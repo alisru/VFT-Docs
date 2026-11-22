@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/22/us-news/biden-appointed-judge-blocks-trump-immigration-policy-which-suspended-visa-processing-from-75-countries/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.82,
-    "real_psi": 0.85,
+    "claim_psi": 1.0,
+    "real_u": 0.22,
+    "real_psi": 0.42,
     "mode": "root",
     "posts": [
       "A federal judge strikes down a sweeping visa ban on 75 nations, halting executive overreach.\n\nBiden-Appointed Judge Blocks Visa Ban\nEvidence: Border security claim, executive overreach halted, statutory authority upheld\n#USPol #Immigration #Law",
-      "The administration argued that suspending visa processing from 75 countries protects public resources and national security.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "In reality, the judiciary checked an executive policy that bypassed statutory authority and unfairly severed families.\nResulting Judgement: (+0.82, +0.85) — Grace",
-      "Verdict: PASS — The Path of Grace.\nJudicial review successfully corrected an unlawful executive policy, upholding statutory limits and protecting constitutional norms.\n\nIntegrity: Trustworthy (Hypocrisy: 0.15, Uncertainty z: 0)",
+      "The administration argued that suspending visa processing from 75 countries protects public resources and national security.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the judiciary checked an executive policy that bypassed statutory authority and unfairly severed families.\nResulting Judgement: (+0.22, +0.42) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nJudicial review successfully corrected an unlawful executive policy, upholding statutory limits and protecting constitutional norms.\n\nIntegrity: Trustworthy (Hypocrisy: 0.15, Uncertainty z: 0)",
       "- Judge Jeannette Vargas: PASS (0.9, 0.9) — Upheld statutory boundaries.\n- State Department Policy: FAIL (-0.8, -0.7) — Exceeded statutory authority.",
       "A federal judge in New York vacated a Trump administration policy suspending visa processing from 75 countries, ruling it exceeded statutory authority under the Immigration and Nationality Act.",
       "The Bright Side:\nIndependent judicial oversight successfully defended statutory limits and kept families connected.",
       "The Breakdown & Plane Error:\nConfusing executive preference (WHAT) with statutory mandate (WHO). The policy bypassed consular discretion for blanket bans.",
       "Social Physics Analysis:\nBy enforcing legal transparency and checking unilateral administrative power, the judicial system reduced institutional friction and protected baseline human rights.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Restoring legal equilibrium aligns institutional power with statutory reality.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Restoring legal equilibrium aligns institutional power with statutory reality.",
       "The Unavoidable Truth: Executive policies must remain strictly within the bounds established by statutory law.\n\nThe Unavoidable Lie: Blanket national bans are purely administrative efficiency rather than political overreach.",
       "Alethekanon:\nJudicial review correctly subordinated executive overreach to statutory law, preserving the separation of powers. 🌐",
       "Awwthekanon:\nIt is a profound relief for families torn apart by sweeping bureaucracy to finally see the rule of law protect their right to love and be together.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.15,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Judge Jeannette Vargas",
@@ -288,6 +350,7 @@
         "name": "African Communities Together",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

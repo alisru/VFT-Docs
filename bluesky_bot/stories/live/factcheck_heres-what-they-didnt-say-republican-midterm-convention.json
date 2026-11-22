@@ -5,22 +5,22 @@
     "subject": "Here’s what they didn’t say at the Republican midterm convention",
     "link": "https://www.washingtonexaminer.com/news/campaigns/congressional/4723183/heres-what-they-didnt-say-republican-midterm-convention/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.4,
+    "claim_u": 0.5,
+    "claim_psi": 0.0,
+    "real_u": -0.5,
     "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "The GOP midterm convention in Dallas faced a silent dilemma: how to transfer Trump's brand downballot.\nEvidence: RNC convention, Trump approval below 40%, generic ballot deficit\n#Aletheia #USPol #Midterms",
-      "The convention was designed to unify the party and solve the historic midterms trend against the incumbent White House.\nStated Judgement: (+0.8, +0.5) — Trustworthy Good",
-      "In reality, the event spotlighted Trump without plotting a course for a divided government or translating his base to local races.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe GOP convention masked structural voter enthusiasm gaps behind a festival of personal loyalty.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "The convention was designed to unify the party and solve the historic midterms trend against the incumbent White House.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "In reality, the event spotlighted Trump without plotting a course for a divided government or translating his base to local races.\nResulting Judgement: (-0.50, -0.50) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nThe GOP convention masked structural voter enthusiasm gaps behind a festival of personal loyalty.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Convention Strategy: COND (+0.5, 0.0) — Focuses on Trump instead of local races.\n- Voter Transfer: FAIL (-0.6, -0.5) — Base fails to mobilize downballot.",
       "The Republican midterm convention gathered party faithful in Dallas, but struggled with the persistent reality that Trump's massive personal pull rarely transfers cleanly to downballot candidates during midterms.",
       "The Bright Side:\nHonest reporting highlights the internal strategic friction rather than buying wholesale into partisan staging.",
       "The Breakdown & Plane Error:\nConfusing WHAT (winning Congress) with WHO (adoring Trump). The event treats a structural legislative challenge as a personal fan club rally.",
       "Social Physics Analysis:\nParty leadership ran a Smart Selfish Maneuver by substituting a rigorous legislative strategy with a high-octane personal rally, projecting unity while dodging the hard reality of a tough midterm map.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The pretexts of unity mask structural vulnerability.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The pretexts of unity mask structural vulnerability.",
       "The Unavoidable Truth: Personal loyalty to a charismatic leader does not automatically translate into congressional votes.\n\nThe Unavoidable Lie: Ignoring legislative coexistence with Democrats secures a midterm victory.",
       "Alethekanon:\nConventions built on personality worship rather than structural policy risk crashing against the hard arithmetic of midterm history.",
       "Awwthekanon:\nIt is tough when leaders put all their eggs in one basket, forgetting that local communities need grounded, everyday solutions to trust the process.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Convention Strategy",
@@ -157,6 +219,7 @@
         "name": "U.S. Congress",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

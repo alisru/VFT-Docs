@@ -5,22 +5,22 @@
     "subject": "Ted Cruz: The Left Has 'Real Bigotry' Toward Justice Clarence Thomas",
     "link": "https://www.breitbart.com/clips/2026/08/30/ted-cruz-the-left-has-real-bigotry-toward-justice-clarence-thomas/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 0.8,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Defending conservative jurisprudence by framing institutional critique as racial bigotry.\n\nTed Cruz: The Left Has 'Real Bigotry' Toward Justice Clarence Thomas\nEvidence: judicial defense, political posturing, partisan framing\n#Aletheia #USPol",
-      "Senator Ted Cruz argued on NBC News that criticism of Justice Clarence Thomas is driven by 'real bigotry' rather than valid legal or ethical scrutiny.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Actual analysis shows political deflection using identity politics to shield a conservative jurist from accountability while stoking base polarization.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPolitical defense masks institutional critique as racial prejudice to rally partisan support.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 2)",
+      "Senator Ted Cruz argued on NBC News that criticism of Justice Clarence Thomas is driven by 'real bigotry' rather than valid legal or ethical scrutiny.\nStated Judgement: (+0.80, +1.00) — Greater Good",
+      "Actual analysis shows political deflection using identity politics to shield a conservative jurist from accountability while stoking base polarization.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPolitical defense masks institutional critique as racial prejudice to rally partisan support.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 2)",
       "- Ted Cruz Defense: FAIL (-0.6, -0.7) — Uses racial framing for political deflection.\n- Judicial Scrutiny: PASS (0.5, 0.0) — Legitimate debate on ethics and jurisprudence.",
       "Senator Ted Cruz defended Supreme Court Justice Clarence Thomas on Meet the Press, accusing critics of harboring racial bias and contrasting it with treatment of Antonin Scalia.",
       "The Bright Side:\nBrings attention to the starkly different tones of media and political criticism directed at various conservative justices over decades.",
       "The Breakdown & Plane Error:\nConfuses WHO (the racial identity of the judge) with WHAT (the ideological impact of his rulings), turning policy debate into personal bigotry.",
       "Social Physics Analysis:\nBy projecting malicious motives onto opponents, political actors maintain high-conflict tribal loyalties instead of addressing substantive legal disagreements transparently.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Post-hoc pretexts replace policy debate.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Post-hoc pretexts replace policy debate.",
       "The Unavoidable Truth: Judicial scrutiny should focus on ethics and legal philosophy rather than personal attacks.\n\nThe Unavoidable Lie: All policy criticism of minority jurists stems purely from racial animus.",
       "Alethekanon:\nFraming ideological critique as bigotry is a classic rhetorical shield that weaponizes identity to immunize public figures from legitimate accountability.",
       "Awwthekanon:\nWhen public discourse reduces complex legal debates to accusations of malice, we lose the capacity to seek true justice together with grace.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ted Cruz Defense",
@@ -210,6 +272,7 @@
         "name": "Kristen Welker",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

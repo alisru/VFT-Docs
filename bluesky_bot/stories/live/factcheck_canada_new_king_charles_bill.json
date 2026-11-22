@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Canada introduces a vertical $20 bill featuring King Charles III, sparking fresh debate over colonial ties.\nEvidence: banknote redesign, monarch portrait, sovereignty signals\n#Aletheia #Canada",
-      "Bank of Canada officials present the new portrait as a celebration of national history, heritage, and environmental dedication.\nStated Judgement: (+0.6, +0.4) — Lesser Good",
-      "While framed as heritage, the design highlights ongoing constitutional tensions amid declining domestic support for the British monarchy.\nResulting Judgement: (-0.1, -0.2) — Stasis",
-      "Verdict: CONDITIONAL — The Path of Stasis.\nSymbolic monarchical continuity paper over unresolved constitutional questions and public ambivalence.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Bank of Canada officials present the new portrait as a celebration of national history, heritage, and environmental dedication.\nStated Judgement: (+0.60, +0.40) — Greater Good",
+      "While framed as heritage, the design highlights ongoing constitutional tensions amid declining domestic support for the British monarchy.\nResulting Judgement: (-0.10, -0.20) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nSymbolic monarchical continuity paper over unresolved constitutional questions and public ambivalence.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Bank of Canada: PASS (+0.50, +0.30) — Standard administrative rollout.\n- Public Reception: COND (-0.20, -0.10) — Mixed constitutional views.",
       "Canada unveiled a vertical polymer $20 banknote featuring King Charles III, making it the first Commonwealth nation outside Britain to feature the monarch.",
       "The Poison:\nUsing royal symbolism to project stability masks deep fractures over sovereignty and post-colonial national identity in modern Canada.",
       "The Breakdown & Plane Error:\nThis is a WHERE vs WHY error: confusing aesthetic representation on currency with substantive democratic consent regarding state heads.",
       "Social Physics Analysis:\nState institutions use traditional imagery to project continuity, but when public alignment is lukewarm, it maintains stasis rather than genuine empowerment.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Stasis. Symbolic inertia balances against quiet public dissent.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Stasis. Symbolic inertia balances against quiet public dissent.",
       "The Unavoidable Truth: Currency design reflects the historical and political compromises embedded in a nation's constitutional framework.\n\nThe Unavoidable Lie: Putting a monarch on a banknote universally unites a citizenry behind shared democratic values.",
       "Alethekanon:\nPrinting monarchical faces on modern currency attempts to institutionalize tradition where public sentiment is increasingly ambivalent.",
       "Awwthekanon:\nTrue national identity grows from the living stories of all its people, not just the inherited portraits of old crowns.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Bank of Canada Banknote Rollout",
@@ -157,6 +219,7 @@
         "name": "Canadian Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Why This Small Island Chain Could Be The First Domino In A Taiwan War",
     "link": "https://dailycaller.com/2026/08/30/taiwan-penghu-islands-us-economy-china",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Strategic warnings highlight Taiwan's Penghu Islands as a vital first domino in any cross-strait conflict.\nEvidence: strategic defense, escalation risk, semiconductor threat\n#Aletheia #Geopolitics",
-      "Analyzing island fortifications as a defensive shield to preserve regional peace and democratic stability.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "Exposing how military posturing and war-gaming accelerate great-power friction and pre-emptive strike risks.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nEscalating island fortifications without diplomatic de-escalation accelerates catastrophic kinetic conflict.\n\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 2)",
+      "Analyzing island fortifications as a defensive shield to preserve regional peace and democratic stability.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Exposing how military posturing and war-gaming accelerate great-power friction and pre-emptive strike risks.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nEscalating island fortifications without diplomatic de-escalation accelerates catastrophic kinetic conflict.\n\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 2)",
       "Sub-Audits Breakdown:\n- Daily Caller: FAIL (-0.75, -0.85) — Amplifies threat framing without diplomacy.\n- Security Experts: COND (0.2, -0.3) — Technical realism mixed with alarmism.",
       "Senior security officials warn that Taiwan's Penghu Islands could serve as a primary target in a Chinese invasion, threatening vital global semiconductor supply chains.",
       "The Bright Side:\nProactive defense planning exposes vulnerabilities early, allowing military planners to reinforce weak spots before a crisis erupts.",
       "The Breakdown & Plane Error:\nConfusing tactical military readiness (WHAT) with long-term diplomatic conflict resolution (WHO).",
       "Social Physics Analysis:\nBy prioritizing military deterrence over open diplomatic engagement, both sides lock themselves into a high-strain loop where preparation for war ironically invites the conflict they wish to deter.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated defensive intentions and actual escalation dynamics, it plots a direct trajectory toward Greater Evil. F = S*A - O*A yields negative moral descent.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated defensive intentions and actual escalation dynamics, it plots a direct trajectory toward Greater Evil. F = S*A - O*A yields negative moral descent.",
       "The Unavoidable Truth: Fortifying strategic islands signals serious deterrence but also hardens adversarial red lines.\n\nThe Unavoidable Lie: Endless military war-gaming makes conflict less likely rather than accelerating a hair-trigger environment.",
       "Alethekanon:\nTreating military escalation as a substitute for diplomacy ensures that small flashpoints ignite great-power wars. Deterrence without dialogue is simply a countdown.",
       "Awwthekanon:\nBehind every strategic war game and island outpost lie millions of families who simply want to live in peace without the constant shadow of war hanging over their homes.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Daily Caller Coverage",
@@ -222,6 +284,7 @@
         "name": "Chris Miller",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

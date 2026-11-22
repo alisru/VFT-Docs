@@ -5,16 +5,16 @@
     "subject": "Steve Alford to retire after final season with Nevada, ending a 36-year coaching career",
     "link": "https://www.chicagotribune.com/2026/09/24/steve-alford-nevada-coach-retiring/?utm_campaign=mrf-bluesky-chicagotribune.com&utm_source=bluesky&utm_medium=social&mrfcid=202609256ab26dc17ebd40685a137371",
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mwcp2eu6eg2j",
-    "claim_u": 0.8,
+    "claim_u": 0.85,
     "claim_psi": 0.9,
-    "real_u": 0.8,
+    "real_u": 0.85,
     "real_psi": 0.9,
     "mode": "root",
     "posts": [
       "Nevada coach Steve Alford announces his upcoming retirement, wrapping up an illustrious 36-year collegiate basketball career.\nEvidence: Retirement, 36 Years, Nevada Wolf Pack\n#Aletheia #CollegeBasketball #Sports",
-      "Alford stated it is the right time to step away after leading teams across Iowa, New Mexico, UCLA, and Nevada with 724 career wins.\nStated Judgement: (+0.8, +0.9) — Greater Good",
-      "The transition marks a transparent, well-planned conclusion to a major sporting career built on mentorship and athletic development.\nResulting Judgement: (+0.8, +0.9) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nA dedicated career concludes transparently, prioritizing community ties and program stability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Alford stated it is the right time to step away after leading teams across Iowa, New Mexico, UCLA, and Nevada with 724 career wins.\nStated Judgement: (+0.85, +0.90) — Greater Good",
+      "The transition marks a transparent, well-planned conclusion to a major sporting career built on mentorship and athletic development.\nResulting Judgement: (+0.85, +0.90) — Greater Good",
+      "Verdict: PASS — Grace.\nA dedicated career concludes transparently, prioritizing community ties and program stability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Chicago Tribune Report: PASS (0.8, 0.9) — Accurate career summary.\n- Coach Alford's Statement: PASS (0.9, 0.9) — Gracious retirement transition.",
       "Alford enters his final season with the Nevada Wolf Pack, looking to cap off decades of leadership on the hardwood.",
       "The Bright Side:\nA legendary career ends on its own terms with community gratitude.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Chicago Tribune Report",
@@ -165,6 +227,7 @@
         "name": "Nevada Wolf Pack",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

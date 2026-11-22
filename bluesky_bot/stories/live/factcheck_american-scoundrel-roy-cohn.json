@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": -0.65,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Tracing Roy Cohn's dark lineage from McCarthy's inquisitions to Donald Trump's legal playbook.\nEvidence: biography excerpts, court histories, political mentorship\n#Aletheia #USPol",
-      "Biographers present Roy Cohn's ruthless legal tactics as standard aggressive advocacy used to navigate elite circles.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Cohn's tactics formed an extractive blueprint of weaponized litigation, defying accountability and eroding democratic norms.\nResulting Judgement: (-0.75, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA political and legal playbook built on constant attack and evasion undermines public trust for private impunity.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Biographers present Roy Cohn's ruthless legal tactics as standard aggressive advocacy used to navigate elite circles.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Cohn's tactics formed an extractive blueprint of weaponized litigation, defying accountability and eroding democratic norms.\nResulting Judgement: (-0.65, -0.75) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA political and legal playbook built on constant attack and evasion undermines public trust for private impunity.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "- Kai Bird Account: PASS (-0.45, -0.60) — Uncovers historical continuity of bad actors.\n- Legal System Resilience: FAIL (-0.85, -0.90) — Shows systemic vulnerability to abuse.",
       "Kai Bird's biography explores how Roy Cohn mentored a young Donald Trump, imparting rules of denial, delay, and relentless countersuing.",
       "The Bright Side:\nExposing these historical mechanics gives citizens a clearer lens to spot authoritarian legal maneuvers.",
       "The Breakdown & Plane Error:\nConfusing aggressive personal ambition (WHO) with principled legal defense (WHAT). The bait-and-switch trades public justice for private dominance.",
       "Social Physics Analysis:\nRoy Cohn and his proteges run a classic Smart Selfish maneuver. They mask personal extraction behind procedural pretexts, projecting corruption onto judges and opponents to evade accountability while hollowing out civic trust.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated legal advocacy and ground-level civic destruction, it plots a direct trajectory toward Lesser Evil. The systemic exploitation of judicial delay degrades the rule of law.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated legal advocacy and ground-level civic destruction, it plots a direct trajectory toward Lesser Evil. The systemic exploitation of judicial delay degrades the rule of law.",
       "The Unavoidable Truth: Relentless litigation without ethical boundaries converts the legal system into a tool of personal protection.\n\nThe Unavoidable Lie: Aggressive rule-breaking is merely a sign of brilliant legal innovation.",
       "Alethekanon:\nWeaponized litigation is not shrewd advocacy; it is the systematic erosion of truth disguised as defense.",
       "Awwthekanon:\nIt is heartbreaking to watch systems designed to protect the vulnerable get twisted into instruments of intimidation.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Kai Bird Account",
@@ -161,6 +223,7 @@
         "name": "Joe McCarthy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

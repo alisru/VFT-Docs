@@ -5,22 +5,22 @@
     "subject": "Fired-Up Crowd Interrupts Ted Cruz with ‘Ted, You Suck!’ Chants",
     "link": "https://www.breitbart.com/politics/2026/09/12/fired-up-crowd-interrupts-ted-cruz-with-ted-you-suck-chants/",
     "target_url": "",
-    "claim_u": 0.7,
-    "claim_psi": 0.1,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "claim_u": 0.65,
+    "claim_psi": 0.15,
+    "real_u": -0.25,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "College football fans deliver a blunt real-world verdict on political grandstanding.\nEvidence: Crowd jeers, Bipartisan sports bill, Public pushback\n#Aletheia #USPol",
-      "Legislative efforts to regulate college sports transfer portals bring necessary order and protect student compensation.\nStated Judgement: (+0.7, +0.1) — Trustworthy",
-      "Attempting to leverage high-profile sports culture for political branding backfired spectacularly as fans rejected the intrusion with hostile chants.\nResulting Judgement: (-0.4, -0.6) — Meaningful Distortion",
-      "Verdict: FAIL — The Path of Deception.\nMixing partisan politics with college sports traditions invites immediate, visceral public rejection.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Legislative efforts to regulate college sports transfer portals bring necessary order and protect student compensation.\nStated Judgement: (+0.65, +0.15) — Greater Good",
+      "Attempting to leverage high-profile sports culture for political branding backfired spectacularly as fans rejected the intrusion with hostile chants.\nResulting Judgement: (-0.25, -0.35) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nMixing partisan politics with college sports traditions invites immediate, visceral public rejection.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "Sub-Audits Breakdown:\n- Protect College Sports Act: COND (+0.3, 0.0) — Regulatory necessity mixed with overreach.\n- Public Engagement Strategy: FAIL (-0.8, -0.7) — Miscalculated fan sentiment.",
       "Senator Ted Cruz faced overwhelming boos and chants during an ESPN College GameDay appearance in Austin while promoting sports legislation.",
       "The Poison:\nTreating beloved cultural spaces as campaign backdrops risks alienating citizens seeking escape from partisan friction.",
       "The Breakdown & Plane Error:\nConfusing legislative intent (WHAT) with public reception (EFFECT/EMOTIVE), assuming institutional authority insulates against cultural backlash.",
       "Social Physics Analysis:\nCruz attempted a Smart Altruistic maneuver by promoting bipartisan legislation, but the execution devolved into a Smart Selfish photo-op that read as tone-deaf intrusion, triggering immediate public projection and rejection.",
-      "The Trajectory: The Path of Deception.\nWhen you map elite political maneuvering against organic public sentiment, it plots a direct trajectory toward Deception. Mathematical divergence underscores the friction of forced cultural integration.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map elite political maneuvering against organic public sentiment, it plots a direct trajectory toward Deception. Mathematical divergence underscores the friction of forced cultural integration.",
       "The Unavoidable Truth: Citizens deeply resent politicians hijacking cultural traditions for partisan signaling.\n\nThe Unavoidable Lie: Bipartisan policy proposals automatically translate into public goodwill.",
       "Alethekanon:\nInstitutional messaging collapses instantly when disconnected from authentic cultural resonance.",
       "Awwthekanon:\nPeople look to sports as a shared sanctuary of joy and community unity. When politics intrudes uninvited, the collective pushback is swift and loud.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Protect College Sports Act",
@@ -156,6 +218,7 @@
         "name": "Rece Davis",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

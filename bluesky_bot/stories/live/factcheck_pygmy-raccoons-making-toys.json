@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.9,
-    "real_psi": 0.8,
+    "real_u": 0.92,
+    "real_psi": 0.95,
     "mode": "root",
     "posts": [
       "Endangered pygmy raccoons in Cozumel are observed crafting and playing with toy balls made from trash.\nEvidence: Biologist study, trash receipts, water bowls\n#Aletheia #Nature #Science 🌐",
       "Researchers document rare material culture and social object play among endangered island wildlife.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Observers genuinely capture novel animal behavior, though scientific caution remains warranted regarding generational persistence.\nResulting Judgement: (+0.9, +0.8) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nAuthentic ecological observation highlights animal intelligence and adaptability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Observers genuinely capture novel animal behavior, though scientific caution remains warranted regarding generational persistence.\nResulting Judgement: (+0.92, +0.95) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAuthentic ecological observation highlights animal intelligence and adaptability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Nessie O'Neil Study: PASS (+0.9, +0.8) — Genuine discovery of animal tool use.\n- Expert Commentary: PASS (+1.0, +0.9) — Balanced scientific caution.",
       "A new study reveals critically endangered pygmy raccoons on Cozumel Island fashioning trash into toys and sharing them.",
       "The Bright Side:\nHighlighting animal ingenuity fosters deeper empathy and conservation awareness for fragile island habitats.",
       "The Breakdown & Plane Error:\nNone; clear physical observation aligned with empirical biological study.",
       "Social Physics Analysis:\nResearchers and wildlife operate in a positive cooperative loop, expanding transparency and empathy toward endangered ecosystems.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Empirical curiosity meets ecological preservation.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Empirical curiosity meets ecological preservation.",
       "The Unavoidable Truth: Animals display complex cognitive play that bridges survival needs and creativity.\n\nThe Unavoidable Lie: This isolated behavior definitively proves a permanent generational culture without further study.",
       "Alethekanon:\nEmpirical observation reveals unexpected resilience and intelligence in endangered species, bridging science and empathy. 🌐",
       "Awwthekanon:\nIt is wonderfully endearing to watch tiny raccoons shape trash into playthings, reminding us of the joy inherent in nature.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Pygmy Raccoon Study",
@@ -211,6 +273,7 @@
         "name": "Pygmy Raccoons",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

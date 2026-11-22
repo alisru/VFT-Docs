@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.7,
     "claim_psi": 0.1,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.65,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Leadership shuffle in Cardiff Bay! Helen Jenner is tipped to take the helm of Reform Wales after Dan Thomas steps down.\nEvidence: leadership succession, police probe fallout, internal party instability\n#Aletheia #WelshPolitics",
-      "Reform sources indicate an orderly transition of power under Jenner will maintain stability and allow the party to continue holding the Welsh government to account.\nStated Judgement: (+0.7, +0.1) — Good Preference",
-      "Behind the orderly exterior, the succession follows an arrest for coercive behaviour, leadership infighting, and open defections to rival parties in the Senedd.\nResulting Judgement: (-0.70, -0.80) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA polished succession narrative masks deep organizational turmoil, internal bullying allegations, and severe ideological fractures.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.4, z: 2)",
+      "Reform sources indicate an orderly transition of power under Jenner will maintain stability and allow the party to continue holding the Welsh government to account.\nStated Judgement: (+0.70, +0.10) — Greater Good",
+      "Behind the orderly exterior, the succession follows an arrest for coercive behaviour, leadership infighting, and open defections to rival parties in the Senedd.\nResulting Judgement: (-0.65, -0.75) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA polished succession narrative masks deep organizational turmoil, internal bullying allegations, and severe ideological fractures.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.4, z: 2)",
       "Sub-Audits Breakdown:\n- Reform Wales Leadership: FAIL (-0.7, -0.8) — Plagued by scandals and abrupt departures.\n- Senedd Opposition Role: COND (-0.6, -0.7) — Struggling to maintain coherent governance.",
       "Dan Thomas resigned as leader of Reform UK Wales following his arrest on suspicion of assault and coercive behavior, though he was later released without charge. The party faces immediate structural headwinds.",
       "The Bright Side:\nHelen Jenner's Welsh-speaking background and local roots provide a credible communicative bridge for regional voters disillusioned with Cardiff establishment politics.",
       "The Breakdown & Plane Error:\nConfusing WHAT is happening (stable transition) with WHY it is happening (emergency damage control following criminal allegations and Senedd defections).",
       "Social Physics Analysis:\nReform leadership operates a Smart Selfish Maneuver, quickly pivoting to an uncontroversial deputy to sanitize an acute governance crisis. Instead of transparently confronting internal cultural rot, they project blame outward while rushing a coronation.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Internal power struggles hollow out substantive policy work, reducing politics to damage control.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Internal power struggles hollow out substantive policy work, reducing politics to damage control.",
       "The Unavoidable Truth: Political parties must maintain rigorous internal safeguards and accountable leadership standards.\n\nThe Unavoidable Lie: Rapid backroom successions completely erase underlying organizational dysfunction and member defections.",
       "Alethekanon:\nSwapping leaders under a cloud of police investigations and member defections reveals structural fragility. True reform demands cultural accountability, not just cosmetic rebranding.",
       "Awwthekanon:\nIt's unsettling when political ambitions overshadow basic human safety and community trust. Everyone deserves to work and participate in politics free from fear and chaos.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Reform Wales Leadership",
@@ -169,6 +231,7 @@
         "sub_psi": -0.7,
         "sub_verdict": "COND"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "The failed state of American education",
     "link": "https://www.washingtonexaminer.com/restoring-america/patriotism-unity/4694718/lower-academic-standards-student-anxiety/",
     "target_url": "",
-    "claim_u": -0.5,
-    "claim_psi": -0.5,
-    "real_u": -0.8,
-    "real_psi": -0.6,
+    "claim_u": -0.33,
+    "claim_psi": -0.44,
+    "real_u": -0.62,
+    "real_psi": -0.8,
     "mode": "root",
     "posts": [
       "Critics argue that lowering academic standards to reduce student anxiety is institutionalizing failure. \nEvidence: Grade inflation, lack of algebra skills, school choice advocacy.\n#Education #Policy",
-      "The claim asserts that schools are failing by removing grades and standards, which actually increases student anxiety by denying them the chance to overcome failure. \nStated Judgement: (-0.5, -0.5) — Bad Preference",
-      "The reality is a polarized debate where both sides use student performance as a proxy for broader ideological battles over school choice and bureaucracy. \nResulting Judgement: (-0.8, -0.6) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe article uses student struggles to promote a specific political agenda, ignoring the complexity of mental health and systemic funding issues.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 2)",
+      "The claim asserts that schools are failing by removing grades and standards, which actually increases student anxiety by denying them the chance to overcome failure. \nStated Judgement: (-0.33, -0.44) — Greater Evil",
+      "The reality is a polarized debate where both sides use student performance as a proxy for broader ideological battles over school choice and bureaucracy. \nResulting Judgement: (-0.62, -0.80) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nThe article uses student struggles to promote a specific political agenda, ignoring the complexity of mental health and systemic funding issues.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- University of Michigan: COND (-0.2, 0.2) — Policy intent vs. outcome.\n- Washington Examiner: FAIL (-0.9, -0.8) — Ideological framing.",
       "The article critiques the removal of letter grades and standardized tests, arguing that these policies prevent students from learning resilience.",
       "The Poison:\nBy framing academic struggle solely as a lack of grit, the article ignores the impact of socioeconomic factors and systemic underfunding.",
       "The Breakdown & Plane Error:\nThis is a WHY vs HOW error; the author identifies the symptoms (anxiety) but attributes them to a single cause (lack of standards) to justify a political solution.",
       "Social Physics Analysis:\nInstead of fostering a coalition to improve student outcomes, the article uses projection to blame schools and bureaucracy, maintaining conflict rather than resolving strain.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between the stated goal of 'excellence' and the actual divisive rhetoric, it plots a trajectory toward Greater Evil. The logic is circular.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between the stated goal of 'excellence' and the actual divisive rhetoric, it plots a trajectory toward Greater Evil. The logic is circular.",
       "The Unavoidable Truth: Students need both support and challenge.\nThe Unavoidable Lie: Standardized testing is the only measure of excellence.",
       "Alethekanon:\nEducational policy is a complex system. Reducing it to a binary of 'standards vs. anxiety' ignores the nuanced reality of student development and institutional constraints.",
       "Awwthekanon:\nIt is heartbreaking to see our students struggling. We should focus on creating environments where they feel safe enough to try, fail, and grow without shame.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.85,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "University of Michigan Policy",
@@ -278,6 +340,7 @@
         "sub_psi": -0.8,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

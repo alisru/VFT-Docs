@@ -5,22 +5,22 @@
     "subject": "EU toughens China stance ahead of Šefčovič’s Beijing visit",
     "link": "https://www.politico.eu/article/europe-tightens-china-policy-trade-securit/",
     "target_url": "https://bsky.app/profile/politico.eu/post/3mxbftmtien2z",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "claim_u": 0.75,
+    "claim_psi": 0.45,
+    "real_u": 0.45,
+    "real_psi": 0.15,
     "mode": "root",
     "posts": [
       "EU hardens its stance on Beijing ahead of Maroš Šefčovič’s trade visit.\nEvidence: Parliamentary report, Franco-German joint push, trade leverage\n#Aletheia #EU #China",
-      "European policymakers are coalescing around a unified strategy that treats China as both an economic and geopolitical security challenge.\nStated Judgement: (+0.8, +0.5) — Constructive Engagement",
-      "Member states balance strategic decoupling with deep economic interdependence, revealing friction beneath institutional unity.\nResulting Judgement: (+0.4, +0.2) — Conditional Pragmatism",
-      "Verdict: PASS — The Path of Redemption.\nThe EU is aligning its trade power with geopolitical reality, though internal commercial divisions remain.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
+      "European policymakers are coalescing around a unified strategy that treats China as both an economic and geopolitical security challenge.\nStated Judgement: (+0.75, +0.45) — Greater Good",
+      "Member states balance strategic decoupling with deep economic interdependence, revealing friction beneath institutional unity.\nResulting Judgement: (+0.45, +0.15) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe EU is aligning its trade power with geopolitical reality, though internal commercial divisions remain.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
       "Sub-Audits Breakdown:\n- European Parliament: PASS (+0.8, +0.5) — Unifying security and trade policies.\n- Franco-German Push: COND (+0.3, 0.0) — Pushing executive powers over imports.",
       "European lawmakers are pushing for a comprehensive approach to Beijing that addresses trade imbalances, human rights, and regional security ahead of key diplomatic visits.",
       "The Bright Side:\nEurope is moving past naive commercialism to address systemic security and human rights challenges coherently.",
       "The Breakdown & Plane Error:\nConfusing trade diplomacy (WHAT) with total geopolitical alignment (WHO). The policy shift uses economic leverage to enforce security boundaries.",
       "Social Physics Analysis:\nThe EU actors navigate a complex balance between cooperative dialogue and protective boundaries. While some factions deploy hardline rhetoric for political positioning, the institutional push reflects a rational pivot toward strategic autonomy against external coercion.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated economic ambitions and geopolitical realities, it plots a direct trajectory toward Grace. The system adapts through transparent realignment.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated economic ambitions and geopolitical realities, it plots a direct trajectory toward Grace. The system adapts through transparent realignment.",
       "The Unavoidable Truth: Economic interdependence cannot be separated from geopolitical security.\nThe Unavoidable Lie: Brussels speaks with a completely unified voice on trade.",
       "Alethekanon:\nEurope's pivot from pure commerce to geopolitical realism acknowledges systemic risks, though internal commercial divergence persists.",
       "Awwthekanon:\nIt is heartening to see nations try to protect human rights and security, even when balancing difficult economic ties.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "European Parliament Report",
@@ -166,6 +228,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

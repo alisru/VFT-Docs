@@ -6,21 +6,21 @@
     "link": "https://www.foxnews.com/politics/dc-public-schools-special-grand-jury-probe-attendance-truancy-graduation-records",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": -0.65,
-    "real_psi": -0.7,
+    "claim_psi": 1.0,
+    "real_u": -0.87,
+    "real_psi": -0.73,
     "mode": "root",
     "posts": [
       "Federal prosecutors launch a rare grand jury probe into D.C. public schools over truancy and graduation rates.\n\nDC Public Schools Grand Jury\nEvidence: safety rhetoric, systemic truancy, institutional friction\n#Aletheia #Education #USPol",
-      "Federal authorities claim the special grand jury probe is purely focused on safeguarding youth and ensuring accurate attendance records across district campuses.\nStated Judgement: (+1.0, +0.5) — Greater Good",
-      "Ground reality reveals deep institutional failures with chronic truancy hitting 50.4% overall and Ballou High reaching 84.4%, sparking severe political friction.\nResulting Judgement: (-0.65, -0.70) — Deception",
-      "Verdict: FAIL — The Path of Deception. Institutional neglect and systemic truancy are met with grand jury theater rather than structural reform.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Federal authorities claim the special grand jury probe is purely focused on safeguarding youth and ensuring accurate attendance records across district campuses.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Ground reality reveals deep institutional failures with chronic truancy hitting 50.4% overall and Ballou High reaching 84.4%, sparking severe political friction.\nResulting Judgement: (-0.87, -0.73) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "- Federal Prosecutors: COND (-0.50, -0.60) — Uses grand jury as heavy-handed oversight.\n- DC Public Schools: FAIL (-0.80, -0.80) — Chronic truancy and data obfuscation.",
       "Federal prosecutors have convened a rare special grand jury to probe D.C. public schools, focusing on chronic absenteeism, graduation rates, and record-keeping.",
       "The Bright Side:\nBrings long-ignored truancy data into public view.",
       "The Breakdown & Plane Error:\nFocuses on WHO is to blame (prosecutors vs mayor) rather than WHAT structural supports students actually need.",
       "Social Physics Analysis:\nInstead of transparently reforming schools to empower students, authorities use punitive grand juries as a pretext, projecting blame onto local administration while maintaining institutional conflict.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Punitive theater replaces systemic repair.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Punitive theater replaces systemic repair.",
       "The Unavoidable Truth: Punitive grand juries will not fix systemic truancy.\n\nThe Unavoidable Lie: This investigation is solely about administrative paperwork.",
       "Alethekanon:\nTreating chronic educational failure as a criminal conspiracy avoids the hard work of structural investment. Bureaucratic theater masks deep social neglect.",
       "Awwthekanon:\nWhen schools fail our children so completely, launching investigations feels like pointing fingers while the kids are left behind in the cold.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Federal Prosecutors",
@@ -204,6 +266,7 @@
         "name": "Muriel Bowser",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

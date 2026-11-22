@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/winnipegfreepress.com/post/3mw6lohqd6n2r",
     "claim_u": 0.8,
     "claim_psi": 0.7,
-    "real_u": 0.6,
-    "real_psi": 0.5,
+    "real_u": 0.7,
+    "real_psi": 0.6,
     "mode": "root",
     "posts": [
       "Prime Minister Carney bridges oceans at the UN.\nEvidence: Multilateral cooperation, OceanEye Alliance, European partnership\n#Canada #UNGA #Geopolitics",
-      "Canada and the EU unite at the UN General Assembly to champion multilateral ocean observation and data-sharing alliances.\nStated Judgement: (+0.8, +0.7) — Lesser Good",
-      "Amidst strained trade ties with the U.S., Canada deepens European institutional linkages to shore up strategic international partnerships.\nResulting Judgement: (+0.6, +0.5) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nCanada and the EU successfully forge tangible multilateral alliances to counter North American trade friction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
+      "Canada and the EU unite at the UN General Assembly to champion multilateral ocean observation and data-sharing alliances.\nStated Judgement: (+0.80, +0.70) — Greater Good",
+      "Amidst strained trade ties with the U.S., Canada deepens European institutional linkages to shore up strategic international partnerships.\nResulting Judgement: (+0.70, +0.60) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nCanada and the EU successfully forge tangible multilateral alliances to counter North American trade friction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
       "- Mark Carney: PASS (+0.7, +0.6) — Proactive multilateral diplomacy.\n- European Commission: PASS (+0.7, +0.6) — Expanding transatlantic ties.",
       "Prime Minister Mark Carney is co-hosting an OceanEye International Alliance event at the UN with EU President Ursula von der Leyen, cementing Canada's pivot toward European multilateral partnerships.",
       "The Bright Side:\nFosters robust international data-sharing and strengthens diplomatic bonds beyond volatile bilateral trade channels.",
       "The Breakdown & Plane Error:\nEvaluating WHO participates in ocean coalitions rather than WHY trade friction exists. The action directly aligns stated cooperation with structural reality.",
       "Social Physics Analysis:\nMark Carney and European leaders are running a Smart Altruistic Maneuver by transparently pooling resources for ocean observation and building resilient multilateral coalitions.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the alignment between stated diplomatic goals and actual multilateral outcomes, it plots a direct trajectory toward Grace.\n\nF_pos = sum(|F_j_ψ|) dominates over F_neg, driving net positive will.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between stated diplomatic goals and actual multilateral outcomes, it plots a direct trajectory toward Grace.\n\nF_pos = sum(|F_j_ψ|) dominates over F_neg, driving net positive will.",
       "The Unavoidable Truth: Multilateral alliances offer a vital counterbalance when traditional bilateral trade negotiations stall.\n\nThe Unavoidable Lie: Global ocean observation pacts are purely academic exercises devoid of strategic geopolitical maneuvering.",
       "Alethekanon:\nDiplomatic coalition-building provides a stable counterbalance to regional trade friction. Genuine institutional cooperation supersedes fleeting bilateral disputes.",
       "Awwthekanon:\nIt is encouraging to see nations lock arms across the seas to protect our oceans and care for our shared global commons together.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Mark Carney Diplomacy",
@@ -162,6 +224,7 @@
         "name": "European Union",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

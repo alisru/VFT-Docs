@@ -5,22 +5,22 @@
     "subject": "An Arizona County’s “Housing Hub” Is a Dead End for Many Homeless Families",
     "link": "https://www.propublica.org/article/maricopa-county-homeless-hub-hotline-shelters?utm_source=bluesky&utm_medium=social&utm_campaign=propublica-bsky",
     "target_url": "https://bsky.app/profile/propublica.org/post/3mxgy7vx2sc2l",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
-    "real_u": -0.85,
-    "real_psi": -0.82,
+    "claim_u": 0.7,
+    "claim_psi": 0.35,
+    "real_u": -0.04,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "Maricopa County's 'Housing Hub' was promised as an Amazon-like portal ending family homelessness, but families face endless bureaucratic dead ends.\nEvidence: 94% assessment failure rate, full shelters, 7-week waitlists.\n#Aletheia #HousingCrisis",
-      "Officials claimed Coordinated Entry systems would streamline placement, eliminate waitlists, and instantly connect vulnerable families to housing resources.\nStated Judgement: (+0.6, +0.2) — Good Preference",
-      "In reality, 94% of assessed families received no permanent housing, hotline calls bounce endlessly, and bureaucratic rules punish families for staying in hotels.\nResulting Judgement: (-0.85, -0.82) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nBureaucratic triage systems hide systemic housing scarcity behind Kafkaesque hurdles, leaving destitute families homeless while claiming efficiency.\nIntegrity: Severe Deception (Hypocrisy: 9.2, Uncertainty z: 3)",
+      "Officials claimed Coordinated Entry systems would streamline placement, eliminate waitlists, and instantly connect vulnerable families to housing resources.\nStated Judgement: (+0.70, +0.35) — Greater Good",
+      "In reality, 94% of assessed families received no permanent housing, hotline calls bounce endlessly, and bureaucratic rules punish families for staying in hotels.\nResulting Judgement: (-0.04, -0.05) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nBureaucratic triage systems hide systemic housing scarcity behind Kafkaesque hurdles, leaving destitute families homeless while claiming efficiency.\nIntegrity: Severe Deception (Hypocrisy: 9.2, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Maricopa Housing Hub: FAIL (-0.88, -0.85) — Bureaucratic dead ends.\n- ProPublica Investigation: PASS (0.80, 0.75) — Exposes systemic failure.",
       "Family homelessness in Maricopa County hit a decade high. Despite federal Coordinated Entry mandates, shelters shrank and red tape locked families out.",
       "The Poison:\nThe system prioritizes chronic street encampments while pushing invisible homeless families and mothers with sick children to the back of the line.",
       "The Breakdown & Plane Error:\nConfusing WHAT (bureaucratic process metrics) with WHO (destitute children sleeping in cars). The system optimizes paperwork while human lives collapse.",
       "Social Physics Analysis:\nCounty administrators run a smart selfish maneuver: wrapping resource rationing in high-tech jargon (\"Coordinated Entry\") while projecting blame onto shelter rules and individual compliance rather than acknowledged systemic housing failure.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated bureaucratic solutions and ground-level destitution, it plots a direct trajectory toward Greater Evil. Stated altruism masks structural neglect.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated bureaucratic solutions and ground-level destitution, it plots a direct trajectory toward Greater Evil. Stated altruism masks structural neglect.",
       "The Unavoidable Truth: A triage system without housing stock only manages suffering rather than ending it.\n\nThe Unavoidable Lie: Calling a broken waitlist an \"Amazon-like hub\" fixes the housing shortage.",
       "Alethekanon:\nAdministrative rebranding cannot substitute for actual shelter. Bureaucracies that measure process instead of human survival are engines of cruelty.",
       "Awwthekanon:\nNo mother fleeing abuse or fighting cancer should have to sleep in an alley while begging operators for a callback that never comes. Every child deserves a safe bed.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Maricopa Housing Hub",
@@ -174,6 +236,7 @@
     "tags": [
       "Aletheia",
       "HousingCrisis"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

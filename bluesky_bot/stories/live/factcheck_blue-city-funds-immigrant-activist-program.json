@@ -5,22 +5,22 @@
     "subject": "Blue city funds immigrant activist program with taxpayer dollars, critics say it 'shuts citizens out'",
     "link": "https://www.foxnews.com/politics/blue-city-funds-immigrant-activist-program-taxpayer-dollars-critics-say-shuts-citizens",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
+    "claim_u": 0.4,
+    "claim_psi": 0.25,
     "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Boston's taxpayer-funded immigrant leadership scholarship program sparks fierce citizen backlash.\nEvidence: taxpayer funding, immigrant-only eligibility, citizen exclusion\n#Aletheia #USPol",
-      "Proponents argue taxpayer-backed civic programs foster community integration and local leadership for emerging immigrant populations.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "Critics highlight that excluding U.S. citizens from taxpayer-funded political pipelines manufactures resentment and deepens civic fractures.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Taxpayer-backed civic programs restricted by immigration status generate avoidable political friction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.80, z: 3)",
+      "Proponents argue taxpayer-backed civic programs foster community integration and local leadership for emerging immigrant populations.\nStated Judgement: (+0.40, +0.25) — Greater Good",
+      "Critics highlight that excluding U.S. citizens from taxpayer-funded political pipelines manufactures resentment and deepens civic fractures.\nResulting Judgement: (-0.60, -0.65) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.80, z: 3)",
       "- Immigrants Lead Boston: COND (-0.5, -0.5) — Fosters immigrant civic engagement.\n- Public Backlash: FAIL (-0.7, -0.8) — Highlights citizen exclusion.",
       "Boston's Mayor Office offers taxpayer-funded scholarships for civic training restricted to immigrant participants, drawing intense public criticism over citizen exclusion.",
       "The Bright Side:\nCivic training programs can help integrate new arrivals into local governance structures.",
       "The Breakdown & Plane Error:\nConfusing WHO is eligible for public funds with WHAT civic education achieves. The program substitutes universal community access for targeted immigrant advocacy.",
       "Social Physics Analysis:\nCity leaders run a flawed loop by restricting taxpayer funds to specific demographics, provoking predictable populist backlash while dodging transparent dialogue on civic inclusion.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Divergent eligibility creates avoidable political polarization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Divergent eligibility creates avoidable political polarization.",
       "The Unavoidable Truth: Targeted municipal funding for non-citizens naturally provokes severe taxpayer backlash.\n\nThe Unavoidable Lie: Exclusive political training pipelines are promoted as neutral civic engagement.",
       "Alethekanon:\nWhen public resources draw rigid lines between citizens and non-citizens, civic trust fractures into partisan warfare.",
       "Awwthekanon:\nIt hurts to see communities divided when everyone simply wants a stable, welcoming home where their voices matter.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Immigrants Lead Boston",
@@ -157,6 +219,7 @@
         "name": "Immigrants Lead Boston",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

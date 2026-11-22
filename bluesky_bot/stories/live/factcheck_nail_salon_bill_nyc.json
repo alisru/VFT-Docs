@@ -5,22 +5,22 @@
     "subject": "The eyewatering bill I got for...",
     "link": "https://www.dailymail.com/yourmoney/article-16070819/nail-salon-bill-cost-hundreds-dollars.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": -0.8,
-    "claim_psi": -0.5,
-    "real_u": -0.1,
-    "real_psi": 0.1,
+    "claim_u": -0.54,
+    "claim_psi": -0.58,
+    "real_u": 0.58,
+    "real_psi": 0.75,
     "mode": "root",
     "posts": [
       "A routine trip to a New York City nail salon ends in sticker shock and a viral debate over hidden fees and beauty costs.\n\nThe eyewatering bill I got...\nEvidence: Clear pricing, stacked fees, consumer awareness 🌐\n#Aletheia #ConsumerRights",
-      "The claim alleges a Manhattan nail salon extorted a customer by charging an unexpected $323 for a manicure, using hidden fees and gaslighting to inflate the final bill.\nStated Judgement: (-0.80, -0.50) — Lesser Evil",
-      "In reality, the salon's itemized breakdown matched its posted rates, but the customer's complex request (ombre plus chrome) stacked multiple specialized service fees that she did not anticipate.\nResulting Judgement: (-0.10, 0.10) — Lesser Evil",
-      "Verdict: FAIL — Revelation into Grace.\nThe conflict stems from a communication gap and complex stacked pricing rather than intentional extortion or malicious deception by the business.\nIntegrity: Conditionally Sound (Hypocrisy: 1.60, z: 1)",
+      "The claim alleges a Manhattan nail salon extorted a customer by charging an unexpected $323 for a manicure, using hidden fees and gaslighting to inflate the final bill.\nStated Judgement: (-0.54, -0.58) — Greater Evil",
+      "In reality, the salon's itemized breakdown matched its posted rates, but the customer's complex request (ombre plus chrome) stacked multiple specialized service fees that she did not anticipate.\nResulting Judgement: (+0.58, +0.75) — Greater Good",
+      "Verdict: PASS — Reckoning into Grace.\nThe conflict stems from a communication gap and complex stacked pricing rather than intentional extortion or malicious deception by the business.\nIntegrity: Conditionally Sound (Hypocrisy: 1.60, z: 1)",
       "Sub-Audits Breakdown:\n- Katrina Schollenberger: COND (-0.10, 0.20) — Misunderstood stacked fees.\n- Akiko Nails: PASS (0.00, 0.00) — Followed posted pricing.\n- Salon Communication: FAIL (-0.30, 0.10) — Poor upfront disclosure.",
       "A customer went viral after sharing a $323 bill for a bridal manicure in NYC. While the salon's pricing was listed online, the stacking of individual technical fees led to a massive gap between expectation and reality.",
       "The Bright Side:\nThis viral moment highlights the need for service businesses to provide clear, upfront, itemized estimates for complex, multi-step custom requests before starting the work.",
       "The Breakdown & Plane Error:\nThe customer mistakes a logical pricing structure (WHAT) for personal extortion (WHO). While the stacked fees are incredibly high, they were technically listed, making it a transparency issue rather than a scam.",
       "Social Physics Analysis:\nFriction arises when upfront transparency is replaced by post-hoc justification. By failing to explicitly warn the customer about stacked fees during the consultation, the salon created an avoidable trust deficit.",
-      "The Trajectory: The Path of Revelation into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Clearer communication resolves the systemic friction.",
+      "The Trajectory: The Path of Reckoning into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Clearer communication resolves the systemic friction.",
       "The Unavoidable Truth: Custom beauty services in major cities are luxury items with complex stacked pricing.\nThe Unavoidable Lie: The salon intentionally scammed the customer with completely unlisted fees.",
       "Alethekanon:\nThis is a classic transactional friction. The salon relied on passive disclosure (website listings) rather than active, upfront communication, leading to an inevitable expectation mismatch.",
       "Awwthekanon:\nGetting ready for your wedding should be filled with joy, not stressful surprises. A little extra kindness and a clear conversation at the start of the appointment could have saved so much heartache.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Katrina Schollenberger Claim",
@@ -283,6 +345,7 @@
         "sub_psi": 0.0,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Reckoning into Grace"
   }
 ]

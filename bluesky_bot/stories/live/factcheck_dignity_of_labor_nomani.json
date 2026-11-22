@@ -5,22 +5,22 @@
     "subject": "My father taught me the dignity of labor: We ‘get to’ live, work and love",
     "link": "https://www.foxnews.com/opinion/father-taught-me-dignity-labor-get-live-work-love",
     "target_url": "",
-    "claim_u": 0.95,
-    "claim_psi": 0.85,
-    "real_u": 0.95,
-    "real_psi": 0.85,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A daughter's moving tribute to her late father reveals the quiet, invisible labor that builds the foundation of our independence.\nEvidence: Quiet service, Personal grief, Intergenerational gratitude\n#Aletheia #LaborDay #FamilyValues",
-      "The author reflects on her father's life, realizing that her strength and independence as a feminist journalist were quietly enabled by his devoted, supportive patriarchy and daily acts of service.\nStated Judgement: (+0.95, +0.85) — Greater Good",
-      "The narrative is a deeply authentic, low-strain reconciliation of personal history, honoring the invisible caregiving that sustains families and communities without seeking external validation.\nResulting Judgement: (+0.95, +0.85) — Greater Good",
-      "Verdict: PASS — Awakening into Grace.\nA beautiful, honest exploration of familial love and the dignity of quiet labor, aligning stated ideals with lived reality.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "The author reflects on her father's life, realizing that her strength and independence as a feminist journalist were quietly enabled by his devoted, supportive patriarchy and daily acts of service.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The narrative is a deeply authentic, low-strain reconciliation of personal history, honoring the invisible caregiving that sustains families and communities without seeking external validation.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nA beautiful, honest exploration of familial love and the dignity of quiet labor, aligning stated ideals with lived reality.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Asra Nomani's Reflection: PASS (0.95, 0.85) — Honest reconciliation of family and labor.\n- Zafar Nomani's Legacy: PASS (0.96, 0.88) — Exemplified genuine dignity of labor.",
       "Following her father's passing, journalist Asra Nomani reflects on his life, his lessons on the dignity of labor, and how his quiet support enabled her own independent career.",
       "The Bright Side:\nEven in deep grief, the recognition of a parent's quiet sacrifices can heal old ideological divides and foster profound gratitude.",
       "The Breakdown & Plane Error:\nThe narrative avoids any plane errors by grounding its philosophical claims about labor directly in concrete, lived physical experiences and historical memories.",
       "Social Physics Analysis:\nThe author executes a Smart Altruistic Maneuver, using transparency and deep empathy to integrate her past resistance with a mature appreciation of her father's quiet empowerment, resolving personal strain.",
-      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of memory and gratitude creates a stable, low-strain state.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of memory and gratitude creates a stable, low-strain state.",
       "The Unavoidable Truth: Quiet, unpaid caregiving is the essential foundation of all public achievement.\n\nThe Unavoidable Lie: Independence is achieved solely through individual resistance without any external support.",
       "Alethekanon:\nA rare, high-fidelity narrative that honors the systemic interdependence of family structures, demonstrating how quiet empowerment resolves ideological friction.",
       "Awwthekanon:\nThis is so beautiful. It reminds us that the hands that quietly wash the cars, weed the gardens, and hold our hands in hospital rooms are the ones that truly carry the weight of the world. Love is the ultimate labor.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Asra Nomani's Reflection",
@@ -211,6 +273,7 @@
         "name": "Sajida Nomani",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -7,14 +7,14 @@
     "target_url": "https://bsky.app/profile/cscv-bot.bsky.social/post/3mwsasgzsza2w",
     "claim_u": 0.9,
     "claim_psi": 0.8,
-    "real_u": 0.85,
-    "real_psi": 0.75,
+    "real_u": 0.9,
+    "real_psi": 0.8,
     "mode": "root",
     "posts": [
       "New generative pipeline extends video diffusion models to create 4K stereoscopic 360-degree immersive video content.\nEvidence: ArXiv preprint, epipolar geometry, video diffusion\n#Aletheia #AI #ComputerVision",
-      "EPIC uses a zero-shot generative pipeline with an epipolar-aware image matching metric to generate high-resolution 360-degree stereo video.\nStated Judgement: (+0.9, +0.8) — Good Preference",
-      "The method successfully leverages direct preference optimization and geometric metrics to maintain temporal and stereo consistency in immersive formats.\nResulting Judgement: (+0.85, +0.75) — Grace",
-      "Verdict: PASS — The Path of Grace.\nInnovative geometric constraints successfully resolve consistency issues in immersive generative video.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "EPIC uses a zero-shot generative pipeline with an epipolar-aware image matching metric to generate high-resolution 360-degree stereo video.\nStated Judgement: (+0.90, +0.80) — Greater Good",
+      "The method successfully leverages direct preference optimization and geometric metrics to maintain temporal and stereo consistency in immersive formats.\nResulting Judgement: (+0.90, +0.80) — Greater Good",
+      "Verdict: PASS — Grace.\nInnovative geometric constraints successfully resolve consistency issues in immersive generative video.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Generative Pipeline: PASS (0.9, 0.8) — Extends diffusion models.\n- Geometric Consistency: PASS (0.8, 0.7) — Ensures stable immersive viewing.",
       "Researchers introduced EPIC, a zero-shot generative pipeline enabling 4K stereoscopic 360-degree video generation via epipolar-consistent preference optimization.",
       "The Bright Side:\nSolving stereo and temporal consistency opens doors for scalable immersive content creation in virtual reality.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Generative Pipeline",
@@ -139,6 +201,7 @@
         "name": "arXiv",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

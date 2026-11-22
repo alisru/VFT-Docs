@@ -5,22 +5,22 @@
     "subject": "Trump administration proposes six-figure price tag for new H-1B visas",
     "link": "https://www.foxnews.com/politics/trump-administration-proposes-six-figure-price-tag-new-h-1b-visas",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.88,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.95,
+    "real_psi": -0.91,
     "mode": "root",
     "posts": [
       "DHS proposes making a permanent $103,265 fee for cap-subject H-1B visas to cover administrative costs.\nEvidence: cost-recovery pretext, protectionist barrier, labor market restriction\n#Aletheia #Immigration #Tech 🌐",
-      "The administration argues the steep six-figure fee covers federal agency costs and protects domestic workers from cheap foreign labor replacement.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "In reality, the prohibitive fee functions as an exclusionary protectionist barrier that heavily disrupts tech, research, and education sectors under administrative guise.\nResulting Judgement: (-0.85, -0.88) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Using administrative cost-recovery as a pretext for exclusionary labor barriers conceals protectionist engineering.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
+      "The administration argues the steep six-figure fee covers federal agency costs and protects domestic workers from cheap foreign labor replacement.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the prohibitive fee functions as an exclusionary protectionist barrier that heavily disrupts tech, research, and education sectors under administrative guise.\nResulting Judgement: (-0.95, -0.91) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
       "Sub-Audits Breakdown:\n- DHS Policy: FAIL (-0.85, -0.88) — Pretext masks exclusion.\n- Economic Impact: FAIL (-0.80, -0.85) — Disrupts skilled talent pools.",
       "The Department of Homeland Security proposed codifying a $103,265 H-1B visa fee after federal courts blocked its previous temporary implementation.",
       "The Bright Side:\nHighlighting the financial burden on federal immigration processing could prompt overdue legislative reform of the statutory cap system.",
       "The Breakdown & Plane Error:\nConfuses WHAT (administrative cost recovery) with WHO (exclusionary labor protection). It is a structural bait-and-switch framing protectionism as bookkeeping.",
       "Social Physics Analysis:\nBy imposing an insurmountable financial barrier under the guise of administrative funding, the policy suppresses skilled labor access while projecting fiscal responsibility.",
-      "The Trajectory: The Path of Deception. When you map the gap between stated bureaucratic cost-recovery and ground-level exclusion, it plots a direct trajectory toward Deception.",
+      "The Trajectory: The Path of Fall into Destruction.",
       "The Unavoidable Truth: Prohibitive fees effectively block foreign talent regardless of administrative framing.\n\nThe Unavoidable Lie: The six-figure charge is purely standard bureaucratic bookkeeping.",
       "Alethekanon:\nFraming an exclusionary economic barrier as neutral administrative cost-recovery is a transparent structural inversion that undermines foundational market stability.",
       "Awwthekanon:\nIt is heartbreaking to watch skilled researchers and innovators caught in political crossfire, unable to contribute their gifts to communities that desperately need them.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Department of Homeland Security Policy",
@@ -276,6 +338,7 @@
         "name": "Trump Administration",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

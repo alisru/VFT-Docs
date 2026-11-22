@@ -5,22 +5,22 @@
     "subject": "Silent Kaitlan Collins skips her own show: Mystery as CNN star off air after Trump's 'illegal' ban from White House",
     "link": "https://www.dailymail.com/media/article-16143719/Kaitlan-Collins-missing-Trump-ban-CNN.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.85,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "When a White House ban on journalists triggers prime-time mystery, press freedom takes center stage.\nEvidence: White House press ban, Kaitlan Collins absence, CNN pushback\n#Aletheia #USPol",
-      "CNN reports that President Trump's sweeping ban on major news outlets is an unconstitutional assault on free speech and independent journalism.\nStated Judgement: (+0.5, 0.0) — Conditional Good",
-      "The administration weaponizes media access bans to sideline critical coverage, while networks sensationalize personnel absences for ratings.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nRetaliatory press bans and sensationalized coverage amplify partisan theater over democratic transparency.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
+      "CNN reports that President Trump's sweeping ban on major news outlets is an unconstitutional assault on free speech and independent journalism.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The administration weaponizes media access bans to sideline critical coverage, while networks sensationalize personnel absences for ratings.\nResulting Judgement: (-0.85, +1.00) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nRetaliatory press bans and sensationalized coverage amplify partisan theater over democratic transparency.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
       "- White House Press Ban: FAIL (-0.8, -0.9) — Retaliatory exclusion of critical outlets.\n- CNN Coverage: COND (0.2, -0.3) — Mixes valid pushback with ratings theater.",
       "President Trump banned CNN, MS NOW, and Politico from the White House, prompting public outcry and intense media focus on correspondent absences.",
       "The Bright Side:\nPublic scrutiny forces institutions to openly defend constitutional press protections.",
       "The Breakdown & Plane Error:\nConfusing political retaliation (WHO/WHY) with constitutional collapse (WHAT), masking partisan posturing as martyrdom.",
       "Social Physics Analysis:\nThe administration runs a Smart Selfish maneuver by manufacturing grievances against critical press to control the narrative, while networks perform outrage to capture engagement.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Friction between partisan actors breeds systemic distrust.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Friction between partisan actors breeds systemic distrust.",
       "The Unavoidable Truth: Retaliatory press bans undermine democratic accountability.\n\nThe Unavoidable Lie: Cable news networks are purely motivated by constitutional defense.",
       "Alethekanon:\nPower hides behind institutional retaliation while media capitalizes on the spectacle. 🌐",
       "Awwthekanon:\nIt is painful to watch the fundamental right to free expression get weaponized as a pawn in high-stakes political theater, leaving citizens caught in the crossfire of distrust.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "White House Press Ban",
@@ -210,6 +272,7 @@
         "name": "CNN",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

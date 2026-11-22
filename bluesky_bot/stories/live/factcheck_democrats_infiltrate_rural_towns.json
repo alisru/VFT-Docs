@@ -5,22 +5,22 @@
     "subject": "Democrats Openly Declare Their Plans To Infiltrate Rural American Towns",
     "link": "https://thefederalist.com/2026/09/02/democrats-openly-declare-their-plans-to-infiltrate-rural-american-towns/?utm_source=rss&utm_medium=rss&utm_campaign=democrats-openly-declare-their-plans-to-infiltrate-rural-american-towns",
     "target_url": "",
-    "claim_u": -0.8,
-    "claim_psi": -0.8,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "claim_u": -1.0,
+    "claim_psi": -1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Standard political outreach is framed as a hostile Marxist invasion to stoke rural paranoia.\n\nDemocrats Openly Declare Their Plans To Infiltrate Rural American Towns\nEvidence: political outreach, hostile invasion, partisan outrage\n#Aletheia #USPol #Elections",
-      "The article claims that Democratic elites despise rural voters and are openly executing a coordinated plan to \"infiltrate\" and \"invade\" rural towns to render them politically irrelevant, citing a local coffee shop dispute in Idaho.\nStated Judgement: (-0.80, -0.80) — Greater Evil",
-      "In reality, political parties regularly engage in rural outreach. The article weaponizes a private business dispute and standard campaign organizing, framing them as a hostile conspiracy to stoke fear and division.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
-      "Verdict: FAIL — Reckoning into Destruction. The article uses militaristic framing to demonize standard political participation and local business decisions.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 0)",
+      "The article claims that Democratic elites despise rural voters and are openly executing a coordinated plan to \"infiltrate\" and \"invade\" rural towns to render them politically irrelevant, citing a local coffee shop dispute in Idaho.\nStated Judgement: (-1.00, -1.00) — Greater Evil",
+      "In reality, political parties regularly engage in rural outreach. The article weaponizes a private business dispute and standard campaign organizing, framing them as a hostile conspiracy to stoke fear and division.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 0)",
       "- The Federalist: FAIL (-0.80, -0.85) — Uses conspiratorial framing to stoke fear.\n- Daily Caller: FAIL (-0.70, -0.75) — Uses personal attacks and mockery.\n- Fox News: COND (-0.40, -0.50) — Reports on Jewish Democratic opposition but oversimplifies.",
       "The media cluster focuses on Democratic campaigns and outreach efforts, framing them as \"weird,\" \"leftist,\" or a hostile \"infiltration\" of conservative areas, highlighting deep partisan polarization.",
       "The Bright Side:\nHighlighting the tension between local business owners and political groups can spark important conversations about free speech and private property rights.",
       "The Breakdown & Plane Error:\nThe article commits a WHO vs WHAT error. It treats standard political organizing (WHAT) as a hostile, coordinated conspiracy by \"elites\" (WHO) to destroy rural communities, replacing civic engagement with a narrative of invasion.",
       "Social Physics Analysis:\nBy projecting corrupt, hostile motives onto standard political outreach, the author creates a pretext for exclusion. This high-strain narrative maintains conflict by presenting normal civic participation as an existential threat.",
-      "The Trajectory: Reckoning into Destruction.\nWhen you map the gap between protecting rural communities and the actual effect of sowing paranoia, it plots a direct trajectory toward systemic polarization and civic decay.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between protecting rural communities and the actual effect of sowing paranoia, it plots a direct trajectory toward systemic polarization and civic decay.",
       "The Unavoidable Truth: Political parties must organize in all areas to win elections.\n\nThe Unavoidable Lie: Standard campaign outreach is a coordinated Marxist invasion.",
       "Alethekanon:\nMilitarizing civic language by calling outreach \"infiltration\" is a deliberate strategy to destroy the middle ground, ensuring that local communities view their neighbors as enemy combatants.",
       "Awwthekanon:\nEvery community deserves to be heard and respected, not used as a battleground for political fear-mongering. True strength lies in sitting down together, listening, and finding common ground.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "The Federalist Editorial",
@@ -228,6 +290,7 @@
         "name": "Fox News",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

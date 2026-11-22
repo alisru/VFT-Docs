@@ -5,22 +5,22 @@
     "subject": "Abraham Accords Progress: Israel and Morocco Exchange Ambassadors",
     "link": "https://www.breitbart.com/middle-east/2026/09/17/abraham-accords-progress-israel-morocco-exchange-ambassadors/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.8,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.88,
+    "real_psi": 0.78,
     "mode": "root",
     "posts": [
       "Diplomatic ties solidify as Israel and Morocco swap full embassies in New York.\nEvidence: Full embassies opened, Direct flights restored, Western Sahara recognized\n#Aletheia #MiddleEast #Diplomacy",
-      "Israel and Morocco agreed to exchange ambassadors and open full embassies, deepening the historic Abraham Accords brokered in 2020.\nStated Judgement: (+0.8, +0.8) — Grace",
-      "While bilateral ties officially upgrade with embassies and trade, regional flashpoints and Palestinian sovereignty demands remain unresolved.\nResulting Judgement: (+0.6, +0.4) — Redemption",
-      "Verdict: PASS — The Path of Redemption. Genuine diplomatic normalization advances regional integration, though underlying territorial and proxy conflicts persist.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
+      "Israel and Morocco agreed to exchange ambassadors and open full embassies, deepening the historic Abraham Accords brokered in 2020.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While bilateral ties officially upgrade with embassies and trade, regional flashpoints and Palestinian sovereignty demands remain unresolved.\nResulting Judgement: (+0.88, +0.78) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
       "- Diplomatic Upgrade: PASS (+0.8, +0.6) — Full embassies and direct flights established.\n- Regional Stability: COND (+0.4, +0.2) — Progress tempered by Houthi and Iran tensions.",
       "Israel and Morocco agreed to exchange ambassadors and open full embassies during a UN meeting with U.S. Ambassador Mike Waltz, marking six years of the Abraham Accords.",
       "The Poison:\nNormalizing relations without addressing Palestinian statehood risks cementing bilateral pacts while leaving core regional grievances festering.",
       "The Breakdown & Plane Error:\nThe report conflates diplomatic ceremony (WHAT) with total regional peace (WHO), missing how geopolitical realignments bypass core sovereignty disputes.",
       "Social Physics Analysis:\nActors deploy transparent coalition-building (Smart Altruistic Loop) to lock in economic and security gains, though underlying exclusionary pretexts persist around regional stalemates.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Positive diplomatic friction resolves regional isolation.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Positive diplomatic friction resolves regional isolation.",
       "The Unavoidable Truth: Full diplomatic ties between Israel and Morocco expand economic cooperation and regional integration.\n\nThe Unavoidable Lie: Bilateral normalization instantly resolves wider Middle Eastern conflicts and Palestinian statehood demands.",
       "Alethekanon:\nFormal diplomatic recognition creates tangible economic bridges, but structural regional peace requires reconciling excluded stakeholders.",
       "Awwthekanon:\nEvery bridge built between nations offers a quiet hope for mothers and children who pray for peace across borders. May this partnership foster genuine mutual understanding rather than just political leverage.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Diplomatic Upgrade",
@@ -223,6 +285,7 @@
         "name": "Gideon Sa'ar",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

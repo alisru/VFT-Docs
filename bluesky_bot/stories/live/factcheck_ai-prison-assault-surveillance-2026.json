@@ -5,22 +5,22 @@
     "subject": "Cameras only watch prison assaults. AI can actually prevent them",
     "link": "https://www.washingtonexaminer.com/op-eds/4694517/ai-prison-assault-surveillance-prea-prevention/",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.8,
-    "real_u": 0.85,
-    "real_psi": 0.82,
+    "claim_u": 0.76,
+    "claim_psi": 0.84,
+    "real_u": 0.76,
+    "real_psi": 0.84,
     "mode": "root",
     "posts": [
       "Prisons rely on passive cameras that only record assaults after the fact, but new AI vision tools aim to stop violence before it starts.\nEvidence: Proactive AI intervention, Chronic staff shortages, Enhanced PREA compliance\n🌐 #Tech #CorrectionalReform",
-      "The claim asserts that deploying agentic AI video analytics in prisons moves security from reactive review to real-time assault prevention.\nStated Judgement: (+0.9, +0.8) — Greater Good",
-      "In practice, Verus Vision AI provides live behavioral analytics that empower stretched-thin staff to intervene before tragedies occur.\nResulting Judgement: (+0.85, +0.82) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Proactive AI surveillance directly bridges the gap between zero-tolerance prison policies and operational staff limits.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "The claim asserts that deploying agentic AI video analytics in prisons moves security from reactive review to real-time assault prevention.\nStated Judgement: (+0.76, +0.84) — Greater Good",
+      "In practice, Verus Vision AI provides live behavioral analytics that empower stretched-thin staff to intervene before tragedies occur.\nResulting Judgement: (+0.76, +0.84) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- AI Safety Tech: PASS (+0.9, +0.8) — Real-time analytics effectively spot anomalies.\n- PREA Enhancement: PASS (+0.8, +0.8) — Strengthens accountability and staff protection.",
       "Over two decades after the Prison Rape Elimination Act, correctional facilities face severe staffing shortages, making real-time technological force multipliers essential.",
       "The Bright Side:\nLeveraging computer vision to protect both inmates and staff transforms passive archiving into active harm reduction.",
       "The Plane Error & Switch:\nThe evaluation successfully aligns the physical tool (WHAT) with the metaphysical goal of zero-tolerance safety (WHO), avoiding any bait-and-switch.",
       "Social Physics Analysis:\nBy replacing manual video scrubbing with transparent, real-time alerts, the technology reduces institutional friction and empowers officers to act before conflict escalates.",
-      "The Trajectory: The Path of Grace. When you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. u = 0.85, psi = 0.82.",
+      "The Trajectory: The Path of Grace.",
       "The Unavoidable Truth: Real-time video intelligence can intervene in prison violence before human guards notice.\nThe Unavoidable Lie: Passive cameras alone are sufficient for maintaining a zero-tolerance standard.",
       "Alethekanon:\nTechnology ceases to be mere surveillance when it actively preserves human dignity and safety behind bars 🌐.",
       "Awwthekanon:\nEvery person inside our correctional system deserves safety, and giving officers the right tools to prevent harm is a profound act of care.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.45,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 1.45,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.45,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.15,
+        "O": 1.45,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.45,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 1.45,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.45,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.15,
+        "O": 1.45,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "AI Safety Tech",
@@ -275,6 +337,7 @@
         "name": "United States Congress",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

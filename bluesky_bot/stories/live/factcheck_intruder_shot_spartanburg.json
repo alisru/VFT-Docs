@@ -6,21 +6,21 @@
     "link": "https://www.breitbart.com/2nd-amendment/2026/08/30/alleged-intruder-dead-after-being-shot-multiple-times-by-homeowner/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": -0.2,
-    "real_u": 0.85,
-    "real_psi": -0.15,
+    "claim_psi": 1.0,
+    "real_u": 0.84,
+    "real_psi": 0.78,
     "mode": "root",
     "posts": [
       "A fatal home invasion in South Carolina ends in gunfire as a homeowner defends his residence.\n\nAlleged Intruder Dead After Being Shot Multiple Times\nEvidence: Self-defense, loss of life, lawful protection\n#Aletheia #2A #SouthCarolina",
-      "Reports state a homeowner shot and killed an unknown intruder who entered his Spartanburg County home at 2 a.m., protecting himself and other residents.\n\nStated Judgement: (+1.0, -0.20) — Lesser Good",
-      "Deputies confirmed 19-year-old Xavier Felix Rivera-Goucher was shot and killed inside the home. Two other residents sustained unspecified injuries during the encounter.\n\nResulting Judgement: (+0.85, -0.15) — Lesser Good",
-      "Verdict: PASS — Awakening into Redemption.\nThe physical evidence and police investigation support the claim of lawful self-defense against an active home invasion.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
+      "Reports state a homeowner shot and killed an unknown intruder who entered his Spartanburg County home at 2 a.m., protecting himself and other residents.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Deputies confirmed 19-year-old Xavier Felix Rivera-Goucher was shot and killed inside the home. Two other residents sustained unspecified injuries during the encounter.\n\nResulting Judgement: (+0.84, +0.78) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe physical evidence and police investigation support the claim of lawful self-defense against an active home invasion.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
       "Sub-Audits Breakdown:\n- Homeowner Action: PASS (0.95, -0.10) — Lawful defense of life and property.\n- Spartanburg Sheriff: PASS (0.90, -0.15) — Transparent and timely investigation.",
       "A 19-year-old intruder with no prior relationship to the residents was shot and killed after entering a Spartanburg County home in the middle of the night.",
       "The Poison:\nWhile the shooting was legally justified, two other residents in the home sustained injuries, highlighting the chaotic and dangerous nature of close-quarters home defense.",
       "The Breakdown & Plane Error:\nNo major plane error. The physical reality of a forced entry (WHERE) aligns perfectly with the legal right to self-defense (WHY) under South Carolina law.",
       "Social Physics Analysis:\nThe homeowner acted to resolve an immediate, high-strain threat to life. By neutralizing the intruder, the system returned to a stable, albeit tragic, equilibrium, minimizing further harm to the residents.",
-      "The Trajectory: The Path of Awakening into Redemption.\nThe alignment between the threat and the defensive response plots a trajectory toward Lesser Good, preserving innocent life.",
+      "The Trajectory: The Path of Small Fall from Grace.\nThe alignment between the threat and the defensive response plots a trajectory toward Lesser Good, preserving innocent life.",
       "The Unavoidable Truth: A homeowner has the legal and moral right to defend their life and property.\n\nThe Unavoidable Lie: Home defense scenarios are clean, risk-free operations for the residents.",
       "Alethekanon:\nThe Castle Doctrine exists because immediate physical threats require immediate resolution. The data in this case confirms a textbook application of defensive force.",
       "Awwthekanon:\nIt is terrifying to have your home invaded at night. While we are glad the family survived, it is heartbreaking that a 19-year-old life ended in such a violent way.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.85,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.15,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.05,
+        "O": 0.95,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.05,
+        "O": 0.95,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Homeowner Action",
@@ -278,6 +340,7 @@
         "name": "Spartanburg County Sheriff's Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

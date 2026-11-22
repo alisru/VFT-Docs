@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/toppnews.bsky.social/post/3mv7oyos4k52l",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "real_u": -0.9,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "A massive data center in Bangkok was caught illegally storing 200,000 liters of diesel oil, exposing the toxic reality behind \"clean\" digital infrastructure. #Aletheia #Thailand #Tech 🌐",
-      "Tech developers claim data centers are clean, high-tech investments driving Thailand's digital future with minimal local footprint. Stated Judgement: (+1.0, +1.0) — Greater Good",
-      "The facility operated as an unregistered heavy industrial hazard, dumping noise, fumes, and 200,000 liters of unpermitted fuel into a residential market area. Resulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Destruction. The project externalized massive environmental and health hazards onto local residents while hiding behind regulatory loopholes.\n\nIntegrity: Baseless Lies (Hypocrisy: 120.0, z: 0)",
+      "Tech developers claim data centers are clean, high-tech investments driving Thailand's digital future with minimal local footprint. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "The facility operated as an unregistered heavy industrial hazard, dumping noise, fumes, and 200,000 liters of unpermitted fuel into a residential market area. Resulting Judgement: (-0.90, -0.85) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Baseless Lies (Hypocrisy: 120.0, z: 0)",
       "- Tech Operators: FAIL (-1.0, -1.0) — Exploited loopholes to hide heavy hazards.\n- Regulatory Oversight: FAIL (-0.8, -0.7) — Allowed industrial plants to pose as warehouses.",
       "A Bangkok data center bypassed environmental reviews by registering as a warehouse, storing massive amounts of fuel for backup generators right next to a market and hospital.",
       "The Poison:\nWhile the digital economy grows, local communities bear the physical costs of noise, air pollution, and water depletion without consent.",
       "The Breakdown & Plane Error:\nThe Plane Error is Metaphysical: the stated beneficiary is the digital public, but the actual beneficiary is the operator hoarding profits while dumping toxic externalities on neighbors.",
       "Social Physics Analysis:\nThe operators executed a Smart Selfish Maneuver, using the pretext of \"digital progress\" to mask a high-risk industrial operation, while projecting a clean image to evade environmental laws.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The physical strain of unmitigated pollution collapses local trust.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The physical strain of unmitigated pollution collapses local trust.",
       "The Unavoidable Truth: Data centers are heavy industrial factories, not clean virtual clouds.\nThe Unavoidable Lie: Digital infrastructure has no physical or environmental footprint.",
       "Alethekanon:\nThe cloud is made of steel, diesel, and noise; pretending it is ethereal is a deliberate strategy to bypass the laws governing physical factories.",
       "Awwthekanon:\nIt breaks my heart to see elderly stallholders like Yui living in fear of toxic leaks just so the world can have faster data processing.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Baseless Lies",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tech Operators",
@@ -157,6 +219,7 @@
         "name": "Thailand",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

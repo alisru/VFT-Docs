@@ -14,7 +14,7 @@
       "Embracing vulnerability over toxic workaholism.\n\nBack on track: Matt Haig on finding acceptance\nEvidence: personal trauma, authentic reflection, collective healing 🌐\n#MentalHealth #MattHaig",
       "Matt Haig reflects on turning 50, overcoming severe agoraphobia and depression, and how true acceptance replaces toxic regret.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "Haig's open sharing of his mental health journey dismantles shame, offering genuine solidarity and emotional liberation to readers.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nRadical personal honesty transforms private suffering into public healing and enduring wisdom.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nRadical personal honesty transforms private suffering into public healing and enduring wisdom.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Matt Haig Narrative: PASS (1.0, 1.0) — Unflinching vulnerability about past breakdowns fosters deep empathetic connection.\n- Psychological Authenticity: PASS (1.0, 1.0) — Rejects superficial self-help tropes in favor of hard-won emotional maturity.",
       "Best-selling author Matt Haig discusses his new book 'The Midnight Train', exploring how aging, therapy, and letting go of regret bring peace after decades of mental health battles.",
       "The Bright Side:\nTurning personal agony into universally accessible art proves that shared vulnerability heals cultural isolation.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Matt Haig Narrative",
@@ -262,6 +324,7 @@
         "name": "Andrea Haig",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

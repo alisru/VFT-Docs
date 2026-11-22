@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
+    "real_u": -0.85,
     "real_psi": -0.9,
     "mode": "root",
     "posts": [
       "Los Angeles's luxury 'mansion' tax was sold as a progressive fix for affordable housing, but UCLA studies reveal it crippled home construction.\nEvidence: intended housing funds, 9000 lost units, builder pullbacks\n#Aletheia #Housing #USPol",
-      "Proponents claimed taxing high-end property sales would easily fund public housing without harming overall real estate supply or economic growth.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "In reality, the mansion tax choked luxury development and reduced overall home-construction permits by thousands, driving builders into surrounding suburbs.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nTop-down punitive taxation was marketed as altruistic aid, but predictable supply destruction hurt the very renters it aimed to help.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, Uncertainty z: 4)",
+      "Proponents claimed taxing high-end property sales would easily fund public housing without harming overall real estate supply or economic growth.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "In reality, the mansion tax choked luxury development and reduced overall home-construction permits by thousands, driving builders into surrounding suburbs.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nTop-down punitive taxation was marketed as altruistic aid, but predictable supply destruction hurt the very renters it aimed to help.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, Uncertainty z: 4)",
       "Sub-Audits Breakdown:\n- Tax Policy Framing: FAIL (-0.8, -0.9) — Masks supply destruction as equity.\n- Economic Reality: FAIL (-0.9, -0.9) — 9,000 lost homes and fleeing builders.",
       "Los Angeles enacted a transfer tax on high-value property sales to fund affordable housing, but researchers at UCLA found it triggered a severe chilling effect on new residential construction.",
       "The Poison:\nPunitive market interventions dressed up as compassion often destroy the exact resources they seek to redistribute, worsening housing scarcity.",
       "The Breakdown & Plane Error:\nConfusing a moral wish (WHAT we want to fund) with a physical reality (HOW supply curves respond to predatory taxes).",
       "Social Physics Analysis:\nPoliticians run a smart selfish maneuver by using a popular class grievance as a pretext to extract revenue, ignoring basic market physics and displacing the resulting shortage onto everyday buyers.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Punitive extraction creates structural scarcity under the guise of compassion.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Punitive extraction creates structural scarcity under the guise of compassion.",
       "The Unavoidable Truth: Punitive luxury taxes can severely depress overall housing supply and drive development out of the city.\n\nThe Unavoidable Lie: Slapping heavy fees on high-end sales magically generates public funds without any negative side effects.",
       "Alethekanon:\nProponents traded economic reality for moral signaling, weaponizing envy while ignoring the predictable collapse of home construction.",
       "Awwthekanon:\nIt breaks my heart seeing families priced out because well-meaning policies end up choking off the very homes people desperately need.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tax Policy Framing",
@@ -163,6 +225,7 @@
       "Aletheia",
       "Housing",
       "USPol"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

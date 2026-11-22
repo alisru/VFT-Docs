@@ -5,22 +5,22 @@
     "subject": "Top JPMorganChase exec warns regulatory proposal could squeeze credit for millions of small businesses",
     "link": "https://www.foxnews.com/politics/top-jpmorgan-chase-exec-warns-regulatory-proposal-could-squeeze-credit-millions-small-businesses",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "claim_u": 0.76,
+    "claim_psi": 0.87,
+    "real_u": -0.13,
+    "real_psi": 0.29,
     "mode": "root",
     "posts": [
       "Mega-banks are using Main Street as a human shield to fight capital rules. When Wall Street lobbies against safety regulations, they always claim small businesses will suffer first.\n\nJPMorgan Basel III\nEvidence: small business shield, GSIB surcharge, bank profits\n#Aletheia #Finance",
-      "JPMorganChase warns that proposed Basel III capital rules will hurt small businesses by raising borrowing costs and reducing access to credit, framing their opposition as a defense of Main Street.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, the bank is lobbying to reduce its own GSIB surcharge—a formula targeting trading and wholesale funding risks of mega-banks, which has little to do with basic small business lending.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Revelation into Destruction. The warning uses small businesses as a rhetorical shield to protect mega-bank leverage and trading profits from systemic stability rules.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 4)",
+      "JPMorganChase warns that proposed Basel III capital rules will hurt small businesses by raising borrowing costs and reducing access to credit, framing their opposition as a defense of Main Street.\nStated Judgement: (+0.76, +0.87) — Greater Good",
+      "In reality, the bank is lobbying to reduce its own GSIB surcharge—a formula targeting trading and wholesale funding risks of mega-banks, which has little to do with basic small business lending.\nResulting Judgement: (-0.13, +0.29) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 4)",
       "Sub-Audits Breakdown:\n- JPMorgan Chase: FAIL (-1.0, -1.0) — Used small businesses as a pretext to fight capital rules.\n- Basel III Endgame: PASS (0.8, 0.5) — Designed to prevent taxpayer bailouts.",
       "JPMorgan Chase executive Stevie Baron issued a memo warning that federal regulators' Basel III Endgame capital rules would penalize everyday lending, specifically targeting the GSIB surcharge calculation.",
       "The Poison:\nWhile capital rules do have compliance costs, framing a reduction in mega-bank trading surcharges as a direct savior of small business credit is highly misleading.",
       "The Breakdown & Plane Error:\nThis is a WHO vs WHAT error. The bank claims the rules target small business credit (WHO), but the regulations actually target systemic trading and wholesale funding risks (WHAT) of global systemically important banks.",
       "Social Physics Analysis:\nBy projecting the burden of regulatory compliance onto small businesses, the bank creates a pretextual narrative. This allows them to lobby for their own trading flexibility while appearing to champion the public interest.",
-      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Reducing capital requirements increases systemic risk for private gain.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Reducing capital requirements increases systemic risk for private gain.",
       "The Unavoidable Truth: Mega-banks want to minimize capital requirements to maximize trading leverage.\nThe Unavoidable Lie: Basel III capital rules are designed to target and destroy small business lending.",
       "Alethekanon:\nWall Street's favorite tactic is using the 'small business' shield to protect complex trading operations from necessary oversight.",
       "Awwthekanon:\nIt is disheartening to see the dreams of small business owners used as leverage in a high-stakes corporate lobbying game.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.9,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "JPMorgan Chase",
@@ -283,6 +345,7 @@
         "name": "Federal Reserve",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

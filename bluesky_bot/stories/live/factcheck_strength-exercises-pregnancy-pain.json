@@ -14,7 +14,7 @@
       "Targeted strength work can ease the physical toll of carrying a child, offering practical relief from common aches.\n\n5 exercises that can prevent (and relieve!) pregnancy pain\nEvidence: expert guidance, practical movement, empowered health\n#Health #Fitness",
       "Experts share five targeted movements like banded walks and glute bridges to build lateral stability and relieve common pregnancy discomforts like sciatica.\nStated Judgement: (+0.81, +1.00) — Good Preference",
       "Physical therapists and trainers deliver actionable, evidence-based movement routines that genuinely empower pregnant individuals to manage changing pressure systems.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nSound physiological advice matches ground-level results, empowering maternal health with transparency.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nSound physiological advice matches ground-level results, empowering maternal health with transparency.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Physical Therapy Guidance: PASS (+1.0, +1.0) — Experts provide safe, accessible exercises grounded in clinical practice.\n- Maternal Health Empowerment: PASS (+1.0, +1.0) — The routine directly reduces physical strain and builds stability.",
       "Navigating pregnancy often brings unexpected physical discomfort due to shifting internal pressure and ligament laxity. NPR outlines five exercises from fitness experts and physical therapists to build core and hip strength, helping mitigate issues like sciatica and pelvic pain.",
       "The Bright Side:\nEquipping expectant mothers with accessible, professional fitness tools fosters bodily autonomy and reduces unnecessary suffering during a demanding life stage.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Physical Therapy Guidance",
@@ -269,6 +331,7 @@
         "name": "Ana Cepin",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

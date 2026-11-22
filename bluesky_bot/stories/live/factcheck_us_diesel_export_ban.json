@@ -5,16 +5,16 @@
     "subject": "Daily on Energy: Europe tries to stave off a US diesel export ban",
     "link": "https://www.washingtonexaminer.com/daily-on-energy/4743476/daily-on-energy-europe-tries-stave-off-diesel-export-ban/",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.75,
-    "real_u": -0.78,
-    "real_psi": -0.65,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.71,
+    "real_psi": -0.81,
     "mode": "root",
     "posts": [
       "A looming energy crisis threatens to freeze transatlantic relations.\n\nDaily on Energy: Europe tries to stave off a US diesel export ban\nEvidence: Domestic Price Relief, Global Supply Shock, Midterm Political Maneuver\n#Aletheia #Energy #USPol 🌐",
-      "The administration claims a potential 90-day diesel export ban is a necessary measure to protect American consumers from rising fuel prices at the pump.\n\nStated Judgement: (+0.85, +0.75) — Greater Good",
-      "In reality, banning exports to Europe—which relies on the US for 50% of its diesel—will spike global prices, strain alliances, and disrupt domestic refining balances, as warned by the Energy Secretary.\n\nResulting Judgement: (-0.78, -0.65) — Greater Evil",
-      "Verdict: FAIL — The Path of Fall into Destruction. The proposed ban sacrifices long-term geopolitical stability and economic reality for short-term domestic political signaling.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 1.63, Uncertainty z: 6)",
+      "The administration claims a potential 90-day diesel export ban is a necessary measure to protect American consumers from rising fuel prices at the pump.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, banning exports to Europe—which relies on the US for 50% of its diesel—will spike global prices, strain alliances, and disrupt domestic refining balances, as warned by the Energy Secretary.\n\nResulting Judgement: (-0.71, -0.81) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 1.63, Uncertainty z: 6)",
       "- US Export Policy: FAIL (-0.78, -0.65) — Sacrifices allies for short-term domestic optics.\n- EU Energy Security: COND (0.15, -0.45) — Vulnerable to external policy shocks.",
       "With Europe facing a tough winter after losing Russian supply, the US is considering a 90-day diesel export ban to lower domestic pump prices before the midterms, sparking panic in Brussels.",
       "The Poison:\nEven if a ban temporarily lowers US prices, the resulting global supply shock will eventually rebound on the US economy through higher import costs and weakened allied economies.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.85,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "US Export Policy",
@@ -289,6 +351,7 @@
         "name": "Chris Wright",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

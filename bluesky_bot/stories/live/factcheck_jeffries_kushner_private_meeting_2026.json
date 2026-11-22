@@ -6,21 +6,21 @@
     "link": "https://www.upi.com/Top_News/US/2026/08/23/ny-donald-trump-hakeem-jeffries-jared-kushner-mike-johnson/9461787513621/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.65,
-    "real_u": 0.18,
-    "real_psi": 0.42,
+    "claim_psi": 1.0,
+    "real_u": 0.15,
+    "real_psi": 0.36,
     "mode": "root",
     "posts": [
       "Private political negotiations spark backchannel dialogue in Washington.\n\nHakeem Jeffries, Jared Kushner met privately\nEvidence: public opposition, quiet dialogue, pragmatic outreach\n#Aletheia #USPol",
-      "House Democratic Leader Hakeem Jeffries met with Trump advisor Jared Kushner to explore common ground, seeking pragmatic solutions to stop political paralysis.\n\nStated Judgement: (+1.00, +0.65) — Lesser Good",
-      "The meeting provides a practical dialogue channel, though bypassing formal House leadership like Speaker Mike Johnson highlights the opaque nature of informal backchannel diplomacy.\n\nResulting Judgement: (+0.18, +0.42) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nInformal cross-party meetings allow pragmatic communication despite partisan public rhetoric, though institutional transparency remains limited.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 2)",
+      "House Democratic Leader Hakeem Jeffries met with Trump advisor Jared Kushner to explore common ground, seeking pragmatic solutions to stop political paralysis.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The meeting provides a practical dialogue channel, though bypassing formal House leadership like Speaker Mike Johnson highlights the opaque nature of informal backchannel diplomacy.\n\nResulting Judgement: (+0.15, +0.36) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nInformal cross-party meetings allow pragmatic communication despite partisan public rhetoric, though institutional transparency remains limited.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 2)",
       "- Hakeem Jeffries Outreach: PASS (+0.32, +0.40) — Pragmatic engagement across parties.\n- Jared Kushner Backchannel: COND (-0.12, +0.38) — Unofficial role bypasses House leadership.",
       "House Democratic Leader Hakeem Jeffries met privately in NYC with Donald Trump's son-in-law Jared Kushner to discuss common ground. House Speaker Mike Johnson stated he was unaware of the discussion.",
       "The Poison:\nRelying on informal family envoys instead of elected leaders can erode formal legislative transparency and leave institutional allies uninformed.",
       "The Breakdown & Plane Error:\nThe error contrasts HOW (formal governance) with WHO (informal advisors). Direct backchannels resolve immediate impasses but risk undermining official channels.",
       "Social Physics Analysis:\nWhen official political channels lock into posturing, actors seek informal backchannels to negotiate. While effective for reducing friction, keeping key stakeholders in the dark creates secondary distrust.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Pragmatic dialogue opens avenues for systemic compromise.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Pragmatic dialogue opens avenues for systemic compromise.",
       "The Unavoidable Truth: Quiet backchannels often accomplish what public grandstanding prevents.\n\nThe Unavoidable Lie: Off-the-record meetings are always fully aligned with public rhetoric.",
       "Alethekanon:\nPragmatic backchannels can break legislative deadlocks, provided informal channels eventually integrate into transparent governance structures.",
       "Awwthekanon:\nIt is comforting to see leaders willing to talk behind closed doors to find common ground when public politics feels so divided.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.35,
+        "O": 0.3,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Hakeem Jeffries Outreach",
@@ -285,6 +347,7 @@
         "name": "Susie Wiles",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "‘Destroying the American way o...",
     "link": "https://www.foxnews.com/politics/destroying-american-way-life-el-sayed-s-political-orbit-complicates-effort-moderate-his-image",
     "target_url": "",
-    "claim_u": -0.6,
-    "claim_psi": -0.4,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.1,
+    "claim_psi": 0.15,
+    "real_u": 0.0,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Fear-mongering in politics vs. cultural integration on the plate. ‘Destroying the American way of life’: El-Sayed’s political orbit. Evidence: National Security Threat, Progressive Policy, Guilt by Association #Aletheia #USPol #Media",
-      "Fox News claims that Abdul El-Sayed's progressive associations reveal a socialist agenda that threatens the American way of life, despite his moderate framing. Stated Judgement: (-0.60, -0.40) — Lesser Evil",
-      "The reality is a standard political attack using guilt-by-association to manufacture fear, contrasted by NPR's coverage of positive Muslim-American cultural integration. Resulting Judgement: (-0.70, -0.80) — Greater Evil",
-      "Verdict: FAIL — Fall into Deception. The political framing relies on manufactured crises and projection to hoard power through division.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 3)",
+      "Fox News claims that Abdul El-Sayed's progressive associations reveal a socialist agenda that threatens the American way of life, despite his moderate framing. Stated Judgement: (+0.10, +0.15) — Greater Good",
+      "The reality is a standard political attack using guilt-by-association to manufacture fear, contrasted by NPR's coverage of positive Muslim-American cultural integration. Resulting Judgement: (+0.00, -0.10) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 3)",
       "Sub-Audits Breakdown:\n- Fox News Framing: FAIL (-0.80, -0.90) — Relies on alarmist guilt-by-association.\n- NPR BBQ Feature: PASS (+0.80, +0.70) — Highlights genuine cultural integration.",
       "As Abdul El-Sayed campaigns for the Senate in Michigan, conservative media frames his progressive ties as an existential threat, while cultural reporting highlights Muslim integration.",
       "The Bright Side:\nDespite the political polarization, grassroots cultural integration—like halal Texas barbecue—continues to build genuine community connections.",
       "The logical error is a category mistake: equating progressive policy associations with an active conspiracy to destroy American life, ignoring actual policy substance.",
       "Social Physics Analysis:\nThe political attack executes a Smart Selfish Maneuver. It manufactures an existential crisis and projects corrupt motives onto the candidate to distract from substantive policy debate and consolidate power.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The reliance on fear-mongering increases social strain.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The reliance on fear-mongering increases social strain.",
       "The Unavoidable Truth: Political campaigns frequently use guilt-by-association to mobilize voters through fear.\nThe Unavoidable Lie: Progressive policy proposals are a literal plot to destroy American civilization.",
       "Alethekanon:\nThe alarmist framing is a classic diversionary tactic, substituting tribal threat-signaling for rigorous policy analysis.",
       "Awwthekanon:\nIt's so heartwarming to see how food can bring people together, showing that we have so much more in common than political headlines want us to believe.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fox News Framing",
@@ -161,6 +223,7 @@
         "sub_psi": 0.7,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

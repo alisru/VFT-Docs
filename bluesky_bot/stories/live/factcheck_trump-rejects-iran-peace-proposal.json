@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.6,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Pope Leo's parade draws massive crowds in Paris.\nEvidence: Stated diplomacy, actual electoral timing, geopolitical escalation\n#Aletheia #Geopolitics",
-      "President Trump confirmed he rejected Iran's seven-day peace proposal to reopen the Strait of Hormuz, deeming terms unacceptable.\nStated Judgement: (+0.5, 0.0) — Conditional Good",
-      "Behind the rejection lies domestic political calculus, with officials signaling plans to resume military strikes after the November midterms.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nDiplomatic overtures are rebuffed not on strategic merit, but to align security policy with domestic electoral timelines.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, z: 3)",
+      "President Trump confirmed he rejected Iran's seven-day peace proposal to reopen the Strait of Hormuz, deeming terms unacceptable.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Behind the rejection lies domestic political calculus, with officials signaling plans to resume military strikes after the November midterms.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nDiplomatic overtures are rebuffed not on strategic merit, but to align security policy with domestic electoral timelines.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, z: 3)",
       "Sub-Audits Breakdown:\n- Washington Examiner: FAIL (-0.7, -0.8) — Frames rejection around rigid terms.\n- Diplomatic Reporting: COND (-0.5, -0.6) — Omiits midterm political timing.",
       "President Trump confirmed rejecting an Iranian proposal to reopen the Strait of Hormuz within seven days in exchange for sanctions relief.",
       "The Poison:\nUsing active military conflict timelines as leverage for domestic electoral cycles rather than pursuing immediate regional stability.",
       "The Breakdown & Plane Error:\nConfusing WHAT (diplomatic terms) with WHO (domestic political beneficiaries). The real driver is electoral timing, not security.",
       "Social Physics Analysis:\nActors deploy a Smart Selfish Maneuver, utilizing manufactured geopolitical standoff as a pretext to project strength while deferring peace for political timing.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated security objectives and actual electoral timing, it plots a direct trajectory toward Destruction. F = -0.8 * A_GE.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated security objectives and actual electoral timing, it plots a direct trajectory toward Destruction. F = -0.8 * A_GE.",
       "The Unavoidable Truth: Peace proposals are frequently subordinated to domestic electoral calendars.\n\nThe Unavoidable Lie: Rejections are purely matters of unyielding security standards.",
       "Alethekanon:\nWhen statecraft is tethered to ballot boxes, diplomacy becomes theater and escalation is timed for maximum political return.",
       "Awwthekanon:\nIt hurts to watch human lives and regional stability treated like bargaining chips in an election year game.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Washington Examiner",
@@ -169,6 +231,7 @@
         "name": "Iran",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

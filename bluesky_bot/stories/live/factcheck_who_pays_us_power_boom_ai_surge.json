@@ -5,22 +5,22 @@
     "subject": "Who pays for US power boom? Blue, red states offer starkly different ways to lower utility bills amid AI surge",
     "link": "https://www.foxnews.com/politics/who-pays-us-power-boom-blue-red-states-offer-starkly-different-ways-lower-utility-bills-amid-ai-surge",
     "target_url": "",
-    "claim_u": 0.75,
-    "claim_psi": 0.5,
-    "real_u": 0.25,
-    "real_psi": -0.35,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.86,
+    "real_psi": 0.93,
     "mode": "root",
     "posts": [
       "As AI data centers strain the power grid, states clash over who should foot the massive bill. 🌐\n\nWho pays for US power boom?\nEvidence: ratepayer protection, corporate subsidies, grid capacity\n#Aletheia #Energy #Tech",
-      "States claim they can protect household utility bills through either strict regulatory mandates (New Jersey) or market-friendly utility deals that promise rate cuts (Indiana).\n\nStated Judgement: (+0.75, +0.50) — Greater Good",
-      "While New Jersey mandates corporate accountability, Indiana's model relies on volatile tech demand. Both face a systemic crisis: public infrastructure is being strained to fuel private AI profits.\n\nResulting Judgement: (+0.25, -0.35) — Lesser Good",
-      "Verdict: CONDITIONAL — Fall into Deception. While states attempt ratepayer protections, the underlying physical strain of AI infrastructure risks socializing long-term grid upgrade costs.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.80, Uncertainty z: 3)",
+      "States claim they can protect household utility bills through either strict regulatory mandates (New Jersey) or market-friendly utility deals that promise rate cuts (Indiana).\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While New Jersey mandates corporate accountability, Indiana's model relies on volatile tech demand. Both face a systemic crisis: public infrastructure is being strained to fuel private AI profits.\n\nResulting Judgement: (+0.86, +0.93) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.80, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- New Jersey Policy: PASS (+0.60, -0.10) — Mandates corporate cost-sharing.\n- Indiana Policy: COND (+0.10, -0.40) — High risk of long-term cost-shifting.\n- Tech Developers: FAIL (-0.30, -0.60) — Externalizing grid costs.",
       "States are adopting starkly different strategies to manage the massive electricity demands of AI data centers without raising residential utility rates.",
       "The Bright Side:\nNew Jersey's proactive legislation sets a strong precedent by requiring data centers to pay for 85% of their requested capacity, shielding residents from sudden corporate exits.",
       "The Breakdown & Plane Error:\nThis is a WHO vs WHAT error. Media frames this as a partisan ideological debate (WHO has the better philosophy) rather than a physical resource limit (WHAT happens when AI consumes 4% of all US power).",
       "Social Physics Analysis:\nTech firms use the pretext of economic growth to secure cheap power, projecting future public benefits. Without upfront transparency and strict mandates, the public inevitably bears the cost of grid upgrades.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence.",
       "The Unavoidable Truth: AI data centers require massive physical grid upgrades that someone must pay for.\n\nThe Unavoidable Lie: Market forces alone will naturally lower residential utility bills during an energy crisis.",
       "Alethekanon:\nThe physical reality of grid capacity cannot be bypassed by clever rate structures. If tech giants do not pay 100% of their infrastructure footprint, the public grid will face severe, costly strain.",
       "Awwthekanon:\nIt feels unfair that regular families, already struggling with inflation, might have to pay more just so massive tech companies can run power-hungry AI models. We must protect our shared resources.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "New Jersey Policy",
@@ -216,6 +278,7 @@
         "name": "Indiana Michigan Power",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

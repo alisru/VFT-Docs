@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/yetupdates.bsky.social/post/3mvmxiizvsi2i",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.97,
+    "real_u": 0.99,
     "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Kenyan government opens 465 paid internships for graduates, offering real-world pathways in tech and water management. Evidence: Youth employment, Actual jobs, Systemic empowerment. #Aletheia #Kenya #Jobs",
-      "The state claims to offer 400 digital talent slots and 65 water ministry internships to empower recent graduates with structured, paid professional development. Stated Judgement: (1.0, 1.0) — Greater Good",
-      "The programs are fully funded and active, with clear criteria and portals, despite a minor Sunday/Monday deadline typo in the digital talent announcement. Resulting Judgement: (0.97, 1.0) — Greater Good",
-      "Verdict: PASS — Grace into Grace. A genuine public empowerment initiative delivering tangible, funded career opportunities to young graduates.\nIntegrity: Trustworthy (Hypocrisy: 0.03, z: 0)",
+      "The state claims to offer 400 digital talent slots and 65 water ministry internships to empower recent graduates with structured, paid professional development. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "The programs are fully funded and active, with clear criteria and portals, despite a minor Sunday/Monday deadline typo in the digital talent announcement. Resulting Judgement: (+0.99, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.03, z: 0)",
       "- PDTP Cohort XI: PASS (0.96, 1.0) — 400 real tech slots.\n- Ministry of Water: PASS (1.0, 1.0) — 65 World Bank funded slots.",
       "Kenya's ICT Authority and Ministry of Water are recruiting 465 interns for 12-month paid positions starting in late 2026 and early 2027.",
       "The Poison:\nStrict age caps (21-29 for tech, 25-35 for water) and recent graduation requirements exclude older career-changers.",
       "The Breakdown & Plane Error:\nNo major plane errors. The minor lyrical error of a Sunday vs Monday deadline does not break the logical causal chain of employment.",
       "Social Physics Analysis:\nThis is a Smart Altruistic Maneuver. The state aligns external funding (World Bank) with local talent, creating transparent pathways that resolve youth underemployment strain rather than manufacturing pretexts.",
-      "The Trajectory: The Path of Grace into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The alignment of funding and execution ensures systemic stability.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The alignment of funding and execution ensures systemic stability.",
       "The Unavoidable Truth: Funded public internships provide vital structural stepping stones for youth.\nThe Unavoidable Lie: Government programs are always perfectly coordinated without administrative typos.",
       "Alethekanon:\nAn audit of the actual program reveals high structural alignment. Public administration here functions as an empowering vector rather than a power-hoarding mechanism.",
       "Awwthekanon:\nIt is beautiful to see young minds getting a real chance to grow, learn, and contribute to their communities with dignity and fair pay.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.05,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "PDTP Cohort XI",
@@ -288,6 +350,7 @@
         "name": "Kenya",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

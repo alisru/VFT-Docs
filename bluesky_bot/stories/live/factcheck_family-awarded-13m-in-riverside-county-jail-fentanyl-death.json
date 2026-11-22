@@ -5,22 +5,22 @@
     "subject": "Family Awarded $13.5M in Riverside County Jail Fentanyl Death",
     "link": "https://nypost.com/2026/08/27/us-news/family-awarded-13-5m-in-riverside-county-jail-fentanyl-death/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "A federal jury awarded $13.5M to the family of an inmate who died of a fentanyl overdose in jail.\nEvidence: wrongful death verdict, 40% county liability, 60% inmate fault\n#Aletheia #Justice",
-      "The lawsuit frames the tragedy purely as a systemic failure where jail staff ignored emergency pleas, forcing taxpayers to foot a massive payout.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While a deputy dismissively ignored an intercom call, the jury found the inmate 60% responsible for ingesting fentanyl-laced pruno during a record mortality year.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA tragedy of institutional neglect and personal culpability is framed purely as an administrative payday.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "The lawsuit frames the tragedy purely as a systemic failure where jail staff ignored emergency pleas, forcing taxpayers to foot a massive payout.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While a deputy dismissively ignored an intercom call, the jury found the inmate 60% responsible for ingesting fentanyl-laced pruno during a record mortality year.\nResulting Judgement: (-0.94, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA tragedy of institutional neglect and personal culpability is framed purely as an administrative payday.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- Riverside County Sheriff: FAIL (-0.7, -0.8) — Dismissive intercom response.\n- Matus Family: COND (0.2, 0.1) — Seeking legitimate oversight amid framing spin.",
       "Richard Matus Jr. died of a fentanyl overdose at Cois M. Byrd Detention Center in 2022, capping a record-deadly year for Riverside County jails.",
       "The Bright Side:\nThe federal verdict forces public accountability and spurs renewed legislative oversight over jail conditions.",
       "The Breakdown & Plane Error:\nConfuses WHO (individual responsibility vs systemic duty). The narrative reduces complex jail safety crises into a simple taxpayer villain story.",
       "Social Physics Analysis:\nWhen institutions foster neglect and inmates resort to illicit substances, accountability gets buried under partisan spin and legal maneuvers rather than systemic reform.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic rot masquerades as simple cash liability.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic rot masquerades as simple cash liability.",
       "The Unavoidable Truth: Jail staff ignored a medical emergency call.\n\nThe Unavoidable Lie: The payout alone solves the systemic overdose crisis.",
       "Alethekanon:\nFinancial settlements cannot substitute for true systemic reform inside neglected correctional facilities.",
       "Awwthekanon:\nMy heart aches for the grieving children who lost their father to a preventable tragedy.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Riverside County Sheriff",
@@ -210,6 +272,7 @@
         "name": "Matus Family",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

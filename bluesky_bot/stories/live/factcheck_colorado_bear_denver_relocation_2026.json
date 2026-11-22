@@ -5,22 +5,22 @@
     "subject": "Young bear takes rough tumble...",
     "link": "https://nypost.com/2026/08/24/us-news/colorado-bear-takes-rough-tumble-from-tree-after-wildlife-officers-tranquilize-it/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.6,
-    "real_u": 0.75,
-    "real_psi": 0.55,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.82,
+    "real_psi": 0.9,
     "mode": "root",
     "posts": [
       "CPW officers tranquilize and safely relocate a young black bear after it wandered into a Denver tree during severe drought conditions.\n\nYoung bear takes rough tumble...\nEvidence: Wildlife safety action, Rough tumble during capture, Protected animal relocated\n#Aletheia #Wildlife",
-      "Colorado Parks and Wildlife reported successfully tranquilizing and capturing a 100-pound male black bear in a Denver tree to safely relocate it back to an appropriate natural habitat.\nStated Judgement: (+0.80, +0.60) — Lesser Good",
-      "While the bear took a rough fall through tree branches during capture, officers caught the animal, verified it was uninjured, and successfully safely transported it out of urban danger.\nResulting Judgement: (+0.75, +0.55) — Lesser Good",
-      "Verdict: PASS — Redemption into Grace. Wildlife officers acted effectively to secure the animal and protect urban residents amidst environmental pressure.\nIntegrity: Trustworthy (Hypocrisy: 1.10, z: 1)",
+      "Colorado Parks and Wildlife reported successfully tranquilizing and capturing a 100-pound male black bear in a Denver tree to safely relocate it back to an appropriate natural habitat.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While the bear took a rough fall through tree branches during capture, officers caught the animal, verified it was uninjured, and successfully safely transported it out of urban danger.\nResulting Judgement: (+0.82, +0.90) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.10, z: 1)",
       "Sub-Audits Breakdown:\n- Colorado Parks & Wildlife: PASS (+0.78, +0.58) — Effective intervention.\n- Urban Wildlife Management: PASS (+0.72, +0.52) — Protective response.",
       "Driven into urban neighborhoods by severe drought and dwindling food sources, a 1.5-year-old black bear climbed a tree in residential Denver before wildlife officers intervened.",
       "The Bright Side:\nPrompt multi-agency intervention prevented potential human-bear conflicts while ensuring the young bear survived its tumble uninjured and was relocated to safety.",
       "The Breakdown & Plane Error:\nThe story presents a physical execution challenge (HOW/Physical plane) as potential administrative failure, but officers successfully mitigated harm under unpredictable real-world conditions.",
       "Social Physics Analysis:\nCPW and police acted with upfront transparency and shared coordination. Rather than treating the bear's presence as a burden, officers aligned physical safety with ecological stewardship to defuse risk.",
-      "The Trajectory: The Path of Redemption into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Responsible stewardship converted an urban conflict into a rescue.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Responsible stewardship converted an urban conflict into a rescue.",
       "The Unavoidable Truth: Environmental drought inevitably pushes wild animals into urban spaces in search of food.\n\nThe Unavoidable Lie: Wildlife relocation captures can always be executed without physical risk or rough landings.",
       "Alethekanon:\nThe operational response successfully balanced public safety and ecological care. Minor physical instability during capture does not negate the overall alignment with environmental stewardship.",
       "Awwthekanon:\nPoor little cub must have been so confused and hungry wandering into the big city! I'm so glad the compassionate officers were there to catch him and take him back home.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.95,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.85,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.1,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.95,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Colorado Parks & Wildlife",
@@ -270,6 +332,7 @@
         "name": "Denver Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

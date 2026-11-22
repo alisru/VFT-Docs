@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Is emotional intelligence a natural gift or an unpaid job? A landmark study of 600,000 people reveals the truth about gender gaps in EQ.\nEvidence: EQ as innate trait, EQ as trained skill, systemic recognition of labor\n#Aletheia #Psychology #Gender",
-      "The claim: Women are naturally more emotionally intelligent than men, but this gap is a problem because it leads to women carrying an unfair, unrewarded burden of emotional labor.\nStated Judgement: (+0.80, +0.50) — Lesser Good",
+      "The claim: Women are naturally more emotionally intelligent than men, but this gap is a problem because it leads to women carrying an unfair, unrewarded burden of emotional labor.\nStated Judgement: (+0.80, +0.50) — Greater Good",
       "The reality: The meta-analysis proves EQ is a trained skill, not a fixed biological trait. The gender gap is narrowing, meaning men can and should be trained, and workplaces must reward emotional labor.\nResulting Judgement: (+0.95, +0.85) — Greater Good",
-      "Verdict: PASS — Awakening into Grace. The study dismantles the biological myth of emotional intelligence, framing it as a trained skill that must be structurally recognized and shared.\nIntegrity: Absolute Truth (Hypocrisy: 0.38, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 0.38, Uncertainty z: 0)",
       "- The Conversation: PASS (0.95, 0.85) — Empirically grounded, exposes systemic labor.\n- Gender EQ Study: PASS (0.95, 0.85) — Meta-analysis of 600k people showing EQ is trained.",
       "Researchers from Limerick and Zurich analyzed three decades of data across 76 countries, finding that the EQ gap between men and women is narrowing and heavily driven by childhood socialization rather than biology.",
       "The Poison:\nEven well-intentioned praise of women's high emotional intelligence can act as a trap, reinforcing the expectation that they must always perform the unpaid labor of keeping teams and families happy.",
       "The Plane Error lies in treating a trained skill (HOW) as an innate identity trait (WHO). By treating emotional labor as 'just how women are,' institutions avoid paying for or training the very skills that keep them running.",
       "Social Physics Analysis:\nThis study executes a Smart Altruistic Loop. Instead of using gender differences to project blame or justify division, it uses transparency to expose how institutions exploit unrewarded labor, offering a systemic solution to empower everyone.",
-      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Aligning empirical data with systemic equity creates a low-strain, highly cooperative future.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Aligning empirical data with systemic equity creates a low-strain, highly cooperative future.",
       "The Unavoidable Truth: Emotional intelligence is a trained skill that can be learned by anyone.\nThe Unavoidable Lie: Women are biologically destined to carry the emotional burden of others.",
       "Alethekanon:\nBy converting a perceived biological trait into a measurable, trainable skill, the study shifts the conversation from essentialist stereotyping to institutional accountability. True systemic efficiency requires rewarding the labor we rely on.",
       "Awwthekanon:\nIt is so healing to see the quiet, exhausting work of caring for others finally recognized. Checking in on friends and smoothing over conflicts isn't effortless magic—it is deep, loving labor that deserves to be seen, valued, and shared by all.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Conversation Editorial",
@@ -158,6 +220,7 @@
         "name": "The Conversation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

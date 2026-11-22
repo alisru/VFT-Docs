@@ -5,22 +5,22 @@
     "subject": "Lauren Boebert sees Flock cameras as frightening expansion of the post-9/11 surveillance state",
     "link": "https://www.washingtontimes.com/news/2026/sep/7/lauren-boebert-sees-flock-cameras-frightening-expansion-post-911/",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.8,
-    "real_u": 0.25,
-    "real_psi": -0.15,
+    "claim_u": 0.4,
+    "claim_psi": 0.37,
+    "real_u": -0.1,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "A fierce debate over public surveillance ignites as Flock Safety cameras face growing political backlash.\nEvidence: Protect civil liberties, Opportunistic political posturing, Expose real privacy abuse\n#Aletheia #Privacy",
-      "Rep. Lauren Boebert claims she is fighting to protect American liberty and privacy by co-sponsoring the \"Flock-Off Act\" to dismantle a frightening post-9/11 surveillance state.\nStated Judgement: (+0.90, +0.80) — Greater Good",
-      "While Flock Safety's massive network does pose genuine privacy risks and high error rates, Boebert's opposition is highly selective, triggered primarily by her personal grievances against federal law enforcement.\nResulting Judgement: (+0.25, -0.15) — Lesser Good",
-      "Verdict: CONDITIONAL — Awakening into Redemption.\nThe effort exposes a genuine, dangerous surveillance apparatus, but its selective, self-serving application limits its systemic impact.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 3)",
+      "Rep. Lauren Boebert claims she is fighting to protect American liberty and privacy by co-sponsoring the \"Flock-Off Act\" to dismantle a frightening post-9/11 surveillance state.\nStated Judgement: (+0.40, +0.37) — Greater Good",
+      "While Flock Safety's massive network does pose genuine privacy risks and high error rates, Boebert's opposition is highly selective, triggered primarily by her personal grievances against federal law enforcement.\nResulting Judgement: (-0.10, -0.30) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nThe effort exposes a genuine, dangerous surveillance apparatus, but its selective, self-serving application limits its systemic impact.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 3)",
       "- Boebert's Stance: COND (0.15, -0.20) — Opportunistic but exposes real threats.\n- Flock Safety Network: FAIL (-0.75, -0.60) — Unregulated private surveillance.\n- DeSantis Highway Ban: COND (0.30, -0.10) — Concrete action, politically framed.",
       "Bipartisan backlash is growing against Flock Safety's automated license plate readers, which perform 20 billion scans monthly, leading to state-level bans and federal legislative proposals to restrict funding.",
       "The Poison:\nBy framing the issue around personal political grievances and partisan battles, leaders risk undermining the broad, non-partisan coalition needed to pass comprehensive digital privacy protections.",
       "The Breakdown & Plane Error:\nThe debate suffers from a logical CAUSE error. Politicians treat surveillance as a partisan weapon (WHAT) rather than a systemic, bipartisan policy failure (WHY). They attack specific private networks while ignoring their own historical support for state surveillance.",
       "Social Physics Analysis:\nThe actors navigate a complex loop. While Flock Safety hoards power through opaque, mass surveillance (Smart Selfish), Boebert's counter-maneuver uses transparency as a shield for personal protection, accidentally aligning with systemic empowerment.",
-      "The Trajectory: The Path of Awakening into Redemption.\nWhen you map the gap between opportunistic motives and the actual exposure of a massive surveillance network, it plots a trajectory toward Lesser Good. The system is forced to confront real privacy violations.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between opportunistic motives and the actual exposure of a massive surveillance network, it plots a trajectory toward Lesser Good. The system is forced to confront real privacy violations.",
       "The Unavoidable Truth: Flock Safety's network operates with minimal regulation and high error rates.\nThe Unavoidable Lie: Politicians opposing these cameras are doing so purely out of a selfless love for civil liberties.",
       "Alethekanon:\nFlock Safety's 20-billion-scan network represents a massive, unregulated privatization of public surveillance. Even opportunistic political opposition serves as a necessary friction against unchecked state power.",
       "Awwthekanon:\nIt is deeply comforting to see communities and leaders finally standing up to protect our basic right to move freely without being constantly tracked. We must protect our shared human dignity from being reduced to data points in a corporate database.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Boebert's Stance",
@@ -170,6 +232,7 @@
         "name": "Thomas Massie",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

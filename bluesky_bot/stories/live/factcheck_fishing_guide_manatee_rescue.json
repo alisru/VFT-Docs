@@ -14,7 +14,7 @@
       "Quick 911 call leads to a multi-agency wildlife triumph! 🛟🐢\n\nFishing Guide Dials 911 for Entangled Manatee, Leading to Rescue While Calf Watches\nEvidence: prompt reporting, multi-state rescue, manatee saved\n#Aletheia #WildlifeConservation",
       "A fishing guide spotted an adult female manatee tightly wrapped in commercial crab pot lines on the Mackay River and immediately reported it, triggering a massive interagency rescue response.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "State and federal wildlife experts successfully cut away the anchoring gear, removed lines cutting into her skin, and attached a satellite tracker so she and her calf can thrive.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Quick civilian reporting and expert agency collaboration successfully restored an endangered marine mammal to full health.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Civilian Reporting: PASS (1.0, 1.0) — Prompt emergency call by Capt. Galland initiated the rescue chain.\n- Wildlife Agencies Collaboration: PASS (1.0, 1.0) — Multi-state team efficiently cut gear and tagged the animal.",
       "A fishing guide near St. Simons Island spotted a massive manatee bound in commercial crab trap lines. Joined by Georgia DNR, Florida FWC, and USFWS, experts spent two days cutting her free before a storm hit.",
       "The Bright Side:\nCross-state agency cooperation proves that institutional rescue networks can mobilize rapidly when citizens act as stewards of local marine ecosystems.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Civilian Reporting",
@@ -269,6 +331,7 @@
         "name": "U.S. Fish and Wildlife Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

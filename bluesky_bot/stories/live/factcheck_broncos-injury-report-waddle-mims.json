@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/denverpost.com/post/3mwwoyphgqb2q",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.8,
-    "real_psi": 0.5,
+    "real_u": 0.94,
+    "real_psi": 0.94,
     "mode": "root",
     "posts": [
       "Denver Broncos receivers Jaylen Waddle and Marvin Mims Jr. are fully cleared for Sunday's matchup against San Francisco.\nEvidence: Denver Broncos injury report, Sean Payton press comments\n#Aletheia #NFL #Broncos",
       "Key offensive weapons are fully recovered and ready to contribute, maintaining competitive roster integrity.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Players practice fully and return to action, though minor roster shuffles like releasing Lil'Jordan Humphrey highlight ongoing depth adjustments.\nResulting Judgement: (+0.8, +0.5) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nAccurate reporting on roster status with clear transparency regarding player availability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Players practice fully and return to action, though minor roster shuffles like releasing Lil'Jordan Humphrey highlight ongoing depth adjustments.\nResulting Judgement: (+0.94, +0.94) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAccurate reporting on roster status with clear transparency regarding player availability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Denver Broncos Staff: PASS (+0.9, +0.7) — Accurate injury reporting.\n- Denver Post Reporting: PASS (+0.8, +0.6) — Clear roster updates.",
       "The Denver Broncos enter their game against the San Francisco 49ers with a healthy roster, returning key playmakers while managing minor defensive depth adjustments.",
       "The Bright Side:\nFull participation in practice ensures a competitive and healthy matchup.",
       "The Breakdown & Plane Error:\nFocusing on athletic status and tactical preparation (HOW) rather than external narratives.",
       "Social Physics Analysis:\nThe franchise operates with transparency regarding athlete health and roster management, supporting team capability without manufactured drama.",
-      "The Trajectory: The Path of Grace.\nWhen you map athletic preparation against physical realities, it plots a stable trajectory toward optimal performance.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map athletic preparation against physical realities, it plots a stable trajectory toward optimal performance.",
       "The Unavoidable Truth: Professional sports require constant roster management and injury mitigation.\n\nThe Unavoidable Lie: Professional football teams never face roster friction or depth concerns.",
       "Alethekanon:\nClear injury reporting supports competitive integrity and transparent athletic communication.",
       "Awwthekanon:\nGreat news for the team getting their playmakers back on the field! Wishing everyone a safe and exciting game.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Denver Broncos",
@@ -217,6 +279,7 @@
         "name": "Sean Payton",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

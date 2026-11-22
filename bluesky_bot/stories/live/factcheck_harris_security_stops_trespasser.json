@@ -5,22 +5,22 @@
     "subject": "Kamala Harris’s security successfully stops trespasser from entering home",
     "link": "https://www.washingtonexaminer.com/news/crime/4725086/kamala-harris-security-trespasser-home/",
     "target_url": "",
-    "claim_u": 0.76,
-    "claim_psi": 0.71,
-    "real_u": 0.28,
-    "real_psi": 0.22,
+    "claim_u": 0.62,
+    "claim_psi": 0.5,
+    "real_u": 0.32,
+    "real_psi": 0.52,
     "mode": "root",
     "posts": [
       "Security personnel intercept a trespasser at a former official's property.\n\nKamala Harris Security Stops Trespasser\nEvidence: Protective protocol, Perimeter containment, Partisan framing\n#Aletheia #USNews #Security",
-      "Reports state security stopped an unauthorized woman entering former VP Kamala Harris and Doug Emhoff's Malibu property before reaching the home, with neither principal present.\nStated Judgement: (+0.76, +0.71) — Greater Good",
-      "Perimeter security functioned as designed, though secondary coverage immediately weaponized the incident to litigate partisan political rhetoric.\nResulting Judgement: (+0.28, +0.22) — Lesser Good",
-      "Verdict: CONDITIONAL — The Path of Revelation.\nPhysical protection protocols succeeded, though media narratives rapidly pivoted from law enforcement facts to political projection.\nIntegrity: Conditionally Sound (Hypocrisy: 1.82, Uncertainty z: 2)",
+      "Reports state security stopped an unauthorized woman entering former VP Kamala Harris and Doug Emhoff's Malibu property before reaching the home, with neither principal present.\nStated Judgement: (+0.62, +0.50) — Greater Good",
+      "Perimeter security functioned as designed, though secondary coverage immediately weaponized the incident to litigate partisan political rhetoric.\nResulting Judgement: (+0.32, +0.52) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPhysical protection protocols succeeded, though media narratives rapidly pivoted from law enforcement facts to political projection.\nIntegrity: Conditionally Sound (Hypocrisy: 1.82, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Security Response: PASS (+0.75, +0.70) — Trespasser intercepted at boundary.\n- Washington Examiner: PASS (+0.55, +0.40) — Factual reporting on incident.\n- Fox News Framing: COND (-0.35, +0.45) — Injected rhetoric debate into breach.",
       "A woman who illegally entered the property perimeter of former Vice President Kamala Harris in Malibu was detained by security personnel on Friday night without reaching the residence.",
       "The Bright Side:\nLayered security perimeters functioned effectively, preventing physical escalation or danger to non-present protectees.",
       "The Breakdown & Plane Error:\nLyrical and Emotive planes diverge. While the physical security event was resolved cleanly, partisan commentary attempted to reframe a perimeter breach as a broader ideological indictment.",
       "Social Physics Analysis:\nThe physical actors operated via transparent protective duty. However, media framing introduces a Smart Selfish maneuver by exploiting a standard law enforcement response to project blame and manufacture political strain.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Operational safety succeeded despite attempts to polarize basic protection.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Operational safety succeeded despite attempts to polarize basic protection.",
       "The Unavoidable Truth: Security perimeters successfully prevented unauthorized access.\n\nThe Unavoidable Lie: Routine trespassing incidents justify partisan moral panic.",
       "Alethekanon:\nPhysical security protocols operated precisely as designed. The friction emerges entirely from secondary media attempts to graft political blame onto a routine perimeter arrest.",
       "Awwthekanon:\nEveryone deserves safety and peace in their own home, regardless of political affiliation or public visibility.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Security Response",
@@ -184,6 +246,7 @@
         "sub_psi": 0.4,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

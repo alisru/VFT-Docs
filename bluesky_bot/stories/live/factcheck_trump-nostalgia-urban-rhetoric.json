@@ -14,13 +14,13 @@
       "Political rhetoric romanticizes historical eras while painting modern urban centers with sweeping generalizations.\n\nUrban Nostalgia and Rhetoric\nEvidence: generalized critiques, nostalgic framing, political commentary\n#Aletheia #Politics",
       "Commentary examines whether political nostalgia for past decades glosses over historical realities and urban crime rates.\nStated Judgement: (-0.91, -0.83) — Lesser Evil",
       "Political discourse often frames modern cities through selective grievances rather than systemic analysis.\nResulting Judgement: (-0.91, -0.82) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Revelation. Commentary highlights political framing gaps but remains within partisan commentary bounds.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
+      "Verdict: FAIL — Destruction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
       "Sub-Audits Breakdown:\n- Political Commentary: COND (-0.4, -0.5) — Reflects partisan framing.\n- Empirical Grounding: COND (-0.3, -0.4) — Generalizes complex urban trends.",
       "Political commentary questions the selective nostalgia surrounding past eras and generalized characterizations of modern cities.",
       "The Poison:\nPolarizing rhetoric reduces complex municipal dynamics into simplistic cultural battlegrounds.",
       "The Breakdown & Plane Error:\nEvaluated on the Lyrical plane; narrative framing emphasizes emotional resonance over rigorous statistical comparison.",
       "Social Physics Analysis:\nBy projecting generalized decay onto political opponents' strongholds, discourse reinforces division rather than collaborative problem-solving.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between generalized political nostalgia and empirical urban realities, it plots a trajectory toward Deception. Analytical resolution maintained.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between generalized political nostalgia and empirical urban realities, it plots a trajectory toward Deception. Analytical resolution maintained.",
       "The Unavoidable Truth: Political nostalgia often selectively ignores past challenges.\nThe Unavoidable Lie: Modern cities are uniformly defined by terminal decay.",
       "Alethekanon:\nNostalgic political framings substitute emotional resonance for empirical nuance.",
       "Awwthekanon:\nIt is disheartening when our public discourse relies on painting whole cities with broad, negative brushstrokes instead of looking for ways to help them thrive.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Political Commentary",
@@ -259,6 +321,7 @@
         "name": "U.S. Cities",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

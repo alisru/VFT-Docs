@@ -5,22 +5,22 @@
     "subject": "Homelessness Non-Profits Are Killing Los Angeles",
     "link": "https://thefederalist.com/2026/09/09/homelessness-non-profits-are-killing-los-angeles/?utm_source=rss&utm_medium=rss&utm_campaign=homelessness-non-profits-are-killing-los-angeles",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.77,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "When public funding feeds private non-profit machinery without accountability, homelessness deepens.\nEvidence: 98% government funding, administrative bloat, housing stagnation\n#Aletheia #Housing #LosAngeles",
-      "Massive non-profit networks like Special Service for Groups absorb hundreds of millions in public grants while operating outside state transparency laws.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Rather than solving homelessness, bureaucratic intermediaries capture public funds, insulating themselves from performance metrics while the unhoused population rises.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Revelation.\nAdministrative capture and lack of transparency drain public funds into bloated private non-profit bureaucracies.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Massive non-profit networks like Special Service for Groups absorb hundreds of millions in public grants while operating outside state transparency laws.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Rather than solving homelessness, bureaucratic intermediaries capture public funds, insulating themselves from performance metrics while the unhoused population rises.\nResulting Judgement: (-0.77, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAdministrative capture and lack of transparency drain public funds into bloated private non-profit bureaucracies.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Special Service for Groups: COND (-0.4, -0.5) — High public funding without public records accountability.\n- LA Housing Policy: FAIL (-0.6, -0.7) — Bureaucratic churn replacing effective shelter solutions.",
       "Los Angeles relies heavily on private non-profits to distribute hundreds of millions in public funds for homeless services, creating opaque governance structures.",
       "The Bright Side:\nExposes critical accountability gaps in the funneling of taxpayer funds through private non-profit entities.",
       "The Breakdown & Plane Error:\nConfusing organizational overhead (WHAT) with ideological corruption (WHO), masking administrative dysfunction as deliberate malice.",
       "Social Physics Analysis:\nNon-profits and municipal agencies often run a Smart Selfish Maneuver: framing chronic crises as funding shortfalls to secure perpetual government grants while deflecting structural failure.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between administrative promises and unhoused realities, it plots a direct trajectory toward Lesser Evil. Systemic capture locks resources into overhead rather than shelter.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between administrative promises and unhoused realities, it plots a direct trajectory toward Lesser Evil. Systemic capture locks resources into overhead rather than shelter.",
       "The Unavoidable Truth: Pouring millions into unaccountable private contractors creates self-sustaining administrative bureaucracies.\n\nThe Unavoidable Lie: The core driver of urban homelessness is simply a lack of non-profit intermediaries.",
       "Alethekanon:\nAdministrative opacity breeds institutional self-preservation over public mission fulfillment.",
       "Awwthekanon:\nBehind every bureaucratic budget line are human lives weathering the cold while agencies argue over overhead.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Special Service for Groups",
@@ -211,6 +273,7 @@
         "name": "City of Los Angeles",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Fears of abandonment grow as analysts question whether Taiwan will resist or strike a deal with Beijing.\nEvidence: US skepticism, Chinese pressure, inevitability framing\n#Aletheia #Geopolitics",
-      "Taiwanese distrust of U.S. security guarantees makes a peaceful capitulation or accommodation with Beijing increasingly inevitable.\nStated Judgement: (-0.5, -0.5) — Lesser Evil",
-      "While political anxieties run high, Taiwan maintains robust defense capabilities and strong societal resistance against authoritarian absorption.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nFraming geopolitical defeatism as inevitable reality suppresses democratic agency and distorts deterrence dynamics.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.5, z: 3)",
+      "Taiwanese distrust of U.S. security guarantees makes a peaceful capitulation or accommodation with Beijing increasingly inevitable.\nStated Judgement: (-0.50, -0.50) — Greater Evil",
+      "While political anxieties run high, Taiwan maintains robust defense capabilities and strong societal resistance against authoritarian absorption.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nFraming geopolitical defeatism as inevitable reality suppresses democratic agency and distorts deterrence dynamics.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.5, z: 3)",
       "- The Atlantic Editorial: COND (-0.5, -0.5) — Amplifies defeatist narratives based on US political shifts.",
       "The Atlantic article argues that waning trust in American defense commitments under Trump is pushing Taiwan toward an inevitable deal with China.",
       "The Poison:\nNormalizing capitulation narratives undermines democratic morale and rewards aggressive geopolitical coercion.",
       "The Breakdown & Plane Error:\nConfusing political elite anxiety (WHAT) with societal surrender (WHO).",
       "Social Physics Analysis:\nExternal actors run a Smart Selfish Maneuver, projecting helplessness to manufacture consent for geopolitical restructuring.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Defeatist narratives serve Beijing's strategic psychological warfare.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Defeatist narratives serve Beijing's strategic psychological warfare.",
       "The Unavoidable Truth: Geopolitical commentary often mistakes political friction for terminal civilizational collapse.\n\nThe Unavoidable Lie: A sovereign democracy will simply surrender its freedom because of foreign electoral cycles.",
       "Alethekanon:\nDefeatism packaged as objective analysis. Projecting external political anxiety onto sovereign resilience creates self-fulfilling vulnerability.",
       "Awwthekanon:\nBehind the terrifying drums of war, ordinary families in Taiwan simply wish to live in peace, freedom, and mutual respect.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Atlantic Editorial",
@@ -157,6 +219,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

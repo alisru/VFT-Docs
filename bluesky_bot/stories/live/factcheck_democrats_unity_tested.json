@@ -7,14 +7,14 @@
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3muwmnvrgyn2e",
     "claim_u": 0.85,
     "claim_psi": 0.15,
-    "real_u": -0.31,
-    "real_psi": 0.54,
+    "real_u": -0.05,
+    "real_psi": 0.12,
     "mode": "root",
     "posts": [
       "A razor-thin majority turns every vote into a hostage situation.\nDemocrats are promising a big agenda. Their unity is already being tested.\nEvidence: Cost-of-living relief, Enforcing party discipline, Power preservation\n#Aletheia #USPol",
-      "Democratic leaders promise an ambitious agenda to lower costs of living and hold the Trump administration accountable, presenting a unified front ready to govern effectively on day one.\nStated Judgement: (+0.85, +0.15) — Good Preference",
-      "Behind the scenes, the focus immediately shifts to enforcing strict party discipline on routine procedural votes, exposing deep internal divisions and a struggle for raw caucus control.\nResulting Judgement: (-0.31, +0.54) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The promise of public relief is quickly co-opted by the structural necessity of enforcing party discipline to maintain power.\nIntegrity: Severe Deception (Hypocrisy: 92.6, z: 0)",
+      "Democratic leaders promise an ambitious agenda to lower costs of living and hold the Trump administration accountable, presenting a unified front ready to govern effectively on day one.\nStated Judgement: (+0.85, +0.15) — Greater Good",
+      "Behind the scenes, the focus immediately shifts to enforcing strict party discipline on routine procedural votes, exposing deep internal divisions and a struggle for raw caucus control.\nResulting Judgement: (-0.05, +0.12) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nIntegrity: Severe Deception (Hypocrisy: 92.6, z: 0)",
       "- Democratic Leadership: COND (-0.25, 0.45) — Enforces discipline over policy.\n- Centrist Dissenters: COND (0.15, -0.20) — Highlights caucus fragility.",
       "With a razor-thin majority expected in the House, Democratic leader Hakeem Jeffries faces immediate rebellion from centrist members on procedural votes, mirroring the chaos of GOP rule.",
       "The Bright Side:\nInternal dissent forces leadership to negotiate and prevents extreme, unilateral policy shifts, keeping the party closer to the political center.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Democratic Leadership",
@@ -161,6 +223,7 @@
         "name": "Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

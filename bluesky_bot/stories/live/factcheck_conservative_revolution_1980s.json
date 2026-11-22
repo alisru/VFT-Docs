@@ -7,13 +7,13 @@
     "target_url": "https://bsky.app/profile/sltrib.com/post/3mvjjszvhh22d",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.79,
-    "real_psi": -0.66,
+    "real_u": -0.8,
+    "real_psi": -0.69,
     "mode": "root",
     "posts": [
       "A legacy of decay laid bare. Opinion: We are suffering the consequences of the conservative revolution that began in the 1980s.\nEvidence: Market prosperity, systemic decay, private wealth hoarding.\n#Aletheia #USPol #Economics",
-      "Proponents of the 1980s conservative revolution promised that deregulation, tax cuts, and supply-side economics would lift all boats, fostering widespread prosperity and robust public infrastructure.\nStated Judgement: (+0.80, +0.50) — Good Preference",
-      "Decades of data reveal a starkly different reality: crumbling infrastructure, soaring higher education debt, a hollowed-out middle class, and hyper-partisan media ecosystems born from deregulation.\nResulting Judgement: (-0.79, -0.66) — Greater Evil",
+      "Proponents of the 1980s conservative revolution promised that deregulation, tax cuts, and supply-side economics would lift all boats, fostering widespread prosperity and robust public infrastructure.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Decades of data reveal a starkly different reality: crumbling infrastructure, soaring higher education debt, a hollowed-out middle class, and hyper-partisan media ecosystems born from deregulation.\nResulting Judgement: (-0.80, -0.69) — Greater Evil",
       "Verdict: FAIL — Fall into Destruction.\nThe systemic shift prioritized short-term private extraction over long-term public stability, leading to structural decay.\nIntegrity: Meaningful Distortion (Hypocrisy: 5.8, z: 3)",
       "Sub-Audits Breakdown:\n- Supply-Side Policy: FAIL (-0.79, -0.66) — Prioritized private wealth over public goods.\n- Media Deregulation: FAIL (-0.82, -0.71) — Dismantled fairness rules for partisan profit.",
       "The long-term consequences of the 1980s economic shift continue to shape modern American life, manifesting as deep wealth inequality and a severely degraded public infrastructure.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Supply-Side Policy",
@@ -159,6 +221,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

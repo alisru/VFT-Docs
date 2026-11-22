@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.3,
+    "real_u": -0.15,
     "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "U.S. Treasury shifts G20 focus entirely to economic growth, dropping climate mandates.\nEvidence: Treasury statements, G20 Asheville agenda exclusions, policy realignment\n#Aletheia #G20 #Economy",
-      "The Treasury Department announced that the U.S. G20 presidency will prioritize pro-growth economic policies over Biden-era climate and DEI initiatives.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While focusing on growth and energy supply chains, the administration completely strips climate and sustainability from the agenda, inviting global criticism.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. A tactical policy shift framed as universal economic renewal while quietly excluding multilateral environmental consensus.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
+      "The Treasury Department announced that the U.S. G20 presidency will prioritize pro-growth economic policies over Biden-era climate and DEI initiatives.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While focusing on growth and energy supply chains, the administration completely strips climate and sustainability from the agenda, inviting global criticism.\nResulting Judgement: (-0.15, -0.40) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
       "- U.S. Treasury: PASS (0.5, 0.0) — Direct execution of stated economic goals.\n- International Critics: COND (-0.3, -0.4) — Excludes development finance needs.",
       "Ahead of the G20 Finance meetings in Asheville, the U.S. Treasury has explicitly narrowed its agenda to economic growth, supply chains, and regulatory relief, sidelining climate change.",
       "The Bright Side:\nTargeting regulatory burdens and energy supply chains directly supports productivity and cost reduction for businesses.",
       "The Breakdown & Plane Error:\nConfusing a nationalist policy preference (WHAT) with universal economic optimization (WHO).\n\nIt is a structural narrowing: framing climate exclusion as pure pragmatism.",
       "Social Physics Analysis:\nBy replacing multilateral environmental mandates with unilateral national economic priorities, the administration asserts control but increases global friction. Rather than negotiating shared burdens, it forces a binary choice between growth and climate.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Pruning international frameworks creates short-term leverage at the cost of long-term global stability.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Pruning international frameworks creates short-term leverage at the cost of long-term global stability.",
       "The Unavoidable Truth: Focusing on economic growth and energy security addresses immediate productivity barriers.\n\nThe Unavoidable Lie: Pretending that narrowing the G20 agenda eliminates global environmental obligations.",
       "Alethekanon:\nNational policy preferences are reframed as objective economic science, substituting multilateral cooperation for unilateral agenda control.",
       "Awwthekanon:\nBalancing economic needs with planetary health is hard, but shutting down the conversation entirely leaves vulnerable communities out in the cold.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "U.S. Treasury Policy",
@@ -157,6 +219,7 @@
         "name": "G20",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

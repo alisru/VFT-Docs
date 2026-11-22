@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "real_u": 0.0,
+    "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "A populist push to demolish a national cultural landmark reveals a deeper battle over political branding.\nEvidence: Cultural preservation, Demolition threat, Political branding\n#Aletheia #USPol #Culture",
-      "The Kennedy Center is a decadent, exclusive playground for wealthy D.C. elites that offers nothing of value to average Americans and should be torn down.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The Center is a congressionally mandated national memorial offering diverse public arts, education, and free events, serving as a shared cultural space.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Demolishing a public cultural institution to score populist points actively contracts shared civic spaces.\nIntegrity: Severe Deception (Hypocrisy: 33.07, z: 0)",
+      "The Kennedy Center is a decadent, exclusive playground for wealthy D.C. elites that offers nothing of value to average Americans and should be torn down.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The Center is a congressionally mandated national memorial offering diverse public arts, education, and free events, serving as a shared cultural space.\nResulting Judgement: (+0.00, +0.00) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 33.07, z: 0)",
       "- The Federalist: FAIL (-1.00, -1.00) — Uses populist resentment to justify destruction.\n- Public Access: PASS (1.00, 1.00) — Center remains open to all.",
       "The article supports a political threat to demolish or rename the Kennedy Center, transforming a standard branding dispute into a populist culture war.",
       "The Poison:\nWhile elite events do exist, using them to justify destroying a massive public educational and artistic resource is a classic burn-it-all-down maneuver.",
       "The Breakdown & Plane Error:\nThe article commits a Metaphysical error (WHO) by claiming the public benefits from losing a cultural center, hiding a political branding grab behind populist pretexts.",
       "Social Physics Analysis:\nThe actors execute a Smart Selfish Maneuver. They manufacture a crisis of \"decadence\" to justify destroying a public asset, projecting their own desire for political branding control onto the institution.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. This active contraction of civic space leaves everyone poorer.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. This active contraction of civic space leaves everyone poorer.",
       "The Unavoidable Truth: Public cultural spaces belong to all citizens, not just the elites who attend them.\nThe Unavoidable Lie: Tearing down a national memorial helps the working class.",
       "Alethekanon:\nThe populist demand to demolish civic infrastructure is a symptom of deep systemic strain, where legitimate class frustration is weaponized to destroy shared public goods.",
       "Awwthekanon:\nArt and music are universal languages that heal our divides. We should be building more spaces for people to gather and share beauty, not tearing down the ones we have.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Federalist Editorial",
@@ -162,6 +224,7 @@
         "name": "The Federalist",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

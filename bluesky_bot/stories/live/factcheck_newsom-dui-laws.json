@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.3,
-    "real_psi": 0.2,
+    "real_u": 0.1,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Tougher DUI penalties sweep California as lawmakers target repeat offenders.\nEvidence: SB 907, felony charges, interlock mandates\n#Aletheia #California #Law",
-      "Governor Newsom signed four new laws increasing penalties and felony charges for repeat DUI offenders.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "The laws establish harsher prison terms and extended license suspensions, though critics warn of disproportionate impacts on low-income drivers.\nResulting Judgement: (+0.3, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nLegitimate legislative action aimed at public safety with acknowledged reformist trade-offs.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Governor Newsom signed four new laws increasing penalties and felony charges for repeat DUI offenders.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "The laws establish harsher prison terms and extended license suspensions, though critics warn of disproportionate impacts on low-income drivers.\nResulting Judgement: (+0.10, +0.10) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nLegitimate legislative action aimed at public safety with acknowledged reformist trade-offs.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Governor Newsom: PASS (+0.4, +0.3) — Enacted public safety deterrents.\n- Reform Advocates: COND (-0.2, -0.1) — Highlighted socioeconomic disparities.",
       "Governor Gavin Newsom signed four bills targeting repeat drunk drivers, introducing stricter felony thresholds and extended license suspensions.",
       "The Bright Side:\nMeasures like Braun's Law add vital warnings and accountability for repeat offenders causing fatal crashes.",
       "The Breakdown & Plane Error:\nThe legislation balances public safety enforcement against valid socioeconomic equity concerns raised by reformers.",
       "Social Physics Analysis:\nThe state asserts a public safety mandate, utilizing legal deterrence while balancing community critiques regarding poverty impact.",
-      "The Trajectory: The Path of Redemption.\nWhen you map legislative intent against public safety outcomes, it plots a direct trajectory toward Lesser Good. Constructive institutional balancing.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map legislative intent against public safety outcomes, it plots a direct trajectory toward Lesser Good. Constructive institutional balancing.",
       "The Unavoidable Truth: Stricter legal penalties for repeat drunk driving reinforce public safety standards on roadways.\n\nThe Unavoidable Lie: The pretense that punitive sentencing alone solves systemic addiction without addressing root causes.",
       "Alethekanon:\nLegislative deterrence targets lethal negligence, though true safety requires balancing punitive tools with systemic prevention.",
       "Awwthekanon:\nEvery life lost to impaired driving is a tragedy; hopefully these measures help protect families from unimaginable pain.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Governor Newsom",
@@ -158,6 +220,7 @@
         "name": "Braun Levi",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

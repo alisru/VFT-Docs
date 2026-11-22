@@ -5,22 +5,22 @@
     "subject": "Right before midterms, Trump dangles $500 refunds for select ACA enrollees",
     "link": "https://www.statnews.com/2026/09/10/trump-affordable-care-act-refund-checks-who-is-eligible/",
     "target_url": "https://bsky.app/profile/statnews.com/post/3mvfxxglvfc2i",
-    "claim_u": 0.8,
-    "claim_psi": 0.1,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "\"Nearly one million Americans will receive $500 refunds,\" promises the Trump administration right before the midterms. But is this a genuine correction of \"excessive fees\" or a calculated electoral bribe?\nEvidence: Healthcare refunds, Midterm timing, Vote buying",
-      "The Trump administration claims it is returning $500 in \"excessive fees\" to ACA enrollees who didn't receive premium assistance, framing it as a populist victory over greedy insurers.\nStated Judgement: (+0.80, +0.10) — Good Preference",
+      "The Trump administration claims it is returning $500 in \"excessive fees\" to ACA enrollees who didn't receive premium assistance, framing it as a populist victory over greedy insurers.\nStated Judgement: (+1.00, +1.00) — Greater Good",
       "The legal basis and funding for these checks are entirely unclear. The move targets just 5% of enrollees right before elections, while broader policies are projected to leave millions uninsured.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe administration deploys a one-time financial payout to distract voters from systemic efforts to dismantle healthcare access and consumer protections.\nIntegrity: Severe Deception (Hypocrisy: 10.0, z: 5)",
+      "Verdict: FAIL — Fall into Destruction.\nThe administration deploys a one-time financial payout to distract voters from systemic efforts to dismantle healthcare access and consumer protections.\nIntegrity: Severe Deception (Hypocrisy: 10.0, z: 5)",
       "- Trump Administration Policy: FAIL (-1.00, -1.00) — Uses public funds for targeted electoral bribes.\n- Healthcare Cost Messaging: FAIL (-0.90, -0.80) — Obfuscates systemic rises in uninsured rates.",
       "On September 10, 2026, President Trump announced $500 rebate checks for select ACA enrollees, scheduled to mail out in October, directly ahead of the highly contested midterm elections.",
       "The Bright Side:\nFor the one million families receiving the $500 checks, the immediate financial relief is real and helpful, even if the underlying motivation is purely transactional and political.",
       "The Breakdown & Plane Error:\nThe policy commits a Logical Error (HOW), claiming a one-time $500 check lowers healthcare costs, when it actually bypasses systemic pricing structures to deliver a temporary political payoff.",
       "Social Physics Analysis:\nThis is a textbook Smart Selfish Maneuver. The administration uses a manufactured solution (unexplained $500 refunds) as a pretext to project a populist, anti-insurance image, hiding the reality of policies that increase the uninsured rate.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Bypassing legal and systemic channels for electoral bribes erodes institutional trust.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Bypassing legal and systemic channels for electoral bribes erodes institutional trust.",
       "The Unavoidable Truth: Sending $500 checks to 5% of enrollees in October is a transparent attempt to buy midterm votes.\n\nThe Unavoidable Lie: This refund program is a sustainable, legally sound solution to rising healthcare premiums.",
       "Alethekanon:\nTransactional politics relies on immediate, visible payoffs to obscure long-term systemic extraction. A $500 check is cheap compared to the political capital gained by masking healthcare deregulation.",
       "Awwthekanon:\nIt is sad that families have to rely on politically timed windfalls just to get by. True healthcare reform should offer security and peace of mind every single day, not just before an election.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Trump Administration Policy",
@@ -291,6 +353,7 @@
         "name": "White House",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

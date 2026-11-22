@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.2,
-    "real_psi": -0.1,
+    "real_u": 0.3,
+    "real_psi": 0.3,
     "mode": "root",
     "posts": [
       "A miraculous lake rescue turns into a political talking point as emergency dispatch audio lays bare the tense, dark hours on Lake Wausau. \nEvidence: plane crash, rescue audio, minor injuries\n#Aletheia #Wisconsin",
-      "The coverage highlights a harrowing aviation accident and a swift rescue operation for a prominent political figure and his pilot.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While everyone survived with minor injuries, the incident highlights the raw hazards of rural aviation and emergency response logistics under night conditions.\nResulting Judgement: (-0.2, -0.1) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nA genuine emergency yielding fortunate survival and transparent rescue records without political exploitation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 2)",
+      "The coverage highlights a harrowing aviation accident and a swift rescue operation for a prominent political figure and his pilot.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While everyone survived with minor injuries, the incident highlights the raw hazards of rural aviation and emergency response logistics under night conditions.\nResulting Judgement: (+0.30, +0.30) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nA genuine emergency yielding fortunate survival and transparent rescue records without political exploitation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 2)",
       "Sub-Audits Breakdown:\n- Fox News Reporting: PASS (-0.2, -0.1) — Accurate recounting of rescue audio and hospital recovery.\n- Safety Response: PASS (+0.8, +0.7) — Prompt emergency deployment saved lives.",
       "Wisconsin GOP gubernatorial candidate Tom Tiffany and his pilot survived a nighttime plane crash into Lake Wausau, emerging with minor injuries after a tense search.",
       "The Bright Side:\nBoth individuals walked away with minor injuries thanks to swift and coordinated local emergency responders.",
       "The Breakdown & Plane Error:\nConfusing personal survival (PHYSICAL) with political narrative advantage (METAPHYSICAL).",
       "Social Physics Analysis:\nActors engaged in genuine emergency survival without manufacturing artificial crises, aligning transparently with safety protocols and rescue teams.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between sudden peril and fortunate survival, it plots a direct trajectory toward Redemption. A real physical shock grounded the actors in immediate human reality.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between sudden peril and fortunate survival, it plots a direct trajectory toward Destruction. A real physical shock grounded the actors in immediate human reality.",
       "The Unavoidable Truth: Sudden accidents strip away all political pretexts to reveal basic human fragility.\n\nThe Unavoidable Lie: Disasters always carry neat political symbolism.",
       "Alethekanon:\nPhysical reality brooks no political spin when a plane hits the water. Survival is a biological fact, not an ideological win.",
       "Awwthekanon:\nThank goodness both men made it out safely to their families. In the face of sudden danger, our shared vulnerability is all that truly matters.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fox News Reporting",
@@ -158,6 +220,7 @@
         "name": "Federal Aviation Administration",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mwaktknajv2u",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "real_u": 0.81,
+    "real_psi": 0.87,
     "mode": "root",
     "posts": [
       "When a nor'easter threatens a pennant race, flexible scheduling creates unavoidable competitive friction.\nEvidence: Nor'easter forecast, Doubleheader shift, Pitching strain\n#Aletheia #MLB #Cubs 🌐",
       "Major League Baseball adjusted the Cubs-Red Sox schedule into a Friday doubleheader to bypass weekend nor'easter floods.\nStated Judgement: (+1.0, +1.0) — Grace",
-      "Moving games disrupts the Cubs' pitching rotation and wild-card equity while locking Boston into static seeding.\nResulting Judgement: (+0.4, +0.2) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nLogistical weather adjustments create structural inequalities, yet remain necessary physical adaptations.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Moving games disrupts the Cubs' pitching rotation and wild-card equity while locking Boston into static seeding.\nResulting Judgement: (+0.81, +0.87) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nLogistical weather adjustments create structural inequalities, yet remain necessary physical adaptations.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- MLB Scheduling: PASS (+0.6, +0.3) — Balances weather safety with season completion.\n- Chicago Cubs Mgmt: COND (+0.2, 0.0) — Absorbs competitive disadvantage pragmatically.",
       "Due to a severe nor'easter, MLB moved Sunday's game to a Friday doubleheader at Fenway Park, challenging the Cubs' postseason pitching plans.",
       "The Bright Side:\nProactive weather management ensures the series gets played without dragging into Monday's off-day before the playoffs.",
       "The Breakdown & Plane Error:\nConfusing WHERE (neutral vs home venue safety) with HOW (pitching roster constraints). Weather forces practical compromises.",
       "Social Physics Analysis:\nMLB and team management negotiated practical trade-offs under severe physical constraints, running a smart altruistic balance between safety and competitive equity.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Practical weather adaptations resolve immediate physical strain.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Practical weather adaptations resolve immediate physical strain.",
       "The Unavoidable Truth: Extreme weather forces logistical compromises that inevitably disadvantage playoff contenders.\n\nThe Unavoidable Lie: All teams experience identical competitive conditions during late-season weather shifts.",
       "Alethekanon:\nLogistical adaptations to natural forces always impose asymmetric costs, proving that perfect fairness is impossible under physical entropy.",
       "Awwthekanon:\nIt is tough on the players who worked so hard all year to have Mother Nature scramble their pitching plans right at the finish line, but they are handling it with grit.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "MLB Scheduling Adjustments",
@@ -229,6 +291,7 @@
         "name": "Major League Baseball",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

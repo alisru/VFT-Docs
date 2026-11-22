@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/dublininquirer.com/post/3mwuti5ru7425",
     "claim_u": 0.8,
     "claim_psi": 0.7,
-    "real_u": 0.1,
-    "real_psi": 0.2,
+    "real_u": -0.05,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Dublin councillors back a motion to allow EV charging cables under footpaths, but practical hurdles loom.\n\nSubject: Dublin Footpath EV Charging\nEvidence: Green transition, bureaucratic delays, resident burden\n#Aletheia #EV #ClimateAction",
-      "Local government is proactively removing barriers to EV ownership by creating a seamless, safe process for residents without driveways to charge their cars at home.\nStated Judgement: (+0.8, +0.7) — Lesser Good",
-      "While councillors pass well-meaning motions, residents face a complex maze of road-opening licenses, safety liabilities, and high costs to dig up public footpaths themselves.\nResulting Judgement: (+0.1, +0.2) — Stasis",
-      "Verdict: CONDITIONAL — Stasis.\nThe council supports the transition in theory but shifts the physical and financial burden of infrastructure onto individual residents.\nIntegrity: Trustworthy (Hypocrisy: 0.70, Uncertainty z: 2)",
+      "Local government is proactively removing barriers to EV ownership by creating a seamless, safe process for residents without driveways to charge their cars at home.\nStated Judgement: (+0.80, +0.70) — Greater Good",
+      "While councillors pass well-meaning motions, residents face a complex maze of road-opening licenses, safety liabilities, and high costs to dig up public footpaths themselves.\nResulting Judgement: (-0.05, +0.10) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nThe council supports the transition in theory but shifts the physical and financial burden of infrastructure onto individual residents.\nIntegrity: Trustworthy (Hypocrisy: 0.70, Uncertainty z: 2)",
       "- Dublin City Council Policy: COND (0.20, 0.30) — Well-meaning but lacks concrete execution.\n- National EV Strategy: FAIL (-0.30, -0.10) — Pushes targets without infrastructure.",
       "Dublin City Council approved a motion to prepare road-opening license guidelines for residents to run EV charging cables under footpaths, anticipating future national legislation.",
       "The Poison:\nBy making residents apply and pay for individual road-opening licenses to dig up footpaths, the city creates an unequal, fragmented patchwork of private infrastructure on public land.",
       "The Plane Error occurs on the Logical plane (HOW). The council assumes passing a motion to \"iron out details\" solves the physical and legal gridlock of ESB's monopoly and footpath safety.",
       "Social Physics Analysis:\nCouncillors execute a mild Smart Selfish Maneuver, using the pretext of green progress to project responsibility onto residents. Instead of building public charging, they manufacture a complex licensing problem that residents must fund.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between grand climate targets and the reality of residents digging up their own streets, it plots a trajectory toward Stasis. Bureaucratic inertia dilutes real systemic solutions into individual chores.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between grand climate targets and the reality of residents digging up their own streets, it plots a trajectory toward Stasis. Bureaucratic inertia dilutes real systemic solutions into individual chores.",
       "The Unavoidable Truth: Shifting the cost of infrastructure to residents slows down the green transition.\nThe Unavoidable Lie: Passing a motion to study footpath digging means the city has solved the EV charging crisis.",
       "Alethekanon:\nPolicy without public funding is just a suggestion. True environmental progress requires collective infrastructure, not individual licensing hurdles.",
       "Awwthekanon:\nPeople want to do the right thing for the planet, but we shouldn't make them jump through bureaucratic hoops and dig up their own streets just to charge their cars.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Dublin City Council Policy",
@@ -165,6 +227,7 @@
         "name": "ESB Networks",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

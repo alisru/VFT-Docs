@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/10/07/us-news/memphis-city-council-meeting-erupts-into-chaos-over-vote-on-musk-data-centers/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "Chaos erupted at a Memphis City Council hearing after a vote on a data center moratorium was delayed.\nEvidence: Meeting postponed, Fistfight breaks out, Protesters storm dais\n#Aletheia #Memphis #Tech",
-      "Officials claimed the delay was merely to evaluate infrastructure impacts, maintaining calm governance.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The meeting dissolved into shouting, fistfights, and storming of the dais as community frustration collided with political gridlock.\nResulting Judgement: (-0.85, -0.80) — Lesser/Greater Evil Co-optation",
-      "Verdict: FAIL — The Path of Deception.\nGridlocked local officials and rushed tech infrastructure collisions create community chaos.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.80, z: 4)",
+      "Officials claimed the delay was merely to evaluate infrastructure impacts, maintaining calm governance.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The meeting dissolved into shouting, fistfights, and storming of the dais as community frustration collided with political gridlock.\nResulting Judgement: (-0.94, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nGridlocked local officials and rushed tech infrastructure collisions create community chaos.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.80, z: 4)",
       "- Memphis City Council: FAIL (-0.85, -0.80) — Postponed vital votes, triggering civic chaos.\n- Protesters & Residents: COND (0.00, -0.50) — Legitimate grievances hijacked by anger.",
       "A Memphis City Council vote on a 12-month data center moratorium for SpaceXAI's Colossus facilities descended into chaos, fistfights, and protesters storming the dais.",
       "The Poison:\nLegitimate community concerns over water and power strain are buried beneath political infighting and violent civic disruptions.",
       "The Breakdown & Plane Error:\nConfusing procedural delays (Q5) with genuine democratic accountability (Q1), officials treated public strain as a nuisance rather than a systemic signal.",
       "Social Physics Analysis:\nCouncil members executed a smart selfish maneuver, using procedural delays to dodge hard choices while projecting blame onto colleagues and residents, bypassing transparent dialogue.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. High friction and hidden corporate extraction drive systemic instability.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. High friction and hidden corporate extraction drive systemic instability.",
       "The Unavoidable Truth: Procedural delays on massive tech infrastructure inevitably ignite community outrage when public resources are compromised.\n\nThe Unavoidable Lie: Claiming a delayed vote is purely about careful study rather than political avoidance ignores the immediate crisis.",
       "Alethekanon:\nElected officials hiding behind procedural delays invite the very chaos they condemn. Transparency cannot be postponed indefinitely.",
       "Awwthekanon:\nIt hurts to see neighbors shouting and fighting when everyone just wants their community, water, and future protected. We need real listening, not closed doors.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Memphis City Council",
@@ -227,6 +289,7 @@
         "name": "Jeff Warren",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

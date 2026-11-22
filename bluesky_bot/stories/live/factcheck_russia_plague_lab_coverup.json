@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "real_u": -0.37,
+    "real_psi": -0.53,
     "mode": "root",
     "posts": [
       "A grieving mother quarantined in Siberia challenges the state narrative blaming her deceased daughter for a lethal lab leak. 🌐\nEvidence: Institutional safety, Scapegoating deceased, State self-preservation\n#Aletheia #SiberiaPlague #Biosecurity",
-      "State media and officials claim lab technician Darya Shipilova died of pneumonic plague after carelessly breaking a test tube, framing the tragedy as isolated human error.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "In reality, colleagues and family expose the 'broken tube' story as a physical impossibility. The state uses quarantine and blackouts to hide systemic biosecurity failures.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Revelation into Destruction. The state actively scapegoated a deceased researcher to shield its biosecurity institutions from liability and public panic.\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 3)",
+      "State media and officials claim lab technician Darya Shipilova died of pneumonic plague after carelessly breaking a test tube, framing the tragedy as isolated human error.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "In reality, colleagues and family expose the 'broken tube' story as a physical impossibility. The state uses quarantine and blackouts to hide systemic biosecurity failures.\nResulting Judgement: (-0.37, -0.53) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 3)",
       "- Russian State Media: FAIL (-1.0, -1.0) — Spreads unverified scapegoating narrative.\n- Irkutsk Anti-Plague Inst: FAIL (-0.9, -0.8) — Conceals systemic safety failures.\n- Lyudi Baikala: PASS (0.8, 0.2) — Exposes the institutional cover-up.",
       "Svetlana Shipilova, mother of deceased 28-year-old scientist Darya Shipilova, remains quarantined in an Irkutsk hospital without an official death certificate, while state narratives blame her daughter for a suspected pneumonic plague leak.",
       "The Bright Side:\nIndependent journalists and courageous colleagues breached the information blackout, refusing to let a dead scientist bear the sole blame for a systemic failure.",
       "The Breakdown & Plane Error:\nThe state committed a Metaphysical error (WHO benefits) by presenting the scapegoating of a deceased technician as a public safety measure, when it actually served to protect state institutions from liability.",
       "Social Physics Analysis:\nRussian authorities executed a Smart Selfish Maneuver. Facing a potential biosecurity crisis, they manufactured a pretext of individual negligence—claiming a technician broke an unbreakable tube—to project blame away from systemic institutional failures.",
-      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated safety protocols and the quarantine of entire families, it plots a direct trajectory toward Greater Evil. The system sacrifices individual truth to preserve institutional power.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated safety protocols and the quarantine of entire families, it plots a direct trajectory toward Greater Evil. The system sacrifices individual truth to preserve institutional power.",
       "The Unavoidable Truth: A deceased lab technician cannot defend her professional reputation against state-sponsored narratives.\nThe Unavoidable Lie: Highly protected, shatterproof laboratory test tubes easily break during routine scientific handling.",
       "Alethekanon:\nInstitutional self-preservation routinely overrides empirical truth. By blaming the deceased, the state attempts to close the possibility space of systemic accountability.",
       "Awwthekanon:\nOur hearts break for Svetlana, locked in a quarantine ward, denied even the dignity of burying her daughter while state machinery smears her child's memory.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Russian State Media Narrative",
@@ -177,6 +239,7 @@
         "name": "Lyudi Baikala",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

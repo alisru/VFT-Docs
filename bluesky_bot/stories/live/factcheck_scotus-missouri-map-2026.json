@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.1,
-    "real_psi": 0.2,
+    "real_u": 0.25,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "SCOTUS blocks Missouri's contested GOP-backed congressional map for the upcoming midterms to prevent late electoral chaos.\nEvidence: Court order, 2022 map restoration, election timeline\n#Aletheia #SCOTUS #USPol 🌐",
-      "The Supreme Court intervened to block a last-minute map change, prioritizing administrative stability over shifting legislative advantages right before voting.\nStated Judgement: (+1.0, +1.0) — Grace",
-      "While preventing administrative chaos, the ruling preserves old district lines, freezing out legislative shifts engineered late in the cycle.\nResulting Judgement: (+0.1, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nThe high court prioritized procedural stability over partisan redistricting chaos to safeguard the electoral process.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "The Supreme Court intervened to block a last-minute map change, prioritizing administrative stability over shifting legislative advantages right before voting.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While preventing administrative chaos, the ruling preserves old district lines, freezing out legislative shifts engineered late in the cycle.\nResulting Judgement: (+0.25, +0.25) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nThe high court prioritized procedural stability over partisan redistricting chaos to safeguard the electoral process.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- SCOTUS Order: PASS (+0.5, +0.5) — Prioritizes orderly elections.\n- Electoral Impact: COND (+0.0, +0.0) — Freezes map boundaries.",
       "The Supreme Court blocked Missouri from using a new map that favored Republicans, opting to revert to 2022 districts to avoid polling confusion.",
       "The Bright Side:\nPreventing last-minute electoral disruption protects voter access and administrative integrity.",
       "The Breakdown & Plane Error:\nConfusing judicial risk management (WHERE/WHEN) with a permanent ruling on partisan gerrymandering rights (WHO/WHY).",
       "Social Physics Analysis:\nActors navigate institutional power through legal friction. By prioritizing stability over partisan maneuvering, the court reduces immediate systemic strain.",
-      "The Trajectory: The Path of Redemption.\nWhen procedural rules override raw power grabs, the system stabilizes toward orderly conflict resolution.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen procedural rules override raw power grabs, the system stabilizes toward orderly conflict resolution.",
       "The Unavoidable Truth: Procedural stability is essential to prevent electoral disenfranchisement.\n\nThe Unavoidable Lie: Judicial intervention is entirely free from political consequence.",
       "Alethekanon:\nCourts must balance partisan claims against the stark physical reality of administrative chaos.",
       "Awwthekanon:\nIt is heartening when institutions step in to protect voters from the sheer confusion of last-minute legal scrambles.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "SCOTUS Order",
@@ -162,6 +224,7 @@
         "name": "Missouri State Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

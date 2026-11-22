@@ -5,22 +5,22 @@
     "subject": "Republicans Head to Dallas with One Mission: Defy History and Win Big",
     "link": "https://www.foxnews.com/opinion/republicans-head-dallas-one-mission-defy-history-win-big",
     "target_url": "",
-    "claim_u": 0.7,
+    "claim_u": 0.65,
     "claim_psi": 0.1,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": -0.58,
+    "real_psi": -0.68,
     "mode": "root",
     "posts": [
       "Republicans gather in Dallas for an unprecedented midterm convention to defy historical odds and showcase America First priorities.\nEvidence: Midterm convention, Trump headline, $347M RNC investment\n#Aletheia #USPol",
-      "Organizers frame the historic Dallas convention as a commonsense conservative revolution focused on border security, economic growth, and legislative momentum.\nStated Judgement: (+0.7, +0.1) — Good Preference",
-      "In practice, the event functions as a centralized loyalty rally and branding exercise designed to override structural midterm headwinds through sheer partisan mobilization.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nAn innovative electoral strategy is framed as a grassroots revolution while consolidating top-down party control.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.4, z: 2)",
+      "Organizers frame the historic Dallas convention as a commonsense conservative revolution focused on border security, economic growth, and legislative momentum.\nStated Judgement: (+0.65, +0.10) — Greater Good",
+      "In practice, the event functions as a centralized loyalty rally and branding exercise designed to override structural midterm headwinds through sheer partisan mobilization.\nResulting Judgement: (-0.58, -0.68) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAn innovative electoral strategy is framed as a grassroots revolution while consolidating top-down party control.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.4, z: 2)",
       "Sub-Audits Breakdown:\n- Fox News Coverage: FAIL (-0.62, -0.71) — Frames partisan rally as historic crusade.\n- RNC Strategy: COND (-0.55, -0.65) — Pragmatic spending disguised as populism.",
       "Republicans are hosting their first-ever midterm convention in Dallas, Texas, featuring Donald Trump as headliner to build momentum ahead of the November elections.",
       "The Poison:\nPresenting top-down electoral engineering as an organic populist uprising obscures the pragmatic consolidation of party machinery.",
       "The Breakdown & Plane Error:\nConfusing HOW (deploying massive campaign funds) with WHY (defying historical political gravity) masks systemic electoral mechanics behind charismatic theater.",
       "Social Physics Analysis:\nParty leadership executes a Smart Selfish Maneuver, manufacturing an existential crusade narrative to drive base turnout while shielding institutional strategy from critique.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil via partisan mobilization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil via partisan mobilization.",
       "The Unavoidable Truth: Midterm elections historically punish the incumbent party regardless of convention pageantry.\nThe Unavoidable Lie: A localized party convention represents an unstoppable grassroots revolution.",
       "Alethekanon:\nRebranding a standard partisan pep rally as a historic constitutional pivot reveals the limits of electoral storytelling.",
       "Awwthekanon:\nPolitics feels like an endless battle for control, but true community strength comes from listening to one another, not rallies.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fox News Coverage",
@@ -165,6 +227,7 @@
         "name": "Joe Gruters",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

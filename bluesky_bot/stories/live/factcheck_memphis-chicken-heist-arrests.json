@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.3,
-    "real_psi": -0.2,
+    "real_u": 0.1,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Police foil a bizarre $250K poultry caper behind a Memphis motel.\nEvidence: Task force arrests, stolen chicken, firearms seized\n#Memphis #Crime",
-      "Federal task force swiftly dismantles an organized ring stealing a quarter-million dollars in poultry from a parked semi-truck.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While 13 suspects were rounded up in a massive sweep, the incident highlights persistent local property crime and asset vulnerability.\nResulting Judgement: (-0.3, -0.2) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPolice action stops a bizarre theft, but sensationalizing a localized cargo heist masks deeper urban safety challenges.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Federal task force swiftly dismantles an organized ring stealing a quarter-million dollars in poultry from a parked semi-truck.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "While 13 suspects were rounded up in a massive sweep, the incident highlights persistent local property crime and asset vulnerability.\nResulting Judgement: (+0.10, +0.10) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nPolice action stops a bizarre theft, but sensationalizing a localized cargo heist masks deeper urban safety challenges.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Task Force Action: PASS (0.5, 0.4) — Swift arrests made.\n- Media Framing: COND (-0.3, -0.2) — Sensationalizes petty cargo theft.",
       "Thirteen individuals were arrested by the Memphis Safe Task Force after being caught red-handed unloading $250,000 worth of frozen chicken from an 18-wheeler behind a motel.",
       "The Poison:\nTurning localized cargo theft into viral spectacle distracts from systemic economic drivers of urban crime.",
       "The Breakdown & Plane Error:\nConfusing WHAT (cargo theft prevention) with WHO (root socio-economic stability). The bust secures property but solves no underlying poverty.",
       "Social Physics Analysis:\nLaw enforcement operates in a reactive Smart Altruistic loop to secure stolen goods, but media framing relies on sensational projection to manufacture public distraction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Reactive enforcement handles symptoms while systemic drivers persist.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Reactive enforcement handles symptoms while systemic drivers persist.",
       "The Unavoidable Truth: Law enforcement successfully recovered stolen goods and illegal firearms during the motel sweep.\n\nThe Unavoidable Lie: Sensationalizing a bizarre cargo theft solves the underlying economic desperation driving urban crime.",
       "Alethekanon:\nSensationalizing routine cargo recovery masks systemic urban decay beneath a veneer of decisive law enforcement triumph.",
       "Awwthekanon:\nIt's wild how a quarter-million in frozen poultry can lead to such chaos, but behind these mugshots are lives caught in cycles of desperation.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Task Force Action",
@@ -156,6 +218,7 @@
         "name": "U.S. Marshals Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

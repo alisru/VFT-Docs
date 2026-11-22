@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.3,
+    "real_u": -0.05,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "Relentless coastal erosion and monster swells from Hurricane Marie force emergency track closures along the scenic San Clemente rail corridor.\nEvidence: High tides, riprap placement, service suspension\n#Aletheia #Infrastructure",
-      "Regional rail networks maintain reliable, uninterrupted transit schedules while proactively managing passenger safety during weather events.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Repeated coastal landslides and storm swells have repeatedly crippled the San Clemente rail line, forcing recurring emergency closures and boulder dumping.\nResulting Judgement: (-0.4, -0.3) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nBand-aid boulder fixes mask a compounding structural crisis on an eroding coastline.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 2)",
+      "Regional rail networks maintain reliable, uninterrupted transit schedules while proactively managing passenger safety during weather events.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Repeated coastal landslides and storm swells have repeatedly crippled the San Clemente rail line, forcing recurring emergency closures and boulder dumping.\nResulting Judgement: (-0.05, -0.35) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nBand-aid boulder fixes mask a compounding structural crisis on an eroding coastline.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 2)",
       "- Metrolink Operational Notice: PASS (0.7, 0.0) — Clear safety alerts issued.\n- Regional Infrastructure Resilience: FAIL (-0.8, -0.7) — Chronic recurring failures.",
       "Metrolink and Amtrak suspended service between Laguna Niguel and Oceanside after Hurricane Marie swells battered the San Clemente coastline.",
       "The Bright Side:\nEmergency crews acted quickly to place protective riprap boulders, preventing catastrophic track collapse during peak storm surges.",
       "The Breakdown & Plane Error:\nTreating chronic geographic degradation (WHERE) as simple temporary weather delays (WHEN), ignoring systemic relocation needs.",
       "Social Physics Analysis:\nTransport agencies run a reactive maintenance loop, treating recurring climate erosion as isolated surprises. Instead of systemic redesign, they apply temporary boulder pretexts, passing long-term infrastructure decay onto future riders.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Patchwork fixes on eroding cliffs inevitably yield compounding transit failures.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Patchwork fixes on eroding cliffs inevitably yield compounding transit failures.",
       "The Unavoidable Truth: Climate pressures and coastal erosion are rendering current shore-line rail routes unsustainable.\n\nThe Unavoidable Lie: Emergency boulder drops represent a permanent solution to a worsening geological crisis.",
       "Alethekanon:\nStacking boulders against an advancing ocean is a desperate ritual of denial, not an engineering strategy.",
       "Awwthekanon:\nIt is frustrating for commuters who rely on this scenic line to see their daily journeys repeatedly disrupted by nature's fury.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Metrolink Operational Notice",
@@ -156,6 +218,7 @@
         "name": "Orange County Transportation Authority",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

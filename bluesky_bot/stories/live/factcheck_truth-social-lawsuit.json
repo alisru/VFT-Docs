@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A lawsuit challenges Truth Social's $100k/month API, alleging it sells market-moving presidential posts for private gain. Evidence: Free speech, Market advantage, Financial corruption. #TruthSocial #Trump #Finance 🌐",
-      "Trump Media claims the service is an 'uncancellable haven for free speech' and a standard business product. Stated Judgement: (+1.00, +1.00) — Good Preference",
-      "The reality is a high-speed data feed selling privileged access to presidential announcements, directly benefiting Trump's personal trust. Resulting Judgement: (-0.30, +0.43) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning. The service commodifies presidential influence, creating a pay-to-play market that undermines public transparency. Integrity: Severe Deception (Hypocrisy: 1.45, Uncertainty z: 2)",
+      "Trump Media claims the service is an 'uncancellable haven for free speech' and a standard business product. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality is a high-speed data feed selling privileged access to presidential announcements, directly benefiting Trump's personal trust. Resulting Judgement: (-0.30, +0.43) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.",
       "- Trump Media: FAIL (-0.9, -0.9) — Prioritizes profit over equity.\n- Plaintiffs: PASS (0.8, 0.5) — Highlights systemic corruption.",
       "The lawsuit, filed by media groups, argues that selling priority access to presidential messages is unconstitutional and corrupt.",
       "The Poison:\nTurning the presidency into a premium subscription service creates a two-tier reality where information is a luxury good.",
       "The Breakdown & Plane Error:\nThis is a WHO vs WHAT error; they claim the 'what' is a tech API, but the 'who' is the President of the US, making it a matter of public trust, not just software.",
       "Social Physics Analysis:\nBy monetizing the President's reach, the platform creates a closed loop of influence where the wealthy gain an informational edge, effectively privatizing the public square for personal gain.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic corruption of public office for private profit is a high-strain, unstable state.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic corruption of public office for private profit is a high-strain, unstable state.",
       "The Unavoidable Truth: Selling early access to presidential announcements creates an inherent conflict of interest.\n\nThe Unavoidable Lie: This is just a standard API service for businesses.",
       "Alethekanon:\nThe commodification of presidential speech is a structural shift in political communication, moving from public broadcast to exclusive, high-frequency trading data.",
       "Awwthekanon:\nIt is heartbreaking to see the public's right to know being sold to the highest bidder, leaving everyone else in the dark.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.55,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.3,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.9,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.55,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Trump Media & Technology Group",
@@ -270,6 +332,7 @@
         "name": "Freedom of the Press Foundation",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

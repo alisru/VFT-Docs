@@ -5,22 +5,22 @@
     "subject": "Flash Flooding At Grand Canyon Knocks Out Water Line",
     "link": "https://dailycaller.com/2026/08/31/flash-flooding-grand-canyon-water-line-dead-missing",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": -0.5,
+    "claim_u": 0.83,
+    "claim_psi": 1.0,
+    "real_u": 0.14,
+    "real_psi": 0.53,
     "mode": "root",
     "posts": [
       "A devastating flash flood hits the Grand Canyon, leaving one dead, fifteen missing, and crippling critical park water infrastructure. 🌐\n\nFlash Flooding At Grand Canyon\nEvidence: severe weather, infrastructure damage, rescue operations\n#Aletheia #Environment",
-      "Reports emphasize emergency evacuations and infrastructure failure following severe weather across canyon trails.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Natural disaster strikes unexpectedly, exposing vulnerabilities in remote park infrastructure and emergency response capabilities.\nResulting Judgement: (+0.2, -0.5) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nA tragic natural disaster exposes systemic infrastructure fragility under sudden environmental stress.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Reports emphasize emergency evacuations and infrastructure failure following severe weather across canyon trails.\nStated Judgement: (+0.83, +1.00) — Greater Good",
+      "Natural disaster strikes unexpectedly, exposing vulnerabilities in remote park infrastructure and emergency response capabilities.\nResulting Judgement: (+0.14, +0.53) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nA tragic natural disaster exposes systemic infrastructure fragility under sudden environmental stress.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- National Park Service: PASS (+0.5, -0.2) — Swift evacuations executed.\n- Infrastructure Resilience: COND (-0.2, -0.5) — Single pipeline vulnerability exposed.",
       "Severe rain on the Kaibab Plateau triggered a massive flash flood in Bright Angel Canyon, destroying footbridges and damaging the Transcanyon Waterline.",
       "The Bright Side:\nRapid emergency response and coordinated evacuations saved dozens of hikers from higher casualties.",
       "The Breakdown & Plane Error:\nConfusing a physical natural disaster (Q3) with institutional failure (Q1). The failure lies in aging park infrastructure resilience.",
       "Social Physics Analysis:\nWhen sudden natural strain hits, systemic survival depends on transparent communication and collective cooperation rather than blame or pretexts.",
-      "The Trajectory: The Path of Awakening.\nWhen nature exposes physical vulnerabilities, it plots a direct trajectory toward structural adaptation and resilience.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen nature exposes physical vulnerabilities, it plots a direct trajectory toward structural adaptation and resilience.",
       "The Unavoidable Truth: Extreme weather events will continue to test aging wilderness infrastructure.\n\nThe Unavoidable Lie: Wilderness environments can be rendered entirely risk-free by administrative decree.",
       "Alethekanon:\nNatural disasters brook no administrative vanity. Infrastructure resilience must match environmental volatility.",
       "Awwthekanon:\nMy heart goes out to all the families affected by this sudden tragedy in the canyon. May healing find those searching.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.3
+      },
+      "GE": {
+        "S": 0.3,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.3,
+        "N": 0.2
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.3,
+        "N": 0.2
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.6,
+        "N": 0.2
+      }
+    },
     "aspects": [
       {
         "aspect": "National Park Service Response",
@@ -217,6 +279,7 @@
         "name": "Hikers",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

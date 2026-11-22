@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.9,
-    "real_psi": -1.2,
+    "real_u": -0.1,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "ICE equips officers with high-tech compliance tools amid fierce pushback. ICE signs contract to buy electric shock gloves. Evidence: $16.7M contract, 380 volts, civil rights concerns. #Aletheia #ICE",
-      "The agency acquires non-lethal compliance tools to enhance officer safety and de-escalate confrontations.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "Procuring concealed 380-volt electric shock devices via a no-bid contract expands coercive force capabilities with minimal independent oversight.\nResulting Judgement: (-0.9, -1.2) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. Equipping coercive federal agents with concealed electric shock tools deepens systemic abuse risks.\n\nIntegrity: Severe Deception (Hypocrisy: 14.5, z: 4)",
+      "The agency acquires non-lethal compliance tools to enhance officer safety and de-escalate confrontations.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Procuring concealed 380-volt electric shock devices via a no-bid contract expands coercive force capabilities with minimal independent oversight.\nResulting Judgement: (-0.10, -0.40) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 14.5, z: 4)",
       "- ICE Procurement: FAIL (-0.9, -1.2) — Bypasses transparent oversight.\n- Senatorial Pushback: PASS (0.7, 0.4) — Flags civil rights risks.",
       "ICE awarded a $16.7 million no-bid contract to Compliant Technologies for 6,000 pairs of electric shock gloves delivering up to 380 volts to subdue resisting individuals.",
       "The Poison:\nFraming high-voltage electroshock devices as passive 'invisible partners' masks the inherent danger of expanding state coercion without strict public accountability.",
       "The Breakdown & Plane Error:\nThe error confuses the WHAT (procuring de-escalation equipment) with the WHO (armed federal immigration enforcement officers operating with low accountability).",
       "Social Physics Analysis:\nBy deploying secretive force multipliers under the pretext of safety, the agency hoards coercive power. True safety requires transparent accountability rather than concealed voltage.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between safety rhetoric and coercive reality, it plots a direct trajectory toward Greater Evil. Power expands silently under pretexts of protection.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between safety rhetoric and coercive reality, it plots a direct trajectory toward Greater Evil. Power expands silently under pretexts of protection.",
       "The Unavoidable Truth: Equipping federal agents with concealed electric shock tools increases the risk of severe abuse.\n\nThe Unavoidable Lie: No-bid procurement of high-voltage compliance gear inherently reduces systemic force.",
       "Alethekanon:\nDisguising electroshock weaponry as benign gloves illustrates the quiet creep of institutional coercion.",
       "Awwthekanon:\nIt is heartbreaking to witness vulnerable people facing increasingly harsh, mechanized forms of physical control.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "ICE Procurement",
@@ -156,6 +218,7 @@
         "name": "Catherine Cortez Masto",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

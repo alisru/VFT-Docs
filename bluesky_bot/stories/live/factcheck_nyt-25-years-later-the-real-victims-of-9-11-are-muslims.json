@@ -5,22 +5,22 @@
     "subject": "NYT: 25 Years Later, The Real Victims Of 9/11 Are Muslims",
     "link": "https://thefederalist.com/2026/09/11/nyt-25-years-later-the-real-victims-of-9-11-are-muslims/?utm_source=rss&utm_medium=rss&utm_campaign=nyt-25-years-later-the-real-victims-of-9-11-are-muslims",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.8,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.7,
+    "claim_psi": 0.4,
+    "real_u": -0.6,
+    "real_psi": -0.6,
     "mode": "root",
     "posts": [
       "When anniversary reporting shifts focus from the fallen to cultural grievances, historical memory fractures.\nEvidence: 2,977 victims, NYT framing, political scrutiny\n#Aletheia #911Anniversary",
-      "Honoring the victims of 9/11 while fairly examining the post-9/11 experiences of American Muslims.\nStated Judgement: (+0.9, +0.8) — Good Preference",
-      "The article uses the 25th anniversary to launch political attacks against NYC Mayor Zohran Mamdani while accusing the NYT of erasing direct victims.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nWeaponizing a national day of mourning for partisan political attacks degrades public discourse.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 3)",
+      "Honoring the victims of 9/11 while fairly examining the post-9/11 experiences of American Muslims.\nStated Judgement: (+0.70, +0.40) — Greater Good",
+      "The article uses the 25th anniversary to launch political attacks against NYC Mayor Zohran Mamdani while accusing the NYT of erasing direct victims.\nResulting Judgement: (-0.60, -0.60) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWeaponizing a national day of mourning for partisan political attacks degrades public discourse.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 3)",
       "- The New York Times: COND (-0.4, -0.3) — Inverts victimhood focus away from direct 9/11 dead.\n- The Federalist Critique: FAIL (-0.8, -0.9) — Uses anniversary for partisan attacks.",
       "On the 25th anniversary of 9/11, media outlets clashed over how to balance honoring the nearly 3,000 direct victims with addressing subsequent Islamophobia.",
       "The Poison:\nUsing solemn historical remembrance as a weapon in ongoing domestic political and cultural battles.",
       "The Breakdown & Plane Error:\nConfusing historical remembrance of direct victims (WHAT) with contemporary political vetting of local officials (WHO).",
       "Social Physics Analysis:\nBoth outlets run a Smart Selfish Maneuver, manufacturing ideological crises around historical trauma to project blame onto political opponents rather than fostering resolution.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between solemn commemoration and partisan weaponization, it plots a direct trajectory toward Destruction. Net force pulls towards GE.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between solemn commemoration and partisan weaponization, it plots a direct trajectory toward Destruction. Net force pulls towards GE.",
       "The Unavoidable Truth: The primary victims of 9/11 were the 2,977 souls murdered by terrorists.\n\nThe Unavoidable Lie: Every historical anniversary is merely an invitation to score modern political points.",
       "Alethekanon:\nTragedy is too often treated as a reusable script by rival factions, where every solemn milestone is hijacked for ideological combat.",
       "Awwthekanon:\nTwenty-five years later, families still ache for the parents, spouses, and children lost on that dark morning. May their memory be held in peace.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "New York Times Framing",
@@ -156,6 +218,7 @@
         "name": "The Federalist",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

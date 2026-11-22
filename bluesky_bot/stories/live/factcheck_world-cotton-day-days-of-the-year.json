@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Celebrating the global cotton sector, smallholder farmers, and sustainable supply chains.\nEvidence: UN FAO backing, WTO oversight, smallholder focus\n#WorldCottonDay #Agriculture",
-      "World Cotton Day celebrates a vital global crop, advocating for fair pay, sustainable farming practices, and improved lives for millions of smallholder farmers.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While international bodies highlight cotton's economic footprint and farmer struggles, structural market asymmetries and trade barriers continue to challenge vulnerable growers.\nResulting Judgement: (+0.2, -0.1) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nInternational awareness initiatives spotlight agricultural labor realities, fostering gradual systemic dialogue despite persistent trade hurdles.\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
+      "World Cotton Day celebrates a vital global crop, advocating for fair pay, sustainable farming practices, and improved lives for millions of smallholder farmers.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While international bodies highlight cotton's economic footprint and farmer struggles, structural market asymmetries and trade barriers continue to challenge vulnerable growers.\nResulting Judgement: (+0.20, -0.10) — Lesser Good",
+      "Verdict: PASS — Compromise.\nInternational awareness initiatives spotlight agricultural labor realities, fostering gradual systemic dialogue despite persistent trade hurdles.\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
       "Sub-Audits Breakdown:\n- UN / WTO Framing: PASS (+0.5, 0.0) — Highlights agricultural equity.\n- Economic Reality: COND (+0.1, -0.2) — Acknowledges persistent trade hurdles.",
       "Established in 2019 by the Cotton-4 nations (Benin, Burkina Faso, Chad, Mali) and backed by the UN, World Cotton Day raises global awareness of cotton's socio-economic impact.",
       "The Bright Side:\nBrings international visibility and collaborative momentum to the economic hurdles faced by millions of rural agricultural workers.",
       "The Breakdown & Plane Error:\nConfusing celebratory awareness (WHAT) with deep structural trade reform (WHO/HOW), overlooking systemic price inequities in global markets.",
       "Social Physics Analysis:\nInternational institutions attempt a Smart Altruistic maneuver by uniting producers and elevating labor concerns, though entrenched commercial supply chains frequently limit true economic empowerment.",
-      "The Trajectory: The Path of Redemption.\nWhen you map international agricultural advocacy against persistent commodity disparities, it charts a steady course toward structural reform.\nMathematical equilibrium: u = +0.2, psi = -0.1.",
+      "The Trajectory: The Path of Compromise.\nWhen you map international agricultural advocacy against persistent commodity disparities, it charts a steady course toward structural reform.\nMathematical equilibrium: u = +0.2, psi = -0.1.",
       "The Unavoidable Truth: Global cotton production directly supports millions of rural livelihoods across developing nations.\n\nThe Unavoidable Lie: Annual awareness days alone can resolve systemic commodity trade inequities.",
       "Alethekanon:\nCelebratory agricultural campaigns successfully elevate worker visibility, but true systemic equity requires binding trade policy over symbolic recognition.",
       "Awwthekanon:\nEvery thread of cotton carries the quiet dignity and hard work of farmers striving to build a better future for their families against immense odds.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "International Agricultural Advocacy",
@@ -150,6 +212,7 @@
         "name": "Cotton-4 Nations",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

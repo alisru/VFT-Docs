@@ -5,22 +5,22 @@
     "subject": "Massive fire engulfs Beverly Hills apartment complex as entire roof caves in",
     "link": "https://nypost.com/2026/09/09/us-news/beverly-hills-apartment-fire-prompts-rexford-drive-road-closure/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.5,
-    "real_psi": 0.3,
+    "claim_u": 0.75,
+    "claim_psi": 0.6,
+    "real_u": 0.75,
+    "real_psi": 0.6,
     "mode": "root",
     "posts": [
       "A massive multi-alarm fire tore through a Beverly Hills apartment complex, causing a roof collapse and drawing emergency responders. Evidence: Rexford Dr fire, roof collapse, minor firefighter injuries. #BeverlyHills #Aletheia 🌐",
-      "Local reports describe an aggressive multi-alarm fire on Rexford Drive that forced evacuations and a shelter-in-place order at a nearby middle school.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "First responders contained the blaze after a partial roof collapse, safely evacuating residents and treating two firefighters for minor injuries.\nResulting Judgement: (+0.5, +0.3) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening. Quick emergency action and swift evacuations prevented major casualties during a dangerous structural collapse.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Local reports describe an aggressive multi-alarm fire on Rexford Drive that forced evacuations and a shelter-in-place order at a nearby middle school.\nStated Judgement: (+0.75, +0.60) — Greater Good",
+      "First responders contained the blaze after a partial roof collapse, safely evacuating residents and treating two firefighters for minor injuries.\nResulting Judgement: (+0.75, +0.60) — Greater Good",
+      "Verdict: PASS — Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Emergency Response: PASS (+0.8, +0.7) — Swift containment & evacuations.\n- Public Safety: PASS (+0.7, +0.5) — School shelter & neighbor safety.",
       "A heavy multi-alarm fire erupted at a two-story apartment complex on South Rexford Drive in Beverly Hills, prompting road closures and emergency deployments.",
       "The Bright Side:\nSwift coordination between firefighters and school officials ensured zero civilian casualties despite a dramatic structural roof collapse.",
       "The Breakdown & Plane Error:\nNone; this is a straightforward physical emergency report accurately covering structural hazards without hidden political agendas.",
       "Social Physics Analysis:\nEmergency responders executed a smart altruistic loop, prioritizing public safety, swift evacuations, and transparent containment over private extraction.",
-      "The Trajectory: The Path of Awakening.\nWhen mapping the emergency response against crisis demands, it plots a direct trajectory toward structural restoration.",
+      "The Trajectory: The Path of Grace.\nWhen mapping the emergency response against crisis demands, it plots a direct trajectory toward structural restoration.",
       "The Unavoidable Truth: Quick emergency response prevents catastrophic loss of life during sudden structural disasters.\nThe Unavoidable Lie: Disasters always come with predictable warnings.",
       "Alethekanon:\nPhysical reality brooks no delay; structural integrity and rapid emergency response determine survival when crisis strikes without warning.",
       "Awwthekanon:\nMy heart goes out to the residents displaced and the brave firefighters who put their safety on the line to keep the neighborhood safe.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Emergency Response",
@@ -156,6 +218,7 @@
         "name": "Beverly Vista Middle School",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

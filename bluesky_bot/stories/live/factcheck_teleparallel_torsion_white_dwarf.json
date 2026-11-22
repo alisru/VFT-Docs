@@ -12,8 +12,8 @@
     "mode": "root",
     "posts": [
       "Mapping the cosmos through pure mathematics. Teleparallel torsion and white dwarf structure in f(T) gravity explores how modified gravity shapes stars.\nEvidence: Theoretical Model, Mathematical Consistency, Physical Prediction\n#Aletheia #Physics",
-      "Researchers claim that quadratic torsion modifies the equilibrium structure of white dwarfs, altering their mass scale without needing to change the underlying matter equation of state.\nStated Judgement: (+1.0, +1.0) — Grace",
-      "The mathematical model consistently demonstrates how negative and positive couplings alter stellar mass and radius limits, providing a robust theoretical framework for modified gravity.\nResulting Judgement: (+1.0, +1.0) — Grace",
+      "Researchers claim that quadratic torsion modifies the equilibrium structure of white dwarfs, altering their mass scale without needing to change the underlying matter equation of state.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The mathematical model consistently demonstrates how negative and positive couplings alter stellar mass and radius limits, providing a robust theoretical framework for modified gravity.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
       "Verdict: PASS — Grace.\nThe theoretical model successfully maps physical predictions without logical contradictions or hidden pretexts.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 28)",
       "Sub-Audits Breakdown:\n- arXiv Preprint: PASS (1.0, 1.0) — Rigorous theoretical framework.\n- Gravity Model: PASS (1.0, 1.0) — Consistent mathematical derivation.",
       "This paper investigates how modifying general relativity with teleparallel torsion affects the maximum mass and physical structure of white dwarf stars under extreme densities.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "arXiv Preprint",
@@ -154,6 +216,7 @@
         "name": "Theoretical Physics Community",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

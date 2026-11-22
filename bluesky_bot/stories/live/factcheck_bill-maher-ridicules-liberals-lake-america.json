@@ -5,22 +5,22 @@
     "subject": "Bill Maher ridicules liberals’ 'Lake America' outrage with jab at left-wing language police",
     "link": "https://www.foxnews.com/media/bill-maher-ridicules-liberals-lake-america-outrage-jab-left-wing-language-police",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Bill Maher calls out liberal outrage over the 'Lake America' renaming while lampooning past progressive rebranding campaigns.\nEvidence: satire of naming, trade war context, partisan double standards\n#Aletheia #USPol",
-      "Bill Maher argues that critics of Trump's Lake Ontario renaming hypocritically ignore their own history of politically driven linguistic shifts like 'Latinx'.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While cultural hypocrisy is a real phenomenon, mocking nomenclature serves as a smokescreen for escalating trade wars and unilateral executive nationalist posturing.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSatirical critique exposes real hypocrisy but normalizes unilateral nationalist executive overreach disguised as cultural commentary.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.8, z: 2)",
+      "Bill Maher argues that critics of Trump's Lake Ontario renaming hypocritically ignore their own history of politically driven linguistic shifts like 'Latinx'.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "While cultural hypocrisy is a real phenomenon, mocking nomenclature serves as a smokescreen for escalating trade wars and unilateral executive nationalist posturing.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nSatirical critique exposes real hypocrisy but normalizes unilateral nationalist executive overreach disguised as cultural commentary.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.8, z: 2)",
       "Sub-Audits Breakdown:\n- Bill Maher Commentary: PASS (+0.4, 0.2) — Sharp cultural critique on hypocrisy.\n- Trade War Context: FAIL (-0.8, -0.9) — Exploits culture war to mask economic strain.",
       "Bill Maher used his HBO monologue to mock liberal anger over the renaming of Lake Ontario to 'Lake America' amidst collapsing U.S.-Canada trade talks and heavy tariffs.",
       "The Poison:\nUsing valid cultural critique of progressive jargon as camouflage for escalating economic confrontation and nationalist territorial branding.",
       "The Breakdown & Plane Error:\nConfusing WHAT (cultural language policing) with WHO (executive geopolitical retaliation). The critique targets elite language while ignoring state trade coercion.",
       "Social Physics Analysis:\nBy focusing on cultural hypocrisy rather than material economic disruption, commentators maintain partisan tribal boundaries. Pretexts of defending linguistic consistency mask the expansion of executive economic force.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. R_net = 2.8 due to selective framing.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. R_net = 2.8 due to selective framing.",
       "The Unavoidable Truth: Cultural hypocrisy in language policing does not justify arbitrary executive renaming of international lakes.\nThe Unavoidable Lie: The renaming is merely a harmless cultural jab rather than an escalation of economic hostility.",
       "Alethekanon:\nCultural hypocrisy is weaponized here as a rhetorical shield to normalize state-level retaliatory branding during trade conflicts.",
       "Awwthekanon:\nIt hurts to watch cultural grievances constantly overshadow real economic pain and human cooperation between neighbors.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Bill Maher Commentary",
@@ -221,6 +283,7 @@
         "name": "Tim Graham",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

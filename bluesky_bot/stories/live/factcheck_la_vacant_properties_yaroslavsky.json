@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.68,
-    "real_psi": 0.45,
+    "real_u": 0.16,
+    "real_psi": 0.29,
     "mode": "root",
     "posts": [
       "LA sits on billions in vacant land while street homelessness festers. Councilwoman Katy Yaroslavsky is pushing to force the city to put its massive real estate holdings to work. 🌐\nEvidence: Public assets, Bureaucratic neglect, Housing reform\n#Aletheia #LA #Housing",
-      "The city claims it wants to solve the housing crisis, but departments let prime real estate sit empty or underutilized without any centralized tracking or economic strategy.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The reality is a slow-motion bureaucratic failure. LA owns thousands of properties but doesn't even know their total value, selling just three minor lots this fiscal year.\nResulting Judgement: (+0.68, +0.45) — Redemption",
-      "Verdict: PASS — Awakening into Redemption. Yaroslavsky's push exposes systemic asset hoarding and offers a logical path to unlock public land for housing.\nIntegrity: Trustworthy (Hypocrisy: 0.32, z: 1)",
+      "The city claims it wants to solve the housing crisis, but departments let prime real estate sit empty or underutilized without any centralized tracking or economic strategy.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality is a slow-motion bureaucratic failure. LA owns thousands of properties but doesn't even know their total value, selling just three minor lots this fiscal year.\nResulting Judgement: (+0.16, +0.29) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.32, z: 1)",
       "- Katy Yaroslavsky: PASS (0.85, 0.75) — Genuine reform push.\n- LA City Bureaucracy: FAIL (-0.45, -0.30) — Passive asset neglect.",
       "Councilwoman Yaroslavsky is advocating for a New York-style development agency to audit and repurpose over 9,000 city-owned properties, bypassing departmental silos to build affordable housing.",
       "The Poison:\nCreating another city agency risks adding more administrative overhead and red tape to a system already paralyzed by bureaucratic inertia.",
       "The Breakdown & Plane Error:\nThe city commits a Logical error (HOW), treating real estate management as a secondary departmental chore rather than a specialized economic development function, leading to massive waste.",
       "Social Physics Analysis:\nLA departments run a Smart Selfish Loop, hoarding land to protect their own spatial footprints while projecting the blame for housing shortages onto external market forces. Yaroslavsky's push attempts to force a transparent, altruistic solution.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between idle public wealth and severe housing strain, it plots a direct trajectory toward Redemption, forcing systemic assets to finally serve the public.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between idle public wealth and severe housing strain, it plots a direct trajectory toward Fall into Destruction, forcing systemic assets to finally serve the public.",
       "The Unavoidable Truth: LA cannot solve its housing crisis while sitting on billions in idle public land.\nThe Unavoidable Lie: The city is doing everything it can to build affordable housing.",
       "Alethekanon:\nLA's real estate paralysis is a textbook case of institutional hoarding. Yaroslavsky's proposal is a logically sound attempt to force public assets to yield public value.",
       "Awwthekanon:\nIt is heartbreaking to see empty lots and quiet parking yards fenced off while our neighbors sleep on the cold pavement. Every piece of unused land is a missed opportunity to build a safe, warm home.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Katy Yaroslavsky Reform Push",
@@ -283,6 +345,7 @@
         "name": "Los Angeles",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

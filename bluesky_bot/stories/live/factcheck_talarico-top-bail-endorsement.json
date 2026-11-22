@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Senate candidate James Talarico faces scrutiny for praising a progressive bail group tied to a freed offender's tragic mass murder spree.\nEvidence: TOP endorsement, Shane James bail, Senate race friction\n#Aletheia #USPol",
-      "Stating that the Texas Organizing Project's community infrastructure is irreplaceable and accepting its endorsement for the U.S. Senate race.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "TOP's former charitable bail program secured the release of an unmonitored violent offender who later committed a horrific six-person killing spree.\nResulting Judgement: (-0.75, -0.80) — Deception/Destruction",
-      "Verdict: FAIL — The Path of Deception.\nA political campaign's uncritical embrace of activist groups creates severe vulnerabilities when past policy failures involve violent crime.\nIntegrity: Severe Distortion (Hypocrisy: 7.5, z: 2)",
+      "Stating that the Texas Organizing Project's community infrastructure is irreplaceable and accepting its endorsement for the U.S. Senate race.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "TOP's former charitable bail program secured the release of an unmonitored violent offender who later committed a horrific six-person killing spree.\nResulting Judgement: (-0.75, -0.80) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA political campaign's uncritical embrace of activist groups creates severe vulnerabilities when past policy failures involve violent crime.\nIntegrity: Severe Distortion (Hypocrisy: 7.5, z: 2)",
       "- TOP Bail Program: FAIL (-0.80, -0.85) — Released violent offender.\n- Campaign Alignment: FAIL (-0.70, -0.75) — Overlooked severe policy risks.",
       "Texas Senate candidate James Talarico praised the Texas Organizing Project as irreplaceable, drawing fierce criticism because the group previously bailed out a suspect accused of mass murder.",
       "The Poison:\nBlindly praising activist groups for local ground game without auditing past program failures invites catastrophic political and public safety fallout.",
       "The Breakdown & Plane Error:\nConfusing grassroots community organizing (WHAT) with the catastrophic operational failures of a flawed bail release mechanism (WHO/HOW).",
       "Social Physics Analysis:\nThe campaign relies on a Smart Selfish maneuver—securing progressive activist infrastructure while ignoring structural liabilities, projecting blame onto critics rather than fixing accountability.",
-      "The Trajectory: The Path of Deception.\nWhen political ambition glosses over lethal operational failures in allied groups, it plots a direct trajectory toward Deception. F_pos < F_neg under severe strain.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen political ambition glosses over lethal operational failures in allied groups, it plots a direct trajectory toward Deception. F_pos < F_neg under severe strain.",
       "The Unavoidable Truth: Grassroots organizing builds vital community trust but requires rigorous operational accountability.\nThe Unavoidable Lie: Endorsing activist groups implies blanket approval of all their past administrative outcomes.",
       "Alethekanon:\nPoliticians cannot compartmentalize activist infrastructure from its real-world consequences without exposing deep hypocrisy.🌐",
       "Awwthekanon:\nIt is heartbreaking when systemic bail reforms fail so catastrophically, costing innocent lives while political campaigns trade endorsements over accountability.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "TOP Bail Program",
@@ -162,6 +224,7 @@
         "name": "Ken Paxton",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

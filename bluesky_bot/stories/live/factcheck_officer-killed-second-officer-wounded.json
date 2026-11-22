@@ -5,22 +5,22 @@
     "subject": "Officer Killed, Second Officer Wounded in Saturday Morning Ambush",
     "link": "https://www.breitbart.com/2nd-amendment/2026/10/10/officer-killed-second-officer-wounded-saturday-morning-ambush/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.25,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Philadelphia police officer Shane Seiber was killed and another wounded in a violent early morning ambush.\nEvidence: 1 officer killed, 2nd officer shot 12 times, suspect surrendered.\n#Philadelphia #Police #Aletheia",
-      "Law enforcement officers responding to a disturbance call were met with sudden, lethal gunfire.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "An officer was murdered and another critically injured in a brutal ambush, highlighting extreme urban violence and peril for first responders.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA routine call turned into a devastating ambush, resulting in the tragic loss of a father and severe injury to another officer.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
+      "Law enforcement officers responding to a disturbance call were met with sudden, lethal gunfire.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "An officer was murdered and another critically injured in a brutal ambush, highlighting extreme urban violence and peril for first responders.\nResulting Judgement: (+0.25, +0.10) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nA routine call turned into a devastating ambush, resulting in the tragic loss of a father and severe injury to another officer.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
       "Sub-Audits Breakdown:\n- Police Department Reporting: PASS (0.8, 0.5) — Accurate and solemn factual account.\n- Editorial Framing: COND (0.2, 0.0) — Focuses on second amendment lens.",
       "Two Philadelphia police officers responding to a gun disturbance call were ambushed just after midnight, resulting in the tragic death of Officer Shane Seiber.",
       "The Poison:\nThe stark vulnerability of first responders confronting heavily armed suspects in modern urban environments.",
       "The Breakdown & Plane Error:\nConfusing the immediate tactical tragedy (officer ambush) with broader political gun debates.",
       "Social Physics Analysis:\nThe violent ambush represents an extreme breakdown of social cohesion; authorities and responders acted with transparent duty, while the suspect's actions epitomized pure destructive force.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Force calculations reflect severe physical violence and tragedy.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Force calculations reflect severe physical violence and tragedy.",
       "The Unavoidable Truth: Officer Shane Seiber was killed and another officer severely wounded while answering a call for help.\n\nThe Unavoidable Lie: Such isolated tragedies can be neatly solved by political posturing rather than addressing deep-seated community violence.",
       "Alethekanon:\nA community mourns as routine public safety response shatters into irreparable personal and institutional tragedy.",
       "Awwthekanon:\nMy heart aches for Officer Seiber's wife, children, and fellow officers who must bear this unimaginable loss.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Police Report",
@@ -163,6 +225,7 @@
       "Philadelphia",
       "Police",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

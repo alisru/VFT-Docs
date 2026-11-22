@@ -6,15 +6,15 @@
     "link": "https://nypost.com/2026/09/05/us-news/colorado-man-barry-morphew-jailed-for-hit-and-run-years-after-wifes-death/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -1.2,
-    "real_psi": -1.5,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Barry Morphew, free on bond for his wife's murder, is back in jail after a hit-and-run.\n\nColorado man Barry Morphew jailed for hit-and-run\nEvidence: Bond compliance, Hit-and-run arrest, Judicial accountability\n#Aletheia #Justice",
-      "Barry Morphew was expected to comply with his strict $3 million bond conditions, remaining in southern Colorado except for authorized work travel.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Morphew violated his bond by traveling to Denver International Airport and was arrested after a hit-and-run crash involving two other vehicles.\nResulting Judgement: (-1.2, -1.5) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Morphew's reckless actions and bond violations shattered his temporary freedom, leading directly back to jail.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Barry Morphew was expected to comply with his strict $3 million bond conditions, remaining in southern Colorado except for authorized work travel.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Morphew violated his bond by traveling to Denver International Airport and was arrested after a hit-and-run crash involving two other vehicles.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Barry Morphew: FAIL (-1.20, -1.50) — Violated bond and fled crash scene.\n- Judicial Oversight: PASS (0.80, 0.50) — Promptly revoked bond upon violation.",
       "Barry Morphew, awaiting trial for the 2020 murder of his wife Suzanne, was arrested on September 4, 2026, after GPS data tracked him violating his bond during a Denver hit-and-run.",
       "The Bright Side:\nGPS monitoring and swift law enforcement action successfully detected and corrected the bond violation, protecting public safety.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Barry Morphew Bond Compliance",
@@ -213,6 +275,7 @@
         "name": "Anne Kelly",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

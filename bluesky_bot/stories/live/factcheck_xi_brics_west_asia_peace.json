@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/viktx.bsky.social/post/3mvexcquz3222",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.61,
-    "real_psi": -0.73,
+    "real_u": -0.37,
+    "real_psi": -0.63,
     "mode": "root",
     "posts": [
       "Xi Jinping calls on BRICS to restore peace in West Asia, positioning Beijing as a global mediator. But does the rhetoric match the reality of regional leverage? 🌐\nEvidence: Peace mediation, Diplomatic posturing, Strategic leverage\n#BRICS #MiddleEast #China",
-      "China claims it is acting as a disinterested, benevolent peace broker seeking to end conflict and protect human lives in West Asia.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, China is leveraging the conflict to project leadership of the Global South and undermine US influence, without offering concrete security guarantees.\nResulting Judgement: (-0.61, -0.73) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The call for peace serves as a low-cost diplomatic maneuver to build anti-Western consensus rather than a functional peace plan.\nIntegrity: Conditionally Sound (Hypocrisy: 1.92, Uncertainty z: 6)",
+      "China claims it is acting as a disinterested, benevolent peace broker seeking to end conflict and protect human lives in West Asia.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, China is leveraging the conflict to project leadership of the Global South and undermine US influence, without offering concrete security guarantees.\nResulting Judgement: (-0.37, -0.63) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Conditionally Sound (Hypocrisy: 1.92, Uncertainty z: 6)",
       "- Xinhua News: FAIL (-0.80, -0.90) — Pure propaganda framing Xi as a savior.\n- Mehr News: COND (-0.40, -0.60) — Focuses heavily on anti-US/Israeli framing.\n- Raisina Hills: PASS (0.10, -0.40) — Accurately tracks the strategic RIC balance.",
       "During the BRICS Summit in New Delhi, Chinese President Xi Jinping proposed a four-point plan to restore peace in West Asia, urging member states to oppose foreign interference.",
       "The Bright Side:\nChina's public commitment to a two-state solution and humanitarian aid keeps essential diplomatic frameworks alive on the international stage.",
       "The Breakdown & Plane Error:\nThis is a Logical-to-Physical error. The logical chain of 'BRICS declarations lead to peace' fails because it lacks any physical enforcement or security guarantees.",
       "Social Physics Analysis:\nBeijing executes a Smart Selfish Maneuver. By using the pretext of humanitarian concern, they project blame onto Western powers while securing their own regional energy interests without taking real security risks.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Rhetorical peace-weaving avoids the cost of real mediation.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Rhetorical peace-weaving avoids the cost of real mediation.",
       "The Unavoidable Truth: China will not deploy military or economic capital to enforce Middle East peace.\nThe Unavoidable Lie: BRICS declarations alone can resolve deep-seated regional conflicts.",
       "Alethekanon:\nCalling for peace is cheap; enforcing it is expensive. Beijing's strategy is to harvest the diplomatic benefits of mediation while leaving the security burdens to others.",
       "Awwthekanon:\nIt hurts to see the suffering of people in West Asia used as a talking point for geopolitical chess. True peace-weaving requires putting real skin in the game to protect lives.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Xinhua News Agency",
@@ -183,6 +245,7 @@
         "name": "West Asia",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

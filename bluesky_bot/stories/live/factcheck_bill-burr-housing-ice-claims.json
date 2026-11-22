@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.85,
+    "real_u": -0.88,
     "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "Comedian Bill Burr claims illegal migration doesn't impact housing and warns ICE will soon target white MAGA voters.\nEvidence: Rolling Stone interview claims, economic reality denial, conspiracy theories\n#BillBurr #Housing #Immigration",
-      "Bill Burr argues that polarization is tearing Americans apart while claiming immigration has no effect on housing costs and that ICE will eventually detain white conservative voters.\nStated Judgement: (+0.5, 0.0) — Conditional Good",
-      "Economic data consistently shows unauthorized workers increase housing costs and rents. Meanwhile, bizarre conspiracy theories about data centers and mass roundups of citizens substitute panic for facts.\nResulting Judgement: (-0.85, -0.88) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nBlending valid critiques of partisan tribalism with wild conspiracy theories and economic denialism constructs a false narrative.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Bill Burr argues that polarization is tearing Americans apart while claiming immigration has no effect on housing costs and that ICE will eventually detain white conservative voters.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Economic data consistently shows unauthorized workers increase housing costs and rents. Meanwhile, bizarre conspiracy theories about data centers and mass roundups of citizens substitute panic for facts.\nResulting Judgement: (-0.88, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nBlending valid critiques of partisan tribalism with wild conspiracy theories and economic denialism constructs a false narrative.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "Sub-Audits Breakdown:\n- Bill Burr Commentary: FAIL (-0.80, -0.85) — Mixes valid tribalism critique with false claims.\n- Economic Claims: FAIL (-0.95, -0.90) — Contradicts established Federal Reserve data.",
       "In a wide-ranging interview with Rolling Stone, comedian Bill Burr criticized political tribalism but veered into controversial claims regarding housing economics and federal immigration enforcement.",
       "The Bright Side:\nBurr rightly challenges toxic political tribalism, reminding Americans that red and blue states are on the same team.",
       "The Breakdown & Plane Error:\nConfusing cultural observation with economic policy, the commentary mistakes subjective grievance for systemic analysis.",
       "Social Physics Analysis:\nBurr runs a hybrid loop, correctly identifying tribal hostility (empathy for social cohesion) while manufacturing economic falsehoods and conspiratorial projections about state actors to delegitimize enforcement.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Discarding empirical data for sensationalist panic degrades public discourse.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Discarding empirical data for sensationalist panic degrades public discourse.",
       "The Unavoidable Truth: Political tribalism is corroding social trust across America.\n\nThe Unavoidable Lie: Unauthorized migration has zero impact on housing demand and prices.",
       "Alethekanon:\nMixing acute observations of cultural fracture with economic falsehoods creates a toxic brew of selective realism. Paranoia is not analysis.",
       "Awwthekanon:\nIt hurts to watch cultural frustration boil over into wild conspiracy theories. People are just trying to find footing in a changing economy.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Bill Burr Commentary",
@@ -158,6 +220,7 @@
         "name": "Rolling Stone",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

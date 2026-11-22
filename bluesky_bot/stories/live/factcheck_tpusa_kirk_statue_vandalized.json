@@ -5,22 +5,22 @@
     "subject": "PHOTO: Turning Point USA's Charlie Kirk Statue Vandalized, Splattered with Red Paint",
     "link": "https://www.breitbart.com/politics/2026/09/13/photo-turning-point-usas-charlie-kirk-statue-vandalized-splattered-with-red-paint/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "claim_u": 0.76,
+    "claim_psi": 0.87,
+    "real_u": -0.32,
+    "real_psi": -0.42,
     "mode": "root",
     "posts": [
       "A bronze memorial to Charlie Kirk is defaced with red paint just days after its unveiling.\nEvidence: Memorialization, Ideological Intimidation, Political Polarization\n#Aletheia #USPol #TPUSA",
-      "Turning Point USA seeks to honor the legacy of its late founder, Charlie Kirk, through a bronze statue dedicated to dialogue and faith.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Vandals defaced the statue with red paint, crossing out the name of Jesus and targeting the memorial to intimidate and polarize.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Vandalism of a memorial replaces civil dialogue with raw intimidation and ideological hostility.\nIntegrity: Severe Deception (Hypocrisy: 2.0, Uncertainty z: 5)",
+      "Turning Point USA seeks to honor the legacy of its late founder, Charlie Kirk, through a bronze statue dedicated to dialogue and faith.\nStated Judgement: (+0.76, +0.87) — Greater Good",
+      "Vandals defaced the statue with red paint, crossing out the name of Jesus and targeting the memorial to intimidate and polarize.\nResulting Judgement: (-0.32, -0.42) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 2.0, Uncertainty z: 5)",
       "- Vandalism Act: FAIL (-1.00, -1.00) — Pure destructive intimidation.\n- TPUSA Memorial: PASS (0.80, 0.50) — Legitimate commemoration.",
       "An eight-foot bronze statue of Charlie Kirk, unveiled outside TPUSA's Phoenix headquarters to mark the anniversary of his killing, was defaced with red paint on September 13, 2026.",
       "The Poison:\nEven in grief, the memorial becomes a lightning rod for further polarization, showing how deep ideological fractures run.",
       "The Breakdown & Plane Error:\nThe Plane Error is WHO vs WHAT. The vandals target the physical representation of a person to attack an ideology, substituting destructive violence for logical debate.",
       "Social Physics Analysis:\nThe vandals execute a Smart Selfish Maneuver, using anonymous destruction to project threat and manufacture a crisis of safety, avoiding transparent dialogue to hoard ideological power through fear.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The act of defacing a memorial accelerates societal decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The act of defacing a memorial accelerates societal decay.",
       "The Unavoidable Truth: Vandalizing memorials only deepens political polarization and hardens opposition.\n\nThe Unavoidable Lie: Defacing a statue is a form of constructive political dialogue.",
       "Alethekanon:\nVandalism is the ultimate admission of logical bankruptcy. When arguments fail, actors resort to physical desecration to signal dominance.",
       "Awwthekanon:\nIt is heartbreaking to see a memorial defaced. Grief deserves space, and we must find ways to heal our deep divisions through empathy rather than anger.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Vandalism Act",
@@ -283,6 +345,7 @@
         "name": "Phoenix Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,16 +5,16 @@
     "subject": "Wildfires Expose - and Detonate - Buried Bombs From WWI and WWII",
     "link": "https://www.breitbart.com/europe/2026/08/22/wildfires-expose-and-detonate-buried-bombs-from-wwi-and-wwii/",
     "target_url": "",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": 0.0,
+    "claim_u": 0.5,
+    "claim_psi": 0.78,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Wildfires across Europe are not just scorching forests—they are unearthing and detonating unexploded World War I and II munitions.\n\nWildfires Expose WWI and WWII Bombs\nEvidence: historical hazard, climate fires, explosive risk\n#Aletheia #Environment",
-      "Reports warn that extreme summer heat and drought are triggering lethal explosions from buried wartime ordnance across France, Belgium, and Germany.\nStated Judgement: (0.0, 0.0) — Neutral Observation",
-      "Experts confirm that climate-fueled fires and heavy winter rains are exposing legacy military debris, creating severe hazards for firefighters.\nResulting Judgement: (0.2, 0.0) — Grounded Truth",
-      "Verdict: PASS — The Path of Grace.\nAccurate reporting on verifiable physical risks and historical ordnance exposure.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Reports warn that extreme summer heat and drought are triggering lethal explosions from buried wartime ordnance across France, Belgium, and Germany.\nStated Judgement: (+0.50, +0.78) — Greater Good",
+      "Experts confirm that climate-fueled fires and heavy winter rains are exposing legacy military debris, creating severe hazards for firefighters.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nAccurate reporting on verifiable physical risks and historical ordnance exposure.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Fire Risk Reporting: PASS (0.2, 0.0) — Accurately details physical hazards.\n- Historical Context: PASS (0.2, 0.0) — Verifiable ordnance data.",
       "Summer wildfires in Europe are triggering unexpected blasts from decades-old munitions buried during major historical conflicts like the Battle of the Bulge.",
       "The Bright Side:\nRaising public awareness of hidden wartime hazards helps emergency responders adapt safety protocols during forest fires.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Fire Risk Reporting",
@@ -280,6 +342,7 @@
         "name": "European Fire Crews",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

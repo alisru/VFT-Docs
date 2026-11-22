@@ -6,21 +6,21 @@
     "link": "https://cnb.cx/4ynGOAj",
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mwppdsgcb72s",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.65,
-    "real_psi": -0.75,
+    "claim_psi": 1.0,
+    "real_u": -0.61,
+    "real_psi": 0.51,
     "mode": "root",
     "posts": [
       "Tech giants agree to mark their own AI homework under a White House accord.\nEvidence: Self-regulation, White House branding, regulatory capture\n#Aletheia #Tech #AI",
-      "Tech leaders claim voluntary safety accords and internal controls ensure robust AI safety and build public trust.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Major tech monopolies capture regulatory oversight, effectively marking their own homework while dodging binding federal accountability.\nResulting Judgement: (-0.65, -0.75) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nVoluntary corporate safety accords substitute PR for binding regulation, protecting oligopolistic control.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.20, Uncertainty z: 2)",
+      "Tech leaders claim voluntary safety accords and internal controls ensure robust AI safety and build public trust.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Major tech monopolies capture regulatory oversight, effectively marking their own homework while dodging binding federal accountability.\nResulting Judgement: (-0.61, +0.51) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nVoluntary corporate safety accords substitute PR for binding regulation, protecting oligopolistic control.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.20, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- AI Self-Regulation: FAIL (-0.60, -0.70) — Corporate PR masquerading as safety.\n- White House Accord: COND (-0.50, -0.60) — Political branding over public protection.",
       "Tech bosses from major AI groups signed the White House Accord on Super Intelligence, agreeing to internal safety checks while delaying mandatory federal regulation.",
       "The Poison:\nAllowing tech conglomerates to write their own safety rules creates a cozy illusion of compliance while locking out independent public oversight.",
       "The Breakdown & Plane Error:\nConfusing WHAT (voluntary corporate promises) with WHO (public safety authorities). The system substitutes industry self-interest for democratic accountability.",
       "Social Physics Analysis:\nTech actors execute a Smart Selfish Maneuver by co-opting the regulatory process. They manufacture the pretext of voluntary compliance to fend off binding laws while consolidating market dominance.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. F_pos vs F_neg dynamics pull will negative (-0.75).",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. F_pos vs F_neg dynamics pull will negative (-0.75).",
       "The Unavoidable Truth: Voluntary corporate safety agreements prioritize monopoly self-protection over genuine public safety.\n\nThe Unavoidable Lie: Tech leaders can impartially regulate their own transformative technologies without binding oversight.",
       "Alethekanon:\nWhen monopolies write their own rules, safety becomes a marketing brochure. 🌐",
       "Awwthekanon:\nIt is heartbreaking to watch our digital future handed over to a handful of executives who promise to look out for us while protecting their bottom line. True safety requires transparent, community-centered care.",
@@ -67,8 +67,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "AI Self-Regulation",
@@ -239,6 +301,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

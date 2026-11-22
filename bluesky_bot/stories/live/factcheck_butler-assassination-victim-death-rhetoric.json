@@ -5,22 +5,22 @@
     "subject": "Another Victim Of Butler Assassination Attempt Dies As Democrats Amp Up Violent Rhetoric",
     "link": "https://thefederalist.com/2026/09/25/another-victim-of-butler-assassination-attempt-dies-as-democrats-amp-up-violent-rhetoric/?utm_source=rss&utm_medium=rss&utm_campaign=another-victim-of-butler-assassination-attempt-dies-as-democrats-amp-up-violent-rhetoric",
     "target_url": "",
-    "claim_u": -0.5,
-    "claim_psi": -0.7,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.54,
+    "claim_psi": 0.75,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "The death of Butler rally shooting victim James Copenhaver sparks partisan media warfare over political rhetoric and violence.\nEvidence: Copenhaver's death, partisan polling, inflammatory headlines\n#Aletheia #USPol 🌐",
-      "The Federalist argues that ongoing political rhetoric from Democrats fuels assassinations and violence, directly linking it to the tragic late death of rally victim James Copenhaver.\nStated Judgement: (-0.5, -0.7) — Projected Blame",
-      "While Copenhaver's death from shooting complications is a tragic loss, the headline exploits grief to score partisan points without causal evidence connecting rhetoric to his medical outcome.\nResulting Judgement: (-0.8, -0.9) — Deception",
-      "Verdict: FAIL — The Path of Deception. Partisan outlets exploit national tragedy to manufacture outrage and weaponize grief.\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 3)",
+      "The Federalist argues that ongoing political rhetoric from Democrats fuels assassinations and violence, directly linking it to the tragic late death of rally victim James Copenhaver.\nStated Judgement: (+0.54, +0.75) — Greater Good",
+      "While Copenhaver's death from shooting complications is a tragic loss, the headline exploits grief to score partisan points without causal evidence connecting rhetoric to his medical outcome.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- The Federalist Framing: FAIL (-0.8, -0.9) — Exploits tragedy for partisan narrative.\n- Factual Core: PASS (0.5, 0.0) — Copenhaver's tragic death is verified.",
       "James Copenhaver passed away from complications related to wounds suffered during the July 2024 assassination attempt against Donald Trump in Butler, Pennsylvania.",
       "The Poison:\nWeaponizing personal tragedy and grief to score political points deepens national division and desensitizes the public to real violence.",
       "Confusing WHO is grieving (a family mourning a patriot) with WHAT is being argued (partisan blame over political rhetoric) twists human tragedy into a political weapon.",
       "Social Physics Analysis:\nThis piece runs a Smart Selfish Maneuver, using genuine national trauma as a pretext to project blame onto political opponents while manufacturing partisan outrage.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Exploiting grief for political leverage poisons public discourse.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Exploiting grief for political leverage poisons public discourse.",
       "The Unavoidable Truth: James Copenhaver's death is a tragic enduring consequence of political violence.\nThe Unavoidable Lie: Blaming partisan opponents for a medical death weaponizes grief.",
       "Alethekanon:\nTurning a survivor's death into a partisan cudgel degrades journalism and dishonors the victims. Grief should unite against violence, not be weaponized for clicks.",
       "Awwthekanon:\nMy heart aches for James Copenhaver's family, who bore physical and emotional pain for over two years. Using their painful loss for political point-scoring is deeply heartbreaking.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "The Federalist Framing",
@@ -211,6 +273,7 @@
         "name": "Corey Comperatore",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,14 +7,14 @@
     "target_url": "https://bsky.app/profile/planetdetroit.org/post/3mxosd3mpub24",
     "claim_u": 0.9,
     "claim_psi": 0.8,
-    "real_u": 0.9,
+    "real_u": 0.95,
     "real_psi": 0.9,
     "mode": "root",
     "posts": [
       "Noojimo’waning returns five Detroit lots to Anishinaabe stewardship for ecological restoration and cultural healing.\nEvidence: Native meadow, tree circles, community spaces\n#LandBack #Detroit #Aletheia",
-      "Returning urban land to Indigenous stewardship heals ecological trauma and restores ancestral cultural practices.\nStated Judgement: (+0.9, +0.8) — Greater Good",
-      "Grassroots stewards successfully transformed vacant lots into thriving native spaces, fostering community resilience.\nResulting Judgement: (+0.9, +0.9) — Absolute Truth",
-      "Verdict: PASS — The Path of Grace.\nTangible grassroots action successfully restores ecological balance and cultural continuity on ancestral land.\n\nIntegrity: Absolute Trust (Hypocrisy: 1.0, z: 0)",
+      "Returning urban land to Indigenous stewardship heals ecological trauma and restores ancestral cultural practices.\nStated Judgement: (+0.90, +0.80) — Greater Good",
+      "Grassroots stewards successfully transformed vacant lots into thriving native spaces, fostering community resilience.\nResulting Judgement: (+0.95, +0.90) — Greater Good",
+      "Verdict: PASS — Grace.\nTangible grassroots action successfully restores ecological balance and cultural continuity on ancestral land.\n\nIntegrity: Absolute Trust (Hypocrisy: 1.0, z: 0)",
       "- Land Stewardship: PASS (+1.0, +0.9) — Direct ecological restoration.\n- Cultural Integration: PASS (+0.9, +0.9) — Authentic community engagement.",
       "Noojimo’waning, located in Poletown's Arboretum Detroit, establishes the city's first Indigenous Land Back project across five urban lots.",
       "The Bright Side:\nFostering deep ecological reconnection and interspecies balance directly within an urban industrial landscape.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Land Stewardship",
@@ -170,6 +232,7 @@
       "LandBack",
       "Detroit",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Democrat-Backed Candidate Admits Quiet Part Out Loud: ‘I Have People Recording Me … I’ll Be F**ked’",
     "link": "https://dailycaller.com/2026/09/02/democrat-backed-nebraska-candidate-senate-dan-osborn-audio-leak-trans-ice-midterms",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Leaked audio exposes Nebraska Senate candidate Dan Osborn privately admitting he conceals his progressive policy stances to win over conservative voters.\n\nDemocrat-Backed Nebraska Candidate Senate Dan Osborn Audio Leak Trans ICE Midterms",
-      "Dan Osborn presents himself as an independent populist mechanic standing completely apart from partisan games, appealing to voters across the aisle.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Private recordings reveal Osborn intentionally hiding his true positions on transgender sports bans and abolishing ICE to secure crucial conservative ballots.\nResulting Judgement: (-0.85, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nCandidate conceals core ideological goals behind pragmatic electoral posturing to secure power.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 2)",
+      "Dan Osborn presents himself as an independent populist mechanic standing completely apart from partisan games, appealing to voters across the aisle.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Private recordings reveal Osborn intentionally hiding his true positions on transgender sports bans and abolishing ICE to secure crucial conservative ballots.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nCandidate conceals core ideological goals behind pragmatic electoral posturing to secure power.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 2)",
       "- Dan Osborn: FAIL (-0.85, -0.8) — Conceals true policy goals from voters.\n- Campaign Messaging: FAIL (-0.80, -0.75) — Masks partisan backing behind independent label.",
       "Leaked audio from Nebraska's Senate race shows independent candidate Dan Osborn acknowledging he must hide support for polarizing policies like abolishing ICE to defeat incumbent Pete Ricketts.",
       "The Bright Side:\nVoters get an unvarnished look at the tactical calculations driving modern campaign strategies.",
       "The Breakdown & Plane Error:\nConfuses WHAT is communicated with WHO is being served. The candidate portrays himself as a working-class champion while tailoring his rhetoric strictly for electoral survival.",
       "Social Physics Analysis:\nInstead of engaging voters through transparent dialogue, the campaign relies on strategic concealment. By masking controversial stances, the actor avoids immediate strain while deferring true accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Tactical omissions replace honest representation.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Tactical omissions replace honest representation.",
       "The Unavoidable Truth: Political candidates frequently suppress controversial positions in competitive electorates.\n\nThe Unavoidable Lie: Pretending tactical concealment constitutes genuine independent representation.",
       "Alethekanon:\nElectoral pragmatism forces candidates to cloak unpopular positions behind populist facades. True independence requires transparency, not calculated omission.",
       "Awwthekanon:\nIt is exhausting when political choices feel like a guessing game between polished marketing and hidden motives. Voters deserve authentic honesty.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Dan Osborn",
@@ -210,6 +272,7 @@
         "name": "Nebraska",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

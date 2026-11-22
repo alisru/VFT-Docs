@@ -5,22 +5,22 @@
     "subject": "Philadelphia police officer killed, another injured after responding to reports of man with a gun",
     "link": "https://www.1011now.com/2026/10/10/philadelphia-police-officer-killed-another-injured-after-responding-reports-man-with-gun/",
     "target_url": "https://bsky.app/profile/1011now.com/post/3mxkho4zxvx25",
-    "claim_u": 0.88,
-    "claim_psi": 0.65,
-    "real_u": -0.88,
-    "real_psi": -0.85,
+    "claim_u": 0.92,
+    "claim_psi": 0.43,
+    "real_u": 0.03,
+    "real_psi": 0.03,
     "mode": "root",
     "posts": [
       "Tragic violence hits West Philadelphia as a routine emergency response turns fatal for a veteran police officer.\nPhiladelphia Officer Killed in Line of Duty\nEvidence: Public Safety, Officer Fatality, Homicide Charges\n#Philadelphia #Police #Aletheia",
-      "Officers responded to a call regarding a man armed with a gun on a porch, executing their duty to protect the community and maintain order.\nStated Judgement: (+0.88, +0.65) — Greater Good",
-      "The suspect opened heavy fire upon arrival, fatally wounding 10-year veteran Shane Seiber and injuring a second officer before being arrested and charged.\nResulting Judgement: (-0.88, -0.85) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. A lawful protective response was met with devastating lethal violence against first responders.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Officers responded to a call regarding a man armed with a gun on a porch, executing their duty to protect the community and maintain order.\nStated Judgement: (+0.92, +0.43) — Greater Good",
+      "The suspect opened heavy fire upon arrival, fatally wounding 10-year veteran Shane Seiber and injuring a second officer before being arrested and charged.\nResulting Judgement: (+0.03, +0.03) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- AP Reporting: PASS (+0.88, +0.50) — Accurate coverage of police call and charges.\n- Wash Examiner: COND (-0.25, -0.40) — Sensationalized ambush framing.\n- Cluster Noise: FAIL (-0.50, 0.0) — Irrelevant Melbourne arson story attached.",
       "Officer Shane Seiber, a husband and father of two young children, was killed and his partner wounded in West Philadelphia. Suspect Eric Lewis faces homicide and multiple attempted murder charges.",
       "The Bright Side:\nRapid SWAT deployment and multi-officer response neutralized the shooter quickly, preventing further loss of civilian lives in the neighborhood.",
       "The Breakdown & Plane Error:\nThe gap lies between physical duty (WHERE/Q3) and violent outcome (EFFECT/Q7). Lawful intervention Q3 was subverted by violent assault, turning protective duty into tragic loss.",
       "Social Physics Analysis:\nThe gunman executed an anti-social, high-strain violent act, destroying human life without justification. First responders absorbed total physical risk to protect others, proving complete alignment with community empowerment despite horrific harm.",
-      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between protective duty and lethal ambush, it plots a trajectory toward Greater Evil where active violence destroys civic stability.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between protective duty and lethal ambush, it plots a trajectory toward Greater Evil where active violence destroys civic stability.",
       "The Unavoidable Truth: Officers face unpredictable lethal danger when answering calls to protect neighborhoods.\nThe Unavoidable Lie: Sensational headlines can capture the full human weight of a family's sudden loss.",
       "Alethekanon:\nInstitutional execution of protective duty remains necessary for civic cohesion, yet individual officers bear the asymmetric physical harm of localized violent breakdown.",
       "Awwthekanon:\nA wife lost her husband and two small children lost their dad in a split second. No headlines or police blotters can ever replace the loving warmth taken from that family home.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "AP Reporting",
@@ -184,6 +246,7 @@
       "Philadelphia",
       "Police",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

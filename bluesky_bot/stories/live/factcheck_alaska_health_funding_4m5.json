@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "Targeted federal grants aim to heal rural care gaps.\n\nState announces $4.5M in funding for Alaska health projects\nEvidence: rural health grants, tangible local projects, targeted federal funds\n#Alaska #Health #PublicPolicy",
-      "The Alaska Dept of Health announced 19 projects receiving initial funds under the Rural Health Transformation Program, part of a coming $1B federal rollout.\nStated Judgement: (+0.91, +1.00) — Lesser Good",
-      "Ground reality reveals tangible local deployments: $600k for Anchorage youth mental health and rolling X-rays for remote Chugachmiut villages.\nResulting Judgement: (+0.92, +1.00) — Grace",
-      "Verdict: PASS — The Path of Grace.\nThe initial funding tranche is actively translating federal grants into concrete rural medical and mental health infrastructure improvements without deceptive pretexts.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "The Alaska Dept of Health announced 19 projects receiving initial funds under the Rural Health Transformation Program, part of a coming $1B federal rollout.\nStated Judgement: (+0.91, +1.00) — Greater Good",
+      "Ground reality reveals tangible local deployments: $600k for Anchorage youth mental health and rolling X-rays for remote Chugachmiut villages.\nResulting Judgement: (+0.92, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nThe initial funding tranche is actively translating federal grants into concrete rural medical and mental health infrastructure improvements without deceptive pretexts.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Alaska Department of Health: PASS (0.8, 0.5) — Effectively distributing federal health transformation grants to address genuine regional access barriers.",
       "The Alaska Department of Health rolled out its first round of funding under the Rural Health Transformation Program. While $4.5 million is a small slice of the anticipated $1 billion five-year federal influx, it immediately supports local efforts like youth mental health at Alaska Behavioral...",
       "The Bright Side:\nTargeted local investments directly alleviate severe geographic travel burdens for vulnerable rural patients seeking basic diagnostic care.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Alaska Department of Health Grant Distribution",
@@ -268,6 +330,7 @@
         "name": "Chugachmiut",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

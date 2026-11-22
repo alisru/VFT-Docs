@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A viral distortion campaign meets the cold reality of the source audio. Ebun Joseph was misquoted to incite outrage, but the transcript tells a different story. Evidence: Audio transcript, viral caption, factual correction. #FactCheck #Ireland 🌐",
-      "The claim alleged that Dr. Ebun Joseph, a government adviser, demanded the Irish language be abandoned by the Irish people. Stated Judgement: (-0.18, +0.60) — Good Preference",
-      "The reality is that Joseph argued against mandatory Irish language requirements for teachers to address staffing shortages, not a cultural ban. Resulting Judgement: (-0.26, -0.37) — Good Preference",
-      "Verdict: PASS — The Path of Redemption. The correction successfully aligns the public record with the actual audio evidence, mitigating the damage of the initial smear. Integrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "The claim alleged that Dr. Ebun Joseph, a government adviser, demanded the Irish language be abandoned by the Irish people. Stated Judgement: (-0.18, +0.60) — Greatest Lie",
+      "The reality is that Joseph argued against mandatory Irish language requirements for teachers to address staffing shortages, not a cultural ban. Resulting Judgement: (-0.26, -0.37) — Greater Evil",
+      "Verdict: FAIL — Revelation into Destruction.",
       "Sub-Audits Breakdown:\n- Ebun Joseph: PASS (0.9, 0.1) — Her clarification aligns with the source audio.\n- Misinformation Actors: FAIL (-1.2, -0.8) — These actors intentionally inverted her policy critique into a cultural attack.",
       "The controversy stems from a podcast where Dr. Ebun Joseph discussed teacher recruitment. Misleading captions on social media platforms like TikTok and X falsely framed her comments as an attack on the Irish language, sparking widespread backlash.",
       "The Bright Side:\nThe rapid debunking by independent media and the adviser herself demonstrates the resilience of the truth when primary sources are accessible.",
       "The Breakdown & Plane Error:\nThe error is a WHAT vs WHO plane shift. The claim focuses on WHO (the adviser) to attack her character, while the reality is a WHAT (policy proposal) regarding teacher qualifications.",
       "Social Physics Analysis:\nBy stripping the context from a policy discussion, the actors created a pretext for outrage. This projection of anti-Irish sentiment onto a minority adviser serves to consolidate power by manufacturing a common enemy.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The correction restores the logical equilibrium of the discourse.",
+      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Revelation into Destruction. The correction restores the logical equilibrium of the discourse.",
       "The Unavoidable Truth: Policy critiques are often weaponized as cultural attacks.\n\nThe Unavoidable Lie: Dr. Joseph called for the end of the Irish language.",
       "Alethekanon:\nThe structural integrity of the discourse was compromised by a deliberate inversion of the subject's intent. The correction is a necessary restoration of the logical baseline.",
       "Awwthekanon:\nIt is painful to see someone's words twisted to hurt them and their community. I am glad the truth came out so clearly.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.3,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.95,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.45,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ebun Joseph",
@@ -262,6 +324,7 @@
         "name": "The Journal",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Revelation into Destruction"
   }
 ]

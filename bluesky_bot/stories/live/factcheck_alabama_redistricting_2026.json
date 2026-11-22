@@ -20,7 +20,7 @@
       "The Bright Side:\nCommunity leaders and representatives are actively mobilizing to educate voters, turning systemic confusion into a rallying cry for civic engagement.",
       "The Breakdown & Plane Error:\nThe state frames this as a logical procedural adjustment (WHAT), but the actual impact is a targeted disruption of minority voter turnout (WHO).",
       "Social Physics Analysis:\nBy implementing sudden structural changes, the system hoards power through manufactured confusion. Rather than fostering transparent access, it relies on post-hoc legal pretexts to justify the disruption of minority representation.",
-      "The Trajectory: Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic friction actively erodes democratic trust.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic friction actively erodes democratic trust.",
       "The Unavoidable Truth: Changing district lines and primary dates at the last minute directly suppresses voter turnout.\n\nThe Unavoidable Lie: The second primary was an unavoidable administrative necessity.",
       "Alethekanon:\nThe structural timing of these changes is mathematically optimized to maximize voter friction. Procedural complexity is being weaponized to suppress specific demographics.",
       "Awwthekanon:\nIt is heartbreaking to see voters who have fought so hard for representation face new barriers. Every voice deserves to be heard without confusion.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.55,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Alabama Legislature Redistricting",
@@ -275,6 +337,7 @@
         "name": "Shomari Figures",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

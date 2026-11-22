@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.8,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": -0.05,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "South Bronx Legionnaires' cluster claims a second life despite rapid mitigation.\nEvidence: 14 cases, 2 deaths, 10 cooling towers disinfected\n#Aletheia #PublicHealth",
-      "Officials highlight aggressive health outreach and prompt disinfection of contaminated cooling towers.\nStated Judgement: (+1.0, +0.8) — Greater Good Support",
-      "Reality reveals an ongoing public health hazard with multiple hospitalizations and fatalities.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil Threat",
-      "Verdict: FAIL — The Path of Reckoning.\nRapid response cannot undo systemic vulnerability to environmental bacterial outbreaks.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.1, z: 2)",
+      "Officials highlight aggressive health outreach and prompt disinfection of contaminated cooling towers.\nStated Judgement: (+1.00, +0.80) — Greater Good",
+      "Reality reveals an ongoing public health hazard with multiple hospitalizations and fatalities.\nResulting Judgement: (-0.05, -0.05) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nRapid response cannot undo systemic vulnerability to environmental bacterial outbreaks.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.1, z: 2)",
       "- NYC Health Department: PASS (0.5, 0.6) — Swift testing and disinfection.\n- Public Risk Mitigation: FAIL (-0.6, -0.7) — Preventable fatalities occurred.",
       "A second death in the South Bronx Legionnaires' outbreak underscores ongoing urban water system vulnerabilities despite prompt municipal cooling tower sanitization.",
       "The Bright Side:\nHealth officials successfully traced and disinfected all ten positive cooling towers within days of initial cluster detection.",
       "The Breakdown & Plane Error:\nConfusing WHERE (localized ZIP codes) with HOW (systemic water infrastructure safety standards).",
       "Social Physics Analysis:\nPublic health agencies operated transparently and actively engaged local communities, but structural environmental maintenance failures preceded the crisis.",
-      "The Trajectory: The Path of Reckoning.\nDiscrepancy between emergency remediation and underlying infrastructure decay plots toward systemic reckoning. Mathematical vector summation shows net negative strain.",
+      "The Trajectory: The Path of Fall into Destruction.\nDiscrepancy between emergency remediation and underlying infrastructure decay plots toward systemic reckoning. Mathematical vector summation shows net negative strain.",
       "The Unavoidable Truth: Prompt municipal testing and disinfection save lives during environmental disease outbreaks.\n\nThe Unavoidable Lie: Routine cooling tower inspections alone guarantee complete public safety.",
       "Alethekanon:\nReactive sanitation measures address acute clusters, but true safety requires proactive infrastructure oversight.",
       "Awwthekanon:\nEvery life lost in these preventable outbreaks is a tragedy for families, reminding us how deeply we rely on safe, clean shared spaces.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NYC Health Department",
@@ -156,6 +218,7 @@
         "name": "South Bronx Community",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

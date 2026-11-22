@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/sltrib.com/post/3mwhnjyozpl2u",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.84,
-    "real_psi": 0.85,
+    "real_u": 0.83,
+    "real_psi": 0.84,
     "mode": "root",
     "posts": [
       "Local leaders face the ultimate test of balancing growth with community preservation. Zach Robinson runs for Salt Lake County Council while Palm Beach pauses data centers. Evidence: Local stewardship, resource protection, community focus. #Aletheia #USPol 🌐",
-      "Zach Robinson claims his firefighting background brings a problem-solving mindset to Salt Lake County, promising to lower living costs and protect natural spaces. Stated Judgement: (1.0, 1.0) — Greater Good",
-      "Robinson's platform aligns with local needs, while Palm Beach's moratorium shows local governments actively protecting resources from AI energy demands. Resulting Judgement: (0.84, 0.85) — Grace",
-      "Verdict: PASS — Grace. Local governance initiatives demonstrate genuine alignment between stated community ideals and protective policy actions.\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "Zach Robinson claims his firefighting background brings a problem-solving mindset to Salt Lake County, promising to lower living costs and protect natural spaces. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "Robinson's platform aligns with local needs, while Palm Beach's moratorium shows local governments actively protecting resources from AI energy demands. Resulting Judgement: (+0.83, +0.84) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Zach Robinson Platform: PASS (0.85, 0.85) — Aligned local governance.\n- Palm Beach Moratorium: PASS (0.82, 0.84) — Proactive resource protection.",
       "Candidate Zach Robinson campaigns on local empowerment in Salt Lake County, while Palm Beach County implements a moratorium on data centers to protect local power grids.",
       "The Bright Side:\nEven standard political campaigns can highlight genuine, localized efforts to protect communities from rapid industrial and technological strain.",
       "The Breakdown & Plane Error:\nThe plane error here is minimal; the stated focus on local problem-solving matches the physical reality of local policy interventions.",
       "Social Physics Analysis:\nActors here run a Smart Altruistic Loop. By identifying real community strains—like housing costs or energy grid overload—and proposing transparent, localized solutions, they empower citizens rather than manufacturing crises for political leverage.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The minimal hypocrisy delta confirms high systemic alignment.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The minimal hypocrisy delta confirms high systemic alignment.",
       "The Unavoidable Truth: Local policy is the most direct tool for community protection.\nThe Unavoidable Lie: National political narratives always dictate local outcomes.",
       "Alethekanon:\nThe data shows high alignment when governance remains localized and focused on tangible resource constraints rather than ideological posturing.",
       "Awwthekanon:\nIt's so heartening to see leaders actually listening to neighbors and protecting the quiet peace of their homes and natural spaces.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Zach Robinson Platform",
@@ -164,6 +226,7 @@
         "name": "Palm Beach County",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

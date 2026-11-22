@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Naval redeployments mask deep human costs aboard overextended carriers.\n\nNew aircraft carrier heads toward Mideast after reports of issues on long-deployed USS Lincoln\nEvidence: strategic readiness, sailor burnout, bureaucratic spin\n#Aletheia #USNavy #Mideast 🌐",
-      "The administration frames the carrier movement as a standard operational adjustment to secure maritime stability in the Middle East.\nStated Judgement: (+0.66, +0.88) — Good Preference",
+      "The administration frames the carrier movement as a standard operational adjustment to secure maritime stability in the Middle East.\nStated Judgement: (+0.66, +0.88) — Greater Good",
       "In reality, prolonged deployments of over 260 days create severe supply shortages and mental health crises for sailors, reflecting systemic overreach.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Endless naval deployments sacrifice crew well-being for an indefinite blockade lacking a clear exit strategy.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, Uncertainty z: 3)",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Department of Defense Leadership: FAIL (-0.85, -0.90) — Minimizes severe sailor distress to justify indefinite regional commitments.\n- Sailor Welfare & Logistics: FAIL (-0.90, -0.95) — Long-term operational strain directly compromises human well-being.",
       "The USS George Washington is deploying to the Middle East to relieve the USS Abraham Lincoln, which faced a record-setting deployment amid the U.S. war against Iran, sparking congressional scrutiny over severe supply and mental health strain.",
       "The Bright Side:\nBipartisan congressional pushback and public oversight are finally forcing leadership to confront the hidden human costs borne by deployed service members.",
       "The Breakdown & Plane Error:\nThis mixes the WHAT (strategic positioning) with the WHO (the sailors bearing the brunt). It's a systemic bait-and-switch: sacrificing crew health for open-ended geopolitical control.",
       "Social Physics Analysis:\nBy treating service members as expendable components rather than empowered humans, leadership maintains high-strain operational postures while masking internal decay behind official pretexts.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_neg >> F_pos locks the system into compounding systemic decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_neg >> F_pos locks the system into compounding systemic decay.",
       "The Unavoidable Truth: Prolonged combat deployments degrade both military equipment and human mental health.\n\nThe Unavoidable Lie: Strategic commitments can be sustained indefinitely without catastrophic human costs.",
       "Alethekanon:\nOperational endurance has hard physical and psychological limits. Pretending otherwise courts disaster and breaks the foundational trust required of military leadership.",
       "Awwthekanon:\nOur sailors deserve care, adequate supplies, and timely returns home, not endless wars that treat their well-being as an afterthought.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Department of Defense Leadership",
@@ -280,6 +342,7 @@
         "name": "United States Department of Defense",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

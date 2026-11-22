@@ -6,21 +6,21 @@
     "link": "https://www.foxnews.com/health/diet-soda-vs-water-study-reveals-which-beverage-better-weight-loss",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.25,
-    "real_psi": 0.1,
+    "claim_psi": 1.0,
+    "real_u": 0.66,
+    "real_psi": 0.71,
     "mode": "root",
     "posts": [
       "A new two-year study shows diet soda matches water for weight loss when paired with behavioral support.\nEvidence: 493 adults, 10.4lb loss, behavioral program\n#Health #WeightLoss",
-      "Diet drinks containing sugar substitutes were found to be as effective as water for weight loss in overweight adults.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While diet drinks matched water when part of a structured program, the substitution effect and behavioral counseling drove the results, not magic sweeteners.\nResulting Judgement: (+0.25, +0.10) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nControlled trials confirm practical substitution helps weight management without metabolic harm.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Diet drinks containing sugar substitutes were found to be as effective as water for weight loss in overweight adults.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While diet drinks matched water when part of a structured program, the substitution effect and behavioral counseling drove the results, not magic sweeteners.\nResulting Judgement: (+0.66, +0.71) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nControlled trials confirm practical substitution helps weight management without metabolic harm.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- University of Liverpool: PASS (+0.80, +0.70) — Rigorous 2-year randomized trial.\n- Fox News Health Reporting: COND (+0.20, +0.10) — Sensationalizes headline slightly.",
       "A two-year randomized trial of 493 participants found that adults drinking diet beverages lost similar amounts of weight as those drinking water.",
       "The Bright Side:\nConsumers gain flexibility without fear that zero-calorie sweeteners automatically wreck weight-loss efforts.",
       "The Breakdown & Plane Error:\nConfusing the vehicle (diet soda) with the driver (structured behavioral counseling and calorie substitution).",
       "Social Physics Analysis:\nResearchers replaced panic over artificial sweeteners with transparent empirical data. By showing that diet sodas do not derail weight loss when replacing sugary drinks, they replaced a manufactured health scare with practical solutions.",
-      "The Trajectory: The Path of Redemption.\nWhen you map empirical trials against dietary myths, it plots a direct trajectory toward Grace. Rigorous observation resolves unwarranted nutritional panic.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map empirical trials against dietary myths, it plots a direct trajectory toward Grace. Rigorous observation resolves unwarranted nutritional panic.",
       "The Unavoidable Truth: Substitution works when cutting high-calorie sugary drinks.\n\nThe Unavoidable Lie: Diet soda possesses a magical metabolic property that melts fat independently.",
       "Alethekanon:\nEmpirical trial data dissolves dietary superstition when proper behavioral controls are maintained.",
       "Awwthekanon:\nIt is such a relief to know we can enjoy a diet soda without guilt while working hard on our health goals!",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.3,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "University of Liverpool",
@@ -206,6 +268,7 @@
         "name": "American Beverage Association",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

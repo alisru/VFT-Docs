@@ -6,21 +6,21 @@
     "link": "https://www.raiders.com/news/1976-unsung-hero-skip-thomas-super-bowl-xi-50th-anniversary",
     "target_url": "https://bsky.app/profile/notraiders.bsky.social/post/3mxaexoxesu2p",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
+    "claim_psi": 1.0,
     "real_u": 0.9,
-    "real_psi": 0.8,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Celebrating the 1976 Raiders' Soul Patrol and cornerback Skip Thomas.\nEvidence: historical profile, Super Bowl XI memories, athletic legacy\n#Raiders #NFL #History",
-      "The franchise honors cornerback Skip Thomas as an unsung hero of Super Bowl XI, highlighting his toughness and impact.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "The historical profile accurately captures the athletic culture and defensive dominance of the 1970s Raiders without distortion.\nResulting Judgement: (+0.9, +0.8) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nHonoring historical sports figures preserves team heritage and cultural legacy with high fidelity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "The franchise honors cornerback Skip Thomas as an unsung hero of Super Bowl XI, highlighting his toughness and impact.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The historical profile accurately captures the athletic culture and defensive dominance of the 1970s Raiders without distortion.\nResulting Judgement: (+0.90, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nHonoring historical sports figures preserves team heritage and cultural legacy with high fidelity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Raiders.com Editorial: PASS (0.9, 0.8) — Accurate and engaging historical tribute.\n- Historical Narrative: PASS (0.9, 0.8) — Faithful preservation of team lore.",
       "Raiders.com continues its 50th-anniversary celebration of Super Bowl XI by profiling legendary defensive back Skip 'Dr. Death' Thomas.",
       "The Bright Side:\nHonoring gritty sports history connects modern fans to the roots of franchise culture.",
       "The Breakdown & Plane Error:\nThis is a straightforward historical tribute operating purely on the Lyrical and Historical planes with zero hidden extraction.",
       "Social Physics Analysis:\nThe franchise shares a transparent historical narrative to celebrate team heritage, operating entirely within a smart altruistic loop of cultural preservation.",
-      "The Trajectory: The Path of Awakening.\nWhen you map historical commemoration against factual team records, it plots a direct trajectory toward Redemption. The cultural legacy remains intact and transparent.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map historical commemoration against factual team records, it plots a direct trajectory toward Redemption. The cultural legacy remains intact and transparent.",
       "The Unavoidable Truth: Sports journalism can faithfully preserve historical team legacies without hidden agendas.\n\nThe Unavoidable Lie: Nostalgia is merely a corporate distraction rather than a celebration of human excellence.",
       "Alethekanon:\nA clean historical retrospective that honors athletic achievement with absolute fidelity to the archives.",
       "Awwthekanon:\nIt is wonderful to see legends like Skip Thomas and the Soul Patrol remembered for their fierce dedication and team spirit!",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.2
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.2
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Raiders Historical Tribute",
@@ -212,6 +274,7 @@
         "name": "National Football League",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

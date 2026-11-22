@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.3,
+    "real_u": -0.35,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "David Brooks argues media elites must regain distance from Democrats.\nEvidence: Off-the-record dinners, Clickbait business models, Partisan coziness\n#Aletheia #Media",
-      "Mainstream media columnists must restore professional distance from the Democratic Party to maintain public trust.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While criticizing Democratic coziness, media pundits continue operating within elite bipartisan bubbles that insulate them from public accountability.\nResulting Judgement: (-0.4, -0.3) — Lesser Evil",
-      "Verdict: COND — The Path of Awakening.\nCritiquing media bias is valid, but framing partisan drift purely as a Democratic issue ignores systemic establishment co-optation.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Mainstream media columnists must restore professional distance from the Democratic Party to maintain public trust.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While criticizing Democratic coziness, media pundits continue operating within elite bipartisan bubbles that insulate them from public accountability.\nResulting Judgement: (-0.35, -0.25) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nCritiquing media bias is valid, but framing partisan drift purely as a Democratic issue ignores systemic establishment co-optation.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- Media Elite Proximity: COND (-0.4, -0.3) — Acknowledges elite coziness but deflects systemic critique.\n- Anti-Trump Business Model: COND (-0.3, -0.2) — Identifies clickbait incentives while ignoring broader press complicity.",
       "David Brooks noted on PBS NewsHour that off-the-record dinners between journalists and Democratic politicians have lost their professional boundary over the past two years.",
       "The Poison:\nBlaming partisan media capture solely on Democratic proximity obscures the broader elite consensus that spans both political parties.",
       "The Breakdown & Plane Error:\nConflating Q1 (Who benefits from media narratives) with Q5 (How partisan incentives operate) creates a skewed view of journalistic capture.",
       "Social Physics Analysis:\nActors run a subtle self-preservation loop. By critiquing Democratic party closeness while ignoring systemic establishment alignment, pundits protect their elite social standing while projecting fault onto partisan theater.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated journalistic independence and actual clubby elite socialization, it plots a direct trajectory toward Lesser Evil. Systemic friction reveals institutional self-protection.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated journalistic independence and actual clubby elite socialization, it plots a direct trajectory toward Lesser Evil. Systemic friction reveals institutional self-protection.",
       "The Unavoidable Truth: Journalists frequently compromise their independence by socializing too closely with the political figures they cover.\n\nThe Unavoidable Lie: Blaming this coziness exclusively on one political party fixes a bipartisan systemic failure.",
       "Alethekanon:\nElite handwringing over media bias rings hollow when columnists remain tethered to the very power circuits they pretend to critique.",
       "Awwthekanon:\nIt is painful when trusted voices realize their profession has drifted from the people it serves, yet true healing requires looking at the whole system.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Media Elite Proximity",
@@ -157,6 +219,7 @@
         "name": "PBS",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

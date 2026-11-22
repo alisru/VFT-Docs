@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Critics accuse left-wing feminists of selective outrage and political opportunism in high-profile criminal cases.\nEvidence: Clancy trial, Zarutska murder, partisan framing\n#Aletheia #Culture",
-      "Feminists and the left are exposed as hypocrites who only champion female victims when it fits progressive narratives.\nStated Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Polarized commentary weaponizes tragic crimes, reducing human suffering to culture-war ammunition while ignoring systemic realities.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nTragedies are exploited to score partisan points rather than pursue genuine justice or safety.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 3)",
+      "Feminists and the left are exposed as hypocrites who only champion female victims when it fits progressive narratives.\nStated Judgement: (-0.80, -0.90) — Greater Evil",
+      "Polarized commentary weaponizes tragic crimes, reducing human suffering to culture-war ammunition while ignoring systemic realities.\nResulting Judgement: (-0.80, -0.90) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nTragedies are exploited to score partisan points rather than pursue genuine justice or safety.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 3)",
       "- The Federalist Editorial: FAIL (-0.8, -0.9) — Weaponizes selective tragedies for partisan point-scoring.\n- Cultural Discourse: FAIL (-0.7, -0.8) — Polarizes empathy along tribal political lines.",
       "Commentators pit horrific criminal cases against each other to argue that ideological opponents lack authentic moral principles.",
       "The Poison:\nExploiting brutal domestic tragedies and violent crimes as mere props in an ongoing ideological grudge match.",
       "The Breakdown & Plane Error:\nConfusing human empathy (EMOTIVE) with partisan tribalism (LOGICAL).\n\nIt treats victims as pawns in a zero-sum political game.",
       "Social Physics Analysis:\nBy projecting total hypocrisy onto political opponents, commentators excuse their own indifference to inconvenient victims while manufacturing outrage for engagement.",
-      "The Trajectory: The Path of Deception.\nWhen you map partisan exploitation against human tragedy, it plots a direct trajectory toward Lesser Evil. Empathy is systematically distorted into tribal weaponization.",
+      "The Trajectory: The Path of Destruction.\nWhen you map partisan exploitation against human tragedy, it plots a direct trajectory toward Lesser Evil. Empathy is systematically distorted into tribal weaponization.",
       "The Unavoidable Truth: True empathy requires mourning all innocent victims regardless of political convenience.\n\nThe Unavoidable Lie: Political opponents hold a monopoly on selective callousness.",
       "Alethekanon:\nWeaponizing the murder of children and helpless women for a culture-war column is the ultimate form of moral bankruptcy.",
       "Awwthekanon:\nBehind these political arguments are broken families and unimaginable grief that deserve our tears, not our talking points.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Severe Deception",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Federalist Editorial Framing",
@@ -147,6 +209,7 @@
         "name": "The Federalist",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Wild dashcam video shows crossing guard shield mother and 2 kids from speeding car",
     "link": "https://nypost.com/2026/09/07/us-news/wild-dashcam-video-shows-crossing-guard-shield-mother-and-2-kids-from-speeding-car-youre-a-hero/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": 1.0,
-    "real_psi": 1.0,
+    "claim_u": 0.0,
+    "claim_psi": 0.0,
+    "real_u": 0.0,
+    "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "Dashcam footage captures heroic Las Vegas crossing guard Richard Jones shielding a mother and kids from a speeding car. #Hero #LasVegas 🌐",
-      "Bystanders and family praise crossing guard Richard Jones for risking his life to stop a reckless driver in a school zone. Stated Judgement: (+1.0, 1.0) — Greater Good",
-      "Instantaneous physical valor by Jones averted a fatal collision, preserving innocent lives through pure selflessness. Resulting Judgement: (1.0, 1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Immediate physical courage and split-second intervention directly prevented tragedy in a school zone.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Bystanders and family praise crossing guard Richard Jones for risking his life to stop a reckless driver in a school zone. Stated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Instantaneous physical valor by Jones averted a fatal collision, preserving innocent lives through pure selflessness. Resulting Judgement: (+0.00, +0.00) — Greater Evil",
+      "Verdict: CONDITIONAL — Destruction.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Crossing Guard Richard Jones: PASS (1.0, 1.0) — Exhibited supreme selflessness and bravery.\n- Motorist: FAIL (-1.0, -1.0) — Reckless speeding endangered children's lives.",
       "In Las Vegas, crossing guard Richard Jones leaped into the path of a car speeding at 35 mph in a 15 mph zone, shielding a mother and two young children.",
       "The Bright Side:\nOrdinary workers stepping up with extraordinary courage to protect vulnerable children in our communities.",
       "The Breakdown & Plane Error:\nMisattributing a systemic traffic issue to individual heroism; while Jones saved lives, the reckless driver evaded capture.",
       "Social Physics Analysis:\nJones embodied pure altruistic empathy and active protection, directly countering the reckless disregard of the fleeing motorist's selfish speed.",
-      "The Trajectory: The Path of Grace.\nWhen you map immediate human empathy against hazard, it plots a direct trajectory toward Grace. Altruistic action saves lives.",
+      "The Trajectory: The Path of Destruction.\nWhen you map immediate human empathy against hazard, it plots a direct trajectory toward Grace. Altruistic action saves lives.",
       "The Unavoidable Truth: Individual courage can instantly alter tragic outcomes.\n\nThe Unavoidable Lie: Reckless driving in school zones carries no immediate cost.",
       "Alethekanon:\nSpontaneous human valor reasserted moral order when systemic traffic enforcement failed at the crosswalk.",
       "Awwthekanon:\nRichard Jones is an absolute angel on earth. His quick thinking and bravery saved that mother and her sweet babies from unimaginable heartbreak.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Crossing Guard Richard Jones",
@@ -159,6 +221,7 @@
         "name": "All City Management Services",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

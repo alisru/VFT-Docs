@@ -5,16 +5,16 @@
     "subject": "The neuroscience of motivation: what orexin neurons reveal about staying the course",
     "link": "https://www.optimistdaily.com/2026/09/the-neuroscience-of-motivation-what-orexin-neurons-reveal-about-staying-the-course/",
     "target_url": "",
-    "claim_u": 0.95,
-    "claim_psi": 0.87,
-    "real_u": 0.94,
-    "real_psi": 0.82,
+    "claim_u": 0.93,
+    "claim_psi": 0.81,
+    "real_u": 0.93,
+    "real_psi": 0.81,
     "mode": "root",
     "posts": [
       "Nagoya University researchers reveal how orexin neurons calculate effort versus reward to govern motivation.\nEvidence: Empirical neural mapping, Rigorous baseline bounds, Transparent methodology\n#Neuroscience #Aletheia",
-      "Nagoya University neuroscientists demonstrated in PNAS that hypothalamic orexin neurons track the real-time cost of effort against expected reward, establishing a neurochemical floor for perseverance.\nStated Judgement: (+0.95, +0.87) — Greater Good",
-      "Rigorous experimental data confirms orexin neurons set a crucial motivation threshold. Researchers openly noted scaling limits: suppressing cells killed drive, but hyperactivating them did not inflate effort.\nResulting Judgement: (+0.94, +0.82) — Greater Good",
-      "Verdict: PASS — Stasis in Grace. Nagoya University and PNAS deliver robust, replicable neurobiology that grounds human willpower in verifiable hypothalamic dynamics.\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
+      "Nagoya University neuroscientists demonstrated in PNAS that hypothalamic orexin neurons track the real-time cost of effort against expected reward, establishing a neurochemical floor for perseverance.\nStated Judgement: (+0.93, +0.81) — Greater Good",
+      "Rigorous experimental data confirms orexin neurons set a crucial motivation threshold. Researchers openly noted scaling limits: suppressing cells killed drive, but hyperactivating them did not inflate effort.\nResulting Judgement: (+0.93, +0.81) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
       "- Nagoya Study: PASS (+0.94, +0.82) — Rigorous empirical data on neural cost tracking.\n- Optimist Daily: PASS (+0.92, +0.80) — Balanced reporting highlighting experimental limits.",
       "Nagoya University neuroscientists identified that hypothalamic orexin neurons actively calculate whether rewards justify required physical effort.",
       "The Poison:\nWhile understanding hypothalamic circuits clarifies the baseline biological mechanics of clinical apathy and depression, mechanical reductionism risks encouraging pharmacological silver bullets for complex systemic burnout.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Nagoya University Research",
@@ -157,6 +219,7 @@
         "name": "Hiroyuki Mizoguchi",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

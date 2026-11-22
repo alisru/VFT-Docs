@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/22/us-news/sacramento-considers-bringing-back-red-light-cameras/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.45,
-    "real_psi": 0.2,
+    "claim_psi": 1.0,
+    "real_u": 0.58,
+    "real_psi": 0.69,
     "mode": "root",
     "posts": [
       "Sacramento is weighing the return of red-light enforcement cameras two years after scrapping its costly previous program.\n\nSacramento Traffic Cameras\nEvidence: public safety goal, collision reduction, cost/malfunction debate\n#Aletheia #Traffic",
-      "City officials argue that installing up to 20 cameras at high-crash intersections will curb a dangerous epidemic of red-light running.\nStated Judgement: (1.0, 0.5) — Good Preference",
-      "While automated enforcement cuts collisions, past financial losses and tech malfunctions remain genuine hurdles for residents.\nResulting Judgement: (0.45, 0.20) — Conditional Good",
-      "Verdict: PASS — The Path of Grace. Automated traffic enforcement provides tangible safety benefits despite historical cost and reliability friction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.45, Uncertainty z: 1)",
+      "City officials argue that installing up to 20 cameras at high-crash intersections will curb a dangerous epidemic of red-light running.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While automated enforcement cuts collisions, past financial losses and tech malfunctions remain genuine hurdles for residents.\nResulting Judgement: (+0.58, +0.69) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.45, Uncertainty z: 1)",
       "- Sacramento City Officials: PASS (0.60, 0.40) — Proposing targeted safety measures for dangerous intersections.\n- Community Skeptics: COND (0.20, 0.00) — Highlighting valid cost and technological reliability concerns.",
       "Sacramento officials are considering reinstating red-light traffic cameras at 20 dangerous intersections to combat a surge in reckless driving.",
       "The Bright Side:\nTargeting high-collision intersections with non-police database cameras directly addresses a severe public safety hazard.",
       "The Breakdown & Plane Error:\nThe plane error mistakes mechanical policing tools (WHAT) for systemic behavioral solutions (HOW). Cameras deter infractions but do not fix underlying recklessness.",
       "Social Physics Analysis:\nBy implementing transparent, rear-plate-only automated ticketing with low-income payment plans, the city balances enforcement with equitable community access.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Transparent safety tools yield measurable protection against road hazards.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Transparent safety tools yield measurable protection against road hazards.",
       "The Unavoidable Truth: Red-light cameras effectively deter dangerous intersection collisions.\n\nThe Unavoidable Lie: Automated systems operate entirely without technical glitches or financial friction.",
       "Alethekanon:\nAutomated enforcement offers a pragmatic shield against reckless driving, provided cost and accuracy remain transparently managed. 🌐",
       "Awwthekanon:\nKeeping our streets safe for families is a shared community responsibility that requires both accountability and compassionate support.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Sacramento City Officials",
@@ -208,6 +270,7 @@
         "name": "Phil Pluckebaum",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

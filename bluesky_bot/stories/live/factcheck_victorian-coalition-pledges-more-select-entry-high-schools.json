@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/news.abc.net.au/post/3mvvwqveixr2v",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": 0.3,
+    "real_u": 0.15,
+    "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "Victorian Coalition promises three new selective-entry high schools and six converted campuses by 2030.\nEvidence: Policy Pledge, $150M Budget, Electoral Strategy\n#Aletheia #Education",
-      "Expanding selective education provides top-tier academic pathways for high-achieving students across outer Melbourne suburbs.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While creating selective options, repurposing existing schools risks fracturing local communities and exacerbating tracking inequalities.\nResulting Judgement: (0.2, 0.3) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nA targeted educational expansion that genuinely addresses regional demand, even if it introduces competitive sorting trade-offs.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Expanding selective education provides top-tier academic pathways for high-achieving students across outer Melbourne suburbs.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "While creating selective options, repurposing existing schools risks fracturing local communities and exacerbating tracking inequalities.\nResulting Judgement: (+0.15, +0.20) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nA targeted educational expansion that genuinely addresses regional demand, even if it introduces competitive sorting trade-offs.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- Victorian Coalition: PASS (0.3, 0.4) — Pledges expanded academic pathways.\n- Incumbent Labor: COND (0.0, 0.0) — Defends comprehensive local school network.",
       "The Coalition's election pledge aims to double selective school placements, emulating New South Wales' broader selective schooling model.",
       "The Bright Side:\nOuter suburban students gain direct access to advanced academic programs without lengthy commutes to inner Melbourne.",
       "The Breakdown & Plane Error:\nConfusing selective institutional prestige (WHAT) with universal educational equity (WHO). Building selective academies helps high-flyers while sidelining neighborhood comprehensives.",
       "Social Physics Analysis:\nRunning a standard political Smart Altruistic Maneuver: identifying a real suburban constituency demand and offering a transparent infrastructural solution, though balanced against broader educational equity debates.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Targeted educational investment yields tangible regional benefit.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Targeted educational investment yields tangible regional benefit.",
       "The Unavoidable Truth: Expanding selective schools meets tangible parental demand for advanced academic pathways in growing outer suburbs.\n\nThe Unavoidable Lie: Pretending that funneling resources into select-entry campuses does not draw support away from general neighborhood schools.",
       "Alethekanon:\nSelective education expansion offers a clear path for academic high-achievers, provided it doesn't starve the broader neighborhood school ecosystem.",
       "Awwthekanon:\nEvery child deserves a learning environment where they can thrive and be challenged, whether in a specialized academy or a supportive local school.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Victorian Coalition Pledge",
@@ -161,6 +223,7 @@
         "name": "Victorian Labor",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

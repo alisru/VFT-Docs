@@ -5,22 +5,22 @@
     "subject": "N.L. spent millions renovating old college for future courthouse — now it's slated for demolition",
     "link": "https://www.cbc.ca/news/canada/newfoundland-labrador/martin-gallant-demolition-9.7370688?cmp=rss",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.6,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.65,
+    "claim_psi": 0.3,
+    "real_u": -0.4,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Millions spent turning an old college into a courthouse in Stephenville Crossing are wasted as the site faces demolition.\nEvidence: $5.6M spent, contaminated soil, building demolition\n#Aletheia #Canada #Infrastructure",
-      "Government officials claimed redeveloping the Martin Gallant Building would efficiently provide a modern courthouse and provincial services.\nStated Judgement: (+0.8, +0.6) — Good Preference",
-      "After spending $5.6 million, officials discovered severe structural flaws, lead paint, and contaminated soil, forcing total demolition.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nMillions vanish into a botched redevelopment plagued by hidden site contamination and soaring cost projections.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Government officials claimed redeveloping the Martin Gallant Building would efficiently provide a modern courthouse and provincial services.\nStated Judgement: (+0.65, +0.30) — Greater Good",
+      "After spending $5.6 million, officials discovered severe structural flaws, lead paint, and contaminated soil, forcing total demolition.\nResulting Judgement: (-0.40, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nMillions vanish into a botched redevelopment plagued by hidden site contamination and soaring cost projections.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "Sub-Audits Breakdown:\n- Provincial Government: FAIL (-0.8, -0.9) — Botched oversight & ballooning costs.\n- Municipal Leadership: COND (0.0, -0.5) — Caught reacting to sudden teardown.",
       "The Newfoundland and Labrador government paused work on converting the former College of the North Atlantic building into a courthouse after spending $5.6 million, ultimately ordering its demolition due to contamination and structural failure.",
       "The Bright Side:\nExposing deep structural and environmental issues early prevents an even more catastrophic financial black hole.",
       "The Breakdown & Plane Error:\nConfusing administrative wishes with physical reality led to a classic WHAT vs WHERE failure, ignoring site toxicity until millions were torched.",
       "Social Physics Analysis:\nThis fiasco runs a textbook smart selfish maneuver. Bureaucrats launched a flashy regional project without thorough due diligence, leaving taxpayers to shoulder multi-million dollar losses while projecting blame onto unforeseen site conditions.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic neglect of environmental audits generated massive fiscal waste.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic neglect of environmental audits generated massive fiscal waste.",
       "The Unavoidable Truth: Millions of public dollars vanished into a structurally compromised building before basic environmental tests were completed.\n\nThe Unavoidable Lie: Officials pretend unexpected site conditions were entirely unpredictable rather than symptoms of slipshod initial vetting.",
       "Alethekanon:\nFlashy announcements preceded basic structural due diligence, transforming a promised community upgrade into an expensive pile of rubble.",
       "Awwthekanon:\nIt is heartbreaking for local residents who saw hope in a revived community hub, only to watch their tax dollars vanish into a condemned ruin.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Provincial Government Oversight",
@@ -163,6 +225,7 @@
         "name": "Barry Petten",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

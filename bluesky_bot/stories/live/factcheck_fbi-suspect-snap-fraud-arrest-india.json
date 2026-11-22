@@ -5,22 +5,22 @@
     "subject": "PHOTO -- FBI: Suspect in $600,000 SNAP Fraud Scheme Arrested in India",
     "link": "https://www.breitbart.com/crime/2026/09/07/photo-fbi-suspect-600000-snap-fraud-scheme-arrested-india/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.8,
-    "real_u": 0.65,
-    "real_psi": 0.7,
+    "claim_u": 0.0,
+    "claim_psi": -0.1,
+    "real_u": -0.1,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "FBI arrests fugitive Manjit Singh Bedi in India over a $600,000 SNAP benefit fraud scheme.\nEvidence: International arrest, DOJ charges, EBT cash-swapping scheme\n#Aletheia #Crime #Justice",
-      "Federal law enforcement successfully tracks down and apprehends international fraudsters exploiting American welfare programs.\nStated Judgement: (+1.0, +0.8) — Constructive Good",
-      "International cooperation enabled the capture, upholding financial accountability and rule of law across borders.\nResulting Judgement: (+0.65, +0.70) — Grace",
-      "Verdict: PASS — The Path of Grace.\nCross-border law enforcement successfully dismantles welfare fraud and brings a fugitive to justice.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "Federal law enforcement successfully tracks down and apprehends international fraudsters exploiting American welfare programs.\nStated Judgement: (+0.00, -0.10) — Greater Evil",
+      "International cooperation enabled the capture, upholding financial accountability and rule of law across borders.\nResulting Judgement: (-0.10, -0.05) — Greater Evil",
+      "Verdict: CONDITIONAL — Destruction.\nCross-border law enforcement successfully dismantles welfare fraud and brings a fugitive to justice.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
       "- Federal Bureau of Investigation: PASS (+0.7, +0.8) — Effective cross-border tracking and apprehension.\n- Manjit Singh Bedi: FAIL (-0.9, -0.9) — Direct exploitation of public welfare systems.",
       "Manjit Singh Bedi was captured in India after fleeing U.S. prosecution for operating an EBT cash-swapping scheme in Tacoma.",
       "The Bright Side:\nInternational law enforcement coordination successfully closes escape routes for financial criminals.",
       "The Breakdown & Plane Error:\nFocuses correctly on WHO executed the fraud (the operator) and WHAT enforcement was applied.",
       "Social Physics Analysis:\nThe FBI and partner agencies executed a transparent smart altruistic maneuver, utilizing international law enforcement channels to secure accountability and protect public welfare integrity without manufactured pretexts.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Law enforcement alignment directly restores systemic order.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Law enforcement alignment directly restores systemic order.",
       "The Unavoidable Truth: Welfare fraud schemes undermine public trust and divert vital resources from vulnerable populations.\n\nThe Unavoidable Lie: High-profile captures single-handedly solve systemic integrity issues within entitlement programs.",
       "Alethekanon:\nAccountability functions best when international cooperation bridges jurisdictional gaps.",
       "Awwthekanon:\nIt is reassuring to see justice reach across borders to protect programs meant for those in true need.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Federal Bureau of Investigation",
@@ -162,6 +224,7 @@
         "name": "Kash Patel",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

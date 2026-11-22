@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": 0.05,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "Washington promised to slash red tape by dismantling Education. Instead, staff say it's created chaotic gridlock. 🌐 #Education #USPol",
-      "The administration argues that scattering education programs across other federal agencies cuts bureaucracy and boosts efficiency. Stated Judgement: (+0.8, +0.5) — Good Preference",
-      "In reality, forcing labor and health agencies to handle incompatible school grants has caused technical chaos, halting funds and hurting vulnerable students. Resulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Dismantling agencies via chaotic administrative shuffling increases red tape while harming students.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "The administration argues that scattering education programs across other federal agencies cuts bureaucracy and boosts efficiency. Stated Judgement: (+0.80, +0.50) — Greater Good",
+      "In reality, forcing labor and health agencies to handle incompatible school grants has caused technical chaos, halting funds and hurting vulnerable students. Resulting Judgement: (+0.05, -0.05) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "Sub-Audits Breakdown:\n- Trump Admin: FAIL (-0.7, -0.8) — False claims of efficiency.\n- Staff Reports: PASS (0.8, 0.7) — Accurate on bureaucratic gridlock.",
       "After historic staff cuts and executive orders targeting the Education Department, remaining functions were scattered across nine separate federal agencies.",
       "The Poison:\nDisrupting established grant systems without compatible software leaves billions in Title I funding for low-income students stranded.",
       "This is a Metaphysical plane error: confusing administrative sabotage (WHO/HOW) with a genuine quest for efficiency (WHAT).",
       "Social Physics Analysis:\nThe administration runs a Smart Selfish maneuver, deploying the pretext of 'cutting red tape' to conceal structural dismantling that starves public institutions of operational capacity.",
-      "The Trajectory: The Path of Deception. When stated efficiency masks administrative chaos, it plots toward destruction of public trust. F_net pulls negative via structural strain.",
+      "The Trajectory: The Path of Fall from Grace.",
       "The Unavoidable Truth: Re-routing education grants through labor systems without proper tech support guarantees administrative failure.\n\nThe Unavoidable Lie: These scattershot agency moves streamline services.",
       "Alethekanon:\nWhen bureaucratic restructuring serves as a smokescreen for institutional gutting, efficiency is replaced by systemic paralysis.",
       "Awwthekanon:\nBehind every tangled federal grant and scrambled office is a child with a disability or a low-income classroom waiting for help that shouldn't be a political football.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Trump Administration Efficiency Claim",
@@ -156,6 +218,7 @@
         "name": "Department of Education",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

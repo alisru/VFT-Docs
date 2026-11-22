@@ -5,22 +5,22 @@
     "subject": "Seattle Times and Newsday sue OpenAI and Microsoft for infringement",
     "link": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft",
     "target_url": "https://bsky.app/profile/theverge.com/post/3muv62wv4io2y",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.3,
-    "real_psi": -0.4,
+    "claim_u": -0.35,
+    "claim_psi": -0.45,
+    "real_u": -0.4,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "Seattle Times and Newsday sue OpenAI and Microsoft over copyright infringement.\nEvidence: Federal lawsuit, training dataset demands, revenue losses\n#Aletheia #AI #Law",
-      "Newspapers allege tech giants unethically scraped copyrighted journalism to train AI models without compensation or permission.\nStated Judgement: (+0.5, 0.0) — Neutral Justification",
-      "The litigation functions primarily as a defensive revenue capture mechanism rather than a systemic solution to journalism's economic crisis.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nDefensive copyright lawsuits mask deeper industrial displacement.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Newspapers allege tech giants unethically scraped copyrighted journalism to train AI models without compensation or permission.\nStated Judgement: (-0.35, -0.45) — Greater Evil",
+      "The litigation functions primarily as a defensive revenue capture mechanism rather than a systemic solution to journalism's economic crisis.\nResulting Judgement: (-0.40, -0.50) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nDefensive copyright lawsuits mask deeper industrial displacement.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Publishers: COND (-0.2, -0.3) — Protecting revenue models via courts.\n- Tech Giants: FAIL (-0.5, -0.6) — Uncompensated content scraping.",
       "The Seattle Times and Newsday filed a federal lawsuit against OpenAI and Microsoft, demanding the destruction of AI models trained on their articles.",
       "The Poison:\nLitigation treats symptoms of digital platform dominance while failing to reform broader creator compensation.",
       "The Breakdown & Plane Error:\nFocusing on WHO (tech defendants) while ignoring WHERE (the structural collapse of local ad-supported media models).",
       "Social Physics Analysis:\nPublishers execute a Smart Selfish Maneuver, using legal pretexts to extract licensing rents from tech platforms without reforming internal distribution.",
-      "The Trajectory: The Path of Deception.\nWhen you map defensive legal pretexts against structural decline, it plots a trajectory toward Deception.",
+      "The Trajectory: The Path of Destruction.\nWhen you map defensive legal pretexts against structural decline, it plots a trajectory toward Deception.",
       "The Unavoidable Truth: Tech companies scraped millions of copyrighted articles without direct author consent.\n\nThe Unavoidable Lie: Destroying trained AI models will restore traditional newspaper subscription revenues.",
       "Alethekanon:\nCopyright lawsuits are the dying gasps of an extractive media model colliding with automated intelligence.",
       "Awwthekanon:\nJournalists deserve fair pay for hard work, but closing the doors of knowledge won't stop the digital tide.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Publishers",
@@ -162,6 +224,7 @@
         "name": "Microsoft",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/theferret.scot/post/3mwztjo2lo22q",
     "claim_u": 0.8,
     "claim_psi": 0.8,
-    "real_u": -0.5,
-    "real_psi": -0.6,
+    "real_u": 0.15,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "Abandoned buildings across Scotland leave local communities to bear the heavy burden of neglect.\nEvidence: Derelict sites, Anti-social behavior, Health impacts\n#Aletheia #Scotland",
-      "Authorities claim vacant and derelict land policies are actively addressing urban decay across Scottish communities.\nStated Judgement: (+0.8, +0.8) — Good Preference",
-      "Half the population lives near derelict sites where fires and anti-social behavior create severe local harms ignored by distant policy.\nResulting Judgement: (-0.5, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSystemic policy inertia leaves vulnerable communities to absorb the physical and social costs of chronic urban abandonment.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Authorities claim vacant and derelict land policies are actively addressing urban decay across Scottish communities.\nStated Judgement: (+0.80, +0.80) — Greater Good",
+      "Half the population lives near derelict sites where fires and anti-social behavior create severe local harms ignored by distant policy.\nResulting Judgement: (+0.15, +0.05) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nSystemic policy inertia leaves vulnerable communities to absorb the physical and social costs of chronic urban abandonment.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Scottish Land Commission: PASS (+0.8, +0.7) — Accurate problem diagnosis.\n- Government Policy: FAIL (-0.5, -0.6) — Slow remediation pace.",
       "Derelict structures like Hartwood Hospital span over 8,850 hectares, creating ongoing safety hazards and neighborhood blight in Scotland.",
       "The Poison:\nOfficial remediation strategies move too slowly, allowing historic sites to become dangerous hazards before action is taken.",
       "The Breakdown & Plane Error:\nConfusing policy declarations (WHO) with actual ground-level remediation (WHERE) creates a dangerous implementation gap.",
       "Social Physics Analysis:\nAuthorities run a smart selfish loop, maintaining administrative pretexts while local communities bear the physical and emotional burden of neglect.",
-      "The Trajectory: The Path of Deception.\nWhen you map administrative rhetoric against derelict land realities, it plots a direct trajectory toward Lesser Evil. Systemic inaction perpetuates community strain.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map administrative rhetoric against derelict land realities, it plots a direct trajectory toward Lesser Evil. Systemic inaction perpetuates community strain.",
       "The Unavoidable Truth: Abandoned industrial sites actively degrade local mental health and community safety.\n\nThe Unavoidable Lie: Current regeneration funds are meeting the scale of the crisis.",
       "Alethekanon:\nBureaucratic silence surrounding chronic dereliction reveals a profound abdication of public stewardship.",
       "Awwthekanon:\nIt breaks my heart that families must live beside crumbling, dangerous ruins while waiting endlessly for official help.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Scottish Land Commission",
@@ -160,6 +222,7 @@
         "name": "North Lanarkshire Council",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

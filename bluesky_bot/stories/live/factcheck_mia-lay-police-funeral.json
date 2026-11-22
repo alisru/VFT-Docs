@@ -5,16 +5,16 @@
     "subject": "Heartbreaking moment Constable Mia Lay's boyfriend talks about going ring shopping with her...",
     "link": "https://www.dailymail.com/news/article-16189245/Mia-Lay-police-crash-Sydney-funeral.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.0,
-    "real_u": 0.8,
-    "real_psi": 0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Mourners pack St Andrew's Cathedral to farewell 20yo rookie NSW Police Constable Mia Lay, killed in a tragic crash.\nEvidence: Funeral tributes, Partner speech, Police honors\n#Sydney #Police #Aletheia 🌐",
-      "The memorial service honors a dedicated young police officer whose life was tragically cut short on duty, drawing deep community sorrow.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "The grief is raw and authentic as family and colleagues mourn an irreplaceable human loss with no political manipulation involved.\nResulting Judgement: (+0.8, +0.8) — Grace",
-      "Verdict: PASS — The Path of Grace.\nA tragic on-duty accident met with genuine community grief, honoring a fallen officer without hidden pretexts.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The memorial service honors a dedicated young police officer whose life was tragically cut short on duty, drawing deep community sorrow.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The grief is raw and authentic as family and colleagues mourn an irreplaceable human loss with no political manipulation involved.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nA tragic on-duty accident met with genuine community grief, honoring a fallen officer without hidden pretexts.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Daily Mail Coverage: PASS (+0.8, +0.8) — Respectful reporting of a genuine tragedy.\n- Family Tributes: PASS (+1.0, +1.0) — Authentic grief and public mourning.",
       "Hundreds gathered at Sydney's St Andrew's Cathedral for the funeral of Constable Mia Lay, who died in a Redfern patrol car crash on September 25.",
       "The Bright Side:\nThe outpouring of solidarity highlights the profound human bonds within emergency services during unimaginable sorrow.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Daily Mail Coverage",
@@ -222,6 +284,7 @@
         "name": "Mal Lanyon",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

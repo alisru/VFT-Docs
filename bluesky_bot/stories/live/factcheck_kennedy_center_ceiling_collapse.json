@@ -5,22 +5,22 @@
     "subject": "Portion of the Kennedy Center...",
     "link": "https://www.washingtonexaminer.com/news/white-house/4714924/portion-of-kennedy-center-ceiling-collapses-renewing-renovation-calls/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.94,
-    "real_psi": -0.88,
+    "claim_u": 0.77,
+    "claim_psi": 0.87,
+    "real_u": -0.97,
+    "real_psi": -0.94,
     "mode": "root",
     "posts": [
       "A ceiling collapse at the Kennedy Center becomes a political weapon as physical decay is leveraged for branding and threats of demolition.\n\nPortion of the Kennedy Center...\nEvidence: Public Safety, Political Leverage, Cultural Preservation\n#Aletheia #USPol",
-      "The administration claims the ceiling collapse is a simple physical warning of decades of neglect, proving the urgent need for a complete two-year closure and renovation to save the cultural landmark.\n\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, the physical failure is weaponized to bypass legal blocks, force a political rebranding, and threaten total demolition into an amphitheater if the unilateral closure plan is resisted.\n\nResulting Judgement: (-0.94, -0.88) — Greater Evil",
-      "Verdict: FAIL — Reckoning into Destruction.\nA physical maintenance crisis is co-opted as political leverage to force rebranding and override judicial oversight.\n\nIntegrity: Severe Deception (Hypocrisy: 85.0, Uncertainty z: 6)",
+      "The administration claims the ceiling collapse is a simple physical warning of decades of neglect, proving the urgent need for a complete two-year closure and renovation to save the cultural landmark.\n\nStated Judgement: (+0.77, +0.87) — Greater Good",
+      "In reality, the physical failure is weaponized to bypass legal blocks, force a political rebranding, and threaten total demolition into an amphitheater if the unilateral closure plan is resisted.\n\nResulting Judgement: (-0.97, -0.94) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA physical maintenance crisis is co-opted as political leverage to force rebranding and override judicial oversight.\n\nIntegrity: Severe Deception (Hypocrisy: 85.0, Uncertainty z: 6)",
       "Sub-Audits Breakdown:\n- Roma Daravi Statement: FAIL (-0.94, -0.88) — Uses safety crisis for political leverage.\n- DOJ Legal Threats: FAIL (-0.95, -0.90) — Threatens demolition to force compliance.",
       "A portion of the Kennedy Center's ceiling collapsed in the Grand Foyer on September 4, 2026. The incident was immediately used by board leadership to push for a controversial two-year closure that has been legally challenged.",
       "The Poison:\nWhile the building genuinely suffers from water damage and deferred maintenance, the proposed solution is held hostage by political demands to insert the president's name and threats of complete demolition.",
       "The Breakdown & Plane Error:\nThe error is WHO vs WHAT. While the physical ceiling collapse (WHAT) is real, the proposed remedy is a structural bait-and-switch designed to benefit political branding (WHO) while suppressing whistleblower warnings of rushed work.",
       "Social Physics Analysis:\nBy using a physical hazard as a pretext, the actors attempt to bypass legal checks and balances. Rather than resolving the structural strain transparently, they project blame onto past leadership while using demolition threats to force compliance.",
-      "The Trajectory: Reckoning into Destruction.\nMapping the gap between public safety claims and coercive political threats plots a trajectory toward Greater Evil. The physical decay of a cultural institution is exploited to expand unilateral executive authority.",
+      "The Trajectory: The Path of Fall into Destruction.\nMapping the gap between public safety claims and coercive political threats plots a trajectory toward Greater Evil. The physical decay of a cultural institution is exploited to expand unilateral executive authority.",
       "The Unavoidable Truth: The Kennedy Center has real structural issues that require careful, transparent repair.\n\nThe Unavoidable Lie: The complete two-year closure is motivated solely by public safety rather than political rebranding.",
       "Alethekanon:\nThe weaponization of physical decay to bypass judicial oversight is a textbook co-optation of public safety. When a cultural landmark is threatened with demolition to force compliance, the motive is power, not preservation.",
       "Awwthekanon:\nIt is deeply saddening to see a place dedicated to human creativity and art turned into a political battleground. Our shared cultural spaces should be restored with care and unity, not held hostage by threats of destruction and division.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Roma Daravi Statement",
@@ -295,6 +357,7 @@
         "name": "Department of Justice",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

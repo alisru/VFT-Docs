@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/vox.com/post/3mxgqrvkovf2u",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.2,
-    "real_psi": -0.1,
+    "real_u": 0.05,
+    "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "Vox examines whether AI apocalyptic warnings from tech CEOs are cynical marketing stunts or genuine techno-futurist beliefs. 🌐\nEvidence: Executive quotes, safety resignations, venture capital motives\n#Aletheia #Tech",
-      "The article investigates whether AI doomerism is a clever PR ploy to secure funding, dodge regulation, and hype product capabilities. Stated Judgement: (+0.5, 0.0) — Good Preference",
-      "Analysis shows executives hold sincere, albeit grandiose, transhumanist beliefs while still benefiting strategically from the hype. Resulting Judgement: (-0.2, -0.1) — Lesser Evil",
-      "Verdict: PASS — The Path of Redemption.\nThoroughly dismantles simplistic conspiracy theories about AI doomerism in favor of nuanced ideological analysis.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
+      "The article investigates whether AI doomerism is a clever PR ploy to secure funding, dodge regulation, and hype product capabilities. Stated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Analysis shows executives hold sincere, albeit grandiose, transhumanist beliefs while still benefiting strategically from the hype. Resulting Judgement: (+0.05, +0.00) — Lesser Good",
+      "Verdict: PASS — Compromise.\nThoroughly dismantles simplistic conspiracy theories about AI doomerism in favor of nuanced ideological analysis.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
       "Sub-Audits Breakdown:\n- PR Stunt Critique: PASS (-0.2, -0.1) — Evaluates sceptic arguments.\n- Executive Sincerity: PASS (0.3, 0.1) — Explores rationalist roots.",
       "Vox staff writer Eric Levitz analyzes why leading AI lab executives frequently warn of existential risks despite potential commercial downsides.",
       "The Bright Side:\nRefuses lazy cynicism and investigates the actual ideological roots of Silicon Valley's doomer culture.",
       "The Breakdown & Plane Error:\nConfusing commercial marketing strategy with deep-seated religious techno-utopian ideology among AI developers.",
       "Social Physics Analysis:\nTech leaders operate through a complex mix of sincere transhumanist zeal and self-serving positioning, using existential risk narratives to frame themselves as indispensable authorities.",
-      "The Trajectory: The Path of Redemption.\nMoving past superficial media narratives toward psychological realism plots a trajectory toward systemic clarity.",
+      "The Trajectory: The Path of Compromise.\nMoving past superficial media narratives toward psychological realism plots a trajectory toward systemic clarity.",
       "The Unavoidable Truth: AI executives genuinely believe their models could lead to catastrophic outcomes if unmanaged.\n\nThe Unavoidable Lie: Existential risk warnings were cooked up solely as a simple pre-IPO marketing stunt.",
       "Alethekanon:\nFear sells apocalypse while promising godhood, masking immediate harms behind grand theological speculations.",
       "Awwthekanon:\nIt's fascinating how techno-optimism and fear are two sides of the same coin when people build powerful new tools without community roots.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "PR Stunt Critique",
@@ -172,6 +234,7 @@
     "tags": [
       "Aletheia",
       "Tech"
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

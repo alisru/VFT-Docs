@@ -8,19 +8,19 @@
     "claim_u": 1.0,
     "claim_psi": 1.0,
     "real_u": 1.0,
-    "real_psi": 1.0,
+    "real_psi": 0.9,
     "mode": "root",
     "posts": [
       "A breathtaking sight in the Wisconsin woods captures a legendary creature of the wild. Let's look at the reality behind this viral marvel.\n\n'Majestic Unicorn': Rare Albino Buck\nEvidence: Rare albino buck, genuine viral footage, protected wild animal\n#Aletheia #Nature",
-      "The Daily Caller shares a viral video of an albino buck with a massive rack, celebrating it as a 'top-tier good omen' and a biological miracle with odds of survival up to 1-in-100,000.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The footage is entirely authentic, filmed by Joe Lord in Wisconsin. While the article omits that white deer are strictly protected under Wisconsin law NR 10.02, the core biological marvel is real.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — Stasis. The viral footage of the rare albino buck is entirely genuine, capturing a rare biological marvel.\n\nIntegrity: Trustworthy (Hypocrisy: 1.11, z: 1)",
+      "The Daily Caller shares a viral video of an albino buck with a massive rack, celebrating it as a 'top-tier good omen' and a biological miracle with odds of survival up to 1-in-100,000.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The footage is entirely authentic, filmed by Joe Lord in Wisconsin. While the article omits that white deer are strictly protected under Wisconsin law NR 10.02, the core biological marvel is real.\nResulting Judgement: (+1.00, +0.90) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.11, z: 1)",
       "- Daily Caller: PASS (1.0, 1.0) — Accurate reporting of viral video.\n- Biological Context: COND (1.0, 0.8) — Omitted local legal protections.",
       "A viral video captured by fisherman Joe Lord in northern Wisconsin shows an incredibly rare albino buck with a massive antler rack crossing a road. Biologists estimate the odds of an albino deer at up to 1-in-100,000.",
       "The Poison:\nWhile beautiful, albino deer face severe survival disadvantages due to lack of camouflage and poor eyesight. Their high visibility makes them easy targets for predators, making this buck's mature age even rarer.",
       "The Breakdown & Plane Error:\nThe report succeeds on the Physical plane (WHERE) by presenting verified footage, but has a minor omission on the Possible plane (WHAT) by failing to mention that hunting these deer is illegal in Wisconsin.",
       "Social Physics Analysis:\nSharing genuine natural wonders fosters a shared sense of awe and connection. By focusing on the sheer beauty and biological rarity of the buck, the narrative avoids divisive pretexts and invites collective appreciation of the wild.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory of alignment. The shared wonder of nature remains uncorrupted by political or commercial distortion.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory of alignment. The shared wonder of nature remains uncorrupted by political or commercial distortion.",
       "The Unavoidable Truth: The albino buck is a genuine, legally protected biological marvel.\n\nThe Unavoidable Lie: This sighting guarantees good luck or is anything more than a beautiful genetic anomaly.",
       "Alethekanon:\nThe data confirms the physical event. While the narrative leans into folklore, the underlying biological rarity is mathematically sound and verified by local wildlife records.",
       "Awwthekanon:\nSeeing such a gentle, majestic creature survive against all odds is a beautiful reminder of nature's magic. It fills our hearts with wonder and reminds us to protect the fragile lives around us.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Daily Caller Reporting",
@@ -146,6 +208,7 @@
         "name": "Joe Lord",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

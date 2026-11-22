@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 0.85,
     "claim_psi": 0.75,
-    "real_u": -0.35,
-    "real_psi": 0.45,
+    "real_u": -0.15,
+    "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "A grand claim of Arctic dominion meets the reality of sovereign partnerships.\nGreenland Deal Vindicates Trump Yet Again\nEvidence: Permanent security control, Bilateral treaty pending ratification, Exaggerated domestic spin\n#Aletheia #USPol #Greenland",
-      "Breitbart claims President Trump secured permanent, cost-free security control over Greenland, completely addressing national security concerns and blocking adversaries without any pushback.\nStated Judgement: (0.85, 0.75) — Good Preference",
-      "In reality, Denmark and Greenland's joint statement shows this is a pending bilateral agreement requiring parliamentary approval, explicitly preserving Greenlandic sovereignty and self-determination.\nResulting Judgement: (-0.35, 0.45) — Deception",
-      "Verdict: FAIL — Fall into Deception.\nThe narrative frames a standard, pending bilateral security treaty as an absolute imperial acquisition to project strength.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.0, z: 2)",
+      "Breitbart claims President Trump secured permanent, cost-free security control over Greenland, completely addressing national security concerns and blocking adversaries without any pushback.\nStated Judgement: (+0.85, +0.75) — Greater Good",
+      "In reality, Denmark and Greenland's joint statement shows this is a pending bilateral agreement requiring parliamentary approval, explicitly preserving Greenlandic sovereignty and self-determination.\nResulting Judgement: (-0.15, +0.40) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nThe narrative frames a standard, pending bilateral security treaty as an absolute imperial acquisition to project strength.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.0, z: 2)",
       "Sub-Audits Breakdown:\n- Trump's Announcement: COND (0.10, 0.50) — Exaggerates bilateral talks as absolute control.\n- Breitbart's Editorial: FAIL (-0.40, 0.30) — Omits sovereignty clauses to claim total vindication.",
       "President Trump announced a security agreement with Denmark and Greenland, claiming permanent U.S. control over Greenland's security. However, Denmark clarified that their sovereignty remains fully intact.",
       "The Bright Side:\nThe U.S. is indeed strengthening its Arctic security posture and formalizing defense cooperation with Denmark, which is a positive step for regional stability, even if the domestic framing is highly inflated.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Trump's Announcement",
@@ -159,6 +221,7 @@
         "name": "Greenland",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

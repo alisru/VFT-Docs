@@ -5,22 +5,22 @@
     "subject": "Bowen says 'no carve-outs' after Queensland claims data centre win",
     "link": "https://www.abc.net.au/news/2026-08-28/bowen-says-no-carve-outs-for-states-on-data-centre-power/107089824",
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3mu4fofo4pv26",
-    "claim_u": 0.8,
+    "claim_u": 0.65,
     "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "real_u": -0.2,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "Federal climate policy clashes with state ambitions as Canberra denies carve-outs for data centre power.\n\nBowen says 'no carve-outs'\nEvidence: strict national rules, state claims win, case-by-case review\n#Aletheia #Energy #AusPol",
-      "The federal government insists national data centre rules require 100 percent renewables with zero exceptions or carve-outs for regional interests.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While federal standards mandate renewables, states can apply through the AER to use fossil fuels if proven cheaper, showing policy flexibility beneath rigid rhetoric.\nResulting Judgement: (-0.4, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nRhetorical rigidity masks pragmatic carve-out pathways, creating federal-state friction over energy control.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "The federal government insists national data centre rules require 100 percent renewables with zero exceptions or carve-outs for regional interests.\nStated Judgement: (+0.65, +0.50) — Greater Good",
+      "While federal standards mandate renewables, states can apply through the AER to use fossil fuels if proven cheaper, showing policy flexibility beneath rigid rhetoric.\nResulting Judgement: (-0.20, -0.40) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nRhetorical rigidity masks pragmatic carve-out pathways, creating federal-state friction over energy control.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Federal Government: COND (0.5, 0.2) — Enforces national renewables standard.\n- Queensland Government: FAIL (-0.6, -0.7) — Exaggerates local power carve-out wins.",
       "Energy Minister Chris Bowen clarified that Queensland and the NT do not have automatic exemptions from national data centre rules, despite state claims of a major policy win.",
       "The Bright Side:\nRigorous independent oversight by the Australian Energy Regulator ensures any fossil fuel exception faces an extremely high evidentiary bar.",
       "The Breakdown & Plane Error:\nConfusing political positioning (WHAT) with regulatory reality (WHO). States claim structural exemptions while federal rules retain gatekeeping authority.",
       "Social Physics Analysis:\nPolitical actors trade in simplified victory narratives to appease local electorates, while institutional mechanisms quietly preserve bureaucratic control over energy standards.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Policy ambiguity creates friction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Policy ambiguity creates friction.",
       "The Unavoidable Truth: National standards allow narrow exemptions under strict regulatory scrutiny.\n\nThe Unavoidable Lie: States secured blanket carve-outs from renewable energy mandates.",
       "Alethekanon:\nRhetorical absolutes conceal administrative loopholes, substituting political posturing for transparent energy policy.",
       "Awwthekanon:\nEnergy transitions are messy and full of competing regional needs. Let's communicate clearly so all communities feel included in a sustainable future.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Federal Government Policy",
@@ -170,6 +232,7 @@
         "name": "Australian Energy Regulator",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

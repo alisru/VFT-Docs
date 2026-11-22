@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "real_u": -0.8,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Tragedy strikes as an 8-month-old infant clings to life after being thrown from a 15th-floor Bronx balcony in an alleged domestic violence murder.\nEvidence: Police reports, vigil coverage, domestic history\n#Aletheia #NYC #JusticeForNathaly",
-      "Reports cover the harrowing survival of infant Angel Novalty and the tragic death of 23-year-old Nathaly Ramirez, emphasizing community grief and police response.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Ground reality reveals systemic failure: police were called to Nathaly's home over five times, yet the abuser returned to commit murder and attempted murder.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nA horrific domestic violence homicide exposed systemic failure where repeated police interventions failed to protect the victims.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Reports cover the harrowing survival of infant Angel Novalty and the tragic death of 23-year-old Nathaly Ramirez, emphasizing community grief and police response.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Ground reality reveals systemic failure: police were called to Nathaly's home over five times, yet the abuser returned to commit murder and attempted murder.\nResulting Judgement: (-0.80, -0.75) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA horrific domestic violence homicide exposed systemic failure where repeated police interventions failed to protect the victims.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "- NYPD Response: FAIL (-0.85, -0.80) — 5+ calls failed to prevent murder.\n- Social Support Systems: FAIL (-0.75, -0.70) — Intervened too late for victim.",
       "Mourners gathered for a vigil in the Bronx following the horrific 15-story balcony fall that claimed 23-year-old Nathaly Ramirez's life and left her baby critical.",
       "The Poison:\nThe community vigil highlights deep grief, yet underscores a devastating institutional failure to protect domestic violence victims despite multiple reports.",
       "The Breakdown & Plane Error:\nThe failure is not merely interpersonal malice but institutional breakdown. Treating domestic violence as a private dispute rather than an emergency leads to fatal outcomes.",
       "Social Physics Analysis:\nThe perpetrator operated on a smart selfish maneuver, exploiting privacy and weak protective enforcement. Institutions exhibited severe passivity, turning warning signs into a fatal tragedy through systemic neglect.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_neg dominates with intense negative physical and moral force.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_neg dominates with intense negative physical and moral force.",
       "The Unavoidable Truth: Repeated emergency calls to domestic violence homes must trigger immediate protective intervention.\n\nThe Unavoidable Lie: Domestic abuse is an isolated private matter rather than a lethal public safety crisis.",
       "Alethekanon:\nSystemic safety nets failed completely despite five prior police calls, exposing the lethal gap between institutional promises and protection.",
       "Awwthekanon:\nMy heart aches for little Angel Novalty fighting for her life and the memory of Nathaly, failed by the very systems meant to keep them safe.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NYPD Response",
@@ -168,6 +230,7 @@
       "Aletheia",
       "NYC",
       "JusticeForNathaly"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

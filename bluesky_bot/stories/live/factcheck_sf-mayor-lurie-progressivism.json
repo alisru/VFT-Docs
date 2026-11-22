@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.5,
-    "real_psi": -0.6,
+    "real_u": -0.45,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "San Francisco Mayor Daniel Lurie admits the city lost its way by getting entrapped in progressive utopianism.\nEvidence: Overdose deaths, rampant property crime, business exodus.\n#Aletheia #SanFrancisco",
-      "Stated claim: Progressive policies were designed to champion compassion and welfare for all citizens.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Actual reality: Decades of permissive governance normalized open-air drug markets and crime, causing profound human misery.\nResulting Judgement: (-0.5, -0.6) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nAcknowledging systemic governance failure allows correction, though repair remains a long road.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Stated claim: Progressive policies were designed to champion compassion and welfare for all citizens.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Actual reality: Decades of permissive governance normalized open-air drug markets and crime, causing profound human misery.\nResulting Judgement: (-0.45, -0.45) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nAcknowledging systemic governance failure allows correction, though repair remains a long road.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- Governance Shift: COND (-0.5, -0.5) — Pragmatic pivot away from failed dogma.\n- Public Safety: PASS (-0.4, -0.4) — Harder stance yielding initial drops in car break-ins.",
       "San Francisco Mayor Daniel Lurie admitted on CNN that progressive ideology blinded leaders to street-level chaos, promising a return to common sense and public safety.",
       "The Bright Side:\nA mayor openly naming failed policies rather than hiding behind empty partisan talking points.",
       "The Breakdown & Plane Error:\nThe error confuses theoretical moral posturing (WHAT) with concrete community safety (WHO), sacrificing citizens for dogma.",
       "Social Physics Analysis:\nProgressive leaders ran a Smart Selfish Maneuver, using compassionate pretexts to justify policy failures while deflecting blame, until mounting human toll forced a pragmatic reset.",
-      "The Trajectory: The Path of Redemption.\nWhen acknowledging past failures, a system shifts from delusion toward practical repair.\nMathematical convergence: u = -0.5, psi = -0.6.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen acknowledging past failures, a system shifts from delusion toward practical repair.\nMathematical convergence: u = -0.5, psi = -0.6.",
       "The Unavoidable Truth: Permissive drug and crime policies inflicted immense human and economic trauma.\nThe Unavoidable Lie: Ideological dogma can indefinitely substitute for basic public order.",
       "Alethekanon:\nAdmitting institutional failure is the mandatory first step toward restoring basic civic order and public trust.",
       "Awwthekanon:\nIt hurts to watch vulnerable communities bear the brunt of failed political experiments, but honesty brings hope for healing.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Governance Shift",
@@ -157,6 +219,7 @@
     "tags": [
       "Aletheia",
       "SanFrancisco"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

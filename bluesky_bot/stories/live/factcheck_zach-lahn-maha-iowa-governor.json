@@ -5,22 +5,22 @@
     "subject": "Zach Lahn is MAHA’s great farm country hope. Is he the populist hero he claims to be?",
     "link": "https://www.motherjones.com/politics/2026/08/zach-lahn-maha-iowa-rob-sand-governor-big-agriculture-glyphosate-monopoly-agribusiness-rfk-jr/",
     "target_url": "https://bsky.app/profile/motherjones.com/post/3mtpbk6iwed2g",
-    "claim_u": 1.0,
+    "claim_u": 0.9,
     "claim_psi": 1.0,
-    "real_u": -0.5,
-    "real_psi": -0.4,
+    "real_u": -0.56,
+    "real_psi": 0.7,
     "mode": "root",
     "posts": [
       "An Iowa GOP gubernatorial candidate promises to take on Big Ag, but critics question his populist packaging.\n\nZach Lahn is MAHA’s great farm country hope\nEvidence: populist rhetoric, operative background, ag monopoly debate #Aletheia #USPol",
-      "Lahn presents himself as a grassroots outsider called by God to break up agricultural monopolies and regulate glyphosate.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Critics reveal Lahn is a seasoned political operative leveraging MAHA health anxiety for electoral gain rather than a true agrarian reformer.\nResulting Judgement: (-0.5, -0.4) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA polished political operative adopting populist talking points while masking professional ambitions.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, Uncertainty z: 3)",
+      "Lahn presents himself as a grassroots outsider called by God to break up agricultural monopolies and regulate glyphosate.\nStated Judgement: (+0.90, +1.00) — Greater Good",
+      "Critics reveal Lahn is a seasoned political operative leveraging MAHA health anxiety for electoral gain rather than a true agrarian reformer.\nResulting Judgement: (-0.56, +0.70) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nA polished political operative adopting populist talking points while masking professional ambitions.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Zach Lahn Campaign: COND (0.0, -0.5) — Operative dressed as populist.\n- MAHA Coalition: COND (+0.5, 0.0) — Leverages genuine health concerns.",
       "Running for Iowa governor, 6th-generation Iowan Zach Lahn has leveraged anti-monopoly anger and RFK Jr.'s MAHA movement to defeat primary opponents.",
       "The Poison:\nPackaging genuine rural anxieties about corporate monopolies into standard political branding without clear structural remedies.",
       "The Breakdown & Plane Error:\nConfusing WHO is benefiting (Q1): the political operative building a brand versus the actual farmers facing chemical and corporate consolidation.",
       "Social Physics Analysis:\nBy deploying pretexts about fighting cartels while concealing a professional political operative background, the campaign substitutes projection and branding for transparent empowerment.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Rhetorical populism masks traditional ambition.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Rhetorical populism masks traditional ambition.",
       "The Unavoidable Truth: Rural communities genuinely suffer from agricultural monopolies and chemical exposure.\n\nThe Unavoidable Lie: That a veteran political operative is an accidental outsider disconnected from machine politics.",
       "Alethekanon:\n🌐 Zach Lahn's rapid ascent shows how MAHA health populism can be co-opted by skilled operatives targeting agricultural grievances.",
       "Awwthekanon:\nFarmers working hard every day deserve authentic champions who truly understand their struggles, not polished political branding.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.35,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Zach Lahn Campaign",
@@ -293,6 +355,7 @@
         "name": "Tucker Carlson",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

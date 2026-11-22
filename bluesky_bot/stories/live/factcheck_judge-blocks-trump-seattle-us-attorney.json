@@ -5,22 +5,22 @@
     "subject": "Judge blocks Trump from firing Seattle US attorney who had job for an hour",
     "link": "https://www.wtae.com/article/judge-overturns-trump-firing-seattle-us-attorney-roger-rogoff/73991182",
     "target_url": "https://bsky.app/profile/local-news-pgh.bsky.social/post/3mwv6b6yb462e",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.65,
-    "real_psi": 0.5,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.05,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "A federal judge steps in to block an executive firing, preserving statutory judicial independence in Seattle.\nEvidence: judicial ruling, statutory law, executive overreach\n#Aletheia #USPol #Legal",
-      "Federal courts protect the rule of law by preventing unilateral executive removal of court-appointed prosecutors.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "The judiciary successfully enforces statutory limits, ensuring court-appointed prosecutors remain stable until Senate confirmation.\nResulting Judgement: (+0.65, +0.50) — Grace",
-      "Verdict: PASS — The Path of Grace.\nInstitutional checks and balances hold firm against executive overreach, preserving legal integrity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Federal courts protect the rule of law by preventing unilateral executive removal of court-appointed prosecutors.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "The judiciary successfully enforces statutory limits, ensuring court-appointed prosecutors remain stable until Senate confirmation.\nResulting Judgement: (+0.05, -0.05) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nInstitutional checks and balances hold firm against executive overreach, preserving legal integrity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Federal Court Ruling: PASS (0.7, 0.6) — Enforces statutory law.\n- Executive Action: FAIL (-0.6, -0.7) — Unilateral removal attempt.",
       "A federal judge blocked the administration's attempt to dismiss a court-appointed U.S. attorney, reinforcing separation of powers.",
       "The Bright Side:\nJudicial independence functions exactly as designed to check executive power grabs.",
       "The Breakdown & Plane Error:\nCorrectly evaluating WHO holds legal authority based on statutory appointment rules.",
       "Social Physics Analysis:\nThe judiciary executes a Smart Altruistic maneuver, applying transparent legal standards to restrain executive power extraction and restore system stability.",
-      "The Trajectory: The Path of Grace.\nWhen you map institutional checks against executive overreach, it plots a direct trajectory toward Grace. Systemic strain is resolved through established legal channels.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map institutional checks against executive overreach, it plots a direct trajectory toward Grace. Systemic strain is resolved through established legal channels.",
       "The Unavoidable Truth: Statutory laws constrain executive discretion in prosecutorial appointments.\n\nThe Unavoidable Lie: The executive branch possesses absolute removal power over court-appointed figures.",
       "Alethekanon:\nInstitutional friction proves that rule of law can successfully buffer executive overreach 🌐",
       "Awwthekanon:\nIt is reassuring to see the legal system protect institutional fairness and provide stability.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Federal Court Ruling",
@@ -175,6 +237,7 @@
         "name": "U.S. Department of Justice",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

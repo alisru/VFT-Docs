@@ -14,13 +14,13 @@
       "A terrifying moment captured on camera as a 7.4 magnitude earthquake strikes Colombia, leaving a trail of destruction and loss. \n\nWilson Barco, a CNN contributor, captured the moment he rushed with his family into his apartment's bathroom. \n#Colombia #Earthquake",
       "The claim highlights the immediate personal experience of a CNN contributor during a major seismic event in Colombia, emphasizing the scale of the 7.4 magnitude quake. \nStated Judgement: (+1.00, +1.00) — Good Preference",
       "Ground reality confirms a 7.4 magnitude quake causing 132 deaths, 570 injuries, and widespread infrastructure damage, with international aid efforts mobilizing. \nResulting Judgement: (+1.00, +1.00) — Good Preference",
-      "Verdict: PASS — The Path of Awakening. \nThe report accurately documents a natural disaster and the subsequent humanitarian response without obfuscation. \nIntegrity: Trustworthy (Hypocrisy: 0.2, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nThe report accurately documents a natural disaster and the subsequent humanitarian response without obfuscation. \nIntegrity: Trustworthy (Hypocrisy: 0.2, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- CNN Reporting: PASS (0.8, 0.7) — The coverage provides factual, timely updates on the disaster.\n- Humanitarian Response: PASS (0.9, 0.8) — International and local aid efforts are actively addressing the crisis.",
       "A 7.4 magnitude earthquake struck western Colombia on Monday, causing significant casualties and structural damage. The government has declared a national disaster, and international aid, including $15.5 million from the US, is being deployed.",
       "The Bright Side:\nInternational solidarity and rapid mobilization of aid, including $15.5 million from the US, provide a lifeline to affected families during this crisis.",
       "The Breakdown & Plane Error:\nThere is no plane error; the report maintains alignment between the WHO (victims) and the WHAT (disaster impact).",
       "Social Physics Analysis:\nBy providing transparent, real-time information, the reporting empowers the public to understand the scale of the disaster, fostering empathy and coordinating effective aid responses.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of intent and action minimizes systemic strain.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of intent and action minimizes systemic strain.",
       "The Unavoidable Truth: Natural disasters reveal the fragility of infrastructure and the necessity of global cooperation.\n\nThe Unavoidable Lie: That such events can be fully mitigated by local resources alone.",
       "Alethekanon:\nThis event is a stark reminder of tectonic volatility. The reporting remains grounded in physical reality, avoiding speculative narratives and focusing on the humanitarian imperative.",
       "Awwthekanon:\nMy heart goes out to the families in Colombia. The pain of losing loved ones and homes is immense, but the outpouring of support is a testament to our shared humanity.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "CNN Reporting",
@@ -282,6 +344,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

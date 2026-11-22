@@ -5,22 +5,22 @@
     "subject": "New York delegation gets shoved in the back at GOP midterm convention...",
     "link": "https://nypost.com/2026/09/09/us-news/new-york-delegation-gets-shoved-in-the-back-at-gop-midterm-convention-in-downgrade-from-prime-2024-and-2016-seats/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -0.92,
-    "real_psi": -1.0,
+    "claim_u": 0.75,
+    "claim_psi": 0.75,
+    "real_u": -0.56,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "A seating chart in Dallas triggers a wave of political outrage. But is it a snub, or just the math of a high-priced fundraiser?\nNew York delegation gets shoved in the back at GOP midterm convention\nEvidence: Political slight, Logistical Tetris, Donor prioritization",
-      "The claim is that the New York Republican delegation was intentionally slighted and downgraded to the back corner of the arena, losing the prime front-row seating they enjoyed during previous presidential cycles.\nStated Judgement: (+1.0, +1.0) — Greater Good",
+      "The claim is that the New York Republican delegation was intentionally slighted and downgraded to the back corner of the arena, losing the prime front-row seating they enjoyed during previous presidential cycles.\nStated Judgement: (+0.75, +0.75) — Greater Good",
       "The reality is that this is an unprecedented midterm fundraiser, not a nominating convention. Seating is a logistical puzzle based on paid attendance, with the front rows explicitly reserved for high-dollar donors and Trump's super-fans.",
-      "Verdict: FAIL — The Path of Deception. The narrative invents a political snub to generate outrage, masking a standard transactional fundraising structure where front-row access is sold to the highest bidder.\n\nIntegrity: Severe Deception (Hypocrisy: 23.8, z: 4)",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 23.8, z: 4)",
       "Sub-Audits Breakdown:\n- NY Post Editorial Framing: FAIL (-0.92, -1.0) — Sensationalizes logistics as a political snub.\n- RNC Seating Logistics: COND (-0.2, -0.5) — Prioritizes donors over local party structures.",
       "The GOP is holding an unprecedented midterm convention in Dallas, doubling as a massive fundraiser. Unlike presidential cycles, seating is determined by paid honorary delegate packages and attendance numbers rather than political influence.",
       "The Bright Side:\nEven from the back corner, New York Republicans are securing key speaking slots for competitive House candidates, proving that actual electoral utility matters far more than symbolic arena seating.",
       "The Breakdown & Plane Error:\nThe article commits a Lyrical error by framing a purely transactional, logistical reality (paid seating) as a narrative of political disrespect. It swaps the 'how' of fundraising for the 'why' of a political snub.",
       "Social Physics Analysis:\nThe actors execute a Smart Selfish Maneuver. The RNC uses the pretext of a party convention to run a high-dollar extraction scheme, while the media projects a narrative of internal conflict to manufacture engagement and outrage.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated party unity and the reality of pay-to-play access, it plots a direct trajectory toward Deception. Transactional extraction inevitably displaces genuine grassroots empowerment.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated party unity and the reality of pay-to-play access, it plots a direct trajectory toward Deception. Transactional extraction inevitably displaces genuine grassroots empowerment.",
       "The Unavoidable Truth: Arena seating at modern political events is a commodity sold to the highest bidder, not a measure of respect.\n\nThe Unavoidable Lie: The New York delegation was pushed to the back as a deliberate political punishment.",
       "Alethekanon:\nThe outrage over seating arrangements is a classic distraction. It replaces structural analysis of campaign finance with superficial theater, keeping the public focused on the seating chart instead of the ledger.",
       "Awwthekanon:\nIt must feel discouraging for dedicated local volunteers to travel all the way to Dallas only to be placed in the back. But true community building doesn't happen in the front row of an arena; it happens on the ground back home.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NY Post Editorial Framing",
@@ -161,6 +223,7 @@
         "name": "Mike LiPetri",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "real_u": -0.82,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "John Oliver's framing of a convicted murderer sparks fierce debate over public healthcare anger and the boundaries of moral commentary.\nEvidence: Murder apology, media glamorization, insurance anger\n#Aletheia #Media #USPol",
-      "John Oliver argued that public fury over UnitedHealthcare's predatory denials explains why many find it hard to completely condemn Luigi Mangione's murder.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Normalizing murder under the pretext of economic grievances erodes basic civic taboos and champions lethal vigilantism as a legitimate grievance outlet.\nResulting Judgement: (-0.85, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nGlamorizing a murderer under the guise of systemic critique normalizes violence and corrupts public discourse.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 4)",
+      "John Oliver argued that public fury over UnitedHealthcare's predatory denials explains why many find it hard to completely condemn Luigi Mangione's murder.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Normalizing murder under the pretext of economic grievances erodes basic civic taboos and champions lethal vigilantism as a legitimate grievance outlet.\nResulting Judgement: (-0.82, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nGlamorizing a murderer under the guise of systemic critique normalizes violence and corrupts public discourse.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 4)",
       "- John Oliver Commentary: FAIL (-0.85, -0.9) — Excuses murder via systemic anger.\n- Media Framing: FAIL (-0.8, -0.85) — Blurs lines between protest and violence.",
       "John Oliver discussed Luigi Mangione's guilty plea for murdering UnitedHealthcare executive Brian Thompson, tying the public's morbid fascination to widespread healthcare anger.",
       "The Poison:\nRomanticizing a killer under the guise of systemic critique normalizes bloodshed and erodes fundamental moral boundaries.",
       "The Breakdown & Plane Error:\nConfusing systemic healthcare failure (Plane Q1/Q2) with individual homicidal culpability (Plane Q6/Q7), validating murder as protest.",
       "Social Physics Analysis:\nJohn Oliver runs a Smart Selfish maneuver: taking legitimate public outrage over predatory insurance practices (shared pain) and co-opting it to excuse a cold-blooded murder, substituting systemic reform with sensationalized shock value.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Normalizing murder for political utility destroys the social fabric.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Normalizing murder for political utility destroys the social fabric.",
       "The Unavoidable Truth: Predatory insurance denials inflict immense, systemic suffering on millions of vulnerable patients.\n\nThe Unavoidable Lie: Murdering a corporate executive serves as a legitimate form of populist social justice.",
       "Alethekanon:\nJustifying homicide as populist catharsis replaces the rule of law with tribal bloodlust under a progressive veneer.",
       "Awwthekanon:\nPeople are so broken by cruel medical bills that they look for heroes in the darkest places, but violence only leaves more empty chairs at dinner tables.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "John Oliver Commentary",
@@ -159,6 +221,7 @@
         "name": "UnitedHealthcare",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

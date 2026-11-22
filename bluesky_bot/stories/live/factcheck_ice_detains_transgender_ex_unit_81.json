@@ -5,22 +5,22 @@
     "subject": "ICE Detains Transgender Ex-Unit 81 Member",
     "link": "https://www.washingtontimes.com/news/2026/aug/29/ice-detains-transgender-ex-member-israeli-spy-unit/",
     "target_url": "",
-    "claim_u": 0.1,
-    "claim_psi": 0.8,
-    "real_u": -0.68,
-    "real_psi": -0.72,
+    "claim_u": 0.79,
+    "claim_psi": 0.88,
+    "real_u": -0.71,
+    "real_psi": -0.77,
     "mode": "root",
     "posts": [
       "Judicial oversight clashes with aggressive immigration transfers.\n\nICE Detains Transgender Ex-Unit 81 Member\nEvidence: Routine detention enforcement, Detainer circumvention, Due process compliance\n#Aletheia #ICE #Immigration",
-      "ICE announced the targeted detention of Avishay Alon, a former Israeli military specialist convicted of kidnapping, framing it as standard public safety enforcement.\nStated Judgement: (+0.10, +0.80) — Greater Good",
-      "State corrections bypassed release on parole directly into ICE custody to preempt a federal judge's order questioning detainer time limits and detention conditions.\nResulting Judgement: (-0.68, -0.72) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nCoordinated custody transfers were executed specifically to render ongoing federal judicial inquiries moot.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.40, z: 4)",
+      "ICE announced the targeted detention of Avishay Alon, a former Israeli military specialist convicted of kidnapping, framing it as standard public safety enforcement.\nStated Judgement: (+0.79, +0.88) — Greater Good",
+      "State corrections bypassed release on parole directly into ICE custody to preempt a federal judge's order questioning detainer time limits and detention conditions.\nResulting Judgement: (-0.71, -0.77) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nCoordinated custody transfers were executed specifically to render ongoing federal judicial inquiries moot.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.40, z: 4)",
       "- Federal ICE: FAIL (-0.72, -0.75) — Preempted court scrutiny on detention limits.\n- NH Corrections: FAIL (-0.65, -0.68) — Refused parole release except directly into ICE hands.",
       "ICE detained Avishay Alon, a transgender former Israeli military intelligence member, one day after a federal judge ordered state officials to justify her prolonged detainer.",
       "The Bright Side:\nTargeted deportation proceedings against individuals convicted of violent felonies remain standard federal law enforcement procedure.",
       "The Breakdown & Plane Error:\nThe discrepancy is between public safety mandates (WHAT) and circumventing federal judicial authority regarding detention limits (HOW).",
       "Social Physics Analysis:\nBy executing a direct inter-agency handoff hours before a court hearing, enforcement agencies maintained institutional control while shutting down judicial reviews of medical care policies.",
-      "The Trajectory: The Path of Reckoning.\nMapping the gap between administrative justifications and procedural avoidance reveals a trajectory toward Greater Evil. Preempting court scrutiny erodes due process.",
+      "The Trajectory: The Path of Fall into Destruction.\nMapping the gap between administrative justifications and procedural avoidance reveals a trajectory toward Greater Evil. Preempting court scrutiny erodes due process.",
       "The Unavoidable Truth: Custody was transferred rapidly to avoid answering a federal judge.\n\nThe Unavoidable Lie: The timing was entirely coincidental administrative processing.",
       "Alethekanon:\nExecuting custodial transfers to evade active judicial orders replaces constitutional process with administrative evasion.",
       "Awwthekanon:\nStripping away medical care and rights in confinement makes an already vulnerable situation even harsher.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.05,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.05,
+        "O": 0.75,
+        "N": 0.05
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.05,
+        "N": 0.2
+      },
+      "LE": {
+        "S": 0.15,
+        "O": 0.55,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.05,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.95,
+        "O": 0.15,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.15,
+        "O": 0.7,
+        "N": 0.2
+      },
+      "LE": {
+        "S": 1.1,
+        "O": 0.1,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "ICE Enforcement Action",
@@ -288,6 +350,7 @@
         "name": "Steven McAuliffe",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -14,7 +14,7 @@
       "A dramatic plea across the Channel frames Brexit as history's grandest deception.\n\nEvidence: European Unity, Geopolitical Leverage, Hegemonic Alignment\n#Aletheia #Brexit #Macron 🌐",
       "The stated narrative claims that rejoining the European Union is a selfless path to restoring British prosperity and repairing continental solidarity.\n\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "In reality, the push leverages domestic political shifts to absorb British economic and military assets back into the federalist European project, bypassing democratic mandates.\n\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The trajectory exploits political transitions to reverse democratic decisions, prioritizing institutional expansion over national sovereignty.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- Emmanuel Macron: FAIL (-1.0, -1.0) — Seeks to reclaim lost EU military and economic leverage.\n- Andy Burnham: COND (-0.5, -0.5) — Reverses manifesto commitments without a clear public mandate.",
       "French President Emmanuel Macron and Spanish PM Pedro Sánchez have seized on UK PM Andy Burnham's suggestions of backtracking on Brexit, urging the UK to return to the EU fold.",
       "The Poison:\nWhile framed as a warm invitation, the rhetoric actively undermines the democratic legitimacy of the original referendum and exploits internal UK political divisions.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Emmanuel Macron Geopolitical Strategy",
@@ -291,6 +353,7 @@
         "name": "United Kingdom",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

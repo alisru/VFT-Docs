@@ -14,7 +14,7 @@
       "Quick thinking saves 900 lives!\nEvidence: Glacier flood, 14-minute warning, school evacuated\n#Aletheia #Nepal #Heroism",
       "A school accountant's frantic last-minute warning gave 900 students and staff 14 minutes to evacuate before a catastrophic glacial flash flood destroyed the building.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "Swift communication and calm headmaster leadership successfully evacuated all 900+ students across the river just moments before the waters obliterated the school.\nResulting Judgement: (+1.0, +1.0) — Grace",
-      "Verdict: PASS — The Path of Grace.\nImmediate, transparent action and selfless warning averted a massive tragedy.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\nImmediate, transparent action and selfless warning averted a massive tragedy.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- School Accountant & Staff: PASS (1.0, 1.0) — Life-saving prompt action.\n- Emergency Reporting: PASS (1.0, 1.0) — Accurate crisis documentation.",
       "A glacial mouth collapse triggered a devastating flash flood in Nepal, but quick-thinking school staff managed to evacuate over 900 students just 14 minutes before the facility was completely destroyed.",
       "The Bright Side:\nExtraordinary situational awareness and courage averted massive loss of young lives during a catastrophic natural disaster.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 2.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 2.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "School Staff & Rescuers",
@@ -207,6 +269,7 @@
         "name": "Rajendra Dawadi",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

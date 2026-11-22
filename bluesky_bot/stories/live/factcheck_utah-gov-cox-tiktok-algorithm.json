@@ -5,22 +5,22 @@
     "subject": "Utah Gov. Cox: CCP Probably Still Controls TikTok Algorithm, They Know TikTok Is Bad, Push It on U.S.",
     "link": "https://www.breitbart.com/clips/2026/09/12/utah-gov-cox-ccp-probably-still-controls-tiktok-algorithm-they-know-tiktok-is-bad-push-it-on-u-s/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.3,
-    "real_psi": -0.4,
+    "claim_u": 0.65,
+    "claim_psi": 0.35,
+    "real_u": -0.15,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "Utah Gov. Cox warns CCP controls TikTok's algorithm while pushing it on U.S. youth. Evidence: Gov. Cox interview, algorithmic control, national security concerns. #Aletheia #Tech #USPol 🌐",
-      "CCP hypocritically restricts social media domestically while weaponizing TikTok's algorithm against U.S. youth.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While algorithmic opacity remains a valid national security challenge, rhetoric often weaponizes foreign tech fears for domestic political alignment without structural reform.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. Legitimate security concerns regarding algorithmic opacity are co-opted into partisan rhetoric without tackling systemic data protection.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "CCP hypocritically restricts social media domestically while weaponizing TikTok's algorithm against U.S. youth.\nStated Judgement: (+0.65, +0.35) — Greater Good",
+      "While algorithmic opacity remains a valid national security challenge, rhetoric often weaponizes foreign tech fears for domestic political alignment without structural reform.\nResulting Judgement: (-0.15, -0.20) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "- Gov. Spencer Cox: PASS (0.5, 0.2) — Raises valid national security concerns on tech opacity.\n- Algorithmic Oversight: COND (-0.5, -0.5) — Highlights risks while sidestepping domestic data laws.",
       "Utah Gov. Spencer Cox discussed TikTok's algorithmic risks on PBS's 'Firing Line,' highlighting China's domestic restrictions versus U.S. availability.",
       "The Bright Side:\nHighlights legitimate data sovereignty vulnerabilities exploited by foreign actors.",
       "The Breakdown & Plane Error:\nConfuses the WHAT (algorithmic transparency) with the WHO (blaming external actors while neglecting domestic privacy regulation frameworks).",
       "Social Physics Analysis:\nActors deploy a Smart Selfish Maneuver, leveraging external threats as pretexts to deflect from domestic regulatory inaction on data privacy.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated security objectives and actual regulatory drift, it plots toward Lesser Evil through selective threat amplification.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated security objectives and actual regulatory drift, it plots toward Lesser Evil through selective threat amplification.",
       "The Unavoidable Truth: Foreign platforms present legitimate governance and data sovereignty challenges.\n\nThe Unavoidable Lie: Blaming foreign actors alone resolves the systemic lack of robust U.S. consumer data privacy laws.",
       "Alethekanon:\nState security rhetoric serves as a convenient proxy for avoiding comprehensive domestic data legislation.",
       "Awwthekanon:\nProtecting kids online is vital, but let's build real data privacy rules at home instead of just pointing fingers across the Pacific.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Gov. Spencer Cox",
@@ -157,6 +219,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

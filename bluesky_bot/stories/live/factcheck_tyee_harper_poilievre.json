@@ -14,7 +14,7 @@
       "Is a former Prime Minister staging a comeback, or are you just reading a donation pitch?\n\nCould Harper Replace Poilievre atop Conservatives?\nEvidence: political analysis, subscription drive, clickbait\n#Aletheia #Media",
       "The Tyee claims a new poll shows the Conservative Party is in such a deep crisis that Stephen Harper is preferred over Pierre Poilievre to lead, suggesting a major leadership shift is brewing.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "In reality, the article is a repeated fundraising pitch wrapped in thin speculation. The poll shows a tiny 16% to 15% margin, with most respondents saying no Conservative can win, used as clickbait.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The Tyee uses sensationalized political speculation as a pretext to drive newsletter signups and financial donations.\nIntegrity: Severe Deception (Hypocrisy: 21.43, z: 0)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 21.43, z: 0)",
       "- Speculation: FAIL (-1.0, -1.0) — Speculative clickbait.\n- Fundraising: FAIL (-1.0, -1.0) — Repeated pitches.",
       "The Tyee published an analysis piece speculating on Stephen Harper replacing Pierre Poilievre based on a Nanos poll, but heavily padded the text with repeated appeals for reader donations.",
       "The Bright Side:\nIndependent journalism needs funding to survive, but wrapping fundraising appeals in highly speculative, thin political clickbait undermines the very credibility they ask readers to fund.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Editorial Speculation",
@@ -269,6 +331,7 @@
         "name": "Nanos Research",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.24,
-    "real_psi": -0.58,
+    "real_u": 0.27,
+    "real_psi": -0.52,
     "mode": "root",
     "posts": [
       "A massive pharma giant and a leading AI lab join forces. Novo Nordisk and Anthropic partner to accelerate drug discovery.\nEvidence: Faster medicine, Corporate efficiency, Market dominance\n#Aletheia #HealthTech",
-      "Novo Nordisk and Anthropic claim their partnership will compress a century of medical breakthroughs into a decade, shortening research timelines to save lives.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While AI speeds up R&D, the primary driver is corporate productivity and securing high-margin drug pipelines. The benefits remain locked behind proprietary paywalls.\nResulting Judgement: (+0.24, -0.58) — Lesser Good",
-      "Verdict: CONDITIONAL — The Path of Redemption. While accelerating drug discovery is a net positive, the benefits are captured by corporate monopolies rather than public health.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 2)",
+      "Novo Nordisk and Anthropic claim their partnership will compress a century of medical breakthroughs into a decade, shortening research timelines to save lives.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While AI speeds up R&D, the primary driver is corporate productivity and securing high-margin drug pipelines. The benefits remain locked behind proprietary paywalls.\nResulting Judgement: (+0.27, -0.52) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 2)",
       "- Novo Nordisk: COND (0.24, -0.58) — Focuses on R&D efficiency.\n- Anthropic AI: COND (0.30, -0.45) — Safe models but commercial focus.",
       "Novo Nordisk is partnering with Anthropic to use frontier AI models to solve complex biological challenges and shorten drug development timelines.",
       "The Poison:\nEven if AI discovers life-saving treatments in record time, patent protections and high pricing models mean patients may still be priced out of care.",
       "The Breakdown & Plane Error:\nThe announcement conflates WHO benefits (humanity) with WHAT is optimized (corporate R&D speed). The bait-and-switch hides commercial profit behind a humanitarian shield.",
       "Social Physics Analysis:\nNovo Nordisk runs a Smart Selfish Maneuver, using the pretext of patient care to justify proprietary AI integration. This hoards market power while projecting an empathetic image of global healing.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Corporate efficiency drives localized progress.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Corporate efficiency drives localized progress.",
       "The Unavoidable Truth: AI will significantly accelerate drug discovery timelines.\nThe Unavoidable Lie: This partnership guarantees cheaper or more accessible medicine for patients.",
       "Alethekanon:\nOptimizing R&D speed without reforming drug pricing models simply accelerates capital accumulation under the guise of scientific progress.",
       "Awwthekanon:\nIt is wonderful that scientists are getting better tools to fight chronic diseases. I just hope they remember the real people waiting for these cures, not just the profit margins.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Novo Nordisk Corporate Strategy",
@@ -161,6 +223,7 @@
         "name": "Dario Amodei",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Grassroots petitions channel public grief and frustration into collective action across Australia and America. 🌐\nEvidence: grassroots petitions, social media age limits, refugee reunification\n#Aletheia #CivicAction",
-      "Platforms enable ordinary citizens to mobilize communities and force governments to address urgent social and legislative failures.\nStated Judgement: (+1.0, 0.5) — Good Preference",
-      "While petitions spotlight vital human pain and spark occasional legal wins, they often serve as symbolic outlets without binding legislative teeth.\nResulting Judgement: (0.6, 0.3) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nGrassroots campaigns successfully channel public outrage into tangible legislative reforms, despite structural limits.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Platforms enable ordinary citizens to mobilize communities and force governments to address urgent social and legislative failures.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "While petitions spotlight vital human pain and spark occasional legal wins, they often serve as symbolic outlets without binding legislative teeth.\nResulting Judgement: (+0.60, +0.30) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nGrassroots campaigns successfully channel public outrage into tangible legislative reforms, despite structural limits.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Petition Campaigns: PASS (0.7, 0.4) — Genuine community organizing.\n- Platform Mechanics: COND (0.5, 0.2) — Balances advocacy with data capture.",
       "Citizen-led petitions on platforms like Change.org amplify marginalized voices demanding accountability for systemic safety and policy failures.",
       "The Bright Side:\nWhen communities unite around shared tragedies, petitions can successfully pressure lawmakers into passing life-saving legislation.",
       "The Breakdown & Plane Error:\nConfusing digital expression (WHAT) with structural institutional enforcement (HOW). Signatures raise awareness but require political will.",
       "Social Physics Analysis:\nCitizens engage in a Smart Altruistic Loop by uniting around shared vulnerabilities (Empathy), surfacing neglected systemic harms (Transparency), and driving cooperative policy changes.",
-      "The Trajectory: The Path of Redemption.\nWhen civic energy directly targets real institutional blind spots, it plots a steady course toward Grace. (u: 0.6, psi: 0.3)",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen civic energy directly targets real institutional blind spots, it plots a steady course toward Grace. (u: 0.6, psi: 0.3)",
       "The Unavoidable Truth: Grassroots mobilization gives voice to the otherwise ignored victims of institutional failure.\n\nThe Unavoidable Lie: Signing a petition automatically guarantees legal reform.",
       "Alethekanon:\nDigital advocacy bridges the gap between isolated individual grievances and collective political pressure. Yet public awareness remains only the first step toward lasting reform.",
       "Awwthekanon:\nEvery signature represents a grieving parent, a worried family, or a community refusing to stay silent in the face of deep pain.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Petition Campaigns",
@@ -159,6 +221,7 @@
     "tags": [
       "Aletheia",
       "CivicAction"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -14,13 +14,13 @@
       "Executive voter restrictions facing Supreme Court review amid midterm battles.\n\nDemocracy Docket Mail Voting Review\nEvidence: protect integrity, disenfranchise voters, voter access\n#Aletheia #USPol",
       "The administration claims executive restrictions on mail voting and USPS ballot delivery are designed to secure elections.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "Executive orders restricting postal delivery alongside post-primary map changes disempower voters to secure partisan advantage.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — Revelation into Destruction. Executive security pretexts conceal systemic voter suppression tactics.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.40, Uncertainty z: 1)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.40, Uncertainty z: 1)",
       "- Trump Executive Order: FAIL (-0.91, -0.85) — Disenfranchises mail voters.\n- Galveston County Mapping: FAIL (-0.88, -0.80) — Mid-election gerrymandering.",
       "Federal courts blocked executive restrictions preventing USPS delivery of mail ballots. The administration appealed to SCOTUS while Texas counties redraw maps after primary results.",
       "The Bright Side:\nLower courts and legal challenges continue to halt sweeping executive mail voting bans nationwide.",
       "The Breakdown & Plane Error:\nThe claim frames restrictions as election integrity (WHAT), but actual execution targets voter eligibility lists to depress turnouts (WHO).",
       "Social Physics Analysis:\nUsing integrity post-hoc pretexts allows officials to obscure partisan map adjustments and postal barriers. Power is hoarded by engineering structural friction rather than competing transparently on policy.",
-      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated security intentions and ground-level disenfranchisement, it plots a direct trajectory toward Greater Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated security intentions and ground-level disenfranchisement, it plots a direct trajectory toward Greater Evil.",
       "The Unavoidable Truth: Restricting ballot delivery restricts participation.\n\nThe Unavoidable Lie: Mandating extra postal verification protects democratic voting.",
       "Alethekanon:\nSystemic barriers dressed as administrative safeguards directly reduce democratic turnout.",
       "Awwthekanon:\nIt is heartbreaking to see everyday citizens facing artificial barriers just to make their voices heard.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Trump Executive Order on Postal Ballots",
@@ -276,6 +338,7 @@
         "name": "Indira Talwani",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://cnb.cx/4jztgNo",
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mwvsidufk52e",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.3,
-    "real_psi": 0.2,
+    "claim_psi": 1.0,
+    "real_u": 0.82,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "When commercial rockets fund missile tech, the defense-industrial complex evolves.\nEvidence: SpaceX, Anduril partnerships, long-term military contracts\n#Aletheia #Defense",
-      "Investors can capitalize on modern military-industrial shifts through key suppliers tied to SpaceX and Anduril.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Defense supply chains capture recurring revenue streams by servicing long-life military hardware and missile components.\nResulting Judgement: (+0.3, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nMarket pragmatism accurately captures the industrial realignment toward defense tech.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Investors can capitalize on modern military-industrial shifts through key suppliers tied to SpaceX and Anduril.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Defense supply chains capture recurring revenue streams by servicing long-life military hardware and missile components.\nResulting Judgement: (+0.82, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nMarket pragmatism accurately captures the industrial realignment toward defense tech.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- Applied Aerospace: PASS (0.5, 0.4) — Delivers robust hardware for modern defense.\n- Financial Reporting: PASS (0.4, 0.2) — Transparent about sector tailwinds.",
       "Applied Aerospace secures a lucrative position supplying components for enduring military platforms, SpaceX rockets, and Anduril defense networks.",
       "The Bright Side:\nPredictable revenue streams and long-term service-life-extension contracts stabilize high-tech manufacturing growth.",
       "The Breakdown & Plane Error:\nEvaluating WHAT (financial positioning of a supplier) without missing WHO (the broader geopolitical economy driving defense spending).",
       "Social Physics Analysis:\nCommercial defense suppliers operate a transparent alignment loop: pairing high-demand manufacturing capacity with real military-industrial demand without hidden pretexts.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Aligned market forces generate steady industrial output.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Aligned market forces generate steady industrial output.",
       "The Unavoidable Truth: Modern aerospace suppliers thrive by integrating commercial rocket innovation with defense systems.\n\nThe Unavoidable Lie: Defense manufacturing investments are entirely disconnected from geopolitical conflict dynamics.",
       "Alethekanon:\nFollowing the supply chain reveals the true architecture of modern statecraft and aerospace power.",
       "Awwthekanon:\nIt's fascinating to watch technology evolve, even when its roots touch upon the complex realities of global defense.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Applied Aerospace Supplier Analysis",
@@ -211,6 +273,7 @@
         "name": "Anduril Industries",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

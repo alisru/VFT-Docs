@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.95,
     "claim_psi": 0.9,
-    "real_u": 0.95,
-    "real_psi": 0.9,
+    "real_u": 0.94,
+    "real_psi": 0.89,
     "mode": "root",
     "posts": [
       "A mechanical miracle keeps a tiny heart beating against all odds.\nFitted with a Berlin Heart, Little Macs Is ‘Absolutely Thriving’ While He Waits for a Heart Transplant\nEvidence: Life-saving technology, Infant survival, Medical innovation\n#Aletheia #MedTech",
       "A baby boy facing end-of-life heart failure is saved by a Berlin Heart device, allowing him to thrive and smile while waiting for a transplant.\nStated Judgement: (+0.95, +0.90) — Greater Good",
-      "The mechanical pump successfully takes over, allowing Macs to come off heavy sedation, interact with his parents, and maintain stable health during his wait.\nResulting Judgement: (+0.95, +0.90) — Greater Good",
-      "Verdict: PASS — Grace into Grace. A genuine triumph of medical engineering and clinical care that delivers exactly the life-saving outcome promised.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "The mechanical pump successfully takes over, allowing Macs to come off heavy sedation, interact with his parents, and maintain stable health during his wait.\nResulting Judgement: (+0.94, +0.89) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Medical Technology: PASS (0.95, 0.90) — Life-saving mechanical support.\n- Patient Care: PASS (0.92, 0.88) — Compassionate clinical intervention.",
       "After suffering two cardiac arrests from dilated cardiomyopathy, baby Macs was fitted with an EXCOR Berlin Heart at Bristol Royal Children's Hospital, saving his life.",
       "The Poison:\nThe wait for an infant heart transplant can take years, leaving the family in a state of prolonged, high-stakes medical suspense despite the device's success.",
       "The Breakdown & Plane Error:\nThere is no plane error here. The metaphysical beneficiary (Macs) matches the physical beneficiary, and the causal chain of mechanical pumping directly enables his survival.",
       "Social Physics Analysis:\nThe medical team and developers execute a Smart Altruistic Maneuver, using transparent technology to resolve a critical physical problem, empowering the family and restoring hope.",
-      "The Trajectory: The Path of Grace into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment between promise and reality is absolute.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment between promise and reality is absolute.",
       "The Unavoidable Truth: Advanced medical technology can keep a dying infant alive and thriving for years.\nThe Unavoidable Lie: The road ahead is easy just because the immediate crisis has been resolved.",
       "Alethekanon:\nWhen human ingenuity is aligned with the preservation of life, the result is a rare, uncompromised victory over physical decay.",
       "Awwthekanon:\nSeeing little Macs smile and play after being so close to the end is a beautiful reminder of the power of love, hope, and the hands that heal.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Medical Technology",
@@ -151,6 +213,7 @@
         "name": "Bristol Royal Children's Hospital",
         "role": "acted_upon"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "'National Treasure' director predicts upcoming third film won't ignore politics",
     "link": "https://www.foxnews.com/media/national-treasure-director-predicts-upcoming-third-film-wont-ignore-politics",
     "target_url": "",
-    "claim_u": 0.62,
-    "claim_psi": 0.55,
-    "real_u": 0.28,
-    "real_psi": 0.22,
+    "claim_u": 0.9,
+    "claim_psi": 1.0,
+    "real_u": 0.14,
+    "real_psi": 0.41,
     "mode": "root",
     "posts": [
       "When pop culture cannot even hunt fictional historical relics without partisan permission, civic escape evaporates.\n\n'National Treasure 3' Politics\nEvidence: Broad Escapism, Cultural Strain, Shared Wonder\n#Culture #NationalTreasure",
-      "Director Jon Turteltaub stated that a finished script for National Treasure 3 exists, but modern political polarization makes addressing contemporary divisions unavoidable in historical storytelling.\nStated Judgement: (+0.62, +0.55) — Lesser Good",
-      "Ground reality reveals commercial studios struggle to craft non-partisan national mythologies as hyper-partisanship turns shared historical symbols into ideological battlegrounds.\nResulting Judgement: (+0.28, +0.22) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening. The director candidly articulates the cultural friction complicating modern mainstream filmmaking.\nIntegrity: Conditionally Sound (Hypocrisy: 1.72, Uncertainty z: 3)",
+      "Director Jon Turteltaub stated that a finished script for National Treasure 3 exists, but modern political polarization makes addressing contemporary divisions unavoidable in historical storytelling.\nStated Judgement: (+0.90, +1.00) — Greater Good",
+      "Ground reality reveals commercial studios struggle to craft non-partisan national mythologies as hyper-partisanship turns shared historical symbols into ideological battlegrounds.\nResulting Judgement: (+0.14, +0.41) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Conditionally Sound (Hypocrisy: 1.72, Uncertainty z: 3)",
       "- Creative Vision: PASS (+0.35, +0.28) — Frank assessment of polarized entertainment.\n- Studio Franchise: COND (+0.21, +0.16) — Commercial hesitation around national unity themes.",
       "Director Jon Turteltaub revealed a completed script for National Treasure 3 while noting that intense political division delayed development and must be carefully navigated.",
       "The Bright Side:\nHonest creative transparency about the difficulty of uniting fractured audiences is healthier than pretending cultural divides do not affect art.",
       "The Breakdown & Plane Error:\nThe strain reflects a WHAT versus WHY error: treating historical adventure as an ideological litmus test rather than a unifying narrative space.",
       "Social Physics Analysis:\nWhen creative storytelling is subordinated to ideological conformity, narrative possibility space collapses. Turteltaub attempts to preserve a common civic myth without inflaming cultural division.",
-      "The Trajectory: The Path of Awakening.\nMapping the dialogue reveals a move from unexamined nostalgia toward a conscious effort to navigate cultural friction without alienating audiences.",
+      "The Trajectory: The Path of Fall from Grace.\nMapping the dialogue reveals a move from unexamined nostalgia toward a conscious effort to navigate cultural friction without alienating audiences.",
       "The Unavoidable Truth: Partisan division now impacts basic escapist entertainment.\nThe Unavoidable Lie: Modern films can easily satisfy hyper-polarized factions without friction.",
       "Alethekanon:\nTurteltaub's analysis is structurally lucid: narrative unity cannot exist when audiences demand partisan alignment from simple adventure fiction.",
       "Awwthekanon:\nIt is heartbreaking when simple fun and shared love for history get bogged down by anger and suspicion. We all deserve stories that bring us together.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.35
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.2,
+        "N": 0.35
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.55,
+        "O": 0.15,
+        "N": 0.3
+      },
+      "LE": {
+        "S": 0.4,
+        "O": 0.15,
+        "N": 0.2
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 0.35,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Creative Direction Assessment",
@@ -285,6 +347,7 @@
         "name": "Kevin McCarthy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

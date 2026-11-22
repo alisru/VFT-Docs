@@ -6,21 +6,21 @@
     "link": "https://www.foxnews.com/politics/texas-gov-greg-abbott-moves-cut-state-funding-ai-powered-flock-cameras-amid-privacy-concerns",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
+    "claim_psi": 1.0,
     "real_u": -0.57,
     "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A sudden pivot to privacy or a calculated retreat from public backlash?\nTexas Gov. Greg Abbott moves to cut state funding for AI-powered Flock cameras.\nEvidence: Protect privacy, Pause funding, Capture sentiment\n#Aletheia #Texas #Privacy 🌐",
-      "Governor Abbott is taking a bold stand for citizen privacy by ordering state agencies to pause funding for Flock Safety's AI-powered license plate readers.\nStated Judgement: (+1.0, 0.0) — Good Preference",
+      "Governor Abbott is taking a bold stand for citizen privacy by ordering state agencies to pause funding for Flock Safety's AI-powered license plate readers.\nStated Judgement: (+1.00, +1.00) — Greater Good",
       "The pause comes only after Texas funneled $30 million to build this massive surveillance grid, and local communities began canceling contracts due to intense public backlash.\nResulting Judgement: (-0.57, -1.0) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nAbbott's funding pause is a reactive political pivot to capture anti-surveillance sentiment after actively financing the grid's expansion.\n\nIntegrity: Severe Deception (Hypocrisy: 1.57, Uncertainty z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nAbbott's funding pause is a reactive political pivot to capture anti-surveillance sentiment after actively financing the grid's expansion.\n\nIntegrity: Severe Deception (Hypocrisy: 1.57, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Greg Abbott: FAIL (-0.57, -1.0) — Reactive pivot after funding the grid.\n- Flock Safety: FAIL (-0.8, -0.9) — Commercializing mass surveillance.\n- Texas MV CPA: FAIL (-0.6, -0.8) — Funneled millions into the grid.",
       "Texas Governor Greg Abbott ordered state agencies to pause funding for Flock Safety's AI-powered cameras, which have faced growing bipartisan backlash and contract cancellations over privacy concerns.",
       "The Bright Side:\nThe funding pause, regardless of political motivation, halts the immediate state-sponsored expansion of a highly invasive license plate tracking network.",
       "The Breakdown & Plane Error:\nThe error is WHO vs WHAT. The state claims to protect citizens (WHO) from surveillance, but the actual action (WHAT) was building the grid first and only pausing when caught in a public backlash.",
       "Social Physics Analysis:\nThe administration used a smart selfish loop. They quietly funded a massive surveillance grid to hoard control, but when public outrage threatened their political capital, they projected a pro-privacy stance to escape accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The pivot is a deceptive shield to preserve power amid rising public friction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The pivot is a deceptive shield to preserve power amid rising public friction.",
       "The Unavoidable Truth: Texas built a massive AI surveillance grid with taxpayer money.\n\nThe Unavoidable Lie: The governor paused the funding solely out of a proactive, principled stance on citizen privacy.",
       "Alethekanon:\nA classic tactical retreat. True privacy advocacy does not fund a thirty-million-dollar surveillance apparatus only to pause it when the public starts pushing back.",
       "Awwthekanon:\nIt is exhausting when the people trusted to protect our communities build silent nets of watchfulness over our daily lives, only stepping back when we cry out in discomfort.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Greg Abbott Policy Pivot",
@@ -218,6 +280,7 @@
         "name": "Texas Motor Vehicle Crime Prevention Authority",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

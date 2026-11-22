@@ -6,21 +6,21 @@
     "link": "https://thefederalist.com/2026/08/28/federal-judge-child-sex-abuse-images-are-ok-as-long-as-theyre-made-with-ai/?utm_source=rss&utm_medium=rss&utm_campaign=federal-judge-child-sex-abuse-images-are-ok-as-long-as-theyre-made-with-ai",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Courts grapple with digital horrors as a federal ruling shields virtual abuse material.\nEvidence: Free speech defense, Real harm overlooked, Legal loophole exploited\n#Aletheia #AI #Law 🌐",
-      "Proponents argue that protecting virtual speech prevents government overreach into private digital creation.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Critics warn that legalizing AI-generated child abuse images creates demand vectors and normalizes horrific exploitation.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nLegal abstraction creates real-world moral decay by shielding synthetic abuse.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Proponents argue that protecting virtual speech prevents government overreach into private digital creation.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Critics warn that legalizing AI-generated child abuse images creates demand vectors and normalizes horrific exploitation.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nLegal abstraction creates real-world moral decay by shielding synthetic abuse.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "Sub-Audits Breakdown:\n- The Federalist Framing: COND (0.5, 0.2) — Highlights dangerous legal precedent.\n- Judicial Reasoning: FAIL (-0.8, -0.9) — Hedges on outdated jurisprudence.",
       "A federal appeals court ruled that private possession of AI-generated child sexual abuse material is protected by the First Amendment if no real children are depicted.",
       "The Poison:\nShielding synthetic abuse under free speech creates safe harbors for predators and overwhelms law enforcement.",
       "The Breakdown & Plane Error:\nConfusing the abstract rights of digital code (WHAT) with the physical protection of vulnerable humans (WHO).",
       "Social Physics Analysis:\nBy hiding behind legal technicalities, the system prioritizes abstract free speech frameworks over shielding society from severe harm.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between abstract legal protection and ground-level harm, it plots a direct trajectory toward Greater Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between abstract legal protection and ground-level harm, it plots a direct trajectory toward Greater Evil.",
       "The Unavoidable Truth: Synthetic child abuse material fuels destructive predatory behavior.\n\nThe Unavoidable Lie: First Amendment protections apply universally to digital abuse.",
       "Alethekanon:\nTreating synthetic abuse as harmless free speech ignores how digital simulation drives real-world exploitation.",
       "Awwthekanon:\nEvery child deserves absolute protection, free from the dark shadows of simulated abuse.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Judicial First Amendment Ruling",
@@ -218,6 +280,7 @@
         "name": "U.S. Court of Appeals for the 7th District",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

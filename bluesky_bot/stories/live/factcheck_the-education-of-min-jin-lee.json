@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/motherjones.com/post/3mwnu3z3c2c2i",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_u": 0.7,
+    "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "Examining the heavy human costs of educational ambition in Min Jin Lee's new work.\nEvidence: cultural prestige, systemic pressure, family sacrifice\n#Aletheia #Literature #Education",
-      "Novelist Min Jin Lee probes the fierce pursuit of education, asking if elite schooling is a true passport to a good life.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While questioning elite status, the competitive machinery surrounding test prep and parental anxiety reveals deep structural strains.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nThoughtful inquiry into cultural pressures yields genuine self-reflection on systemic ambition.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Novelist Min Jin Lee probes the fierce pursuit of education, asking if elite schooling is a true passport to a good life.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "While questioning elite status, the competitive machinery surrounding test prep and parental anxiety reveals deep structural strains.\nResulting Judgement: (+0.70, +0.40) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nThoughtful inquiry into cultural pressures yields genuine self-reflection on systemic ambition.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- Min Jin Lee's Narrative: PASS (0.8, 0.5) — Deeply examines diasporic educational burdens.\n- Media Framing: PASS (0.6, 0.3) — Captures cultural nuance without toxic tropes.",
       "Novelist Min Jin Lee explores the intense cultural focus on education in the Korean diaspora, balancing personal sacrifice against systemic pressure.",
       "The Bright Side:\nOpens an honest cultural dialogue about the psychological toll of hyper-competitive academic benchmarks.",
       "The Breakdown & Plane Error:\nConfusing the cultural tool of education (HOW) with the human purpose of flourishing (WHO), exposing underlying systemic anxiety.",
       "Social Physics Analysis:\nActors navigate structural pressures rather than malicious manipulation, favoring transparency and shared reflection over hidden agendas.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Analytical balance ensures low systemic strain.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Analytical balance ensures low systemic strain.",
       "The Unavoidable Truth: Education is pursued as an absolute shield against insecurity.\n\nThe Unavoidable Lie: Elite academic credentials guarantee personal fulfillment.",
       "Alethekanon:\nExamining cultural obsessions with credentialism reveals how systemic anxiety masquerades as moral virtue.",
       "Awwthekanon:\nEvery parent who sacrifices desires only safety for their child, yet the heavy machinery of competition often burdens the very souls it seeks to protect.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Min Jin Lee's Narrative",
@@ -156,6 +218,7 @@
         "name": "Mother Jones",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

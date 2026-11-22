@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A veteran prosecutor steps down from a high-profile DOJ probe.\nEvidence: diGenova resignation, DOJ conspiracy probe, leadership friction\n#Aletheia #USPol",
-      "Official framing attributes the exit to mutual professional differences in a high-stakes investigation.\nStated Judgement: (+0.5, 0.0) — Conditional Good",
-      "Internal friction and loss of confidence crippled a loosely defined probe, prompting an unceremonious departure.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nLeadership friction and lack of strategic clarity derailed the probe.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "Official framing attributes the exit to mutual professional differences in a high-stakes investigation.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Internal friction and loss of confidence crippled a loosely defined probe, prompting an unceremonious departure.\nResulting Judgement: (-0.70, -0.80) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nLeadership friction and lack of strategic clarity derailed the probe.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "- Joseph diGenova: FAIL (-0.75, -0.82) — Probe leader exiting amid strategic friction.\n- DOJ Leadership: COND (-0.65, -0.78) — Managing high-stakes political fallout.",
       "Joseph diGenova resigned as lead prosecutor for the Justice Department's probe into an alleged conspiracy against Donald Trump, citing differences of opinion.",
       "The Bright Side:\nClearing out a stalled and politicized probe prevents further wasted resources.",
       "The Breakdown & Plane Error:\nConfusing administrative friction (WHAT) with systemic accountability (WHO).",
       "Social Physics Analysis:\nThe actors run a smart selfish maneuver: launching a vague political probe as a pretext, only to abandon it when institutional friction exposes its fragility.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Net forces tilt toward structural decay.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Net forces tilt toward structural decay.",
       "The Unavoidable Truth: High-profile legal probes often collapse under the weight of political expectations.\n\nThe Unavoidable Lie: Legal integrity guided this investigation from inception to conclusion.",
       "Alethekanon:\nPoliticized investigations built on vague pretexts inevitably implode under internal friction.",
       "Awwthekanon:\nIt is exhausting when institutions are used as chess pieces rather than instruments of true justice, leaving everyone disillusioned.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Joseph diGenova Resignation",
@@ -156,6 +218,7 @@
         "name": "U.S. Department of Justice",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

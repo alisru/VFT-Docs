@@ -5,22 +5,22 @@
     "subject": "Texas And Florida Are Quietly Reviving The Financial Stability Of The Gold Standard",
     "link": "https://thefederalist.com/2026/08/24/texas-and-florida-are-quietly-reviving-the-financial-stability-of-the-gold-standard/?utm_source=rss&utm_medium=rss&utm_campaign=texas-and-florida-are-quietly-reviving-the-financial-stability-of-the-gold-standard",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "claim_u": 0.74,
+    "claim_psi": 1.0,
+    "real_u": 0.74,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "States are building gold-backed payment rails, bypassing the Federal Reserve's monopoly on currency. \nEvidence: Texas HB 1056, Florida HB 999, Gold-backed payment systems. \n#Finance #GoldStandard",
-      "Texas and Florida are implementing laws to allow citizens to use gold and silver as legal tender via electronic payment rails, effectively creating competing currencies. \nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Legislative efforts are underway to integrate bullion into digital payment systems, providing a tangible alternative to fiat currency for daily transactions. \nResulting Judgement: (+0.6, +0.4) — Good Preference",
-      "Verdict: PASS — The Path of Redemption. \nStates are creating tangible financial alternatives, reducing reliance on centralized fiat systems. \nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "Texas and Florida are implementing laws to allow citizens to use gold and silver as legal tender via electronic payment rails, effectively creating competing currencies. \nStated Judgement: (+0.74, +1.00) — Greater Good",
+      "Legislative efforts are underway to integrate bullion into digital payment systems, providing a tangible alternative to fiat currency for daily transactions. \nResulting Judgement: (+0.74, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nStates are creating tangible financial alternatives, reducing reliance on centralized fiat systems. \nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Legislative Action: PASS (+0.7, +0.5) — Concrete legal frameworks established.\n- Financial Innovation: PASS (+0.5, +0.3) — Practical alternative to fiat.",
       "Texas and Florida have passed legislation (HB 1056 and HB 999) to enable gold and silver as legal tender, creating electronic payment rails for bullion transactions.",
       "The Bright Side:\nThis decentralizes currency control, offering citizens a hedge against inflation and a choice in how they store and spend value.",
       "The Breakdown & Plane Error:\nThere is no plane error; the claim aligns with the physical legislative reality. The bait-and-switch is absent; the states are doing exactly what they claimed.",
       "Social Physics Analysis:\nBy enabling private custodians and electronic transfers, these states empower individuals to opt out of fiat dependency. This transparency in value storage reduces systemic friction.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The alignment of law and utility creates a stable, low-strain equilibrium.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The alignment of law and utility creates a stable, low-strain equilibrium.",
       "The Unavoidable Truth: Decentralized currency options provide a necessary check on central bank monopoly power.\nThe Unavoidable Lie: Fiat currency is the only possible medium for a modern, functioning economy.",
       "Alethekanon:\nThese states are effectively re-introducing market discipline to money. It is a structural shift toward tangible value.",
       "Awwthekanon:\nIt is heartening to see people finding ways to protect their hard-earned savings. Choice brings peace of mind.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Legislative Action",
@@ -199,6 +261,7 @@
         "name": "Federal Reserve",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

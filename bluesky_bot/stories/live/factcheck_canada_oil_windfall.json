@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.73,
     "claim_psi": -0.73,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_u": -0.5,
+    "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "Profiting from the flames of global conflict. Canada's oil windfall may yet wipe out its losses from tariffs. Evidence: Geopolitical crisis, Economic windfall, Exploitative framing. #Aletheia #Economy #Canada 🌐",
       "The narrative suggests that Canada's economy will easily absorb the shock of US tariffs thanks to a massive oil windfall driven by rising global prices.\nStated Judgement: (+0.73, -0.73) — Lesser Good",
-      "The 'windfall' is directly subsidized by devastating Middle East warfare and Houthi attacks, forcing everyday consumers to pay the price at the pump.\nResulting Judgement: (-0.4, -0.5) — Deception",
-      "Verdict: FAIL — Fall into Deception.\nFraming regional war and consumer pain as a convenient economic savior masks systemic instability.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 3.5, Uncertainty z: 2)",
+      "The 'windfall' is directly subsidized by devastating Middle East warfare and Houthi attacks, forcing everyday consumers to pay the price at the pump.\nResulting Judgement: (-0.50, -0.55) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nFraming regional war and consumer pain as a convenient economic savior masks systemic instability.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 3.5, Uncertainty z: 2)",
       "- Canadian Oil Windfall: COND (-0.4, -0.5) — Benefits from global instability.\n- Tariff Mitigation: FAIL (-0.5, -0.6) — Ignores consumer inflation costs.",
       "While US tariffs cost Canada up to $20B annually, oil prices topping $100 due to Middle East conflict could add up to $32B to its GDP. However, this windfall relies on ongoing war and drives up domestic fuel costs.",
       "The Poison:\nCelebrating a national GDP boost from soaring oil prices ignores the fact that Canadian citizens are simultaneously squeezed by the resulting inflation and high fuel costs.",
       "The Breakdown:\nThis is a Lyrical vs Physical error. The lyrical narrative celebrates a macroeconomic 'winfall' while suppressing the physical reality of war-driven inflation and consumer exploitation.",
       "Social Physics Analysis:\nThis represents a Smart Selfish Maneuver. Institutional actors use the pretext of tariff mitigation to justify and celebrate high oil prices, projecting the blame onto foreign conflicts while extracting wealth from squeezed domestic consumers.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated economic benefits and ground-level consumer strain, it plots a direct trajectory toward Deception. Short-term gains mask long-term systemic instability.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated economic benefits and ground-level consumer strain, it plots a direct trajectory toward Deception. Short-term gains mask long-term systemic instability.",
       "The Unavoidable Truth: One nation's economic windfall can be directly fueled by global tragedy.\nThe Unavoidable Lie: High oil prices are a pure benefit to the Canadian public.",
       "Alethekanon:\nMacroeconomic metrics often decouple from human reality. Labeling war-driven inflation as a 'windfall' is a structural distortion that hides systemic fragility behind a veneer of GDP growth.",
       "Awwthekanon:\nIt's so heartbreaking to see human suffering and war in the Middle East talked about like a lucky break for someone else's economy. We are all connected, and true prosperity shouldn't cost others their peace.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.15,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.45,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.05,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.85,
+        "O": 0.15,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Canadian Oil Windfall",
@@ -295,6 +357,7 @@
         "name": "Saudi Arabia",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Slainte! Trump Scraps 10% Tariff on All Irish Whiskey as Parting Gift",
     "link": "https://www.breitbart.com/europe/2026/09/14/slainte-trump-scraps-10-tariff-on-all-irish-whiskey-as-parting-gift/",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.4,
-    "real_u": 0.2,
-    "real_psi": 0.3,
+    "claim_u": 0.7,
+    "claim_psi": 0.45,
+    "real_u": 0.3,
+    "real_psi": 0.35,
     "mode": "root",
     "posts": [
       "President Trump scraps the 10% tariff on Irish whiskey during his farewell visit to Ireland.\nEvidence: Irish Open announcement, whiskey tariffs, trade gesture\n#Aletheia #Trade #USPol",
-      "Lifting the tariff on Irish whiskey honors popular requests and fosters goodwill between the United States and Ireland.\nStated Judgement: (+0.6, +0.4) — Good Preference",
-      "A strategic trade carveout delivered at a high-profile sporting event offers mutual PR benefits while sidestepping complex multilateral trade negotiations.\nResulting Judgement: (+0.2, +0.3) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nA pragmatic trade concession wrapped in populist showmanship successfully resolves a minor diplomatic friction point.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Lifting the tariff on Irish whiskey honors popular requests and fosters goodwill between the United States and Ireland.\nStated Judgement: (+0.70, +0.45) — Greater Good",
+      "A strategic trade carveout delivered at a high-profile sporting event offers mutual PR benefits while sidestepping complex multilateral trade negotiations.\nResulting Judgement: (+0.30, +0.35) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nA pragmatic trade concession wrapped in populist showmanship successfully resolves a minor diplomatic friction point.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Donald Trump: PASS (+0.2, +0.3) — Effective trade gesture yielding mutual goodwill.\n- Irish Whiskey Industry: PASS (+0.4, +0.4) — Direct beneficiary of tariff removal.",
       "President Trump announced the removal of the 10% Irish whiskey tariff during the Irish Open, delighting fans and distillers alike.",
       "The Bright Side:\nInstantly lowers cost barriers for popular international spirits and pleases allies.",
       "The Breakdown & Plane Error:\nFocusing on a symbolic gesture (WHAT) rather than comprehensive trade policy reforms (HOW).",
       "Social Physics Analysis:\nTrump executes a classic smart populist maneuver: turning a localized trade friction into an immediate public relations win that satisfies both domestic and foreign stakeholders.",
-      "The Trajectory: The Path of Redemption.\nWhen you map trade concessions against diplomatic optics, it plots a direct trajectory toward Lesser Good. Practical friction is eased through high-profile engagement.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map trade concessions against diplomatic optics, it plots a direct trajectory toward Lesser Good. Practical friction is eased through high-profile engagement.",
       "The Unavoidable Truth: Targeted tariff rollbacks can quickly alleviate pressure on specific allied industries.\n\nThe Unavoidable Lie: Symbolic gestures at golf tournaments replace comprehensive and stable trade frameworks.",
       "Alethekanon:\nPragmatic trade diplomacy wears the cheerful mask of a casual parting gift. 🌐",
       "Awwthekanon:\nSometimes a simple toast and a removed barrier are all it takes to bring people together in shared celebration.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Donald Trump Trade Action",
@@ -171,6 +233,7 @@
         "name": "Micheál Martin",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

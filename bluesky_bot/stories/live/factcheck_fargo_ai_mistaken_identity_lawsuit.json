@@ -5,22 +5,22 @@
     "subject": "Tennessee Grandmother Sues Fargo City and Police After Spending Six Months in Jail over AI Mistaken Identity",
     "link": "https://www.breitbart.com/law-and-order/2026/09/18/tennessee-grandmother-sues-fargo-city-and-police-after-spending-six-months-in-jail-over-ai-mistaken-identity/",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.8,
-    "real_u": 0.95,
-    "real_psi": 0.9,
+    "claim_u": 0.05,
+    "claim_psi": 0.05,
+    "real_u": 0.07,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "A grandmother's six-month nightmare sparks a $10M lawsuit. Tennessee Grandmother Sues Fargo City and Police After Spending Six Months in Jail over AI Mistaken Identity.\nEvidence: Systemic accountability, AI facial recognition failure, False arrest\n#Tech #Law",
-      "A Tennessee grandmother is suing Fargo for $10 million, alleging police recklessly relied on uncorroborated AI facial recognition to jail her for six months for a crime she didn't commit.\nStated Judgement: (0.90, 0.80) — Greater Good",
-      "Angela Lipps was arrested at gunpoint and jailed for six months because Fargo police matched her social media photo to a fake ID without checking basic bank records proving she was in Tennessee.\nResulting Judgement: (0.95, 0.90) — Greater Good",
-      "Verdict: PASS — Stasis.\nThe lawsuit is a vital corrective action against reckless law enforcement reliance on uncorroborated AI technology.\nIntegrity: Absolute Truth (Hypocrisy: 0.05, z: 0)",
+      "A Tennessee grandmother is suing Fargo for $10 million, alleging police recklessly relied on uncorroborated AI facial recognition to jail her for six months for a crime she didn't commit.\nStated Judgement: (+0.05, +0.05) — Greater Good",
+      "Angela Lipps was arrested at gunpoint and jailed for six months because Fargo police matched her social media photo to a fake ID without checking basic bank records proving she was in Tennessee.\nResulting Judgement: (+0.07, +0.10) — Greater Good",
+      "Verdict: PASS — Grace.\nThe lawsuit is a vital corrective action against reckless law enforcement reliance on uncorroborated AI technology.\nIntegrity: Absolute Truth (Hypocrisy: 0.05, z: 0)",
       "- Angela Lipps: PASS (0.95, 0.90) — Seeks systemic accountability.\n- Fargo Police Department: FAIL (-0.80, -0.70) — Reckless reliance on unverified AI.",
       "Angela Lipps was arrested in July 2025 and held until Christmas Eve before bank records proved she was never in North Dakota. She is now suing for false arrest and due process violations.",
       "The Bright Side:\nIn response to this catastrophic failure, the Fargo Police Department has reportedly mandated stricter AI training and revised its facial recognition protocols to prevent future errors.",
       "The Breakdown & Plane Error:\nThe police committed a severe logical plane error, treating a probabilistic AI facial match (WHAT) as definitive proof of identity (WHO) without performing basic, low-effort investigative verification.",
       "Social Physics Analysis:\nThe police executed a lazy, power-hoarding maneuver, prioritizing a quick arrest over transparent verification. By projecting guilt onto an innocent grandmother based on a machine guess, they manufactured a crisis that destroyed her life.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The lawsuit acts as a corrective force to restore systemic accountability and protect civil liberties.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The lawsuit acts as a corrective force to restore systemic accountability and protect civil liberties.",
       "The Unavoidable Truth: Uncorroborated AI facial recognition is a tool for leads, not a substitute for real police work.\nThe Unavoidable Lie: Automated technology is infallible enough to justify arresting citizens without human verification.",
       "Alethekanon:\nThe Fargo Police Department's reliance on a single AI match without verifying basic financial alibis represents a catastrophic failure of investigative logic and due process.",
       "Awwthekanon:\nMy heart breaks for Angela. To be torn away from your grandchildren, jailed for six months, and lose your home and car over a computer glitch is an unimaginable tragedy. She deserves every bit of healing, support, and justice.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Angela Lipps",
@@ -161,6 +223,7 @@
         "name": "City of Fargo",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

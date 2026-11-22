@@ -5,14 +5,14 @@
     "subject": "South Carolina mail-in voting law illegally discriminates, appeals court rules",
     "link": "https://www.foxnews.com/politics/south-carolina-mail-in-voting-law-illegally-discriminates-appeals-court-rules",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
+    "claim_u": 0.8,
+    "claim_psi": 1.0,
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A constitutional clash over who gets to vote by mail.\n\nSouth Carolina Mail-In Voting Law\nEvidence: equal access, age discrimination, constitutional rights\n#Aletheia #VotingRights #USPol",
-      "South Carolina claims its mail-in voting law is a fair, common-sense measure designed to protect and assist senior citizens by granting them unconditional absentee ballots.\nStated Judgement: (+1.0, 0.0) — Good Preference",
+      "South Carolina claims its mail-in voting law is a fair, common-sense measure designed to protect and assist senior citizens by granting them unconditional absentee ballots.\nStated Judgement: (+0.80, +1.00) — Greater Good",
       "In reality, the 4th Circuit ruled the law unconstitutionally discriminates against younger voters under the 26th Amendment, forcing them to meet strict criteria while seniors vote unconditionally.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
       "Verdict: FAIL — Fall into Destruction.\nBy creating unequal tiers of constitutional rights based on age, the state's law actively undermined democratic equality.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 1)",
       "Sub-Audits Breakdown:\n- South Carolina Law: FAIL (-1.00, -1.00) — Age discrimination.\n- 4th Circuit Court: PASS (0.80, 0.50) — Upheld equality.\n- Fox News: COND (-0.10, -0.10) — Partisan framing.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "South Carolina Voting Law",
@@ -213,6 +275,7 @@
         "name": "4th U.S. Circuit Court of Appeals",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

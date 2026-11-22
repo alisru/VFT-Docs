@@ -14,7 +14,7 @@
       "A breakthrough in mathematical physics constructs a global smooth solution for the focusing cubic Schrödinger equation, demonstrating logarithmic concentration.\nEvidence: Constructing global solutions, Verifying physical models, Advancing wave equations\n#Aletheia #Physics",
       "Researchers claim to construct a smooth, global-in-time solution to the focusing cubic nonlinear Schrödinger equation on a 2D torus that concentrates at a single point as time goes to infinity.\nStated Judgement: (1.0, 1.0) — Greater Good",
       "The mathematical construction rigorously proves the existence and uniqueness of this concentrating solution, matching the predicted logarithmic scale and Sobolev space asymptotics.\nResulting Judgement: (1.0, 1.0) — Greater Good",
-      "Verdict: PASS — Grace. The authors deliver a rigorous, self-consistent mathematical proof that advances our understanding of nonlinear wave equations and singularity formation.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Mathematical Physics: PASS (1.0, 1.0) — Rigorous wave analysis.\n- Nonlinear Schrödinger: PASS (1.0, 1.0) — Confirms concentration.",
       "This work solves a key problem in nonlinear dispersive equations by showing how a wave profile interacts with its periodic images on a torus, leading to a highly controlled, point-like concentration over infinite time.",
       "The Bright Side:\nUnderstanding these concentration mechanisms helps physicists model extreme wave phenomena, such as rogue waves in oceans or intense light filaments in nonlinear optics.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Mathematical Physics",
@@ -273,6 +335,7 @@
         "name": "arXiv",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

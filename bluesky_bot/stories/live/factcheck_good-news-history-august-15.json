@@ -14,7 +14,7 @@
       "Honoring the historical roots of animation and true artistic conviction across time.\n\nGood News in History, August 15\nEvidence: historical milestone, artistic dedication, cultural preservation\n#History #Animation",
       "Winsor McCay's pioneering 1918 animation of the Lusitania stands as a monumental leap for artistic expression and journalistic conviction.\nStated Judgement: (+0.75, +1.00) — Greater Good",
       "McCay independently spent 22 months creating 25,000 drawings to capture historical truth against editorial suppression, establishing enduring cultural milestones.\nResulting Judgement: (+0.75, +1.00) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nHistorical preservation of pioneering animation honors genuine artistic dedication and truth-telling.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nHistorical preservation of pioneering animation honors genuine artistic dedication and truth-telling.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Winsor McCay Animation Work: PASS (1.0, 1.0) — Pioneering technical and artistic dedication to truth.\n- Historical Preservation: PASS (1.0, 1.0) — Proper recognition by national film registry.",
       "A look back at historical milestones on August 15, including Winsor McCay's groundbreaking 1918 animation film 'The Sinking of the Lusitania', the founding of Vardzia, the discovery of the olinguito, the Panama Canal opening, and The Beatles' first stadium concert.",
       "The Poison:\nThe original suppression of truth by media bosses demonstrates how commercial interests frequently attempt to stifle independent conviction.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Winsor McCay Animation Work",
@@ -267,6 +329,7 @@
         "name": "The Beatles",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

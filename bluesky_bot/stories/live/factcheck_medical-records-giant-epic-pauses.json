@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Epic pauses product development to patch critical security vulnerabilities.\nEvidence: Product pause, Security audit, Patient data risk\n#Aletheia #Cybersecurity #HealthTech",
-      "A leading health software giant halts new features to remediate deep security flaws exposed by frontier AI testing.\nStated Judgement: (+0.9, +0.8) — Good Preference",
-      "Decades of rushed health tech expansion left massive blind spots, exposing 320 million patient records to silent extraction.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nPausing to fix critical security flaws prevents catastrophe but exposes deep structural neglect in health tech.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.9, z: 2)",
+      "A leading health software giant halts new features to remediate deep security flaws exposed by frontier AI testing.\nStated Judgement: (+0.90, +0.80) — Greater Good",
+      "Decades of rushed health tech expansion left massive blind spots, exposing 320 million patient records to silent extraction.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPausing to fix critical security flaws prevents catastrophe but exposes deep structural neglect in health tech.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.9, z: 2)",
       "Sub-Audits Breakdown:\n- Epic Systems: PASS (+0.6, +0.5) — Proactively halting development to fix security bugs.\n- Healthcare Providers: FAIL (-0.7, -0.8) — Inheriting systemic digital vulnerabilities.",
       "Health tech giant Epic paused development for weeks after AI-driven security auditing exposed critical flaws in MyChart patient record systems.",
       "The Bright Side:\n Frontier AI models are actively used to discover and patch dangerous security vulnerabilities before malicious hackers strike.",
       "The Breakdown & Plane Error:\nConfusing feature velocity (WHAT) with foundational system safety (HOW).",
       "Social Physics Analysis:\nEpic executes a belated smart altruistic correction after AI auditing forces transparency upon long-standing technical debt and hidden risks.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Reactive patching masks systemic architectural risks.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Reactive patching masks systemic architectural risks.",
       "The Unavoidable Truth: Frontier AI tools can uncover severe security blind spots that human developers miss for years.\n\nThe Unavoidable Lie: Modern electronic health record systems were built with impenetrable security from the ground up.",
       "Alethekanon:\nConvenience always outpaces security until automated auditors force a reckoning. Pausing is the first honest step.",
       "Awwthekanon:\nIt is terrifying to think that hundreds of millions of private medical records sat exposed, but deeply reassuring to see leadership halt everything to make patients safe.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Epic Systems",
@@ -152,6 +214,7 @@
         "name": "Healthcare Sector",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

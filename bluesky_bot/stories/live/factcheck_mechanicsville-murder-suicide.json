@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": -0.95,
-    "real_psi": -0.95,
+    "real_u": -0.22,
+    "real_psi": -0.38,
     "mode": "root",
     "posts": [
       "When private custody battles spiral into unthinkable tragedy, innocent lives pay the ultimate price.\nEvidence: Toxicology report, kratom, Benadryl poisoning\n#Aletheia #Crime #NewYork",
-      "Initial perpetrator notes alleged that extreme protective measures were necessary due to unverified abuse claims.\nStated Judgement: (0.0, 0.0) — Neutral Stasis",
-      "Toxicology reports confirm a calculated, drugged murder-suicide perpetrated by a mother and grandmother against four children.\nResulting Judgement: (-0.95, -0.95) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nToxicology reports confirm four children were systematically poisoned with allergy medication and kratom before a fatal murder-suicide.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
+      "Initial perpetrator notes alleged that extreme protective measures were necessary due to unverified abuse claims.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Toxicology reports confirm a calculated, drugged murder-suicide perpetrated by a mother and grandmother against four children.\nResulting Judgement: (-0.22, -0.38) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nToxicology reports confirm four children were systematically poisoned with allergy medication and kratom before a fatal murder-suicide.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
       "- Perpetrators (Mother & Grandmother): FAIL (-0.95, -0.95) — Executed calculated murder under fraudulent pretexts.\n- Father: PASS (0.5, 0.2) — Denied abuse claims and mourns the victims.",
       "A toxicology report revealed that four upstate New York children killed in a June murder-suicide were drugged with kratom and Benadryl.",
       "The Poison:\nThe tragic confirmation of systematic drugging shatters any sympathetic framing of the perpetrators' self-serving suicide notes.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Perpetrators (Mother & Grandmother)",
@@ -162,6 +224,7 @@
         "name": "Harper Harmon",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

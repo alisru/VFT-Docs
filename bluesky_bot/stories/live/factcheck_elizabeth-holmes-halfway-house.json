@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.5,
+    "real_u": -0.15,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "Theranos founder Elizabeth Holmes is scheduled to transfer from federal prison to a Texas halfway house in August 2027.\nEvidence: DOJ Victim Notification, BOP Guidelines\n#Aletheia #Fraud",
-      "Reports emphasize her transition toward community reentry after serving a portion of her federal fraud sentence.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Holmes remains convicted of massive multi-million dollar investor fraud, owing hundreds of millions in restitution.\nResulting Judgement: (-0.6, -0.5) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA high-profile white-collar criminal navigates standard bureaucratic reentry while victims bear lasting financial losses.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Reports emphasize her transition toward community reentry after serving a portion of her federal fraud sentence.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Holmes remains convicted of massive multi-million dollar investor fraud, owing hundreds of millions in restitution.\nResulting Judgement: (-0.15, -0.15) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nA high-profile white-collar criminal navigates standard bureaucratic reentry while victims bear lasting financial losses.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- Media Reporting: PASS (0.5, 0.4) — Accurate BOP schedule tracking.\n- Restitution Reality: FAIL (-0.8, -0.7) — Victims remain unpaid.",
       "Disgraced biotech founder Elizabeth Holmes has been approved for a community corrections center transfer in late 2027, shortening her physical cell confinement.",
       "The Bright Side:\nThe judicial system enforced real prison time and accountability for corporate fraud.",
       "The Breakdown & Plane Error:\nConfusing WHAT (administrative halfway house rules) with WHO (systemic corporate accountability for massive fraud).",
       "Social Physics Analysis:\nThe actors operate within a legal framework where corporate malfeasance is met with lengthy sentences, yet rehabilitation milestones routinely spark public debate over proportionality.",
-      "The Trajectory: The Path of Deception.\nWhen you map white-collar crime against administrative halfway house transfers, it plots a direct trajectory toward Lesser Evil. Systemic rules apply, but restitution remains unfulfilled.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map white-collar crime against administrative halfway house transfers, it plots a direct trajectory toward Lesser Evil. Systemic rules apply, but restitution remains unfulfilled.",
       "The Unavoidable Truth: Accountability catches up to corporate deception, though victims rarely recover their losses.\n\nThe Unavoidable Lie: Halfway house transfers equate to a full pardon or erasure of past crimes.",
       "Alethekanon:\nAdministrative halfway house transfers are standard procedure, but they cannot erase the hundreds of millions in broken trust left behind.",
       "Awwthekanon:\nIt is hard to watch white-collar offenders receive pathways home while countless investor victims grapple with permanent financial ruin.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Media Reporting",
@@ -161,6 +223,7 @@
         "name": "Federal Bureau of Prisons",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Rep. Randy Fine: I'm Not Sure the Video of Me Going Through Homeowner's Mailbox Is Real",
     "link": "https://www.breitbart.com/politics/2026/09/04/rep-randy-fine-im-not-sure-the-video-of-me-going-through-homeowners-mailbox-is-real/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.89,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -0.77,
+    "real_psi": 0.89,
     "mode": "root",
     "posts": [
       "When Ring footage catches a candidate rifling through a voter's mailbox, reality gets gaslit.\nEvidence: Ring footage, office confirmation, denial\n#Aletheia #USPol",
-      "Rep. Randy Fine casts doubt on the viral mailbox video, claiming he cannot recall the event and suggesting the footage might be completely fabricated.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While police noted no federal mail tampering occurred and charges were dropped, Fine's shifting narrative from initial office confirmation to total denial exposes political gaslighting.\nResulting Judgement: (-0.8, -0.89) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nShifting from initial office confirmation to denying video reality undermines public trust.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 3)",
+      "Rep. Randy Fine casts doubt on the viral mailbox video, claiming he cannot recall the event and suggesting the footage might be completely fabricated.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "While police noted no federal mail tampering occurred and charges were dropped, Fine's shifting narrative from initial office confirmation to total denial exposes political gaslighting.\nResulting Judgement: (-0.77, +0.89) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nShifting from initial office confirmation to denying video reality undermines public trust.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 3)",
       "- Rep. Randy Fine: FAIL (-0.85, -0.9) — Denies verified footage via deflection.\n- Campaign Conduct: COND (-0.6, -0.5) — Boundary crossing during canvassing.",
       "Ring footage emerged showing Florida Rep. Randy Fine looking through a homeowner's mailbox while campaigning, prompting public scrutiny and shifting denials from his campaign.",
       "The Bright Side:\nThe homeowner declined to press charges after police verified nothing was stolen or tampered with inside the mailbox.",
       "The Breakdown & Plane Error:\nThe plane error conflates WHAT occurred (canvassing property) with WHO is accountable (denying personal action through post-hoc fabrication claims).",
       "Social Physics Analysis:\nInstead of addressing a minor campaign misstep transparently, the official deploys deflection and claims of fake media, substituting projection for accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Defensive pretexts supersede transparent accountability.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Defensive pretexts supersede transparent accountability.",
       "The Unavoidable Truth: Video evidence and initial staff confirmations cannot be erased by retroactive denials.\n\nThe Unavoidable Lie: The viral Ring footage is an AI fabrication akin to cartoon memes.",
       "Alethekanon:\nRetreating into wholesale denials of verified personal actions converts a minor optical blunder into a severe credibility failure.",
       "Awwthekanon:\nIt is exhausting when public figures cannot simply own a strange mistake with grace and humor, choosing instead to make us doubt our own eyes.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Rep. Randy Fine Response",
@@ -210,6 +272,7 @@
         "name": "TMZ",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

@@ -14,13 +14,13 @@
       "An eye-opening look at how American research universities are losing their global edge to China, hidden behind deceptive rankings.\n\nDecline of American Universities\nEvidence: ranking bias, research decline, systemic shift\n#Aletheia #HigherEd #Science",
       "The claim states that American universities are in a self-inflicted decline, blaming external political figures while ignoring structural issues exposed by objective global rankings.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "The reality confirms that alternative, data-driven global rankings show a steady decline in US scientific research quality and a rapid rise in Chinese institutions.\nResulting Judgement: (+1.00, +1.00) — Good Preference",
-      "Verdict: PASS — Grace Stasis.\nA sobering and data-backed critique of institutional self-delusion in Western higher education.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nA sobering and data-backed critique of institutional self-delusion in Western higher education.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- University Leadership: PASS (0.90, 0.0) — Exposes administrative denial.\n- Global Rankings: PASS (0.95, 0.0) — Deconstructs methodology bias.",
       "This article challenges the dominant narrative of Western academic supremacy by highlighting lesser-known, data-driven global university rankings.",
       "The Poison:\nWhile the critique of US universities is highly valid, it relies heavily on specific alternative rankings like Leiden without fully exploring potential biases in those metrics.",
       "The Breakdown & Plane Error:\nNo plane error. The author successfully connects the physical reality of research output (WHERE) with the metaphysical self-delusion of university administrators (WHO).",
       "Social Physics Analysis:\nBy relying on prestigious but superficial rankings, Western universities created a self-justifying feedback loop. This allowed them to ignore structural decay while projecting blame onto external political figures.",
-      "The Trajectory: Grace Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The critique forces a necessary confrontation with empirical reality.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The critique forces a necessary confrontation with empirical reality.",
       "The Unavoidable Truth: Prestige rankings often mask systemic declines in actual research quality.\nThe Unavoidable Lie: Political leaders are solely responsible for the decline of higher education.",
       "Alethekanon:\nThe critique of institutional self-delusion is precise; prestige has become a lagging indicator that obscures active structural decay.",
       "Awwthekanon:\nIt is sad to see institutions of learning lose their way, but facing the truth of our decline is the only way to rebuild genuine excellence.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.93,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.93,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "University Leadership",
@@ -270,6 +332,7 @@
         "name": "Leiden University",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

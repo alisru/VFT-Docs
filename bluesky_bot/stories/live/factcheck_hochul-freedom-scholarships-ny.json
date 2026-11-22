@@ -5,22 +5,22 @@
     "subject": "Hochul officially opts NY into Trump admin's 'Freedom' scholarships for students",
     "link": "https://nypost.com/2026/10/09/us-news/hochul-officially-opts-ny-into-trump-admins-freedom-scholarships-for-students/",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.0,
     "claim_psi": 0.0,
     "real_u": -0.2,
     "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "New York Governor Kathy Hochul opts the state into a federal scholarship tax credit program, bypassing fierce teachers union opposition.\nEvidence: Federal tax credit, private tuition support, union pushback\n#Aletheia #Education #USPol",
-      "Governor Hochul claims New York's participation in the federal tax credit program will bring millions in educational resources to public and private school families without budget cuts.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While funding relies on private donations for tax credits, the policy sparks fierce political backlash from teachers unions and Democratic leaders warning of private school subsidization.\nResulting Judgement: (-0.2, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nBalancing fiscal pragmatism with intense political fallout from labor allies.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Governor Hochul claims New York's participation in the federal tax credit program will bring millions in educational resources to public and private school families without budget cuts.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "While funding relies on private donations for tax credits, the policy sparks fierce political backlash from teachers unions and Democratic leaders warning of private school subsidization.\nResulting Judgement: (-0.20, -0.50) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nBalancing fiscal pragmatism with intense political fallout from labor allies.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- Governor Kathy Hochul: COND (0.3, -0.2) — Balances federal funds against union wrath.\n- Teachers Unions: FAIL (-0.7, -0.8) — Defends public monopoly against choice.",
       "Governor Kathy Hochul announced New York will join the federal scholarship tax credit program, becoming the most prominent blue-state governor to opt in.",
       "The Bright Side:\nFamilies gain supplemental funding and tuition flexibility without reducing direct state aid to public school budgets.",
       "The Breakdown & Plane Error:\nConfusing administrative mechanism (tax credits vs vouchers) with institutional intent (school choice vs privatization).",
       "Social Physics Analysis:\nHochul navigates a high-strain political friction between labor unions demanding public sector protection and families seeking educational options. Rather than a pure selfish extraction, it reflects pragmatic maneuvering under federal policy incentives.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and political fallout, it plots a trajectory toward conditional equilibrium. Mathematical resolution of conflicting institutional pressures.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and political fallout, it plots a trajectory toward conditional equilibrium. Mathematical resolution of conflicting institutional pressures.",
       "The Unavoidable Truth: Federal tax credits provide tangible financial relief for families across public and private school settings.\n\nThe Unavoidable Lie: Participating in the program constitutes a direct defunding of state public education budgets.",
       "Alethekanon:\nPragmatic policy shifts often trigger fierce ideological warfare between institutional gatekeepers and expanding options.",
       "Awwthekanon:\nEvery family just wants their children to thrive and learn in an environment where they feel supported and safe.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Governor Kathy Hochul",
@@ -165,6 +227,7 @@
       "Aletheia",
       "Education",
       "USPol"
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Alleged ISIS plotter Jessica Bowie threatened to blow up home, roommates say",
     "link": "https://nypost.com/2026/08/22/us-news/isis-plotter-jessica-bowie-threatened-to-blow-up-house-roommates/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.2,
-    "real_u": -0.6,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A roommate's nightmare reveals a system blind to red flags. Alleged ISIS plotter Jessica Bowie terrorized her home while authorities stood by. Evidence: Documented threats, police inaction, radicalization. #Aletheia #Security",
-      "The claim suggests police failed to act on repeated reports of death threats and radical behavior by a tenant. Stated Judgement: (0.5, 0.2) — Lesser Good",
-      "Reality shows a breakdown in mental health and law enforcement response, where threats were dismissed as 'he-said-she-said' despite clear danger. Resulting Judgement: (-0.6, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Institutional inertia and failure to address mental health crises created a vacuum of safety. Integrity: Severe Deception (Hypocrisy: 2.5, Uncertainty z: 7)",
+      "The claim suggests police failed to act on repeated reports of death threats and radical behavior by a tenant. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "Reality shows a breakdown in mental health and law enforcement response, where threats were dismissed as 'he-said-she-said' despite clear danger. Resulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.",
       "Sub-Audits Breakdown:\n- Albany Police: FAIL (-0.8, -0.9) — Negligence in duty.\n- Jessica Bowie: FAIL (-1.2, -1.5) — Active threat to others.",
       "The situation highlights a critical failure in community safety protocols when dealing with individuals suffering from both mental illness and radicalization.",
       "The Poison:\nDismissing clear threats as interpersonal disputes creates a dangerous environment for vulnerable roommates.",
       "The Breakdown & Plane Error:\nThis is a WHO vs WHERE error; the focus on the 'plotter' obscures the systemic failure of the police to protect the 'roommates'.",
       "Social Physics Analysis:\nBy treating life-threatening behavior as a private dispute, the police maintained a high-strain environment that prioritized administrative ease over human safety.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The system failed to intervene.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The system failed to intervene.",
       "The Unavoidable Truth: Neglect of duty leads to preventable violence.\nThe Unavoidable Lie: The police were powerless to intervene.",
       "Alethekanon:\nThe failure to act on repeated warnings is a systemic collapse of the social contract. When institutions ignore the vulnerable, they invite chaos.",
       "Awwthekanon:\nMy heart aches for the roommates who lived in constant fear. No one should have to endure such terror in their own home.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Severe Deception",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Albany Police Department",
@@ -204,6 +266,7 @@
         "sub_psi": -0.9,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

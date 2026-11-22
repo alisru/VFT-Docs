@@ -5,22 +5,22 @@
     "subject": "Big Bend border wall construction pause extended to September",
     "link": "https://www.washingtonexaminer.com/policy/immigration/4704994/big-bend-border-wall-construction-pause-extended-to-september/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.5,
-    "real_psi": -0.6,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.91,
+    "real_psi": -0.82,
     "mode": "root",
     "posts": [
       "Federal border wall pause extended in Big Bend National Park amid local and environmental pushback.\nEvidence: federal authority push, environmental lawsuits, Sept 15 extension\n#Aletheia #Immigration",
-      "The administration claims the border wall project is a lawful, necessary security measure under congressional authority.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "In reality, bypassing local stakeholders and environmental laws sparks intense legal conflict and deep community division.\nResulting Judgement: (-0.5, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA top-down infrastructure push cloaked in security pretexts triggers community lawsuits and division.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.2, z: 2)",
+      "The administration claims the border wall project is a lawful, necessary security measure under congressional authority.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, bypassing local stakeholders and environmental laws sparks intense legal conflict and deep community division.\nResulting Judgement: (-0.91, -0.82) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA top-down infrastructure push cloaked in security pretexts triggers community lawsuits and division.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.2, z: 2)",
       "- Federal Government: COND (0.5, 0.0) — Claims lawful security authority.\n- Local Plaintiffs: PASS (-0.6, -0.4) — Defending land and livelihood.",
       "The Trump administration extended its temporary halt on border wall construction in Big Bend National Park until September 15 as a federal court weighs a temporary restraining order.",
       "The Bright Side:\nJudicial oversight and active local lawsuits are forcing a temporary pause and public review of environmental impacts.",
       "The Breakdown & Plane Error:\nConfusing WHAT (securing a border) with WHO (ignoring local residents and indigenous stakeholders whose lives are directly impacted).",
       "Social Physics Analysis:\nBy imposing rigid infrastructure without local buy-in, the state generates unnecessary friction and conflict. True security requires transparent coalition-building rather than top-down mandates.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through administrative imposition.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through administrative imposition.",
       "The Unavoidable Truth: National security mandates often collide directly with local ecological and community preservation.\n\nThe Unavoidable Lie: Top-down infrastructure projects can bypass local stakeholders without generating severe social friction.",
       "Alethekanon:\nState security imperatives routinely collide with local sovereignty, exposing the fault lines of unilateral governance.",
       "Awwthekanon:\nIt hurts to see ancestral lands and fragile ecosystems caught in political gridlock and construction friction.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Federal Government Infrastructure Push",
@@ -217,6 +279,7 @@
         "name": "Roland Gutierrez",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

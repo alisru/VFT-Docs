@@ -14,7 +14,7 @@
       "Anthropic's annualized revenue surges to $65B amid booming AI demand and impending IPO preparations.\nEvidence: rapid revenue growth, high valuation, confidential IPO filings\n#Aletheia #AI #Tech 🌐",
       "Anthropic reports massive financial expansion, hitting $65B in annualized revenue run rate as investors eye a $2T public valuation.\nStated Judgement: (1.0, 1.0) — Greater Good",
       "The rapid fiscal acceleration reflects intense AI market consolidation and aggressive venture scaling ahead of public listing.\nResulting Judgement: (+1.00, +1.00) — Trustworthy Growth",
-      "Verdict: PASS — The Path of Grace.\nRapid commercial scaling aligns with stated market expansion metrics.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nRapid commercial scaling aligns with stated market expansion metrics.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "- Anthropic Scaling: PASS (0.9, 0.8) — Massive revenue growth verified.\n- Market Impact: PASS (0.7, 0.7) — Strong investor confidence.",
       "Anthropic's annualized revenue has surpassed $65 billion, jumping from $9 billion late last year as AI model adoption accelerates globally.",
       "The Bright Side:\nUnprecedented technological scaling and market competition driving commercial innovation.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Anthropic Scaling",
@@ -197,6 +259,7 @@
         "name": "Bloomberg",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

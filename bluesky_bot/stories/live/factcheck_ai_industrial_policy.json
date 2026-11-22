@@ -5,22 +5,22 @@
     "subject": "Your job is AI-proof. Your tax...",
     "link": "https://www.washingtonexaminer.com/op-eds/4712542/sane-ai-industrial-policy-washington-ownership/",
     "target_url": "",
-    "claim_u": 0.65,
-    "claim_psi": 0.45,
-    "real_u": -0.38,
-    "real_psi": -0.42,
+    "claim_u": 0.57,
+    "claim_psi": 0.38,
+    "real_u": -0.42,
+    "real_psi": -0.46,
     "mode": "root",
     "posts": [
       "Washington's AI industrial policy promises to protect American workers, but it risks turning taxpayers into a risk-bearing ATM for tech monopolies.\nEvidence: Job protection, Corporate subsidies, State-backed capitalism\n#Aletheia #AI #USPol",
-      "Policymakers claim that massive federal subsidies, tariffs, and sovereign wealth funds are necessary to protect American jobs and secure national technology leadership in the AI era.\nStated Judgement: (+0.65, +0.45) — Lesser Good",
-      "In reality, these policies funnel billions in risk-free taxpayer funds to tech giants while workers bear the brunt of automation, leaving the public with all the risk and no equity.\nResulting Judgement: (-0.38, -0.42) — Lesser Evil",
-      "Verdict: FAIL — Revelation into Deception.\nThe state uses national security pretexts to socialize corporate risks while privatizing AI's massive gains.\nIntegrity: Partially Distorted (Hypocrisy: 3.5, z: 2)",
+      "Policymakers claim that massive federal subsidies, tariffs, and sovereign wealth funds are necessary to protect American jobs and secure national technology leadership in the AI era.\nStated Judgement: (+0.57, +0.38) — Greater Good",
+      "In reality, these policies funnel billions in risk-free taxpayer funds to tech giants while workers bear the brunt of automation, leaving the public with all the risk and no equity.\nResulting Judgement: (-0.42, -0.46) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe state uses national security pretexts to socialize corporate risks while privatizing AI's massive gains.\nIntegrity: Partially Distorted (Hypocrisy: 3.5, z: 2)",
       "- US AI Subsidies: FAIL (-0.38, -0.42) — Funnels public cash to tech monopolies.\n- Tech Lobbying: FAIL (-0.45, -0.50) — Secures risk-free taxpayer funding.",
       "As Congress and the administration debate AI industrial policy, massive subsidies are being deployed to build data centers and semiconductor fabs, raising concerns about corporate welfare.",
       "The Bright Side:\nStrategic reshoring of semiconductor manufacturing does build domestic industrial capacity, even if the financial distribution remains highly unequal.",
       "The Breakdown:\nThe policy commits a Logical error by confusing corporate welfare with public empowerment. It uses the pretext of job security to justify massive corporate handouts.",
       "Social Physics Analysis:\nThe state executes a Smart Selfish Maneuver, using the manufactured crisis of foreign technological dominance as a pretext to funnel public capital to private monopolies, projecting the blame for job losses onto inevitable automation.",
-      "The Trajectory: The Path of Revelation into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Corporate capture of public funds closes off equitable futures.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Corporate capture of public funds closes off equitable futures.",
       "The Unavoidable Truth: Taxpayers are funding the very technology that may automate their jobs.\nThe Unavoidable Lie: Corporate subsidies are designed to protect the average worker.",
       "Alethekanon:\nThe math of industrial policy is simple: when risk is socialized and profit is privatized, the system is designed for extraction, not empowerment.",
       "Awwthekanon:\nIt is heartbreaking to see hard-working people's tax dollars used to fund systems that threaten their livelihoods, instead of investing directly in their communities.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "US AI Subsidies",
@@ -164,6 +226,7 @@
         "name": "Joe Biden",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,16 +5,16 @@
     "subject": "Back Zack or sack?",
     "link": "https://www.politico.eu/newsletter/london-playbook/back-zack-or-sack/",
     "target_url": "https://bsky.app/profile/politico.eu/post/3mxgfewemvo2s",
-    "claim_u": 0.7,
-    "claim_psi": 0.55,
-    "real_u": -0.78,
-    "real_psi": -0.86,
+    "claim_u": 0.67,
+    "claim_psi": 0.38,
+    "real_u": -0.61,
+    "real_psi": -0.37,
     "mode": "root",
     "posts": [
       "London by-election spin cannot mask the crisis of accountability engulfing Westminster.\nBack Zack or Sack?\nEvidence: Progressive Electoral Breakthrough, Internal Crisis and Defeat, Leadership Self Preservation\n#Aletheia #UKPol 🌐",
-      "Green Party leader Zack Polanski framed his Holborn and St Pancras loss as a historic breakthrough, claiming tripling the vote proves an expanding progressive movement ready to sweep Westminster.\nStated Judgement: (+0.70, +0.55) — Greater Good",
-      "In reality, Polanski lost by over 3,300 votes, merely absorbed preexisting leftist blocs, and faces party rebellion alongside an EHRC antisemitism probe, while Labour spins an eroded vote share as a triumph.\nResulting Judgement: (-0.78, -0.86) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Both parties replaced substantive democratic accountability with cynical public relations, hiding internal division behind manufactured optimism.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.60, z: 3)",
+      "Green Party leader Zack Polanski framed his Holborn and St Pancras loss as a historic breakthrough, claiming tripling the vote proves an expanding progressive movement ready to sweep Westminster.\nStated Judgement: (+0.67, +0.38) — Greater Good",
+      "In reality, Polanski lost by over 3,300 votes, merely absorbed preexisting leftist blocs, and faces party rebellion alongside an EHRC antisemitism probe, while Labour spins an eroded vote share as a triumph.\nResulting Judgement: (-0.61, -0.37) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.60, z: 3)",
       "- Polanski: FAIL (-0.78, -0.86) — Spins defeat as a victory.\n- Labour: COND (-0.65, -0.55) — Masks falling vote share.\n- Playbook: COND (-0.40, 0.30) — Treats governance as PR.",
       "Labour held Holborn and St Pancras with 45.2% of the vote under Andy Burnham, while Green leader Zack Polanski took second at 32.8% amid fierce internal party rows over his handling of antisemitism motions.",
       "The Bright Side:\nA 39% turnout in a safe seat proves voters refuse to rubber-stamp party spin. By rejecting entrenched tribalism, constituents force both leaderships to confront simmering rank-and-file policy revolts.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Zack Polanski Campaign",
@@ -181,6 +243,7 @@
         "name": "Sagal Abdi-Wali",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

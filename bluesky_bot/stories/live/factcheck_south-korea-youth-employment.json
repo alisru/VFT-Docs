@@ -14,7 +14,7 @@
       "Youth job insurance enrollment declines amid demographic shifts.\nSouth Korea youth employment falls for 47th straight month\nEvidence: shrinking youth cohort, automation, experienced hiring #Labor",
       "Employment insurance among young Koreans dropped for the 47th consecutive month as companies favored experienced workers and automation.\nStated Judgement: (-1.00, -1.00) — Lesser Evil",
       "Government data confirms structural demographic contraction combined with preference for veteran workers and AI adoption.\nResulting Judgement: (-1.00, -1.00) — Destruction",
-      "Verdict: FAIL — The Path of Destruction. Persistent structural headwinds contract youth opportunities.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "Verdict: FAIL — Destruction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.2, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Demographic Decline: FAIL (-0.8, -0.7) — Shrinking youth population drives majority of enrollment drop.\n- Automation Shift: FAIL (-0.8, -0.7) — Enterprise preference for AI and experienced staff squeezes entry levels.",
       "South Korea's youth employment insurance enrollment has experienced a prolonged downturn, driven by population aging and changing corporate hiring criteria.",
       "The Poison:\nChronic entry-level job shortages risk alienating younger generations from the formal economic ladder.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Youth Labor Market Friction",
@@ -186,6 +248,7 @@
         "name": "Ministry of Employment and Labor",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

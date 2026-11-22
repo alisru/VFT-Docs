@@ -5,22 +5,22 @@
     "subject": "Jim Justice could shake up West Virginia politics with 2028 governor run",
     "link": "https://www.washingtonexaminer.com/news/campaigns/state/4761820/jim-justice-shake-up-west-virginia-politics-2028-governor-run/",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 0.55,
+    "claim_psi": 0.15,
+    "real_u": -0.35,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Sen. Jim Justice eyes a 2028 primary run against WV Gov. Patrick Morrisey, threatening a high-stakes intra-party collision.\nEvidence: Senate term, 2028 gubernatorial ambitions, GOP power struggle\n#WVPol #Aletheia 🌐",
-      "Proponents frame Justice’s potential 2028 run as a bold leadership move to shake up West Virginia politics and offer experienced executive oversight.\nStated Judgement: (+0.6, +0.2) — Good Preference",
-      "In truth, it is an elite chess match driven by personal ambition and ego that risks tearing open a bitter intra-party war over the governor's seat and Senate vacancy.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. A high-stakes intra-party feud masked as civic duty prioritizes personal political legacy over state stability.\n\nIntegrity: Conditionally Sound (Hypocrisy: 2.40, z: 2)",
+      "Proponents frame Justice’s potential 2028 run as a bold leadership move to shake up West Virginia politics and offer experienced executive oversight.\nStated Judgement: (+0.55, +0.15) — Greater Good",
+      "In truth, it is an elite chess match driven by personal ambition and ego that risks tearing open a bitter intra-party war over the governor's seat and Senate vacancy.\nResulting Judgement: (-0.35, -0.45) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 2.40, z: 2)",
       "Sub-Audits Breakdown:\n- Jim Justice Ambition: COND (-0.4, -0.5) — Personal ambition masked as civic duty.\n- GOP Stability: COND (-0.3, -0.4) — Risks bitter intra-party fracture.",
       "Senator Jim Justice, serving after two terms as governor, is weighing a 2028 primary challenge against current Gov. Patrick Morrisey, creating massive political ripples across WV.",
       "The Bright Side:\nA high-profile primary forces both leaders to directly address pressing economic and infrastructure challenges facing West Virginia voters.",
       "The Breakdown & Plane Error:\nThis is a classic Plane Error: confusing personal political ambition (WHO/Power) with systemic institutional reform (WHAT/Policy). The power struggle is framed as public service.",
       "Social Physics Analysis:\nJustice operates a Smart Selfish Maneuver: using personal brand and raw political capital as a pretext to reclaim executive power, manufacturing an intra-party showdown while sidelining grassroots needs.",
-      "The Trajectory: The Path of Deception.\nWhen personal ambition masquerades as public stewardship, it plots a direct trajectory toward Lesser Evil, trading collective stability for elite power games.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen personal ambition masquerades as public stewardship, it plots a direct trajectory toward Lesser Evil, trading collective stability for elite power games.",
       "The Unavoidable Truth: Elite political rivalries prioritize individual legacy over community well-being.\n\nThe Unavoidable Lie: High-stakes primary battles are purely about rescuing public administration.",
       "Alethekanon:\nPersonal ambition must never be mistaken for structural reform. Elite power struggles are exercises in self-preservation, not public liberation.",
       "Awwthekanon:\nVoters deserve leaders focused on daily hardships rather than endless political chess games between wealthy elites fighting over titles.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Jim Justice Ambition",
@@ -164,6 +226,7 @@
     "tags": [
       "WVPol",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": 0.15,
+    "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "Outrageous proposals meet swift reality checks in LA.\nWild proposal in city council\nEvidence: absurd public pitch, swift rejection, systemic distraction\n#Aletheia #USNews",
-      "A speaker pitched taxpayer-funded public sex huts for homeless individuals to promote equality and stress relief.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The pitch served as a theatrical distraction from deep housing failures while city officials bickered over park camping bans.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA bizarre public comment hijacked serious policy debates, deflecting accountability from systemic housing failures.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "A speaker pitched taxpayer-funded public sex huts for homeless individuals to promote equality and stress relief.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The pitch served as a theatrical distraction from deep housing failures while city officials bickered over park camping bans.\nResulting Judgement: (+0.15, +0.00) — Lesser Good",
+      "Verdict: PASS — Compromise.\nA bizarre public comment hijacked serious policy debates, deflecting accountability from systemic housing failures.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "Sub-Audits Breakdown:\n- Public Pitch: COND (0.5, 0.0) — Fringe concept presented as systemic policy.\n- Council Response: PASS (0.8, 0.5) — Immediate institutional pushback.",
       "During an LA City Council meeting, an unidentified speaker proposed taxpayer-funded 'sexual relief clinics' for the unhoused. Councilwoman Traci Park instantly rejected the absurd notion.",
       "The Bright Side:\nElected officials like Traci Park swiftly dismissed fringe distractions to refocus on core municipal responsibilities.",
       "The Breakdown & Plane Error:\nConfusing a fringe individual's rhetorical provocation (WHAT) with actual municipal legislative intent (WHO).",
       "Social Physics Analysis:\nBy injecting absurdity into a severe crisis, the discourse shifted from real structural solutions to performative spectacles, protecting institutional inaction behind defensive laughter.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between fringe theatrics and ground-level neglect, it plots a direct trajectory toward Lesser Evil. Absurd proposals obscure real policy failures.",
+      "The Trajectory: The Path of Compromise.\nWhen you map the gap between fringe theatrics and ground-level neglect, it plots a direct trajectory toward Lesser Evil. Absurd proposals obscure real policy failures.",
       "The Unavoidable Truth: Bizarre public comments do not reflect actual municipal policy.\n\nThe Unavoidable Lie: Fringe spectacles solve systemic urban housing crises.",
       "Alethekanon:\nPerformative shock value crowds out legislative competence, reducing human suffering to viral media fodder.",
       "Awwthekanon:\nBeneath the headlines lie real neighbors suffering on our streets who deserve genuine dignity, not political theater.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Public Pitch",
@@ -151,6 +213,7 @@
         "name": "Los Angeles City Council",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

@@ -14,13 +14,13 @@
       "A standard public news broadcast delivering local updates without spin or hidden agendas.\n\nAlaska News Nightly: Tuesday, August 11, 2026\nEvidence: Public news, Local updates, Public news\n#Aletheia #Alaska #News",
       "Alaska Public Media presents its nightly news roundup covering the upcoming glacial outburst flood in Juneau, a Republican gubernatorial pitch, and local cultural events.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "The broadcast delivers exactly what it promises: objective, localized public radio reporting on environmental, political, and community events in Alaska.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — Stasis.\nThe broadcast maintains absolute alignment between its public service mandate and its actual delivered content.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nThe broadcast maintains absolute alignment between its public service mandate and its actual delivered content.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Alaska Public Media: PASS (1.0, 1.0) — The public broadcaster delivers objective, localized reporting on environmental and political events.\n- Public Information Integrity: PASS (1.0, 1.0) — The news summary matches the broadcast content without distortion.",
       "This episode of Alaska News Nightly covers Juneau's impending glacial outburst flood, a Republican former state lawmaker's pitch for governor, and a celebration of Filipino culinary history.",
       "The Bright Side:\nLocal public radio remains a highly reliable, low-friction source of critical environmental and community information.",
       "The Breakdown & Plane Error:\nNo plane error detected. The broadcast operates entirely on the physical and logical planes, delivering verifiable local facts to the public.",
       "Social Physics Analysis:\nBy prioritizing transparent, factual reporting over sensationalism, the broadcast minimizes social friction and empowers the local community to prepare for environmental and political developments.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The alignment of intent and action maintains systemic trust.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The alignment of intent and action maintains systemic trust.",
       "The Unavoidable Truth: Public media serves its purpose best when it remains boring, local, and factual.\n\nThe Unavoidable Lie: There is no hidden political conspiracy behind a local Filipino food festival.",
       "Alethekanon:\nThe data shows perfect structural alignment. Public service broadcasting that avoids sensationalism maintains a low-strain, high-integrity state.",
       "Awwthekanon:\nIt is so comforting to see local communities coming together to celebrate their heritage and keep each other safe from natural disasters.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Alaska Public Media",
@@ -268,6 +330,7 @@
         "name": "Juneau",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

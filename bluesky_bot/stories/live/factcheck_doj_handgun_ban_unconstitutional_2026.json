@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.55,
-    "real_psi": -0.45,
+    "real_u": 0.7,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "The DOJ shifts its stance on young adult gun ownership, declaring the federal handgun ban for 18-20-year-olds unconstitutional.\n\nDOJ: Federal Ban On Sale Of Handguns To 18-Year-Olds Is Unconstitutional\nEvidence: Constitutional Rights, Policy Shift\n#USPol #SecondAmendment",
-      "The DOJ claims that because 18-year-olds bear full adult responsibilities like voting and military service, the federal ban on licensed handgun sales to them violates the Second Amendment.\nStated Judgement: (+1.0, +1.0) — Grace",
-      "The DOJ's non-binding OLC opinion halts federal prosecution of licensed dealers but leaves the statute on the books and state-level bans intact, acting as a unilateral executive policy shift.\nResulting Judgement: (+0.55, -0.45) — Lesser Good",
-      "Verdict: CONDITIONAL — The Path of Redemption. The DOJ aligns federal enforcement with constitutional precedent, but does so via executive non-enforcement rather than legislative repeal.\nIntegrity: Trustworthy (Hypocrisy: 0.45, z: 1)",
+      "The DOJ claims that because 18-year-olds bear full adult responsibilities like voting and military service, the federal ban on licensed handgun sales to them violates the Second Amendment.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The DOJ's non-binding OLC opinion halts federal prosecution of licensed dealers but leaves the statute on the books and state-level bans intact, acting as a unilateral executive policy shift.\nResulting Judgement: (+0.70, -0.35) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.45, z: 1)",
       "- DOJ OLC Opinion: COND (0.6, -0.4) — Unilateral shift bypassing Congress.\n- Gun Rights Impact: PASS (0.8, -0.3) — Restores constitutional parity for young adults.\n- Gun Control Critics: COND (-0.4, 0.5) — Valid safety concerns but weak constitutional footing.",
       "On September 18, 2026, the DOJ's Office of Legal Counsel declared the 1968 federal ban on handgun sales to 18-20-year-olds unconstitutional, citing the Supreme Court's Bruen historical tradition test.",
       "The Poison:\nBypassing legislative processes via executive non-enforcement creates a fragile legal landscape where rights depend on which administration controls the Justice Department.",
       "The Breakdown & Plane Error:\nThe error lies in the HOW (Logical). While the WHO (18-20-year-olds) gains rights, the causal mechanism relies on executive discretion rather than permanent legislative reform, leaving dealers in a legal gray zone.",
       "Social Physics Analysis:\nThe DOJ executes a complex maneuver. It uses the pretext of constitutional consistency to enact a policy shift that pleases its political base, while critics project school shooting blame onto all young adults rather than addressing systemic violence.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated constitutional ideals and the reality of executive non-enforcement, it plots a trajectory toward Redemption. It expands individual liberties but leaves the underlying statutory conflict unresolved.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated constitutional ideals and the reality of executive non-enforcement, it plots a trajectory toward Destruction. It expands individual liberties but leaves the underlying statutory conflict unresolved.",
       "The Unavoidable Truth: If 18-year-olds can be drafted to fight wars, denying them basic constitutional rights is logically inconsistent.\nThe Unavoidable Lie: This non-binding opinion permanently resolves the legal status of young adult gun ownership.",
       "Alethekanon:\nConstitutional rights must be applied consistently across adulthood. However, relying on executive non-enforcement to bypass statutory law undermines the separation of powers.",
       "Awwthekanon:\nIt is a heavy thing to think about young people carrying handguns. We must ensure they have the mentorship, support, and care needed to handle such serious responsibilities safely.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DOJ OLC Opinion",
@@ -156,6 +218,7 @@
         "name": "GIFFORDS",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

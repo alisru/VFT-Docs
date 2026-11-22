@@ -5,22 +5,22 @@
     "subject": "Sanders: If El-Sayed Wins, It...",
     "link": "https://www.breitbart.com/clips/2026/10/08/sanders-if-el-sayed-wins-it-shows-anyone-can-win-anywhere/",
     "target_url": "",
-    "claim_u": 0.75,
-    "claim_psi": 0.65,
-    "real_u": 0.3,
-    "real_psi": 0.4,
+    "claim_u": 0.52,
+    "claim_psi": 0.45,
+    "real_u": 0.1,
+    "real_psi": 0.18,
     "mode": "root",
     "posts": [
       "Can a battleground victory really rewrite the national map overnight?\nSanders: If El-Sayed Wins, It Shows Anyone Can Win Anywhere\nEvidence: Universal populist victory, Battleground mobilization, Electoral overreach\n#Aletheia #USPol",
-      "Bernie Sanders asserts on MSNBC that if progressive doctor Abdul El-Sayed wins Michigan’s Senate seat against Trump-backed opposition, it proves progressive populists can win in any American district.\nStated Judgement: (+0.75, +0.65) — Greater Good",
-      "Michigan has unique union density and demographic organizing. Winning there proves disciplined local power against big spending, but projecting it as an automatic national blueprint ignores steep structural headwinds.\nResulting Judgement: (+0.30, +0.40) — Greater Good",
-      "Verdict: COND — Fall into Grace. Sanders legitimately champions grassroots resilience against oligarchic spending, but overextends a local contest into universal proof.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 2)",
+      "Bernie Sanders asserts on MSNBC that if progressive doctor Abdul El-Sayed wins Michigan’s Senate seat against Trump-backed opposition, it proves progressive populists can win in any American district.\nStated Judgement: (+0.52, +0.45) — Greater Good",
+      "Michigan has unique union density and demographic organizing. Winning there proves disciplined local power against big spending, but projecting it as an automatic national blueprint ignores steep structural headwinds.\nResulting Judgement: (+0.10, +0.18) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 2)",
       "- Bernie Sanders: PASS (+0.42, +0.48) — Solid defense of labor against big money.\n- Electoral Generalization: COND (+0.12, +0.22) — Overstates national viability.\n- Breitbart Framing: COND (-0.25, -0.15) — Clips progressive hype for outrage.",
       "Sen. Bernie Sanders appeared on MSNBC to rally support for Abdul El-Sayed’s 2026 Michigan Senate bid, arguing progressive policies can defeat high-dollar super PACs and racist rhetoric in battleground states.",
       "The Bright Side:\nHighlighting working-class economic solidarity and universal healthcare cuts through toxic cultural polarization, giving voters a tangible alternative to high-dollar political cynicism.",
       "The Breakdown & Plane Error:\nThe category error is confusing a localized demographic breakthrough (WHAT) with a universal national rule (WHO). Michigan’s distinct labor base cannot be copy-pasted across diverse districts without local organizing.",
       "Social Physics Analysis:\nSanders executes a Smart Altruistic push, aligning working-class empowerment against billionaire super PACs. The friction lies in narrative projection: exaggerating local success into an effortless national wave skips structural organizing.",
-      "The Trajectory: The Path of Fall into Grace.\nWhen you map the gap between sweeping national promises and localized realities, it plots a direct trajectory toward fragile optimism. Enduring power demands structural presence over rhetorical guarantees.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between sweeping national promises and localized realities, it plots a direct trajectory toward fragile optimism. Enduring power demands structural presence over rhetorical guarantees.",
       "The Unavoidable Truth: Strong ground organizing and labor solidarity can overcome massive billionaire super PAC ad buys.\nThe Unavoidable Lie: One swing-state triumph proves any progressive can easily win anywhere.",
       "Alethekanon:\nExtrapolating idiosyncratic swing-state coalitions into universal formulas confuses correlation with causality. Labor populism works where infrastructure exists, not by rhetorical osmosis.",
       "Awwthekanon:\nIt is deeply uplifting to see leaders stand up against bigotry and rally everyday folks for healthcare. Real hope is built when we honor every community’s unique struggle rather than taking their hard work for granted.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sanders Working-Class Mobilization",
@@ -183,6 +245,7 @@
     "tags": [
       "Aletheia",
       "USPol"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

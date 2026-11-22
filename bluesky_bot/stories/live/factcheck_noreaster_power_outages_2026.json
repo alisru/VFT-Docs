@@ -5,22 +5,22 @@
     "subject": "Power Outages Hit New Jersey, New York as Powerful Nor'easter Slams the Mid-Atlantic Coast",
     "link": "https://www.breitbart.com/pre-viral/2026/09/26/power-outages-hit-new-jersey-new-york-as-powerful-noreaster-slams-the-mid-atlantic-coast/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
-    "real_psi": 0.0,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.15,
+    "real_psi": 0.15,
     "mode": "root",
     "posts": [
       "A fierce nor'easter pummels the Mid-Atlantic, leaving tens of thousands shivering in the dark across New Jersey and New York.\nEvidence: Emergency declarations, 37000+ NJ outages, major coastal flooding\n#Aletheia #Weather",
-      "Officials urge residents to take the storm seriously as emergency declarations and flood warnings activate across vulnerable coastal counties.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While emergency crews mobilize, infrastructure strain highlights chronic coastal vulnerability and localized grid fragility under extreme weather.\nResulting Judgement: (+0.2, 0.0) — Neutral",
-      "Verdict: PASS — The Path of Awakening.\nEmergency responders effectively manage severe weather crises despite infrastructural vulnerabilities.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Officials urge residents to take the storm seriously as emergency declarations and flood warnings activate across vulnerable coastal counties.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "While emergency crews mobilize, infrastructure strain highlights chronic coastal vulnerability and localized grid fragility under extreme weather.\nResulting Judgement: (+0.15, +0.15) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nEmergency responders effectively manage severe weather crises despite infrastructural vulnerabilities.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Emergency Response: PASS (+0.5, +0.5) — Rapid disaster declarations.\n- Infrastructure Resilience: COND (-0.2, -0.2) — Grid strains under shock.",
       "A powerful early-season nor'easter triggered states of emergency across New Jersey and New York over the weekend, leaving over 100,000 without power.",
       "The Bright Side:\nSwift state declarations and active emergency mobilizations mitigated worse human tragedy during severe coastal flooding.",
       "The Breakdown & Plane Error:\nThe report focuses accurately on physical weather impacts (Plane Q3), avoiding deeper political scapegoating.",
       "Social Physics Analysis:\nState actors engaged in straightforward crisis management, swapping post-hoc pretexts for transparent disaster warnings and immediate public safety alerts.",
-      "The Trajectory: The Path of Awakening.\nWhen mapping crisis response against natural adversity, it plots a stable equilibrium toward resilience. Systems adapt through transparent emergency action.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen mapping crisis response against natural adversity, it plots a stable equilibrium toward resilience. Systems adapt through transparent emergency action.",
       "The Unavoidable Truth: Severe storms expose chronic vulnerabilities in coastal electrical infrastructure.\n\nThe Unavoidable Lie: Extreme weather events can be entirely prevented by local administrative policy.",
       "Alethekanon:\nEmergency logistics successfully managed sudden storm shocks, proving robust even as vulnerable shorelines buckled.",
       "Awwthekanon:\nOur hearts go out to every family shivering in the dark tonight. May local crews work swiftly to bring warmth and safety back to every home.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Emergency Response",
@@ -152,6 +214,7 @@
         "name": "National Weather Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

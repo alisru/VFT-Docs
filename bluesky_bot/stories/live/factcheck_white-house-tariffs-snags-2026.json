@@ -5,22 +5,22 @@
     "subject": "The White House's preferred economic tools are hitting snags",
     "link": "https://www.npr.org/2026/08/26/nx-s1-5928351/white-house-tarifffs-snags",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.2,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.93,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "Trade security tools like export controls and tariffs are facing severe administrative bottlenecks and billions in corporate losses.\nEvidence: policy shifts, bureau bottlenecks, corporate losses\n#Aletheia #Economy",
-      "The administration claims tariffs and export controls smoothly safeguard national security and strengthen domestic manufacturing.\nStated Judgement: (+0.8, +0.2) — Good Preference",
-      "In reality, policy whiplash, micromanagement, and license delays have created multi-billion-dollar losses for U.S. firms.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nContradictory economic signaling and bureaucratic bottlenecks undermine stated national security goals.\n\nIntegrity: Severe Distortion (Hypocrisy: 6.8, z: 2)",
+      "The administration claims tariffs and export controls smoothly safeguard national security and strengthen domestic manufacturing.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, policy whiplash, micromanagement, and license delays have created multi-billion-dollar losses for U.S. firms.\nResulting Judgement: (-0.93, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nContradictory economic signaling and bureaucratic bottlenecks undermine stated national security goals.\n\nIntegrity: Severe Distortion (Hypocrisy: 6.8, z: 2)",
       "- Export Controls: FAIL (-0.7, -0.8) — Massive license backlog hurts US firms.\n- Tariff Strategy: COND (-0.4, -0.5) — Legal and policy hurdles disrupt trade.",
       "U.S. export controls and tariffs designed to protect domestic tech and manufacturing are bogged down by administrative delays and inconsistent White House directives.",
       "The Bright Side:\nHighlighting these regulatory gridlocks forces public scrutiny on inefficient trade enforcement before further losses mount.",
       "The Breakdown & Plane Error:\nConfusing WHAT (protecting security) with WHO (empowering domestic industry), the policy relies on blunt instruments that starve exporters.",
       "Social Physics Analysis:\nBy imposing rigid top-down controls without clear, consistent operational rules, leadership shifts uncertainty onto businesses, generating friction instead of security.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Incoherent policy design multiplies friction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Incoherent policy design multiplies friction.",
       "The Unavoidable Truth: Bureaucratic bottlenecks and mixed signals are actively costing U.S. companies billions.\n\nThe Unavoidable Lie: Blunt trade restrictions effortlessly guarantee national economic security.",
       "Alethekanon:\nIncoherent economic signaling turns protective trade policy into an administrative trap for domestic firms.",
       "Awwthekanon:\nIt is heartbreaking to watch hardworking businesses suffer simply because leaders cannot align their grand strategies with clear, supportive daily actions.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Export Controls",
@@ -212,6 +274,7 @@
         "name": "U.S. China Business Council",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

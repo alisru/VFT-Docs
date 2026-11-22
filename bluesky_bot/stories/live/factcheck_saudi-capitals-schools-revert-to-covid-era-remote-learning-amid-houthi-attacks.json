@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.5,
+    "real_u": -0.7,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Riyadh schools shift to remote learning amid Houthi missile and drone threats, angering parents over a lack of official transparency.\nEvidence: School notices, drone interceptions, GCC alerts\n#Aletheia #SaudiArabia #MiddleEast",
-      "Stated Claim: Schools shifted to remote learning to protect children amid regional security escalations.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Real Reality: Authorities enforced sudden closures without public explanations, highlighting security vulnerabilities from Houthi attacks.\nResulting Judgement: (-0.60, -0.50) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Awakening. Security threats require emergency measures, but administrative opacity undermines public trust.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Stated Claim: Schools shifted to remote learning to protect children amid regional security escalations.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Real Reality: Authorities enforced sudden closures without public explanations, highlighting security vulnerabilities from Houthi attacks.\nResulting Judgement: (-0.70, -0.65) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Saudi Education Ministry: COND (-0.50, -0.40) — Pragmatic security shift lacks transparent communication.\n- Houthi Insurgents: FAIL (-0.90, -0.90) — Direct aggression threatening civilian infrastructure.",
       "Schools in Riyadh ordered remote learning for the week after Houthi drone and missile attacks targeted Saudi territory.",
       "The Poison:\nOpaque emergency orders leave families in the dark, breeding anxiety and distrust during active security threats.",
       "The Breakdown & Plane Error:\nConfusing tactical risk mitigation (WHERE/HOW) with transparent governance (WHO/WHY families deserve answers).",
       "Social Physics Analysis:\nAuthorities manage security via top-down decrees (Smart Selfish/State Control) rather than transparent coalition-building with affected families.",
-      "The Trajectory: The Path of Awakening.\nThe tension between emergency state survival and citizen transparency creates friction that demands open communication.",
+      "The Trajectory: The Path of Awakening into Destruction.\nThe tension between emergency state survival and citizen transparency creates friction that demands open communication.",
       "The Unavoidable Truth: National security threats necessitate immediate protective measures.\n\nThe Unavoidable Lie: Silent administrative mandates build public resilience.",
       "Alethekanon:\nSecurity imperatives do not suspend the state's fundamental obligation to maintain transparent communication with its citizens.",
       "Awwthekanon:\nParents just want to keep their children safe while needing honest reassurance in scary times. Clear communication brings peace of mind.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Saudi Education Ministry",
@@ -158,6 +220,7 @@
         "name": "Gulf Cooperation Council",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

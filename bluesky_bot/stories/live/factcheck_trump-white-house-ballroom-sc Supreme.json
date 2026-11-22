@@ -5,22 +5,22 @@
     "subject": "Trump Administration Says It Doesn’t Matter If People Think White House Ballroom Is Ugly",
     "link": "https://www.yahoo.com/news/politics/articles/trump-administration-says-doesn-t-175912680.html",
     "target_url": "https://bsky.app/profile/eleanorrigbyatx.bsky.social/post/3mtjn4obiug2p",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -0.82,
-    "real_psi": -0.85,
+    "claim_u": 0.66,
+    "claim_psi": 0.88,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "The DOJ argues before the Supreme Court that aesthetic objections to the White House ballroom are trumped by national security needs.\nEvidence: security pretext, bypass Congress, luxury build\n#Aletheia #USPol",
-      "The administration claims the unauthorized White House ballroom is a vital national security structure necessary for hosting foreign dignitaries safely.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, the project bypasses congressional oversight to rush an executive vanity luxury build, hiding behind flimsy security justifications.\nResulting Judgement: (-0.82, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Revelation into Destruction. Executive overreach cloaks a luxury vanity project in national security pretexts to outrun judicial review.\nIntegrity: Severe Deception (Hypocrisy: 15.2, Uncertainty z: 3)",
+      "The administration claims the unauthorized White House ballroom is a vital national security structure necessary for hosting foreign dignitaries safely.\nStated Judgement: (+0.66, +0.88) — Greater Good",
+      "In reality, the project bypasses congressional oversight to rush an executive vanity luxury build, hiding behind flimsy security justifications.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 15.2, Uncertainty z: 3)",
       "- National Security Pretext: FAIL (-0.82, -0.85) — Uses defense claims for luxury.\n- Congressional Authority: FAIL (-0.90, -0.90) — Bypasses legal oversight.",
       "The Supreme Court is weighing whether to halt construction on an unfinished 70-foot White House ballroom while litigation proceeds.",
       "The Poison:\nRewriting executive authority boundaries by inventing national security emergencies to shield vanity architecture from courts.",
       "The Breakdown & Plane Error:\nConfusing the stated goal (WHAT: national security defense) with the actual goal (WHO: presidential luxury and outrunning judicial review).",
       "Social Physics Analysis:\nBy manufacturing security pretexts to bypass legal oversight and force irreversible construction, the administration substitutes unilateral executive fiat for transparent public accountability.",
-      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Negative coordinates reflect systemic evasion of lawful constraints.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Negative coordinates reflect systemic evasion of lawful constraints.",
       "The Unavoidable Truth: Inventing national security threats to shield unauthorized executive construction violates the separation of powers.\n\nThe Unavoidable Lie: The primary purpose of the controversial ballroom structure is vital national defense.",
       "Alethekanon:\n🌐 National security pretexts cannot legally mask unauthorized executive luxury construction.",
       "Awwthekanon:\nIt is sad to see historic public spaces and legal safeguards trampled by rushed executive vanity projects that ignore the community's heritage.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "National Security Pretext",
@@ -282,6 +344,7 @@
         "name": "Supreme Court",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

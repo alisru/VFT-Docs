@@ -14,7 +14,7 @@
       "Unlocking clear skin beneath facial hair is easier than you think.\n\nBeard dandruff remedies dermat\nEvidence: seborrheic yeast, active contact time, gentle care\n#Health #Skincare",
       "Beard flakes are usually seborrheic dermatitis, driven by Malassezia yeast overgrowth, and require targeted care rather than harsh stripping.\nStated Judgement: (+0.81, +1.00) — Good Preference",
       "Dermatological guidance confirms that 5-minute contact time with anti-dandruff shampoo and gentle moisturizing effectively controls flare-ups.\nResulting Judgement: (+0.81, +1.00) — Good Preference",
-      "Verdict: PASS — The Path of Grace.\nEvidence-based dermatological advice directly resolves skin irritation without misleading pretexts.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nEvidence-based dermatological advice directly resolves skin irritation without misleading pretexts.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Dr. Robert Finney: PASS (1.0, 0.5) — Provides clear, actionable medical guidance.\n- Editorial Team: PASS (1.0, 0.5) — Communicates scientifically sound hygiene solutions.",
       "Clear guidance on managing facial seborrheic dermatitis helps groomers distinguish between dryness and fungal overgrowth, improving skin health.",
       "The Poison:\nMisdiagnosing fungal flaking as simple dryness can lead to heavier oils that inadvertently feed the yeast and worsen the condition.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Dermatological Guidance",
@@ -196,6 +258,7 @@
         "name": "The Optimist Daily",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

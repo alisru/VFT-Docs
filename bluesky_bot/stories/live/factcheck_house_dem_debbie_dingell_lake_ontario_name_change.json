@@ -5,22 +5,22 @@
     "subject": "House Dem Debbie Dingell places Trump's Lake Ontario name change in crosshairs",
     "link": "https://www.foxnews.com/politics/house-dem-debbie-dingell-places-trumps-lake-ontario-name-change-crosshairs",
     "target_url": "",
-    "claim_u": 0.2,
-    "claim_psi": 0.2,
-    "real_u": -0.5,
-    "real_psi": -0.6,
+    "claim_u": 0.3,
+    "claim_psi": 0.25,
+    "real_u": -0.1,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "Trump’s executive order renaming Lake Ontario to Lake America sparks international friction and legislative pushback.\n\nHouse Dem Debbie Dingell Places Trump's Lake Ontario Name Change in Crosshairs\nEvidence: Executive renaming, Legislative nullification, Trade tensions",
-      "Proponents frame the renaming as a patriotic rebranding to assert national identity and pride over shared geographic assets.\nStated Judgement: (+0.2, +0.2) — Lesser Good",
-      "In reality, the executive order is symbolic political theater during a trade dispute, prompting legislative blockades and cross-border diplomatic spats.\nResulting Judgement: (-0.5, -0.6) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nSymbolic renaming serves as a distracting pretext rather than resolving actual economic strains.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.5, z: 3)",
+      "Proponents frame the renaming as a patriotic rebranding to assert national identity and pride over shared geographic assets.\nStated Judgement: (+0.30, +0.25) — Greater Good",
+      "In reality, the executive order is symbolic political theater during a trade dispute, prompting legislative blockades and cross-border diplomatic spats.\nResulting Judgement: (-0.10, -0.20) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nSymbolic renaming serves as a distracting pretext rather than resolving actual economic strains.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.5, z: 3)",
       "- Trump Executive Order: FAIL (-0.6, -0.7) — Uses symbolic rebrand as trade distraction.\n- Rep. Debbie Dingell: PASS (0.4, 0.3) — Challenges unilateral executive overreach.",
       "President Trump signed an executive order renaming Lake Ontario to Lake America, prompting Rep. Debbie Dingell to introduce the Hands Off Our Great Lakes Act to nullify it.",
       "The Bright Side:\nHighlighting the shared ecological and economic stewardship of the Great Lakes across international borders brings attention to vital regional cooperation.",
       "The Breakdown & Plane Error:\nThe conflict mistakes symbolic nomenclature (WHAT) for substantive economic governance (WHO/HOW). It's a classic distraction mechanism in a trade dispute.",
       "Social Physics Analysis:\nInstead of resolving underlying economic strain, leaders deploy nationalist symbols as pretexts to rally factions, maintaining conflict rather than building transparent solutions.",
-      "The Trajectory: The Path of Deception.\nWhen symbolic gestures replace substantive problem-solving, it plots a direct trajectory toward friction and performative gridlock.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen symbolic gestures replace substantive problem-solving, it plots a direct trajectory toward friction and performative gridlock.",
       "The Unavoidable Truth: Symbolic renaming does not alter economic realities or lower grocery costs.\n\nThe Unavoidable Lie: Rebranding a shared natural landmark solves bilateral trade disputes.",
       "Alethekanon:\nExecutive re-baptisms of ancient lakes substitute geographic fantasy for actionable trade diplomacy, weaponizing nomenclature for temporary political posturing.",
       "Awwthekanon:\nIt is exhausting when leaders argue over maps while communities struggle with real economic needs. Let's focus on healing cooperation, not renaming nature.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Trump Executive Order",
@@ -163,6 +225,7 @@
         "name": "Canada",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Freak ocean phenomenon takes hold of California coast with seas surging",
     "link": "https://nypost.com/2026/10/02/us-news/el-nino-causes-ocean-phenomenon-waves-to-raise-california-sea-levels/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.0,
-    "real_psi": 0.0,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": 0.17,
+    "real_psi": 0.83,
     "mode": "root",
     "posts": [
       "A massive Kelvin wave tied to El Niño is surging toward California, threatening record coastal sea levels.\nEvidence: Oceanographic data, rising tides, coastal erosion\n#Aletheia #Weather #California",
-      "Experts warn that the coastal bulge could raise sea levels by up to a foot, dramatically increasing flood and erosion risks.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Ocean dynamics are driving sustained high water levels, compounding existing storm damage and shoreline vulnerability.\nResulting Judgement: (0.0, 0.0) — Neutral Equilibrium",
-      "Verdict: PASS — The Path of Stasis.\nAccurate scientific reporting on natural oceanographic phenomena without deceptive framing.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "Experts warn that the coastal bulge could raise sea levels by up to a foot, dramatically increasing flood and erosion risks.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "Ocean dynamics are driving sustained high water levels, compounding existing storm damage and shoreline vulnerability.\nResulting Judgement: (+0.17, +0.83) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAccurate scientific reporting on natural oceanographic phenomena without deceptive framing.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Oceanographic Reporting: PASS (0.0, 0.0) — Accurate description of El Niño Kelvin wave mechanics.",
       "El Niño teleconnections produce massive oceanic bulges that travel across the Pacific, impacting coastal margins.",
       "The Bright Side:\nEarly scientific warnings allow coastal communities to prepare for heightened erosion and flooding risks.",
       "The Breakdown & Plane Error:\nPure physical mechanics (Q3/Q5) accurately reported without moralizing or false human attribution.",
       "Social Physics Analysis:\nPurely natural phenomena evaluated through transparent scientific observation; no human actor running deceptive social loops.",
-      "The Trajectory: The Path of Stasis.\nWhen you map transparent scientific reporting against physical reality, it plots a direct trajectory toward neutral equilibrium.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map transparent scientific reporting against physical reality, it plots a direct trajectory toward neutral equilibrium.",
       "The Unavoidable Truth: A powerful Kelvin wave is significantly elevating sea levels along the California coast.\n\nThe Unavoidable Lie: Coastal flooding risks can be entirely neutralized by existing seawalls without adaptive management.",
       "Alethekanon:\nTransparent scientific reporting of physical systems provides essential foresight for vulnerable human settlements.",
       "Awwthekanon:\nNature moves in mighty waves, reminding us to care for our shores and support communities bracing for the tides.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.5
+      }
+    },
     "aspects": [
       {
         "name": "Oceanographic Scientific Reporting",
@@ -207,6 +269,7 @@
         "name": "California Coastal Communities",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

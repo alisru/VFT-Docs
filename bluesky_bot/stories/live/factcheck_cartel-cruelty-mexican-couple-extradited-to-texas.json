@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.92,
-    "real_psi": -0.89,
+    "real_u": -0.02,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "Mexican couple extradited for drugging children in border smuggling scheme.\nEvidence: federal indictment, extradition, child endangerment\n#Aletheia #Border #Cartel",
-      "Law enforcement prosecutes ruthless human smugglers exploiting border vulnerabilities.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Smugglers routinely drug children with cannabis gummies to evade border checks during migrant surges.\nResulting Judgement: (-0.92, -0.89) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning into Destruction.\nCartel proxies inflict extreme harm on children for profit.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 0)",
+      "Law enforcement prosecutes ruthless human smugglers exploiting border vulnerabilities.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Smugglers routinely drug children with cannabis gummies to evade border checks during migrant surges.\nResulting Judgement: (-0.02, -0.05) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nCartel proxies inflict extreme harm on children for profit.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 0)",
       "- Smuggling Syndicate: FAIL (-0.95, -0.9) — Drugs children for profit.\n- U.S. Federal Prosecution: PASS (0.9, 0.8) — Secures extraditions.",
       "Susana and Daniel Guadian were extradited from Mexico to face U.S. federal charges for drugging children aged 5-13 to smuggle them past border agents.",
       "The Bright Side:\nCross-border law enforcement cooperation successfully secures extraditions of cartel operatives.",
       "The Breakdown & Plane Error:\nConfusing the human cost on children with abstract political border debates.",
       "Social Physics Analysis:\nSmugglers operate a Smart Selfish loop, utilizing extreme child endangerment behind a veil of illicit profit seeking.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nThe horrifying exploitation of children plots a direct trajectory toward destruction. F_neg dominates through severe abuse.",
+      "The Trajectory: The Path of Awakening into Destruction.\nThe horrifying exploitation of children plots a direct trajectory toward destruction. F_neg dominates through severe abuse.",
       "The Unavoidable Truth: Human smuggling networks treat children as disposable commodities.\n\nThe Unavoidable Lie: Smugglers claim their operations prioritize family safety.",
       "Alethekanon:\nWhen criminal networks drug toddlers with THC gummies to bypass checkpoints, human depravity reaches an abyss.",
       "Awwthekanon:\nMy heart shatters for those little children, drugged and terrified, treated like cargo instead of precious human lives.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Smuggling Syndicate",
@@ -163,6 +225,7 @@
         "name": "CBP",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

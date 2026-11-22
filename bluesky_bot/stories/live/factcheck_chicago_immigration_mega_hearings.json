@@ -13,14 +13,14 @@
     "posts": [
       "Immigration courts in Chicago are packing up to 185 cases per judge daily, turning due process into a chaotic assembly line.\n\nLawmakers want chaotic 'mega master' hearings to end\nEvidence: due process, quota enforcement, systemic fairness\n#Aletheia #Immigration",
       "Lawmakers demand an end to 'mega master' hearings, arguing that rushing hundreds of immigrants through court without adequate notice or counsel violates basic due process.\nStated Judgement: (+1.00, +1.00) — Greater Good",
-      "The reality is that the Department of Justice prioritizes deportation quotas and backlog clearance over individual fairness, creating a chaotic and punitive environment.\nResulting Judgement: (+0.06, +0.30) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nWhile lawmakers demand reform, systemic administrative quotas continue to override constitutional due process.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.80, Uncertainty z: 3)",
+      "The reality is that the Department of Justice prioritizes deportation quotas and backlog clearance over individual fairness, creating a chaotic and punitive environment.\nResulting Judgement: (+0.06, +0.30) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nWhile lawmakers demand reform, systemic administrative quotas continue to override constitutional due process.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.80, Uncertainty z: 3)",
       "- Illinois Lawmakers: PASS (1.20, 0.80) — Defending due process.\n- DOJ Enforcement: FAIL (-0.45, -0.60) — Prioritizes quotas over fairness.",
       "Illinois Democrats have petitioned the Department of Justice to end mass immigration hearings in Chicago, citing severe overcrowding and lack of legal representation.",
       "The Poison:\nClearing court backlogs is necessary, but doing so through rushed mass hearings destroys the legitimacy of the legal process.",
       "The Breakdown & Plane Error:\nConfusing administrative efficiency (WHAT) with human justice (WHO). Rushing cases to meet numerical targets treats individuals as mere data points.",
       "Social Physics Analysis:\nThe system uses the pretext of backlog clearance to justify rapid deportations. By projecting efficiency as the primary goal, it hides the active erosion of legal protections and shifts the systemic strain onto vulnerable families.",
-      "The Trajectory: Fall into Deception.\nMapping the gap between stated due process ideals and the reality of quota-driven mass hearings plots a trajectory toward Deception. Efficiency goals actively undermine justice.",
+      "The Trajectory: The Path of Fall from Grace.\nMapping the gap between stated due process ideals and the reality of quota-driven mass hearings plots a trajectory toward Deception. Efficiency goals actively undermine justice.",
       "The Unavoidable Truth: Mass hearings make a mockery of constitutional due process.\nThe Unavoidable Lie: Rushing hundreds of cases daily is about efficiency, not mass removal.",
       "Alethekanon:\nThe structural tension between administrative speed and constitutional rights is resolved here by sacrificing the latter to meet political quotas.",
       "Awwthekanon:\nImagine standing in a crowded room, terrified, not understanding the language, and having your entire future decided in seconds. We must bring dignity back.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Illinois Lawmakers Petition",
@@ -274,6 +336,7 @@
         "name": "EOIR",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

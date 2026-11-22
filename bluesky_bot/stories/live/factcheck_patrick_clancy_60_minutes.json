@@ -5,22 +5,22 @@
     "subject": "Patrick Clancy opens up on ‘living with outcome’ after ex-wife killed 3 kids",
     "link": "https://nypost.com/2026/09/19/us-news/patrick-clancy-opens-up-on-living-with-outcome-after-ex-wife-killed-3-kids-but-insists-i-did-the-best-i-could/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": -0.35,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "A father's public grief meets the harsh reality of systemic failure. Patrick Clancy opens up on 'living with outcome' after ex-wife killed 3 kids. Evidence: Personal Absolution, Tragic Loss, Public Narrative. #Aletheia #MentalHealth 🌐",
-      "Patrick Clancy claims he did the absolute best he could with what he had at the time, seeking understanding as he lives with the tragic outcome of his children's deaths. Stated Judgement: (+0.8, +0.5) — Lesser Good",
-      "The tragedy exposes a catastrophic failure of mental health oversight and parental recognition of postpartum psychosis, resulting in three deaths and a mistrial. Resulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Revelation. While Patrick's grief is undeniably real, the public media tour serves to manage narrative blame and seek personal absolution.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 2)",
+      "Patrick Clancy claims he did the absolute best he could with what he had at the time, seeking understanding as he lives with the tragic outcome of his children's deaths. Stated Judgement: (+0.65, +0.25) — Greater Good",
+      "The tragedy exposes a catastrophic failure of mental health oversight and parental recognition of postpartum psychosis, resulting in three deaths and a mistrial. Resulting Judgement: (-0.35, -0.45) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 2)",
       "- Patrick Clancy Narrative: COND (-0.2, -0.3) — Managing public perception of personal responsibility.\n- Lindsay Clancy Defense: COND (-0.5, -0.6) — Postpartum psychosis vs. tragic systemic failure.",
       "Patrick Clancy spoke publicly on 60 Minutes following a mistrial in the case of his ex-wife, Lindsay Clancy, who killed their three children in 2023 during a severe mental health crisis.",
       "The Poison:\nPublicly litigating personal guilt on television risks turning a profound family tragedy into a curated media spectacle.",
       "The Plane Error lies in WHO vs WHY. The media focuses on Patrick's personal absolution (WHO) rather than the systemic failure of the medical system to diagnose and intervene in severe postpartum psychosis (WHY).",
       "Social Physics Analysis:\nPatrick executes a self-protective loop, using the pretext of \"doing his best\" to deflect the unbearable weight of hindsight. By projecting blame onto systemic medical failures, he seeks to resolve his personal cognitive strain in the public eye.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The shift from private mourning to public media management reveals a need for external validation over quiet healing.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The shift from private mourning to public media management reveals a need for external validation over quiet healing.",
       "The Unavoidable Truth: No amount of public explanation can undo the tragic failure to protect three innocent lives.\nThe Unavoidable Lie: The belief that a media tour can provide the absolution that only deep, private reckoning can offer.",
       "Alethekanon:\nGrief is weaponized as a shield against the unbearable question of responsibility. The media consumes the spectacle of a broken father, ignoring the systemic medical gaps that allowed postpartum psychosis to turn fatal.",
       "Awwthekanon:\nMy heart breaks for a father carrying an unimaginable weight. No parent should ever have to survive the loss of their children, and his search for peace, however public, is a cry for grace in the dark.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Patrick Clancy Narrative",
@@ -156,6 +218,7 @@
         "name": "Rachel Danis",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

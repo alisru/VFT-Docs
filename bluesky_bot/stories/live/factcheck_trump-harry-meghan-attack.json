@@ -5,22 +5,22 @@
     "subject": "Trump doubles down on his attack on Harry and Meghan",
     "link": "https://www.dailymail.com/news/article-16101777/Trump-says-wouldnt-let-Harry-Meghan-UK-terrible-treatment-William-King-Charles-late-Queen.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 0.65,
+    "claim_psi": 0.45,
+    "real_u": -0.15,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "Donald Trump attacks Harry and Meghan again, condemning their treatment of the Royal Family.\nEvidence: royal rift, Trump commentary, media spectacle\n#Aletheia #Royals #USPol",
-      "Trump claims his criticism defends traditional respect for the British Monarchy against perceived slights.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "In reality, the public attacks amplify personal grievances and exploit family drama for political theater.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nExploiting private family disputes for public political posturing degrades discourse.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
+      "Trump claims his criticism defends traditional respect for the British Monarchy against perceived slights.\nStated Judgement: (+0.65, +0.45) — Greater Good",
+      "In reality, the public attacks amplify personal grievances and exploit family drama for political theater.\nResulting Judgement: (-0.15, -0.25) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nExploiting private family disputes for public political posturing degrades discourse.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
       "- Daily Mail Coverage: PASS (0.5, 0.4) — Reports statements directly.\n- Trump Commentary: FAIL (-0.6, -0.7) — Amplifies personal hostility.",
       "Donald Trump reinforced his critical stance on Prince Harry and Meghan Markle, criticizing their past actions toward senior royals.",
       "The Bright Side:\nHighlighting the importance of family respect and institutional stability in public life.",
       "The Breakdown & Plane Error:\nConfusing personal celebrity grievances with state-level diplomacy (Metaphysical WHO error).",
       "Social Physics Analysis:\nUsing public attacks as a pretext to project fault onto high-profile figures creates division without solving any actual societal strain.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Amplifying personal feuds displaces constructive governance.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Amplifying personal feuds displaces constructive governance.",
       "The Unavoidable Truth: Public commentary on private family rifts serves political utility rather than reconciliation.\n\nThe Unavoidable Lie: These partisan remarks offer meaningful solutions to geopolitical challenges.",
       "Alethekanon:\nLeveraging royal gossip for political posturing trades civic dignity for cheap applause 🌐",
       "Awwthekanon:\nConstant public judgment of personal family struggles only deepens wounds instead of fostering peace and healing.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Daily Mail Coverage",
@@ -174,6 +236,7 @@
         "name": "Prince William",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

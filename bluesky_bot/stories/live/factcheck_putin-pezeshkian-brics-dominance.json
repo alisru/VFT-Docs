@@ -5,22 +5,22 @@
     "subject": "Putin and Pezeshkian call out US dominance ahead of BRICS - Remotestake market desk",
     "link": "https://remotestake.com/news/putin-and-pezeshkian-call-out-us-dominance-ahead-of-brics-9872e",
     "target_url": "https://bsky.app/profile/remotestake.com/post/3mvc6jbnxsl22",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "Challenging dollar dominance or carving out authoritarian spheres? Putin and Pezeshkian rally BRICS ahead of the New Delhi summit. Evidence: Dollar critique, Local currency trade push, Geopolitical bloc alignment. #Aletheia #BRICS",
-      "Leaders frame the BRICS summit as a vital step toward a multipolar financial order, promoting local currency trade and reducing dependence on Western sanctions. Stated Judgement: (+0.5, 0.0) — Good Preference",
-      "The rhetoric masks a concerted push by sanctioned regimes to insulate themselves from international accountability while building transactional autarky. Resulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Anti-Western rhetoric is leveraged as a diplomatic shield to bypass sanctions rather than foster genuine multilateral development.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "Leaders frame the BRICS summit as a vital step toward a multipolar financial order, promoting local currency trade and reducing dependence on Western sanctions. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "The rhetoric masks a concerted push by sanctioned regimes to insulate themselves from international accountability while building transactional autarky. Resulting Judgement: (-0.94, -0.88) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "- Putin & Pezeshkian: FAIL (-0.7, -0.8) — Uses currency multilateralism as sanction evasion.\n- BRICS Media Framing: COND (0.0, -0.5) — Highlights economic multipolarity while omitting autocratic consolidation.",
       "Ahead of the 18th BRICS Summit in New Delhi, Russian President Vladimir Putin and Iranian President Masoud Pezeshkian sharply criticized US dollar dominance, urging member states to expand local currency trade and secure energy networks.",
       "The BrightSide:\nIt accelerates necessary diversification of global financial messaging and payment mechanisms away from single-point vulnerabilities.",
       "The Breakdown & Plane Error:\nThis is a classic WHO-to-WHAT substitution. The stated focus is technical monetary sovereignty (WHAT), but the actual mechanism is geopolitical bloc fortification for sanctioned regimes (WHO).",
       "Social Physics Analysis:\nPutin and Pezeshkian execute a Smart Selfish Maneuver. They take genuine global frustrations over US financial hegemony (pretext) and convert them into protective diplomatic cover for autocratic economic integration (secret goal). By projecting blame entirely onto Western sanctions, they distract from domestic economic strains while consolidating closed-loop regional power.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated economic multilateralism and actual sanction evasion, it plots a direct trajectory toward Deception. F_pos < F_neg pushes ψ negative through systemic fragmentation.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated economic multilateralism and actual sanction evasion, it plots a direct trajectory toward Deception. F_pos < F_neg pushes ψ negative through systemic fragmentation.",
       "The Unavoidable Truth: Multipolar financial diversification addresses legitimate global vulnerabilities.\n\nThe Unavoidable Lie: Sanctioned autocracies championing local currencies are driven purely by altruistic economic fairness.",
       "Alethekanon:\nRhetorical multipolarity masks narrow regime survival strategies. True financial equity requires institutional transparency, not authoritarian shelter.",
       "Awwthekanon:\nEvery nation desires breathing room from crushing financial embargoes. Yet true community is built on mutual trust and open doors, not shared grievances against distant powers.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Putin & Pezeshkian Financial Stance",
@@ -233,6 +295,7 @@
         "name": "Iran",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

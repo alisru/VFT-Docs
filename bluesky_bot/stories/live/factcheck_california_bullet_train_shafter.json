@@ -5,22 +5,22 @@
     "subject": "A California City Drops Houses on Gavin Newsom's Bullet Train",
     "link": "https://thefederalist.com/2026/09/02/a-california-city-drops-houses-on-gavin-newsoms-bullet-train/?utm_source=rss&utm_medium=rss&utm_campaign=a-california-city-drops-houses-on-gavin-newsoms-bullet-train",
     "target_url": "",
-    "claim_u": -0.8,
-    "claim_psi": -0.9,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 0.0,
+    "claim_psi": 0.5,
+    "real_u": -0.15,
+    "real_psi": -0.38,
     "mode": "root",
     "posts": [
       "A local housing tract just blocked California's multi-billion-dollar high-speed rail. 🌐\n\nA California City Drops Houses on Gavin Newsom's Bullet Train\nEvidence: Completed acquisitions, planning failure, unacquired route\n#Aletheia #Infrastructure #California",
-      "The state claimed all property acquisitions for the high-speed rail were finished and the route was clear. Critics argue local housing approvals expose total administrative incompetence.\nStated Judgement: (-0.80, -0.90) — Greater Evil",
-      "The city of Shafter approved 1,251 homes on the route because the state failed to acquire the land or flag it as active during reviews, exposing a massive planning and coordination gap.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
-      "Verdict: PASS — Fall into Deception.\nThe state's premature victory laps on land acquisition collided with local development realities due to bureaucratic neglect.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 1)",
+      "The state claimed all property acquisitions for the high-speed rail were finished and the route was clear. Critics argue local housing approvals expose total administrative incompetence.\nStated Judgement: (+0.00, +0.50) — Greatest Lie",
+      "The city of Shafter approved 1,251 homes on the route because the state failed to acquire the land or flag it as active during reviews, exposing a massive planning and coordination gap.\nResulting Judgement: (-0.15, -0.38) — Greater Evil",
+      "Verdict: CONDITIONAL — Revelation into Destruction.\nThe state's premature victory laps on land acquisition collided with local development realities due to bureaucratic neglect.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Gavin Newsom: FAIL (-0.70, -0.80) — Prematurely claimed all land was acquired.\n- Shafter City: PASS (0.20, -0.10) — Approved housing after years of state silence.",
       "The city of Shafter approved a 1,251-home development directly on the planned high-speed rail path. The state's rail authority failed to buy the land or formally object during a 2018 settlement.",
       "The Poison:\nWhile Shafter gets much-needed housing, the state's flagship transit project faces further delays and expensive rerouting costs because of basic administrative oversight.",
       "The Breakdown & Plane Error:\nThe state focused on the WHO (political victory laps) instead of the WHAT (actual physical land acquisition). This created a massive gap between public relations and physical reality.",
       "Social Physics Analysis:\nBy prioritizing political narratives over tedious administrative execution, the state created a vacuum. Local actors, facing housing demands, naturally filled the empty space, forcing the state into costly, reactive damage control.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Bureaucratic inertia actively closes off future public transit possibilities.",
+      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Bureaucratic inertia actively closes off future public transit possibilities.",
       "The Unavoidable Truth: You cannot build a high-speed railway if you forget to buy the land it runs on.\n\nThe Unavoidable Lie: Claiming a massive infrastructure project is fully on track when basic coordination has failed.",
       "Alethekanon:\nThe friction here is entirely self-inflicted. Administrative arrogance substituted press releases for property deeds, allowing local municipal reality to physically derail state-level fantasy.",
       "Awwthekanon:\nIt is so disheartening to see public dreams of green transit crumble under the weight of bureaucratic neglect. The families getting new homes in Shafter deserve a community, but we all deserve a future where we can connect with each other.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Gavin Newsom Executive Claims",
@@ -289,6 +351,7 @@
         "sub_psi": -0.1,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Revelation into Destruction"
   }
 ]

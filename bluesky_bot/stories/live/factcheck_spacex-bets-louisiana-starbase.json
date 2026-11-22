@@ -5,22 +5,22 @@
     "subject": "GOV JEFF LANDRY: SpaceX bets on Louisiana as America’s next frontier takes off in the South",
     "link": "https://www.foxnews.com/opinion/gov-jeff-landry-spacex-bets-louisiana-americas-next-frontier-takes-off-south",
     "target_url": "",
-    "claim_u": 1.5,
+    "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 1.0,
-    "real_psi": 0.8,
+    "real_u": 0.94,
+    "real_psi": 0.89,
     "mode": "root",
     "posts": [
       "SpaceX commits to a monumental $100 billion investment for a new spaceport in Louisiana.\nEvidence: $100B investment, 11K jobs, economic boost\n#Aletheia #SpaceX #Louisiana",
-      "Governor Jeff Landry celebrates SpaceX's massive investment as proof of state economic momentum and high-tech job creation.\nStated Judgement: (1.5, 1.0) — Greater Good",
-      "The massive aerospace project brings transformative economic growth and thousands of jobs, while navigating local environmental reviews.\nResulting Judgement: (1.0, 0.8) — Grace",
-      "Verdict: PASS — The Path of Grace.\nTangible industrial investment creates genuine regional opportunity.\nIntegrity: Trustworthy (Hypocrisy: 0.4, z: 1)",
+      "Governor Jeff Landry celebrates SpaceX's massive investment as proof of state economic momentum and high-tech job creation.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The massive aerospace project brings transformative economic growth and thousands of jobs, while navigating local environmental reviews.\nResulting Judgement: (+0.94, +0.89) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nTangible industrial investment creates genuine regional opportunity.\nIntegrity: Trustworthy (Hypocrisy: 0.4, z: 1)",
       "- Gov. Jeff Landry: PASS (1.2, 1.0) — Champions productive economic development.\n- SpaceX Investment: PASS (1.0, 0.8) — Delivers verifiable job growth and capital.",
       "Louisiana Governor Jeff Landry highlighted SpaceX's historic $100 billion investment to build Starbase Louisiana in Vermilion Parish.",
       "The Bright Side:\nTransforms rural Louisiana into a thriving national hub for aerospace manufacturing and technological innovation.",
       "The Breakdown & Plane Error:\nGrounds grand political claims in concrete physical capital and verifiable employment metrics (Plane Q3 Physical pass).",
       "Social Physics Analysis:\nAligns public policy incentives with private capital to resolve economic stagnation through transparent, mutually beneficial collaboration.",
-      "The Trajectory: The Path of Grace.\nWhen you map stated economic revitalization against verified infrastructure investments, it plots directly toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map stated economic revitalization against verified infrastructure investments, it plots directly toward Grace.",
       "The Unavoidable Truth: Massive industrial projects generate vital regional employment alongside real environmental challenges.\n\nThe Unavoidable Lie: Megaprojects alter local landscapes without any friction or community strain.",
       "Alethekanon:\nSubstantial capital alignment and transparent goals achieve genuine material elevation without deceitful pretexts.",
       "Awwthekanon:\nSeeing local communities gain new hope and skilled careers right at home is a wonderful step forward.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Gov. Jeff Landry Announcement",
@@ -206,6 +268,7 @@
         "name": "SpaceX",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

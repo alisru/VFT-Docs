@@ -5,22 +5,22 @@
     "subject": "Fugitive walks right into Cali cops' dinner break, gets arrested at Panda Express",
     "link": "https://nypost.com/2026/08/28/us-news/california-wanted-man-busted-at-panda-express-by-cops-on-lunch-break/",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.25,
     "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": 0.0,
+    "real_u": -0.15,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "A fugitive walked into a Panda Express to find the very cops hunting him eating dinner. Wild luck ends a month-long manhunt in San Gabriel Valley.\nEvidence: evasion, lunch break, arrest\n#Aletheia #California",
-      "Police departments leverage quirky viral bodycam moments to highlight routine arrests with playful humor and community engagement.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Officers successfully captured a probation violator after prior evasions, utilizing social media charm to frame a routine arrest as viral entertainment.\nResulting Judgement: (+0.2, 0.0) — Neutral Equilibrium",
-      "Verdict: PASS — The Path of Awakening.\nA routine fugitive capture ends peacefully through sheer coincidence, successfully blending public safety with social media humor.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Police departments leverage quirky viral bodycam moments to highlight routine arrests with playful humor and community engagement.\nStated Judgement: (+0.25, +0.00) — Lesser Good",
+      "Officers successfully captured a probation violator after prior evasions, utilizing social media charm to frame a routine arrest as viral entertainment.\nResulting Judgement: (-0.15, -0.45) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nA routine fugitive capture ends peacefully through sheer coincidence, successfully blending public safety with social media humor.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Monrovia Police PR: PASS (+0.5, 0.0) — Effective community engagement.\n- Fugitive Evasion: FAIL (-0.8, -0.9) — Failed persistent flight.",
       "Monrovia police officers on a dinner break unexpectedly apprehended a wanted probation violator who walked into the same Panda Express, concluding a month-long search without incident.",
       "The Bright Side:\nA tense situation resolved safely and peacefully without high-speed freeway chases or violence, ending with everyone getting their food.",
       "The Breakdown & Plane Error:\nMistaking a lighthearted police PR anecdote for a profound policy shift. The event is a straightforward tactical success wrapped in local humor.",
       "Social Physics Analysis:\nThis interaction relied on simple operational persistence rather than manipulation. The police maintained public safety without resorting to pretexts or projecting blame.",
-      "The Trajectory: The Path of Awakening.\nThe alignment between stated law enforcement duties and peaceful operational outcomes preserves institutional trust and community stability.",
+      "The Trajectory: The Path of Awakening into Destruction.\nThe alignment between stated law enforcement duties and peaceful operational outcomes preserves institutional trust and community stability.",
       "The Unavoidable Truth: Justice often arrives through mundane and unexpected circumstances rather than grand cinematic pursuits.\nThe Unavoidable Lie: Police tactical success is purely a product of humorous social media timing.",
       "Alethekanon:\nOrder is restored not through elaborate pretexts but through the persistent convergence of ordinary duty and happenstance. Real operational friction resolves itself cleanly.",
       "Awwthekanon:\nWell, life has a funny way of bringing balance when we least expect it! After all that stressful running, everyone got to pause and share a peaceful moment—even if the handcuffs came first.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Monrovia Police PR",
@@ -146,6 +208,7 @@
         "name": "Monrovia Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

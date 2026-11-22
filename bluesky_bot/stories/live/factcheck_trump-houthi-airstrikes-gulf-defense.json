@@ -5,22 +5,22 @@
     "subject": "Bombs were loaded, warplanes were ready — but Trump was right to say ‘no’",
     "link": "https://www.washingtonexaminer.com/op-eds/4736829/trump-houthi-airstrikes-gulf-defense-must-take-their-own-action-not-us-shield/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.0,
-    "real_u": -0.65,
-    "real_psi": -0.75,
+    "claim_u": 0.74,
+    "claim_psi": 0.86,
+    "real_u": -0.96,
+    "real_psi": -0.93,
     "mode": "root",
     "posts": [
       "When warplanes are recalled at the eleventh hour, who truly bears the cost of regional security? #Geopolitics #MiddleEast #Defense",
-      "Stated claim: Halting airstrikes against Houthi forces forces wealthy Gulf allies to shoulder their own defense and ends endless American military entanglement. Stated Judgement: (+0.8, 0.0) — Good Preference",
-      "Ground reality: Sudden policy reversals leave allies vulnerable, embolden militant expansion, and destabilize Red Sea shipping lanes without a coherent security architecture. Resulting Judgement: (-0.65, -0.75) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nAbrupt military cancellations without regional coordination create power vacuums and escalate proxy conflicts.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.5, z: 2)",
+      "Stated claim: Halting airstrikes against Houthi forces forces wealthy Gulf allies to shoulder their own defense and ends endless American military entanglement. Stated Judgement: (+0.74, +0.86) — Greater Good",
+      "Ground reality: Sudden policy reversals leave allies vulnerable, embolden militant expansion, and destabilize Red Sea shipping lanes without a coherent security architecture. Resulting Judgement: (-0.96, -0.93) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAbrupt military cancellations without regional coordination create power vacuums and escalate proxy conflicts.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.5, z: 2)",
       "Sub-Audits Breakdown:\n- U.S. Administration: COND (0.7, 0.2) — Seeks restraint but executes chaotic reversals.\n- Gulf Allies: FAIL (-0.7, -0.8) — Relies entirely on U.S. security umbrella.",
       "As Houthi forces seize strategic heights in Yemen following the halted U.S. strikes, the debate over burden-sharing exposes deep friction in Middle Eastern security alliances.",
       "The Bright Side:\nForcing regional allies to invest in their own defense reduces long-term American overreach and military exhaustion.",
       "The Breakdown & Plane Error:\nConfusing tactical military restraint (WHAT) with a comprehensive regional security strategy (WHO/WHY), leading to sudden escalation vacuums.",
       "Social Physics Analysis:\nThe U.S. administration runs a reactive maneuver, substituting abrupt tactical withdrawals for genuine strategic transparency, while regional actors attempt to outsource defense burdens.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Erratic disengagement without diplomatic frameworks breeds instability.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Erratic disengagement without diplomatic frameworks breeds instability.",
       "The Unavoidable Truth: Sudden military pullbacks without regional frameworks invite immediate militant expansion.\n\nThe Unavoidable Lie: Abruptly canceling planned strikes constitutes a coherent long-term defense strategy.",
       "Alethekanon:\nTactical withdrawal is not a substitute for strategic design. Abandoning allies mid-stream invites chaos rather than peace.",
       "Awwthekanon:\nIt is heartbreaking to witness communities in Yemen displaced by endless conflict while distant powers treat their security as a shifting political football.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.7,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "U.S. Administration Policy",
@@ -288,6 +350,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

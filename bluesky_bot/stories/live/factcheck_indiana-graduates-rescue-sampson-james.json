@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A chance encounter in a park leads to a life-saving reunion for a former college football star.\nNews: Indiana Graduates Rescue Sampson James\nEvidence: Fraternity, Grassroots Rescue, Direct Empowerment\n#Aletheia #GoodNews",
-      "A chance meeting between two Indiana University graduates rescued former star running back Sampson James from eight months of homelessness through a spontaneous $20,000 GoFundMe campaign.\nStated Judgement: (1.0, 1.0) — Greater Good",
-      "The campaign successfully secured an apartment, food, and furniture for James, demonstrating genuine grassroots altruism and direct, transparent community support.\nResulting Judgement: (1.0, 1.0) — Greater Good",
-      "Verdict: PASS — Grace into Grace. A genuine grassroots effort that bypassed institutional gaps to deliver immediate, life-saving support.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "A chance meeting between two Indiana University graduates rescued former star running back Sampson James from eight months of homelessness through a spontaneous $20,000 GoFundMe campaign.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The campaign successfully secured an apartment, food, and furniture for James, demonstrating genuine grassroots altruism and direct, transparent community support.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Jasper Steinmetz: PASS (1.0, 1.0) — Direct, transparent grassroots action.\n- Sampson James: PASS (1.0, 1.0) — Receptive and committed to stability.",
       "Recent IU graduate Jasper Steinmetz met homeless former running back Sampson James in Austin, Texas, and raised $20,000 to help him secure housing and essentials.",
       "The Poison:\nWhile this individual rescue is beautiful, it highlights the severe lack of institutional safety nets for former student-athletes suffering from sudden physical and mental health crises.",
       "The Plane Error lies in focusing purely on the lyrical 'miracle' of the chance encounter (WHY) rather than the physical systemic gaps (WHERE) that leave vulnerable, injured athletes without support.",
       "Social Physics Analysis:\nThis event represents a Smart Altruistic Maneuver. Steinmetz used transparent coordination to build a coalition of former teammates, empowering James directly rather than projecting blame or seeking personal power.",
-      "The Trajectory: The Path of Grace into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The alignment of intent and outcome remains perfectly coherent.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The alignment of intent and outcome remains perfectly coherent.",
       "The Unavoidable Truth: Grassroots empathy can solve immediate crises faster than bureaucracy.\nThe Unavoidable Lie: College athletic programs guarantee long-term safety nets for their players.",
       "Alethekanon:\nA rare alignment where the stated ideal of fraternity matches physical reality. Grassroots coordination bypassed institutional friction to deliver immediate, measurable relief.",
       "Awwthekanon:\nIt's beautiful how a simple red backpack connected two strangers and built a bridge back to safety. We all need someone to see us and remind us we're not alone.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Jasper Steinmetz",
@@ -156,6 +218,7 @@
         "name": "Indiana University",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

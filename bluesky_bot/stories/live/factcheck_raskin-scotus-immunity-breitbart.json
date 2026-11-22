@@ -5,22 +5,22 @@
     "subject": "Raskin: SCOTUS Invented Presidential Immunity 'Out of Thin Air'",
     "link": "https://www.breitbart.com/clips/2026/08/21/raskin-scotus-invented-presidential-immunity-out-of-thin-air/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.2,
-    "real_psi": -0.3,
+    "claim_u": 0.73,
+    "claim_psi": 0.86,
+    "real_u": -0.88,
+    "real_psi": -0.81,
     "mode": "root",
     "posts": [
       "Rep. Jamie Raskin argues the Supreme Court's immunity ruling was invented out of thin air.\n\nRaskin: SCOTUS Presidential Immunity\nEvidence: defending rule of law, partisan judicial critique, institutional friction\n#Aletheia #USPol #SCOTUS",
-      "Democrats are organizing to expose and counter assaults on the rule of law, aiming to reverse judicial overreach if they retake Congress.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While framed as defending constitutional integrity, the critique weaponizes judicial review disputes for partisan electoral mobilization.\nResulting Judgement: (-0.2, -0.3) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nPartisan framing obscures structural constitutional debate behind political posturing.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, Uncertainty z: 1)",
+      "Democrats are organizing to expose and counter assaults on the rule of law, aiming to reverse judicial overreach if they retake Congress.\nStated Judgement: (+0.73, +0.86) — Greater Good",
+      "While framed as defending constitutional integrity, the critique weaponizes judicial review disputes for partisan electoral mobilization.\nResulting Judgement: (-0.88, -0.81) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPartisan framing obscures structural constitutional debate behind political posturing.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, Uncertainty z: 1)",
       "- Jamie Raskin: COND (+0.5, +0.2) — Defending rule of law while leveraging partisanship.\n- Judicial Critique: COND (-0.3, -0.4) — Conflating disagreement with illegitimacy.",
       "Appearing on MS NOW, Rep. Raskin criticized the Supreme Court's executive immunity rulings and outlined Democratic legislative strategy.",
       "The Poison:\nFraming judicial disagreement as total lawlessness undermines long-term institutional trust for short-term political gains.",
       "The Breakdown & Plane Error:\nConflating WHAT (legal doctrine) with WHO (political actors), framing structural constitutional questions as personal corruption.",
       "Social Physics Analysis:\nInstead of engaging the complex jurisprudential merits of executive power, the discourse deploys pretexts of total corruption to mobilize political coalitions against opponents.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated constitutional purity and partisan strategizing, it plots toward Lesser Evil. Explanatory mathematical calculation holds.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated constitutional purity and partisan strategizing, it plots toward Lesser Evil. Explanatory mathematical calculation holds.",
       "The Unavoidable Truth: Executive immunity raises profound structural questions about separation of powers.\n\nThe Unavoidable Lie: Judicial rulings with which one disagrees are pure lawlessness.",
       "Alethekanon:\nTreating constitutional disputes as existential treason degrades the judiciary's legitimacy without offering structural reform.",
       "Awwthekanon:\nIt is painful to watch our foundational legal institutions become battlegrounds where every ruling is viewed through partisan lenses rather than shared search for truth.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Jamie Raskin Political Intervention",
@@ -283,6 +345,7 @@
         "name": "United States Congress",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

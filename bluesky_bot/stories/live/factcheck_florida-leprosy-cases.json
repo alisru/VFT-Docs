@@ -14,7 +14,7 @@
       "Florida's leprosy uptick is a biological puzzle, not a plague. Cases are rising, but the risk remains low and manageable. Evidence: Rising cases, Armadillo vector, Low risk. #Health #Florida 🌐",
       "The claim states that leprosy cases are climbing in Florida and that people are looking at armadillos as the potential source of the infection. Stated Judgement: (+1.00, +1.00) — Good Preference",
       "Reality confirms cases are rising, but health officials emphasize the risk is low and armadillos are only one part of a complex transmission puzzle. Resulting Judgement: (+1.00, +1.00) — Good Preference",
-      "Verdict: PASS — The Path of Grace. The reporting is balanced and avoids alarmism. Subs: Reporting: PASS (+0.5, +0.2); Public Health: PASS (+0.6, +0.1). Integrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Verdict: PASS — Grace.",
       "Sub-Audits Breakdown:\n- Health Reporting: PASS (+0.5, +0.2) — The article accurately conveys the nuance of the risk.\n- Public Health Guidance: PASS (+0.6, +0.1) — It correctly identifies the armadillo vector while maintaining perspective.",
       "The article discusses the recent increase in leprosy cases in Florida, noting the role of armadillos as a known vector while clarifying that the overall risk to the public remains low.",
       "The Poison:\nThe poison here is the potential for public panic. Even with careful reporting, the mention of 'leprosy' and 'armadillos' can trigger irrational fear.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Health Reporting",
@@ -264,6 +326,7 @@
         "name": "Dr. Norman Beatty",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

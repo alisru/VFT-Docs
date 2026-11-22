@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Sheriff Bob Fletcher appeals to gang members to behave during the state fair.\nEvidence: stern letter, symbolic plea, zero enforcement\n#Aletheia #Minnesota #LawEnforcement",
-      "Law enforcement issuing public letters to urge gang restraint during major public events.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Writing open letters to violent gangs highlights institutional impotence rather than proactive security.\nResulting Judgement: (-0.75, -0.80) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSymbolic appeals replace actual deterrence, masking structural weakness with performative letters.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
+      "Law enforcement issuing public letters to urge gang restraint during major public events.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Writing open letters to violent gangs highlights institutional impotence rather than proactive security.\nResulting Judgement: (-0.75, -0.80) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nSymbolic appeals replace actual deterrence, masking structural weakness with performative letters.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
       "- Sheriff Bob Fletcher: FAIL (-0.75, -0.80) — Prefers performative open letters over enforcement.\n- Public Safety Messaging: FAIL (-0.70, -0.75) — Substitutes PR for security.",
       "Ramsey County Sheriff Bob Fletcher sent public letters asking Somali gang members to exercise restraint during the Minnesota State Fair, drawing wide public mockery.",
       "The Poison:\nSymbolic posturing replaces concrete public safety measures, lowering deterrence.",
       "The Breakdown & Plane Error:\nConfusing WHAT (public safety enforcement) with WHO (public relations optics directed at gangs).\n\nIt is a structural bait-and-switch: public appeals stand in for actual policing.",
       "Social Physics Analysis:\nRelying on open letters instead of direct enforcement reflects a breakdown in institutional authority. Pretexts of community engagement mask an inability to maintain order.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Mathematical friction confirms institutional decay.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Mathematical friction confirms institutional decay.",
       "The Unavoidable Truth: Open letters to criminal gangs do not replace physical law enforcement.\n\nThe Unavoidable Lie: Performative appeals constitute an effective public safety strategy.",
       "Alethekanon:\nPerformative policing substitutes public relations for accountability, masking systemic weakness in administrative authority.",
       "Awwthekanon:\nWhen communities face tension, genuine safety comes from consistent protection, not open letters posted online.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sheriff Bob Fletcher Appeal",
@@ -148,6 +210,7 @@
         "name": "Somali Gangs",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

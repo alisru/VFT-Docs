@@ -5,22 +5,22 @@
     "subject": "‘Learn to code’ is dead: Gen Z is picking up a wrench",
     "link": "https://www.washingtonexaminer.com/op-eds/4689357/gen-z-ditching-tech-school-learning-trades/",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.8,
-    "real_u": 0.8,
-    "real_psi": 0.9,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Gen Z is pivoting from coding to skilled trades as AI disrupts the white-collar job market. Evidence: rising trade enrollment, plateauing AI adoption. #Aletheia #Economy",
-      "The claim is that Gen Z is making a rational, structural shift toward physical trades to ensure career stability against AI. Stated Judgement: (+0.9, +0.8) — Good Preference",
-      "Young adults are indeed abandoning traditional college paths for vocational training due to the existential threat of automation. Resulting Judgement: (+0.8, +0.9) — Good Preference",
-      "Verdict: PASS — The Path of Awakening. This shift represents a pragmatic response to economic reality, moving toward high-demand, human-centric infrastructure. Integrity: Absolute Truth (Hypocrisy: 0.1, Uncertainty z: 0)",
+      "The claim is that Gen Z is making a rational, structural shift toward physical trades to ensure career stability against AI. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "Young adults are indeed abandoning traditional college paths for vocational training due to the existential threat of automation. Resulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.",
       "Sub-Audits Breakdown:\n- Gen Z Workforce: PASS (0.9, 0.9) — Rational adaptation.\n- Federal Policy: FAIL (-0.5, -0.4) — Outdated funding models.",
       "As AI automates entry-level corporate roles, the next generation is choosing fields where human presence is physically mandatory, such as electrical and HVAC work.",
       "The Bright Side:\nThis shift forces a long-overdue revaluation of vocational training and physical infrastructure in the national economy.",
       "The Breakdown & Plane Error:\nThere is no plane error here; the actors are correctly identifying the HOW (AI automation) and the WHERE (the physical labor market).",
       "Social Physics Analysis:\nBy embracing physical trades, Gen Z is moving from a high-strain, competitive digital environment to a low-strain, high-utility physical one. This is an empowering shift toward tangible, non-automatable value.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the alignment between economic reality and workforce behavior, it plots a trajectory toward Grace. The shift reduces systemic friction by matching labor to actual needs.",
+      "The Trajectory: The Path of Grace.\nWhen you map the alignment between economic reality and workforce behavior, it plots a trajectory toward Grace. The shift reduces systemic friction by matching labor to actual needs.",
       "The Unavoidable Truth: AI is fundamentally altering the value of entry-level white-collar labor.\nThe Unavoidable Lie: Traditional four-year degrees remain the most reliable path to financial security.",
       "Alethekanon:\nThis transition is a classic example of market correction. When the digital landscape becomes saturated and volatile, the economy naturally gravitates back toward the physical foundations of human survival.",
       "Awwthekanon:\nIt is heartening to see young people finding their own path and valuing the dignity of skilled, hands-on work. There is such deep beauty in building and maintaining the world we live in.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Gen Z Workforce Shift",
@@ -203,6 +265,7 @@
         "name": "Walton Family Foundation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

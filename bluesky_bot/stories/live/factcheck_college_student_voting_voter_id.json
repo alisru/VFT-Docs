@@ -14,13 +14,13 @@
       "New bans on student IDs for voting in states like New Hampshire and Indiana spark lawsuits and accusations of partisan voter suppression. 🌐\n\nStudent Voter ID Bans\nEvidence: pretextual security, youth disenfranchisement, partisan power grab\n#Aletheia #USPol",
       "Supporters argue that restricting student IDs streamlines voting rules and enhances overall election security and public confidence.\nStated Judgement: (+0.14, +1.00) — Good Preference",
       "Advocates demonstrate that targeted restrictions selectively burden younger, less experienced voters who rely on campus identification.\nResulting Judgement: (-1.00, -1.00) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nPartisan actors weaponize security pretexts to suppress youth turnout and manipulate electoral outcomes.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nPartisan actors weaponize security pretexts to suppress youth turnout and manipulate electoral outcomes.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- State Legislators: FAIL (-0.9, -0.8) — Pretextual voter suppression.\n- Voting Rights Advocates: PASS (0.8, 0.7) — Defending constitutional access.",
       "New Hampshire, Indiana, and Florida have enacted or advanced bans disallowing student IDs at polling places, prompting legal challenges.",
       "The Poison:\nMasking partisan disenfranchisement behind the neutral banner of administrative uniformity and election security.",
       "The Breakdown & Plane Error:\nConfusing WHAT (election security rules) with WHO (targeted suppression of young voters).\n\nA classic bait-and-switch: promising ballot integrity while systematically restricting demographic access.",
       "Social Physics Analysis:\nBy replacing transparent democratic expansion with exclusionary rules, proponents use pretexts to hoard political power and neutralize opposing demographics.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated security goals and actual disenfranchisement, it plots a direct trajectory toward Destruction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated security goals and actual disenfranchisement, it plots a direct trajectory toward Destruction.",
       "The Unavoidable Truth: Student ID bans disproportionately burden young voters and reduce ballot access.\n\nThe Unavoidable Lie: These voting restrictions are purely designed to enhance election security.",
       "Alethekanon:\nDemocracy requires expanding access, not erecting artificial barriers against the youngest citizens.",
       "Awwthekanon:\nEvery young mind stepping into civic life deserves an open door, not a locked ballot box disguised as security.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "State Legislators / Proponents",
@@ -196,6 +258,7 @@
         "name": "Coalition for Open Democracy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

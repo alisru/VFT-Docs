@@ -8,19 +8,19 @@
     "claim_u": 1.0,
     "claim_psi": 1.0,
     "real_u": 0.8,
-    "real_psi": 0.9,
+    "real_psi": 0.75,
     "mode": "root",
     "posts": [
       "Sen. Heinrich tours a local Food Farmacy to promote nutrition as health care.\nEvidence: legislative support, community health outreach, bipartisan bill\n#Aletheia #HealthEquity",
-      "Bipartisan legislation and local healthcare clinics can successfully integrate nutrition into medicine and lower chronic disease burdens.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "While local health initiatives successfully aid food-insecure patients, federal financing hurdles and congressional gridlock stall scalable Medicaid reform.\nResulting Judgement: (+0.8, +0.9) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nWhen local preventative care meets federal policy backing, it slowly shifts systemic health toward true community resilience.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Bipartisan legislation and local healthcare clinics can successfully integrate nutrition into medicine and lower chronic disease burdens.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While local health initiatives successfully aid food-insecure patients, federal financing hurdles and congressional gridlock stall scalable Medicaid reform.\nResulting Judgement: (+0.80, +0.75) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nWhen local preventative care meets federal policy backing, it slowly shifts systemic health toward true community resilience.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- Presbyterian Food Farmacy: PASS (0.9, 0.9) — Direct nutritional aid for 1,000 weekly patients.\n- Federal Legislation: COND (0.7, 0.6) — Awaits committee action amidst fiscal hurdles.",
       "Senator Martin Heinrich visited an Albuquerque health clinic on Sept. 9, 2026, to distribute produce and spotlight the Accountable Produce is Medicine Act.",
       "The Bright Side:\nBipartisan sponsorship shows rare consensus on preventative care reform.",
       "The Breakdown & Plane Error:\nConfusing a local charitable band-aid (WHO/WHERE) with comprehensive federal health financing reform (WHAT/HOW).",
       "Social Physics Analysis:\nSen. Heinrich and Presbyterian run a Smart Altruistic loop: aligning a shared health goal, partnering transparently with local volunteers, and resolving chronic disease strain through nutritional empowerment rather than manufactured division.",
-      "The Trajectory: The Path of Awakening.\nWhen policy actors align incentives with grassroots preventative care, it charts a direct course toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen policy actors align incentives with grassroots preventative care, it charts a direct course toward Grace.",
       "The Unavoidable Truth: Preventative nutrition directly mitigates costly chronic illnesses.\n\nThe Unavoidable Lie: Grant-funded pilot programs alone can replace structural healthcare finance reform.",
       "Alethekanon:\nLegislative framing accurately mirrors local realities, though federal funding reform remains a steep hill to climb.",
       "Awwthekanon:\nIt is deeply moving to see fresh peaches and greens handed directly to families who need them most, reminding us that care starts with nourishment.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Presbyterian Food Farmacy",
@@ -158,6 +220,7 @@
         "name": "U.S. Senate",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

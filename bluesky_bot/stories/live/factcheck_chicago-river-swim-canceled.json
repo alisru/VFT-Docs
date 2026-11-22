@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/chicago.suntimes.com/post/3mvxmtwg7xl2u",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 1.0,
-    "real_psi": 1.0,
+    "real_u": 0.75,
+    "real_psi": 0.5,
     "mode": "root",
     "posts": [
       "Nature cancels the swim. Chicago's highly anticipated River Swim is called off due to heavy storms and sewer overflow risks.\nEvidence: Public safety, Canceled river swim, Storm water management\n#Aletheia #Chicago #Weather",
-      "Organizers and city officials claim the cancellation was necessary to protect swimmers from lightning and toxic sewer runoff.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The physical reality matches the claim perfectly: torrential rain overwhelmed the city's infrastructure, making the river unsafe.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — Grace into Grace. A straightforward, science-based decision prioritizing public health over event revenue.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 28)",
+      "Organizers and city officials claim the cancellation was necessary to protect swimmers from lightning and toxic sewer runoff.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The physical reality matches the claim perfectly: torrential rain overwhelmed the city's infrastructure, making the river unsafe.\nResulting Judgement: (+0.75, +0.50) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 28)",
       "- Swim Organizers: PASS (1.00, 1.00) — Prioritized safety over optics.\n- Chicago Infrastructure: COND (0.50, 0.00) — Sewer overflow limits river use.",
       "Heavy weekend rainfall and thunderstorms in Chicago triggered a flood advisory, disrupting flights and forcing the cancellation of the historic Chicago River Swim due to water quality concerns.",
       "The Poison:\nThe cancellation highlights how easily Chicago's combined sewer system is overwhelmed, revealing the fragile state of urban water infrastructure.",
       "The Breakdown & Plane Error:\nAs an inanimate event, metaphysical and intentional planes are blanked. The physical reality of toxic runoff directly dictates the logical necessity of cancellation.",
       "Social Physics Analysis:\nThis event demonstrates a low-strain, transparent response to a physical constraint. Rather than manufacturing pretexts or projecting blame, organizers accepted the physical reality, choosing public safety over financial interests.",
-      "The Trajectory: The Path of Grace into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Respecting physical limits prevents systemic harm.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Respecting physical limits prevents systemic harm.",
       "The Unavoidable Truth: Chicago's river is still too vulnerable to storm runoff to support reliable recreation.\nThe Unavoidable Lie: The river is fully clean and ready for unrestricted public use.",
       "Alethekanon:\nAn objective physical constraint met with logical compliance. When infrastructure capacity fails, canceling the event is the only rational, low-strain path to preserve public health.",
       "Awwthekanon:\nIt is disappointing for the swimmers who trained so hard, but keeping everyone safe from dirty water and lightning was absolutely the right and caring thing to do.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Swim Organizers Safety Decision",
@@ -152,6 +214,7 @@
         "name": "National Weather Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Prominent NYC rabbi’s daughter accuses Mamdani of fueling antisemitism",
     "link": "https://nypost.com/2026/08/23/us-news/prominent-nyc-rabbis-daughter-accuses-mamdani-of-fueling-antisemitism-im-sure-many-have-buyers-remorse/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.3,
-    "real_u": -0.7,
-    "real_psi": -0.65,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Rabbi’s daughter slams NYC Mayor Mamdani for fueling rising antisemitic hate.\n\nBuyer’s Remorse\nEvidence: rhetorical hostility, community fear, political polarization\n#Aletheia #NYC #Antisemitism 🌐",
-      "Proponents argue calling out dangerous political rhetoric defends vulnerable minority communities from rising bigotry.\nStated Judgement: (+0.5, +0.3) — Lesser Good",
-      "Critics weaponize legitimate fears of hate crimes to score political points against a socialist mayor, deepening civic fractures.\nResulting Judgement: (-0.70, -0.65) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Real trauma is leveraged for partisan point-scoring, deepening community alienation.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.8, Uncertainty z: 3)",
+      "Proponents argue calling out dangerous political rhetoric defends vulnerable minority communities from rising bigotry.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Critics weaponize legitimate fears of hate crimes to score political points against a socialist mayor, deepening civic fractures.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.8, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Community Defense: COND (+0.5, +0.3) — Validating safety.\n- Partisan Exploitation: FAIL (-0.7, -0.7) — Polarizing rhetoric.",
       "Karen Schneier Dresbach criticized Mayor Zohran Mamdani on WABC, accusing his anti-Israel policies of emboldening antisemitism across New York City.",
       "The Poison:\nLegitimate anguish over rising anti-Jewish hatred is converted into blunt partisan ammunition, deepening sectarian hostility.",
       "The Breakdown & Plane Error:\nConfusing WHAT policies are debated with WHO bears the brunt of street-level hatred.\n\nTrauma is treated as leverage.",
       "Social Physics Analysis:\nBy projecting institutional malice onto political opponents while ignoring complex local realities, actors widen social divides.",
-      "The Trajectory: The Path of Destruction. When grief and fear are weaponized for political combat, communities fracture further. Polarization reigns.",
+      "The Trajectory: The Path of Fall into Destruction.",
       "The Unavoidable Truth: Antisemitism is a terrifying reality in New York that demands uncompromising civic leadership and protection.\n\nThe Unavoidable Lie: Every political disagreement with foreign policy equals personal endorsement of bigotry.",
       "Alethekanon:\nLegitimate grief over hate crimes must not be co-opted into sectarian warfare; real safety requires bridging divides, not widening them. 🌐",
       "Awwthekanon:\nWhen sacred spaces are violated and elders shaken, the pain is real and deep. Healing requires protecting all neighbors with unconditional grace.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Community Protection Advocacy",
@@ -281,6 +343,7 @@
         "name": "Larry Montes",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

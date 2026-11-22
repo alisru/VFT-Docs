@@ -6,21 +6,21 @@
     "link": "https://www.breitbart.com/2nd-amendment/2026/09/02/minneapolis-at-least-six-people-shot-including-two-officers/",
     "target_url": "",
     "claim_u": 0.5,
-    "claim_psi": 0.0,
+    "claim_psi": 0.78,
     "real_u": -0.67,
     "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "A local tragedy is weaponized to score cheap political points.\n\nMinneapolis: At Least Six People Shot, Including Two Officers\nEvidence: Gun control failure, Active shooter response, Public safety crisis\n#Aletheia #Minneapolis 🌐",
-      "Breitbart reports a mass shooting in Minneapolis, immediately framing the tragedy around the state's gun control ranking to argue that strict laws fail to prevent violence.\nStated Judgement: (+0.50, 0.00) — Good Preference",
+      "Breitbart reports a mass shooting in Minneapolis, immediately framing the tragedy around the state's gun control ranking to argue that strict laws fail to prevent violence.\nStated Judgement: (+0.50, +0.78) — Greater Good",
       "The shooting resulted in three deaths, including the suspect, and injured officers. Framing a chaotic, active crime scene to push a pre-packaged anti-gun-control narrative exploits a tragedy.\nResulting Judgement: (-0.67, -0.65) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nThe outlet exploits a violent local tragedy to push a national political agenda, ignoring the human cost to score ideological points.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.5, z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nThe outlet exploits a violent local tragedy to push a national political agenda, ignoring the human cost to score ideological points.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.5, z: 2)",
       "Sub-Audits Breakdown:\n- Breitbart News: FAIL (-0.67, -0.65) — Exploits tragedy for gun control narrative.\n- Local Reporting: PASS (0.80, 0.10) — Focused on public safety and facts.",
       "On September 2, 2026, a shooting in Minneapolis left three dead and multiple officers injured. While local authorities worked to secure the scene, national media immediately pivoted to political framing.",
       "The Poison:\nBy reducing a complex local emergency to a single statistic about state gun laws, the reporting erases the immediate community trauma and the bravery of first responders in favor of culture-war bait.",
       "The Breakdown & Plane Error:\nThe error is WHAT vs WHO. The article treats a physical tragedy (WHAT) as a metaphysical debate about policy (WHO), using the victims as props to validate a pre-existing political stance.",
       "Social Physics Analysis:\nThe narrative relies on projection. By immediately blaming gun control laws, the outlet diverts attention from the immediate crisis and projects a complex social failure onto a single political target to maintain conflict.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated reporting and ground-level exploitation, it plots a direct trajectory toward Greater Evil. The narrative actively contracts the possibility of constructive dialogue.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated reporting and ground-level exploitation, it plots a direct trajectory toward Greater Evil. The narrative actively contracts the possibility of constructive dialogue.",
       "The Unavoidable Truth: A violent shooting occurred, leaving families devastated and officers injured.\n\nThe Unavoidable Lie: The tragedy can be neatly explained or solved by a single state gun control ranking.",
       "Alethekanon:\nThe rapid conversion of human trauma into ideological ammunition is a systemic failure of modern media. True analysis requires grounding in physical facts, not immediate political exploitation.",
       "Awwthekanon:\nMy heart aches for the families in Minneapolis who lost loved ones and the brave officers who were hurt. In moments of sudden violence, we must wrap our communities in love and support, not divide them with political arguments.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.8,
+        "N": 0.2
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.1,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.1,
+        "O": 0.4,
+        "N": 0.2
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.2
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Breitbart News Editorial",
@@ -205,6 +267,7 @@
         "name": "Everytown for Gun Safety",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

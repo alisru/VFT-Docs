@@ -5,16 +5,16 @@
     "subject": "NYC nurse still wearing scrubs killed in caught-on-camera hit-and-run crash",
     "link": "https://nypost.com/2026/08/30/us-news/nyc-nurse-killed-in-caught-on-camera-hit-and-run-crash/",
     "target_url": "",
-    "claim_u": -0.9,
-    "claim_psi": -0.9,
-    "real_u": -1.5,
-    "real_psi": -1.8,
+    "claim_u": -1.0,
+    "claim_psi": -1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A dedicated young nurse walking home from saving lives in Brooklyn was struck down in a senseless red-light hit-and-run.\nEvidence: Sunset Park crash, hit-and-run, NYU Langone nurse\n#Aletheia #NYC #TrafficSafety",
-      "Reports detail the tragic death of 28-year-old nurse Jiayi Zheng, killed by a speeding driver running a red light.\nStated Judgement: (-0.9, -0.9) — Lesser Evil",
-      "Reckless driving and driver flight expose severe urban safety failures and a breakdown of civic accountability.\nResulting Judgement: (-1.5, -1.8) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nReckless lawlessness on city streets terminates an innocent life while the perpetrator evades immediate justice.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
+      "Reports detail the tragic death of 28-year-old nurse Jiayi Zheng, killed by a speeding driver running a red light.\nStated Judgement: (-1.00, -1.00) — Greater Evil",
+      "Reckless driving and driver flight expose severe urban safety failures and a breakdown of civic accountability.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nReckless lawlessness on city streets terminates an innocent life while the perpetrator evades immediate justice.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
       "- NY Post Coverage: PASS (-1.5, -1.8) — Accurate reporting of a tragic hit-and-run event.\n- ABC Kimberley Syndication: COND (-0.5, -0.5) — Unrelated crime context cluster.",
       "Jiayi Zheng, 28, was struck in a Sunset Park crosswalk by a speeding Cadillac running a red light while walking home from her overnight shift.",
       "The Poison:\nThe stark vulnerability of essential workers on urban streets underscores ongoing failures in traffic enforcement.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 2.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 2.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 2.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 2.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NY Post Coverage",
@@ -218,6 +280,7 @@
         "name": "NYU Langone-Brooklyn",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

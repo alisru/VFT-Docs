@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "real_u": -0.31,
+    "real_psi": 0.41,
     "mode": "root",
     "posts": [
       "A political wedge in the Senate exposes the gap between constitutional reality and populist theater. Albanese government votes down One Nation's terrorist ban bill.\nEvidence: National Security, Political Wedge, Constitutional Order\n#Aletheia #AusPol",
       "One Nation claims their bill is a vital shield to protect Australians by permanently blocking returning foreign fighters and ISIS brides, accusing the government of failing its primary duty of public safety.\nStated Judgement: (+1.00, +1.00) — Greater Good",
-      "Legal experts and senators confirm the bill is unconstitutional, duplicates existing exclusion orders, and uses overly broad terms. The move is a classic wedge designed for political branding rather than viable security.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. One Nation's bill uses terrorism as a pretext for wedge politics, while Labor opts for silent avoidance over active leadership.\nIntegrity: Severe Deception (Hypocrisy: 32.00, z: 5)",
+      "Legal experts and senators confirm the bill is unconstitutional, duplicates existing exclusion orders, and uses overly broad terms. The move is a classic wedge designed for political branding rather than viable security.\nResulting Judgement: (-0.31, +0.41) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nIntegrity: Severe Deception (Hypocrisy: 32.00, z: 5)",
       "- Pauline Hanson: FAIL (-1.0, -1.0) — Wedge politics.\n- Albanese Gov: COND (0.74, 1.0) — Avoids debate.",
       "The Australian Senate voted down One Nation's Protecting Australians from Foreign Terrorist Fighters Bill. Opponents argued the bill was unconstitutional and duplicated existing temporary exclusion powers.",
       "The Poison:\nWhile the government successfully blocked a legally flawed and unconstitutional bill, their complete silence during the Senate debate left a vacuum for populist fear-mongering to dominate the public narrative.",
       "The Plane Error lies in the Lyrical (WHY) and Logical (HOW) planes. One Nation presents a simplistic, emotional narrative of \"banning bad actors\" while completely suppressing the constitutional and legal realities of citizenship and statelessness.",
       "Social Physics Analysis:\nOne Nation executes a Smart Selfish Maneuver, using the repatriation of ISIS-linked women to manufacture a security crisis. By projecting cowardice onto the government, they hoard political capital while offering unconstitutional, unworkable solutions.",
-      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated security ideals and the reality of unconstitutional grandstanding, it plots a direct trajectory toward systemic decay and the erosion of the rule of law.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated security ideals and the reality of unconstitutional grandstanding, it plots a direct trajectory toward systemic decay and the erosion of the rule of law.",
       "The Unavoidable Truth: You cannot protect a constitutional democracy by passing laws that violate its own constitution.\nThe Unavoidable Lie: One Nation's bill was a genuine, legally viable attempt to improve national security.",
       "Alethekanon:\nPopulism thrives on the illusion of simple solutions to complex legal realities. True governance requires defending the constitutional order, even when doing so is politically inconvenient.",
       "Awwthekanon:\nTrue safety isn't built on fear, exclusion, or using vulnerable families as political pawns. We must find ways to heal communities and uphold justice without losing our humanity or turning our backs on the legal principles that protect us all.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.25
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Pauline Hanson Wedge Bill",
@@ -297,6 +359,7 @@
         "name": "David Shoebridge",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

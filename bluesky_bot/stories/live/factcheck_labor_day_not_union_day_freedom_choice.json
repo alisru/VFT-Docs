@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.57,
-    "real_psi": -0.58,
+    "real_u": -0.4,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "Is \"freedom of choice\" just a corporate shield? It’s Labor Day, not Union Day. American workers deserve freedom of choice. Evidence: Worker Freedom, Collective Bargaining, Corporate Interests. #Aletheia #LaborDay #Unions",
-      "Labor Day should celebrate individual worker freedom, protecting employees from coercive union dues and monopoly representation that run counter to their personal economic interests. Stated Judgement: (+1.0, +1.0) — Greater Good",
-      "The \"freedom of choice\" narrative is heavily funded by corporate interests to weaken collective bargaining power, lowering overall wages and benefits for all workers. Resulting Judgement: (-0.57, -0.58) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The appeal to individual liberty masks a structural effort to dismantle collective worker power, shifting leverage entirely to employers.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 0)",
+      "Labor Day should celebrate individual worker freedom, protecting employees from coercive union dues and monopoly representation that run counter to their personal economic interests. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "The \"freedom of choice\" narrative is heavily funded by corporate interests to weaken collective bargaining power, lowering overall wages and benefits for all workers. Resulting Judgement: (-0.40, -0.50) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 0)",
       "- Right-to-Work Advocacy: COND (0.2, -0.4) — Individual choice vs. collective bargaining.\n- Anti-Union Rhetoric: FAIL (-0.6, -0.6) — Uses freedom framing to mask union-busting.",
       "An opinion piece argues that Labor Day has been co-opted by union leadership to push coercive policies like the PRO Act, advocating instead for \"right-to-work\" laws.",
       "The Poison:\nBy framing solidarity as coercion, the argument erodes the shared bargaining power that historically built the middle class, leaving individual workers isolated against corporate scale.",
       "The Breakdown & Plane Error:\nThe plane error is confusing individual liberty (WHO decides) with systemic bargaining leverage (WHAT protects workers), presenting isolation as a form of empowerment.",
       "Social Physics Analysis:\nThe anti-union lobby runs a Smart Selfish Loop, using \"freedom of choice\" as a pretext to divide workers and prevent collective action, thereby maintaining corporate dominance and preventing a balanced economic equilibrium.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between the ideal of worker freedom and the reality of weakened bargaining power, it plots a direct trajectory toward Lesser Evil, eroding labor solidarity.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between the ideal of worker freedom and the reality of weakened bargaining power, it plots a direct trajectory toward Lesser Evil, eroding labor solidarity.",
       "The Unavoidable Truth: Unions can sometimes have misaligned political goals with individual members.\n\nThe Unavoidable Lie: Workers are economically stronger negotiating entirely on their own.",
       "Alethekanon:\nThe rhetoric of individual choice is a powerful solvent for collective power; once solidarity is dissolved, the individual worker stands alone before the corporate ledger.",
       "Awwthekanon:\nEvery worker deserves dignity, fair pay, and a voice. True freedom isn't standing alone in a storm; it's standing together to build a shelter where everyone is protected.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.35,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.3,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.7,
+        "O": 0.3,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Right-to-Work Advocacy",
@@ -285,6 +347,7 @@
         "name": "Kamala Harris",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

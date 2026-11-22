@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "When separatist constitutional drafts platform bigotry, the dream of freedom curdles into exclusion.\n\nAlberta Prosperity Project Fallout\nEvidence: constitutional freedom, racist slur at podium, swift distancing\n#Alberta #Aletheia",
-      "The Alberta Prosperity Project presented a draft constitution for an independent Alberta, claiming to champion citizen rights, freedom, and democratic integrity.\nStated Judgement: (+0.80, +1.00) — Good Preference",
-      "A co-writer of the draft constitution delivered an overt racial slur against police officers from the podium to applause, exposing deep-seated bigotry within the movement's ranks.\nResulting Judgement: (-0.90, -0.81) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA separatist platform aiming for liberty collapses into xenophobic rhetoric, exposing a severe gap between lofty constitutional ideals and baseline bigotry.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, Uncertainty z: 2)",
+      "The Alberta Prosperity Project presented a draft constitution for an independent Alberta, claiming to champion citizen rights, freedom, and democratic integrity.\nStated Judgement: (+0.80, +1.00) — Greater Good",
+      "A co-writer of the draft constitution delivered an overt racial slur against police officers from the podium to applause, exposing deep-seated bigotry within the movement's ranks.\nResulting Judgement: (-0.90, -0.81) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA separatist platform aiming for liberty collapses into xenophobic rhetoric, exposing a severe gap between lofty constitutional ideals and baseline bigotry.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, Uncertainty z: 2)",
       "- Alberta Prosperity Project: FAIL (-0.82, -0.80) — Platforms bigots while claiming civic virtue.\n- Black Hat Gang: FAIL (-0.90, -0.85) — Injects racist rhetoric into political discourse.",
       "The Alberta Prosperity Project faced swift backlash after a speaker used a derogatory racial slur during the unveiling of their 'Foundation of Freedom' draft constitution in Airdrie.",
       "The Bright Side:\nLeadership swiftly condemned the remark and accepted the speaker's resignation, showing zero tolerance for explicit hate from the platform.",
       "The Breakdown & Plane Error:\nThe plane error confuses WHAT (constitutional reform) with WHO (the bigoted actors given a platform). It is a classic bait-and-switch: promising liberty while cultivating division.",
       "Social Physics Analysis:\nBy masking exclusionary nationalism behind appeals to freedom, the movement relies on pretexts to justify division and projects blame onto outsiders while harboring internal bigotry.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The mathematical vector confirms active contraction of trust.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The mathematical vector confirms active contraction of trust.",
       "The Unavoidable Truth: Separatist platforms that pander to fringe elements inevitably invite public bigotry.\n\nThe Unavoidable Lie: The racist outburst was an isolated anomaly completely disconnected from the group's core ideology.",
       "Alethekanon:\nConstitutional self-determination rings hollow when foundational platforms tolerate and amplify xenophobic tropes. 🌐",
       "Awwthekanon:\nIt hurts to see movements for autonomy hijacked by small-minded hatred that divides communities instead of healing them.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Alberta Prosperity Project Leadership",
@@ -274,6 +336,7 @@
         "name": "Black Hat Gang",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

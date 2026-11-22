@@ -6,21 +6,21 @@
     "link": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
     "target_url": "",
     "claim_u": 0.5,
-    "claim_psi": 0.0,
+    "claim_psi": 0.05,
     "real_u": 0.1,
-    "real_psi": -0.2,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "Apple reveals reverse acqui-hire of podcast startup Huxe.\nEvidence: EU regulatory filing, IP license, talent absorption\n#Aletheia #Tech #Apple",
-      "Apple discloses a regulatory filing detailing an agreement to hire team members and license technology from personalized audio startup Huxe.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While framed as a routine talent acquisition, the maneuver reflects big tech consolidating AI audio expertise while circumventing formal merger oversight.\nResulting Judgement: (+0.1, -0.2) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nRegulatory transparency coexists with strategic consolidation of talent.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Apple discloses a regulatory filing detailing an agreement to hire team members and license technology from personalized audio startup Huxe.\nStated Judgement: (+0.50, +0.05) — Greater Good",
+      "While framed as a routine talent acquisition, the maneuver reflects big tech consolidating AI audio expertise while circumventing formal merger oversight.\nResulting Judgement: (+0.10, -0.15) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nRegulatory transparency coexists with strategic consolidation of talent.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Apple Disclosure: PASS (+0.6, +0.2) — Complies with regulatory filings.\n- Talent Consolidation: COND (-0.3, -0.4) — Absorbs startup IP quietly.",
       "Apple informed the European Commission that it reached a licensing and hiring deal with defunct AI podcast startup Huxe, founded by former NotebookLM developers.",
       "The Bright Side:\nDisclosures to the European Commission ensure regulatory visibility over corporate hiring and IP licensing structures.",
       "The Breakdown & Plane Error:\nFocusing on corporate recruitment mechanics (HOW) while obscuring market consolidation impacts on independent developers (WHO).",
       "Social Physics Analysis:\nApple utilizes reverse acqui-hires to secure top-tier AI talent and technology without triggering full antitrust merger reviews. It projects standard corporate recruitment while quietly absorbing critical market innovations.",
-      "The Trajectory: The Path of Deception.\nWhen you map stated talent acquisition against competitive market dynamics, it plots a trajectory toward Lesser Evil. F_neg slightly exceeds F_pos as consolidation squeezes independent innovators.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map stated talent acquisition against competitive market dynamics, it plots a trajectory toward Lesser Evil. F_neg slightly exceeds F_pos as consolidation squeezes independent innovators.",
       "The Unavoidable Truth: Regulatory disclosures provide transparency regarding corporate talent acquisition and IP licensing deals.\n\nThe Unavoidable Lie: Reverse acqui-hires are merely standard hiring practices devoid of strategic market consolidation.",
       "Alethekanon:\nCalling a buyout a handshake doesn't change the board. Regulatory loopholes let giants swallow innovation whole.",
       "Awwthekanon:\nIt is sad when small innovative startups dissolve and their creators get absorbed into corporate machinery.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Apple Disclosure",
@@ -158,6 +220,7 @@
       "Aletheia",
       "Tech",
       "Apple"
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

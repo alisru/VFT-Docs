@@ -14,7 +14,7 @@
       "Fresh local food and independent journalism both depend on fragile local systems. Let's examine how grassroots funding sustains open-access reporting in B.C.\n\nEvidence: reader-funded, public interest, open access #Aletheia #BCPol",
       "The Tyee argues that reader-supported non-profit journalism is essential for local democracy, keeping reporting free of corporate paywalls and ad clutter.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "The outlet successfully operates on direct reader contributions, maintaining transparent, open-access reporting without corporate capture or paywalls.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Transparent reader-funding preserves independent public-interest journalism without corporate gatekeeping.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Reader Funding: PASS (1.0, 1.0) — Direct community support keeps news free.\n- Editorial Independence: PASS (1.0, 1.0) — No corporate interference or paywalls.",
       "As B.C. municipal elections approach, independent local journalism faces severe funding pressures while covering crucial grassroots issues.",
       "The Bright Side:\nOver 10,000 readers actively support open-access reporting, proving viable alternatives to traditional media decline.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Reader Funding Model",
@@ -275,6 +337,7 @@
         "name": "Vancouver Farmers Markets",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

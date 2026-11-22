@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": 0.1,
+    "real_u": 0.15,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "When ancient marine ecology clashes with coastal tourism, natural reality feels like a horror film.\nEvidence: Great white shark, seal hunt, Nantucket shore\n#Aletheia #Nature",
-      "A peaceful beach scene is violently disrupted by an unnatural ecological disaster.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "A apex predator successfully hunts its natural prey near a thriving coastal seal colony.\nResulting Judgement: (0.2, 0.1) — Good Preference",
-      "Verdict: PASS — The Path of Grace.\nRaw biological predation is correctly identified by experts as a healthy ecosystem marker despite sensationalist framing.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "A peaceful beach scene is violently disrupted by an unnatural ecological disaster.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "A apex predator successfully hunts its natural prey near a thriving coastal seal colony.\nResulting Judgement: (+0.15, -0.15) — Lesser Good",
+      "Verdict: PASS — Reckoning into Redemption.\nRaw biological predation is correctly identified by experts as a healthy ecosystem marker despite sensationalist framing.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- Ecological Reality: PASS (0.5, 0.0) — Healthy ocean.\n- Media Framing: COND (-0.2, -0.3) — Sensationalist panic.",
       "A great white shark was filmed devouring a seal feet from Nantucket's Great Point shore, highlighting peak seasonal seal-hunting activity.",
       "The Bright Side:\nA recovering seal population and active apex predators signify a thriving, resilient marine ecosystem.",
       "The Breakdown & Plane Error:\nConfusing standard ecological predation with an abnormal threat to human safety.",
       "Social Physics Analysis:\nThe ecosystem operates on pure transparency and natural necessity, while human observers project dramatic narrative pretexts onto routine biological survival.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between sensationalist headlines and ecological reality, it plots a direct trajectory toward Grace. Natural balance prevails over human alarmism.",
+      "The Trajectory: The Path of Reckoning into Redemption.\nWhen you map the gap between sensationalist headlines and ecological reality, it plots a direct trajectory toward Grace. Natural balance prevails over human alarmism.",
       "The Unavoidable Truth: Nature operates according to ecological survival, not human comfort.\n\nThe Unavoidable Lie: Wild predation close to shore indicates an unnatural crisis.",
       "Alethekanon:\nEcological health requires predators and prey, not sanitised shores.",
       "Awwthekanon:\nIt is fierce and humbling to witness wild nature living out its ancient rhythms right beside our shores.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Ecological Reality",
@@ -151,6 +213,7 @@
         "name": "Gregory Skomal",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Reckoning into Redemption"
   }
 ]

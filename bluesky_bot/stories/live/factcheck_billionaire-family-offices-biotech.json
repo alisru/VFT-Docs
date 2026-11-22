@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "real_u": 0.65,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "Private wealth powers biotech breakthroughs.\nEvidence: Family office deals, 20% biotech share, venture capital rebound\n#Aletheia #Biotech #Economy",
-      "Billionaire family offices are aggressively funding healthcare and biotech startups to drive medical innovation.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Private investment firms are deploying capital into high-growth biopharma and gene-editing assets for lucrative market returns.\nResulting Judgement: (+0.6, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nPrivate wealth allocation into biotech fosters medical innovation while pursuing capital returns.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Billionaire family offices are aggressively funding healthcare and biotech startups to drive medical innovation.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Private investment firms are deploying capital into high-growth biopharma and gene-editing assets for lucrative market returns.\nResulting Judgement: (+0.65, +0.45) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPrivate wealth allocation into biotech fosters medical innovation while pursuing capital returns.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- Family Office Investments: PASS (0.7, 0.5) — Direct private funding for biotech.\n- Venture Capital Rebound: PASS (0.6, 0.4) — High-net-worth capital flows.",
       "Ultra-wealthy family offices are channeling billions into private biopharma companies and gene-editing startups, fueling a post-slump venture capital recovery.",
       "The Bright Side:\nTargeted private capital accelerates critical drug discovery and medical innovation.",
       "The Breakdown & Plane Error:\nEvaluating capital allocation through the lens of societal benefit (WHAT) versus private wealth extraction (WHO).",
       "Social Physics Analysis:\nFamily offices execute a Smart Altruistic maneuver by aligning private capital deployment with high-impact biotech solutions, fostering innovation while securing returns.",
-      "The Trajectory: The Path of Redemption.\nWhen private capital fuels medical breakthroughs, it builds positive structural momentum toward Grace.\n\nMathematical vector stability holds positive.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen private capital fuels medical breakthroughs, it builds positive structural momentum toward Grace.\n\nMathematical vector stability holds positive.",
       "The Unavoidable Truth: Private capital often drives vital medical research where public funding stalls.\n\nThe Unavoidable Lie: Philanthropic motives entirely override the quest for substantial financial returns.",
       "Alethekanon:\nPrivate wealth fuels biomedical innovation, proving that capital allocation and societal benefit can align.",
       "Awwthekanon:\nIt's wonderful to see resources poured into curing rare diseases and advancing medical science for everyone.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Family Office Investments",
@@ -171,6 +233,7 @@
         "name": "Thiel Capital",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

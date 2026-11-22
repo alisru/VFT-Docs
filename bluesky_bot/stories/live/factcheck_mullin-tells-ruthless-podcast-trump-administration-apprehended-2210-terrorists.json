@@ -5,22 +5,22 @@
     "subject": "Mullin tells 'Ruthless Podcast' that Trump administration apprehended 2,210 terrorists",
     "link": "https://www.foxnews.com/media/mullin-tells-ruthless-podcast-trump-administration-apprehended-2210-terrorists",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_u": 0.76,
+    "claim_psi": 0.87,
+    "real_u": -0.97,
+    "real_psi": -0.94,
     "mode": "root",
     "posts": [
       "DHS claims 2,210 terrorists arrested under aggressive border shifts.\nEvidence: Sec. Mullin interview, Fox News report, Biden-era release claims\n#Aletheia #USPol",
-      "DHS Secretary Markwayne Mullin states the administration has apprehended 2,210 actual terrorists who entered via asylum loopholes.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Official metrics conflate suspected watchlist entries with confirmed operatives to manufacture an aggressive security triumph ahead of midterms.\nResulting Judgement: (-0.85, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nInflated terror apprehension figures are deployed as a political pretext ahead of midterms, masking routine enforcement as extraordinary offensive wins.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
+      "DHS Secretary Markwayne Mullin states the administration has apprehended 2,210 actual terrorists who entered via asylum loopholes.\nStated Judgement: (+0.76, +0.87) — Greater Good",
+      "Official metrics conflate suspected watchlist entries with confirmed operatives to manufacture an aggressive security triumph ahead of midterms.\nResulting Judgement: (-0.97, -0.94) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nInflated terror apprehension figures are deployed as a political pretext ahead of midterms, masking routine enforcement as extraordinary offensive wins.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
       "Sub-Audits Breakdown:\n- DHS Border Stats: FAIL (-0.80, -0.75) — Conflates watchlists with threats.\n- Podcast Framing: FAIL (-0.90, -0.85) — Partisan boosterism disguised as news.",
       "Homeland Security Secretary Markwayne Mullin appeared on the 'Ruthless Podcast' to tout the administration's aggressive border policies and record terror apprehensions ahead of the midterms.",
       "The Bright Side:\nHeightened scrutiny on border screening mechanisms improves administrative vigilance against genuine security threats.",
       "The Breakdown & Plane Error:\nConfusing WHAT (actual operational security metrics) with WHO (political actors seeking midterm leverage). The narrative treats statistical rebranding as frontline triumph.",
       "Social Physics Analysis:\nSecretary Mullin runs a classic Smart Selfish Maneuver. By framing routine watchlist categorizations as a massive offensive sweep against active terrorists, the administration manufactures a dramatic crisis-to-victory narrative, projecting past policy failures onto opponents while consolidating executive authority.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The system optimizes for political signaling over factual transparency.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The system optimizes for political signaling over factual transparency.",
       "The Unavoidable Truth: Border security involves complex tracking of watchlist individuals across changing administrations.\n\nThe Unavoidable Lie: Every person categorized under broad watchlists represents an active terrorist captured on offensive raids.",
       "Alethekanon:\nWhen state officials weaponize reclassified security data for partisan podcasts, institutional credibility is traded for short-term political theater 🌐",
       "Awwthekanon:\nIt is stressful when public safety becomes a game of political football. We all want safe communities, but honesty about numbers brings true peace of mind.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "DHS Border Stats",
@@ -288,6 +350,7 @@
         "name": "Department of Homeland Security",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

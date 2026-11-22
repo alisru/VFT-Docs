@@ -5,22 +5,22 @@
     "subject": "AI’s data center problem could move to space",
     "link": "https://www.washingtonexaminer.com/policy/space/4743313/ais-data-center-problem-space/",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.15,
-    "real_u": -0.75,
-    "real_psi": -0.65,
+    "claim_u": 0.68,
+    "claim_psi": 0.12,
+    "real_u": -0.57,
+    "real_psi": -0.47,
     "mode": "root",
     "posts": [
       "A futuristic escape hatch or just high-altitude greenwashing? Tech giants are looking to orbit to solve AI's massive terrestrial energy and water footprint.\nEvidence: Space data centers, Terrestrial resource drain, Regulatory bypass\n#Aletheia #Tech #AI",
-      "Google and SpaceX claim launching AI hardware into orbit powered by solar energy will bypass Earth's power grid strains, water cooling demands, and local community resistance.\nStated Judgement: (+0.85, +0.15) — Good Preference",
-      "Space is a vacuum where heat cannot easily dissipate, radiation causes constant data-corrupting bit flips, and launch emissions and space debris risks remain massive.\nResulting Judgement: (-0.75, -0.65) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. Moving AI to space is a high-tech distraction that ignores physical limits to justify unchecked terrestrial resource consumption.\nIntegrity: Severe Deception (Hypocrisy: 1.78, Uncertainty z: 5)",
+      "Google and SpaceX claim launching AI hardware into orbit powered by solar energy will bypass Earth's power grid strains, water cooling demands, and local community resistance.\nStated Judgement: (+0.68, +0.12) — Greater Good",
+      "Space is a vacuum where heat cannot easily dissipate, radiation causes constant data-corrupting bit flips, and launch emissions and space debris risks remain massive.\nResulting Judgement: (-0.57, -0.47) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 1.78, Uncertainty z: 5)",
       "Sub-Audits Breakdown:\n- Google Project Suncatcher: FAIL (-0.75, -0.65) — Greenwashing terrestrial AI expansion.\n- SpaceX Launch Feasibility: COND (-0.40, -0.30) — High costs and debris risks ignored.",
       "Google plans to launch its experimental MVP satellite with four TPUs to test orbital AI processing, aiming for cost-parity with Earth facilities by the mid-2030s.",
       "The Poison:\nPromising a clean, cosmic future allows tech giants to expand highly polluting coal- and gas-powered data centers on Earth today with less public resistance.",
       "The Breakdown & Plane Error:\nThe Plane Error lies in WHAT vs WHO. The physical limits of vacuum cooling and radiation are treated as minor engineering hurdles rather than fundamental barriers to protect corporate PR.",
       "Social Physics Analysis:\nTech firms execute a Smart Selfish Maneuver. They manufacture a futuristic space solution (Pretext) to distract from their massive, immediate consumption of local water and fossil fuels on Earth (Secret Goal), projecting responsibility onto physics.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The physical impossibility of vacuum cooling exposes the orbital dream as a PR shield.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The physical impossibility of vacuum cooling exposes the orbital dream as a PR shield.",
       "The Unavoidable Truth: AI data centers are consuming massive amounts of Earth's water and power right now.\n\nThe Unavoidable Lie: Launching chips into space will solve AI's environmental crisis anytime soon.",
       "Alethekanon:\nThe laws of thermodynamics cannot be greenwashed. Shifting the physical footprint of computation to orbit is a thermodynamic shell game designed to bypass terrestrial environmental regulations.",
       "Awwthekanon:\nIt is heartbreaking to see our beautiful night sky treated as a trash bin for data waste just because we cannot find a way to live within our means on Earth. We must learn to care for our home first.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Google Project Suncatcher",
@@ -174,6 +236,7 @@
         "sub_psi": -0.65,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

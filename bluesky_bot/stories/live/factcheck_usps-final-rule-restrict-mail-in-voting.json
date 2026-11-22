@@ -5,22 +5,22 @@
     "subject": "USPS issues final rule to restrict mail-in voting",
     "link": "https://www.washingtonexaminer.com/news/white-house/4697419/usps-final-rule-restrict-mail-in-voting/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_u": 0.73,
+    "claim_psi": 0.86,
+    "real_u": -0.97,
+    "real_psi": -0.94,
     "mode": "root",
     "posts": [
       "The Postal Service rolls out a rigid rule to overhaul mail-in voting under executive pressure.\n\nUSPS Final Rule on Mail-In Voting\nEvidence: election security framing, voting channel restriction, partisan political friction\n#Aletheia #USPolitics #USPS",
-      "Officials frame the 95-page USPS rule as a technical upgrade for election integrity and compliance with citizenship verification mandates.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "In reality, the rule introduces heavy administrative friction and court-contested restrictions designed to limit mail-in participation.\nResulting Judgement: (-0.85, -0.80) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nStated administrative integrity masks a partisan effort to restrict voting access under the guise of security.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 2)",
+      "Officials frame the 95-page USPS rule as a technical upgrade for election integrity and compliance with citizenship verification mandates.\nStated Judgement: (+0.73, +0.86) — Greater Good",
+      "In reality, the rule introduces heavy administrative friction and court-contested restrictions designed to limit mail-in participation.\nResulting Judgement: (-0.97, -0.94) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nStated administrative integrity masks a partisan effort to restrict voting access under the guise of security.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- USPS Compliance: COND (0.5, -0.2) — Following executive orders while facing judicial blocks.\n- Election Integrity: FAIL (-0.9, -0.8) — Curbs voter access under security pretexts.",
       "The United States Postal Service issued a final rule requiring states to submit participant lists and notify officials ahead of midterm elections, navigating ongoing court battles.",
       "The Poison:\nFraming administrative hurdles as neutral safeguards hides their partisan impact on voter access.",
       "The Breakdown & Plane Error:\nThis is a WHO/WHAT plane confusion: treating broad voting rights as a logistical postal compliance issue.\n\nBait-and-switch: claiming ballot security while erecting barriers.",
       "Social Physics Analysis:\nBy masking ballot restriction as logistical compliance, authorities use a technical pretext to project election vulnerability. Instead of transparently engaging voters, the process creates friction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Negative will forces outweigh constructive engagement.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Negative will forces outweigh constructive engagement.",
       "The Unavoidable Truth: Election administration requires clear standards to maintain public trust.\n\nThe Unavoidable Lie: Administrative restrictions on mail-in ballots are purely technical postal adjustments.",
       "Alethekanon:\nProcedural pretexts cannot conceal partisan restrictions on fundamental democratic access. 🌐",
       "Awwthekanon:\nEvery citizen deserves to have their voice heard without navigating a maze of bureaucratic hurdles and political roadblocks.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "USPS Compliance Mandate",
@@ -281,6 +343,7 @@
         "name": "John Thune",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

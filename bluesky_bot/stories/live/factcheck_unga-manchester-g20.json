@@ -5,22 +5,22 @@
     "subject": "World leaders convene for UNGA...",
     "link": "https://www.npr.org/2026/09/21/g-s1-144238/up-first-newsletter-united-nations-general-assembly-trump-arch-faa-ai-federal-agent-shooting",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.2,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 0.75,
+    "claim_psi": 0.15,
+    "real_u": -0.35,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Global leaders gather in New York for the UN General Assembly amid ongoing conflicts while Manchester prepares to host the 2027 G20 summit.\nEvidence: UNGA opening, G20 announcement, Trump arch proposal\n#Aletheia #UNGA #G20",
-      "Stated Claim: World leaders unite for transparent multilateral diplomacy and global problem-solving at the UN General Assembly.\nStated Judgement: (+0.8, +0.2) — Good Preference",
-      "Ground Reality: Multilateral summits function largely as stages for national grandstanding, tactical posturing, and domestic political leverage.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nGlobal diplomacy balances stated cooperative ideals against transactional statecraft and self-interest.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Stated Claim: World leaders unite for transparent multilateral diplomacy and global problem-solving at the UN General Assembly.\nStated Judgement: (+0.75, +0.15) — Greater Good",
+      "Ground Reality: Multilateral summits function largely as stages for national grandstanding, tactical posturing, and domestic political leverage.\nResulting Judgement: (-0.35, -0.45) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nGlobal diplomacy balances stated cooperative ideals against transactional statecraft and self-interest.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- NPR Global Reporting: COND (0.7, 0.2) — Standard diplomatic framing.\n- BBC Manchester G20: COND (0.6, 0.1) — Highlights local economic ambition.",
       "As world leaders converge in New York for the final General Assembly under António Guterres, domestic leaders like Andy Burnham promote future summits.",
       "The Bright Side:\nBringing international summits to regional hubs like Manchester fosters local civic engagement and global visibility.",
       "The Breakdown & Plane Error:\nConfusing the Lyrical plane of noble diplomatic rhetoric with the Physical reality of transactional power politics.",
       "Social Physics Analysis:\nActors deploy cooperative rhetoric (Justification) while guarding national sovereignty and leverage (Power). This creates a perpetual cycle of managed friction rather than true systemic solutions.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Real-world negotiations manage systemic strain.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Real-world negotiations manage systemic strain.",
       "The Unavoidable Truth: Global summits provide vital forums for face-to-face dialogue.\nThe Unavoidable Lie: High-level speeches alone resolve structural geopolitical conflicts.",
       "Alethekanon:\nDiplomatic pageantry often masks hard geopolitical bargaining.\n🌐",
       "Awwthekanon:\nIt's wonderful to see cities like Manchester stepping onto the global stage, reminding us that international bonds start in local communities.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NPR UNGA Coverage",
@@ -158,6 +220,7 @@
         "name": "António Guterres",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

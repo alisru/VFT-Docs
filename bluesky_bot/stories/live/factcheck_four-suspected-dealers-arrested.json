@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.5,
+    "real_u": -0.55,
     "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Police clamp down on deadly new narcotics after a teen's tragic overdose.\nEvidence: Overdose deaths, 20k pills seized, Four arrests\n#Aletheia #SanFrancisco",
-      "Law enforcement operations aim to dismantle dangerous drug rings peddling ultra-potent synthetic opioids.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While four dealers were arrested and 20,000 counterfeit pills seized, the illicit pipeline of lethal synthetics like cychlorphine continues unabated.\nResulting Judgement: (-0.5, -0.7) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nTargeted arrests address the symptom while the lethal synthetic drug pipeline adapts and expands.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Law enforcement operations aim to dismantle dangerous drug rings peddling ultra-potent synthetic opioids.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "While four dealers were arrested and 20,000 counterfeit pills seized, the illicit pipeline of lethal synthetics like cychlorphine continues unabated.\nResulting Judgement: (-0.55, -0.70) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nTargeted arrests address the symptom while the lethal synthetic drug pipeline adapts and expands.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Police Enforcement: COND (-0.4, -0.6) — Arrests dealers but fails to stem supply.\n- Public Health Response: FAIL (-0.7, -0.8) — Narcan resistance and hidden potency.",
       "Four suspects were arrested in San Francisco following the fatal April overdose of 16-year-old Dante Paul Lacourte from a cychlorphine-laced pill.",
       "The Bright Side:\nSwift police work removed over 20,000 deadly counterfeit pills and firearms from circulation.",
       "The Breakdown & Plane Error:\nConfusing tactical interdiction (WHAT) with systemic eradication (WHO), treating localized arrests as a complete solution.",
       "Social Physics Analysis:\nLaw enforcement operates within a reactive loop, substituting high-profile arrests for structural demand reduction while lethal analogues mutate faster than enforcement capacity.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Reactive enforcement contains immediate harms without altering systemic drug economics.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Reactive enforcement contains immediate harms without altering systemic drug economics.",
       "The Unavoidable Truth: Arresting high-level dealers removes immediate lethal vectors from the streets.\n\nThe Unavoidable Lie: Interdiction alone can eradicate synthetic chemical epidemics.",
       "Alethekanon:\nTactical busts provide necessary accountability but mask the structural failure of supply-chain drug proliferation.",
       "Awwthekanon:\nEvery parent's worst nightmare unfolded in a quiet bedroom, reminding us of the immense fragility of young lives caught in a silent chemical storm.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Police Enforcement",
@@ -171,6 +233,7 @@
         "name": "Dante Paul Lacourte",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

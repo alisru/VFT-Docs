@@ -5,22 +5,22 @@
     "subject": "There's growing concern that Trump may deploy the National Guard ahead of elections",
     "link": "https://www.npr.org/2026/09/23/nx-s1-5978015/national-guard-election-military-midterms",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.95,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Fears grow that the Trump administration might deploy the military near polling places ahead of the midterms.\nEvidence: Legal prohibitions, admin sidestepping, voting official reassurances\n#Aletheia #USPol #Elections",
-      "Officials claim any potential military presence or emergency measure would solely ensure honest, secure elections free from irregularities.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Deploying troops near polls under manufactured pretexts bypasses federal law to intimidate voters and suppress civic participation.\nResulting Judgement: (-0.9, -0.95) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nWhen executive power overrides constitutional safeguards under vague pretexts, democratic integrity collapses.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
+      "Officials claim any potential military presence or emergency measure would solely ensure honest, secure elections free from irregularities.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "Deploying troops near polls under manufactured pretexts bypasses federal law to intimidate voters and suppress civic participation.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWhen executive power overrides constitutional safeguards under vague pretexts, democratic integrity collapses.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
       "Sub-Audits Breakdown:\n- White House Stance: FAIL (-0.8, -0.9) — Sidesteps legality while hinting at force.\n- Legal Protections: PASS (0.5, 0.0) — Clearly bars military at polls.",
       "With midterms approaching, civil rights groups and retired military lawyers are sounding alarms as administration officials decline to rule out troop deployments.",
       "The Bright Side:\nCivil society groups and retired military lawyers are actively preparing lawsuits and public awareness campaigns.",
       "The Breakdown & Plane Error:\nConfusing WHAT (the legal mechanism of elections) with WHO (executive command of armed forces), substituting constitutional limits with partisan enforcement.",
       "Social Physics Analysis:\nThe administration runs a Smart Selfish Maneuver by manufacturing crisis pretexts around election integrity to justify extraordinary military presence, projecting blame onto critics while hoarding executive power.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked executive overreach degrades constitutional norms into authoritarian control.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked executive overreach degrades constitutional norms into authoritarian control.",
       "The Unavoidable Truth: Federal law strictly prohibits deploying the military to polling places.\n\nThe Unavoidable Lie: Armed troops near ballot boxes protect democracy.",
       "Alethekanon:\nConstitutional guardrails exist to prevent executive overreach, yet political actors routinely test their limits under the guise of security.",
       "Awwthekanon:\nVoters deserve to cast their ballots in peace, free from the heavy shadow of armed intimidation or the fear of state coercion.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "White House Stance",
@@ -216,6 +278,7 @@
         "name": "U.S. Department of Justice",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

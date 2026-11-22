@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Why do 'free' eye tests end up costing customers extra?\nEvidence: Stated free care, Bundled OCT charges, Hidden upgrade fees\n#Aletheia #ConsumerRights",
-      "Promotions and government entitlements suggest eye tests are entirely free for eligible medical card and PRSI holders.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Customers face unexpected baseline charges because mandatory diagnostic scans like OCT are quietly bundled into standard appointments.\nResulting Judgement: (-1.0, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Marketing promises free care while administrative bundling quietly extracts baseline fees from consumers.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Promotions and government entitlements suggest eye tests are entirely free for eligible medical card and PRSI holders.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Customers face unexpected baseline charges because mandatory diagnostic scans like OCT are quietly bundled into standard appointments.\nResulting Judgement: (-0.85, -0.82) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "Sub-Audits Breakdown:\n- Promotional Messaging: FAIL (-0.85, -0.80) — Promotes free tests while omitting bundled fees.\n- Point-of-Sale Transparency: FAIL (-0.85, -0.85) — Opaque pricing and unexpected add-ons at checkout.",
       "Irish customers frequently report unexpected charges during routine visits, as mandatory advanced scans inflate baseline costs past advertised rates.",
       "The Bright Side:\nAdvanced scans provide genuine clinical value for early detection, provided patients are fully informed in advance.",
       "The Breakdown & Plane Error:\nConfusing promotional eligibility (WHO qualifies) with retail checkout realities (WHAT is actually charged).",
       "Social Physics Analysis:\nSpecsavers runs a classic Smart Selfish Maneuver: using alluring zero-cost promotional hooks to drive foot traffic, then extracting margin via mandatory bundled diagnostic add-ons at checkout.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Marketing pretexts mask profit extraction behind mandatory medical bundling.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Marketing pretexts mask profit extraction behind mandatory medical bundling.",
       "The Unavoidable Truth: Promotional healthcare claims often conceal mandatory service bundling.\n\nThe Unavoidable Lie: Eye tests are completely free without hidden diagnostic costs.",
       "Alethekanon:\nMarketing claims of absolute zero-cost access collapse when routine appointments require bundled diagnostic fees.",
       "Awwthekanon:\nIt is frustrating when you step into a healthcare appointment expecting a straightforward, covered service, only to receive a surprise bill at the end because extra scans were bundled in without clear prior notice.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Promotional Messaging",
@@ -152,6 +214,7 @@
         "name": "The Journal",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -14,13 +14,13 @@
       "Common sense meets tinder-dry reality as local leaders urge residents to ditch fireworks and barbecues to prevent devastating wildfires.\n\nMPs make fireworks plea in 't...🌐\nEvidence: public safety appeal, wildfire risk, community action\n#PublicSafety #UKNews",
       "Labour MPs Andrew Pakes, Sam Carling and council leader Shabina Qayyum urged restraint during the heatwave to protect strained emergency crews.\nStated Judgement: (+0.81, +1.00) — Good Preference",
       "Direct alignment between public safety messaging and community risk mitigation, successfully reducing hazard vectors during extreme weather.\nResulting Judgement: (+0.86, +0.95) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Transparent, public-spirited safety appeals effectively coordinate community restraint to prevent disaster.\n\nIntegrity: Trustworthy (Hypocrisy: 0.1, Uncertainty z: 0)",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 0.1, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Local MPs & Council: PASS (0.9, 0.9) — Clear, proactive safety communication matching ground reality.\n- Community Compliance: PASS (0.8, 0.8) — Public cooperation curbs high-risk fire hazards effectively.",
       "Labour MPs Andrew Pakes and Sam Carling, alongside council leader Shabina Qayyum, urged people not to set off nuisance fireworks or use disposable barbecues during severe heatwave conditions to prevent wildfires.",
       "The Bright Side:\nRapid community mobilization and clear, preventative leadership directly safeguard local nature reserves and strained emergency services from catastrophic loss.",
       "The Breakdown & Plane Error:\nDirect physical alignment (WHERE/WHAT). The stated danger matches physical reality on the ground with zero obfuscation or hidden agendas.",
       "Social Physics Analysis:\nTransparent communication fosters shared responsibility. By aligning safety goals directly with community welfare, leaders empower citizens to protect their environment.",
-      "The Trajectory: The Path of Grace.\nWhen you map transparent safety appeals against real physical risks, it plots a direct trajectory toward Greater Good.\nEquilibrium vector matches constructive intent.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map transparent safety appeals against real physical risks, it plots a direct trajectory toward Greater Good.\nEquilibrium vector matches constructive intent.",
       "The Unavoidable Truth: Extreme weather requires immediate, collective restraint to prevent irreversible ecological damage.\n\nThe Unavoidable Lie: Personal convenience supersedes community safety during environmental crises.",
       "Alethekanon:\nThis is governance functioning as intended. Clear warnings matched to physical realities protect the vulnerable and preserve shared natural spaces. 🌐",
       "Awwthekanon:\nIt is heartwarming to see communities pulling together to protect our firefighters and local wildlife during such a tense, scary heatwave.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.45,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.05,
+        "O": 1.45,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.45,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.05,
+        "O": 1.45,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "MPs Public Safety Campaign",
@@ -264,6 +326,7 @@
         "name": "Shabina Qayyum",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

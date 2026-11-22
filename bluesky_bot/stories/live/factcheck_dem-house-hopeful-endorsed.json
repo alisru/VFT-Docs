@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": -0.4,
     "claim_psi": -0.3,
-    "real_u": 0.62,
-    "real_psi": 0.45,
+    "real_u": -0.08,
+    "real_psi": -0.12,
     "mode": "root",
     "posts": [
       "Guilt by association is a cheap political weapon. But does it hold up under scrutiny?\n\nDem House hopeful endorsed by activist who said 'evil Jews run the world'\nEvidence: Condemning hate, Guilt by association, Political smear\n#Aletheia #USPol",
-      "An activist with a history of antisemitic and homophobic social media posts endorsed Democratic congressional candidate Eric Jones, raising questions about whether he quietly aligns with her fringe views.\nStated Judgement: (-0.40, -0.30) — Lesser Evil",
-      "Jones immediately and unequivocally condemned the activist's hateful comments, noting his own wife is Jewish and they raise their children in a Jewish household. The endorsement was unsolicited.\nResulting Judgement: (0.62, 0.45) — Awakening",
-      "Verdict: PASS — Awakening into Grace. The candidate's swift, personal rejection of hatred successfully neutralizes the guilt-by-association smear.\nIntegrity: Trustworthy (Hypocrisy: 1.12, z: 2)",
+      "An activist with a history of antisemitic and homophobic social media posts endorsed Democratic congressional candidate Eric Jones, raising questions about whether he quietly aligns with her fringe views.\nStated Judgement: (-0.40, -0.30) — Greater Evil",
+      "Jones immediately and unequivocally condemned the activist's hateful comments, noting his own wife is Jewish and they raise their children in a Jewish household. The endorsement was unsolicited.\nResulting Judgement: (-0.08, -0.12) — Greater Evil",
+      "Verdict: CONDITIONAL — Destruction.\nIntegrity: Trustworthy (Hypocrisy: 1.12, z: 2)",
       "Sub-Audits Breakdown:\n- Eric Jones: PASS (0.85, 0.90) — Swiftly rejected hate.\n- Adina Flores: FAIL (-0.90, -0.85) — Fringe conspiracist.\n- Fox News Framing: COND (-0.20, -0.40) — Guilt by association.",
       "Democratic candidate Eric Jones faced scrutiny after Adina Flores, a local activist who posted antisemitic conspiracy theories, endorsed him. Jones's campaign immediately issued a strong condemnation of her views.",
       "The Bright Side:\nThis incident forced a clear, public, and deeply personal commitment from the candidate against antisemitism and homophobia, drawing a firm line against fringe elements in local politics.",
       "The Breakdown & Plane Error:\nThe Plane Error is WHO vs WHAT. The report focuses on WHO endorsed the candidate to imply shared beliefs, ignoring the WHAT: the candidate's actual, consistent record and immediate, explicit denunciation of her hate.",
       "Social Physics Analysis:\nFlores runs a Smart Selfish Loop, using shocking bigotry to gain local attention. The media outlet attempts a projection maneuver, trying to stick her toxic brand to Jones. Jones counters with a Smart Altruistic Loop of transparency.",
-      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between the media's framing and the candidate's actual response, it plots a direct trajectory toward systemic clarity and the rejection of hate.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between the media's framing and the candidate's actual response, it plots a direct trajectory toward systemic clarity and the rejection of hate.",
       "The Unavoidable Truth: Unsolicited endorsements from fringe actors do not define a candidate's character.\nThe Unavoidable Lie: A candidate must agree with every eccentric local who supports them.",
       "Alethekanon:\nGuilt-by-association tactics fail when the target provides immediate, falsifiable counter-evidence. Jones's personal stakes make the media's framing structurally untenable.",
       "Awwthekanon:\nIt must be so exhausting to have your family's identity weaponized for political points. Jones stood up beautifully for his Jewish wife and children, choosing love over political noise.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Eric Jones Response",
@@ -175,6 +237,7 @@
         "sub_psi": -0.4,
         "sub_verdict": "COND"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Putin's Kuril Islands visit sparks Tokyo protests.\n\nPutin visits Kuril Islands claimed by Japan\nEvidence: sovereign outreach, territorial assertion, geopolitical friction\n#Geopolitics #Russia #Japan🌐",
-      "Moscow frames the visit as routine domestic regional development and governance across Russian territory.\nStated Judgement: (+0.89, +1.00) — Good Preference",
-      "The visit acts as a deliberate geopolitical assertion of hard control over disputed islands, dismissing Japanese sovereignty claims.\nResulting Judgement: (-0.21, +0.47) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPutin uses domestic governance imagery as a pretext to reinforce unilateral territorial dominance.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 2)",
+      "Moscow frames the visit as routine domestic regional development and governance across Russian territory.\nStated Judgement: (+0.89, +1.00) — Greater Good",
+      "The visit acts as a deliberate geopolitical assertion of hard control over disputed islands, dismissing Japanese sovereignty claims.\nResulting Judgement: (-0.21, +0.47) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nPutin uses domestic governance imagery as a pretext to reinforce unilateral territorial dominance.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Vladimir Putin: FAIL (-0.85, -0.9) — Uses regional inspection as a diplomatic wedge to cement disputed territorial gains.\n- Japanese Foreign Ministry: PASS (+0.7, +0.2) — Strictly maintains lawful historical sovereignty claims in response to coercion.",
       "Russian President Vladimir Putin visited Iturup island in the Kuril chain, triggering formal diplomatic protests from Tokyo over territories seized by the Soviet Union in 1945.",
       "The Poison:\nA diplomatic stalemate over WWII legacy is weaponized to project military resolve rather than foster regional peace treaties.",
       "The Breakdown & Plane Error:\nThe error confuses WHERE (geographical inspection) with WHO (beneficiary of geopolitical leverage). The bait-and-switch trades local welfare for state power projection.",
       "Social Physics Analysis:\nBy prioritizing unilateral geopolitical dominance over diplomatic engagement, the state relies on coercive power rather than mutual empowerment, reinforcing regional hostility.",
-      "The Trajectory: The Path of Deception.\nWhen you map stated regional development against coercive territorial signaling, it plots a direct trajectory toward Deception. Net force vector drives ψ negative.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map stated regional development against coercive territorial signaling, it plots a direct trajectory toward Deception. Net force vector drives ψ negative.",
       "The Unavoidable Truth: The islands remain a disputed WWII flashpoint without a peace treaty.\n\nThe Unavoidable Lie: The visit is purely an ordinary domestic administrative tour.",
       "Alethekanon:\nAdministrative routines serve as sovereign flags in contested waters. When a leader touches disputed soil, it is never just tourism; it is a live geopolitical boundary marker.",
       "Awwthekanon:\nIt is heartbreaking how ancient grievances and strategic chess games keep neighboring nations locked in perpetual tension, preventing genuine healing for those living on these islands.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Vladimir Putin",
@@ -276,6 +338,7 @@
         "sub_psi": 0.2,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

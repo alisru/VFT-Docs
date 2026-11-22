@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/26/us-news/crazed-nyc-son-who-allegedly-killed-mom-left-bloodied-battered-on-couch-charged-with-murder-cops-sources/",
     "target_url": "",
     "claim_u": 0.0,
-    "claim_psi": 0.0,
+    "claim_psi": 1.0,
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "An NYC man is captured and charged with murder after allegedly beating his mother to death in their apartment.\nEvidence: police report, arrest footage, public tip\n#Aletheia #News #NYC",
-      "Authorities report the arrest of a 33-year-old man for the brutal killing of his mother following a public tip from released surveillance footage.\nStated Judgement: (0.0, 0.0) — Neutral Stasis",
+      "Authorities report the arrest of a 33-year-old man for the brutal killing of his mother following a public tip from released surveillance footage.\nStated Judgement: (+0.00, +1.00) — Greatest Lie",
       "A domestic homicide occurred in Concourse Village, ending in the tragic death of a 57-year-old woman and the swift apprehension of her son by police.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA tragic domestic crime resulting in loss of life and criminal charges, accurately reported by law enforcement.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: FAIL — Revelation into Destruction.\nA tragic domestic crime resulting in loss of life and criminal charges, accurately reported by law enforcement.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Police Response: PASS (1.0, 0.0) — Swift identification and arrest.\n- Media Reporting: PASS (1.0, 0.0) — Factual coverage of police sources.",
       "A 33-year-old Bronx man was arrested for allegedly murdering his mother after a passerby recognized him from NYPD surveillance footage.",
       "The Bright Side:\nPublic vigilance and rapid police action ensured the suspect was swiftly apprehended off community tips.",
       "The Breakdown & Plane Error:\nPhysical plane evaluation of a violent crime where stated police facts match ground-level reality without ideological spin.",
       "Social Physics Analysis:\nWhen violent domestic tragedy strikes, community visibility and transparent police action restore public safety equilibrium.",
-      "The Trajectory: The Path of Destruction.\nWhen you map a domestic homicide, it plots a direct trajectory toward Greater Evil. Physical destruction of life collapses the social fabric.",
+      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map a domestic homicide, it plots a direct trajectory toward Greater Evil. Physical destruction of life collapses the social fabric.",
       "The Unavoidable Truth: A mother lost her life in a senseless domestic tragedy.\n\nThe Unavoidable Lie: No systemic narrative distortion was present in this straight police report.",
       "Alethekanon:\nThis report accurately chronicles a grim domestic crime with high factual integrity and zero ideological obfuscation.",
       "Awwthekanon:\nMay peace surround the memory of Josefa Soto De Carmen, and may healing reach all touched by this profound grief.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Police Investigation",
@@ -211,6 +273,7 @@
         "name": "New York Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Revelation into Destruction"
   }
 ]

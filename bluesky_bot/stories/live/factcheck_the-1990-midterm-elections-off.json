@@ -37,7 +37,7 @@
     "macro_claim_psi": 0.5,
     "macro_real_u": -0.7,
     "macro_real_psi": -0.8,
-    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "status": "QUARANTINED (Flagged for Re-Audit)",
     "claim_rnet": 1.0,
     "real_rnet": 6.2,
     "claim_z": 0,
@@ -167,6 +167,8 @@
         "name": "Republican Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "exclude_from_analytics": true,
+    "quarantine_reason": "Severe partisan collapse (Delta-u = -1.5) from washingtonexaminer.com without wire counter-grounding"
   }
 ]

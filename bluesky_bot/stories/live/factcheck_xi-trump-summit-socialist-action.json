@@ -5,22 +5,22 @@
     "subject": "Video: What’s behind the positive Xi-Trump Summit? - Socialist Action",
     "link": "https://www.socialistaction.net/2026/10/01/video-whats-behind-the-positive-xi-trump-summit-john-ross/",
     "target_url": "https://bsky.app/profile/socialistact.bsky.social/post/3mwsxoc26ms2x",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.3,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.13,
     "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "Breaking down the shifting dynamics behind the recent US-China summit and global geopolitical realignments.\nEvidence: Diplomatic engagement, trade truce extension, strategic posturing\n#Aletheia #Geopolitics 🌐",
-      "Analyses suggest strategic dialogue between superpowers paves the way for lasting global stability and cooperation.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Beneath ceremonial optics, structural competition and unresolved tech divides persist as both powers hedge their bets.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Redemption.\nDiplomatic engagement prevents immediate escalation, yet relies on tactical optics over deep structural resolution.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
+      "Analyses suggest strategic dialogue between superpowers paves the way for lasting global stability and cooperation.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Beneath ceremonial optics, structural competition and unresolved tech divides persist as both powers hedge their bets.\nResulting Judgement: (+0.13, -0.40) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nDiplomatic engagement prevents immediate escalation, yet relies on tactical optics over deep structural resolution.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
       "Sub-Audits Breakdown:\n- Socialist Action Commentary: COND (-0.2, -0.3) — Ideological framing of pragmatic statecraft.\n- Carnegie Analysis: PASS (0.0, 0.0) — Highlights ceremony over substance.",
       "Leaders from the U.S. and China met to discuss trade extensions, agricultural purchases, and AI safety frameworks amidst ongoing strategic competition.",
       "The Bright Side:\nExtending trade truces and establishing communication channels on AI safety prevents accidental escalation between nuclear powers.",
       "The Breakdown & Plane Error:\nConfusing diplomatic stagecraft (WHAT) with structural systemic reform (WHO), ignoring deep geopolitical incentives.",
       "Social Physics Analysis:\nActors deploy strategic diplomacy to manage domestic economic pressures while maintaining competitive postures. It's a pragmatic balancing act rather than transformative altruism.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated diplomatic harmony and actual competitive friction, it plots a modest trajectory toward pragmatic coexistence.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated diplomatic harmony and actual competitive friction, it plots a modest trajectory toward pragmatic coexistence.",
       "The Unavoidable Truth: Superpower summits manage friction rather than erase fundamental geopolitical competition.\n\nThe Unavoidable Lie: High-level photo ops signal a permanent end to strategic rivalry.",
       "Alethekanon:\nDiplomatic handshakes manage immediate volatility but leave underlying structural fault lines fully intact.",
       "Awwthekanon:\nIt is heartening to see nations choose dialogue over confrontation, even when grand visions take time to manifest in everyday lives.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Socialist Action Commentary",
@@ -233,6 +295,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

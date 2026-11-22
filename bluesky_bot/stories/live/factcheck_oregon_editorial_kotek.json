@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/npeninsulareview.bsky.social/post/3mwcp6euues2o",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.15,
-    "real_psi": 0.25,
+    "real_u": 0.17,
+    "real_psi": 0.28,
     "mode": "root",
     "posts": [
       "An Oregon editorial weighs in on the gubernatorial race, backing substance over style.\nEvidence: Endorsement, Partisan framing, Editorial bias\n#Aletheia #OregonPol #Kotek",
-      "The editorial claims Governor Tina Kotek is the clear, effective choice for Portland, while her opponent Christine Drazan is a harsh climate denier who will gut public services.\nStated Judgement: (1.0, 1.0) — Grace",
-      "While Kotek has pushed key policies, she has faced real ethical and budgetary stumbles. The editorial uses highly loaded language to frame Drazan while minimizing Kotek's flaws.\nResulting Judgement: (0.15, 0.25) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption. The editorial provides a biased but disclosed perspective, acknowledging some of Kotek's flaws while strongly advocating her platform.\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
+      "The editorial claims Governor Tina Kotek is the clear, effective choice for Portland, while her opponent Christine Drazan is a harsh climate denier who will gut public services.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While Kotek has pushed key policies, she has faced real ethical and budgetary stumbles. The editorial uses highly loaded language to frame Drazan while minimizing Kotek's flaws.\nResulting Judgement: (+0.17, +0.28) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
       "- North Peninsula Review: PASS (0.15, 0.25) — Disclosed bias but highly partisan framing.\n- Tina Kotek Record: COND (0.20, 0.30) — Real policy progress mixed with ethical stumbles.",
       "The North Peninsula Review published an editorial endorsing Governor Tina Kotek, contrasting her record with opponent Christine Drazan's platform ahead of the election.",
       "The Bright Side:\nThe writer transparently discloses having run against Kotek in 2006, and explicitly mentions her early ethical stumbles regarding her wife's role in policy.",
       "The Breakdown & Plane Error:\nThe editorial confuses WHO (the candidate's personality and alignment) with WHAT (the objective systemic outcomes of their policies), reducing complex governance to partisan loyalty.",
       "Social Physics Analysis:\nThe editorial runs a classic Smart Altruistic Loop by advocating for shared community goals like housing and education, but slips into projection by framing the opponent's tax policies as purely malicious rather than a differing economic theory.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The disclosure of flaws prevents a slide into pure deception.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The disclosure of flaws prevents a slide into pure deception.",
       "The Unavoidable Truth: Editorials are inherently biased arguments, not objective news.\nThe Unavoidable Lie: A candidate's extroversion or TV ads dictate their policy outcomes.",
       "Alethekanon:\nThe editorial's value lies in its transparency of authorship and acknowledgment of Kotek's flaws, even as it engages in heavy partisan framing of the opposition.",
       "Awwthekanon:\nIt's heartening to see a community paper care so deeply about local schools and the homeless, even if the political divide makes it hard to see the humanity in the other side.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "North Peninsula Review",
@@ -158,6 +220,7 @@
         "name": "North Peninsula Review",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

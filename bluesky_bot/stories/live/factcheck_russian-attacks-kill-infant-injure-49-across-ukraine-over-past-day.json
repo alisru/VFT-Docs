@@ -14,13 +14,13 @@
       "Unrelenting overnight bombardments shatter innocent lives across Ukraine, taking a baby's life and injuring dozens.\n\nRussian attacks kill infant, injure 49 across Ukraine over past day\nEvidence: defensive pretext, civilian casualties, absolute devastation\n#Aletheia #Ukraine",
       "Official reports document relentless overnight strikes using scores of drones and munitions across multiple Ukrainian regions, causing widespread civilian harm.\nStated Judgement: (+0.50, +0.78) — Good Preference",
       "Ground reality reveals targeted destruction of homes and civilian infrastructure, resulting in tragic deaths including infants and dozens of injuries.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning into Destruction.\nThe stark reality of lethal drone strikes on civilian zones directly contradicts any security pretexts, driving deep into destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nThe stark reality of lethal drone strikes on civilian zones directly contradicts any security pretexts, driving deep into destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
       "- Russian Military Command: FAIL (-0.95, -0.92) — Direct deployment of lethal force against civilian areas violates international humanitarian laws.\n- Civilian Infrastructure Protection: FAIL (-0.89, -0.85) — Sustained attacks on residential zones demonstrate systemic disregard for human life.",
       "Overnight attacks across multiple Ukrainian oblasts utilizing drones and missiles resulted in tragic civilian casualties, including a 3-month-old infant, highlighting the relentless human toll of the ongoing conflict.",
       "The Poison:\nThe continuous escalation of drone and missile strikes against densely populated civilian areas guarantees mounting humanitarian catastrophe with zero strategic justification.",
       "The Breakdown & Plane Error:\nThe analysis shifts from a nominal reporting plane (WHAT) to the devastating physical reality of lost civilian lives and trauma (WHERE/EFFECT).",
       "Social Physics Analysis:\nBy utilizing overwhelming force against civilian populations to project dominance, the aggressor relies on destructive pretexts while ignoring human survival.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nWhen you map the gap between stated objectives and brutal ground realities, it plots a direct trajectory toward Greater Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated objectives and brutal ground realities, it plots a direct trajectory toward Greater Evil.",
       "The Unavoidable Truth: Civilian populations bear the catastrophic human cost of relentless military bombardments.\n\nThe Unavoidable Lie: Strategic military necessity justifies the destruction of innocent civilian lives.",
       "Alethekanon:\nThe calculus of war strips away all pretexts when an infant's life is extinguished. This is raw destruction masquerading as strategic necessity.",
       "Awwthekanon:\nMy heart aches for the families and the little ones whose lives were cut short in the dark of night. No geopolitical ambition can ever justify this heartbreak.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Russian Military Command",
@@ -264,6 +326,7 @@
         "name": "Government of Ukraine",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

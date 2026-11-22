@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/news.abc.net.au/post/3mwnadnm2572f",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.75,
-    "real_psi": -0.7,
+    "real_u": 0.03,
+    "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "An elderly Brisbane cyclist who lost an eye to an unlit council stake wins a $675k payout.\nEvidence: Court ruling, council negligence, severe injury\n#Aletheia #Courts",
-      "The council erected a temporary mesh barrier without lights or warnings, leading to a horrific crash and a 17-year legal battle.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "The Court of Appeal found the council completely failed its duty of care, exposing deep institutional resistance to accountability.\nResulting Judgement: (-0.75, -0.7) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nAn arduous judicial appeal corrected an initial miscarriage of justice, forcing institutional accountability after years of evasion.\n\nIntegrity: Trustworthy (Hypocrisy: 1.45, z: 1)",
+      "The council erected a temporary mesh barrier without lights or warnings, leading to a horrific crash and a 17-year legal battle.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "The Court of Appeal found the council completely failed its duty of care, exposing deep institutional resistance to accountability.\nResulting Judgement: (+0.03, +0.00) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nAn arduous judicial appeal corrected an initial miscarriage of justice, forcing institutional accountability after years of evasion.\n\nIntegrity: Trustworthy (Hypocrisy: 1.45, z: 1)",
       "Sub-Audits Breakdown:\n- Brisbane City Council: FAIL (-0.85, -0.8) — Evaded liability for years via legal technicalities.\n- Queensland Court of Appeal: PASS (+0.9, +0.8) — Corrected initial error and upheld public safety duty.",
       "In 2009, 64-year-old Victor George Dennison crashed into an unlit council barrier on a Brisbane footpath, impaling his eye and suffering permanent brain damage. After a lengthy legal battle, the Court of Appeal finally ordered the council to pay $675,000 in damages.",
       "The Bright Side:\nThe appellate court firmly re-established that local authorities cannot escape basic safety obligations through technicalities.",
       "The Breakdown & Plane Error:\nThe initial court ruling conflated statutory liability thresholds with basic operational duty, committing a Metaphysical plane error by shielding institutional negligence over citizen safety.",
       "Social Physics Analysis:\nThe council ran a defensive Smart Selfish maneuver, deploying legal bureaucracy and liability shields to dodge responsibility for a blatant safety hazard until judicial transparency forced accountability.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between initial institutional denial and final judicial correction, it plots a direct trajectory toward Awakening. Systemic strain was resolved when independent oversight forced the actor to absorb the true cost of negligence.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between initial institutional denial and final judicial correction, it plots a direct trajectory toward Awakening. Systemic strain was resolved when independent oversight forced the actor to absorb the true cost of negligence.",
       "The Unavoidable Truth: Public authorities have an absolute duty to properly mark hazardous urban works.\n\nThe Unavoidable Lie: Legal technicalities can permanently erase a clear failure of basic municipal safety.",
       "Alethekanon:\nInstitutions often hide behind legal shields until independent courts puncture the pretext. Justice delayed required systemic correction.",
       "Awwthekanon:\nMr. Dennison and his family endured unimaginable suffering for over a decade while fighting for simple accountability. May this ruling bring some measure of peace.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Brisbane City Council",
@@ -160,6 +222,7 @@
         "name": "Supreme Court of Queensland",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

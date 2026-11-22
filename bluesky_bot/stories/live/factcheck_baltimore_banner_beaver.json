@@ -13,8 +13,8 @@
     "posts": [
       "Tracking phantom rabid beavers in a late-night Bigfoot-style wildlife patrol across a shuttered state park lake.\n\nInside the hunt for the biting beaver that wasn’t there\nEvidence: Public safety, statistical anomaly, theatrical wildlife patrol\n#Aletheia #Wildlife",
       "Wildlife staffers conduct intensive thermal imaging patrols to prove a negative and ensure no other rabid beavers remain before reopening the lake.\nStated Judgement: (+0.76, +0.87) — Greater Good",
-      "Following an unprecedented statistical anomaly of two rabid beaver attacks, authorities perform exhaustive searches for nonexistent threats to reassure the public.\nResulting Judgement: (+1.00, +1.00) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nDiligent wildlife management goes to extraordinary lengths to ensure absolute public safety following a bizarre statistical anomaly.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Following an unprecedented statistical anomaly of two rabid beaver attacks, authorities perform exhaustive searches for nonexistent threats to reassure the public.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nDiligent wildlife management goes to extraordinary lengths to ensure absolute public safety following a bizarre statistical anomaly.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Wildlife Staff Intervention: PASS (+0.7, +0.4) — Staff carry out thorough nighttime thermal surveys to safeguard visitors.\n- Public Safety Communication: PASS (+0.6, +0.3) — Transparent park closures prevent further rare incidents.",
       "After two rare rabid beaver attacks hospitalized humans at Cunningham Falls State Park, wildlife officials used thermal imaging to search for any remaining infected animals before reopening.",
       "The Bright Side:\nExtraordinary dedication by wildlife biologists ensures absolute safety and deepens scientific understanding of ultra-rare wildlife health anomalies.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Wildlife Staff Intervention",
@@ -264,6 +326,7 @@
         "name": "Cunningham Falls State Park",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

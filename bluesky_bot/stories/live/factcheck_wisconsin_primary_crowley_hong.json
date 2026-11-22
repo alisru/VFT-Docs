@@ -14,13 +14,13 @@
       "A narrative of centrist triumph built on a completely fabricated electoral matchup. Wisconsin's political reality is rewritten.\n\nWisconsin result dents winning...\nEvidence: Centrist pragmatism, Fabricated primary, Actual political offices\n#Aletheia #USPol 🌐",
       "The claim presents David Crowley's primary victory over Francesca Hong as a centrist breakthrough for the Wisconsin gubernatorial nomination, promising pragmatic, unifying governance.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "In reality, no such gubernatorial primary occurred between Crowley and Hong. The narrative fabricates a high-profile race to manufacture a trend of left-wing decline.\nResulting Judgement: (-1.00, -1.00) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe text invents an electoral matchup to force a national political narrative.\n\nIntegrity: Severe Deception (Hypocrisy: 15.4, Uncertainty z: 3)",
+      "Verdict: FAIL — Fall into Destruction.\nThe text invents an electoral matchup to force a national political narrative.\n\nIntegrity: Severe Deception (Hypocrisy: 15.4, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- David Crowley Campaign Narrative: FAIL (-0.75, -0.80) — Framed as a gubernatorial candidate despite serving as Milwaukee County Executive.\n- Media Narrative Integrity: FAIL (-0.82, -0.85) — Fabricates a primary race to construct a national political trend.",
       "This article reports on a projected primary victory for centrist David Crowley over democratic socialist Francesca Hong for the Democratic nomination for Wisconsin governor, framing it as a major blow to the party's left wing.",
       "The Bright Side:\nIt highlights the ongoing strategic tension and debate between centrist pragmatists and progressive democratic socialists within the Democratic Party.",
       "The Breakdown & Plane Error:\nThe text commits a Metaphysical error (WHO). It misidentifies the political offices and races of the candidates, presenting a local county executive and state representative as gubernatorial primary rivals.",
       "Social Physics Analysis:\nBy fabricating a high-stakes conflict, the narrative seeks to justify centrist dominance. It projects a false sense of momentum by inventing a race that never took place, using pretexts of electability to marginalize progressive factions.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The fabrication of political events serves to manipulate public perception of party dynamics.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The fabrication of political events serves to manipulate public perception of party dynamics.",
       "The Unavoidable Truth: David Crowley is the Milwaukee County Executive and Francesca Hong is a State Representative; they did not run against each other for governor.\n\nThe Unavoidable Lie: The claim that a gubernatorial primary occurred between them.",
       "Alethekanon:\nThe structural integrity of this report is entirely compromised. Fabricating an entire electoral matchup to serve a national narrative of centrist resurgence is a severe violation of basic journalistic truth.",
       "Awwthekanon:\nIt is deeply disappointing to see political narratives manufactured this way. It creates unnecessary division and misleads voters who deserve honest information about their leaders.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "David Crowley Campaign Narrative",
@@ -272,6 +334,7 @@
         "name": "Wisconsin",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

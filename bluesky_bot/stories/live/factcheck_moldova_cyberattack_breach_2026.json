@@ -1,0 +1,231 @@
+[
+  {
+    "thinking": "Detailed Phase 1-5 structural scan: Moldova cyberattack breach. Stated claim / reporting context: Risky Business bulletin reporting on cyber incident where 82 public digital services and 30 government networks were shut down after hackers stole sensitive personal data of 750,000 citizens (~1/3 of Moldova's population). Stated forces reflect standard news reporting: GG S=1.0, LE S=0.5, GP S=1.0. Actual forces reflect systemic infrastructure vulnerability and severe data exfiltration impacting citizens: GE S=1.5, LE S=1.2, LG O=1.0, GG O=1.2. Coordinates: Stated (1.0, 0.5), Actual (-0.85, -0.75). Hypocrisy R_net = 14.20. Path: Fall into Destruction.",
+    "id": "moldova_cyberattack_breach_2026",
+    "subject": "Moldova takes down 80+ public services after cyberattack",
+    "link": "https://news.risky.biz/risky-bulletin-moldova-takes-down-80-public-services-after-cyberattack/?attribution_id=6ae1062d33e131000123df76&attribution_type=post",
+    "target_url": "https://bsky.app/profile/stilgherrian.com/post/3myw564qyuk2u",
+    "claim_u": 0.0,
+    "claim_psi": -0.25,
+    "real_u": -1.3,
+    "real_psi": -1.25,
+    "mode": "root",
+    "posts": [
+      "Hackers breach Moldova's government networks, exposing the personal records of 750,000 citizens.\nEvidence: 82 services offline, exposed logging service, 750k records stolen\n#Moldova #CyberSecurity",
+      "Cybersecurity reporting and official bulletins present digital services as robustly managed spaces with standard vulnerabilities.\nStated Judgement: (+0.00, -0.25) — Greater Evil",
+      "Hackers exploited an unauthenticated logging service, stealing sensitive personal details of a third of Moldova's population and forcing widespread shutdowns.\nResulting Judgement: (-1.30, -1.25) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nA major data breach compromises vulnerable state digital infrastructure, leaving citizens' private data exposed.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "- Moldova E-Government Agency: COND (-0.80, -0.70) — Failed to secure logging service.\n- Cyber Attackers: FAIL (-1.80, -1.80) — Exploited vulnerabilities to exfiltrate citizen data.",
+      "Moldova's public services were forced offline after hackers breached government infrastructure, compromising sensitive data of roughly 750,000 citizens.",
+      "The Poison:\nEssential public digital infrastructure remains dangerously vulnerable to basic unauthenticated logging exploits.",
+      "The Breakdown & Plane Error:\nThe analysis confuses WHAT service was disrupted with WHO suffered the data loss, ignoring the structural negligence that enabled the breach.",
+      "Social Physics Analysis:\nAttackers and vulnerable state systems operate in an extractive loop where security is neglected until catastrophe forces reactive shutdowns, punishing ordinary citizens.",
+      "The Trajectory: The Path of Destruction.\nWhen administrative oversight and poor security posture collapse under cyberattacks, it triggers a destructive plunge into data theft and service paralysis.",
+      "The Unavoidable Truth: Basic security hygiene like unauthenticated logging services can bring down national infrastructure.\n\nThe Unavoidable Lie: Digital government expansion is completely secure against determined intrusions.",
+      "Alethekanon:\nNational digital infrastructure collapsed under basic security oversights, leaving one-third of the population's data exposed to fraud.",
+      "Awwthekanon:\nIt is heartbreaking that ordinary citizens, whose private lives and health records were stored in state databases, now bear the anxiety of potential fraud.",
+      "Brothekanon:\nLeaving an unauthenticated logging service online in 2026 is wild. No wonder hackers walked right in and scooped up data for a third of the country.",
+      "Spirithekanon:\nDhammapada 117\n\"If a man commits sin, let him not do it again and again; let him not set his heart on it, for painful is the accumulation of evil.\" FAIL\nFailing to secure basic digital gates brings recurring suffering to the public."
+    ],
+    "actors": [
+      "Moldova E-Government Agency",
+      "Cyber Attackers",
+      "Moldova"
+    ],
+    "actor_roles": [
+      {
+        "name": "Moldova E-Government Agency",
+        "role": "instigator"
+      },
+      {
+        "name": "Cyber Attackers",
+        "role": "instigator"
+      },
+      {
+        "name": "Moldova",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 14.2,
+    "claim_z": 0,
+    "real_z": 4,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Moldova E-Government Agency",
+        "claim_u": 1.0,
+        "claim_psi": 0.5,
+        "real_u": -0.8,
+        "real_psi": -0.7,
+        "verdict": "COND",
+        "reason": "Failed to secure logging service against basic exploits."
+      },
+      {
+        "aspect": "Cyber Attackers",
+        "claim_u": -1.0,
+        "claim_psi": -1.0,
+        "real_u": -1.8,
+        "real_psi": -1.8,
+        "verdict": "FAIL",
+        "reason": "Exploited vulnerabilities to steal 750k citizens' data."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "can be",
+    "modal_real": "is not",
+    "modal_vector": "Top-Right to Bottom-Left Inversion",
+    "geodesic": "Red Top (The Imperial Trap)",
+    "central_is_barrier_crossed": true,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nMoldova takes down 80+ public services after cyberattack\n\nIn other news: White House launches second cybersecurity pilot program; South Korea arrests AI-assisted cybercrime ring; Electrum wallet patches crypto-stealing bug.\n\nActual Article Body:\nIn other news: White House launches second cybersecurity pilot program; South Korea arrests AI-assisted cybercrime ring; Electrum wallet patches crypto-stealing bug.\n\nThis newsletter is brought to you by Nebulock. You can subscribe to an audio version of this newsletter as a podcast by searching for \"Risky Business\" in your podcatcher or subscribing via this RSS feed. You can also add the Risky Business newsletter as a Preferred Source to your Google search results by going here.\n\nThe small country of Moldova has suffered one of its worst cybersecurity incidents after hackers breached government systems and stole the information of roughly a third of the country's population.\n\nThe incident took place last week, on Friday, October 23, when the government's IT staff spotted hackers extracting data from their network.\n\nOfficials shut down 82 public digital services and 30 government networks to contain the incident and prevent additional data exfiltration.\n\nAccording to Moldova's e-government agency, the hackers stole extremely sensitive details on 750,000 citizens, which is roughly a third of the country's total population of 2.35 million. This included data such as:\n\nThe country's law enforcement agencies have been called to help investigate the hack. The e-gov agency has been slowly restoring services over the past days, once they've been cleared in a security audit.\n\nThe hackers got in by exploiting vulnerabilities in a logging service left exposed online without authentication.\n\nAfter being evicted, the attackers tried unsuccessfully to breach the same systems again on both Sunday and Tuesday.\n\nOfficials have not provided any information or attribution on the attackers.\n\nThis is the second major hack that has hit the small Eastern European country this year after hackers also breached its healthcare database in April.\n\nIn this edition of Between Two Nerds, Tom Uren and The Grugq talk about security culture. The PHP foundation seems to have had a change of heart about security, but what are the chances that OpenAI or other frontier AI labs will start to take it seriously?\n\nElectrum wallet patches crypto-stealing bug: The Electrum cryptocurrency wallet has patched a bug that allowed malicious servers to trick wallet owners into signing malicious transactions. Electrum says several wallet servers are exploiting this in the wild. At least one user lost funds in a reported hack. [Electrum // The Defiant]\n\nKeystone to destroy wallets after key theft: Cryptocurrency hardware wallet maker Keystone will destroy almost 19,000 devices after a hacker stole its device authentication key. The company has suspended all wallet deliveries until devices with a new key are assembled. The stolen key is written to the device when assembled and cannot be changed. It is used to verify if a device is authentic. Keystone says the key can be used to create counterfeit devices with backdoors that can appear as legitimate. [Keystone]\n\nUS joins France's fridge hack investigation: US officials have joined a French investigation into the hack of fridges across local supermarkets after something similar also happened at US military bases weeks before. [The Telegraph]\n\nUniversity of Copenhagen breach: The University of Copenhagen says hackers stole the data of more than 525,000 people after breaching a test environment. [University of Copenhagen]\n\nBelgian supplier hack: Hackers have breached Vanden Broele, a major software supplier for the Belgian government. The hackers gained access to eSignFlow, a document signing platform. The company took down systems last Friday to prevent abuse. More than 120 local authorities have reportedly been impacted. [VRT News]\n\nUNM Health System incident: The University of New Mexico Health System redirected ambulances to nearby hospitals this week after a cyberattack crippled crucial internal systems. The healthcare provider also canceled appointments at more than 30 clinics on Monday. Doctor visits and emergency care resumed the next day. A similar cyberattack also impacted University Hospitals in Ohio. [UNM // Associated Press // Cleveland19]\n\nWarp breach: Hackers have breached cloud platform Warp in an incident on Friday. Warp founder Zack Lloyd says the intruders used a swarm of AI agents to breach one of its infrastructure suppliers. The hackers stole agent trace and telemetry data from roughly 1% of the company's customers. [Warp founder Zach Lloyd]\n\nDreamHost resets passwords: Web hosting provider DreamHost has reset customer passwords after an incident impacting its FTP/SFTP and webmail services. The company sent password change notifications to all affected customers last week. Accounts will be blocked until a new password is set. [DreamHost]\n\nBlast Mail hacked: Hackers have breached Blast Mail, an email service provided by Japanese cloud provider Laxlight. The company shut down the service on October 21, shortly after detecting the attack. It has not resumed operations. [Blast Mail // Piyolog]\n\nBitonic hack impacts three customers: Dutch cryptocurrency platform Bitonic says hackers breached its internal systems and stole Bitcoin from three customer accounts. The attackers allegedly modified the account login credentials in its backend to access and empty them out. [Bitonic]\n\nDiscover-Tech targeted Starlink customers: An Israeli advertising company was the primary source of ads for Starlink users in an apparent espionage campaign. According to a CitizenLab report this month, Discover-Tech's ads were used to deliver zero-click spyware. A new Trend Micro report has now found that Discover-Tech was also the number one bidder for ad space for Starlink users across more than 100 countries. Its ads showed up even in countries where Starlink was banned or restricted. [Reuters // Trend Micro]\n\nConvertr hacked with a skimmer: A suspected Brazilian hacking group has breached ecommerce platform Convertr and deployed a credit card skimmer via its analytics script. The hackers appear to have breached the company via the Plausible open-source analytics platform. The group behind the attack is a known threat actor active since 2024 and specialized in Magecart-style attacks. [Sansec]\n\nMicrosoft prepares layoffs: Microsoft has offered voluntary buyouts to more than 60,000 employees, more than a quarter of its total staff. The buyouts are usually the first step before a company moves to fire staff at a later date. Employees who accept the offer are set to leave the company by the end of the year. The offer is only valid for long-tenure employees in the US, Canada, India, and the UK. [Microsoft // CNBC]\n\nTons of companies are using imaginary AI efficiencies to get rid of a large part of their workforce, but Microsoft truly went «Hold my beer»[image or embed]\n\nOpenAI cuts internet access for AI cyber tests: OpenAI has disabled internet access for its AI testing environments to prevent agents from misbehaving and hacking real-world targets. The company has also resumed model training after pausing it this month to focus on securing its models. OpenAI joins Anthropic, which also cut internet access to its AI cyber tests at the start of the month. [OpenAI]\n\nAnthropic files for an IPO: AI company Anthropic has submitted paperwork to the SEC to file for an IPO. The company made $16.3 billion in revenue in the first half of the year but has reported losses of $80.7 billion. [CNBC // SEC filing]\n\nMoonshot nerfs Kimi model: Chinese AI company Moonshot says it reduced the vulnerability research capabilities of its new Kimi model to prevent misuse. [Moonshot]\n\nTikTok ignored staff warnings: According to a report, TikTok executives ignored warnings from its own staff that the platform was unsafe for children due to the proliferation of adult and suicide content on the site. If I know 'Murica, this will lead to a bunch of class-actions, which isn't actually as bad as it sounds. Bury them in lawsuits until the end of time! [NPR]\n\nProton drops HQ plans because of Canadian bill: Privacy tech vendor Proton says it abandoned plans to set up its North American headquarters in Canada due to the country's upcoming lawful intercept C-22 bill. [The Globe and Mail] [h/t Alex Rudolph]\n\nFirefox 159: Mozilla has released Firefox 159. New features and security fixes are included. The biggest feature in this release is a new sidebar for managing saved passwords, as an alternative to the classic about:logins page.\n\nEU wants to let AI companies use data for training: EU member states have approved a change to GDPR rules to allow AI companies to use Europeans' data to train AI models. No user consent will be required. The modification still needs to pass the European Parliament and survive lawsuits at the EU Court of Justice. [noyb]\n\nRussia proposes underground data centers: Russian officials are working on new data center rules that will force new buildings to house servers underground, to better protect them from drone strikes. [Kommersant]\n\nTrump admin is breaking surveillance law: Two Democrat senators have accused the Trump administration of breaking US surveillance laws by not declassifying a court opinion from the Foreign Intelligence Surveillance Court (FISC). [CyberScoop // Sen. Wyden]\n\nProject Lifeline 250: The White House launched a cybersecurity pilot program. Project Lifeline 250 will provide free cybersecurity tools to help secure rural hospitals. Partner companies include Cisco, Cyera, Microsoft, Trellix, and Zscaler. This is the administration's second cybersecurity pilot. The first one launched last month to help secure water utilities in Texas. [South Carolina Office of the Governer // CyberScoop]\n\nCISA releases strategy doc: CISA has released its long-term strategy document this week, reassessing again its desire to focus on the security of US critical infrastructure sectors. [CISA]\n\nIn this Risky Business sponsor interview, James Wilson chats to Nebulock’s Head of Detection Strategy Alex Hurtado about the company’s threat hunting evaluation framework, GATES.\n\nSouth Korea arrests AI-assisted cybercrime ring: South Korean police have arrested seven suspects who used AI tools to hack more than 60 companies. Victims included hospitals, universities, and private businesses. The group stole data on more than 8.2 million individuals and tried to extort some organizations. The group was led by a 32-year-old, which police referred for prosecution. [Yonhap News]\n\nNefilim affiliate gets 70 months: A US court has sentenced a Ukrainian national to 70 months in prison for ransomware attacks. Artem Stryzhak served as an affiliate in the Hive and Nefilim ransomware operations. He was arrested in Spain in 2024 and extradited to the US last year. [DOJ]\n\nSilent Ransom Group leaks: The Ransom-ISAC team has published its own analysis on the internal chats leak from the Silent Ransom Group. See similar reports from other vendors too. [Ransom-ISAC // KELA // Crystal Intelligence // GuidePoint Security]\n\nGheist campaign: A threat actor is stealing secrets and tokens from GitHub repositories in a mass campaign. According to Wiz, the campaign started mid-September. The attacker is using already compromised GitHub tokens to access accounts, send commands to all repos to print all their secrets in workflow logs. The attacker then collects the logs and then deletes them seconds later. Wiz has found more than 850 compromised accounts and more than 13,500 affected repositories. [Wiz]\n\nMore AI agents targeting Japan: There have been reports of hackers using the ARTEX AI agents to hack companies in Japan this month. Security firm Trend Micro say it's more than ARTEX and threat actors are using many other AI tools, including the CyberStrikeAI framework. [Trend Micro]\n\nMore malicious Firefox extensions: Socket's team has identified yet another cluster of malicious extensions on the Firefox store that target cryptocurrency users. There's been a few over the past months. [Socket Security]\n\nNew MSFT Teams campaigns: Threat actors are abusing a Microsoft Teams external chat creation feature to target enterprises in social engineering campaigns. Security Arctic Wolf has documented at least 400 cases where hackers posed as the company's IT support team. An initial message turns into a phone call, and then tricking users into running malicious files that install a remote access tool. In several cases, ransomware was also installed, with strains such as Chaos, 3AM, Cactus, and Black Basta. [Arctic Wolf]\n\nZloyRAT: Russian security firm F6 has discovered a new Android remote access trojan named ZloyRAT, currently spread via various lures related to drone attacks, fuel shortages, and government applications. [F6 // F6 on Habr]\n\nYoba: Check Point looks at Yoba, a malware campaign using fake GitHub projects impersonating supposed ChatGPT and Claude desktop applications to infect users with malware. [Check Point]\n\nAgentic AI platform Nebulock pitches its product in one of our recent Snakeoilers episodes.\n\nKimsuky IOCs: Nextron researchers have published IOCs from Kimsuky's September operations, mostly involving malicious LNK files spread via spear-phishing campaigns. [Nextron Systems]\n\nUAC-0226: A suspected Russian threat actor tracked as UAC-0226 is targeting Ukrainian military and government agencies for data theft, since at least 2025. [SSSCIP]\n\nNGC5081: Rostelecom's security team has spotted new activity from NGC5081, a threat actor that hacked IT suppliers last year in Russia. The company describes the group as very sophisticated. [Rostelecom]\n\nNine APT groups used AI: Russian security firm F6 says it spotted six APT groups using AI tools in hacks this year. The list includes Mythic Likho, HeartlessSoul, GOFFEE, PhantomCore, Rezet, Eagle Werewolf, SkyCloak, AITencShell, and an unattributed APT group. [F6]\n\nSecurity updates: .NET, Apple, Firefox, GoAhead, HashiCorp, Red Hat, Siemens, VeraCrypt.\n\nPHP2Shell added to KEV: CISA has added the two PHP2Shell vulnerabilities to its KEV database of actively exploited vulns. [CISA]\n\nApple backports zero-day patches: Apple has backported a zero-day (CVE-2026-86950) patched last month to older versions of its macOS and iOS operating systems. There are also patches for new bugs. [Apple]\n\nOracle EBS exploitation: Security firm Defused has reported exploratory exploits against a recently patched vulnerability in the Oracle E-Business Suite. The vulnerability is an unauthenticated SQL injection that can run malicious code on the platform. It was discovered by security firm Horizon3 and patched last week. [Defused]\n\nWake and Break exploit: A security researcher has released an exploit for AMD's Platform Security Processor that can be used to run unsigned firmware on some chipsets. [GitHub]\n\nCompaction smuggling technique: Xint researchers have discovered a bug in the OpenAI API that leaks raw reasoning traces from frontier OpenAI models. [Xint]\n\nGoAhead vulns: The EmbedThis GoAhead web server is using flawed TLS libraries that accept revoked client certificates. Issues were found with the OpenSSL, Mbed, and LibreSSL integrations. The bugs can be exploited to launch attacks against smart devices and ICS equipment, which often rely on the server to run their management panels. EmbedThis has patched the issues earlier this month. [FoxIO]\n\nWESP preview: Elastic's Pavel Yosifovich has reverse-engineered Microsoft's new Windows Endpoint Security Platform, an upcoming mechanism through which security tools like EDRs can run on Windows from outside the kernel. [Elastic]\n\nTailscale promises to patch Tailworm bugs: Tailscale has promised to release patches for a collection of 11 bugs known as Tailworm. The bugs were disclosed last week after Tailscale failed to address them for several months. [Tailscale // Mike Shaver on Reddit // Tailworm]\n\nSony pays $50k bounty for PS exploit: Sony has paid out a $50,000 bug bounty for an exploit that could have allowed users to run Linux on PlayStation 5 gaming consoles. The bug was found with AI and reported via HackerOne. The researcher is now being criticized for not sharing the exploit with the console jailbreaking community ahead of the GTA6 release. [IGN]\n\nThreat/trend reports: Arctic Wolf, ASD, Canadian government, Cloudflare, Forrester, and OPSWAT have recently published reports and summaries covering various emerging threats and industry trends.\n\nBSides Canberra 2026 videos: Talks from the BSides Canberra 2026 security conference, which took place in September, are now available on YouTube.\n\nNew tool—ElectroNG: Security firm Doyensec has open-sourced ElectroNG, a desktop application for scanning Electron apps for security bugs.\n\nIn this episode of Risky Business Features, James Wilson looks at the string of recent AI benchmark cheating escapades and how they’ve reshaped his thinking about LLMs and vulnerability research.\n\nIn other news: ABC wipes staff devices; third PHP RCE incoming; new HTTP/3 DDoS attack vector.\n\nIn other news: Pentagon builds tech sabotage unit; PHP2Shell exploitation gets underway; GoDaddy revokes 400,000 certs.\n\nYour weekly dose of Seriously Risky Business news is written by Tom Uren and edited by Patrick Gray and Amberleigh Jack. This week's edition is sponsored by Sondera.\n\nYou can hear a podcast discussion of this newsletter by searching for \"Risky Business News\" in your podcatcher\n\nIn other news: Second ransomware negotiator linked to ShinyHunters; Chinese crime ring hacks Staples; hacker leaks AfD internal data.\n\nRisky Business publishes cybersecurity newsletters and podcasts for security professionals.",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://news.risky.biz/risky-bulletin-moldova-takes-down-80-public-services-after-cyberattack/?attribution_id=6ae1062d33e131000123df76&attribution_type=post",
+        "snippet": "Stated Claim / Post Context:\nMoldova takes down 80+ public services after cyberattack\n\nIn other news: White House launches second cybersecurity pilot program; South Korea arrests AI-assisted cybercrime ring; Electrum wallet patches crypto-stealing bug.\n\nActual Article Body:\nIn other news: White Hous"
+      }
+    ],
+    "category": "all",
+    "topic": "Moldova",
+    "event": "",
+    "graph_img": "graph_png/moldova_cyberattack_breach_2026_graph.png",
+    "rkeys": [
+      "3mywzalujxg23",
+      "3mywzan3h2j2h",
+      "3mywzapabd62b",
+      "3mywzarfgew2z",
+      "3mywzatk36d22",
+      "3mywzavp5v52r",
+      "3mywzayhpm32y",
+      "3mywzb2mt6c2t",
+      "3mywzb4rm7d22",
+      "3mywzb6xit527",
+      "3mywzbb46y623",
+      "3mywzbdb6yq2i",
+      "3mywzbffyb62b",
+      "3mywzbhkq5l22",
+      "3mywzbjpgon27"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzalujxg23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzan3h2j2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzapabd62b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzarfgew2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzatk36d22",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzavp5v52r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzayhpm32y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzb2mt6c2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzb4rm7d22",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzb6xit527",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzbb46y623",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzbdb6yq2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzbffyb62b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzbhkq5l22",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mywzbjpgon27"
+    ],
+    "tags": [
+      "Moldova",
+      "CyberSecurity"
+    ],
+    "policies": [],
+    "path_name": "Destruction"
+  }
+]

@@ -5,22 +5,22 @@
     "subject": "Talarico on Six Biological Sexes Comments",
     "link": "https://www.breitbart.com/clips/2026/09/09/talarico-on-six-biological-sexes-comments-ive-missed-the-mark-on-some-of-my-past-statements/",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.15,
-    "real_u": -0.78,
-    "real_psi": -0.82,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.62,
+    "real_psi": -0.73,
     "mode": "root",
     "posts": [
       "A sudden biological pivot in the Texas Senate race reveals the high-stakes dance of political damage control.\nTexas Rep. James Talarico backtracks on \"six biological sexes\" claim.\nEvidence: Scientific correction, Political survival, Strategic deflection.\n#Aletheia #Texas #USPol",
-      "Talarico claims he is simply correcting a past mistake to align with biological reality, admitting there are only two sexes, while refocusing the conversation on the real economic struggles of everyday Texans.\nStated Judgement: (+0.85, +0.15) — Good Preference",
-      "In reality, the sudden scientific clarity is a calculated campaign pivot to neutralize a potent Republican attack. The immediate deflection to economic issues serves to dodge deeper accountability for past ideological posturing.\nResulting Judgement: (-0.78, -0.82) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nTalarico's pivot uses a factual correction as a tactical shield, deflecting from past ideological claims to protect his Senate campaign viability.\n\nIntegrity: Severe Deception (Hypocrisy: 1.90, Uncertainty z: 2)",
+      "Talarico claims he is simply correcting a past mistake to align with biological reality, admitting there are only two sexes, while refocusing the conversation on the real economic struggles of everyday Texans.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the sudden scientific clarity is a calculated campaign pivot to neutralize a potent Republican attack. The immediate deflection to economic issues serves to dodge deeper accountability for past ideological posturing.\nResulting Judgement: (-0.62, -0.73) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nTalarico's pivot uses a factual correction as a tactical shield, deflecting from past ideological claims to protect his Senate campaign viability.\n\nIntegrity: Severe Deception (Hypocrisy: 1.90, Uncertainty z: 2)",
       "- James Talarico: FAIL (-0.78, -0.82) — Tactical pivot to shield Senate campaign.\n- Fox News Interview: COND (0.20, -0.40) — Standard adversarial press framing.\n- Campaign Rhetoric: FAIL (-0.85, -0.90) — Deflects from past claims using economic bait.",
       "During a Fox News interview on September 9, 2026, Texas State Rep. James Talarico backtracked on his 2021 assertion that modern science recognizes six biological sexes, admitting there are only two, before pivoting to attack his opponent Ken Paxton.",
       "The Bright Side:\nA prominent lawmaker publicly correcting a scientifically inaccurate claim is a positive step for objective truth, even if the underlying motivation is purely driven by electoral survival in a conservative state.",
       "The Breakdown & Plane Error:\nThe breakdown lies in a Metaphysical vs. Logical Plane Error. Talarico attempts to resolve a logical error in his past biological claims, but switches the metaphysical beneficiary from scientific truth to his own political self-preservation.",
       "Social Physics Analysis:\nTalarico executes a classic Smart Selfish Maneuver. He uses the pretext of economic empathy (focusing on gas and groceries) to project blame onto his opponents, distracting voters from his own past ideological vulnerability.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated humility and actual campaign damage control, it plots a direct trajectory toward Lesser Evil. The deflection mechanics reveal a priority of power over transparency.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated humility and actual campaign damage control, it plots a direct trajectory toward Lesser Evil. The deflection mechanics reveal a priority of power over transparency.",
       "The Unavoidable Truth: Biological sex is binary, and admitting this is scientifically correct.\nThe Unavoidable Lie: The claim that the pivot was motivated by economic focus rather than urgent campaign damage control.",
       "Alethekanon:\nThe political arena rarely tolerates pure confession. By wrapping a factual correction in a partisan counter-attack, the actor demonstrates that in campaigns, even scientific truth is merely a tool for tactical positioning.",
       "Awwthekanon:\nIt takes courage to admit when we miss the mark, but true healing only begins when we own our mistakes fully. When we use our errors as weapons to attack others, we miss the chance to build genuine trust and understanding.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.35,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "James Talarico Political Intervention",
@@ -288,6 +350,7 @@
         "name": "Texas Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

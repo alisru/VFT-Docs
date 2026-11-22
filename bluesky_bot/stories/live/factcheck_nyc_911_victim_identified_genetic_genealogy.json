@@ -20,7 +20,7 @@
       "The Bright Side:\nEven after twenty-five years, technological evolution allows forensic teams to bypass the limits of paper records and degraded DNA to restore names to the lost.",
       "The Breakdown & Plane Error:\nThere is no plane error here. The stated goal of identifying victims matches the physical and historical reality of the forensic work being done.",
       "Social Physics Analysis:\nBy aligning scientific advancement with deep respect for human dignity, the forensic team minimized systemic friction. The process empowers families by offering answers without forcing them into the public spotlight.",
-      "The Trajectory: Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of intent and execution remains perfectly intact.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of intent and execution remains perfectly intact.",
       "The Unavoidable Truth: Persistent scientific effort can eventually pierce decades of silence.\n\nThe Unavoidable Lie: Time erases the obligation of institutions to remember their citizens.",
       "Alethekanon:\nThis is a rare instance of perfect alignment between institutional promise and technical execution. The data confirms a quiet victory for forensic integrity.",
       "Awwthekanon:\nEvery name restored is a thread of love rewoven into the fabric of our shared memory. May this bring quiet peace to a family that has waited so long.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Forensic Identification",
@@ -204,6 +266,7 @@
         "name": "Jason Graham",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

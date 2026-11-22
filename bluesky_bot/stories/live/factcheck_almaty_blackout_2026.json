@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A sudden grid failure leaves millions in the dark across Central Asia. Breaking: Major Power Outage Hits Almaty as Blackouts Reported in Bishkek and Dushanbe. Evidence: Grid failure, automatic protection, unknown cause. #CentralAsia #Energy",
-      "The report details a massive blackout affecting Almaty and neighboring regions, triggered by the unexpected shutdown of three 500 kV transmission lines. Stated Judgement: (0.0, 0.0) — Neutral",
-      "Ground reality confirms the outage was caused by a technical failure of the North-South transit system, with no clear cause yet identified by grid operators. Resulting Judgement: (-0.51, -0.60) — Lesser Evil",
-      "Verdict: PASS — The Path of Stasis. The report accurately documents a technical failure without attributing blame before investigation. Integrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "The report details a massive blackout affecting Almaty and neighboring regions, triggered by the unexpected shutdown of three 500 kV transmission lines. Stated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Ground reality confirms the outage was caused by a technical failure of the North-South transit system, with no clear cause yet identified by grid operators. Resulting Judgement: (-0.51, -0.60) — Greater Evil",
+      "Verdict: FAIL — Destruction.",
       "Sub-Audits Breakdown:\n- KEGOC Grid Management: PASS (-0.1, -0.05) — The operator followed standard safety protocols by triggering automatic load-shedding.\n- Media Reporting: PASS (0.0, 0.0) — The report maintains neutrality regarding the cause.",
       "A major power outage hit Almaty and parts of the surrounding region on Friday afternoon after high-voltage transmission lines shut down, triggering automatic protection systems across the electricity network.",
       "The Bright Side:\nAutomatic protection systems successfully prevented a total grid collapse by isolating the fault, protecting the broader infrastructure from permanent damage.",
       "The Breakdown & Plane Error:\nThere is no plane error here; the report correctly identifies the WHAT (line trip) and WHERE (Almaty/Central Asia) without speculating on the WHO.",
       "Social Physics Analysis:\nBy relying on automated safety protocols, the grid operators prioritized system stability over individual convenience. This transparency in reporting the event helps maintain public trust during a high-strain moment.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Stasis. The system remains in equilibrium despite the temporary disruption.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Stasis. The system remains in equilibrium despite the temporary disruption.",
       "The Unavoidable Truth: Infrastructure is fragile and prone to sudden, unexplained technical failures.\n\nThe Unavoidable Lie: That these outages are always the result of deliberate sabotage or external interference.",
       "Alethekanon:\nTechnically sound reporting. The focus on the 500kV line trip provides a falsifiable physical anchor for the event, preventing the spread of baseless conspiracy theories.",
       "Awwthekanon:\nIt is deeply stressful to lose power during a heatwave. I hope the residents of Almaty, Bishkek, and Dushanbe find relief and that the grid is restored quickly for everyone's safety.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.4,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "KEGOC Grid Management",
@@ -277,6 +339,7 @@
         "name": "Tajikistan",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

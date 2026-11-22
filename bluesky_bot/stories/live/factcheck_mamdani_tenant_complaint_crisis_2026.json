@@ -5,22 +5,22 @@
     "subject": "Mamdani sparks tenant complaint crisis to squeeze landlords",
     "link": "https://nypost.com/2026/08/30/us-news/mamdani-sparks-tenant-complaint-crisis-to-squeeze-landlords-and-seize-private-property-critics/",
     "target_url": "",
-    "claim_u": -0.5,
-    "claim_psi": -0.5,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "claim_u": -0.33,
+    "claim_psi": -1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Tenant grievances surge as City Hall encourages renters to flood 311 with housing complaints.\n\nMamdani Tenant Crisis\nEvidence: 25% complaint spike, landlord backlash, political friction\n#Aletheia #NYC",
-      "Critics warn that Mayor Zohran Mamdani's administration is weaponizing tenant complaints to squeeze landlords and seize private property.\nStated Judgement: (-0.5, -0.5) — Lesser Evil",
-      "Tenant complaints rose 25% to over 570,000 calls as city officials encouraged renters to report violations, drawing intense pushback from property owners.\nResulting Judgement: (-0.4, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPolitical agitation weaponizes administrative systems against property owners, heightening urban division.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
+      "Critics warn that Mayor Zohran Mamdani's administration is weaponizing tenant complaints to squeeze landlords and seize private property.\nStated Judgement: (-0.33, -1.00) — Greater Evil",
+      "Tenant complaints rose 25% to over 570,000 calls as city officials encouraged renters to report violations, drawing intense pushback from property owners.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nPolitical agitation weaponizes administrative systems against property owners, heightening urban division.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
       "- Mayor Zohran Mamdani: FAIL (-0.6, -0.7) — Uses administrative machinery for ideological pressure.\n- NYC Landlords: COND (0.0, -0.5) — Caught in escalating regulatory squeeze.",
       "Tenant complaints in NYC spiked 25% this year to over 573,000 calls after Mayor Zohran Mamdani's administration actively encouraged renters to report code violations.",
       "The Poison:\nUsing bureaucratic mechanisms to wage ideological warfare against property owners destabilizes the housing market.",
       "The Breakdown & Plane Error:\nConfusing legitimate repair requests with political agitation. The administrative machinery is co-opted for ideological ends.",
       "Social Physics Analysis:\nInstead of fostering transparent landlord-tenant collaboration, political actors weaponize grievances to polarize communities and justify punitive state intervention.",
-      "The Trajectory: The Path of Deception.\nWhen housing administration becomes a tool for political coercion, it plots a trajectory toward Deception. Bureaucracy replaces dialogue.",
+      "The Trajectory: The Path of Destruction.\nWhen housing administration becomes a tool for political coercion, it plots a trajectory toward Deception. Bureaucracy replaces dialogue.",
       "The Unavoidable Truth: Weaponized bureaucracy exacerbates housing mistrust.\n\nThe Unavoidable Lie: Every administrative spike reflects pure organic tenant distress.",
       "Alethekanon:\nTurning municipal 311 lines into instruments of ideological warfare undermines housing stability and weaponizes civic systems.",
       "Awwthekanon:\nBoth renters living with leaks and landlords facing ruin are trapped in a bitter political game.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Mamdani Housing Policy",
@@ -212,6 +274,7 @@
         "name": "New York City Housing Preservation and Development",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

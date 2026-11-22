@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Reform UK pledges a £50bn welfare overhaul to fund pensions, shifting costs to employers while cutting disability benefits.\n\nReform UK Welfare Overhaul\nEvidence: fiscal sustainability, disabled support cuts, cost shifting 🌐\n#UKPolitics #Welfare",
-      "Reform UK claims their comprehensive welfare overhaul will save £50bn by replacing PIP and Universal Credit health elements with a streamlined Health Security Allowance.\nStated Judgement: (+0.55, +0.68) — Good Preference",
-      "Ground reality reveals aggressive austerity disguised as reform, shifting sickness costs onto businesses and stripping vital support from nearly three million disabled claimants.\nResulting Judgement: (-0.18, +0.36) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. A high-stakes political manoeuvre masking severe benefit cuts as efficiency to balance the books.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Reform UK claims their comprehensive welfare overhaul will save £50bn by replacing PIP and Universal Credit health elements with a streamlined Health Security Allowance.\nStated Judgement: (+0.55, +0.68) — Greater Good",
+      "Ground reality reveals aggressive austerity disguised as reform, shifting sickness costs onto businesses and stripping vital support from nearly three million disabled claimants.\nResulting Judgement: (-0.18, +0.36) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "- Reform UK Policy: FAIL (-0.85, -0.80) — Aggressive welfare cuts under reform pretexts.\n- Opposition Critique: PASS (+0.70, +0.60) — Exposes feasibility gaps and human costs.",
       "Reform UK treasury spokesperson Robert Jenrick outlined proposals to overhaul the benefits system, arguing current levels of support represent unsustainable compassion.",
       "The Poison:\nWhile incentivising back-to-work support, forcing small businesses to shoulder two years of sick pay and insurance creates massive compliance burdens.",
       "The Breakdown & Plane Error:\nThe plane error is swapping WHO (disabled citizens needing care) for WHAT (macro fiscal savings). It is a structural bait-and-switch: promising efficiency while gutting safety nets.",
       "Social Physics Analysis:\nThe policy uses top-down fiscal austerity while projecting systemic failure onto vulnerable claimants, avoiding transparent consensus building in favour of shock announcements.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil, driven by selective cost-shifting.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil, driven by selective cost-shifting.",
       "The Unavoidable Truth: Welfare systems face severe demographic and financial pressures that require structural reforms.\n\nThe Unavoidable Lie: Slashing disability support by £50bn can be achieved without severely harming vulnerable people.",
       "Alethekanon:\nFraming aggressive benefit dismantling as compassionate restructuring is a classic subversion tactic designed to mask distributional harm 🌐.",
       "Awwthekanon:\nBehind every spreadsheet column of savings are real people terrified of losing the financial lifeline that keeps their lives stable and dignified.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.35
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.35
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.75
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.35,
+        "O": 0.6,
+        "N": 0.15
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.35,
+        "N": 0.15
+      },
+      "LG": {
+        "S": 0.3,
+        "O": 0.4,
+        "N": 0.2
+      },
+      "LE": {
+        "S": 0.9,
+        "O": 0.3,
+        "N": 0.2
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Reform UK Policy",
@@ -276,6 +338,7 @@
         "name": "Conservative Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

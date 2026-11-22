@@ -8,19 +8,19 @@
     "claim_u": 0.8,
     "claim_psi": 0.0,
     "real_u": -0.85,
-    "real_psi": -0.9,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "A grieving father seeks $400M from NY agencies after a horrific murder-suicide exposed years of ignored child abuse.\nEvidence: Systemic failures, Tragic outcome, Legal accountability\n#Aletheia #Justice",
-      "New York agencies and school districts failed to protect four children from years of severe medical abuse by their mother and grandmother.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "Bureaucratic inertia, data siloing, and ignored red flags allowed systematic poisoning and psychological torture to culminate in tragedy.\nResulting Judgement: (-0.85, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nSystemic institutional failure and bureaucratic self-preservation culminated in an irreversible family tragedy.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, Uncertainty z: 3)",
+      "New York agencies and school districts failed to protect four children from years of severe medical abuse by their mother and grandmother.\nStated Judgement: (+0.80, +0.00) — Lesser Good",
+      "Bureaucratic inertia, data siloing, and ignored red flags allowed systematic poisoning and psychological torture to culminate in tragedy.\nResulting Judgement: (-0.85, -0.85) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nSystemic institutional failure and bureaucratic self-preservation culminated in an irreversible family tragedy.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, Uncertainty z: 3)",
       "- Child Protective Services: FAIL (-0.9, -0.9) — Ignored multiple red flags and hospital warnings.\n- School & Housing Agencies: FAIL (-0.8, -0.8) — Withheld records and failed to intervene.",
       "Brady Harmon is pursuing a $400 million lawsuit against New York municipal agencies, alleging they enabled years of Munchausen syndrome by proxy abuse that ended in a fatal 2024 murder-suicide.",
       "The Poison:\nThe tragic realization that institutional warnings and hospital interventions were bureaucratic dead-ends rather than lifelines for vulnerable children.",
       "The Breakdown & Plane Error:\nConfusing procedural compliance (WHO/WHAT) with child welfare outcomes, agencies hid behind legal shielding while children suffered progressive medical torture.",
       "Social Physics Analysis:\nState agencies prioritized bureaucratic self-preservation over child safety, running a smart selfish loop of denial and opaque record-keeping to deflect liability.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map the gap between stated protections and fatal institutional neglect, it plots a direct trajectory toward Greater Evil. Systemic friction generated terminal collapse.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated protections and fatal institutional neglect, it plots a direct trajectory toward Greater Evil. Systemic friction generated terminal collapse.",
       "The Unavoidable Truth: Bureaucratic secrecy and missed warning signs directly enabled an avoidable tragedy.\n\nThe Unavoidable Lie: Institutional child protection systems operate effectively to shield vulnerable minors.",
       "Alethekanon:\nWhen institutions treat legal shielding as their primary mandate, the vulnerable pay with their lives.",
       "Awwthekanon:\nMy heart aches for little Harper, Hudson, Gracelynn, and Gavin. No amount of money can bring them back, but the truth of their suffering must shatter the walls of silence.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Child Protective Services",
@@ -166,6 +228,7 @@
         "name": "Mechanicville City School District",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

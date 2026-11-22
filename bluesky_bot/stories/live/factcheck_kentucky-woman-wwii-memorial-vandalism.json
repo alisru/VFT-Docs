@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "When personal grievances are carved into sacred spaces, the message is lost in the wreckage.\n\nKentucky woman charged with vandalizing National Mall's WWII Memorial\nEvidence: whistleblower protest, memorial destruction, legal accountability\n#Aletheia #USNews",
-      "Melissa Farris claimed her spray-painting of the World War II Memorial was a cognitive act of whistleblowing designed to force her case into court.\nStated Judgement: (+0.64, +0.86) — Good Preference",
-      "In reality, federal property was defaced with paint and foam, resulting in felony charges and severe legal jeopardy for the perpetrator.\nResulting Judgement: (-0.27, +0.42) — Lesser Evil",
-      "Verdict: FAIL — The Path of Revelation into Destruction. Vandalizing a national war memorial to air personal grievances replaces constructive dialogue with destructive self-sabotage.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
+      "Melissa Farris claimed her spray-painting of the World War II Memorial was a cognitive act of whistleblowing designed to force her case into court.\nStated Judgement: (+0.64, +0.86) — Greater Good",
+      "In reality, federal property was defaced with paint and foam, resulting in felony charges and severe legal jeopardy for the perpetrator.\nResulting Judgement: (-0.27, +0.42) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Melissa Farris: FAIL (-0.85, -0.88) — Chose illegal property destruction over lawful whistleblower avenues.\n- Federal Monument Protection: PASS (1.0, 1.0) — U.S. law correctly enforces strict penalties to protect shared national heritage.",
       "A Kentucky woman was arrested after allegedly spraying paint and foam on the World War II Memorial on the National Mall, writing 'Clean Hands Dirty $' and posting admission videos online to draw attention to a personal whistleblower case.",
       "The Bright Side:\nSwift law enforcement intervention prevented further damage and ensured accountability for the desecration of a national monument.",
       "The Breakdown & Plane Error:\nThis is a failure of Logical (HOW) and Emotive (EFFECT) planes. Farris confused unlawful attention-seeking with effective whistleblowing, substituting public vandalism for actual legal remediation.",
       "Social Physics Analysis:\nInstead of engaging in transparent public coalition-building to resolve her grievances, the actor resorted to anti-social property damage, projecting her personal frustrations onto a sacred public monument.",
-      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Severe friction causes systemic breakdown.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Severe friction causes systemic breakdown.",
       "The Unavoidable Truth: Defacing a war memorial harms public trust and invites severe criminal penalties without advancing any legitimate cause.\n\nThe Unavoidable Lie: Vandalism is an effective and justifiable substitute for legal whistleblower procedures.",
       "Alethekanon:\nUsing a monument dedicated to fallen soldiers as a billboard for a personal grievance is a catastrophic logical error. True whistleblowing relies on verified evidence and legal channels, not desecrating public history.",
       "Awwthekanon:\nIt is heartbreaking to see someone in such deep distress that they feel compelled to lash out at a sacred memorial. I hope she finds the help and lawful support she truly needs.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Melissa Farris Vandalism Action",
@@ -267,6 +329,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

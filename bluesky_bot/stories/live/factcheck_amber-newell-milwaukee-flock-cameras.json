@@ -6,21 +6,21 @@
     "link": "https://dailycaller.com/2026/08/28/amber-newell-milwaukee-police-department-flock-cameras-wrongly-flagged-arrested-gunpoin",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "Surveillance tech intended to catch criminals instead subjects innocent citizens to terrifying gunpoint arrests twice due to basic clerical negligence.\n\nAmber Newell Flock Cameras\nEvidence: safety promise, gunpoint trauma, administrative error\n#Aletheia #Surveillance",
-      "Automated plate-reader systems protect communities by swiftly tracking dangerous suspects without compromising innocent daily routines.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Deadly force is unleashed on innocent citizens because agencies fail to clear stale alerts, destroying livelihoods with zero initial accountability.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nBureaucratic incompetence masked as high-tech security creates terrifying hazards for innocent citizens.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 2)",
+      "Automated plate-reader systems protect communities by swiftly tracking dangerous suspects without compromising innocent daily routines.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Deadly force is unleashed on innocent citizens because agencies fail to clear stale alerts, destroying livelihoods with zero initial accountability.\nResulting Judgement: (-0.94, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nBureaucratic incompetence masked as high-tech security creates terrifying hazards for innocent citizens.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 2)",
       "- Milwaukee Police Department: FAIL (-0.85, -0.90) — Failed to clear stale alerts.\n- Surveillance Infrastructure: COND (-0.75, -0.80) — Lacks basic oversight safeguards.",
       "Amber Newell was mistakenly arrested at gunpoint twice in weeks because MPD failed to remove her car from the Flock ALPR system after an old homicide alert.",
       "The Bright Side:\nPublic scrutiny over ALPR errors is forcing agencies to confront the devastating human toll of automated policing mistakes.",
       "The Breakdown & Plane Error:\nConfusing technological capability with administrative competence (WHAT vs WHO). The tool didn't fail; human negligence weaponized it.",
       "Social Physics Analysis:\nWhen institutions hide behind automated systems to justify aggressive errors, they evade responsibility. True accountability requires transparency and human oversight.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Unchecked automation expands systemic harm.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Unchecked automation expands systemic harm.",
       "The Unavoidable Truth: Automated tools amplify human carelessness into terrifying public safety hazards.\n\nThe Unavoidable Lie: Surveillance errors are unavoidable glitches rather than failures of institutional care.",
       "Alethekanon:\nTechnology without rigorous administrative hygiene is merely automated harassment disguised as modernization.",
       "Awwthekanon:\nNo one should have to look down the barrel of a gun because someone forgot to hit delete on a keyboard. My heart aches for Amber's lost peace.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Milwaukee Police Department",
@@ -211,6 +273,7 @@
         "name": "Brookfield Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

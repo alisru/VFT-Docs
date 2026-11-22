@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "real_u": -0.2,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Lawyers reveal Cornell fraternity brothers held emergency meetings to cover up gang-rape allegations.\nEvidence: emergency meetings, group chat cover-up, reputation protection\n#Aletheia #Cornell",
-      "The legal narrative suggests a pursuit of justice and accountability for a survivor of sexual assault.\nStated Judgement: (+0.5, 0.0) — Conditional Good",
-      "In reality, fraternity members coordinated a conspiracy of silence and narrative control to protect their house.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nFraternity members coordinated a cover-up to protect their reputation rather than facing accountability.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "The legal narrative suggests a pursuit of justice and accountability for a survivor of sexual assault.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "In reality, fraternity members coordinated a conspiracy of silence and narrative control to protect their house.\nResulting Judgement: (-0.20, -0.45) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nFraternity members coordinated a cover-up to protect their reputation rather than facing accountability.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "- Legal Representation: PASS (0.5, 0.0) — Advocates for survivor transparency.\n- Fraternity Leadership: FAIL (-0.9, -0.9) — Orchestrates a cover-up.",
       "Cornell University's Chi Phi fraternity scrambled to contain fallout after a student reported being drugged and gang-raped at their house.",
       "The Poison:\nThe reflexive tribalism of institutional fraternity culture that prioritizes brand protection over human safety.",
       "The Breakdown & Plane Error:\nConfusing institutional reputation management (WHAT) with genuine ethical accountability (WHO).",
       "Social Physics Analysis:\nFraternity members ran a classic Smart Selfish maneuver, manufacturing a cover narrative ('consensual orgy') and leveraging group cohesion to protect institutional power at the victim's expense.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_neg heavily outweighs F_pos due to coordinated concealment.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_neg heavily outweighs F_pos due to coordinated concealment.",
       "The Unavoidable Truth: Institutional loyalty often supersedes basic human empathy during crises.\n\nThe Unavoidable Lie: Group chats concerning sexual assault were merely routine weekly chapter business.",
       "Alethekanon:\nTribal protectionism masquerades as routine chapter administration until leaked messages expose the conspiracy.",
       "Awwthekanon:\nMy heart breaks for the survivor who had to face not only trauma but a coordinated wall of institutional silence.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Legal Representation",
@@ -167,6 +229,7 @@
         "name": "Matthew Ingalls",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -14,7 +14,7 @@
       "Empirical global data reveals massive, overlooked strides in literacy, renewable energy expansion, and worldwide ocean conservation.\n\nSpecial edition on global progress\nEvidence: rising education, clean energy, habitat restoration\n#GlobalProgress #Data #Aletheia",
       "Despite widespread headlines of perpetual crisis, human development indicators and environmental protections are achieving historic milestones globally.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "Rigorous international datasets corroborate systemic gains in literacy, solar cost drops, coal phase-downs, and massive marine conservation expansion.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Measurable global indicators demonstrate genuine civilizational advancement across education, energy transitions, and ecological protection.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Educational & Social Metrics: PASS (+1.4, +1.5) — Literacy rates and school meal programs show massive structural expansion.\n- Ecological & Energy Transition: PASS (+1.4, +1.5) — Solar cost parity and ocean treaties drive planetary healing.",
       "Amid constant news cycles focused on crises, this compilation aggregates verified long-term data from international agencies demonstrating monumental progress in literacy, renewable energy rollout, and biodiversity preservation.",
       "The Bright Side:\nThe historic collapse of solar energy costs combined with falling coal use proves the global green energy transition has achieved unstoppable economic momentum.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Educational & Social Metrics",
@@ -272,6 +334,7 @@
         "name": "Morocco",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

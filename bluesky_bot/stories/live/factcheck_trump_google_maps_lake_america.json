@@ -5,22 +5,22 @@
     "subject": "Trump gleefully announces that Google Maps has changed Lake Ontario to Lake America",
     "link": "https://www.dailymail.com/news/article-16091389/Trump-Google-Maps-Lake-Ontario-Lake-America.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_u": 0.68,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "When geopolitical grandstanding meets digital cartography, borders become punchlines.\nTrump gleefully announces that...\nEvidence: executive renaming order, Google Maps regional update, diplomatic friction\n#Aletheia #Geopolitics",
-      "President Trump shares his delight that Google Maps updated Lake Ontario to Lake America for US users following his executive renaming order.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The change is purely localized for U.S. users amid trade tensions, dismissed by Canada and international bodies as a meaningless domestic stunt.\nResulting Judgement: (-0.75, -0.80) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nA domestic symbolic decree is framed as a cartographic conquest, substituting manufactured friction for actual diplomacy.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "President Trump shares his delight that Google Maps updated Lake Ontario to Lake America for US users following his executive renaming order.\nStated Judgement: (+0.68, +1.00) — Greater Good",
+      "The change is purely localized for U.S. users amid trade tensions, dismissed by Canada and international bodies as a meaningless domestic stunt.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA domestic symbolic decree is framed as a cartographic conquest, substituting manufactured friction for actual diplomacy.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- Trump Executive Order: FAIL (-0.80, -0.82) — Uses unilateral rebranding for domestic political theater.\n- Google Maps Regional Update: COND (-0.50, -0.40) — Complies with local GNIS naming data while fracturing regional accuracy.",
       "Following an executive order, Google Maps updated Lake Ontario's label to Lake America for U.S. users, drawing swift mockery from Canadian officials.",
       "The Bright Side:\nHighlighting the absurdity of algorithmic mapping and how digital borders easily bend to domestic political whims.",
       "The Breakdown & Plane Error:\nConfusing WHAT (a shared transboundary ecosystem) with WHO (American domestic political branding). It treats geographic nomenclature as a partisan trophy.",
       "Social Physics Analysis:\nBy replacing collaborative binational relations with unilateral decree, leadership manufactures external grievances to rally domestic loyalty without solving underlying trade strains.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Manufactured nationalist friction replaces substantive solutions.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Manufactured nationalist friction replaces substantive solutions.",
       "The Unavoidable Truth: A digital map label does not alter physical geography or international borders.\n\nThe Unavoidable Lie: Rebranding a shared lake is a major victory rather than a hollow domestic photo-op.",
       "Alethekanon:\nCartographic vanity serves as a cheap substitute for statecraft, substituting local screen pixels for real diplomatic achievement. 🌐",
       "Awwthekanon:\nIt is sad when shared natural wonders between neighbors are dragged into petty political point-scoring instead of being cherished together.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Trump Executive Order",
@@ -288,6 +350,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

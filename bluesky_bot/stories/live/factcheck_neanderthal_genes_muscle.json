@@ -14,7 +14,7 @@
       "Unlocking ancient human biology through rigorous data science.\n\nYour Neanderthal genes may be building your muscles\nEvidence: lab cell tests, million-person data, robust science\n#Science #Genetics",
       "A new study cross-referencing lab experiments with data from over one million people reveals that a Neanderthal growth hormone receptor variant increases muscle mass.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "The research bridges molecular cell culture results with massive population datasets, proving robust genetic inheritance without sensationalist distortion.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nRigorous scientific inquiry uncovers fascinating biological truths that expand human self-understanding.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nRigorous scientific inquiry uncovers fascinating biological truths that expand human self-understanding.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Scientific Methodology: PASS (1.0, 1.0) — Flawlessly bridges microscopic cellular analysis with macro-level population data.\n- Science Communication: PASS (1.0, 1.0) — Accurately conveys genetic findings without overstating biological determinism.",
       "Researchers from the Max Planck Institute and Karolinska Institute discovered that a common Neanderthal genetic variant enhances growth hormone signaling, boosting muscle mass in modern humans.",
       "The Bright Side:\nValidates how ancient hominin interbreeding actively contributes positively to modern human physiological traits.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Scientific Methodology",
@@ -269,6 +331,7 @@
         "name": "Karolinska Institute",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

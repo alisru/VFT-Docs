@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.35,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "NYC Legionnaires' death toll hits 11 as officials insist the outbreak has stopped spreading.\nEvidence: 11 deaths, 94 cases, cooling tower contamination.\n#Aletheia #NYC #PublicHealth",
-      "Officials claim that while the death toll rose to 11, the cluster is contained with no ongoing transmission for over six weeks.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "While new cases have plateaued, systemic infrastructure failures across elite institutions left water cooling towers contaminated, resulting in 11 deaths and 94 hospitalizations.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nOfficial reassurance masks systemic municipal and private infrastructure negligence.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "Officials claim that while the death toll rose to 11, the cluster is contained with no ongoing transmission for over six weeks.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While new cases have plateaued, systemic infrastructure failures across elite institutions left water cooling towers contaminated, resulting in 11 deaths and 94 hospitalizations.\nResulting Judgement: (-0.35, -0.45) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nOfficial reassurance masks systemic municipal and private infrastructure negligence.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "Sub-Audits Breakdown:\n- NYC Health Dept: COND (0.2, -0.1) — Accurate case counts, but masks systemic infrastructure blame.\n- Upper East Side Institutions: FAIL (-0.9, -0.8) — Neglected cooling tower maintenance.",
       "Health officials announced two additional deaths from the Upper East Side Legionnaires' cluster, bringing the total to 11, though no new cases have been diagnosed in six weeks.",
       "The Bright Side:\nAll currently hospitalized patients have recovered and been discharged home safely.",
       "The Breakdown & Plane Error:\nConfusing temporal containment (WHAT) with systemic infrastructure accountability (WHO).",
       "Social Physics Analysis:\nInstitutions focus on public relations reassurance to quell panic rather than transparently addressing the deferred infrastructure maintenance that breeds bacterial growth.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between reassuring health announcements and structural neglect, it plots a direct trajectory toward Lesser Evil.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between reassuring health announcements and structural neglect, it plots a direct trajectory toward Lesser Evil.",
       "The Unavoidable Truth: Eleven New Yorkers lost their lives due to preventable bacterial contamination in cooling towers.\n\nThe Unavoidable Lie: Officials claim the crisis is fully resolved simply because transmission paused.",
       "Alethekanon:\nReassuring phrases about zero active transmissions cannot erase the structural negligence that allowed lethal bacteria to breed in museum cooling towers.",
       "Awwthekanon:\nMy heart aches for the families who lost loved ones in this outbreak. Healing requires both safety and honest accountability from our city leaders.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NYC Health Department",
@@ -157,6 +219,7 @@
         "name": "Metropolitan Museum of Art",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

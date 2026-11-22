@@ -5,22 +5,22 @@
     "subject": "Pauline Hanson One Nation Migration Visa Canavan",
     "link": "https://www.dailymail.com/news/article-16083293/pauline-hanson-one-nation-migration-visa-canavan.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.59,
-    "real_psi": -0.47,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.79,
+    "real_psi": -0.8,
     "mode": "root",
     "posts": [
       "Pauline Hanson scrambles to patch up One Nation's leaking migration policy after her own MP's public blunder.\nEvidence: Capping migration, Uncapped cheap labor, Political survival\n#Aletheia #AusPol #OneNation",
-      "One Nation claims their 130,000 migration cap is a firm, clear policy that only applies to permanent residency, and that temporary visas are a separate, well-managed category.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "The policy is a mathematical mess. Hanson claims a 130,000 cap but excludes 100,000+ PALM and holiday workers, while claiming net migration will be negative 100,000—a logical impossibility.\nResulting Judgement: (-0.59, -0.47) — Lesser Evil",
-      "Verdict: FAIL — Reckoning into Destruction.\nHanson's policy is a contradictory attempt to appease anti-migration voters while protecting cheap agricultural labor for donors.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 4)",
+      "One Nation claims their 130,000 migration cap is a firm, clear policy that only applies to permanent residency, and that temporary visas are a separate, well-managed category.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The policy is a mathematical mess. Hanson claims a 130,000 cap but excludes 100,000+ PALM and holiday workers, while claiming net migration will be negative 100,000—a logical impossibility.\nResulting Judgement: (-0.79, -0.80) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nHanson's policy is a contradictory attempt to appease anti-migration voters while protecting cheap agricultural labor for donors.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 4)",
       "- Pauline Hanson: FAIL (-0.59, -0.47) — Bad policy math.\n- David Farley: FAIL (-0.62, -0.51) — Confused platform.\n- Matt Canavan: COND (0.12, -0.25) — Exposed the folly.",
       "At the Bush Summit in Dubbo, Pauline Hanson clashed with Nationals Leader Matt Canavan while trying to clarify why her MP David Farley compared One Nation's migration stance to Labor's.",
       "The Bright Side:\nExposing these internal contradictions forces a much-needed public debate on the realistic math of migration caps versus the agricultural sector's reliance on temporary foreign labor.",
       "The Breakdown & Plane Error:\nOne Nation commits a Logical error by treating temporary and permanent migration as completely separate systems. In reality, temporary visa holders compete for the exact same housing and infrastructure.",
       "Social Physics Analysis:\nHanson uses a classic pretext of protecting local workers to justify her policy, but projects confusion onto her own MP when the math fails. This maintains the conflict without offering a viable solution.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The policy serves as an electoral shield rather than a functional plan.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The policy serves as an electoral shield rather than a functional plan.",
       "The Unavoidable Truth: You cannot achieve negative net migration while leaving major temporary visa categories completely uncapped.\n\nThe Unavoidable Lie: One Nation has a clear, mathematically consistent migration policy.",
       "Alethekanon:\nPolitical rhetoric inevitably collapses when forced to reconcile populist slogans with the economic demands of agricultural donors. The math does not lie, even if the politicians try to.",
       "Awwthekanon:\nIt is heartbreaking to see everyday people, who are genuinely struggling with housing and living costs, being offered confusing promises that do not add up. We need honest, compassionate solutions.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.45,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.15,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Pauline Hanson Migration Clarification",
@@ -288,6 +350,7 @@
         "name": "Matt Canavan",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

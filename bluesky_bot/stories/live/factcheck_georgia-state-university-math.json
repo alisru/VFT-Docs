@@ -14,7 +14,7 @@
       "A 19-year-old math prodigy blazes through a four-year degree in just 14 months.\n\nGeorgia State University Math Whiz\nEvidence: high dedication, institutional support, academic triumph\n#Education #Math",
       "Ivanna Poliashenko condensed a four-year bachelor's degree into four intense semesters through sheer grit and railway study sessions.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "Georgia State University accommodated her ambitious plan, validating her mastery with top grades and a calculus award.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. True dedication and institutional flexibility combined to foster remarkable academic achievement.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Ivanna Poliashenko: PASS (1.0, 1.0) — Exceptional drive and discipline.\n- Georgia State University: PASS (1.0, 1.0) — Flexible, supportive framework.",
       "An extraordinary 19-year-old student earned her math degree from Georgia State University in record time, balancing intense coursework and tutoring.",
       "The Bright Side:\nA rare instance where institutional flexibility successfully nurtured exceptional student talent.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ivanna Poliashenko",
@@ -286,6 +348,7 @@
         "name": "Florian Enescu",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

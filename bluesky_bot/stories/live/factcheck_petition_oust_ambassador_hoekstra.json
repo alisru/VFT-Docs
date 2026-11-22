@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Tens of thousands of Canadians sign a petition calling to expel US Ambassador Pete Hoekstra over controversial annexation remarks.\nEvidence: 70k+ signatures, diplomatic friction, trade disputes\n#Aletheia #Canada #USPol",
-      "Petition organizers argue that expelling an ambassador who normalizes annexation threats defends national sovereignty and diplomatic norms.\nStated Judgement: (+0.08, +0.35) — Good Preference",
-      "While public mobilization signals strong sovereign discontent, formal expulsion is unlikely and risks deepening bilateral trade friction ahead of key tariff deadlines.\nResulting Judgement: (-0.03, +0.42) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Redemption.\nGrassroots pushback against diplomatic overreach is authentic, though institutional impact remains symbolic amidst wider economic negotiations.\nIntegrity: Conditionally Sound (Hypocrisy: 1.5, Uncertainty z: 2)",
+      "Petition organizers argue that expelling an ambassador who normalizes annexation threats defends national sovereignty and diplomatic norms.\nStated Judgement: (+0.08, +0.35) — Greater Good",
+      "While public mobilization signals strong sovereign discontent, formal expulsion is unlikely and risks deepening bilateral trade friction ahead of key tariff deadlines.\nResulting Judgement: (-0.03, +0.42) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nGrassroots pushback against diplomatic overreach is authentic, though institutional impact remains symbolic amidst wider economic negotiations.\nIntegrity: Conditionally Sound (Hypocrisy: 1.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Lee Walker (Petition Organizer): PASS (0.6, 0.5) — Authentic grassroots mobilization to uphold national sovereignty.\n- Pete Hoekstra (US Ambassador): FAIL (-0.7, -0.6) — Rhetorical interventions undermine diplomatic protocol and inflame tensions.",
       "Over 70,000 Canadians have signed an online petition initiated by Calgary resident Lee Walker calling for U.S. Ambassador Pete Hoekstra to be declared persona non grata following comments regarding Canadian annexation and trade.",
       "The Bright Side:\nRobust civic engagement demonstrates that citizens actively monitor and push back against perceived foreign diplomatic pressure.",
       "The Breakdown & Plane Error:\nConfuses symbolic expression (WHAT) with diplomatic enforcement (WHO). A parliamentary petition voices public frustration but cannot unilaterally alter federal foreign policy.",
       "Social Physics Analysis:\nBy publicly rejecting aggressive rhetorical framing, citizens forced transparency into diplomatic friction. Instead of passive acceptance of external pressure, grassroots organizing established a clear boundary for national respect.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Civic pushback rebalances power dynamics against coercive rhetoric.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Fall into Deception. Civic pushback rebalances power dynamics against coercive rhetoric.",
       "The Unavoidable Truth: Ambassador Hoekstra's public comments crossed conventional diplomatic boundaries and alienated the Canadian public.\n\nThe Unavoidable Lie: A House of Commons petition will realistically result in the ambassador's immediate expulsion.",
       "Alethekanon:\nLee Walker's petition successfully quantified widespread unease over unconventional diplomatic rhetoric, turning passive political frustration into a measurable civic signal.",
       "Awwthekanon:\nIt takes real courage to stand up and say our home and our sovereignty are not up for negotiation. People just want mutual respect across the border.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.3,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.4,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.7,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.4,
+        "O": 0.35,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Lee Walker Grassroots Petition",
@@ -293,6 +355,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

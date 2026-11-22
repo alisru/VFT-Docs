@@ -5,22 +5,22 @@
     "subject": "Manufacturing mental illness to block deportations",
     "link": "https://www.washingtonexaminer.com/op-eds/4737644/psychologists-immigration-evaluations-deportation-fraud/",
     "target_url": "",
-    "claim_u": 0.85,
+    "claim_u": 0.68,
     "claim_psi": 0.0,
-    "real_u": -0.68,
-    "real_psi": 0.72,
+    "real_u": -0.04,
+    "real_psi": 0.41,
     "mode": "root",
     "posts": [
       "An op-ed claims psychologists are being trained to fake mental illness to block deportations. But is it fraud, or standard legal advocacy?\nEvidence: Professional standards, Sensationalized framing, Political narrative\n#Immigration #Psychology #USPol 🌐",
-      "The claim asserts that advocacy groups are training neuropsychologists to manufacture cognitive and emotional diagnoses to help illegal immigrants evade deportation.\nStated Judgement: (+0.85, 0.0) — Good Preference",
-      "In reality, the training focuses on documenting legitimate cognitive and emotional barriers within established legal frameworks, which the op-ed frames as systemic fraud.\nResulting Judgement: (-0.68, +0.72) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe narrative reframes standard legal-psychological evaluation training as an organized conspiracy to manufacture fraudulent diagnoses.\nIntegrity: Severe Deception (Hypocrisy: 1.53, Uncertainty z: 4)",
+      "The claim asserts that advocacy groups are training neuropsychologists to manufacture cognitive and emotional diagnoses to help illegal immigrants evade deportation.\nStated Judgement: (+0.68, +0.00) — Lesser Good",
+      "In reality, the training focuses on documenting legitimate cognitive and emotional barriers within established legal frameworks, which the op-ed frames as systemic fraud.\nResulting Judgement: (-0.04, +0.41) — Greatest Lie",
+      "Verdict: CONDITIONAL — Awakening into Deception.\nThe narrative reframes standard legal-psychological evaluation training as an organized conspiracy to manufacture fraudulent diagnoses.\nIntegrity: Severe Deception (Hypocrisy: 1.53, Uncertainty z: 4)",
       "Sub-Audits Breakdown:\n- Washington Examiner Op-Ed: FAIL (-0.68, 0.72) — Sensationalizes professional training as fraud.\n- Hispanic Neuropsychological Society: PASS (0.60, 0.10) — Provides standard legal-medical training.",
       "A neuropsychologist writes an op-ed warning that a Hispanic Neuropsychological Society training session on documenting cognitive and emotional barriers for immigration exceptions is actually a guide to manufacturing fake mental illnesses.",
       "The Bright Side:\nHighlighting the need for rigorous, objective standards in forensic psychological evaluations is a valid professional concern.",
       "The Breakdown & Plane Error:\nThe op-ed commits a Lyrical and Logical error by conflating the existence of training on legal exceptions with active, intentional diagnostic fraud.",
       "Social Physics Analysis:\nThe author executes a Smart Selfish Maneuver, using the pretext of professional ethics to launch a projection-heavy attack on immigration advocacy. By framing legitimate clinical evaluations as manufactured crises, the piece hoards narrative power.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The narrative uses professional credentials to validate a politically motivated attack.",
+      "The Trajectory: The Path of Awakening into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The narrative uses professional credentials to validate a politically motivated attack.",
       "The Unavoidable Truth: Psychological evaluations are a standard, legally recognized component of immigration proceedings.\nThe Unavoidable Lie: Providing training on how to document cognitive barriers is equivalent to teaching fraud.",
       "Alethekanon:\nThe piece weaponizes professional clinical authority to delegitimize standard legal defenses, transforming clinical training into a political wedge.",
       "Awwthekanon:\nIt is deeply saddening when professional tools meant to understand human suffering are reduced to battlegrounds of suspicion and political division.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Washington Examiner Op-Ed",
@@ -159,6 +221,7 @@
         "sub_psi": 0.72,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Awakening into Deception"
   }
 ]

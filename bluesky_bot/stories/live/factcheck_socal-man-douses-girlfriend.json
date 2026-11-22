@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "A Montecito man was arrested after dousing his girlfriend in lighter fluid and attempting to set her on fire near a homeless encampment.\nEvidence: Police arrest, 911 call, violent assault\n#Aletheia #Crime 🌐",
-      "Deputies responded to an emergency call reporting a violent assault and attempted arson near Highway 101 in Montecito, leading to a swift suspect arrest.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "Jason Tucker attacked his partner with a wooden stake and lighter fluid, highlighting severe public safety hazards and escalating crisis vulnerabilities.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nUnchecked violent criminality in vulnerable encampments shatters basic community safety.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 28)",
+      "Deputies responded to an emergency call reporting a violent assault and attempted arson near Highway 101 in Montecito, leading to a swift suspect arrest.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Jason Tucker attacked his partner with a wooden stake and lighter fluid, highlighting severe public safety hazards and escalating crisis vulnerabilities.\nResulting Judgement: (-0.90, -0.90) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nUnchecked violent criminality in vulnerable encampments shatters basic community safety.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 28)",
       "- Police Response: PASS (0.5, 0.5) — Swift arrest made.\n- Suspect Action: FAIL (-0.9, -0.9) — Violent attempted murder.",
       "Jason Tucker was arrested and held on $100,000 bail after allegedly threatening his girlfriend with a wooden stake and pouring lighter fluid on her in Montecito.",
       "The Poison:\nFlashy juxtaposition of billionaire estates with desperate encampment violence masks a deep systemic failure to address underlying shelter and safety crises.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Police Blotter Reporting",
@@ -142,6 +204,7 @@
         "name": "Santa Barbara County Sheriff's Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

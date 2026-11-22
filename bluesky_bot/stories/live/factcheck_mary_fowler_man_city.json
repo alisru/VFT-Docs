@@ -5,22 +5,22 @@
     "subject": "Mary Fowler's Man City boost with big WSL win over Arsenal",
     "link": "https://www.abc.net.au/news/2026-10-05/mary-fowler-s-man-city-gets-boost-with-big-wsl-win/107228530",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.7,
-    "real_u": 0.2,
-    "real_psi": 0.1,
+    "claim_u": 0.4,
+    "claim_psi": 0.4,
+    "real_u": 0.05,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "Mary Fowler shines in Manchester City's 4-2 WSL victory over Arsenal, offering a sporting bright spot amidst club turmoil.\nEvidence: Stated athletic triumph, Actual corporate scandal context, Actual sports deflection\n#Aletheia #Soccer #WSL",
-      "Mary Fowler's landmark 100th appearance and stellar sub performance powered Manchester City to a crucial win, maintaining their table-topping WSL form.\nStated Judgement: (+0.6, +0.7) — Lesser Good",
-      "While athletes deliver genuine excellence on the pitch, the club machinery operates under a cloud of massive financial rule breaches and sham revenue inflation.\nResulting Judgement: (+0.2, +0.1) — Neutral Orbit",
-      "Verdict: PASS — The Path of Redemption.\nAuthentic athletic achievement triumphs on the pitch, even as institutional financial scandals loom over the club.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Mary Fowler's landmark 100th appearance and stellar sub performance powered Manchester City to a crucial win, maintaining their table-topping WSL form.\nStated Judgement: (+0.40, +0.40) — Greater Good",
+      "While athletes deliver genuine excellence on the pitch, the club machinery operates under a cloud of massive financial rule breaches and sham revenue inflation.\nResulting Judgement: (+0.05, +0.05) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAuthentic athletic achievement triumphs on the pitch, even as institutional financial scandals loom over the club.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Athletic Performance: PASS (0.9, 0.8) — Genuine sporting excellence by Fowler.\n- Corporate Governance: FAIL (-0.8, -0.7) — Severe financial rule breaches.",
       "Manchester City defeated Arsenal 4-2 to stay top of the WSL, while dealing with ongoing fallout from Premier League financial charges.",
       "The Bright Side:\nAthletes like Mary Fowler continue to inspire through dedication and brilliance, transcending administrative corruption.",
       "The Breakdown & Plane Error:\nConfusing individual athletic merit (Q1/Metaphysical) with institutional financial integrity (Q5/Logical).",
       "Social Physics Analysis:\nSports reporting often runs a Smart Altruistic loop on the pitch (genuine teamwork and skill) while shielding the Smart Selfish maneuvers of ownership running inflated commercial contracts.",
-      "The Trajectory: The Path of Redemption.\nWhen you map athletic dedication against administrative misconduct, it plots a stable trajectory toward Lesser Good. F_pos = 1.2, F_neg = 0.5, yielding psi = +0.5.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map athletic dedication against administrative misconduct, it plots a stable trajectory toward Lesser Good. F_pos = 1.2, F_neg = 0.5, yielding psi = +0.5.",
       "The Unavoidable Truth: Mary Fowler and her teammates deliver world-class soccer through pure competitive effort.\n\nThe Unavoidable Lie: On-field sporting success washes away institutional financial misconduct by club executives.",
       "Alethekanon:\nBrilliant athletic execution provides a temporary emotional shield for institutions facing severe regulatory reckoning.",
       "Awwthekanon:\nIt is wonderful to see Mary Fowler finding her joy and rhythm on the pitch after working so hard through injuries.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Athletic Performance",
@@ -165,6 +227,7 @@
         "name": "Barclays WSL",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

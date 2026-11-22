@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.5,
-    "real_u": 0.9,
+    "real_u": 0.95,
     "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "A minor electrical fire over the weekend caused slight, repairable damage to the 97-year-old Dragon Coaster at Rye Playland.\nEvidence: Fire department report, county statement, zero injuries\n#Aletheia #NewYork",
-      "The historic amusement park landmark experienced a contained electrical fire during its off-season closure.\nStated Judgement: (+1.0, 0.5) — Good Preference",
-      "Quick municipal intervention and minor structural impact ensure the beloved coaster will be fully restored for next season.\nResulting Judgement: (+0.9, 0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nSwift emergency response and minor damage allow a historic community landmark to be preserved and repaired.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "The historic amusement park landmark experienced a contained electrical fire during its off-season closure.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "Quick municipal intervention and minor structural impact ensure the beloved coaster will be fully restored for next season.\nResulting Judgement: (+0.95, +0.40) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nSwift emergency response and minor damage allow a historic community landmark to be preserved and repaired.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Municipal Response: PASS (1.0, 0.5) — Fast containment.\n- Media Reporting: PASS (0.9, 0.3) — Accurate, low-hype coverage.",
       "A minor electrical fire struck the 97-year-old Dragon Coaster at Rye Playland in Westchester County, causing minimal damage that county officials plan to repair before the 2027 season.",
       "The Bright Side:\nPrompt firefighter response prevented structural disaster, preserving a cherished century-old piece of American cinematic and recreational history.",
       "The Breakdown & Plane Error:\nObject state blanking applies here: an inanimate municipal asset experienced physical wear, correctly evaluated on the physical plane without manufactured political conspiracy.",
       "Social Physics Analysis:\nCounty officials and emergency responders executed a Smart Altruistic loop, ensuring transparent communication, rapid strain resolution, and community reassurance without exploiting the incident for division.",
-      "The Trajectory: The Path of Redemption.\nWhen physical maintenance issues are met with competent, transparent stewardship, it plots a direct trajectory toward Grace. Restorative efforts ensure continuity of cultural heritage.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen physical maintenance issues are met with competent, transparent stewardship, it plots a direct trajectory toward Grace. Restorative efforts ensure continuity of cultural heritage.",
       "The Unavoidable Truth: Routine infrastructure maintenance and rapid emergency response protect historic public assets from accidental loss.\n\nRelying on nostalgic headlines masks the underlying financial squabbles that previously shuttered the park.",
       "Alethekanon:\nPhysical infrastructure requires continuous care; transparent municipal stewardship successfully preserves community heritage when accidents strike.",
       "Awwthekanon:\nIt is such a relief that no one was hurt and this wonderful old roller coaster will be smiling and riding again for generations to come.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Municipal Response",
@@ -156,6 +218,7 @@
         "name": "Rye Fire Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Ban on selling handguns to young adults under 21 deemed unconstitutional, DOJ says",
     "link": "https://nypost.com/2026/09/18/us-news/ban-on-selling-handguns-to-adults-under-21-unconstitutional-doj-says/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": -0.65,
-    "real_psi": -0.72,
+    "claim_u": 0.75,
+    "claim_psi": 0.25,
+    "real_u": 0.08,
+    "real_psi": -0.11,
     "mode": "root",
     "posts": [
       "The Justice Department declares federal handgun bans for 18-to-20-year-olds unconstitutional.\nEvidence: DOJ legal opinion, Second Amendment invocation, gun lobby praise\n#Aletheia #USPol",
-      "The DOJ argues that young adults face military drafts and voting rights, making handgun sales bans a violation of fundamental constitutional liberties.\nStated Judgement: (+1.0, 0.5) — Good Preference",
-      "By removing enforcement against illegal sales, the DOJ dismantles safeguards for high-risk demographics, bypassing legislative channels to appease gun lobbies.\nResulting Judgement: (-0.65, -0.72) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA legal pretense of constitutional parity shields an executive retreat from public safety enforcement.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.4, z: 2)",
+      "The DOJ argues that young adults face military drafts and voting rights, making handgun sales bans a violation of fundamental constitutional liberties.\nStated Judgement: (+0.75, +0.25) — Greater Good",
+      "By removing enforcement against illegal sales, the DOJ dismantles safeguards for high-risk demographics, bypassing legislative channels to appease gun lobbies.\nResulting Judgement: (+0.08, -0.11) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nA legal pretense of constitutional parity shields an executive retreat from public safety enforcement.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.4, z: 2)",
       "- DOJ Policy Shift: FAIL (-0.65, -0.72) — Favors lobbying over safety.\n- Gun Control Groups: PASS (0.8, 0.5) — Highlights risks to public safety.",
       "The Justice Department issued a non-binding legal opinion stating that federal bans on licensed dealers selling handguns to 18-to-20-year-olds violate the Second Amendment.",
       "The Poison:\nShort-circuiting legislative debate through executive fiat degrades institutional checks and fuels polarization.",
       "The Breakdown & Plane Error:\nConfusing WHAT (legal doctrine) with WHO (political beneficiaries), masking a lobbying victory as civil rights expansion.",
       "Social Physics Analysis:\nThe DOJ runs a Smart Selfish Maneuver. It deploys a rights-based pretext to dismantle regulations, shifting liability and projecting blame onto public safety advocates while quietly serving partisan interest groups.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Executive convenience supersedes systemic stability.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Executive convenience supersedes systemic stability.",
       "The Unavoidable Truth: Adults aged 18 to 20 possess recognized civic responsibilities across civil and military domains.\n\nThe Unavoidable Lie: Dismantling firearm purchase safeguards serves constitutional equality rather than political lobbying.",
       "Alethekanon:\nInvoking constitutional rights as a tactical shield for deregulation subverts legislative process and ignores empirical safety risks.",
       "Awwthekanon:\nEvery community yearns for safety and clarity. When powerful institutions bypass public consensus, young people and families bear the heavy burden of heightened risk.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DOJ Policy Shift",
@@ -156,6 +218,7 @@
         "name": "Second Amendment Foundation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://www.daysoftheyear.com/days/folklore-day/",
     "target_url": "https://bsky.app/profile/stilgherrian.com/post/3mtmtpdqq6625",
     "claim_u": 1.0,
-    "claim_psi": 0.67,
+    "claim_psi": 1.0,
     "real_u": 0.96,
-    "real_psi": 0.63,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Preserving ancestral myths keeps living heritage vibrant across generations.\n\nFolklore Day Brazil\nEvidence: Cultural memory, Living tradition, Educational honor\n#Folklore #Culture",
-      "Folklore Day highlights Brazil's rich oral traditions, celebrating how indigenous, African, and European myths shape cultural identity.\nStated Judgement: (+1.00, +0.67) — Greater Good",
-      "The holiday successfully promotes traditional arts, environmental stewardship, and generational storytelling across Brazil's educational landscape.\nResulting Judgement: (+0.96, +0.63) — Greater Good",
-      "Verdict: PASS — Stasis in Grace.\nThe observance authentically fosters cultural preservation and intergenerational heritage.\n\nIntegrity: Trustworthy (Hypocrisy: 1.02, Uncertainty z: 0)",
+      "Folklore Day highlights Brazil's rich oral traditions, celebrating how indigenous, African, and European myths shape cultural identity.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The holiday successfully promotes traditional arts, environmental stewardship, and generational storytelling across Brazil's educational landscape.\nResulting Judgement: (+0.96, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe observance authentically fosters cultural preservation and intergenerational heritage.\n\nIntegrity: Trustworthy (Hypocrisy: 1.02, Uncertainty z: 0)",
       "- Cultural Preservation: PASS (+0.96, +0.63) — Genuine celebration of heritage.\n- Educational Integration: PASS (+0.92, +0.58) — Fosters generational pride.",
       "Established by decree in 1965, Brazilian Folklore Day honors regional legends like Saci-Pererê and Curupira through music, dance, and classroom storytelling.",
       "The Poison:\nCommercialization can occasionally reduce complex indigenous and afro-descendant sacred traditions into superficial party caricatures.",
       "The Breakdown & Plane Error:\nNo plane error present. The cultural holiday directly connects historical origin stories with living community practices.",
       "Social Physics Analysis:\nBy celebrating diverse regional legends, the tradition honors local perspectives and unites communities through shared cultural pride.",
-      "The Trajectory: The Path of Grace.\nWhen historical narratives celebrate diverse contributions, cultural identity expands without systemic friction.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen historical narratives celebrate diverse contributions, cultural identity expands without systemic friction.",
       "The Unavoidable Truth: Folklore embodies the ecological and ethical values of ancestral communities.\nThe Unavoidable Lie: Cultural roots survive automatically without deliberate preservation.",
       "Alethekanon:\nAccurate historical reflection on Brazil's 1965 decree establishing August 22 as Folklore Day.",
       "Awwthekanon:\nPassing down these colorful tales helps kids appreciate nature and stay rooted in their culture.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.15
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.95,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Brazilian Cultural Preservation",
@@ -270,6 +332,7 @@
         "name": "Humberto de Alencar Castello Branco",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

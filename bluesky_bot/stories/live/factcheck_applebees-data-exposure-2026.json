@@ -1,0 +1,227 @@
+[
+  {
+    "thinking": "Detailed Phase 1-5 structural scan and calculations: Applebee's left a hardcoded database password in its Android app, exposing millions of customers' personal data (names, emails, DOBs, phone numbers, veteran status, login logs, and IP locations). Security researcher Robert Wiggins discovered the flaw, verified by TechCrunch. Dine Brands investigated, claiming no unauthorized access was found, but failed to provide audit logs. Stated claims project secure operations (+0.5, 0.0), while actual institutional negligence and lack of security reporting channels land at (-0.85, -0.90) — Reductive Erasure / Greater Evil vector. Hypocrisy R_net = 15.20, z = 4. Verdict: FAIL — Fall into Destruction.",
+    "id": "applebees-data-exposure-2026",
+    "subject": "Applebee’s exposed customers’ personal data after leaving database password in app",
+    "link": "https://techcrunch.com/2026/10/30/applebees-exposed-customers-personal-data-after-leaving-database-password-in-app/",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.0,
+    "real_u": -0.85,
+    "real_psi": -0.9,
+    "mode": "root",
+    "posts": [
+      "Applebee's mobile app left hardcoded database credentials exposed, risking 8.5M+ loyalty customer records.\nEvidence: Exposed Password, 1M+ Downloads, Missing Security Contact\n#Aletheia #Cybersecurity",
+      "Applebee's maintained a secure mobile rewards ecosystem protecting user privacy.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "A hardcoded password in Applebee's Android app exposed millions of customer records without basic security reporting channels.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 4)",
+      "- Applebee's / Dine Brands: FAIL (-0.85, -0.90) — Exposed customer data via hardcoded credentials and lacked security contact channels.\n- Security Researcher: PASS (+1.20, +1.10) — Discovered and responsibly disclosed the critical database flaw.",
+      "A cybersecurity researcher discovered that Applebee's Android app contained a hardcoded database password, granting unrestricted access to sensitive customer PII including veteran status and login IP addresses.",
+      "The Bright Side:\nThe vulnerability was responsibly disclosed and patched before widespread malicious exploitation was publicly confirmed.",
+      "The Breakdown & Plane Error:\nThe report confuses digital security architecture (WHAT) with corporate consumer relations (WHO). Applebee's prioritized app deployment speed over foundational data safety.",
+      "Social Physics Analysis:\nApplebee's ran a smart selfish maneuver: prioritizing lightweight app functionality while omitting basic security disclosure channels, projecting safety while leaving millions exposed to data extraction.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen corporate convenience trumps basic data protection, it plots a direct path toward destruction. The illusion of consumer security collapses into systemic exposure.",
+      "The Unavoidable Truth: Hardcoding database credentials in a public mobile app inevitably invites unauthorized data access.\n\nThe Unavoidable Lie: Corporate silence and unverified internal logs equate to proactive consumer protection.",
+      "Alethekanon:\nConvenient coding shortcuts create systemic hazards that glossy PR statements cannot erase. 🌐",
+      "Awwthekanon:\nIt's deeply unsettling to think our personal details, birthdays, and login logs are left unprotected because of a simple developer shortcut.",
+      "Brothekanon:\nWild that an 8.5-million-user rewards app had its database password just sitting right there in the source code.",
+      "Spirithekanon:\n\"Let nothing be done through selfish ambition or conceit, but in lowliness of mind let each esteem others better than themselves.\" Philippians 2:3 PASS\nTrue stewardship honors trust by guarding what is entrusted to our care."
+    ],
+    "actors": [
+      "Applebee's",
+      "Dine Brands",
+      "Robert Wiggins",
+      "TechCrunch"
+    ],
+    "actor_roles": [
+      {
+        "name": "Applebee's",
+        "role": "instigator"
+      },
+      {
+        "name": "Dine Brands",
+        "role": "instigator"
+      },
+      {
+        "name": "Robert Wiggins",
+        "role": "instigator"
+      },
+      {
+        "name": "TechCrunch",
+        "role": "author"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 15.2,
+    "claim_z": 0,
+    "real_z": 4,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Applebee's App Security",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": -0.85,
+        "real_psi": -0.9,
+        "verdict": "FAIL",
+        "reason": "Hardcoded database credentials exposed customer data."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "will be",
+    "modal_real": "is not",
+    "modal_vector": "Top-Right to Bottom-Left Inversion",
+    "geodesic": "Red Top (The Imperial Trap)",
+    "central_is_barrier_crossed": true,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nApplebee’s exposed customers’ personal data after leaving database password in app\n\nEXCLUSIVE: A security researcher discovered the hardcoded credential in Applebee's app, allowing unrestricted access to customers' personal data.\n\nActual Article Body:\nBuy One Founder Summit Ticket, Get a Second for Free. Register now.\n\nFounder Summit begins Nov. 4, 9:00 a.m. ET. Get your pass savings & deals before it starts. REGISTER HERE.\n\nLatest\n\nAI\n\nAmazon\n\nApps\n\nBiotech & Health\n\nClimate\n\nCloud Computing\n\nCommerce\n\nCrypto\n\nEnterprise\n\nEVs\n\nFintech\n\nFundraising\n\nGadgets\n\nGaming\n\nGoogle\n\nGovernment & Policy\n\nHardware\n\nInstagram\n\nLayoffs\n\nMedia & Entertainment\n\nMeta\n\nMicrosoft\n\nPrivacy\n\nRobotics\n\nSecurity\n\nSocial\n\nSpace\n\nStartups\n\nTikTok\n\nTransportation\n\nVenture\n\nStaff\n\nEvents\n\nStartup Battlefield\n\nStrictlyVC\n\nNewsletters\n\nPodcasts\n\nVideos\n\nPartner Content\n\nTechCrunch Brand Studio\n\nContact Us\n\nApplebee’s has fixed a security flaw that allowed anyone to access the personal information of its registered customers, after a researcher found a password for an internal database inside Applebee’s mobile app, TechCrunch has learned.\n\nThe popular restaurant chain confirmed on Thursday that it had taken action to address the security issue to prevent any unauthorized access to its customer database.\n\nTechCrunch withheld publication of this story until the bug was confirmed to be fixed.\n\nRobert Wiggins, a U.K.-based cybersecurity researcher at What Security, discovered the security lapse earlier this month. Wiggins is no stranger to discovering security issues, including exposed or sensitive information that should not be publicly accessible.\n\nFor this latest discovery, Wiggins used AI to help find the credential buried inside thousands of lines of source code in Applebee’s Android app, which has more than a million downloads on Google Play. The credential allowed access to the company’s customer database.\n\nStoring a password or private key in software, known as hardcoding credentials, is one of the most severe types of security vulnerabilities because anyone with the app can extract the key and use it to log in to a remote system as if they were an authorized user.\n\nWiggins said that the hardcoded credential could have also allowed a malicious attacker to modify customer data in the database.\n\nTechCrunch verified Wiggins’ findings by downloading and decompiling Applebee’s Android app to examine its source code and confirm that it contained the exposed credential. We also created an Applebee’s account with dummy account data, which allowed Wiggins to retrieve our information from the company’s database.\n\nThe exposed database contained customer names, email addresses (including whether or not the customer verified their email), dates of birth, phone numbers, and ZIP codes. The data also included veteran status, the number of times customers had logged in, when their accounts were created, and the IP addresses of their most recent log-ins, which can be used to reveal the person’s approximate location.\n\nWiggins was unable to alert Applebee’s or its parent company, Dine Brands, as neither have ways to report security issues. Wiggins asked TechCrunch for help in disclosing the security issue to the company.\n\nA spokesperson for Dine Brands, who did not provide their name, said in an emailed statement on Friday: “We appreciate TechCrunch and the security researcher for bringing this matter to our attention. Our security team promptly launched an investigation and has not currently found any evidence of unauthorized access.”\n\nWhen asked by TechCrunch, the spokesperson would not say if the company has server logs that it can review to determine whether anyone accessed the database, or if it has any logs at all.\n\n“Our investigation is ongoing, and we will take appropriate steps based on our findings,” the company added.\n\nIt’s unclear how many customers were affected by the data exposure. Wiggins said that figuring out the number of customers in the database would have required the AI model to unnecessarily access potentially every customer record.\n\nApplebee’s had at least 8.5 million customers enrolled in its rewards program as of last year, though the company would not provide a number of how many customers had their personal information exposed by this security flaw.\n\nTechCrunch asked the company if it would alert customers or U.S. regulators about the incident, including whether it would file a disclosure with the U.S. Securities and Exchange Commission, as publicly traded companies are required to do for material cybersecurity incidents. We also asked the company how long the exposed credential had been in the Applebee’s app, but we did not get a response.\n\nWe’ll update this article if the company responds.\n\nTopics\n\nWhen you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.\n\nSecurity Editor\n\nZack Whittaker is the security editor at TechCrunch. He also authors the weekly cybersecurity newsletter, this week in security.\n\nHe can be reached via encrypted message at zackwhittaker.1337 on Signal. You can also contact him by email, or to verify outreach, at [email protected].\n\nBuy One Pass, Get a Second FreeCover more ground at TechCrunch’s ultimate founder bootcamp of the year by bringing your co-founder or partner for freeBook before the BOGO deal expires\n\nAs search traffic dries up, Reddit announces it’s shifting to a logged-in experience\n\t\t\t\n\n\nSarah Perez\n\nVCs will make billions on Anthropic’s IPO, but Amazon is set to make much (much) more\n\t\t\t\n\n\nMarina Temkin\n\nBillionaire Palmer Luckey isn’t leaving California over the wealth tax\n\t\t\t\n\n\nJulie Bort\n\nMicrosoft offers buyouts to around 60,000 employees\n\t\t\t\n\n\nAisha Malik\n\nGrok releases the first seven minutes of its AI-generated ‘Odyssey’\n\t\t\t\n\n\nAnthony Ha\n\nAI delivers ‘zero financial payoff’ to most companies, Apollo economist says\n\t\t\t\n\n\nAnthony Ha\n\nThe AI graveyard: a running list of projects and startups that didn’t make it\n\t\t\t\n\n\nLauren Forristal\n\n© 2026 TechCrunch Media LLC.",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://techcrunch.com/2026/10/30/applebees-exposed-customers-personal-data-after-leaving-database-password-in-app/",
+        "snippet": "Stated Claim / Post Context:\nApplebee’s exposed customers’ personal data after leaving database password in app\n\nEXCLUSIVE: A security researcher discovered the hardcoded credential in Applebee's app, allowing unrestricted access to customers' personal data.\n\nActual Article Body:\nBuy One Founder Sum"
+      }
+    ],
+    "category": "all",
+    "topic": "Cybersecurity",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/applebees-data-exposure-2026_graph.png",
+    "rkeys": [
+      "3mz5odct4u622",
+      "3mz5oddhflq2z",
+      "3mz5odfmbhz2i",
+      "3mz5odhr43b2t",
+      "3mz5odjwjz72f",
+      "3mz5odm3ur72f",
+      "3mz5odob45622",
+      "3mz5odqg5qy2s",
+      "3mz5odslkip2i",
+      "3mz5oduqfse27",
+      "3mz5odwvt6q2t",
+      "3mz5odz2uli2k",
+      "3mz5oe37raq2t",
+      "3mz5oe5erog22",
+      "3mz5oe7jkm52h"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odct4u622",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5oddhflq2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odfmbhz2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odhr43b2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odjwjz72f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odm3ur72f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odob45622",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odqg5qy2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odslkip2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5oduqfse27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odwvt6q2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5odz2uli2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5oe37raq2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5oe5erog22",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz5oe7jkm52h"
+    ],
+    "tags": [
+      "Aletheia",
+      "Cybersecurity"
+    ],
+    "path_name": "Awakening into Destruction"
+  }
+]

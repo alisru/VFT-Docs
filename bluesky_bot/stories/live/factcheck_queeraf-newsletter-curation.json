@@ -5,16 +5,16 @@
     "subject": "Tired of doom scrolling for quality queer content? Get it here",
     "link": "https://www.wearequeeraf.com/subscribe/?utm_source=bluesky&utm_medium=social&utm_campaign=evergreen",
     "target_url": "https://bsky.app/profile/wearequeeraf.com/post/3mvwrudci5s2h",
-    "claim_u": 0.95,
-    "claim_psi": 0.88,
-    "real_u": 0.91,
-    "real_psi": 0.84,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Escaping algorithmic doomscrolling with curated queer journalism.\nTired of doom scrolling for quality queer content?\nEvidence: Community journalism, Uplifting creators, Editorial transparency\n#Aletheia #Media #LGBTQIA",
-      "QueerAF offers a weekly newsletter that curates major queer news stories, explains cultural developments, and commissions emerging LGBTQIA+ writers.\nStated Judgement: (+0.95, +0.88) — Greater Good",
-      "The publication operates as an audited Community Interest Company, reinvesting subscription funds directly into underrepresented freelance creators.\nResulting Judgement: (+0.91, +0.84) — Greater Good",
-      "Verdict: PASS — Stasis in Grace.\nThe platform directly aligns its public promise with practical community funding and independent reporting.\nIntegrity: Absolute Truth (Hypocrisy: 1.05, Uncertainty z: 1)",
+      "QueerAF offers a weekly newsletter that curates major queer news stories, explains cultural developments, and commissions emerging LGBTQIA+ writers.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The publication operates as an audited Community Interest Company, reinvesting subscription funds directly into underrepresented freelance creators.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nThe platform directly aligns its public promise with practical community funding and independent reporting.\nIntegrity: Absolute Truth (Hypocrisy: 1.05, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Creator Funding: PASS (+0.92, +0.85) — Direct payout.\n- Curation Bias: PASS (+0.89, +0.82) — Transparent framing.",
       "QueerAF distributes a free weekly digest summarizing LGBTQIA+ headlines while commissioning marginalized writers under a non-profit editorial model.",
       "The Poison:\nRelying on curated digests can create ideological echo chambers if opposing legal or social perspectives are entirely filtered out.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Creator Support Model",
@@ -206,6 +268,7 @@
         "name": "Community Interest Company",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

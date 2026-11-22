@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mxgt62423k2i",
     "claim_u": 1.0,
     "claim_psi": 0.5,
-    "real_u": 0.5,
-    "real_psi": 0.0,
+    "real_u": 0.55,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Wall Street gives CBOE a green light on renewed options.\nEvidence: Morgan Stanley upgrade, CBOE license extension, equity bullishness\n#Finance #CBOE 🌐",
-      "Morgan Stanley double upgraded CBOE to overweight, citing a renewed options deal.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "Analyst upgrades reflect institutional revenue capture via licensing renewals and fee generation.\nResulting Judgement: (+0.5, 0.0) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nFinancial analysis correctly identifies corporate license stability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Morgan Stanley double upgraded CBOE to overweight, citing a renewed options deal.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "Analyst upgrades reflect institutional revenue capture via licensing renewals and fee generation.\nResulting Judgement: (+0.55, +0.10) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nFinancial analysis correctly identifies corporate license stability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- Morgan Stanley: PASS (+0.8, +0.5) — Bullish analyst upgrade.\n- CNBC Reporting: PASS (+0.7, +0.2) — Accurate financial coverage.",
       "Morgan Stanley upgraded CBOE exchange stock following the successful renewal of lucrative options licensing deals.",
       "The Bright Side:\nClear reporting of financial analyst rating changes for market participants.",
       "The Breakdown & Plane Error:\nConfusing short-term equity upside for systemic economic stability ignores broader market volatility.",
       "Social Physics Analysis:\nAnalysts and exchanges engage in transparent value signaling and fee optimization, balancing capital growth against market risks without malicious deception.",
-      "The Trajectory: The Path of Redemption.\nWhen you map market alignment with corporate earnings, it plots a direct trajectory toward Grace.\nEquilibrium holds through transparent profit incentives.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map market alignment with corporate earnings, it plots a direct trajectory toward Grace.\nEquilibrium holds through transparent profit incentives.",
       "The Unavoidable Truth: Exchange licensing renewals directly secure predictable corporate revenue streams.\n\nThe Unavoidable Lie: Equity analyst upgrades guarantee immunity from broader macroeconomic downturns.",
       "Alethekanon:\nFinancial ratings reflect contractual renewals rather than systemic reform. Market incentives prioritize immediate shareholder returns over public welfare.",
       "Awwthekanon:\nIt's reassuring when financial data is clear, but let's remember everyday workers facing rising costs need stability just as much as investors.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Morgan Stanley",
@@ -168,6 +230,7 @@
     "tags": [
       "Finance",
       "CBOE"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Three novice hikers had to be rescued on Mount Shasta after relying blindly on Google Gemini for trip planning.\nEvidence: AI trip planning, inadequate supplies, mountain rescue\n#Aletheia #AI",
-      "Tech platforms pitch AI as a reliable, all-knowing companion for outdoor adventures and daily logistics.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Blind trust in unverified AI outputs without basic common sense or local ranger consultation nearly cost these hikers their lives.\nResulting Judgement: (-0.6, -0.5) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nOver-reliance on synthetic convenience without critical thinking creates avoidable crises.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Tech platforms pitch AI as a reliable, all-knowing companion for outdoor adventures and daily logistics.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Blind trust in unverified AI outputs without basic common sense or local ranger consultation nearly cost these hikers their lives.\nResulting Judgement: (-0.60, -0.50) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nOver-reliance on synthetic convenience without critical thinking creates avoidable crises.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Tech Platform Framing: COND (0.5, 0.0) — Hypes capability, buries user risk.\n- Hikers' Judgment: FAIL (-0.8, -0.7) — Substituted AI for critical thinking.",
       "Three hikers scaling Mount Shasta followed flawed AI advice regarding food, water, and timing, turning an 8-hour trek into a multi-day ordeal.",
       "The Bright Side:\nTimely rescue by professional rangers and volunteers prevented a fatal outcome.",
       "The Breakdown & Plane Error:\nConfusing computational pattern matching (WHAT) with lived physical reality and safety boundaries (WHO/WHERE).",
       "Social Physics Analysis:\nActors traded active situational awareness for passive convenience. By outsourcing judgment to an automated system, they created a manufactured crisis of scarcity and exposure.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Uncritical tool adoption outpaces verification.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Uncritical tool adoption outpaces verification.",
       "The Unavoidable Truth: AI models synthesize probabilities, not physical survival truths.\n\nThe Unavoidable Lie: Artificial intelligence can replace local wilderness expertise.",
       "Alethekanon:\nTreating generative text models as infallible wilderness guides is an epistemic category error that invites physical peril.",
       "Awwthekanon:\nIt is terrifying to be stranded in the dark and cold, but thankfully skilled search and rescue volunteers brought them home safely.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tech Platform Framing",
@@ -156,6 +218,7 @@
         "name": "US Forest Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

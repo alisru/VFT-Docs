@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/news.abc.net.au/post/3mv7gz6h55m2e",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": -0.05,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "Justice delivered as Daniel Billings receives a 28-year sentence for the brutal murder of Molly Ticehurst.\nEvidence: 28-year sentence, bail loophole failure, Molly's Law reform\n#Justice #DomesticViolence",
-      "The legal system delivers a definitive sentence, holding the perpetrator fully accountable for a terrifying domestic violence murder.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While justice is served in court, this tragedy exposes a catastrophic pre-existing failure where a violent offender was granted bail.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nStrict sentencing follows a devastating failure of protective bail laws.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "The legal system delivers a definitive sentence, holding the perpetrator fully accountable for a terrifying domestic violence murder.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "While justice is served in court, this tragedy exposes a catastrophic pre-existing failure where a violent offender was granted bail.\nResulting Judgement: (-0.05, -0.15) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nStrict sentencing follows a devastating failure of protective bail laws.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Judicial Sentencing: PASS (0.8, 0.5) — Imposes a robust 28-year prison term.\n- Pre-Trial Bail System: FAIL (-0.9, -0.8) — Failed to protect the victim from a known violent threat.",
       "Molly Ticehurst's tragic murder in April 2024 forced New South Wales lawmakers to tighten bail laws through 'Molly's Law,' introducing electronic monitoring.",
       "The Bright Side:\nPublic outrage over this failure catalyzed vital legal reforms, including mandatory electronic ankle monitors for violent offenders.",
       "The Breakdown & Plane Error:\nConfusing judicial punishment (WHAT happened in court) with systemic prevention (WHO failed to protect the victim beforehand).",
       "Social Physics Analysis:\nThe system operated under a passive bureaucratic loop until tragedy forced an active response. The perpetrator's violent coercion exploited administrative blind spots.",
-      "The Trajectory: The Path of Reckoning.\nWhen institutional complacency collides with lethal reality, it triggers harsh structural corrections.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen institutional complacency collides with lethal reality, it triggers harsh structural corrections.",
       "The Unavoidable Truth: A severe prison sentence provides legal accountability for a horrific crime.\n\nThe Unavoidable Lie: Strict post-tragedy laws fully undo prior systemic negligence.",
       "Alethekanon:\nJustice in the courtroom cannot resurrect what systemic negligence allowed to be destroyed.",
       "Awwthekanon:\nMay Molly's memory live on in a world that finally learns to shield the vulnerable before tragedy strikes.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Judicial Sentencing",
@@ -161,6 +223,7 @@
         "name": "New South Wales Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.6,
-    "real_u": -0.7,
-    "real_psi": -0.6,
+    "real_u": -0.25,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "Exposing Democratic hypocrisy on foreign nationals in campaigns while ignoring legal TPS distinctions. #Aletheia #USPol",
-      "Democrats hypocritically hired foreign nationals for election work after years of condemning foreign election interference.\nStated Judgement: (+0.8, +0.6) — Good Preference",
-      "Employing legal TPS holders for campaign support is lawful labor, conflated with state interference for partisan point-scoring.\nResulting Judgement: (-0.7, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Conflating legal immigrant labor with illicit state interference manufactures partisan outrage.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "Democrats hypocritically hired foreign nationals for election work after years of condemning foreign election interference.\nStated Judgement: (+0.80, +0.60) — Greater Good",
+      "Employing legal TPS holders for campaign support is lawful labor, conflated with state interference for partisan point-scoring.\nResulting Judgement: (-0.25, -0.40) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "- The Federalist Framing: FAIL (-0.7, -0.6) — Equates legal TPS labor with foreign interference.\n- Democratic Party Actions: COND (+0.2, -0.2) — Lawful employment, clumsy messaging.",
       "The Federalist highlights a New Yorker report on a TPS worker helping Democratic campaigns, weaponizing it against past anti-interference rhetoric.",
       "The Poison:\nWeaponizing individual immigrant worker statuses to score partisan points against past election integrity warnings distorts immigration reality.",
       "The Breakdown & Plane Error:\nConfusing WHAT (legal employment of temporary protected status workers) with WHO (state-level foreign election interference actors).",
       "Social Physics Analysis:\nActors run a Smart Selfish maneuver. By substituting a legal immigration labor issue into a menacing foreign interference pretext, they project hypocrisy onto opponents to manufacture outrage.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Net force pulls away from transparency (-0.7).",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Net force pulls away from transparency (-0.7).",
       "The Unavoidable Truth: Legal TPS workers are permitted to hold jobs in the U.S.\n\nThe Unavoidable Lie: Hiring a TPS consultant equates to foreign election hacking.",
       "Alethekanon:\nConflating lawful labor migration with geopolitical subversion is a classic rhetorical slight of hand designed to inflame xenophobic anxieties.",
       "Awwthekanon:\nIt's heartbreaking to watch ordinary people trying to build a life under temporary status get turned into political footballs in a bitter partisan game.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Federalist Framing",
@@ -161,6 +223,7 @@
         "name": "The Federalist",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

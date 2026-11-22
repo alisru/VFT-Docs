@@ -5,22 +5,22 @@
     "subject": "Trump Admin Cracks Down On School-Enforced Trans Madness In Kansas",
     "link": "https://thefederalist.com/2026/08/31/trump-admin-cracks-down-on-school-enforced-trans-madness-in-kansas/?utm_source=rss&utm_medium=rss&utm_campaign=trump-admin-cracks-down-on-school-enforced-trans-madness-in-kansas",
     "target_url": "",
-    "claim_u": 1.5,
-    "claim_psi": 1.0,
-    "real_u": 0.75,
-    "real_psi": 0.65,
+    "claim_u": 1.25,
+    "claim_psi": 0.75,
+    "real_u": 0.65,
+    "real_psi": 0.55,
     "mode": "root",
     "posts": [
       "Federal enforcement brings Kansas school districts into compliance with parental rights laws.\n\nTrump Admin Cracks Down On School-Enforced Trans Madness In Kansas\nEvidence: parental rights, federal enforcement, FERPA compliance\n#Education #USPol",
-      "The article claims the Trump administration successfully ended Topeka Public Schools' policy of concealing students' gender transitions from parents under FERPA.\nStated Judgement: (+1.5, +1.0) — Greater Good",
-      "In reality, the Department of Education secured a resolution agreement with Topeka Public Schools to ensure parental access to student records, enforcing existing federal law.\nResulting Judgement: (+0.75, +0.65) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nThe administration used federal regulatory power to enforce parental notification, aligning school policies with federal privacy laws.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
+      "The article claims the Trump administration successfully ended Topeka Public Schools' policy of concealing students' gender transitions from parents under FERPA.\nStated Judgement: (+1.25, +0.75) — Greater Good",
+      "In reality, the Department of Education secured a resolution agreement with Topeka Public Schools to ensure parental access to student records, enforcing existing federal law.\nResulting Judgement: (+0.65, +0.55) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe administration used federal regulatory power to enforce parental notification, aligning school policies with federal privacy laws.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Federal Enforcement: PASS (0.90, 0.80) — Successfully enforced FERPA compliance in Topeka.\n- Editorial Framing: COND (0.40, 0.30) — Uses highly sensationalized language for a standard regulatory action.",
       "The U.S. Department of Education reached a resolution with Topeka Public Schools, requiring the district to share student 'gender support plans' with parents to comply with FERPA.",
       "The Poison:\nWhile enforcing parental rights, the highly charged political rhetoric surrounding the enforcement can increase social friction and anxiety for vulnerable students.",
       "The Breakdown & Plane Error:\nThe article conflates a standard regulatory enforcement of student privacy laws (WHAT) with a sensationalized culture-war 'crackdown' (WHO) to maximize political impact.",
       "Social Physics Analysis:\nBy enforcing upfront transparency regarding student records, the action reduces systemic friction between parents and schools, ensuring that families remain the primary decision-makers rather than administrative systems.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The enforcement of FERPA restores the legal balance of parental authority.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The enforcement of FERPA restores the legal balance of parental authority.",
       "The Unavoidable Truth: Schools cannot legally hide student records, including gender plans, from parents under FERPA.\nThe Unavoidable Lie: This regulatory resolution is a sweeping ideological purge rather than a standard legal compliance action.",
       "Alethekanon:\nThis is a straightforward enforcement of federal privacy law. While the editorial framing is highly sensationalized, the underlying legal mechanism of FERPA compliance is structurally sound.",
       "Awwthekanon:\nWe must always protect the bond between parents and children, while ensuring that schools remain safe, supportive, and loving environments for every single student.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Federal Enforcement",
@@ -173,6 +235,7 @@
         "name": "Kansas",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

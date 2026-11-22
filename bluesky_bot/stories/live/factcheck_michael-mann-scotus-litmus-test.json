@@ -5,22 +5,22 @@
     "subject": "VIDEO: Climate Alarmist Michael Mann Says Senate Democrats Need 'Litmus Test' on Expanding SCOTUS",
     "link": "https://www.breitbart.com/politics/2026/08/28/michael-mann-senate-democrats-litmus-test-expand-supreme-court/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.68,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Climate scientist Michael Mann demands Senate Democrats pledge to pack the Supreme Court for climate policy.\nEvidence: climate urgency, institutional subversion, judicial packing\n#Aletheia #USPol",
-      "Mann argues that passing climate regulations requires a partisan litmus test to expand the Supreme Court, framing it as the only viable environmental path.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Beneath climate advocacy lies a raw institutional power grab, marked by legal confusion over Chevron deference and a history of distorted trial data.\nResulting Judgement: (-0.7, -0.8) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nUsing environmental survival as a pretext to dismantle judicial independence.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "Mann argues that passing climate regulations requires a partisan litmus test to expand the Supreme Court, framing it as the only viable environmental path.\nStated Judgement: (+0.68, +1.00) — Greater Good",
+      "Beneath climate advocacy lies a raw institutional power grab, marked by legal confusion over Chevron deference and a history of distorted trial data.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nUsing environmental survival as a pretext to dismantle judicial independence.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "Sub-Audits Breakdown:\n- Michael Mann: FAIL (-0.7, -0.8) — Demands court packing for policy.\n- Legal Accuracy: FAIL (-0.8, -0.7) — Confuses Chevron deference rules.",
       "Climate scientist Michael Mann stated on a podcast that Senate Democrats should face a litmus test supporting Supreme Court expansion to ensure environmental regulations pass.",
       "The Poison:\nWeaponizing existential environmental threats to justify packing independent judicial institutions, eroding constitutional checks and balances.",
       "The Breakdown & Plane Error:\nConfusing WHAT (environmental protection) with WHO (institutional power concentration). It's a structural bait-and-switch: saving the planet is used to justify rewriting constitutional rules.",
       "Social Physics Analysis:\nMann uses an existential crisis as a pretext to demand partisan control over the judiciary. Instead of transparent democratic persuasion, he applies ideological coercion to bypass institutional checks.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated climate urgency and actual institutional subversion, it plots a direct trajectory toward Deception.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated climate urgency and actual institutional subversion, it plots a direct trajectory toward Deception.",
       "The Unavoidable Truth: Climate regulation currently faces major judicial roadblocks from conservative court rulings.\n\nThe Unavoidable Lie: Packing the Supreme Court is a neutral procedural fix rather than a raw partisan power grab.",
       "Alethekanon:\nElevating policy goals above constitutional guardrails turns advocacy into authoritarianism. When ends justify any means, the republic erodes from within.",
       "Awwthekanon:\nIt is heartbreaking to watch desperate ecological concern get channeled into destructive power struggles that only deepen our civic divisions.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Michael Mann Political Intervention",
@@ -216,6 +278,7 @@
         "name": "Senate Democrats",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

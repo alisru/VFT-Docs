@@ -14,7 +14,7 @@
       "University of Kentucky researchers restore two hours of sleep in Alzheimer's models by targeting brain immune cells!\n\nTwo Hours of Sleep Restored in Alzheimer’s Brains\nEvidence: scientific discovery, microglial intervention, restorative sleep\n#Aletheia #Science 🌐",
       "Targeting microglia with Pexidartinib successfully reverses sleep disruption caused by early amyloid plaque inflammation in Alzheimer's.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "Rigorous preclinical research reveals microglia as the primary drivers of sleep loss, opening novel therapeutic avenues for neurodegeneration.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nThis breakthrough correctly identifies a core mechanism of Alzheimer's pathology, offering tangible hope for effective future treatments.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nThis breakthrough correctly identifies a core mechanism of Alzheimer's pathology, offering tangible hope for effective future treatments.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- UK College of Medicine: PASS (+1.0, +1.0) — Rigorous neuroinflammation research.\n- Therapeutic Approach: PASS (+1.0, +1.0) — Shifting focus to microglial immune storms.",
       "Researchers led by Shannon Macauley and Nicholas Constantino discovered that microglia drive sleep loss in Alzheimer's, challenging previous neuron-death models.",
       "The Bright Side:\nPinpointing the immune cascade opens precise targets for preserving cognitive function and sleep quality.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "UK College of Medicine Research Team",
@@ -268,6 +330,7 @@
         "name": "University of Kentucky",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

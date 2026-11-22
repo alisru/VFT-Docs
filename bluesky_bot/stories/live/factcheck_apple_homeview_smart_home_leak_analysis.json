@@ -6,21 +6,21 @@
     "link": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
     "target_url": "",
     "claim_u": 0.6,
-    "claim_psi": 0.35,
-    "real_u": -0.35,
-    "real_psi": 0.46,
+    "claim_psi": 0.3,
+    "real_u": -0.17,
+    "real_psi": 0.35,
     "mode": "root",
     "posts": [
       "Apple HomeView Smart Home Hub Announcement. Evidence: Stated seamless control, Actual ecosystem lock-in, Actual proprietary hardware margins. #Aletheia #Tech",
-      "Tech reporting highlights Apple’s upcoming HomeView smart home hub, framing it as a Siri and A18-powered central controller designed to seamlessly manage household smart devices and revive Apple’s home ecosystem.\nStated Judgement: (+0.60, +0.35) — Good Preference 🌐",
-      "Behind the hype lies Apple’s persistent hardware-first strategy to lock consumers inside its closed ecosystem, withholding a full App Store on the device while leveraging hardware sales to recapture smart home market share.\nResulting Judgement: (-0.35, +0.46) — Deception",
-      "Verdict: FAIL — The Path of Deception. Corporate framing masks ecosystem extraction behind consumer convenience.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.25, z: 2)",
+      "Tech reporting highlights Apple’s upcoming HomeView smart home hub, framing it as a Siri and A18-powered central controller designed to seamlessly manage household smart devices and revive Apple’s home ecosystem.\nStated Judgement: (+0.60, +0.30) — Greater Good",
+      "Behind the hype lies Apple’s persistent hardware-first strategy to lock consumers inside its closed ecosystem, withholding a full App Store on the device while leveraging hardware sales to recapture smart home market share.\nResulting Judgement: (-0.17, +0.35) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.25, z: 2)",
       "- TechCrunch Coverage: COND (+0.10, +0.20) — Parroted leak details without scrutinizing lock-in.\n- Apple Home Strategy: FAIL (-0.45, +0.50) — Prioritizes hardware margin over open standards.",
       "Apple is preparing to release HomeView, a Siri-driven smart home display powered by the A18 chip, alongside refreshed HomePod mini and Apple TV hardware, to compete against Amazon Echo Show and Google Nest Hub.",
       "The Bright Side:\nA dedicated, localized control hub with an A18 chip could significantly reduce latency and privacy risks associated with cloud-heavy smart home competitors.",
       "The Breakdown & Plane Error:\nThe report commits a Metaphysical Plane Error (WHO). It frames the hub as a user-empowerment solution, while the underlying architecture enforces corporate ecosystem capture and hardware monetization.",
       "Social Physics Analysis:\nApple executes a Smart Selfish Maneuver. Under the pretext of solving smart home fragmentation, it projects user convenience while securing proprietary hardware margins and excluding open app ecosystems.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated consumer utility and corporate enclosure, it plots a direct trajectory toward Deception. Closed hardware ecosystems extract recurring margin at the expense of open inter-operability.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated consumer utility and corporate enclosure, it plots a direct trajectory toward Deception. Closed hardware ecosystems extract recurring margin at the expense of open inter-operability.",
       "The Unavoidable Truth: Apple needs a dedicated home hardware anchor to stay relevant in ambient computing.\nThe Unavoidable Lie: HomeView is built primarily for user convenience rather than ecosystem lock-in.",
       "Alethekanon:\nHardware iteration cannot disguise structural ecosystem enclosure. When device capability is intentionally throttled to protect proprietary boundaries, utility is subordinated to rent-seeking.",
       "Awwthekanon:\nPeople just want their homes to run smoothly without fighting clunky software or proprietary walls. Tech should bring ease to family life, not force households into corporate ecosystems.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "TechCrunch Coverage",
@@ -162,6 +224,7 @@
     "tags": [
       "Aletheia",
       "Tech"
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

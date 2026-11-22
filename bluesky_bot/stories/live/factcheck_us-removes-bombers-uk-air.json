@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": -0.6,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "The U.S. military pulls all bombers from RAF Fairford in England following a security scare and terror arrests.\nEvidence: Terror arrests, Bomber redeployment, Iran war tensions\n#Aletheia #Geopolitics #RAF Fairford",
-      "Officials frame the withdrawal of strategic bombers from RAF Fairford as a standard security precaution after local terror arrests.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "In reality, the sudden pullout exposes acute vulnerabilities and escalating security risks tied to the U.S. bombing campaign against Iran.\nResulting Judgement: (-0.75, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA tactical withdrawal is spun as routine security to mask deep vulnerability and mounting friction in the Iran campaign.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.4, z: 3)",
+      "Officials frame the withdrawal of strategic bombers from RAF Fairford as a standard security precaution after local terror arrests.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "In reality, the sudden pullout exposes acute vulnerabilities and escalating security risks tied to the U.S. bombing campaign against Iran.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA tactical withdrawal is spun as routine security to mask deep vulnerability and mounting friction in the Iran campaign.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.4, z: 3)",
       "Sub-Audits Breakdown:\n- Pentagon Framing: FAIL (-0.70, -0.80) — Masks operational vulnerability.\n- Media Coverage: COND (-0.50, -0.60) — Repeats official pretexts uncritically.",
       "Following terror arrests near RAF Fairford, the U.S. Air Force hurriedly relocated its B-1 and B-52 bombers back home, rattling alliance logistics.",
       "The Bright Side:\nExposing base vulnerabilities early prevents catastrophic security breaches before an attack can materialize.",
       "The Breakdown & Plane Error:\nConfusing WHAT (withdrawing aircraft) with WHY (masking strategic panic over compromised security infrastructure).",
       "Social Physics Analysis:\nThe Pentagon runs a Smart Selfish maneuver, spinning an urgent operational retreat as routine prudence to protect institutional prestige while avoiding accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg drives ψ negative (-0.85).",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg drives ψ negative (-0.85).",
       "The Unavoidable Truth: Security threats forced an emergency redeployment of strategic bombers.\n\nThe Unavoidable Lie: The relocation was entirely routine rather than a reactionary retreat.",
       "Alethekanon:\nInstitutions mask operational panics behind procedural jargon to preserve an illusion of absolute control.",
       "Awwthekanon:\nIt is unsettling when the shields we rely on for safety suddenly reveal cracks, reminding us how fragile our arrangements truly are.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Pentagon Framing",
@@ -173,6 +235,7 @@
         "name": "Iran",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

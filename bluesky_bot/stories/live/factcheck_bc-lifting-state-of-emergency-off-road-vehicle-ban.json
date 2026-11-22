@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.2,
+    "real_u": 0.35,
     "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "B.C. lifts its province-wide wildfire state of emergency and off-road vehicle ban as conditions improve.\nEvidence: emergency lifted, vehicle ban ending, wildfire risk persists\n#Aletheia #BCWildfires",
-      "Officials claim the emergency tools are no longer required province-wide, encouraging tourism and local support in the Okanagan.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While province-wide emergency powers end, over 1,300 properties remain under evacuation orders and active fires continue.\nResulting Judgement: (-0.2, +0.2) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nPragmatic resource management scales back broad emergency powers as regional conditions improve, despite localized ongoing risks.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Officials claim the emergency tools are no longer required province-wide, encouraging tourism and local support in the Okanagan.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "While province-wide emergency powers end, over 1,300 properties remain under evacuation orders and active fires continue.\nResulting Judgement: (+0.35, +0.20) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPragmatic resource management scales back broad emergency powers as regional conditions improve, despite localized ongoing risks.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- B.C. Forests Ministry: PASS (0.8, 0.5) — Pragmatic emergency scale-back.\n- Wildfire Service: PASS (0.5, 0.2) — Regionally adaptive policy.",
       "British Columbia has officially ended its province-wide state of emergency and lifted the off-road vehicle ban, though local evacuation orders remain in place for hundreds of properties.",
       "The Bright Side:\nLifting broad bans allows local businesses and tourism in affected regions like Summerland to recover economically.",
       "The Breakdown & Plane Error:\nConfusing WHAT (province-wide emergency declaration) with WHERE (specific regional fire zones still under threat).",
       "Social Physics Analysis:\nThe government transparently shifted from broad bureaucratic prohibitions to targeted regional management, empowering local recovery while maintaining situational awareness.",
-      "The Trajectory: The Path of Awakening.\nWhen you map administrative adjustments to ground-level weather changes, it plots a direct trajectory toward Redemption. Pragmatic alignment reduces unnecessary friction.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map administrative adjustments to ground-level weather changes, it plots a direct trajectory toward Destruction. Pragmatic alignment reduces unnecessary friction.",
       "The Unavoidable Truth: Broad emergency declarations cannot remain indefinitely once immediate systemic collapse risks recede.\nThe Unavoidable Lie: Lifting province-wide restrictions implies the wildfire season has entirely concluded.",
       "Alethekanon:\nAdministrative recalibration replaces blanket decrees with targeted local oversight, balancing recovery needs against residual environmental hazards.",
       "Awwthekanon:\nIt is a relief to see communities beginning to heal and welcome visitors back after such terrifying fires, even as vigilance remains necessary.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "B.C. Forests Ministry",
@@ -156,6 +218,7 @@
         "name": "British Columbia",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

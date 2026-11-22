@@ -6,15 +6,15 @@
     "link": "https://www.abc.net.au/news/2026-10-04/wwii-shell-detonated-on-sunshine-coast-beach/107226936",
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3mwzs3o3upn2q",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.9,
-    "real_psi": 0.9,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Midnight beach stroll turns explosive when a dog walker spots a WWII relic! 🐚💥\nShock wake-up for residents as WWII shell detonated on beach\nEvidence: Historical ordnance, Public safety response, Safe controlled detonation\n#Aletheia #Australia 🌐",
-      "Authorities and news reports framed the midnight discovery of an unexploded 11-kilogram WWII shell on Wurtulla Beach as a critical public safety hazard requiring immediate ADF bomb squad intervention.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Ground reality confirms the Australian Defence Force swiftly secured and safely detonated the historical high explosive device at 4 AM, averting disaster while jolting local residents awake with a massive blast.\nResulting Judgement: (+0.9, +0.9) — Grace",
-      "Verdict: PASS — The Path of Grace.\nA real historical hazard was responsibly neutralized by trained specialists with transparent public coordination.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Authorities and news reports framed the midnight discovery of an unexploded 11-kilogram WWII shell on Wurtulla Beach as a critical public safety hazard requiring immediate ADF bomb squad intervention.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Ground reality confirms the Australian Defence Force swiftly secured and safely detonated the historical high explosive device at 4 AM, averting disaster while jolting local residents awake with a massive blast.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nA real historical hazard was responsibly neutralized by trained specialists with transparent public coordination.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Australian Defence Force: PASS (+0.95, +0.90) — Rapid, professional bomb disposal.\n- Local Media Reporting: PASS (+0.90, +0.85) — Accurate, factual hazard reporting.",
       "An 11-kilogram World War II high-explosive 25-pounder shell was discovered at the base of a sand dune on Queensland's Wurtulla Beach, prompting an emergency ADF bomb squad response and a controlled 4 AM blast.",
       "The Bright Side:\nWhile the 4 AM blast startled sleeping residents, it successfully eliminated a dangerous piece of wartime ordnance before anyone could stumble upon it accidentally on a busy beach.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.45,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Australian Defence Force",
@@ -288,6 +350,7 @@
         "name": "Sean Mackney",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

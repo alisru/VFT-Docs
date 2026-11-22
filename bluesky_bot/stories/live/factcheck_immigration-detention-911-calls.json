@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/propublica.org/post/3muss4uefzq2c",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.82,
+    "real_u": 0.0,
+    "real_psi": -0.03,
     "mode": "root",
     "posts": [
       "Emergency calls from a massive Texas immigration detention center reveal harrowing medical crises hidden behind locked doors.\nEvidence: emergency calls, medical neglect, hidden facility\n#Aletheia #Immigration",
-      "Detention centers maintain robust medical care and emergency protocols for all individuals.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Systemic warehousing leads to preventable medical emergencies, overdoses, and delayed hospital transports.\nResulting Judgement: (-0.85, -0.82) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nEmergency 911 calls expose severe medical neglect inside detention facilities where transparency is absent.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
+      "Detention centers maintain robust medical care and emergency protocols for all individuals.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Systemic warehousing leads to preventable medical emergencies, overdoses, and delayed hospital transports.\nResulting Judgement: (+0.00, -0.03) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nEmergency 911 calls expose severe medical neglect inside detention facilities where transparency is absent.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
       "- Facility Healthcare Claims: FAIL (-0.80, -0.80) — Denies systemic care failures.\n- Investigative Reporting: PASS (0.80, 0.75) — Exposes hidden realities.",
       "Leaked 911 audio from Camp East Montana reveals frantic pleas for ambulances amid suicide attempts, overdoses, and acute kidney stones.",
       "The Poison:\nThe institutional shrug that treats preventable medical crises inside detention as mere administrative overhead.",
       "The Breakdown & Plane Error:\nThe error confuses institutional procedural claims (WHAT) with the lived human reality of detained individuals (WHO).",
       "Social Physics Analysis:\nAuthorities run a smart selfish maneuver by masking systemic neglect behind boilerplate assurances of comprehensive medical care, projecting blame onto detainees.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between administrative assurances and emergency 911 audio, it plots a direct trajectory toward Lesser Evil.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between administrative assurances and emergency 911 audio, it plots a direct trajectory toward Lesser Evil.",
       "The Unavoidable Truth: Secretive detention environments inevitably produce preventable medical emergencies.\n\nThe Unavoidable Lie: Facilities claim their healthcare is the best detainees have ever experienced.",
       "Alethekanon:\nEmergency 911 audio strips away bureaucratic PR to expose the stark human cost of invisible detention warehousing. 🌐",
       "Awwthekanon:\nBehind every desperate call for an ambulance is a human being crying out in pain, trapped behind walls that refuse to hear them.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Facility Healthcare Claims",
@@ -168,6 +230,7 @@
         "name": "Immigration and Customs Enforcement",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

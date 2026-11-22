@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "When July's nights burn hotter than the Dust Bowl, we are no longer watching weather—we are watching a system cross thresholds.🌐\n\nContiguous US breaks its record hottest month ever, NOAA says\nEvidence: historical temperature record, systemic heat retention, climate crisis\n#Climate #NOAA",
-      "NOAA reported that the contiguous United States experienced its hottest month ever in July 2026, averaging 76.89°F and surpassing the 1936 Dust Bowl record, driven by extreme nighttime minimums.\nStated Judgement: (+0.80, +1.00) — Good Preference",
+      "NOAA reported that the contiguous United States experienced its hottest month ever in July 2026, averaging 76.89°F and surpassing the 1936 Dust Bowl record, driven by extreme nighttime minimums.\nStated Judgement: (+0.80, +1.00) — Greater Good",
       "While the data is accurate, the systemic reality is that institutional inaction and fossil capitalism continue driving planetary heating cycles, locking in irreversible ecological collapse.\nResulting Judgement: (-0.20, -0.40) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning into Destruction. NOAA's precise tracking exposes a warming trajectory while systemic actors suppress emergency adaptation.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- NOAA Climate Reporting: PASS (1.0, 0.0) — Rigorous empirical tracking of historical temperature records without obfuscation.\n- Systemic Climate Response: FAIL (-0.8, -0.9) — Institutional failure to match scientific warnings with proportional mitigation.",
       "NOAA announced that July 2026 was the hottest month on record for the contiguous US, beating the infamous 1936 Dust Bowl. Nighttime lows smashed previous records by 0.7 degrees, highlighting severe heat retention driven by climate change.",
       "The Bright Side:\nUncompromising meteorological transparency allows communities and scientists to measure exact warming velocities with absolute empirical clarity.",
       "The Breakdown & Plane Error:\nConfusing factual meteorological reporting (WHAT/WHERE) with systemic political remediation (WHO/HOW). Accurate data is published while structural root causes remain untouched.",
       "Social Physics Analysis:\nTransparent data collection empowers the public with facts, yet institutional structures maintain fossil-fuel dependencies through slow-walked policies, externalizing catastrophic costs onto future generations.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nWhen you map the gap between empirical reporting and systemic inaction, it plots a direct trajectory toward Greater Evil. F_neg dominates with intense systemic suppression.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between empirical reporting and systemic inaction, it plots a direct trajectory toward Greater Evil. F_neg dominates with intense systemic suppression.",
       "The Unavoidable Truth: The planet's thermal baselines are shifting upward permanently, making historical records obsolete.\n\nThe Unavoidable Lie: That incremental policy adjustments are sufficient to stabilize the global climate system.",
       "Alethekanon:\nAccurate telemetry cannot substitute for systemic correction. NOAA measures the fever while the patient continues stoking the boiler.",
       "Awwthekanon:\nEvery broken heat record means sleepless nights, endangered crops, and vulnerable communities bearing the heavy burden of a shifting world. We need deep care.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.85,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NOAA Climate Reporting",
@@ -269,6 +331,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

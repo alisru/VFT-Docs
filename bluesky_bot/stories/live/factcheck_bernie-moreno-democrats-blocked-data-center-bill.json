@@ -5,22 +5,22 @@
     "subject": "Exclusive — Bernie Moreno: Democrats Blocked Jon Husted’s Data Center Bill to Lower Electricity Costs, but Media Won’t Cover",
     "link": "https://www.breitbart.com/politics/2026/10/02/exclusive-bernie-moreno-democrats-blocked-jon-husteds-data-center-bill-to-lower-electricity-costs-but-media-wont-cover/",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
-    "real_u": -0.7,
-    "real_psi": -0.7,
+    "claim_u": 0.55,
+    "claim_psi": 0.15,
+    "real_u": -0.6,
+    "real_psi": -0.54,
     "mode": "root",
     "posts": [
       "Sen. Bernie Moreno accuses Democrats of blocking a bipartisan data center bill to hike electricity costs for political gain. 🌐\nEvidence: Senate vote, utility cost debate, partisan framing\n#Aletheia #USPol",
-      "Moreno claims Democrats cynically blocked Jon Husted's Ratepayer Protection Act to shield data centers and protect political power, while media covers trivial distractions.\nStated Judgement: (+0.6, +0.2) — Lesser Good",
-      "In reality, the 57-43 cloture vote reflected standard legislative impasses over regulatory scope and energy policy, not a malicious plot to burn down the country.\nResulting Judgement: (-0.7, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA routine Senate procedural disagreement is weaponized into an existential conspiracy narrative to score midterm points.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Moreno claims Democrats cynically blocked Jon Husted's Ratepayer Protection Act to shield data centers and protect political power, while media covers trivial distractions.\nStated Judgement: (+0.55, +0.15) — Greater Good",
+      "In reality, the 57-43 cloture vote reflected standard legislative impasses over regulatory scope and energy policy, not a malicious plot to burn down the country.\nResulting Judgement: (-0.60, -0.54) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA routine Senate procedural disagreement is weaponized into an existential conspiracy narrative to score midterm points.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "Sub-Audits Breakdown:\n- Bernie Moreno: FAIL (-0.71, -0.68) — Weaponizes policy dispute as existential threat.\n- Media Framing: COND (-0.50, -0.40) — Focuses on partisan rhetoric over details.",
       "As AI data centers strain local grids and drive up electricity bills, lawmakers are clashing over how to allocate grid upgrade costs between tech firms and residential ratepayers.",
       "The Poison:\nLegitimate public anxiety over soaring utility bills caused by massive AI data center energy consumption is exploited to stoke partisan rage instead of yielding bipartisan fixes.",
       "Plane Error: Confusing WHAT (legislative gridlock over regulatory scope) with WHO (a demonic conspiracy to destroy America). It substitutes policy debate with cartoonish villainy.",
       "Social Physics Analysis:\nThis runs a classic Smart Selfish Maneuver. Actors project malicious intent onto opponents (Projection) to obscure complex grid policy debates and rally base voters.",
-      "The Trajectory: The Path of Deception.\nMapping the gap between stated existential plots and actual legislative gridlock leads toward Deception, degrading democratic trust.\nΔ(p·t + n) < 0",
+      "The Trajectory: The Path of Fall into Destruction.\nMapping the gap between stated existential plots and actual legislative gridlock leads toward Deception, degrading democratic trust.\nΔ(p·t + n) < 0",
       "The Unavoidable Truth: AI data centers are rapidly inflating residential electricity bills.\n\nThe Unavoidable Lie: Procedural Senate filibusters are proof of a sinister plot to destroy America.",
       "Alethekanon:\nElevating standard legislative disagreements into apocalyptic treason is a rhetorical sleight of hand that poisons institutional integrity for short-term political spoils.",
       "Awwthekanon:\nIt's hard when our electric bills are climbing and politicians turn real worries into shouting matches instead of just sitting down to fix the grid together.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Bernie Moreno",
@@ -165,6 +227,7 @@
         "name": "United States Senate",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Article",
     "link": "https://www.hcn.org/issues/58-10/native-nations-sue-over-endangered-species-act-changes",
     "target_url": "https://bsky.app/profile/highcountrynews.org/post/3mx4h5n52if2l",
-    "claim_u": 0.82,
-    "claim_psi": 0.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "claim_u": 0.85,
+    "claim_psi": 0.4,
+    "real_u": -0.05,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Native nations sue the federal government over radical changes to the Endangered Species Act that strip habitat protections.\nEvidence: Streamlining, Habitat destruction, Industrial extraction\n#Aletheia #Biodiversity #IndigenousRights",
-      "The administration claims narrowing the definition of 'harm' to individual animals simplifies regulation while still protecting species.\nStated Judgement: (+0.82, 0.0) — Good Preference",
-      "In reality, protecting an individual animal while legally permitting the destruction of its entire habitat is an ecological absurdity designed to benefit industrial developers.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Narrowing species protection to exclude their habitats guarantees ecological collapse and violates sovereign tribal treaties.\nIntegrity: Severe Deception (Hypocrisy: 1.82, Uncertainty z: 5)",
+      "The administration claims narrowing the definition of 'harm' to individual animals simplifies regulation while still protecting species.\nStated Judgement: (+0.85, +0.40) — Greater Good",
+      "In reality, protecting an individual animal while legally permitting the destruction of its entire habitat is an ecological absurdity designed to benefit industrial developers.\nResulting Judgement: (-0.05, -0.10) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 1.82, Uncertainty z: 5)",
       "- Federal Policy: FAIL (-1.00, -1.00) — Prioritizes industrial extraction over treaty rights.\n- Tribal Sovereignty: PASS (0.90, 0.80) — Defending ecological and cultural survival.",
       "The Trump administration redefined 'harm' under the Endangered Species Act to exclude habitat degradation, prompting immediate lawsuits from the Swinomish and Squaxin Island tribes.",
       "The Poison:\nBy framing the rule change as a technical clarification of 'harm,' the administration legally immunizes systemic habitat destruction by corporate developers.",
       "The Breakdown & Plane Error:\nThe policy commits a logical HOW error: it claims to protect species (WHO) while legally permitting the destruction of the physical ecosystems (WHERE) they require to survive.",
       "Social Physics Analysis:\nThe federal government executed a Smart Selfish Maneuver. They manufactured a pretext of 'regulatory efficiency' to hide their secret goal of corporate land extraction, while projecting indifference onto the sovereign tribes by refusing mandatory legal consultations.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between protecting individual animals and destroying their habitats, it plots a direct trajectory toward Greater Evil. This active contraction of ecological futures guarantees systemic collapse.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between protecting individual animals and destroying their habitats, it plots a direct trajectory toward Greater Evil. This active contraction of ecological futures guarantees systemic collapse.",
       "The Unavoidable Truth: You cannot protect a species if you legally permit the destruction of its home.\nThe Unavoidable Lie: Redefining harm to exclude habitat loss is a harmless administrative update.",
       "Alethekanon:\nTo claim protection of a life while authorizing the destruction of its home is a severe logical and moral collapse. The policy serves extraction, not conservation.",
       "Awwthekanon:\nOur relations—the salmon, the whales, the waters—are not separate from us. To destroy their home is to tear at the sacred web of life and treaty promises.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Federal Policy",
@@ -163,6 +225,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

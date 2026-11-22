@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.78,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "Celebrity backlash over Cornell 7 rape lawsuit support sparks fierce cultural debate.\nEvidence: Celebrity statement, Media attack, Institutional scrutiny\n#Aletheia #CultureWar",
-      "Megyn Kelly argued that pop star Olivia Rodrigo has no business speaking out on serious legal and sexual assault matters, telling her to shut up and stick to singing. Stated Judgement: (+0.5, 0.0) — Good Preference 🌐",
-      "In practice, this aggressive dismissal weaponizes a media platform to attack those demanding institutional accountability for sexual assault survivors. Resulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. A high-profile media personality uses ad hominem attacks to deflect from institutional failures in sexual assault accountability.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Megyn Kelly argued that pop star Olivia Rodrigo has no business speaking out on serious legal and sexual assault matters, telling her to shut up and stick to singing. Stated Judgement: (+0.50, +0.00) — Lesser Good",
+      "In practice, this aggressive dismissal weaponizes a media platform to attack those demanding institutional accountability for sexual assault survivors. Resulting Judgement: (-0.78, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Megyn Kelly Commentary: FAIL (-0.75, -0.85) — Weaponizes ad hominem attacks to silence abuse advocacy.\n- Cornell Institutional Handling: FAIL (-0.80, -0.90) — Delayed accountability in sexual assault case.",
       "Megyn Kelly criticized Olivia Rodrigo for supporting Jane Doe, a student suing Cornell and fraternity members over a 2024 gang rape allegation.",
       "The Poison:\nUsing cultural friction over celebrity activism to overshadow the severe systemic failures of university administration and fraternity culture.",
       "The Breakdown & Plane Error:\nConfusing WHO speaks with WHAT is at stake. Kelly attacks Rodrigo's credentials to dodge the institutional failures of Cornell and the fraternity.",
       "Social Physics Analysis:\nMegyn Kelly runs a classic Smart Selfish maneuver, manufacturing a proxy war against pop star activism as a pretext to distract from institutional negligence and sexual violence.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. It replaces institutional reform with celebrity flame wars.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. It replaces institutional reform with celebrity flame wars.",
       "The Unavoidable Truth: Dismissing celebrity voices does nothing to address the underlying reality of campus sexual violence.\n\nThe Unavoidable Lie: Cultural commentary about who is allowed to speak substitutes for genuine accountability.",
       "Alethekanon:\nAttacking a messenger's credentials to shield powerful institutions from scrutiny is a transparent deflection tactic.",
       "Awwthekanon:\nWhen survivors seek justice, turning their pain into fodder for media shouting matches only deepens the wound for everyone involved.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Megyn Kelly Commentary",
@@ -160,6 +222,7 @@
         "name": "Cornell University",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

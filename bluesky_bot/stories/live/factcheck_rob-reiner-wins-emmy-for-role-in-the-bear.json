@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.2,
-    "real_psi": 0.0,
+    "real_u": 0.6,
+    "real_psi": 0.5,
     "mode": "root",
     "posts": [
       "Rob Reiner Wins Posthumous Emmy for Role in ‘The Bear’\nEvidence: Creative Arts Emmys, Season 4, posthumous win\n#Aletheia #Emmys #Culture 🌐",
-      "Rob Reiner won a posthumous Emmy for Outstanding Guest Actor in a Comedy Series for his role in 'The Bear'.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The reporting accurately notes the Emmy win while quietly omitting the severe domestic tragedy and homicide investigation surrounding his death.\nResulting Judgement: (+2.0, 0.0) — Neutral",
-      "Verdict: PASS — The Path of Grace.\nPosthumous recognition honors a storied career, though entertainment reporting glides past the family tragedy behind it.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
+      "Rob Reiner won a posthumous Emmy for Outstanding Guest Actor in a Comedy Series for his role in 'The Bear'.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reporting accurately notes the Emmy win while quietly omitting the severe domestic tragedy and homicide investigation surrounding his death.\nResulting Judgement: (+0.60, +0.50) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPosthumous recognition honors a storied career, though entertainment reporting glides past the family tragedy behind it.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
       "Sub-Audits Breakdown:\n- Emmy Academy: PASS (1.0, 1.0) — Legitimate artistic recognition.\n- Media Framing: COND (0.2, 0.0) — Omits domestic tragedy context.",
       "Late actor and director Rob Reiner posthumously won an Emmy for his guest role in 'The Bear' during the Creative Arts Emmy Awards.",
       "The Bright Side:\nHonoring a brilliant creative legacy provides a moment of artistic closure for fans and peers.",
       "The Breakdown & Plane Error:\nEvaluating artistic merit on the Lyrical plane while ignoring the profound Metaphysical tragedy of the underlying family homicide.",
       "Social Physics Analysis:\nThe reporting celebrates public achievement while insulating readers from uncomfortable domestic realities, operating as standard entertainment fluff.",
-      "The Trajectory: The Path of Grace.\nWhen artistic honor is accurately recorded even amidst quiet omission of tragedy, it maintains stasis near Grace. Artistic merit stands independently.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen artistic honor is accurately recorded even amidst quiet omission of tragedy, it maintains stasis near Grace. Artistic merit stands independently.",
       "The Unavoidable Truth: Rob Reiner gave a stellar performance in 'The Bear' worthy of recognition.\n\nThe Unavoidable Lie: The entertainment industry can separate art from devastating personal tragedy.",
       "Alethekanon:\nHonoring an artist's final work is fitting, yet glossing over the dark reality of how his life ended reveals media escapism.",
       "Awwthekanon:\nIt is heartbreaking to see awards given when the person is gone, reminding us how fragile our time truly is.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Emmy Academy",
@@ -152,6 +214,7 @@
         "name": "Television Academy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

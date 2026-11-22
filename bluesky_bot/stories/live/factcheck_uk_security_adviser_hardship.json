@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 0.85,
     "claim_psi": 0.75,
-    "real_u": -0.78,
-    "real_psi": -0.72,
+    "real_u": -0.8,
+    "real_psi": -0.73,
     "mode": "root",
     "posts": [
       "A rare public warning from the UK's top security adviser reveals the steep price of geopolitical deadlock.\nPM's top security adviser says Europe faces hard winter to keep pressure on Putin\nEvidence: Geopolitical resolve, Public energy hardship, Elite policy insulation",
       "The UK National Security Adviser claims that demanding \"real hardship\" and energy sacrifices from European citizens is a necessary, winning strategy to maintain economic pressure on Russia and secure a free Ukraine.\nStated Judgement: (+0.85, +0.75) — Greater Good",
-      "In reality, security elites are offloading the economic and physical strain of a deadlocked proxy conflict onto the public, framing systemic energy vulnerability and policy failures as a moral victory and a \"sign of success.\"\nResulting Judgement: (-0.78, -0.72) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Geopolitical elites demand public sacrifice to sustain a strategic stalemate, rebranding energy insecurity as a moral triumph.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 5)",
+      "In reality, security elites are offloading the economic and physical strain of a deadlocked proxy conflict onto the public, framing systemic energy vulnerability and policy failures as a moral victory and a \"sign of success.\"\nResulting Judgement: (-0.80, -0.73) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 5)",
       "Sub-Audits Breakdown:\n- Jonathan Powell: FAIL (-0.78, -0.72) — Demands public hardship to mask strategic deadlock.\n- UK Energy Policy: FAIL (-0.82, -0.75) — Offloads systemic vulnerability onto citizens.",
       "UK National Security Adviser Jonathan Powell urged European nations to endure energy shortages and high bills this winter, claiming that Russian escalation proves the sanctions strategy is working.",
       "The Poison:\nRebranding the physical suffering and economic strain of ordinary citizens as a geopolitical metric of \"success\" insulates decision-makers from their own policy failures.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Jonathan Powell Geopolitical Strategy",
@@ -165,6 +227,7 @@
         "name": "Ukraine",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.45,
+    "real_u": -0.5,
     "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "A peaceful day at Crissy Field beach turns into a violent sand brawl when a dog walker and an aggressive man trade punches.\nEvidence: beach brawl video, police response, martial artist quote\n#Aletheia #SanFrancisco",
-      "A casual dog walker was allegedly accosted by an aggressive stranger and successfully defended public safety until police arrived.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Two individuals engaged in a violent physical altercation on a public beach, escalating routine urban friction into a brawl.\nResulting Judgement: (-0.45, -0.55) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nAn ordinary beach confrontation is sensationalized into a heroic martial arts showdown, masking low-level street violence as civic protection.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 2)",
+      "A casual dog walker was allegedly accosted by an aggressive stranger and successfully defended public safety until police arrived.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Two individuals engaged in a violent physical altercation on a public beach, escalating routine urban friction into a brawl.\nResulting Judgement: (-0.50, -0.55) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nAn ordinary beach confrontation is sensationalized into a heroic martial arts showdown, masking low-level street violence as civic protection.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- James Hidalgo: COND (-0.30, -0.40) — Defends self but dramatizes street brawl.\n- Media Framing: FAIL (-0.70, -0.70) — Sensationalizes minor beach fight.",
       "The incident occurred at Crissy Field in San Francisco, where a dog walker and another man engaged in a physical altercation before park police intervened and handcuffed both individuals.",
       "The Bright Side:\nA trained martial artist was present to prevent potential harm to vulnerable beachgoers during the sudden violent dust-up.",
       "The Breakdown & Plane Error:\nConfusing private self-defense with heroic public stewardship (Plane Error: WHO/WHAT). The narrative frames a street scuffle as a civic triumph.",
       "Social Physics Analysis:\nBoth actors ran a reactive loop of ego protection, escalating verbal friction into physical combat. The media then applied a Smart Selfish framing, using a sensationalized pretext to generate viral outrage.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Force imbalance pulls the system into avoidable conflict.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Force imbalance pulls the system into avoidable conflict.",
       "The Unavoidable Truth: Public spaces frequently host unmanaged personal volatile conflicts.\n\nThe Unavoidable Lie: Street brawls are noble cinematic showdowns protecting the innocent.",
       "Alethekanon:\nSensationalizing routine beach brawls into heroic morality plays obscures the underlying reality of urban friction. We mistake personal ego clashes for civic defense.",
       "Awwthekanon:\nIt is terrifying when a pleasant walk by the water suddenly erupts into violence. We hope everyone involved finds peace and healing after such fear.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "James Hidalgo",
@@ -159,6 +221,7 @@
         "name": "United States Park Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A profound critique of generative AI's existential vacancy and its simulation of human artistic struggle.\n\nAI isn’t making art. It’s sell...\nEvidence: human soul, performative reciprocity, lived experience\n#AIArt #Philosophy",
-      "The author argues that AI art is a hollow simulacrum, mimicking the outward architecture of transcendence while lacking the conscious reality of lived human experience.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "AI processes representations of existence without experiencing vulnerability or mortality, bypassing the crucible of failure that shapes genuine artistic consciousness.\nResulting Judgement: (+1.0, +0.5) — Good Preference",
+      "The author argues that AI art is a hollow simulacrum, mimicking the outward architecture of transcendence while lacking the conscious reality of lived human experience.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "AI processes representations of existence without experiencing vulnerability or mortality, bypassing the crucible of failure that shapes genuine artistic consciousness.\nResulting Judgement: (+1.00, +0.50) — Greater Good",
       "Verdict: PASS — Grace.\nThe essay delivers a logically sound and deeply honest critique of AI's inability to participate in the mutual recognition that defines true art.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Philosophical Argument: PASS (1.0, 0.5) — Sound critique of AI's existential vacancy.\n- Artistic Integrity: PASS (1.0, 0.5) — Validates the necessity of human struggle.",
       "The piece explores the ontological difference between human art—born of mortality, failure, and mutual recognition—and AI-generated images, which merely simulate the footprints of creativity.",
       "The Bright Side:\nGenerative AI offers undeniable logistical breakthroughs in cinema and production, even if it cannot replicate the spiritual crucible of artistic creation.",
       "The Breakdown & Plane Error:\nThe error lies in confusing logistical output (WHAT) with conscious creation (WHO). AI simulates the product of consciousness while entirely lacking the conscious reality.",
       "Social Physics Analysis:\nBy removing the resistance of the medium, generative AI offers a shortcut past the crucible of failure. True empowerment arises from wrestling with limitations, not bypassing them.",
-      "The Trajectory: Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Aligning the critique of simulation with the preservation of human depth.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Aligning the critique of simulation with the preservation of human depth.",
       "The Unavoidable Truth: Art is an act of mutual recognition between conscious beings.\n\nThe Unavoidable Lie: A machine can replicate the depth of a life it has never lived.",
       "Alethekanon:\nThe simulation of intimacy is not intimacy. A system that merely averages human footprints cannot transcend its own training data.",
       "Awwthekanon:\nOur vulnerability, our grief, and our hope are what connect us. True art is a beautiful bridge between souls, something a machine can never feel.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Philosophical Argument",
@@ -151,6 +213,7 @@
         "name": "Human Artists",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

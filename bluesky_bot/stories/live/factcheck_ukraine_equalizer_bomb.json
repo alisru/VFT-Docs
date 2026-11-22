@@ -6,21 +6,21 @@
     "link": "https://www.foxnews.com/politics/ukraines-equalizer-bomb-aims-blow-reliance-us-european-weapons",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.65,
-    "real_psi": 0.45,
+    "claim_psi": 1.0,
+    "real_u": 0.67,
+    "real_psi": 0.81,
     "mode": "root",
     "posts": [
       "Ukraine's new \"Equalizer\" glide bomb promises to break reliance on Western weapons, but is it truly independent?\n\nUkraine’s ‘Equalizer’ bomb aims to blow up reliance on US, European weapons\nEvidence: Homegrown design, Western microchips, Strategic autonomy\n#Aletheia #UkraineWar",
-      "The claim: Ukraine has developed a homegrown glide bomb, the Vyrivniuvach (\"Equalizer\"), allowing its pilots to strike Russian forces from safer distances while completely bypassing reliance on Western-supplied JDAMs and Hammer bombs.\nStated Judgement: (1.0, 0.5) — Grace",
-      "The reality: While the bomb is a massive step for local production, it is not fully independent. Over 90% of its parts are sourced from Ukraine, Europe, and the US, and its critical microchips still rely on foreign supply chains.\nResulting Judgement: (0.65, 0.45) — Grace",
-      "Verdict: CONDITIONAL — Awakening into Grace. The bomb represents genuine local innovation and tactical value, but claiming it \"blows up\" reliance on Western weapons is a stretch given its dependence on foreign microchips.\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 0)",
+      "The claim: Ukraine has developed a homegrown glide bomb, the Vyrivniuvach (\"Equalizer\"), allowing its pilots to strike Russian forces from safer distances while completely bypassing reliance on Western-supplied JDAMs and Hammer bombs.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality: While the bomb is a massive step for local production, it is not fully independent. Over 90% of its parts are sourced from Ukraine, Europe, and the US, and its critical microchips still rely on foreign supply chains.\nResulting Judgement: (+0.67, +0.81) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 0)",
       "Sub-Audits Breakdown:\n- DG Industry & Brave1: PASS (0.8, 0.5) — Genuine local engineering.\n- Strategic Autonomy: COND (0.5, 0.4) — Still tied to Western chip supply.",
       "Ukraine is deploying the \"Equalizer\" glide bomb to allow its MiG-29 and Su-27 pilots to strike Russian targets from safer distances, mitigating the devastating impact of Russia's own massive glide bomb campaign.",
       "The Bright Side:\nEven with foreign chips, producing 90% of the bomb's physical structure locally dramatically lowers procurement costs, bypasses political delays on finished weapons, and secures a steady supply of tactical guided munitions.",
       "The Breakdown & Plane Error:\nThe error is confusing physical assembly (WHAT) with supply chain sovereignty (WHO). While Ukraine builds the wings, the weapon cannot exist without Western microcircuits. It is a tactical evolution, not total autonomy.",
       "Social Physics Analysis:\nBy shifting production locally, Ukraine reduces foreign political friction. However, the pretext of total self-reliance serves to reassure domestic morale, even as the underlying dependency on Western tech remains.",
-      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The minor exaggeration of autonomy does not negate the massive leap in local defense capability.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The minor exaggeration of autonomy does not negate the massive leap in local defense capability.",
       "The Unavoidable Truth: Ukraine has successfully built a highly effective, low-cost precision glide bomb.\n\nThe Unavoidable Lie: This weapon completely frees Ukraine from its reliance on Western defense supply chains.",
       "Alethekanon:\nThe \"Equalizer\" is a brilliant exercise in asymmetric defense engineering. However, true strategic autonomy requires semiconductor sovereignty, which remains Ukraine's ultimate bottleneck.",
       "Awwthekanon:\nIt is inspiring to see Ukrainian engineers working under fire to protect their pilots and communities. Every local innovation is a shield forged in hope, keeping brave defenders a little safer from the storm.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "DG Industry & Brave1",
@@ -286,6 +348,7 @@
         "name": "Russia",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

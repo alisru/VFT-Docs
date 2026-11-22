@@ -5,22 +5,22 @@
     "subject": "Forget Broadway — NYC’s hottest audition is for fitness instructors...",
     "link": "https://nypost.com/2026/09/09/health/the-hottest-audition-is-nyc-is-at-a-luxury-gym/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -0.89,
-    "real_psi": -1.0,
+    "claim_u": 0.9,
+    "claim_psi": 0.9,
+    "real_u": -0.82,
+    "real_psi": -0.9,
     "mode": "root",
     "posts": [
       "A luxury gym turns standard job interviews into a high-stakes reality TV spectacle. But is this a talent search, or just free marketing?\nForget Broadway — NYC’s hottest audition is for fitness instructors\nEvidence: Talent discovery, Corporate PR, Cheap labor pipeline",
-      "The claim is that Life Time's instructor auditions are the most glamorous, high-stakes talent search in New York, akin to a Broadway casting call where elite fitness stars are discovered and celebrated.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The reality is that this is a highly calculated corporate recruitment drive for a $348/month luxury gym chain, using reality-TV framing to generate free PR and exploit the aspirations of gig-economy fitness workers.\nResulting Judgement: (-0.89, -1.0) — Deception",
-      "Verdict: FAIL — The Path of Deception. The event repackages standard corporate hiring and gig-economy recruitment as a prestigious cultural phenomenon, extracting marketing value from hopeful applicants.\n\nIntegrity: Severe Deception (Hypocrisy: 41.7, z: 5)",
+      "The claim is that Life Time's instructor auditions are the most glamorous, high-stakes talent search in New York, akin to a Broadway casting call where elite fitness stars are discovered and celebrated.\nStated Judgement: (+0.90, +0.90) — Greater Good",
+      "The reality is that this is a highly calculated corporate recruitment drive for a $348/month luxury gym chain, using reality-TV framing to generate free PR and exploit the aspirations of gig-economy fitness workers.\nResulting Judgement: (-0.82, -0.90) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 41.7, z: 5)",
       "Sub-Audits Breakdown:\n- NY Post Editorial Framing: FAIL (-0.89, -1.0) — Glamorizes corporate recruitment as cultural event.\n- Life Time Corporate PR: FAIL (-0.75, -0.8) — Uses reality-TV framing to mask standard gig-hiring.",
       "Luxury gym chain Life Time held auditions for fitness instructors at its Wall Street location, capping applicants at 250. The event was heavily promoted to frame standard employment interviews as an elite, exclusive talent competition.",
       "The Bright Side:\nFor a few talented instructors, the intense audition process does provide a legitimate platform to secure employment at a high-paying luxury facility, turning corporate theater into actual livelihood.",
       "The Breakdown & Plane Error:\nThe narrative commits a Metaphysical error by framing the corporate beneficiary (a multi-million dollar gym chain getting free PR) as a benevolent platform for artistic discovery. It swaps labor recruitment for cultural triumph.",
       "Social Physics Analysis:\nThe actors run a Smart Selfish Maneuver. Life Time uses the pretext of an elite 'Broadway-style' audition to hoard brand power, projecting an image of cultural prestige while extracting free promotional labor from hopeful gig workers.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between the promise of artistic stardom and the reality of corporate gig recruitment, it plots a direct trajectory toward Deception. Cultural aspirations are commodified for corporate branding.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between the promise of artistic stardom and the reality of corporate gig recruitment, it plots a direct trajectory toward Deception. Cultural aspirations are commodified for corporate branding.",
       "The Unavoidable Truth: A luxury gym audition is a corporate hiring event designed to recruit staff, not a cultural milestone.\n\nThe Unavoidable Lie: Teaching a two-minute fitness demo at a Wall Street gym is the equivalent of landing a Broadway role.",
       "Alethekanon:\nRepackaging labor recruitment as a reality-TV spectacle is a brilliant corporate extraction technique. It convinces workers to compete for the privilege of being exploited, transforming a job application into a PR stunt.",
       "Awwthekanon:\nIt takes so much courage to stand in front of judges and pour your heart and energy into a two-minute performance. I hope all these passionate instructors find spaces where their dedication is truly valued and supported.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NY Post Editorial Framing",
@@ -154,6 +216,7 @@
         "name": "Christi Thibodeau",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Iran’s economy will have ‘nothing’ left ‘within two weeks,’ Scott Bessent warns",
     "link": "https://nypost.com/2026/09/27/us-news/irans-economy-will-have-nothing-left-within-two-weeks-scott-bessent-warns/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.0,
+    "claim_psi": -0.25,
+    "real_u": -0.75,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "Treasury Secretary Scott Bessent warns Iran’s economy has just two weeks left of oil trade under Operation Economic Outcast.\nEvidence: Max pressure, oil blockades, two-week deadline\n#Aletheia #Geopolitics #Iran 🌐",
-      "Officials claim aggressive sanctions will completely exhaust Iran's oil exports to China within weeks, forcing a desperate diplomatic surrender.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "Intensified blockades strain the regime and squeeze state finances, but instead of inducing a stable deal, they heighten regional standoff and hostility.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Economic warfare is framed as swift diplomatic leverage, masking severe escalation risks.\n\nIntegrity: Severe Deception (Hypocrisy: 4.8, z: 2)",
+      "Officials claim aggressive sanctions will completely exhaust Iran's oil exports to China within weeks, forcing a desperate diplomatic surrender.\nStated Judgement: (+0.00, -0.25) — Greater Evil",
+      "Intensified blockades strain the regime and squeeze state finances, but instead of inducing a stable deal, they heighten regional standoff and hostility.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
+      "Verdict: FAIL — Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 4.8, z: 2)",
       "Sub-Audits Breakdown:\n- US Treasury Dept: FAIL (-0.7, -0.8) — Frames coercion as imminent collapse.\n- Iranian Regime: FAIL (-0.8, -0.9) — Uses threats to dodge accountability.",
       "Treasury Secretary Scott Bessent announced Operation Economic Outcast to sever Iran's final oil trade routes to China, aiming to block all remaining revenue channels.",
       "The Poison:\nTightening economic nooses without a viable diplomatic off-ramp breeds desperation and deeper regional flashpoints rather than lasting stability.",
       "The Breakdown & Plane Error:\nTreating financial strangulation as a guaranteed catalyst for peaceful surrender confuses short-term pain with long-term resolution.",
       "Social Physics Analysis:\nThe administration deploys a smart selfish maneuver: leveraging economic blockades while projecting total collapse to force compliance without mutual compromise.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as punitive measures replace diplomacy.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as punitive measures replace diplomacy.",
       "The Unavoidable Truth: Severe economic blockades severely restrict state financial lifelines.\nThe Unavoidable Lie: Financial exhaustion guarantees immediate diplomatic surrender.",
       "Alethekanon:\nEconomic coercion is dressed up as inevitable collapse, ignoring the volatile blowback of cornering a regime.",
       "Awwthekanon:\nWhen nations squeeze each other's lifelines until they snap, ordinary people bear the heaviest burden while leaders stay insulated.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "US Treasury Economic Policy",
@@ -158,6 +220,7 @@
         "name": "Iranian Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://www.breitbart.com/clips/2026/08/21/angie-nixon-people-are-taking-their-lives-each-and-every-day-because-of-donald-trump/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.93,
-    "real_psi": -0.82,
+    "claim_psi": 1.0,
+    "real_u": -0.1,
+    "real_psi": 0.3,
     "mode": "root",
     "posts": [
       "Hyper-partisan framing obscures complex systemic health crises.\n\nAngie Nixon: 'People Are Taking Their Lives...'\nEvidence: Advocates care access, Blames sole politicians, Hyper-partisan weaponization 🌐 #USPol #Healthcare",
-      "Florida candidate Angie Nixon claims people take their lives daily strictly because Donald Trump and Ashley Moody lead the country and roll back healthcare subsidies.\nStated Judgement: (+1.0, 0.0) — Greater Good",
-      "While healthcare cuts harm vulnerable people, attributing complex mental health outcomes strictly to political opponents flattens systemic failure into partisan rhetoric.\nResulting Judgement: (-0.93, -0.82) — Deception",
-      "Verdict: FAIL — The Path of Deception. Reductive political blaming converts genuine personal tragedy into campaign propaganda.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.4, Uncertainty z: 3)",
+      "Florida candidate Angie Nixon claims people take their lives daily strictly because Donald Trump and Ashley Moody lead the country and roll back healthcare subsidies.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While healthcare cuts harm vulnerable people, attributing complex mental health outcomes strictly to political opponents flattens systemic failure into partisan rhetoric.\nResulting Judgement: (-0.10, +0.30) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.4, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Angie Nixon Rhetoric: FAIL (-0.93, -0.82) — Exploits tragedy for blame.\n- Healthcare Access: PASS (+0.80, +0.20) — Policy reforms are urgently needed.",
       "During an interview on MS NOW, Florida Democratic candidate Angie Nixon cited her sister's suicide and ACA roll changes to argue Donald Trump and Ashley Moody are directly causing daily suicides.",
       "The Bright Side:\nHighlighting real insurance gaps and mental health funding shortages brings crucial attention to systemic healthcare barriers.",
       "The Breakdown & Plane Error:\nThis is a WHAT vs WHO plane error. A multifaceted public health failure is reduced entirely to partisan figures to score direct political points.",
       "Social Physics Analysis:\nUsing deep personal grief to assign exclusive blame to political rivals avoids constructive policy coalitions. Post-hoc blame turns systemic trauma into electoral bait.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Reductive finger-pointing prevents actual structural repair.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Reductive finger-pointing prevents actual structural repair.",
       "The Unavoidable Truth: Systemic healthcare deficiencies require real, structural policy solutions.\n\nThe Unavoidable Lie: Complex mental health tragedies are caused entirely by individual opposing politicians.",
       "Alethekanon:\nAttributing multifaceted social crises to political rivals creates logical incoherence and distorts causality for short-term campaign gains.",
       "Awwthekanon:\nThe pain of losing a loved one to suicide is heartbreaking, but weaponizing that grief for political attacks distracts from real healing.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.3,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Angie Nixon Campaign Rhetoric",
@@ -290,6 +352,7 @@
         "name": "Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

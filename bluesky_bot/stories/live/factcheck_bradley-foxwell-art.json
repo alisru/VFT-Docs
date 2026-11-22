@@ -14,7 +14,7 @@
       "A homeless artist finds a unique gallery space on a canal boat, proving that dignity and creativity can thrive even in the hardest circumstances. Evidence: Artist exhibition, zero commission, direct support. #Art #BigIssue",
       "The claim is that this exhibition provides a platform for a homeless artist to gain recognition and financial support without exploitation. Stated Judgement: (+1.0, +1.0) — Greater Good",
       "The reality confirms that the gallery took no commission, ensuring all proceeds went directly to the artist, fostering genuine empowerment. Resulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. The project successfully aligns stated altruistic intent with concrete, transparent action. Integrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.",
       "Sub-Audits Breakdown:\n- Bradley Foxwell: PASS (1.0, 1.0) — Authentic creative expression.\n- Canal Boat Contemporary: PASS (1.0, 1.0) — Transparent support.",
       "This event highlights a collaborative effort to bring art from the margins to the public, using a mobile gallery to bypass traditional barriers.",
       "The Bright Side:\nThis model demonstrates how community-led initiatives can provide real-world support to vulnerable individuals without bureaucratic friction.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Bradley Foxwell",
@@ -281,6 +343,7 @@
         "sub_psi": 1.0,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

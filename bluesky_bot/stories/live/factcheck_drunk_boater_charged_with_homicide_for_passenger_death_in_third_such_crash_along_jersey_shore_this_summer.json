@@ -5,22 +5,22 @@
     "subject": "Drunk boater charged with homi...",
     "link": "https://nypost.com/2026/08/30/us-news/drunk-jersey-shore-boater-latest-to-be-charged-with-homicide-for-deadly-crash/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -1.4,
-    "real_psi": -1.6,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Reckless intoxication on waterways claims another avoidable life along the Jersey Shore.\n\nDrunk boater charged with homicide for passenger death in third such crash\nEvidence: alcohol impairment, channel marker collision, fatality\n#Aletheia #JerseyShore",
-      "Recreational boating assumed to be safe leisure activity without lethal hazard.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "Operating a vessel while intoxicated led to a catastrophic collision and preventable death.\nResulting Judgement: (-1.4, -1.6) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nOperating watercraft under the influence combines heavy machinery with impaired judgment, causing fatal results.\n\nIntegrity: Severe Deception (Hypocrisy: 16.5, z: 2)",
+      "Recreational boating assumed to be safe leisure activity without lethal hazard.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "Operating a vessel while intoxicated led to a catastrophic collision and preventable death.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nOperating watercraft under the influence combines heavy machinery with impaired judgment, causing fatal results.\n\nIntegrity: Severe Deception (Hypocrisy: 16.5, z: 2)",
       "- Kevin Wells: FAIL (-1.5, -1.7) — Operated vessel while intoxicated causing death.\n- Michael T. Bereheiko: COND (0.0, 0.0) — Innocent victim of reckless conduct.",
       "An intoxicated boater crashed into a Jersey Shore channel marker, killing a passenger and highlighting a troubling summer trend of fatal maritime DUIs.",
       "The Bright Side:\nLaw enforcement is aggressively pursuing vessel homicide charges against intoxicated operators to deter future recklessness.",
       "The Breakdown & Plane Error:\nConfusing personal recreation with collective safety responsibilities on public waterways.",
       "Social Physics Analysis:\nSelfish disregard for community safety prioritizes personal intoxication over human lives. Ignoring obvious navigational hazards under the influence destroys trust and community well-being.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Combining alcohol and high-speed navigation inevitably produces catastrophic structural failure.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Combining alcohol and high-speed navigation inevitably produces catastrophic structural failure.",
       "The Unavoidable Truth: Operating boats while drunk directly endangers innocent passengers and bystanders.\n\nThe Unavoidable Lie: Alcohol does not impair reaction time or spatial awareness on the water.",
       "Alethekanon:\nReckless intoxication behind the helm is not an accident; it is a negligent choice that destroys innocent lives 🌐",
       "Awwthekanon:\nSuch a devastating loss for a young worker's family. Recreation should never cost someone their life.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.6,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Kevin Wells",
@@ -205,6 +267,7 @@
         "name": "Michael T. Bereheiko",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

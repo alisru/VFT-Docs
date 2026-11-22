@@ -5,22 +5,22 @@
     "subject": "Far-left Florida Democrat Angie Nixon claims GOP is 'literally trying to kill' black Americans",
     "link": "https://nypost.com/2026/08/22/us-news/florida-senate-nominee-angie-nixon-claims-gop-is-trying-to-kill-black-americans/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.16,
+    "real_psi": -0.33,
     "mode": "root",
     "posts": [
       "Florida Senate nominee Angie Nixon claims Republicans are literally trying to kill Black Americans and brands ICE a paramilitary force.\nEvidence: Inflammatory rhetoric, hyperbole, partisan posturing\n#USPol #Aletheia",
-      "Nixon frames partisan opposition as existential violence to mobilize her base ahead of the general election.\nStated Judgement: (+0.8, +0.5) — Constructive Mobilization",
-      "Ground reality reveals exaggerated claims masking standard immigration enforcement and exploiting racial tensions for political gain.\nResulting Judgement: (-0.85, -0.80) — Destructive Deception",
-      "Verdict: FAIL — The Path of Deception.\nInflammatory hyperbole weaponizes racial fears for electoral mobilization, distorting institutional realities.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
+      "Nixon frames partisan opposition as existential violence to mobilize her base ahead of the general election.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Ground reality reveals exaggerated claims masking standard immigration enforcement and exploiting racial tensions for political gain.\nResulting Judgement: (-0.16, -0.33) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nInflammatory hyperbole weaponizes racial fears for electoral mobilization, distorting institutional realities.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
       "- Angie Nixon: FAIL (-0.85, -0.80) — Weaponizes extreme hyperbole for political mobilization.\n- DHS Enforcement: PASS (+0.70, +0.40) — Operates under lawful statutory mandates.",
       "Democratic Senate nominee Angie Nixon faced fierce pushback from the Department of Homeland Security after accusing Republicans of state-sanctioned violence.",
       "The Poison:\nInflaming racial tensions and mischaracterizing federal law enforcement as a terrorist paramilitary group erodes civic trust.",
       "The Breakdown & Plane Error:\nConfusing WHAT (immigration enforcement) with WHO (racial identity), substituting policy disagreement with lethal intent.",
       "Social Physics Analysis:\nBy framing routine political conflict as an existential murder plot, the campaign relies on fear and projection rather than transparent policy debate.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_neg dominates via aggressive polarization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_neg dominates via aggressive polarization.",
       "The Unavoidable Truth: Rhetorical demonization of opponents undermines democratic safety.\n\nThe Unavoidable Lie: Federal law enforcement is an intentional murder squad.",
       "Alethekanon:\nEquating policy disputes with literal murder replaces civic debate with lethal tribalism, manufacturing a crisis to drive voter turnout.",
       "Awwthekanon:\nWhen fear and pain are weaponized into political weapons, everyone loses their sense of shared safety. We need spaces where real grievances can be heard without turning neighbors into mortal enemies.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Angie Nixon Rhetoric",
@@ -275,6 +337,7 @@
         "name": "Emma Hall",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

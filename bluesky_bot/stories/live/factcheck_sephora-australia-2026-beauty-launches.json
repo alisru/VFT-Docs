@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.5,
-    "real_psi": -0.6,
+    "real_u": -0.65,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Stepping into Sydney's glittering beauty vault to find what's actually worth your cash...\nEvidence: Influencer hype, Product debuts, PR goodie bags\n#Aletheia #Beauty",
-      "Editorial curation cuts through the marketing noise to highlight genuine beauty staples.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Commercial influencer showcases function as top-of-funnel PR to drive impulse consumer spending.\nResulting Judgement: (-0.5, -0.6) — Lesser Evil",
-      "Verdict: COND — The Path of Revelation.\nAn entertaining consumer guide that frames commercial product launches as objective editorial journalism.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Editorial curation cuts through the marketing noise to highlight genuine beauty staples.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Commercial influencer showcases function as top-of-funnel PR to drive impulse consumer spending.\nResulting Judgement: (-0.65, -0.65) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nAn entertaining consumer guide that frames commercial product launches as objective editorial journalism.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Daily Mail Curation: COND (-0.5, -0.6) — Blurs line between ads and reviews.\n- Sephora Marketing: FAIL (-0.8, -0.7) — Drives consumerism via hype.",
       "Sephora Australia hosted a massive preview event in Sydney showcasing upcoming Spring/Summer 2026 beauty drops to media and influencers.",
       "The Bright Side:\nConsumers get an early look at innovative formulations and nostalgic revivals like Marc Jacobs Beauty.",
       "The Breakdown & Plane Error:\nConfusing commercial promotion (WHAT) with objective consumer protection (WHO).",
       "Social Physics Analysis:\nSephora executes a smart selfish loop, packaging corporate PR as exclusive editorial insight to drive impulse purchases under the pretext of helpful advice.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between stated editorial independence and commercial PR, it plots a direct trajectory toward Lesser Evil.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated editorial independence and commercial PR, it plots a direct trajectory toward Lesser Evil.",
       "The Unavoidable Truth: Early product access fuels consumer excitement.\n\nThe Unavoidable Lie: Influencer reviews are entirely uninfluenced by brand gifting.",
       "Alethekanon:\nFraming sponsored PR showcases as independent journalism obscures the commercial machinery driving consumer trends.",
       "Awwthekanon:\nIt's fun to feel like Charlie Bucket in a candy store of shiny new beauty drops, even if the wallet takes a little hit!",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Daily Mail Curation",
@@ -164,6 +226,7 @@
         "name": "Merit Beauty",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

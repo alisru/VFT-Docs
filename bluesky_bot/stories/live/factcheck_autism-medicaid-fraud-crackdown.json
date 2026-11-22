@@ -5,22 +5,22 @@
     "subject": "Autism providers warn foster kids caught in Medicaid fraud crackdown",
     "link": "https://www.foxnews.com/politics/autism-providers-warn-foster-kids-risk-unintended-consequences-trumps-medicaid-fraud-crackdown",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": -0.1,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "Georgia foster kids with autism face losing therapy as a broad Medicaid fraud crackdown triggers blunt reimbursement cuts.\nEvidence: Amerigroup 30% rate cuts, clinic closure warnings, foster family distress\n#Medicaid #Georgia #Aletheia",
-      "Officials claim broad fraud crackdowns will protect public funds without harming legitimate care for vulnerable children.\nStated Judgement: (+0.5, 0.0) — Conditionally Sound",
-      "Blunt 30% reimbursement cuts by managed care providers threaten to close clinics and cut off therapy for high-need foster children.\nResulting Judgement: (-0.75, -0.80) — Lesser Evil",
-      "Verdict: COND — The Path of Decision.\nBlunt administrative cuts collateralize vulnerable foster children in the rush to curb Medicaid fraud.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.5, z: 2)",
+      "Officials claim broad fraud crackdowns will protect public funds without harming legitimate care for vulnerable children.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "Blunt 30% reimbursement cuts by managed care providers threaten to close clinics and cut off therapy for high-need foster children.\nResulting Judgement: (-0.10, -0.30) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nBlunt administrative cuts collateralize vulnerable foster children in the rush to curb Medicaid fraud.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.5, z: 2)",
       "Sub-Audits Breakdown:\n- Fraud Crackdown Intent: PASS (+0.8, +0.5) — Legitimate goal to recover stolen public funds.\n- Managed Care Execution: COND (-0.7, -0.8) — 30% cuts crush vital care providers.",
       "Georgia foster families and autism advocates warn that Amerigroup's 30% rate reduction for Applied Behavior Analysis therapy risks shutting down 75% of local clinics serving foster children.",
       "The Poison:\nUsing a blunt sledgehammer on Medicaid payments instead of a precise scalpel sacrifices vulnerable foster children to achieve short-term budgetary targets.",
       "The Breakdown & Plane Error:\nConfusing administrative fiscal reduction (WHAT) with targeted fraud elimination (WHO). The systemic failure collateralizes foster children who depend on stability.",
       "Social Physics Analysis:\nThe state and insurers executed a Smart Selfish Maneuver by bundling legitimate fraud crackdowns with broad reimbursement cuts, shifting the financial burden onto helpless foster children and providers while projecting fiscal responsibility.",
-      "The Trajectory: The Path of Decision.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic shortcuts sacrifice the most vulnerable to satisfy bureaucratic accounting metrics.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic shortcuts sacrifice the most vulnerable to satisfy bureaucratic accounting metrics.",
       "The Unavoidable Truth: Fraud must be aggressively prosecuted to protect taxpayer funds and legitimate program recipients.\n\nThe Unavoidable Lie: Slashing critical care reimbursement by thirty percent has no harmful collateral impact on vulnerable children.",
       "Alethekanon:\nAdministrative sledgehammers punish vulnerable foster children instead of precision tools targeting actual fraudsters. Real accountability requires protecting access while weeding out abuse.",
       "Awwthekanon:\nIt breaks my heart to see little ones who have already been through so much trauma suddenly lose the therapy they need just because of bureaucratic budget slashing.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fraud Crackdown Intent",
@@ -168,6 +230,7 @@
       "Medicaid",
       "Georgia",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Iowa Governor Candidate Rob Sand Doesn't Want Voters to Know He's a Democrat",
     "link": "https://www.breitbart.com/politics/2026/09/14/iowa-governor-candidate-rob-sand-doesnt-want-voters-to-know-hes-a-democrat/",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.75,
-    "real_u": -0.78,
-    "real_psi": -0.65,
+    "claim_u": 0.68,
+    "claim_psi": 0.62,
+    "real_u": -0.32,
+    "real_psi": -0.33,
     "mode": "root",
     "posts": [
       "Is a candidate's call for electoral reform a trick, or is the partisan machine just terrified of losing control?\nEvidence: Party Affiliation, Bipartisan Platform, Partisan Framing\n#Aletheia #IowaPolitics",
-      "Breitbart claims Iowa gubernatorial candidate Rob Sand is actively trying to trick voters by hiding his Democratic party affiliation to win over moderates.\nStated Judgement: (+0.85, +0.75) — Greater Good",
-      "Sand is the official Democratic nominee and the state's sole statewide elected Democrat. He openly critiques the two-party system and promotes open primaries, which partisan media frames as deception.\nResulting Judgement: (-0.78, -0.65) — Greater Evil",
+      "Breitbart claims Iowa gubernatorial candidate Rob Sand is actively trying to trick voters by hiding his Democratic party affiliation to win over moderates.\nStated Judgement: (+0.68, +0.62) — Greater Good",
+      "Sand is the official Democratic nominee and the state's sole statewide elected Democrat. He openly critiques the two-party system and promotes open primaries, which partisan media frames as deception.\nResulting Judgement: (-0.32, -0.33) — Greater Evil",
       "Verdict: FAIL — Fall into Destruction.\nThe narrative twists a candidate's critique of the two-party system into a malicious conspiracy to deceive voters, reinforcing partisan polarization.\nIntegrity: Meaningful Distortion (Hypocrisy: 5.5, z: 2)",
       "- Rob Sand Platform: COND (0.20, 0.10) — Promotes reform while running on party line.\n- Breitbart Framing: FAIL (-0.85, -0.75) — Distorts reformist rhetoric as voter fraud.",
       "Rob Sand, the Democratic nominee for Iowa Governor, has campaigned on systemic electoral reforms like open primaries, drawing sharp criticism from partisan groups seeking to enforce strict party-line voting.",
       "The Poison:\nWhile Sand's critique of the two-party system is structurally sound, running under a major party banner while disavowing its utility creates an inherent rhetorical tension that opponents easily exploit.",
       "The Breakdown:\nThe article commits a Logical Plane Error (HOW vs WHY). It treats Sand's bipartisan hiring and reform platform (HOW he governs) as proof of a deceptive plot to hide his identity (WHY he runs), ignoring his public primary win.",
       "Social Physics Analysis:\nThe partisan machine executes a Smart Selfish Maneuver. By manufacturing a crisis of 'voter deception' and projecting corrupt motives onto Sand's reformist platform, they protect the duopoly's power and block systemic solutions.",
-      "The Trajectory: Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Enforcing partisan compliance over systemic reform accelerates democratic decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Enforcing partisan compliance over systemic reform accelerates democratic decay.",
       "The Unavoidable Truth: Rob Sand is the official Democratic nominee and cannot hide his ballot line.\nThe Unavoidable Lie: Sand's critique of the two-party system is a secret plot to trick voters.",
       "Alethekanon:\nThe duopoly maintains power by framing systemic critique as personal dishonesty. When a candidate challenges the two-choice system, the machine's immediate reflex is to enforce compliance through character assassination.",
       "Awwthekanon:\nIt is exhausting when someone tries to build bridges and bring people together, only to have their intentions painted as a trick. We need leaders who value people over party labels to help heal our deep divisions.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Rob Sand Platform",
@@ -161,6 +223,7 @@
         "name": "Breitbart",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

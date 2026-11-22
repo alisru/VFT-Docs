@@ -5,22 +5,22 @@
     "subject": "As DOJ went after protesters for felony assault, juries and judges were unconvinced",
     "link": "https://www.washingtontimes.com/news/2026/sep/12/juries-judges-unconvinced-justice-dept-went-protesters-felony-assault/",
     "target_url": "",
-    "claim_u": 0.82,
-    "claim_psi": 0.74,
-    "real_u": -0.74,
-    "real_psi": -0.68,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.08,
+    "real_psi": 0.27,
     "mode": "root",
     "posts": [
       "Federal prosecutors claimed aggressive felony charges were necessary to punish violent assaults on law enforcement, but juries rejected every single case brought to trial.\nEvidence: Law Enforcement Protection, Mass Case Dismissals, Punitive Deterrence\n#Aletheia #USPol",
-      "The Justice Department claimed it was impartially prosecuting serious felony assaults against federal officers during demonstrations, insisting charges were backed by evidence.\nStated Judgement: (+0.82, +0.74) — Greater Good",
-      "Out of 102 defendants, prosecutors failed to win a single felony trial verdict. 41% of cases were dismissed entirely, 34% reduced to misdemeanors, and all 12 trial cases ended in defeat.\nResulting Judgement: (-0.74, -0.68) — Lesser Evil",
-      "Verdict: FAIL — Fall into Destruction. Rushed overcharging transformed political posturing into systemic courtroom collapse.\nIntegrity: Baseless Lies (Hypocrisy: 129.95, Uncertainty z: 5)",
+      "The Justice Department claimed it was impartially prosecuting serious felony assaults against federal officers during demonstrations, insisting charges were backed by evidence.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Out of 102 defendants, prosecutors failed to win a single felony trial verdict. 41% of cases were dismissed entirely, 34% reduced to misdemeanors, and all 12 trial cases ended in defeat.\nResulting Judgement: (-0.08, +0.27) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nIntegrity: Baseless Lies (Hypocrisy: 129.95, Uncertainty z: 5)",
       "Sub-Audits Breakdown:\n- DOJ Overcharging: FAIL (-0.82, -0.75) — Politically driven charges collapsed in court.\n- Judicial Pushback: PASS (+0.78, +0.65) — Juries and judges rejected unevidenced claims.",
       "An AP analysis revealed the DOJ secured zero felony trial wins across 102 protester arrests in four major cities, a stark contrast to the standard 82% federal assault conviction rate.",
       "The Bright Side:\nThe federal jury system functioned as an effective constitutional check against prosecutorial overreach and politically motivated overcharging.",
       "The Breakdown & Plane Error:\nWHO vs. WHAT error. The state framed protesters as dangerous felons to justify crackdowns, but physical courtroom evidence proved the charges were unsubstantiated.",
       "Social Physics Analysis:\nProsecutors ran an anti-social extraction loop: manufacturing extreme felony charges as pretexts to project strength, only for transparency in open court to dissolve the narrative.",
-      "The Trajectory: The Path of Fall into Destruction.\nWhen aggressive state overcharging collides with jury scrutiny, systemic credibility collapses from assumed authority into courtroom defeat.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen aggressive state overcharging collides with jury scrutiny, systemic credibility collapses from assumed authority into courtroom defeat.",
       "The Unavoidable Truth: Juries refused to convict because the government lacked evidence of felony violence.\nThe Unavoidable Lie: Federal prosecutors claimed every arrestee was a dangerous violent felon.",
       "Alethekanon:\nWhen prosecutors prioritize deterrence over evidence, the courtroom becomes an audit they cannot survive. The 0-for-12 trial record reflects institutional overreach.",
       "Awwthekanon:\nIt is terrifying to face felony charges and the full weight of the state simply for speaking out. Juries seeing the human reality and choosing fairness brings hope.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Baseless Lies",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.55,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "DOJ Prosecutorial Strategy",
@@ -277,6 +339,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

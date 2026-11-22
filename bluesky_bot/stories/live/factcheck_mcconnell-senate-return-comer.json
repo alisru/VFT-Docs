@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.0,
-    "real_u": -0.43,
-    "real_psi": 1.0,
+    "real_u": -0.35,
+    "real_psi": 0.75,
     "mode": "root",
     "posts": [
       "Questions mount over Senate leadership as allies project confidence about Mitch McConnell's return following a severe fall.\n\nComer indicates McConnell staffers aiming for return\nEvidence: staff optimism, physical absence, leadership continuity\n#Aletheia #USPol 🌐",
-      "Rep. James Comer indicates that Mitch McConnell's staff is aiming for the senator to return to the Senate on September 14, projecting confidence in his recovery and leadership continuity.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "In reality, McConnell has been absent for three months after a fall. Comer admits he has not spoken to McConnell directly, relying on staffer optimism while actual fitness remains highly opaque.\nResulting Judgement: (-0.43, 1.0) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nStaffers are projecting optimistic timelines to maintain political leverage and stability despite severe physical uncertainty.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 7.81, Uncertainty z: 0)",
+      "Rep. James Comer indicates that Mitch McConnell's staff is aiming for the senator to return to the Senate on September 14, projecting confidence in his recovery and leadership continuity.\nStated Judgement: (+0.80, +0.00) — Lesser Good",
+      "In reality, McConnell has been absent for three months after a fall. Comer admits he has not spoken to McConnell directly, relying on staffer optimism while actual fitness remains highly opaque.\nResulting Judgement: (-0.35, +0.75) — Greatest Lie",
+      "Verdict: FAIL — Awakening into Deception.\nStaffers are projecting optimistic timelines to maintain political leverage and stability despite severe physical uncertainty.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 7.81, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- James Comer Statement: COND (-0.2, 0.5) — Relies entirely on staffer hearsay rather than direct contact.\n- McConnell Staff PR: FAIL (-0.5, 1.0) — Projecting recovery timelines to maintain political leverage.",
       "Senator Mitch McConnell has been absent from Washington since a fall in June 2026. While his staff targets a return date of September 14, colleagues admit they are basing expectations on staff conversations rather than direct contact.",
       "The Bright Side:\nTargeting a specific return date provides a benchmark for accountability, forcing the office to eventually address the senator's actual physical capacity if the deadline is missed.",
       "The Breakdown & Plane Error:\nThis is a Logical error (HOW). The causal chain relies on staffer optimism as proof of physical fitness. In reality, staffer statements are a PR mechanism to preserve authority and prevent a leadership vacuum.",
       "Social Physics Analysis:\nTo avoid a power struggle, the institution uses post-hoc justifications of recovery. By projecting a near-term return, they freeze challenges to leadership, using optimism as a shield against transparency.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Projecting false confidence to maintain power creates systemic instability.",
+      "The Trajectory: The Path of Awakening into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Projecting false confidence to maintain power creates systemic instability.",
       "The Unavoidable Truth: McConnell's prolonged absence has complicated Senate operations and reduced Republican voting flexibility.\n\nThe Unavoidable Lie: The claim that a staffer's target date is proof of a senator's medical fitness.",
       "Alethekanon:\nPower abhorring a vacuum is a law of political physics. When staffers become the primary source of a leader's status, the line between public service and institutional self-preservation completely dissolves.",
       "Awwthekanon:\nBehind the political maneuvering is an elderly man recovering from a serious injury. We should wish him a peaceful recovery, free from the intense pressure of being a shield for institutional power.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "James Comer Statement",
@@ -154,6 +216,7 @@
         "name": "Mitch McConnell",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Deception"
   }
 ]

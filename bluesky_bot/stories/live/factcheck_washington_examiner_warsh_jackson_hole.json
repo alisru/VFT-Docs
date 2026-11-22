@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.8,
-    "real_u": 0.15,
-    "real_psi": 0.45,
+    "real_u": 0.48,
+    "real_psi": 0.62,
     "mode": "root",
     "posts": [
       "A routine economic preview gets derailed by a bizarre, unrelated partisan political insertion.\n\nWATCH LIVE: Fed Chairman Kevin Warsh speaks at Jackson Hole\nEvidence: economic preview, partisan pollution, objective reporting\n#Aletheia #Finance #Fed 🌐",
-      "The article claims to provide a straightforward, objective preview of Federal Reserve Chairman Kevin Warsh's highly anticipated monetary policy address at the 2026 Jackson Hole symposium.\nStated Judgement: (+0.80, +0.80) — Good Preference",
-      "While covering the basic event details, the text abruptly inserts an unrelated, highly partisan political attack on \"DSA ideas\" by Sarah Bedford, polluting a neutral financial report with editorial noise.\nResulting Judgement: (+0.15, +0.45) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Revelation into Deception. A standard financial preview is compromised by sloppy editorial curation or automated ad-scraping errors.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.05, Uncertainty z: 0)",
+      "The article claims to provide a straightforward, objective preview of Federal Reserve Chairman Kevin Warsh's highly anticipated monetary policy address at the 2026 Jackson Hole symposium.\nStated Judgement: (+0.80, +0.80) — Greater Good",
+      "While covering the basic event details, the text abruptly inserts an unrelated, highly partisan political attack on \"DSA ideas\" by Sarah Bedford, polluting a neutral financial report with editorial noise.\nResulting Judgement: (+0.48, +0.62) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.05, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Washington Examiner: COND (+0.15, +0.45) — Sloppy ad-scraping or partisan insertion.\n- Economic Reporting: PASS (+0.80, +0.80) — Basic event details are accurate.",
       "Federal Reserve Chairman Kevin Warsh spoke at the Jackson Hole symposium on August 28, 2026, addressing inflation concerns. However, the Examiner's coverage included a completely unrelated political quote.",
       "The Bright Side:\nThe core details of the Jackson Hole meeting, including the timing of Warsh's speech and the historical context of the Grand Teton summit, remain factually intact for readers seeking basic scheduling info.",
       "The Breakdown & Plane Error:\nThe error is Metaphysical (WHO). The article claims to serve the general public seeking financial news, but actually serves partisan narrative-pushing or sloppy automated ad-revenue systems that inject irrelevant political noise.",
       "Social Physics Analysis:\nBy allowing automated ad-scraping or uncurated partisan quotes to bleed into objective financial reporting, the outlet introduces unnecessary systemic friction, trading journalistic credibility for cheap political engagement.",
-      "The Trajectory: The Path of Revelation into Deception.\nWhen you map the gap between stated objective reporting and actual partisan pollution, it plots a trajectory toward Lesser Evil, where editorial standards are sacrificed for narrative alignment.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated objective reporting and actual partisan pollution, it plots a trajectory toward Lesser Evil, where editorial standards are sacrificed for narrative alignment.",
       "The Unavoidable Truth: Kevin Warsh spoke at Jackson Hole on August 28, 2026, to discuss inflation.\n\nThe Unavoidable Lie: The random political attack on DSA ideas has any logical connection to the Fed's monetary policy preview.",
       "Alethekanon:\nJournalistic integrity decays when financial reporting is treated as a passive vehicle for automated political outrage. The insertion of unrelated partisan quotes exposes a systemic failure in editorial oversight.",
       "Awwthekanon:\nIt is exhausting when we just want to understand the economy and instead get hit with random political bickering. We deserve clean, peaceful spaces to learn without constant division being pushed into every corner.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Washington Examiner Editorial Curation",
@@ -160,6 +222,7 @@
         "sub_psi": 0.45,
         "sub_verdict": "COND"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

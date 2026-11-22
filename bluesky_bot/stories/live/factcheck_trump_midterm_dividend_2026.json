@@ -5,16 +5,16 @@
     "subject": "Trump makes extraordinary prom...",
     "link": "https://www.dailymail.com/news/article-16118547/Trump-gets-heros-welcome-rowdy-MAGA-partiers-kicks-GOP-midterm-convention-glaring-absences.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.45,
-    "real_u": -0.82,
-    "real_psi": -0.78,
+    "claim_u": 0.58,
+    "claim_psi": 0.32,
+    "real_u": -0.65,
+    "real_psi": -0.58,
     "mode": "root",
     "posts": [
       "A $5,000 check for your vote? Trump's Dallas midterm convention speech offers a massive cash promise, but only if the GOP wins.\nEvidence: Universal Dividend, Transactional Vote Buying, Power Consolidation\n#Aletheia #USPol #Trump",
-      "Trump claims that a $5,000 \"Trump Dividend\" will be paid to every American adult if Republicans win both chambers of Congress, funded by \"tremendous economic success\" and $20T in foreign investment.\nStated Judgement: (+0.85, +0.45) — Greater Good",
-      "The promise is a $1 trillion transactional bribe with no legislative mechanism or fiscal backing. The claimed $20 trillion in foreign investment is mathematically fabricated, masking a deficit-funded play for power.\nResulting Judgement: (-0.82, -0.78) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. A transactional cash-for-votes promise that trades long-term fiscal stability and democratic integrity for immediate electoral power.\nIntegrity: Severe Deception (Hypocrisy: 51.4, z: 5)",
+      "Trump claims that a $5,000 \"Trump Dividend\" will be paid to every American adult if Republicans win both chambers of Congress, funded by \"tremendous economic success\" and $20T in foreign investment.\nStated Judgement: (+0.58, +0.32) — Greater Good",
+      "The promise is a $1 trillion transactional bribe with no legislative mechanism or fiscal backing. The claimed $20 trillion in foreign investment is mathematically fabricated, masking a deficit-funded play for power.\nResulting Judgement: (-0.65, -0.58) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 51.4, z: 5)",
       "- Donald Trump: FAIL (-0.85, -0.80) — Transactional bribe for power.\n- Economic Claims: FAIL (-0.90, -0.85) — Fabricated $20T investment.\n- Media Coverage: COND (-0.20, -0.10) — Focuses on spectacle over math.",
       "At the inaugural GOP midterm convention in Dallas, Donald Trump pitched a $1 trillion \"Trump Dividend\" to mobilize voters, tying direct cash payouts to a Republican victory in the upcoming midterm elections.",
       "The Poison:\nBy framing public funds as a corporate dividend, the proposal normalizes the direct purchase of electoral outcomes, eroding the boundary between state treasury and party campaign.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Donald Trump Political Intervention",
@@ -178,6 +240,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

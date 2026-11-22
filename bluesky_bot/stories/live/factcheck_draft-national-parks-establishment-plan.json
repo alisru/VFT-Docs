@@ -5,22 +5,22 @@
     "subject": "Draft National Parks Establishment Plan",
     "link": "https://www.haveyoursay.nsw.gov.au/NPWS-est-plan",
     "target_url": "https://bsky.app/profile/stilgherrian.com/post/3mxbkxtcgsc2o",
-    "claim_u": 0.7,
-    "claim_psi": 0.4,
-    "real_u": 0.5,
-    "real_psi": 0.2,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.87,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "NSW Government seeks public feedback on the draft National Parks Establishment Plan.\nEvidence: Public consultation, biodiversity goals, land assessment\n#Aletheia #NSW #Environment #Parks",
-      "Stated claim is to update conservation frameworks and expand national park estates for future generations through community input.\nStated Judgement: (+0.7, +0.4) — Good Preference",
-      "Actual process provides a structured consultation platform for stakeholders to shape biodiversity preservation priorities.\nResulting Judgement: (+0.5, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nOpen public consultation on environmental conservation balances ecological preservation with civic participation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Stated claim is to update conservation frameworks and expand national park estates for future generations through community input.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Actual process provides a structured consultation platform for stakeholders to shape biodiversity preservation priorities.\nResulting Judgement: (+0.87, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nOpen public consultation on environmental conservation balances ecological preservation with civic participation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- NSW Government: PASS (+0.6, +0.3) — Transparent public consultation framework.\n- Community Input: PASS (+0.5, +0.2) — Encourages grassroots participation.",
       "The New South Wales government has opened public consultation on its draft National Parks Establishment Plan to guide future conservation investments.",
       "The Bright Side:\nInvites direct community and expert feedback to ensure protected areas reflect genuine ecological and cultural needs.",
       "The Breakdown & Plane Error:\nAddresses both physical WHERE (land estate) and metaphysical WHO (future generations) transparently without hidden agendas.",
       "Social Physics Analysis:\nState actors operate via a Smart Altruistic Loop, offering public transparency and inviting citizen feedback to solve regional environmental strains.",
-      "The Trajectory: The Path of Grace.\nWhen you map intentions to results, it plots toward Greater Good. Collaborative conservation planning safeguards natural heritage.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map intentions to results, it plots toward Greater Good. Collaborative conservation planning safeguards natural heritage.",
       "The Unavoidable Truth: Protecting biodiversity requires deliberate land planning and public buy-in.\n\nThe Unavoidable Lie: Government plans alone satisfy all competing land-use pressures.",
       "Alethekanon:\nTransparent public consultation bridges the gap between state conservation strategy and community stewardship.",
       "Awwthekanon:\nIt is wonderful to see communities invited to help protect the wild spaces and native species we all cherish for tomorrow.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NSW Government",
@@ -218,6 +280,7 @@
         "name": "Department of Climate Change, Energy, the Environment and Water",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

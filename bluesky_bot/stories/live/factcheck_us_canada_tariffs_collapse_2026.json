@@ -5,22 +5,22 @@
     "subject": "U.S.-Canada trade talks collapse just before deadline for tariffs",
     "link": "https://www.npr.org/2026/08/22/nx-s1-5941584/us-canada-tariffs",
     "target_url": "",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.85,
+    "claim_u": 0.73,
+    "claim_psi": 0.86,
+    "real_u": -0.93,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "U.S.-Canada trade talks collapse as 50% tariffs hit $20B in goods. 🌐\nU.S.-Canada Tariffs Collapse\nEvidence: fair deal, trade war, retaliatory tariffs #Trade #USCan #Economy",
-      "Officials claimed negotiations aimed to secure the best trade deal with mutual alignment.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "Talks collapsed at midnight, triggering 50% tariffs and dollar-for-dollar retaliation.\nResulting Judgement: (-0.8, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nUnilateral demands triggered reciprocal tariffs and severed agreements.\n\nIntegrity: Severe Deception (Hypocrisy: 7.5, Uncertainty z: 2)",
+      "Officials claimed negotiations aimed to secure the best trade deal with mutual alignment.\nStated Judgement: (+0.73, +0.86) — Greater Good",
+      "Talks collapsed at midnight, triggering 50% tariffs and dollar-for-dollar retaliation.\nResulting Judgement: (-0.93, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nUnilateral demands triggered reciprocal tariffs and severed agreements.\n\nIntegrity: Severe Deception (Hypocrisy: 7.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Trade Negotiations: FAIL (-0.8, -0.9) — Sudden collapse.\n- Retaliatory Response: FAIL (-0.8, -0.8) — Dollar-for-dollar match.",
       "Trade negotiations between the U.S. and Canada fell apart over last-minute terms, triggering 50% tariffs on $20 billion of goods.",
       "The Poison:\nBlaming the breakdown entirely on counterparty walk-backs ignores the coercive nature of last-minute tariff threats.",
       "The Breakdown & Plane Error:\nConfusing WHO (bilateral partnership) with WHAT (tariff enforcement), turning cooperation into a zero-sum contest.",
       "Social Physics Analysis:\nImposing sudden terms without transparent consensus replaces stable collaboration with retaliatory friction and defensive posturing.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil.",
       "The Unavoidable Truth: Fifty percent tariffs are now active on $20 billion of goods.\n\nThe Unavoidable Lie: Last-minute demands were the sole cause of collapse.",
       "Alethekanon:\nUltimatums destroy cooperative frameworks and substitute retaliation for diplomacy. 🌐",
       "Awwthekanon:\nWorkers and businesses caught in the crossfire of sudden tariff wars deserve stability, not abrupt economic shocks.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.1,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Bilateral Trade Negotiations",
@@ -289,6 +351,7 @@
         "name": "Canada",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

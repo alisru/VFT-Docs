@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3mwp2gphphy25",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.9,
-    "real_psi": 0.9,
+    "real_u": 0.95,
+    "real_psi": 0.95,
     "mode": "root",
     "posts": [
       "Celebrating Alan Kohler's remarkable three-decade legacy of making complex economics accessible to all Australians.\nEvidence: ABC career, AFR editor, That's Business podcast\n#Aletheia #Media #Australia",
-      "Alan Kohler concludes an extraordinary 31-year career at the ABC, having transformed financial journalism with clarity and warmth.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Kohler's legendary career as a finance communicator leaves an enduring legacy of public trust and economic literacy across Australia.\nResulting Judgement: (+0.9, +0.9) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nExemplary career dedicated to public transparency and financial education.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Alan Kohler concludes an extraordinary 31-year career at the ABC, having transformed financial journalism with clarity and warmth.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Kohler's legendary career as a finance communicator leaves an enduring legacy of public trust and economic literacy across Australia.\nResulting Judgement: (+0.95, +0.95) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nExemplary career dedicated to public transparency and financial education.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- ABC Management: PASS (+0.9, +0.9) — Honors public contribution.\n- Editorial Legacy: PASS (+1.0, +1.0) — Unmatched clarity.",
       "Alan Kohler steps back from his regular news role after 31 years at the ABC, though he will continue contributing via special projects.",
       "The Poison:\nThe loss of a trusted, steady voice explaining complex economic realities to the everyday public.",
       "The Breakdown & Plane Error:\nFocusing on an individual career milestone (WHO/Q1) rather than systemic economic policy (WHAT/Q2).",
       "Social Physics Analysis:\nKohler ran a smart altruistic loop for decades, pairing transparent market analysis with genuine audience empowerment to demystify finance.",
-      "The Trajectory: The Path of Grace.\nWhen media institutions honor transparent public service, it fosters deep societal trust. R_net is 1.1, keeping trajectories stable.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen media institutions honor transparent public service, it fosters deep societal trust. R_net is 1.1, keeping trajectories stable.",
       "The Unavoidable Truth: Clear communication builds lasting public trust in journalism.\n\nThe Unavoidable Lie: Individual retirement marks the end of an institutional ethos.",
       "Alethekanon:\nTranslating complex financial markets into accessible public knowledge exemplifies the highest ideal of public broadcasting.",
       "Awwthekanon:\nIt's hard to imagine the evening news without his friendly graphs and reassuring smile. Thank you for decades of making the numbers make sense.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "ABC Management",
@@ -158,6 +220,7 @@
         "name": "Paul Keating",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

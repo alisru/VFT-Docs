@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": 0.1,
+    "real_u": 0.6,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "When mountain monsoons turn washes into raging torrents, even a Jeep Wrangler isn't safe.\nEvidence: San Bernardino storm, Jeep swept away, no injuries\n#Aletheia #Weather",
-      "A freak Southern California storm violently swept a passenger-filled Jeep hundreds of feet down a flooded riverbed.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Torrential rains and flash floods triggered sudden mudslides in San Bernardino, stranding motorists and requiring swift rescue operations.\nResulting Judgement: (+0.2, +0.1) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nA dramatic flash flood event unfolds safely through swift emergency response and fortunate outcomes despite severe weather.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "A freak Southern California storm violently swept a passenger-filled Jeep hundreds of feet down a flooded riverbed.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Torrential rains and flash floods triggered sudden mudslides in San Bernardino, stranding motorists and requiring swift rescue operations.\nResulting Judgement: (+0.60, +0.45) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nA dramatic flash flood event unfolds safely through swift emergency response and fortunate outcomes despite severe weather.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Emergency Response: PASS (+0.8, +0.7) — Prompt rescue operations.\n- Weather Reporting: PASS (+0.4, +0.2) — Accurate flash flood coverage.",
       "A severe mountain storm battered Southern California with torrential rain and hail, turning roads into mudslides and sweeping vehicles into washes.",
       "The Bright Side:\nFirst responders managed to rescue all passengers without any reported injuries despite the extreme conditions.",
       "The Breakdown & Plane Error:\nConfusing a localized natural hazard warning (Where/Q3) with systemic infrastructure failure (How/Q5).",
       "Social Physics Analysis:\nNature exercises raw physical power, while emergency responders act with transparent, cooperative empathy to protect stranded residents without hidden pretexts.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between sudden natural hazards and effective rescue responses, it plots a direct trajectory toward Redemption.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between sudden natural hazards and effective rescue responses, it plots a direct trajectory toward Destruction.",
       "The Unavoidable Truth: Flash floods near burn scars present lethal, unpredictable dangers in mountain communities.\n\nThe Unavoidable Lie: Sensationalist headlines imply total community collapse when rescues succeed.",
       "Alethekanon:\nNatural elements impose sudden chaos, but prompt human coordination restores physical order swiftly. 🌐",
       "Awwthekanon:\nThank goodness everyone made it out of that terrifying riverbed safely! Nature is so powerful and unpredictable.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Emergency Response",
@@ -157,6 +219,7 @@
         "name": "Cal Fire",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

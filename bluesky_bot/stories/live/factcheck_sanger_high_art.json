@@ -5,22 +5,22 @@
     "subject": "Outrage as school shows kids graphic art",
     "link": "https://nypost.com/2026/08/24/us-news/controversial-abortion-imagery-shown-to-sanger-high-school-students/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.2,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.57,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Parents are reeling after high schoolers were exposed to graphic art installations in a college course. Evidence: parental outrage, graphic curriculum, institutional disconnect. #Education #California",
-      "The school claims dual-enrollment courses are set by colleges, not high schools, shifting responsibility for the content. Stated Judgement: (0.5, 0.2) — Good Preference",
-      "In reality, the lack of oversight for minors in adult-level art courses created a high-strain environment for students and families. Resulting Judgement: (-0.4, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. The institution failed to bridge the gap between college autonomy and high school student safety. Integrity: Meaningful Distortion (Hypocrisy: 6.5, Uncertainty z: 2)",
+      "The school claims dual-enrollment courses are set by colleges, not high schools, shifting responsibility for the content. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the lack of oversight for minors in adult-level art courses created a high-strain environment for students and families. Resulting Judgement: (-0.57, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.",
       "Sub-Audits Breakdown:\n- Sanger Unified: FAIL (-0.4, -0.5) — Failed to vet content.\n- Reedley College: FAIL (-0.5, -0.7) — Ignored age-appropriateness.",
       "Sanger High students were exposed to graphic abortion and sexual imagery through a dual-enrollment art course at Reedley College. The school board is now facing intense pressure to review these partnerships.",
       "The Bright Side:\nThis incident forces a necessary conversation about the boundaries of dual-enrollment programs and parental rights in curriculum selection.",
       "The Breakdown & Plane Error:\nThis is a WHAT vs WHO error. The school focuses on the 'what' (academic freedom) while parents focus on the 'who' (the developmental stage of the students).",
       "Social Physics Analysis:\nThe school used institutional autonomy as a pretext to avoid vetting, while parents projected their concerns onto the board. Transparency would have prevented this friction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The failure to align curriculum with student age creates systemic strain.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The failure to align curriculum with student age creates systemic strain.",
       "The Unavoidable Truth: Institutions often prioritize administrative convenience over individual student needs.\nThe Unavoidable Lie: Academic freedom justifies exposing minors to graphic content without parental consent.",
       "Alethekanon:\nInstitutional autonomy is not a shield for negligence. The failure to curate content for minors is a structural collapse of duty.",
       "Awwthekanon:\nIt is painful to see young students caught in the middle of adult debates. We must protect their innocence while fostering their growth.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Sanger Unified School District",
@@ -214,6 +276,7 @@
         "name": "Jose Soria",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

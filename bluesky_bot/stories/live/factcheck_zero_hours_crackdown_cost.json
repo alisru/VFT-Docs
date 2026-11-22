@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A £2.9bn headline hides a £10bn economic boost. Let's look past the business lobby's worst-case scare tactics.\n\nZero hours crackdown could cost firms up to £2.9bn a year\nEvidence: worker protection, net economic boost, fair labor\n#Aletheia #UKPol #Labor",
-      "The claim warns that Labour's zero-hours contract crackdown will impose a devastating £2.9bn annual burden on retail and hospitality, threatening jobs.\nStated Judgement: (-0.05, +0.28) — Lesser Evil",
-      "The reality is the £2.9bn figure is an extreme upper-bound estimate. The middle estimate is £1.1bn, and the policy is projected to deliver a £10bn economic boost through productivity.\nResulting Judgement: (+0.12, +0.33) — Lesser Good",
-      "Verdict: PASS — Revelation into Redemption. The policy's actual design mitigates extreme costs while unlocking massive net economic benefits.\nIntegrity: Trustworthy (Hypocrisy: 1.20, Uncertainty z: 1)",
+      "The claim warns that Labour's zero-hours contract crackdown will impose a devastating £2.9bn annual burden on retail and hospitality, threatening jobs.\nStated Judgement: (-0.05, +0.28) — Greatest Lie",
+      "The reality is the £2.9bn figure is an extreme upper-bound estimate. The middle estimate is £1.1bn, and the policy is projected to deliver a £10bn economic boost through productivity.\nResulting Judgement: (+0.12, +0.33) — Greater Good",
+      "Verdict: PASS — Revelation into Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.20, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Labour Employment Rights Bill: PASS (0.45, -0.20) — Balanced reform with net positive economic potential.\n- Business Lobby Cost Projections: COND (-0.30, 0.50) — Relies on extreme, worst-case scenarios to oppose regulation.",
       "The UK government released an impact analysis of its proposed employment rights bill, showing a wide range of potential costs for ending zero-hours contracts, alongside unmonetized benefits like worker wellbeing.",
       "The Poison:\nEven with net benefits, small hospitality and retail businesses will face genuine transitional friction and administrative costs to update payroll systems.",
       "The Plane Error is Logical (HOW vs WHAT). Opponents focus on the raw cost of compliance (WHAT) while ignoring the causal chain of how higher security boosts productivity (HOW).",
       "Social Physics Analysis:\nOpponents use post-hoc pretexts of job losses to maintain a high-strain, low-security labor model. Upfront transparency about the £10bn productivity boost defuses this division.",
-      "The Trajectory: Revelation into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The policy stabilizes systemic labor friction.",
+      "The Trajectory: The Path of Revelation into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The policy stabilizes systemic labor friction.",
       "The Unavoidable Truth: Unstable, insecure labor shifts systemic risk onto the most vulnerable workers.\n\nThe Unavoidable Lie: Business flexibility requires keeping workers in perpetual financial anxiety.",
       "Alethekanon:\nThe data reveals a classic optimization problem. By internalizing the cost of last-minute cancellations, the system reduces overall social friction, yielding a net positive return.",
       "Awwthekanon:\nNo one should have to live in fear of whether they can pay rent next week. Providing guaranteed hours is a beautiful step toward restoring dignity and peace to millions of families.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.3,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.45,
+        "O": 0.55,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Labour Employment Rights Bill",
@@ -275,6 +337,7 @@
         "name": "Baroness Jacqui Smith",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Revelation into Grace"
   }
 ]

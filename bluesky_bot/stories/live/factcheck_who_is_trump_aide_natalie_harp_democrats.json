@@ -14,7 +14,7 @@
       "A viral speech targeting a close presidential aide exposes the deep tension between personal loyalty and public accountability.\n\nWho is Trump aide Natalie Harp...\nEvidence: Loyal assistant, Gatekeeper shield, Political proxy\n#Aletheia #USPol",
       "The White House presents Natalie Harp as a simple executive assistant, framing Democratic scrutiny of her travel and influence as an unfair, politically motivated distraction from governance.\nStated Judgement: (+1.0, +1.0) — Saintly",
       "In reality, Harp is a powerful gatekeeper who promoted false election claims and travels on high-level flights, while the administration uses outrage to deflect from broader foreign policy failures.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Scrutiny is deflected by weaponizing personal loyalty, turning public office into a private shield against accountability.\nIntegrity: Severe Deception (Hypocrisy: 32.0, z: 5)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 32.0, z: 5)",
       "- Natalie Harp: FAIL (-1.0, -1.0) — Shields power with personal gratitude.\n- White House Defense: FAIL (-1.0, -1.0) — Deflects public oversight with outrage.",
       "Georgia Senator Jon Ossoff accused Trump of avoiding his duties to travel with Harp on Air Force One, sparking an angry White House response amid low approval ratings and ongoing foreign policy pressure.",
       "The Bright Side:\nThe intense focus on Harp's role highlights the critical importance of staff transparency in modern presidencies, ensuring that even behind-the-scenes actors are held to public standards.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Natalie Harp Gatekeeping",
@@ -280,6 +342,7 @@
         "name": "White House",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

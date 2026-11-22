@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A court in Damascus sentences the exiled dictator to death, but can victor's justice deliver true healing?\n\nFormer Syrian President Assad sentenced to death\nEvidence: legal accountability, political transition, transitional justice\n#Syria #Assad #HumanRights",
-      "The new Syrian authorities claim the death sentence represents a pure, lawful triumph of human rights and accountability for half a million dead.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "While Assad's horrific crimes are undeniable, a trial in absentia by his armed ousters serves as much as political consolidation as it does objective rule of law.\nResulting Judgement: (+0.44, +0.58) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nWhile politically charged, the trial formally documents decades of state-sponsored atrocities.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
+      "The new Syrian authorities claim the death sentence represents a pure, lawful triumph of human rights and accountability for half a million dead.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While Assad's horrific crimes are undeniable, a trial in absentia by his armed ousters serves as much as political consolidation as it does objective rule of law.\nResulting Judgement: (+0.44, +0.58) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nWhile politically charged, the trial formally documents decades of state-sponsored atrocities.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Syrian Transitional Court: COND (0.31, 0.42) — Delivers long-awaited symbolic justice but operates under the shadow of victor's political control.\n- Assad Regime Accountability: PASS (0.45, 0.52) — Formally codifies the historical record of state-sponsored war crimes.",
       "A Syrian court in Damascus has sentenced ousted President Bashar al-Assad and his brother Maher to death in absentia for war crimes and crimes against humanity, marking the first major legal ruling since their regime fell.",
       "The Bright Side:\nThis verdict provides a historic, official record of the regime's atrocities, offering symbolic closure to millions of victims of the civil war.",
       "The Breakdown & Plane Error:\nThe error is confusing the WHO with the WHAT. The court claims to represent impartial global justice (WHO), but its primary function is consolidating the new regime's domestic legitimacy (WHAT).",
       "Social Physics Analysis:\nThe new administration uses the trial to build a shared coalition of domestic support. By publicly exposing the former regime's brutal pretexts, they attempt to transition from armed rebellion to a stable, transparent legal authority.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The transition from raw violence to legal frameworks reduces systemic strain.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The transition from raw violence to legal frameworks reduces systemic strain.",
       "The Unavoidable Truth: Assad's regime committed unspeakable atrocities that demand accountability.\n\nThe Unavoidable Lie: This trial was a completely neutral, non-political judicial process.",
       "Alethekanon:\nThe court's decision is a predictable exercise in sovereign consolidation. While the documentation of Assad's crimes is legally sound, the trial's structure is designed to legitimize the new state apparatus.",
       "Awwthekanon:\nFor the families of the victims, this is a moment of profound recognition. The pain of the past fourteen years cannot be erased, but seeing these crimes named in court is a step toward healing.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Syrian Transitional Court",
@@ -278,6 +340,7 @@
         "name": "Russia",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

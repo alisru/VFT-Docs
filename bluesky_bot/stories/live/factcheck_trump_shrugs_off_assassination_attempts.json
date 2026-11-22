@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.85,
-    "real_psi": 0.8,
+    "real_u": 0.92,
+    "real_psi": 0.97,
     "mode": "root",
     "posts": [
       "Humor as a shield against history. Trump shrugs off multiple assassination attempts with a characteristic quip about consequential leaders. 🌐\n\nTrump: 'Only Consequential Presidents Get Shot'\nEvidence: Bravado, Real Danger, Historical Reframing\n#Aletheia #USPol",
       "Trump claims that the multiple attempts on his life are a historical marker of his consequence as a leader, joking that non-consequential presidents lead much nicer lives.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The reality matches the claim: Trump used humor and historical framing to process the genuine, documented threats against his life during a surprising reunion interview with Michael Cohen.\nResulting Judgement: (+0.85, +0.80) — Grace",
-      "Verdict: PASS — Grace.\nTrump's reframing is a psychologically consistent coping mechanism that uses humor to defuse the trauma of real, physical threats.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The reality matches the claim: Trump used humor and historical framing to process the genuine, documented threats against his life during a surprising reunion interview with Michael Cohen.\nResulting Judgement: (+0.92, +0.97) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nTrump's reframing is a psychologically consistent coping mechanism that uses humor to defuse the trauma of real, physical threats.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Donald Trump: PASS (0.85, 0.80) — Uses humor to process real trauma.\n- Michael Cohen: PASS (0.80, 0.20) — Seeks reconciliation through forgiveness.",
       "During a radio interview with his former critic Michael Cohen, Donald Trump laughed off the assassination attempts against him, noting that historically, only highly consequential presidents face such threats.",
       "The Poison:\nWhile humor defuses trauma, framing assassination attempts as a badge of \"consequence\" risks romanticizing political violence and deepening the polarization surrounding his presidency.",
       "The Breakdown & Plane Error:\nNo plane error detected. The physical reality of the threats (WHERE) aligns perfectly with the personal narrative (WHY) and the emotional processing of the event (EFFECT).",
       "Social Physics Analysis:\nBy choosing reconciliation over continued conflict, Trump and Cohen defused years of systemic friction. The upfront transparency of their mutual forgiveness replaced post-hoc justifications, creating a rare moment of alignment.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between the physical threats and the psychological reframing, it plots a direct trajectory toward Grace, driven by resilience and unexpected reconciliation.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between the physical threats and the psychological reframing, it plots a direct trajectory toward Grace, driven by resilience and unexpected reconciliation.",
       "The Unavoidable Truth: Trump has faced genuine, life-threatening dangers that few modern presidents have experienced.\n\nThe Unavoidable Lie: The idea that his lighthearted quip downplays the serious security failures surrounding these events.",
       "Alethekanon:\nHumor in the face of mortality is a classic human defense mechanism. Reframing threat as consequence allows a leader to maintain agency under extreme pressure.",
       "Awwthekanon:\nIt takes immense strength to laugh in the shadow of danger, and even greater strength to forgive a past enemy. Seeing two former adversaries find peace through grace is a beautiful reminder of healing.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.85,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.15,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.15,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Donald Trump Personal Reframing",
@@ -270,6 +332,7 @@
         "name": "Michael Cohen",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

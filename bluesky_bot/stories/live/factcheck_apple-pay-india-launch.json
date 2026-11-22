@@ -5,22 +5,22 @@
     "subject": "Apple Pay set to launch in India with Axis Bank today, sources say",
     "link": "https://techcrunch.com/2026/09/29/apple-pay-set-to-launch-in-india-with-axis-bank-today-sources-say/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.3,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -0.07,
     "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "Apple Pay launches in India via Axis Bank, navigating a market dominated by UPI.\nEvidence: Axis Bank partnership, RuPay omission, 20 bps fee friction\n#Aletheia #Tech #India",
-      "Apple Pay expands into India's massive digital payments ecosystem, starting with Axis Bank credit cards.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "The rollout is limited to Axis Bank Visa/Mastercard networks, excluding RuPay and facing stiff resistance and 20 bps fee friction from major banks.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nApple Pay's limited rollout meets the unyielding wall of UPI dominance and commercial fee pushback.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.65, z: 1)",
+      "Apple Pay expands into India's massive digital payments ecosystem, starting with Axis Bank credit cards.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "The rollout is limited to Axis Bank Visa/Mastercard networks, excluding RuPay and facing stiff resistance and 20 bps fee friction from major banks.\nResulting Judgement: (-0.07, -0.40) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nApple Pay's limited rollout meets the unyielding wall of UPI dominance and commercial fee pushback.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.65, z: 1)",
       "- Axis Bank Integration: COND (-0.2, -0.3) — Limited launch partner.\n- UPI Dominance & Fees: FAIL (-0.5, -0.6) — Commercial fee friction.",
       "Apple Pay is entering India's digital payments market with Axis Bank, facing steep competition from the state-backed UPI system.",
       "The Bright Side:\nAffluent iPhone users get premium contactless payment options despite broader merchant hurdles.",
       "The Breakdown & Plane Error:\nConfusing a niche commercial rollout (WHAT) with universal national disruption (WHO).",
       "Social Physics Analysis:\nApple attempts a Smart Selfish extraction maneuver, seeking 20 bps margins in a market dominated by free UPI rails, colliding with bank resistance.",
-      "The Trajectory: The Path of Redemption.\nThe gap between global ambitions and local infrastructure realities points toward a niche corporate compromise.\nMath: R_net = 1.65.",
+      "The Trajectory: The Path of Fall into Destruction.\nThe gap between global ambitions and local infrastructure realities points toward a niche corporate compromise.\nMath: R_net = 1.65.",
       "The Unavoidable Truth: Premium tech brands must adapt to entrenched local financial infrastructure.\n\nThe Unavoidable Lie: Global convenience automatically displaces native public payment systems.",
       "Alethekanon:\nCorporate expansion cannot bypass local architectural supremacy through sheer brand gravity.🌐",
       "Awwthekanon:\nIt's tough entering a bustling market where everyone already has a smooth, free way to pay. Change takes gentle persistence and respect for local systems.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.4,
+        "N": 0.4
+      },
+      "GE": {
+        "S": 0.3,
+        "O": 0.3,
+        "N": 0.4
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.2,
+        "N": 0.4
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.3
+      },
+      "GP": {
+        "S": 0.2,
+        "O": 0.4,
+        "N": 0.4
+      },
+      "BP": {
+        "S": 0.3,
+        "O": 0.3,
+        "N": 0.4
+      }
+    },
     "aspects": [
       {
         "name": "Axis Bank Integration",
@@ -217,6 +279,7 @@
         "name": "UPI",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

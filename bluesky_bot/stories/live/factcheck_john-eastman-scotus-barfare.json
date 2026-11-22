@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": 0.0,
+    "real_psi": -0.03,
     "mode": "root",
     "posts": [
       "Constitutional attorney John Eastman petitions SCOTUS to overturn his disbarment by the California Bar over 2020 election advice.\nEvidence: SCOTUS petition, disbarment rulings, First Amendment claims\n#Aletheia #Legal #SCOTUS",
-      "The petition argues that punishing an attorney for challenging election results violates core First Amendment speech and constitutional advocacy rights.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "State courts found Eastman engaged in a calculated campaign of false factual assertions and legal subversion, not protected advocacy.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Framing professional accountability for election subversion as pure political censorship distorts legal realities.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, Uncertainty z: 3)",
+      "The petition argues that punishing an attorney for challenging election results violates core First Amendment speech and constitutional advocacy rights.\nStated Judgement: (+0.80, +0.00) — Lesser Good",
+      "State courts found Eastman engaged in a calculated campaign of false factual assertions and legal subversion, not protected advocacy.\nResulting Judgement: (+0.00, -0.03) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- John Eastman: FAIL (-0.70, -0.65) — Frames professional discipline as partisan censorship.\n- California Bar: PASS (0.70, 0.60) — Enforces ethical standards for legal officers.",
       "John Eastman asked the U.S. Supreme Court to review his disbarment, arguing state bars are weaponizing disciplinary power against conservative lawyers.",
       "The Bright Side:\nSCOTUS review forces a rigorous national examination of the boundaries between protected legal advocacy and professional misconduct.",
       "The Breakdown & Plane Error:\nConfusing protected legal advice (WHAT) with bad-faith attempts to overturn legitimate election results (HOW).",
       "Social Physics Analysis:\nEastman runs a Smart Selfish Maneuver, projecting political animus onto neutral bar standards to shield past actions from accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map claimed constitutional defense against actual election subversion, it plots a trajectory toward Lesser Evil via institutional pretext.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map claimed constitutional defense against actual election subversion, it plots a trajectory toward Lesser Evil via institutional pretext.",
       "The Unavoidable Truth: Lawyers must be held accountable for knowingly submitting false claims to courts.\n\nThe Unavoidable Lie: Disbarment for election subversion is purely partisan speech policing.",
       "Alethekanon:\nProtecting speech does not immunize lawyers from professional consequences when legal advocacy crosses into deliberate subversion.",
       "Awwthekanon:\nIt is heavy when the rules of the profession become a battlefield, leaving everyone questioning where professional duty ends and partisanship begins.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "John Eastman",
@@ -162,6 +224,7 @@
         "name": "U.S. Supreme Court",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

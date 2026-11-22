@@ -5,22 +5,22 @@
     "subject": "Massachusetts' plan to offer postpartum screening home visits sparks online debate",
     "link": "https://www.foxnews.com/politics/massachusetts-plan-offer-postpartum-screening-home-visits-sparks-online-debate",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.85,
-    "real_psi": 0.9,
+    "claim_u": 0.25,
+    "claim_psi": -0.25,
+    "real_u": 0.1,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "Voluntary postpartum nurse visits spark privacy debates in Mass.\nEvidence: $2.25M maternal health funding, Welcome Family expansion, Lindsay Clancy trial context\n#Aletheia #Healthcare #USPol 🌐",
-      "Claim: Universal voluntary home visits by registered nurses will expand postpartum mental health support and prevent maternal crises.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Reality: The $2M expansion makes voluntary nurse screenings accessible for 68,000 annual births, directly aiding hundreds with postpartum depression.\nResulting Judgement: (+0.85, +0.90) — Grace",
-      "Verdict: PASS — The Path of Grace.\nExpanding voluntary maternal mental health support addresses a proven clinical need without infringing on privacy.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
+      "Claim: Universal voluntary home visits by registered nurses will expand postpartum mental health support and prevent maternal crises.\nStated Judgement: (+0.25, -0.25) — Lesser Good",
+      "Reality: The $2M expansion makes voluntary nurse screenings accessible for 68,000 annual births, directly aiding hundreds with postpartum depression.\nResulting Judgement: (+0.10, +0.05) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nExpanding voluntary maternal mental health support addresses a proven clinical need without infringing on privacy.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
       "Sub-Audits Breakdown:\n- Gov. Healey Office: PASS (+0.9, +0.9) — Proactive voluntary maternal care.\n- Social Media Critics: FAIL (-0.7, -0.8) — Mischaracterizes voluntary help as mandate.",
       "Gov. Healey announced a $2.25M maternal mental health investment, expanding the Welcome Family program statewide following intense scrutiny after the Lindsay Clancy trial.",
       "The Bright Side:\nUniversal voluntary nurse visits offer vital postpartum depression screenings and newborn care support directly to families in need.",
       "The Breakdown & Plane Error:\nCritics commit a Plane Error by confusing WHO (voluntary parents assisted by nurses) with WHAT (state overreach), treating a support offer as a mandate.",
       "Social Physics Analysis:\nHealey's administration runs a Smart Altruistic maneuver by funding voluntary nurse visits to support new parents. Critics project authoritarian motives onto a non-coercive program.",
-      "The Trajectory: The Path of Grace.\nWhen you map the alignment between stated health goals and transparent voluntary implementation, it plots a direct trajectory toward Grace. (u = +0.85, ψ = +0.90).",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the alignment between stated health goals and transparent voluntary implementation, it plots a direct trajectory toward Grace. (u = +0.85, ψ = +0.90).",
       "The Unavoidable Truth: Voluntary postpartum nurse visits provide proven life-saving depression screenings for new mothers.\n\nThe Unavoidable Lie: Offering voluntary health support in the home constitutes a totalitarian government mandate.",
       "Alethekanon:\nCriticizing voluntary healthcare outreach as tyranny distorts cooperative social safety nets into partisan bugbears.",
       "Awwthekanon:\nEvery new parent deserves a gentle hand and a safe ear during the overwhelming transition of birth; supporting mothers heals entire communities.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Gov. Healey Office",
@@ -159,6 +221,7 @@
         "name": "Lindsay Clancy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

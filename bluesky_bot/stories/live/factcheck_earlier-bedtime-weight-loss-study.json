@@ -1,0 +1,208 @@
+[
+  {
+    "thinking": "Phase 1-6 Convergence Scan: Simple bedtime change may help some individuals lose weight, study finds. Stated claim evaluates NYU clinical trial linking earlier bedtime to weight loss in prediabetes (claim_u: +1.0, claim_psi: +1.0). Actual evidence confirms study findings while noting correlation does not prove direct causation (real_u: +0.8, real_psi: +0.7). Forces computed granulate to GG and GP. Hypocrisy delta: 0.2. Trajectory: Productive.",
+    "id": "earlier-bedtime-weight-loss-study",
+    "subject": "Simple bedtime change may help some individuals lose weight, study finds",
+    "link": "https://www.foxnews.com/health/simple-bedtime-change-help-individuals-lose-weight-study-finds",
+    "target_url": "",
+    "claim_u": 0.88,
+    "claim_psi": 1.0,
+    "real_u": 0.85,
+    "real_psi": 1.0,
+    "mode": "root",
+    "posts": [
+      "Shifting your bedtime earlier could be a simple, accessible key to metabolic health and weight management for prediabetes patients.\nEvidence: NYU nursing study, 196 adults\n#Health #Sleep 🌐",
+      "An NYU clinical trial found that moving bedtime one hour earlier was associated with modest weight loss in prediabetes patients.\nStated Judgement: (+0.88, +1.00) — Greater Good",
+      "While participants achieved better sleep quality and lost weight, researchers emphasize the trial shows correlation rather than direct causation.\nResulting Judgement: (+0.85, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 0.2, z: 1)",
+      "Researchers at NYU Rory Meyers College of Nursing evaluated 196 adults with prediabetes to test how sleep timing impacts metabolic health.",
+      "The Poison:\nOversimplified headlines can lead readers to mistake correlation for a guaranteed medical cure.",
+      "The Breakdown & Plane Error:\nBalancing clinical observation (Physical/WHERE) with statistical correlation cautions (Logical/HOW).",
+      "Social Physics Analysis:\nResearchers run a Smart Altruistic loop by sharing transparent findings on sleep timing, empowering patients with practical tools without manipulative pretexts.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map empirical health research against practical lifestyle advice, it plots a direct trajectory toward systemic empowerment. Stated potential (+1.0u) aligns with actual constructive health insights.",
+      "The Unavoidable Truth: Adjusting sleep schedules supports better metabolic health and rest quality.\n\nThe Unavoidable Lie: Earlier bedtimes single-handedly cure prediabetes without broader lifestyle changes.",
+      "Alethekanon:\nTransparent reporting of clinical data helps individuals optimize everyday health habits safely.",
+      "Awwthekanon:\nGentle reminders to rest better offer comforting support for anyone navigating metabolic wellness.",
+      "Brothekanon:\nTurns out sleeping earlier is a solid low-effort health hack worth trying out.",
+      "Spirithekanon:\n\"Better is a handful of quietness than two hands full of toil.\" Ecclesiastes 4.6 PASS\nAligning natural rest rhythms with health fosters sustainable well-being."
+    ],
+    "actors": [
+      "NYU Rory Meyers College of Nursing",
+      "Susan Kohl Malone"
+    ],
+    "actor_roles": [
+      {
+        "name": "NYU Rory Meyers College of Nursing",
+        "role": "instigator"
+      },
+      {
+        "name": "Susan Kohl Malone",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.2,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "NYU Nursing Study",
+        "claim_u": 1.0,
+        "claim_psi": 1.0,
+        "real_u": 0.8,
+        "real_psi": 0.7,
+        "verdict": "PASS",
+        "reason": "Transparently reports sleep timing and weight loss data."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "can be",
+    "modal_real": "will be",
+    "modal_vector": "Top-Right to Top-Right Stasis",
+    "geodesic": "Productive Geodesic",
+    "central_is_barrier_crossed": false,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nSimple bedtime change may help some individuals lose weight, study finds\n\nAn NYU clinical trial found that moving bedtime just one hour earlier led to weight loss in prediabetes patients, even without longer sleep.\n\nActual Article Body:\nMetabolic health expert Jim LaValle explains how chronic stress, inadequate sleep and everyday dietary choices can affect blood sugar regulation and contribute to insulin resistance.\n\nFalling asleep earlier was linked to greater weight loss in adults with prediabetes, according to new research.\n\nAn analysis of data from a randomized trial led by the NYU Rory Meyers College of Nursing found that each hour earlier participants fell asleep was associated with roughly 1. 3 pounds of weight loss over eight weeks, although the finding does not prove that moving bedtime earlier causes weight loss.\n\n\"When we fall asleep — not just how much we sleep — seems to be an important and overlooked factor for weight loss and metabolic health,\" Susan Kohl Malone, an assistant professor at the nursing college and the study's lead author, said in a press release.\n\nPOPULAR WEIGHT-LOSS DRUGS MAY PREVENT PREDIABETES FROM TURNING INTO DIABETES\n\nThe investigation, published in the journal Nursing Research, evaluated 196 adults diagnosed with prediabetes who routinely logged fewer than 6.5 hours of sleep nightly. Half the group took part in an eight-week lifestyle education course on diet, exercise and stress.\n\nGoing to bed earlier was linked to weight loss in adults with prediabetes, independent of the total number of hours they spent asleep. (iStock)\n\nThe other half received the same training alongside behavioral coaching meant to get them to go to bed earlier in gradual phases.\n\nDIETITIAN REVEALS SIMPLE EATING STRATEGY FOR BETTER SLEEP — AND ONE HABIT TO AVOID\n\nResearchers tracked participants’ blood sugar, sleep and activity using sensors, sleep logs and wrist-worn monitors.\n\nNeither group showed significant improvements in blood sugar. Both groups lost weight, but those receiving sleep coaching did not lose significantly more than those receiving lifestyle education alone.\n\nParticipants who received sleep coaching did report better sleep quality and less daytime drowsiness, and they gradually began going to bed earlier. (iStock)\n\n\"While we expected that extending sleep would improve glucose levels and weight loss in adults with prediabetes who sleep for shorter periods, this wasn't the case in our study,\" Malone said.\n\nParticipants who received sleep coaching did report better sleep quality and less daytime drowsiness, and they gradually began going to bed earlier.\n\nCLICK HERE TO SIGN UP FOR OUR HEALTH NEWSLETTER\n\nIn a separate analysis across both groups, participants who...",
+    "grounding_url": "https://nursing.nyu.edu/w/news/press-release/earlier-bedtime-linked-weight-loss-prediabetes",
+    "category": "general",
+    "topic": "Health",
+    "event": "",
+    "path_name": "Small Fall from Grace",
+    "policies": [],
+    "graph_img": "graph_png/earlier-bedtime-weight-loss-study_graph.png",
+    "rkeys": [
+      "3mzxefc7c6326",
+      "3mzxefct4vx2d",
+      "3mzxefdzx4f2e",
+      "3mzxeffaiiy2p",
+      "3mzxefghdod2p",
+      "3mzxefhnw2b2s",
+      "3mzxefivcrz2s",
+      "3mzxefk54a52e",
+      "3mzxefle4bj2s",
+      "3mzxefmlb7l26",
+      "3mzxefnt2nn2b",
+      "3mzxefozoxq2p",
+      "3mzxefqaecj2f",
+      "3mzxefriu5s2j"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefc7c6326",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefct4vx2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefdzx4f2e",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxeffaiiy2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefghdod2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefhnw2b2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefivcrz2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefk54a52e",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefle4bj2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefmlb7l26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefnt2nn2b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefozoxq2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefqaecj2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzxefriu5s2j"
+    ],
+    "tags": [
+      "Health",
+      "Sleep"
+    ]
+  }
+]

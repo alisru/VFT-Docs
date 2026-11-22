@@ -5,22 +5,22 @@
     "subject": "Hidden clues could help predict a woman's breast cancer risk years in advance",
     "link": "https://www.foxnews.com/health/hidden-clues-could-help-predict-womans-breast-cancer-risk-years-advance",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.6,
+    "claim_u": 0.75,
+    "claim_psi": 0.55,
     "real_u": 0.7,
-    "real_psi": 0.8,
+    "real_psi": 0.75,
     "mode": "root",
     "posts": [
       "AI mammogram research unlocks early breast cancer risk detection years ahead of clinical symptoms.\nEvidence: peer-reviewed study, 313k scans, NYU Langone\n#Health #AI #MedicalScience",
-      "An artificial intelligence tool developed at NYU Langone analyzes years of 3D mammograms to predict breast cancer risk up to five years prior.\nStated Judgement: (+0.8, +0.6) — Lesser Good",
-      "Researchers published study findings in the American Journal of Roentgenology using 313k scans, though experts note it requires multi-center testing and lacks FDA approval.\nResulting Judgement: (+0.7, +0.8) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nRigorous medical research provides early screening tools while openly acknowledging necessary clinical validation stages.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
+      "An artificial intelligence tool developed at NYU Langone analyzes years of 3D mammograms to predict breast cancer risk up to five years prior.\nStated Judgement: (+0.75, +0.55) — Greater Good",
+      "Researchers published study findings in the American Journal of Roentgenology using 313k scans, though experts note it requires multi-center testing and lacks FDA approval.\nResulting Judgement: (+0.70, +0.75) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nRigorous medical research provides early screening tools while openly acknowledging necessary clinical validation stages.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- NYU Langone Research: PASS (+0.8, +0.8) — Validated peer-reviewed study.\n- Media Reporting: PASS (+0.6, +0.6) — Accurate nuance on limitations.",
       "Researchers at NYU Langone Health developed an AI model that reviews multi-year 3D mammograms to track breast tissue changes and estimate five-year cancer risks.",
       "The Poison:\nMedia coverage occasionally frames early AI research as an immediate clinical diagnostic tool before multi-center validation is complete.",
       "The Breakdown & Plane Error:\nConfusing a research-stage predictive model (WHAT) with an FDA-approved diagnostic replacement (WHO/HOW).",
       "Social Physics Analysis:\nResearchers and medical experts operate within a transparent empirical loop, sharing data openly while clearly defining clinical boundaries and limitations.",
-      "The Trajectory: The Path of Redemption.\nWhen medical research aligns transparent methodology with empirical validation, it charts a direct course toward human empowerment and better health outcomes.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen medical research aligns transparent methodology with empirical validation, it charts a direct course toward human empowerment and better health outcomes.",
       "The Unavoidable Truth: AI analysis of historical mammograms can identify subtle tissue changes preceding clinical tumors.\n\nThe Unavoidable Lie: Algorithmic risk scores currently replace the need for physical diagnostic biopsies or regular exams.",
       "Alethekanon:\nTransparent clinical research bridges data science and early intervention without masking its current regulatory limitations.",
       "Awwthekanon:\nIt is such a relief to know medical technology is evolving to catch these hidden signs early, giving women empowering choices.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NYU Langone Research",
@@ -158,6 +220,7 @@
       "Health",
       "AI",
       "MedicalScience"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

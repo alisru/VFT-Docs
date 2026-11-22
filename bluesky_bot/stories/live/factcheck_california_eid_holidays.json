@@ -5,22 +5,22 @@
     "subject": "Muslim holy days of Eid al-Fitr and Eid al-Adha closer to becoming California holidays",
     "link": "https://nypost.com/2026/08/29/us-news/eid-al-fitr-and-eid-al-adha-closer-to-becoming-california-holidays/",
     "target_url": "",
-    "claim_u": 1.0,
+    "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": 0.6,
-    "real_psi": 0.5,
+    "real_u": 0.5,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "California advances AB 2017 to recognize Eid al-Fitr and Eid al-Adha as official state holidays for workers and schools.\nEvidence: bill passage, inclusion, debate\n#Aletheia #California #StateHolidays",
-      "AB 2017 provides equity, dignity, and accommodation for Muslim Californians without compelling religious instruction.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "The bill advances through the Senate, offering optional holiday credits while sparking standard political debates over religious representation.\nResulting Judgement: (0.6, 0.5) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nState legislation successfully expands cultural equity and institutional inclusion for minority communities.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "AB 2017 provides equity, dignity, and accommodation for Muslim Californians without compelling religious instruction.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "The bill advances through the Senate, offering optional holiday credits while sparking standard political debates over religious representation.\nResulting Judgement: (+0.50, +0.10) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nState legislation successfully expands cultural equity and institutional inclusion for minority communities.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- AB 2017 Legislation: PASS (0.8, 0.6) — Expands holiday equity for state workers.\n- California Family Council: COND (0.2, -0.4) — Highlights church-state friction.",
       "Assembly Bill 2017 is moving through the California Senate after passing the Assembly, aiming to give state employees holiday credits for Eid observances.",
       "The Bright Side:\nFosters profound civic inclusion and respects the lived traditions of over a million Muslim residents.",
       "The Breakdown & Plane Error:\nConfusing policy accommodation (WHAT) with mandatory religious enforcement (WHO).",
       "Social Physics Analysis:\nBy replacing rigid institutional exclusion with transparent, flexible civic accommodation, the state reduces cultural friction and empowers diverse communities to participate fully.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Inclusive civic policies resolve social strain.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Inclusive civic policies resolve social strain.",
       "The Unavoidable Truth: Expanding holiday recognition validates the cultural diversity of California's population.\n\nThe Unavoidable Lie: Optional accommodation equals mandatory state establishment of religion.",
       "Alethekanon:\nCivic inclusion strengthens pluralism when applied transparently across diverse traditions.",
       "Awwthekanon:\nEvery family deserves to see their sacred moments honored and respected by their home state.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "AB 2017 Legislation",
@@ -162,6 +224,7 @@
         "name": "Council on American-Islamic Relations",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

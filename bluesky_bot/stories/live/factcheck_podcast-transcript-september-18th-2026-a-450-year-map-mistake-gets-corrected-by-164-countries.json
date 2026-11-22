@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "One hundred sixty-four nations vote to correct Mercator map distortions and champion equal-area projections.\nEvidence: UN General Assembly vote, Equal Earth projection, 164-1 tally\n#Aletheia #Geography #UN",
-      "The UN General Assembly adopted the Correct the Map resolution to promote equal-area projections, accurately reflecting continental sizes.\nStated Judgement: (+0.9, +0.8) — Greater Good",
-      "One hundred sixty-four countries voted to adopt map projections that fairly represent landmasses like Africa, overcoming centuries of cartographic bias.\nResulting Judgement: (+0.9, +0.8) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nInternational consensus successfully addresses 450 years of cartographic distortion to foster cognitive justice and factual fidelity.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The UN General Assembly adopted the Correct the Map resolution to promote equal-area projections, accurately reflecting continental sizes.\nStated Judgement: (+0.90, +0.80) — Greater Good",
+      "One hundred sixty-four countries voted to adopt map projections that fairly represent landmasses like Africa, overcoming centuries of cartographic bias.\nResulting Judgement: (+0.90, +0.80) — Greater Good",
+      "Verdict: PASS — Grace.\nInternational consensus successfully addresses 450 years of cartographic distortion to foster cognitive justice and factual fidelity.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- UN Resolution Adoption: PASS (0.9, 0.8) — Verified 164-1 vote for Equal Earth maps.\n- Cartographic Accuracy: PASS (0.9, 0.8) — Corrects severe Mercator size distortions.",
       "The UN General Assembly adopted the Correct the Map resolution on September 4, 2026, encouraging equal-area map projections to accurately represent continent sizes.",
       "The Poison:\nIgnoring that flat map projections must distort something; while equal-area fixes size, it alters shapes and directional angles.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UN Resolution Adoption",
@@ -164,6 +226,7 @@
         "name": "Arielle and Karissa",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

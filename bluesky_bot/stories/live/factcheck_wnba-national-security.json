@@ -5,22 +5,22 @@
     "subject": "Why is one WNBA team calling in national security experts?",
     "link": "https://www.npr.org/2026/08/29/nx-s1-5947897/wnba-national-security",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.13,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "When sports entertainment requires national security intervention, the culture war has breached the stadium gates.\nEvidence: player abuse, PERIL partnership, security tech\n#Aletheia #WNBA",
-      "The Chicago Sky partners with counter-extremism groups to protect athletes from a soaring wave of online abuse and targeted harassment.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "The escalation reveals deep-seated misogynistic and racist hostility stoked by bad-faith actors exploiting the league's popularity.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Redemption. Proactive security measures attempt to shield athletes, but structural societal toxicity remains unaddressed.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.45, z: 2)",
+      "The Chicago Sky partners with counter-extremism groups to protect athletes from a soaring wave of online abuse and targeted harassment.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The escalation reveals deep-seated misogynistic and racist hostility stoked by bad-faith actors exploiting the league's popularity.\nResulting Judgement: (-0.13, -0.70) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.45, z: 2)",
       "- Chicago Sky: PASS (0.5, 0.4) — Proactively shields players using specialized threat analysis.\n- PERIL & Moonshot: PASS (0.6, 0.5) — Applies counter-extremism tools to sports abuse.",
       "As the WNBA surges in popularity, players face an alarming escalation in racist and sexualized online threats, prompting unprecedented security partnerships.",
       "The Bright Side:\nFranchises are refusing to normalize abuse, weaponizing counter-terrorism technology to safeguard marginalized athletes.",
       "The Breakdown & Plane Error:\nConfusing a cultural hostility problem (WHO) with a mere PR inconvenience (WHAT).",
       "Social Physics Analysis:\nBy establishing transparent partnerships to absorb external shocks, the team empowers players against bad-faith actors who weaponize identity for clout.",
-      "The Trajectory: The Path of Redemption.\nWhen you map institutional defense against targeted harassment, it plots a trajectory toward Redemption. Proactive resilience mitigates external strain.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map institutional defense against targeted harassment, it plots a trajectory toward Fall into Destruction. Proactive resilience mitigates external strain.",
       "The Unavoidable Truth: Protecting athletes from targeted online abuse is essential for civic health.\n\nThe Unavoidable Lie: Sports can remain isolated from broader societal culture-war toxicity.",
       "Alethekanon:\nApplying counter-terrorism tech to sports trolls highlights the grim reality of digital public squares. Shielding targeted players is vital institutional hygiene.",
       "Awwthekanon:\nNo athlete should endure hatred simply for excelling at their craft. It takes immense courage to stand tall while the digital mob howls.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Chicago Sky Security Partnership",
@@ -220,6 +282,7 @@
         "name": "WNBA",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

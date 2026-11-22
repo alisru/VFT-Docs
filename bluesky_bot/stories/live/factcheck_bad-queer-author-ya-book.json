@@ -6,15 +6,15 @@
     "link": "https://www.abc.net.au/news/2026-09-07/bad-queer-gayathiri-kamalakanthan-chi-nwosu-young-adult-fiction/107116832",
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3muvgfzahrn2y",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.8,
-    "real_psi": 0.8,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A young adult verse novel exploring queer identity draws deeply on the author's background as a sex educator.\nEvidence: Creative inspiration, sex education background, queer representation\n#Aletheia #Books",
-      "The book aims to offer authentic representation and emotional validation for young people navigating complex identities.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The work fosters genuine empathy and self-acceptance, opening creative spaces for marginalized youth without hidden manipulation.\nResulting Judgement: (+0.8, +0.8) — Grace",
-      "Verdict: PASS — The Path of Grace.\nAuthentic creative storytelling directly fulfills its promise of supporting diverse youth.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "The book aims to offer authentic representation and emotional validation for young people navigating complex identities.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The work fosters genuine empathy and self-acceptance, opening creative spaces for marginalized youth without hidden manipulation.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nAuthentic creative storytelling directly fulfills its promise of supporting diverse youth.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Creative Intent: PASS (+0.9, +0.8) — Fosters genuine self-acceptance.\n- Cultural Representation: PASS (+0.8, +0.8) — Bridges Tamil and queer identities.",
       "Gayathiri Kamalakanthan and Chi Nwosu's verse novel 'Bad Queer' blends poetry and illustration to map the delicate journey of coming of age.",
       "The Bright Side:\nIt provides a much-needed literary template for young people who feel outside traditional binaries.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Creative Intent",
@@ -210,6 +272,7 @@
         "name": "Faber",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

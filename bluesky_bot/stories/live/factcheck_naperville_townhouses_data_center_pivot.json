@@ -5,22 +5,22 @@
     "subject": "Plan moving forward for 262 townhouses where Naperville rejected data center",
     "link": "https://www.chicagotribune.com/2026/10/09/plan-moving-forward-for-262-townhouses-where-naperville-rejected-data-center/?utm_campaign=mrf-bluesky-chicagotribune.com&utm_source=bluesky&utm_medium=social&mrfcid=202610106ac74d8171d3431697b1a4a5",
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mxiur3j5tl24",
-    "claim_u": 0.89,
-    "claim_psi": 0.65,
-    "real_u": 0.67,
-    "real_psi": 0.52,
+    "claim_u": 0.99,
+    "claim_psi": 1.0,
+    "real_u": 0.7,
+    "real_psi": 0.8,
     "mode": "root",
     "posts": [
       "Suburban planning pivots from noisy servers to new front porches.\nNaperville Townhome Development\nEvidence: Master Plan Housing, Residential Subdivision, Commercial Tax Base\n#Aletheia #Naperville #Housing",
-      "Pulte Homes and Naperville planning commissioners assert rezoning the former Nokia office site for 262 townhouses fulfills the city's master plan and provides cohesive medium-density housing after rejecting a data center.\nStated Judgement: (+0.89, +0.65) — Greater Good",
-      "The Commission voted 6-3 to approve the residential pivot without resident opposition, though dissenting members rightly noted trading commercial office zoning permanently sacrifices long-term business tax revenues.\nResulting Judgement: (+0.67, +0.52) — Greater Good",
-      "Verdict: PASS — The Path of Grace. City leaders responsive to neighborhood pushback pivoted to needed housing while openly debating commercial tax impacts.\nIntegrity: Trustworthy (Hypocrisy: 1.18, z: 0)",
+      "Pulte Homes and Naperville planning commissioners assert rezoning the former Nokia office site for 262 townhouses fulfills the city's master plan and provides cohesive medium-density housing after rejecting a data center.\nStated Judgement: (+0.99, +1.00) — Greater Good",
+      "The Commission voted 6-3 to approve the residential pivot without resident opposition, though dissenting members rightly noted trading commercial office zoning permanently sacrifices long-term business tax revenues.\nResulting Judgement: (+0.70, +0.80) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.18, z: 0)",
       "- Zoning Board: PASS (+0.72, +0.48) — Balanced tax vs housing.\n- Pulte Homes: PASS (+0.62, +0.55) — Aligned with master plan.\n- Tribune: PASS (+0.85, +0.60) — Fair report on 6-3 split.",
       "After Naperville residents blocked a massive data center on Warrenville Road, Pulte Homes stepped in to convert the 42-acre former Nokia corporate campus into 262 townhomes priced between $515,000 and $680,000.",
       "The Bright Side:\nCivic feedback actually functioned. Rather than forcing an unwanted industrial server hub into a residential corridor, officials and developers collaborated on a compromise that adds suburban housing stock.",
       "The Breakdown & Plane Error:\nThe tension lies between Logical utility and Metaphysical foresight: whether sacrificing future commercial tax revenue to satisfy immediate residential demand creates long-term fiscal strain for Naperville.",
       "Social Physics Analysis:\nNaperville avoided an anti-social power grab by abandoning the data center once residents objected. Pulte executed an altruistic pivot by aligning with the city's 2022 master plan, defusing civic friction through transparent zoning.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Transparent civic responsiveness keeps municipal development aligned with community welfare.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Transparent civic responsiveness keeps municipal development aligned with community welfare.",
       "The Unavoidable Truth: Community pushback successfully stopped an unwanted industrial data center.\nThe Unavoidable Lie: Rezoning commercial land carries zero economic trade-offs for city tax coffers.",
       "Alethekanon:\nNaperville demonstrates functional local governance. When community dissent halts an extractive data center, pivoting commercial land to residential zoning resolves public strain without manufacturing pretexts.",
       "Awwthekanon:\nIt is wonderful seeing local residents speak up and actually be heard! Instead of humming cooling towers and industrial concrete, families will get homes, porches, and tree-lined streets where an old empty office once sat.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.03,
+        "O": 0.0,
+        "N": 0.03
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.67,
+        "O": 0.0,
+        "N": 0.03
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.67,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.97,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.1,
+        "N": 0.2
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.13
+      },
+      "LG": {
+        "S": 0.77,
+        "O": 0.0,
+        "N": 0.17
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.53,
+        "N": 0.13
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 0.7,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Zoning Commission",
@@ -375,6 +437,7 @@
       "Aletheia",
       "Naperville",
       "Housing"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

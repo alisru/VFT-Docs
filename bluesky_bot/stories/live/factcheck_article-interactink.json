@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/thelibbojack.bsky.social/post/3mwebarhj3c2h",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.2,
+    "real_u": 0.1,
     "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "InteractInk operates as an imageboard community requiring real accounts for sharing media and posts.\nEvidence: Platform interface, account registration, media sharing\n#Aletheia #Tech",
-      "The platform offers a straightforward community space for users to post, reply, and share media securely.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The site functions as an imageboard with basic user verification rules, though moderation burdens remain on a single developer.\nResulting Judgement: (+0.2, +0.1) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption. InteractInk provides a structured imageboard experience with verified accounts while managing basic moderation.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
+      "The platform offers a straightforward community space for users to post, reply, and share media securely.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The site functions as an imageboard with basic user verification rules, though moderation burdens remain on a single developer.\nResulting Judgement: (+0.10, +0.10) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
       "Sub-Audits Breakdown:\n- Platform Design: PASS (+0.3, +0.2) — Clean imageboard layout with account controls.\n- Moderation Scope: COND (-0.1, 0.0) — Single developer limits systemic scale.",
       "The platform bridges open image sharing with account accountability to curb anonymous abuse.",
       "The Bright Side:\nRequiring registered accounts helps mitigate malicious botting and anonymous harassment common on imageboards.",
       "The Breakdown & Plane Error:\nConfusing WHAT (the technical imageboard UI) with HOW (single-developer resource constraints).",
       "Social Physics Analysis:\nThe platform implements a Smart Altruistic Loop by fostering transparent user verification and shared community rules rather than concealing bad actors behind total anonymity.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated features and practical operation, it plots a stable trajectory toward Lesser Good.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated features and practical operation, it plots a stable trajectory toward Lesser Good.",
       "The Unavoidable Truth: Account verification reduces anonymous harassment on imageboards.\nThe Unavoidable Lie: Single-developer platforms are entirely immune to moderation overload.",
       "Alethekanon:\nBalancing open media sharing with account verification establishes a healthier baseline for online community spaces.",
       "Awwthekanon:\nIt is refreshing to see independent developers build spaces that encourage real connections while keeping safety in mind.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Platform Design",
@@ -154,6 +216,7 @@
         "name": "InteractInk",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

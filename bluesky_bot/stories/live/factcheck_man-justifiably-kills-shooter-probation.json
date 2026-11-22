@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "real_u": -0.05,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "When protecting lives in a mall shooting lands you on probation, justice takes a bizarre detour.\nEvidence: Valid Self-Defense, Youthful Trainee Act, Concealed Carry Charge\n#Aletheia #Law #Michigan",
-      "A teenager who acted in self-defense to stop a deadly mall shooting was rightly cleared of homicide, yet still penalized with two years of probation.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While legally acknowledged for saving lives, the state still slapped him with probation for carrying without a permit due to age restrictions.\nResulting Judgement: (-0.4, -0.6) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nLegal self-defense was validated, but bureaucratic weaponization of minor infractions created unwarranted penalization.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "A teenager who acted in self-defense to stop a deadly mall shooting was rightly cleared of homicide, yet still penalized with two years of probation.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "While legally acknowledged for saving lives, the state still slapped him with probation for carrying without a permit due to age restrictions.\nResulting Judgement: (-0.05, -0.15) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nLegal self-defense was validated, but bureaucratic weaponization of minor infractions created unwarranted penalization.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Self-Defense Recognition: PASS (+0.8, +0.5) — Court validated defensive intervention.\n- Permit Prosecution: FAIL (-0.9, -0.8) — Penalizes youth for defensive necessity.",
       "A 19-year-old Michigan man who intervened to stop a gunman during a violent altercation at the Fairlane Town Center received two years of probation for carrying a concealed weapon without a permit.",
       "The Bright Side:\nThe Holmes Youthful Trainee Act protects his clean record, allowing his constitutional rights to remain intact post-probation.",
       "The Breakdown & Plane Error:\nThe legal system commits a Plane Error by confusing WHO (a citizen defending others) with WHAT (a technical permit violation).",
       "Social Physics Analysis:\nThe judicial system runs a mixed maneuver, balancing legal reality with bureaucratic paternalism. While acknowledging life-saving self-defense, it extracts compliance via minor technicalities.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Bureaucratic inertia clashes with practical survival.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Bureaucratic inertia clashes with practical survival.",
       "The Unavoidable Truth: Self-defense is legally recognized, yet procedural technicalities still extract penalties.\n\nThe Unavoidable Lie: Punishing a defender protects public safety rather than enforcing arbitrary age limits.",
       "Alethekanon:\nJustice stumbles when administrative statutes override the fundamental ethics of self-preservation. Punishing a defender for lacking a permit he could not legally obtain creates an impossible catch-22. 🌐",
       "Awwthekanon:\nIt is heartbreaking that a young man stepping up to protect others is met with courtrooms and probation instead of gratitude for saving lives.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Self-Defense Recognition",
@@ -167,6 +229,7 @@
         "name": "Michigan Judicial System",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

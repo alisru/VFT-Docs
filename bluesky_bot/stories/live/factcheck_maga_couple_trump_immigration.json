@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A loyal MAGA supporter learns the harsh reality of immigration enforcement firsthand.\n\n'Terrified' MAGA couple turns on Trump after brutal encounter\nEvidence: border security rhetoric, family detention ordeal, political disillusionment\n#Aletheia #USPol",
-      "Supporters assumed immigration crackdowns would strictly target violent criminals, leaving legal residents and families untouched by enforcement overreach.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "Federal enforcement swept up a woman with a pending green card, subjecting her to harsh detention conditions and exposing the sweeping collateral damage of policy.\nResulting Judgement: (-0.93, -0.93) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA policy marketed to protect citizens through targeted enforcement instead inflicts indiscriminate fear on mixed-status families.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
+      "Supporters assumed immigration crackdowns would strictly target violent criminals, leaving legal residents and families untouched by enforcement overreach.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Federal enforcement swept up a woman with a pending green card, subjecting her to harsh detention conditions and exposing the sweeping collateral damage of policy.\nResulting Judgement: (-0.93, -0.93) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA policy marketed to protect citizens through targeted enforcement instead inflicts indiscriminate fear on mixed-status families.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
       "- Brent Jindra: FAIL (-0.70, -0.75) — Overlooked systemic policy harms until personally impacted.\n- ICE Enforcement: FAIL (-0.80, -0.85) — Indiscriminate detention of pending-status residents.",
       "A devoted Trump voter faced a 16-day detention ordeal when his Russian wife was arrested by immigration agents upon returning to California.",
       "The Bright Side:\nPersonal encounters with systemic overreach sometimes bridge partisan divides and foster empathy for vulnerable immigrant communities.",
       "The Breakdown & Plane Error:\nConfusing WHAT (deterring dangerous criminals) with WHO (detaining a legal applicant). The systemic net swallows everyone indiscriminately.",
       "Social Physics Analysis:\nBy relying on broad pretexts rather than transparent, precise criteria, the system protects political narratives while inflicting random human suffering.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic coercion replaces justice.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic coercion replaces justice.",
       "The Unavoidable Truth: Sweeping immigration policies inevitably trap legal applicants and families.\n\nThe Unavoidable Lie: Enforcement mechanisms only target dangerous criminals.",
       "Alethekanon:\nRhetoric promised targeted security, but administrative machinery operates without human distinction.",
       "Awwthekanon:\nNobody should have to live in terror in their own home or face detention without basic care.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.15,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.1,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Brent Jindra",
@@ -271,6 +333,7 @@
         "name": "ICE",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

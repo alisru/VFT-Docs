@@ -14,7 +14,7 @@
       "Pet owners are projected to spend nearly $1 billion on Halloween costumes for dogs this year, with pumpkins leading the pack.\nEvidence: NRF retail survey, consumer spending, pet parades\n#Aletheia #Culture #Retail",
       "Retail surveys indicate widespread joy and festive spending as families dress up pets in creative costumes like pumpkins, ghosts, and superheroes.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "Market data confirms robust consumer demand and joyful community events celebrating pets without institutional coercion or harm.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nConsumer spending reflects genuine festive participation and harmless joy.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\nConsumer spending reflects genuine festive participation and harmless joy.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- National Retail Federation: PASS (1.0, 1.0) — Accurate consumer trend reporting.\n- Pet Retailers: PASS (1.0, 1.0) — Genuine festive commercial alignment.",
       "Americans are investing nearly $1 billion in pet Halloween costumes this year, turning local parks and parades into vibrant showcases for canine creativity.",
       "The Bright Side:\nHarmless cultural celebration that fosters community connection and joy among animal lovers.",
@@ -71,8 +71,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "National Retail Federation",
@@ -207,6 +269,7 @@
       "Aletheia",
       "Culture",
       "Retail"
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

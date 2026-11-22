@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Hypocrisy hits home as Texas Senate nominee James Talarico faces scrutiny over his own voter registration.\n\nExclusive: James Talarico, Dogged By Voter Fraud Accusations, Says Voter Fraud Is 'Non-Existent In Texas'",
-      "James Talarico claimed voter fraud is 'non-existent in Texas' and criticized voter ID laws while accusing opponents of election tampering.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "Reports reveal Talarico registered to vote using his mother's Austin address after buying his own home, mirroring the exact type of residency questions he weaponized against rivals.\nResulting Judgement: (-0.85, -0.90) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nTalarico's sweeping denials of Texas voter fraud collapsed under the weight of his own questionable residency filings.\n\nIntegrity: Severe Deception (Hypocrisy: 18.2, z: 2)",
+      "James Talarico claimed voter fraud is 'non-existent in Texas' and criticized voter ID laws while accusing opponents of election tampering.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Reports reveal Talarico registered to vote using his mother's Austin address after buying his own home, mirroring the exact type of residency questions he weaponized against rivals.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nTalarico's sweeping denials of Texas voter fraud collapsed under the weight of his own questionable residency filings.\n\nIntegrity: Severe Deception (Hypocrisy: 18.2, z: 2)",
       "- James Talarico: FAIL (-0.85, -0.90) — Hypocrisy in residency filings.\n- Election Integrity Rhetoric: FAIL (-0.80, -0.85) — Partisan shielding.",
       "Democratic Senate candidate James Talarico faced intense scrutiny after investigative reports revealed he voted using his mother's address despite owning another property, contradicting his past assertions that voter fraud does not occur in Texas.",
       "The Bright Side:\nExposing hypocrisy on all sides forces greater institutional accountability in elections.",
       "The Breakdown & Plane Error:\nThe error is treating election integrity as a partisan weapon rather than a universal standard (WHAT vs WHO).",
       "Social Physics Analysis:\nBy projecting fraudulent behavior onto opponents while quietly engaging in questionable residency practices, the actor protects personal political viability at the expense of transparent public trust.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Self-serving narrative shielding overrides objective consistency.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Self-serving narrative shielding overrides objective consistency.",
       "The Unavoidable Truth: Rules governing residency and voter registration must apply equally to all candidates regardless of party.\n\nThe Unavoidable Lie: Sweeping claims that voter fraud is entirely non-existent serve only to deflect from personal accountability.",
       "Alethekanon:\nProclaiming systemic perfection while concealing personal procedural anomalies is the hallmark of partisan self-preservation.",
       "Awwthekanon:\nIt hurts when leaders we trust fail to hold themselves to the same standards they demand of others.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "James Talarico Residency",
@@ -142,6 +204,7 @@
         "name": "Texas Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

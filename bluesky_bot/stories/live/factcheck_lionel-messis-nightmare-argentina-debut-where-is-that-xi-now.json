@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/planetfootball.bsky.social/post/3mx6tciz6gk2q",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": 0.6,
-    "real_psi": 0.2,
+    "real_u": 0.55,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Looking back at Lionel Messi's infamous 2005 red-card debut for Argentina and where his teammates are today.\nEvidence: 2005 Hungary match, red card, 2026 farewell\n#Football #Messi",
-      "A sports feature sets out to track the post-playing careers of the squad that shared the pitch during Messi's tumultuous international debut.\nStated Judgement: (+0.5, 0.0) — Neutral",
-      "The article successfully maps the coaching and media careers of the 2005 squad while contextualizing Messi's legendary career trajectory.\nResulting Judgement: (+0.6, +0.2) — Good Preference",
-      "Verdict: PASS — The Path of Awakening.\nNostalgic sports journalism accurately chronicles historical milestones and career paths of Argentine football legends.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "A sports feature sets out to track the post-playing careers of the squad that shared the pitch during Messi's tumultuous international debut.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "The article successfully maps the coaching and media careers of the 2005 squad while contextualizing Messi's legendary career trajectory.\nResulting Judgement: (+0.55, +0.10) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nNostalgic sports journalism accurately chronicles historical milestones and career paths of Argentine football legends.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- Historical Accuracy: PASS (+0.6, +0.2) — Faithful recounting of 2005.\n- Career Tracking: PASS (+0.5, +0.0) — Accurate updates on squad.",
       "As Lionel Messi prepares for his final international appearance, sports analysts revisit his dramatic two-minute red card debut against Hungary in 2005.",
       "The Bright Side:\nHighlighting early failures alongside ultimate triumphs offers a compelling human narrative of resilience and persistence.",
       "Focusing on historical player trajectories connects past athletic trials with present-day leadership roles without distorting facts.",
       "Social Physics Analysis:\nThis retrospective operates on shared cultural engagement, connecting fans to the evolutionary journey of football icons through transparent storytelling.",
-      "The Trajectory: The Path of Awakening.\nTracing an iconic career from its disastrous genesis to historic triumph maps an inspiring path of growth and redemption.",
+      "The Trajectory: The Path of Awakening into Grace.\nTracing an iconic career from its disastrous genesis to historic triumph maps an inspiring path of growth and redemption.",
       "The Unavoidable Truth: Early setbacks do not dictate the ultimate destination of a committed career.\n\nThe Unavoidable Lie: Every player from a single historic match achieves equal post-playing prominence.",
       "Alethekanon:\nFaithful historical cataloging grounds this sports retrospective in verifiable athletic reality.",
       "Awwthekanon:\nSeeing how a boy who stumbled on day one rose to lift the world is a testament to the quiet grace of enduring passion.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Historical Accuracy",
@@ -162,6 +224,7 @@
         "name": "Roberto Ayala",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

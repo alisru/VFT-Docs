@@ -5,22 +5,22 @@
     "subject": "El-Sayed: It's Not Antisemitic to Criticize 'Genocide', Can't Let Issues on 'Country 6,000 Miles Away' Divide Dems",
     "link": "https://www.breitbart.com/clips/2026/08/28/el-sayed-its-not-antisemitic-to-criticize-genocide-cant-let-issues-on-country-6000-miles-away-divide-dems/",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.4,
-    "real_u": -0.7,
-    "real_psi": -0.6,
+    "claim_u": 0.82,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -0.67,
     "mode": "root",
     "posts": [
       "Michigan Senate nominee Abdul El-Sayed defends foreign policy criticism and urges party unity.\nEvidence: policy debate, antisemitism concerns, Democratic coalition\n#Aletheia #USPol",
-      "El-Sayed argues criticizing Israel is not antisemitic and urges Democrats to focus on domestic threats rather than foreign policy divisions.\nStated Judgement: (+0.6, +0.4) — Good Preference",
-      "While policy critique is valid, sweeping rhetoric and dismissive framing alienate vulnerable constituents and deepen intra-party fractures.\nResulting Judgement: (-0.7, -0.6) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nWhile policy debate is legitimate, sweeping framing risks alienating minority voters and masking deep coalition fractures.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "El-Sayed argues criticizing Israel is not antisemitic and urges Democrats to focus on domestic threats rather than foreign policy divisions.\nStated Judgement: (+0.82, +1.00) — Greater Good",
+      "While policy critique is valid, sweeping rhetoric and dismissive framing alienate vulnerable constituents and deepen intra-party fractures.\nResulting Judgement: (-1.00, -0.67) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWhile policy debate is legitimate, sweeping framing risks alienating minority voters and masking deep coalition fractures.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Abdul El-Sayed: COND (-0.6, -0.5) — Seeks unity while using polarizing foreign policy rhetoric.\n- Jewish Democratic Caucus: COND (-0.5, -0.4) — Highlights very real fears of unresolved antisemitic rhetoric.",
       "Michigan Senate candidate Abdul El-Sayed addressed tensions within the Democratic coalition on MS NOW, arguing that foreign policy disagreements over Israel should not derail domestic goals.",
       "The Bright Side:\nEncouraging voters to unite against broader domestic threats prevents single-issue paralysis during a high-stakes Senate race.",
       "The Breakdown & Plane Error:\nConfusing WHAT (substantive policy debate) with WHO (identity and constituent safety), leading to a rhetorical dismissal of legitimate fears.",
       "Social Physics Analysis:\nBy prioritizing electoral coalition over genuine empathy for alienated voters, the discourse substitutes defensive deflection for reconciliation.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Structural divergence stems from rhetorical minimization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Structural divergence stems from rhetorical minimization.",
       "The Unavoidable Truth: Foreign policy critique is distinct from bigotry.\n\nThe Unavoidable Lie: Dismissing voter anxiety as mere distraction papers over real pain.",
       "Alethekanon:\nDistinguishing policy from identity is vital, but dismissing constituents' genuine fears under the guise of unity breeds deeper distrust.",
       "Awwthekanon:\nWhen people express deep fear for their safety, telling them to look away 6,000 miles ignores the heavy emotional toll they carry right at home.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.5
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Abdul El-Sayed Stance",
@@ -210,6 +272,7 @@
         "name": "Michigan",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

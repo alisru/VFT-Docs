@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/wearequeeraf.com/post/3mwsxrb6auc2l",
     "claim_u": 0.85,
     "claim_psi": 0.75,
-    "real_u": 0.15,
-    "real_psi": 0.35,
+    "real_u": 0.17,
+    "real_psi": 0.32,
     "mode": "root",
     "posts": [
       "Can clownfish teach us about human gender? A queer advocacy outlet claims marine biology proves gender fluidity is a natural strength. But is this a deep truth or a category error?\nEvidence: Natural diversity, Human identity, Biological analogy\n#Aletheia #Biology",
       "The article claims that sequential hermaphroditism in fish and monoecious plants prove that gender fluidity and queerness are natural, common-sense strengths that aid survival.\nStated Judgement: (+0.85, +0.75) — Greater Good",
-      "While sequential hermaphroditism is a real evolutionary adaptation for reproduction in specific marine species, conflating these biological mechanisms with human sociological gender identity is a logical category error.\nResulting Judgement: (+0.15, +0.35) — Lesser Good",
-      "Verdict: CONDITIONAL — Awakening into Redemption. While celebrating natural diversity is positive, using teleost fish reproduction to validate human sociological identity relies on flawed biological analogies.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "While sequential hermaphroditism is a real evolutionary adaptation for reproduction in specific marine species, conflating these biological mechanisms with human sociological gender identity is a logical category error.\nResulting Judgement: (+0.17, +0.32) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- QueerAF Editorial: COND (0.15, 0.35) — Well-meaning but flawed biological analogies.\n- Scientific Framing: COND (0.20, 0.30) — Conflates reproductive sex with gender identity.",
       "An LGBTQ+ media outlet uses examples of sex-changing fish, monoecious plants, and same-sex animal pairings to argue that human gender fluidity is a natural, evolutionary strength.",
       "The Bright Side:\nHighlighting the vast, non-binary complexity of biological reproduction challenges rigid, unscientific assumptions about nature being strictly static or simple.",
       "The Breakdown & Plane Error:\nThe Plane Error is Logical (WHAT vs WHO). The article performs a bait-and-switch: it takes 'sex' (a biological mechanism for reproduction in fish) and swaps it for 'gender' (a complex human psychological and social construct).",
       "Social Physics Analysis:\nThe actors run a Smart Altruistic loop with a logical flaw. They seek to empower a marginalized group (Empathetic Axis) but rely on post-hoc justification (Justification Axis) by projecting human social constructs onto marine biology.",
-      "The Trajectory: The Path of Awakening into Redemption.\nWhen you map the gap between biological facts and sociological claims, it plots a trajectory toward Redemption, where well-meaning narratives must be grounded in rigorous logic to avoid collapse.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between biological facts and sociological claims, it plots a trajectory toward Destruction, where well-meaning narratives must be grounded in rigorous logic to avoid collapse.",
       "The Unavoidable Truth: Nature exhibits immense reproductive diversity and adaptability.\nThe Unavoidable Lie: Biological sex-change in fish is the same thing as human gender identity.",
       "Alethekanon:\nRigorous science does not need flawed analogies to support human rights. Conflating teleost reproductive biology with human gender identity weakens the logical foundation of the very advocacy it seeks to bolster.",
       "Awwthekanon:\nIt is beautiful to look at the ocean and feel a sense of belonging. Nature is full of surprises, and while the science might not align perfectly, the desire to find our stories written in the stars and seas comes from a place of deep love.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "QueerAF Editorial",
@@ -147,6 +209,7 @@
         "name": "QueerAF",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

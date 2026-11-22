@@ -5,22 +5,22 @@
     "subject": "NYC Council to grill Mamdani admin over use of influencers, encrypted messaging app",
     "link": "https://nypost.com/2026/09/03/us-news/nyc-council-to-grill-mamdani-admin-over-use-of-influencers-encrypted-messaging-app/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": -0.05,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "NYC Council targets Mayor Mamdani's secret influencer PR push on Signal.\n\nNYC Council vs Mamdani Admin\nEvidence: public outreach, hidden paid PR, evaded FOIL records 🌐\n#Aletheia #NYC",
-      "The administration claims engaging social media creators is a modern grassroots strategy to promote city services.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "City Hall used encrypted disappearing chats to coordinate talking points and funneled tax dollars to out-of-state influencers without public contracts.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSecrecy and paid PR evade open records laws, undermining public trust.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 2)",
+      "The administration claims engaging social media creators is a modern grassroots strategy to promote city services.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "City Hall used encrypted disappearing chats to coordinate talking points and funneled tax dollars to out-of-state influencers without public contracts.\nResulting Judgement: (-0.05, -0.15) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nSecrecy and paid PR evade open records laws, undermining public trust.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 2)",
       "Sub-Audits Breakdown:\n- Mamdani Admin: FAIL (-0.7, -0.8) — Hides paid PR behind Signal.\n- City Council: PASS (+0.6, +0.5) — Demands transparency & oversight.",
       "The NYC Council scheduled a hearing to investigate Mayor Mamdani's use of a secret Signal group to coordinate messaging with nearly 200 influencers.",
       "The Poison:\nUsing encrypted, auto-deleting messaging apps for municipal business directly circumvents Freedom of Information laws and public accountability.",
       "The Breakdown & Plane Error:\nConfusing administrative secrecy (WHO controls the narrative) with public service (WHAT services are delivered).\nIt's a bait-and-switch: hiding political spin behind grassroots engagement.",
       "Social Physics Analysis:\nInstead of transparent engagement, the administration deployed a smart selfish loop, using hidden pretexts and out-of-state influencers to manufacture approval while dodging public oversight.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The high secrecy variable inflates the hypocrisy gap.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The high secrecy variable inflates the hypocrisy gap.",
       "The Unavoidable Truth: Public officials cannot use secret disappearing chat apps to conduct official government business.\n\nThe Unavoidable Lie: This is merely an innovative grassroots social media strategy.",
       "Alethekanon:\nOperational opacity cloaked as civic innovation is standard bureaucratic self-preservation. True public service welcomes sunlight, not encrypted auto-delete toggles.",
       "Awwthekanon:\nNew Yorkers deserve honest leadership where every tax dollar and official communication is open to public light, free from secret influencer spin.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Mamdani Administration PR Campaign",
@@ -161,6 +223,7 @@
         "name": "Phil Wong",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

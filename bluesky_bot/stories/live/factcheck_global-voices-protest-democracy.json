@@ -5,22 +5,22 @@
     "subject": "Protest in democracy · Global Voices",
     "link": "https://globalvoices.org/special/protest-in-democracy/",
     "target_url": "https://bsky.app/profile/globalvoices.org/post/3mw6l32eg6u2d",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": 0.1,
+    "claim_u": 0.8,
+    "claim_psi": 1.0,
+    "real_u": 0.83,
+    "real_psi": 0.83,
     "mode": "root",
     "posts": [
       "Exploring the global state of protest, democratic rights, and state crackdowns.\nEvidence: Fundamental rights, State suppression, Global movements\n#Aletheia #Democracy",
-      "Protest is a fundamental right enshrined in international law, vital for social change and democratic health.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While a vital right, peaceful dissent is systematically met with state violence, surveillance, and false criminalization globally.\nResulting Judgement: (+0.2, +0.1) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nDespite severe state crackdowns, organized civic resistance continues to push democratic boundaries toward true reform.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
+      "Protest is a fundamental right enshrined in international law, vital for social change and democratic health.\nStated Judgement: (+0.80, +1.00) — Greater Good",
+      "While a vital right, peaceful dissent is systematically met with state violence, surveillance, and false criminalization globally.\nResulting Judgement: (+0.83, +0.83) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nDespite severe state crackdowns, organized civic resistance continues to push democratic boundaries toward true reform.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
       "Sub-Audits Breakdown:\n- Civil Liberties: PASS (+0.5, +0.3) — Fundamental right to dissent.\n- State Backlash: COND (-0.3, -0.4) — Violent suppression tactics.",
       "Global Voices highlights how governments worldwide weaponize rhetoric and force to crush peaceful public dissent and retain control.",
       "The Bright Side:\nGrassroots solidarity and digital organizing repeatedly outpace authoritarian crackdowns.",
       "The Breakdown & Plane Error:\nConfusing the legal ideal of free expression (WHAT) with the violent reality of state power struggles (WHO).",
       "Social Physics Analysis:\nStates often run Smart Selfish maneuvers, manufacturing crises and projecting criminality onto peaceful protesters to preserve entrenched power, while citizens counter with transparent solidarity.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated democratic ideals and violent state resistance, it plots a trajectory toward Redemption. Mathematical resolution of societal strain.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated democratic ideals and violent state resistance, it plots a trajectory toward Redemption. Mathematical resolution of societal strain.",
       "The Unavoidable Truth: Peaceful protest remains the ultimate catalyst for systemic democratic reform.\n\nThe Unavoidable Lie: State violence against citizens is merely restoring public order.",
       "Alethekanon:\nProtest exposes the fragile boundary between institutional authority and popular sovereignty. Civic resistance forces power to reveal its true face.",
       "Awwthekanon:\nIt breaks my heart seeing brave people marching for basic dignity only to face batons and tear gas. Yet their courage lights a path forward for us all.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Civil Liberties",
@@ -210,6 +272,7 @@
         "name": "CIVICUS",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

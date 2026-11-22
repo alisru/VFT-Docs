@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Pediatricians face an overwhelming Ebola surge in the DRC as children bear the brunt of the deadliest outbreak. 🌐\nEvidence: Pediatric crisis, Heroic care, Systemic strain\n#Aletheia #GlobalHealth",
-      "Humanitarian medical teams rush to save young lives and contain the deadly Bundibugyo Ebola outbreak in eastern Congo.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Clinics are completely overwhelmed, with zero approved vaccines for this strain and sky-high fatality rates among infants.\nResulting Judgement: (-0.4, -0.5) — Lesser Good",
-      "Verdict: COND — The Path of Awakening.\nDedicated medical personnel provide vital supportive care amid severe systemic shortages.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 1)",
+      "Humanitarian medical teams rush to save young lives and contain the deadly Bundibugyo Ebola outbreak in eastern Congo.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Clinics are completely overwhelmed, with zero approved vaccines for this strain and sky-high fatality rates among infants.\nResulting Judgement: (-0.40, -0.50) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nDedicated medical personnel provide vital supportive care amid severe systemic shortages.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 1)",
       "- Dr. Rupa Narra: PASS (+0.8, +0.5) — Tireless pediatric care in extreme risk.\n- MSF & Local Staff: PASS (+0.7, +0.4) — Maximizing palliative relief under strain.",
       "An acute Ebola outbreak in the DRC strains medical infrastructure, with children disproportionately affected by the untreated Bundibugyo strain.",
       "The Bright Side:\nSelfless volunteers and local survivors step up to comfort orphaned newborns.",
       "The Breakdown & Plane Error:\nConfusing local medical heroism (WHO) with systemic epidemiological preparedness (WHAT).",
       "Social Physics Analysis:\nHumanitarian workers deploy genuine empathy and transparent care to ease suffering, directly countering infrastructural neglect.",
-      "The Trajectory: The Path of Awakening.\nWhen dedicated aid meets systemic devastation, it forces a clear realization of global health inequalities.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen dedicated aid meets systemic devastation, it forces a clear realization of global health inequalities.",
       "The Unavoidable Truth: Pure medical heroism cannot replace missing vaccines and robust public health infrastructure.\n\nThe Unavoidable Lie: Local clinics have all the resources necessary to manage the surge.",
       "Alethekanon:\nTrue humanitarian courage shines amidst profound systemic failure.",
       "Awwthekanon:\nEvery small life held by compassionate hands matters deeply in the darkness.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Medical Response",
@@ -147,6 +209,7 @@
         "name": "Democratic Republic of Congo",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

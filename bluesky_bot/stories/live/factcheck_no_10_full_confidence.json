@@ -14,13 +14,13 @@
       "A Manchester developer's political simulator 'No 10: Full Confidence' tops the UK App Store, turning Westminster's chaotic churn into a hit game. #Gaming #UKPolitics",
       "The game invites players to navigate 300+ scenarios, balancing cabinet, media, and public moods to survive as Prime Minister. Stated Judgement: (+1.00, +1.00) — Good Preference",
       "The game accurately reflects the high-strain, unstable reality of UK politics, where factional balancing is the only way to avoid a career-ending resignation. Resulting Judgement: (+1.00, +1.00) — Good Preference",
-      "Verdict: PASS — The Path of Awakening. The game provides a transparent, low-strain simulation of political dynamics, fostering public understanding of systemic instability. Integrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.",
       "- Game Design: PASS (0.9, 0.7) — Transparent factional balancing.\n- Political Satire: PASS (0.8, 0.6) — Accurate reflection of churn.",
       "The success of this app highlights how the public is using interactive media to process the rapid turnover of UK leadership since 2016.",
       "The Bright Side:\nTurning political frustration into a game allows for catharsis and a better understanding of the complex trade-offs leaders face.",
       "The Breakdown & Plane Error:\nThere is no plane error; the game explicitly maps the 'WHAT' (scenarios) to the 'WHO' (factions), creating a coherent, honest simulation.",
       "Social Physics Analysis:\nBy gamifying political trade-offs, the developer empowers players to understand the difficulty of coalition management. It replaces opaque political maneuvering with transparent, rule-based decision-making.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment is high because the game's mechanics mirror real-world political strain.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment is high because the game's mechanics mirror real-world political strain.",
       "The Unavoidable Truth: Political churn in Westminster has become so absurd that it is now a popular form of entertainment.\n\nThe Unavoidable Lie: Staying in power for 157 years is a realistic outcome for a Prime Minister.",
       "Alethekanon:\nThe game succeeds because it acknowledges the high-strain nature of the PM role. It is a rare example of a simulation that respects the complexity of its subject matter.",
       "Awwthekanon:\nIt is so refreshing to see people finding a way to laugh at the stress of our times. Games like this help us feel less alone in the confusion of modern politics.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Game Design",
@@ -264,6 +326,7 @@
         "name": "United Kingdom",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

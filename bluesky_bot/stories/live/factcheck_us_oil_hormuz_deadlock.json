@@ -14,13 +14,13 @@
       "Geopolitical posturing meets market reality as oil prices surge amid dwindling hopes of a U.S.-Iran deal.\n\nU.S. oil tops $84 as Hormuz deal hopes dwindle\nEvidence: Energy Security, Depleted Reserves, Geopolitical Leverage\n#Aletheia #Energy #Markets",
       "The stated narrative claims efforts to boost fuel flows and stabilize energy markets through targeted shipping waivers, presenting a proactive stance on domestic energy security.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "The reality reveals depleted strategic stockpiles at a 40-year low, combined with restrictive shipping waivers and geopolitical deadlock that drive prices higher.\nResulting Judgement: (-1.00, -1.00) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nGeopolitical posturing and narrow shipping waivers prioritize political leverage over genuine market stabilization.\n\nIntegrity: Partially Distorted (Hypocrisy: 1.85, Uncertainty z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nGeopolitical posturing and narrow shipping waivers prioritize political leverage over genuine market stabilization.\n\nIntegrity: Partially Distorted (Hypocrisy: 1.85, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Trump Administration Energy Policy: FAIL (-0.85, -0.78) — Narrowing shipping waivers while reserves are at a 40-year low drives up domestic energy costs.",
       "Oil prices surged above $84 as hopes for a U.S.-Iran deal to reopen the Strait of Hormuz faded. Despite Washington narrowing shipping waivers to boost fuel flows, record-low U.S. crude stockpiles and mutual demands for reparations have left the market highly volatile.",
       "The Bright Side:\nNarrowing the shipping waiver specifically to vessels hauling energy resources attempts to shield the domestic fuel market from broader supply chain disruptions.",
       "The Breakdown & Plane Error:\nThe narrative commits a WHAT vs WHO error. It focuses on the mechanics of shipping waivers (WHAT) while ignoring that the primary drivers (WHO) are political actors using strategic reserves as leverage.",
       "Social Physics Analysis:\nRather than fostering transparency to stabilize global energy flows, actors employ post-hoc justifications to mask depleted domestic reserves. By projecting blame onto foreign adversaries, they maintain high-strain market conditions to preserve political leverage.",
-      "The Trajectory: Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The systemic friction of depleted reserves and political deadlock prevents stable equilibrium.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The systemic friction of depleted reserves and political deadlock prevents stable equilibrium.",
       "The Unavoidable Truth: Narrowing shipping waivers cannot offset the structural strain of U.S. crude oil stockpiles falling to their lowest level in over four decades.\n\nThe Unavoidable Lie: Claiming total control over global shipping straits while domestic reserves are depleted.",
       "Alethekanon:\nThe mathematical reality of a 40-year low in crude stockpiles cannot be papered over by selective shipping waivers. The causal chain of supply restriction directly contradicts the stated goal of market stabilization.",
       "Awwthekanon:\nIt is stressful to watch energy security become a pawn in geopolitical chess. Everyday people bear the burden of rising fuel costs while leaders prioritize posturing over collective well-being.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Trump Administration Energy Policy",
@@ -273,6 +335,7 @@
         "name": "Iran",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Man sets himself on fire in lobby of Google office building in Lower Manhattan",
     "link": "https://nypost.com/2026/08/28/us-news/man-sets-himself-on-fire-in-lobby-of-google-office-building-in-lower-manhattan/",
     "target_url": "",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.25,
+    "claim_psi": 0.25,
+    "real_u": 0.15,
+    "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "A 63-year-old man sets himself on fire in a Lower Manhattan office building lobby.\nEvidence: emergency response, hospital transport, stable condition\n#Aletheia #NYC",
-      "Reports cover an isolated self-immolation incident inside a commercial office building housing Google.\nStated Judgement: (0.0, 0.0) — Neutral Stasis",
-      "An individual experienced a profound personal crisis, turning extreme distress into a public spectacle of self-harm.\nResulting Judgement: (-0.7, -0.8) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nExtreme self-harm highlights deep societal alienation and unaddressed mental health crises.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
+      "Reports cover an isolated self-immolation incident inside a commercial office building housing Google.\nStated Judgement: (+0.25, +0.25) — Greater Good",
+      "An individual experienced a profound personal crisis, turning extreme distress into a public spectacle of self-harm.\nResulting Judgement: (+0.15, +0.20) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nExtreme self-harm highlights deep societal alienation and unaddressed mental health crises.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
       "- Emergency Services: PASS (0.5, 0.5) — Rapid response and medical care.\n- Media Reporting: COND (-0.2, -0.1) — Frames tragedy as sensational crime beat.",
       "A 63-year-old man self-immolated in the lobby of 315 Hudson Street in Lower Manhattan, prompting a rapid police and fire response before being rushed to Weill Cornell Medical Center.",
       "The Bright Side:\nFirst responders acted swiftly, preventing loss of life and securing immediate medical care for the victim.",
       "The Breakdown & Plane Error:\nConfusing a private psychological crisis (WHO/WHY) with a corporate security failure (WHERE/WHAT).",
       "Social Physics Analysis:\nWhen structural safety nets fail, individuals resort to extreme acts to force visibility. Rather than resolving root distress, society treats the symptom as spectacle.",
-      "The Trajectory: The Path of Reckoning.\nWhen desperation meets institutional indifference, it plots a direct trajectory toward destruction. The failure to support vulnerable lives triggers catastrophic outcomes.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen desperation meets institutional indifference, it plots a direct trajectory toward destruction. The failure to support vulnerable lives triggers catastrophic outcomes.",
       "The Unavoidable Truth: Extreme public self-harm is a symptom of deep systemic alienation.\n\nThe Unavoidable Lie: Sensational crime headlines capture the whole truth of mental health crises.",
       "Alethekanon:\nTragedy is not a spectator sport for news cycles; it is a glaring indictment of our collective failure to care for the vulnerable.",
       "Awwthekanon:\nMy heart aches for a soul in such deep, isolating pain that he felt fire was his only megaphone. May he find true healing and comfort now.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Emergency Response",
@@ -156,6 +218,7 @@
         "name": "Google",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

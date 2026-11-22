@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "real_u": -0.1,
+    "real_psi": -0.22,
     "mode": "root",
     "posts": [
       "Tabloid rumor mill spins tell-all tales about Sarah Ferguson, while her team issues firm denials.\nEvidence: Tabloid claims, PR denial, expert commentary\n#Aletheia #RoyalFamily #SarahFerguson",
-      "Tabloid reports claimed Sarah Ferguson was days away from signing a lucrative tell-all memoir detailing Prince Andrew and Jeffrey Epstein.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Representatives shut down book deal rumors, though experts warn her past association with Epstein leaves her persona non grata in aristocratic circles.\nResulting Judgement: (-0.75, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSensationalized tabloid speculation creates manufactured drama around personal scandals for attention.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Tabloid reports claimed Sarah Ferguson was days away from signing a lucrative tell-all memoir detailing Prince Andrew and Jeffrey Epstein.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Representatives shut down book deal rumors, though experts warn her past association with Epstein leaves her persona non grata in aristocratic circles.\nResulting Judgement: (-0.10, -0.22) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nSensationalized tabloid speculation creates manufactured drama around personal scandals for attention.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "- Tabloid Outlets: FAIL (-0.80, -0.85) — Fabricates sensational claims.\n- PR Representatives: PASS (+0.60, +0.40) — Corrects false rumors promptly.",
       "Sarah Ferguson's team denied reports she planned to write a tell-all memoir about her ex-husband Andrew Mountbatten-Windsor and Jeffrey Epstein, amid warnings from experts about family fallout.",
       "The Bright Side:\nPrompt denials from representatives prevent unverified gossip from hardening into accepted fiction.",
       "The Breakdown & Plane Error:\nConfusing tabloid speculation (WHAT) with verified institutional actions (WHO).",
       "Social Physics Analysis:\nTabloids run a Smart Selfish Maneuver by inventing dramatic pretexts to extract attention from readers. Meanwhile, royal figures navigate reputational fallout by managing public perception rather than addressing systemic accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between sensationalized rumors and ground-level reality, it plots a direct trajectory toward Lesser Evil through speculative extraction.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between sensationalized rumors and ground-level reality, it plots a direct trajectory toward Lesser Evil through speculative extraction.",
       "The Unavoidable Truth: Tabloid sensationalism exploits past scandals for clickbait attention.\n\nThe Unavoidable Lie: Speculative book deals are treated as confirmed institutional events.",
       "Alethekanon:\nTabloid speculation weaponizes past associations for profit, substituting manufactured gossip for verified reality.",
       "Awwthekanon:\nIt is painful to watch personal missteps and family ties continually dragged through the public media grinder without resolution.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tabloid Outlets",
@@ -168,6 +230,7 @@
       "Aletheia",
       "RoyalFamily",
       "SarahFerguson"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

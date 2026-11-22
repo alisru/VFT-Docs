@@ -6,15 +6,15 @@
     "link": "https://nypost.com/2026/09/04/us-news/new-forecast-models-show-hawaii-in-hurricane-lowells-path/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.8,
-    "real_psi": 0.6,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Tracking the Pacific: Hawaii faces potential impacts as Category 4 Hurricane Lowell shifts paths.\nEvidence: emergency declaration, offshore track models, rapid intensification\n#Aletheia #Weather #Hawaii",
-      "Hurricane Lowell is barreling across the Pacific and projected to make a sharp turn north, threatening the western islands with severe wind, surf, and flooding.\nStated Judgement: (+1.0, 0.5) — Good Preference",
-      "While Lowell reached Category 5 strength and triggered a state emergency, current models keep the center offshore of Kauai, mitigating direct landfall catastrophe.\nResulting Judgement: (0.8, 0.6) — Grace",
-      "Verdict: PASS — The Path of Grace.\nOfficial preparedness and accurate tracking match the unfolding natural emergency.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
+      "Hurricane Lowell is barreling across the Pacific and projected to make a sharp turn north, threatening the western islands with severe wind, surf, and flooding.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While Lowell reached Category 5 strength and triggered a state emergency, current models keep the center offshore of Kauai, mitigating direct landfall catastrophe.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nOfficial preparedness and accurate tracking match the unfolding natural emergency.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
       "- Governor Josh Green: PASS (0.9, 0.7) — Proactive emergency mobilization.\n- National Hurricane Center: PASS (1.0, 0.8) — Precise meteorological tracking.",
       "Governor Josh Green declared a state of emergency as Hurricane Lowell neared Hawaii, prompting local preparations reminiscent of historic storms like Iniki.",
       "The Bright Side:\nPrecise forecasting models and early emergency declarations give residents crucial lead time to prepare safely.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Governor Josh Green Emergency Response",
@@ -211,6 +273,7 @@
         "name": "Hawaii",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

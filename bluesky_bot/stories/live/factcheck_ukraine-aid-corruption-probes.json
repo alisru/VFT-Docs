@@ -5,22 +5,22 @@
     "subject": "Billions in US aid to Ukraine under microscope as corruption rocks Zelenskyy’s inner circle",
     "link": "https://www.foxnews.com/world/billions-us-aid-ukraine-under-microscope-corruption-rocks-zelenskyys-inner-circle",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.65,
-    "real_psi": -0.55,
+    "claim_u": 0.9,
+    "claim_psi": 0.75,
+    "real_u": -0.35,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "Systemic corruption probes rock Kyiv while billions in US aid face scrutiny.\n\nUkraine aid corruption probes\nEvidence: Proactive housecleaning, Systemic corruption, Oversight gaps\n#Aletheia #Ukraine #USPol",
-      "Over 24 federal agencies are successfully protecting billions in U.S. defense aid to Ukraine as President Zelenskyy proactively dismisses officials to combat corruption.\nStated Judgement: (+0.8, 0.5) — Lesser Good",
-      "While oversight exists, audits show unverified salary claims, and the wave of high-level dismissals points to deep-seated systemic corruption rather than simple proactive governance.\nResulting Judgement: (-0.65, -0.55) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nThe framing of systemic corruption dismissals as proactive housecleaning masks deep structural vulnerabilities in aid oversight.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Over 24 federal agencies are successfully protecting billions in U.S. defense aid to Ukraine as President Zelenskyy proactively dismisses officials to combat corruption.\nStated Judgement: (+0.90, +0.75) — Greater Good",
+      "While oversight exists, audits show unverified salary claims, and the wave of high-level dismissals points to deep-seated systemic corruption rather than simple proactive governance.\nResulting Judgement: (-0.35, -0.25) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe framing of systemic corruption dismissals as proactive housecleaning masks deep structural vulnerabilities in aid oversight.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Volodymyr Zelenskyy: COND (-0.40, -0.30) — Dismissals driven by pressure, not just proactive reform.\n- US Aid Oversight: COND (-0.30, -0.20) — Gaps exist despite multiple agencies.",
       "As the U.S. continues to send billions in military and economic aid to Ukraine, a series of high-profile resignations and dismissals within Zelenskyy's inner circle has renewed concerns over corruption and oversight.",
       "The Bright Side:\nThe active involvement of independent anti-corruption bodies like NABU shows that Ukraine's internal investigative mechanisms are functioning and willing to target high-level officials.",
       "The Breakdown & Plane Error:\nConfusing the process of dismissing corrupt officials (HOW) with the eradication of systemic corruption (WHAT). Firing individuals after the fact does not prove that billions in aid are fully secure.",
       "Social Physics Analysis:\nBy framing forced resignations as proactive housecleaning, the administration attempts to maintain the flow of foreign aid. This pretext projects a narrative of control to minimize the friction of systemic corruption.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated oversight perfection and actual audit gaps, it plots a direct trajectory toward a loss of public trust and systemic decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated oversight perfection and actual audit gaps, it plots a direct trajectory toward a loss of public trust and systemic decay.",
       "The Unavoidable Truth: High-level corruption remains a persistent challenge in Ukraine despite billions in aid.\n\nThe Unavoidable Lie: Every dollar of U.S. aid is perfectly tracked and verified before disbursement.",
       "Alethekanon:\nFraming systemic corruption dismissals as proactive housecleaning ignores the structural failure of oversight, where billions are disbursed before basic verification occurs.",
       "Awwthekanon:\nIt hurts to see resources meant to protect innocent lives get caught up in political games and greed, while the brave people on the ground bear the true cost of these systemic failures.",
@@ -66,8 +66,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Volodymyr Zelenskyy Inner Circle",
@@ -180,6 +242,7 @@
         "name": "Ukraine",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

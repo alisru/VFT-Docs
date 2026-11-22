@@ -6,15 +6,15 @@
     "link": "https://www.dailymail.com/news/article-16100957/coalition-cigarette-tax-illicit-tobacco-firebombing-taylor.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.8,
-    "real_u": -0.85,
-    "real_psi": -0.75,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A radical plan to slash cigarette taxes by 80% is pitched as a war on crime, but critics warn it's a deadly gamble.\n\nCigarette prices to drop $30 under Coalition plan\nEvidence: Slashed crime, Increased smoking deaths, Political survival\n#Aletheia #AusPol 🌐",
-      "The Coalition claims that cutting the tobacco excise by 80% will destroy the multi-billion-dollar black market, stop violent firebombings, and lower prices for struggling household budgets.\nStated Judgement: (+1.00, +0.80) — Greater Good",
-      "In reality, slashing cigarette prices to $6 a pack reverses decades of public health progress, risking a massive surge in smoking rates and preventable deaths, all to claw back votes from One Nation.\nResulting Judgement: (-0.85, -0.75) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The Coalition trades public health and human lives for a desperate bid to counter One Nation's rising popularity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, Uncertainty z: 1)",
+      "The Coalition claims that cutting the tobacco excise by 80% will destroy the multi-billion-dollar black market, stop violent firebombings, and lower prices for struggling household budgets.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, slashing cigarette prices to $6 a pack reverses decades of public health progress, risking a massive surge in smoking rates and preventable deaths, all to claw back votes from One Nation.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Angus Taylor: FAIL (-0.85, -0.75) — Pretextual law-and-order framing.\n- Public Health Impact: FAIL (-0.90, -0.80) — Reverses decades of anti-smoking progress.",
       "The Coalition has proposed an 80% cut to tobacco excise, reducing a standard pack to $6, claiming it will undercut the illicit market currently fueling a wave of violent retail firebombings.",
       "The Poison:\nWhile undercutting the black market could temporarily reduce gang-related firebombings, making cigarettes dirt-cheap will inevitably hook a new generation of smokers and cost thousands of lives.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Angus Taylor Policy",
@@ -290,6 +352,7 @@
         "name": "One Nation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

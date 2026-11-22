@@ -5,22 +5,22 @@
     "subject": "Anthropic pushes for opt-out model for Australian content as ABC warns of ‘cannibalisation’ of news | AI (artificial intelligence) - Bytes Europe",
     "link": "https://www.byteseu.com/2415481/",
     "target_url": "https://bsky.app/profile/byteseu.bsky.social/post/3mwtyzaely62n",
-    "claim_u": 0.4,
-    "claim_psi": 0.2,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 0.45,
+    "claim_psi": 0.15,
+    "real_u": 0.05,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Tech giants push opt-out training models while public broadcasters sound the alarm over news cannibalisation.\nEvidence: Opt-out training push, Broadcaster warnings, Commercial compensation debate\n#AI #Copyright #Australia 🌐",
-      "Anthropic claims an opt-out training model balances AI innovation with copyright flexibility while supporting economic growth.\nStated Judgement: (+0.4, +0.2) — Conditional Good",
-      "Tech firms extract public journalism value without upfront compensation, threatening local news sustainability and public trust.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nCorporate lobbying frames extraction as innovation while undermining public journalism.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, Uncertainty z: 2)",
+      "Anthropic claims an opt-out training model balances AI innovation with copyright flexibility while supporting economic growth.\nStated Judgement: (+0.45, +0.15) — Greater Good",
+      "Tech firms extract public journalism value without upfront compensation, threatening local news sustainability and public trust.\nResulting Judgement: (+0.05, -0.10) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nCorporate lobbying frames extraction as innovation while undermining public journalism.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Anthropic Lobbying: FAIL (-0.7, -0.8) — Seeks unilateral copyright exemption.\n- ABC & SBS Defense: PASS (+0.8, +0.6) — Defends public interest journalism.",
       "Anthropic urged the Australian government to permit AI training on local copyrighted works unless creators actively opt out, drawing fierce pushback from national broadcasters.",
       "The Poison:\nShifting the burden of protection onto creators forces cash-strapped newsrooms to police massive tech scrapers.",
       "Confusing WHAT (copyright theft and audience diversion) with WHO (AI giants vs public broadcasters), masking extraction as mere regulatory modernization.",
       "Social Physics Analysis:\nAnthropic runs a Smart Selfish Maneuver: hiding value extraction behind a pretext of technological progress while projecting blame onto rigid copyright rules.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Extraction triumphs over sustainability.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Extraction triumphs over sustainability.",
       "The Unavoidable Truth: AI models rely entirely on human-generated journalism to function.\nThe Unavoidable Lie: Opt-out models adequately protect content creators.",
       "Alethekanon:\nShifting the burden of opt-out onto creators is corporate capture disguised as open innovation.",
       "Awwthekanon:\nIt hurts to see vital public journalism treated as mere fuel for distant algorithms without care for its creators.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Anthropic Lobbying",
@@ -176,6 +238,7 @@
         "sub_psi": 0.6,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

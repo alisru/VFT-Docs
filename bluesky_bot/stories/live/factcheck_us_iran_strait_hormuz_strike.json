@@ -5,22 +5,22 @@
     "subject": "US disputes Iran strike on Navy ship trying to enter Strait of Hormuz",
     "link": "https://www.washingtonexaminer.com/policy/defense/4715308/us-iran-strike-navy-ship-strait-of-hormuz/",
     "target_url": "",
-    "claim_u": 0.2,
-    "claim_psi": 0.8,
-    "real_u": -0.81,
-    "real_psi": -0.81,
+    "claim_u": 0.6,
+    "claim_psi": 0.73,
+    "real_u": 0.22,
+    "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "A high-stakes game of mirrors in the Strait of Hormuz. Iran claims a strike on a US Navy vessel, but CENTCOM calls it a total fabrication.\nEvidence: Defensive Deterrence, Regional Escalation, Domestic Propaganda\n#Aletheia #Geopolitics",
-      "Iran claims its forces successfully struck a U.S. Navy unmanned surface vessel to demonstrate its military capability and deter further American naval actions in the Strait of Hormuz.\nStated Judgement: (+0.20, +0.80) — Lesser Good",
+      "Iran claims its forces successfully struck a U.S. Navy unmanned surface vessel to demonstrate its military capability and deter further American naval actions in the Strait of Hormuz.\nStated Judgement: (+0.60, +0.73) — Greater Good",
       "The reality is a fabricated strike designed to project strength after the US destroyed three Iranian tankers. Iran is using state media to manufacture a victory, avoiding direct conflict while maintaining domestic and regional posture.",
-      "Verdict: FAIL — The Path of Deception. Iran's fabricated strike is a classic projection maneuver to mask military vulnerability and avoid a direct, devastating confrontation with US forces.\nIntegrity: Severe Deception (Hypocrisy: 10.5, z: 3)",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Severe Deception (Hypocrisy: 10.5, z: 3)",
       "- Iranian Media: FAIL (-0.90, -0.85) — Fabricating strike.\n- US CENTCOM: PASS (0.80, 0.75) — Accurate denial.\n- Wash Examiner: PASS (0.75, 0.70) — Balanced reporting.",
       "Amid ongoing naval tensions and a US blockade, Iran claimed to have struck a US unmanned vessel in the Strait of Hormuz, a claim swiftly and completely denied by US Central Command as a total lie.",
       "The Bright Side:\nBy fabricating a fictional victory instead of launching a real, kinetic attack on US assets, Iran chooses a path of rhetorical escalation over actual physical warfare, temporarily preventing a wider regional conflict.",
       "The Breakdown & Plane Error:\nThe error is confusing a media narrative with physical reality (WHAT vs WHERE). Iran attempts to substitute a fabricated physical event for actual strategic leverage, hoping domestic audiences won't notice the difference.",
       "Social Physics Analysis:\nIran is running a Smart Selfish Maneuver. Facing the loss of three oil tankers, the regime manufactures a fictional victory (Pretext) to project strength and distract from its military vulnerability, avoiding the high cost of actual escalation.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Fabricating military strikes increases systemic strain and risks accidental escalation.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Fabricating military strikes increases systemic strain and risks accidental escalation.",
       "The Unavoidable Truth: Iran cannot match US naval power, so it must invent victories in the information space to save face.\nThe Unavoidable Lie: The alleged strike on the US unmanned vessel actually occurred and represents a shift in naval dominance.",
       "Alethekanon:\nInformation warfare is the weapon of the physically outmatched. Fabricating a kinetic strike reveals strategic weakness, not strength, as the regime prioritizes domestic survival over physical reality.",
       "Awwthekanon:\nIt is terrifying to think how close we are to a massive conflict. Even if this strike was made up, the constant posturing and threats leave families on both sides living in fear of the day the fiction becomes a devastating reality.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Iranian State Media Claims",
@@ -170,6 +232,7 @@
         "name": "Mohammad Bagher Ghalibaf",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

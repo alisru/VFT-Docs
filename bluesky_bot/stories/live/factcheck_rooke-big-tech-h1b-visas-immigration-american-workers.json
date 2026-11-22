@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Silicon Valley promised our kids a tech future, but traded American workers for cheap H-1B labor instead.\n\nBig Tech H-1B Visas\nEvidence: broken social contract, H-1B visa expansion, middle class displacement\n#Aletheia #Tech #Labor",
-      "The tech industry fulfilled its side of the bargain by innovating and offering high-end careers to educated American families.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Major tech firms lobbied for expansive visa caps to substitute domestic talent with controllable, lower-cost foreign workers.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nBig Tech marketed visas as skill-shortage solutions while systematically undercutting and displacing American labor.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 2)",
+      "The tech industry fulfilled its side of the bargain by innovating and offering high-end careers to educated American families.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Major tech firms lobbied for expansive visa caps to substitute domestic talent with controllable, lower-cost foreign workers.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nBig Tech marketed visas as skill-shortage solutions while systematically undercutting and displacing American labor.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 2)",
       "- Tech Lobbying: FAIL (-0.7, -0.8) — Pushed visa caps for cheap labor.\n- Middle Class Impact: FAIL (-0.5, -0.6) — Displaced domestic tech workers.",
       "Mary Rooke examines how Silicon Valley's shift toward H-1B visa reliance eroded the unwritten social contract with American middle-class workers.",
       "The Bright Side:\nGlobal talent exchange accelerates technological innovation across borders.",
       "The Breakdown & Plane Error:\nConfusing WHAT (economic growth) with WHO (beneficiary of middle-class stability), masking corporate cost-cutting as global meritocracy.",
       "Social Physics Analysis:\nTech leadership prioritized corporate margin growth over community stewardship, using legislative lobbying as a pretext to offshore labor pressure while projecting blame onto global market forces.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Corporate self-interest masqueraded as innovation.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Corporate self-interest masqueraded as innovation.",
       "The Unavoidable Truth: Silicon Valley leveraged immigration policy to suppress labor costs.\n\nThe Unavoidable Lie: Visa expansion was solely driven by a lack of qualified American talent.",
       "Alethekanon:\nSilicon Valley institutionalized a structural bait-and-switch, trading domestic workforce investment for margin-maximizing labor arbitrage under humanitarian pretexts.",
       "Awwthekanon:\nIt hurts to watch young people follow the promised path of hard work and education, only to find the door closed by corporate cost-cutting. We must honor the workers who built this digital age.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tech Lobbying & Visas",
@@ -157,6 +219,7 @@
         "name": "American Workers",
         "role": "acted_upon"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

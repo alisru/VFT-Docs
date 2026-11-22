@@ -14,13 +14,13 @@
       "Venture capital pours tens of millions into human movement data to train robots.\nEvidence: Physical world training, Crowd data collection, Series B funding\n#Aletheia #Robotics",
       "Mecka AI claims its crowd-sourced motion capture pipeline will build the core data infrastructure required to train next-generation humanoid robots.\nStated Judgement: (+1.00, +1.00) — Greater Good",
       "Mecka AI secured $60M led by Sequoia at a ~$500M valuation, mirroring the LLM data-broker playbook by commercializing task recordings for robotic models.\nResulting Judgement: (+0.45, +0.53) — Greater Good",
-      "Verdict: PASS — Stasis in Grace.\nA proven venture-backed data aggregation model expands into physical robotics.\nIntegrity: Conditionally Sound (Hypocrisy: 1.62, Uncertainty z: 0)",
+      "Verdict: PASS — Small Fall from Grace.\nA proven venture-backed data aggregation model expands into physical robotics.\nIntegrity: Conditionally Sound (Hypocrisy: 1.62, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Funding & Valuation: PASS (+0.50, +0.60) — Verified $60M Series B led by Sequoia.\n- Data Pipeline Viability: COND (+0.40, +0.45) — Crowdsourced smartphone video limits.",
       "Mecka AI raised $60 million in Series B funding from Sequoia, Nvidia, and Microsoft's M12 to pay everyday people to record household tasks for humanoid robot training.",
       "The Poison:\nHeavy reliance on low-cost gig labor to capture domestic tasks risks high noise ratios, sensor drift, and repetitive-data saturation.",
       "The Breakdown & Plane Error:\nThis venture links Physical (WHERE) sensor telemetry with Logical (HOW) robotics training, transferring the Scale AI data brokerage blueprint to kinematics.",
       "Social Physics Analysis:\nThe company applies standard venture scaling to robotics data bottlenecks. By turning mundane domestic labor into tokenized training feeds, it builds value across software and hardware ecosystems.",
-      "The Trajectory: The Path of Stasis in Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Capital reliably accelerates robotics infrastructure.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Capital reliably accelerates robotics infrastructure.",
       "The Unavoidable Truth: Humanoid robots cannot generalize in physical spaces without massive volumes of real-world motion data.\nThe Unavoidable Lie: Simple smartphone videos will instantly solve fine-motor manipulation for robots.",
       "Alethekanon:\nThe funding validates data brokerage as the bottleneck for robotics, though data cleanliness remains the central technical hurdle.",
       "Awwthekanon:\nIt is fascinating to see ordinary human chores like making coffee become valuable lessons for teaching the machines of tomorrow.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Funding & Valuation",
@@ -162,6 +224,7 @@
         "name": "Microsoft",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

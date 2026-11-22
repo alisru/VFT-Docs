@@ -5,22 +5,22 @@
     "subject": "2,000 pounds of meth stuffed in cabbage found at US-Mexico border",
     "link": "https://nypost.com/2026/09/11/us-news/2000-pounds-of-meth-stuffed-in-cabbage-found-at-us-mexico-border/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.3,
-    "real_psi": 0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Border agents pull off a wild leafy bust!\nEvidence: 2,000+ lbs meth seized, Cabbage concealment, DEA operation\n#Aletheia #BorderSecurity",
-      "Law enforcement agencies successfully intercepted over 2,000 pounds of methamphetamine cleverly hidden inside a commercial cabbage shipment at the southern border.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Federal task forces disrupted a major cartel smuggling route, though broader narcotics trafficking networks remain active and adaptable across the border.\nResulting Judgement: (+0.3, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nA tactical enforcement win disrupts illicit supply chains, though underlying demand and trafficking pressures persist.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Law enforcement agencies successfully intercepted over 2,000 pounds of methamphetamine cleverly hidden inside a commercial cabbage shipment at the southern border.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Federal task forces disrupted a major cartel smuggling route, though broader narcotics trafficking networks remain active and adaptable across the border.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nA tactical enforcement win disrupts illicit supply chains, though underlying demand and trafficking pressures persist.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- DEA / CBP Enforcement: PASS (+0.4, +0.5) — Successful interdiction of massive illicit drug cargo.\n- Cartel Logistics: FAIL (-0.8, -0.9) — Exploits commercial supply chains for trafficking.",
       "Federal law enforcement in South Texas intercepted a massive shipment of methamphetamine concealed inside heads of commercial cabbage, highlighting evolving smuggling tactics.",
       "The Bright Side:\nClever concealment methods were successfully uncovered and neutralized by coordinated federal and state task force efforts.",
       "The Breakdown & Plane Error:\nThe report focuses on the physical WHAT (narcotics hidden in produce) rather than the systemic WHO (cartel leadership behind the supply chain).",
       "Social Physics Analysis:\nLaw enforcement agencies operate within a standard transparency and enforcement loop, targeting visible supply vectors. While the seizure disrupts immediate cartel cash flow, it treats symptoms rather than the root systemic drivers of transnational drug demand.",
-      "The Trajectory: The Path of Redemption.\nWhen you map targeted interdiction against cartel logistics, it plots a steady course toward Lesser Good. Operational vigilance successfully curtails immediate harm.",
+      "The Trajectory: The Path of Grace.\nWhen you map targeted interdiction against cartel logistics, it plots a steady course toward Lesser Good. Operational vigilance successfully curtails immediate harm.",
       "The Unavoidable Truth: Creative smuggling methods constantly adapt to border security measures.\n\nThe Unavoidable Lie: Single large seizures dismantle transnational drug cartels.",
       "Alethekanon:\nTactical enforcement wins disrupt immediate supply lines but leave systemic market drivers entirely untouched.",
       "Awwthekanon:\nIt's a relief to see dangerous drugs intercepted before reaching vulnerable communities, but we must also remember the human struggles driving addiction.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "DEA/CBP Interdiction",
@@ -211,6 +273,7 @@
         "name": "Homeland Security Task Force",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

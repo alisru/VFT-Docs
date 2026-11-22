@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.2,
     "claim_psi": 0.1,
-    "real_u": 0.1,
+    "real_u": 0.15,
     "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "A federal judge dismisses Minnesota's lawsuit seeking to force Texas to extradite an ICE officer.\nEvidence: legal dismissal, statutory limits, jurisdictional bounds\n#Aletheia #USPol",
-      "Minnesota demanded Texas hand over an ICE officer charged in a shooting, framing it as an urgent fugitive matter.\nStated Judgement: (+0.2, +0.1) — Good Preference",
-      "A federal court ruled the lawsuit not ripe, upholding Texas statutory extradition timelines and constitutional boundaries.\nResulting Judgement: (+0.1, 0.0) — Conditional",
-      "Verdict: PASS — The Path of Grace.\nThe court correctly applied procedural law to resolve a complex interstate conflict without executive overreach.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Minnesota demanded Texas hand over an ICE officer charged in a shooting, framing it as an urgent fugitive matter.\nStated Judgement: (+0.20, +0.10) — Greater Good",
+      "A federal court ruled the lawsuit not ripe, upholding Texas statutory extradition timelines and constitutional boundaries.\nResulting Judgement: (+0.15, +0.00) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nThe court correctly applied procedural law to resolve a complex interstate conflict without executive overreach.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- Federal Court Ruling: PASS (+0.2, 0.0) — Upheld procedural statutes.\n- Interstate Dispute: COND (+0.1, 0.0) — Handled standard legal limits.",
       "Minnesota Governor Tim Walz filed a lawsuit to compel Texas Governor Greg Abbott to extradite an ICE officer. The federal court dismissed it as premature under statutory deadlines.",
       "The Bright Side:\nStandard constitutional checks and balances successfully managed an interstate jurisdictional clash.",
       "The Breakdown & Plane Error:\nThe dispute confuses WHO holds ultimate enforcement authority with WHAT statutory deadlines dictate.",
       "Social Physics Analysis:\nBy adhering to established legal frameworks rather than yielding to political pressure, the court maintained structural equilibrium and systemic trust.",
-      "The Trajectory: The Path of Grace.\nWhen you map statutory fidelity against political demands, it plots a direct trajectory toward structural stability. The procedural balance preserves federalism.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map statutory fidelity against political demands, it plots a direct trajectory toward structural stability. The procedural balance preserves federalism.",
       "The Unavoidable Truth: Jurisdictional rules prevent states from overriding statutory timelines.\n\nThe Unavoidable Lie: Political pressure can bypass established legal ripeness doctrines.",
       "Alethekanon:\nProcedural adherence preserves institutional stability amidst partisan friction.",
       "Awwthekanon:\nIt is reassuring to see the rule of law guide complex disputes smoothly.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Federal Court Ruling",
@@ -154,6 +216,7 @@
         "name": "Fernando Rodriguez Jr.",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

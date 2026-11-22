@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/fathh.com/post/3mvexklrvte2z",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.49,
-    "real_psi": -0.89,
+    "real_u": 0.03,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "A carefully staged handshake in New Delhi attempts to mask years of deep border freeze. Modi and Xi meet at the BRICS summit to signal a 'prudent thaw' in relations. 🌐\nEvidence: Diplomatic thaw, Tactical posturing, Strategic rivalry\n#BRICS #IndiaChina",
-      "Both nations claim they are actively resolving border disputes and building a stable, cooperative partnership for regional development.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, the meeting is a highly cautious, symbolic gesture. Both sides maintain heavy border militarization and deep strategic distrust, using the summit for global optics.\nResulting Judgement: (-0.49, -0.89) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The symbolic handshake serves as a tactical pause rather than a genuine resolution of structural border conflicts.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, Uncertainty z: 5)",
+      "Both nations claim they are actively resolving border disputes and building a stable, cooperative partnership for regional development.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the meeting is a highly cautious, symbolic gesture. Both sides maintain heavy border militarization and deep strategic distrust, using the summit for global optics.\nResulting Judgement: (+0.03, -0.50) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, Uncertainty z: 5)",
       "- Narendra Modi: COND (0.10, -0.50) — Balancing autonomy with border realities.\n- Xi Jinping: COND (-0.20, -0.60) — Projecting leadership while maintaining pressure.\n- Le Monde: PASS (0.20, -0.40) — Accurately highlights the prudent thaw.",
       "At the 18th BRICS Summit in New Delhi, Indian PM Narendra Modi and Chinese President Xi Jinping held their first bilateral talks in years, attempting to de-escalate border tensions.",
       "The Bright Side:\nEven a purely symbolic diplomatic thaw reduces the immediate risk of accidental military escalation along the disputed Line of Actual Control.",
       "The Breakdown & Plane Error:\nThis is a Lyrical-to-Physical error. The narrative of diplomatic harmony is substituted for the physical reality of heavily armed, unresolved border standoffs.",
       "Social Physics Analysis:\nBoth leaders execute a Smart Selfish Maneuver. They use the pretext of Global South unity to project strength abroad while quietly maintaining their respective nationalistic and militarized border postures at home.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The symbolic peace masks ongoing strategic containment.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The symbolic peace masks ongoing strategic containment.",
       "The Unavoidable Truth: Border militarization remains unchanged despite the handshakes.\nThe Unavoidable Lie: A single summit meeting has resolved the deep structural rivalry between India and China.",
       "Alethekanon:\nDiplomatic theater cannot overwrite physical geography. Until troops withdraw from the border, handshakes are merely high-resolution propaganda.",
       "Awwthekanon:\nIt is exhausting to watch leaders smile for cameras while soldiers remain frozen in high-altitude standoffs. True peace requires the courage to disarm, not just to shake hands.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Narendra Modi Diplomatic Framing",
@@ -187,6 +249,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

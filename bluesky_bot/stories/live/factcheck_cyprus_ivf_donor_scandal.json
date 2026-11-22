@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Families discover IVF clinics in northern Cyprus may have swapped their carefully chosen donors.\nEvidence: verified donor promise, DNA ancestry mismatch, unverified clinic practices\n#Aletheia #Health 🌐",
-      "Clinics promised rigorous matching with healthy, screened European donors for hopeful parents.\nStated Judgement: (1.0, 1.0) — Greater Good",
-      "DNA tests reveal dozens of children inherited ancestry from entirely different regions, exposing systemic deception.\nResulting Judgement: (-0.14, +0.38) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nSystemic exploitation of families seeking fertility treatment reveals severe regulatory failure and betrayal of trust.\n\nIntegrity: Severe Deception (Hypocrisy: 25.0, Uncertainty z: 4)",
+      "Clinics promised rigorous matching with healthy, screened European donors for hopeful parents.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "DNA tests reveal dozens of children inherited ancestry from entirely different regions, exposing systemic deception.\nResulting Judgement: (-0.14, +0.38) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nSystemic exploitation of families seeking fertility treatment reveals severe regulatory failure and betrayal of trust.\n\nIntegrity: Severe Deception (Hypocrisy: 25.0, Uncertainty z: 4)",
       "- Dogus IVF Centre: FAIL (-1.7, -1.6) — Systematic donor substitution.\n- Affected Families: PASS (1.2, 0.5) — Seeking truth through DNA testing.",
       "At least 30 children are feared conceived with unverified sperm or egg donors at loosely regulated fertility clinics in northern Cyprus, leaving families devastated.",
       "The Poison:\nThe total lack of legal recourse in an unrecognised territory leaves victims with virtually no institutional protection.",
       "The Breakdown & Plane Error:\nConfusing marketing promises (WHAT is advertised) with actual operational practices (WHO is utilized).",
       "Social Physics Analysis:\nBy exploiting regulatory vacuums for financial gain, the clinic used deceitful pretexts to extract profit while violating fundamental human rights.",
-      "The Trajectory: The Path of Deception.\nWhen you map predatory commercial exploitation against parental trust, it plots a direct trajectory toward Greater Evil.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map predatory commercial exploitation against parental trust, it plots a direct trajectory toward Greater Evil.",
       "The Unavoidable Truth: DNA testing has proven that multiple families received unverified donors.\n\nThe Unavoidable Lie: Loosely regulated fertility tourism guarantees strict adherence to donor selections.",
       "Alethekanon:\nProfiteering off deep human hope through covert substitution is a profound breach of foundational ethics.",
       "Awwthekanon:\nMy heart aches for these parents who trusted a clinic with their dearest dreams only to face such betrayal.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Dogus IVF Centre Management",
@@ -278,6 +340,7 @@
         "name": "Donor Conceived UK",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

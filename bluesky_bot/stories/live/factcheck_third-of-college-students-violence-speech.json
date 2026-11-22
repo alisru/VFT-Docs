@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.1,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "A new survey reveals a disturbing rise in illiberal campus culture, with over a third of students condoning violence to stop speech.\n\nOne third of college students...\nEvidence: survey data, self-censorship, institutional chill #Aletheia #FreeSpeech",
-      "The stated claim highlights that campus free speech is severely threatened by a growing student willingness to use disruption and violence against opposing views.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Ground reality shows that ideological polarization has weaponized campus culture, normalizing intimidation and self-censorship across political lines.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPolarized campus norms suppress open inquiry while masking partisan intolerance as moral righteousness.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "The stated claim highlights that campus free speech is severely threatened by a growing student willingness to use disruption and violence against opposing views.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Ground reality shows that ideological polarization has weaponized campus culture, normalizing intimidation and self-censorship across political lines.\nResulting Judgement: (-0.10, -0.40) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nPolarized campus norms suppress open inquiry while masking partisan intolerance as moral righteousness.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "- FIRE Survey Data: PASS (0.5, 0.0) — Captures real polling trends accurately.\n- Institutional Responses: FAIL (-0.7, -0.8) — Colleges punish controversial speech inconsistently.",
       "A comprehensive survey by the Foundation for Individual Rights and Expression polled 68,000+ students, exposing widespread self-censorship and a permission culture for silencing dissent.",
       "The Poison:\nTreating opposing viewpoints as active harm creates a toxic moral certainty that replaces debate with intimidation.",
       "This is a WHAT vs WHO plane error, mistaking the symptom (student attitudes) for the root cause (institutional failure to protect ideological pluralism and open inquiry).",
       "Social Physics Analysis:\nWhen institutions validate moral condemnation of disagreement, they replace transparent dialogue with tribal protectionism, creating a high-strain environment where dissent is treated as hostility.",
-      "The Trajectory: The Path of Deception.\nWhen institutional cowardice masks intolerance as safety, it drives campuses toward ideological stagnation and decay.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen institutional cowardice masks intolerance as safety, it drives campuses toward ideological stagnation and decay.",
       "The Unavoidable Truth: Free inquiry cannot survive when disagreement is reframed as violence.\n\nThe Unavoidable Lie: Censorship protects student well-being rather than stifling growth.",
       "Alethekanon:\nTreating speech as violence institutionalizes intellectual cowardice under a false banner of safety.",
       "Awwthekanon:\nIt hurts to see young minds retreating into echo chambers out of fear. We must foster spaces where curiosity outweighs condemnation and grace heals division.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "FIRE Survey Data",
@@ -161,6 +223,7 @@
         "name": "Claremont McKenna College",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

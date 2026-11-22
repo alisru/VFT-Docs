@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "When political campaigns trade substantive policy for viral combat theatrics, substance takes a back seat.\nEvidence: Combative rhetoric, Media posturing, Viral engagement\n#Aletheia #USPol 🌐",
-      "Candidate Abdul El-Sayed argued that appearing on Bill Maher's show would let him challenge Islamophobia and debate vital ideas.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Using aggressive combat imagery like wanting someone's 'ass whooped' replaces policy debate with performative outrage culture.\nResulting Judgement: (-0.85, -0.88) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nPerformative hostility masquerading as ideological courage manufactures division rather than resolving societal strain.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Candidate Abdul El-Sayed argued that appearing on Bill Maher's show would let him challenge Islamophobia and debate vital ideas.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Using aggressive combat imagery like wanting someone's 'ass whooped' replaces policy debate with performative outrage culture.\nResulting Judgement: (-0.85, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nPerformative hostility masquerading as ideological courage manufactures division rather than resolving societal strain.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- Abdul El-Sayed: FAIL (-0.85, -0.88) — Uses combative rhetoric for viral media reach.\n- Bill Maher: COND (-0.40, -0.20) — Engages provocation for ratings.",
       "Michigan Senate candidate Abdul El-Sayed told Chuck Todd he'd welcome appearing on Bill Maher's show to see him 'whooped' by a Muslim, prompting Maher to invite him on.",
       "The Poison:\nTrading serious legislative debate for viral internet brawls degrades public discourse and deepens partisan tribalism.",
       "The Breakdown & Plane Error:\nConfusing interpersonal combat (WHO) with genuine policy debate (WHAT) creates a false equivalence that rewards sensationalism.",
       "Social Physics Analysis:\nEl-Sayed runs a Smart Selfish maneuver, utilizing aggressive combat metaphors as a pretext to capture media attention while projecting moral superiority onto media figures.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos and F_neg imbalances lock the system into high-strain tribalism.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos and F_neg imbalances lock the system into high-strain tribalism.",
       "The Unavoidable Truth: Viral bravado substitutes for genuine policy solutions in modern Senate campaigns.\n\nThe Unavoidable Lie: Performative media clashes solve deep cultural and economic grievances.",
       "Alethekanon:\nSensationalist media posturing masquerades as moral courage while avoiding substantive legislative realities.",
       "Awwthekanon:\nWhen campaigns resort to hostile combat metaphors, voters yearning for healing and constructive dialogue are left behind in the noise.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Abdul El-Sayed Rhetoric",
@@ -153,6 +215,7 @@
         "name": "Mike Rogers",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

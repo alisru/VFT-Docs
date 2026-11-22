@@ -5,22 +5,22 @@
     "subject": "EXCLUSIVE: Here’s How They Host A Trump Rally In The Balkans",
     "link": "https://dailycaller.com/2026/10/03/balkan-bosnia-and-herzegovina-milorad-dodik-speech-republika-srpska",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.2,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.65,
+    "claim_psi": 0.1,
+    "real_u": -0.55,
+    "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "Balkan political rallies blend folksy traditions with geopolitical positioning.\nEvidence: Rakija branding, Trump praise, anti-Brussels rhetoric\n#Aletheia #Balkans #Geopolitics",
-      "Milorad Dodik frames his Republika Srpska rally as an open-door pursuit of American and Russian partnership for regional peace.\nStated Judgement: (+0.8, +0.2) — Good Preference",
-      "Dodik leverages populist pageantry and external figures to shield his banned political ambitions and stoke ethnic division against central authorities.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPopist pageantry masks personal political survival and institutional subversion.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Milorad Dodik frames his Republika Srpska rally as an open-door pursuit of American and Russian partnership for regional peace.\nStated Judgement: (+0.65, +0.10) — Greater Good",
+      "Dodik leverages populist pageantry and external figures to shield his banned political ambitions and stoke ethnic division against central authorities.\nResulting Judgement: (-0.55, -0.55) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPopist pageantry masks personal political survival and institutional subversion.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "Sub-Audits Breakdown:\n- Milorad Dodik: FAIL (-0.7, -0.8) — Uses foreign alignment for local immunity.\n- Regional Media Framing: COND (-0.4, -0.3) — Sensationalizes folksy rally optics.",
       "Milorad Dodik, banned from official office by international high representative Christian Schmidt, hosted a festive campaign rally in Republika Srpska endorsing Donald Trump and maintaining ties with Vladimir Putin.",
       "The Poison:\nFolk traditions and hospitality are weaponized as populist theatre to shield corrupt political maneuvers.",
       "The Breakdown & Plane Error:\nConfusing cultural hospitality (WHO/WHAT) with democratic legitimacy (HOW/WHY). The rally's folksy charm obscures authoritarian evasion.",
       "Social Physics Analysis:\nActors run a Smart Selfish maneuver. Dodik deploys folk charm and foreign leader endorsements as pretexts to distract from his legal ban and project blame onto Brussels.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic friction increases via manufactured polarization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic friction increases via manufactured polarization.",
       "The Unavoidable Truth: Populist rallies disguise personal power struggles behind folksy cultural displays.\n\nThe Unavoidable Lie: Aligning with distant strongmen guarantees local sovereignty and peace.",
       "Alethekanon:\nFolk traditions become props for autocrats seeking immunity from the rule of law. Rhetoric about open doors masks closed-circuit extraction.",
       "Awwthekanon:\nPeople gather seeking community and strength, only to have their deep cultural warmth co-opted by leaders playing high-stakes geopolitical games.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Milorad Dodik Political Stance",
@@ -166,6 +228,7 @@
         "name": "Christian Schmidt",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

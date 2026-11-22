@@ -5,22 +5,22 @@
     "subject": "Republicans call Cornyn 'lousy loser'",
     "link": "https://www.washingtontimes.com/news/2026/aug/31/republicans-call-john-cornyn-lousy-loser-refusing-help-ken-paxtons/",
     "target_url": "",
-    "claim_u": -0.75,
-    "claim_psi": 0.85,
-    "real_u": 0.59,
-    "real_psi": -0.55,
+    "claim_u": 0.5,
+    "claim_psi": 0.58,
+    "real_u": -0.68,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Texas Republicans are blasting John Cornyn as a \"lousy loser\" for refusing to fund Ken Paxton's Senate run. But is it bitterness, or basic math?\n\nRepublicans call Cornyn 'lousy loser'\nEvidence: Party unity, Strategic triage, Swing-state funding\n#USPol #Texas 🌐",
-      "The narrative claims Senator Cornyn is acting out of pure spite after losing the primary runoff to Paxton. Critics demand he fall in line to protect the seat, calling his refusal the act of a bitter old man.\n\nStated Judgement: (-0.75, 0.85) — Lesser Evil",
+      "The narrative claims Senator Cornyn is acting out of pure spite after losing the primary runoff to Paxton. Critics demand he fall in line to protect the seat, calling his refusal the act of a bitter old man.\n\nStated Judgement: (+0.50, +0.58) — Greater Good",
       "In reality, Cornyn is executing cold strategic triage. Democrat James Talarico has outspent Paxton 200-to-1 on ads, raising $68.5M to Paxton's $9M. Cornyn is redirecting donor cash to viable swing states instead of a Texas black hole.",
-      "Verdict: FAIL — Awakening into Deception.\n\nThe \"bitter loser\" narrative is a convenient pretext to mask a massive campaign funding and polling crisis.\n\nIntegrity: Severe Deception (Hypocrisy: 12.76, z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\n\nThe \"bitter loser\" narrative is a convenient pretext to mask a massive campaign funding and polling crisis.\n\nIntegrity: Severe Deception (Hypocrisy: 12.76, z: 2)",
       "- Washington Times: COND (0.20, 0.40) — Amplifies the \"bitter\" framing while burying the 200-to-1 ad spend gap.\n- Ken Paxton Campaign: FAIL (-0.80, -0.90) — Claims \"tremendous\" fundraising while being outspent by over $50 million.",
       "Texas Senator John Cornyn refused to fundraise for Attorney General Ken Paxton's Senate campaign against Democrat James Talarico, calling Paxton \"lazy.\" Angry state Republicans accused Cornyn of sabotaging the party out of spite.",
       "The Poison:\n\nWhile Cornyn's math is sound, his public airing of grievances actively damages downballot Texas Republicans who rely on top-ticket momentum, turning his pragmatic triage into a self-fulfilling prophecy of defeat.",
       "The Breakdown & Plane Error:\n\nThe narrative commits a WHO vs WHAT error. It frames the conflict as a personal grudge (WHO) to avoid addressing the catastrophic structural reality (WHAT) of a campaign outspent 200-to-1 with only $1.75M cash on hand.",
       "Social Physics Analysis:\n\nRather than doing the hard work of building a viable coalition, the campaign uses projection. By labeling Cornyn's strategic triage as personal betrayal, they create a scapegoat to pre-explain a potential electoral disaster.",
-      "The Trajectory: The Path of Awakening into Deception.\n\nMapping the gap between the \"bitter loser\" pretext and the $50M funding chasm plots a direct line toward Deception. The narrative trades structural accountability for cheap factional blame.",
+      "The Trajectory: The Path of Fall into Destruction.\n\nMapping the gap between the \"bitter loser\" pretext and the $50M funding chasm plots a direct line toward Deception. The narrative trades structural accountability for cheap factional blame.",
       "The Unavoidable Truth: Paxton's campaign is facing a catastrophic financial deficit that no amount of party loyalty can bridge.\n\nThe Unavoidable Lie: Cornyn's refusal to fundraise is driven purely by personal bitterness rather than electoral math.",
       "Alethekanon:\nThe math does not lie, even when politicians do. Diverting scarce capital from a non-viable, underperforming campaign to competitive swing states is basic portfolio management, not a personal vendetta.",
       "Awwthekanon:\n\nIt is painful to watch a family fight in public. When trust breaks down, people stop seeing each other's genuine fears and start throwing stones. We need to find ways to speak the truth in love, rather than letting bitterness divide us.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Washington Times Reporting",
@@ -287,6 +349,7 @@
         "name": "Republican Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

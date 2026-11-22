@@ -5,16 +5,16 @@
     "subject": "Five stories crossing borders — Rounds.news",
     "link": "https://rounds-archive.rounds-archive-worker.workers.dev/editions/2026-09-20-2100-en",
     "target_url": "https://bsky.app/profile/roundsnews.bsky.social/post/3mvyliczs4z2y",
-    "claim_u": 0.89,
-    "claim_psi": 0.88,
-    "real_u": 0.89,
-    "real_psi": 0.88,
+    "claim_u": 0.9,
+    "claim_psi": 0.89,
+    "real_u": 0.9,
+    "real_psi": 0.89,
     "mode": "root",
     "posts": [
       "A curated look at global friction, trade, and culture.\nFive stories crossing borders — Rounds.news\nEvidence: Objective curation, Balanced summaries, Multi-perspective news\n#Aletheia #GlobalNews",
-      "Rounds.news presents a source-linked night round covering diplomacy, trade, history, and culture, aiming to provide a balanced, informative overview of global events without editorial bias.\nStated Judgement: (+0.89, +0.88) — Good Preference",
-      "The curation delivers on its promise, summarizing complex international events accurately and linking directly to reputable sources, maintaining high transparency and objective framing.\nResulting Judgement: (+0.89, +0.88) — Good Preference",
-      "Verdict: PASS — The Path of Grace. The newsletter maintains high editorial integrity, offering readers transparent, multi-perspective summaries of global events without manufactured narrative spin.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Rounds.news presents a source-linked night round covering diplomacy, trade, history, and culture, aiming to provide a balanced, informative overview of global events without editorial bias.\nStated Judgement: (+0.90, +0.89) — Greater Good",
+      "The curation delivers on its promise, summarizing complex international events accurately and linking directly to reputable sources, maintaining high transparency and objective framing.\nResulting Judgement: (+0.90, +0.89) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Global Curation: PASS (0.89, 0.88) — Accurate, multi-perspective news summary.\n- Source Transparency: PASS (0.90, 0.90) — Direct links to original reporting.",
       "The newsletter covers five distinct global developments, including Iran's closure of a French language center, Canada-France diplomatic ties, and US-China trade talks, providing concise context for each.",
       "The Poison:\nEven objective curation relies on the integrity of the underlying sources, meaning systemic biases in mainstream reporting can still filter through to the final summary.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Global Curation",
@@ -171,6 +233,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Ted Cruz Declares Himself Leader of Opposition to Trump Dividends: ‘I Don't Think We Should’",
     "link": "https://www.breitbart.com/politics/2026/09/11/ted-cruz-declares-himself-leader-of-opposition-to-trump-dividends-i-dont-think-we-should/",
     "target_url": "",
-    "claim_u": 0.2,
-    "claim_psi": 0.1,
-    "real_u": -0.5,
-    "real_psi": -0.6,
+    "claim_u": 0.35,
+    "claim_psi": 0.05,
+    "real_u": -0.55,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Senator Ted Cruz breaks with populist proposals, conditioning support for direct payouts on work-incentivized tax refunds.\nEvidence: $5k dividend push, Cruz pushback, 2028 positioning\n#Aletheia #USPol #TedCruz",
-      "Sen. Ted Cruz declines to endorse Trump's $5,000 dividend unless restructured as a tax refund exclusively for working taxpayers.\nStated Judgement: (+0.2, +0.1) — Lesser Good",
-      "Cruz's calculated pushback reflects intra-party friction and early 2028 positioning rather than pure fiscal conservatism.\nResulting Judgement: (-0.5, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nFiscal posturing masks underlying political jockeying for the 2028 primary field.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.2, z: 2)",
+      "Sen. Ted Cruz declines to endorse Trump's $5,000 dividend unless restructured as a tax refund exclusively for working taxpayers.\nStated Judgement: (+0.35, +0.05) — Greater Good",
+      "Cruz's calculated pushback reflects intra-party friction and early 2028 positioning rather than pure fiscal conservatism.\nResulting Judgement: (-0.55, -0.65) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nFiscal posturing masks underlying political jockeying for the 2028 primary field.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.2, z: 2)",
       "- Ted Cruz Framing: FAIL (-0.5, -0.6) — Strategic branding over policy consistency.\n- Populist Dividend: FAIL (-0.6, -0.7) — Unfunded inflationary promises.",
       "Senator Ted Cruz stated he would only support President Trump's proposed $5,000 adult dividend if converted into a tax refund for working citizens.",
       "The Bright Side:\nHighlighting work incentives prevents unconditional cash handouts that could exacerbate inflation.",
       "The Breakdown & Plane Error:\nConfusing fiscal policy debate (WHAT) with leadership positioning (WHO).",
       "Social Physics Analysis:\nActors deploy populist pretexts to capture headlines while positioning themselves against rival factions, running a classic Smart Selfish Maneuver.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated fiscal caution and political maneuvering, it plots a direct trajectory toward Lesser Evil. Political posturing deepens party fractures.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated fiscal caution and political maneuvering, it plots a direct trajectory toward Lesser Evil. Political posturing deepens party fractures.",
       "The Unavoidable Truth: Unfunded trillion-dollar dividend checks risk accelerating national debt.\n\nThe Unavoidable Lie: Policy opposition is driven purely by fiscal austerity rather than ambition.",
       "Alethekanon:\nIntra-party policy disputes are frequently proxies for future leadership battles.",
       "Awwthekanon:\nIt's exhausting watching politicians turn basic economic relief and tax debates into a chessboard for future presidential runs.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Ted Cruz Framing",
@@ -163,6 +225,7 @@
         "name": "Susan Collins",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

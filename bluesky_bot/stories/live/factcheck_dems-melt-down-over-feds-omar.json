@@ -5,16 +5,16 @@
     "subject": "Dems Melt Down Over Feds’ Omar...",
     "link": "https://thefederalist.com/2026/10/13/dems-melt-down-over-feds-omar-search-after-praising-bidens-mar-a-lago-raid/?utm_source=rss&utm_medium=rss&utm_campaign=dems-melt-down-over-feds-omar-search-after-praising-bidens-mar-a-lago-raid",
     "target_url": "",
-    "claim_u": 0.78,
-    "claim_psi": 0.35,
-    "real_u": -0.94,
-    "real_psi": -0.89,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.86,
+    "real_psi": -0.84,
     "mode": "root",
     "posts": [
       "Federal raids on sitting lawmakers weeks before an election expose deep institutional decay.\nDems Melt Down Over Feds' Omar Search\nEvidence: Neutral Rule of Law, Pre-Election Intimidation, Equal Public Justice\n#Aletheia #USPol 🌐",
-      "Commentators claim federal agents raided Rep. Ilhan Omar's home solely to enforce immigration law impartially, arguing Democrats are hypocrites for condemning this search after supporting the Mar-a-Lago raid.\nStated Judgement: (+0.78, +0.35) — Greater Good",
-      "In reality, HSI raided a lawmaker's home 22 days before midterms over 30-year-old childhood paperwork, breaching election-sensitivity norms while partisans draw false equivalences to national security secrets.\nResulting Judgement: (-0.94, -0.89) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Law enforcement was deployed on decades-old childhood forms 22 days before an election, while media weaponizes false equivalence to milk tribal outrage.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 2)",
+      "Commentators claim federal agents raided Rep. Ilhan Omar's home solely to enforce immigration law impartially, arguing Democrats are hypocrites for condemning this search after supporting the Mar-a-Lago raid.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, HSI raided a lawmaker's home 22 days before midterms over 30-year-old childhood paperwork, breaching election-sensitivity norms while partisans draw false equivalences to national security secrets.\nResulting Judgement: (-0.86, -0.84) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 2)",
       "- The Federalist: FAIL (-0.95, -0.86) — Partisan extraction.\n- HSI Search Timing: FAIL (-0.92, -0.88) — Breaches 60-day rule.\n- Partisan Reaction: COND (-0.65, -0.42) — Tit-for-tat spin.",
       "Homeland Security Investigations searched Rep. Ilhan Omar's D.C. home over childhood paperwork 22 days before the 2026 midterms, bypassing traditional DOJ pre-election sensitivity windows while partisan outlets seized on the spectacle.",
       "The Bright Side:\nPublic scrutiny of overt pre-election enforcement actions forces DOJ protocols back into the light, reminding voters to demand that legal processes remain insulated from electoral intimidation.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.03,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.97,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.77,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.97,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.97,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.07,
+        "O": 1.23,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.17,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.07,
+        "O": 0.53,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.03,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.07,
+        "O": 1.03,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.03,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "The Federalist Media Framing",
@@ -374,6 +436,7 @@
     "tags": [
       "Aletheia",
       "USPol"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

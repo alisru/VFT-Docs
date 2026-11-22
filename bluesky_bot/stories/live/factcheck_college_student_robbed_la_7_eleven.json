@@ -5,22 +5,22 @@
     "subject": "College Student Brutally Robbed at LA 7-Eleven in Early Morning Attack",
     "link": "https://nypost.com/2026/09/04/us-news/college-student-brutally-robbed-at-la-7-11-in-early-morning-attack/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.75,
-    "real_psi": -0.82,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.3,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "An 18-year-old college student was brutally attacked and robbed inside a Hollywood 7-Eleven for her gold chain.\nEvidence: brutal assault, bystander indifference, police absence\n#Aletheia #Crime #LosAngeles",
-      "Reports frame the incident as an isolated street crime shocker requiring standard police investigation.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Ground reality shows chronic urban decay, bystander apathy, and institutional abandonment of public safety.\nResulting Judgement: (-0.75, -0.82) — Lesser Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA brutal street robbery exposes systemic urban decay and institutional failure to protect ordinary citizens.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.8, z: 2)",
+      "Reports frame the incident as an isolated street crime shocker requiring standard police investigation.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Ground reality shows chronic urban decay, bystander apathy, and institutional abandonment of public safety.\nResulting Judgement: (-0.30, -0.45) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA brutal street robbery exposes systemic urban decay and institutional failure to protect ordinary citizens.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.8, z: 2)",
       "- Destiny Valderrama: PASS (-0.20, +0.50) — Innocent victim seeking justice.\n- 7-Eleven Staff: FAIL (-0.90, -0.90) — Refused aid and ejected victims for safety.",
       "An 18-year-old student and her friends were ambushed and beaten inside a Hollywood 7-Eleven after a quinceañera, while employees refused to call police and forced them outside.",
       "The Bright Side:\nThe victim survived a terrifying violent assault with resilience and courageously spoke out to demand accountability.",
       "The Breakdown & Plane Error:\nConfusing the WHAT (street crime) with the WHO (systemic institutional failure). The bait-and-switch treats a symptom of lawlessness as an isolated anomaly.",
       "Social Physics Analysis:\nWhen public safety institutions fail and commercial bystanders prioritize self-preservation over basic human empathy, social trust collapses into predatory survivalism.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated safety guarantees and ground-level neglect, it plots a direct trajectory toward Greater Evil. Systemic decay compounds when bystanders look away.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated safety guarantees and ground-level neglect, it plots a direct trajectory toward Greater Evil. Systemic decay compounds when bystanders look away.",
       "The Unavoidable Truth: Public spaces in major cities are increasingly failing basic safety thresholds.\n\nThe Unavoidable Lie: Corporate convenience stores are neutral community zones immune to urban crime.",
       "Alethekanon:\nSystemic urban decay cannot be handwaved as isolated street friction; when institutions abdicate duty, violence fills the vacuum.",
       "Awwthekanon:\nMy heart breaks for young Destiny, terrified and bruised, begging for help only to be pushed out into the cold night. No one should ever face such cruelty alone.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Destiny Valderrama",
@@ -283,6 +345,7 @@
         "name": "7-Eleven",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

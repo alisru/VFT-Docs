@@ -5,22 +5,22 @@
     "subject": "Netanyahu Came to New York. New Yorkers Were Ready for Him.",
     "link": "https://www.thenation.com/article/activism/netanyahu-un-protest-dispatch/?utm_source=flipboard&utm_content=topic%2Fliberal",
     "target_url": "https://bsky.app/profile/adnan-rahman.bsky.social/post/3mweb7fnxhs24",
-    "claim_u": 0.8,
-    "claim_psi": 0.7,
-    "real_u": -0.85,
-    "real_psi": -0.91,
+    "claim_u": 0.65,
+    "claim_psi": 0.55,
+    "real_u": 0.05,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "Over 100 arrests marked fierce New York protests against Benjamin Netanyahu's UN General Assembly address.\nEvidence: Mass arrests, UN walkouts, ICC warrant\n#Aletheia #Palestine #UNGA",
-      "Official diplomatic framing presents the visit as a routine international address defending sovereign security against hostile actors.\nStated Judgement: (+0.8, +0.7) — Good Preference",
-      "In reality, the visit triggered massive civil disobedience, over 100 arrests, delegate walkouts, and fierce opposition over war crimes.\nResulting Judgement: (-0.85, -0.91) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nState-sanctioned violence and war crime allegations collided with widespread grassroots resistance.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Official diplomatic framing presents the visit as a routine international address defending sovereign security against hostile actors.\nStated Judgement: (+0.65, +0.55) — Greater Good",
+      "In reality, the visit triggered massive civil disobedience, over 100 arrests, delegate walkouts, and fierce opposition over war crimes.\nResulting Judgement: (+0.05, -0.05) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nState-sanctioned violence and war crime allegations collided with widespread grassroots resistance.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "Sub-Audits Breakdown:\n- UN Assembly Speech: FAIL (-0.8, -0.9) — Defends ongoing military carnage.\n- Grassroots Protests: PASS (0.9, 0.8) — Exposes accountability demands.",
       "As Benjamin Netanyahu addressed the UN General Assembly, thousands of New Yorkers staged massive blockades and rallies, leading to over 100 arrests and high-profile walkouts.",
       "The Poison:\nThe framing treats state violence and international arrest warrants as mere political disagreements rather than severe human rights atrocities.",
       "The Breakdown & Plane Error:\nThe reporting commits a metaphysical error by evaluating diplomatic podium rhetoric (WHAT) instead of civilian survival and legal accountability (WHO).",
       "Social Physics Analysis:\nState actors execute a Smart Selfish Maneuver, utilizing international forums to project legitimacy while suppressing accountability through security forces.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked militarism inevitably breeds widespread systemic violence.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked militarism inevitably breeds widespread systemic violence.",
       "The Unavoidable Truth: International immunity cannot shield leaders from mass moral condemnation.\n\nThe Unavoidable Lie: Military bombardment is a viable substitute for basic human rights.",
       "Alethekanon:\nWhen legal accountability is ignored by states, the streets become the true court of last resort. 🌐",
       "Awwthekanon:\nMy heart breaks for every family torn apart while leaders argue in guarded halls.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UN Assembly Speech",
@@ -163,6 +225,7 @@
         "name": "United Nations",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

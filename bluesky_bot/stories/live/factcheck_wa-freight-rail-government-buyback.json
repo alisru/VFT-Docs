@@ -5,22 +5,22 @@
     "subject": "Will making WA's freight rail network public be cost-effective?",
     "link": "https://www.abc.net.au/news/2026-09-19/wa-freight-rail-network-government-buyback/107159246",
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3mvti3vjnom26",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "claim_u": 0.75,
+    "claim_psi": 0.45,
+    "real_u": 0.45,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "Western Australia introduces legislation to lay the legal framework for potentially buying back its privatized freight rail network.\nEvidence: State legislation, Industry debate, Commercial talks\n#Aletheia #Rail #Economy",
-      "Proponents argue state ownership will restore neglected regional lines, lower transport costs, and reinvest profits into public infrastructure.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "While regional growers and unions welcome the shift, immense financial costs and complex commercial negotiations with Brookfield remain unresolved.\nResulting Judgement: (+0.4, +0.2) — Conditionally Sound",
-      "Verdict: PASS — The Path of Awakening.\nBalancing public infrastructure needs against commercial realities requires strict fiscal prudence.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Proponents argue state ownership will restore neglected regional lines, lower transport costs, and reinvest profits into public infrastructure.\nStated Judgement: (+0.75, +0.45) — Greater Good",
+      "While regional growers and unions welcome the shift, immense financial costs and complex commercial negotiations with Brookfield remain unresolved.\nResulting Judgement: (+0.45, +0.25) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nBalancing public infrastructure needs against commercial realities requires strict fiscal prudence.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- WA State Government: COND (0.5, 0.3) — Ambitious framework, unproven final cost.\n- Industry Stakeholders: PASS (0.6, 0.4) — Genuine economic debate on regional rail.",
       "The Cook Labor government has introduced a bill establishing a framework for public acquisition, but final cost-effectiveness depends on ongoing talks with leaseholder Brookfield.",
       "The Bright Side:\nOpens a viable pathway to revitalize abandoned regional rail lines and reduce heavy truck traffic on local country roads.",
       "The plane error mistakes legislative mechanics for guaranteed fiscal outcomes, obscuring the heavy financial hurdles of buying out a multi-decade lease.",
       "Social Physics Analysis:\nThe government is attempting a Smart Altruistic Maneuver by aligning regional farming communities and unions toward public infrastructure renewal, though commercial valuation risks remain a friction point.",
-      "The Trajectory: The Path of Awakening.\nWhen you map stated public benefits against complex commercial buyouts, it plots a direct trajectory toward Lesser Good. Prudent financial scrutiny ensures public dollars serve genuine needs.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map stated public benefits against complex commercial buyouts, it plots a direct trajectory toward Lesser Good. Prudent financial scrutiny ensures public dollars serve genuine needs.",
       "The Unavoidable Truth: Bringing regional rail back into public hands could revitalize neglected supply chains and reduce rural road tolls.\n\nThe Unavoidable Lie: The state can repurchase a massive privatized network without confronting steep fiscal costs and complex negotiations.",
       "Alethekanon:\nPublic ownership is only as sound as its balance sheet. Intentions matter less than the final acquisition cost.",
       "Awwthekanon:\nFarmers and regional towns struggling with crumbling tracks deserve reliable infrastructure that connects their hard work to the world.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "WA State Government",
@@ -164,6 +226,7 @@
         "name": "CBH Group",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

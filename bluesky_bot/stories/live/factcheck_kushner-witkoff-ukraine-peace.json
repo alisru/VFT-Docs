@@ -5,22 +5,22 @@
     "subject": "Kushner, Witkoff ‘Really Feel Good’ About Ukraine-Russia Peace Push After Zelensky Huddle",
     "link": "https://nypost.com/2026/09/06/us-news/kushner-witkoff-really-feel-good-about-ukraine-russia-peace-push-after-zelensky-huddle/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.9,
-    "real_u": -0.7,
-    "real_psi": -0.6,
+    "claim_u": 0.65,
+    "claim_psi": 0.7,
+    "real_u": -0.1,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "High-level envoys push for diplomatic breakthroughs as Ukraine faces another brutal winter.\nEvidence: Envoys meet Putin and Zelensky, ongoing territorial disputes, severe energy impacts\n#Aletheia #Geopolitics",
-      "US special envoys Jared Kushner and Steve Witkoff expressed strong optimism for a revived peace framework after holding direct talks with Vladimir Putin and Volodymyr Zelensky.\nStated Judgement: (+0.8, +0.9) — Greater Good",
-      "Despite hopeful rhetoric, foundational disagreements over territorial sovereignty and an ongoing war of attrition mean a durable peace remains distant and fraught.\nResulting Judgement: (-0.7, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nDiplomatic optimism papers over intractable territorial disputes and continuing military destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "US special envoys Jared Kushner and Steve Witkoff expressed strong optimism for a revived peace framework after holding direct talks with Vladimir Putin and Volodymyr Zelensky.\nStated Judgement: (+0.65, +0.70) — Greater Good",
+      "Despite hopeful rhetoric, foundational disagreements over territorial sovereignty and an ongoing war of attrition mean a durable peace remains distant and fraught.\nResulting Judgement: (-0.10, -0.10) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nDiplomatic optimism papers over intractable territorial disputes and continuing military destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "Sub-Audits Breakdown:\n- Diplomatic Outreach: PASS (0.7, 0.8) — Direct talks initiated.\n- Territorial Realities: FAIL (-0.8, -0.7) — Core disputes unresolved.",
       "U.S. envoys Jared Kushner and Steve Witkoff traveled to Moscow and Kyiv to lay groundwork for potential trilateral peace talks ahead of winter.",
       "The Bright Side:\nBoth warring leaderships engaged in direct diplomatic contact facilitated by international intermediaries.",
       "The Breakdown & Plane Error:\nConfusing diplomatic optics and procedural meetings (WHAT) with fundamental geopolitical sovereignty realities (WHO/WHY).",
       "Social Physics Analysis:\nEnvoys operate via a smart altruistic pretense while navigating complex power incentives, but underlying actor maneuvers remain anchored in strategic extraction rather than immediate consensus.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through premature diplomatic projection.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through premature diplomatic projection.",
       "The Unavoidable Truth: High-level diplomatic engagement is a necessary prerequisite for ending prolonged state conflicts.\nThe Unavoidable Lie: Envoys can broker durable peace without resolving fundamental constitutional and territorial constraints.",
       "Alethekanon:\nOptimism is a useful diplomatic lubricant, but it cannot dissolve constitutional prohibitions against territorial surrender.",
       "Awwthekanon:\nWe pray for a just peace that can spare innocent lives from enduring yet another freezing winter of war.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Diplomatic Outreach",
@@ -166,6 +228,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

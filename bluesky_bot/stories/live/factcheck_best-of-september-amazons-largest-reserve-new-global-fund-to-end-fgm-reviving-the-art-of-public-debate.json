@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.8,
-    "real_psi": 0.75,
+    "real_u": 0.82,
+    "real_psi": 0.78,
     "mode": "root",
     "posts": [
       "September closed with major conservation milestones and historic crime drops.\nEvidence: Amazon reserve, mine clearance, solar growth\n#Aletheia #Environment",
-      "Global conservation and public health initiatives achieved unprecedented breakthroughs over the past month.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Verified reports confirm major land protections, mine clearances, and rising renewable energy capacity.\nResulting Judgement: (+0.8, +0.75) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nVerified conservation and renewable milestones reflect concrete global strides toward sustainability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Global conservation and public health initiatives achieved unprecedented breakthroughs over the past month.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Verified reports confirm major land protections, mine clearances, and rising renewable energy capacity.\nResulting Judgement: (+0.82, +0.78) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nVerified conservation and renewable milestones reflect concrete global strides toward sustainability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Colombian Amazon Reserve: PASS (+0.85, +0.8) — Petro bars mining in massive reserve.\n- Renewable Energy Expansion: PASS (+0.8, +0.75) — Solar overtakes coal capacity in China.",
       "International conservation efforts and policy shifts delivered major victories for biodiversity and renewable energy in September 2026.",
       "The Bright Side:\nInstitutional commitments to conservation are successfully securing critical carbon sinks and natural habitats.",
       "The Breakdown & Plane Error:\nConfusing political announcements with permanent enforcement leaves newly minted reserves vulnerable to future reversals.",
       "Social Physics Analysis:\nConservation leaders and communities executed a Smart Altruistic Loop, substituting short-term extraction with systemic stewardship.",
-      "The Trajectory: The Path of Grace.\nAligning policy frameworks with long-term ecological preservation steers global development toward sustainability.",
+      "The Trajectory: The Path of Small Fall from Grace.\nAligning policy frameworks with long-term ecological preservation steers global development toward sustainability.",
       "The Unavoidable Truth: Institutional protections actively safeguard vital ecosystems.\nThe Unavoidable Lie: Designations alone guarantee immunity from future exploitation.",
       "Alethekanon:\nVerifiable conservation milestones demonstrate that decisive policy action can successfully arrest ecological degradation.",
       "Awwthekanon:\nSeeing vast swaths of the Amazon protected and landmines cleared brings immense hope for healing our scarred earth.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Colombian Amazon Reserve",
@@ -167,6 +229,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

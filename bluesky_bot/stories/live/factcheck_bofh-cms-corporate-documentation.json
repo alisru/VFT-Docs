@@ -6,21 +6,21 @@
     "link": "https://www.theregister.com/bofh/2026/09/11/bofh-oh-no-the-cms-ate-500-pages-of-corporate-documentation/5295201?utm_source=dlvr.it&utm_medium=bluesky",
     "target_url": "https://bsky.app/profile/theregister.com/post/3mva5vfb24z2c",
     "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": 0.1,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "When enterprise software turns into a digital black hole, corporate memory vanishes into the void. #Tech #IT\nEvidence: 500 pages lost, dysfunctional CMS, satirical tech humor",
-      "A content management system is designed to efficiently store and retrieve critical enterprise knowledge.\nStated Judgement: (0.0, 0.0) — Neutral / Fictional Satire",
-      "In reality, bad tech procurement creates black holes where documentation dies and corporate memory is sacrificed.\nResulting Judgement: (+0.2, +0.1) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nSatirical exposure of bureaucratic software procurement failures reveals institutional truths.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 28)",
+      "A content management system is designed to efficiently store and retrieve critical enterprise knowledge.\nStated Judgement: (+0.00, +1.00) — Greatest Lie",
+      "In reality, bad tech procurement creates black holes where documentation dies and corporate memory is sacrificed.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Revelation into Grace.\nSatirical exposure of bureaucratic software procurement failures reveals institutional truths.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 28)",
       "- IT Administration: PASS (+0.2, +0.1) — Exposes bureaucratic tech procurement.\n- Corporate Documentation: PASS (+0.2, +0.1) — Highlights systemic record loss.",
       "A satirical look at corporate IT bureaucracy where content management systems intentionally or incompetently consume critical files.",
       "The Bright Side:\nHumor exposes the absurdity of poorly designed enterprise tools.",
       "The Breakdown & Plane Error:\nConfusing satirical fiction with technical reporting while revealing actual administrative dysfunction.",
       "Social Physics Analysis:\nThe story highlights bureaucratic self-preservation through opaque tech systems. Management procures flashy vanity tools rather than reliable infrastructure, trading real utility for surface-level aesthetics.",
-      "The Trajectory: The Path of Redemption.\nWhen satire exposes hidden institutional failures, it charts a course toward systemic awareness.",
+      "The Trajectory: The Path of Revelation into Grace.\nWhen satire exposes hidden institutional failures, it charts a course toward systemic awareness.",
       "The Unavoidable Truth: Bad software choices are often championed by committees lacking technical sense.\n\nThe Unavoidable Lie: Enterprise content management systems always preserve institutional memory.",
       "Alethekanon:\nSatire lays bare the silent failures of corporate software procurement. When systems are designed for avatars instead of backups, chaos is guaranteed.",
       "Awwthekanon:\nPoor IT folks having to deal with black-hole software while management chases shiny avatars is a universal workplace tragedy.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "IT Administration",
@@ -205,6 +267,7 @@
         "name": "Bastard Operator From Hell",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Revelation into Grace"
   }
 ]

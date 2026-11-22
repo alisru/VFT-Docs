@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/theregister.com/post/3muvhxpyxiq23",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "real_u": 0.65,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "Linus Torvalds joked we might as well blame AI for the chunky Linux 7.3 release candidate.\nEvidence: Linux 7.3-rc1 adds 560k lines, AI bug-scanning tools active, human code patches.\n#Linux #OpenSource #AI",
-      "Torvalds humorously attributes the bloated release candidate size to AI code generation trends in modern software development.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "AI tools scan for bugs and find issues, but human contributors still write and submit every patch into the massive kernel tree.\nResulting Judgement: (+0.6, +0.4) — Trustworthy",
-      "Verdict: PASS — The Path of Grace.\nTorvalds' tongue-in-cheek remark highlights open-source pragmatism amidst shifting software development tooling.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Torvalds humorously attributes the bloated release candidate size to AI code generation trends in modern software development.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "AI tools scan for bugs and find issues, but human contributors still write and submit every patch into the massive kernel tree.\nResulting Judgement: (+0.65, +0.45) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nTorvalds' tongue-in-cheek remark highlights open-source pragmatism amidst shifting software development tooling.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Torvalds Commentary: PASS (0.7, 0.5) — Transparent humor about dev realities.\n- The Register Coverage: PASS (0.6, 0.4) — Accurate framing of kernel stats.",
       "Linux version 7.3-rc1 added roughly 560,000 lines of code, pushing the kernel past 40.98 million total lines as automated bug-scanning tool usage expands.",
       "The Bright Side:\nAI is accelerating bug discovery across massive repositories without replacing human architectural oversight.",
       "The Breakdown & Plane Error:\nConfusing automated static analysis tools (WHAT) with autonomous artificial intelligence code generation (WHO). Torvalds jokes about the meme.",
       "Social Physics Analysis:\nLinus Torvalds runs a transparent engagement loop, acknowledging dev realities rather than deploying a manufactured crisis or projecting blame onto external actors.",
-      "The Trajectory: The Path of Grace.\nWhen you map stated developer humor against actual engineering outcomes, it plots a stable trajectory toward Grace. The system absorbs new tooling without institutional collapse.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map stated developer humor against actual engineering outcomes, it plots a stable trajectory toward Grace. The system absorbs new tooling without institutional collapse.",
       "The Unavoidable Truth: AI accelerates bug discovery in massive software codebases.\n\nThe Unavoidable Lie: Autonomous models are writing entire operating system kernels from scratch.",
       "Alethekanon:\nHumor is often the truest mirror of technical pragmatism; Torvalds correctly identifies AI as a useful utility rather than an existential overlord.",
       "Awwthekanon:\nIt's refreshing when open-source leaders laugh at the chaotic growth of codebases instead of panicking. Building software together is wonderfully messy!",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Torvalds Commentary",
@@ -152,6 +214,7 @@
         "name": "Linux Foundation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

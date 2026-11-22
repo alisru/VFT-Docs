@@ -5,22 +5,22 @@
     "subject": "Drone footage captures moment police fatally shoot knife-wielding man on Brooklyn Bridge",
     "link": "https://nypost.com/2026/10/02/us-news/drone-footage-captures-moment-police-fatally-shoot-knife-wielding-nut-as-he-lunges-at-them-from-atop-the-brooklyn-bridge/",
     "target_url": "",
-    "claim_u": 0.7,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
+    "claim_u": 0.6,
+    "claim_psi": 0.25,
+    "real_u": 0.15,
     "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "Newly released drone footage captures the tense final moments of an hour-long NYPD standoff on the Brooklyn Bridge.\nEvidence: ESU standoff, Drone footage, Fatal lunge\n#Aletheia #NYPD",
-      "Police reports and footage highlight extensive, patient negotiation by ESU detectives attempting to save a troubled man from self-harm.\nStated Judgement: (+0.7, +0.5) — Trustworthy Good",
-      "Despite nearly an hour of desperate pleading by Detective Giordani, the armed suspect lunged, forcing a single defensive shot.\nResulting Judgement: (+0.2, 0.0) — Neutral Equilibrium",
-      "Verdict: PASS — The Path of Redemption.\nLaw enforcement exhausted every de-escalation avenue before defensive force became unavoidable.\n\nIntegrity: Trustworthy (Hypocrisy: 1.35, Uncertainty z: 0)",
+      "Police reports and footage highlight extensive, patient negotiation by ESU detectives attempting to save a troubled man from self-harm.\nStated Judgement: (+0.60, +0.25) — Greater Good",
+      "Despite nearly an hour of desperate pleading by Detective Giordani, the armed suspect lunged, forcing a single defensive shot.\nResulting Judgement: (+0.15, +0.00) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nLaw enforcement exhausted every de-escalation avenue before defensive force became unavoidable.\n\nIntegrity: Trustworthy (Hypocrisy: 1.35, Uncertainty z: 0)",
       "- NYPD ESU: PASS (+0.6, +0.2) — Exemplary 50-minute negotiation effort.\n- Media Framing: COND (+0.3, 0.0) — Sensationalized headline terminology.",
       "The release of bodycam and drone footage reveals Detective Nicholas Giordani spending nearly an hour pleading with 41-year-old Chaun Bottom before he lunged with a knife.",
       "The Bright Side:\nThe footage documents extraordinary patience and empathy from ESU officers who tried every possible verbal tactic to avert tragedy.",
       "The Breakdown & Plane Error:\nSensationalized tabloid framing frames a psychiatric crisis purely as spectacle, masking the profound human tragedy underneath.",
       "Social Physics Analysis:\nOfficers ran a genuine Smart Altruistic de-escalation loop—transparently communicating, showing profound empathy, and exhausting all options until physical violence forced a defensive resolution.",
-      "The Trajectory: The Path of Redemption.\nWhen you balance professional de-escalation attempts against unavoidable lethal reality, it plots a stable equilibrium trajectory.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you balance professional de-escalation attempts against unavoidable lethal reality, it plots a stable equilibrium trajectory.",
       "The Unavoidable Truth: First responders routinely bear the horrific burden of managing acute, armed psychiatric crises.\n\nThe Unavoidable Lie: Better verbal de-escalation can permanently neutralize active physical lunges with lethal weapons.",
       "Alethekanon:\nUnflinching documentation confirms genuine police patience before inevitable defensive force ended a prolonged standoff. 🌐",
       "Awwthekanon:\nIt is heartbreaking to witness such despair on the bridge cables. You can hear the genuine anguish in the officer's voice trying to save him.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NYPD ESU",
@@ -162,6 +224,7 @@
         "name": "Dennis Dooley",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

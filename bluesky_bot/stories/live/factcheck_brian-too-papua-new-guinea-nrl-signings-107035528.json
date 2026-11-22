@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "PNG Chiefs' roster blitz signals a massive shift in NRL power dynamics as star players line up for the new franchise.\n\nBrian To'o Signings\nEvidence: expansion hype, financial dominance, market disruption\n#NRL #RugbyLeague",
-      "The signing of Brian To'o and other elite talent is framed as a natural milestone for the league's newest expansion franchise.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "Behind the hype lies an aggressive talent sweep driven by unmatched government funding and early clause activations, disrupting the competitive balance.\nResulting Judgement: (+0.49, +0.68) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Revelation. Heavy financial leveraging creates competitive distortion beneath the guise of standard growth.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 0)",
+      "The signing of Brian To'o and other elite talent is framed as a natural milestone for the league's newest expansion franchise.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Behind the hype lies an aggressive talent sweep driven by unmatched government funding and early clause activations, disrupting the competitive balance.\nResulting Judgement: (+0.49, +0.68) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 0)",
       "Sub-Audits Breakdown:\n- PNG Chiefs Recruitment: CONDITIONAL (0.2, -0.2) — Brilliant talent acquisition leveraging unique financial advantages, but destabilizes traditional club lists.\n- NRL Expansion Framework: PASS (0.5, 0.0) — Necessary structural growth for Pacific rugby league integration.",
       "The PNG Chiefs are assembling an unprecedented roster of NRL stars, including Brian To'o and potentially Joseph Manu, before even entering official free agency or playing a match, sparking anxiety among traditional clubs.",
       "The Bright Side:\nUnprecedented investment creates a viable, high-tier pathway for Pacific rugby league excellence.",
       "The Breakdown & Plane Error:\nConfusing WHAT (roster talent) with WHO (market distortion). The bait-and-switch frames financial muscle as organic sporting success.",
       "Social Physics Analysis:\nBy leveraging massive external funding to secure top talent early, the franchise bypasses standard competitive constraints, creating anxiety and friction across rival clubs through sheer economic gravity.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Discrepancy yields mild structural distortion.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Discrepancy yields mild structural distortion.",
       "The Unavoidable Truth: Massive funding accelerates expansion success.\n\nThe Unavoidable Lie: This represents a standard, level-playing-field recruitment process.",
       "Alethekanon:\nExpansion economics inevitably disrupt legacy equilibria. Pretending this is standard free agency ignores the sheer gravitational pull of unprecedented capital injections.",
       "Awwthekanon:\nIt's exciting to see Pacific rugby league grow so strong, but we must also hold space for the fans of traditional clubs who feel anxious watching their favorite players get swept away.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "PNG Chiefs Recruitment",
@@ -277,6 +339,7 @@
         "name": "Joseph Manu",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

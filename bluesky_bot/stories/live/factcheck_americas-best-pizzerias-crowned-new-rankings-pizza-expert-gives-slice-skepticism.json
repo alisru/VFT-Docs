@@ -5,22 +5,22 @@
     "subject": "America's best pizzerias crown...",
     "link": "https://www.foxnews.com/food-drink/americas-best-pizzerias-crowned-new-rankings-pizza-expert-gives-slice-skepticism",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "claim_u": 0.75,
+    "claim_psi": 0.45,
+    "real_u": 0.75,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "America's best pizzerias crowned in 2026 rankings as experts debate regional bias and style.\nEvidence: 50 Top Pizza list, expert analysis, NYC winner\n#Food #Pizza",
-      "The annual 50 Top Pizza rankings highlight the finest pies across America, with New York City's Una Pizza Napoletana taking the top spot for the fifth consecutive year.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While culinary rankings celebrate exceptional craftsmanship, experts note inherent stylistic biases toward traditional Neapolitan pies over diverse regional American styles.\nResulting Judgement: (+0.6, +0.4) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nCelebrates culinary excellence while acknowledging the subjective nature of food criticism.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
+      "The annual 50 Top Pizza rankings highlight the finest pies across America, with New York City's Una Pizza Napoletana taking the top spot for the fifth consecutive year.\nStated Judgement: (+0.75, +0.45) — Greater Good",
+      "While culinary rankings celebrate exceptional craftsmanship, experts note inherent stylistic biases toward traditional Neapolitan pies over diverse regional American styles.\nResulting Judgement: (+0.75, +0.45) — Greater Good",
+      "Verdict: PASS — Grace.\nCelebrates culinary excellence while acknowledging the subjective nature of food criticism.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
       "- 50 Top Pizza: PASS (+0.8, +0.5) — Highlights premier culinary talent.\n- Expert Analysis: PASS (+0.7, +0.4) — Offers healthy stylistic context.",
       "Food historian Colin Caplan examines the influence of 50 Top Pizza rankings, highlighting how regional traditions shape our national pizza landscape.",
       "The Poison:\nElevating single styles risks overshadowing the vibrant, diverse regional pizza innovations thriving across American cities.",
       "The Breakdown & Plane Error:\nConfusing a subjective stylistic preference (Q1 WHO/WHAT) with an objective culinary absolute creates unnecessary debate.",
       "Social Physics Analysis:\nThis ranking operates on transparent appreciation of culinary craft, celebrating dedication without exploiting social divisions or manufacturing crises.",
-      "The Trajectory: The Path of Redemption.\nBalanced appreciation of artisanal craft fosters community pride and culinary evolution.",
+      "The Trajectory: The Path of Grace.\nBalanced appreciation of artisanal craft fosters community pride and culinary evolution.",
       "The Unavoidable Truth: Craftsmanship and quality ingredients define truly exceptional pizza.\n\nThe Unavoidable Lie: No single ranking can capture America's vast pizza diversity.",
       "Alethekanon:\nRankings celebrate artistic dedication while highlighting the cultural diversity of regional culinary traditions.",
       "Awwthekanon:\nEvery hand-tossed crust tells a story of passion, early mornings, and a lifelong devotion to feeding people well.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "50 Top Pizza Rankings",
@@ -168,6 +230,7 @@
       "Food",
       "Pizza",
       "1"
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://www.washingtonexaminer.com/premium/4684343/bayh-political-family-indiana-democrats-bygone-era/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.6,
-    "real_psi": 0.5,
+    "claim_psi": 1.0,
+    "real_u": 0.68,
+    "real_psi": 0.67,
     "mode": "root",
     "posts": [
       "Thirty years after his father's historic run, Beau Bayh is stepping into Indiana politics to revive a struggling state party.\n\nA Bayh-gone era for Indiana Democrats?\nEvidence: reform message, dynastic revival, tough GOP map\n#Indiana #Politics",
-      "Beau Bayh launched his campaign for secretary of state in South Bend, rallying Democrats against alleged political corruption and promising public service.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While a dynastic comeback faces steep odds in a heavily red state, the campaign offers a legitimate grassroots challenge to entrenched single-party power.\nResulting Judgement: (+0.6, +0.5) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nA genuine grassroots challenge brings competitive tension back to an uncompetitive state electorate.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "Beau Bayh launched his campaign for secretary of state in South Bend, rallying Democrats against alleged political corruption and promising public service.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While a dynastic comeback faces steep odds in a heavily red state, the campaign offers a legitimate grassroots challenge to entrenched single-party power.\nResulting Judgement: (+0.68, +0.67) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nA genuine grassroots challenge brings competitive tension back to an uncompetitive state electorate.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "- Beau Bayh Campaign: PASS (+0.7, +0.6) — Energizes a dormant local opposition.\n- State Party Strategy: COND (+0.5, +0.3) — Relies heavily on historical family brand.",
       "Indiana Democrats have not won a statewide race in 14 years, leaving local organizers searching for a spark from the next generation of a storied political family.",
       "The Bright Side:\nEven if long-term odds are steep, competitive elections force incumbents to defend their records and engage voters.",
       "The Breakdown & Plane Error:\nEvaluating WHO runs rather than WHAT structural rules govern the race creates a personality-focused campaign frame.",
       "Social Physics Analysis:\nBy returning to transparent grassroots organizing rather than hiding behind party machinery, the campaign invites broad community participation and shared civic ownership.",
-      "The Trajectory: The Path of Redemption.\nWhen you map stated public service intentions against actual competitive engagement, it plots a direct trajectory toward Lesser Good. Positive actual forces outweigh opposition.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map stated public service intentions against actual competitive engagement, it plots a direct trajectory toward Lesser Good. Positive actual forces outweigh opposition.",
       "The Unavoidable Truth: Dynastic names can re-energize a stagnant party base.\n\nThe Unavoidable Lie: A famous surname alone can overcome structural electoral majorities.",
       "Alethekanon:\nReviving a moribund political brand requires more than nostalgia; it demands structural connection to modern voter concerns.",
       "Awwthekanon:\nIt takes courage to step into the political arena where your family's name carries both high expectations and heavy historical weight.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.65,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.6,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.7,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.7,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Beau Bayh Campaign",
@@ -280,6 +342,7 @@
         "name": "Republican Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -6,15 +6,15 @@
     "link": "https://www.breitbart.com/europe/2026/09/26/watch-an-army-of-saints-pope-leo-moved-to-tears-during-theatrical-reenactment-of-2000-year-history-of-christianity-in-france/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.8,
-    "real_u": 0.9,
-    "real_psi": 0.75,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Pope Leo XIV is moved to tears by a massive youth vigil celebrating two millennia of Christian history in France.\nEvidence: Stade de France, 80k youth, historical tableaux\n#Aletheia #Vatican",
-      "A grand theatrical display connects thousands of young Catholics to France's rich spiritual heritage.\nStated Judgement: (+1.0, +0.8) — Greater Good",
-      "Over 80,000 youth gathered at the Stade de France to witness tableaux depicting saints, martyrs, and cultural foundations.\nResulting Judgement: (+0.9, +0.75) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nA powerful cultural gathering fostering historical reflection and shared spiritual identity among European youth.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "A grand theatrical display connects thousands of young Catholics to France's rich spiritual heritage.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Over 80,000 youth gathered at the Stade de France to witness tableaux depicting saints, martyrs, and cultural foundations.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nA powerful cultural gathering fostering historical reflection and shared spiritual identity among European youth.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Stade de France Vigil: PASS (0.9, 0.75) — Engages tens of thousands in cultural heritage.\n- Papal Reception: PASS (0.95, 0.8) — Inspires dialogue on secularism and faith.",
       "Pope Leo XIV participated in a massive youth vigil featuring 1,700 young performers portraying French saints and historical figures at the Stade de France.",
       "The Bright Side:\nFostering intergenerational cultural memory and peaceful community bonding around historical virtue.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Stade de France Vigil",
@@ -206,6 +268,7 @@
         "name": "France",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

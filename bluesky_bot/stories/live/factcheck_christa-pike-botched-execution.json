@@ -5,22 +5,22 @@
     "subject": "Christa Pike thought her arm would 'burst open' during botched Tennessee execution",
     "link": "https://nypost.com/2026/10/02/us-news/christa-pike-thought-her-arm-would-burst-open-during-botched-tennessee-execution-court-docs/",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.25,
     "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "real_u": -0.45,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "During a botched execution in Tennessee, death row inmate Christa Pike cried out that her arm felt like it was going to burst open.\nEvidence: Caustic pentobarbital, 7 needles, severe chemical burns\n#Aletheia #Tennessee #DeathPenalty 🌐",
-      "Officials frame capital punishment as a controlled, clinical, and humane procedure governed by strict protocols.\nStated Judgement: (+0.5, 0.0) — Conditional Good",
-      "In reality, execution teams poked her seven times, bent a needle, and pumped caustic pentobarbital that severely burned and blistered her arms.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA botched execution exposing brutal physical torture under clinical pretexts directly drives a terminal descent into state-sanctioned cruelty.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 4)",
+      "Officials frame capital punishment as a controlled, clinical, and humane procedure governed by strict protocols.\nStated Judgement: (+0.25, +0.00) — Lesser Good",
+      "In reality, execution teams poked her seven times, bent a needle, and pumped caustic pentobarbital that severely burned and blistered her arms.\nResulting Judgement: (-0.45, -0.45) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA botched execution exposing brutal physical torture under clinical pretexts directly drives a terminal descent into state-sanctioned cruelty.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 4)",
       "Sub-Audits Breakdown:\n- State Execution Protocol: FAIL (-0.9, -0.9) — Clinical veneer masks brutal chemical torture.\n- Legal & Medical Reporting: PASS (0.0, 0.0) — Exposes harrowing details of procedural failure.",
       "Christa Pike, imprisoned for a 1995 murder, experienced a horrific execution ordeal when lethal drugs burned her tissue and veins, leaving her hospitalized in critical condition.",
       "The Poison:\nThe harrowing breakdown highlights how clinical euphemisms obscure the grim, violent physical reality of state-administered lethal injections.",
       "The Breakdown & Plane Error:\nConfusing procedural compliance (WHAT) with human bodily reality (PHYSICAL), reducing severe chemical trauma to a mere administrative glitch.",
       "Social Physics Analysis:\nThe state runs a defensive justification loop, projecting orderly protocol while inflicting severe physiological damage behind closed curtains.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated humane intentions and ground-level torture, it plots a direct trajectory toward Greater Evil. F_neg swamps positive claims.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated humane intentions and ground-level torture, it plots a direct trajectory toward Greater Evil. F_neg swamps positive claims.",
       "The Unavoidable Truth: Lethal injection often involves severe physiological trauma that belies its clinical appearance.\n\nThe Unavoidable Lie: Capital punishment is always administered painlessly and cleanly.",
       "Alethekanon:\nClinical euphemisms cannot sanitize the brutal physical reality of chemical burns and botched lethal injections.",
       "Awwthekanon:\nNo matter past crimes, witnessing a human body undergo such agonizing chemical trauma is a profound tragedy that demands our collective moral reckoning.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "State Execution Protocol",
@@ -158,6 +220,7 @@
         "name": "Colleen Slemmer",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

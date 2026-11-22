@@ -14,7 +14,7 @@
       "Rep. Ro Khanna champions local community controls against unchecked AI data center expansion.\nEvidence: local community veto, clean energy mandates, fair utility rates\n#Aletheia #Tech #USPol",
       "Rep. Ro Khanna proposed a Data Center Bill of Rights to give communities a say over AI infrastructure, utility costs, and clean energy rules.\nStated Judgement: (+0.81, +1.00) — Good Preference",
       "Khanna's legislative push directly addresses local environmental and economic concerns, seeking transparent guardrails for the booming tech sector.\nResulting Judgement: (+1.00, +1.00) — Lesser Good",
-      "Verdict: PASS — The Path of Grace. Khanna's legislative framework successfully aligns local community protection with national technological infrastructure demands.\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "- Ro Khanna: PASS (0.85, 0.70) — Advocates for local community protections.\n- Data Center Policy: PASS (0.80, 0.65) — Balances growth with utility caps.",
       "As AI data centers multiply across the U.S., driving up power bills and water usage, lawmakers are forced to address intense local opposition and grid strain.",
       "The Bright Side:\nEmpowering local townships with veto power over heavy utility and zoning burdens protects residents from corporate overreach.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ro Khanna Legislative Push",
@@ -195,6 +257,7 @@
         "name": "Kristen Welker",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

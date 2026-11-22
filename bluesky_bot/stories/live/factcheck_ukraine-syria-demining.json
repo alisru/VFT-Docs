@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.3,
-    "real_psi": 0.2,
+    "real_u": 0.35,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "Ukraine and post-Assad Syria forge a landmark humanitarian demining pact to clear explosive remnants of war.\nEvidence: Humanitarian demining, diplomatic normalization, anti-Russia alignment\n#Ukraine #Syria #Geopolitics",
-      "State media frames the Ukraine-Syria demining agreement as a purely humanitarian initiative to protect civilian agriculture and save lives.\nStated Judgement: (+0.8, +0.5) — Trustworthy Good",
-      "While genuine in its technical execution, the deal serves as a strategic wedge to erode Russian military presence and deepen Damascus-Kyiv ties.\nResulting Judgement: (+0.3, +0.2) — Pragmatic Equilibrium",
-      "Verdict: PASS — The Path of Awakening.\nPragmatic statecraft replaces decades of Assad-Moscow alignment with a new technical and diplomatic partnership.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
+      "State media frames the Ukraine-Syria demining agreement as a purely humanitarian initiative to protect civilian agriculture and save lives.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "While genuine in its technical execution, the deal serves as a strategic wedge to erode Russian military presence and deepen Damascus-Kyiv ties.\nResulting Judgement: (+0.35, +0.25) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPragmatic statecraft replaces decades of Assad-Moscow alignment with a new technical and diplomatic partnership.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
       "- Syrian Government: PASS (+0.4, +0.2) — Rebrands via technical partnerships.\n- Ukrainian Ministry: PASS (+0.5, +0.3) — Exports expertise while isolating Moscow.",
       "Following the fall of the Assad regime, Syria's new leadership under Ahmed al-Sharaa is actively normalizing relations with Western allies and Ukraine, pushing out old Russian ties.",
       "The Bright Side:\nClearing landmines directly saves civilian lives and restores arable land in war-torn northern Syria.",
       "The Breakdown & Plane Error:\nConfusing the immediate technical utility of demining (WHAT) with the broader geopolitical realignment against Russian influence (WHO).",
       "Social Physics Analysis:\nActors are engaged in a strategic realignment loop. Syria trades away old Russian patronage for Western-aligned technical assistance, while Ukraine extends its diplomatic footprint into the Middle East.",
-      "The Trajectory: The Path of Awakening.\nWhen you map stated humanitarian goals to pragmatic geopolitical realignment, it plots a stable trajectory toward Redemption. F_pos outweighs F_neg, establishing a low-strain cooperative equilibrium.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map stated humanitarian goals to pragmatic geopolitical realignment, it plots a stable trajectory toward Destruction. F_pos outweighs F_neg, establishing a low-strain cooperative equilibrium.",
       "The Unavoidable Truth: Ukrainian experts will directly assist in removing deadly unexploded ordnance across Syria.\n\nThe Unavoidable Lie: This diplomatic outreach is entirely devoid of strategic maneuvering against Russian influence.",
       "Alethekanon:\nHumanitarian necessity and geopolitical strategy operate in tandem here, proving that post-war reconstruction is never purely altruistic.",
       "Awwthekanon:\nEvery landmine cleared brings safety back to children playing in fields that were once zones of unending terror.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Syrian Government Realignment",
@@ -157,6 +219,7 @@
         "name": "Ihor Bezkaravainyi",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

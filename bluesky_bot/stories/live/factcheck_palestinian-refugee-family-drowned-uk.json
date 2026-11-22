@@ -5,22 +5,22 @@
     "subject": "Family who died in sea off UK named as Palestinian refugees | The National",
     "link": "https://www.thenationalnews.com/news/2026/08/19/family-who-died-in-sea-off-uk-named-as-palestinian-refugees/?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1787148685",
     "target_url": "https://bsky.app/profile/thenationalnews.com/post/3mtgwk34z6i2n",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.57,
+    "real_psi": -0.67,
     "mode": "root",
     "posts": [
       "Tragic confirmation emerges as a family of Palestinian refugees who drowned off the UK coast in West Sussex are identified by authorities.\nEvidence: police confirmation, embassy statement, fatal drowning\n#Refugees #UKNews",
-      "News reports cover the heartbreaking drowning of a Palestinian refugee family in rough UK seas while highlighting rescue efforts.\nStated Judgement: (0.0, 0.0) — Neutral Reporting",
-      "A refugee father, wife, and daughter lost their lives in Shoreham waters, with a younger daughter left in critical condition.\nResulting Judgement: (-0.85, -0.80) — Greater Evil / Tragedy",
-      "Verdict: PASS — The Path of Reckoning. Accurate and sober reporting of a devastating human tragedy without manipulative distortion.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "News reports cover the heartbreaking drowning of a Palestinian refugee family in rough UK seas while highlighting rescue efforts.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "A refugee father, wife, and daughter lost their lives in Shoreham waters, with a younger daughter left in critical condition.\nResulting Judgement: (-0.57, -0.67) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Emergency Response: PASS (-0.50, -0.50) — Coast guard and police swift action.\n- Human Cost: PASS (-0.95, -0.90) — Devastating loss of vulnerable refugee lives.",
       "Hossam Al Khawas and his family, refugees from Lebanon's Rashidieh camp, tragically perished after getting into difficulty in rough waters off Shoreham.",
       "The Poison:\nThe heart-wrenching loss underscores the desperate, perilous conditions faced by displaced families seeking safety and dignity.",
       "The Breakdown & Plane Error:\nThe tragedy operates on the Physical and Metaphysical planes of human vulnerability, exposing the harsh realities of displacement.",
       "Social Physics Analysis:\nWhen vulnerable displaced people face fatal barriers, society's failure to provide safe passage is laid bare through stark physical tragedy.",
-      "The Trajectory: The Path of Reckoning.\nWhen mapping the grim reality of refugee peril against maritime tragedies, it plots a direct trajectory toward systemic reckoning.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen mapping the grim reality of refugee peril against maritime tragedies, it plots a direct trajectory toward systemic reckoning.",
       "The Unavoidable Truth: Maritime hazards claim vulnerable lives seeking refuge.\n\nThe Unavoidable Lie: Tragic drownings are isolated incidents devoid of wider geopolitical displacement context.",
       "Alethekanon:\nSober journalistic recording of refugee casualties brings unavoidable human costs into sharp relief.",
       "Awwthekanon:\nMay gentle peace embrace the departed souls, and may profound healing surround the surviving child in her critical hours.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Emergency Response",
@@ -282,6 +344,7 @@
         "name": "Sussex Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

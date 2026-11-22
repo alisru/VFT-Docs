@@ -5,22 +5,22 @@
     "subject": "Hegseth touts the end of the ‘woke’ and ‘weak department’ in address",
     "link": "https://www.washingtonexaminer.com/policy/defense/4749479/hegseth-end-of-woke-weak-department-address/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.9,
+    "claim_psi": 0.75,
+    "real_u": -0.65,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "War Secretary Pete Hegseth declares the end of a 'woke' military during his State of the Force address.\nEvidence: Restructuring forces, revoking DEI, targeting media\n#Aletheia #USPol",
-      "Officials claim sweeping reforms eliminate institutional weakness and restore traditional combat readiness to the armed forces.\nStated Judgement: (+1.0, 1.0) — Greater Good",
-      "Beneath the rhetoric of renewal, leadership purges internal dissent, obscures mounting casualty data, and fuels partisan division.\nResulting Judgement: (-0.8, -0.9) — Deception",
-      "Verdict: FAIL — The Path of Deception. Sweeping cultural restructuring masks institutional consolidation and deflection from active wartime accountability.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Officials claim sweeping reforms eliminate institutional weakness and restore traditional combat readiness to the armed forces.\nStated Judgement: (+0.90, +0.75) — Greater Good",
+      "Beneath the rhetoric of renewal, leadership purges internal dissent, obscures mounting casualty data, and fuels partisan division.\nResulting Judgement: (-0.65, -0.65) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Pentagon Messaging: FAIL (-0.8, -0.9) — Uses culture war framing to obscure policy flaws.\n- Media Accountability: COND (-0.5, -0.4) — Deflects legitimate scrutiny via attacks.",
       "The administration delivered its State of the Force address at Quantico, emphasizing aggressive cultural realignment across the armed forces.",
       "The Poison:\nLabeling systemic policy debates as 'woke weakness' shields military leadership from transparent critique.",
       "The Plane Error & Switch:\nConfusing cultural scapegoating (WHO) with operational reform (WHAT). The bait-and-switch trades institutional competence for partisan compliance.",
       "Social Physics Analysis:\nLeadership runs a Smart Selfish Maneuver by inventing a cultural crisis ('woke weakness') as a pretext to purge internal dissent, projecting blame onto critics to evade oversight.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg under high-strain extraction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg under high-strain extraction.",
       "The Unavoidable Truth: Rhetorical attacks on internal culture cannot substitute for transparent operational accountability.\n\nThe Unavoidable Lie: The department's leadership is entirely free from systemic politicization.",
       "Alethekanon:\nCultural scapegoating replaces institutional honesty, converting defense policy into a partisan theater.",
       "Awwthekanon:\nWhen institutions turn inward to fight cultural battles, the human toll on service members caught in the crossfire is too often forgotten.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Pentagon Messaging",
@@ -157,6 +219,7 @@
         "name": "Marine Corps Base Quantico",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

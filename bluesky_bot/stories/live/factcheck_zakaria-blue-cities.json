@@ -5,22 +5,22 @@
     "subject": "Zakaria: Blue Cities in Blue States Largely Have the Worst Homelessness Problems",
     "link": "https://www.breitbart.com/clips/2026/10/03/zakaria-blue-cities-in-blue-states-largely-have-the-worst-homelessness-problems/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.3,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.0,
+    "real_psi": 0.48,
     "mode": "root",
     "posts": [
       "When urban housing costs and homelessness surge, commentators point fingers at blue-state governance.\nEvidence: High budgets, strict housing caps, urban crisis\n#Aletheia #UrbanPolicy #Housing",
-      "Fareed Zakaria argues that blue cities face acute homelessness because of over-regulating housing and overprivileging homeless rights over the public.\nStated Judgement: (+0.8, +0.5) — Trustworthy Good",
-      "While spending and zoning friction are real, framing complex housing failures strictly as partisan municipal failure ignores broader macroeconomic and federal safety net gaps.\nResulting Judgement: (-0.4, -0.3) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nAnalysis links local zoning rigidity to real crises, but partisan finger-pointing obscures systemic housing deficits.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
+      "Fareed Zakaria argues that blue cities face acute homelessness because of over-regulating housing and overprivileging homeless rights over the public.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While spending and zoning friction are real, framing complex housing failures strictly as partisan municipal failure ignores broader macroeconomic and federal safety net gaps.\nResulting Judgement: (+0.00, +0.48) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nAnalysis links local zoning rigidity to real crises, but partisan finger-pointing obscures systemic housing deficits.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
       "Sub-Audits Breakdown:\n- Fareed Zakaria: COND (0.8, 0.5) — Highlights zoning failures but frames via partisan lens.\n- Urban Housing Policy: COND (-0.4, -0.3) — Conflates local spending with systemic market failure.",
       "CNN host Fareed Zakaria highlighted that major blue cities grapple with severe homelessness despite heavy spending, pointing to strict building restrictions.",
       "The Bright Side:\nIt forces a candid debate on zoning reform and municipal fiscal efficiency.",
       "The Breakdown & Plane Error:\nConflating WHO (municipal leadership) with WHAT (structural zoning and housing supply failure), leading to partisan deflection.",
       "Social Physics Analysis:\nZakaria runs a partial Smart Selfish maneuver, using real municipal inefficiencies as a pretext to project systemic housing policy failures onto progressive governance models.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between political rhetoric and housing reality, it plots a direct trajectory toward Redemption through necessary zoning reform.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between political rhetoric and housing reality, it plots a direct trajectory toward Fall into Deception through necessary zoning reform.",
       "The Unavoidable Truth: Restrictive zoning and high costs drive acute urban homelessness.\nThe Unavoidable Lie: Partisan municipal mismanagement is the sole root cause.",
       "Alethekanon:\nPointing out municipal spending flaws is fair, but ignoring macro housing economics turns critique into partisan theater.",
       "Awwthekanon:\nEvery unhoused neighbor represents a housing market failure that deserves compassion and concrete building solutions, not political point-scoring.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Fareed Zakaria Commentary",
@@ -215,6 +277,7 @@
         "name": "HBO",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

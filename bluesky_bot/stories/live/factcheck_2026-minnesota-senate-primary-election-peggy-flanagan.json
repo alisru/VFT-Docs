@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Progressive Lt. Gov. Peggy Flanagan wins Minnesota's Democratic Senate primary, defeating centrist Rep. Angie Craig.\n\nProgressive Peggy Flanagan win...\nEvidence: progressive platform, bitter primary battle, general election ahead\n🌐 #USPol #Minnesota",
-      "Peggy Flanagan campaigned on expanding social safety nets, protecting Medicaid, and pushing for universal Medicare coverage, securing major progressive endorsements.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "While championing social programs, the campaign involved sharp factional attacks, deep party divisions, and intense external ad spending.\nResulting Judgement: (+0.36, +0.44) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption. Progressive momentum secured the nomination, though bitter intra-party rifts require healing.\nSubs: Flanagan Campaign: PASS (0.5, 0.3); Party Unity: COND (0.0, 0.0).\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Peggy Flanagan campaigned on expanding social safety nets, protecting Medicaid, and pushing for universal Medicare coverage, securing major progressive endorsements.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While championing social programs, the campaign involved sharp factional attacks, deep party divisions, and intense external ad spending.\nResulting Judgement: (+0.36, +0.44) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nSubs: Flanagan Campaign: PASS (0.5, 0.3); Party Unity: COND (0.0, 0.0).\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- Peggy Flanagan Campaign: PASS (0.5, 0.3) — Successfully advanced progressive priorities and safety net defense.\n- Intra-Party Unity: COND (0.0, 0.0) — Bitter clashes with centrist rivals left fractures requiring repair.",
       "Minnesota Lt. Gov. Peggy Flanagan won the Democratic primary for U.S. Senate, defeating Rep. Angie Craig. Endorsed by progressives like Bernie Sanders, Flanagan ran on expanding healthcare and social programs, setting up a fall showdown.",
       "The Bright Side:\nFlanagan's victory empowers grassroots progressive advocacy and strong commitments to protecting vital assistance programs.",
       "The Breakdown & Plane Error:\nFocusing solely on factional labels misses the core policy debate regarding social safety net expansion versus centrist caution.",
       "Social Physics Analysis:\nBy mobilizing grassroots coalitions around tangible economic needs, the campaign fostered high empowerment, though aggressive intra-party contestation generated friction.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption.",
       "The Unavoidable Truth: Grassroots enthusiasm can successfully propel progressive policy platforms into major general election slots.\n\nThe Unavoidable Lie: Primary campaigns are entirely unified without lasting factional friction.",
       "Alethekanon:\nFlanagan's primary victory highlights shifting power dynamics within the Democratic Party toward structural economic populism.",
       "Awwthekanon:\nIt's wonderful to see leaders championing food assistance and healthcare access for families who truly need them.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.3,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.15,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.3,
+        "O": 0.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Peggy Flanagan Campaign",
@@ -274,6 +336,7 @@
         "name": "Elizabeth Warren",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

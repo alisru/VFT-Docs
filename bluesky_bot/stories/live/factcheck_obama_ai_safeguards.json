@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.85,
     "claim_psi": 0.45,
-    "real_u": -0.68,
-    "real_psi": -0.42,
+    "real_u": -0.17,
+    "real_psi": -0.22,
     "mode": "root",
     "posts": [
       "A former president steps in to shape the future of technology.\nObama urges Democrats to have a clear plan for AI safeguards.\nEvidence: Public safety framing, Corporate regulatory capture, State-directed centralization.\n#Aletheia #AI #USPol",
-      "Obama claims Democrats must establish a clear framework to protect the public from AI's economic and safety risks, ensuring rapid private sector tech doesn't become dangerous.\nStated Judgement: (+0.85, +0.45) — Good Preference",
-      "While framed as public protection, top-down licensing frameworks often serve as regulatory capture, entrenching tech giants like OpenAI and Anthropic while crushing open-source competition.\nResulting Judgement: (-0.68, -0.42) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nThe push for AI safeguards masks a structural maneuver to centralize digital control and protect corporate cartels under the guise of public safety.\nIntegrity: Severe Deception (Hypocrisy: 3.2, z: 5)",
+      "Obama claims Democrats must establish a clear framework to protect the public from AI's economic and safety risks, ensuring rapid private sector tech doesn't become dangerous.\nStated Judgement: (+0.85, +0.45) — Greater Good",
+      "While framed as public protection, top-down licensing frameworks often serve as regulatory capture, entrenching tech giants like OpenAI and Anthropic while crushing open-source competition.\nResulting Judgement: (-0.17, -0.22) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe push for AI safeguards masks a structural maneuver to centralize digital control and protect corporate cartels under the guise of public safety.\nIntegrity: Severe Deception (Hypocrisy: 3.2, z: 5)",
       "- Obama AI Proposal: COND (-0.45, -0.30) — Focuses on top-down control over open innovation.\n- TechCrunch Framing: PASS (0.10, -0.15) — Neutral reporting of political statements.",
       "Former President Obama urged congressional Democrats to prioritize AI regulation, consulting with major AI executives while warning of rapid private sector risks.",
       "The Poison:\nBy framing safety purely through the lens of centralized state licensing, the policy actively suffocates the decentralized open-source community, which is often the best check on corporate monopoly.",
       "The Plane Error lies in confusing WHO benefits (the public) with WHAT is built (a regulatory moat for tech giants). The bait-and-switch uses existential dread to justify state-backed corporate cartels.",
       "Social Physics Analysis:\nThe actors run a Smart Selfish Maneuver. They manufacture a crisis of existential risk to justify a pretext of top-down licensing. This projects blame onto open innovation while hoarding power for state-aligned tech monopolies.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Centralizing control under corporate-state alliances closes off open futures.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Centralizing control under corporate-state alliances closes off open futures.",
       "The Unavoidable Truth: AI safety requires serious coordination.\nThe Unavoidable Lie: Top-down licensing is designed to protect the public rather than corporate market share.",
       "Alethekanon:\nThe call for safeguards is a classic centralization play. By defining safety as compliance, the state and its corporate partners construct a mutual moat, trading public freedom for cartel stability.",
       "Awwthekanon:\nIt is natural to worry about the rapid pace of change and want to protect people's livelihoods. But true safety comes from empowering communities to understand and shape these tools, not from locking them away behind corporate walls.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Obama AI Proposal",
@@ -167,6 +229,7 @@
         "name": "Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

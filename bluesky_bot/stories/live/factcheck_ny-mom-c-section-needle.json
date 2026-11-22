@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "real_u": -0.88,
+    "real_psi": -0.82,
     "mode": "root",
     "posts": [
       "Seven years of chronic abdominal agony culminate in a shocking medical malpractice lawsuit against Mount Sinai Hospital.\nEvidence: Leftover needle, 7-year pain, hospital employee\n#Aletheia #Health #Lawsuit",
-      "Mount Sinai surgeons provided standard, competent surgical care during the patient's procedures.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "Surgeons left a 1.5-inch needle inside her abdomen for seven years, exposing severe safety failures.\nResulting Judgement: (-0.85, -0.80) — Lesser/Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nA routine surgical procedure turned into a seven-year nightmare due to institutional negligence and opaque internal accountability.\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Mount Sinai surgeons provided standard, competent surgical care during the patient's procedures.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Surgeons left a 1.5-inch needle inside her abdomen for seven years, exposing severe safety failures.\nResulting Judgement: (-0.88, -0.82) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA routine surgical procedure turned into a seven-year nightmare due to institutional negligence and opaque internal accountability.\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "Sub-Audits Breakdown:\n- Mount Sinai Hospital: FAIL (-0.85, -0.80) — Severe oversight and institutional silence.\n- Surgical Team: FAIL (-0.90, -0.85) — Retained foreign object left in patient.",
       "Jana Petriganova DeGregoris endured seven years of unexplained pain before a CT scan revealed a 1.5-inch surgical needle left behind during her 2018 C-section or 2021 abdominoplasty.",
       "The Poison:\nA medical professional working within the same hospital network had to resort to a lawsuit just to uncover basic institutional accountability for a retained surgical instrument.",
       "The Breakdown & Plane Error:\nConfusing WHAT (the physical reality of a retained sharp) with WHO (institutional liability vs. individual surgeon error) allowed a preventable hazard to persist for years.",
       "Social Physics Analysis:\nThe hospital system operated via a Smart Selfish Loop: prioritizing institutional protection and silence over transparent disclosure, leaving the patient to bear the cost of a manufactured crisis.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated medical duty and ground-level harm, it plots a direct trajectory toward Greater Evil. Systemic opacity replaces patient trust.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated medical duty and ground-level harm, it plots a direct trajectory toward Greater Evil. Systemic opacity replaces patient trust.",
       "The Unavoidable Truth: Hospitals possess advanced safeguards that should make leaving surgical tools inside patients virtually impossible.\nThe Unavoidable Lie: Internal review boards automatically and transparently expose all preventable surgical errors without external litigation.",
       "Alethekanon:\nInstitutional medicine preaches rigorous safety standards while systemic blind spots conceal devastating, preventable errors for years. Accountability requires external legal force.",
       "Awwthekanon:\nNo mother should endure seven years of silent agony wondering why her body is failing her, only to discover a forgotten metal instrument left behind by those sworn to heal.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Mount Sinai Hospital",
@@ -171,6 +233,7 @@
         "name": "Scott Nguyen",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

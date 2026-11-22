@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/zeit.de/post/3mwpllfr2pw2o",
     "claim_u": 0.9,
     "claim_psi": 0.8,
-    "real_u": 0.85,
-    "real_psi": 0.75,
+    "real_u": 0.82,
+    "real_psi": 0.72,
     "mode": "root",
     "posts": [
       "A child psychologist advocates for shifting our focus from correcting mistakes to celebrating what children do right to protect their mental health.\nEvidence: Positive reinforcement, Emotional resilience, Empathetic parenting\n#Aletheia #MentalHealth #Parenting",
       "The claim is that children's mental well-being is deeply rooted in reliable relationships, genuine appreciation, and a healthy balance of constructive feedback and praise.\nStated Judgement: (+0.90, +0.80) — Greater Good",
-      "The psychological advice is structurally sound, emphasizing systemic empowerment and emotional resilience over punitive or purely corrective educational models.\nResulting Judgement: (+0.85, +0.75) — Greater Good",
-      "Verdict: PASS — The Path of Grace. The guidance offers a genuine, low-strain path toward emotional empowerment, aligning stated ideals with constructive real-world outcomes.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The psychological advice is structurally sound, emphasizing systemic empowerment and emotional resilience over punitive or purely corrective educational models.\nResulting Judgement: (+0.82, +0.72) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Silvia Schneider's Advice: PASS (0.85, 0.75) — Genuinely empowers children and parents.\n- Educational Framing: PASS (0.80, 0.70) — Promotes constructive, non-punitive development.",
       "As children face increasing modern stressors, psychologists emphasize the critical role of positive reinforcement and emotional availability from parents and educators.",
       "The Poison:\nOver-praising without substance can create a fragile sense of self-worth that crumbles when faced with real-world criticism or failure.",
       "The Breakdown & Plane Error:\nThere is no significant Plane Error here; the causal chain (HOW) from emotional validation to psychological resilience is well-supported by developmental science.",
       "Social Physics Analysis:\nThe approach represents a Smart Altruistic Maneuver. By prioritizing transparency and empathy, it seeks to resolve emotional strain rather than manufacturing behavioral crises, empowering children to build internal strength.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good, fostering a stable, low-strain emotional environment.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good, fostering a stable, low-strain emotional environment.",
       "The Unavoidable Truth: Children mirror the emotional health and behavioral patterns of the adults who raise them.\nThe Unavoidable Lie: That we can fix a child's behavioral issues without addressing the systemic stress in their environment.",
       "Alethekanon:\nEmpowerment begins with recognition. Shifting the educational paradigm from error-detection to potential-cultivation is a mathematically superior path to systemic stability.",
       "Awwthekanon:\nEvery child just wants to be seen and loved for who they are. When we celebrate their small victories, we give them the courage to face a big, scary world.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Silvia Schneider's Advice",
@@ -153,6 +215,7 @@
         "name": "Germany",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

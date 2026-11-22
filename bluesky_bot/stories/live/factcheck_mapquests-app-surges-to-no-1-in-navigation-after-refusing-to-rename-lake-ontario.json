@@ -5,22 +5,22 @@
     "subject": "MapQuest’s app surges to No. 1 in Navigation after refusing to rename Lake Ontario",
     "link": "https://techcrunch.com/2026/08/31/mapquests-app-surges-to-no-1-in-navigation-after-refusing-to-rename-lake-ontario/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.4,
-    "real_u": 0.3,
-    "real_psi": 0.2,
+    "claim_u": 0.55,
+    "claim_psi": 0.35,
+    "real_u": 0.45,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "MapQuest surges to No. 1 in navigation by refusing to rename Lake Ontario.\nEvidence: 50x usage spike, 184k downloads, social media pushback\n#Aletheia #MapQuest #Tech",
-      "MapQuest presents its refusal to adopt politically mandated lake renaming as an organic defense of traditional cartography.\nStated Judgement: (+0.5, +0.4) — Lesser Good",
-      "A commercial advertising platform leverages geopolitical friction for viral app downloads and historic engagement metrics.\nResulting Judgement: (+0.3, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nCorporate defiance of political overreach sparks a genuine user-driven revival.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 0)",
+      "MapQuest presents its refusal to adopt politically mandated lake renaming as an organic defense of traditional cartography.\nStated Judgement: (+0.55, +0.35) — Greater Good",
+      "A commercial advertising platform leverages geopolitical friction for viral app downloads and historic engagement metrics.\nResulting Judgement: (+0.45, +0.25) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nCorporate defiance of political overreach sparks a genuine user-driven revival.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 0)",
       "Sub-Audits Breakdown:\n- MapQuest Branding: PASS (+0.6, +0.4) — Brilliant viral marketing hook.\n- User Response: PASS (+0.5, +0.3) — Organic nostalgia download wave.",
       "MapQuest's mobile app soared to the top of the U.S. and Canadian App Store charts after publicly refusing to implement President Trump's executive order renaming Lake Ontario.",
       "The Bright Side:\nProves that institutional resistance to arbitrary political decrees can galvanize public support.",
       "The Breakdown & Plane Error:\nConfusing populist brand marketing (WHERE/WHAT) with systemic geopolitical reform (WHO/WHY).",
       "Social Physics Analysis:\nBy tapping into collective exhaustion with political renaming spats, MapQuest bypassed expensive ad spends, converting cultural friction into viral organic growth.",
-      "The Trajectory: The Path of Awakening.\nWhen you map corporate defiance against consumer fatigue, it plots a direct trajectory toward renewed relevance.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map corporate defiance against consumer fatigue, it plots a direct trajectory toward renewed relevance.",
       "The Unavoidable Truth: Cultural friction and defiance of arbitrary authority remain powerful drivers of viral consumer engagement.\n\nThe Unavoidable Lie: A commercial mapping app's defiance is born purely of civic duty rather than viral marketing.",
       "Alethekanon:\nDefiance sells when the public is weary of political theater, turning a legacy brand into an overnight viral sensation.",
       "Awwthekanon:\nIt's sweet to see the underdog map app find its old spark by simply refusing to lose its way.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "MapQuest Branding",
@@ -160,6 +222,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

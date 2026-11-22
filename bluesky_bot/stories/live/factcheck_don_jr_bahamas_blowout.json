@@ -5,16 +5,16 @@
     "subject": "'Really bad!': Republican outrage mounts over Don Jr.'s billionaire-funded Bahamas blowout",
     "link": "https://www.rawstory.com/don-trump-jr-wedding-2677900111/",
     "target_url": "https://bsky.app/profile/lundr.bsky.social/post/3mvxo3mxxkk2p",
-    "claim_u": 0.45,
-    "claim_psi": 0.3,
-    "real_u": -0.88,
-    "real_psi": -0.85,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.47,
+    "real_psi": -0.59,
     "mode": "root",
     "posts": [
       "A $250,000 private island blowout funded by a Putin-linked oligarch. Donald Trump Jr.'s Bahamas wedding afterparty sparks fierce bipartisan outrage over foreign influence.\nEvidence: Personal gift, Foreign influence, Access laundering\n#TrumpJr #Bahamas #USPol 🌐",
-      "The claim: The Bahamas celebration was merely a generous, non-political wedding gift from a personal friend, with no strings attached or political agenda.\nStated Judgement: (+0.45, +0.30) — Lesser Good",
-      "The reality: Accepting massive financial favors from a Kremlin-linked oligarch creates severe national security conflicts and represents active access-laundering.\nResulting Judgement: (-0.88, -0.85) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Accepting six-figure luxury gifts from a Kremlin-linked oligarch while in close proximity to presidential power is a textbook national security failure.\nIntegrity: Severe Deception (Hypocrisy: 1.33, z: 6)",
+      "The claim: The Bahamas celebration was merely a generous, non-political wedding gift from a personal friend, with no strings attached or political agenda.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality: Accepting massive financial favors from a Kremlin-linked oligarch creates severe national security conflicts and represents active access-laundering.\nResulting Judgement: (-0.47, -0.59) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 1.33, z: 6)",
       "- Donald Trump Jr.: FAIL (-0.92, -0.88) — Accepted oligarch funding.\n- Republican Critics: COND (0.15, -0.20) — Outraged but lack enforcement.",
       "ProPublica revealed Russian oligarch Umar Kremlev funded a $250,000 Bahamas wedding afterparty for Donald Trump Jr., drawing sharp condemnation from several Republican senators.",
       "The Bright Side:\nThe public condemnation from Republican senators shows that some institutional antibodies against blatant foreign influence still exist within the party.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.85,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.85,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.85,
+        "O": 0.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Donald Trump Jr. Conduct",
@@ -293,6 +355,7 @@
         "name": "Thom Tillis",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,16 +5,16 @@
     "subject": "Voting opens in Sweden's extremely close election as far-right eyes government role",
     "link": "http://jrnl.ie/7161289",
     "target_url": "https://bsky.app/profile/thejournal.ie/post/3mveyaqway22q",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
+    "claim_u": 0.75,
+    "claim_psi": 0.5,
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A nation's progressive identity hangs in the balance as voters head to the polls.\nSweden's Election\nEvidence: Democratic representation, Polarized nationalist alignment, Power consolidation\n#Aletheia #SwedenElection #Europe 🌐",
-      "The ruling coalition claims to offer a stable, conservative path to 'Make Sweden Great Again,' promising democratic representation and security while downplaying the influence of its far-right allies.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, the alliance relies on a far-right party with extremist roots, trading Sweden's human rights reputation for power. This creates deep social polarization and systemic instability.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The ruling coalition's compromise with far-right nationalists sacrifices systemic stability and human rights for short-term power.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "The ruling coalition claims to offer a stable, conservative path to 'Make Sweden Great Again,' promising democratic representation and security while downplaying the influence of its far-right allies.\nStated Judgement: (+0.75, +0.50) — Greater Good",
+      "In reality, the alliance relies on a far-right party with extremist roots, trading Sweden's human rights reputation for power. This creates deep social polarization and systemic instability.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- jrnl.ie: PASS (0.8, 0.5) — Balanced reporting on the tight race.\n- Washington Examiner: COND (0.5, 0.2) — Loaded framing of the coalition.",
       "Sweden's general election on September 13, 2026, is a dead heat. The center-right coalition's reliance on the far-right Sweden Democrats has polarized the nation, threatening its long-standing reputation for human rights.",
       "The Poison:\nBy normalizing far-right populism to secure a governing majority, mainstream conservative parties risk permanently shifting the political spectrum, making extremist policies the new baseline of governance.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Ulf Kristersson's Coalition",
@@ -169,6 +231,7 @@
         "name": "Sweden",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

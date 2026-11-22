@@ -5,22 +5,22 @@
     "subject": "Now Jim Chalmers is hinting at an income tax bonanza",
     "link": "https://www.dailymail.com/news/article-16146959/Now-Jim-Chalmers-hinting-income-tax-bonanza-owes-starting-truth-Australias-economy-PVO.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.52,
+    "real_psi": 0.6,
     "mode": "root",
     "posts": [
       "Treasurer Jim Chalmers dangles fresh income tax relief as political pressure mounts around the 7th Intergenerational Report.\nEvidence: Fiscal forecasts, bracket creep return, political timing\n#Aletheia #AusPol 🌐",
-      "Stated claim: Exceptional financial management has successfully created genuine budgetary room for future tax relief across working households.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Ground reality: Forward estimates show persistent deficits, and tax cuts merely return inflation-driven bracket creep rather than funded surplus.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nPolitical optics outpace structural tax reform, masking wall-to-wall budget deficits with electoral hints.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "Stated claim: Exceptional financial management has successfully created genuine budgetary room for future tax relief across working households.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Ground reality: Forward estimates show persistent deficits, and tax cuts merely return inflation-driven bracket creep rather than funded surplus.\nResulting Judgement: (-0.52, +0.60) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nPolitical optics outpace structural tax reform, masking wall-to-wall budget deficits with electoral hints.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "Sub-Audits Breakdown:\n- Fiscal Management: COND (-0.3, -0.4) — Deficits remain across forward estimates.\n- Tax Relief Framing: FAIL (-0.5, -0.6) — Returns bracket creep as generosity.",
       "As political pressure mounts, Treasurer Jim Chalmers is utilizing long-term fiscal projections to pitch future economic benefits while navigating ongoing structural budget deficits.",
       "The Bright Side:\nAcknowledging that workers deserve income tax relief and reducing the tax penalty on labor effort remains a worthy policy objective.",
       "The Breakdown & Plane Error:\nConfusing the return of inflation-induced bracket creep with structural fiscal generosity represents a classic logical substitution error.",
       "Social Physics Analysis:\nThe government runs a smart selfish maneuver: using distant intergenerational forecasts and recycled bracket creep as pretexts to distract voters from persistent forward deficits.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between political pretexts and fiscal realities, it plots a direct trajectory toward Deception. Mathematical divergence driven by unbacked tax hints.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between political pretexts and fiscal realities, it plots a direct trajectory toward Deception. Mathematical divergence driven by unbacked tax hints.",
       "The Unavoidable Truth: Returning inflation-driven bracket creep is not the same as funding genuine tax cuts from a structural surplus.\nThe Unavoidable Lie: Forward structural deficits magically generate unearned fiscal bonanzas.",
       "Alethekanon:\nPolitical survival requires sugarcoating structural deficits with distant optimistic forecasts. Voters see through electoral tax hints unsupported by real spending restraint.",
       "Awwthekanon:\nWorking families are just trying to keep up with the cost of living. When politicians dangle tax relief tied to political survival, it feels exhausting.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.45,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.85,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.45,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Fiscal Management",
@@ -285,6 +347,7 @@
         "name": "Australian Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

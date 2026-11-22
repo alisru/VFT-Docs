@@ -6,15 +6,15 @@
     "link": "https://cnn.it/4yOMELr",
     "target_url": "https://bsky.app/profile/cnn.com/post/3mx3iyoz5362a",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.8,
-    "real_psi": 0.9,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Hope takes root in Congo as clinical trials test experimental antivirals against the deadliest Ebola wave. 🌐\nEvidence: Trials launched, 250+ enrolled, medical response\n#Ebola #GlobalHealth",
-      "Medical researchers and health authorities launched trials for experimental antivirals like obeldesivir to curb Congo's devastating Ebola outbreak and protect vulnerable populations.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Over 250 participants are enrolled in rigorous trials across Ituri province, actively seeking medical interventions against an unprecedented viral surge with thousands of cases.\nResulting Judgement: (+0.8, +0.9) — Grace",
-      "Verdict: PASS — The Path of Grace.\nMedical researchers and health workers are transparently pursuing clinical solutions to a severe public health crisis.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Medical researchers and health authorities launched trials for experimental antivirals like obeldesivir to curb Congo's devastating Ebola outbreak and protect vulnerable populations.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Over 250 participants are enrolled in rigorous trials across Ituri province, actively seeking medical interventions against an unprecedented viral surge with thousands of cases.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nMedical researchers and health workers are transparently pursuing clinical solutions to a severe public health crisis.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Medical Trial Initiative: PASS (+0.8, +0.9) — Direct scientific intervention.\n- Reporting Coverage: PASS (+0.8, +0.8) — Accurate public health updates.",
       "Congo's deadliest Ebola outbreak has recorded thousands of cases since May, prompting urgent clinical trials for antiviral treatments to contain the virus.",
       "The Bright Side:\nRigorous clinical trials in active conflict and outbreak zones provide vital scientific data while offering tangible protection to exposed individuals.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Medical Trial Initiative",
@@ -223,6 +285,7 @@
         "name": "Medical Researchers",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

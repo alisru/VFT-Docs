@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3mwyyx4hr7d2q",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.7,
-    "real_psi": 0.4,
+    "real_u": 0.75,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "ACT police appeal for witnesses after ball bearings shatter windows at two Canberra government buildings on Thursday night.\nEvidence: Broken windows, police report, public appeal.\n#Aletheia #CanberraCrime 🌐",
-      "ACT Policing states that detectives are actively investigating criminal damage after windows at government properties were struck by ball bearings.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Routine police blotter reporting accurately reflects minor property damage and an open public appeal for witnesses without systemic distortion.\nResulting Judgement: (+0.7, +0.4) — Good Preference",
-      "Verdict: PASS — The Path of Grace.\nStraightforward law enforcement reporting fulfills public transparency obligations during minor property crime investigations.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "ACT Policing states that detectives are actively investigating criminal damage after windows at government properties were struck by ball bearings.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Routine police blotter reporting accurately reflects minor property damage and an open public appeal for witnesses without systemic distortion.\nResulting Judgement: (+0.75, +0.45) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nStraightforward law enforcement reporting fulfills public transparency obligations during minor property crime investigations.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- ACT Policing: PASS (+0.8, +0.5) — Transparent public witness appeal.\n- ABC News Reporting: PASS (+0.7, +0.4) — Accurate, factual local crime coverage.",
       "Between 7 pm and 9:30 pm on Thursday, October 1, ball bearings were fired at windows of buildings on Emu Bank and Benjamin Way in Canberra, prompting temporary staff lockdowns.",
       "The Bright Side:\nPrompt police transparency and public safety warnings ensure the community stays informed even over minor property crimes without panic.",
       "The Breakdown & Plane Error:\nNo plane error here. The reporting accurately matches the physical reality of a localized property vandalism incident investigated by local authorities.",
       "Social Physics Analysis:\nPolice executed a smart altruistic loop, sharing transparent details of the vandalism to engage community help and resolve the public security strain efficiently.",
-      "The Trajectory: The Path of Grace.\nWhen you map transparent public safety reporting against actual police investigations, it plots a direct trajectory toward Grace.\nSystemic alignment holds firm.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map transparent public safety reporting against actual police investigations, it plots a direct trajectory toward Grace.\nSystemic alignment holds firm.",
       "The Unavoidable Truth: Transparent reporting of minor crimes builds foundational civic trust.\nThe Unavoidable Lie: Every isolated act of vandalism signals a systemic breakdown in public order.",
       "Alethekanon:\nStraightforward crime reporting without sensationalism honors the public's right to know local safety conditions.",
       "Awwthekanon:\nIt's unsettling for office staff to experience sudden lockdowns over flying ball bearings, but thankfully nobody was hurt in this senseless vandalism.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "ACT Policing",
@@ -155,6 +217,7 @@
         "name": "Housing ACT",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

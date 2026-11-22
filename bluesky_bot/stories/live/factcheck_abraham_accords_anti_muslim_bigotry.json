@@ -5,22 +5,22 @@
     "subject": "Stop doing Hamas’s propaganda work: Why anti-Muslim hate sabotages Israel",
     "link": "https://www.washingtonexaminer.com/op-eds/4713252/abraham-accords-anti-muslim-bigotry/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": 0.9,
-    "real_psi": 0.85,
+    "claim_u": 0.75,
+    "claim_psi": 0.5,
+    "real_u": 0.55,
+    "real_psi": 0.28,
     "mode": "root",
     "posts": [
       "Can self-criticism save a coalition? 🌐\n\nStop doing Hamas’s propaganda work: Why anti-Muslim hate sabotages Israel\n\nEvidence: Strategic alignment, Countering bigotry, Preserving alliances\n#Aletheia #Israel #AbrahamAccords",
-      "The pro-Israel movement must reject anti-Muslim bigotry, as it alienates allies, undermines the Abraham Accords, and aids extremist propaganda.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The warning is logically sound and strategically necessary; bigotry against Muslims directly undermines Israel's integration into the region.\nResulting Judgement: (+0.9, +0.85) — Greater Good",
-      "Verdict: PASS — The Path of Grace. The analysis accurately identifies how internal bigotry sabotages long-term strategic and moral goals.\nIntegrity: Trustworthy (Hypocrisy: 0.15, z: 1)",
+      "The pro-Israel movement must reject anti-Muslim bigotry, as it alienates allies, undermines the Abraham Accords, and aids extremist propaganda.\nStated Judgement: (+0.75, +0.50) — Greater Good",
+      "The warning is logically sound and strategically necessary; bigotry against Muslims directly undermines Israel's integration into the region.\nResulting Judgement: (+0.55, +0.28) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.15, z: 1)",
       "- Washington Examiner: PASS (0.90, 0.85) — Honest critique of internal movement dynamics.\n- Fox News (UNRWA): COND (0.20, -0.30) — Focuses on funding cuts without broader context.",
       "As the Abraham Accords approach their sixth anniversary, a faction within the pro-Israel movement is criticized for using rhetoric that targets Muslims as a people, aiding Hamas's narrative.",
       "The Poison:\nWhile the critique is vital, it frames the rejection of bigotry primarily as a strategic utility rather than an intrinsic moral duty.",
       "The Breakdown & Plane Error:\nNo major plane error. The argument correctly aligns the WHO (allies and moderate partners) with the WHAT (preserving the Abraham Accords).",
       "Social Physics Analysis:\nThis represents a Smart Altruistic Maneuver. The author seeks to correct a self-destructive loop within their own coalition by promoting transparency and empathy toward Muslim partners, defusing the manufactured division that extremists exploit.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Self-correction and alignment with shared human values build durable peace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Self-correction and alignment with shared human values build durable peace.",
       "The Unavoidable Truth: Broad-brush bigotry alienates the very regional partners needed to secure peace.\nThe Unavoidable Lie: You can build a lasting regional alliance while demonizing the population of your allies.",
       "Alethekanon:\nStrategic wisdom and moral integrity converge here. A coalition built on shared interests cannot survive when fueled by domestic contempt for the partner's identity.",
       "Awwthekanon:\nIt is so healing to see people speak up against hate within their own circles. True peace is built on seeing the humanity in everyone, especially our neighbors.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Washington Examiner Op-Ed",
@@ -179,6 +241,7 @@
         "name": "Fox News",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

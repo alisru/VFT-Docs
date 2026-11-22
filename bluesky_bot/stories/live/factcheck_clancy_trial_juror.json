@@ -5,22 +5,22 @@
     "subject": "'Zero Doubt': Clancy Trial Holdout Juror Attorney Says Client Had 'Mountain of Evidence'",
     "link": "https://www.breitbart.com/clips/2026/09/28/zero-doubt-clancy-trial-holdout-juror-attorney-says-client-had-mountain-of-evidence-to-back-position/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.35,
+    "real_psi": 0.15,
     "mode": "root",
     "posts": [
       "When a murder trial ends in an 11-1 mistrial, the lone holdout faces intense public scrutiny.\nEvidence: Fox News interview, attorney statements, juror plea\n#Aletheia #Law #Justice",
-      "The holdout juror's attorney insists his client acted strictly on the evidence and had zero doubt regarding guilt.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While public debate swirls over jury dynamics and mental health defenses, the juror redirected focus to the victims.\nResulting Judgement: (+0.4, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nDespite intense polarization, the juror maintained conscientious deliberation and refocused attention on the victims.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "The holdout juror's attorney insists his client acted strictly on the evidence and had zero doubt regarding guilt.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "While public debate swirls over jury dynamics and mental health defenses, the juror redirected focus to the victims.\nResulting Judgement: (+0.35, +0.15) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nDespite intense polarization, the juror maintained conscientious deliberation and refocused attention on the victims.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Juror Deliberation: PASS (+0.5, +0.3) — Adhered to personal conviction on evidence.\n- Media Framing: COND (+0.2, 0.0) — Sensationalized lone holdout identity.",
       "The high-profile Lindsay Clancy murder trial resulted in a hung jury after an 11-1 split over criminal responsibility, sparking intense legal debate.",
       "The Bright Side:\nThe juror ultimately urged the public to honor the children rather than fueling personal celebrity.",
       "The Breakdown & Plane Error:\nConfusing procedural disagreement (WHO/HOW) with malicious intent, turning a standard legal hung jury into a media spectacle.",
       "Social Physics Analysis:\nThe actor operated within a transparent framework, standing firm on personal conviction despite immense social pressure, reflecting a principled engagement with the legal process.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between public outrage and grounded juror duty, it plots a direct trajectory toward structural stability. Balanced legal processes absorb friction.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between public outrage and grounded juror duty, it plots a direct trajectory toward structural stability. Balanced legal processes absorb friction.",
       "The Unavoidable Truth: Jurors are legally entitled to vote their conscience based on the evidence presented.\n\nThe Unavoidable Lie: Disagreeing with the majority automatically implies bad faith or juror misconduct.",
       "Alethekanon:\nIndependent conscience is the bedrock of jury trials, even when consensus collapses into deadlock. 🌐",
       "Awwthekanon:\nIt is heartbreaking to watch a tragedy become a media battlefield when three innocent children should remain at the center of our grief and prayers.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Juror Deliberation",
@@ -165,6 +227,7 @@
         "name": "Edward Paltzik",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

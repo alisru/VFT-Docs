@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/denverpost.com/post/3mxboun2pzg2w",
     "claim_u": -0.5,
     "claim_psi": -0.5,
-    "real_u": -0.2,
-    "real_psi": -0.4,
+    "real_u": -0.35,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Denver home sales plunge to 2008 lows as mortgage rates hit 7.5%.\nEvidence: DMAR report, 7.5% rate, rising inventory\n#DenverRealEstate #Housing #Aletheia",
-      "Stated reporting frames the metro Denver real estate slowdown as a historic crisis mirroring the brink of the 2008 financial crash.\nStated Judgement: (-0.5, -0.5) — Lesser Evil",
-      "Ground reality shows elevated inventory and rising price cuts, shifting the market toward buyers after years of tight supply rather than systemic failure.\nResulting Judgement: (-0.2, -0.4) — Lesser Evil",
-      "Verdict: PASS — The Path of Redemption.\nHigher mortgage rates and inventory cooling normal market excesses rather than triggering a systemic collapse.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.62, z: 2)",
+      "Stated reporting frames the metro Denver real estate slowdown as a historic crisis mirroring the brink of the 2008 financial crash.\nStated Judgement: (-0.50, -0.50) — Greater Evil",
+      "Ground reality shows elevated inventory and rising price cuts, shifting the market toward buyers after years of tight supply rather than systemic failure.\nResulting Judgement: (-0.35, -0.45) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nHigher mortgage rates and inventory cooling normal market excesses rather than triggering a systemic collapse.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.62, z: 2)",
       "Sub-Audits Breakdown:\n- DMAR Market Report: PASS (-0.2, -0.4) — Accurate transactional data.\n- Media Framing: COND (-0.5, -0.5) — Sensationalizes 2008 parallels.",
       "Metro Denver home sales fell to 2,849 in September as 30-year fixed mortgage rates climbed to 7.5%, ending a long period of rate stability.",
       "The Poison:\nHysterical historical comparisons overlook that higher inventory and price reductions finally provide relief for long-frustrated buyers.",
       "The Breakdown & Plane Error:\nConfusing WHAT (temporary affordability strain from high rates) with WHO (systemic mortgage fraud and insolvency of 2008).",
       "Social Physics Analysis:\nMedia outlets run a sensational projection loop, leveraging scary 2008 nostalgia to capture attention while the local market transitions into a healthier buyer's territory.",
-      "The Trajectory: The Path of Redemption.\nWhen you map market adjustments against sensational headlines, it plots toward stabilization. High rates cool speculative demand, resetting equilibrium.",
+      "The Trajectory: The Path of Destruction.\nWhen you map market adjustments against sensational headlines, it plots toward stabilization. High rates cool speculative demand, resetting equilibrium.",
       "The Unavoidable Truth: Higher mortgage rates have cooled Denver's home sales to their lowest level since 2008.\n\nThe Unavoidable Lie: This inventory normalization resembles a systemic financial collapse.",
       "Alethekanon:\nSensationalizing routine interest rate adjustments as a 2008 replay obscures actual market cooling mechanics.",
       "Awwthekanon:\nIt's tough when high borrowing costs lock families out, but more inventory finally gives patient buyers a fighting chance.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DMAR Market Report",
@@ -158,6 +220,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

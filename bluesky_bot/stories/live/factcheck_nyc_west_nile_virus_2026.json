@@ -5,22 +5,22 @@
     "subject": "Cases of West Nile virus soar in NYC, surpassing total number in 2025",
     "link": "https://nypost.com/2026/09/18/us-news/cases-of-west-nile-virus-soar-in-nyc-surpassing-total-number-in-2025/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
+    "claim_u": 0.75,
+    "claim_psi": 0.15,
     "real_u": 0.45,
-    "real_psi": -0.25,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Mosquitoes and media headlines both thrive in the heat. NYC West Nile Virus Cases. Evidence: Public health warning, Sensationalized panic, Seasonal virus monitoring. #Aletheia #Health #NYC 🌐",
-      "Media outlets and health officials warn that West Nile virus cases are soaring in New York City, surpassing last year's totals and posing an escalating threat to public health. Stated Judgement: (1.0, 0.0) — Good Preference",
-      "While cases have risen from 18 to 30 in a city of 8 million, the vast majority remain asymptomatic. The threat is real but highly managed, with media framing exaggerating the scale. Resulting Judgement: (0.45, -0.25) — Lesser Good",
-      "Verdict: COND — Awakening into Redemption. The underlying health data is accurate and actionable, though the media's alarmist framing slightly distorts the actual risk.\nIntegrity: Trustworthy (Hypocrisy: 0.55, z: 2)",
+      "Media outlets and health officials warn that West Nile virus cases are soaring in New York City, surpassing last year's totals and posing an escalating threat to public health. Stated Judgement: (+0.75, +0.15) — Greater Good",
+      "While cases have risen from 18 to 30 in a city of 8 million, the vast majority remain asymptomatic. The threat is real but highly managed, with media framing exaggerating the scale. Resulting Judgement: (+0.45, -0.10) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.55, z: 2)",
       "- NYC Health Dept: PASS (0.7, 0.2) — Proactive spraying.\n- Media Sensationalism: COND (0.2, -0.4) — Exaggerated risk.",
       "New York City health officials confirmed that West Nile virus cases and positive mosquito pools have surpassed 2025 levels, prompting targeted pesticide spraying across multiple boroughs.",
       "The Bright Side:\nIncreased surveillance and public reporting ensure that vulnerable populations remain vigilant, even if the headline numbers are sensationalized to capture attention.",
       "The Plane Error is in the Emotive effect (Q7). The narrative uses alarming language ('soaring') to trigger fear, when the logical causal chain (Q5) shows a predictable, highly managed seasonal cycle.",
       "Social Physics Analysis:\nThis reflects a Smart Altruistic Loop. Despite sensationalist media framing, the health department uses transparent data and targeted solutions to empower citizens and resolve environmental strain.",
-      "The Trajectory: Awakening into Redemption.\nWhen you filter out the media's alarmist noise, the data plots a trajectory toward stable public health management and community resilience.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you filter out the media's alarmist noise, the data plots a trajectory toward stable public health management and community resilience.",
       "The Unavoidable Truth: West Nile cases have increased this year.\nThe Unavoidable Lie: NYC is facing an unprecedented health catastrophe.",
       "Alethekanon:\nFear is a highly effective vector for public attention, but the cold math of epidemiology reveals a manageable seasonal fluctuation, not a crisis.",
       "Awwthekanon:\nIt's completely natural to feel anxious when we hear about rising virus cases. But remember, our community health teams are working hard, and taking simple precautions can keep us and our loved ones safe.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NYC Health Dept",
@@ -157,6 +219,7 @@
         "name": "New York City",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://www.breitbart.com/politics/2026/10/03/burchett-plans-to-block-socialist-chevalier-from-congress-over-flag-desecration-post/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "Rep. Tim Burchett moves to block congressional candidate Darializa Avila Chevalier over a 2019 flag post.\nEvidence: Resurfaced tweet, constitutional norms, partisan pretexts.\n#Aletheia #USPol #FreeSpeech",
-      "Lawmakers argue that disrespecting the American flag is a disqualifying disavowal of the constitutional oath.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Using a majority vote to block a duly elected representative disenfranchises voters and violates established precedent.\nResulting Judgement: (-0.85, -0.80) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nA partisan culture-war stunt attempts to override voters' choices under the guise of protecting constitutional oaths.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 3)",
+      "Lawmakers argue that disrespecting the American flag is a disqualifying disavowal of the constitutional oath.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Using a majority vote to block a duly elected representative disenfranchises voters and violates established precedent.\nResulting Judgement: (-0.94, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA partisan culture-war stunt attempts to override voters' choices under the guise of protecting constitutional oaths.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 3)",
       "- Rep. Tim Burchett: FAIL (-0.88, -0.82) — Weaponizes personal patriotism for partisan exclusion.\n- Constitutional Precedent: FAIL (-0.80, -0.78) — Ignores Supreme Court limits on seating members.",
       "Rep. Tim Burchett announced plans to block New York Democratic Socialist Darializa Avila Chevalier from being seated in January if she wins on Nov. 3, citing a 2019 tweet about the American flag.",
       "The Poison:\nWeaponizing parliamentary procedure to disenfranchise political opponents erodes the foundational democratic principle of voter choice.",
       "The Plane Error & Switch:\nConfusing personal offense with constitutional qualifications (Plane 1 vs Plane 5). The stated goal of oath protection masks a raw power grab to exclude rivals.",
       "Social Physics Analysis:\nActors run a smart selfish maneuver, manufacturing a moral crisis over an old tweet to justify preemptive exclusion while projecting disrespect onto opponents.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated constitutional purity and ground-level voter disenfranchisement, it plots a direct trajectory toward Deception. F_pos dominance drives ψ negative.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated constitutional purity and ground-level voter disenfranchisement, it plots a direct trajectory toward Deception. F_pos dominance drives ψ negative.",
       "The Unavoidable Truth: Lawmakers cannot arbitrarily reject duly elected members based on past social media remarks.\n\nThe Unavoidable Lie: This maneuver protects constitutional integrity rather than expanding partisan control.",
       "Alethekanon:\nPretending to defend the Constitution by shredding its structural precedents is the ultimate irony. Disdain for speech should be contested at the ballot box, not through parliamentary coups.",
       "Awwthekanon:\nIt hurts to see symbols of deep sacrifice weaponized in partisan fights. We need leaders who mend divisions rather than building walls to keep out those they disagree with.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Rep. Tim Burchett",
@@ -212,6 +274,7 @@
         "name": "U.S. House of Representatives",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

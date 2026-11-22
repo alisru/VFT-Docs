@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/dennisjkoch.bsky.social/post/3mwv6b7i3rs2v",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.4,
+    "real_u": -0.2,
     "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "Breaking partisan ranks to force a political reckoning.\nEvidence: Never-Trump commentary, strategic protest vote, party reform\n#USPol #Aletheia",
-      "A veteran conservative argues that voting Democratic is necessary to force the GOP to hit rock bottom and reform.\nStated Judgement: (0.5, 0.0) — Conditional Good",
-      "Protest voting within a deeply polarized two-party system rarely sparks structural renewal, often deepening partisan hostility.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nAn honest critique of party capture that relies on counterproductive electoral tactics.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "A veteran conservative argues that voting Democratic is necessary to force the GOP to hit rock bottom and reform.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Protest voting within a deeply polarized two-party system rarely sparks structural renewal, often deepening partisan hostility.\nResulting Judgement: (-0.20, -0.50) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nAn honest critique of party capture that relies on counterproductive electoral tactics.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Matt K. Lewis Analysis: COND (0.5, 0.0) — Honest critique, risky electoral tactic.\n- GOP Party Reform: FAIL (-0.6, -0.6) — Rock bottom rarely yields renewal.",
       "A prominent conservative writer argues that the Republican Party must face a historic defeat before it can purge Trumpism and rebuild its foundational principles.",
       "The Poison:\nAccelerating institutional decay in hopes of a mythical phoenix-like rebirth is a dangerous gamble with fragile democratic norms.",
       "The Breakdown & Plane Error:\nConfusing WHAT (electoral sabotage) with WHO (party elites responsible for capture).",
       "Social Physics Analysis:\nThe columnist runs a Smart Altruistic diagnostic wrapped in tactical frustration, exposing institutional capture but misjudging whether external electoral punishment heals or fractures coalition stability.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between reformist ideals and adversarial voting, it plots a direct trajectory toward Lesser Evil. Systemic friction outweighs tactical leverage.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between reformist ideals and adversarial voting, it plots a direct trajectory toward Lesser Evil. Systemic friction outweighs tactical leverage.",
       "The Unavoidable Truth: Political parties rarely reform until electoral defeat shatters their internal power structures.\n\nThe Unavoidable Lie: Voting for the opposing party magically cures internal ideological rot.",
       "Alethekanon:\nStrategic exhaustion drives commentators into paradoxical alliances that mistake temporary disruption for systemic cure.🌐",
       "Awwthekanon:\nIt hurts to watch people who love their political home feel so abandoned that they try tough love through the ballot box.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Matt K. Lewis Analysis",
@@ -177,6 +239,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

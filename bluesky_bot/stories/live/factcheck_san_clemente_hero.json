@@ -14,7 +14,7 @@
       "A father's selfless act of courage at Riviera Beach leaves him paralyzed while saving a child from a rip current. \nEvidence: Heroic rescue, tragic injury, community support. #Heroism #SanClemente 🌐",
       "The claim highlights a father's heroic sacrifice to save a drowning child, resulting in severe injury. \nStated Judgement: (+1.0, +1.0) — Greater Good",
       "The reality confirms the selfless intervention and the subsequent life-altering injury, with community support mobilized. \nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. A father's immediate, selfless action to preserve life aligns with the highest moral imperative. \nIntegrity: Absolute Truth (Hypocrisy: 0.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 0.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Josh Collette: PASS (1.0, 1.0) — Acted with total selflessness.\n- Community Response: PASS (1.0, 1.0) — Rapid mobilization of aid.",
       "Josh Collette, a father of five, suffered a broken neck after diving into the ocean to rescue a child caught in a rip current at Riviera Beach. He is currently recovering with family support.",
       "The Bright Side:\nThe child was saved, and the community has rallied to provide financial and emotional support for Josh's long-term recovery.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Josh Collette Heroic Act",
@@ -201,6 +263,7 @@
         "name": "Hillary Collette",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

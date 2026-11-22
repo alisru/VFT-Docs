@@ -5,22 +5,22 @@
     "subject": "Chicago Cubs activate reliever Daniel Palencia — out since June — from the 60-day injured list",
     "link": "https://www.chicagotribune.com/2026/08/21/chicago-cubs-activate-daniel-palencia/?utm_campaign=mrf-bluesky-chicagotribune.com&utm_source=bluesky&utm_medium=social&mrfcid=202608226a88f0f117ae256244b03368",
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mtnbwron3w2o",
-    "claim_u": 0.98,
-    "claim_psi": 0.95,
-    "real_u": 0.94,
-    "real_psi": 0.92,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.96,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Transparent roster mechanics and player welfare guide Chicago's bullpen moves as Daniel Palencia returns.\nEvidence: Bullpen health, Roster depth preservation, Transparent management\n#Cubs #MLB",
-      "The Cubs activate flamethrower Daniel Palencia from the 60-day injured list while methodically managing his pitching workload.\nStated Judgement: (+0.98, +0.95) — Greater Good",
-      "Management openly communicates that demoting Javier Assad is strictly an option-management decision, preserving full roster depth.\nResulting Judgement: (+0.94, +0.92) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Transparent roster optimization aligns organizational depth with individual physical rehabilitation.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "The Cubs activate flamethrower Daniel Palencia from the 60-day injured list while methodically managing his pitching workload.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Management openly communicates that demoting Javier Assad is strictly an option-management decision, preserving full roster depth.\nResulting Judgement: (+0.96, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
       "- Daniel Palencia Activation: PASS (+0.95, +0.93) — Prudent workload ramp-up.\n- Javier Assad Optioning: PASS (+0.92, +0.90) — Honest, transparent depth move.",
       "The Chicago Cubs activated reliever Daniel Palencia from the 60-day IL and optioned Javier Assad to Triple-A Iowa to protect roster depth.",
       "The Bright Side:\nAssad gets regular starting reps in Triple-A while remaining available if injury strikes the major-league rotation.",
       "The Breakdown & Plane Error:\nZero plane error. Managerial transparency matches operational action without distorting athletic realities or contract rules.",
       "Social Physics Analysis:\nClear communication from leadership defused tension around demoting a productive pitcher, prioritizing transparent depth preservation over obfuscation.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Aligns roster flexibility with long-term athletic health.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Aligns roster flexibility with long-term athletic health.",
       "The Unavoidable Truth: Minor-league option rules force tough roster choices on productive players.\nThe Unavoidable Lie: Demotions always reflect poor athletic performance.",
       "Alethekanon:\nClear managerial communication aligns institutional roster rules with player health, proving transparency builds organizational trust.",
       "Awwthekanon:\nAssad took a tough demotion like a true pro, and it is wonderful to see Palencia healthy and smiling on the mound again.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.05
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.95,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.95,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Daniel Palencia Rehabilitation",
@@ -280,6 +342,7 @@
         "name": "Javier Assad",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

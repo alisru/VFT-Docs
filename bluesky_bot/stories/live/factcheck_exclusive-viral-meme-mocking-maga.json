@@ -5,22 +5,22 @@
     "subject": "EXCLUSIVE: Viral Meme Mocking MAGA Hardliners Was Made By America First Conservative",
     "link": "https://dailycaller.com/2026/10/09/exclusive-the-viral-meme-mocking-maga-hardliners-was-made-by-a-conservative",
     "target_url": "",
-    "claim_u": -0.8,
-    "claim_psi": -0.7,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "claim_u": 0.0,
+    "claim_psi": -0.05,
+    "real_u": 0.45,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "Satirical caricature creator reveals conservative identity, sparking right-wing debate on blind loyalty.\nEvidence: Anonymous creator, DCNF interview, viral satire.\n#Aletheia #USPol 🌐",
-      "The viral caricature mocking unthinking MAGA influencers was created by political opponents.\nStated Judgement: (-0.8, -0.7) — Less Evil",
-      "The creator is a committed America First conservative using satire to expose hypocritical groupthink among online political influencers.\nResulting Judgement: (0.4, 0.2) — Trustworthy",
-      "Verdict: PASS — The Path of Redemption.\nExposes online echo chambers and media groupthink honestly.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 0)",
+      "The viral caricature mocking unthinking MAGA influencers was created by political opponents.\nStated Judgement: (+0.00, -0.05) — Greater Evil",
+      "The creator is a committed America First conservative using satire to expose hypocritical groupthink among online political influencers.\nResulting Judgement: (+0.45, +0.25) — Greater Good",
+      "Verdict: PASS — Reckoning into Grace.\nExposes online echo chambers and media groupthink honestly.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 0)",
       "Sub-Audits Breakdown:\n- Daily Caller News: PASS (0.5, 0.3) — Accurate profile of anonymous creator.\n- Forbidden HQ Satire: PASS (0.4, 0.2) — Exposes influencer hypocrisy.",
       "A viral satirical character dubbed \"MAGAtard\" became an internet mascot, prompting reflections on ideological conformity across political factions.",
       "The Poison:\nExtremist language and derogatory caricatures risk reducing nuanced political policy debates to superficial internet name-calling.",
       "The Breakdown & Plane Error:\nConfusing aesthetic mockery (WHO/WHAT plane) with substantive policy critique, weaponizing caricatures to police online speech.",
       "Social Physics Analysis:\nThe creator operates via a smart altruistic loop, using transparent humor to challenge elite echo chambers, while influencers run a defensive selfish loop to protect brand narratives.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Satirical critique fosters greater self-awareness.",
+      "The Trajectory: The Path of Reckoning into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Satirical critique fosters greater self-awareness.",
       "The Unavoidable Truth: Political movements naturally breed unthinking sycophants who defend any leadership action.\nThe Unavoidable Lie: Internet satire can single-handedly cure deep-seated partisan tribalism.",
       "Alethekanon:\nSatire acts as an immune response against ideological ossification, exposing how quickly tribalism replaces principle.",
       "Awwthekanon:\nIt hurts when our own side starts punishing independent thought, but laughter can help us find our way back to honest truth.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Daily Caller News",
@@ -157,6 +219,7 @@
     "tags": [
       "Aletheia",
       "USPol"
-    ]
+    ],
+    "path_name": "Reckoning into Grace"
   }
 ]

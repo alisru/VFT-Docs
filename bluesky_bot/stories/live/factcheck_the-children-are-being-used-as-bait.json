@@ -5,22 +5,22 @@
     "subject": "\"The children are being used as bait\"",
     "link": "https://www.motherjones.com/politics/2025/05/unaccompanied-immigrant-children-trump-ice-orr-shelters/",
     "target_url": "https://bsky.app/profile/motherjones.com/post/3mtn35diqdh2f",
-    "claim_u": 0.75,
-    "claim_psi": 0.55,
-    "real_u": -0.84,
-    "real_psi": -0.88,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "New federal sponsorship restrictions leave thousands of migrant kids trapped in government shelters.\n\n\"The children are being used as bait\"\nEvidence: child welfare protection, indefinite detention, family reunification\n#Immigration #ORR",
-      "The administration claimed updated sponsor vetting standards protect children from trafficking by requiring strict domestic ID and formal tax documentation.\nStated Judgement: (+0.75, +0.55) — Greater Good",
-      "The policy made undocumented relatives ineligible, tripling detention times to six months and weaponizing child custody against families fearing deportation.\nResulting Judgement: (-0.84, -0.88) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. Shielded as anti-trafficking safeguards, the rules function to prolong the confinement of vulnerable children.\n\nIntegrity: Severe Deception (Hypocrisy: 11.40, z: 3)",
+      "The administration claimed updated sponsor vetting standards protect children from trafficking by requiring strict domestic ID and formal tax documentation.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The policy made undocumented relatives ineligible, tripling detention times to six months and weaponizing child custody against families fearing deportation.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 11.40, z: 3)",
       "- ORR Sponsorship Policy: FAIL (-0.85, -0.90) — Traps kids in shelters.\n- Legal Safeguards: FAIL (-0.80, -0.82) — Slashes child legal aid.",
       "Over 2,000 migrant children are held in ORR facilities as new Trump administration rules disqualify undocumented sponsors, tripling average stays from 2 to 6 months.",
       "The Poison:\nPresenting administrative hurdles as child protection while actively dismantling legal defense funding for unaccompanied minors in court.",
       "The Breakdown & Plane Error:\nA classic Metaphysical plane error (WHO benefits). The policy claims to protect children's safety, but actually uses their detention as immigration deterrence.",
       "Social Physics Analysis:\nBy imposing impossible compliance demands on families, the system manufactures prolonged detention. It uses children as administrative leverage, projecting guilt onto parents while actively blocking reunification.",
-      "The Trajectory: The Path of Deception into Destruction.\nWhen protective mandates are inverted into enforcement traps, the system moves directly toward Greater Evil. Confining minors to enforce policy strains basic human rights.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen protective mandates are inverted into enforcement traps, the system moves directly toward Greater Evil. Confining minors to enforce policy strains basic human rights.",
       "The Unavoidable Truth: Barring family sponsors leaves traumatized children trapped in institutional care.\n\nThe Unavoidable Lie: Stranding kids in shelters protects their welfare.",
       "Alethekanon:\nA structural bait-and-switch. Inverting a child welfare agency into a border deterrence trap violates both statutory intent and fundamental ethics.",
       "Awwthekanon:\nA 7-year-old boy crying because he thinks his mother abandoned him is utterly devastating. Children deserve love and safety, not being used as pawns.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.55,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "ORR Sponsorship Policy",
@@ -280,6 +342,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

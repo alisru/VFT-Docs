@@ -5,22 +5,22 @@
     "subject": "Share your photos dressed as Bears legend Mike Ditka",
     "link": "https://chicago.suntimes.com/bears/2026/10/09/share-your-photos-dressed-as-bears-legend-mike-ditka?utm_campaign=mrf-bluesky-chicago.suntimes.com&utm_source=bluesky&utm_medium=social&mrfcid=202610106acaab27ea61d6314ffb9fbc",
     "target_url": "https://bsky.app/profile/chicago.suntimes.com/post/3mxkg2uuntd23",
-    "claim_u": 0.94,
-    "claim_psi": 0.82,
-    "real_u": 0.88,
-    "real_psi": 0.76,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.87,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Chicago mourns 'Da Coach' as local media invites fans to celebrate Mike Ditka's larger-than-life legacy.\nEvidence: Civic Celebration, Reader Memories Shared, Honoring Sports Icon\n#Bears #Chicago",
-      "The Chicago Sun-Times and WBEZ invite readers to submit photos dressed as legendary Bears coach Mike Ditka following his death at 86, honoring his 1985 championship lore.\nStated Judgement: (+0.94, +0.82) — Greater Good",
-      "The callout is a genuine civic tribute allowing fans to process grief through shared cultural nostalgia, connecting generations of Chicago sports enthusiasts.\nResulting Judgement: (+0.88, +0.76) — Greater Good",
-      "Verdict: PASS — The Path of Grace. The initiative transparently honors a shared civic icon, fostering authentic communal solidarity without deceptive extraction.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "The Chicago Sun-Times and WBEZ invite readers to submit photos dressed as legendary Bears coach Mike Ditka following his death at 86, honoring his 1985 championship lore.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The callout is a genuine civic tribute allowing fans to process grief through shared cultural nostalgia, connecting generations of Chicago sports enthusiasts.\nResulting Judgement: (+0.87, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
       "- Civic Memorial Callout: PASS (+0.89, +0.78) — Sincere tribute honoring Chicago cultural history.\n- Media Transparency: PASS (+0.85, +0.72) — Reader engagement aligned with stated communal intent.",
       "Mike Ditka passed away Friday at 86 just ahead of the Bears-Packers rivalry game. Local outlets opened submissions for fans to share memories dressed in his iconic sweater vest and shades.",
       "The Poison:\nMemorial callouts often double as engagement magnets and reader-acquisition funnels, capitalizing on civic sentiment to pad subscriber databases under the cover of mourning.",
       "The Breakdown & Plane Error:\nNo plane switch detected. The lyrical celebration of Ditka's folk legacy aligns cleanly with the physical archive being assembled, maintaining institutional coherence.",
       "Social Physics Analysis:\nThe newsroom executes an Altruistic Loop: converting the shared emotional shock of Ditka's passing into participatory civic solidarity. Instead of hoarding attention, it invites community co-creation to celebrate a unifying local mythos.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Communal participation matches the stated purpose of collective remembrance.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Communal participation matches the stated purpose of collective remembrance.",
       "The Unavoidable Truth: Mike Ditka's cultural impact transcended football into authentic civic identity.\nThe Unavoidable Lie: Honoring an icon in local media is purely commercial exploitation.",
       "Alethekanon:\nWhen local reporting invites community memory rather than manufacturing panic, social trust stabilizes. Mutual cultural recognition creates genuine coherence.",
       "Awwthekanon:\nSeeing generations of Bears fans dig out sweater vests and fake mustaches to honor Da Coach is deeply touching. It's a sweet, loving way to smile through the heartache of losing a legend.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.95,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.15
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.1,
+        "O": 0.45,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Civic Memorial Callout",
@@ -294,6 +356,7 @@
     "tags": [
       "Bears",
       "Chicago"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

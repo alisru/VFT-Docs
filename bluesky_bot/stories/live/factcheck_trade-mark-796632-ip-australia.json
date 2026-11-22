@@ -5,16 +5,16 @@
     "subject": "Trade Mark 796632 | IP Australia | Trade Mark Search",
     "link": "https://search.ipaustralia.gov.au/trademarks/search/view/796632",
     "target_url": "https://bsky.app/profile/stilgherrian.com/post/3mwnbqrrfbcxs",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": 0.0,
-    "real_psi": 0.0,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Checking brand registration status via the official Australian IP database search tool.\nEvidence: IP database record, official search, administrative registry check\n#Aletheia #IPAustralia #Trademarks",
-      "The registry search tool provides public data for verifying pending and registered intellectual property rights in Australia.\nStated Judgement: (0.0, 0.0) — Neutral Equilibrium",
-      "The system executes routine database queries without deception or active actor manipulation, reflecting standard bureaucratic record-keeping.\nResulting Judgement: (0.0, 0.0) — Neutral Equilibrium",
-      "Verdict: PASS — The Path of Grace.\nAdministrative registry tools accurately reflect institutional records without hidden extraction.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 28)",
+      "The registry search tool provides public data for verifying pending and registered intellectual property rights in Australia.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The system executes routine database queries without deception or active actor manipulation, reflecting standard bureaucratic record-keeping.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nAdministrative registry tools accurately reflect institutional records without hidden extraction.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 28)",
       "- IP Australia Registry: PASS (0.0, 0.0) — Transparent IP database record.\n- Administrative Data: PASS (0.0, 0.0) — Standard public utility.",
       "IP Australia maintains searchable databases for trademarks, patents, and design rights to ensure public transparency before formal registration.",
       "The Bright Side:\nProvides friction-free access to intellectual property records for researchers and businesses.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "IP Australia Registry",
@@ -207,6 +269,7 @@
         "name": "Australian Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Banning sex offender character references exposes institutional blind spots.\n\nWestern Power Rape Case Character References\nEvidence: reform optics, oversight failure, defensive policy #Aletheia #AusLaw 🌐",
-      "WA is considering banning positive character references in sex crime sentencing following outrage over Western Power staff supporting a convicted rapist.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "Reality reveals severe oversight lapses where executives missed major court cases until journalists intervened, sparking reactionary policy changes.\nResulting Judgement: (-0.81, -0.72) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Institutional panic replaces genuine accountability when oversight failures are masked by hasty policy bans.\nSubs: WA Government: PASS (0.5, -0.2); Western Power: FAIL (-0.8, -0.9).\nIntegrity: Meaningful Distortion (Hypocrisy: 3.2, z: 2)",
+      "WA is considering banning positive character references in sex crime sentencing following outrage over Western Power staff supporting a convicted rapist.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Reality reveals severe oversight lapses where executives missed major court cases until journalists intervened, sparking reactionary policy changes.\nResulting Judgement: (-0.81, -0.72) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nSubs: WA Government: PASS (0.5, -0.2); Western Power: FAIL (-0.8, -0.9).\nIntegrity: Meaningful Distortion (Hypocrisy: 3.2, z: 2)",
       "Sub-Audits Breakdown:\n- WA Government Reform Call: PASS (0.5, -0.2) — Proposing necessary legal tightening on character evidence, though politically reactive.\n- Western Power Management: FAIL (-0.8, -0.9) — Failed basic institutional oversight by missing court proceedings until media inquiry.",
       "Growing calls in Western Australia urge banning positive character evidence in sex crime sentencing after three Western Power staff provided references for a colleague jailed for rape.",
       "The Bright Side:\nPublic outrage and media scrutiny are forcing legislative reviews to close loopholes that humanize violent offenders at victims' expense.",
       "The Breakdown & Plane Error:\nConfusing WHAT (banning a legal tool) with WHO (accountability for executives who failed to monitor employee misconduct). It's a deflection from internal governance failures.",
       "Social Physics Analysis:\nManagement avoided proactive transparency, reacting only after public exposure. Rather than owning internal cultural failures, leadership redirected attention toward statutory rule changes.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Defensive policy covers operational neglect.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Defensive policy covers operational neglect.",
       "The Unavoidable Truth: Legal rules alone cannot substitute for active, accountable internal oversight.\n\nThe Unavoidable Lie: The agency was entirely blindsided by rogue actions without systemic cultural blind spots.",
       "Alethekanon:\nProposing legal bans on character references addresses a symptom while deflecting from the acute oversight failure at Western Power, where leadership missed a major trial entirely.",
       "Awwthekanon:\nFor the victim, reading positive praise for her assailant from colleagues was re-traumatizing. True healing demands institutions that protect survivors rather than enabling abusers.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "WA Government Reform Call",
@@ -272,6 +334,7 @@
         "name": "Gair Landsborough",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

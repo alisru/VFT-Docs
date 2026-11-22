@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "real_u": -0.88,
+    "real_psi": -0.82,
     "mode": "root",
     "posts": [
       "Nithya Raman dodges questions on whether ousted DA George Gascón will run the LAPD if she's elected mayor.\nEvidence: Evasive TV word salad, staff warnings, deleted social media attack.\n#Aletheia #LAPD #USPol",
-      "Nithya Raman's campaign presents her mayoral bid as a forward-looking plan for public safety, denying rumors of appointing controversial former DA George Gascón.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Raman's conflicting timelines and evasive word-salad answers mask a polarizing association with Gascón that threatens to spark a mass exodus of LAPD officers.\nResulting Judgement: (-0.85, -0.80) — Deception",
-      "Verdict: FAIL — The Path of Deception. Raman's evasive word salad over appointing George Gascón exposes a deep disconnect between campaign denials and institutional chaos.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Nithya Raman's campaign presents her mayoral bid as a forward-looking plan for public safety, denying rumors of appointing controversial former DA George Gascón.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Raman's conflicting timelines and evasive word-salad answers mask a polarizing association with Gascón that threatens to spark a mass exodus of LAPD officers.\nResulting Judgement: (-0.88, -0.82) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Nithya Raman: FAIL (-0.85, -0.80) — Evasive word salad on police chief plans.\n- Law Enforcement Impact: FAIL (-0.90, -0.85) — Triggers staffing exodus fears.",
       "As Los Angeles approaches the 2028 Olympics, mayoral candidate Nithya Raman faces intense scrutiny over conflicting timelines for replacing LAPD Chief Jim McDonnell and rumors surrounding George Gascón.",
       "The Poison:\nCampaign double-speak on police leadership deepens institutional distrust and accelerates department staff departures.",
       "The Breakdown & Plane Error:\nThe analysis confuses WHAT is stated (innocuous campaign denials) with WHO is affected (morale-battered LAPD officers facing a polarizing ex-DA).",
       "Social Physics Analysis:\nRaman executes a classic evasive maneuver, hiding controversial associations behind shifting timelines and projected distractions. Rather than building transparent coalitions, the campaign relies on pretexts to deflect from an alarming leadership vision.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The net force vector collapses under institutional friction and policy evasion.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The net force vector collapses under institutional friction and policy evasion.",
       "The Unavoidable Truth: Evasive word salad on police leadership undermines public trust during a staffing crisis.\n\nThe Unavoidable Lie: Dismissing persistent rumors without a clear, definitive public safety plan solves nothing.",
       "Alethekanon:\nShifting campaign timelines and evasive denials cannot mask the institutional destabilization of floating a polarizing former prosecutor for top cop.",
       "Awwthekanon:\nIt hurts to watch leaders play political games with community safety while officers and residents bear the brunt of the anxiety.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Nithya Raman Campaign Strategy",
@@ -168,6 +230,7 @@
       "Aletheia",
       "LAPD",
       "USPol"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

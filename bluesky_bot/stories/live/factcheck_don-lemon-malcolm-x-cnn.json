@@ -5,22 +5,22 @@
     "subject": "Don Lemon Says He Feels 'Spirit of Malcolm X' Now He's Free of CNN",
     "link": "https://www.breitbart.com/politics/2026/08/28/don-lemon-says-he-feels-spirit-of-malcolm-x-now-hes-free-of-cnn/",
     "target_url": "",
-    "claim_u": 0.2,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.83,
+    "claim_psi": 1.0,
+    "real_u": -0.9,
+    "real_psi": -0.81,
     "mode": "root",
     "posts": [
       "Former CNN anchor Don Lemon claims freedom from corporate media lets him speak raw truths, invoking Malcolm X and racialized political critiques.\nEvidence: free expression, racial framing, aggressive litigation\n#Aletheia #USPol",
-      "Don Lemon argues that dropping corporate filters allows unvarnished truth, framing political support for Donald Trump through racial lenses and urging aggressive legal retaliation.\nStated Judgement: (+0.2, 0.0) — Neutral Preference",
-      "Lemon substitutes institutional accountability with aggressive sectarian polarization, generalizing millions of voters by race and calling for retaliatory lawfare.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil / Deception",
-      "Verdict: FAIL — The Path of Deception.\nLemon replaces media constraints with inflammatory sectarian rhetoric, weaponizing race and lawfare to divide the electorate.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Don Lemon argues that dropping corporate filters allows unvarnished truth, framing political support for Donald Trump through racial lenses and urging aggressive legal retaliation.\nStated Judgement: (+0.83, +1.00) — Greater Good",
+      "Lemon substitutes institutional accountability with aggressive sectarian polarization, generalizing millions of voters by race and calling for retaliatory lawfare.\nResulting Judgement: (-0.90, -0.81) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nLemon replaces media constraints with inflammatory sectarian rhetoric, weaponizing race and lawfare to divide the electorate.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- Don Lemon: FAIL (-0.85, -0.90) — Uses racial generalization and lawfare calls.\n- Media Freedom Narrative: COND (0.0, -0.50) — Confuses license with constructive discourse.",
       "Freed from corporate contracts, former anchor Don Lemon is using independent platforms to deliver stark racial critiques of Trump supporters and call for aggressive political lawsuits.",
       "The Bright Side:\nTotal editorial independence reveals unvarnished perspectives without corporate filtering.",
       "The Breakdown & Plane Error:\nLemon mistakes personal license (WHAT) for constructive public dialogue (WHO/WHY), treating political opposition as an inherent racial pathology.",
       "Social Physics Analysis:\nRather than seeking common ground, this rhetoric relies on projection and sectarian division, framing political disagreements as demographic conflicts to build an independent audience.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated liberation and ground-level polarization, it plots a direct trajectory toward Deception. F_pos < F_neg under sectarian escalation.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated liberation and ground-level polarization, it plots a direct trajectory toward Deception. F_pos < F_neg under sectarian escalation.",
       "The Unavoidable Truth: Absolute freedom from institutional filters often amplifies raw tribalism rather than objective insight.\n\nThe Unavoidable Lie: Inflammatory racial generalizations constitute brave and unvarnished truth.",
       "Alethekanon:\nLiberation from corporate guardrails exposes an underlying preference for sectarian grievance over constructive public synthesis.",
       "Awwthekanon:\nIt hurts to watch public figures retreat into tribal silos instead of building bridges across our deep political divides.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Don Lemon Commentary",
@@ -210,6 +272,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

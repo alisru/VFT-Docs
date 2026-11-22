@@ -5,22 +5,22 @@
     "subject": "Inside the ‘summer camp’ training rabbis how to use firearms",
     "link": "https://nypost.com/2026/09/12/us-news/why-rabbis-are-attending-magen-ams-la-intensive-security-camp/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.75,
-    "real_psi": 0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A unique LA-based pilot program trains rabbis in firearms, emergency medicine, and synagogue security ahead of the High Holidays.\nEvidence: Magen Am program, 20 rabbis trained, ADL data\n#Aletheia #Security",
-      "Community defense training equips religious leaders to protect their congregations against targeted hate and violence.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "Magen Am successfully trained 20 rabbis from 12 states in practical security, responsible gun use, and emergency response.\nResulting Judgement: (+0.75, +0.8) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nPragmatic self-reliance addressing real security threats with professional discipline and transparency.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Community defense training equips religious leaders to protect their congregations against targeted hate and violence.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Magen Am successfully trained 20 rabbis from 12 states in practical security, responsible gun use, and emergency response.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nPragmatic self-reliance addressing real security threats with professional discipline and transparency.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Magen Am USA: PASS (+0.8, +0.8) — Transparent, empowering community security training.\n- Participating Rabbis: PASS (+0.7, +0.7) — Proactive and responsible safety preparation.",
       "Faced with surging antisemitic assaults, Magen Am organized an intensive security camp to teach rabbis situational awareness and self-defense.",
       "The Bright Side:\nCommunities are shifting from passive vulnerability to active, organized self-defense and preparedness.",
       "The Breakdown & Plane Error:\nSound alignment across Q3 Physical and Q5 Logical planes: matching practical training directly to verified threat metrics.",
       "Social Physics Analysis:\nMagen Am runs a Smart Altruistic Maneuver, replacing fear and manufactured victimhood with transparent empowerment and collective competence.",
-      "The Trajectory: The Path of Redemption.\nWhen threat reality meets pragmatic self-defense preparation, it charts a steady course toward structural resilience.",
+      "The Trajectory: The Path of Grace.\nWhen threat reality meets pragmatic self-defense preparation, it charts a steady course toward structural resilience.",
       "The Unavoidable Truth: Community survival in hostile environments requires active preparedness rather than passive reliance on others.\nThe Unavoidable Lie: Defensive training inherently promotes aggression rather than deterrence.",
       "Alethekanon:\nPragmatism supersedes optics when survival is at stake. Training leaders in self-defense is a rational adaptation to rising real-world hostility.",
       "Awwthekanon:\nIt breaks my heart that spiritual leaders must learn firearms, but protecting one's flock from hatred is an act of profound love.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Magen Am USA",
@@ -213,6 +275,7 @@
         "name": "Anti-Defamation League",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

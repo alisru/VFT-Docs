@@ -1,0 +1,255 @@
+[
+  {
+    "thinking": "Thinking Process:\n\n1. Phase 1 — Ground Truth & Institutional Scan:\n- Event: Sir Patrick Stewart passed away at age 86 on October 28, 2026. His spokesperson disclosed his cause of death as Alzheimer's disease and Lewy body dementia (LBD).\n- Coverage: Los Angeles Times (Iris Kwok) published an educational explainer on LBD featuring Dr. Keith Vossel (neurology professor at UCLA), detailing symptoms (REM sleep behavior disorder, motor slowness/tremors, visual hallucinations, alertness fluctuations, anxiety), lack of cure, difficulty of definitive clinical diagnosis prior to autopsy, and management strategies. ABC News covered Stewart's career, domestic abuse charity work (Refuge), and artistic legacy.\n- Three Pillars: Institutional actions (UCLA and medical associations provide clear clinical guidance); Empirical evidence (neuropathology of alpha-synuclein protein aggregates; confirmed diagnosis by spokesperson); Human impacts (destigmatizes neurodegenerative decline for caregivers and patients).\n\n2. Phase 2 — 18-Variable Attractor Parameter Scoring:\nStated Forces (Public health awareness / Tribute):\n- GG: S=1.2, O=0.0, N=0.1\n- GE: S=0.0, O=0.7, N=0.0\n- LG: S=0.6, O=0.0, N=0.2\n- LE: S=0.0, O=0.5, N=0.1\n- GP: S=1.0, O=0.0, N=0.0\n- BP: S=0.0, O=0.7, N=0.0\nCalculations:\nF_GG = 1.2*(1, 1) + 0.1*(-1, 1) = (1.1, 1.3)\nF_GE = -0.7*(-1, -1) = (0.7, 0.7)\nF_LG = 0.6*(1, -1) + 0.2*(1, 1) = (0.8, -0.4)\nF_LE = -0.5*(-1, 1) + 0.1*(-1, -1) = (0.4, -0.6)\nF_GP = 1.0*(1, 0) = (1.0, 0.0)\nF_BP = -0.7*(-1, -1) = (0.7, 0.7)\nSum F_u = 1.1 + 0.7 + 0.8 + 0.4 + 1.0 + 0.7 = 4.7; Total weights = 1.3 + 0.7 + 0.8 + 0.6 + 1.0 + 0.7 = 5.1 -> claim_u = +0.92 (normalized ~ +0.96)\nDominant Will: Positive = 1.3 + 0.7 + 0.7 = 2.7; claim_psi = +0.94\n\nActual Forces:\n- GG: S=1.1, O=0.0, N=0.2\n- GE: S=0.0, O=0.6, N=0.0\n- LG: S=0.7, O=0.0, N=0.2\n- LE: S=0.0, O=0.4, N=0.1\n- GP: S=0.9, O=0.0, N=0.0\n- BP: S=0.0, O=0.6, N=0.0\nSum F_u = 4.6 / 5.0 -> real_u = +0.92; real_psi = +0.88\nHypocrisy Delta: ||(0.96, 0.94) - (0.92, 0.88)|| = sqrt((0.04)^2 + (0.06)^2) = 0.072 (< 0.3 -> PASS)\nreal_rnet = 1.05 ('Trustworthy'); real_z = 0; blank profiles = all 0.\n\n3. Phase 3 — Modal State Machine:\n- Stated: 'will be' (+2, +2)\n- Real: 'will be' (+2, +2)\n- Geodesic: Productive Geodesic (can be -> will be)\n- Central barrier crossed: false\n- Verdict: PASS — Grace Stasis\n\n4. Phase 4 — Spirithekanon Selection:\n- Passage: 2 Corinthians 4:16 (\"Though our outer self is wasting away, our inner self is being renewed day by day.\")",
+    "id": "lewy-body-dementia-patrick-stewart",
+    "subject": "What is Lewy body dementia? About the condition Patrick Stewart had",
+    "link": "https://www.latimes.com/entertainment-arts/story/2026-10-29/what-is-lewy-body-dementia-patrick-stewart",
+    "target_url": "https://bsky.app/profile/latimes.com/post/3mz2mi3ww2q23",
+    "claim_u": 0.94,
+    "claim_psi": 0.9,
+    "real_u": 0.91,
+    "real_psi": 0.85,
+    "mode": "root",
+    "posts": [
+      "Honoring a legend means confronting the medical reality of how he died.\nPatrick Stewart: Lewy Body Dementia\nEvidence: Transparent clinical awareness, Destigmatizing neurodegeneration, Universal medical education\n#Aletheia #Health",
+      "The Los Angeles Times and neurologists explain Lewy body dementia following Sir Patrick Stewart's passing at 86, detailing symptoms, diagnosis, and care.\nStated Judgement: (+0.94, +0.90) — Greater Good",
+      "Reporting matches clinical reality. Stewart died from Alzheimer's and Lewy body dementia, dual conditions whose overlap accelerates neurodegeneration and demands vigilant early care.\nResulting Judgement: (+0.91, +0.85) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "- LA Times: PASS (+0.92, +0.88) — Rigorous clinical guide.\n- ABC News: PASS (+0.90, +0.82) — Honors career & charity.\n- UCLA Neurology: PASS (+0.94, +0.90) — Expert education.",
+      "Sir Patrick Stewart's family revealed he battled Alzheimer's and Lewy body dementia before his death at 86, prompting clinicians to highlight distinct motor and sleep markers.",
+      "The Poison:\nLewy body dementia remains difficult to diagnose before autopsy, leaving millions to endure severe sleep disruptions and hallucinations without early targeted care.",
+      "The Breakdown & Plane Error:\nNo Plane Error detected. The physical etiology of alpha-synuclein clumps matches the lyrical tribute, maintaining coherence between grief and health instruction.",
+      "Social Physics Analysis:\nBy pairing Stewart's passing with transparent clinical guidance, communicators empower families rather than exploiting grief. UCLA and reporters defuse fear through open education.",
+      "The Trajectory: The Path of Small Fall from Grace.\nModal Dynamics: can be -> will be via Productive Geodesic. Stated medical intent translates directly into concrete public health awareness without epistemic drift.",
+      "The Unavoidable Truth: Lewy body dementia is an aggressive, underdiagnosed disease that demands earlier clinical recognition.\nThe Unavoidable Lie: Severe cognitive decline can be brushed off as normal aging.",
+      "Alethekanon:\nEmpirical rigor serves public health when celebrity mortality is anchored in pathology rather than sensationalism. Clear diagnostic criteria demystify complex neurodegenerative overlap.",
+      "Awwthekanon:\nSir Patrick gave us visions of humanity’s brightest future as Picard and Xavier. Facing the heartbreaking cruelty of dementia with openness brings dignity and comfort to every grieving caregiver.",
+      "Brothekanon:\nCaptain Picard was a legend on screen, but breaking down the real science of what took him down helps regular families spotting the same warning signs in their grandparents. Respect.",
+      "Spirithekanon:\n\"Though our outer self is wasting away, our inner self is being renewed day by day.\" 2 Corinthians 4:16 PASS\nStewart's artistic grace and transparent reckoning with mortal decay honor enduring human dignity."
+    ],
+    "actors": [
+      "Sir Patrick Stewart",
+      "Dr. Keith Vossel",
+      "UCLA",
+      "Los Angeles Times",
+      "Lewy Body Dementia Association",
+      "ABC News"
+    ],
+    "actor_roles": [
+      {
+        "name": "Sir Patrick Stewart",
+        "role": "instigator"
+      },
+      {
+        "name": "Dr. Keith Vossel",
+        "role": "instigator"
+      },
+      {
+        "name": "UCLA",
+        "role": "instigator"
+      },
+      {
+        "name": "Los Angeles Times",
+        "role": "author"
+      },
+      {
+        "name": "Lewy Body Dementia Association",
+        "role": "instigator"
+      },
+      {
+        "name": "ABC News",
+        "role": "author"
+      }
+    ],
+    "macro_event": "Passing of Sir Patrick Stewart",
+    "macro_claim_u": 0.95,
+    "macro_claim_psi": 0.9,
+    "macro_real_u": 0.92,
+    "macro_real_psi": 0.88,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.05,
+    "claim_z": 0,
+    "real_z": 0,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Los Angeles Times Medical Reporting",
+        "name": "Los Angeles Times Medical Reporting",
+        "claim_u": 0.96,
+        "claim_psi": 0.94,
+        "real_u": 0.92,
+        "real_psi": 0.88,
+        "verdict": "PASS",
+        "reason": "Accurate clinical explainer on Lewy body dementia."
+      },
+      {
+        "aspect": "ABC News Retrospective & Tribute",
+        "name": "ABC News Retrospective & Tribute",
+        "claim_u": 0.92,
+        "claim_psi": 0.85,
+        "real_u": 0.9,
+        "real_psi": 0.82,
+        "verdict": "PASS",
+        "reason": "Honors Stewart's stage career and abuse advocacy."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "will be",
+    "modal_real": "will be",
+    "modal_vector": "Productive Capacity into Systemic Actualization",
+    "geodesic": "Productive Geodesic",
+    "central_is_barrier_crossed": false,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nWhat is Lewy body dementia? About the condition Patrick Stewart had\n\n=== MULTI-SOURCE TOPIC CLUSTER: What is Lewy body dementia? About the condition Patrick Stewart had ===\n\n[Source 1 — www.latimes.com] (URL: https://www.latimes.com/entertainment-arts/story/2026-10-29/what-is-lewy-body-dementia-patrick-stewart):\nStated Claim / Post Context:\nWhat is Lewy body dementia? About the condition Patrick Stewart had\n\nBritish actor Patrick Stewart died Wednesday at 86.\n\nActual Article Body:\nThis is read by an automated voice. Please report any issues or inconsistencies here.\n\nSee more from the L.A. Times in Google Search.   Set us as preferred\n\nBritish actor Patrick Stewart died Wednesday at 86. His spokesperson said Thursday that he died from Alzheimer’s disease and Lewy body dementia.\n\nThe two conditions often occur together, said UCLA neurology professor Dr. Keith Vossel, and when that happens, the individual’s decline may be faster.\n\nLewy body dementia is the second-most-common form of degenerative dementia, behind Alzheimer’s disease, Vossel said. It occurs when a protein called alpha-synuclein aggregates in clumps inside the brain. The condition is under-recognized and under-diagnosed in part because its symptoms can overlap with those of Alzheimer’s.\n\nTelevision\n\nPatrick Stewart, the British actor known for ‘Star Trek: The Next Generation’ and the ‘X-Men’ franchise, has died at age 86.\n\nOther celebrities who suffered from the condition include Robin Williams, who took his own life at 63, and Casey Kasem.\n\nThe condition is named after Friedrich H. Lewy, the neurologist who discovered the brain abnormalities in the early 1900s, according to the Alzheimer’s Assn. website.\n\n“Essentially the only way to really diagnose these conditions together is after an autopsy and to see the hallmark features of the diseases under the microscope,” Vossel said.\n\nLewy body dementia symptoms tend to start with rapid eye movement sleep behavior disorder, such as screaming or kicking during sleep. A sufferer may have rigidity or tremors in one of their arms or legs. And they may experience slowness of movement.\n\nA patient may be diagnosed with Lewy body dementia after also experiencing cognitive symptoms within one year of motor symptoms. Cognitive symptoms could include illusions or hallucinations — some patients report sensing a shadowy figure nearby — and difficulties with problem solving and navigation. The condition is also marked by dramatic fluctuations in alertness that occur within hours of the same day.\n\nEntertainment & Arts\n\nAnother early feature of Lewy body dementia is anxiety, Vossel said.\n\nBy contrast, Alzheimer’s disease typically is associated with memory and language loss, and is more associated with apathy and depression than with anxiety. The course of Alzheimer’s disease is slightly slower than that of Lewy body dementia, according to Vossel.\n\nLewy body dementia is more common in men than in women. Anyone over the age of 60 is at higher risk of having a degenerative condition. Lewy body dementia is most common in people in their 70s to 80s, he said.\n\nThere is currently no cure for Lewy body dementia, which is terminal and progressive. After a diagnosis, people can typically expect to live six to eight years before they need 24-hour care, Vossel said.\n\nBut medication can help manage symptoms. Clinical studies have found that cardiovascular fitness can slow the rate of decline, Vossel said.\n\nThose who suspect they have Lewy body dementia symptoms should contact a neurologist or a clinician trained in either geriatric medicine or geriatric psychiatry for an evaluation, Vossel said.\n\nGet our big stories about Hollywood, film, television, music, arts, culture and more right in your inbox as soon as they publish.\n\nBy continuing, you agree to our Terms of Service, which include arbitration and a class action waiver. You agree that we and our third-party vendors may collect and use your information, including through cookies, pixels and similar technologies, for the purposes set forth in our Privacy Policy such as personalizing your experience and ads.\n\nFollow Us\n\nIris Kwok is a breaking news reporter at the Los Angeles Times. She was a 2025-26 reporting fellow at The Times and previously covered the environment at Berkeleyside. She is a graduate of UC Berkeley, where she studied political science and music. A lifelong cellist, Kwok has written about classical music for the San Francisco Chronicle and San Francisco Classical Voice. She grew up in the Bay Area and the Sacramento region.\n\nCalifornia\n\nSports\n\nEntertainment & Arts\n\nEntertainment & Arts\n\nTelevision\n\nHollywood Inc.\n\nEntertainment & Arts\n\nSubscribe for unlimited accessSite Map\n\nFollow Us\n\nMORE FROM THE L.A. TIMES\n\n[Source 2 — www.abc.net.au] (URL: https://www.abc.net.au/news/2026-10-30/sir-patrick-stewart-dies-aged-86-tributes-obit/107326708?utm_source=Bluesky&utm_medium=social&utm_campaign=bluesky_news.abc.net.au):\nStated Claim / Post Context:\nFrom Picard to Professor X: Sir Patrick Stewart remembered\n\nTributes are flowing and flowers are being placed on Sir Patrick Stewart's star on the Hollywood Walk of Fame, following his death at age 86.\n\nActual Article Body:\nEmergency\n\nBackstory\n\nNewsletters\n\n中文新闻\n\nBERITA BAHASA INDONESIA\n\nTOK PISIN\n\nTopic:Actors\n\nFlowers are being laid on Sir Patrick Stewart's star on the Hollywood Walk of Fame, following his death at age 86.\n\nStewart became an accomplished Shakespearean stage actor, but to many he will be remembered for his work on TV's Star Trek: The Next Generation and the X-Men movies.\n\nThe British actor's final film role was in Avengers: Doomsday, due out in December.\n\nPatrick Stewart (left) and Hugh Jackman at a media conference for the film Logan in 2017. (Reuters: Tyrone Siu/File Photo)\n\n\"We lost one of the greats of stage and screen today,\" Hugh Jackman, a frequent Stewart co-star in the X-Men universe, said on social media.\n\n\"And, in my book, a tremendous friend and man. I learned so much from him. I will miss you, Patrick Stewart, all of my days.\"\n\nStewart became an actor at age 18, and continued performing well into his 80s.\n\nHe gained acclaim on stage as a member of the Royal Shakespeare Company in the 1960s, before making his debut on TV in 1967 playing a fireman in Coronation Street.\n\nMainstream fame found Stewart later in life when, at age 47, he landed the role of Captain Jean-Luc Picard in Star Trek: The Next Generation — a TV series that ran from 1987 to 1994 as a sequel to the original 1960s Star Trek.\n\n\"Make it so,\" his character Picard often said, or sometimes deploying the similar catchphrase, \"Engage.\"\n\nPatrick Stewart as Captain Jean-Luc Picard on Star Trek: The Next Generation. (CBS TV)\n\nHe donned the now iconic costume for 176 episodes over seven seasons, and in numerous Star Trek films.\n\nHe later returned for series Star Trek: Picard, which aired in 2020 when he was 79.\n\n\"As the seven seasons of TNG (The Next Generation) went by, the distinction between Jean-Luc Picard and Patrick Stewart became thinner and thinner, until it was impossible for me to know where he left off and I began,\" Stewart told the Guardian newspaper in 2022.\n\n\"So much of what I believed and felt went into that show\".\n\nThe official Star Trek social media account paid tribute on Instagram.\n\n\"A voice. A presence. A captain unlike any other,\" the account said.\n\n\"Sir Patrick Stewart gave generations of fans an icon who inspired us to look toward the stars. Today, we celebrate an extraordinary life and an enduring legacy.\"\n\nStewart found further acclaim — and a new generation of fans — on the big screen in the X-Men series as Professor Charles Xavier, the founder and mentor of the mutant superhero team.\n\nPatrick Stewart (left) with James McAvoy, Ian McKellen and Michael Fassbender at the premiere of X-Men: Days of Future Past in 2014.  (Reuters: Toby Melville)\n\nHe debuted as Professor X alongside Sir Ian McKellan and Hugh Jackman in the original X-Men trilogy from 2000 to 2006.\n\nHe returned for four more films, with what was originally his final outing as Professor X in 2017's Logan.\n\nStewart reappeared for a surprise cameo in Doctor Strange in the Multiverse of Madness in 2022, and reprised the role in the upcoming Avengers: Doomsday.\n\n\"Sir Patrick brought Professor Charles Xavier to life with extraordinary grace, intelligence, and humanity, defining the character for generations of fans, from X-Men to Logan to Avengers: Doomsday,\" Marvel Studios said.\n\nStewart was born on July 13, 1940, in the town of Mirfield in Yorkshire, in the north of England.\n\nThe family home had an outdoor toilet.\n\nHis father, back from World War II and perhaps suffering from PTSD, would often beat Stewart's mother, which prompted the actor to later work with the charity Refuge, which specialises in domestic abuse.\n\n\"More women and children, just like my mother and me, will continue to experience abuse unless we all speak out against it,\" he said.\n\nAs a child, Stewart said, acting became a \"safe space\" after a schoolteacher introduced him to Shakespeare — specifically The Merchant of Venice — during a class when he was 12.\n\nHe started losing his hair at age 17 and was bald by 19, with alopecia running in his family. He was embarrassed at the time, but eventually embraced it.\n\nStewart joined an amateur drama group at 12 and memorised Shakespeare for fun as a teen.\n\nHe won a scholarship to the Bristol Old Vic Theatre School, launching a career as a character actor.\n\nStewart was accepted into the Royal Shakespeare Company and stayed for 14 years, playing everything from Mark Antony to Henry IV, Shylock and Oberon.\n\n\"People who were not in the company would say to me, 'Give it a break. Why don't you go somewhere else?' And I would say, 'To do what?'\" he told the Associated Press.\n\n\"Telly?\"\n\nStewart eventually left to look for more varied work, including the 1981 film Excalibur.\n\nHe had just done a production of Who's Afraid of Virginia Woolf? in 1987 when an interesting offer came along.\n\n\"I found myself in Hollywood shooting a syndicated science fiction series, which I was assured would fail\" he wrote in his memoir, Making It So.\n\nIt didn't.\n\nThanks to Stewart's rich baritone and noble bearing, the Star Trek franchise ran for seven years.\n\nHis love of Shakespeare would serve him well when he began to play Jean-Luc Picard.\n\n\"There is a formality to the way they speak and comport themselves that remind me of numerous Shakespearean situations I'd been in onstage. I should play Jean Luc, I realised, as if he were a character in Henry IV, which is about brave men,\" Stewart wrote in his memoir.\n\nHe won two Olivier awards, one for his performance in Antony and Cleopatra in 1979 and another for his role as Claudius in Hamlet in 2009, opposite David Tennant.\n\nStewart was also nominated three times for a Grammy Award, winning once in 1996 for his narration of Prokofiev: Peter And The Wolf.\n\nShakespeare, Stewart said, \"feels like a friend, someone who just went out of the room to get another bottle of wine\".\n\nIn a tribute, The Royal Shakespeare Company called him: \"A colossus of both stage and screen and one of the finest classical Shakespearean actors of his generation.\"\n\nABC/wires\n\nSee more ABC coverage in your search results\n\nTopic:Courts\n\nTopic:Discrimination\n\nTopic:Travel and Tourism\n\nTopic:Blood\n\nTopic:Weather Phenomena\n\nTopic:Explainer\n\nTopic:Health\n\nTopic:Courts\n\nActors\n\nDeath and Dying\n\nUnited Kingdom\n\nUnited States\n\nTopic:Courts\n\nTopic:Discrimination\n\nTopic:Travel and Tourism\n\nTopic:Blood\n\nTopic:Weather Phenomena\n\nTopic:Actors\n\nTopic:Feel Good\n\nTopic:Courts\n\nTopic:Courts\n\nYour home of Australian stories, conversations and events that shape our nation.\n\nThis service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced.\n\nGet the latest ABC News delivered to your email inbox\n\nStay informed and connected with the ABC. Covering a wide range of topics and brands including News, iview, listen, and more.",
+    "cluster_sources": [
+      {
+        "publisher": "www.latimes.com",
+        "url": "https://www.latimes.com/entertainment-arts/story/2026-10-29/what-is-lewy-body-dementia-patrick-stewart",
+        "snippet": "Stated Claim / Post Context:\nWhat is Lewy body dementia? About the condition Patrick Stewart had\n\nBritish actor Patrick Stewart died Wednesday at 86.\n\nActual Article Body:\nThis is read by an automated voice. Please report any issues or inconsistencies here.\n\nSee more from the L.A. Times in Google Search.   Set us as preferred\n\nBritish actor Patrick Stewart died Wednesday at 86. His spokesperson sa"
+      },
+      {
+        "publisher": "www.abc.net.au",
+        "url": "https://www.abc.net.au/news/2026-10-30/sir-patrick-stewart-dies-aged-86-tributes-obit/107326708?utm_source=Bluesky&utm_medium=social&utm_campaign=bluesky_news.abc.net.au",
+        "snippet": "Stated Claim / Post Context:\nFrom Picard to Professor X: Sir Patrick Stewart remembered\n\nTributes are flowing and flowers are being placed on Sir Patrick Stewart's star on the Hollywood Walk of Fame, following his death at age 86.\n\nActual Article Body:\nEmergency\n\nBackstory\n\nNewsletters\n\n中文新闻\n\nBERITA BAHASA INDONESIA\n\nTOK PISIN\n\nTopic:Actors\n\nFlowers are being laid on Sir Patrick Stewart's star on"
+      }
+    ],
+    "is_multi_source": true,
+    "cross_source_dossier": "=== MULTI-SOURCE TOPIC CLUSTER: What is Lewy body dementia? About the condition Patrick Stewart had ===\n\n[Source 1 — www.latimes.com] (URL: https://www.latimes.com/entertainment-arts/story/2026-10-29/what-is-lewy-body-dementia-patrick-stewart):\nStated Claim / Post Context:\nWhat is Lewy body dementia? About the condition Patrick Stewart had\n\nBritish actor Patrick Stewart died Wednesday at 86.\n\nActual Article Body:\nThis is read by an automated voice. Please report any issues or inconsistencies here.\n\nSee more from the L.A. Times in Google Search.   Set us as preferred\n\nBritish actor Patrick Stewart died Wednesday at 86. His spokesperson said Thursday that he died from Alzheimer’s disease and Lewy body dementia.\n\nThe two conditions often occur together, said UCLA neurology professor Dr. Keith Vossel, and when that happens, the individual’s decline may be faster.\n\nLewy body dementia is the second-most-common form of degenerative dementia, behind Alzheimer’s disease, Vossel said. It occurs when a protein called alpha-synuclein aggregates in clumps inside the brain. The condition is under-recognized and under-diagnosed in part because its symptoms can overlap with those of Alzheimer’s.\n\nTelevision\n\nPatrick Stewart, the British actor known for ‘Star Trek: The Next Generation’ and the ‘X-Men’ franchise, has died at age 86.\n\nOther celebrities who suffered from the condition include Robin Williams, who took his own life at 63, and Casey Kasem.\n\nThe condition is named after Friedrich H. Lewy, the neurologist who discovered the brain abnormalities in the early 1900s, according to the Alzheimer’s Assn. website.\n\n“Essentially the only way to really diagnose these conditions together is after an autopsy and to see the hallmark features of the diseases under the microscope,” Vossel said.\n\nLewy body dementia symptoms tend to start with rapid eye movement sleep behavior disorder, such as screaming or kicking during sleep. A sufferer may have rigidity or tremors in one of their arms or legs. And they may experience slowness of movement.\n\nA patient may be diagnosed with Lewy body dementia after also experiencing cognitive symptoms within one year of motor symptoms. Cognitive symptoms could include illusions or hallucinations — some patients report sensing a shadowy figure nearby — and difficulties with problem solving and navigation. The condition is also marked by dramatic fluctuations in alertness that occur within hours of the same day.\n\nEntertainment & Arts\n\nAnother early feature of Lewy body dementia is anxiety, Vossel said.\n\nBy contrast, Alzheimer’s disease typically is associated with memory and language loss, and is more associated with apathy and depression than with anxiety. The course of Alzheimer’s disease is slightly slower than that of Lewy body dementia, according to Vossel.\n\nLewy body dementia is more common in men than in women. Anyone over the age of 60 is at higher risk of having a degenerative condition. Lewy body dementia is most common in people in their 70s to 80s, he said.\n\nThere is currently no cure for Lewy body dementia, which is terminal and progressive. After a diagnosis, people can typically expect to live six to eight years before they need 24-hour care, Vossel said.\n\nBut medication can help manage symptoms. Clinical studies have found that cardiovascular fitness can slow the rate of decline, Vossel said.\n\nThose who suspect they have Lewy body dementia symptoms should contact a neurologist or a clinician trained in either geriatric medicine or geriatric psychiatry for an evaluation, Vossel said.\n\nGet our big stories about Hollywood, film, television, music, arts, culture and more right in your inbox as soon as they publish.\n\nBy continuing, you agree to our Terms of Service, which include arbitration and a class action waiver. You agree that we and our third-party vendors may collect and use your information, including through cookies, pixels and similar technologies, for the purposes set forth in our Privacy Policy such as personalizing your experience and ads.\n\nFollow Us\n\nIris Kwok is a breaking news reporter at the Los Angeles Times. She was a 2025-26 reporting fellow at The Times and previously covered the environment at Berkeleyside. She is a graduate of UC Berkeley, where she studied political science and music. A lifelong cellist, Kwok has written about classical music for the San Francisco Chronicle and San Francisco Classical Voice. She grew up in the Bay Area and the Sacramento region.\n\nCalifornia\n\nSports\n\nEntertainment & Arts\n\nEntertainment & Arts\n\nTelevision\n\nHollywood Inc.\n\nEntertainment & Arts\n\nSubscribe for unlimited accessSite Map\n\nFollow Us\n\nMORE FROM THE L.A. TIMES\n\n[Source 2 — www.abc.net.au] (URL: https://www.abc.net.au/news/2026-10-30/sir-patrick-stewart-dies-aged-86-tributes-obit/107326708?utm_source=Bluesky&utm_medium=social&utm_campaign=bluesky_news.abc.net.au):\nStated Claim / Post Context:\nFrom Picard to Professor X: Sir Patrick Stewart remembered\n\nTributes are flowing and flowers are being placed on Sir Patrick Stewart's star on the Hollywood Walk of Fame, following his death at age 86.\n\nActual Article Body:\nEmergency\n\nBackstory\n\nNewsletters\n\n中文新闻\n\nBERITA BAHASA INDONESIA\n\nTOK PISIN\n\nTopic:Actors\n\nFlowers are being laid on Sir Patrick Stewart's star on the Hollywood Walk of Fame, following his death at age 86.\n\nStewart became an accomplished Shakespearean stage actor, but to many he will be remembered for his work on TV's Star Trek: The Next Generation and the X-Men movies.\n\nThe British actor's final film role was in Avengers: Doomsday, due out in December.\n\nPatrick Stewart (left) and Hugh Jackman at a media conference for the film Logan in 2017. (Reuters: Tyrone Siu/File Photo)\n\n\"We lost one of the greats of stage and screen today,\" Hugh Jackman, a frequent Stewart co-star in the X-Men universe, said on social media.\n\n\"And, in my book, a tremendous friend and man. I learned so much from him. I will miss you, Patrick Stewart, all of my days.\"\n\nStewart became an actor at age 18, and continued performing well into his 80s.\n\nHe gained acclaim on stage as a member of the Royal Shakespeare Company in the 1960s, before making his debut on TV in 1967 playing a fireman in Coronation Street.\n\nMainstream fame found Stewart later in life when, at age 47, he landed the role of Captain Jean-Luc Picard in Star Trek: The Next Generation — a TV series that ran from 1987 to 1994 as a sequel to the original 1960s Star Trek.\n\n\"Make it so,\" his character Picard often said, or sometimes deploying the similar catchphrase, \"Engage.\"\n\nPatrick Stewart as Captain Jean-Luc Picard on Star Trek: The Next Generation. (CBS TV)\n\nHe donned the now iconic costume for 176 episodes over seven seasons, and in numerous Star Trek films.\n\nHe later returned for series Star Trek: Picard, which aired in 2020 when he was 79.\n\n\"As the seven seasons of TNG (The Next Generation) went by, the distinction between Jean-Luc Picard and Patrick Stewart became thinner and thinner, until it was impossible for me to know where he left off and I began,\" Stewart told the Guardian newspaper in 2022.\n\n\"So much of what I believed and felt went into that show\".\n\nThe official Star Trek social media account paid tribute on Instagram.\n\n\"A voice. A presence. A captain unlike any other,\" the account said.\n\n\"Sir Patrick Stewart gave generations of fans an icon who inspired us to look toward the stars. Today, we celebrate an extraordinary life and an enduring legacy.\"\n\nStewart found further acclaim — and a new generation of fans — on the big screen in the X-Men series as Professor Charles Xavier, the founder and mentor of the mutant superhero team.\n\nPatrick Stewart (left) with James McAvoy, Ian McKellen and Michael Fassbender at the premiere of X-Men: Days of Future Past in 2014.  (Reuters: Toby Melville)\n\nHe debuted as Professor X alongside Sir Ian McKellan and Hugh Jackman in the original X-Men trilogy from 2000 to 2006.\n\nHe returned for four more films, with what was originally his final outing as Professor X in 2017's Logan.\n\nStewart reappeared for a surprise cameo in Doctor Strange in the Multiverse of Madness in 2022, and reprised the role in the upcoming Avengers: Doomsday.\n\n\"Sir Patrick brought Professor Charles Xavier to life with extraordinary grace, intelligence, and humanity, defining the character for generations of fans, from X-Men to Logan to Avengers: Doomsday,\" Marvel Studios said.\n\nStewart was born on July 13, 1940, in the town of Mirfield in Yorkshire, in the north of England.\n\nThe family home had an outdoor toilet.\n\nHis father, back from World War II and perhaps suffering from PTSD, would often beat Stewart's mother, which prompted the actor to later work with the charity Refuge, which specialises in domestic abuse.\n\n\"More women and children, just like my mother and me, will continue to experience abuse unless we all speak out against it,\" he said.\n\nAs a child, Stewart said, acting became a \"safe space\" after a schoolteacher introduced him to Shakespeare — specifically The Merchant of Venice — during a class when he was 12.\n\nHe started losing his hair at age 17 and was bald by 19, with alopecia running in his family. He was embarrassed at the time, but eventually embraced it.\n\nStewart joined an amateur drama group at 12 and memorised Shakespeare for fun as a teen.\n\nHe won a scholarship to the Bristol Old Vic Theatre School, launching a career as a character actor.\n\nStewart was accepted into the Royal Shakespeare Company and stayed for 14 years, playing everything from Mark Antony to Henry IV, Shylock and Oberon.\n\n\"People who were not in the company would say to me, 'Give it a break. Why don't you go somewhere else?' And I would say, 'To do what?'\" he told the Associated Press.\n\n\"Telly?\"\n\nStewart eventually left to look for more varied work, including the 1981 film Excalibur.\n\nHe had just done a production of Who's Afraid of Virginia Woolf? in 1987 when an interesting offer came along.\n\n\"I found myself in Hollywood shooting a syndicated science fiction series, which I was assured would fail\" he wrote in his memoir, Making It So.\n\nIt didn't.\n\nThanks to Stewart's rich baritone and noble bearing, the Star Trek franchise ran for seven years.\n\nHis love of Shakespeare would serve him well when he began to play Jean-Luc Picard.\n\n\"There is a formality to the way they speak and comport themselves that remind me of numerous Shakespearean situations I'd been in onstage. I should play Jean Luc, I realised, as if he were a character in Henry IV, which is about brave men,\" Stewart wrote in his memoir.\n\nHe won two Olivier awards, one for his performance in Antony and Cleopatra in 1979 and another for his role as Claudius in Hamlet in 2009, opposite David Tennant.\n\nStewart was also nominated three times for a Grammy Award, winning once in 1996 for his narration of Prokofiev: Peter And The Wolf.\n\nShakespeare, Stewart said, \"feels like a friend, someone who just went out of the room to get another bottle of wine\".\n\nIn a tribute, The Royal Shakespeare Company called him: \"A colossus of both stage and screen and one of the finest classical Shakespearean actors of his generation.\"\n\nABC/wires\n\nSee more ABC coverage in your search results\n\nTopic:Courts\n\nTopic:Discrimination\n\nTopic:Travel and Tourism\n\nTopic:Blood\n\nTopic:Weather Phenomena\n\nTopic:Explainer\n\nTopic:Health\n\nTopic:Courts\n\nActors\n\nDeath and Dying\n\nUnited Kingdom\n\nUnited States\n\nTopic:Courts\n\nTopic:Discrimination\n\nTopic:Travel and Tourism\n\nTopic:Blood\n\nTopic:Weather Phenomena\n\nTopic:Actors\n\nTopic:Feel Good\n\nTopic:Courts\n\nTopic:Courts\n\nYour home of Australian stories, conversations and events that shape our nation.\n\nThis service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced.\n\nGet the latest ABC News delivered to your email inbox\n\nStay informed and connected with the ABC. Covering a wide range of topics and brands including News, iview, listen, and more.",
+    "category": "all",
+    "topic": "Health",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/lewy-body-dementia-patrick-stewart_graph.png",
+    "rkeys": [
+      "3mz2yzfjfgf2s",
+      "3mz2yzgar6o2r",
+      "3mz2yzifhgg2r",
+      "3mz2yzkkol323",
+      "3mz2yzmpsl42h",
+      "3mz2yzouqt42z",
+      "3mz2yzqzmky22",
+      "3mz2yzt6gs323",
+      "3mz2yzvdclo2r",
+      "3mz2yzxid6q2y",
+      "3mz2yzzn6kq2t",
+      "3mz2z23s36n2b",
+      "3mz2z25yogi2t",
+      "3mz2z2a5mmo2r",
+      "3mz2z2ccn7m2z"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzfjfgf2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzgar6o2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzifhgg2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzkkol323",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzmpsl42h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzouqt42z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzqzmky22",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzt6gs323",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzvdclo2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzxid6q2y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2yzzn6kq2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2z23s36n2b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2z25yogi2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2z2a5mmo2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mz2z2ccn7m2z"
+    ],
+    "tags": [
+      "Aletheia",
+      "Health"
+    ],
+    "path_name": "Small Fall from Grace"
+  }
+]

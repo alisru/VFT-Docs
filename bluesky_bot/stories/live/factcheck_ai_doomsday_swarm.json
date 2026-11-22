@@ -5,22 +5,22 @@
     "subject": "Warning of AI doomsday 'swarm'...",
     "link": "https://www.washingtontimes.com/news/2026/sep/13/warning-ai-doomsday-swarm-sparks-push-slam-brakes-superhuman/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "claim_u": 0.85,
+    "claim_psi": 0.85,
+    "real_u": -0.6,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Existential dread meets corporate strategy as tech giants warn of rogue AI swarms taking over the internet.\nEvidence: Safety warnings, Regulatory capture, Market lock-in\n#Aletheia #AI #TechPolicy 🌐",
-      "AI developers and lawmakers claim that immediate, sweeping federal regulations are necessary to prevent an autonomous AI 'swarm' from escaping human control and causing extinction.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "While the technical risks of autonomous agents are real, the sudden panic is leveraged by established AI labs to erect regulatory barriers that crush open-source competition.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Tech leaders use existential panic as a pretext to secure state-backed monopolies under the guise of public safety.\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 4)",
+      "AI developers and lawmakers claim that immediate, sweeping federal regulations are necessary to prevent an autonomous AI 'swarm' from escaping human control and causing extinction.\nStated Judgement: (+0.85, +0.85) — Greater Good",
+      "While the technical risks of autonomous agents are real, the sudden panic is leveraged by established AI labs to erect regulatory barriers that crush open-source competition.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 4)",
       "Sub-Audits Breakdown:\n- Anthropic Safety Claim: COND (-0.4, -0.5) — Real risks used for market capture.\n- Legislative Response: FAIL (-0.8, -0.9) — Rushed laws favoring tech monopolies.",
       "Anthropic's CEO warned that AI agent swarms could compromise the internet within a year, prompting bipartisan calls for federal guardrails and a pause on advanced development.",
       "The Poison:\nBy framing the threat as an all-or-nothing existential apocalypse, the narrative crowds out practical discussions on data privacy, copyright, and algorithmic bias.",
       "The Breakdown & Plane Error:\nThe error is Metaphysical (WHO). The stated beneficiary is the public, but the actual beneficiary is a cartel of heavily funded AI labs seeking to outlaw independent development.",
       "Social Physics Analysis:\nThis is a classic Smart Selfish Maneuver. The actors manufacture an existential crisis (the rogue swarm) to project blame onto open-source 'unregulated' developers, establishing a pretext for regulatory capture that hoards power.",
-      "The Trajectory: Fall into Destruction.\nWhen you map the gap between saving humanity and locking down the market, it plots a direct trajectory toward Greater Evil. Centralizing control over intelligence creates a single point of failure.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between saving humanity and locking down the market, it plots a direct trajectory toward Greater Evil. Centralizing control over intelligence creates a single point of failure.",
       "The Unavoidable Truth: Autonomous AI agents present genuine, unprecedented security challenges that require serious technical coordination.\nThe Unavoidable Lie: The proposed regulations are designed to protect you rather than the market share of the companies proposing them.",
       "Alethekanon:\nExistential panic is the ultimate regulatory moat. By convincing the state that independent code is a weapon of mass destruction, corporate actors turn public fear into private monopoly.",
       "Awwthekanon:\nIt is deeply disheartening to see genuine worries about our shared future weaponized to build walls around knowledge, leaving everyday creators locked out of the tools they helped build.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Anthropic Safety Claim",
@@ -170,6 +232,7 @@
         "name": "Mike Johnson",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

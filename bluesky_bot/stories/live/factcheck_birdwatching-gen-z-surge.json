@@ -14,7 +14,7 @@
       "Birdwatching is soaring among Gen Z Brits as a powerful antidote to climate anxiety and digital overload.\n\nHow birdwatching has become an unexpected hit with Gen Z\nEvidence: climate anxiety, community growth, active conservation\n#Environment #GenZ",
       "A rising wave of young naturalists is turning an old pastime into a vibrant, modern hobby driven by a deep respect for the natural world.\nStated Judgement: (+0.82, +1.00) — Lesser Good",
       "Research confirms over 750,000 young Brits now embrace birding, fostering genuine community connections and ecological awareness.\nResulting Judgement: (+0.84, +1.00) — Greater Good",
-      "Verdict: PASS — The Path of Grace. This organic surge in youth conservation reflects authentic ecological reconnection and shared community resilience.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Youth Ecological Engagement: PASS (1.0, 0.8) — Gen Z is actively reclaiming outdoor spaces to combat climate despair.\n- Community & Tech Integration: PASS (1.0, 0.7) — Apps and social media lower barriers without diluting real-world connection.",
       "A new wave of young birders is turning birdwatching into one of Britain's fastest-growing hobbies, moving past traditional stereotypes to embrace nature and community.",
       "The Bright Side:\nTechnology like Merlin and iNaturalist acts as a bridge rather than a barrier, seamlessly connecting digital natives to the physical outdoors.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Youth Ecological Engagement",
@@ -259,6 +321,7 @@
         "name": "Royal Society for the Protection of Birds",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Venture capital soars on AI coding hype as Cognition eyes a massive leap to a $40B valuation.\n\nAI coding startup Cognition reportedly already in talks to raise at $40B valuation\nEvidence: high revenue targets, robust enterprise adoption, premium venture valuation\n#Aletheia #AI",
-      "Cognition, maker of Devin, is reportedly discussing a new funding round at a $40B valuation after its $1B raise at $26B, driven by strong enterprise demand and hitting a $1B annualized revenue run rate.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "While valuations reflect hyper-growth and intense investor enthusiasm, the practical utility of Devin in assisting developers with grunt work delivers genuine enterprise value without outright displacement.\nResulting Judgement: (+0.93, +0.87) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption. Venture scaling aligns with genuine productivity gains for enterprise software engineering teams.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "Cognition, maker of Devin, is reportedly discussing a new funding round at a $40B valuation after its $1B raise at $26B, driven by strong enterprise demand and hitting a $1B annualized revenue run rate.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While valuations reflect hyper-growth and intense investor enthusiasm, the practical utility of Devin in assisting developers with grunt work delivers genuine enterprise value without outright displacement.\nResulting Judgement: (+0.93, +0.87) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Cognition Enterprise Growth: PASS (+0.9, +0.5) — Devin's adoption by major firms like NASA and Mercedes confirms solid utility.\n- Valuation Scale: COND (+0.6, +0.3) — Rapidly escalating valuations introduce speculative financial pressure.",
       "Cognition, the AI coding startup behind Devin, is reportedly in talks to raise a massive new funding round at a $40B valuation. This follows its previous $1 billion raise at a $26 billion valuation just months prior, fueled by rapid enterprise adoption.",
       "The Bright Side:\nDevin tackles repetitive, tedious long-tail coding tasks that human developers universally dislike, streamlining software maintenance.",
       "The Breakdown & Plane Error:\nEvaluating the WHAT (valuation targets) versus the WHO (enterprise utility). There is minor financial hype, but underlying adoption is grounded in real productivity metrics.",
       "Social Physics Analysis:\nBy providing tools that handle tedious migration and maintenance tasks, the technology empowers engineering teams rather than displacing them, fostering a collaborative and productive environment.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Aligned incentives create sustainable value expansion.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Aligned incentives create sustainable value expansion.",
       "The Unavoidable Truth: AI coding agents successfully automate repetitive software maintenance tasks.\n\nThe Unavoidable Lie: Megaround valuations reflect infallible long-term market certainty.",
       "Alethekanon:\nThe rapid valuation growth mirrors genuine revenue expansion and enterprise adoption. While speculative froth exists, the core product utility remains robust and verifiable.",
       "Awwthekanon:\nIt is wonderful to see developers getting relief from exhausting, repetitive grunt work so they can focus on creative, meaningful problem-solving.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Cognition Enterprise Growth",
@@ -272,6 +334,7 @@
         "name": "OpenAI",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

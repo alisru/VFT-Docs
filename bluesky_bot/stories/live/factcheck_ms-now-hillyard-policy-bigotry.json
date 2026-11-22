@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.3,
+    "real_u": 0.25,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Media analysis links domestic prejudice to decades of foreign interventionism.\nEvidence: Hillyard remarks, Foreign policy critique, Domestic bigotry\n#Aletheia #ForeignPolicy",
-      "Journalistic analysis honestly traces domestic hate trends back to the systemic fallout of foreign interventions.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "Complex domestic prejudice is reductionistly blamed on state policy, blurring personal accountability for bigotry.\nResulting Judgement: (-0.4, -0.3) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nComplex social prejudice is over-attributed to geopolitical causes, deflecting individual moral agency.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Journalistic analysis honestly traces domestic hate trends back to the systemic fallout of foreign interventions.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Complex domestic prejudice is reductionistly blamed on state policy, blurring personal accountability for bigotry.\nResulting Judgement: (+0.25, -0.10) — Lesser Good",
+      "Verdict: PASS — Compromise.\nComplex social prejudice is over-attributed to geopolitical causes, deflecting individual moral agency.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Hillyard Analysis: COND (0.0, -0.2) — Valid critique paired with reductive framing.\n- Policy Context: PASS (0.5, 0.0) — Highlights bipartisan anti-intervention views.",
       "MS NOW's Vaughn Hillyard argued that much domestic antisemitism and Islamophobia over 25 years stems from U.S. foreign military intervention.",
       "The Bright Side:\nOpens a vital conversation about the domestic blowback and cultural costs of prolonged foreign military interventions.",
       "The Breakdown & Plane Error:\nThe plane error mistakes CAUSE (historical geopolitical policy) for WHO (the individuals perpetrating hate crimes).",
       "Social Physics Analysis:\nThe commentary risks a Smart Selfish Maneuver by substituting systemic foreign policy pretexts for direct moral condemnation of domestic bigots.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Geopolitical critique shields individual accountability.",
+      "The Trajectory: The Path of Compromise.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Geopolitical critique shields individual accountability.",
       "The Unavoidable Truth: Foreign interventions leave deep psychological and cultural scars across domestic societies.\n\nThe Unavoidable Lie: Domestic bigotry is merely an automated output of foreign policy decisions.",
       "Alethekanon:\nSystemic critique must never become an alibi for personal moral culpability.",
       "Awwthekanon:\nIt is painful when hatred in our neighborhoods feels like an echo of distant wars we never wanted.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Hillyard Analysis",
@@ -156,6 +218,7 @@
         "name": "JD Vance",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

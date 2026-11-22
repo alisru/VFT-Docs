@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/latimes.com/post/3mwwq4h2a7t2s",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": 0.4,
+    "real_u": 0.45,
     "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "Over 400 iconic items from Paul Reubens' career heading to auction.\nEvidence: Gray suit, red bicycle, scripts, props\n#Aletheia #Entertainment",
-      "Julien's Auctions announces a major public sale celebrating Paul Reubens' artistic legacy and iconic Pee-wee Herman collection.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Fans and collectors gather online and in Los Angeles to bid on 439 authentic pieces of television and film history.\nResulting Judgement: (+0.4, 0.0) — Good Preference",
-      "Verdict: PASS — The Path of Awakening.\nThe auction faithfully honors Paul Reubens' artistic legacy by preserving and sharing his iconic creations with fans.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "Julien's Auctions announces a major public sale celebrating Paul Reubens' artistic legacy and iconic Pee-wee Herman collection.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Fans and collectors gather online and in Los Angeles to bid on 439 authentic pieces of television and film history.\nResulting Judgement: (+0.45, +0.00) — Lesser Good",
+      "Verdict: PASS — Compromise.\nThe auction faithfully honors Paul Reubens' artistic legacy by preserving and sharing his iconic creations with fans.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Julien's Auctions: PASS (+0.4, 0.0) — Transparently manages memorabilia sale.\n- Cultural Legacy: PASS (+0.5, 0.0) — Preserves pop-culture history.",
       "Over 400 items spanning Paul Reubens' career—including Pee-wee Herman's gray suit and signature red Schwinn bicycle—are being auctioned off in Los Angeles.",
       "The Bright Side:\nFans gain a tangible connection to a beloved comedic icon while celebrating his groundbreaking contributions to television and film.",
       "The Breakdown & Plane Error:\nEvaluating WHAT happens to cultural artifacts. The reporting accurately tracks a commercial auction celebrating artistic history without inflated pretexts.",
       "Social Physics Analysis:\nOrganizers and estate representatives run a transparent exchange: honoring a beloved performer's cultural footprint while connecting collectors with authentic pieces of television history.",
-      "The Trajectory: The Path of Awakening.\nWhen cultural celebration matches public reality, it plots a stable trajectory of appreciation. R_net remains tightly bounded.",
+      "The Trajectory: The Path of Compromise.\nWhen cultural celebration matches public reality, it plots a stable trajectory of appreciation. R_net remains tightly bounded.",
       "The Unavoidable Truth: Iconic pop culture artifacts serve as powerful tangible reminders of an artist's enduring creative impact.\n\nThe Unavoidable Lie: Commercial auctions of celebrity estates exist purely for sentimental preservation rather than financial exchange.",
       "Alethekanon:\nPreserving pop-culture history through open auction bridges fans to the physical artifacts of enduring creative genius.",
       "Awwthekanon:\nIt is bittersweet to see Pee-wee's beloved props find new homes, keeping the pure joy he shared alive in the hearts of fans.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Julien's Auctions",
@@ -152,6 +214,7 @@
         "name": "Julien's Auctions",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

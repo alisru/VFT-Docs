@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A sudden retreat at the top. Oracle co-founder Larry Ellison cancels his planned $7.5 billion stock sale as market pressures mount.\nEvidence: Canceled sale, Stock decline, Regulatory scrutiny\n#Aletheia #Oracle #Finance",
-      "Oracle claims Ellison canceled the pre-arranged sale of 50 million shares simply because he has \"no other plans to sell,\" framing it as a neutral, long-term commitment to the company.\nStated Judgement: (+0.60, +0.40) — Good Preference",
-      "The cancellation follows a 22% year-to-date stock drop, shrinking margins, and potential European regulatory scrutiny over the plan's timing, forcing a tactical retreat to protect the stock.\nResulting Judgement: (-0.45, -0.50) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The sudden cancellation is a defensive maneuver to prevent a massive downward signal on a struggling stock, masked as shareholder alignment.\nIntegrity: Severe Deception (Hypocrisy: 40.0, z: 4)",
+      "Oracle claims Ellison canceled the pre-arranged sale of 50 million shares simply because he has \"no other plans to sell,\" framing it as a neutral, long-term commitment to the company.\nStated Judgement: (+0.60, +0.40) — Greater Good",
+      "The cancellation follows a 22% year-to-date stock drop, shrinking margins, and potential European regulatory scrutiny over the plan's timing, forcing a tactical retreat to protect the stock.\nResulting Judgement: (-0.45, -0.50) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 40.0, z: 4)",
       "- Larry Ellison: FAIL (-0.48, -0.52) — Defensive retreat masked as commitment.\n- Oracle PR: FAIL (-0.42, -0.48) — Suppressed market and regulatory context.",
       "Larry Ellison canceled a June 2026 plan to sell up to 50 million Oracle shares worth $7.5 billion. The company offered no explanation, but Oracle's stock has fallen nearly 23% this year.",
       "The Bright Side:\nBy canceling the sale, Ellison avoids flooding the market with $7.5 billion in shares, temporarily sparing retail investors from a deeper, insider-driven selloff.",
       "The Breakdown:\nThe Plane Error is Lyrical vs. Physical (WHY vs. WHERE). Oracle uses the narrative of \"no plans to sell\" to obfuscate the physical reality of a 22% stock drop and regulatory pressure.",
       "Social Physics Analysis:\nEllison executes a Smart Selfish Maneuver. The pretext of long-term commitment hides the secret goal of protecting personal net worth and avoiding regulatory scrutiny, projecting a false sense of stability to keep retail investors holding the bag.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated corporate alignment and the reality of market damage control, it plots a direct trajectory toward Deception. A classic insider retreat.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated corporate alignment and the reality of market damage control, it plots a direct trajectory toward Deception. A classic insider retreat.",
       "The Unavoidable Truth: Insiders cancel massive stock sales when the market signal would destroy their remaining holdings.\nThe Unavoidable Lie: Billionaires cancel multi-billion dollar sales solely out of sudden loyalty to retail shareholders.",
       "Alethekanon:\nCorporate silence is highly informative. Canceling a $7.5 billion exit without explanation speaks volumes about the underlying pressure on Oracle's margins and valuation.",
       "Awwthekanon:\nIt must be so stressful to watch your life's work lose value so quickly. Even at the very top, the pressure to keep up appearances and protect others can lead to difficult, silent choices.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Larry Ellison",
@@ -152,6 +214,7 @@
         "name": "Oracle",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

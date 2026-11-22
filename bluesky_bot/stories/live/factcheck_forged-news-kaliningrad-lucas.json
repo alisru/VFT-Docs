@@ -5,22 +5,22 @@
     "subject": "Forged news of military conscripts in Kaliningrad had hallmarks of a Western counter-attack in Putin’s info wars",
     "link": "https://euobserver.com/242265/forged-news-of-military-conscripts-in-kaliningrad-had-hallmarks-of-a-western-counter-attack-in-putins-info-wars/",
     "target_url": "https://bsky.app/profile/euobserver.com/post/3mxpt2afiej25",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 0.5,
+    "claim_psi": 0.3,
+    "real_u": 0.4,
+    "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "Wargaming Info Wars in Kaliningrad.\nEvidence: Scenario testing, Kremlin narratives, real political spillovers\n#Geopolitics #InfoWars",
-      "Western counter-tactics in Kaliningrad simulate Kremlin-style disinformation to test resilience.\nStated Judgement: (+0.6, +0.2) — Good Preference",
-      "Simulated wargames highlight how easily real political statements echo toxic propaganda and destabilize fragile security zones.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nSimulated wargaming exposes the vulnerability of information ecosystems to real-world political noise.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Western counter-tactics in Kaliningrad simulate Kremlin-style disinformation to test resilience.\nStated Judgement: (+0.50, +0.30) — Greater Good",
+      "Simulated wargames highlight how easily real political statements echo toxic propaganda and destabilize fragile security zones.\nResulting Judgement: (+0.40, +0.20) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nSimulated wargaming exposes the vulnerability of information ecosystems to real-world political noise.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Edward Lucas Analysis: PASS (0.5, 0.3) — Sharp expert framing.\n- Info-War Scenarios: PASS (0.4, 0.2) — Realistic strategic modeling.",
       "Experts at a Vilnius wargaming lab tested scenarios of civil unrest in Kaliningrad, noting how real political statements blur info-war lines.",
       "The Poison:\nSatirical wargames easily bleed into the grim reality of actual political deals and security threats.",
       "The Breakdown & Plane Error:\nConfusing hypothetical simulations (WHAT) with active sabotage (WHO), exposing the thin veil of modern information security.",
       "Social Physics Analysis:\nExperts deploy a smart altruistic loop by modeling transparent information vulnerabilities, contrasting sharply with the selfish opacity of Kremlin propaganda.",
-      "The Trajectory: The Path of Awakening.\nWhen mapped against reality, strategic wargaming moves toward systemic awakening by anticipating info-war hazards. F = S*A - O*A + N*A_perp.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen mapped against reality, strategic wargaming moves toward systemic awakening by anticipating info-war hazards. F = S*A - O*A + N*A_perp.",
       "The Unavoidable Truth: Information warfare exploits the gap between perception and reality.\n\nThe Unavoidable Lie: State media narratives are immune to counter-messaging.",
       "Alethekanon:\nSimulated chaos mirrors real political fragility. Information integrity remains humanity's primary strategic defense.",
       "Awwthekanon:\nIt's unsettling to see how easily fiction mimics grim reality, but shining light on these tactics helps us stay grounded.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Edward Lucas Analysis",
@@ -160,6 +222,7 @@
     "tags": [
       "Geopolitics",
       "InfoWars"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

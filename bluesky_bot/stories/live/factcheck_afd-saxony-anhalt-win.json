@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": -0.5,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "Germany's AfD celebrates a projected landslide in Saxony-Anhalt exit polls.\nEvidence: 44% vote share, extremist classification, mainstream isolation\n#Aletheia #Germany",
-      "The democratic process reflects voter choice and political realignment in eastern Germany.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "The surge of a classified far-right extremist branch creates severe institutional strain and democratic polarization.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nElectoral success for extremist factions exploits legitimate public grievances while threatening democratic guardrails.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.5, z: 3)",
+      "The democratic process reflects voter choice and political realignment in eastern Germany.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "The surge of a classified far-right extremist branch creates severe institutional strain and democratic polarization.\nResulting Judgement: (-0.50, -0.50) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nElectoral success for extremist factions exploits legitimate public grievances while threatening democratic guardrails.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.5, z: 3)",
       "- AfD Campaign: FAIL (-0.7, -0.8) — Exploits anti-establishment anger for exclusionary ends.\n- Mainstream Parties: COND (-0.3, -0.2) — Fails to address root economic anxieties.",
       "The Alternative for Germany secured about 44% in Saxony-Anhalt state exit polls, marking a historic high despite being flagged as far-right extremists by intelligence services.",
       "The Bright Side:\nIt forces traditional parties to confront deep-seated regional alienation and voter abandonment.",
       "The Breakdown & Plane Error:\nConfusing WHERE (electoral geography) with WHO (democratic accountability), treating a protest vote as a mandate for exclusion.",
       "Social Physics Analysis:\nThe AfD runs a classic smart selfish maneuver, manufacturing grievance against immigration and federal policies while offering exclusionary pretexts that deepen societal fractures.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between democratic participation and extremist outcomes, it plots a direct trajectory toward Deception. Structural friction amplifies polarization.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between democratic participation and extremist outcomes, it plots a direct trajectory toward Deception. Structural friction amplifies polarization.",
       "The Unavoidable Truth: Electoral victories by extremist parties signal deep institutional failure among mainstream leaders.\n\nThe Unavoidable Lie: Protest votes for far-right platforms offer constructive solutions to economic decline.",
       "Alethekanon:\nWhen systemic governance ignores local despair, voters embrace radical alternatives that promise disruption over dialogue.",
       "Awwthekanon:\nIt is deeply unsettling to watch communities fracture and turn toward fear and division. True security comes from listening to people's real struggles, not building walls against our neighbors.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "AfD Campaign",
@@ -156,6 +218,7 @@
         "name": "Saxony-Anhalt Electorate",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

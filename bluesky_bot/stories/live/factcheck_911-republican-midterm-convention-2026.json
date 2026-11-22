@@ -5,22 +5,22 @@
     "subject": "Remembering 9/11. And, Vance, Trump urge voters to back Republicans in the midterms",
     "link": "https://www.npr.org/2026/09/11/g-s1-142846/up-first-newsletter-september-11-remembrance-republican-midterm-convention-scotus-missouri-redistricting",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.86,
     "mode": "root",
     "posts": [
       "Marking 25 years since 9/11 while GOP leaders rally voters for the midterms.\nEvidence: Memorial tributes, partisan speeches, electoral appeals\n#Aletheia #USPol #911Memorial",
-      "Leaders solemnly honor 9/11 victims while calling for civic participation in upcoming midterm elections.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Solemn national grief is leveraged directly into partisan electoral maneuvers and divisive political posturing.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nNational trauma is co-opted as a partisan backdrop to drive midterm electoral mobilization.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "Leaders solemnly honor 9/11 victims while calling for civic participation in upcoming midterm elections.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Solemn national grief is leveraged directly into partisan electoral maneuvers and divisive political posturing.\nResulting Judgement: (-0.94, -0.86) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nNational trauma is co-opted as a partisan backdrop to drive midterm electoral mobilization.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "- Memorial Tributes: COND (0.2, -0.2) — Genuine grief mixed with political utility.\n- Partisan Messaging: FAIL (-0.8, -0.9) — Exploits national tragedy for votes.",
       "As the nation marks the 25th anniversary of 9/11, political figures balance solemn commemorations with aggressive midterm campaign rallies.",
       "The Poison:\nWrapping partisan electoral appeals in the solemn shroud of national tragedy cheapens collective grief.",
       "The Breakdown & Plane Error:\nConfusing Metaphysical remembrance (WHO suffered) with Logical electoral strategy (WHO gains votes).",
       "Social Physics Analysis:\nThis dynamic runs a Smart Selfish Maneuver. Actors invoke national unity as a pretext, project corruption onto opponents, and extract partisan loyalty from shared trauma.",
-      "The Trajectory: The Path of Deception.\nWhen solemn remembrance is co-opted for electoral leverage, it plots a direct trajectory toward Deception.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen solemn remembrance is co-opted for electoral leverage, it plots a direct trajectory toward Deception.",
       "The Unavoidable Truth: National tragedies inevitably become rhetorical weapons in partisan political struggles.\n\nThe Unavoidable Lie: Political conventions seamlessly honor victims without seeking electoral advantage.",
       "Alethekanon:\nTrue reverence requires separating solemn national grief from the machinery of partisan electoral mobilization.",
       "Awwthekanon:\nIt hurts to see the sacred pain of 25 years ago stitched onto the banners of a partisan rally, when we should just be holding space for those we lost.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Memorial Tributes",
@@ -217,6 +279,7 @@
         "name": "NPR",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

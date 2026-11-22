@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A record-breaking deployment masks crew breakdown while leaders brush off mental health crises.\n\nUSS Abraham Lincoln ending long deployment amid health concerns\nEvidence: mission rotation, crew distress, institutional denial\n#USNavy #Military #Aletheia",
-      "Officials claimed the 266-day deployment was a routine success focused on mission readiness and sailor safety, dismissing outside reports as dishonest media framing.\nStated Judgement: (+0.76, +0.87) — Good Preference",
-      "In reality, sailors faced extreme exhaustion, water issues, and suicide attempts while leaders minimized the severe mental toll to project strength.\nResulting Judgement: (-0.93, -0.86) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nWhen institutional image preservation overrides troop welfare, systemic denial replaces genuine care.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
+      "Officials claimed the 266-day deployment was a routine success focused on mission readiness and sailor safety, dismissing outside reports as dishonest media framing.\nStated Judgement: (+0.76, +0.87) — Greater Good",
+      "In reality, sailors faced extreme exhaustion, water issues, and suicide attempts while leaders minimized the severe mental toll to project strength.\nResulting Judgement: (-0.93, -0.86) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWhen institutional image preservation overrides troop welfare, systemic denial replaces genuine care.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
       "- Navy Leadership Public Messaging: FAIL (1.0, 0.0) — Frames an extended, grueling deployment purely as a triumphant mission execution.\n- Crew Welfare & Mental Health Reality: FAIL (-0.75, -0.72) — Unacknowledged extreme strain, supply issues, and suicide attempts among sailors.",
       "The USS Abraham Lincoln is returning from a grueling 266-day deployment in the Middle East amid reports of crew burnout, suicide attempts, and supply shortages, prompting sharp political scrutiny and defensive official denials.",
       "The Bright Side:\nThe ship is finally returning home, and no fatalities occurred from the reported mental health crises.",
       "The Breakdown & Plane Error:\nThe plane error conflates WHAT (operational rotation) with WHO (who bears the human cost). The bait-and-switch trades sailor well-being for geopolitical posturing.",
       "Social Physics Analysis:\nBy prioritizing institutional image over transparent acknowledgment of strain, leaders use pretexts of mission necessity to project strength while deflecting accountability for crew welfare.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The structural friction of ignored human limits inevitably triggers institutional collapse.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The structural friction of ignored human limits inevitably triggers institutional collapse.",
       "The Unavoidable Truth: Extended deployments without adequate support break morale and endanger lives.\n\nThe Unavoidable Lie: Pushing crews past their limits without consequence is merely standard toughness.",
       "Alethekanon:\nWhen command structures substitute public relations spin for authentic care, they hollow out the very resilience they claim to champion. True strength requires facing operational reality honestly.",
       "Awwthekanon:\nThose young sailors and their worried families carried an unimaginable burden far from home. They deserve our deepest compassion and real, unstinting support, not dismissive rhetoric.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Navy Leadership Public Messaging",
@@ -270,6 +332,7 @@
         "name": "Richard Blumenthal",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Democrat Moderate: 'My Biggest Desire... Biggest Goal' Is Mass Amnesty",
     "link": "https://www.breitbart.com/immigration/2026/09/25/democrat-moderate-my-biggest-desire-biggest-goal-is-mass-amnesty/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.65,
-    "real_psi": -0.72,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": -0.55,
+    "real_psi": -0.6,
     "mode": "root",
     "posts": [
       "Rep. Tom Suozzi pushes mass amnesty for millions, framing it as personal empathy while elite economic interests drive wage-suppressing migration policies. \nEvidence: Suozzi quotes, RNC reports, immigration policy shifts\n#Aletheia #Immigration",
-      "Stated claims present mass amnesty as an act of profound personal compassion rooted in immigrant family history to protect millions from deportation.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Actual drivers reflect coordinated pressure from corporate lobbies seeking cheaper labor and political planners prioritizing foreign constituencies over domestic workers.\nResulting Judgement: (-0.65, -0.72) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nAmnesty rhetoric masks corporate labor extraction behind a facade of humanitarianism, distorting civic trust.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
+      "Stated claims present mass amnesty as an act of profound personal compassion rooted in immigrant family history to protect millions from deportation.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "Actual drivers reflect coordinated pressure from corporate lobbies seeking cheaper labor and political planners prioritizing foreign constituencies over domestic workers.\nResulting Judgement: (-0.55, -0.60) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAmnesty rhetoric masks corporate labor extraction behind a facade of humanitarianism, distorting civic trust.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
       "Sub-Audits Breakdown:\n- Rep. Tom Suozzi: FAIL (-0.6, -0.7) — Masks economic lobbying as personal empathy.\n- Media Framing: COND (-0.5, -0.5) — Highlights donor pressure while ignoring legal realities.",
       "Representative Tom Suozzi declared legalizing millions of undocumented immigrants his top political priority, sparking intense debate over national sovereignty and labor economics.",
       "The Poison:\nHiding corporate labor extraction behind personal humanitarian anecdotes prevents honest debate on national wage impacts.",
       "The Breakdown & Plane Error:\nConfusing personal family sentiment (Q4 Lyrical) with systemic macroeconomic policy (Q5 Logical) creates a severe structural blind spot.",
       "Social Physics Analysis:\nActors employ a Smart Selfish Loop: hiding corporate wage-suppression goals behind humanitarian pretexts, while projecting callousness onto opponents who defend national borders.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated humanitarian intentions and actual economic extraction drivers, it plots a direct trajectory toward Lesser Evil (ψ = -0.72).",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated humanitarian intentions and actual economic extraction drivers, it plots a direct trajectory toward Lesser Evil (ψ = -0.72).",
       "The Unavoidable Truth: Immigration policy directly shapes domestic labor markets and wage floors.\n\nThe Unavoidable Lie: Mass legalization is driven purely by unselfish humanitarian compassion.",
       "Alethekanon:\nFraming structural labor demand as purely personal empathy substitutes sentimental pretexts for systemic economic accountability.",
       "Awwthekanon:\nEvery family story matters deeply, but ignoring the economic strain on working-class citizens leaves entire communities feeling forgotten and unheard in the halls of power.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Rep. Tom Suozzi",
@@ -179,6 +241,7 @@
         "name": "U.S. Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

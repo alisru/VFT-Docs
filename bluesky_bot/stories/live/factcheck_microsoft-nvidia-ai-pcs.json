@@ -6,21 +6,21 @@
     "link": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.25,
-    "real_psi": -0.3,
+    "claim_psi": 1.0,
+    "real_u": 0.28,
+    "real_psi": -0.41,
     "mode": "root",
     "posts": [
       "Microsoft drops pricey new Nvidia-powered AI PCs and dev workstations.\nEvidence: Surface Laptop Ultra specs, RTX Spark Dev Box, $2.6k-$6k pricing\n#Tech #Microsoft #AI",
-      "Microsoft claims its new Nvidia-chip Surface PCs democratize local AI agent development for all creators.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Reality reveals elite-tier hardware priced from $2,600 to $6,000, locking advanced local AI capability behind massive capital walls.\nResulting Judgement: (-0.25, -0.30) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nHigh-end hardware innovation packaged as universal empowerment while serving elite enterprise margins.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.65, z: 1)",
+      "Microsoft claims its new Nvidia-chip Surface PCs democratize local AI agent development for all creators.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Reality reveals elite-tier hardware priced from $2,600 to $6,000, locking advanced local AI capability behind massive capital walls.\nResulting Judgement: (+0.28, -0.41) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nHigh-end hardware innovation packaged as universal empowerment while serving elite enterprise margins.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.65, z: 1)",
       "Sub-Audits Breakdown:\n- Microsoft Hardware: COND (-0.2, -0.3) — Premium pricing filters access.\n- Windows Platform: PASS (0.2, 0.1) — Sandbox execution containers.",
       "Microsoft and Nvidia released high-performance AI PCs and dev boxes running on RTX Spark chips, aiming to capture developer workflows locally.",
       "The Bright Side:\nExecution containers offer improved sandboxing and local privacy for developers running models without cloud latency.",
       "The Breakdown & Plane Error:\nConfusing WHAT (selling expensive hardware) with WHO (empowering everyday developers).",
       "Social Physics Analysis:\nMicrosoft deploys a smart selfish maneuver: wrapping high-margin workstation sales in the noble pretext of democratizing AI agent development for the masses.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Premium gatekeeping masquerades as open empowerment.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Premium gatekeeping masquerades as open empowerment.",
       "The Unavoidable Truth: Powerful local AI hardware expands developer capability.\n\nThe Unavoidable Lie: Premium $6,000 workstations are built for everyone.",
       "Alethekanon:\nHigh-end hardware pricing exposes the commercial reality behind democratic rhetoric.",
       "Awwthekanon:\nIt is exciting to see powerful local tools, but financial barriers leave many creators behind.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Microsoft Hardware Strategy",
@@ -215,6 +277,7 @@
         "name": "Satya Nadella",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

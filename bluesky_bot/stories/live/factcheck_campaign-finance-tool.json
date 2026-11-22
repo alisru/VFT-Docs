@@ -5,22 +5,22 @@
     "subject": "This tool makes everyone a campaign finance expert",
     "link": "https://popular.info/p/this-tool-makes-everyone-a-campaign-a35",
     "target_url": "https://bsky.app/profile/popular.info/post/3mx5thrbatc2o",
-    "claim_u": 0.9,
-    "claim_psi": 0.8,
-    "real_u": 0.2,
-    "real_psi": 0.1,
+    "claim_u": 0.85,
+    "claim_psi": 0.7,
+    "real_u": 0.4,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "Dark money mailers flood mailboxes during elections, hiding behind opaque PAC names until now.\nEvidence: $1M spent on ads, opaque disclosures, PaidForBy.info launch\n#Aletheia #CampaignFinance #Transparency",
-      "Popular Information’s new web app, PaidForBy.info, gives voters unprecedented insight into who is really funding political mailers and dark money campaigns.\nStated Judgement: (+0.9, +0.8) — Good Preference",
-      "While the tool offers a valuable database lookup, decoding intricate Super PAC networks and shell corporations remains challenging for average voters without deep investigative time.\nResulting Judgement: (+0.2, +0.1) — Lesser Good",
-      "Verdict: COND — The Path of Redemption.\nThe app provides genuine transparency into political spending, though systemic dark money loopholes limit how easily everyday users can trace ultimate funding.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 1)",
+      "Popular Information’s new web app, PaidForBy.info, gives voters unprecedented insight into who is really funding political mailers and dark money campaigns.\nStated Judgement: (+0.85, +0.70) — Greater Good",
+      "While the tool offers a valuable database lookup, decoding intricate Super PAC networks and shell corporations remains challenging for average voters without deep investigative time.\nResulting Judgement: (+0.40, +0.25) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe app provides genuine transparency into political spending, though systemic dark money loopholes limit how easily everyday users can trace ultimate funding.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 1)",
       "Sub-Audits Breakdown:\n- Popular Info Tool: PASS (0.8, 0.7) — Opens up political mailer disclosures.\n- Systemic Transparency: COND (0.0, -0.2) — Dark money structures still obscure ultimate actors.",
       "As political campaigns ramp up spending with millions funneled through opaque PACs, new digital tools attempt to bridge the transparency gap for everyday voters.",
       "The Bright Side:\nCivic tech initiatives empower local watchdogs with searchable databases, stripping away some of the secrecy surrounding independent expenditure mailers.",
       "The Breakdown & Plane Error:\nThe analysis shifts from the instrumental WHAT (a searchable web app interface) to the structural WHO (the hidden billionaire donors and PAC founders funding dark money).",
       "Social Physics Analysis:\nIndependent journalists are deploying a Smart Altruistic maneuver by creating transparent public tools, countering the Smart Selfish tactics of political operatives who use opaque PAC shells to shield their donors from public scrutiny.",
-      "The Trajectory: The Path of Redemption.\nWhen civic tools expose hidden funding structures, public oversight improves, moving toward structural accountability.\nThe mathematical convergence stabilizes into conditional utility.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen civic tools expose hidden funding structures, public oversight improves, moving toward structural accountability.\nThe mathematical convergence stabilizes into conditional utility.",
       "The Unavoidable Truth: Digital lookup tools expose who pays for political ads, but they cannot eliminate dark money loopholes.\n\nThe Unavoidable Lie: A simple web app instantly turns every voter into an expert financial auditor.",
       "Alethekanon:\nTransparency tools shine a light into dark corners, but opacity evolves just as fast as the tech built to pierce it.\nKnowing who paid for the mailer is only half the battle.",
       "Awwthekanon:\nIt's wonderful seeing journalists build tools that help everyday people see through political spin. Knowledge is the first step toward reclaiming our democracy.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Popular Info Tool",
@@ -165,6 +227,7 @@
         "name": "Voters",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

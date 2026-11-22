@@ -5,22 +5,22 @@
     "subject": "'Things got out of control': Video of alleged beating by Santa Ana police spurs investigation",
     "link": "https://www.latimes.com/california/story/2026-10-06/video-of-alleged-beating-by-santa-ana-police-spurs-investigation",
     "target_url": "https://bsky.app/profile/latimes.com/post/3mxbepg7rfg2s",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.78,
-    "real_psi": -0.85,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "A shocking video of Santa Ana police repeatedly punching a man on the ground sparks a use-of-force investigation. 🌐\n\nEvidence: Public Safety, Police Brutality, State Protection\n#Aletheia #PoliceBrutality #SantaAna",
-      "Authorities claim they are conducting a thorough, objective investigation into the October 1st arrest of Florentino Lopez to ensure accountability and uphold standard use-of-force protocols.\n\nStated Judgement: (+0.80, +0.50) — Greater Good",
-      "The video shows officers pulling Lopez to the ground and punching him repeatedly before backup arrives. State power is used to inflict physical violence, followed by institutional damage control.\n\nResulting Judgement: (-0.78, -0.85) — Greater Evil",
-      "Verdict: FAIL — Deception into Destruction. The state uses physical violence to enforce compliance, then deploys bureaucratic investigations to manage public outrage.\n\nIntegrity: Severe Deception (Hypocrisy: 6.50, Uncertainty z: 4)",
+      "Authorities claim they are conducting a thorough, objective investigation into the October 1st arrest of Florentino Lopez to ensure accountability and uphold standard use-of-force protocols.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The video shows officers pulling Lopez to the ground and punching him repeatedly before backup arrives. State power is used to inflict physical violence, followed by institutional damage control.\n\nResulting Judgement: (-0.94, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 6.50, Uncertainty z: 4)",
       "- Santa Ana PD: FAIL (-0.78, -0.85) — Violence masked as standard arrest.\n- French PM Lecornu: FAIL (-0.82, -0.75) — Dismisses severe injuries as accidents.",
       "On October 1, 2026, 28-year-old Florentino Lopez was arrested outside his Santa Ana home. Video captured officers punching him repeatedly, sparking outrage and a police use-of-force investigation.",
       "The Bright Side:\nMobile video technology continues to bypass official narratives, forcing immediate public investigations that would otherwise be buried under standard police reports.",
       "The Breakdown:\nThe state commits a Metaphysical error by claiming the beneficiary of this violence is public safety (WHO), when the actual beneficiary is the preservation of unchecked police authority over citizens.",
       "Social Physics Analysis:\nOfficers execute a Smart Selfish Maneuver, using immediate physical force to establish dominance, then projecting blame onto the victim's behavior while using internal investigations as a shield.",
-      "The Trajectory: The Path of Deception into Destruction.\nMapping the gap between public safety claims and physical violence plots a direct trajectory toward systemic decay, where state authority is maintained through fear.",
+      "The Trajectory: The Path of Fall into Destruction.\nMapping the gap between public safety claims and physical violence plots a direct trajectory toward systemic decay, where state authority is maintained through fear.",
       "The Unavoidable Truth: Police violence is documented by citizens, not self-reported by the state.\nThe Unavoidable Lie: Internal investigations are designed to prioritize justice over institutional self-preservation.",
       "Alethekanon:\nWhen the state's monopoly on violence is exposed on video, the immediate pivot to 'investigation' is a systemic pressure-release valve, not a commitment to structural reform.",
       "Awwthekanon:\nIt is heartbreaking to see someone beaten outside their own home, where they should feel safest. True safety cannot be built on fear, and our communities deserve healing, empathy, and real protection.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Santa Ana Police Department Use of Force",
@@ -291,6 +353,7 @@
         "name": "Sébastien Lecornu",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

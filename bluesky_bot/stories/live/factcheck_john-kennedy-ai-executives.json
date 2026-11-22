@@ -5,22 +5,22 @@
     "subject": "John Kennedy Criticizes AI Executives' Messaging Failures",
     "link": "https://www.washingtonexaminer.com/policy/technology/4715684/john-kennedy-knocks-ai-messaging-failures/",
     "target_url": "",
-    "claim_u": 0.6,
+    "claim_u": 0.55,
     "claim_psi": 0.4,
-    "real_u": 0.5,
-    "real_psi": 0.6,
+    "real_u": 0.55,
+    "real_psi": 0.55,
     "mode": "root",
     "posts": [
       "Sen. John Kennedy calls AI execs 'high-IQ, stupid people' for terrible marketing around resource strains.\nEvidence: Meet the Press, water/power use, Sam Altman\n#Tech #AI #USPol",
-      "Sen. John Kennedy argued that tech leaders are terrible marketers who alienate the public by openly admitting AI destroys jobs and drains power grids.\nStated Judgement: (+0.6, +0.4) — Conditionally Sound",
-      "Kennedy accurately spotlights the severe tone-deafness and massive resource footprints of AI data centers that tech moguls gloss over.\nResulting Judgement: (+0.5, +0.6) — Trustworthy",
-      "Verdict: PASS — The Path of Awakening.\nKennedy cuts through corporate tech hype, exposing how tone-deaf executive messaging fuels legitimate public backlash against data center burdens.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Sen. John Kennedy argued that tech leaders are terrible marketers who alienate the public by openly admitting AI destroys jobs and drains power grids.\nStated Judgement: (+0.55, +0.40) — Greater Good",
+      "Kennedy accurately spotlights the severe tone-deafness and massive resource footprints of AI data centers that tech moguls gloss over.\nResulting Judgement: (+0.55, +0.55) — Greater Good",
+      "Verdict: PASS — Grace.\nKennedy cuts through corporate tech hype, exposing how tone-deaf executive messaging fuels legitimate public backlash against data center burdens.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- AI Executive Messaging: PASS (+0.5, +0.6) — Exposes tone-deaf PR failures.\n- Resource Strain Reality: PASS (+0.6, +0.5) — Highlights power and water use.",
       "Appearing on Meet the Press, Sen. John Kennedy blasted AI developers for openly boasting about job losses and grid strain while demanding public trust.",
       "The Bright Side:\nBlunt political calling-out of tech elitism forces a necessary public reckoning over unchecked data center resource consumption.",
       "The Breakdown & Plane Error:\nConfusing WHAT the technology achieves with WHO pays the environmental and economic bill for grid expansion.",
       "Social Physics Analysis:\nAI executives run a smart selfish maneuver by masking infrastructure strain behind utopian promises. Kennedy cuts through this pretext, exposing how poor transparency triggers public resistance.",
-      "The Trajectory: The Path of Awakening.\nWhen political figures dismantle corporate gaslighting, it plots a direct trajectory toward structural transparency and public realism.",
+      "The Trajectory: The Path of Grace.\nWhen political figures dismantle corporate gaslighting, it plots a direct trajectory toward structural transparency and public realism.",
       "The Unavoidable Truth: AI infrastructure demands massive water and power that tech executives refuse to honestly account for.\n\nThe Unavoidable Lie: Silicon Valley leaders are master communicators building a shared, frictionless future.",
       "Alethekanon:\nTech moguls who treat public grid depletion as an afterthought deserve the populist backlash they harvest. Marketing cannot outrun megawatts.",
       "Awwthekanon:\nIt is exhausting watching tech billionaires brush off our rising utility bills while they build endless thirsty data centers.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "AI Executive Messaging",
@@ -164,6 +226,7 @@
         "name": "Dario Amodei",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

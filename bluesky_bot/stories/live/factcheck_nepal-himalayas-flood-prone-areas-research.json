@@ -5,22 +5,22 @@
     "subject": "Almost 300,000 people now live in flood-prone areas in the Nepalese Himalayas – new research",
     "link": "https://tcnv.link/0Q8f3qS",
     "target_url": "https://bsky.app/profile/uk.theconversation.com/post/3mxgfmf7thj2i",
-    "claim_u": 0.94,
-    "claim_psi": 1.0,
-    "real_u": 0.55,
-    "real_psi": 0.6,
+    "claim_u": 0.78,
+    "claim_psi": 0.73,
+    "real_u": 0.66,
+    "real_psi": 0.64,
     "mode": "root",
     "posts": [
       "Glaciers retreat, floodplains fill: 300,000 lives in the Himalayas sit directly in nature's crosshairs.\nHimalayan flood-prone settlement research\nEvidence: satellite screening, rapid development, climate hazard #Aletheia #Climate",
-      "New research shows built-up areas in flood-prone Himalayan catchments grew 46% since 2016. Nearly 300,000 residents, including 100,000 downstream of expanding glacial lakes, are exposed to severe flood hazards.\nStated Judgement: (+0.94, +1.00) — Greater Good",
-      "Topographic data confirms that narrow river valleys offer the only flat land for trade and tourism routes, funneling roads and towns directly into active debris corridors. Physical vulnerability is accelerating.\nResulting Judgement: (+0.55, +0.60) — Greater Good",
-      "Verdict: PASS — Stasis in Grace. The study provides objective empirical risk analysis to guide municipal planning before glacial breaches turn settlements into disaster zones.\nIntegrity: Trustworthy (Hypocrisy: 1.34, z: 0)",
+      "New research shows built-up areas in flood-prone Himalayan catchments grew 46% since 2016. Nearly 300,000 residents, including 100,000 downstream of expanding glacial lakes, are exposed to severe flood hazards.\nStated Judgement: (+0.78, +0.73) — Greater Good",
+      "Topographic data confirms that narrow river valleys offer the only flat land for trade and tourism routes, funneling roads and towns directly into active debris corridors. Physical vulnerability is accelerating.\nResulting Judgement: (+0.66, +0.64) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.34, z: 0)",
       "- Study Authors: PASS (+0.88, +0.82) — Sound hazard mapping.\n- Nepal Zoning: COND (+0.25, +0.35) — Lagging safety policy.\n- The Conversation: PASS (+0.84, +0.76) — Accurate coverage.",
       "Following an August 2026 glacial avalanche in Nepal that claimed over 1,400 lives, scientists mapped river catchments to quantify why human settlement exposure grew by nearly half over seven years.",
       "The Bright Side:\nThe Height Above Nearest Drainage metric provides a cheap, rapid screening method for steep valleys, giving resource-constrained mountain governments actionable maps to enforce safe zoning.",
       "The Breakdown & Plane Error:\nThe study avoids the common trap of blaming climate alone (CAUSE) while ignoring human exposure (WHERE). By aligning physical geography with human expansion, it restores empirical causality.",
       "Social Physics Analysis:\nEconomic gravity pulls roads and lodges into flat valley floors, creating systemic strain when regional planners ignore glacial risks. Transparency in spatial data offers a path to defuse this disaster trap.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good, leveraging scientific transparency to protect vulnerable lives.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good, leveraging scientific transparency to protect vulnerable lives.",
       "The Unavoidable Truth: Human exposure in steep Himalayan valleys is accelerating disaster risk.\nThe Unavoidable Lie: The lie is that mountain floods are purely unpredictable acts of nature beyond human mitigation.",
       "Alethekanon:\nSpatial analysis proves that disaster is a function of exposure as much as climate forcing. Closing the gap between topographic reality and municipal development is an urgent physical imperative.",
       "Awwthekanon:\nFamilies are building homes where roads take them, trying to earn a living in the mountains. They deserve early warnings, safe ground, and protection before the next glacial lake breaks open.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Academic Research Validity",
@@ -176,6 +238,7 @@
         "name": "Nepal",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

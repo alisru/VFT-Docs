@@ -5,22 +5,22 @@
     "subject": "Karen Bass tears into Nithya Raman over contradictory comments on LAPD chief Jim McDonnell",
     "link": "https://nypost.com/2026/10/12/us-news/karen-bass-blasts-nithya-raman-over-contradictory-comments-on-lapd-chief-jim-mcdonnell/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.8,
-    "real_psi": -0.7,
+    "claim_u": 0.65,
+    "claim_psi": 0.35,
+    "real_u": -0.15,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "LA Mayor Karen Bass blasts challenger Nithya Raman over conflicting timelines on LAPD Chief Jim McDonnell and rumored ties to George Gascón. 🌐\nEvidence: Flip-flop, Video, Staffing\n#LA #Politics #Aletheia",
-      "Raman's campaign claims she never spoke with George Gascón and that her deleted 'fascist liars' video targeted ICE, not LAPD Chief McDonnell.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Raman repeatedly flip-flopped on when she'd replace McDonnell (2026 vs 2030), while leaked reports point to Gascón as a preferred choice, alarming police.\nResulting Judgement: (-0.8, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nRaman's shifting timelines and evasion on controversial leadership appointments expose rank political expediency.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.20, z: 2)",
+      "Raman's campaign claims she never spoke with George Gascón and that her deleted 'fascist liars' video targeted ICE, not LAPD Chief McDonnell.\nStated Judgement: (+0.65, +0.35) — Greater Good",
+      "Raman repeatedly flip-flopped on when she'd replace McDonnell (2026 vs 2030), while leaked reports point to Gascón as a preferred choice, alarming police.\nResulting Judgement: (-0.15, -0.25) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nRaman's shifting timelines and evasion on controversial leadership appointments expose rank political expediency.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.20, z: 2)",
       "Sub-Audits Breakdown:\n- Nithya Raman Campaign: FAIL (-0.8, -0.7) — Flip-flops on police leadership timelines.\n- Karen Bass Campaign: COND (+0.5, +0.2) — Rightly exposes policy contradictions.",
       "Ahead of the Nov 3 mayoral election, LA's policing crisis and leadership stability before the 2028 Olympics have become fierce electoral flashpoints.",
       "The Poison:\nUsing public safety and police leadership as footballs for mayoral ambition risks severe officer attrition and institutional breakdown.",
       "Plane Error: Confusing WHAT (stable policing) with WHO (political patronage). Raman dodges accountability for radical staff appointments.",
       "Social Physics Analysis:\nRaman runs a Smart Selfish Maneuver—hiding controversial staffing plans behind pretexts and blamed editing—while Bass exposes the contradiction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated denials and staffing reality, it plots a direct trajectory toward Lesser Evil. Systemic strain rises.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated denials and staffing reality, it plots a direct trajectory toward Lesser Evil. Systemic strain rises.",
       "The Unavoidable Truth: Ambiguity on police leadership undermines morale in an already understaffed department.\n\nThe Unavoidable Lie: Political videos blaming 'fascists' have no impact on public trust.",
       "Alethekanon:\nElectoral survival requires transparent administrative commitments, not shifting timelines that alienate both reformers and officers.",
       "Awwthekanon:\nWhen leaders play political chess with public safety, it's the hardworking officers on the ground and worried residents who bear the stress.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Nithya Raman Campaign",
@@ -168,6 +230,7 @@
       "LA",
       "Politics",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

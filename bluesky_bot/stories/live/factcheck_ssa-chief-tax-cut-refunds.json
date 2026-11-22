@@ -5,22 +5,22 @@
     "subject": "Exclusive--SSA Chief Credits Working Families Tax Cut for 'Largest' Refunds Ever",
     "link": "https://www.breitbart.com/politics/2026/09/12/exclusive-ssa-chief-credits-working-families-tax-cut-for-largest-refunds-ever/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 0.75,
+    "claim_psi": 0.35,
+    "real_u": 0.35,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "SSA and IRS chief credits Working Families Tax Cut for record tax refunds. Evidence: Frank Bisignano interview, Treasury figures, tax relief metrics. #Aletheia #Economy #USPol 🌐",
-      "The tax cuts delivered record $3,400+ refunds and accelerated service while boosting federal revenue and business formation.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "While tax refunds increased, the dual-role leadership of SSA and IRS, partisan division, and selective fiscal framing mask deeper structural deficit trade-offs.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. Tax relief provides tangible short-term gains, but selective economic framing masks institutional consolidation and deficit strains.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 7.1, z: 3)",
+      "The tax cuts delivered record $3,400+ refunds and accelerated service while boosting federal revenue and business formation.\nStated Judgement: (+0.75, +0.35) — Greater Good",
+      "While tax refunds increased, the dual-role leadership of SSA and IRS, partisan division, and selective fiscal framing mask deeper structural deficit trade-offs.\nResulting Judgement: (+0.35, +0.05) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 7.1, z: 3)",
       "- Frank Bisignano: COND (0.2, -0.3) — Touts tax cut gains while minimizing structural trade-offs.\n- Economic Impact: PASS (0.5, 0.4) — Delivers genuine financial relief to tax filers.",
       "SSA Commissioner and IRS CEO Frank Bisignano touted the Working Families Tax Cut Act, highlighting record refund payouts and accelerated IRS processing.",
       "The Bright Side:\nMillions of taxpayers receive substantial direct financial relief through higher refunds.",
       "The Breakdown & Plane Error:\nConfuses the WHAT (immediate tax refund totals) with the WHO (attributing broad economic trends exclusively to targeted legislative maneuvers).",
       "Social Physics Analysis:\nOfficials execute a Smart Selfish Maneuver, spotlighting popular tax relief to justify institutional consolidation and sideline structural fiscal concerns.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between promotional rhetoric and fiscal reality, it plots toward Lesser Evil through selective economic framing.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between promotional rhetoric and fiscal reality, it plots toward Lesser Evil through selective economic framing.",
       "The Unavoidable Truth: Direct tax relief provides meaningful, tangible assistance to working families.\n\nThe Unavoidable Lie: A single tax cut solves long-term structural revenue and deficit imbalances.",
       "Alethekanon:\nEconomic policy communication prioritizes midterm narrative control over fiscal transparency.",
       "Awwthekanon:\nGetting extra money back in hard times helps families breathe easier, even if the big picture is complicated.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Frank Bisignano",
@@ -159,6 +221,7 @@
         "name": "Social Security Administration",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

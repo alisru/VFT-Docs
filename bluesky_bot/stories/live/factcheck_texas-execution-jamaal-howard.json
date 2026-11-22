@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/10/07/us-news/texas-set-to-execute-jamaal-howard-first-lethal-injection-execution-since-christa-pike-botch-attempt/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Texas prepares for its 30th U.S. execution this year as Jamaal Howard faces lethal injection for a 2000 robbery murder.\nEvidence: Lethal Injection, 2000 Murder, Legal Appeals\n#Aletheia #Texas #DeathPenalty",
-      "Media framing portrays the upcoming execution as a standard judicial milestone while noting recent national execution delays and intellectual disability claims.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Behind the procedural reporting lies the raw mechanics of state-sanctioned execution, where systemic finality overrides evolving legal challenges and psychiatric disputes.\nResulting Judgement: (-0.75, -0.80) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSensationalizing routine capital punishment relative to botched attempts obscures fundamental ethical inquiries.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.50, z: 2)",
+      "Media framing portrays the upcoming execution as a standard judicial milestone while noting recent national execution delays and intellectual disability claims.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Behind the procedural reporting lies the raw mechanics of state-sanctioned execution, where systemic finality overrides evolving legal challenges and psychiatric disputes.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nSensationalizing routine capital punishment relative to botched attempts obscures fundamental ethical inquiries.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.50, z: 2)",
       "Sub-Audits Breakdown:\n- Judicial Procedure: COND (0.0, -0.5) — Follows statutory mandates ignoring systemic flaws.\n- Media Framing: FAIL (-0.75, -0.8) — Exploits national botched execution fears.",
       "Jamaal Howard, convicted of the 2000 slaying of store clerk Vickie Swartout, faces lethal injection in Texas amid ongoing appeals regarding intellectual disability claims.",
       "The Poison:\n sensationalizing botched executions elsewhere as a hook normalizes state-sanctioned lethality without debating the core ethics of capital punishment.",
       "The Breakdown & Plane Error:\nConfusing WHAT (the legal statute of execution) with WHO (the moral responsibility of state-administered death) creates a systemic empathy blind spot.",
       "Social Physics Analysis:\nThe state and media run a Smart Selfish Maneuver, utilizing procedural crime reporting as a pretext to project deterrence while extracting final retributive power without societal transparency.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic lethality perpetuates high-strain retributive loops.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic lethality perpetuates high-strain retributive loops.",
       "The Unavoidable Truth: Capital punishment permanently closes all avenues of rehabilitation and systemic correction.\n\nThe Unavoidable Lie: State executions are administered with flawless clinical neutrality.",
       "Alethekanon:\nFraming state executions through the lens of procedural continuity sanitizes the irreversible nature of lethal force. 🌐",
       "Awwthekanon:\nEvery human life carries inherent dignity, and reducing a tragic crime and a complex mental history to a scheduled state execution leaves a deep scar on our collective humanity.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Judicial Procedure",
@@ -289,6 +351,7 @@
         "name": "U.S. Supreme Court",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

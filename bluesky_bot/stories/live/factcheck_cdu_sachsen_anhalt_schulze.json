@@ -8,19 +8,19 @@
     "claim_u": 0.5,
     "claim_psi": 0.0,
     "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Sven Schulze campaigns in Saxony-Anhalt as CDU polls slide toward a historic defeat.\nEvidence: falling approval, ducked debates, coalition decay\n#Aletheia #Germany #CDU",
-      "The CDU presents steady governance and confident leadership ahead of the September vote.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "In reality, the party faces steep declines and its leader avoids confronting far-right opponents directly.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nElectoral decline meets evasive strategy, hastening political erosion.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.2, z: 2)",
+      "The CDU presents steady governance and confident leadership ahead of the September vote.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "In reality, the party faces steep declines and its leader avoids confronting far-right opponents directly.\nResulting Judgement: (-0.70, -0.75) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nElectoral decline meets evasive strategy, hastening political erosion.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.2, z: 2)",
       "- Sven Schulze: COND (-0.6, -0.7) — Struggles to halt poll collapse.\n- CDU Strategy: FAIL (-0.8, -0.8) — Avoids direct clash with extremists.",
       "As Saxony-Anhalt approaches its state election, the governing CDU coalition faces an unprecedented challenge from the surging far-right AfD.",
       "The Bright Side:\nGrassroots voter engagement remains active on local discount store doorsteps.",
       "The Breakdown & Plane Error:\nConfusing procedural campaigning (WHAT) with existential political confrontation (WHO).",
       "Social Physics Analysis:\nBy avoiding direct ideological confrontation to protect comfort, leadership projects weakness and cedes ground to reactionary friction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Evasive avoidance fails to arrest systemic decline.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Evasive avoidance fails to arrest systemic decline.",
       "The Unavoidable Truth: Evasion in political debates accelerates institutional decay.\n\nThe Unavoidable Lie: Cosmetic local snapshots mask structural voter abandonment.",
       "Alethekanon:\nPolite campaigning in the face of radical polarization is a retreat disguised as composure.",
       "Awwthekanon:\nIt is hard to watch leaders try so hard to smile while the ground shifts entirely beneath their feet.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sven Schulze Campaign",
@@ -157,6 +219,7 @@
         "name": "Saxony-Anhalt",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

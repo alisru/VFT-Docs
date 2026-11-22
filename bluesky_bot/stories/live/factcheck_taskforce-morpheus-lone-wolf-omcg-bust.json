@@ -5,22 +5,22 @@
     "subject": "Australia and New Zealand police target motorbike gang deemed 'high threat'",
     "link": "https://www.abc.net.au/news/2026-10-09/qld-lone-wolf-outlaw-motorbike-gang-targeted/107249476",
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3mxgcqvggz22y",
-    "claim_u": 0.88,
-    "claim_psi": 0.82,
-    "real_u": 0.86,
-    "real_psi": 0.8,
+    "claim_u": 0.6,
+    "claim_psi": 0.72,
+    "real_u": 0.19,
+    "real_psi": 0.34,
     "mode": "root",
     "posts": [
       "A trans-Tasman dragnet strikes organized crime: Australian and New Zealand police hit the Lone Wolf biker gang with 20 arrests and 69 charges across dozens of raids.\nEvidence: Public Safety, Drug Seizures, Syndicate Disruption\n#TaskforceMorpheus #Crime",
-      "Authorities announced Taskforce Morpheus coordinated across state and international borders to disrupt the high-threat Lone Wolf motorcycle gang, targeting illicit drug trafficking, extortion, and tobacco black markets.\nStated Judgement: (+0.88, +0.82) — Greater Good",
-      "Police executed 18 search warrants and 10 firearms checks, seizing cocaine, MDMA, and illegal tobacco while detaining 20 key operatives. The multi-agency blitz matched stated operational goals without overreach.\nResulting Judgement: (+0.86, +0.80) — Greater Good",
-      "Verdict: PASS — Grace Stasis. Coordinated inter-agency policing delivered measurable disruption against high-level organized crime networks.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "Authorities announced Taskforce Morpheus coordinated across state and international borders to disrupt the high-threat Lone Wolf motorcycle gang, targeting illicit drug trafficking, extortion, and tobacco black markets.\nStated Judgement: (+0.60, +0.72) — Greater Good",
+      "Police executed 18 search warrants and 10 firearms checks, seizing cocaine, MDMA, and illegal tobacco while detaining 20 key operatives. The multi-agency blitz matched stated operational goals without overreach.\nResulting Judgement: (+0.19, +0.34) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
       "- Taskforce Morpheus: PASS (+0.88, +0.82) — Coordinated cross-border sweep executed cleanly.\n- Lone Wolf OMCG: FAIL (-0.92, -0.88) — Predatory drug trafficking and extortion networks.\n- ABC Reporting: PASS (+0.82, +0.75) — Factual reporting anchored in official metrics.",
       "Taskforce Morpheus brought together federal, state, and New Zealand police to dismantle Lone Wolf OMCG networks, which fund criminal enterprises by exploiting retail tobacco shops and trafficking drugs.",
       "The Poison:\nWhile tactical busts seize illicit inventory and yield headline arrests, organized crime syndicates frequently replenish lower-tier ranks and supply chains unless underlying black-market financial flows are severed.",
       "The Breakdown & Plane Error:\nNo plane error detected. Physical seizures of MDMA, cocaine, and illicit tobacco (Physical/WHAT) match law enforcement's stated objective to degrade gang operations (Logical/HOW) for public protection (Metaphysical/WHO).",
       "Social Physics Analysis:\nTaskforce Morpheus executed a Smart Altruistic Maneuver, leveraging inter-jurisdictional transparency and shared intelligence to neutralize predatory coercion, disarming syndicates that extract illicit profits through fear and addiction.",
-      "The Trajectory: The Path of Grace Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Sustained multi-agency alignment creates an effective systemic barrier against cartel expansion.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Sustained multi-agency alignment creates an effective systemic barrier against cartel expansion.",
       "The Unavoidable Truth: Outlaw motorcycle gangs rely on lucrative retail black markets to bankroll violent transnational drug operations.\nThe Unavoidable Lie: Single-day police operations can permanently dismantle deeply entrenched criminal syndicates.",
       "Alethekanon:\nInstitutional cohesion across borders is the only structural antidote to decentralized cartels. When operational output matches stated mandates, enforcement delivers genuine societal protection.",
       "Awwthekanon:\nIt is a huge relief to see communities protected from gang violence and illegal drug trades. Families and local shop owners deserve to live and work peacefully without intimidation from criminal syndicates.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.87,
+        "O": 0.17,
+        "N": 0.13
+      },
+      "GE": {
+        "S": 0.17,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.53,
+        "O": 0.07,
+        "N": 0.2
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.77,
+        "O": 0.17,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.77,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.5,
+        "N": 0.13
+      },
+      "GE": {
+        "S": 0.53,
+        "O": 0.73,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.47,
+        "O": 0.27,
+        "N": 0.13
+      },
+      "LE": {
+        "S": 0.27,
+        "O": 0.43,
+        "N": 0.03
+      },
+      "GP": {
+        "S": 0.7,
+        "O": 0.47,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.47,
+        "O": 0.7,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Taskforce Morpheus",
@@ -379,6 +441,7 @@
         "name": "New Zealand Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.0,
-    "real_u": -0.2,
-    "real_psi": -0.3,
+    "real_u": 0.35,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "When wildlife strikes without warning, local residents face unseen biological risks.\nEvidence: animal attack, rabies exposure, public warning\n#Aletheia #NewHampshire",
-      "A local resident recounts a harrowing encounter with an aggressive, unidentified animal, leading to intensive rabies treatments.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "An aggressive rabid animal roams a local New Hampshire area, posing an ongoing public health hazard while authorities hunt it down.\nResulting Judgement: (-0.2, -0.3) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nAn unexpected wildlife encounter exposes local health risks, met with transparent public safety warnings rather than malice.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.2, z: 1)",
+      "A local resident recounts a harrowing encounter with an aggressive, unidentified animal, leading to intensive rabies treatments.\nStated Judgement: (+0.80, +0.00) — Lesser Good",
+      "An aggressive rabid animal roams a local New Hampshire area, posing an ongoing public health hazard while authorities hunt it down.\nResulting Judgement: (+0.35, -0.10) — Lesser Good",
+      "Verdict: PASS — Compromise.\nAn unexpected wildlife encounter exposes local health risks, met with transparent public safety warnings rather than malice.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.2, z: 1)",
       "- Resident Encounter: PASS (0.8, 0.0) — Honest recounting of a frightening wild animal attack.\n- Official Response: PASS (-0.1, -0.2) — Transparent public safety warning issued.",
       "Three people were attacked by a mysterious animal in Lebanon, New Hampshire, prompting police and Fish & Game warnings.",
       "The Bright Side:\nPrompt medical intervention and clear police warnings prevented wider panic or unaddressed infections.",
       "The Breakdown & Plane Error:\nConfusing a random biological hazard (WHERE/WHEN) with human institutional malice.",
       "Social Physics Analysis:\nThis is a natural friction event rather than a manufactured crisis. Wildlife acting erratically due to illness triggers immediate community response without hidden political extraction.",
-      "The Trajectory: The Path of Awakening.\nWhen biological reality intrudes on daily routines, the community shifts from complacency to active vigilance. The vector resolves toward natural equilibrium.",
+      "The Trajectory: The Path of Compromise.\nWhen biological reality intrudes on daily routines, the community shifts from complacency to active vigilance. The vector resolves toward natural equilibrium.",
       "The Unavoidable Truth: Wild nature operates outside human political intentions.\n\nThe Unavoidable Lie: Every unexpected hazard is a sign of institutional failure.",
       "Alethekanon:\nPhysical hazards demand biological vigilance, not ideological projection.",
       "Awwthekanon:\nIt is terrifying to be attacked unexpectedly, but thankfully medical care is available.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Resident Encounter",
@@ -156,6 +218,7 @@
         "name": "Lebanon Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

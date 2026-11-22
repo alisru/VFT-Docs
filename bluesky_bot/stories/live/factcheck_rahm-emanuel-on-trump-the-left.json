@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Veteran political operator argues centrism is key to winning elections and defeating populism.\n\nRahm Emanuel on Trump and the Left\nEvidence: pragmatic governance, party gatekeeping, elite framing\n#Aletheia #USPol",
-      "Centrist leaders argue that the Democratic party must avoid progressive overreach to secure broad voter coalitions and defeat political opponents.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "Pragmatic focus on electoral math often masks defensive gatekeeping that protects established power structures from working-class economic demands.\nResulting Judgement: (+0.50, +0.79) — Lesser Good",
-      "Verdict: COND — The Path of Redemption. Pragmatic electoral strategy offers realistic coalition building but alienates voters facing severe economic distress.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 0)",
+      "Centrist leaders argue that the Democratic party must avoid progressive overreach to secure broad voter coalitions and defeat political opponents.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Pragmatic focus on electoral math often masks defensive gatekeeping that protects established power structures from working-class economic demands.\nResulting Judgement: (+0.50, +0.79) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 0)",
       "- Rahm Emanuel: COND (+0.3, -0.2) — Pragmatic but entrenched.\n- Democratic Strategy: COND (+0.1, 0.0) — Safe districts prioritized.",
       "Rahm Emanuel discusses political strategy, criticizing progressive purity tests while outlining economic arguments against the Trump administration.",
       "The Bright Side:\nFocusing on tangible economic grievances and lowering household costs directly addresses core voter pain points.",
       "The Breakdown & Plane Error:\nConfusing HOW (centrist coalition mechanics) with WHO (class representation).\n\nBait-and-switch: presenting institutional self-preservation as working-class protection.",
       "Social Physics Analysis:\nEstablishment brokers protect existing power configurations by framing progressive reforms as electoral suicide, prioritizing institutional safety over structural transformation.",
-      "The Trajectory: The Path of Redemption. When you map the gap between stated intentions and ground-level results, it plots a balanced trajectory toward Lesser Good.",
+      "The Trajectory: The Path of Small Fall from Grace.",
       "The Unavoidable Truth: Centrist pragmatism wins purple districts but fails to inspire systemic economic hope.\n\nThe Unavoidable Lie: Establishment incrementalism solves deep structural inequality.",
       "Alethekanon:\nEmanuel's hard-nosed pragmatism correctly identifies swing district math while dismissing valid working-class desperation as ideological noise.",
       "Awwthekanon:\nPeople hurting from high costs just want leaders who genuinely listen to their struggles rather than playing political chess.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Rahm Emanuel Political Posture",
@@ -264,6 +326,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

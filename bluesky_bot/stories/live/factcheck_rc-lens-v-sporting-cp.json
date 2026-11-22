@@ -6,15 +6,15 @@
     "link": "https://outsideofthepride.blogspot.com/2026/08/rc-lens-v-sporting-cp.html",
     "target_url": "https://bsky.app/profile/sexdrugsandaraujo.bsky.social/post/3mxanghoufs2t",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
+    "claim_psi": 1.0,
     "real_u": 1.0,
-    "real_psi": 0.8,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A spirited look ahead to the Champions League clash between RC Lens and Sporting CP, mixing football history with financial realities.\nEvidence: club history, billionaire ownership, financial regulations\n#Aletheia #ChampionsLeague #RCLens",
-      "Previews and historical breakdowns offer an objective, engaging look at European fixtures without partisan distortion or false pretexts.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Football journalism frames club ownership and financial histories through engaging narrative color, maintaining high structural alignment with sporting reality.\nResulting Judgement: (+1.0, +0.8) — Grace",
-      "Verdict: PASS — The Path of Grace. An honest, engaging sports preview that accurately frames club history and financial realities.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Previews and historical breakdowns offer an objective, engaging look at European fixtures without partisan distortion or false pretexts.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Football journalism frames club ownership and financial histories through engaging narrative color, maintaining high structural alignment with sporting reality.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- RC Lens Buildup: PASS (1.0, 0.8) — Accurate historical and ownership context.\n- Sporting CP Context: PASS (1.0, 0.8) — Clean pre-match fixture reporting.",
       "RC Lens prepares to face Sporting CP in the 2026/27 UEFA Champions League at the Stade Bollaert-Delelis following strong European campaigns.",
       "The Bright Side:\nRich historical context and transparent acknowledgment of ownership realities enrich modern football journalism.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "RC Lens Buildup",
@@ -290,6 +352,7 @@
         "name": "Joseph Oughourlian",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

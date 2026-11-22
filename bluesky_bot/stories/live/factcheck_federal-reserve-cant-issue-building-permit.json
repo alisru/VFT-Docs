@@ -1,0 +1,255 @@
+[
+  {
+    "thinking": "Phase 1: Plane Verification Scan\nEvaluating 7 Planes for 'The Fed can’t issue a building permit':\nQ1 (Metaphysical - WHO): Stated beneficiary is prospective homebuyers and families seeking housing affordability. Matches actual beneficiary of supply-side regulatory reform. Score: PASS (0.8, V_Q1 = 1.0).\nQ2 (Possible - WHAT): Failure mode of monetary policy without supply expansion is explicitly addressed (subsidizing demand into constrained supply inflates prices). Score: PASS (0.85, V_Q2 = 1.0).\nQ3 (Physical - WHERE): Physical construction reality (zoning laws, permitting, physical structures) recognized as primary physical constraint. Score: PASS (0.9, V_Q3 = 1.0).\nQ4 (Lyrical - WHY): Editorial narrative cuts through monetary obfuscation to highlight root regulatory frictions. Score: PASS (0.8, V_Q4 = 1.0).\nQ5 (Logical - HOW): Causal chain connecting supply inelasticity, zoning restrictions, and home prices holds firmly under load. Score: PASS (0.85, V_Q5 = 1.0).\nQ6 (Historical - CAUSE): Historical context of post-war zoning barriers and interest rate cycles acknowledged. Score: PASS (0.75, V_Q6 = 1.0).\nQ7 (Emotive - EFFECT): Pragmatic analysis aligns with goal of structural housing affordability. Score: PASS (0.8, V_Q7 = 1.0).\nz-profile = [0, 0, 0, 0, 0, 0, 0], z = 0.\nR_net calculation: Minor omission of speculative investment dynamics yields slight friction. V_prod = 0.85. R_net = 1 / 0.85 = 1.18 ('Trustworthy').\n\nPhase 2: Vector Verification (18 Variables & Separated Will)\nStated Forces:\nGG: S=1.2, O=0.0, N=0.1 -> F_GG = (1.1, 1.3)\nGE: S=0.0, O=1.1, N=0.1 -> F_GE = (1.2, 1.0)\nLG: S=0.8, O=0.0, N=0.2 -> F_LG = (1.0, -0.6)\nLE: S=0.1, O=0.8, N=0.1 -> F_LE = (0.6, -0.8)\nGP: S=1.2, O=0.0, N=0.1 -> F_GP = (1.2, 0.0)\nBP: S=0.0, O=1.2, N=0.0 -> F_BP = (1.2, 1.2)\nWeights sum = 7.0. Sum F_u = 6.3. claim_u = 6.3 / 7.0 = +0.82. Net Will positive: claim_psi = +0.76.\n\nActual Forces:\nGG: S=0.9, O=0.1, N=0.2 -> F_GG = 0.8*(1,1) + (-0.2,0.2) = (0.6, 1.0)\nGE: S=0.1, O=0.9, N=0.2 -> F_GE = -0.8*(-1,-1) + (0.2,-0.2) = (1.0, 0.6)\nLG: S=0.7, O=0.1, N=0.2 -> F_LG = 0.6*(1,-1) + (0.2,0.2) = (0.8, -0.4)\nLE: S=0.2, O=0.6, N=0.2 -> F_LE = -0.4*(-1,1) + (-0.2,-0.2) = (0.2, -0.6)\nGP: S=1.0, O=0.1, N=0.1 -> F_GP = 1.0*(1,0) - 0.1*(1,1) = (0.9, -0.1)\nBP: S=0.1, O=0.9, N=0.1 -> F_BP = 0.1*(-1,0) - 0.9*(-1,-1) = (0.8, 0.9)\nWeights: GG=1.2, GE=1.2, LG=1.0, LE=1.0, GP=1.2, BP=1.1. Total = 6.7.\nSum F_u = 0.6 + 1.0 + 0.8 + 0.2 + 0.9 + 0.8 = 4.3. real_u = 4.3 / 6.7 = +0.64.\nSeparated Will Protocol:\nΨ_pos = {GG (1.0), GE (0.6), BP (0.9)} -> F_pos = 2.5, W_pos = 3.5.\nΨ_neg = {LG (-0.4), LE (-0.6), GP (-0.1)} -> F_neg = 1.1, W_neg = 3.2.\nF_pos > F_neg -> Dominant positive Will. real_psi = 2.5 / 3.5 = +0.71.\nActual coordinates: (+0.64, +0.71) -> Greater Good quadrant.\n\nPhase 3: Source Integrity & Hypocrisy Gap\nΔH = ||(0.82, 0.76) - (0.64, 0.71)|| = sqrt((0.18)^2 + (0.05)^2) = sqrt(0.0324 + 0.0025) = 0.187 < 0.3 (PASS).\n\nPhase 4: Forensic Stress Test\nNo fake maximiser: Effort correctly directs focus to physical municipal bottlenecks.\nNo helxis: Stated target (prospective buyers) matches systemic beneficiaries of housing construction.\n\nPhase 5: Trajectory\nOrigin: Greater Good. Destination: Greater Good. Path: The Path of Grace.",
+    "id": "federal-reserve-cant-issue-building-permit",
+    "subject": "The Fed can’t issue a building...",
+    "link": "https://www.washingtonexaminer.com/opinion/4763167/federal-reserve-cant-issue-building-permit/",
+    "target_url": "",
+    "claim_u": 0.77,
+    "claim_psi": 0.72,
+    "real_u": 0.64,
+    "real_psi": 0.7,
+    "mode": "root",
+    "posts": [
+      "Blaming interest rates won't build new homes when local zoning bans the foundation.\nThe Fed Can't Issue a Building Permit\nEvidence: Monetary Scapegoating, Supply Bottlenecks, Regulatory Reform\n#Aletheia #HousingCrisis",
+      "The Washington Examiner argues lower mortgage rates cannot solve America's housing crisis because affordability is constrained by physical supply bottlenecks, zoning restrictions, and permitting delays.\nStated Judgement: (+0.77, +0.72) — Greater Good",
+      "Empirical data confirms the thesis: subsidizing demand through lower rates without expanding physical housing stock simply inflates asset prices. Local zoning cartels and regulatory delays are the primary bottleneck.\nResulting Judgement: (+0.64, +0.70) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.18, z: 0)",
+      "- Rate Scapegoating: PASS (+0.72, +0.75) — Debunks rate panacea.\n- Supply Bottlenecks: PASS (+0.68, +0.70) — Identifies zoning drag.\n- Developer Omissions: COND (+0.52, +0.65) — Ignores land speculation.",
+      "The national housing debate fixates on Federal Reserve interest rate cuts, ignoring municipal zoning laws, mandatory parking minimums, and bureaucratic permitting delays that stall construction.",
+      "The Poison:\nWhile cutting red tape expands private supply, deregulation alone cannot guarantee affordability for low-income families without public infrastructure investment or protections against corporate land hoarding.",
+      "The Breakdown & Plane Error:\nThe piece correctly identifies a Category Error: confusing financial demand instruments (WHERE money flows) with physical production reality (WHAT actually gets constructed). You cannot print physical lumber or land.",
+      "Social Physics Analysis:\nPoliticians run a Smart Selfish Maneuver by blaming central bankers (projection) to avoid confronting wealthy local homeowners who hoard equity via restrictive zoning. Real solutions require transparent deregulation and supply empowerment.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Confronting physical supply constraints aligns financial policy with material reality.",
+      "The Unavoidable Truth: Cheap credit into restricted housing supply only drives up home prices.\nThe Unavoidable Lie: Federal Reserve interest rate cuts alone will make housing broadly affordable.",
+      "Alethekanon:\nCentral banks set the cost of capital, not the speed of concrete. Treating monetary policy as a substitute for physical production is an institutional fiction that protects municipal zoning cartels.",
+      "Awwthekanon:\nEveryone deserves a safe, affordable place to call home and raise a family. It breaks my heart to see young parents locked out of homeownership simply because local boards refuse to let new neighborhoods be built.",
+      "Brothekanon:\nDropping mortgage rates when there are zero houses for sale just makes buyers bid each other into massive debt. If you want cheaper rent and homes, you actually have to let people build them, bro.",
+      "Spirithekanon:\n\"Unless the Lord builds the house, the builders labor in vain.\" Psalm 127:1 PASS\nMaterial prosperity requires honest foundations and actual labor, not financial illusions that evade the discipline of physical creation."
+    ],
+    "actors": [
+      "Federal Reserve",
+      "Municipal Zoning Boards",
+      "Homebuilders",
+      "American Homebuyers",
+      "Washington Examiner",
+      "United States"
+    ],
+    "actor_roles": [
+      {
+        "name": "Federal Reserve",
+        "role": "regulator"
+      },
+      {
+        "name": "Municipal Zoning Boards",
+        "role": "regulator"
+      },
+      {
+        "name": "Homebuilders",
+        "role": "instigator"
+      },
+      {
+        "name": "American Homebuyers",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Washington Examiner",
+        "role": "author"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.18,
+    "claim_z": 0,
+    "real_z": 0,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Rate Scapegoating",
+        "name": "Rate Scapegoating",
+        "claim_u": 0.85,
+        "claim_psi": 0.8,
+        "real_u": 0.72,
+        "real_psi": 0.75,
+        "verdict": "PASS",
+        "reason": "Accurately dismantles monetary panacea narrative"
+      },
+      {
+        "aspect": "Supply Bottlenecks",
+        "name": "Supply Bottlenecks",
+        "claim_u": 0.8,
+        "claim_psi": 0.75,
+        "real_u": 0.68,
+        "real_psi": 0.7,
+        "verdict": "PASS",
+        "reason": "Empirically grounds housing crisis in zoning constraints"
+      },
+      {
+        "aspect": "Developer Omissions",
+        "name": "Developer Omissions",
+        "claim_u": 0.65,
+        "claim_psi": 0.6,
+        "real_u": 0.52,
+        "real_psi": 0.65,
+        "verdict": "COND",
+        "reason": "Overlooks land speculation and low-income subsidies"
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nThe Fed can’t issue a building permit\n\nA lower mortgage rate may help a family afford a house, but it will never solve America’s housing affordability crisis. That is because the price of borrowing is only part of what determines whether a family can afford a home. The other side of the equation, which Washington has neglected for too long, is whether [&#8230;]\n\nActual Article Body:\nA lower mortgage rate may help a family afford a house, but it will never solve America’s housing affordability crisis. That is because the price of borrowing is only part of what determines whether a family can afford a home. The other side of the equation, which Washington has neglected for too long, is whether we allow enough homes to be built in the first place.\n\nYet, much of the national housing debate continues to revolve around the Federal Reserve. Every movement in mortgage rates is treated as a verdict on whether affordability is improving or deteriorating, while far less attention is paid to the zoning restrictions, permitting delays, regulatory costs, and financing obstacles that determine whether new housing ever makes it out of the ground.\n\nJoin Washington Examiner for unlimited access to the news, analysis, and commentary that matter most.\n\nAlready a member? Log in\n\nSubscribe for full access to Washington Examiner coverage, expert political analysis,\n      and subscriber-only journalism.\n\nAlready a member? Log in\n\nCancel anytime.",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.washingtonexaminer.com/opinion/4763167/federal-reserve-cant-issue-building-permit/",
+        "snippet": "Stated Claim / Post Context:\nThe Fed can’t issue a building permit\n\nA lower mortgage rate may help a family afford a house, but it will never solve America’s housing affordability crisis. That is because the price of borrowing is only part of what determines whether a family can afford a home. The o"
+      }
+    ],
+    "category": "all",
+    "topic": "HousingCrisis",
+    "event": "",
+    "policies": [
+      "Housing Policy",
+      "Cost of Living"
+    ],
+    "graph_img": "graph_png/federal-reserve-cant-issue-building-permit_graph.png",
+    "rkeys": [
+      "3mxtoa3wmvk23",
+      "3mxtoa4nz6n2n",
+      "3mxtoa6tosy2x",
+      "3mxtoaayhwo2x",
+      "3mxtoad5kwi2x",
+      "3mxtoafdlee2j",
+      "3mxtoahj4x42j",
+      "3mxtoajogho2x",
+      "3mxtoaltu6l2u",
+      "3mxtoao2f672i",
+      "3mxtoaqbguo26",
+      "3mxtoasgjbf2n",
+      "3mxtoaulw2o2x",
+      "3mxtoawqs7u2d",
+      "3mxtob26un52i"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoa3wmvk23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoa4nz6n2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoa6tosy2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoaayhwo2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoad5kwi2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoafdlee2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoahj4x42j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoajogho2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoaltu6l2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoao2f672i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoaqbguo26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoasgjbf2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoaulw2o2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtoawqs7u2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxtob26un52i"
+    ],
+    "tags": [
+      "Aletheia",
+      "HousingCrisis"
+    ],
+    "path_name": "Small Fall from Grace"
+  }
+]

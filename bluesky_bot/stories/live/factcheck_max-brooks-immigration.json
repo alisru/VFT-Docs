@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Max Brooks diagnoses Western European immigration friction through colonial guilt.\nEvidence: HBO Real Time interview, cultural commentary\n#Aletheia #Immigration",
-      "Max Brooks claims Western Europe's immigration struggles stem from colonial guilt rather than practical policy.\nStated Judgement: (0.0, -0.5) — Neutral / Cynical Stance",
-      "The commentary reduces complex socio-economic realities and welfare state strains into reductive cultural caricatures.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil / Division",
-      "Verdict: FAIL — The Path of Deception.\nOversimplifies geopolitical policy challenges into provocative cultural generalizations.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 2)",
+      "Max Brooks claims Western Europe's immigration struggles stem from colonial guilt rather than practical policy.\nStated Judgement: (+0.00, -0.50) — Greater Evil",
+      "The commentary reduces complex socio-economic realities and welfare state strains into reductive cultural caricatures.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nOversimplifies geopolitical policy challenges into provocative cultural generalizations.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 2)",
       "- Max Brooks: FAIL (-0.6, -0.7) — Uses provocative rhetoric over rigorous analysis.\n- Media Framing: COND (-0.5, -0.5) — Amplifies culture-war soundbites.",
       "During an HBO Overtime segment, Max Brooks argued that Western Europe's welfare and migration strains stem from historical colonial guilt.",
       "The Poison:\nReduces complex demographic and economic integration challenges into simplistic ethnic generalizations.",
       "The Breakdown & Plane Error:\nConfusing systemic economic policy failures with psychological guilt tropes.",
       "Social Physics Analysis:\nBrooks runs a projection loop, attributing institutional policy strain to moral failing rather than addressing concrete material trade-offs.",
-      "The Trajectory: The Path of Deception.\nWhen you map provocative cultural tropes over policy failures, it plots a direct trajectory toward division.",
+      "The Trajectory: The Path of Destruction.\nWhen you map provocative cultural tropes over policy failures, it plots a direct trajectory toward division.",
       "The Unavoidable Truth: Historical context deeply influences national political attitudes toward borders.\n\nThe Unavoidable Lie: Entire continent-wide policy dilemmas reduce to simple psychological guilt.",
       "Alethekanon:\nReducing structural policy dilemmas to catchy cultural insults short-circuits genuine solutions.",
       "Awwthekanon:\nTrue understanding requires listening to the real human struggles on all sides of border debates.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Max Brooks Commentary",
@@ -142,6 +204,7 @@
         "name": "HBO",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

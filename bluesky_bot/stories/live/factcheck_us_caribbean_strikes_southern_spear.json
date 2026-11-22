@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "A deadly high-seas campaign operating far from the courts.\nEvidence: Military strikes, Extrajudicial killings, Unilateral violence\n#Aletheia #USPol #SouthernSpear 🌐",
-      "The US military claims Operation Southern Spear is a necessary war against \"narco-terrorists\" to protect American citizens from deadly drug cartels.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The US military executes lethal airstrikes on vessels without providing definitive evidence of drug smuggling, bypassing international law and risking civilian lives.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Unilateral military strikes bypass judicial oversight, replacing proof with high-seas executions.\nIntegrity: Severe Deception (Hypocrisy: 61.0, z: 0)",
+      "The US military claims Operation Southern Spear is a necessary war against \"narco-terrorists\" to protect American citizens from deadly drug cartels.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The US military executes lethal airstrikes on vessels without providing definitive evidence of drug smuggling, bypassing international law and risking civilian lives.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 61.0, z: 0)",
       "- US Southern Command: FAIL (-1.00, -1.00) — Bypasses legal frameworks.\n- Operation Southern Spear: FAIL (-1.00, -1.00) — Extrajudicial killings.",
       "Under Operation Southern Spear, the US military has killed over 200 people in the Caribbean and Pacific, drawing heavy criticism from legal experts and human rights groups.",
       "The Poison:\nBy framing drug interdiction as a military war, the administration normalizes extrajudicial executions of suspected civilians without trial or evidence.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "US Southern Command",
@@ -157,6 +219,7 @@
         "name": "US Army",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

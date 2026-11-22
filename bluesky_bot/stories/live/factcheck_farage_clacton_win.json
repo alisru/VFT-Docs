@@ -14,13 +14,13 @@
       "A political victory met with silence, marking a shift in the Clacton constituency. Muted response as Nigel Farage declared winner. Evidence: Electoral win, muted reception, political shift. #UKPol #Farage",
       "Nigel Farage secured a victory in Clacton with 22,239 votes, defeating Count Binface. The claim suggests a clear democratic mandate for his platform. Stated Judgement: (+0.72, +0.72) — Good Preference",
       "The victory was met with a notably muted public response, highlighting deep polarization and local skepticism despite the numerical win. Resulting Judgement: (+0.00, +0.58) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening. The electoral process functioned as intended, though the social reception reflects significant underlying tension. Integrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "Verdict: CONDITIONAL — Fall into Deception.",
       "Sub-Audits Breakdown:\n- Nigel Farage: PASS (0.2, 0.1) — Secured the seat through standard democratic processes.\n- Clacton Electorate: PASS (0.2, 0.1) — Expressed their will through a muted but decisive democratic participation.",
       "Nigel Farage was elected as the MP for Clacton in the 2024 UK General Election, representing Reform UK. The event was notable for the lack of celebratory fervor compared to typical election night declarations.",
       "The Bright Side:\nThe democratic process successfully facilitated a peaceful transition of power, allowing the electorate to express their preference clearly.",
       "The Breakdown & Plane Error:\nThe error lies in the Lyrical plane; the narrative of a 'triumphant' win is contradicted by the 'muted' reality of the public's reaction.",
       "Social Physics Analysis:\nThe election functioned as a transparent mechanism for power transfer. While the result was decisive, the lack of public enthusiasm suggests a disconnect between the candidate's platform and the broader community's emotional state.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The system remains stable despite local friction.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Fall into Deception. The system remains stable despite local friction.",
       "The Unavoidable Truth: The vote count is a factual, verifiable outcome of the democratic process.\n\nThe Unavoidable Lie: The assumption that a numerical victory automatically equates to broad public enthusiasm.",
       "Alethekanon:\nThe data confirms the win, but the social resonance is low. A victory without consensus is a fragile mandate.",
       "Awwthekanon:\nIt is hard to see a celebration met with such silence. I hope the community finds a way to bridge these divides.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Nigel Farage Political Intervention",
@@ -267,6 +329,7 @@
         "name": "Count Binface",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

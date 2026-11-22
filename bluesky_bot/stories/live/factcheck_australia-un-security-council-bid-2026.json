@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/jinjirrie.bsky.social/post/3mvym5kgy622w",
     "claim_u": 0.8,
     "claim_psi": 0.8,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "real_u": 0.55,
+    "real_psi": 0.35,
     "mode": "root",
     "posts": [
       "Australia launches its diplomatic bid for a UN Security Council seat, pitching multilateralism and international rules. 🌐\nEvidence: Multilateralism, Diplomatic Influence, Regional Power\n#Australia #UN #Geopolitics",
-      "Canberra frames its UN Security Council bid as a champion for global peace, international law, and small-state inclusion in multilateral security frameworks.\nStated Judgement: (+0.8, +0.8) — Greater Good",
-      "While championing global norms, the bid reflects strategic calculus to secure regional diplomatic leverage amid intensifying US-China great power competition.\nResulting Judgement: (+0.4, +0.2) — Lesser Good",
-      "Verdict: COND — The Path of Redemption.\nAustralia's UN bid balances genuine multilateral engagement with pragmatic great power positioning.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
+      "Canberra frames its UN Security Council bid as a champion for global peace, international law, and small-state inclusion in multilateral security frameworks.\nStated Judgement: (+0.80, +0.80) — Greater Good",
+      "While championing global norms, the bid reflects strategic calculus to secure regional diplomatic leverage amid intensifying US-China great power competition.\nResulting Judgement: (+0.55, +0.35) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAustralia's UN bid balances genuine multilateral engagement with pragmatic great power positioning.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
       "Sub-Audits Breakdown:\n- Valor Globo: PASS (+0.7, +0.5) — Accurate diplomatic coverage.\n- DFAT Framing: COND (+0.4, +0.2) — Strategic self-interest masked as altruism.",
       "Australia has officially announced its candidacy for a non-permanent seat on the UN Security Council, seeking to elevate its diplomatic presence on the global stage.",
       "The Bright Side:\nActive diplomatic engagement provides a moderating conduit for middle powers in multilateral forums.",
       "The Breakdown & Plane Error:\nConfusing procedural diplomatic ambition (WHAT) with pure altruistic world-saving (WHO). The bid is standard statecraft, not moral salvation.",
       "Social Physics Analysis:\nCanberra executes a Smart Altruistic Maneuver, aligning national influence with multilateral forums to foster stability through transparent diplomatic engagement.",
-      "The Trajectory: The Path of Redemption.\nWhen stated multilateral idealism meets diplomatic realism, it plots a stable trajectory toward Lesser Good. F_net > 0 under moderate friction.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen stated multilateral idealism meets diplomatic realism, it plots a stable trajectory toward Lesser Good. F_net > 0 under moderate friction.",
       "The Unavoidable Truth: Middle-power diplomacy requires balancing national interest with collective security.\nThe Unavoidable Lie: State bids are entirely selfless humanitarian acts.",
       "Alethekanon:\nDiplomatic positioning is judged by its structural contribution to regional peace, not lofty rhetoric about global order.",
       "Awwthekanon:\nEvery nation seeks a seat at the table to protect its people; true leadership means lifting up neighbors while holding the center.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Valor Globo Coverage",
@@ -150,6 +212,7 @@
         "name": "Department of Foreign Affairs and Trade",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

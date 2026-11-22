@@ -5,22 +5,22 @@
     "subject": "Gas could be banned from Australian homes under controversial new proposal",
     "link": "https://www.dailymail.com/news/article-16134401/Gas-banned-Australian-homes-controversial-new-proposal.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.8,
-    "real_u": 0.2,
-    "real_psi": 0.1,
+    "claim_u": 0.7,
+    "claim_psi": 0.5,
+    "real_u": 0.45,
+    "real_psi": 0.3,
     "mode": "root",
     "posts": [
       "Doctors push to phase out gas appliances over childhood asthma risks.\nEvidence: 12.3% childhood asthma link, health warnings, new home bans\n#Aletheia #Health #Energy",
-      "Doctors for the Environment Australia urge phasing out gas to protect public health and cut the 12.3% of childhood asthma tied to gas cooking.\nStated Judgement: (+0.9, +0.8) — Good Preference",
-      "While medical evidence on indoor air pollution is robust, wholesale bans collide with industrial gas projects and immediate cost-of-living burdens on renters.\nResulting Judgement: (+0.2, +0.1) — Conditional Good",
-      "Verdict: COND — The Path of Redemption.\nPublic health warnings correctly highlight hidden indoor toxins, but economic realities require careful transition support.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Doctors for the Environment Australia urge phasing out gas to protect public health and cut the 12.3% of childhood asthma tied to gas cooking.\nStated Judgement: (+0.70, +0.50) — Greater Good",
+      "While medical evidence on indoor air pollution is robust, wholesale bans collide with industrial gas projects and immediate cost-of-living burdens on renters.\nResulting Judgement: (+0.45, +0.30) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPublic health warnings correctly highlight hidden indoor toxins, but economic realities require careful transition support.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Doctors for the Environment: PASS (0.9, 0.8) — Rigorous health risk data.\n- Energy Sector / Govt: COND (0.0, -0.2) — Balancing health vs export revenue.",
       "Doctors for the Environment Australia released a report warning that fossil gas poses severe health hazards, following bans on new gas connections in Victoria and ACT.",
       "The Bright Side:\nAccelerating indoor air quality standards directly protects vulnerable children and hospitality workers from respiratory toxins.",
       "The Breakdown & Plane Error:\nConfuses WHERE harm occurs (indoor kitchens vs broad energy markets) and HOW transitions are funded without harming low-income renters.",
       "Social Physics Analysis:\nHealth advocates operate via a Smart Altruistic Loop, transparently linking verifiable medical data to public policy, though implementation strains low-income households.",
-      "The Trajectory: The Path of Redemption.\nBridging empirical health data with practical energy shifts moves systems toward stable equilibrium despite short-term economic friction.",
+      "The Trajectory: The Path of Small Fall from Grace.\nBridging empirical health data with practical energy shifts moves systems toward stable equilibrium despite short-term economic friction.",
       "The Unavoidable Truth: Indoor combustion of gas releases harmful respiratory pollutants.\n\nThe Unavoidable Lie: Phasing out gas appliances is costless for low-income households and renters.",
       "Alethekanon:\nPublic health advocacy exposes hidden domestic costs of fossil fuels, forcing policymakers to weigh medical evidence against industrial inertia.",
       "Awwthekanon:\nIt's wonderful to want cleaner air for our kids to breathe, as long as we help families afford the switch without extra stress.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Doctors for the Environment",
@@ -167,6 +229,7 @@
         "name": "Australian Capital Territory",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

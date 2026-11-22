@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Hezbollah decries direct talks as a surrender while ignoring the rubble its own proxy campaign created.\n\nHezbollah chief calls to reverse 'mistake'\nEvidence: sovereign defense, proxy ruin, realist diplomacy\n#Lebanon #Hezbollah",
-      "Hezbollah leader Sheikh Naim Qassem condemned Lebanese officials for pursuing a U.S.-brokered framework agreement with Israel, calling it a shameful surrender.\nStated Judgement: (+1.00, +1.00) — Good Preference",
+      "Hezbollah leader Sheikh Naim Qassem condemned Lebanese officials for pursuing a U.S.-brokered framework agreement with Israel, calling it a shameful surrender.\nStated Judgement: (+1.00, +1.00) — Greater Good",
       "In reality, Hezbollah's ongoing regional proxy conflicts triggered devastating Israeli retaliation, leaving Lebanon searching for survival through direct state negotiations.\nResulting Judgement: (-0.22, -0.35) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nHezbollah weaponizes anti-normalization rhetoric to mask the catastrophic toll of its own militant escalation.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, Uncertainty z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nHezbollah weaponizes anti-normalization rhetoric to mask the catastrophic toll of its own militant escalation.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Hezbollah Rhetoric: FAIL (-0.90, -0.85) — Blames state diplomacy while concealing militant complicity in national destruction.\n- Lebanese State Diplomacy: PASS (+0.40, +0.30) — Pragmatic effort to secure sovereignty amid existential crisis.",
       "Hezbollah leader Sheikh Naim Qassem criticized Lebanese officials Friday for engaging in U.S.-brokered talks with Israel, labeling the framework agreement a humiliating mistake that relinquishes national sovereignty after seven rounds of fruitless negotiations.",
       "The Bright Side:\nLebanon's official government is asserting independent diplomatic channels to reclaim state authority and territory.",
       "The Breakdown & Plane Error:\nConfusing tactical militancy with strategic sovereignty (Plane 5, Logical).\n\nIt is a bait-and-switch: blaming state diplomats for capitulation while ignoring that armed proxies precipitated the destruction.",
       "Social Physics Analysis:\nBy projecting failure onto state officials, militant leadership attempts to preserve coercive authority. Transparent state diplomacy threatens non-state monopolies on violence, prompting severe rhetorical pushback.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Militant self-preservation overrides national recovery.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Militant self-preservation overrides national recovery.",
       "The Unavoidable Truth: Hezbollah's proxy war invited massive destruction upon southern Lebanon.\n\nThe Unavoidable Lie: Direct diplomatic negotiations are a betrayal rather than a desperate survival mechanism.",
       "Alethekanon:\nBlaming diplomats for seeking a cease-fire after inviting total devastation is tactical gaslighting. Sovereignty cannot be restored by perpetuating endless proxy wars.",
       "Awwthekanon:\nSo many families lost their homes and livelihoods while political rhetoric drowns out their grief. Lebanon deserves peace, not another cycle of blame.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Hezbollah Rhetoric",
@@ -272,6 +334,7 @@
         "name": "Israel",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

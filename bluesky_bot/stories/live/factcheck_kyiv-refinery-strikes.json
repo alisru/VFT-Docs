@@ -14,13 +14,13 @@
       "Deep-range strikes redefine the geography of conflict as fires erupt thousands of kilometers inside Russia. ⚡️Fire reported at Russian oil refinery. Evidence: Strategic attrition, kinetic escalation, logistical disruption. #Ukraine #Russia",
       "Reports detail fires at distant oil refineries and logistics hubs, framing these as strategic efforts to diminish Russian war capacity. Stated Judgement: (+0.00, +0.50) — Neutral",
       "Ground reality shows a widening theater of war where infrastructure destruction is the primary tool for both sides, increasing systemic strain. Resulting Judgement: (-0.90, -0.82) — Lesser Evil",
-      "Verdict: PASS — The Path of Revelation. The report accurately tracks the expansion of kinetic strikes across Russian territory. Integrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "Verdict: FAIL — Revelation into Destruction.",
       "Sub-Audits Breakdown:\n- Strategic Infrastructure Strikes: PASS (-0.42, -0.65) — Accurately reports the reach of Ukrainian drone operations.\n- Russian Logistics Vulnerability: PASS (-0.42, -0.65) — Documents the impact on Wildberries hubs.",
       "The Kyiv Independent reports on fires at a Russian oil refinery in the Far East and a Wildberries logistics hub in Voronezh, highlighting the increasing reach of Ukrainian drone strikes deep within Russian territory.",
       "The Bright Side:\nIncreased transparency regarding the reach of drone technology may force a re-evaluation of defensive postures, potentially reducing the reliance on long-range missile barrages.",
       "The Breakdown & Plane Error:\nThis is a physical plane report (WHERE). The error lies in the assumption that distance equates to safety; the reality is a shrinking security perimeter for all involved.",
       "Social Physics Analysis:\nBy targeting logistics and energy, the conflict shifts from front-line combat to systemic economic disruption. This creates a cycle of retaliation where both sides project their own survival needs onto the destruction of the other.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The kinetic expansion increases the total energy cost of the conflict.",
+      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The kinetic expansion increases the total energy cost of the conflict.",
       "The Unavoidable Truth: Long-range strikes are now a permanent feature of this war.\n\nThe Unavoidable Lie: That any region of Russia remains immune to the conflict's reach.",
       "Alethekanon:\nThis report maintains structural integrity by focusing on verifiable events. The expansion of the strike zone is a logical, if grim, progression of the current attrition strategy.",
       "Awwthekanon:\nIt is heartbreaking to see the conflict reach so far, touching lives and infrastructure across such vast distances. May there be a path to peace that does not require more fire.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Strategic Infrastructure Strikes",
@@ -272,6 +334,7 @@
         "name": "Volodymyr Zelensky",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Revelation into Destruction"
   }
 ]

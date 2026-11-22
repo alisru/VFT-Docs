@@ -5,22 +5,22 @@
     "subject": "Louisiana Mother Found Guilty of Murdering 4-Year-Old Son, Abandoning Baby",
     "link": "https://www.breitbart.com/politics/2026/09/18/louisiana-mother-found-guilty-of-murdering-4-year-old-abandoning-baby-near-i-10/",
     "target_url": "",
-    "claim_u": 0.2,
-    "claim_psi": 0.1,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "claim_u": 0.5,
+    "claim_psi": 0.4,
+    "real_u": 0.05,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "A horrific case of child neglect ends in a murder conviction. Louisiana Mother Found Guilty of Murdering 4-Year-Old Son, Abandoning Baby. Evidence: Parental duty, Fatal neglect, Criminal conviction. #Aletheia #Justice",
-      "The defense argued that leaving a 4-year-old near water and a baby on a highway did not guarantee harm, claiming the state stretched the definition of murder to force a conviction. Stated Judgement: (+0.2, +0.1) — Lesser Good",
-      "The mother confessed to abandoning her children while high on drugs. Her 4-year-old drowned, and her baby was found crawling on an interstate. The jury convicted her of second-degree murder. Resulting Judgement: (-0.85, -0.9) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. A mother's ultimate betrayal of her protective duty resulted in the death of one child and the abandonment of another, meeting the legal threshold for murder.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "The defense argued that leaving a 4-year-old near water and a baby on a highway did not guarantee harm, claiming the state stretched the definition of murder to force a conviction. Stated Judgement: (+0.50, +0.40) — Greater Good",
+      "The mother confessed to abandoning her children while high on drugs. Her 4-year-old drowned, and her baby was found crawling on an interstate. The jury convicted her of second-degree murder. Resulting Judgement: (+0.05, +0.05) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
       "Sub-Audits Breakdown:\n- Defense Argument: FAIL (-0.70, -0.60) — Claims abandonment carries no certain harm.\n- Prosecution Case: PASS (0.80, 0.70) — Correctly identified fatal neglect as murder.",
       "Aaliyah Jack was convicted of second-degree murder and child cruelty after her four-year-old son drowned and her baby was abandoned on an interstate in July 2024.",
       "The Poison:\nEven with a life sentence secured, the systemic failures and drug addiction that led to this tragedy remain unaddressed, leaving other children vulnerable.",
       "The Breakdown & Plane Error:\nThe defense made a logical error by treating physical certainty of harm (WHAT) as the sole measure of intent, ignoring the mother's absolute moral and legal duty of care (WHO).",
       "Social Physics Analysis:\nThe mother executed a destructive selfish loop, prioritizing drug consumption over her children's lives. The defense attempted a post-hoc justification, trying to redefine lethal neglect as a minor oversight to evade the consequences of a manufactured tragedy.",
-      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The complete abandonment of basic human empathy leads directly to systemic and physical collapse.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The complete abandonment of basic human empathy leads directly to systemic and physical collapse.",
       "The Unavoidable Truth: Leaving toddlers alone near water and highways is a lethal act of violence.\nThe Unavoidable Lie: Pretending that abandoning helpless infants carries no predictable risk of death.",
       "Alethekanon:\nThe defense's attempt to decouple action from predictable consequence is a systemic failure of logic. Justice was served only because the jury rejected this absurd semantic evasion.",
       "Awwthekanon:\nMy heart breaks for little Legend, who was so afraid of the dark and the water, and for baby Kingtrail. May he find a loving family to help him heal from this unimaginable trauma.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Defense Argument",
@@ -161,6 +223,7 @@
         "name": "Louisiana",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

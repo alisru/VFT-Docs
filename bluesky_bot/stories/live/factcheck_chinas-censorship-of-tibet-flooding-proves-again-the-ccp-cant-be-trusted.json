@@ -8,19 +8,19 @@
     "claim_u": 0.9,
     "claim_psi": 0.8,
     "real_u": -0.9,
-    "real_psi": -0.9,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "Exposing the Chinese Communist Party's ruthless censorship of devastating Himalayan floods in Tibet. #Aletheia #China",
-      "Beijing's total information blackout and punishment of citizens over Tibetan flash floods prove the CCP is fundamentally untrustworthy.\nStated Judgement: (+0.9, +0.8) — Greater Good",
-      "The CCP violently suppresses disaster casualty figures and detains independent voices in Tibet to preserve autocratic narrative control at human cost.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. State censorship during mass mortality crises sacrifices human lives for authoritarian optics.\n\nIntegrity: Severe Deception (Hypocrisy: 18.0, z: 5)",
+      "Beijing's total information blackout and punishment of citizens over Tibetan flash floods prove the CCP is fundamentally untrustworthy.\nStated Judgement: (+0.90, +0.80) — Greater Good",
+      "The CCP violently suppresses disaster casualty figures and detains independent voices in Tibet to preserve autocratic narrative control at human cost.\nResulting Judgement: (-0.90, -0.85) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 18.0, z: 5)",
       "- CCP Disaster Management: FAIL (-0.9, -0.9) — Suppresses casualty data and punishes truth-tellers.\n- State Media Suppression: FAIL (-0.9, -0.8) — Enforces strict narrative control over human suffering.",
       "Following a catastrophic flash flood on the Tibet-Nepal border, Beijing clamped down on information, detaining citizens and underreporting thousands missing.",
       "The Poison:\nAuthoritarian information control transforms natural disasters into state-sponsored human tragedies by delaying emergency rescue and aid coordination.",
       "The Breakdown & Plane Error:\nConfusing WHO (protecting vulnerable citizens trapped by floods) with WHAT (protecting party prestige through censorship).",
       "Social Physics Analysis:\nBeijing runs a Smart Selfish maneuver. Faced with massive natural calamity, the regime prioritizes power preservation over transparency, punishing rescuers and truth-tellers to hide failure.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Autocratic control collapses human welfare.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Autocratic control collapses human welfare.",
       "The Unavoidable Truth: The CCP actively censors flood casualty numbers in Tibet.\n\nThe Unavoidable Lie: State media claims the disaster is fully managed with minimal impact.",
       "Alethekanon:\nTotalitarian regimes treat human lives as expendable collateral in the defense of infallibility, weaponizing censorship as state policy.",
       "Awwthekanon:\nMy heart aches for the families searching for their missing loved ones while an unyielding government silences their grief and hides the truth.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "CCP Disaster Management",
@@ -161,6 +223,7 @@
         "name": "Nepal Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

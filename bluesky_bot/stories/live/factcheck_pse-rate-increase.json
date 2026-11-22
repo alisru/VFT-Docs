@@ -5,22 +5,22 @@
     "subject": "Puget Sound Energy seeks $1.5B rate increase",
     "link": "https://www.kuow.org/topics/business/2026-09-28/puget-sound-energy-seeks-1-5b-rate-increase",
     "target_url": "https://bsky.app/profile/kuow.org/post/3mwmtl3wtb52a",
-    "claim_u": 0.8,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.7,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.85,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Washington's largest utility wants to charge customers more to build gas plants while missing clean targets. 🌐\nEvidence: rate hikes, profit boost, missed climate goals\n#Aletheia #Energy #Utilities",
-      "Puget Sound Energy claims its $1.5B rate hike balances clean energy investments with grid reliability while raising profit margins.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "The utility extracts higher profits from captive customers while planning to miss state 2030 clean energy mandates by relying on fossil gas.\nResulting Judgement: (-0.75, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. A corporate profit grab is masked as environmental progress, shifting costs onto ratepayers.\n\nIntegrity: Severe Deception (Hypocrisy: 8.5, z: 3)",
+      "Puget Sound Energy claims its $1.5B rate hike balances clean energy investments with grid reliability while raising profit margins.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The utility extracts higher profits from captive customers while planning to miss state 2030 clean energy mandates by relying on fossil gas.\nResulting Judgement: (-0.85, +1.00) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\n\nIntegrity: Severe Deception (Hypocrisy: 8.5, z: 3)",
       "- Puget Sound Energy: FAIL (-0.8, -0.7) — Seeks profit hikes while missing clean targets.\n- Ratepayer Burden: FAIL (-0.7, -0.6) — Bears heavy cost for fossil-reliant grid.",
       "Puget Sound Energy is asking state regulators to approve a $1.5 billion rate increase over three years, raising typical electric and gas bills significantly.",
       "The Poison:\nCaptive ratepayers fund fossil infrastructure expansions disguised as green transitions.",
       "The Breakdown & Plane Error:\nThe utility confuses WHO pays (captive customers) with WHAT is built (fossil gas plants), framing profit extraction as public duty.",
       "Social Physics Analysis:\nPSE runs a Smart Selfish Maneuver, using the pretext of green modernization to manufacture a revenue crisis that extracts higher profits from captive residential customers.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic extraction replaces genuine environmental stewardship.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic extraction replaces genuine environmental stewardship.",
       "The Unavoidable Truth: Utilities prioritize shareholder profit margins over accelerated decarbonization timelines.\n\nThe Unavoidable Lie: Massive rate hikes are primarily driven by altruistic investments in clean energy.",
       "Alethekanon:\nWhen corporate monopolies rebrand profit expansion as climate compliance, language becomes a tollbooth.",
       "Awwthekanon:\nIt hurts to watch families struggle with soaring utility bills while corporate profits climb.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Puget Sound Energy",
@@ -219,6 +281,7 @@
         "name": "Earthjustice",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

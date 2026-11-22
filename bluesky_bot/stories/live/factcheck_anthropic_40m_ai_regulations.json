@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.6,
     "claim_psi": 0.4,
-    "real_u": -0.7,
-    "real_psi": 0.6,
+    "real_u": -0.75,
+    "real_psi": 0.55,
     "mode": "root",
     "posts": [
       "Safety is the ultimate corporate shield. Anthropic splashes out $40M in fight over AI regulations in Congress. Evidence: Public Safety, Market Dominance, Regulatory Capture. #Aletheia #AI #USPol 🌐",
-      "Anthropic claims its $40 million funding of Public First Action is purely to advocate for essential AI safety safeguards and public education to protect society. Stated Judgement: (+0.6, +0.4) — Lesser Good",
-      "Anthropic is executing a classic regulatory capture maneuver, using safety panic to erect high legal barriers that freeze out open-source and smaller competitors. Resulting Judgement: (-0.7, +0.6) — Deception",
-      "Verdict: FAIL — The Path of Deception. Anthropic's massive lobbying push uses the pretext of existential risk to secure market dominance and capture the regulatory apparatus.\nIntegrity: Meaningful Distortion (Hypocrisy: 5.8, z: 3)",
+      "Anthropic claims its $40 million funding of Public First Action is purely to advocate for essential AI safety safeguards and public education to protect society. Stated Judgement: (+0.60, +0.40) — Greater Good",
+      "Anthropic is executing a classic regulatory capture maneuver, using safety panic to erect high legal barriers that freeze out open-source and smaller competitors. Resulting Judgement: (-0.75, +0.55) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nIntegrity: Meaningful Distortion (Hypocrisy: 5.8, z: 3)",
       "- Anthropic Safety Campaign: FAIL (-0.7, 0.5) — Safety narrative used to capture regulatory agencies.\n- Public First Action: FAIL (-0.8, 0.6) — Dark money vehicle used to freeze out open-source rivals.",
       "Anthropic has doubled its funding to the nonprofit Public First Action to $40 million, leading lawmakers to accuse the tech giant of attempting to capture future regulatory bodies and stifle competition.",
       "The Bright Side:\nThe intense spending war between tech giants at least forces the debate over AI safety and corporate influence into the public spotlight.",
       "The Plane Error lies in WHAT vs WHO. The public is told the regulations are about WHAT (preventing AI doom), but the actual lobbying is about WHO (which multi-billion dollar corporations get to write the rules and lock out competitors).",
       "Social Physics Analysis:\nAnthropic runs a Smart Selfish Maneuver. The secret goal is market dominance. The pretext is \"existential AI safety.\" By projecting risk onto open-source rivals, they manufacture a crisis that only their government-sanctioned models can solve.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The massive dark money influx reveals a corporate strategy designed to capture the state before it can regulate them.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The massive dark money influx reveals a corporate strategy designed to capture the state before it can regulate them.",
       "The Unavoidable Truth: Corporate safety lobbying is almost always a disguised effort to write the rules of your own monopoly.\nThe Unavoidable Lie: The claim that spending $40 million on political action committees is done out of pure altruism.",
       "Alethekanon:\nRegulatory capture disguised as existential altruism is the oldest trick in the corporate playbook. Anthropic builds a legal moat under the banner of safety, ensuring only the wealthy can afford to innovate.",
       "Awwthekanon:\nIt is sad to see the genuine hope for safe, ethical technology being used as a tool for corporate warfare. We need real safety, but it should come from open, honest collaboration, not multi-million dollar lobbying.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Anthropic Safety Campaign",
@@ -164,6 +226,7 @@
         "name": "Reed Hastings",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

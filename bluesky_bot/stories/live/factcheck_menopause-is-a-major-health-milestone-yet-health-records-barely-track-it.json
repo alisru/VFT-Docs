@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/us.theconversation.com/post/3mwmtma7g4i2l",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.3,
+    "real_u": 0.05,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "New research reveals electronic health records track menopause in only 12 percent of women experiencing the transition.\nEvidence: All of Us Research Program, NIH data\n#Health #WomenHealth",
-      "Modern electronic health records comprehensively track vital midlife health transitions.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Clinical documentation systematically omits menopause tracking, ignoring basic female health milestones in medical databases.\nResulting Judgement: (-0.40, -0.30) — Lesser Evil",
-      "Verdict: COND — The Path of Awakening.\nSystemic medical neglect of female health milestones demands urgent data reform to improve personalized care.\n\nIntegrity: Conditionally Sound (Hypof: 1.8, z: 1)",
+      "Modern electronic health records comprehensively track vital midlife health transitions.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Clinical documentation systematically omits menopause tracking, ignoring basic female health milestones in medical databases.\nResulting Judgement: (+0.05, +0.05) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nSystemic medical neglect of female health milestones demands urgent data reform to improve personalized care.\n\nIntegrity: Conditionally Sound (Hypof: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Research Team: PASS (0.90, 0.80) — Exposes hidden data gaps.\n- Electronic Medical Records: FAIL (-0.80, -0.70) — Fails to document menopause.",
       "Context: A study of nearly 240,000 women found just 12 percent had menopause noted in EHRs despite widespread symptoms.",
       "The Bright Side:\nResearchers are actively developing simple questionnaires and automated tools to integrate menopause tracking into EHRs.",
       "The Breakdown & Plane Error:\nConfuses WHAT is medically relevant with WHO bears the burden of omitted clinical documentation.",
       "Social Physics Analysis:\nInattentive medical recording reflects a passive institutional neglect rather than active malice, but perpetuates data blind spots for women's health.",
-      "The Trajectory: The Path of Awakening.\nWhen you map comprehensive health ideals against missing clinical records, it plots a direct trajectory toward Lesser Evil.\nF_pos = 1.0, F_neg = 2.5, ψ = -0.30.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map comprehensive health ideals against missing clinical records, it plots a direct trajectory toward Lesser Evil.\nF_pos = 1.0, F_neg = 2.5, ψ = -0.30.",
       "The Unavoidable Truth: Healthcare systems routinely overlook foundational female health milestones.\nThe Unavoidable Lie: Electronic health records capture comprehensive patient life stages.",
       "Alethekanon:\nUnrecorded physiological transitions reveal structural blind spots in modern clinical data collection. 🌐",
       "Awwthekanon:\nWomen's lived experiences deserve to be fully seen, heard, and documented by the medical community with deep care and respect.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Research Team",
@@ -157,6 +219,7 @@
         "name": "Journal Menopause",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

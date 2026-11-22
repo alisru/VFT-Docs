@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "OpenAI swaps top sales brass amid a massive executive exodus, trading stability for a relentless enterprise push.🌐\nOpenAI hires new CRO\nEvidence: seamless pivot, executive turmoil, enterprise control\n#Aletheia #Tech #AI",
-      "OpenAI frames the appointment of Dali Rajic as CRO as a natural step to turn lessons into repeatable execution and scale enterprise utility across businesses globally.\nStated Judgement: (+0.92, +1.00) — Good Preference",
-      "Beneath the growth narrative lies severe internal upheaval, marked by the rapid departures of top leaders like Fidji Simo and Brad Lightcap, signaling strategic friction ahead of an IPO.\nResulting Judgement: (-0.83, -0.71) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nStructural instability and high-level flight undermine the public narrative of smooth enterprise scaling.\n\nIntegrity: Severe Deception (Hypocrisy: 3.2, z: 2)",
+      "OpenAI frames the appointment of Dali Rajic as CRO as a natural step to turn lessons into repeatable execution and scale enterprise utility across businesses globally.\nStated Judgement: (+0.92, +1.00) — Greater Good",
+      "Beneath the growth narrative lies severe internal upheaval, marked by the rapid departures of top leaders like Fidji Simo and Brad Lightcap, signaling strategic friction ahead of an IPO.\nResulting Judgement: (-0.83, -0.71) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nStructural instability and high-level flight undermine the public narrative of smooth enterprise scaling.\n\nIntegrity: Severe Deception (Hypocrisy: 3.2, z: 2)",
       "Sub-Audits Breakdown:\n- Executive Transition Narrative: FAIL (-0.7, -0.8) — Framed as routine scaling while masking acute leadership drain.\n- Enterprise Revenue Strategy: COND (0.2, -0.3) — Pressured by monetization demands despite massive active user volume.",
       "OpenAI replaced chief revenue officer Denise Dresser after nine months, bringing in Wiz president Dali Rajic as part of a sweeping executive shake-up that also saw the exits of COO Brad Lightcap and AGI deployment CEO Fidji Simo.",
       "The Bright Side:\nBringing in seasoned operational leadership from Wiz adds valuable enterprise deployment experience as the company attempts to structure repeatable sales systems for millions of businesses.",
       "The Breakdown & Plane Error:\nConfusing WHAT (building useful AI tools) with WHO (corporate power struggles and executive retention). The narrative masks internal power realignment behind outward growth metrics.",
       "Social Physics Analysis:\nBy centralizing authority and squeezing out top deputies to force commercial targets, leadership prioritizes rigid control over collaborative stability. Pretexts of smooth scaling mask internal strain.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The structural gap yields negative will.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The structural gap yields negative will.",
       "The Unavoidable Truth: Rapid commercialization pressures cause severe executive churn.\n\nThe Unavoidable Lie: Executive shake-ups represent seamless organizational maturation.",
       "Alethekanon:\nWhen foundational deputies depart en masse while leadership claims business-as-usual scaling, the institutional architecture is experiencing severe tectonic stress beneath a polished PR veneer.",
       "Awwthekanon:\nIt's tough watching a visionary lab get consumed by relentless corporate grind. Behind every executive departure are real people navigating immense pressure to monetize at all costs.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Executive Transition Narrative",
@@ -275,6 +337,7 @@
         "name": "Denise Dresser",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

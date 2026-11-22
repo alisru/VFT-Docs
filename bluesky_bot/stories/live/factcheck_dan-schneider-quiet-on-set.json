@@ -5,22 +5,22 @@
     "subject": "Former Nickelodeon Showrunner Dan Schneider Loses Defamation Suit Against Quiet on Set",
     "link": "https://www.breitbart.com/entertainment/2026/09/12/former-nickelodeon-showrunner-dan-schneider-loses-defamation-suit-against-quiet-on-set/",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.75,
     "claim_psi": 0.0,
-    "real_u": 0.7,
-    "real_psi": 0.8,
+    "real_u": 0.15,
+    "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "Dan Schneider loses defamation lawsuit against Quiet on Set producers.\nEvidence: Los Angeles Superior Court, First Amendment ruling, 2024 docuseries\n#Aletheia #Entertainment",
-      "Dan Schneider argued the docuseries falsely implied he facilitated child sexual abuse, damaging his reputation.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "A three-judge panel unanimously ruled that the series accurately distinguished between toxic workplace behavior and criminal abuse, protecting free speech.\nResulting Judgement: (+0.7, +0.8) — Grace",
-      "Verdict: PASS — The Path of Grace.\nCourt upholds First Amendment protections for investigative journalism exposing workplace toxicity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Dan Schneider argued the docuseries falsely implied he facilitated child sexual abuse, damaging his reputation.\nStated Judgement: (+0.75, +0.00) — Lesser Good",
+      "A three-judge panel unanimously ruled that the series accurately distinguished between toxic workplace behavior and criminal abuse, protecting free speech.\nResulting Judgement: (+0.15, +0.20) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nCourt upholds First Amendment protections for investigative journalism exposing workplace toxicity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Dan Schneider Legal Team: FAIL (-0.6, -0.5) — Overreaches via defamation claims.\n- California Appeals Court: PASS (0.9, 0.9) — Upholds journalistic protections.",
       "A California appeals court unanimously dismissed former Nickelodeon showrunner Dan Schneider's defamation suit against the makers of Quiet on Set.",
       "The Bright Side:\nReinforces legal safeguards for journalists exposing workplace misconduct without fear of retaliatory SLAPP suits.",
       "The Breakdown & Plane Error:\nConfusing personal reputational grievance (WHO) with systemic accountability for workplace conditions (HOW).",
       "Social Physics Analysis:\nActors attempting to use legal mechanisms to shield past behavior face robust transparency boundaries. The court enforced public accountability over defensive legal extraction.",
-      "The Trajectory: The Path of Grace.\nWhen you map judicial defense of free speech against retaliatory litigation, it plots a direct trajectory toward Grace. F_pos dominates through clear legal precedent.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map judicial defense of free speech against retaliatory litigation, it plots a direct trajectory toward Grace. F_pos dominates through clear legal precedent.",
       "The Unavoidable Truth: Exposing toxic workplaces is protected speech when grounded in documented testimony.\n\nThe Unavoidable Lie: Legal challenges can erase verified accounts of workplace harassment.",
       "Alethekanon:\nJudicial protection of investigative rigor preserves public accountability against chilling defamation claims. 🌐",
       "Awwthekanon:\nConfronting past mistakes is painful, but truth-telling allows healing and prevents future harm for vulnerable youth.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Dan Schneider Lawsuit",
@@ -166,6 +228,7 @@
         "name": "Emma Schwartz",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

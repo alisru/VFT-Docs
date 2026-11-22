@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.85,
-    "real_psi": 0.9,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Colombian narco-terror boss 'Spider' was extradited to California to face federal cocaine conspiracy charges.\nEvidence: Extradition, 1000-man army, DEA custody\n#Aletheia #Law",
       "International law enforcement dismantles violent narco-terrorist cartels threatening public safety.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Federal prosecutors successfully extradited and arraigned a major cocaine kingpin to face justice.\nResulting Judgement: (+0.85, +0.90) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nCross-border cooperation successfully delivers a dangerous narco-terrorist to federal court.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Federal prosecutors successfully extradited and arraigned a major cocaine kingpin to face justice.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nCross-border cooperation successfully delivers a dangerous narco-terrorist to federal court.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- US-Colombia Extradition: PASS (0.90, 0.95) — Effective cross-border law enforcement.\n- Narco-Terrorism Prosecution: PASS (0.85, 0.88) — Halts large-scale cartel operations.",
       "Geovany Andres Rojas, leader of a 1,000-member paramilitary cocaine army, was transferred to US custody in San Diego after approvals by Colombian authorities.",
       "The Bright Side:\nInternational cooperation bridges political hurdles to neutralize transnational criminal cartels.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "US-Colombia Extradition",
@@ -211,6 +273,7 @@
         "name": "Colombian Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

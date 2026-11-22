@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_u": 0.0,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "Unusual data claims spark political firestorms.\n\nCensus Bureau Report Ties\nEvidence: partisan analysis, disputed data, false voting claims\n#Aletheia #USPol",
-      "A Census Bureau report is cited to renew claims of widespread noncitizen voting in elections.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Investigation reveals the underlying analysis links directly to a Trump-aligned think tank, with experts calling conclusions false.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nPartisan narratives weaponize flawed bureaucratic reports to manufacture election distrust.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
+      "A Census Bureau report is cited to renew claims of widespread noncitizen voting in elections.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Investigation reveals the underlying analysis links directly to a Trump-aligned think tank, with experts calling conclusions false.\nResulting Judgement: (+0.00, -0.20) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nPartisan narratives weaponize flawed bureaucratic reports to manufacture election distrust.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
       "- npr.org: COND (0.2, 0.0) — Focuses heavily on partisan controversy.\\n- NPR: PASS (-0.6, -0.7) — Provides broader institutional and policy context.",
       "A Trump-aligned think tank has ties to an unusual Census Bureau report being used by the president to renew false claims of widespread noncitizen voting.",
       "The Bright Side:\nInvestigative reporting successfully exposes hidden partisan links behind institutional reports.",
       "The Breakdown & Plane Error:\nConfusing WHAT (objective data analysis) with WHO (partisan political actors). It is a structural bait-and-switch where advocacy is disguised as neutral research.",
       "Political actors leverage institutional credibility to launder partisan talking points, substituting manufactured crises for verified electoral reality.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F(GE) dominates as partisan friction destroys trust.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F(GE) dominates as partisan friction destroys trust.",
       "The Unavoidable Truth: Institutional reports can be co-opted to launder partisan narratives.\n\nThe Unavoidable Lie: The disputed analysis reflects unbiased demographic consensus.",
       "Alethekanon:\nWhen political advocacy masquerades as objective bureaucracy, public trust is systematically hollowed out for partisan gain.",
       "Awwthekanon:\nIt is heartbreaking to watch public faith in our shared institutions get chipped away by political gamesmanship. We deserve truth that heals rather than divides.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NPR Reporting",
@@ -162,6 +224,7 @@
         "name": "U.S. Census Bureau",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

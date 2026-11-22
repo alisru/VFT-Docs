@@ -5,22 +5,22 @@
     "subject": "One Dead, Five Wounded in Shooting at Rave in Switzerland",
     "link": "https://www.breitbart.com/europe/2026/08/30/one-dead-five-wounded-in-shooting-at-rave-in-switzerland/",
     "target_url": "",
-    "claim_u": -0.9,
-    "claim_psi": -0.9,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "claim_u": 0.65,
+    "claim_psi": 0.35,
+    "real_u": 0.65,
+    "real_psi": 0.35,
     "mode": "root",
     "posts": [
       "Tragedy Strikes Swiss Rave\nEvidence: 1 dead, 5 wounded, Aarau shooting\n#Aletheia #Switzerland",
-      "A shooting at an Aarau techno rave left one dead and five wounded, shocking local authorities.\nStated Judgement: (-0.9, -0.9) — Greater Evil",
-      "A joyful communal gathering of 3,500 people was shattered by sudden violence, highlighting rare public safety failures.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nSenseless violence shatters a public celebration, leaving a community in mourning.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "A shooting at an Aarau techno rave left one dead and five wounded, shocking local authorities.\nStated Judgement: (+0.65, +0.35) — Greater Good",
+      "A joyful communal gathering of 3,500 people was shattered by sudden violence, highlighting rare public safety failures.\nResulting Judgement: (+0.65, +0.35) — Greater Good",
+      "Verdict: PASS — Grace.\nSenseless violence shatters a public celebration, leaving a community in mourning.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Police Response: PASS (0.5, 0.5) — Swift investigation and containment.\n- Media Reporting: PASS (0.8, 0.2) — Accurate coverage of casualties.",
       "Early Sunday morning at the Aarau Rave VOL. 7 in Switzerland, gunfire erupted near the end of the event, killing a 22-year-old woman.",
       "The Poison:\nPublic spaces meant for joy and freedom become sudden sites of trauma when violence pierces the perimeter.",
       "The Breakdown & Plane Error:\nConfusing isolated criminal violence (WHO) with systemic cultural failure (WHAT). The tragedy is an acute criminal act, not a systemic policy collapse.",
       "When unprovoked violence shatters a peaceful gathering, it strikes at the core of community trust. The incident reflects destructive impulse overriding shared social safety.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the violent disruption of peaceful communal spaces, it plots a direct trajectory toward Greater Evil and sudden trauma.",
+      "The Trajectory: The Path of Grace.\nWhen you map the violent disruption of peaceful communal spaces, it plots a direct trajectory toward Greater Evil and sudden trauma.",
       "The Unavoidable Truth: Public violence can shatter safe spaces without warning.\n\nThe Unavoidable Lie: High-security vigilance can completely eliminate random human malice.",
       "Alethekanon:\nViolence in spaces dedicated to shared joy reveals the fragility of public trust. Reporting accurately captures the tragedy without sensationalizing the motive.",
       "Awwthekanon:\nMy heart aches for the young lives cut short and injured while seeking simple joy and connection among friends.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Police Response",
@@ -156,6 +218,7 @@
         "name": "Maria Spinelli",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

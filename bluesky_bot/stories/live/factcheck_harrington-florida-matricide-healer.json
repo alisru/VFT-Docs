@@ -5,16 +5,16 @@
     "subject": "Self-described ‘intuitive heal...",
     "link": "https://nypost.com/2026/09/27/us-news/self-described-intuitive-healer-makes-chilling-admission-after-fatally-stabbing-his-mom-in-gated-florida-neighborhood/",
     "target_url": "",
-    "claim_u": 0.94,
-    "claim_psi": 0.88,
-    "real_u": -0.92,
-    "real_psi": -0.89,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Spiritual posturing collides with fatal violence in Delray Beach.\n\nFlorida Homicide: Alexander Harrington\nEvidence: Intuitive Healing, Fatal Stabbing, Extreme Deception\n#Aletheia #DelrayBeach #FloridaCrime",
-      "Alexander Harrington presented himself online as an intuitive healer preaching emotional release and radical forgiveness just hours before calling dispatch to report a violent domestic killing.\n\nStated Judgement: (+0.94, +0.88) — Greater Good",
-      "Police arrested Harrington for first-degree murder after finding his 77-year-old mother, Susan Baratto, fatally stabbed inside her Monterey Lake home, revealing a horrific rupture from his wellness persona.\n\nResulting Judgement: (-0.92, -0.89) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The catastrophic collapse of a superficial wellness veneer into premeditated domestic violence.\n\nIntegrity: Severe Deception (Hypocrisy: 78.4, z: 4)",
+      "Alexander Harrington presented himself online as an intuitive healer preaching emotional release and radical forgiveness just hours before calling dispatch to report a violent domestic killing.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Police arrested Harrington for first-degree murder after finding his 77-year-old mother, Susan Baratto, fatally stabbed inside her Monterey Lake home, revealing a horrific rupture from his wellness persona.\n\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 78.4, z: 4)",
       "Sub-Audits Breakdown:\n- Alexander Harrington: FAIL (-0.92, -0.89) — Lethal violence behind healing claims.\n- Wellness Persona: FAIL (-0.88, -0.85) — Cosmetic spirituality masking instability.",
       "Alexander Harrington, 50, confessed to stabbing his elderly mother to death in her gated Delray Beach residence only one day after posting a public video preaching emotional forgiveness.",
       "The Bright Side:\nImmediate emergency reporting and rapid apprehension by Palm Beach County deputies prevented further harm to neighbors in the gated community.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.7,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Alexander Harrington Action",
@@ -287,6 +349,7 @@
         "name": "Palm Beach County Sheriff's Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

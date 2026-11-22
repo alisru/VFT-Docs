@@ -5,22 +5,22 @@
     "subject": "Government spent millions on Trump ads and federal agents search Rep. Ilhan Omar's home",
     "link": "https://www.npr.org/2026/10/13/g-s1-147822/up-first-newsletter-trump-ads-funding-campaign-rallies-ilhan-omar",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.25,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "real_u": -0.75,
+    "real_psi": -0.68,
     "mode": "root",
     "posts": [
       "Taxpayer funds spent on pro-Trump ads despite pledges of private super PAC backing.\nEvidence: AdImpact data, White House PSA defense, Common Cause lawsuit\n#Aletheia #USPol #Accountability",
-      "The administration claimed taxpayer-funded promotional ads were educational public service announcements and that private super PACs would cover campaign-adjacent media.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Audits reveal nearly $22 million in taxpayer funds bankrolled the ads, with $10 million spent after the president promised private funding, violating anti-propaganda laws.\nResulting Judgement: (-0.85, -0.80) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nTaxpayer funds were diverted into unauthorized partisan advertising while public oversight mechanisms were bypassed.\n\nIntegrity: Severe Deception (Hypocrisy: 16.5, z: 4)",
+      "The administration claimed taxpayer-funded promotional ads were educational public service announcements and that private super PACs would cover campaign-adjacent media.\nStated Judgement: (+0.25, +0.00) — Lesser Good",
+      "Audits reveal nearly $22 million in taxpayer funds bankrolled the ads, with $10 million spent after the president promised private funding, violating anti-propaganda laws.\nResulting Judgement: (-0.75, -0.68) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nTaxpayer funds were diverted into unauthorized partisan advertising while public oversight mechanisms were bypassed.\n\nIntegrity: Severe Deception (Hypocrisy: 16.5, z: 4)",
       "- Taxpayer Ad Funding: FAIL (-0.90, -0.85) — Public funds used for political ads.\n- DOJ Search of Rep. Omar: COND (-0.60, -0.50) — Politically contested probe.",
       "The U.S. government continued funding pro-Trump promotional spots despite a federal judge's stop order and presidential pledges of private super PAC financing.",
       "The Poison:\nMisusing public coffers for unapproved political propaganda breaks legal firewalls between state machinery and campaign apparatuses.",
       "The Breakdown & Plane Error:\nConfusing WHO pays (taxpayers vs private donors) and WHAT the ads are (partisan campaigning vs neutral PSAs) to skirt federal spending laws.",
       "Social Physics Analysis:\nThe administration runs a Smart Selfish Maneuver, utilizing public tax dollars for partisan messaging while projecting a veneer of educational necessity, shielding political motives behind bureaucratic pretexts.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_neg dominates as state resources are extracted for partisan gain.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_neg dominates as state resources are extracted for partisan gain.",
       "The Unavoidable Truth: Taxpayer funds were improperly spent on partisan advertisements in violation of federal restrictions.\n\nThe Unavoidable Lie: These promotional spots qualified as objective public service announcements.",
       "Alethekanon:\nState machinery cannot be co-opted to fund partisan narratives under the guise of public education without destroying institutional trust.",
       "Awwthekanon:\nIt hurts to watch public resources meant for community welfare get siphoned off into political theater while citizens carry the cost.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Taxpayer Ad Funding",
@@ -168,6 +230,7 @@
       "Aletheia",
       "USPol",
       "Accountability"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

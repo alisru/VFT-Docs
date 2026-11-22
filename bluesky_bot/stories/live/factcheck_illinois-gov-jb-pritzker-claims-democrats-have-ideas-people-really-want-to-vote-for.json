@@ -5,22 +5,22 @@
     "subject": "Illinois Gov. JB Pritzker Claims Democrats Have Ideas 'People Really Want To Vote For'",
     "link": "https://www.breitbart.com/politics/2026/09/09/illinois-tds-gov-jb-pritzker-claims-democrats-have-ideas-people-really-want-vote/",
     "target_url": "",
-    "claim_u": 0.6,
+    "claim_u": 0.3,
     "claim_psi": 0.0,
-    "real_u": -0.5,
-    "real_psi": -0.7,
+    "real_u": -0.45,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Gov. Pritzker insists Democrats champion popular voter ideas on affordability and health care.\nEvidence: voter appeal, partisan framing, policy contrast\n#Aletheia #USPol",
-      "Democrats own the ideas voters truly want, fighting for affordability and healthcare against Republican cuts.\nStated Judgement: (+0.6, 0.0) — Good Preference",
-      "Partisan rhetoric masks policy failures and structural voter disconnect by projecting extreme motives onto opponents.\nResulting Judgement: (-0.5, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPartisan rhetoric frames policy debates as existential battles while avoiding institutional shortcomings.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "Democrats own the ideas voters truly want, fighting for affordability and healthcare against Republican cuts.\nStated Judgement: (+0.30, +0.00) — Lesser Good",
+      "Partisan rhetoric masks policy failures and structural voter disconnect by projecting extreme motives onto opponents.\nResulting Judgement: (-0.45, -0.65) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nPartisan rhetoric frames policy debates as existential battles while avoiding institutional shortcomings.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "Sub-Audits Breakdown:\n- JB Pritzker: FAIL (-0.5, -0.7) — Frames partisan rhetoric as popular mandate.\n- Breitbart Framing: COND (-0.4, -0.6) — Highlights contradictions with sharp bias.",
       "At a Dallas press conference, Illinois Gov. JB Pritzker defended Democratic messaging ahead of the midterms, contrasting party priorities with Republican policies.",
       "The Bright Side:\nHighlighting economic affordability and healthcare keeps the political focus on tangible voter needs.",
       "The Breakdown & Plane Error:\nConfusing partisan narrative alignment (WHAT) with actual systemic voter resonance (WHO).",
       "Social Physics Analysis:\nPritzker executes a standard partisan defense loop, projecting authoritarian motives onto opponents to distract from internal electoral friction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Partisan self-preservation overrides transparent self-correction.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Partisan self-preservation overrides transparent self-correction.",
       "The Unavoidable Truth: Political messaging often substitutes partisan posturing for genuine policy solutions.\n\nThe Unavoidable Lie: One political party holds a monopoly on popular voter aspirations.",
       "Alethekanon:\nPartisan grandstanding masquerades as popular consensus while systematically erasing legislative failures.",
       "Awwthekanon:\nIt is exhausting when leaders turn real struggles over food and healthcare into weapons for political point-scoring.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "JB Pritzker",
@@ -161,6 +223,7 @@
         "name": "Republican Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

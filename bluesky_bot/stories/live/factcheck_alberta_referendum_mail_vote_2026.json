@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "real_u": 0.7,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "Mail-in ballot requests surge past 500,000 for Alberta's high-stakes October referendum, crushing previous turnout records by over eight times.\nEvidence: 509k special ballots, 10 referendum questions, record engagement\n#Aletheia #Canada #Politics",
-      "Elections Alberta reported that over half a million citizens applied for special mail-in ballots for the upcoming provincial referendum.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "Beyond routine voting, 17% of the electorate is mobilizing over contentious governance and secession questions, straining administrative capacity.\nResulting Judgement: (+0.6, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nElectoral participation surges as citizens demand a direct voice on foundational constitutional questions.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Elections Alberta reported that over half a million citizens applied for special mail-in ballots for the upcoming provincial referendum.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Beyond routine voting, 17% of the electorate is mobilizing over contentious governance and secession questions, straining administrative capacity.\nResulting Judgement: (+0.70, +0.45) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nElectoral participation surges as citizens demand a direct voice on foundational constitutional questions.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Elections Alberta: PASS (0.8, 0.5) — Transparent administration.\n- Electorate Mobilization: PASS (0.6, 0.4) — High democratic engagement.",
       "Elections Alberta received over 500,000 mail-in ballot requests ahead of the October 19 referendum featuring ten questions, including potential secession.",
       "The Bright Side:\nMassive civic engagement proves citizens care deeply about constitutional direction and direct democratic participation.",
       "The Breakdown & Plane Error:\nConfusing administrative logistics (WHERE) with democratic legitimacy (WHO). High turnout elevates the mandate's gravity.",
       "Social Physics Analysis:\nCitizens bypass political intermediaries by demanding direct votes, exercising structural empowerment rather than accepting manufactured political stasis.",
-      "The Trajectory: The Path of Redemption.\nWhen civic participation expands massively, it plots a direct trajectory toward structural Grace. Democratic energy resolves institutional stagnation.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen civic participation expands massively, it plots a direct trajectory toward structural Grace. Democratic energy resolves institutional stagnation.",
       "The Unavoidable Truth: High voter turnout forces governments to address foundational constitutional questions openly.\n\nThe Unavoidable Lie: Mail-in voting systems are inherently prone to catastrophic institutional failure.",
       "Alethekanon:\nUnprecedented mail-in volume reflects genuine populist mobilization around governance, transcending routine electoral apathy.",
       "Awwthekanon:\nIt's truly inspiring to see half a million people take their civic duty into their own hands and demand a real say in their collective future!",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Elections Alberta Administration",
@@ -163,6 +225,7 @@
         "name": "Government of Canada",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A Chucky-masked goon who terrorized Philadelphia strangers learned that fleeing across state lines doesn't stop the US Marshals.\nEvidence: viral terror spree, cross-country flight, violent capture\n#Aletheia #USNews",
-      "Reports framed the suspect's antics as misguided viral pranks by a rogue individual seeking attention.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "Reality reveals targeted terror, assault on a jogger requiring hospitalization, and violent resistance upon capture.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nA violent terror spree masked as a prank ends in lawful capture after cross-country evasion.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Reports framed the suspect's antics as misguided viral pranks by a rogue individual seeking attention.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Reality reveals targeted terror, assault on a jogger requiring hospitalization, and violent resistance upon capture.\nResulting Judgement: (-0.80, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA violent terror spree masked as a prank ends in lawful capture after cross-country evasion.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "- Zymire Hughes: FAIL (-0.8, -0.9) — Terrorized citizens for viral clout.\n- US Marshals: PASS (0.8, 0.8) — Apprehended fugitive across state lines.",
       "Zymire Hughes was captured in Las Vegas following a manhunt for allegedly terrorizing six people in Philadelphia while wearing a Chucky mask.",
       "The Bright Side:\nSwift interstate law enforcement coordination successfully apprehended the fugitive before further escalation.",
       "The Breakdown & Plane Error:\nConfusing WHAT (violent assault) with WHO (a mere prankster) trivializes severe criminal acts.",
       "Social Physics Analysis:\nUsing anonymity to inflict terror for personal amusement reflects severe anti-social extraction. Hiding behind a mask to harvest social media engagement creates high-strain community panic.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Anti-social actions collapse social trust.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Anti-social actions collapse social trust.",
       "The Unavoidable Truth: Violence disguised as a joke remains a serious criminal offense.\n\nThe Unavoidable Lie: Evading capture proves that online notoriety shields perpetrators from justice.",
       "Alethekanon:\nMasking malice as mere amusement is a classic pretext of predatory social extraction. Justice inevitably catches up to those who flee accountability.",
       "Awwthekanon:\nIt is heartbreaking that innocent people walking down the street had to experience such terrifying moments of unprovoked fear.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Zymire Hughes Actions",
@@ -147,6 +209,7 @@
         "name": "Philadelphia Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

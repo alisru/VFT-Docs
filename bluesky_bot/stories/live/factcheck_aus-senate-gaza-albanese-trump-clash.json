@@ -5,16 +5,16 @@
     "subject": "Liberal senator's scathing dig...",
     "link": "https://www.dailymail.com/news/article-16204127/pauline-hanson-mehreen-faruqi-lidia-thorpe.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.8,
-    "real_u": -0.88,
-    "real_psi": 0.82,
+    "claim_u": 0.77,
+    "claim_psi": 0.65,
+    "real_u": -0.86,
+    "real_psi": 0.78,
     "mode": "root",
     "posts": [
       "Senate outrage erupts over diplomatic photo-ops while real war crimes get buried in domestic theater.\nAustralian Senate Gaza Clash\nEvidence: Ending War Complicity, Partisan Attention Extraction, Defending Human Rights\n#Aletheia #AusPol 🌐",
-      "Greens and independent senators claim suspending parliamentary standing orders to condemn Albanese meeting Trump and mandate sanctions is an urgent, non-negotiable moral duty to stop active war crimes.\nStated Judgement: (+0.85, +0.80) — Grace",
-      "The doomed motions were immediately defeated by a bipartisan majority. Shouting about selfies and traded insults harvested partisan media attention while delivering zero aid or systemic protection to Gaza victims.\nResulting Judgement: (-0.88, +0.82) — Deception",
-      "Verdict: FAIL — Fall into Deception. The debate traded substantive human rights accountability for partisan floor theatrics, exploiting ongoing atrocities for media clicks.\n\nIntegrity: Severe Deception (Hypocrisy: 42.50, z: 4)",
+      "Greens and independent senators claim suspending parliamentary standing orders to condemn Albanese meeting Trump and mandate sanctions is an urgent, non-negotiable moral duty to stop active war crimes.\nStated Judgement: (+0.77, +0.65) — Greater Good",
+      "The doomed motions were immediately defeated by a bipartisan majority. Shouting about selfies and traded insults harvested partisan media attention while delivering zero aid or systemic protection to Gaza victims.\nResulting Judgement: (-0.86, +0.78) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\n\nIntegrity: Severe Deception (Hypocrisy: 42.50, z: 4)",
       "- Senate Floor: FAIL (-0.88, 0.82) — Pure political theatre.\n- Daily Mail: FAIL (-0.85, 0.75) — Tabloid sensationalism.\n- Labor Govt: COND (-0.40, -0.20) — Avoids policy debate.",
       "Greens and independent senators attempted to suspend Senate business to force debate on Australian ties to Israel and Trump. The major parties united to crush the motion, triggering bitter partisan shouting across the chamber.",
       "The Bright Side:\nParliamentary procedure still allows crossbench senators to force public records on foreign policy alignments. Even when procedural motions fail, citizens gain transparency into how their elected officials vote on international alliances and human rights.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Senate Crossbench Motion",
@@ -172,6 +234,7 @@
     "tags": [
       "Aletheia",
       "AusPol"
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

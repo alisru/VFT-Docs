@@ -5,22 +5,22 @@
     "subject": "An eagle for Xi, pandas for America and a changing world order",
     "link": "https://pearlsandirritations.com/post/2026/09/an-eagle-for-xi-pandas-for-america-and-a-changing-world-order/?utm_source=pi_news&utm_medium=email&utm_campaign=daily-2026-09-30",
     "target_url": "https://bsky.app/profile/indymediaaus.mastodon.social.ap.brid.gy/post/3mwpwriuy25h2",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.51,
+    "real_psi": -0.57,
     "mode": "root",
     "posts": [
       "When superpowers trade symbols like eagles and pandas, what structural shifts are masked beneath the theatre?\nEvidence: eagle statue gift, panda promise, shifting global trust\n#Aletheia #Geopolitics",
-      "Diplomatic exchanges like Trump's eagle gift and Xi's pandas symbolize mutual recognition and stable superpower relations amidst global crises.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Behind the photo-ops, American soft power declines while China's standing rises across multilateral groupings and international institutions.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nThe summit theatre masks a structural realignment where declining US hegemony meets rising multilateralism.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
+      "Diplomatic exchanges like Trump's eagle gift and Xi's pandas symbolize mutual recognition and stable superpower relations amidst global crises.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Behind the photo-ops, American soft power declines while China's standing rises across multilateral groupings and international institutions.\nResulting Judgement: (-0.51, -0.57) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe summit theatre masks a structural realignment where declining US hegemony meets rising multilateralism.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
       "- Jocelyn Chey / Analysis: COND (-0.3, -0.4) — Explores diplomatic symbolism.\n- US-China Summit: COND (-0.4, -0.5) — Manages tensions amidst shifting power.",
       "President Trump and Xi Jinping met in Washington, exchanging symbolic gifts while navigating deep geopolitical divergences and global conflicts.",
       "The Bright Side:\nOpen diplomatic channels persist even as traditional American unipolarity recedes.",
       "The Breakdown & Plane Error:\nThe analysis conflates surface-level diplomatic tokens (WHAT) with deep structural hegemony shifts (WHO/WHY).",
       "Social Physics Analysis:\nActors run a smart self-preservation loop. Washington projects strength via symbolic theatre to mask declining soft power, while Beijing builds multilateral stability and long-term economic ties.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos vs F_neg dynamics yield a conditional trajectory.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos vs F_neg dynamics yield a conditional trajectory.",
       "The Unavoidable Truth: Superpower diplomacy is transactional theatre hiding deeper shifts in global trust.\nThe Unavoidable Lie: Symbolic gifts signify enduring unipolar dominance.",
       "Alethekanon:\nSymbolic diplomacy cannot reverse structural decline; it merely decorates the changing balance of global power. 🌐",
       "Awwthekanon:\nIt is tender to see leaders exchange animals and birds as tokens of peace, even when grand armies clash elsewhere. If only our hearts were as gentle as the pandas and eagles.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.3,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Diplomatic Framing",
@@ -216,6 +278,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

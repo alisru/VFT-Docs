@@ -5,22 +5,22 @@
     "subject": "Pete Buttigieg returns to South Carolina as he weighs another White House run",
     "link": "https://www.washingtontimes.com/news/2026/aug/23/weighing-another-white-house-run-pete-buttigieg-returns-south/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "claim_u": 0.76,
+    "claim_psi": 0.87,
+    "real_u": 0.65,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Pete Buttigieg returns to South Carolina to test 2028 presidential waters among Black voters.\n\nPete Buttigieg in SC\nEvidence: civic messaging, political ambition, federal grants\n#Aletheia #USPol",
-      "Buttigieg frames his return as a community-first listening tour focused on institutional reform and local empowerment.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "Beneath local outreach lies calculated coalition-building for a 2028 primary bid, blending federal grants with presidential positioning.\nResulting Judgement: (+0.4, +0.2) — Conditional Good",
-      "Verdict: PASS — The Path of Redemption.\nGround-level ambition aligns with public investment, though driven by electoral calculus.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
+      "Buttigieg frames his return as a community-first listening tour focused on institutional reform and local empowerment.\nStated Judgement: (+0.76, +0.87) — Greater Good",
+      "Beneath local outreach lies calculated coalition-building for a 2028 primary bid, blending federal grants with presidential positioning.\nResulting Judgement: (+0.65, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nGround-level ambition aligns with public investment, though driven by electoral calculus.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
       "- Pete Buttigieg: PASS (+0.4, +0.2) — Balances ambition with public works delivery.\n- Voter Outreach: PASS (+0.5, +0.3) — Engages historically sidelined electorates.",
       "Pete Buttigieg visited South Carolina, speaking at NAACP and Claflin University, aiming to rebuild ties with Black voters crucial for a 2028 presidential primary.",
       "The Bright Side:\nLeveraging federal infrastructure funding to tangibly benefit communities provides real value even amid political ambition.",
       "The Breakdown & Plane Error:\nConfusing WHAT (policy delivery) with WHO (presidential candidate). It is strategic positioning using past federal projects to secure future trust.",
       "Social Physics Analysis:\nBy pairing federal funding delivery with local coalition engagement, the campaign utilizes transparent public investment rather than raw deception.",
-      "The Trajectory: The Path of Redemption.\nThe gap between stated civic duty and electoral strategy plots a stable trajectory toward constructive political engagement.",
+      "The Trajectory: The Path of Small Fall from Grace.\nThe gap between stated civic duty and electoral strategy plots a stable trajectory toward constructive political engagement.",
       "The Unavoidable Truth: Federal grants delivered tangible local revitalization.\n\nThe Unavoidable Lie: The tour is purely civic service devoid of presidential ambition.",
       "Alethekanon:\nAmbition and public service are not mutually exclusive when anchored in verifiable infrastructure delivery, but transparency remains the ultimate test of motive.",
       "Awwthekanon:\nEvery community deserves leaders who listen deeply and deliver real resources, bridging past fractures with genuine presence and mutual respect.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.1,
+        "O": 0.1,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Pete Buttigieg Political Outreach",
@@ -270,6 +332,7 @@
         "name": "Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

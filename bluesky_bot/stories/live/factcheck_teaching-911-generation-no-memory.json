@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.8,
-    "real_psi": 0.9,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "25 years later, how do you teach 9/11 to a generation with no memory of it?\nEvidence: 100M young Americans, museum outreach, TikTok historical distortion\n#Aletheia #History",
-      "The 9/11 Memorial & Museum strives to instill factual foundations and human empathy in 100 million young Americans with no living memory of the tragedy.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Educators face severe digital fragmentation as online revisionism and TikTok trends distort historical reality for youth lacking direct reference points.\nResulting Judgement: (+0.8, +0.9) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nHuman-centric storytelling bridges the generational memory gap against digital revisionism.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "The 9/11 Memorial & Museum strives to instill factual foundations and human empathy in 100 million young Americans with no living memory of the tragedy.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Educators face severe digital fragmentation as online revisionism and TikTok trends distort historical reality for youth lacking direct reference points.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nHuman-centric storytelling bridges the generational memory gap against digital revisionism.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Museum Outreach: PASS (1.0, 1.0) — Strong human-centric storytelling.\n- Digital Environment: COND (0.2, -0.4) — Vulnerable to online revisionism.",
       "Twenty-five years after the September 11 terrorist attacks, educational institutions confront the challenge of passing historical memory to a generation born long after 2001.",
       "The Bright Side:\nFocusing on individual acts of heroism like Welles Crowther transforms abstract statistics into relatable moral lessons that build deep empathy.",
       "The Breakdown & Plane Error:\nThe error confuses WHERE (online algorithms) with HOW (pedagogical storytelling), requiring active engagement against digital misinformation.",
       "Social Physics Analysis:\nEducators execute a Smart Altruistic loop, sharing historical reality through transparent storytelling to empower youth against manipulation.",
-      "The Trajectory: The Path of Awakening.\nWhen you map stated intent to results, it plots a trajectory toward Grace. Active pedagogical stewardship counters historical amnesia.",
+      "The Trajectory: The Path of Grace.\nWhen you map stated intent to results, it plots a trajectory toward Grace. Active pedagogical stewardship counters historical amnesia.",
       "The Unavoidable Truth: 100 million Americans have no living memory of 9/11.\n\nThe Unavoidable Lie: Digital algorithms reliably preserve historical accuracy.",
       "Alethekanon:\nWhen living memory fades into digital noise, preserving historical truth requires intentional, human-centered storytelling. 🌐",
       "Awwthekanon:\nIt's heartbreaking to realize an entire generation only knows our nation's deepest wound through TikTok clips, making human connection more vital than ever.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Museum Outreach",
@@ -152,6 +214,7 @@
         "name": "Gen Z Students",
         "role": "acted_upon"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

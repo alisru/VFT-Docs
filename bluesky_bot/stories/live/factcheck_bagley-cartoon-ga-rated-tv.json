@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/sltrib.com/post/3mw5ooyy7j32a",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.8,
+    "real_u": 0.85,
     "real_psi": 0.5,
     "mode": "root",
     "posts": [
       "Political satire meets nonprofit appeal.\nEvidence: editorial cartoon, free access model, reader support appeal\n#Aletheia #Journalism",
-      "Pat Bagley's latest political cartoon offers sharp satirical commentary suitable for general audiences.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "The publication provides free access while transparently asking readers for voluntary donations to sustain independent local journalism.\nResulting Judgement: (0.8, 0.5) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nTransparently funding public-interest satire through voluntary support upholds democratic discourse.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Pat Bagley's latest political cartoon offers sharp satirical commentary suitable for general audiences.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The publication provides free access while transparently asking readers for voluntary donations to sustain independent local journalism.\nResulting Judgement: (+0.85, +0.50) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nTransparently funding public-interest satire through voluntary support upholds democratic discourse.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Pat Bagley Satire: PASS (0.9, 0.6) — Sharp public commentary.\n- Nonprofit Model: PASS (0.8, 0.4) — Open access with transparent appeals.",
       "The Salt Lake Tribune publishes political satire while maintaining an open-access nonprofit model supported by reader donations.",
       "The Bright Side:\nFree public access to independent editorial cartooning fosters an informed and engaged local electorate.",
       "The Breakdown & Plane Error:\nEvaluates cultural commentary (WHAT) rather than institutional extraction (WHO), maintaining clear alignment between goals and funding.",
       "Social Physics Analysis:\nThe publisher runs a Smart Altruistic Loop, pairing transparent public-interest commentary with voluntary reader support rather than coercive paywalls.",
-      "The Trajectory: The Path of Awakening.\nWhen open cultural commentary matches community funding needs, it plots a direct trajectory toward Grace and stability.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen open cultural commentary matches community funding needs, it plots a direct trajectory toward Grace and stability.",
       "The Unavoidable Truth: Independent political cartoons provide vital mirrors for democratic societies.\n\nThe Unavoidable Lie: Free digital journalism requires zero operational resources to survive.",
       "Alethekanon:\nSatirical commentary coupled with open-access fundraising represents a sustainable model for civic transparency.",
       "Awwthekanon:\nIt's wonderful to see artists using humor to bring people together and question power gently.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Pat Bagley Satire",
@@ -154,6 +216,7 @@
         "name": "Salt Lake Tribune",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

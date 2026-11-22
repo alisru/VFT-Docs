@@ -7,14 +7,14 @@
     "target_url": "https://bsky.app/profile/joshtaylor.bsky.social/post/3mugz7coook22",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.95,
-    "real_psi": 0.9,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Australia updates its digital privacy framework to tackle emerging AI and smart device risks.\nEvidence: public consultation, exposure draft bill, 900+ submissions\n#Aletheia #Privacy #Australia",
       "The Australian government released an Exposure Draft bill to modernize privacy protections for the digital age.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The consultation process is open and rigorous, gathering extensive stakeholder feedback to shape robust data protection.\nResulting Judgement: (+0.95, +0.9) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nSystemic policy evolution aligns institutional transparency with public interest protections.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "The consultation process is open and rigorous, gathering extensive stakeholder feedback to shape robust data protection.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nSystemic policy evolution aligns institutional transparency with public interest protections.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Attorney-General's Department: PASS (0.95, 0.90) — Transparent consultation framework.\n- Public Stakeholders: PASS (0.90, 0.85) — Broad civic engagement.",
       "The Australian Attorney-General's Department opened public consultation on the Privacy Amendment Bill 2026, building upon years of comprehensive Privacy Act reviews.",
       "The Bright Side:\nProactive regulatory adaptation ensures privacy frameworks keep pace with rapid AI and wearable tech advancements.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Attorney-General's Department",
@@ -206,6 +268,7 @@
         "name": "Australian Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -6,15 +6,15 @@
     "link": "https://www.chicagotribune.com/2026/10/03/matas-buzelis-caleb-wilson-chicago-bulls/?utm_campaign=mrf-bluesky-chicagotribune.com&utm_source=bluesky&utm_medium=social&mrfcid=202610046ac188f7658f6305ff689976",
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mx3j3le2kk25",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.9,
-    "real_psi": 0.8,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Brotherly bonds ignite in Chicago as Matas Buzelis and Caleb Wilson push each other to the limit in training camp. 🌐\nEvidence: Intense scrimmages, rookie push, team rebuild\n#Bulls #NBA",
-      "Chicago Bulls players Matas Buzelis and Caleb Wilson are forging a tight brotherhood while engaging in fierce, competitive scrimmages under new coach Tiago Splitter.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Young NBA talents are genuinely driving each other's competitive growth during training camp, establishing authentic chemistry and leadership within the franchise's rebuild.\nResulting Judgement: (+0.9, +0.8) — Grace",
-      "Verdict: PASS — The Path of Grace.\nAthletes and coaching staff are authentically cultivating competitive excellence and mutual growth during a team transition.\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Chicago Bulls players Matas Buzelis and Caleb Wilson are forging a tight brotherhood while engaging in fierce, competitive scrimmages under new coach Tiago Splitter.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Young NBA talents are genuinely driving each other's competitive growth during training camp, establishing authentic chemistry and leadership within the franchise's rebuild.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nAthletes and coaching staff are authentically cultivating competitive excellence and mutual growth during a team transition.\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Player Chemistry: PASS (+0.9, +0.8) — Genuine competitive bond.\n- Editorial Framing: PASS (+0.9, +0.8) — Accurate portrayal of camp dynamics.",
       "The Chicago Bulls are leaning into a youth-led rebuild around promising young talents like Matas Buzelis and rookie Caleb Wilson ahead of the NBA season.",
       "The Bright Side:\nFierce internal competition paired with genuine mutual support builds resilient team culture capable of weathering multi-year franchise rebuilds.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Player Chemistry",
@@ -218,6 +280,7 @@
         "name": "Chicago Bulls",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

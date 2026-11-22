@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "real_u": -0.02,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "Kenyan President William Ruto's directive shutting down foreign-owned small businesses sparks panic and fear across migrant communities. Evidence: shop closures, embassy queues, policy backlash. #Aletheia #Kenya 🌐",
-      "The government claims the abrupt closure directive is designed to protect local traders and small business people from cheap foreign competition. Stated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, the crackdown has triggered widespread panic, empty market stalls, and fears of xenophobic violence while threatening regional trade agreements. Resulting Judgement: (-0.85, -0.8) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. Using economic nationalism as a pretext for sudden crackdowns destabilizes regional commerce and fuels xenophobia.\nIntegrity: Severe Deception (Hypocrisy: 15.2, Uncertainty z: 3)",
+      "The government claims the abrupt closure directive is designed to protect local traders and small business people from cheap foreign competition. Stated Judgement: (+1.00, +0.00) — Lesser Good",
+      "In reality, the crackdown has triggered widespread panic, empty market stalls, and fears of xenophobic violence while threatening regional trade agreements. Resulting Judgement: (-0.02, -0.05) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 15.2, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Kenyan Govt: FAIL (-0.85, -0.8) — Abrupt bans spark panic.\n- Migrant Workers: PASS (0.8, 0.7) — Legitimate economic contributors.",
       "Following presidential directives, East African nationals were given 90 days to update documents, but the sudden shutdown orders have already paralyzed local supply chains.",
       "The Poison:\nFraming economic anxieties as a foreign threat weaponizes nationalism while undermining trade pacts like the African Continental Free Trade Area.",
       "The plane error mistakes systemic governance failures (WHO/WHY) for a foreign vendor problem (WHAT), deploying populist pretexts to project blame outward.",
       "Social Physics Analysis:\nRuto runs a Smart Selfish Maneuver, leveraging anti-migrant pretexts to divert voter attention from domestic economic pressures onto vulnerable foreign traders.",
-      "The Trajectory: The Path of Deception.\nThe gap between stated protectionism and actual economic disruption plots a direct trajectory toward Deception and social instability. F = S_LE * LE - O_LE * LE.",
+      "The Trajectory: The Path of Awakening into Destruction.\nThe gap between stated protectionism and actual economic disruption plots a direct trajectory toward Deception and social instability. F = S_LE * LE - O_LE * LE.",
       "The Unavoidable Truth: Abrupt crackdowns on migrant traders disrupt tax-paying businesses and violate continental free trade principles.\n\nThe Unavoidable Lie: Halting foreign small shops solves domestic unemployment without harming the wider economy.",
       "Alethekanon:\nBlaming foreign micro-traders for domestic economic strain is a classic political diversion that sacrifices real tax revenue for hollow populist theater.",
       "Awwthekanon:\nFamilies who built quiet, honest lives are suddenly terrified of losing everything, queuing at embassies just to escape unprovoked hostility.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Kenyan Government Administration",
@@ -156,6 +218,7 @@
         "name": "Foreign Traders",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

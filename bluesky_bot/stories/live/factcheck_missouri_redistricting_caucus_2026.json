@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.78,
-    "real_psi": -0.82,
+    "real_u": -0.72,
+    "real_psi": -0.76,
     "mode": "root",
     "posts": [
       "A partisan push to redraw Missouri's map exposes a deeper war on judicial independence. Missouri Freedom Caucus Eyes Judicial Reform.\nEvidence: Compact districts, Partisan dominance, Court stripping.\n#USPol #Missouri",
-      "The Missouri Freedom Caucus claims they are pursuing judicial reform and an 8-0 map to protect constitutional integrity and keep local communities compact and contiguous against activist court overreach.\nStated Judgement: (+0.80, +0.50) — Good Preference",
-      "The caucus is executing a power grab, attempting to dismantle judicial checks because the state Supreme Court upheld the constitutional right of citizens to hold a referendum on partisan gerrymandering.\nResulting Judgement: (-0.78, -0.82) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The caucus seeks to strip judicial power to force a highly gerrymandered map, bypassing voter referendums.\nIntegrity: Severe Deception (Hypocrisy: 1.58, z: 5)",
+      "The Missouri Freedom Caucus claims they are pursuing judicial reform and an 8-0 map to protect constitutional integrity and keep local communities compact and contiguous against activist court overreach.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "The caucus is executing a power grab, attempting to dismantle judicial checks because the state Supreme Court upheld the constitutional right of citizens to hold a referendum on partisan gerrymandering.\nResulting Judgement: (-0.72, -0.76) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 1.58, z: 5)",
       "- MO Freedom Caucus: FAIL (-0.78, -0.82) — Seeks to weaken courts.\n- Federalist: FAIL (-0.65, -0.70) — Omits court's legal basis.",
       "Following a Missouri Supreme Court ruling allowing a voter referendum on a newly drawn congressional map, the state's Freedom Caucus announced plans to target the judiciary and push for an 8-0 partisan map.",
       "The Poison:\nBy framing court-stripping as \"judicial reform,\" the caucus normalizes the systematic dismantling of constitutional checks and balances whenever a ruling disfavors their party.",
       "The Breakdown & Plane Error:\nThe Plane Error is WHO vs WHAT. The caucus claims to protect the \"voters\" (WHO), but their actual actions target the \"referendum process\" (WHAT) to prevent those very voters from rejecting their gerrymandered maps.",
       "Social Physics Analysis:\nThe caucus runs a classic Smart Selfish Maneuver. They manufacture a crisis of \"judicial activism\" as a pretext to strip court authority, projecting bias onto judges to hide their secret goal of locking in a permanent partisan monopoly.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated constitutionalism and the active dismantling of judicial checks, it plots a direct trajectory toward Deception. This represents a systematic closure of democratic futures.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated constitutionalism and the active dismantling of judicial checks, it plots a direct trajectory toward Deception. This represents a systematic closure of democratic futures.",
       "The Unavoidable Truth: The caucus wants to eliminate judicial oversight to guarantee partisan outcomes.\nThe Unavoidable Lie: They claim they are protecting the constitution by blocking voter referendums.",
       "Alethekanon:\nThe structural tension here lies in the attempt to use legislative supremacy to destroy the co-equal status of the judiciary. It is a textbook extraction of systemic power disguised as democratic reform.",
       "Awwthekanon:\nIt is deeply disheartening to see the rules of our shared community treated like a game to be won, rather than a sacred trust to protect everyone's voice. True strength lies in welcoming the people's choice, not silencing it.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "MO Freedom Caucus",
@@ -168,6 +230,7 @@
         "name": "Mike Kehoe",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/09/28/us-news/safety-advocate-blames-central-park-redesign-for-pedestrians-death-as-crashes-rise/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_psi": 1.0,
+    "real_u": -0.82,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "When a tragic park collision claims a life, safety advocates and officials point fingers at road layouts while basic enforcement languishes.\nEvidence: Tragic fatality, Rising crashes, Enforcement failure\n#Aletheia #NYC",
-      "Advocates claim the Department of Transportation's park redesign turned paths into dangerous speedways, directly causing pedestrian deaths and rising crashes.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While redesigns altered lane widths, the root crisis is zero accountability, stalled speed limits, and absent enforcement for reckless riders.\nResulting Judgement: (-0.85, -0.80) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nBlaming paint and lane lines masks the systemic failure of city agencies to enforce basic park safety laws.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
+      "Advocates claim the Department of Transportation's park redesign turned paths into dangerous speedways, directly causing pedestrian deaths and rising crashes.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While redesigns altered lane widths, the root crisis is zero accountability, stalled speed limits, and absent enforcement for reckless riders.\nResulting Judgement: (-0.82, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nBlaming paint and lane lines masks the systemic failure of city agencies to enforce basic park safety laws.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
       "Sub-Audits Breakdown:\n- Safety Advocacy: COND (-0.7, -0.6) — Fixates on paint while ignoring enforcement.\n- NYC DOT: COND (-0.8, -0.7) — Stalled policies and delayed buildout.",
       "Following the tragic death of a steamfitter hit by a cyclist, advocates are demanding park leadership resign over a controversial lane redesign.",
       "The Poison:\nShifting focus entirely to road paint shields policymakers from tackling the real vacuum of park enforcement and e-bike chaos.",
       "The Breakdown & Plane Error:\nConfusing WHAT (lane configuration) with WHO (reckless riders and absent enforcement), weaponizing a tragedy to settle political scores.",
       "Social Physics Analysis:\nActors run a smart selfish maneuver: exploiting a tragic death as a pretext to attack park leadership while dodging the hard work of actual policing and speed enforcement.",
-      "The Trajectory: The Path of Deception.\nWhen you map stated intentions against ground results, it plots a direct trajectory toward Lesser Evil through displaced blame.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map stated intentions against ground results, it plots a direct trajectory toward Lesser Evil through displaced blame.",
       "The Unavoidable Truth: Road design matters less than active enforcement of traffic rules.\n\nThe Unavoidable Lie: A coat of paint on park drives single-handedly caused a fatal collision.",
       "Alethekanon:\nWeaponizing grief to attack administrators avoids the hard reality that rules without enforcement are merely suggestions.",
       "Awwthekanon:\nEvery family grieving an avoidable tragedy deserves honest systemic protection, not political posturing over lane striping.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Safety Advocacy Framing",
@@ -221,6 +283,7 @@
         "name": "Central Park Conservancy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

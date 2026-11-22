@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.2,
-    "real_u": 0.12,
-    "real_psi": -0.15,
+    "real_u": 0.16,
+    "real_psi": -0.12,
     "mode": "root",
     "posts": [
       "Canberra's delicate dance between superpowers. The Documentary: Australia's Relationship with China explores the tightrope.\nEvidence: Balanced Diplomacy, Strategic Hedging, Pragmatic Sovereignty\n#Aletheia #Geopolitics",
-      "The BBC documentary presents Australia's relationship with China as a complex but manageable balancing act between economic reliance on Beijing and security dependence on Washington.\nStated Judgement: (+0.80, +0.20) — Lesser Good",
-      "The reality is a high-strain geopolitical tug-of-war where economic coercion and strategic posturing force Canberra into constant, unstable diplomatic compromises.\nResulting Judgement: (+0.12, -0.15) — Lesser Good",
-      "Verdict: COND — Fall into Redemption. The shift reflects the transition from idealistic diplomatic balance to pragmatic, tense geopolitical survival.\nIntegrity: Trustworthy (Hypocrisy: 0.68, z: 0)",
+      "The BBC documentary presents Australia's relationship with China as a complex but manageable balancing act between economic reliance on Beijing and security dependence on Washington.\nStated Judgement: (+0.80, +0.20) — Greater Good",
+      "The reality is a high-strain geopolitical tug-of-war where economic coercion and strategic posturing force Canberra into constant, unstable diplomatic compromises.\nResulting Judgement: (+0.16, -0.12) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.68, z: 0)",
       "- BBC Editorial Framing: COND (0.20, -0.10) — Balanced but highlights conflict.\n- Australian Foreign Policy: COND (0.12, -0.15) — Balancing trade and security.",
       "European Council President António Costa's recent push for closer EU-Canada ties highlights a global trend of democratic nations seeking stable, alternative alliances amid rising US-China tensions.",
       "The Poison:\nEven the most balanced diplomatic framing cannot hide the fact that Australia remains highly vulnerable to economic leverage, making true neutrality an illusion.",
       "The Breakdown & Plane Error:\nThe analysis confuses the physical reality of economic dependence (WHAT) with the lyrical narrative of diplomatic partnership (WHY). Hedging is a survival tactic, not a stable alliance.",
       "Social Physics Analysis:\nCanberra executes a Smart Altruistic Maneuver by trying to integrate security and trade interests. However, Beijing's pressure forces a defensive posture, shifting the dynamic toward power hoarding rather than mutual empowerment.",
-      "The Trajectory: The Path of Fall into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Pragmatic survival forces a shift from high ideals to realistic hedging.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Pragmatic survival forces a shift from high ideals to realistic hedging.",
       "The Unavoidable Truth: Australia cannot fully decouple from China without severe economic pain.\nThe Unavoidable Lie: Canberra can maintain perfect strategic balance indefinitely.",
       "Alethekanon:\nCanberra's hedging strategy is a rational response to systemic strain. True sovereignty lies in diversifying economic dependencies, not in pretending a geopolitical tightrope is a stable bridge.",
       "Awwthekanon:\nIt must be so stressful for local businesses and communities caught in the middle of these giant global rivalries. We all just want to trade, share, and live in peace without being forced to choose sides in a cold war.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "BBC Editorial Framing",
@@ -161,6 +223,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

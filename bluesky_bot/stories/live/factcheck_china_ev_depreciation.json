@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/restofworld.org/post/3mvvxumebzs2n",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.61,
-    "real_psi": -0.8,
+    "real_u": -0.74,
+    "real_psi": -0.67,
     "mode": "root",
     "posts": [
       "Used car dealers in China are turning away 5-year-old EVs, exposing a massive battery anxiety and depreciation crisis.\nEvidence: Green transition, Rapid depreciation, Corporate obsolescence\n#Aletheia #EVs #China",
-      "The EV revolution promises a seamless, sustainable transition to green mobility where vehicles retain long-term value and empower consumers.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Four out of five Chinese dealers refuse EVs older than five years due to battery degradation and lack of diagnostic standards, leaving buyers with massive depreciation.\nResulting Judgement: (-0.61, -0.80) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nManufacturers rushed to sell new EVs without building a sustainable secondary market or battery standard, shifting the risk to consumers.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "The EV revolution promises a seamless, sustainable transition to green mobility where vehicles retain long-term value and empower consumers.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Four out of five Chinese dealers refuse EVs older than five years due to battery degradation and lack of diagnostic standards, leaving buyers with massive depreciation.\nResulting Judgement: (-0.74, -0.67) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nManufacturers rushed to sell new EVs without building a sustainable secondary market or battery standard, shifting the risk to consumers.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- EV Manufacturers: FAIL (-0.65, -0.85) — Shifted battery risks to buyers.\n- Used Car Market: COND (-0.45, -0.60) — Lacks diagnostic standards.",
       "China is the first major market where EVs are aging in large numbers, revealing that rapid technological shifts can leave early adopters stranded without a viable resale ecosystem.",
       "The Poison:\nWhile new EVs lower tailpipe emissions, the lack of a circular economy and standardized battery health metrics threatens to turn millions of vehicles into premature electronic waste.",
       "The Breakdown & Plane Error:\nThe error is confusing the physical product (the car) with the logical platform (the battery ecosystem). By failing to standardize battery health, manufacturers sold a depreciating asset under the guise of a long-term investment.",
       "Social Physics Analysis:\nManufacturers executed a Smart Selfish Maneuver, hoarding profits from new sales while projecting the long-term battery degradation risks onto used car dealers and everyday consumers, creating a manufactured crisis of obsolescence.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The lack of systemic support forces early adopters to bear the cost of premature technological decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The lack of systemic support forces early adopters to bear the cost of premature technological decay.",
       "The Unavoidable Truth: Rapid EV adoption without battery standardization creates massive financial risk for used buyers.\nThe Unavoidable Lie: The transition to electric vehicles is economically seamless for the average consumer.",
       "Alethekanon:\nThe data exposes a structural failure in the green transition. When manufacturers prioritize rapid deployment over lifecycle sustainability, they merely trade carbon emissions for economic instability and electronic waste.",
       "Awwthekanon:\nIt is heartbreaking for families who bought into the green dream, hoping to do their part for the planet, only to find themselves stuck with a rapidly depreciating car they can't sell or afford to repair. We must support them.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "EV Manufacturers",
@@ -283,6 +345,7 @@
         "name": "Automobility",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

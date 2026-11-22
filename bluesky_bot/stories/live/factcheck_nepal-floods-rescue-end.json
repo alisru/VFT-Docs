@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/news.abc.net.au/post/3mx5ya3ijw42v",
     "claim_u": 0.8,
     "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": -0.2,
+    "real_u": 0.37,
+    "real_psi": -0.03,
     "mode": "root",
     "posts": [
       "Nepal closes its tragic chapter on flood rescue operations as thousands remain missing.\nEvidence: 5285 missing, search ended, rehabilitation focus\n#Nepal #DisasterRecovery",
-      "Officials state that after 40 grueling days, search and rescue operations must conclude to pivot toward long-term reconstruction and legal closure for grieving families.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "Behind the bureaucratic transition lies a crushing reality: 5,285 people remain missing, billions are needed for recovery, and high-risk glacial lakes still threaten future floods.\nResulting Judgement: (+0.2, -0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nWhen physical limits force an agonizing shift from impossible rescues to reconstruction, necessity replaces active deception.\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 0)",
+      "Officials state that after 40 grueling days, search and rescue operations must conclude to pivot toward long-term reconstruction and legal closure for grieving families.\nStated Judgement: (+0.80, +0.00) — Lesser Good",
+      "Behind the bureaucratic transition lies a crushing reality: 5,285 people remain missing, billions are needed for recovery, and high-risk glacial lakes still threaten future floods.\nResulting Judgement: (+0.37, -0.03) — Lesser Good",
+      "Verdict: PASS — Compromise.\nWhen physical limits force an agonizing shift from impossible rescues to reconstruction, necessity replaces active deception.\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 0)",
       "Sub-Audits Breakdown:\n- Rescue Termination: PASS (+0.3, -0.2) — Forced by physical survival limits.\n- Bureaucratic Transition: COND (+0.2, 0.0) — Legal steps for missing persons.\n- Climate Mitigation: PASS (+0.6, +0.1) — Proactive glacial lake drainage.",
       "Nepal's August floods devastated mountain regions, destroying vital infrastructure and leaving thousands unaccounted for as authorities race to prevent future glacial catastrophes.",
       "The Bright Side:\nShifting focus to high-stakes engineering projects like draining volatile glacial lakes shows proactive foresight to prevent future cataclysms.",
       "The Breakdown & Plane Error:\nThe plane error mistakes a physical impossibility (searching indefinitely in frozen altitudes) for a moral abandonment. The state is managing an overwhelming tragedy.",
       "Social Physics Analysis:\nAuthorities are running a smart altruistic loop, transparently acknowledging resource limits and shifting from crisis response to systemic resilience.",
-      "The Trajectory: The Path of Redemption.\nWhen a nation confronts overwhelming natural destruction with pragmatic adaptation rather than cover-ups, it plots a course toward collective survival.",
+      "The Trajectory: The Path of Compromise.\nWhen a nation confronts overwhelming natural destruction with pragmatic adaptation rather than cover-ups, it plots a course toward collective survival.",
       "The Unavoidable Truth: Physical survival limits force agonizing transitions from rescue to recovery.\n\nThe Unavoidable Lie: Bureaucratic closure can ever heal the void of thousands missing.",
       "Alethekanon:\nWhen nature overwhelms institutional capacity, honesty about operational limits is the only ethical foundation left to stand upon.",
       "Awwthekanon:\nMy heart aches for every family left standing at the riverbank waiting for a name that may only ever be spoken in legal documents and quiet prayers.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Rescue Termination",
@@ -166,6 +228,7 @@
         "name": "United Nations Development Programme",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

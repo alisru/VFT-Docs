@@ -5,22 +5,22 @@
     "subject": "CNN Blames Natalie Harp for Media Ban",
     "link": "https://www.breitbart.com/politics/2026/09/21/cnn-blames-natalie-harp-media-ban/",
     "target_url": "",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "CNN reports that White House aide Natalie Harp triggered media bans against outlets.\nEvidence: media ban, lawsuit, anonymous leaks\n#Aletheia #USPol",
-      "Journalistic reporting provides objective accountability of administrative decisions.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "Anonymous institutional sourcing weaponizes narrative placement to deflect blame and protect access.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nRetaliatory media bans and anonymous institutional leaks degrade public discourse.\n\nIntegrity: Severe Deception (Hypocrisy: 11.5, z: 3)",
+      "Journalistic reporting provides objective accountability of administrative decisions.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Anonymous institutional sourcing weaponizes narrative placement to deflect blame and protect access.\nResulting Judgement: (-0.94, -0.88) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nRetaliatory media bans and anonymous institutional leaks degrade public discourse.\n\nIntegrity: Severe Deception (Hypocrisy: 11.5, z: 3)",
       "Sub-Audits Breakdown:\n- CNN Narrative: FAIL (-0.8, -0.9) — Shifts institutional blame onto a staffer via anonymous leaks.\n- White House Action: FAIL (-0.6, -0.7) — Enforces blunt retaliatory press credentials bans.",
       "The White House barred CNN, Politico, and MS NOW following critical coverage, prompting an immediate joint lawsuit from the outlets.",
       "The Poison:\nRetaliatory credential revocation undermines the constitutional protections of a free press.",
       "The Breakdown & Plane Error:\nConfusing personal staff influence (WHO) with systemic institutional policy (HOW).",
       "Social Physics Analysis:\nClassic Smart Selfish Maneuver. The administration exercises raw power through exclusion while media actors project personal malice onto aides to manufacture grievance.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Retaliation breeds polarization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Retaliation breeds polarization.",
       "The Unavoidable Truth: White House media bans are retaliatory political tools.\nThe Unavoidable Lie: Anonymous leaks accurately capture the complex motivations behind executive decisions.",
       "Alethekanon:\nInstitutional access is weaponized on both sides, trading transparency for tactical warfare.",
       "Awwthekanon:\nIt is painful to watch dialogue break down into petty exclusions and legal battles.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "CNN Narrative",
@@ -289,6 +351,7 @@
         "name": "Politico",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Kennedy: 'You Need to Put Down the Bong if You Think that Iran and China Are Not Helping Russia'",
     "link": "https://www.breitbart.com/clips/2026/08/30/kennedy-you-need-to-put-down-the-bong-if-you-think-that-iran-and-china-are-not-helping-russia/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.05,
     "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "Sen. John Kennedy bluntly insists Beijing and Tehran are propping up Moscow's war machine.\nEvidence: legislative delays, sanctions, geopolitical axes\n#Aletheia #Geopolitics",
-      "Lawmakers claim immediate bipartisan sanctions targeting Chinese supply lines will force Russia to the negotiating table.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Sanctions risk accelerating decoupling and hardening autocratic blocs rather than securing an immediate diplomatic settlement.\nResulting Judgement: (+0.2, -0.3) — Lesser Evil",
-      "Verdict: PASS — The Path of Redemption.\nDirect critique of allied proxy supply chains highlights realpolitik leverage.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Lawmakers claim immediate bipartisan sanctions targeting Chinese supply lines will force Russia to the negotiating table.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "Sanctions risk accelerating decoupling and hardening autocratic blocs rather than securing an immediate diplomatic settlement.\nResulting Judgement: (+0.05, -0.30) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nDirect critique of allied proxy supply chains highlights realpolitik leverage.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Sen. John Kennedy: PASS (+0.3, -0.2) — Direct call-out of allied blind spots.\n- Legislative Delay: FAIL (-0.2, -0.4) — Slow-walking bipartisan leverage.",
       "Senator John Kennedy argued on Fox News that lawmakers ignoring Chinese and Iranian logistical support for Russia are detached from reality.",
       "The Bright Side:\nUnvarnished public recognition of multi-front geopolitical alliances.",
       "The Breakdown & Plane Error:\nConfusing tactical trade friction with total strategic victory.",
       "Social Physics Analysis:\nKennedy cuts through diplomatic pretense by exposing the active supply network sustaining Moscow, urging direct deterrence.",
-      "The Trajectory: The Path of Redemption.\nConfronting real-world supply dependencies directly reduces diplomatic delusion, steering policy toward realistic deterrence.",
+      "The Trajectory: The Path of Fall from Grace.\nConfronting real-world supply dependencies directly reduces diplomatic delusion, steering policy toward realistic deterrence.",
       "The Unavoidable Truth: Iran and China provide critical economic and material lifelines to Russia.\n\nThe Unavoidable Lie: Simple legislative sanctions alone will swiftly force an end to the war.",
       "Alethekanon:\nRaw candor exposes systemic denial among Western policymakers regarding integrated Eurasian adversary logistics.",
       "Awwthekanon:\nIt is painful to face how deeply intertwined global conflicts are, but honesty is our only anchor.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sen. John Kennedy",
@@ -156,6 +218,7 @@
         "name": "Vladimir Putin",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "A look at the legacy and influence Nancy Pelosi will leave behind when she retires",
     "link": "https://www.npr.org/2026/09/23/nx-s1-5977030/a-look-at-the-legacy-and-influence-nancy-pelosi-will-leave-behind-when-she-retires",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.6,
-    "real_u": -0.2,
-    "real_psi": -0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.08,
+    "real_psi": 0.5,
     "mode": "root",
     "posts": [
       "Reflecting on a historic political titan's career finale.\nEvidence: 40 years in House, landmark bills, delayed succession.\n#Aletheia #USPol #Pelosi",
-      "Nancy Pelosi's retirement after four decades marks the end of an era defined by historic legislative victories and barrier-breaking leadership.\nStated Judgement: (+0.8, +0.6) — Good Preference",
-      "While cementing monumental laws like the ACA, her tenure also epitomized entrenched party leadership, financial trading privileges, and blocked succession.\nResulting Judgement: (-0.2, -0.4) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nHer departure closes a transformative chapter in legislative history while exposing the perils of prolonged gerontocracy.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Nancy Pelosi's retirement after four decades marks the end of an era defined by historic legislative victories and barrier-breaking leadership.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While cementing monumental laws like the ACA, her tenure also epitomized entrenched party leadership, financial trading privileges, and blocked succession.\nResulting Judgement: (-0.08, +0.50) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nHer departure closes a transformative chapter in legislative history while exposing the perils of prolonged gerontocracy.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Legislative Impact: PASS (0.9, 0.7) — Delivered monumental laws like ACA and climate bills.\n- Generational Power: COND (-0.6, -0.5) — Entrenched leadership stifled new talent.",
       "Representative Nancy Pelosi announced her retirement following the 2026 midterms, concluding nearly 40 years representing San Francisco and leading House Democrats through historic highs and deep polarization.",
       "The Bright Side:\nHer institutional mastery and whip counts delivered generational investments in infrastructure and healthcare that shaped modern America.",
       "The Breakdown & Plane Error:\nConfusing the historical magnitude of legislative achievements (WHAT) with the systemic costs of delayed generational turnover (WHO).",
       "Social Physics Analysis:\nPelosi operated through a masterclass of institutional power management, trading transparency for disciplined party unity. While she delivered structural goods, her long refusal to clear the bench prioritized dynastic control over democratic renewal.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between hallowed legislative milestones and entrenched dynastic control, it plots a direct trajectory toward structural awakening. u = -0.2 due to institutional stagnation.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between hallowed legislative milestones and entrenched dynastic control, it plots a direct trajectory toward structural awakening. u = -0.2 due to institutional stagnation.",
       "The Unavoidable Truth: Four decades of leadership reshaped American healthcare and infrastructure.\n\nThe Unavoidable Lie: Prolonged entrenchment in power has no cost to democratic renewal.",
       "Alethekanon:\nLegislative giants build enduring monuments while inadvertently locking the doors behind them, confusing personal endurance with institutional health.",
       "Awwthekanon:\nSaying goodbye to a towering figure brings complex feelings. We see the profound dedication to public service alongside the quiet grief of a generation waiting too long for their turn to heal the world.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Legislative Impact",
@@ -283,6 +345,7 @@
         "name": "Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

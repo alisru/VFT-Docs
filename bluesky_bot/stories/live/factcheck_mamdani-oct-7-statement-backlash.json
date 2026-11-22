@@ -5,22 +5,22 @@
     "subject": "Zohran Mamdani’s Oct. 7 statement and parade boycotts spark community backlash",
     "link": "https://www.washingtonexaminer.com/news/entertainment/4762558/mamdani-oct-7-statement-insult-jews-joe-concha/",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.2,
-    "real_u": -0.94,
-    "real_psi": -0.88,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.93,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "New York civic tensions rise as mayoral statements and parade boycotts spark backlash across traditional ethnic communities.\nEvidence: Civic Unity Claim, Selective Exclusion, Community Alienation\n#NYC #Aletheia 🌐",
-      "Mayor Zohran Mamdani claims his public statements and cultural engagements foster inclusive progress, civic justice, and historical recognition for all New Yorkers while honoring anti-colonial principles.\nStated Judgement: (+0.85, +0.20) — Good Preference",
-      "Ground reality reveals systematic snubbing of key constituency events, selective historical erasure of traditional enclaves, and divisive messaging on sensitive international anniversaries that alienate major civic groups.\nResulting Judgement: (-0.94, -0.88) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nRepeated selective civic engagement and post-hoc rationalizations create systemic cultural friction and alienation.\n\nIntegrity: Severe Deception (Hypocrisy: 10.40, z: 4)",
+      "Mayor Zohran Mamdani claims his public statements and cultural engagements foster inclusive progress, civic justice, and historical recognition for all New Yorkers while honoring anti-colonial principles.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Ground reality reveals systematic snubbing of key constituency events, selective historical erasure of traditional enclaves, and divisive messaging on sensitive international anniversaries that alienate major civic groups.\nResulting Judgement: (-0.93, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nRepeated selective civic engagement and post-hoc rationalizations create systemic cultural friction and alienation.\n\nIntegrity: Severe Deception (Hypocrisy: 10.40, z: 4)",
       "Sub-Audits Breakdown:\n- Oct 7 Anniversary Statement: FAIL (-0.94, -0.88) — Divisive framing alienates key community.\n- Italian-American Heritage Engagement: FAIL (-0.92, -0.85) — Parade boycott and map omissions deepen rift.",
       "Mayor Zohran Mamdani faces widespread criticism from Jewish and Italian-American civic leaders following controversial statements on October 7 and his decision to skip Fifth Avenue's Columbus Day parade.",
       "The Bright Side:\nHighlighting historical figures like Vito Marcantonio promotes awareness of immigrant labor history, though weaponized to justify broader parade boycotts and community omissions.",
       "The Breakdown & Plane Error:\nThe Mayor commits a Lyrical and Metaphysical Error (WHY vs WHO) by substituting anti-colonial ideological pretexts for equal civic representation, performing inclusive representation while actively excluding historic ethnic communities.",
       "Social Physics Analysis:\nMamdani runs a Smart Selfish Maneuver. He uses anti-colonial rhetoric as a pretext to consolidate progressive ideological support while projecting division onto traditional heritage organizations, replacing authentic civic cohesion with targeted factional signaling.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions of inclusive leadership and ground-level civic exclusion, it plots a direct trajectory toward Lesser Evil. The force vectors (-0.94, -0.88) reflect systemic trust erosion.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions of inclusive leadership and ground-level civic exclusion, it plots a direct trajectory toward Lesser Evil. The force vectors (-0.94, -0.88) reflect systemic trust erosion.",
       "The Unavoidable Truth: Selective civic representation undermines the core duty of citywide leadership.\nThe Unavoidable Lie: Ideological posturing can replace genuine integration without fracturing public trust.",
       "Alethekanon:\nMayor Mamdani's deliberate exclusion of traditional ethnic institutions exposes an operational shift from universal civic governance to ideological gatekeeping. True leadership unifies heterogenous populations rather than enforcing selective performative erasure.",
       "Awwthekanon:\nEvery community deserves to feel seen, valued, and honored by their city's leadership. When traditional celebrations and painful anniversaries become political battlegrounds, real New Yorkers are left feeling unheard and pushed aside.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "actual_forces": {
@@ -295,6 +357,7 @@
     "tags": [
       "NYC",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

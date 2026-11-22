@@ -6,21 +6,21 @@
     "link": "https://processorpress.com/story/40/trump-announces-new-ai-ministry-promises-no-banned-algorithms-while-recruiting-a",
     "target_url": "https://bsky.app/profile/processorpress.bsky.social/post/3mvvxfygneg2z",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Trump announces a new federal 'AI Force' and a digital tsar while promising zero banned algorithms.\nEvidence: Bureaucratic restructuring, populist rhetoric, satirical framing\n#Aletheia #AI",
-      "The administration presents the AI Force as an innovation-friendly body to champion unrestricted algorithmic entrepreneurship.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Reality reveals a bureaucratic power grab masking deep policy incoherence and centralized control behind populist tech jargon.\nResulting Judgement: (-0.75, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSatirical posturing and bureaucratic expansion mask central power consolidation behind populist tech slogans.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 4)",
+      "The administration presents the AI Force as an innovation-friendly body to champion unrestricted algorithmic entrepreneurship.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Reality reveals a bureaucratic power grab masking deep policy incoherence and centralized control behind populist tech jargon.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nSatirical posturing and bureaucratic expansion mask central power consolidation behind populist tech slogans.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 4)",
       "Sub-Audits Breakdown:\n- Processor Press: FAIL (-0.75, -0.8) — Satirical framing highlights political absurdity.\n- 1News Oil/China Context: COND (-0.2, 0.1) — Geopolitical friction noted.\n- The Nation Critique: FAIL (-0.8, -0.85) — Exposes systemic executive chaos.",
       "Donald Trump announced plans on Truth Social to establish a federal 'AI Force' led by an 'AI Czar,' predicting AI could impact up to 25% of GDP.",
       "The Bright Side:\nBrings mainstream attention to the massive economic footprint and governance challenges of emerging AI systems.",
       "The Breakdown & Plane Error:\nConfuses WHAT (technical governance) with WHO (appointed czars), substituting bureaucratic theatre for actual policy safety.",
       "Social Physics Analysis:\nActors run a smart selfish maneuver, leveraging populist tech enthusiasm and manufactured oversight pretexts to centralize control while projecting freedom.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Bureaucratic pretexts replace empirical safeguards.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Bureaucratic pretexts replace empirical safeguards.",
       "The Unavoidable Truth: Bureaucratic re-branding does not substitute for coherent technical governance.\n\nThe Unavoidable Lie: Unrestricted algorithms can be managed entirely through executive fiat without clear safety rules.",
       "Alethekanon:\nBureaucratic showmanship masquerades as deregulation, concealing centralized power grabs behind catchy populist titles.",
       "Awwthekanon:\nLet's hope our leaders focus less on flashy titles like 'Digital Tsar' and more on empowering communities to safely navigate technological change together.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Processor Press",
@@ -217,6 +279,7 @@
         "name": "United States Federal Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

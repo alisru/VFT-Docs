@@ -6,21 +6,21 @@
     "link": "https://www.breitbart.com/politics/2026/09/05/exclusive-wagley-says-politicians-let-flock-cameras-data-centers-slide/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_psi": 0.25,
+    "real_u": -0.05,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "Louisiana congressional candidate Stephen Wagley calls out lack of transparency on data centers and surveillance cameras!\nEvidence: NDAs, rising bills, privacy concerns\n#USPol #Louisiana",
-      "Candidate Stephen Wagley argues that career politicians have allowed data centers and Flock cameras to expand without public oversight or transparency.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While highlighting real citizen concerns regarding utility costs and privacy, political framing leverages these anxieties primarily for primary election positioning.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nLegitimate oversight concerns are weaponized as campaign rhetoric without offering structural policy solutions.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 2)",
+      "Candidate Stephen Wagley argues that career politicians have allowed data centers and Flock cameras to expand without public oversight or transparency.\nStated Judgement: (+1.00, +0.25) — Greater Good",
+      "While highlighting real citizen concerns regarding utility costs and privacy, political framing leverages these anxieties primarily for primary election positioning.\nResulting Judgement: (-0.05, -0.15) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nLegitimate oversight concerns are weaponized as campaign rhetoric without offering structural policy solutions.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 2)",
       "Sub-Audits Breakdown:\n- Transparency Critique: PASS (+0.8, +0.5) — Valid concerns over NDAs and rising energy bills.\n- Political Framing: FAIL (-0.9, -0.8) — Leverages anxieties for campaign traction.",
       "Louisiana GOP congressional candidate Stephen Wagley criticized officials for signing secret NDAs with data center developers and allowing unchecked surveillance.",
       "The Poison:\nValid grassroots concerns over utility rates and privacy are co-opted into partisan talking points for a crowded primary race.",
       "The Breakdown & Plane Error:\nConfuses political posturing (WHAT) with systemic regulatory reform (HOW), substituting rhetoric for actionable governance.",
       "Social Physics Analysis:\nThe candidate runs a smart selfish maneuver: identifying a genuine public grievance (surveillance and rising costs) but framing it entirely through a political pretext to capture voter outrage.",
-      "The Trajectory: The Path of Deception.\nWhen you map political posturing onto structural infrastructure issues, it plots a direct trajectory toward Lesser Evil. Pretexts replace genuine legislative solutions.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map political posturing onto structural infrastructure issues, it plots a direct trajectory toward Lesser Evil. Pretexts replace genuine legislative solutions.",
       "The Unavoidable Truth: Citizens deserve complete transparency regarding energy grid strain and private surveillance deals.\n\nThe Unavoidable Lie: Campaign rhetoric alone constitutes an effective check on corporate infrastructure expansion.",
       "Alethekanon:\nValid concerns about surveillance and energy costs are frequently co-opted as political pretexts during competitive primaries. 🌐",
       "Awwthekanon:\nIt is painful when people's genuine worries about their privacy and utility bills are used just to win votes.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Transparency Critique",
@@ -156,6 +218,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

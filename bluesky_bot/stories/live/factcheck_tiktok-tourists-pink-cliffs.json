@@ -5,22 +5,22 @@
     "subject": "TikTok tourists blamed for visitor damage at Victoria's Pink Cliffs",
     "link": "https://www.abc.net.au/news/2026-09-29/heathcote-pink-cliffs-attracts-tik-tok-tourists/107189304",
     "target_url": "https://bsky.app/profile/fionaparker1.bsky.social/post/3mwmhnyrvks22",
-    "claim_u": 0.75,
-    "claim_psi": 0.5,
-    "real_u": -0.62,
-    "real_psi": -0.48,
+    "claim_u": 0.7,
+    "claim_psi": 0.45,
+    "real_u": -0.06,
+    "real_psi": -0.12,
     "mode": "root",
     "posts": [
       "Viral clout vs. site preservation at Heathcote's Pink Cliffs.\nEvidence: Promoting scenic spots, Off-path trampling damage, Clout over conservation. 🌐\n#Victoria #Ecology",
-      "Tourists and influencers frame visiting the Pink Cliffs as harmless nature exploration and local tourism, bringing attention and appreciation to central Victoria's unique geological scenery.\nStated Judgement: (+0.75, +0.50) — Lesser Good",
-      "Visitors ignore barrier signs and trample fragile clay cliffs to get viral photos, accelerating irreversible erosion on what is actually a devastated 19th-century gold mining waste site.\nResulting Judgement: (-0.62, -0.48) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nSocial media incentives prioritize temporary personal exposure over site preservation, turning fragile landscapes into photo backdrops.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.80, z: 2)",
+      "Tourists and influencers frame visiting the Pink Cliffs as harmless nature exploration and local tourism, bringing attention and appreciation to central Victoria's unique geological scenery.\nStated Judgement: (+0.70, +0.45) — Greater Good",
+      "Visitors ignore barrier signs and trample fragile clay cliffs to get viral photos, accelerating irreversible erosion on what is actually a devastated 19th-century gold mining waste site.\nResulting Judgement: (-0.06, -0.12) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nSocial media incentives prioritize temporary personal exposure over site preservation, turning fragile landscapes into photo backdrops.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.80, z: 2)",
       "Sub-Audits Breakdown:\n- Social Media Tourists: FAIL (-0.72, -0.65) — Ignored signs for clout.\n- Parks Victoria: PASS (+0.60, +0.40) — Active warnings & signs.",
       "Parks Victoria warned that tourists driven by TikTok and Instagram are ignoring signs at Heathcote's Pink Cliffs, risking severe erosion on fragile terrain formed during 1800s gold sluicing.",
       "The Bright Side:\nIncreased interest brings economic attention to regional Victoria and highlights local history, provided visitors respect structural barriers and stay on marked paths.",
       "The Breakdown:\nA Category Error conflates industrial scars with durable rock. Visitors treat fragile 19th-century mining erosion as a theme park, trading public heritage for social clout.",
       "Social Physics Analysis:\nInfluencer culture operates on a Smart Selfish Loop: extracting digital validation while dumping the physical cost onto public heritage. Algorithmic incentives actively reward boundary-crossing over stewardship.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen short-term online metrics override site preservation, public commons undergo rapid physical decay and irreversible loss.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen short-term online metrics override site preservation, public commons undergo rapid physical decay and irreversible loss.",
       "The Unavoidable Truth: Pink Cliffs are fragile mining scars, not durable playgrounds.\nThe Unavoidable Lie: Taking one off-trail photo does no lasting damage.",
       "Alethekanon:\nAlgorithmic incentives detach digital rewards from physical consequences. When social platforms reward boundary degradation, shared ecological spaces decay under systemic clout extraction.",
       "Awwthekanon:\nIt is tragic to see people rush to touch beauty only to destroy the very thing they came to admire. We need to cultivate gentle appreciation that leaves landscapes whole for others.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Social Media Tourists",
@@ -160,6 +222,7 @@
         "name": "Instagram",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

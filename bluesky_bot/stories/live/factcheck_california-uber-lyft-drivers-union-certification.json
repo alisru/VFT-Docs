@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "California rideshare drivers near historic union certification under AB 1340 after years of battles.\n\nCalifornia Uber & Lyft Union Certification\nEvidence: contractor flexibility, union representation, legislative compromise\n#California #Labor #GigEconomy",
-      "The California Gig Workers Union is on the cusp of certification, giving hundreds of thousands of rideshare drivers collective bargaining rights while keeping independent contractor status.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "State regulators confirmed sufficient support under AB 1340, marking a negotiated compromise between tech platforms and labor after years of intense legislative and ballot fights.\nResulting Judgement: (+0.85, +1.00) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption. A hard-fought legislative compromise successfully delivers collective bargaining rights to gig drivers while preserving operational flexibility.\n\nIntegrity: Trustworthy (Hypocrisy: 1.35, Uncertainty z: 0)",
+      "The California Gig Workers Union is on the cusp of certification, giving hundreds of thousands of rideshare drivers collective bargaining rights while keeping independent contractor status.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "State regulators confirmed sufficient support under AB 1340, marking a negotiated compromise between tech platforms and labor after years of intense legislative and ballot fights.\nResulting Judgement: (+0.85, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.35, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- California Gig Workers Union: PASS (+0.7, +0.6) — Secured representation rights for drivers after years of organizing.\n- Rideshare Platforms (Uber/Lyft): COND (+0.1, 0.0) — Accepted unionization via compromise to protect independent contractor classification.",
       "California rideshare drivers are nearing official union representation after the state's Public Employment Relations Board confirmed adequate support. This follows historic legislation allowing app-based drivers to bargain collectively.",
       "The Bright Side:\nDrivers finally gain a formalized voice in pay and working conditions without sacrificing the scheduling flexibility they value.",
       "The Breakdown & Plane Error:\nEvaluating WHO benefits (drivers gaining representation) versus WHAT mechanisms are used (legislative compromise rather than total reclassification).",
       "Social Physics Analysis:\nBy replacing zero-sum ballot battles with a structured legislative compromise, both labor and platforms established a workable equilibrium, reducing systemic friction.",
-      "The Trajectory: The Path of Redemption. When you map the gap between initial conflict and negotiated results, it plots a direct trajectory toward Lesser Good. Grounded compromises replace intractable warfare.",
+      "The Trajectory: The Path of Small Fall from Grace.",
       "The Unavoidable Truth: Drivers have secured a legitimate pathway to collective bargaining.\n\nThe Unavoidable Lie: This completely resolves all tensions regarding gig worker classification.",
       "Alethekanon:\nA pragmatic institutional compromise. It avoids total reclassification while delivering genuine bargaining power, proving incrementalism can yield stability.",
       "Awwthekanon:\nFinally, thousands of hardworking drivers who fought for a decade are getting the recognition and voice they deserve to survive and thrive.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "California Gig Workers Union Representation",
@@ -291,6 +353,7 @@
         "name": "California Public Employment Relations Board",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "New Mexico man allegedly gunne...",
     "link": "https://nypost.com/2026/08/30/us-news/new-mexico-man-allegedly-fatally-shot-cousin-in-argument-over-enchiladas/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -1.5,
-    "real_psi": -1.8,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A deadly family dispute over green chile enchiladas highlights a tragic escalation.\n\nNew Mexico man allegedly gunned down cousin in argument over enchiladas\nEvidence: family dinner, alcohol, fatal shooting\n#Aletheia #NewMexico",
-      "Domestic cooking and casual family gathering turning into a violent altercation.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "A petty argument over spice levels escalated into a lethal physical confrontation and murder.\nResulting Judgement: (-1.5, -1.8) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA minor culinary disagreement erupted into lethal violence due to impaired judgment and immediate access to firearms.\n\nIntegrity: Severe Deception (Hypocrisy: 18.2, z: 2)",
+      "Domestic cooking and casual family gathering turning into a violent altercation.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "A petty argument over spice levels escalated into a lethal physical confrontation and murder.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA minor culinary disagreement erupted into lethal violence due to impaired judgment and immediate access to firearms.\n\nIntegrity: Severe Deception (Hypocrisy: 18.2, z: 2)",
       "- Ervin Gutierrez: FAIL (-1.6, -1.9) — Escalated domestic dispute into homicide.\n- Nathaniel Cavazos: COND (0.0, 0.0) — Victim of sudden lethal escalation.",
       "An argument over the spiciness of green chile enchiladas between cousins in Albuquerque turned deadly when one shot the other following a fistfight.",
       "The Bright Side:\nThe suspect turned himself in to authorities, ensuring the justice system could proceed without a prolonged manhunt.",
       "The Breakdown & Plane Error:\nConfusing minor sensory disagreements with existential threats, leading to a fatal catastrophic failure of emotional regulation.",
       "Social Physics Analysis:\nAlcohol impairment dissolved rational conflict-resolution mechanisms. Instead of de-escalating, ego defense and physical retaliation dominated, turning a trivial dinner debate into a tragic loss of life.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Impaired judgment coupled with lethal force collapses civil social coordination.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Impaired judgment coupled with lethal force collapses civil social coordination.",
       "The Unavoidable Truth: Petty arguments can turn fatal when mixed with alcohol and firearms.\n\nThe Unavoidable Lie: Lethal force is a proportionate response to losing a fistfight.",
       "Alethekanon:\nUnchecked escalation and lethal retaliation reveal a catastrophic collapse of basic human restraint over trivial pride.",
       "Awwthekanon:\nSuch a heartbreaking, senseless loss over something as trivial as dinner. Families should be safe havens, not battlegrounds.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ervin Gutierrez",
@@ -205,6 +267,7 @@
         "name": "Nathaniel Cavazos",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

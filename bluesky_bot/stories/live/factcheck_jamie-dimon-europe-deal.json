@@ -5,22 +5,22 @@
     "subject": "Jamie Dimon has a plan to revive the West: A 'big, beautiful' deal with Europe",
     "link": "https://cnb.cx/4dceQ1W",
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mwnu65wlhl2n",
-    "claim_u": 0.6,
-    "claim_psi": 0.5,
-    "real_u": -0.2,
-    "real_psi": -0.4,
+    "claim_u": 0.5,
+    "claim_psi": 0.4,
+    "real_u": -0.25,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Jamie Dimon pitches a massive transatlantic trade pact tied to European defense and economic reform.\nEvidence: WSJ op-ed, JPMorgan strategy, geopolitical alignment\n#Economy #Aletheia",
-      "A strategic trade agreement will spontaneously revive Western economies and fortify collective security.\nStated Judgement: (+0.6, +0.5) — Constructive Liberalism",
-      "Elite technocratic restructuring imposes American financial priorities onto European sovereign policy under threat of isolation.\nResulting Judgement: (-0.2, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nTransatlantic trade integration uses reform pretexts to consolidate corporate banking leverage over sovereign policy.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "A strategic trade agreement will spontaneously revive Western economies and fortify collective security.\nStated Judgement: (+0.50, +0.40) — Greater Good",
+      "Elite technocratic restructuring imposes American financial priorities onto European sovereign policy under threat of isolation.\nResulting Judgement: (-0.25, -0.45) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nTransatlantic trade integration uses reform pretexts to consolidate corporate banking leverage over sovereign policy.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- Wall Street Journal Op-Ed: COND (+0.5, +0.4) — Frames corporate goals as public good.\n- European Reform Demand: COND (-0.3, -0.5) — Imposes external financial leverage.",
       "JPMorgan CEO Jamie Dimon argued in the Wall Street Journal that the U.S. should offer Europe a free-trade pact conditional on sweeping structural reforms.",
       "The Bright Side:\nOpenly advocates for transatlantic solidarity and coordinated industrial strategy against rising autocracies.",
       "The Breakdown & Plane Error:\nConfuses macroeconomic financial restructuring (HOW) with grassroots democratic empowerment (WHO), substituting banking interests for public welfare.",
       "Social Physics Analysis:\nWall Street leadership runs a Smart Selfish Maneuver, leveraging systemic security anxieties to extract institutional deregulation and trade concessions.",
-      "The Trajectory: The Path of Deception.\nWhen you map corporate hegemony against democratic sovereignty, it plots a trajectory toward Lesser Evil. F = S_LE * A_LE - O_LE * A_LE.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map corporate hegemony against democratic sovereignty, it plots a trajectory toward Lesser Evil. F = S_LE * A_LE - O_LE * A_LE.",
       "The Unavoidable Truth: Financial elites always tie geopolitical cooperation to structural deregulation favoring capital.\n\nThe Unavoidable Lie: Megabanks propose sweeping trade pacts purely out of selfless devotion to Western renewal.",
       "Alethekanon:\nTranslating geopolitical alliance into corporate financial leverage reveals the true currency of modern statesmanship. 🌐",
       "Awwthekanon:\nIt is exhausting watching powerful executives treat nations like chess pieces in a global monopoly game rather than homes for real people.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Wall Street Journal Op-Ed",
@@ -171,6 +233,7 @@
         "name": "Wall Street Journal",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

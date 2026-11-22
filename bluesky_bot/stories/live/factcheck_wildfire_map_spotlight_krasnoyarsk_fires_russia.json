@@ -14,13 +14,13 @@
       "A Siberian environmental crisis unfolds as massive wildfires blanket towns in smoke. Wildfire Map Spotlight: Krasnoyarsk Fires, Russia | IQAir USA. Evidence: Public safety, real-time tracking, health protection. #Aletheia #Climate",
       "IQAir claims to provide transparent, real-time tracking of the Siberian wildfires to empower local populations with critical air quality data and health guidelines. Stated Judgement: (+1.00, +1.00) — Greater Good",
       "Ground data, NASA satellite imagery, and local reports confirm the severe wildfire spread and hazardous air quality, validating the reported metrics. Resulting Judgement: (+1.00, +1.00) — Greater Good",
-      "Verdict: PASS — Grace into Grace. The reporting is highly accurate, transparent, and serves a vital public health function without sensationalism or hidden agendas. Integrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.",
       "Sub-Audits Breakdown:\n- IQAir Reporting: PASS (1.0, 0.8) — Accurate, data-driven public safety tracking.\n- Environmental Data: PASS (1.0, 0.8) — Verified by NASA and local reports.",
       "Wildfires in Russia's Krasnoyarsk region have burned over 62,600 hectares, severely degrading air quality in towns like Lesosibirsk and Yeniseysk.",
       "The Poison:\nWhile the data is highly accurate, the remote nature of the fires means suppression relies heavily on limited aerial resources, leaving communities vulnerable to prolonged smoke.",
       "The Breakdown & Plane Error:\nNo plane error detected. The physical reality of the fires matches the lyrical narrative of environmental hazard, with clear causal links between dry weather and fire spread.",
       "Social Physics Analysis:\nBy providing transparent, accessible data, the platform minimizes public friction and empowers individuals to make informed health decisions, aligning actions with shared safety goals.",
-      "The Trajectory: The Path of Grace into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of public safety goals with accurate data creates a stable, low-strain system.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of public safety goals with accurate data creates a stable, low-strain system.",
       "The Unavoidable Truth: The Siberian wildfires represent a severe, climate-driven ecological and public health emergency.\n\nThe Unavoidable Lie: Pretending that remote northern forests can be easily managed without systemic climate action is a dangerous illusion.",
       "Alethekanon:\nThe data is clean, verifiable, and structurally sound. Public safety communication achieves its highest utility when it remains strictly objective and actionable.",
       "Awwthekanon:\nMy heart goes out to the 80,000 residents breathing in this heavy smoke. May the brave firefighters be kept safe as they work to protect these communities and forests.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "IQAir Reporting",
@@ -190,6 +252,7 @@
         "name": "NASA",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

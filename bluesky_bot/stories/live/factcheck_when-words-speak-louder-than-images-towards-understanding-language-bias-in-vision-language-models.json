@@ -8,19 +8,19 @@
     "claim_u": 0.8,
     "claim_psi": 0.5,
     "real_u": -0.7,
-    "real_psi": -0.6,
+    "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "Vision-language models stumble on basic negation, prioritizing linguistic priors over visual facts.\nEvidence: MIT research, negation failure, medical diagnosis risks\n#Aletheia #AI #MachineLearning",
-      "Vision-language models achieve robust understanding by balancing linguistic priors and visual content across inference stages.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Black-box VLMs heavily rely on statistical language priors, completely failing negation words like 'no' or 'doesn't' in high-stakes settings.\nResulting Judgement: (-0.7, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nFlawed black-box models mask catastrophic negation failures behind impressive general metrics.\n\nIntegrity: Severe Deception (Hypocrisy: 10.2, z: 2)",
+      "Vision-language models achieve robust understanding by balancing linguistic priors and visual content across inference stages.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Black-box VLMs heavily rely on statistical language priors, completely failing negation words like 'no' or 'doesn't' in high-stakes settings.\nResulting Judgement: (-0.70, -0.55) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nFlawed black-box models mask catastrophic negation failures behind impressive general metrics.\n\nIntegrity: Severe Deception (Hypocrisy: 10.2, z: 2)",
       "- MIT VLM Study: FAIL (-0.7, -0.6) — Exposes severe negation blindness.\n- Vision-Language Models: FAIL (-0.7, -0.5) — Prioritizes text priors over visual evidence.",
       "Researchers found that modern vision-language models struggle with simple negation terms like 'no', creating hidden risks in critical real-world applications.",
       "The Poison:\nHiding fundamental reasoning flaws behind glossy benchmark scores creates dangerous overconfidence in medical and automated systems.",
       "The Breakdown & Plane Error:\nThe error lies in Plane Q2 (Possible) and Q5 (Logical)—assuming text-image alignment substitutes for actual logical negation handling.",
       "Social Physics Analysis:\nModel developers run a smart selfish maneuver, prioritizing commercial benchmark performance over transparent safety disclosures regarding negation failures.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic opacity around failure modes causes fragile deployments.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic opacity around failure modes causes fragile deployments.",
       "The Unavoidable Truth: Vision-language models systematically fail when processing negation words.\n\nThe Unavoidable Lie: High benchmark scores guarantee reliable multi-modal reasoning.",
       "Alethekanon:\nGlossy benchmarks mask brittle linguistic priors that collapse under simple negation tests.🌐",
       "Awwthekanon:\nIt is heartbreaking how trusting patients and clinicians might rely on AI tools that literally cannot see the word 'no' in a critical scan.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "MIT VLM Study",
@@ -153,6 +215,7 @@
         "name": "Vision-Language Models",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

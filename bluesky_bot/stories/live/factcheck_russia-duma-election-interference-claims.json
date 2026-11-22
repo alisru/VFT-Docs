@@ -8,19 +8,19 @@
     "claim_u": 0.5,
     "claim_psi": 0.0,
     "real_u": -0.85,
-    "real_psi": -0.88,
+    "real_psi": -0.89,
     "mode": "root",
     "posts": [
       "Unmasking Moscow's pretexts as Russia claims Western election meddling ahead of the Duma vote.\nEvidence: Unfounded intel claims, Ban on monitors, Yabloko ban\n#Aletheia #Russia",
-      "Russian officials claim Western intelligence and NGOs are plotting cyberattacks and fake exit polls to disrupt the upcoming Duma elections.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Moscow uses baseless pretexts of foreign subversion to justify domestic crackdowns, ban independent watchdogs, and cement a rubber-stamp election.\nResulting Judgement: (-0.85, -0.88) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nBaseless claims of foreign electoral interference are weaponized to preemptively discredit dissent and sanitize a rubber-stamp vote.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Russian officials claim Western intelligence and NGOs are plotting cyberattacks and fake exit polls to disrupt the upcoming Duma elections.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Moscow uses baseless pretexts of foreign subversion to justify domestic crackdowns, ban independent watchdogs, and cement a rubber-stamp election.\nResulting Judgement: (-0.85, -0.89) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nBaseless claims of foreign electoral interference are weaponized to preemptively discredit dissent and sanitize a rubber-stamp vote.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "- Russian State Apparatus: FAIL (-0.89, -0.92) — Weaponizes fake foreign threats to justify repression.\n- Kremlin Election Control: FAIL (-0.82, -0.85) — Eliminates independent watchdogs and real opposition.",
       "As Russia approaches its State Duma elections, state media and officials have amplified unsubstantiated claims that the West is orchestrating cyberattacks and training secret monitors.",
       "The Poison:\nPreemptively framing all domestic criticism and independent monitoring as foreign subversion shields the regime from accountability.",
       "The Breakdown & Plane Error:\nConfusing WHAT (protecting electoral integrity) with WHO (who controls the ballot), masking state authoritarianism behind externalized blame.",
       "Social Physics Analysis:\nThe Kremlin runs a classic Smart Selfish Maneuver, inventing external threats to project blame onto the West while dismantling internal democratic checks.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Unfounded pretexts mask autocratic consolidation.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Unfounded pretexts mask autocratic consolidation.",
       "The Unavoidable Truth: Unfounded claims of foreign election interference are used to silence domestic opposition.\n\nThe Unavoidable Lie: State-managed sham elections are defended as targets of Western subversion.",
       "Alethekanon:\nState propaganda externalizes blame to criminalize dissent and sanitize a rubber-stamp election. Fabricated foreign threats are the shield of absolute power. 🌐",
       "Awwthekanon:\nWhen people are denied a real voice in their own future, it breaks trust and deepens fear. True stability comes from honesty and listening, not manufactured enemies.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Russian State Apparatus",
@@ -161,6 +223,7 @@
         "name": "European Union",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.9,
-    "real_psi": 0.8,
+    "real_u": 0.95,
+    "real_psi": 0.9,
     "mode": "root",
     "posts": [
       "Upper East Side street renamed for NYPD Officer John Perry, who died rushing to help on 9/11.\nEvidence: 9/11 sacrifice, street renaming, family tribute\n#Aletheia #NYC",
-      "An Upper East Side intersection is renamed to honor NYPD Officer John Perry, who gave his life running toward the Twin Towers on September 11 while preparing to retire.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Twenty-five years later, family, colleagues, and city officials gathered in solemn remembrance to cement his legacy in New York City history.\nResulting Judgement: (+0.9, +0.8) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nHonoring selfless sacrifice preserves moral clarity and civic memory across generations.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "An Upper East Side intersection is renamed to honor NYPD Officer John Perry, who gave his life running toward the Twin Towers on September 11 while preparing to retire.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Twenty-five years later, family, colleagues, and city officials gathered in solemn remembrance to cement his legacy in New York City history.\nResulting Judgement: (+0.95, +0.90) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nHonoring selfless sacrifice preserves moral clarity and civic memory across generations.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Officer John Perry: PASS (+1.0, +1.0) — Exemplifies ultimate selflessness in crisis.\n- NYPD & City Officials: PASS (+0.8, +0.8) — Faithfully honors historical sacrifice.",
       "An Upper East Side street intersection was renamed in honor of NYPD Officer John Perry, who died during the 9/11 terrorist attacks after rushing to assist responders.",
       "The Bright Side:\nHonoring Officer Perry preserves the memory of everyday heroism and community solidarity during our nation's darkest hours.",
       "The Breakdown & Plane Error:\nFocusing purely on the tragic loss (WHAT) while uplifting the enduring moral inspiration of his final act (WHO).",
       "Social Physics Analysis:\nFamily and colleagues enacted a smart altruistic loop, honoring shared sacrifice through transparent remembrance and collective mourning.",
-      "The Trajectory: The Path of Grace.\nWhen you map sincere public honors against profound historical sacrifice, it plots a direct trajectory toward Greater Good. Honoring virtue reinforces societal resilience.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map sincere public honors against profound historical sacrifice, it plots a direct trajectory toward Greater Good. Honoring virtue reinforces societal resilience.",
       "The Unavoidable Truth: True heroism involves ordinary people making extraordinary sacrifices when disaster strikes.\n\nThe Unavoidable Lie: Symbolic street renamings can fully heal the decades of raw grief carried by surviving families.",
       "Alethekanon:\nCommemorating true selflessness anchors civic conscience. We honor ourselves when we remember those who gave everything for others. 🌐",
       "Awwthekanon:\nMy heart breaks for his brother and sister carrying this pain twenty-five years later. May his memory forever be a blessing of courage and love.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Officer John Perry Heroism",
@@ -161,6 +223,7 @@
         "name": "NYPD",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

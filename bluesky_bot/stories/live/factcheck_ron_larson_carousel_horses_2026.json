@@ -14,7 +14,7 @@
       "A world-class artist steps away from grand gallery canvases to quietly restore a local children's carousel. 🌐\n\nEvidence: Community Service, Restored Carousel, Artistic Humility\n#Aletheia #Art #Utah",
       "Acclaimed Western artist Ron Larson dedicates his time every year to touch up the fiberglass horses of the St. George carousel, treating it as a humble labor of love.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
       "The reality perfectly aligns with the claim. Larson has quietly maintained the 30 carousel horses since 2012, bringing genuine joy to the local community without seeking profit.\n\nResulting Judgement: (+1.00, +1.00) — Greater Good",
-      "Verdict: PASS — Grace. A beautiful example of an artist using their talent to directly uplift their local community, demonstrating perfect alignment between stated ideals and actions.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Ron Larson: PASS (1.00, 1.00) — Genuine civic contribution.\n- Heritage Preservation: PASS (1.00, 1.00) — Sustains public joy.",
       "Utah artist Ron Larson, famous for his massive landscape paintings of the American West, returns annually to St. George's Town Square Park to touch up the carousel horses.",
       "The Poison:\nNone. This is a rare, unblemished act of civic goodwill and artistic humility that serves no hidden agenda.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ron Larson Artistry",
@@ -283,6 +345,7 @@
         "name": "Utah",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

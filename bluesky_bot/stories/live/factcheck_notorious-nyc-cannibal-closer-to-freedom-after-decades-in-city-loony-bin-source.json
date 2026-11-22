@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.65,
-    "real_psi": -0.8,
+    "real_u": -0.62,
+    "real_psi": -0.68,
     "mode": "root",
     "posts": [
       "A notorious 1980s NYC killer has been moved to a lower-security psychiatric wing, sparking alarm.\nEvidence: Facility transfer, Anonymous sources, 1991 insanity ruling\n#Aletheia #NYC #Crime",
-      "Sensational reports warn that a notorious NYC cannibal is being prepped for imminent release from a psychiatric facility.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While transferred to a civilian wing for bed management, legal release still requires strict judicial review.\nResulting Judgement: (-0.65, -0.80) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSensationalized tabloid framing conflates routine internal psychiatric transfers with imminent societal danger.\n\nIntegrity: Severe Deception (Hypocrisy: 10.8, z: 3)",
+      "Sensational reports warn that a notorious NYC cannibal is being prepped for imminent release from a psychiatric facility.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "While transferred to a civilian wing for bed management, legal release still requires strict judicial review.\nResulting Judgement: (-0.62, -0.68) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nSensationalized tabloid framing conflates routine internal psychiatric transfers with imminent societal danger.\n\nIntegrity: Severe Deception (Hypocrisy: 10.8, z: 3)",
       "Sub-Audits Breakdown:\n- Tabloid Reporting: FAIL (-0.75, -0.85) — Exaggerates transfer risk to stoke public fear.\n- Psychiatric Facility: COND (-0.50, -0.50) — Manages bed shortages by shifting patient tiers.",
       "Daniel Rakowitz, institutionalized after an insanity acquittal in 1991, was quietly moved to a lower-security wing, stoking staff fears.",
       "The Poison:\nStoking public panic over psychiatric housing changes obscures the rigid judicial oversight legally required for any actual release.",
       "The Breakdown & Plane Error:\nConfuses WHERE (civilian psychiatric wing transfer) with WHO (an unrepentant threat walking free), exaggerating administrative reality.",
       "Social Physics Analysis:\nAnonymous sources and tabloids run a smart selfish maneuver: leveraging extreme historical horror to manufacture a panic over current institutional logistics.",
-      "The Trajectory: The Path of Deception.\nWhen you map sensationalized threat inflation against actual legal constraints, it plots a direct trajectory toward Deception. Friction generates unnecessary fear.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map sensationalized threat inflation against actual legal constraints, it plots a direct trajectory toward Deception. Friction generates unnecessary fear.",
       "The Unavoidable Truth: Internal psychiatric tier transfers do not equate to judicial orders for community release.\n\nThe Unavoidable Lie: Tabloid headlines accurately reflect an imminent danger of violent criminals walking our streets.",
       "Alethekanon:\nFear-driven journalism weaponizes historic trauma to misrepresent routine psychiatric facility administration.",
       "Awwthekanon:\nIt is painful to watch old wounds ripped open by sensational headlines that trade human peace for shock value.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tabloid Reporting",
@@ -158,6 +220,7 @@
         "name": "Sunny Hostin",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Ireland's relationship with UK under Burnham off to 'very good start'",
     "link": "https://www.bbc.co.uk/news/articles/cked7zjq57n5o?at_medium=RSS&at_campaign=rss",
     "target_url": "",
-    "claim_u": 0.92,
-    "claim_psi": 0.85,
-    "real_u": 0.93,
-    "real_psi": 0.86,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Diplomatic maturity in the shadow of external disruption. Irish Taoiseach Micheál Martin and UK PM Andy Burnham reaffirm their commitment to the Good Friday Agreement.\nEvidence: Bilateral alignment, Peace preservation, Diplomatic stability\n#Aletheia #UKPol #Ireland",
-      "The UK and Ireland are working in lockstep as co-guarantors of peace, focusing on legacy legislation and Stormont reform despite external political noise.\nStated Judgement: (+0.92, +0.85) — Greater Good",
-      "The meeting at 'Number 10 North' demonstrated genuine diplomatic alignment, prioritizing institutional stability over reactive responses to Trump's comments.\nResulting Judgement: (+0.93, +0.86) — Greater Good",
-      "Verdict: PASS — Grace into Grace. Both leaders maintained a constructive, transparent dialogue, reinforcing the foundations of the peace process against external disruption.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The UK and Ireland are working in lockstep as co-guarantors of peace, focusing on legacy legislation and Stormont reform despite external political noise.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The meeting at 'Number 10 North' demonstrated genuine diplomatic alignment, prioritizing institutional stability over reactive responses to Trump's comments.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Andy Burnham: PASS (0.92, 0.85) — Reaffirms commitment to the Good Friday Agreement.\n- Micheál Martin: PASS (0.94, 0.87) — Prioritizes bilateral stability and legacy reform.",
       "Irish Taoiseach Micheál Martin's visit to UK PM Andy Burnham in Manchester marked a constructive start to their relationship, focusing on the Good Friday Agreement and Stormont reform.",
       "The Bright Side:\nIn an era of volatile, headline-grabbing politics, quiet and institutional diplomacy remains an effective tool for maintaining regional stability.",
       "The Breakdown & Plane Error:\nNo significant plane error. The narrative and actions are aligned, focusing on the concrete mechanisms of the peace treaty rather than rhetorical posturing.",
       "Social Physics Analysis:\nBoth leaders executed a Smart Altruistic Maneuver. By focusing on shared institutional goals—such as resolving the Stormont budget and passing legacy legislation—they built a transparent coalition that neutralizes external attempts to project division.",
-      "The Trajectory: The Path of Grace into Grace.\nWhen you map the alignment between diplomatic rhetoric and concrete policy cooperation, it plots a direct trajectory toward Greater Good. This stasis of constructive alignment reinforces regional peace.",
+      "The Trajectory: The Path of Grace.\nWhen you map the alignment between diplomatic rhetoric and concrete policy cooperation, it plots a direct trajectory toward Greater Good. This stasis of constructive alignment reinforces regional peace.",
       "The Unavoidable Truth: Stable bilateral relations require quiet, institutional commitment rather than reactive responses to external political commentary.\nThe Unavoidable Lie: A unified Ireland can be achieved through unilateral external declarations without local consensus.",
       "Alethekanon:\nThis is a rare example of diplomatic alignment matching its stated ideals. By focusing on institutional duty, both leaders successfully insulated their relationship from external noise.",
       "Awwthekanon:\nIt is so comforting to see leaders treat their duties with such care and respect, especially when they are supporting each other through personal loss.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Andy Burnham",
@@ -293,6 +355,7 @@
         "name": "Ireland",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

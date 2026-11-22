@@ -5,22 +5,22 @@
     "subject": "Young people are bridging the climate divide for Oceania and the Caribbean",
     "link": "https://globalvoices.org/2026/10/06/young-people-are-bridging-the-climate-divide-for-oceania-and-the-caribbean/",
     "target_url": "https://bsky.app/profile/globalvoices.org/post/3mxbqymztva2l",
-    "claim_u": 0.8,
-    "claim_psi": 0.2,
-    "real_u": -0.3,
-    "real_psi": -0.4,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.15,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "Youth climate activists in Oceania and the Caribbean face rising seas while global policy stalls. 🌐\nEvidence: grassroots resilience, incomplete aid, funding appeals\n#ClimateAction #SIDS",
-      "Young people are successfully bridging the climate divide across Oceania and the Caribbean through grassroots adaptation and shared frontline solidarity.\nStated Judgement: (+0.8, +0.2) — Good Preference",
-      "Frontline communities battle rising seas and abandoned infrastructure projects alone, while systemic funding gaps and political inaction persist.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nGrassroots youth adaptation highlights real community resilience, even as systemic aid proves incomplete and precarious.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Young people are successfully bridging the climate divide across Oceania and the Caribbean through grassroots adaptation and shared frontline solidarity.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "Frontline communities battle rising seas and abandoned infrastructure projects alone, while systemic funding gaps and political inaction persist.\nResulting Judgement: (+0.15, +0.05) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nGrassroots youth adaptation highlights real community resilience, even as systemic aid proves incomplete and precarious.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Youth Climate Activism: PASS (+0.7, +0.6) — Genuine grassroots adaptation.\n- Institutional Aid & Policy: COND (-0.4, -0.5) — Unfinished infrastructure & neglect.",
       "Small Island Developing States contribute under 1% of global emissions yet bear the brunt of climate disasters, forcing local communities to adapt independently.",
       "The Bright Side:\nLocal community leaders like John Whippy demonstrate extraordinary ingenuity, reinforcing homes and adapting in place despite sparse external support.",
       "The Plane Error conflates WHAT (local resilience efforts) with WHO (systemic institutional failure). It masks structural abandonment behind inspiring human-interest stories.",
       "Social Physics Analysis:\nFrontline youth rely on a Smart Altruistic Loop of shared survival, while external institutions often run half-measures, leaving communities stranded.",
-      "The Trajectory: The Path of Redemption.\nWhen bridging grassroots action meets systemic neglect, it plots a mixed course toward local endurance against global institutional failure.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen bridging grassroots action meets systemic neglect, it plots a mixed course toward local endurance against global institutional failure.",
       "The Unavoidable Truth: Grassroots communities possess deep adaptive wisdom but lack necessary structural resources.\n\nThe Unavoidable Lie: Small grants fully solve systemic climate displacement.",
       "Alethekanon:\nHeroic youth resilience does not absolve global policymakers of systemic abandonment. True adaptation requires durable infrastructure, not just striking students.",
       "Awwthekanon:\nMy heart breaks for families lifting their homes above the rising tides in Fiji while the world argues over coal. Their courage is a beacon we must honor with action.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "-0.8",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Youth Climate Activism",
@@ -159,6 +221,7 @@
         "name": "Global Voices",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

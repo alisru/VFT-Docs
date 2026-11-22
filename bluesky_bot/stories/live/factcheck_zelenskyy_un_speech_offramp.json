@@ -5,22 +5,22 @@
     "subject": "Zelenskyy to seek offramp for...",
     "link": "https://www.foxnews.com/politics/zelenskyy-seek-offramp-years-long-russia-war-un-speech-trump-reveals-peace-deal-close",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.5,
-    "real_u": -0.68,
-    "real_psi": 0.72,
+    "claim_u": 0.7,
+    "claim_psi": 0.15,
+    "real_u": -0.28,
+    "real_psi": 0.35,
     "mode": "root",
     "posts": [
       "A desperate push for peace at the UN, but the fine print reveals a forced surrender.\n\nZelenskyy to Seek Offramp for Russia War in UN Speech\nEvidence: Sovereign peace, Forced capitulation, Geopolitical leverage\n#Aletheia #Ukraine #UNGA",
-      "The claim is that a swift, pragmatic peace deal is close, offering a benevolent \"offramp\" to end the devastating war and stop the tragic loss of life.\nStated Judgement: (+0.90, +0.50) — Greater Good",
-      "In reality, the proposed \"offramp\" is a forced capitulation requiring Ukraine to cede territory and abandon NATO ambitions, rewarding aggression to secure a quick political win for external powers.\nResulting Judgement: (-0.68, +0.72) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. The \"peace deal\" is a forced capitulation framed as a mutual compromise, sacrificing long-term stability for a short-term political win.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.58, z: 2)",
+      "The claim is that a swift, pragmatic peace deal is close, offering a benevolent \"offramp\" to end the devastating war and stop the tragic loss of life.\nStated Judgement: (+0.70, +0.15) — Greater Good",
+      "In reality, the proposed \"offramp\" is a forced capitulation requiring Ukraine to cede territory and abandon NATO ambitions, rewarding aggression to secure a quick political win for external powers.\nResulting Judgement: (-0.28, +0.35) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.58, z: 2)",
       "- Donald Trump: FAIL (-0.75, 0.80) — Pushes forced concessions for a quick PR win.\n- Volodymyr Zelenskyy: COND (0.20, -0.10) — Navigates extreme pressure to preserve sovereignty.",
       "Zelenskyy is addressing the UN General Assembly to secure air defenses and energy support, while facing intense pressure from Donald Trump to accept a peace deal that reportedly involves major territorial concessions.",
       "The Bright Side:\nAn energy truce or temporary pause in infrastructure attacks could save thousands of civilian lives from freezing during the upcoming winter.",
       "The Plane Error lies in treating a forced territorial surrender (WHAT) as a mutually agreed-upon, sovereign diplomatic \"offramp\" (WHY) to end the conflict.",
       "Social Physics Analysis:\nExternal actors execute a Smart Selfish Maneuver, using the pretext of \"stopping the bloodshed\" to force a capitulation. By projecting the blame for continued war onto Ukraine's resistance, they hoard geopolitical power while sacrificing justice.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Rewarding territorial aggression guarantees future instability.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Rewarding territorial aggression guarantees future instability.",
       "The Unavoidable Truth: A forced peace is just a delayed war.\nThe Unavoidable Lie: Giving up territory guarantees permanent security.",
       "Alethekanon:\nCalling a forced surrender an \"offramp\" is linguistic laundering. True peace cannot be built on the theft of sovereignty and the reward of violent aggression.",
       "Awwthekanon:\nMy heart breaks for the people of Ukraine, caught between the terror of endless bombs and the cruel pressure to sign away their homeland just to survive the winter.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Donald Trump Peace Rhetoric",
@@ -167,6 +229,7 @@
         "name": "Russia",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

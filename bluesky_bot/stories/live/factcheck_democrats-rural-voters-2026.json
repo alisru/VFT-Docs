@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Winning rural voters requires shifting national brands, but critics allege bad-faith camouflage.\nEvidence: Hidden camera claims, podcast outreach, ideological friction.\n#Aletheia #USPol",
-      "Political commentators argue that Democrats are deploying deceptive moderation strategies and hidden agendas to win over rural voters.\nStated Judgement: (-0.5, -0.5) — Lesser Evil",
-      "Parties tailor messaging to different audiences during campaigns, leading to accusations of insincerity from opposing media outlets.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA partisan framing of standard campaign tailoring as malicious deception.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 2)",
+      "Political commentators argue that Democrats are deploying deceptive moderation strategies and hidden agendas to win over rural voters.\nStated Judgement: (-0.50, -0.50) — Greater Evil",
+      "Parties tailor messaging to different audiences during campaigns, leading to accusations of insincerity from opposing media outlets.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nA partisan framing of standard campaign tailoring as malicious deception.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 2)",
       "Sub-Audits Breakdown:\n- The Federalist: FAIL (-0.65, -0.75) — Frames standard outreach as deceit.\n- Democratic Campaign Strategy: COND (-0.55, -0.65) — Adapts messaging for rural survival.",
       "The Federalist published claims that Democratic candidates are masking progressive policies behind moderate rhetoric to court rural voters.",
       "The Poison:\nTreating ordinary political adaptation exclusively as proof of bad-faith subversion.",
       "The Breakdown & Plane Error:\nConfusing WHAT (campaign messaging adjustments) with WHO (voters' organic political alignment), masking partisan bias as objective analysis.",
       "Social Physics Analysis:\nThe commentary runs a Smart Selfish Maneuver by projecting malicious intent onto standard political outreach, manufacturing a narrative of deceit to harden partisan divisions.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Partisan posturing supersedes constructive dialogue.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Partisan posturing supersedes constructive dialogue.",
       "The Unavoidable Truth: Political campaigns naturally tailor their emphasis to resonate with different regional audiences.\n\nThe Unavoidable Lie: Tailoring a message is equivalent to an absolute conspiracy to deceive the electorate.",
       "Alethekanon:\nWhen political strategy is reframed as existential deceit, dialogue collapses into tribal warfare. Every opponent is painted as an actor in bad faith.",
       "Awwthekanon:\nPeople just want leaders who listen to their real struggles rather than treating them as targets in a political chess game.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Federalist",
@@ -166,6 +228,7 @@
         "name": "Rural Voters",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

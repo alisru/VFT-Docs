@@ -5,16 +5,16 @@
     "subject": "Laura Loomer Feuds with Marjorie Taylor Greene Over Attacks on Angie Nixon",
     "link": "https://www.washingtonexaminer.com/news/campaigns/congressional/4705888/laura-loomer-mtg-feud-angie-nixon/",
     "target_url": "",
-    "claim_u": -0.2,
-    "claim_psi": -0.4,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "claim_u": -1.0,
+    "claim_psi": -1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Right-wing figures clash in a public social media brawl.\n\nLaura Loomer Feuds with MTG\nEvidence: racist rhetoric, partisan hypocrisy, personal attacks",
-      "Greene denounces Loomer's derogatory remarks against Angie Nixon as racist and harmful to the party.\nStated Judgement: (-0.2, -0.4) — Lesser Evil",
-      "The feud exposes deep factional toxicity and unapologetic bigotry traded for political clout.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nUnfiltered animus and racial vitriol dominate political discourse without ideological redemption.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
+      "Greene denounces Loomer's derogatory remarks against Angie Nixon as racist and harmful to the party.\nStated Judgement: (-1.00, -1.00) — Greater Evil",
+      "The feud exposes deep factional toxicity and unapologetic bigotry traded for political clout.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nUnfiltered animus and racial vitriol dominate political discourse without ideological redemption.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
       "- Marjorie Taylor Greene: FAIL (-0.2, -0.4) — Condemns rhetoric while weaponizing factionalism.\n- Laura Loomer: FAIL (-0.9, -0.9) — Employs explicit racial slurs and vitriol.",
       "A public feud erupted between former Rep. Marjorie Taylor Greene and influencer Laura Loomer following inflammatory attacks directed at Florida state Representative Angie Nixon.",
       "The Bright Side:\nThe public infighting forces right-wing figures to openly confront and disavow overt bigotry within their networks.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Marjorie Taylor Greene Stated Stance",
@@ -205,6 +267,7 @@
         "name": "Angie Nixon",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

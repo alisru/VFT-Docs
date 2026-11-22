@@ -5,22 +5,22 @@
     "subject": "Georgia Map Challengers Face Uphill Battle Under New SCOTUS Test",
     "link": "https://www.foxnews.com/politics/georgia-map-challengers-face-uphill-battle-under-new-scotus-test-after-jim-crow-2-0-firestorm",
     "target_url": "",
-    "claim_u": 0.76,
-    "claim_psi": 0.48,
-    "real_u": -0.68,
-    "real_psi": -0.74,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.83,
+    "real_psi": -0.86,
     "mode": "root",
     "posts": [
       "Judicial doctrine reshapes voting rights battles.\n\nGeorgia Map Challengers Face Uphill Battle Under New SCOTUS Test\nEvidence: Constitutional Neutrality, Vote Dilution, Partisan Entrenchment\n#Aletheia #SCOTUS #VotingRights",
-      "Defenders claim the new legal standard ensures constitutional rigor by requiring proof of intentional racial bias rather than purely partisan outcomes in redistricting.\nStated Judgement: (+0.76, +0.48) — Greater Good",
-      "The elevated legal bar exploits the overlap of race and party, insulating racial vote dilution behind the legal shield of allowable partisan gerrymandering.\nResulting Judgement: (-0.68, -0.74) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nJudicial thresholds effectively protect racial vote dilution under partisan cover.\n\nIntegrity: Severe Deception (Hypocrisy: 22.3, Uncertainty z: 2)",
+      "Defenders claim the new legal standard ensures constitutional rigor by requiring proof of intentional racial bias rather than purely partisan outcomes in redistricting.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The elevated legal bar exploits the overlap of race and party, insulating racial vote dilution behind the legal shield of allowable partisan gerrymandering.\nResulting Judgement: (-0.83, -0.86) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nJudicial thresholds effectively protect racial vote dilution under partisan cover.\n\nIntegrity: Severe Deception (Hypocrisy: 22.3, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- SCOTUS Callais Rule: FAIL (-0.72, -0.76) — Shields discriminatory districting.\n- 11th Circuit Remand: COND (-0.55, -0.60) — Enforces stringent appellate precedent.",
       "The 11th Circuit vacated a 2023 ruling that struck down Georgia's 2021 legislative maps, remanding the case under the Supreme Court's stringent Louisiana v. Callais standard.",
       "The Bright Side:\nDemanding strict evidentiary proof of intent provides predictable legal standards for state legislatures drawing electoral boundaries.",
       "The Breakdown & Plane Error:\nThe plane error conflates legal intent with systemic impact. Demanding explicit racial animus ignores how partisan maneuvers intentionally suppress minority power.",
       "Social Physics Analysis:\nWhen legal tests require proof of subjective animus in polarized systems, mapmakers easily disguise discriminatory impact as partisan interest. This shields power structures from meaningful accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Legal formalism entrenches electoral imbalances.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Legal formalism entrenches electoral imbalances.",
       "The Unavoidable Truth: Heightening evidentiary hurdles severely weakens Voting Rights Act protections for minority communities.\n\nThe Unavoidable Lie: Partisan redistricting in racially polarized states operates independently of racial calculations.",
       "Alethekanon:\nRequiring plaintiffs to prove overt racial malice rather than structural dilution creates an evidentiary barrier designed to protect partisan gerrymandering while eroding representative democracy.",
       "Awwthekanon:\nEvery voter deserves a voice that counts. Making it harder to challenge unfair maps leaves entire communities without fair representation.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.1,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "SCOTUS Callais Standard Impact",
@@ -295,6 +357,7 @@
         "name": "Joe Biden",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

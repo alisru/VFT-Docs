@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "real_u": -0.72,
+    "real_psi": -0.78,
     "mode": "root",
     "posts": [
       "Seattle PD attempts a linguistic rebrand for armed criminals, sparking massive backlash.\nEvidence: Terminology rebrand, violent crime surge, public mockery\n#Aletheia #LawEnforcement",
-      "Law enforcement officials claim the alternative nomenclature aims to accurately identify violent actors in community policing efforts.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "Deploying empty semantic rebranding while violent crime surges exposes institutional avoidance of core security failures.\nResulting Judgement: (-0.75, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSuperficial vocabulary shifts substitute for genuine crime reduction, prioritizing public relations over public safety.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
+      "Law enforcement officials claim the alternative nomenclature aims to accurately identify violent actors in community policing efforts.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Deploying empty semantic rebranding while violent crime surges exposes institutional avoidance of core security failures.\nResulting Judgement: (-0.72, -0.78) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nSuperficial vocabulary shifts substitute for genuine crime reduction, prioritizing public relations over public safety.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
       "Sub-Audits Breakdown:\n- Seattle Police Leadership: FAIL (-0.75, -0.8) — Uses semantic spin to mask rising violent crime.\n- Public Safety Strategy: FAIL (-0.7, -0.75) — Prioritizes PR optics over direct community protection.",
       "Amid a weekend where three people were killed and three wounded in Seattle, interim police chief Andre Sayles introduced the term 'trigger-pullers' to describe known shooters.",
       "The Poison:\nSubstituting sterile jargon for accountability creates an absurd theatre that alienates communities and invites well-deserved ridicule.",
       "The Breakdown & Plane Error:\nConfusing WHO is responsible for violence (the criminals) with WHAT words are used to describe them, substituting linguistic gymnastics for substantive policing solutions.",
       "Social Physics Analysis:\nSeattle leadership executes a classic Smart Selfish maneuver, replacing operational solutions with a linguistic pretext. Instead of confronting violent crime directly, they project reform through semantic rebrands, protecting institutional image.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The force vectors show institutional energy diverted into cosmetic spin rather than public safety.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The force vectors show institutional energy diverted into cosmetic spin rather than public safety.",
       "The Unavoidable Truth: Semantic rebranding cannot alter the destructive reality of armed violence on city streets.\n\nThe Unavoidable Lie: Cosmetic vocabulary shifts represent meaningful progress in community policing.",
       "Alethekanon:\nCosmetic vocabulary shifts cannot substitute for substantive security. Rebranding violence with bureaucratic slang only exposes institutional drift.",
       "Awwthekanon:\nWhen communities hurt and families grieve losses, word games feel like a cruel dismissal. People need real safety, not clever rebranding from leaders.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Seattle Police Leadership",
@@ -159,6 +221,7 @@
         "sub_psi": -0.8,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

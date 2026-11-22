@@ -6,21 +6,21 @@
     "link": "https://www.upi.com/Top_News/World-News/2026/08/31/Greece-sign-major-defense-export-deal/3441788177994/",
     "target_url": "",
     "claim_u": 0.6,
-    "claim_psi": 0.8,
+    "claim_psi": 0.7,
     "real_u": 0.2,
     "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "Greece and Israel forge a historic multi-billion defense pact to build an advanced air defense umbrella.\n\nIsrael-Greece ink $3.5B deal for 'multitiered' air defense shield\nEvidence: Achilles Shield accord, David's Sling, local Greek subcontractor share",
-      "The €3 billion 'Achilles Shield' deal establishes a multi-layered air defense array to safeguard sovereign territory and enhance bilateral strategic stability.\nStated Judgement: (+0.6, +0.8) — Good Preference",
-      "While providing robust regional deterrence, the pact also deepens entanglements in high-stakes arms markets amid persistent Mediterranean tensions.\nResulting Judgement: (+0.2, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nThe deal successfully modernizes allied defense infrastructure and integrates domestic industrial capacity, despite regional friction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
+      "The €3 billion 'Achilles Shield' deal establishes a multi-layered air defense array to safeguard sovereign territory and enhance bilateral strategic stability.\nStated Judgement: (+0.60, +0.70) — Greater Good",
+      "While providing robust regional deterrence, the pact also deepens entanglements in high-stakes arms markets amid persistent Mediterranean tensions.\nResulting Judgement: (+0.20, +0.40) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe deal successfully modernizes allied defense infrastructure and integrates domestic industrial capacity, despite regional friction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
       "Sub-Audits Breakdown:\n- UPI World News: PASS (0.6, 0.7) — Comprehensive coverage of Achilles Shield parameters.",
       "Israel and Greece formally signed the €3 billion defense agreement in Tel Aviv, incorporating systems like David's Sling and SPYDER to create a comprehensive national air shield.",
       "The Bright Side:\nGreek defense firms secure substantial technology transfer and €700M in subcontractor revenue, boosting domestic industrial capabilities.",
       "The Breakdown & Plane Error:\nConfusing tactical defensive capability (WHERE) with broader regional geopolitical alignment (WHO).",
       "Social Physics Analysis:\nBy aligning technical capabilities and co-producing defense infrastructure, both nations establish transparent deterrence, replacing unilateral vulnerability with shared protective architecture.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward balanced regional deterrence and industrial cooperation.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward balanced regional deterrence and industrial cooperation.",
       "The Unavoidable Truth: Multi-layered air defense systems provide concrete deterrence against evolving ballistic and drone threats.\n\nThe Unavoidable Lie: Large-scale arms export pacts are driven purely by mutual friendship rather than hard geopolitical calculus.",
       "Alethekanon:\nStrategic deterrence requires tangible hardware integration, binding allied security postures together.",
       "Awwthekanon:\nIn a volatile world, nations seek reliable shields to protect their people, hoping defensive strength preserves peace.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UPI World News Coverage",
@@ -147,6 +209,7 @@
         "name": "Israel Aerospace Industries",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

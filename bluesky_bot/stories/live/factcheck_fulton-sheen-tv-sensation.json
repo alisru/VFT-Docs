@@ -5,22 +5,22 @@
     "subject": "Fulton Sheen became a TV sensation preaching faith, morality and warnings Michael Knowles says still resonate",
     "link": "https://www.foxnews.com/politics/fulton-sheen-tv-sensation-preaching-faith-morality-warnings-michael-knowles-says-still-resonate",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.4,
-    "real_psi": -0.2,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.5,
+    "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "Archbishop Fulton Sheen's historic broadcasting legacy meets modern culture-war framing.\nEvidence: 30M weekly viewers, recent beatification, Knowles commentary\n#Aletheia #History #Religion",
-      "Michael Knowles argues newly beatified Archbishop Fulton Sheen would be branded a far-right extremist today without altering his message.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "While Sheen commanded massive 1950s audiences through universal moral appeal, modern pundits project partisan labels onto his spiritual legacy.\nResulting Judgement: (+0.4, -0.2) — Conditionally Sound",
-      "Verdict: PASS — The Path of Awakening.\nSheen's historic religious broadcasting bridges universal spiritual truths, though contemporary pundits reframe them for partisan battles.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Michael Knowles argues newly beatified Archbishop Fulton Sheen would be branded a far-right extremist today without altering his message.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "While Sheen commanded massive 1950s audiences through universal moral appeal, modern pundits project partisan labels onto his spiritual legacy.\nResulting Judgement: (+0.50, +0.00) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nSheen's historic religious broadcasting bridges universal spiritual truths, though contemporary pundits reframe them for partisan battles.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- Historical Legacy: PASS (+0.8, +0.6) — Reached 30M viewers across faiths.\n- Political Framing: COND (+0.2, -0.6) — Pundits weaponize his memory for culture wars.",
       "Archbishop Fulton Sheen was recently beatified in St. Louis, drawing renewed attention to his pioneering television ministry that captivated millions in the 1950s.",
       "The Bright Side:\nSheen's timeless focus on human dignity and spiritual resilience continues to transcend narrow sectarian and political divides.",
       "The Breakdown & Plane Error:\nConfusing the historical universality of spiritual broadcasting (WHAT) with partisan culture-war categorization (WHO).",
       "Social Physics Analysis:\nCommentators run a projection loop, mapping contemporary ideological friction onto a historical figure whose actual appeal rested on broad moral resonance rather than partisan exclusion.",
-      "The Trajectory: The Path of Awakening.\nThe gap between historical spiritual reality and partisan framing leads toward balanced re-evaluation when separating theology from modern punditry.",
+      "The Trajectory: The Path of Fall from Grace.\nThe gap between historical spiritual reality and partisan framing leads toward balanced re-evaluation when separating theology from modern punditry.",
       "The Unavoidable Truth: Sheen engaged universal human questions that resonated far beyond Catholic audiences.\n\nThe Unavoidable Lie: His historic ministry can be neatly weaponized for modern partisan factionalism.",
       "Alethekanon:\nHistorical figures are frequently retrofitted into modern political silos, obscuring their actual expansive cultural footprint 🌐",
       "Awwthekanon:\nIt is wonderful to see how art, faith, and media once united millions across divides, reminding us of our shared human search for meaning.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Historical Legacy",
@@ -158,6 +220,7 @@
         "name": "Roman Catholic Church",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

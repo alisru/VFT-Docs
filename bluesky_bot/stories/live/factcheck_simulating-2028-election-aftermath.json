@@ -13,14 +13,14 @@
     "posts": [
       "Role-playing the breakdown of American democracy in 2028 reveals stark vulnerabilities.\n\nSimulating 2028 Election\nEvidence: scenario gaming, institutional planning, democratic resilience\n#Aletheia #Politics",
       "Strategic simulation salons aim to prepare political and business leaders for extreme post-election volatility and safeguard the rule of law.\nStated Judgement: (+0.75, +0.88) — Greater Good",
-      "Workshops successfully stress-test institutional defenses and align diverse factions against catastrophic collapse without partisan spin.\nResulting Judgement: (+0.69, +0.77) — Good Preference",
-      "Verdict: PASS — The Path of Grace. Proactive stress-testing builds institutional resilience before systemic crises strike.\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "Workshops successfully stress-test institutional defenses and align diverse factions against catastrophic collapse without partisan spin.\nResulting Judgement: (+0.69, +0.77) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "- Institutionalists: PASS (0.6, 0.5) — Preserving constitutional norms.\n- Capitalists: PASS (0.4, 0.3) — Protecting markets from collapse.",
       "Political strategists are running gaming salons to help leaders navigate constitutional crises between the 2028 election and inauguration day.",
       "The Poison:\nFictionalizing civil strife can normalize authoritarian inevitability if participants treat breakdowns as unchangeable script rather than choices.",
       "The Breakdown & Plane Error:\nEvaluating a simulation requires looking at process (WHO) rather than immediate policy outcomes (WHAT). It builds preparedness.",
       "Social Physics Analysis:\nBy bringing rival factions together in a safe sandbox, the exercise replaces anxiety with collaborative scenario planning, fostering collective resilience and transparency.",
-      "The Trajectory: The Path of Grace.\nWhen you map proactive planning against potential democratic collapse, it plots a direct trajectory toward Grace. Open preparation dampens systemic fear.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map proactive planning against potential democratic collapse, it plots a direct trajectory toward Grace. Open preparation dampens systemic fear.",
       "The Unavoidable Truth: Proactive gaming helps institutions identify blind spots before crises hit.\n\nThe Unavoidable Lie: Simulation outcomes predict inevitable reality rather than possible choices.",
       "Alethekanon:\nProactive scenario planning successfully transforms abstract democratic anxiety into concrete, actionable institutional resilience.🌐",
       "Awwthekanon:\nIt is comforting to see people calmly preparing to protect democracy together rather than just panicking in the dark.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Atoll Society Simulation",
@@ -274,6 +336,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

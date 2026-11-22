@@ -6,21 +6,21 @@
     "link": "https://www.playboy.com/read/sex/the-unexpected-way-your-dentist-might-help-you-in-bed",
     "target_url": "https://bsky.app/profile/playboy.com/post/3mtgwmi3qfs24",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.8,
-    "real_psi": 0.5,
+    "claim_psi": 1.0,
+    "real_u": 0.9,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Can your dentist really tell if you've been busy? Playboy investigates oral health and sexual wellness.\nEvidence: quirky hook, real medical study data, lifestyle humor\n#Aletheia #Health",
-      "Dental hygiene is not just about a bright smile—it can directly improve your sexual health and intimacy by preventing bacteria and enhancing wellness.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "While palatal petechiae and oral bacteria links are scientifically real, the article is mostly a playful, informative lifestyle read blending medical facts with humor.\nResulting Judgement: (+0.8, +0.5) — Trustworthy",
-      "Verdict: PASS — The Path of Awakening.\nA lighthearted yet medically grounded exploration of oral hygiene that successfully connects dental care to intimate wellness without deception.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "Dental hygiene is not just about a bright smile—it can directly improve your sexual health and intimacy by preventing bacteria and enhancing wellness.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While palatal petechiae and oral bacteria links are scientifically real, the article is mostly a playful, informative lifestyle read blending medical facts with humor.\nResulting Judgement: (+0.90, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nA lighthearted yet medically grounded exploration of oral hygiene that successfully connects dental care to intimate wellness without deception.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "- Dental Hygiene Link: PASS (1.0, 0.5) — Backed by peer-reviewed studies.\n- Lifestyle Framing: PASS (0.8, 0.5) — Engaging and informative tone.",
       "Playboy explores how routine dental visits intersect with sexual health, highlighting everything from palatal petechiae caused by vigorous activity to bacterial transmission risks.",
       "The Bright Side:\nIt destigmatizes open conversations about sexual health and dental care, encouraging proactive hygiene practices.",
       "The Breakdown & Plane Error:\nNo major plane error; the article explicitly links physical dental realities (WHAT/WHERE) with intimate wellness benefits (WHO/WHY).",
       "Social Physics Analysis:\nBy blending medical education with engaging lifestyle commentary, the piece empowers readers with transparent health information rather than using fear-based pretexts.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the stated intention of promoting dental awareness against the informative, entertaining reality, it plots a direct trajectory toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the stated intention of promoting dental awareness against the informative, entertaining reality, it plots a direct trajectory toward Grace.",
       "The Unavoidable Truth: Good oral hygiene genuinely reduces bacterial transmission risks during intimacy.\n\nThe Unavoidable Lie: Dentists do not actually train to answer your specific sexual technique queries.",
       "Alethekanon:\nA surprisingly educational intersection of dental science and intimacy, maintaining solid factual grounding beneath playful framing.",
       "Awwthekanon:\nTaking care of our whole bodies—including our smiles and intimate health—is an act of self-love and mutual care. Let's keep health conversations open and kind!",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Dental Health & Hygiene Messaging",
@@ -203,6 +265,7 @@
         "name": "Playboy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

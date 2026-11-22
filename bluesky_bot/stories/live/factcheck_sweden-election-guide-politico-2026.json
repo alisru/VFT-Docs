@@ -5,22 +5,22 @@
     "subject": "How to watch Sweden’s election like a pro",
     "link": "https://www.politico.eu/article/how-to-watch-sweden-election-like-pro/",
     "target_url": "https://bsky.app/profile/politico.eu/post/3mvf3pgveli2k",
-    "claim_u": 0.81,
-    "claim_psi": 0.32,
-    "real_u": 0.76,
-    "real_psi": 0.28,
+    "claim_u": 0.83,
+    "claim_psi": 0.31,
+    "real_u": 0.8,
+    "real_psi": 0.29,
     "mode": "root",
     "posts": [
       "Sweden faces a historic knife-edge election testing coalition boundaries.\nEvidence: Democratic Transparency, Proportional Representation, Voter Franchise\n#Aletheia #Sweden #Elections",
-      "Analysis provides an objective breakdown of the 349-seat Riksdag race, coalition math, and the 4% parliamentary threshold.\nStated Judgement: (+0.81, +0.32) — Greater Good",
-      "The reporting cleanly reflects the institutional mechanics, high voter turnout, and shifting political red lines in Stockholm.\nResulting Judgement: (+0.76, +0.28) — Greater Good",
-      "Verdict: PASS — Stasis in Grace. Accurate, rigorous structural overview of Swedish constitutional mechanics and coalition realities.\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
+      "Analysis provides an objective breakdown of the 349-seat Riksdag race, coalition math, and the 4% parliamentary threshold.\nStated Judgement: (+0.83, +0.31) — Greater Good",
+      "The reporting cleanly reflects the institutional mechanics, high voter turnout, and shifting political red lines in Stockholm.\nResulting Judgement: (+0.80, +0.29) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
       "Sub-Audits Breakdown:\n- Riksdag Electoral System: PASS (+0.85, +0.30) — Transparent proportional math.\n- Politico Guide Quality: PASS (+0.76, +0.28) — Accurate nonpartisan analysis.",
       "Millions of Swedes cast ballots in a dead-heat election pitting Magdalena Andersson's left bloc against Ulf Kristersson's right-wing coalition backed by the Sweden Democrats.",
       "The Poison:\nIntense horse-race polling coverage can reduce complex socioeconomic platforms to simplistic parliamentary seat-counting games.",
       "The Breakdown & Plane Error:\nNo systemic distortion detected. The guide correctly aligns the structural rules of proportional voting (WHERE) with legitimate political consequences (WHY).",
       "Social Physics Analysis:\nThe democratic process relies on transparent rules reducing societal friction. By clearly outlining threshold barriers and coalition stakes, civic understanding is empowered rather than polarized.",
-      "The Trajectory: Stasis in Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good, sustaining civic transparency through faithful reporting.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good, sustaining civic transparency through faithful reporting.",
       "The Unavoidable Truth: Clear election rules prevent institutional gridlock.\nThe Unavoidable Lie: Complex parliamentary compromises can be reduced to single-party dominance.",
       "Alethekanon:\nA well-structured proportional representation system naturally checks unchecked power. The reporting faithfully maps constitutional mechanics without distortion.",
       "Awwthekanon:\nIt is heartening to see democratic participation remain high, giving every citizen a meaningful voice in shaping their country's future.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Riksdag Electoral System",
@@ -162,6 +224,7 @@
         "name": "Sweden",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

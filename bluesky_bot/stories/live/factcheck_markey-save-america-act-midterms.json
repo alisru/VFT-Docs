@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": -1.0,
     "claim_psi": -1.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Sen. Ed Markey claims the SAVE America Act is a plot by Donald Trump to steal the upcoming midterm elections.\n\nEvidence: primary debate rhetoric, voter ID bills, partisan warnings\n#USPol #Elections #Aletheia",
       "Markey argues that pushing voter citizenship verification laws is a constitutional crisis designed to undermine democracy and rig elections.\nStated Judgement: (-1.0, -1.0) — Greater Evil",
-      "In reality, legal experts confirm the bill cannot be implemented in time for the midterms, making Markey's claims primary election posturing.\nResulting Judgement: (-0.85, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPartisan rhetoric exploits fears of election subversion for primary political leverage despite structural impossibility.\nIntegrity: Severe Deception (Hypocrisy: 8.4, Uncertainty z: 0)",
+      "In reality, legal experts confirm the bill cannot be implemented in time for the midterms, making Markey's claims primary election posturing.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nPartisan rhetoric exploits fears of election subversion for primary political leverage despite structural impossibility.\nIntegrity: Severe Deception (Hypocrisy: 8.4, Uncertainty z: 0)",
       "- Markey Debate Strategy: FAIL (-0.9, -0.85) — Uses exaggerated coup claims for votes.\n- Election Integrity Debate: FAIL (-0.8, -0.75) — Distorts timeline and legal reality.",
       "During their final primary debate, Sen. Ed Markey and Rep. Seth Moulton clashed over Donald Trump's push for voter ID legislation ahead of the midterms.",
       "The Poison:\nFraming standard policy debates as immediate authoritarian coups erodes public trust in democratic institutions for short-term political gain.",
       "The Breakdown & Plane Error:\nConfusing WHAT (voter registration laws) with WHO (partisan survival in a Senate primary).\nIt is a structural bait-and-switch: warning of stolen elections to secure primary votes.",
       "Social Physics Analysis:\nBy manufacturing an imminent existential crisis rather than engaging transparently on voting policy, politicians maximize division and project corruption onto opponents.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Polarization compounds.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Polarization compounds.",
       "The Unavoidable Truth: Election rules are a legitimate arena of political debate without needing hyperbole about stolen midterms.\nThe Unavoidable Lie: Proposing voter ID laws three months before an election constitutes an immediate coup.",
       "Alethekanon:\nInflammatory rhetoric transforms complex legal timelines into apocalyptic narratives, trading civic stability for campaign momentum. 🌐",
       "Awwthekanon:\nWhen our leaders talk about democracy with so much fear and anger, it leaves everyday voters feeling anxious and unheard in the noise.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ed Markey Campaign Rhetoric",
@@ -204,6 +266,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

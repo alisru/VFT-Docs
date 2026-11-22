@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.55,
-    "real_psi": 0.58,
+    "real_u": -0.91,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A high-stakes Senate race is framed as a battle for the nation's soul, but debate avoidance undermines the democratic process. Amy Acton's Ohio campaign. Evidence: Democratic representation, Debate avoidance, Polarization. #Aletheia #USPol #Ohio",
       "The campaign claims Ohio is 'ground zero' for democracy, framing their run as a historic, grassroots effort to restore representation and break a decades-long partisan hold.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, while using high-stakes national rhetoric, Acton has declined to debate her opponent, Ramaswamy, shielding her platform from direct public scrutiny under the guise of moral high ground.\nResulting Judgement: (-0.55, +0.58) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Deception. High-stakes national rhetoric is used to nationalize a local race while avoiding local accountability.\nIntegrity: Conditionally Sound (Hypocrisy: 1.55, z: 0)",
+      "In reality, while using high-stakes national rhetoric, Acton has declined to debate her opponent, Ramaswamy, shielding her platform from direct public scrutiny under the guise of moral high ground.\nResulting Judgement: (-0.91, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Conditionally Sound (Hypocrisy: 1.55, z: 0)",
       "Sub-Audits Breakdown:\n- Amy Acton Campaign: COND (-0.55, 0.58) — Avoids debates while claiming democratic high ground.\n- Breitbart: COND (-0.40, 0.45) — Highlights hypocrisy but frames with partisan bias.",
       "Democratic gubernatorial candidate Amy Acton called Ohio 'ground zero' for the nation's future, but has declined to debate Republican nominee Vivek Ramaswamy, citing his rhetoric.",
       "The Poison:\nUsing the opponent's controversial persona as a convenient pretext to avoid the standard democratic obligation of a public debate.",
       "The Breakdown & Plane Error:\nThe campaign commits a WHY vs HOW error. They justify the 'why' of their campaign (saving democracy) while failing the 'how' (participating in democratic debates).",
       "Social Physics Analysis:\nActon's campaign runs a Smart Selfish Maneuver. They manufacture a crisis of 'saving democracy' as a pretext to nationalize the race and boost fundraising, while projecting moral superiority to justify avoiding a high-risk public debate.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Democratic ideals are used to bypass democratic processes.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Democratic ideals are used to bypass democratic processes.",
       "The Unavoidable Truth: Ohio is a highly competitive, crucial swing state.\nThe Unavoidable Lie: Avoiding public debates is a way to protect democratic integrity.",
       "Alethekanon:\nDeclining debates while calling your race 'ground zero' for democracy is a structural contradiction. True democratic representation requires facing opposition, not hiding behind pretexts.",
       "Awwthekanon:\nIt's sad when political campaigns become so hostile that candidates can't even stand on the same stage to talk to the voters who need to hear them.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Amy Acton Campaign",
@@ -286,6 +348,7 @@
         "name": "Ohio",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

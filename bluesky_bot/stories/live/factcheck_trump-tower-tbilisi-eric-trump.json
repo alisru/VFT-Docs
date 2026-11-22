@@ -5,22 +5,22 @@
     "subject": "To the Trumps, it’s a tower. To Georgia’s oligarchs, it’s a stamp of approval",
     "link": "https://www.washingtonexaminer.com/op-eds/4736864/trump-tower-tbilisi-eric-trump-georgia-politics/",
     "target_url": "",
-    "claim_u": 0.7,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "claim_u": 0.74,
+    "claim_psi": 0.86,
+    "real_u": -0.97,
+    "real_psi": -0.95,
     "mode": "root",
     "posts": [
       "When luxury towers rise on land bought from sanctioned foundations, is it business or geopolitics? #RealEstate #Georgia #Politics",
-      "Stated claim: Trump Tower Tbilisi is a standard private licensing agreement completely detached from government influence or politics. Stated Judgement: (+0.7, 0.0) — Good Preference",
-      "Ground reality: The project functions as a political stamp of approval for ruling elites and relies on land deals linked to sanctioned oligarch Bidzina Ivanishvili. Resulting Judgement: (-0.75, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nBranding deals with politically compromised oligarchs provide legitimacy to authoritarian influence networks.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 3)",
+      "Stated claim: Trump Tower Tbilisi is a standard private licensing agreement completely detached from government influence or politics. Stated Judgement: (+0.74, +0.86) — Greater Good",
+      "Ground reality: The project functions as a political stamp of approval for ruling elites and relies on land deals linked to sanctioned oligarch Bidzina Ivanishvili. Resulting Judgement: (-0.97, -0.95) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nBranding deals with politically compromised oligarchs provide legitimacy to authoritarian influence networks.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 3)",
       "Sub-Audits Breakdown:\n- Trump Organization: FAIL (-0.7, -0.8) — Disclaims political ties while profiting from oligarchic land.\n- Georgian Ruling Elite: FAIL (-0.8, -0.9) — Leverages foreign real estate brands to secure domestic legitimacy.",
       "As construction moves forward on the $2 billion Downtown Tbilisi project, critics argue the brand partnership whitewashes anti-democratic governance.",
       "The Bright Side:\nHigh-profile foreign investments inject capital into fast-growing emerging markets like Georgia's booming real estate sector.",
       "The Breakdown & Plane Error:\nConfusing private commercial branding (WHAT) with geopolitical alignment and elite co-optation (WHO/WHY).",
       "Social Physics Analysis:\nThe Trump Organization executes a Smart Selfish Maneuver, using commercial licensing as a pretext to extract high-margin rents while deflecting accountability onto local partners.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Blending family political power with foreign oligarchic real estate creates unavoidable conflicts of interest.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Blending family political power with foreign oligarchic real estate creates unavoidable conflicts of interest.",
       "The Unavoidable Truth: International luxury real estate in fragile democracies invariably serves as a political instrument for ruling elites.\n\nThe Unavoidable Lie: Brand licensing completely insulates a family business from local government corruption.",
       "Alethekanon:\nBrand separation is an illusion when the brand itself is traded as political currency. Profit and power cannot be neatly divorced.",
       "Awwthekanon:\nIt is sad to see magnificent cities and hopeful economies used as chessboards for powerful elites seeking stamps of approval rather than genuine community flourishing.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.1,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Trump Organization Licensing",
@@ -291,6 +353,7 @@
         "sub_psi": -0.8,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

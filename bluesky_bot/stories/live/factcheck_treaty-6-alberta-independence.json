@@ -5,22 +5,22 @@
     "subject": "Treaty 6 was signed 150 years ago. First Nations worry a push for Alberta independence puts it at risk",
     "link": "https://www.cbc.ca/news/canada/edmonton/treaty-6-alberta-independence-9.7322920?cmp=rss",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "As Treaty 6 marks its 150th anniversary, a push for Alberta independence threatens historic rights and federal protections.\nEvidence: Treaty rights, Provincial referendum, First Nations pushback\n#Treaty6 #Alberta",
-      "Proponents argue Alberta independence can accommodate First Nations through modern agreements while granting local self-determination.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "The unilateral push for secession bypassing consultation jeopardizes legally binding federal fiduciary obligations and health/education funding.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nUnilateral secession efforts bypass mandatory consultation and destabilize century-old Crown treaty obligations.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 2)",
+      "Proponents argue Alberta independence can accommodate First Nations through modern agreements while granting local self-determination.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The unilateral push for secession bypassing consultation jeopardizes legally binding federal fiduciary obligations and health/education funding.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nUnilateral secession efforts bypass mandatory consultation and destabilize century-old Crown treaty obligations.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 2)",
       "- Alberta Separation Advocates: FAIL (-0.7, -0.8) — Bypasses consultation to advance political goals.\n- First Nations Leadership: PASS (+0.8, +0.7) — Defends constitutional rights and treaty obligations.",
       "As Treaty 6 marks 150 years, Indigenous leaders are pushing back against Alberta's separation referendum, arguing that breaking ties with Canada threatens federally guaranteed healthcare, education, and land rights.",
       "The Bright Side:\nFirst Nations solidarity and legal challenges are successfully forcing provincial recognition of constitutional consultation duties.",
       "The Breakdown & Plane Error:\nConfusing WHAT (political autonomy) with WHO (treaty signatories). Separatists treat historic Crown agreements as provincial administrative details.",
       "Social Physics Analysis:\nBy imposing political restructuring without transparent coalition or consent, separatists rely on pretexts of local freedom while generating severe institutional strain and eroding indigenous trust.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil, as administrative disruption outweighs democratic pretexts.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil, as administrative disruption outweighs democratic pretexts.",
       "The Unavoidable Truth: Historic treaties are federal obligations that cannot be unilaterally dissolved by provincial secession.\n\nThe Unavoidable Lie: Separatist restructuring preserves indigenous sovereignty without friction.",
       "Alethekanon:\nTreaties are foundational covenants, not administrative paperwork to be discarded in political divorces.",
       "Awwthekanon:\nOur ancestors foresaw these very struggles when they shook hands and promised to share the land in peace and mutual respect.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Alberta Separation Advocates",
@@ -218,6 +280,7 @@
         "name": "Danielle Smith",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

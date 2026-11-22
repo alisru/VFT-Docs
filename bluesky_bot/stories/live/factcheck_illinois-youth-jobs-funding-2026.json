@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Panic erupted over 5,000 youth jobs at risk until a governor's office clarification resolved the clerical budgeting error.\n\nIllinois Youth Investment Program Funding Dispute\nEvidence: threatened job cuts, clerical error, level funding restored\n#Aletheia #ILPol 🌐",
-      "Governor Pritzker's office clarified that youth employment funding is maintained at last year's $45 million level, correcting a drafting error.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "While initial confusion sparked alarm among 59 community organizations, direct legislative talks quickly restored alignment and secured jobs.\nResulting Judgement: (+0.84, +0.91) — Grace & Constructive Resolution",
-      "Verdict: PASS — The Path of Grace. Open dialogue between community leaders and state officials successfully resolved a dangerous clerical drafting error without job losses.\nSubs: Gov Office: PASS (+0.9, +0.8); Community Orgs: PASS (+0.8, +0.7).\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 1)",
+      "Governor Pritzker's office clarified that youth employment funding is maintained at last year's $45 million level, correcting a drafting error.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While initial confusion sparked alarm among 59 community organizations, direct legislative talks quickly restored alignment and secured jobs.\nResulting Judgement: (+0.84, +0.91) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nSubs: Gov Office: PASS (+0.9, +0.8); Community Orgs: PASS (+0.8, +0.7).\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 1)",
       "Sub-Audits Breakdown:\n- Illinois Governor's Office: PASS (0.9, 0.8) — Promptly clarified funding levels and corrected legislative drafting errors.\n- Community Organizations & ASN: PASS (0.8, 0.7) — Effectively mobilized advocacy and engaged in constructive dialogue to protect youth employment.",
       "Community organizations and the Alternative Schools Network initially called a press conference regarding threatened funding cuts for at-risk youth, only to cancel it after productive discussions with state leaders confirmed flat funding of $45 million for fiscal year 2027.",
       "The Bright Side:\nSwift communication and collaborative problem-solving between state officials and community partners averted unnecessary panic and preserved vital youth jobs.",
       "The Breakdown & Plane Error:\nConfusing WHAT (clerical drafting error) with WHO (intentional program cuts). The initial alarm stemmed from a budget typo, not a malicious policy change.",
       "Social Physics Analysis:\nBy replacing potential confrontation with transparent dialogue, stakeholders bridged the gap between administrative error and mutual understanding, empowering community youth without resorting to divisive posturing.",
-      "The Trajectory: The Path of Grace. When you map the gap between initial administrative miscommunication and cooperative resolution, it plots a direct trajectory toward Grace. Open collaboration successfully restored systemic equilibrium.",
+      "The Trajectory: The Path of Small Fall from Grace.",
       "The Unavoidable Truth: Administrative errors can cause widespread panic if transparency lags.\n\nThe Unavoidable Lie: Typographical drafting mistakes are identical to intentional funding slashes.",
       "Alethekanon:\nVerifying the record shows Governor Pritzker maintained the $45M baseline from FY2026 to FY2027, fulfilling core funding commitments despite federal headwinds. Collaborative engagement by Jack Wuest and the ASN proved vital.",
       "Awwthekanon:\nIt is such a relief that thousands of young people didn't lose their summer work opportunities over a paperwork mistake. Clear communication heals anxiety fast!",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.15
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 0.95,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.15,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Illinois Governor's Office",
@@ -274,6 +336,7 @@
         "name": "Illinois Department of Human Services",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

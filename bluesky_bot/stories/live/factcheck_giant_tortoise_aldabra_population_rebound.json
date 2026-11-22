@@ -6,15 +6,15 @@
     "link": "https://www.goodnewsnetwork.org/giant-tortoise-population-is-thriving-survey-finds-180000-on-one-island-chain/",
     "target_url": "",
     "claim_u": 0.96,
-    "claim_psi": 0.92,
-    "real_u": 0.95,
-    "real_psi": 0.9,
+    "claim_psi": 1.0,
+    "real_u": 0.96,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Half a century of relentless conservation just delivered an extraordinary wildlife recovery on the Aldabra Atoll.\n\nAldabra Tortoises Reach 180,000\nEvidence: Sanctuary Defense, 180k Census Count, Sovereign Ecosystem\n#Aletheia #Wildlife",
-      "Researchers from the Seychelles Islands Foundation and Exeter report 180,000 giant tortoises now roam Aldabra Atoll, marking a historic rebound from fewer than 1,000 in the 1800s.\n\nStated Judgement: (+0.96, +0.92) — Greater Good",
-      "Five years of rigorous statistical modeling confirm the population is remarkably stable and free-roaming, proving that strict legal sanctuary and UNESCO status can reverse near-extinction.\n\nResulting Judgement: (+0.95, +0.90) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Persistent habitat defense and rigorous field ecology successfully rebuilt a devastated wild population.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Researchers from the Seychelles Islands Foundation and Exeter report 180,000 giant tortoises now roam Aldabra Atoll, marking a historic rebound from fewer than 1,000 in the 1800s.\n\nStated Judgement: (+0.96, +1.00) — Greater Good",
+      "Five years of rigorous statistical modeling confirm the population is remarkably stable and free-roaming, proving that strict legal sanctuary and UNESCO status can reverse near-extinction.\n\nResulting Judgement: (+0.96, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Seychelles Islands Fdn: PASS (+0.96, +0.92) — Rigorous 5-year census confirms stable rebound.\n- Exeter Ecology Team: PASS (+0.95, +0.90) — Sound statistical modeling across dense terrain.",
       "In the 19th century, heavy exploitation reduced Aldabra's tortoises to under 1,000. Designated a strict nature reserve in 1981 and a UNESCO site in 1982, the atoll now harbors the planet's largest free-roaming herd.",
       "The Poison:\nRising global temperatures cause prolonged droughts that threaten food and shade, while invasive feral cats and black rats continue to prey on vulnerable eggs and hatchlings.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.75,
+        "O": 0.0,
+        "N": 0.2
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.45,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.75,
+        "O": 0.0,
+        "N": 0.2
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.45,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Seychelles Islands Foundation Conservation",
@@ -294,6 +356,7 @@
     "tags": [
       "Aletheia",
       "Wildlife"
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

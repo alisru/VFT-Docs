@@ -14,13 +14,13 @@
       "Facing antitrust lawsuits over an $111B merger, Paramount promises a toothless oversight board to appease regulators while gutting media integrity.\n\nParamount Promises Meaningless CNN ‘Oversight Board’ To Try And Gain Merger Approval\nEvidence: corporate spin, regulatory capture, labor erosion #Tech",
       "Paramount executives claim their massive media consolidation will create jobs and protect journalistic integrity with a new oversight committee.\nStated Judgement: (+0.50, +0.78) — Greater Good (Stated)",
       "In reality, toothless oversight boards are historic corporate pretexts used to bypass antitrust enforcement, resulting in mass layoffs, higher prices, and propaganda.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nCorporate consolidation pretexts mask aggressive regulatory capture and the systemic dismantling of independent journalism.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, Uncertainty z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nCorporate consolidation pretexts mask aggressive regulatory capture and the systemic dismantling of independent journalism.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Paramount Merger Spin: FAIL (-0.9, -0.9) — Promises of journalistic protection are historically empty and legally unenforceable.\n- Antitrust Regulatory Integrity: FAIL (-0.9, -0.8) — Corrupt regulatory environments enable unchecked media monopolies.",
       "Paramount's stalled $111 billion merger with Warner Bros. Discovery has sparked heavy antitrust scrutiny, prompting executive David Ellison to float a fake journalistic oversight board.",
       "The Poison:\nWhile promising to protect CNN and Hollywood jobs, leadership simultaneously threatens to pull production from California entirely if demands aren't met.",
       "The Breakdown & Plane Error:\nThe failure is a logical (HOW) and metaphysical (WHO) contradiction: the stated beneficiary is public journalism, but the actual beneficiary is billionaire consolidation.\n\nIt is a classic bait-and-switch.",
       "Social Physics Analysis:\nCorporate leadership uses high-minded pretexts of 'neutrality' and 'oversight' to mask power consolidation, projecting cooperative intent while executing unilateral market domination.",
-      "The Trajectory: The Path of Deception.\nWhen you map corporate merger spin against real labor extraction, it plots a direct trajectory toward Greater Evil.\n\nMathematical divergence confirms systemic deception overcoming public oversight.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map corporate merger spin against real labor extraction, it plots a direct trajectory toward Greater Evil.\n\nMathematical divergence confirms systemic deception overcoming public oversight.",
       "The Unavoidable Truth: Media consolidation consistently yields mass layoffs, higher prices, and degraded news quality.\n\nThe Unavoidable Lie: Billionaire-backed oversight boards protect editorial independence.",
       "Alethekanon:\nMurdoch promised a Wall Street Journal oversight board in 2007; today it is gone. Ellison's CNN board is the exact same hollow corporate pretense designed to dodge antitrust cops.",
       "Awwthekanon:\nIt breaks my heart seeing skilled production crews and dedicated journalists treated like disposable pawns in billionaire monopoly games they never consented to play.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Paramount Merger Spin",
@@ -271,6 +333,7 @@
         "name": "CNN",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

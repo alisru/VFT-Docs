@@ -6,21 +6,21 @@
     "link": "https://www.breitbart.com/politics/2026/09/13/brandon-johnson-will-seek-another-term-as-mayor-of-homicide-plagued-chicago/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "Chicago Mayor Brandon Johnson announces his 2027 reelection bid amid high homicide numbers and low approval ratings.\nEvidence: Crime rates, fiscal allocation, public polling\n#Aletheia #Chicago #Politics",
-      "Stated claims frame progressive leadership as defending the working class and creating a safe, affordable city.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Actual realities reveal persistent gun violence, widespread public disapproval, and massive spending on migrant care over public schools.\nResulting Judgement: (-0.75, -0.80) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nWhen progressive rhetoric masks severe municipal decay, it leads straight to institutional crisis.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 1.75, z: 2)",
+      "Stated claims frame progressive leadership as defending the working class and creating a safe, affordable city.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Actual realities reveal persistent gun violence, widespread public disapproval, and massive spending on migrant care over public schools.\nResulting Judgement: (-0.94, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWhen progressive rhetoric masks severe municipal decay, it leads straight to institutional crisis.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 1.75, z: 2)",
       "Sub-Audits Breakdown:\n- Campaign Narrative: FAIL (-0.80, -0.85) — Ignores catastrophic public safety stats.\n- Fiscal Priorities: FAIL (-0.70, -0.75) — Diverts funds from core services.",
       "Chicago Mayor Brandon Johnson announced his 2027 reelection campaign, emphasizing his progressive platform despite facing a 23% approval rating.",
       "The Bright Side:\nChallengers from across the political spectrum are stepping up to offer alternative municipal visions.",
       "The Breakdown & Plane Error:\nConfusing the rhetorical goal of social justice (WHO) with actual operational safety outcomes (WHAT) creates a glaring plane error.",
       "Social Physics Analysis:\nJohnson runs a classic Smart Selfish maneuver: framing institutional failure as an ongoing fight against corporate elites while shielding failing sanctuary policies from accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The net negative force vector pulls systems into stasis.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The net negative force vector pulls systems into stasis.",
       "The Unavoidable Truth: Rhetorical commitment to the working class rings hollow when basic public safety collapses.\n\nThe Unavoidable Lie: Chicago's crime rates and municipal management represent a national model of success.",
       "Alethekanon:\nWhen mayors redefine rising homicide numbers as systemic progress, language becomes a shield against accountability.",
       "Awwthekanon:\nEvery Chicago family weathering the storm of neighborhood violence deserves honest leadership and safe streets, not political posturing.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Campaign Narrative",
@@ -206,6 +268,7 @@
         "name": "City of Chicago",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

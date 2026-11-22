@@ -5,16 +5,16 @@
     "subject": "Illegal Immigrant On Run Crash Into Mayor's Wife",
     "link": "https://dailycaller.com/2026/09/07/illegal-immigrant-crashes-east-brunswick-nj-mayor-wife-penelope-cohen-ice-agents",
     "target_url": "",
-    "claim_u": -0.6,
-    "claim_psi": -0.7,
-    "real_u": -0.88,
-    "real_psi": -0.92,
+    "claim_u": -0.55,
+    "claim_psi": -0.6,
+    "real_u": -0.65,
+    "real_psi": -0.57,
     "mode": "root",
     "posts": [
       "Deported felon crashes into mayor's wife during ICE pursuit.\nEvidence: ICE detainer, prior deportations, severe injuries\n#Aletheia #Immigration #NewJersey",
-      "Routine enforcement actions successfully apprehend dangerous recidivist offenders violating federal immigration statutes.\nStated Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Systemic enforcement failures permit twice-deported felons to re-enter, culminating in violent community collisions and severe injury.\nResulting Judgement: (-0.88, -0.92) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nCatastrophic policy breakdowns result in innocent citizens bearing the physical toll of border enforcement gaps.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
+      "Routine enforcement actions successfully apprehend dangerous recidivist offenders violating federal immigration statutes.\nStated Judgement: (-0.55, -0.60) — Greater Evil",
+      "Systemic enforcement failures permit twice-deported felons to re-enter, culminating in violent community collisions and severe injury.\nResulting Judgement: (-0.65, -0.57) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nCatastrophic policy breakdowns result in innocent citizens bearing the physical toll of border enforcement gaps.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
       "Sub-Audits Breakdown:\n- Federal Immigration Policy: FAIL (-0.90, -0.95) — Recurrent border failure.\n- Local Enforcement Response: PASS (-0.40, -0.20) — Swift apprehension post-crash.",
       "An illegal immigrant with prior deportations crashed into the mayor's wife during an ICE operation, sparking intense debate over sanctuary policies and border enforcement.",
       "The Bright Side:\nSwift multi-agency response ensured the suspect was apprehended immediately following the crash.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Federal Immigration Policy",
@@ -169,6 +231,7 @@
         "name": "Immigration and Customs Enforcement",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

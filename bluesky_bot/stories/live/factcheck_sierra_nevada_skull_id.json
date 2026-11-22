@@ -14,7 +14,7 @@
       "Unlocking a 32-year cold case mystery.\nEvidence: DNA profiling, forensic genealogy, positive ID\n#Aletheia #ColdCase #California",
       "Advanced DNA tech successfully IDs decades-old remains found in the wilderness.\nStated Judgement: (1.0, 1.0) — Greater Good",
       "Rigorous genetic genealogy resolves a long-standing missing person case with dignity.\nResulting Judgement: (1.0, 1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nSystemic perseverance and modern forensic science finally restore identity and closure to a forgotten soul.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\nSystemic perseverance and modern forensic science finally restore identity and closure to a forgotten soul.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Placer County Sheriff: PASS (1.0, 1.0) — Persistent cold case investigation.\n- Ramapo IGG Center: PASS (1.0, 1.0) — Advanced genetic genealogy breakthrough.",
       "A partial skull found by loggers near Putt Lake in 1994 has finally been identified as George Krusely using cutting-edge DNA profiling and genetic genealogy.",
       "The Bright Side:\nModern forensic genealogy provides closure to families of long-forgotten missing persons.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Placer County Sheriff",
@@ -216,6 +278,7 @@
         "name": "Othram Inc.",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

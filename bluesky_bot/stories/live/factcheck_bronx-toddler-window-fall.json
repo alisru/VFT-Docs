@@ -1,0 +1,219 @@
+[
+  {
+    "thinking": "Detailed Phase 1-5 structural scan: Candidate 2 evaluates a tragic 2-year-old child's fatal fall from a 5th-floor Bronx apartment window. Stated news coverage reports the incident as an accidental fall with no criminality suspected (claim_u: 0.0, claim_psi: 0.0). Ground reality confirms the heartbreaking physical reality of an unsecured window accordion panel leading to fatal trauma (real_u: 0.0, real_psi: -1.0). Attractor forces reflect profound tragedy without systemic political malice, though highlighting urban housing safety failures. Trajectory represents neutral ground truth encountering tragic structural decay.",
+    "id": "bronx-toddler-window-fall",
+    "subject": "Girl, 2, falls to death from 5th floor NYC apartment window in tragic accident",
+    "link": "https://nypost.com/2026/11/04/us-news/girl-2-falls-to-death-from-5th-floor-nyc-apartment-window-in-tragic-accident/",
+    "target_url": "",
+    "claim_u": 0.0,
+    "claim_psi": 0.0,
+    "real_u": 0.0,
+    "real_psi": -0.5,
+    "mode": "root",
+    "posts": [
+      "A 2-year-old girl tragically dies after falling from a fifth-floor Mott Haven apartment window.\nEvidence: NYPD reports, Harlem Hospital records, family statements\n#Aletheia #Bronx #NYC",
+      "Initial reports document a heartbreaking accidental fall from a residential window.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Investigation confirms the child pushed past an unsecured air conditioner divider, resulting in fatal trauma.\nResulting Judgement: (+0.00, -0.50) — Greater Evil",
+      "Verdict: CONDITIONAL — Destruction.\nA devastating domestic tragedy handled with accurate journalistic reporting and immediate emergency response.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "- NYPD / Emergency Responders: PASS (0.0, -0.5) — Rapid response to a horrific residential accident.\n- Local Reporting: PASS (0.0, 0.0) — Respectful, factual coverage of a family tragedy.",
+      "The tragedy occurred late Tuesday night on East 138th Street in the Bronx, underscoring the vital importance of window guard safety in high-rise city apartments.",
+      "The Bright Side:\nPrompt emergency dispatch ensured the child received immediate medical attention at Harlem Hospital.",
+      "The Breakdown & Plane Error:\nProperly grounds physical reality in concrete empirical facts (Q3) without sensationalizing private grief.",
+      "Social Physics Analysis:\nA profound domestic tragedy rather than systemic extraction; highlights the critical need for foolproof child safety guards in urban housing.",
+      "The Trajectory: The Path of Destruction.\nWhen reporting adheres strictly to verified facts during an unspeakable tragedy, it maintains structural integrity.",
+      "The Unavoidable Truth: Unsecured window air conditioner panels in high-rise apartments pose lethal hazards to unattended toddlers.\n\nThe Unavoidable Lie: Tragic household accidents can always be prevented by sheer parental vigilance alone without structural safeguards.",
+      "Alethekanon:\nFactual reporting of domestic tragedy respects human grief while underscoring essential urban safety standards.",
+      "Awwthekanon:\nOur hearts ache infinitely for the grieving mother and family facing an unimaginable loss in the Bronx.",
+      "Brothekanon:\nAbsolute nightmare scenario for any parent; a stark reminder to check window guards immediately.",
+      "Spirithekanon:\n\"The Lord is close to the brokenhearted and saves those who are crushed in spirit\" Psalm 34:18 PASS\nMay grace surround the family in this hour of inconsolable grief."
+    ],
+    "actors": [
+      "New York City Police Department",
+      "Harlem Hospital"
+    ],
+    "actor_roles": [
+      {
+        "name": "New York City Police Department",
+        "role": "instigator"
+      },
+      {
+        "name": "Harlem Hospital",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.0,
+    "claim_z": 0,
+    "real_z": 0,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "NYPD / Emergency Responders",
+        "claim_u": 0.0,
+        "claim_psi": 0.0,
+        "real_u": 0.0,
+        "real_psi": -0.5,
+        "verdict": "PASS",
+        "reason": "Rapid response and accurate reporting of residential tragedy."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "is",
+    "modal_real": "is not",
+    "modal_vector": "Central Pivot to Systemic Erasure",
+    "geodesic": "None",
+    "central_is_barrier_crossed": false,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nGirl, 2, falls to death from 5...\n\n=== MULTI-SOURCE TOPIC CLUSTER: Girl, 2, falls to death from 5... ===\n\n[Source 1 — nypost.com (Bias: Right / Tabloid Conservative)] (URL: https://nypost.com/2026/11/04/us-news/girl-2-falls-to-death-from-5th-floor-nyc-apartment-window-in-tragic-accident/):\nStated Claim / Post Context:\nGirl, 2, falls to death from 5th floor  NYC apartment window in tragic accident\n\nThe toddler plunged from the window of the building on East 138th Street near St. Ann’s Avenue in Mott Haven around 10:45 p.m., police said.\n\nActual Article Body:\nSwitch between CA and NY editions here.\n\nSee more of our coverage in your search results.\n\nA 2-year-old Bronx girl fell to her death from a fifth-floor apartment window in what appears to be a tragic accident late Tuesday, cops and sources said.\n\nThe toddler plunged from the window on the top floor of the building on East 138th Street near St. Ann’s Avenue in Mott Haven around 10:45 p.m., police said.\n\nShe landed in an alleyway and was rushed unconscious to Harlem Hospital, where she succumbed to her injuries.\n\nThe tot apparently took the fall after pushing aside the divider between the window and the air conditioner, the sources said.\n\nHer mother was in another room when her young daughter fell, and ultimately called 911.\n\nNo criminality is suspected in the deadly fall, cops said.\n\n[Source 2 — www.abc.net.au (Bias: Center / Public Broadcaster)] (URL: https://www.abc.net.au/news/2026-11-05/federal-court-challenge-to-adelaide-motogp-circuit-falls-over/107349314):\nStated Claim / Post Context:\nFederal Court challenge to Adelaide MotoGP circuit falls over\n\nA case brought by a Queensland man against the SA government's plans for a MotoGP circuit in Adelaide has been discontinued.\n\nActual Article Body:\nEmergency\n\nBackstory\n\nNewsletters\n\n中文新闻\n\nBERITA BAHASA INDONESIA\n\nTOK PISIN\n\nTopic:Courts\n\nConstruction is due to begin on the Adelaide MotoGP circuit in December. (Supplied: SA Government)\n\nAn interstate challenge to South Australia's Adelaide Circuit project has been withdrawn, following a brief hearing in Brisbane.\n\nNeither the federal or South Australian governments will pursue costs.\n\nThe SA government faces another challenge to the project, to be heard in the state's Supreme Court later this month.\n\nA Queensland man's Federal Court challenge against the South Australian government's MotoGP circuit has been discontinued.\n\nJoshua Hogan lodged action in the Federal Court in September seeking a permanent injunction against the proposed $96 million Adelaide circuit, which will require the removal of nearly 400 trees and is due to begin construction in December.\n\nBut at a brief hearing on Thursday morning, Judicial Registrar Michael Buckingham said the proceedings \"were going to be discontinued\".\n\nAsked if any of the parties had anything to add, Mr Hogan said: \"I'm fine, I just want to get this over my depression's pretty bad.\"\n\nJudicial Registrar Buckingham replied that he understood and he \"hoped this proceeding would come to an end for everyone's sake very quickly\".\n\nThe state and federal governments are not seeking costs from Mr Hogan.\n\nPremier Peter Malinauskas said the SA government was \"very grateful\" Mr Hogan's case had been discontinued.\n\n\"[This is] another legal hurdle that we've now overcome when it comes to the MotoGP circuit development,\" he said.\n\nMr Hogan had lodged his application against the development of the Adelaide Circuit in the federal court in Brisbane. (ABC News: Rachel Riga)\n\nA separate legal challenge to the circuit by the South East City Residents Association (SECRA) remains ongoing.\n\nThe SA Supreme Court today set down a hearing for the matter on November 17, according to SECRA president David Klingberg.\n\nMr Klingberg said the discontinuation of the Queensland Federal Court challenge \"doesn't affect\" SECRA's case, which is based on the state government's powers under the Motorsport Act.\n\n\"Clearly … the government doesn't have the power to cut down trees,\" Mr Klingberg said.\n\n\"The Act is all about promoting motorsports and our view is they can do that to their heart's content on existing infrastructure.\"\n\nMr Malinauskas, asked if he was confident that state government could overcome the SECRA legal challenge, said: \"I hope so, but I never pre-empt the outcomes of courts.\"\n\n\"We've done all the work, we've done it as thoroughly as possible, we've worked really hard to engage with local communities, the … Conservation Council to get a good outcome here,\" he said.\n\n\"People are entitled to take up whatever action they so choose, it's part of a healthy liberal democracy and a functioning judicial system.\n\n\"That's oversight that we're not against, we welcome it.\"\n\nMotoGP is due to be hosted in Adelaide in November 2027.\n\nSee more ABC coverage in your search results\n\nLIVE\n\nTopic:US Elections\n\nAnalysis by David Speers\n\nTopic:Retail Industry\n\nLIVE\n\nTopic:Motor Sports\n\nTopic:Motor Sports\n\nAnalysis by Thomas Kelsall\n\nTopic:Motor Sports\n\nAdelaide\n\nCommunity and Society\n\nCourts\n\nGovernment and Politics\n\nMotor Sports\n\nLIVE\n\nTopic:US Elections\n\nAnalysis by David Speers\n\nTopic:Retail Industry\n\nLIVE\n\nTopic:Police\n\nTopic:Animal Diseases\n\nTopic:Wellbeing\n\nTopic:Environment\n\nYour home of Australian stories, conversations and events that shape our nation.\n\nThis service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced.\n\nGet the latest ABC News delivered to your email inbox\n\nStay informed and connected with the ABC. Covering a wide range of topics and brands including News, iview, listen, and more.",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://nypost.com/2026/11/04/us-news/girl-2-falls-to-death-from-5th-floor-nyc-apartment-window-in-tragic-accident/",
+        "snippet": "Stated Claim / Post Context:\nGirl, 2, falls to death from 5...\n\n=== MULTI-SOURCE TOPIC CLUSTER: Girl, 2, falls to death from 5... ===\n\n[Source 1 — nypost.com (Bias: Right / Tabloid Conservative)] (URL: https://nypost.com/2026/11/04/us-news/girl-2-falls-to-death-from-5th-floor-nyc-apartment-window-in"
+      }
+    ],
+    "cross_source_dossier": "=== MULTI-SOURCE TOPIC CLUSTER: Girl, 2, falls to death from 5... ===\n\n[Source 1 — nypost.com (Bias: Right / Tabloid Conservative)] (URL: https://nypost.com/2026/11/04/us-news/girl-2-falls-to-death-from-5th-floor-nyc-apartment-window-in-tragic-accident/):\nStated Claim / Post Context:\nGirl, 2, falls to death from 5th floor  NYC apartment window in tragic accident\n\nThe toddler plunged from the window of the building on East 138th Street near St. Ann’s Avenue in Mott Haven around 10:45 p.m., police said.\n\nActual Article Body:\nSwitch between CA and NY editions here.\n\nSee more of our coverage in your search results.\n\nA 2-year-old Bronx girl fell to her death from a fifth-floor apartment window in what appears to be a tragic accident late Tuesday, cops and sources said.\n\nThe toddler plunged from the window on the top floor of the building on East 138th Street near St. Ann’s Avenue in Mott Haven around 10:45 p.m., police said.\n\nShe landed in an alleyway and was rushed unconscious to Harlem Hospital, where she succumbed to her injuries.\n\nThe tot apparently took the fall after pushing aside the divider between the window and the air conditioner, the sources said.\n\nHer mother was in another room when her young daughter fell, and ultimately called 911.\n\nNo criminality is suspected in the deadly fall, cops said.\n\n[Source 2 — www.abc.net.au (Bias: Center / Public Broadcaster)] (URL: https://www.abc.net.au/news/2026-11-05/federal-court-challenge-to-adelaide-motogp-circuit-falls-over/107349314):\nStated Claim / Post Context:\nFederal Court challenge to Adelaide MotoGP circuit falls over\n\nA case brought by a Queensland man against the SA government's plans for a MotoGP circuit in Adelaide has been discontinued.\n\nActual Article Body:\nEmergency\n\nBackstory\n\nNewsletters\n\n中文新闻\n\nBERITA BAHASA INDONESIA\n\nTOK PISIN\n\nTopic:Courts\n\nConstruction is due to begin on the Adelaide MotoGP circuit in December. (Supplied: SA Government)\n\nAn interstate challenge to South Australia's Adelaide Circuit project has been withdrawn, following a brief hearing in Brisbane.\n\nNeither the federal or South Australian governments will pursue costs.\n\nThe SA government faces another challenge to the project, to be heard in the state's Supreme Court later this month.\n\nA Queensland man's Federal Court challenge against the South Australian government's MotoGP circuit has been discontinued.\n\nJoshua Hogan lodged action in the Federal Court in September seeking a permanent injunction against the proposed $96 million Adelaide circuit, which will require the removal of nearly 400 trees and is due to begin construction in December.\n\nBut at a brief hearing on Thursday morning, Judicial Registrar Michael Buckingham said the proceedings \"were going to be discontinued\".\n\nAsked if any of the parties had anything to add, Mr Hogan said: \"I'm fine, I just want to get this over my depression's pretty bad.\"\n\nJudicial Registrar Buckingham replied that he understood and he \"hoped this proceeding would come to an end for everyone's sake very quickly\".\n\nThe state and federal governments are not seeking costs from Mr Hogan.\n\nPremier Peter Malinauskas said the SA government was \"very grateful\" Mr Hogan's case had been discontinued.\n\n\"[This is] another legal hurdle that we've now overcome when it comes to the MotoGP circuit development,\" he said.\n\nMr Hogan had lodged his application against the development of the Adelaide Circuit in the federal court in Brisbane. (ABC News: Rachel Riga)\n\nA separate legal challenge to the circuit by the South East City Residents Association (SECRA) remains ongoing.\n\nThe SA Supreme Court today set down a hearing for the matter on November 17, according to SECRA president David Klingberg.\n\nMr Klingberg said the discontinuation of the Queensland Federal Court challenge \"doesn't affect\" SECRA's case, which is based on the state government's powers under the Motorsport Act.\n\n\"Clearly … the government doesn't have the power to cut down trees,\" Mr Klingberg said.\n\n\"The Act is all about promoting motorsports and our view is they can do that to their heart's content on existing infrastructure.\"\n\nMr Malinauskas, asked if he was confident that state government could overcome the SECRA legal challenge, said: \"I hope so, but I never pre-empt the outcomes of courts.\"\n\n\"We've done all the work, we've done it as thoroughly as possible, we've worked really hard to engage with local communities, the … Conservation Council to get a good outcome here,\" he said.\n\n\"People are entitled to take up whatever action they so choose, it's part of a healthy liberal democracy and a functioning judicial system.\n\n\"That's oversight that we're not against, we welcome it.\"\n\nMotoGP is due to be hosted in Adelaide in November 2027.\n\nSee more ABC coverage in your search results\n\nLIVE\n\nTopic:US Elections\n\nAnalysis by David Speers\n\nTopic:Retail Industry\n\nLIVE\n\nTopic:Motor Sports\n\nTopic:Motor Sports\n\nAnalysis by Thomas Kelsall\n\nTopic:Motor Sports\n\nAdelaide\n\nCommunity and Society\n\nCourts\n\nGovernment and Politics\n\nMotor Sports\n\nLIVE\n\nTopic:US Elections\n\nAnalysis by David Speers\n\nTopic:Retail Industry\n\nLIVE\n\nTopic:Police\n\nTopic:Animal Diseases\n\nTopic:Wellbeing\n\nTopic:Environment\n\nYour home of Australian stories, conversations and events that shape our nation.\n\nThis service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced.\n\nGet the latest ABC News delivered to your email inbox\n\nStay informed and connected with the ABC. Covering a wide range of topics and brands including News, iview, listen, and more.",
+    "category": "all",
+    "topic": "Bronx",
+    "event": "",
+    "policies": [],
+    "path_name": "Destruction",
+    "graph_img": "graph_png/bronx-toddler-window-fall_graph.png",
+    "rkeys": [
+      "3mzngzjp4mx2k",
+      "3mzngzkio2f2l",
+      "3mzngzmnur72i",
+      "3mzngzotef22e",
+      "3mzngzqy7mh2k",
+      "3mzngzt57ji2k",
+      "3mzngzvbzrt2n",
+      "3mzngzxhx5r2d",
+      "3mzngzzn5yr2d",
+      "3mznh23s4xz2w",
+      "3mznh25wv2v2x",
+      "3mznh2a42y72y",
+      "3mznh2ces5x2k",
+      "3mznh2ejhdv2x",
+      "3mznh2go6nh2k"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzngzjp4mx2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzngzkio2f2l",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzngzmnur72i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzngzotef22e",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzngzqy7mh2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzngzt57ji2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzngzvbzrt2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzngzxhx5r2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mzngzzn5yr2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mznh23s4xz2w",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mznh25wv2v2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mznh2a42y72y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mznh2ces5x2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mznh2ejhdv2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mznh2go6nh2k"
+    ],
+    "tags": [
+      "Aletheia",
+      "Bronx",
+      "NYC"
+    ]
+  }
+]

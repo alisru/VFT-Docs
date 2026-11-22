@@ -5,16 +5,16 @@
     "subject": "Massachusetts lesbian bar igni...",
     "link": "https://www.foxnews.com/us/massachusetts-lesbian-bar-ignites-fury-after-easing-mask-rules-for-one-night-a-week",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.4,
-    "real_u": -0.77,
-    "real_psi": -0.64,
+    "claim_u": 0.7,
+    "claim_psi": 0.2,
+    "real_u": -0.26,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "A struggling lesbian bar in Massachusetts tried to stay afloat by making Saturdays mask-optional. Instead of support, they faced a fierce boycott from their own community.\n\nStory: Massachusetts lesbian bar ignites fury\nEvidence: Inclusion, Financial survival, Boycott",
-      "The stated claim of the activist critics is that enforcing strict, perpetual masking is necessary to protect the most vulnerable and maintain a truly inclusive, safe space for everyone.\nStated Judgement: (+0.90, +0.40) — Greater Good",
-      "In reality, the rigid enforcement of ideological purity ignores the bar's financial survival, threatening to destroy the very safe space they claim to protect through circular, self-defeating outrage.\nResulting Judgement: (-0.77, -0.64) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The activist backlash prioritizes absolute ideological compliance over the physical survival of the community's own institutions, leading to mutual ruin.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 4)",
+      "The stated claim of the activist critics is that enforcing strict, perpetual masking is necessary to protect the most vulnerable and maintain a truly inclusive, safe space for everyone.\nStated Judgement: (+0.70, +0.20) — Greater Good",
+      "In reality, the rigid enforcement of ideological purity ignores the bar's financial survival, threatening to destroy the very safe space they claim to protect through circular, self-defeating outrage.\nResulting Judgement: (-0.26, -0.40) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 4)",
       "- Activist Backlash: FAIL (-0.77, -0.64) — Destroys safe spaces over ideological purity.\n- Bar Management: COND (0.25, -0.15) — Pragmatic compromise met with capitulation.",
       "Last Ditch Bar in Greenfield, MA, faced intense backlash and boycott threats after lifting its mask mandate for just one night a week (Saturdays) to prevent financial insolvency.",
       "The Poison:\nWhen a community's standard of inclusion becomes so rigid that it bankrupts the physical spaces hosting them, the pursuit of safety ends up destroying the community itself.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Activist Backlash",
@@ -153,6 +215,7 @@
         "name": "Greenfield",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/thenationalnews.com/post/3muwmfpjidb2s",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.7,
-    "real_psi": 0.6,
+    "real_u": 0.75,
+    "real_psi": 0.55,
     "mode": "root",
     "posts": [
       "When rubbernecking triggers highway carnage, authorities turn viral footage into a blunt lesson on road survival.\nEvidence: multi-vehicle crash, viral video, safety campaign\n#Aletheia #RoadSafety #UAE",
-      "Police argue that releasing shocking crash footage educates drivers, cuts dangerous distraction, and prevents secondary highway pile-ups.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "The campaign genuinely alerts motorists to highway risks, though public shock occasionally amplifies morbid curiosity rather than pure caution.\nResulting Judgement: (+0.7, +0.6) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nTransparent public safety campaigns leverage viral reality to foster community resilience and lower road trauma.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
+      "Police argue that releasing shocking crash footage educates drivers, cuts dangerous distraction, and prevents secondary highway pile-ups.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "The campaign genuinely alerts motorists to highway risks, though public shock occasionally amplifies morbid curiosity rather than pure caution.\nResulting Judgement: (+0.75, +0.55) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nTransparent public safety campaigns leverage viral reality to foster community resilience and lower road trauma.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
       "Sub-Audits Breakdown:\n- Abu Dhabi Police: PASS (+0.8, +0.6) — Proactive transparency on road hazards.\n- Media Coverage: PASS (+0.7, +0.5) — Accurate framing of traffic safety data.",
       "Abu Dhabi Police released graphic crash footage to warn motorists against sudden swerving, illegal lane changes, and dangerous rubbernecking on highways.",
       "The Bright Side:\nLeveraging viral media for instant public safety education saves lives.",
       "The Breakdown & Plane Error:\nThe report focuses on WHO needs to drive safely and WHAT causes crashes, avoiding abstract evasion.",
       "Social Physics Analysis:\nAuthorities operate in a Smart Altruistic loop, using transparent safety campaigns to empower motorists and resolve recurring traffic risks rather than exploiting them for profit.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the alignment between stated safety goals and public education results, it plots a direct trajectory toward Grace.\n\nDelta is positive.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between stated safety goals and public education results, it plots a direct trajectory toward Grace.\n\nDelta is positive.",
       "The Unavoidable Truth: Rubbernecking on busy highways creates deadly secondary pile-ups.\n\nThe Unavoidable Lie: Public awareness videos instantly eliminate all reckless driving habits.",
       "Alethekanon:\nTransparent safety interventions turn tragic errors into shared community vigilance.🌐",
       "Awwthekanon:\nEvery time drivers slow down to help or look away, precious lives hang in the balance. Let's protect each other on the road with calm, attentive care.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Abu Dhabi Police",
@@ -162,6 +224,7 @@
         "name": "United Arab Emirates",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

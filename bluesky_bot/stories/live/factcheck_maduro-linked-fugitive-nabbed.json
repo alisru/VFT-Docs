@@ -5,22 +5,22 @@
     "subject": "Maduro-linked fugitive nabbed over alleged scheme to cash in on Venezuelans’ basic needs",
     "link": "https://www.foxnews.com/us/maduro-linked-fugitive-nabbed-alleged-scheme-cash-venezuelans-basic-needs",
     "target_url": "",
-    "claim_u": 0.7,
-    "claim_psi": 0.6,
-    "real_u": 0.5,
-    "real_psi": 0.4,
+    "claim_u": -0.05,
+    "claim_psi": -0.05,
+    "real_u": -0.05,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "Fugitive Alvaro Pulido Vargas arrested in U.S. custody over multibillion-dollar Venezuelan money laundering and bribery schemes.\nEvidence: DOJ indictment, HSTF operation, financial trails\n#Aletheia #Justice #Venezuela",
-      "Federal authorities arrested Alvaro Pulido Vargas, accusing him of exploiting Venezuelan food and housing programs to funnel billions through U.S. banks.\nStated Judgement: (+0.7, +0.6) — Trustworthy",
-      "Law enforcement successfully tracked and apprehended a key Maduro-linked operative, dismantling complex transnational financial corruption channels.\nResulting Judgement: (+0.5, +0.4) — Trustworthy",
-      "Verdict: PASS — The Path of Grace.\nCoordinated international law enforcement successfully brings a major transnational corruption fugitive to justice.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
+      "Federal authorities arrested Alvaro Pulido Vargas, accusing him of exploiting Venezuelan food and housing programs to funnel billions through U.S. banks.\nStated Judgement: (-0.05, -0.05) — Greater Evil",
+      "Law enforcement successfully tracked and apprehended a key Maduro-linked operative, dismantling complex transnational financial corruption channels.\nResulting Judgement: (-0.05, -0.05) — Greater Evil",
+      "Verdict: CONDITIONAL — Destruction.\nCoordinated international law enforcement successfully brings a major transnational corruption fugitive to justice.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
       "Sub-Audits Breakdown:\n- DOJ & HSTF Enforcement: PASS (+0.8, +0.7) — Effective cross-border prosecution.\n- Transnational Corruption: FAIL (-0.9, -0.8) — Exploitation of basic humanitarian needs.",
       "Alvaro Pulido Vargas was arrested by a Homeland Security Task Force operation, facing federal charges for laundering billions siphoned from Venezuelan food and housing programs.",
       "The Bright Side:\nInternational task forces successfully pierce opaque financial networks to hold corrupt intermediaries accountable for exploiting civilian needs.",
       "The Breakdown & Plane Error:\nConfusing the structural plane of transnational financial crime (HOW) with the administrative plane of law enforcement apprehension (WHAT).",
       "Social Physics Analysis:\nFederal authorities executed a transparent law enforcement operation (+u), dismantling a smart selfish loop where elites enriched themselves off civilian suffering.",
-      "The Trajectory: The Path of Grace.\nThe alignment between stated legal mandates and effective cross-border arrests plots a direct trajectory toward institutional accountability.\n\nDeterministic formula: Δ(p·t + n) > 0 via active enforcement.",
+      "The Trajectory: The Path of Destruction.\nThe alignment between stated legal mandates and effective cross-border arrests plots a direct trajectory toward institutional accountability.\n\nDeterministic formula: Δ(p·t + n) > 0 via active enforcement.",
       "The Unavoidable Truth: Transnational criminal networks frequently abuse Western banking systems to launder funds stolen from vulnerable populations.\n\nThe Unavoidable Lie: Corrupt state programs designed to feed the poor operate with adequate internal financial oversight.",
       "Alethekanon:\nCross-border task forces pierce international sanctuaries, proving that financial corruption leaves a traceable paper trail.",
       "Awwthekanon:\nIt is heartbreaking to witness basic food and housing programs corrupted for greed while ordinary people bear the cost.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DOJ & HSTF Enforcement",
@@ -168,6 +230,7 @@
       "Aletheia",
       "Justice",
       "Venezuela"
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

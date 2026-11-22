@@ -5,16 +5,16 @@
     "subject": "Lost Florida dog shows up at p...",
     "link": "https://nypost.com/2026/10/09/us-news/florida-lost-dog-reports-himself-missing-at-tampa-police-station-reunites-with-tearful-owner/",
     "target_url": "",
-    "claim_u": 0.95,
-    "claim_psi": 0.95,
-    "real_u": 0.92,
-    "real_psi": 0.88,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A lost German shepherd takes matters into his own paws by walking into a police station to find help.\nEvidence: Missing dog walks in, Microchip scanned by vet, Owner reunited tearfully\n#Aletheia #TampaPD",
-      "The New York Post reports that an escaped German shepherd strolled up to the Tampa Police Department doors, prompting an officer to scan his chip and return him safely to his crying owner.\nStated Judgement: (+0.95, +0.95) — Greater Good",
-      "Bodycam and security video confirm the dog walked to station doors on Sept. 30. An officer took him to a vet for a checkup and microchip scan, locating his owner and returning him within hours.\nResulting Judgement: (+0.92, +0.88) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Community policing functioned with empathy and care, resolving a citizen's distress through simple, direct public service.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "The New York Post reports that an escaped German shepherd strolled up to the Tampa Police Department doors, prompting an officer to scan his chip and return him safely to his crying owner.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Bodycam and security video confirm the dog walked to station doors on Sept. 30. An officer took him to a vet for a checkup and microchip scan, locating his owner and returning him within hours.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Tampa Police: PASS (+0.94, +0.90) — Reunited lost pet.\n- Vet Clinic: PASS (+0.91, +0.85) — Quick microchip scan.\n- NY Post: PASS (+0.88, +0.82) — Verified, accurate report.",
       "After slipping out of his yard, a friendly German shepherd approached Tampa police headquarters. An officer took him to a vet, checked his microchip, and personally brought him home.",
       "The Bright Side:\nRoutine community-level police work often goes uncelebrated, yet this gentle intervention prevented an animal from being injured and immediately relieved an owner's heartbreak.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.17,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.63,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.37,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.37,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.63,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Tampa Police Department",
@@ -354,6 +416,7 @@
         "name": "Tampa Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

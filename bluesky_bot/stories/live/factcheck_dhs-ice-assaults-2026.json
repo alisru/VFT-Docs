@@ -5,22 +5,22 @@
     "subject": "EXCLUSIVE: DHS Secretary Mullin slams sanctuary politicians as attacks on ICE officers skyrocket",
     "link": "https://www.foxnews.com/politics/exclusive-dhs-secretary-mullin-slams-sanctuary-politicians-attacks-ice-officers-skyrocket",
     "target_url": "",
-    "claim_u": 1.0,
+    "claim_u": 0.75,
     "claim_psi": 0.0,
-    "real_u": -0.78,
-    "real_psi": -0.85,
+    "real_u": -0.28,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "DHS Secretary Markwayne Mullin blames sanctuary politicians for a staggering 1,649% surge in assaults against ICE officers.\nEvidence: ICE assault stats, sanctuary rhetoric, congressional clashes\n#Aletheia #Immigration #Politics",
-      "Federal officials claim that sanctuary city policies and inflammatory political rhetoric are directly driving physical attacks and threats against ICE law enforcement personnel nationwide.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While assaults have risen amid heightened immigration enforcement, framing the entire crisis as a product of local political opposition obscures the systemic friction of aggressive federal enforcement.\nResulting Judgement: (-0.78, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nBlaming local politicians for national enforcement friction weaponizes law enforcement safety to score political points.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, Uncertainty z: 3)",
+      "Federal officials claim that sanctuary city policies and inflammatory political rhetoric are directly driving physical attacks and threats against ICE law enforcement personnel nationwide.\nStated Judgement: (+0.75, +0.00) — Lesser Good",
+      "While assaults have risen amid heightened immigration enforcement, framing the entire crisis as a product of local political opposition obscures the systemic friction of aggressive federal enforcement.\nResulting Judgement: (-0.28, -0.35) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nBlaming local politicians for national enforcement friction weaponizes law enforcement safety to score political points.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, Uncertainty z: 3)",
       "- DHS Rhetoric: COND (-0.75, -0.80) — Highlights real officer threats while weaponizing blame.\n- Sanctuary Opposition: PASS (0.20, 0.10) — Represents legitimate local policy resistance.",
       "As federal immigration crackdowns intensify under the administration, polarization around detention facilities and local cooperation has reached a boiling point.",
       "The Poison:\nReducing complex jurisdictional friction and officer safety concerns into partisan weaponization against local elected officials.",
       "The Breakdown & Plane Error:\nConfusing WHAT (enforcement friction and rising hostility) with WHO (blaming local sanctuary politicians instead of systemic policy strain).",
       "Social Physics Analysis:\nOfficials run a Smart Selfish Maneuver by taking a real security issue (officer assaults) and wrapping it in a pretext that blames political opponents, projecting malice onto sanctuary policies while deflecting from enforcement strain.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Post-hoc justifications replace genuine cooperative security solutions.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Post-hoc justifications replace genuine cooperative security solutions.",
       "The Unavoidable Truth: Law enforcement officers face genuine physical dangers during high-tension immigration enforcement operations.\n\nThe Unavoidable Lie: Local sanctuary policies are the primary ideological engine driving physical assaults on federal agents.",
       "Alethekanon:\nWeaponizing law enforcement danger into partisan pretexts shields structural policy failures behind manufactured outrage.",
       "Awwthekanon:\nEvery person deserves safety on the job, yet turning real pain into political ammo only deepens the wounds between communities.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DHS Rhetoric",
@@ -163,6 +225,7 @@
         "name": "Jasmine Crockett",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

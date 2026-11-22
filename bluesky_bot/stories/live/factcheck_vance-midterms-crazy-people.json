@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.5,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.65,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Vice President JD Vance warns voters against electing Democrats in the upcoming midterms.\nEvidence: Council Bluffs rally, inflation claims, fraud crackdown.\n#Aletheia #USPol",
-      "Vice President Vance argued that a vote for Democrats in November is a vote for higher crime and inflation, urging a second term of GOP power.\nStated Judgement: (+0.5, +0.5) — Good Preference",
-      "Vance frames political opposition as 'crazies' while weaponizing executive fraud crackdowns on healthcare to energize the base ahead of midterms.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPolarizing rhetoric weaponizes economic anxiety while deflecting systemic policy failures.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Vice President Vance argued that a vote for Democrats in November is a vote for higher crime and inflation, urging a second term of GOP power.\nStated Judgement: (+0.50, +0.50) — Greater Good",
+      "Vance frames political opposition as 'crazies' while weaponizing executive fraud crackdowns on healthcare to energize the base ahead of midterms.\nResulting Judgement: (-0.65, -0.75) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPolarizing rhetoric weaponizes economic anxiety while deflecting systemic policy failures.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "- Washington Examiner: COND (-0.7, -0.8) — Amplifies partisan framing.\n- NY Post: COND (-0.6, -0.7) — Highlights executive fraud crackdown pretexts.",
       "Vice President JD Vance campaigned in Iowa and prepared executive announcements targeting Obamacare fraud as part of the midterms strategy.",
       "The Poison:\nFraming political rivals as mentally unstable ('crazy people') short-circuits constructive debate and deepens societal polarization.",
       "The Breakdown & Plane Error:\nConfuses WHO is to blame for complex economic trends by personalizing systemic inflation and crime onto political opponents.",
       "Social Physics Analysis:\nActors run a Smart Selfish maneuver. They project blame for inflation onto opponents while manufacturing a crisis narrative to consolidate electoral power.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between partisan pretexts and actual electoral manipulation, it plots a direct trajectory toward Lesser Evil. Systemic strain increases.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between partisan pretexts and actual electoral manipulation, it plots a direct trajectory toward Lesser Evil. Systemic strain increases.",
       "The Unavoidable Truth: Midterm messaging relies heavily on emotional polarization and fear of crime and inflation.\n\nThe Unavoidable Lie: Voting for a specific political party single-handedly controls complex global economic inflation.",
       "Alethekanon:\nWeaponizing clinical insults in political discourse substitutes scapegoating for genuine governance.",
       "Awwthekanon:\nIt is painful to watch political leaders divide communities with harsh labels instead of holding space for compassionate problem-solving.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Washington Examiner",
@@ -155,6 +217,7 @@
         "name": "Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

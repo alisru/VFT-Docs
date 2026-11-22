@@ -5,22 +5,22 @@
     "subject": "Sickos keep walking early under Newsom’s soft parole law",
     "link": "https://nypost.com/2026/08/23/us-news/what-is-californias-elderly-offenders-law/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.81,
+    "claim_psi": 1.0,
+    "real_u": -0.97,
+    "real_psi": -0.94,
     "mode": "root",
     "posts": [
       "Releasing notorious child predators early under prison reform sparks fierce legislative backlash in California.\nEvidence: humane overcrowding fix, public safety threat, dangerous offender release\n#California #News #Aletheia",
-      "Stated Claim: California's elderly parole law aims to reduce prison overcrowding and rehabilitate aging inmates who no longer pose threats. Stated Judgement: (+1.0, 0.0) — Good Preference 🌐",
-      "Reality: Violent child predators and killers walk free decades early, ignoring heinous acts under blanket age-based criteria.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nWell-intentioned prison reform gets co-opted into releasing violent predators without adequate public safety filters.\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
+      "Stated Claim: California's elderly parole law aims to reduce prison overcrowding and rehabilitate aging inmates who no longer pose threats. Stated Judgement: (+0.81, +1.00) — Greater Good",
+      "Reality: Violent child predators and killers walk free decades early, ignoring heinous acts under blanket age-based criteria.\nResulting Judgement: (-0.97, -0.94) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWell-intentioned prison reform gets co-opted into releasing violent predators without adequate public safety filters.\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Newsom Parole Policy: FAIL (-0.8, -0.9) — Releases violent offenders early.\n- Public Safety Impact: FAIL (-0.9, -0.9) — Exposes communities to predators.",
       "Context: California lowered elderly parole thresholds to ease crowding, but releasing notorious child molesters ignited statewide outrage and AB 2727.",
       "The Poison:\nFraming public safety concerns as mere age discrimination while ignoring the horrific nature of the released crimes.",
       "The Breakdown & Plane Error:\nPlane Error (WHO vs WHAT): Confusing systemic prison capacity metrics with individual moral culpability of violent felons.",
       "Social Physics Analysis:\nPolicy makers prioritized administrative convenience over transparent public safety, substituting institutional metrics for genuine societal protection.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos outweighed by negative utility.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos outweighed by negative utility.",
       "The Unavoidable Truth: Age alone does not erase a history of extreme predatory violence.\n\nThe Unavoidable Lie: Blanket early release policies ensure safer prisons without endangering the public.",
       "Alethekanon:\nAdministrative convenience masquerading as rehabilitation collapses when violent predators re-enter society. Policy must weigh public safety above arbitrary age thresholds.",
       "Awwthekanon:\nIt is heartbreaking for victims and families to watch monsters walk free. True justice requires healing and absolute protection for the vulnerable.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Newsom Parole Policy",
@@ -286,6 +348,7 @@
         "name": "Prison Policy Initiative",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

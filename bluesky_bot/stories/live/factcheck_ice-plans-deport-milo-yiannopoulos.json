@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.94,
-    "real_psi": -0.88,
+    "real_u": -0.68,
+    "real_psi": -0.61,
     "mode": "root",
     "posts": [
       "A vocal champion of mass deportations gets caught in the very dragnet he cheered for.\n\nMilo Yiannopoulos Deportation\nEvidence: Strict Enforcement, Performative PR Stunt, Rule of Law\n#Aletheia #Immigration #USPol",
-      "The Department of Homeland Security claims the arrest of Milo Yiannopoulos is part of a fair, systematic crackdown on undocumented individuals flying domestically, restoring rule of law.\nStated Judgement: (+1.0, 1.0) — Greater Good",
-      "In reality, the arrest is a highly politicized PR stunt. While Yiannopoulos legally overstayed his visa, his detention is weaponized for narrative points, amid far-right infighting and performative enforcement.\nResulting Judgement: (-0.94, -0.88) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. A performative arrest is weaponized as a political PR stunt, exposing the selective and narrative-driven nature of enforcement.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 0)",
+      "The Department of Homeland Security claims the arrest of Milo Yiannopoulos is part of a fair, systematic crackdown on undocumented individuals flying domestically, restoring rule of law.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the arrest is a highly politicized PR stunt. While Yiannopoulos legally overstayed his visa, his detention is weaponized for narrative points, amid far-right infighting and performative enforcement.\nResulting Judgement: (-0.68, -0.61) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 0)",
       "- DHS Enforcement: FAIL (-0.94, -0.88) — Performative PR stunt.\n- Milo Yiannopoulos: FAIL (-0.90, -0.85) — Caught in his own rhetoric.\n- Media Coverage: COND (-0.20, -0.10) — Focuses on drama over policy.",
       "Homeland Security officers arrested right-wing commentator Milo Yiannopoulos at a Louisiana airport for deportation after he overstayed his 2019 visa and missed his July hearing.",
       "The Bright Side:\nThe enforcement of visa laws remains a legitimate state function, and applying rules to high-profile figures shows that status does not grant permanent immunity.",
       "The Breakdown & Plane Error:\nThe state confuses systematic rule of law (WHAT) with selective political theater (WHO). By parading a controversial figure, they substitute a consistent policy with a high-profile spectacle.",
       "Social Physics Analysis:\nThe administration uses a high-profile arrest as a pretext to project strength, while internal political rivals use it to settle scores. This performative enforcement hoards political capital rather than resolving systemic immigration issues.",
-      "The Trajectory: Fall into Destruction.\nWhen you map the gap between impartial law enforcement and selective PR spectacles, it plots a direct trajectory toward Greater Evil. Performative justice erodes institutional trust.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between impartial law enforcement and selective PR spectacles, it plots a direct trajectory toward Greater Evil. Performative justice erodes institutional trust.",
       "The Unavoidable Truth: Milo Yiannopoulos overstayed his visa and legally faced deportation under standard immigration procedures.\n\nThe Unavoidable Lie: This arrest represents a systematic, non-political shift in domestic flight enforcement.",
       "Alethekanon:\nThe state's performative crackdown on a high-profile figure exposes the selective nature of narrative-driven enforcement. True rule of law requires consistent application, not political theater.",
       "Awwthekanon:\nIt is deeply sad to see human lives and legal processes reduced to political chess pieces and public spectacles, where personal downfalls are celebrated as entertainment rather than handled with quiet dignity.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DHS Enforcement",
@@ -166,6 +228,7 @@
         "name": "U.S. Immigration and Customs Enforcement",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

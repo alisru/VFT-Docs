@@ -5,22 +5,22 @@
     "subject": "From Miscarriages To Judgement Day: We Took A Look At All The AI Takes The Internet Has To Offer",
     "link": "https://dailycaller.com/2026/08/30/artificial-intelligence-takes-mistruths-aquifers-power-bills-skynet-chris-johnson",
     "target_url": "",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Internet anxieties surrounding AI data centers unleash a wave of wild claims from aquifer fears to acoustic miscarriages.\nEvidence: public fear, hyperbole, policy debate\n#Aletheia #Tech #AI",
-      "Validating grassroots community concerns over local utility strain and environmental impact from rapid infrastructure growth.\nStated Judgement: (0.0, 0.0) — Neutral Baseline",
-      "Exposing how baseless fringe claims and moral panic are weaponized to obstruct technological development and mislead the public.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nAmplifying unverified panic over infrastructure creates unnecessary polarization rather than sensible local resource management.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
+      "Validating grassroots community concerns over local utility strain and environmental impact from rapid infrastructure growth.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Exposing how baseless fringe claims and moral panic are weaponized to obstruct technological development and mislead the public.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAmplifying unverified panic over infrastructure creates unnecessary polarization rather than sensible local resource management.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
       "Sub-Audits Breakdown:\n- Daily Caller Analysis: PASS (0.5, 0.2) — Debunks extreme claims effectively.\n- Public Opposition: FAIL (-0.8, -0.7) — Relies on unscientific moral panic.",
       "As data center construction surges, public debate has devolved into exaggerated claims regarding water depletion, power grid strain, and fictitious health hazards.",
       "The Bright Side:\nIntense public scrutiny forces tech companies to embrace greater transparency and invest in sustainable closed-loop cooling and recycled water.",
       "The Breakdown & Plane Error:\nConfusing legitimate resource management queries (WHERE/HOW) with apocalyptic science fiction narratives (WHO/WHAT).",
       "Social Physics Analysis:\nBy replacing technical dialogue with emotional fear-mongering, fringe actors exploit public anxieties to block progress, forcing communities into defensive, high-friction loops.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between genuine civic oversight needs and hysterical misinformation, it plots a direct trajectory toward Lesser Evil. F = S*A - O*A calculates negative moral drift.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between genuine civic oversight needs and hysterical misinformation, it plots a direct trajectory toward Lesser Evil. F = S*A - O*A calculates negative moral drift.",
       "The Unavoidable Truth: Data centers do require substantial power and water, demanding careful regional planning and transparent oversight.\n\nThe Unavoidable Lie: Low-frequency data center vibrations are a direct vector for human miscarriages and localized toxic fallout.",
       "Alethekanon:\nMoral panic masquerades as environmentalism when complex engineering challenges are reduced to apocalyptic fairy tales. Truth is the first casualty of tech backlash.",
       "Awwthekanon:\nIt is completely understandable for families to feel overwhelmed by rapid changes in their backyards, but fear is best met with honest facts rather than frightening myths.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Daily Caller Debunking",
@@ -211,6 +273,7 @@
         "name": "J. Dale Shoemaker",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

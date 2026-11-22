@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.25,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "Clout-chasing subway surfer dangles off moving Philly train, triggering an urgent SEPTA safety probe.\nEvidence: Viral video, 40th St tunnel, transit warning\n#Aletheia #Philly",
-      "A reckless individual was filmed clinging to the exterior of a moving SEPTA train in a dangerous viral stunt.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Subway surfing exploits public transit infrastructure for viral engagement, risking fatal falls and electrocution.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSensationalized stunts commodify mortal peril for social media clout.\n\nIntegrity: Severe Deception (Hypocrisy: 10.5, z: 2)",
+      "A reckless individual was filmed clinging to the exterior of a moving SEPTA train in a dangerous viral stunt.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Subway surfing exploits public transit infrastructure for viral engagement, risking fatal falls and electrocution.\nResulting Judgement: (-0.25, -0.20) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nSensationalized stunts commodify mortal peril for social media clout.\n\nIntegrity: Severe Deception (Hypocrisy: 10.5, z: 2)",
       "Sub-Audits Breakdown:\n- SEPTA Transit Police: PASS (0.5, 0.5) — Swiftly launching probe to deter copycats.\n- Viral Stunt Actor: FAIL (-1.0, -0.9) — Trades life for fleeting online clout.",
       "Viral footage of a man in a Hawaiian shirt clinging to an L-train exterior has forced SEPTA transit police to ramp up investigations.",
       "The Bright Side:\nSEPTA is proactively warning the public and investigating to curb deadly copycat trends before tragedy strikes.",
       "The Breakdown & Plane Error:\nConfusing individual thrill-seeking foolishness with systemic transit failure. The plane error misattributes personal recklessness to institutional design.",
       "Social Physics Analysis:\nThe stuntman executes a Smart Selfish Maneuver, hijacking shared public transit spaces for private attention while externalizing mortal risk.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Clout-chasing metrics distort reality.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Clout-chasing metrics distort reality.",
       "The Unavoidable Truth: Social media algorithms incentivize extreme, life-threatening stunts for public attention.\n\nThe Unavoidable Lie: Viral subway surfing is harmless youthful rebellion rather than lethal self-destruction.",
       "Alethekanon:\nWhen public infrastructure becomes a stage for viral vanity, basic survival instincts are traded for digital validation.",
       "Awwthekanon:\nIt is so sad to watch someone gamble their precious life on the back of a train just to chase fleeting internet views.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "SEPTA Transit Police",
@@ -154,6 +216,7 @@
         "name": "Philadelphia Transit Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

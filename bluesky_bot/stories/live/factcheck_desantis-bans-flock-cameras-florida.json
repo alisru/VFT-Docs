@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.8,
-    "real_psi": 0.8,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Florida orders removal of AI-powered Flock license plate cameras from state highway rights-of-way within 30 days over privacy concerns.\nEvidence: state directive, local compliance, privacy defense\n#Aletheia #Florida #Surveillance",
       "Governor DeSantis argues automated license plate readers on state roads violate public privacy and risk rogue misuse, halting state permits.\nStated Judgement: (+1.0, +1.0) — Saintly / Greater Good",
-      "FDOT officially revoked permits and mandated removal from state highways, prompting several sheriff's offices to halt similar local programs.\nResulting Judgement: (+0.8, +0.8) — Constructive Expansion",
-      "Verdict: PASS — The Path of Grace.\nConcrete action matches stated privacy defense, curbing unwarranted state highway tracking.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "FDOT officially revoked permits and mandated removal from state highways, prompting several sheriff's offices to halt similar local programs.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nConcrete action matches stated privacy defense, curbing unwarranted state highway tracking.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- FDOT Directive: PASS (+0.8, +0.8) — Enforces strict removal window.\n- Sheriff Compliance: PASS (+0.7, +0.7) — Local agencies scaling back programs.",
       "Florida has ordered local law enforcement to remove automated license plate readers from state highway rights-of-way within 30 days to prevent surveillance overreach.",
       "The Bright Side:\nProactive defense of citizen travel privacy against unchecked algorithmic tracking on major roadways.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "FDOT Directive",
@@ -212,6 +274,7 @@
         "name": "Flock Safety",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

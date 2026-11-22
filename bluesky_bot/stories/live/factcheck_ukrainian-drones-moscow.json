@@ -14,7 +14,7 @@
       "Over 600 Ukrainian drones targeted the Moscow region, damaging residential buildings, warehouses, and injuring civilians.\nEvidence: mass drone barrage, civilian infrastructure hits, regional fires\n#Aletheia #Ukraine #Russia",
       "Reports frame the drone strikes as strategic military countermeasures against logistics hubs supporting Russian operations.\nStated Judgement: (-0.82, -1.00) — Lesser Evil",
       "Mass drone saturation over urban areas inflicted widespread civilian disruption, structural fires, and injuries across multiple districts.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Asymmetric escalation via large-scale drone barrages increasingly impacts civilian population centers.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, Uncertainty z: 2)",
+      "Verdict: FAIL — Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Military Target Strategy: COND (-0.7, -0.7) — Mixed logistics and urban hits.\n- Civilian Impact: FAIL (-0.9, -0.9) — Widespread property and personal injury.",
       "More than 600 drones headed toward the Moscow region, triggering air defenses, striking warehouses, and injuring civilians in multiple districts.",
       "The Poison:\nMass drone barrages inevitably cause civilian collateral damage and infrastructural terror, escalating the cycle of retaliation.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Military Strike Campaign",
@@ -202,6 +264,7 @@
         "name": "Wildberries",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

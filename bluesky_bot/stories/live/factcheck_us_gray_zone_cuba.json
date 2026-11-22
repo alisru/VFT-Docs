@@ -5,16 +5,16 @@
     "subject": "Cut the oil, leak the secrets, feed the people: Trump’s blueprint to break Havana",
     "link": "https://www.washingtonexaminer.com/op-eds/4735707/us-gray-zone-strategy-cuban-regime-collapse/",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.75,
-    "real_u": -0.82,
-    "real_psi": -0.88,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A quiet siege unfolds 90 miles off Florida's coast. US Gray-Zone Strategy: Breaking Havana through infrastructure denial and backchannel pressure.\nEvidence: Starving the regime, Humanitarian collapse, Monroe Doctrine hegemony\n#Aletheia #Cuba #USPol",
-      "The administration is deploying a sophisticated gray-zone campaign to peacefully dismantle Cuba's 67-year-old communist regime and liberate its people.\nStated Judgement: (+0.85, +0.75) — Greater Good",
-      "The strategy weaponizes infrastructure denial, causing 20-hour daily blackouts and economic collapse, trading civilian survival for geopolitical leverage.\nResulting Judgement: (-0.82, -0.88) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The administration's campaign inflicts severe humanitarian suffering on Cuban civilians under the pretext of liberation, prioritizing geopolitical dominance over human welfare.\nIntegrity: Severe Deception (Hypocrisy: 2.33, z: 4)",
+      "The administration is deploying a sophisticated gray-zone campaign to peacefully dismantle Cuba's 67-year-old communist regime and liberate its people.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The strategy weaponizes infrastructure denial, causing 20-hour daily blackouts and economic collapse, trading civilian survival for geopolitical leverage.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 2.33, z: 4)",
       "- US Gray-Zone Strategy: FAIL (-0.82, -0.88) — Coercive siege.\n- Cuban Humanitarian Impact: FAIL (-0.85, -0.90) — Severe suffering.",
       "The US has intensified secondary tariffs on oil to Cuba, triggering historic blackouts and economic paralysis, while conducting backchannel talks with regime insiders.",
       "The Poison:\nWhile targeting a repressive regime is a standard geopolitical goal, starving a population of electricity and fuel to force a coup creates a humanitarian catastrophe.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.55,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.55,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "US Gray-Zone Strategy",
@@ -293,6 +355,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

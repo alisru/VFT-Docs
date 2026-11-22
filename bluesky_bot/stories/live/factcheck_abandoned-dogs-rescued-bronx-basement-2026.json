@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/30/us-news/2-abandoned-dogs-rescued-from-squalid-nyc-basement-we-dont-know-how-they-survived-this-long/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": -1.5,
-    "real_psi": -1.5,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Two severely neglected dogs are rescued from a squalid Bronx basement by animal welfare workers.\nEvidence: animal cruelty, maggots, emergency rescue\n#Aletheia #AnimalWelfare",
-      "Rescuers pull two severely neglected dogs, dubbed Ren and Stimpy, from a filthy Bronx basement where they were left behind.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "The dogs endured horrific conditions, with one eaten alive by maggots and matted fur cutting into his flesh due to callous abandonment.\nResulting Judgement: (-1.5, -1.5) — Greater Evil",
-      "Verdict: PASS — The Path of Awakening.\nExposing severe animal cruelty mobilizes rescue networks and holds abusers accountable.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Rescuers pull two severely neglected dogs, dubbed Ren and Stimpy, from a filthy Bronx basement where they were left behind.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The dogs endured horrific conditions, with one eaten alive by maggots and matted fur cutting into his flesh due to callous abandonment.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nExposing severe animal cruelty mobilizes rescue networks and holds abusers accountable.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- NYC Second Chance Rescue: PASS (+1.0, +1.0) — Provided immediate emergency veterinary care.\n- Animal Welfare Reporting: PASS (-1.0, -1.0) — Exposed harrowing cruelty without sensationalism.",
       "Two dogs were rescued from a Bronx basement after being abandoned by a former building superintendent, requiring intensive emergency veterinary intervention.",
       "The Bright Side:\nDedicated rescue organizations stepped in just in time to provide life-saving medical care and rehabilitation.",
       "The Breakdown & Plane Error:\nThe report exposes physical abuse and neglect (WHERE/WHAT), highlighting the ethical failure of abandonment.",
       "Social Physics Analysis:\nShining a light on severe neglect breaks cycles of cruelty, rallying public empathy and institutional resources to protect the vulnerable.",
-      "The Trajectory: The Path of Awakening.\nWhen hidden cruelty is brought to light, it triggers compassionate intervention and reinforces societal standards of care.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen hidden cruelty is brought to light, it triggers compassionate intervention and reinforces societal standards of care.",
       "The Unavoidable Truth: Domestic animals depend entirely on human stewardship for their survival and well-being.\n\nThe Unavoidable Lie: Severe animal neglect is rare and isolated from broader systemic housing issues.",
       "Alethekanon:\nExposing cruelty forces society to confront the dark boundaries of human irresponsibility toward dependent lives.",
       "Awwthekanon:\nSending so much love and healing light to sweet Ren and Stimpy as they recover from such heartbreak.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NYC Second Chance Rescue",
@@ -200,6 +262,7 @@
         "name": "NYC Second Chance Rescue",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

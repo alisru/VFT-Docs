@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.78,
-    "real_psi": -0.82,
+    "real_u": -0.49,
+    "real_psi": -0.61,
     "mode": "root",
     "posts": [
       "A Melbourne restaurant group sparks outrage by automatically adding a $1 charity fee to customer bills. Maison Batard receipt goes viral.\nEvidence: Voluntary donation, Forced opt-out, Self-serving foundation\n#Aletheia #MaisonBatard #Hospitality 🌐",
-      "Lucas Collective claims the $1 fee is a voluntary donation to the Collective Foundation, supporting hospitality professional development and industry research.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, the fee is automatically added without prior notice, forcing customers to opt out. The charity was founded by the restaurant group's own owner, Chris Lucas.\nResulting Judgement: (-0.78, -0.82) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nAutomatically adding fees to bills exploits social friction to fund a founder's private foundation.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 2)",
+      "Lucas Collective claims the $1 fee is a voluntary donation to the Collective Foundation, supporting hospitality professional development and industry research.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "In reality, the fee is automatically added without prior notice, forcing customers to opt out. The charity was founded by the restaurant group's own owner, Chris Lucas.\nResulting Judgement: (-0.49, -0.61) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nAutomatically adding fees to bills exploits social friction to fund a founder's private foundation.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 2)",
       "Sub-Audits Breakdown:\n- Lucas Collective: FAIL (-0.78, -0.82) — Uses opt-out friction to extract funds.\n- Collective Foundation: COND (-0.20, -0.40) — Legitimate charity but funded deceptively.",
       "Diners at Chris Lucas's Maison Batard noticed a $1 charge added to their bills for the Collective Foundation, requiring them to ask staff to remove it if they did not wish to pay.",
       "The Bright Side:\nThe funds do support professional development in the hospitality sector, which is a genuine industry need.",
       "The Breakdown & Plane Error:\nThis is a WHO vs WHAT error. They frame the fee as a collective industry benefit (WHAT), but the mechanism (WHO) is a unilateral extraction that benefits the owner's private foundation.",
       "Social Physics Analysis:\nBy using an opt-out default, the business exploits social friction. Customers must risk social awkwardness to decline, shifting the moral burden of giving from the wealthy owner to the paying customer.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated charity and forced defaults, it plots a direct trajectory toward Deception. The mechanism relies on passive compliance rather than active goodwill.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated charity and forced defaults, it plots a direct trajectory toward Deception. The mechanism relies on passive compliance rather than active goodwill.",
       "The Unavoidable Truth: Opt-out fees are designed to exploit human inertia and social awkwardness.\n\nThe Unavoidable Lie: The restaurant group is doing this purely out of selfless generosity.",
       "Alethekanon:\nTrue charity requires active consent. Forcing an opt-out default on a bill is not philanthropy; it is a behavioral nudge designed to extract capital under the guise of goodwill.",
       "Awwthekanon:\nGiving should come from a place of joy and connection, not from feeling trapped at the end of a lovely meal. Let people choose where their hearts and dollars go.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Lucas Collective",
@@ -168,6 +230,7 @@
         "name": "Maison Bâtard",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Listen: Did the Spanish government address the protesters’ demands on housing?",
     "link": "https://euobserver.com/240472/listen-did-the-spanish-government-address-the-protesters-demands-on-housing/",
     "target_url": "https://bsky.app/profile/euobserver.com/post/3mwpx6gmz7b2z",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 0.0,
+    "claim_psi": -0.25,
+    "real_u": -0.3,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Protesters flood Madrid streets demanding housing action after an 83-year-old's eviction sparks national outrage. \nEvidence: Eviction outcry, tenant decrees, rising rents\n#HousingCrisis #Spain",
-      "The Spanish government responds to soaring housing costs and public protests by adopting new housing decrees to protect tenants.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While decrees are adopted, soaring rents and deep structural supply deficits persist despite short-term political concessions.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nModest housing decrees offer temporary relief, but systemic pressures require deeper structural reforms.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "The Spanish government responds to soaring housing costs and public protests by adopting new housing decrees to protect tenants.\nStated Judgement: (+0.00, -0.25) — Greater Evil",
+      "While decrees are adopted, soaring rents and deep structural supply deficits persist despite short-term political concessions.\nResulting Judgement: (-0.30, -0.45) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nModest housing decrees offer temporary relief, but systemic pressures require deeper structural reforms.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- EUobserver Podcast: COND (0.2, 0.0) — Covers protests and decrees fairly.\n- Breitbart Clip: FAIL (-0.8, -0.9) — Injects unrelated US political attacks.",
       "Tens of thousands of Spaniards have camped in Madrid and other cities, protesting soaring housing costs following high-profile eviction cases.",
       "The Bright Side:\nPublic mobilization successfully compelled the government to implement immediate eviction protections.",
       "The Breakdown & Plane Error:\nFocusing solely on WHAT legislative decrees passed misses WHO captures the long-term rental market gains.",
       "Social Physics Analysis:\nActors utilize a mix of public pressure and administrative decrees. While protesters demand transparency and equity, political leaders often deploy short-term measures to manage unrest rather than solve the root supply crisis.",
-      "The Trajectory: The Path of Redemption.\nThe gap between political crisis-management and structural reality points toward cautious reform under sustained civic pressure.",
+      "The Trajectory: The Path of Destruction.\nThe gap between political crisis-management and structural reality points toward cautious reform under sustained civic pressure.",
       "The Unavoidable Truth: Temporary eviction bans do not fix a chronic housing shortage.\n\nThe Unavoidable Lie: Administrative decrees alone solve the national housing crisis.",
       "Alethekanon:\nLegislative decrees ease immediate pain, but without tackling structural supply, they remain administrative band-aids.",
       "Awwthekanon:\nEvery family deserves a secure home where they can rest without fear of sudden displacement. Housing is a fundamental anchor of human dignity.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "EUobserver Podcast",
@@ -164,6 +226,7 @@
         "sub_psi": 0.0,
         "sub_verdict": "COND"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

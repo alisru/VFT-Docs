@@ -5,22 +5,22 @@
     "subject": "Federal appeals court deals bl...",
     "link": "https://www.foxnews.com/politics/federal-appeals-court-deals-blow-trump-deportation-agenda",
     "target_url": "",
-    "claim_u": 0.65,
-    "claim_psi": 0.4,
-    "real_u": -0.68,
-    "real_psi": -0.62,
+    "claim_u": 0.62,
+    "claim_psi": 0.43,
+    "real_u": 0.05,
+    "real_psi": -0.06,
     "mode": "root",
     "posts": [
       "Executive overreach hits a federal wall. A court halts deportation of a Peruvian migrant to Ghana without notice.\nEvidence: Due process, Secret deportations, Procedural law\n#Aletheia #USPol",
-      "The administration claims third-party removals are fully lawful enforcement measures, arguing federal judges are staging political activism by delaying deportations.\nStated Judgement: (+0.65, +0.40) — Lesser Good",
-      "In reality, ICE attempted to fly a Peruvian migrant to Ghana without notice or a hearing, violating basic constitutional due process and ignoring judicial stays.\nResulting Judgement: (-0.68, -0.62) — Greater Evil",
-      "Verdict: FAIL — Reckoning into Destruction. DHS bypassed statutory notice rules to execute arbitrary removals before higher court mandates settled.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
+      "The administration claims third-party removals are fully lawful enforcement measures, arguing federal judges are staging political activism by delaying deportations.\nStated Judgement: (+0.62, +0.43) — Greater Good",
+      "In reality, ICE attempted to fly a Peruvian migrant to Ghana without notice or a hearing, violating basic constitutional due process and ignoring judicial stays.\nResulting Judgement: (+0.05, -0.06) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
       "Sub-Audits Breakdown:\n- DHS Removal Policy: FAIL (-0.72, -0.65) — Skips due process to secretly deport abroad.\n- First Circuit Order: PASS (+0.78, +0.62) — Enforces basic constitutional safeguards.\n- Fox News Framing: COND (+0.10, -0.15) — Highlights judicial blow but centers DHS spin.",
       "The First Circuit upheld a ruling requiring DHS to give migrants notice and a meaningful chance to contest being sent to unfamiliar third countries like Ghana.",
       "The Bright Side:\nThe appellate ruling preserves the principle that administrative speed cannot override constitutional protections against arbitrary deportation.",
       "The Breakdown & Plane Error:\nThe error is Logical vs Metaphysical (HOW vs WHO). DHS treats statutory deportation power as a blank check, ignoring that lawful authority requires procedural fairness.",
       "Social Physics Analysis:\nDHS executed a Smart Selfish Maneuver by claiming statutory authority while quietly removing migrants without notice. The court applied transparency to restore accountability.",
-      "The Trajectory: The Path of Reckoning.\nWhen administrative expediency bypasses basic procedural rights, governance degrades into arbitrary enforcement. Mathematical balance requires judicial correction.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen administrative expediency bypasses basic procedural rights, governance degrades into arbitrary enforcement. Mathematical balance requires judicial correction.",
       "The Unavoidable Truth: Due process protects everyone under the law from arbitrary state exile.\n\nThe Unavoidable Lie: Calling constitutional oversight political activism does not make procedural shortcuts legal.",
       "Alethekanon:\nWhen an agency attempts to deport a Peruvian to Ghana without notice, it abandons the rule of law for bureaucratic expedience. Judicial friction is the necessary cost of constitutional integrity.",
       "Awwthekanon:\nImagine being forced onto a plane to an unfamiliar continent without anyone telling you where you are going. Every human being deserves the safety of knowing their rights and having a voice.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DHS Third-Country Deportation Policy",
@@ -181,6 +243,7 @@
         "name": "Brian Murphy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

@@ -14,7 +14,7 @@
       "Cultural heritage restored as international authorities track down stolen masterpieces across borders!\n\nStolen artworks by Matisse, Cezanne, Renoir recovered in Brazil, Italy\nEvidence: stolen art, police recovery, heritage restored\n#Aletheia #Culture",
       "Law enforcement agencies successfully recovered priceless stolen paintings by master artists Henri Matisse, Paul Cezanne, and Pierre-Auguste Renoir in coordinated operations across Italy and Brazil.\nStated Judgement: (1.0, 1.0) — Grace",
       "Police confirmed that raids and searches in Parma and São Paulo successfully located several major stolen works, returning stolen cultural history to the public domain where it belongs.\nResulting Judgement: (1.0, 1.0) — Grace",
-      "Verdict: PASS — The Path of Grace.\nInternational cooperation successfully recovers priceless stolen art, protecting cultural heritage from permanent illicit loss.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nInternational cooperation successfully recovers priceless stolen art, protecting cultural heritage from permanent illicit loss.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Italian Police Recovery: PASS (1.0, 1.0) — Parma authorities successfully recovered three major stolen paintings from a local museum heist.\n- Brazilian Police Recovery: PASS (1.0, 1.0) — São Paulo police tracked down and recovered stolen Matisse engravings from a suspect's residence.",
       "International law enforcement agencies in Italy and Brazil have successfully recovered multiple high-value masterpieces by Henri Matisse, Paul Cezanne, and Pierre-Auguste Renoir that were stolen in separate museum and library heists.",
       "The Bright Side:\nGlobal police cooperation successfully defeats illicit art trafficking rings, ensuring priceless cultural treasures survive to inspire future generations.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Italian Police Recovery",
@@ -274,6 +336,7 @@
         "name": "São Paulo Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

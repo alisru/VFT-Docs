@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_u": -0.3,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "With Tupac's murder case resolved, media pressure mounts on authorities to solve The Notorious B.I.G.'s cold case.\nEvidence: Keffe D conviction, speculation, unsolved history\n#Crime #Justice #Aletheia",
-      "A recent conviction in Tupac Shakur's murder naturally paves the way for justice in Christopher Wallace's cold case.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Decades of silence, conflicting theories, and a missing 'Keefe D moment' mean Biggie's murder remains operationally unsolved.\nResulting Judgement: (-0.4, -0.5) — Deception",
-      "Verdict: COND — The Path of Deception.\nSpeculative media pressure conflates legal closures with unsolved historical complexities.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.3, z: 2)",
+      "A recent conviction in Tupac Shakur's murder naturally paves the way for justice in Christopher Wallace's cold case.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Decades of silence, conflicting theories, and a missing 'Keefe D moment' mean Biggie's murder remains operationally unsolved.\nResulting Judgement: (-0.30, -0.30) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nSpeculative media pressure conflates legal closures with unsolved historical complexities.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.3, z: 2)",
       "Sub-Audits Breakdown:\n- Legal Comparison: COND (0.0, 0.0) — Different evidentiary baselines.\n- Media Framing: FAIL (-0.6, -0.6) — Speculative sensationalism.",
       "Following Duane 'Keefe D' Davis's conviction for Tupac's 1996 murder, journalists are questioning whether Biggie Smalls' 1997 murder will ever see closure.",
       "The Poison:\nExploits tragic historical violence for speculative sensationalism without offering new investigative breakthroughs.",
       "The Breakdown & Plane Error:\nConfuses historical speculation (WHAT) with active legal accountability (WHO), fueling false hope.",
       "Social Physics Analysis:\nOperating on a sensationalist loop, media outlets project public desire for closure onto dormant cold cases to generate engagement.",
-      "The Trajectory: The Path of Deception.\nWhen you map speculative premises to cold-case realities, it plots a direct trajectory toward Deception. False equivalence distorts historical clarity.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map speculative premises to cold-case realities, it plots a direct trajectory toward Deception. False equivalence distorts historical clarity.",
       "The Unavoidable Truth: High-profile cold cases require concrete self-incriminating evidence to move forward.\nThe Unavoidable Lie: Media speculation alone can substitute for missing forensic proof.",
       "Alethekanon:\nDesire for poetic symmetry cannot override the stubborn absence of corroborated physical evidence.",
       "Awwthekanon:\nDecades later, families still ache for answers and true peace in the wake of such senseless tragedies.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Legal Comparison",
@@ -160,6 +222,7 @@
         "name": "Greg Kading",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

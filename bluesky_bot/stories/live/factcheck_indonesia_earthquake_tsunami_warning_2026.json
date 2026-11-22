@@ -14,7 +14,7 @@
       "Nature strikes without warning off Indonesia's coast, triggering emergency alerts across vulnerable shores.\n\nPowerful 7.7-magnitude quake strikes off Indonesia coast\nEvidence: natural seismic event, transparent official warnings, public safety focus\n#Aletheia #Indonesia",
       "Official agencies report a major 7.7-magnitude earthquake near Flores Island, immediately issuing tsunami warnings to protect coastal residents from potential hazards.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "Ground reports confirm transparent hazard communication by geological services, prioritizing public safety with zero immediate casualties reported.\nResulting Judgement: (+1.00, +1.00) — Good Preference",
-      "Verdict: PASS — The Path of Grace.\nAccurate, transparent disaster reporting fulfills public safety obligations without hidden agendas or distortion.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\nAccurate, transparent disaster reporting fulfills public safety obligations without hidden agendas or distortion.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- USGS Seismic Reporting: PASS (1.0, 0.0) — Accurate, prompt scientific data distribution regarding magnitude and impact zones.\n- Local Tsunami Warning: PASS (1.0, 0.0) — Timely hazard alerts issued to protect vulnerable coastal communities.",
       "A powerful 7.7-magnitude earthquake struck off the coast of Indonesia near Flores Island, prompting authorities to issue a tsunami warning. Approximately 1.5 million people experienced strong shaking, though no immediate casualties or structural damages were reported as officials urged",
       "The Bright Side:\nPrompt scientific detection and immediate public warnings help safeguard millions of residents from secondary disaster risks.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "USGS Seismic Reporting",
@@ -264,6 +326,7 @@
         "name": "Flores Island",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

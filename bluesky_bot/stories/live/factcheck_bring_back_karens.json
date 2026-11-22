@@ -5,22 +5,22 @@
     "subject": "Bring Back Karens",
     "link": "https://thefederalist.com/2026/08/28/bring-back-karens/?utm_source=rss&utm_medium=rss&utm_campaign=bring-back-karens",
     "target_url": "",
-    "claim_u": 0.62,
-    "claim_psi": 0.15,
-    "real_u": -0.78,
-    "real_psi": -0.65,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.63,
+    "real_psi": -0.66,
     "mode": "root",
     "posts": [
       "A culture-war defense of the \"Karen\" archetype frames social scolding as a vital civic duty.\n\nBring Back Karens\nEvidence: civic standards, partisan grievance, cultural division\n#Aletheia #SocialPhysics #USPol",
-      "The article argues that \"Karens\" were essential for maintaining public standards, clean spaces, and local accountability, and that silencing them has led to societal decay.\nStated Judgement: (+0.62, +0.15) — Good Preference",
-      "In reality, the piece uses a superficial meme as a Trojan horse to attack progressive politics, ignoring the real-world harassment and racialized policing associated with the archetype.\nResulting Judgement: (-0.78, -0.65) — Greater Evil",
-      "Verdict: FAIL — Fall into Deception.\nThe piece rebrands exclusionary social policing as a public service to launch a partisan attack.\n\nIntegrity: Severe Deception (Hypocrisy: 69.44, Uncertainty z: 4)",
+      "The article argues that \"Karens\" were essential for maintaining public standards, clean spaces, and local accountability, and that silencing them has led to societal decay.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the piece uses a superficial meme as a Trojan horse to attack progressive politics, ignoring the real-world harassment and racialized policing associated with the archetype.\nResulting Judgement: (-0.63, -0.66) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe piece rebrands exclusionary social policing as a public service to launch a partisan attack.\n\nIntegrity: Severe Deception (Hypocrisy: 69.44, Uncertainty z: 4)",
       "Sub-Audits Breakdown:\n- The Federalist: FAIL (-0.78, -0.65) — Uses cultural memes for partisan grievance.\n- Civic Standards: COND (0.10, -0.20) — Conflates accountability with overbearing scolding.",
       "The Federalist published an essay arguing that the decline of the \"Karen\" archetype—assertive, demanding women—has directly caused the deterioration of American public spaces and local governance.",
       "The Bright Side:\nDemanding that local governments fix potholes and businesses maintain clean facilities is a valid form of civic participation that keeps institutions accountable.",
       "The Breakdown & Plane Error:\nThe article commits a WHO vs WHAT error. It conflates the constructive WHAT of demanding civic standards with the destructive WHO of an entitled, exclusionary social archetype.",
       "Social Physics Analysis:\nBy framing overbearing behavior as a public good, the author projects constructive motives onto a divisive archetype. This pretext justifies social friction while scapegoating progressive movements for systemic civic decay.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil, where social friction is weaponized for political division.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil, where social friction is weaponized for political division.",
       "The Unavoidable Truth: Civic accountability requires active, vocal citizens who demand excellence.\n\nThe Unavoidable Lie: Entitled social scolding is a harmless and necessary prerequisite for clean public parks.",
       "Alethekanon:\nThe analysis reveals a classic co-optation of a cultural meme to serve a partisan narrative. True civic standards rely on mutual respect, not exclusionary authority.",
       "Awwthekanon:\nCommunities thrive when we look out for one another with kindness, not when we police each other with suspicion. True care builds bridges instead of demanding compliance.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "The Federalist Editorial",
@@ -276,6 +338,7 @@
         "sub_psi": -0.65,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

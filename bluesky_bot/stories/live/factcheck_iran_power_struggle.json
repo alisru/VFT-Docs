@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.4,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "real_u": -0.38,
+    "real_psi": -0.53,
     "mode": "root",
     "posts": [
       "A regime fractured in the shadows of conflict.\nWho Is Running Iran? — Report Exposes Power Struggle at Top of the Regime.\nEvidence: Sovereign governance, Rogue military sabotage, Power preservation.\n#Aletheia #Iran #Geopolitics",
-      "The Iranian regime claims to operate as a unified sovereign state defending its national rights and security against foreign aggression through its official leadership.\nStated Judgement: (+0.80, +0.40) — Good Preference",
-      "In reality, unelected hardline factions are running rogue operations, attacking commercial ships to deliberately sabotage diplomatic agreements and preserve their own institutional power.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
-      "Verdict: FAIL — Reckoning into Destruction.\nRogue hardliners actively sabotage peace pathways to force a state of perpetual conflict, ensuring their own survival at the expense of their nation.\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 4)",
+      "The Iranian regime claims to operate as a unified sovereign state defending its national rights and security against foreign aggression through its official leadership.\nStated Judgement: (+0.80, +0.40) — Greater Good",
+      "In reality, unelected hardline factions are running rogue operations, attacking commercial ships to deliberately sabotage diplomatic agreements and preserve their own institutional power.\nResulting Judgement: (-0.38, -0.53) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nRogue hardliners actively sabotage peace pathways to force a state of perpetual conflict, ensuring their own survival at the expense of their nation.\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 4)",
       "- Hardline Sabotage: FAIL (-0.90, -0.95) — Rogue operations to force conflict.\n- Breitbart Reporting: PASS (0.15, -0.10) — Accurately conveys the NYT investigation.",
       "A New York Times report details a fierce power struggle in Iran, where hardliner Hossein Taeb allegedly orchestrated ship attacks to blow up a US-Iran memorandum of understanding.",
       "The Bright Side:\nThe exposure of these internal rifts reveals that the regime is not a monolith, offering diplomatic leverage to engage with more moderate factions who genuinely sought the memorandum.",
       "The Plane Error lies in treating the regime as a single WHO (a unified state) when the WHAT (rogue military sabotage) proves it is a collection of warring factions. The bait-and-switch uses national defense to mask factional survival.",
       "Social Physics Analysis:\nHardliners execute a Smart Selfish Maneuver. Their secret goal is preserving their domestic grip. They manufacture a crisis by attacking ships, projecting the blame onto foreign enemies to justify perpetual conflict.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nWhen you map the gap between sovereign pretexts and rogue military sabotage, it plots a direct trajectory toward Greater Evil. Sabotaging peace pathways locks the nation into conflict.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between sovereign pretexts and rogue military sabotage, it plots a direct trajectory toward Greater Evil. Sabotaging peace pathways locks the nation into conflict.",
       "The Unavoidable Truth: Iran's leadership is deeply fractured by rogue actors.\nThe Unavoidable Lie: The regime acts as a unified, legitimate representative of its people's security.",
       "Alethekanon:\nWhen a state's security apparatus operates independently of its executive, sovereignty is an illusion. The hardliners' sabotage proves that for some, peace is a greater threat than war.",
       "Awwthekanon:\nIt is heartbreaking to see how close a nation came to a peaceful path, only to have it stolen away by a few powerful men who profit from fear. The people of Iran deserve a leadership that seeks their safety, not endless war.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Hardline Sabotage",
@@ -167,6 +229,7 @@
         "name": "IRGC",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

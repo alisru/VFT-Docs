@@ -6,21 +6,21 @@
     "link": "https://dailycaller.com/2026/09/26/healthcare-professionals-dropping-insurance-affordability-jeff-singer",
     "target_url": "",
     "claim_u": 0.65,
-    "claim_psi": 0.2,
+    "claim_psi": 0.15,
     "real_u": -0.78,
     "real_psi": 0.35,
     "mode": "root",
     "posts": [
       "Even doctors and nurses are dropping their own health insurance as costs skyrocket. But who is actually to blame for this systemic collapse?\nHealthcare Workers Are Dropping Health Insurance\nEvidence: Regulatory blame, Subsidy cliff omission, Deregulation push",
-      "The claim: Skyrocketing premiums and rigid federal mandates under the Affordable Care Act are forcing healthcare professionals to forgo coverage, proving that government-mandated benefits make insurance unusable.\nStated Judgement: (0.65, 0.20) — Good Preference",
-      "The reality: The sudden 2026 premium spike was triggered by the expiration of federal ACA subsidies, not the mandates themselves. Blaming regulations while ignoring the subsidy cliff is a deliberate distraction.\nResulting Judgement: (-0.78, 0.35) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nThe narrative uses the genuine pain of healthcare workers to lobby for stripping essential health benefits, while hiding the policy choice that actually cut their financial support.\nIntegrity: Severe Deception (Hypocrisy: 1.43, z: 3)",
+      "The claim: Skyrocketing premiums and rigid federal mandates under the Affordable Care Act are forcing healthcare professionals to forgo coverage, proving that government-mandated benefits make insurance unusable.\nStated Judgement: (+0.65, +0.15) — Greater Good",
+      "The reality: The sudden 2026 premium spike was triggered by the expiration of federal ACA subsidies, not the mandates themselves. Blaming regulations while ignoring the subsidy cliff is a deliberate distraction.\nResulting Judgement: (-0.78, +0.35) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nThe narrative uses the genuine pain of healthcare workers to lobby for stripping essential health benefits, while hiding the policy choice that actually cut their financial support.\nIntegrity: Severe Deception (Hypocrisy: 1.43, z: 3)",
       "Sub-Audits Breakdown:\n- Daily Caller Framing: FAIL (-0.80, 0.40) — Omitted the subsidy cliff to push deregulation.\n- Jeff Singer Analysis: FAIL (-0.75, 0.30) — Blamed long-standing mandates for a sudden 2026 spike.",
       "Federal subsidies that made ACA plans affordable expired on January 1, 2026, causing premiums to surge and driving millions of Americans—including independent medical professionals—to drop their coverage.",
       "The Poison:\nBy framing the crisis solely around \"unwanted mandates,\" the narrative paves the way for junk insurance plans that leave families completely unprotected when major medical emergencies actually strike.",
       "The Breakdown & Plane Error:\nThe article commits a Logical error (HOW) by attributing a sudden 2026 enrollment drop to rules established over a decade ago, completely bypassing the immediate, physical impact of the subsidy expiration.",
       "Social Physics Analysis:\nThis is a classic Smart Selfish Maneuver. Political actors manufacture a crisis of \"regulatory overreach\" to justify stripping consumer protections, projecting the blame onto safety standards rather than the removal of funding.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Stripping protections under the guise of affordability leads to systemic vulnerability.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Stripping protections under the guise of affordability leads to systemic vulnerability.",
       "The Unavoidable Truth: Healthcare is genuinely unaffordable without systemic subsidies.\nThe Unavoidable Lie: Stripping essential health benefits will make healthcare safer or cheaper for the average worker.",
       "Alethekanon:\nThe analysis reveals a structural bait-and-switch. The public is told that deregulation will lower costs, but the actual outcome is the transfer of financial risk from insurers directly onto vulnerable workers.",
       "Awwthekanon:\nIt is heartbreaking to see the very people who care for our sick forced to go without care themselves. They deserve real, compassionate support, not to be used as political leverage to weaken their own protections.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Daily Caller Framing",
@@ -160,6 +222,7 @@
         "sub_psi": 0.4,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

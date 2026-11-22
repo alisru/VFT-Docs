@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.7,
-    "real_u": 0.2,
-    "real_psi": 0.1,
+    "real_u": 0.5,
+    "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "AI chip startup Etched draws eye-popping $40B-$50B valuation bids just months after a $21B raise. 🌐\nEvidence: soaring valuations, major customer orders, VC frenzy\n#Aletheia #AI #Tech",
-      "Etched claims its specialized inference chips outperform Nvidia's processors, driving massive enterprise demand and high-stakes investor bidding wars.\nStated Judgement: (+0.8, +0.7) — Good Preference",
-      "While early customer deployments show promise, these sky-high valuations reflect hyper-speculative AI capital rather than proven mass market dominance.\nResulting Judgement: (+0.2, +0.1) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption. Hyper-growth funding reflects genuine technical demand, though speculative valuations outpace current commercial scale.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Etched claims its specialized inference chips outperform Nvidia's processors, driving massive enterprise demand and high-stakes investor bidding wars.\nStated Judgement: (+0.80, +0.70) — Greater Good",
+      "While early customer deployments show promise, these sky-high valuations reflect hyper-speculative AI capital rather than proven mass market dominance.\nResulting Judgement: (+0.50, +0.40) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- Etched Fundraising: PASS (+0.8, +0.7) — Strong VC backing and early customer validation.\n- Market Valuation: COND (+0.2, +0.1) — Sky-high bids driven by speculative AI fever.",
       "Etched is attempting to challenge Nvidia's hardware monopoly with specialized chips designed exclusively for AI inference tasks.",
       "The Bright Side:\nSpecialized inference architectures could significantly lower computing costs for large-scale enterprise deployments.",
       "The Breakdown & Plane Error:\nMistaking speculative funding momentum (WHAT) for proven market saturation (WHO), creating a distorted picture of industry dominance.",
       "Social Physics Analysis:\nActors navigate a high-stakes race where transparent technical capability meets speculative capital. Rather than manufacturing crises, investors chase scarce compute power, though hype risks overextending market realities.",
-      "The Trajectory: The Path of Redemption.\nWhen you map technical innovation against capital expansion, it plots a stable trajectory toward collaborative market integration.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map technical innovation against capital expansion, it plots a stable trajectory toward collaborative market integration.",
       "The Unavoidable Truth: Specialized inference chips offer real performance advantages for high-frequency compute tasks.\n\nThe Unavoidable Lie: Multi-billion dollar valuation leaps reflect immediate mass-market ubiquity rather than speculative bets.",
       "Alethekanon:\nVenture capital's insatiable appetite for AI hardware disruptors drives astronomical valuations ahead of actual production scale.",
       "Awwthekanon:\nIt's exhilarating to watch small teams build groundbreaking chips, but let's hope the financial pressure doesn't crush their engineering spirit!",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Etched Fundraising",
@@ -171,6 +233,7 @@
         "name": "Gavin Uberti",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

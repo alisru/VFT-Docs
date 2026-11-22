@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Federal lawsuits targeting elite universities conceal political score-settling behind civil rights rhetoric.\n\nJudge dismisses Trump administration lawsuit alleging antisemitism at Harvard University\nEvidence: civil protection, political retaliation, judicial dismissal\n#Aletheia #Education #Law 🌐",
-      "The administration argues the lawsuit enforces federal civil rights protections to combat harassment and defend Jewish students on campus.\nStated Judgement: (+0.66, +0.88) — Good Preference",
-      "A federal judge dismissed the case, ruling the allegations were isolated and used as a smokescreen for an ideologically motivated funding assault.\nResulting Judgement: (-0.09, +0.32) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Using civil rights enforcement as a pretext for political retaliation undermines genuine efforts to combat bigotry.\n\nIntegrity: Severe Deception (Hypocrisy: 15.1, Uncertainty z: 2)",
+      "The administration argues the lawsuit enforces federal civil rights protections to combat harassment and defend Jewish students on campus.\nStated Judgement: (+0.66, +0.88) — Greater Good",
+      "A federal judge dismissed the case, ruling the allegations were isolated and used as a smokescreen for an ideologically motivated funding assault.\nResulting Judgement: (-0.09, +0.32) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\n\nIntegrity: Severe Deception (Hypocrisy: 15.1, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Department of Justice Civil Rights Division: FAIL (-0.80, -0.85) — Pursued legally flawed claims to exert political pressure on academic institutions.",
       "A federal judge dismissed a Trump administration lawsuit accusing Harvard of ignoring antisemitism, ruling the government failed to prove systemic violations. The case followed Harvard's refusal of White House demands, forming part of a wider funding dispute.",
       "The Bright Side:\nIndependent judicial oversight successfully defended institutional autonomy against politically motivated executive overreach and funding coercion.",
       "The Breakdown & Plane Error:\nThis confuses WHO is being protected with WHAT is being targeted. It is a classic bait-and-switch: weaponizing legitimate concerns over campus safety to punish political opponents.",
       "Social Physics Analysis:\nBy projecting moral motives onto punitive administrative attacks, authorities mask power consolidation behind righteous pretexts, deepening societal division rather than solving campus safety issues.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic pretexts override genuine justice mechanisms.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic pretexts override genuine justice mechanisms.",
       "The Unavoidable Truth: Genuine antisemitism on campuses requires consistent, fair disciplinary reforms rather than political retaliatory lawsuits.\n\nThe Unavoidable Lie: Federal civil rights enforcement was the sole motivation behind the multi-billion-dollar funding attacks.",
       "Alethekanon:\nTrue civil rights enforcement requires rigorous, unbiased legal standards, not selective weaponization of administrative penalties to punish political foes. (🌐)",
       "Awwthekanon:\nStudent safety should never be treated as a political football. Protecting students requires authentic community care, not partisan legal battles.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Department of Justice Civil Rights Division",
@@ -283,6 +345,7 @@
         "sub_psi": -0.85,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

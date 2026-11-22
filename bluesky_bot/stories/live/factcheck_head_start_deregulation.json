@@ -14,13 +14,13 @@
       "The promise of early childhood support faces a 'streamlined' future that looks suspiciously like a hollowed-out shell. 🌐\n\nHead Start deregulation proposal\nEvidence: Regulatory cuts, service reduction, community alarm\n#Aletheia #Education",
       "The administration claims these changes will remove unnecessary bureaucracy and expand access to hundreds of thousands more children by streamlining requirements.\nStated Judgement: (+0.76, +1.00) — Good Preference",
       "In practice, the proposal increases staff-to-student ratios and removes support for dual-language learners, effectively degrading the quality of care for the most vulnerable families.\nResulting Judgement: (-0.81, +1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning. The 'streamlining' is a pretext for cost-cutting that sacrifices the developmental needs of children for administrative efficiency.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 3)",
+      "Verdict: FAIL — Fall into Deception.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- HHS Regulatory Reform: FAIL (-0.8, -0.8) — Prioritizes cost-cutting over service quality.\n- Community Impact: FAIL (-0.7, -0.9) — Undermines support for vulnerable, diverse families.",
       "The Trump administration has proposed a rule to eliminate 1,400 Head Start regulations, replacing them with a 'streamlined framework.' Providers fear this will lead to larger classes and reduced services for dual-language learners.",
       "The Poison:\nThe proposal frames the removal of essential services as 'trusting parents and communities,' which is a manipulative way to offload the burden of care while reducing federal accountability.",
       "The Breakdown & Plane Error:\nThe error is in the HOW: they claim 'streamlining' (efficiency) will lead to 'expansion' (benefit), but the physical reality is that removing quality controls leads to service degradation. It is a bait-and-switch of quality for quantity.",
       "Social Physics Analysis:\nThe administration uses a 'Smart Selfish Loop': the secret goal is budget reduction, the pretext is 'streamlining bureaucracy,' and the projection is that critics are merely defending 'unnecessary' rules.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The loss of quality controls creates a high-strain environment for families.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The loss of quality controls creates a high-strain environment for families.",
       "The Unavoidable Truth: The proposed rule reduces the quality of care and support services for low-income families.\n\nThe Unavoidable Lie: The changes are purely about removing bureaucracy to help more children.",
       "Alethekanon:\nThis is a classic case of administrative erasure. By removing the specific requirements that make Head Start effective, they are effectively dismantling the program while claiming to 'renew' it.",
       "Awwthekanon:\nThese programs are lifelines for parents struggling to build a better future. To see them weakened under the guise of 'streamlining' is to ignore the real, human struggle of these families.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "HHS Regulatory Reform",
@@ -192,6 +254,7 @@
         "name": "Trump Administration",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

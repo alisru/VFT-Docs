@@ -5,22 +5,22 @@
     "subject": "How a six pack of beer and the...",
     "link": "https://www.foxnews.com/politics/six-pack-beer-magna-carta-fix-problem-plaguing-americans-decades",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.15,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.12,
+    "real_psi": -0.26,
     "mode": "root",
     "posts": [
       "A $95,000 plane seized over a misdemeanor six-pack of beer. The Supreme Court will decide if this is an excessive fine. 🌐\nEvidence: Property rights, Asset forfeiture, State extraction\n#Aletheia #SCOTUS #PropertyRights",
-      "The state of Alaska claims that forfeiting a $95,000 aircraft is a proportionate response to a misdemeanor alcohol importation conviction because even a six-pack causes grave societal harm.\nStated Judgement: (+0.85, +0.15) — Lesser Good",
-      "In reality, seizing a citizen's primary livelihood for a minor misdemeanor with a $1,500 fine is a predatory extraction of wealth that violates the core principle of proportionality.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. The state uses minor infractions as pretexts to seize massive private assets, destroying livelihoods.\nIntegrity: Meaningful Distortion (Hypocrisy: 1.85, z: 4)",
+      "The state of Alaska claims that forfeiting a $95,000 aircraft is a proportionate response to a misdemeanor alcohol importation conviction because even a six-pack causes grave societal harm.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, seizing a citizen's primary livelihood for a minor misdemeanor with a $1,500 fine is a predatory extraction of wealth that violates the core principle of proportionality.\nResulting Judgement: (-0.12, -0.26) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 1.85, z: 4)",
       "- Alaska Forfeiture: FAIL (-1.00, -1.00) — Predatory asset seizure.\n- Kenneth Jouppi: PASS (0.80, -0.50) — Defending property rights.\n- Heritage Analysis: PASS (0.75, -0.30) — Sound constitutional critique.",
       "The Supreme Court agreed to hear Jouppi v. Alaska to determine whether civil asset forfeiture must be proportionate to the actual offense committed rather than the maximum theoretical penalty.",
       "The Poison:\nWhile dry communities have a legitimate interest in preventing illegal alcohol importation, using total asset forfeiture as a primary enforcement tool creates a corrupt incentive for state revenue generation.",
       "The Plane Error is WHO vs WHAT. The state focuses on the abstract legality of forfeiture (WHAT) while ignoring the devastating physical destruction of an individual's livelihood (WHO) for a minor infraction.",
       "Social Physics Analysis:\nAlaska is running a Smart Selfish Maneuver. They use the pretext of public safety to justify a massive wealth extraction, projecting the blame onto the victim while maintaining a highly lucrative forfeiture apparatus.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between public safety pretexts and predatory wealth extraction, it plots a direct trajectory toward Greater Evil. This systemic overreach actively crushes individual agency.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between public safety pretexts and predatory wealth extraction, it plots a direct trajectory toward Greater Evil. This systemic overreach actively crushes individual agency.",
       "The Unavoidable Truth: Civil asset forfeiture has devolved into a state-sanctioned revenue generator.\nThe Unavoidable Lie: Seizing a $95,000 plane for a six-pack of beer is about public safety.",
       "Alethekanon:\nWhen the state's punishment exceeds the offense by a factor of sixty, the law ceases to be a shield of justice and becomes an instrument of plunder. Proportionality is the bedrock of legitimate authority.",
       "Awwthekanon:\nIt is heartbreaking to see an 82-year-old man lose his entire livelihood and his beloved plane over a mistake he didn't even know was happening. We must protect people from being crushed by the very systems meant to keep us safe.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Alaska Forfeiture Policy",
@@ -296,6 +358,7 @@
         "name": "Heritage Foundation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

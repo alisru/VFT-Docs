@@ -14,7 +14,7 @@
       "A new museum exhibit honors decades of community music-making and shared local heritage in Batavia.\n\nBatavia Depot Museum Music Exhibit\nEvidence: Local musical heritage, Community cohesion, Free historical preservation #Aletheia #Batavia",
       "The Batavia Depot Museum aims to celebrate local music history and community connection through 'In Harmony – Batavians Making Music,' highlighting shared civic joy across generations.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
       "Ground reality confirms a deeply researched, 18-month curation featuring over 30 historical artifacts, audio files, and community stories that actively foster public connection.\n\nResulting Judgement: (+1.00, +1.00) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nThe exhibit delivers fully on its public promise, enriching local cultural memory and social cohesion without structural distortion.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.00, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nThe exhibit delivers fully on its public promise, enriching local cultural memory and social cohesion without structural distortion.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.00, Uncertainty z: 0)",
       "- Batavia Depot Museum Curation: PASS (+1.00, +0.25) — High-integrity historical preservation & public engagement.\n- Community Social Cohesion: PASS (+1.00, +0.25) — Fosters genuine social connection and shared history.",
       "The Batavia Depot Museum opened 'In Harmony – Batavians Making Music,' an 18-month curated exhibit displaying vintage band uniforms, instruments, sheet music, and oral histories to celebrate local civic ensembles.",
       "The Bright Side:\nSmall municipal museums serve as essential anchors for civic identity, transforming donated family relics into active, shared community education.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Batavia Depot Museum Curation",
@@ -268,6 +330,7 @@
         "name": "Batavia Historical Society",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

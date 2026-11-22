@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.55,
-    "real_psi": 0.72,
+    "real_u": 0.15,
+    "real_psi": 0.31,
     "mode": "root",
     "posts": [
       "An old criminal case is resurrected as breaking news. A mother was charged with forging a judge's signature to take her son from child services, but the timeline is heavily obscured.\nEvidence: Real crime, Recycled timeline, Partisan framing\n#Aletheia #Immigration #USNews",
-      "Media outlets present this as a fresh, shocking incident of an undocumented immigrant bypassing the legal system to commit a kidnapping.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While the criminal charges are real, the event actually occurred in July 2025. Presenting a year-old case as active news serves to manufacture immediate political outrage.\nResulting Judgement: (-0.55, +0.72) — Deception",
-      "Verdict: FAIL — The Path of Deception. The physical facts of the crime are real, but the temporal framing is manipulated to serve a specific political narrative.\nIntegrity: Severe Deception (Hypocrisy: 1.71, Uncertainty z: 3)",
+      "Media outlets present this as a fresh, shocking incident of an undocumented immigrant bypassing the legal system to commit a kidnapping.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "While the criminal charges are real, the event actually occurred in July 2025. Presenting a year-old case as active news serves to manufacture immediate political outrage.\nResulting Judgement: (+0.15, +0.31) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nIntegrity: Severe Deception (Hypocrisy: 1.71, Uncertainty z: 3)",
       "- NY Post Reporting: FAIL (-0.55, 0.72) — Recycles a 2025 case as current news.\n- Legal Facts: PASS (0.85, -0.10) — The underlying criminal charges are accurate.",
       "In July 2025, Yuriana Julia Pelaez Calderon was charged with forging a federal judge's signature in an attempt to recover her son from child welfare authorities.",
       "The Poison:\nBy stripping the date from the headline, the reporting creates the illusion of a sudden, systemic breakdown in current border and legal enforcement.",
       "The Breakdown & Plane Error:\nThe error is in the Historical plane (CAUSE). By erasing the timeline, the outlet presents a past, resolved event as an active, urgent crisis to drive engagement.",
       "Social Physics Analysis:\nThe media actors execute a Smart Selfish Maneuver. They use a real, tragic family dispute and legal violation as a pretext to project a broader narrative of lawlessness, manufacturing a sense of immediate crisis to capture attention.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Temporal manipulation distorts public perception of active threats.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Temporal manipulation distorts public perception of active threats.",
       "The Unavoidable Truth: A woman was charged with forging a judge's signature in 2025.\nThe Unavoidable Lie: This is a brand-new, active crisis occurring right now.",
       "Alethekanon:\nTruth requires context, including time. Stripping the date from a real crime converts journalism into a perpetual outrage machine.",
       "Awwthekanon:\nThis is a deeply sad story of a desperate mother and a child caught in the system. Using their pain for political points is heartbreaking.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NY Post Reporting",
@@ -164,6 +226,7 @@
         "name": "Department of Justice",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

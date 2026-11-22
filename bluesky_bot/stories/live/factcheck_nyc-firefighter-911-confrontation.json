@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.8,
+    "real_u": -0.1,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "Emotions boil over at Ground Zero as a uniformed individual launches into an explosive tirade against a demonstrator.\nEvidence: Ground zero confrontation, Uniformed rant, FDNY clarification\n#Aletheia #911Memorial",
-      "A firefighter heroically defends the solemnity of the 9/11 anniversary against provocative demonstrations at Ground Zero.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "An unverified individual in uniform engages in aggressive public harassment, exploiting national grief for partisan scapegoating.\nResulting Judgement: (-0.6, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nTensions at national memorials are weaponized for political theater, masking personal aggression behind patriotic pretexts.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "A firefighter heroically defends the solemnity of the 9/11 anniversary against provocative demonstrations at Ground Zero.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "An unverified individual in uniform engages in aggressive public harassment, exploiting national grief for partisan scapegoating.\nResulting Judgement: (-0.10, -0.30) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nTensions at national memorials are weaponized for political theater, masking personal aggression behind patriotic pretexts.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "Sub-Audits Breakdown:\n- Firefighter Confrontation: FAIL (-0.7, -0.8) — Uses public memorial space for partisan tirades.\n- FDNY Clarification: PASS (0.5, 0.2) — Quickly corrects impostor status.",
       "Near the 9/11 memorial on its 25th anniversary, a man in a firefighter uniform went viral for a profane anti-protester rant, though FDNY clarified he was not a member.",
       "The Bright Side:\nThe FDNY swiftly clarified the individual's lack of affiliation, protecting the department's integrity from being hijacked.",
       "The Breakdown & Plane Error:\nThe plane error confuses WHAT (protecting solemn memorials) with WHO (using public grief as a megaphone for partisan rage).",
       "Social Physics Analysis:\nThe actor runs a Smart Selfish Maneuver, wrapping personal rage in the sacred pretext of 9/11 solemnity to project blame onto political targets.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Reactive hostility masquerades as memorial stewardship.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Reactive hostility masquerades as memorial stewardship.",
       "The Unavoidable Truth: Public memorials should be spaces of collective mourning rather than partisan battlegrounds.\n\nThe Unavoidable Lie: Screaming profanities at strangers defends the honor of first responders.",
       "Alethekanon:\nSacred remembrance is routinely hollowed out into a brand asset for manufactured outrage.",
       "Awwthekanon:\nIt hurts to watch days of collective healing get twisted into angry shouting matches when we need each other most.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Firefighter Confrontation",
@@ -162,6 +224,7 @@
         "name": "Pro-Palestinian Protester",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -8,19 +8,19 @@
     "claim_u": 0.8,
     "claim_psi": 0.8,
     "real_u": 0.7,
-    "real_psi": 0.6,
+    "real_psi": 0.7,
     "mode": "root",
     "posts": [
       "Stifel upgraded Microsoft stock to buy, raising its target to $575 on strong Azure and Copilot growth.\nEvidence: Azure revenue, Copilot seats, Margin growth\n#Tech #Markets #Aletheia 🌐",
-      "Stifel argues Microsoft's agnostic AI strategy and robust cloud margins will sustain upper-teens revenue growth.\nStated Judgement: (0.8, 0.8) — Good Preference",
-      "Enterprise adoption of Copilot and Azure expansion indeed drive strong financial margins, though accompanied by internal studio consolidation layoffs.\nResulting Judgement: (0.7, 0.6) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nSolid cloud and AI monetization justify bullish financial projections despite underlying labor friction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Stifel argues Microsoft's agnostic AI strategy and robust cloud margins will sustain upper-teens revenue growth.\nStated Judgement: (+0.80, +0.80) — Greater Good",
+      "Enterprise adoption of Copilot and Azure expansion indeed drive strong financial margins, though accompanied by internal studio consolidation layoffs.\nResulting Judgement: (+0.70, +0.70) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nSolid cloud and AI monetization justify bullish financial projections despite underlying labor friction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- Stifel Financial: PASS (0.8, 0.8) — Accurate earnings trajectory projection.\n- Market Fundamentals: PASS (0.7, 0.6) — Backed by solid gross margins.",
       "Investment firm Stifel upgraded Microsoft to buy with a $575 price target, highlighting strong enterprise adoption of AI tools and cloud infrastructure.",
       "The Bright Side:\nStrong enterprise demand for AI integration provides a sustainable economic engine supporting tech sector innovation.",
       "The Breakdown & Plane Error:\nFocuses on macro corporate financials (WHAT) while obscuring micro labor impacts like studio layoffs (WHO). A standard market analysis split.",
       "Social Physics Analysis:\nStifel runs a transparent financial assessment, aligning investor incentives with verifiable cloud growth metrics and profit margins.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good through value creation.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good through value creation.",
       "The Unavoidable Truth: Cloud and AI software adoption generate massive corporate revenue.\nThe Unavoidable Lie: Financial growth metrics fully capture the human cost of corporate restructuring.",
       "Alethekanon:\nMarket valuations track real capital efficiency, but spreadsheets flatten the human friction of studio layoffs into mere operating expenses.",
       "Awwthekanon:\nWhile investors celebrate soaring cloud revenue, let's remember the workers whose displacement quietly funds those margins.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Stifel Financial",
@@ -157,6 +219,7 @@
         "name": "OpenAI",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.94,
-    "real_psi": -0.88,
+    "real_u": -0.82,
+    "real_psi": -0.84,
     "mode": "root",
     "posts": [
       "A federal judge overrides a state supreme court to keep a gerrymandered map. Federal Judge Reinstates Missouri’s New Election Map. Evidence: Voter order, Partisan gerrymander, Power hoarding. #Aletheia #USPol",
       "Proponents claim the federal court's reinstatement of the GOP-friendly map prevents voter confusion and respects primary results, ensuring an orderly general election. Stated Judgement: (+1.00, +1.00) — Greater Good",
-      "The reality is a structural power grab: a federal judge bypassed the state supreme court's ruling that validated a voter referendum, locking in a 7-1 gerrymander and disenfranchising citizens. Resulting Judgement: (-0.94, -0.88) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The ruling uses procedural pretexts to suppress a constitutional voter referendum, prioritizing partisan advantage over democratic transparency.\nIntegrity: Meaningful Distortion (Hypocrisy: 9.2, z: 4)",
+      "The reality is a structural power grab: a federal judge bypassed the state supreme court's ruling that validated a voter referendum, locking in a 7-1 gerrymander and disenfranchising citizens. Resulting Judgement: (-0.82, -0.84) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 9.2, z: 4)",
       "- Stephen Clark: FAIL (-0.94, -0.88) — Gerrymander locked.\n- Denny Hoskins: FAIL (-0.70, -0.80) — Rejected petition.",
       "After the Missouri Supreme Court ruled that a voter referendum against a new congressional map was valid and blocked the map, a federal judge issued a TRO to reinstate the map anyway.",
       "The Bright Side:\nAvoiding last-minute ballot changes does prevent immediate administrative chaos for local election workers.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Stephen Clark",
@@ -163,6 +225,7 @@
         "name": "Missouri General Assembly",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

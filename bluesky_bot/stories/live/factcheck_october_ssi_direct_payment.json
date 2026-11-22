@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.65,
-    "real_psi": 0.83,
+    "real_u": 0.08,
+    "real_psi": 0.31,
     "mode": "root",
     "posts": [
       "Is a massive new government windfall headed your way? Let's look past the sensational headlines. 🌐\n\nOctober Supplemental Security Direct Payment\nEvidence: Standard SSI Schedule, Regular Monthly Check, Clickbait Hype\n#Aletheia #Finance #USPol",
-      "The claim: A direct payment worth up to $994 is going out in 15 days, framing this as a special, high-value upcoming disbursement for eligible recipients.\n\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The reality: This is simply the standard monthly SSI payment. The \"second payment\" in October is just the November check moved up because November 1st falls on a Sunday. No bonus exists.\n\nResulting Judgement: (-0.65, 0.83) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The framing exploits financial anxiety by dressing up routine administrative scheduling as a sudden financial windfall.\n\nIntegrity: Severe Deception (Hypocrisy: 1.85, z: 4)",
+      "The claim: A direct payment worth up to $994 is going out in 15 days, framing this as a special, high-value upcoming disbursement for eligible recipients.\n\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The reality: This is simply the standard monthly SSI payment. The \"second payment\" in October is just the November check moved up because November 1st falls on a Sunday. No bonus exists.\n\nResulting Judgement: (+0.08, +0.31) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\n\nIntegrity: Severe Deception (Hypocrisy: 1.85, z: 4)",
       "- Examiner Framing: FAIL (-0.65, 0.83) — Clickbait hype exploits vulnerable readers.\n- SSA Reality: PASS (0.80, -0.20) — Standard administrative scheduling.",
       "The Social Security Administration routinely shifts payment dates when the first of the month falls on a weekend, resulting in two standard payments in a single month.",
       "The Bright Side:\nWhile the headline is misleading, the article does eventually clarify the standard scheduling rules, preventing total confusion for those who read the full text.",
       "The Breakdown & Plane Error:\nThe article commits a WHAT vs WHO error. It frames a routine administrative process (WHAT) as a special benefit for the vulnerable (WHO) to manufacture clicks.",
       "Social Physics Analysis:\nThis is a Smart Selfish Maneuver. The media outlet uses the pretext of helpful financial news to capture attention, projecting an image of public service while extracting ad revenue from misleading hype.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Clickbait erosion of trust.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Clickbait erosion of trust.",
       "The Unavoidable Truth: Recipients are getting their regular, earned benefits on a standard schedule.\nThe Unavoidable Lie: There is an extra or special $994 bonus coming in October.",
       "Alethekanon:\nSensationalizing routine bureaucracy to farm engagement from financially insecure populations is a systemic failure of media ethics.",
       "Awwthekanon:\nIt is heartbreaking to see people's hopes raised by misleading headlines when they are just trying to get by on their standard monthly support.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Examiner Framing",
@@ -152,6 +214,7 @@
         "name": "Washington Examiner",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "http://epaper.hindustantimes.com",
     "target_url": "https://bsky.app/profile/hindustan-times.bsky.social/post/3mv7ep2jodc2x",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.12,
-    "real_psi": 0.15,
+    "claim_psi": 1.0,
+    "real_u": 0.01,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "A historic diplomatic bridge or a calculated chess move? Xi Jinping is set to visit India for the BRICS summit, ending a seven-year gap.\nEvidence: Multilateral unity, Strategic hedging, Bilateral leverage\n#Aletheia #BRICS #Geopolitics 🌐",
-      "The official narrative frames the upcoming BRICS summit as a grand milestone of multipolar cooperation and regional integration.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, the visit serves as strategic hedging. While multilateral papers are signed, deep bilateral border tensions and economic rivalries remain unresolved.\nResulting Judgement: (+0.12, +0.15) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nXi's visit represents a pragmatic step toward dialogue, though driven by strategic hedging rather than genuine integration.\nIntegrity: Trustworthy (Hypocrisy: 0.25, z: 1)",
+      "The official narrative frames the upcoming BRICS summit as a grand milestone of multipolar cooperation and regional integration.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the visit serves as strategic hedging. While multilateral papers are signed, deep bilateral border tensions and economic rivalries remain unresolved.\nResulting Judgement: (+0.01, -0.50) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nXi's visit represents a pragmatic step toward dialogue, though driven by strategic hedging rather than genuine integration.\nIntegrity: Trustworthy (Hypocrisy: 0.25, z: 1)",
       "Sub-Audits Breakdown:\n- Hindustan Times: PASS (0.15, 0.10) — Accurate scheduling.\n- Newsmason: PASS (0.12, 0.15) — Solid geopolitical context.",
       "Chinese President Xi Jinping will visit India on September 12-13, 2026, for the BRICS summit, marking his first trip to the country in seven years amid ongoing border tensions.",
       "The Bright Side:\nEven symbolic diplomatic presence keeps communication channels open, reducing the risk of active military escalation along the disputed border.",
       "The Breakdown & Plane Error:\nThe narrative confuses the physical spectacle of a summit (WHAT) with actual bilateral resolution (WHO). A handshake does not erase years of structural border friction.",
       "Social Physics Analysis:\nChina's leadership executes a Smart Altruistic Maneuver on the surface, projecting a cooperative multipolar front. Beneath this, a Smart Selfish Loop operates: using the summit as a pretext to hedge against Western pressure while maintaining regional dominance.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Pragmatic engagement prevents active conflict but falls short of true systemic harmony.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Pragmatic engagement prevents active conflict but falls short of true systemic harmony.",
       "The Unavoidable Truth: Diplomatic summits are essential for preventing active conflict between nuclear neighbors.\nThe Unavoidable Lie: A high-profile visit means long-standing border disputes have been resolved.",
       "Alethekanon:\nSpectacle often masquerades as statecraft. The resumption of high-level visits is a stabilizing mechanism, but structural rivalries remain untouched by ceremonial handshakes.",
       "Awwthekanon:\nIt is comforting to see leaders sit at the same table again. Even when trust is thin, choosing dialogue over silence brings a quiet sigh of relief to a tense world.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.55,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.45,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.35,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Hindustan Times Reporting",
@@ -295,6 +357,7 @@
         "name": "India",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

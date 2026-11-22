@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.85,
-    "real_psi": 0.9,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Rep. Thomas Massie files a second discharge petition for the Epstein Files Transparency Act II to compel unredacted DOJ file releases.\nEvidence: legislative petition, DOJ resistance, state AG demand\n#Aletheia #Transparency #USPol",
       "Massie argues the DOJ failed to enforce the original transparency law, using deliberative process privilege to withhold critical records.\nStated Judgement: (+1.0, +1.0) — Saintly / Greater Good",
-      "The new bill grants state AGs, victims, and Congress standing to sue the DOJ and bypass administrative secrecy hurdles in federal court.\nResulting Judgement: (+0.85, +0.9) — Constructive Transparency",
-      "Verdict: PASS — The Path of Grace.\nLegislative mechanism directly challenges executive stonewalling to enforce public accountability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "The new bill grants state AGs, victims, and Congress standing to sue the DOJ and bypass administrative secrecy hurdles in federal court.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nLegislative mechanism directly challenges executive stonewalling to enforce public accountability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
       "- Massie Petition: PASS (+0.9, +0.9) — Direct legislative enforcement.\n- DOJ Stonewalling: FAIL (-0.8, -0.9) — Resisting statutory transparency mandates.",
       "Representative Thomas Massie launched a discharge petition for a new bill enabling victims and state prosecutors to access unredacted Jeffrey Epstein files.",
       "The Bright Side:\nDirect legislative pushback against executive branch stonewalling and administrative secrecy.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Massie Petition",
@@ -216,6 +278,7 @@
         "name": "Raul Torrez",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

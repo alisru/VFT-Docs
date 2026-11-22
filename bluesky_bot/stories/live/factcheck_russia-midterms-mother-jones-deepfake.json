@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/oaktreedance.bsky.social/post/3mwn7wvatq22u",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "real_u": -0.2,
+    "real_psi": -0.47,
     "mode": "root",
     "posts": [
       "Russian trolls weaponize AI deepfakes, fabricating fake Mother Jones and CNN clips to disrupt the 2026 US midterms.\nEvidence: Deepfake videos, Bot accounts, Disinformation campaigns\n#Aletheia #USPol #Disinformation",
-      "Stated claims present viral videos as legitimate investigative journalism exposing political corruption to inform voters.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Reality reveals covert state-sponsored operations using synthetic media and stolen brand identities to sow maximum chaos and tilt elections.\nResulting Judgement: (-0.85, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nForeign state actors weaponize synthetic media and forged media brands to destabilize democratic elections.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Stated claims present viral videos as legitimate investigative journalism exposing political corruption to inform voters.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Reality reveals covert state-sponsored operations using synthetic media and stolen brand identities to sow maximum chaos and tilt elections.\nResulting Judgement: (-0.20, -0.47) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nForeign state actors weaponize synthetic media and forged media brands to destabilize democratic elections.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Russian Troll Operations: FAIL (-0.9, -0.95) — Uses forged identities.\n- Media Brand Integrity: COND (0.5, 0.0) — Defending free press against spoofing.",
       "Russian disinformation networks like Matryoshka are deploying sophisticated deepfakes impersonating major US outlets to influence key voter demographics.",
       "The Poison:\nThe erosion of public trust in any verified journalism, making all institutional reporting vulnerable to blanket dismissal as fake.",
       "The Breakdown & Plane Error:\nConfusing the tool (AI deepfakes) with the political objective (covert electoral manipulation). The mechanism exploits trust in established media.",
       "Social Physics Analysis:\nActors execute a Smart Selfish Maneuver: secret geopolitical goals wrapped in forged journalistic pretexts, projecting societal decay onto rivals.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic manipulation degrades democratic trust.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic manipulation degrades democratic trust.",
       "The Unavoidable Truth: Foreign actors actively use synthetic media to manipulate domestic democratic elections.\n\nThe Unavoidable Lie: These deepfake campaigns represent organic grassroots political commentary.",
       "Alethekanon:\nForging trusted journalistic brands to inject synthetic outrage into an election is a calculated assault on institutional truth.",
       "Awwthekanon:\nIt breaks the heart to see human connection and trust weaponized by unseen algorithms designed only to divide us against one another.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Russian Troll Operations",
@@ -165,6 +227,7 @@
         "name": "Storm-1679",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

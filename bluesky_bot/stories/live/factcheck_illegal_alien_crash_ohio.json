@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "real_u": -0.9,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "A preventable tragedy becomes a political weapon. In Ohio, a previously deported illegal immigrant is charged in a fatal drunk driving crash that killed 23-year-old teacher Cameron Lyon.\nEvidence: Public Safety, Partisan Outrage, Political Capital\n#Aletheia #Immigration #Ohio",
-      "The narrative claims this tragedy is a direct, simple consequence of lax border enforcement, suggesting that strict immigration policies alone are sufficient to guarantee public safety and prevent such criminal acts.\nStated Judgement: (+1.0, 0.0) — Good Preference",
+      "The narrative claims this tragedy is a direct, simple consequence of lax border enforcement, suggesting that strict immigration policies alone are sufficient to guarantee public safety and prevent such criminal acts.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
       "The reality is a horrific crime of drunk driving by an individual who bypassed legal barriers, coupled with immediate political exploitation that uses a family's profound grief to score partisan points rather than address systemic safety.",
-      "Verdict: FAIL — Fall into Destruction. A tragic loss of life is immediately co-opted into a partisan outrage cycle, bypassing genuine systemic solutions for border security and drunk driving.\nIntegrity: Severe Deception (Hypocrisy: 2.24, z: 5)",
+      "Verdict: FAIL — Awakening into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 2.24, z: 5)",
       "- Uribe-Gonzalez: FAIL (-1.0, -1.0) — Fatal DUI crash.\n- Exploitation: FAIL (-0.8, 0.8) — Partisan leverage.",
       "Alvaro Uribe-Gonzalez, deported in 2020, illegally re-entered the US and allegedly caused a fatal DUI crash in Ohio, killing 23-year-old teacher Cameron Lyon. Political figures immediately used the tragedy to attack current border policies.",
       "The Poison:\nBy framing this solely as an immigration failure, political actors ignore the broader, systemic challenges of drunk driving enforcement and recidivism, reducing a complex safety issue to a single partisan talking point.",
       "The Breakdown:\nThe narrative commits a Metaphysical Error (WHO vs WHAT), substituting the tragic loss of an innocent life (WHAT) with a convenient political scapegoat (WHO) to avoid addressing the multi-layered failures of both border control and DUI prevention.",
       "Social Physics Analysis:\nThe actors execute a classic Smart Selfish Maneuver. Instead of seeking transparent, systemic solutions to prevent drunk driving and secure borders, they use the pretext of public safety to project blame onto political opponents, hoarding power through manufactured outrage.",
-      "The Trajectory: Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Grief is weaponized to deepen societal division rather than resolve systemic strain.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Grief is weaponized to deepen societal division rather than resolve systemic strain.",
       "The Unavoidable Truth: A young teacher's life was cut short by a preventable act of drunk driving by an individual who should not have been in the country.\nThe Unavoidable Lie: That simple partisan policy changes alone can easily eliminate complex criminal behavior.",
       "Alethekanon:\nTragedy is the ultimate currency of the demagogue. By reducing a human life to a data point in an immigration debate, the system reveals its preference for conflict over resolution.",
       "Awwthekanon:\nOur hearts break for Cameron’s fiancée and family, whose unimaginable grief is being paraded in public. They deserve quiet space to mourn, not to have their pain turned into a political battlefield.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Alvaro Uribe-Gonzalez",
@@ -162,6 +224,7 @@
         "name": "Fox News",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

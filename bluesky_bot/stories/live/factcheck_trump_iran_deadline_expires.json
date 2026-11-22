@@ -14,13 +14,13 @@
       "A unilateral diplomatic clock runs out, exposing the gap between performative deadlines and the grinding reality of economic warfare. \n\nTrump’s 60-Day Iran Deadline Expires\nEvidence: peace framework, stalled talks, restored blockade #Aletheia #Geopolitics",
       "The US administration set a 60-day deadline to secure a broader peace deal, reopen the Strait of Hormuz, and address Iran's nuclear program.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "The deadline expired with zero diplomatic progress, sanctions restored, and both nations locked in a high-strain naval standoff in the Gulf.\nResulting Judgement: (-1.00, -1.00) — Deception",
-      "Verdict: FAIL — Fall into Deception. The performative 60-day clock served as a geopolitical pretext, masking a deliberate return to economic containment.\n\nIntegrity: Severe Deception (Hypocrisy: 18.5, Uncertainty z: 4)",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 18.5, Uncertainty z: 4)",
       "- US Administration: FAIL (-0.62, 1.0) — Replaced diplomacy with blockades.\n- Iranian Government: FAIL (-0.62, -1.0) — Leveraged shipping disruption.",
       "The 60-day timeline established in June has expired without negotiations. Instead of sanctions relief and maritime cooperation, the US has reinstated its naval blockade, and Iran refuses to reopen the Strait of Hormuz.",
       "The Bright Side:\nWhile formal negotiations have collapsed, the avoidance of direct, large-scale military strikes prevents the standoff from deteriorating into open warfare.",
       "The Breakdown & Plane Error:\nThis is a WHAT vs WHO error. The framework was sold as a mutual path to maritime security (WHAT), but functioned as a tool for unilateral leverage (WHO) to force concessions.",
       "Social Physics Analysis:\nBy using a public deadline as a pretext for pressure rather than a tool for transparent negotiation, both sides increased systemic friction. This projection of bad faith ensures a high-strain equilibrium.",
-      "The Trajectory: Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The performative peace framework collapsed into active containment.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The performative peace framework collapsed into active containment.",
       "The Unavoidable Truth: Unilateral deadlines without mutual concessions are pressure tactics, not diplomacy.\nThe Unavoidable Lie: The 60-day clock was designed to foster a genuine, balanced framework for regional peace.",
       "Alethekanon:\nThe expiration of the deadline reveals the mathematical inevitability of conflict when pretexts replace transparent, low-strain diplomatic engagement.",
       "Awwthekanon:\nIt is deeply disheartening to watch families and communities bear the economic weight of blockades while leaders play games of endurance with human lives.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "US Diplomatic Strategy",
@@ -264,6 +326,7 @@
         "name": "Iranian Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

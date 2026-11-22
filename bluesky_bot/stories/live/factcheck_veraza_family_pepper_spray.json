@@ -5,22 +5,22 @@
     "subject": "The Veraza family heard fireworks, flash bangs and blaring horns. Then a crying baby.",
     "link": "https://www.chicagotribune.com/2026/09/06/operation-midway-blitz-veraza-family/?utm_campaign=mrf-bluesky-chicagotribune.com&utm_source=bluesky&utm_medium=social&mrfcid=202609066a9ab2c1f046393007a29023",
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3muu4uskokb2r",
-    "claim_u": 0.4,
-    "claim_psi": 0.2,
-    "real_u": -0.92,
-    "real_psi": -0.88,
+    "claim_u": 0.7,
+    "claim_psi": 0.1,
+    "real_u": -0.01,
+    "real_psi": -0.39,
     "mode": "root",
     "posts": [
       "A Chicago family, including a 1-year-old baby, was pepper-sprayed by federal immigration agents during a grocery run, contradicting official denials. 🌐\nEvidence: Public safety, Indiscriminate force, Official cover-up\n#Aletheia #Chicago #CivilRights",
-      "The Department of Homeland Security claimed that no pepper spray was deployed in the parking lot and blamed \"rioters\" for throwing objects and blocking the road during the operation.\nStated Judgement: (0.40, 0.20) — Lesser Good",
-      "Cellphone footage explicitly showed a masked federal agent leaning out of a vehicle window and deploying pepper spray directly at the innocent family's car, leaving a baby crying and injured.\nResulting Judgement: (-0.92, -0.88) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Federal agents used indiscriminate chemical force against innocent civilians, followed by false official denials to cover up the misconduct.\nIntegrity: Severe Deception (Hypocrisy: 1.32, z: 0)",
+      "The Department of Homeland Security claimed that no pepper spray was deployed in the parking lot and blamed \"rioters\" for throwing objects and blocking the road during the operation.\nStated Judgement: (+0.70, +0.10) — Greater Good",
+      "Cellphone footage explicitly showed a masked federal agent leaning out of a vehicle window and deploying pepper spray directly at the innocent family's car, leaving a baby crying and injured.\nResulting Judgement: (-0.01, -0.39) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 1.32, z: 0)",
       "- DHS Actions: FAIL (-0.92, -0.88) — Indiscriminate force and false official denials.\n- Tribune Reporting: PASS (0.90, 0.10) — Thorough investigation exposing official falsehoods.",
       "During \"Operation Midway Blitz\" in Cicero, Illinois, federal immigration agents pepper-sprayed Rafael Veraza, his wife, and their 1-year-old daughter in a Sam's Club parking lot, then falsely denied the incident occurred.",
       "The Poison:\nEven during high-tension law enforcement operations, the indiscriminate deployment of chemical agents against bystanders and infants represents a catastrophic failure of operational discipline and basic humanity.",
       "The Breakdown & Plane Error:\nDHS attempts to shift the issue from operational misconduct (WHO/HOW) to a generalized narrative of combating \"rioters\" (WHAT). Video evidence exposes this as a false pretext to justify collateral harm.",
       "Social Physics Analysis:\nDHS executed a Smart Selfish Maneuver, using state power to deploy force indiscriminately, then projecting blame onto \"rioters\" to justify the violence and cover up the injury of an infant. This destroys community trust.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated public safety and the actual deployment of chemical weapons against infants, it plots a direct trajectory toward Greater Evil. Unchecked state violence breeds systemic terror.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated public safety and the actual deployment of chemical weapons against infants, it plots a direct trajectory toward Greater Evil. Unchecked state violence breeds systemic terror.",
       "The Unavoidable Truth: Video evidence is a vital shield against official misconduct and false state narratives.\nThe Unavoidable Lie: Law enforcement operations can justify the indiscriminate chemical poisoning of innocent infants.",
       "Alethekanon:\nWhen state actors deploy chemical weapons against infants and then issue official falsehoods to cover it up, the rule of law is replaced by raw, unaccountable violence.",
       "Awwthekanon:\nMy heart breaks for this family and their sweet baby girl. No child should ever have to experience the terror and pain of being pepper-sprayed by those sworn to protect.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DHS Actions",
@@ -167,6 +229,7 @@
         "name": "Chicago Tribune",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

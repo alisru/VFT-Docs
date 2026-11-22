@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.06,
-    "real_psi": -0.72,
+    "real_u": -0.02,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "A high-stakes economic siege begins as the US targets Iran's global financial lifelines.\n\nBessent Warns Iran's Outside Backers\nEvidence: National security containment, secondary sanctions pressure, geopolitical hegemony\n#Aletheia #USPol #Iran",
-      "The Treasury claims that unprecedented sanctions will economically asphyxiate Iran's regime, forcing compliance and protecting global security by cutting off outside backers.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, the campaign relies on aggressive secondary sanctions that coerce allies and risk systemic financial decoupling, shifting the burden onto ordinary citizens.\nResulting Judgement: (+0.06, -0.72) — Lesser Good",
-      "Verdict: FAIL — Fall into Redemption.\nEconomic warfare is framed as a moral crusade, but its execution relies on coercive pressure that risks global financial stability.\n\nIntegrity: Severe Deception (Hypocrisy: 16.5, z: 3)",
+      "The Treasury claims that unprecedented sanctions will economically asphyxiate Iran's regime, forcing compliance and protecting global security by cutting off outside backers.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the campaign relies on aggressive secondary sanctions that coerce allies and risk systemic financial decoupling, shifting the burden onto ordinary citizens.\nResulting Judgement: (-0.02, -0.65) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nEconomic warfare is framed as a moral crusade, but its execution relies on coercive pressure that risks global financial stability.\n\nIntegrity: Severe Deception (Hypocrisy: 16.5, z: 3)",
       "- Scott Bessent: COND (0.10, -0.50) — Strong rhetoric masks systemic risks.\n- Sanctions Strategy: FAIL (-0.15, -0.80) — Coercive pressure over diplomatic solutions.",
       "Treasury Secretary Scott Bessent announced \"Operation Economic Outcast,\" warning foreign banks and countries like Russia and China to stop propping up Iran's economy or face exclusion from the US dollar system.",
       "The Bright Side:\nTargeting illicit financial networks can disrupt state-sponsored terror and limit the regime's military capabilities without immediate kinetic escalation.",
       "The Breakdown & Plane Error:\nConfusing the WHAT (economic collapse) with the WHO (the regime vs. citizens). While aiming to punish leaders, systemic sanctions physically starve the population first.",
       "Social Physics Analysis:\nBy using the US dollar's global dominance as a unilateral weapon, the administration seeks to force compliance through fear. This high-strain approach incentivizes adversaries to build alternative financial systems, accelerating decoupling.",
-      "The Trajectory: The Path of Fall into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward containment. Unilateral pressure forces systemic realignment.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward containment. Unilateral pressure forces systemic realignment.",
       "The Unavoidable Truth: Sanctions rarely collapse regimes but always devastate civilian lives.\n\nThe Unavoidable Lie: Cutting off Iran from the dollar system will easily force a white flag without global economic blowback.",
       "Alethekanon:\nWeaponizing global financial infrastructure yields short-term compliance at the cost of long-term systemic trust. True security requires sustainable diplomatic equilibrium, not just economic siege.",
       "Awwthekanon:\nIt breaks my heart to see ordinary families bearing the brunt of geopolitical chess. Behind the talk of \"asphyxiation\" are real people struggling to buy food and medicine. We must find a path of compassion.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Scott Bessent Rhetoric",
@@ -162,6 +224,7 @@
         "name": "Russian Federation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

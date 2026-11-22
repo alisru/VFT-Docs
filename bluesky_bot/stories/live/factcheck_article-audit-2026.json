@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/inlawadvocacy.bsky.social/post/3mwpauekx2s2j",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
+    "real_u": -0.85,
     "real_psi": -0.9,
     "mode": "root",
     "posts": [
       "When tech insiders warn of an AI 'Chernobyl,' they frame it as public safety. But look closer at who writes the rules.\nEvidence: Apocalyptic warnings, Regulatory moats, Corporate consolidation\n#Aletheia #AI #TechPolicy",
-      "Media reports warn that advanced AI systems could develop survival instincts, presenting a 10% existential threat to humanity that requires urgent state alignment controls.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Framing AI as an impending sci-fi apocalypse masks corporate lobbying designed to lock out open-source competitors and cement regulatory monopolies under the guise of safety.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Apocalyptic AI warnings mask corporate lobbying designed to secure regulatory moats and crush open-source competitors.\n\nIntegrity: Severe Distortion (Hypocrisy: 6.20, z: 4)",
+      "Media reports warn that advanced AI systems could develop survival instincts, presenting a 10% existential threat to humanity that requires urgent state alignment controls.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Framing AI as an impending sci-fi apocalypse masks corporate lobbying designed to lock out open-source competitors and cement regulatory monopolies under the guise of safety.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\n\nIntegrity: Severe Distortion (Hypocrisy: 6.20, z: 4)",
       "- Tech Media Framing: FAIL (-0.8, -0.9) — Amplifies unverified sci-fi panic.\n- Corporate Alignment Claims: FAIL (-0.9, -0.9) — Shields monopolies via safety pretexts.",
       "As AI tools proliferate, tech labs invoke existential dread to shape state policy, shifting public focus from current labor and privacy harms to distant sci-fi scenarios.",
       "The Poison:\nHype about rogue AI serves as a convenient smokescreen for incumbents seeking to monopolize governance and suppress open-source innovation.",
       "The Breakdown & Plane Error:\nThis is a Q1 Metaphysical error (WHO). Analysts confuse corporate self-preservation with universal human safety, attributing altruistic motives to market capture.",
       "Social Physics Analysis:\nTech labs run a smart selfish loop: they invent an existential crisis pretext ('AI apocalypse') to project blame onto open-source developers while extracting legal protections and market dominance behind the scenes.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated safety altruism and ground-level regulatory capture, it plots a direct trajectory toward Lesser Evil. F_neg dominates through systemic market restriction.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated safety altruism and ground-level regulatory capture, it plots a direct trajectory toward Lesser Evil. F_neg dominates through systemic market restriction.",
       "The Unavoidable Truth: AI systems present complex governance challenges that require sober, transparent oversight rather than sci-fi moral panic.\n\nThe Unavoidable Lie: Megacorporations championing strict AI licensing models are primarily motivated by the selfless desire to protect humanity from itself.",
       "Alethekanon:\nApocalyptic rhetoric about rogue AI functions not as scientific foresight, but as a calculated shield for incumbent market power. 🌐",
       "Awwthekanon:\nIt hurts to watch genuine fears about technology's future get weaponized by powerful companies just to shut out smaller creators and keep all the control for themselves.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tech Media Framing",
@@ -175,6 +237,7 @@
         "name": "The Telegraph",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

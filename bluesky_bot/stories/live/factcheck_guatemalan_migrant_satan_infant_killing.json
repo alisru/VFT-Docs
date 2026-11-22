@@ -5,22 +5,22 @@
     "subject": "Guatemalan migrant blames Satan for battered infant's killing",
     "link": "https://nypost.com/2026/09/12/us-news/baltimore-dad-blames-satan-infant-death-doctors-discover-bruising-face/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Tragic infant death in Baltimore meets absurd supernatural deflection by arrested parents.\nEvidence: Severe infant trauma, Supernatural blame, Parental arrest 🌐\n#Aletheia #Baltimore",
-      "The father blamed Satan and a slamming door for his 2-month-old infant's fatal skull fractures while the mother blamed their toddler.\nStated Judgement: (+0.5, 0.0) — Conditional Good",
-      "Medical exams revealed severe brain trauma and skull fractures, exposing horrific child abuse hidden behind bizarre pretexts.\nResulting Judgement: (-0.85, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nGross child abuse and fatal neglect masked by fantastical shifting blames lead straight to tragedy.\n\nIntegrity: Severe Deception (Hypocrisy: 18.5, z: 2)",
+      "The father blamed Satan and a slamming door for his 2-month-old infant's fatal skull fractures while the mother blamed their toddler.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Medical exams revealed severe brain trauma and skull fractures, exposing horrific child abuse hidden behind bizarre pretexts.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nGross child abuse and fatal neglect masked by fantastical shifting blames lead straight to tragedy.\n\nIntegrity: Severe Deception (Hypocrisy: 18.5, z: 2)",
       "Sub-Audits Breakdown:\n- Paternal Defense: FAIL (-0.90, -0.95) — Uses absurd supernatural pretexts.\n- Maternal Defense: FAIL (-0.80, -0.85) — Shifts blame to toddler.",
       "Two-month-old Aida Alvarado died at Baltimore's Harbor Hospital with severe head trauma, leading to child abuse charges against her parents, Oscar Pineda and Katerin Monzon-Alvarado.",
       "The Poison:\nShifting horrific violence onto supernatural forces or toddlers to evade accountability.",
       "The Breakdown & Plane Error:\nConfusing objective physical brutality (WHAT/WHERE) with supernatural claims (WHO/WHY) to evade criminal liability.",
       "Social Physics Analysis:\nThe parents deployed a Smart Selfish Maneuver, using grotesque pretexts and shifting blame to protect themselves after fatal abuse.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between parental duty and fatal abuse, it plots a direct trajectory toward Greater Evil through active harm and deception.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between parental duty and fatal abuse, it plots a direct trajectory toward Greater Evil through active harm and deception.",
       "The Unavoidable Truth: Severe physical abuse caused the infant's tragic death.\nThe Unavoidable Lie: Supernatural forces or toddlers caused the fatal skull fractures.",
       "Alethekanon:\nFantasy excuses cannot conceal the brutal physical reality of fatal child abuse.",
       "Awwthekanon:\nPrecious little Aida deserved safety and tenderness, not the unimaginable terror and neglect she suffered in her short life.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Parental Defense",
@@ -210,6 +272,7 @@
         "name": "Aida Alvarado",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

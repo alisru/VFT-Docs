@@ -5,22 +5,22 @@
     "subject": "James Carville predicts a 2028 'reckoning' as socialist candidates eye the Democratic ticket",
     "link": "https://www.foxnews.com/media/james-carville-predicts-2028-reckoning-socialist-candidates-eye-democratic-ticket",
     "target_url": "",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": 0.1,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "James Carville warns Democrats face a 2028 primary showdown with socialist factions while dismissing DSA presidential viability.\nEvidence: primary wins, AOC membership renewal, strategic warnings\n#Aletheia #USPol",
-      "Carville asserts that mainstream Democratic primary voters have never nominated the most liberal candidate and will reject DSA-aligned contenders in 2028.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "Intra-party debate and primary competition are normal democratic functions, though strategic gatekeeping attempts to constrain working-class policy expansion.\nResulting Judgement: (+0.2, +0.1) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nPragmatic political analysis recognizes structural party realities while accurately describing ongoing ideological tensions.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Carville asserts that mainstream Democratic primary voters have never nominated the most liberal candidate and will reject DSA-aligned contenders in 2028.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Intra-party debate and primary competition are normal democratic functions, though strategic gatekeeping attempts to constrain working-class policy expansion.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nPragmatic political analysis recognizes structural party realities while accurately describing ongoing ideological tensions.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Carville Strategic Analysis: PASS (+0.3, 0.2) — Accurate read of historical primary trends.\n- Factional Reality: PASS (+0.2, 0.1) — Acknowledges genuine local DSA primary wins.",
       "Veteran strategist James Carville analyzed the Democratic Party's upcoming 2028 primary landscape, predicting that voters will reject democratic socialist nominees despite insurgent primary successes.",
       "The Bright Side:\nHonest engagement with internal ideological conflicts rather than sweeping them under the rug, promoting realistic debate over party direction.",
       "The Breakdown & Plane Error:\nShifting from WHAT (policy platforms) to WHO (factional personalities like AOC or Hasan Piker) to personalize structural disagreements.",
       "Social Physics Analysis:\nCarville relies on historical institutional gravity rather than coercion. By transparently stating strategic boundaries for coalition survival, he invites internal negotiation instead of administrative suppression.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. R_net = 1.2.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. R_net = 1.2.",
       "The Unavoidable Truth: Major political parties are broad coalitions containing inherent ideological friction that cannot be wished away.\nThe Unavoidable Lie: Nominating processes are entirely immune to shifting generational and economic demands.",
       "Alethekanon:\nPragmatic institutional gatekeeping collides with grassroots insurgent energy, mapping standard democratic realignment dynamics. 🌐",
       "Awwthekanon:\nIt is stressful when political families argue over who belongs, but honest conversation is better than silent resentment.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Carville Strategic Analysis",
@@ -215,6 +277,7 @@
         "name": "Bernie Sanders",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

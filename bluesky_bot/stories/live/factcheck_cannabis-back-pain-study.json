@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/harborhempcbd.bsky.social/post/3mw3gvjs4ns2j",
     "claim_u": 0.9,
     "claim_psi": 0.8,
-    "real_u": 0.7,
-    "real_psi": 0.6,
+    "real_u": 0.75,
+    "real_psi": 0.65,
     "mode": "root",
     "posts": [
       "Long-term observational data shows profound pain relief and opioid reduction from medical cannabis.\nEvidence: 10-year study, 89.8% opioid reduction, 84% pain drop\n#Cannabis #Health",
-      "Medical cannabis provides long-term pain relief and substantially reduces pharmaceutical and opioid dependence in chronic pain patients.\nStated Judgement: (+0.9, +0.8) — Greater Good",
-      "A 10-year observational study of 1,000 patients demonstrated massive reductions in opioid use and pain scores, though observational biases are acknowledged.\nResulting Judgement: (+0.7, +0.6) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nLong-term observational findings demonstrate significant opioid-sparing effects, validating patient-reported therapeutic outcomes.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Medical cannabis provides long-term pain relief and substantially reduces pharmaceutical and opioid dependence in chronic pain patients.\nStated Judgement: (+0.90, +0.80) — Greater Good",
+      "A 10-year observational study of 1,000 patients demonstrated massive reductions in opioid use and pain scores, though observational biases are acknowledged.\nResulting Judgement: (+0.75, +0.65) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nLong-term observational findings demonstrate significant opioid-sparing effects, validating patient-reported therapeutic outcomes.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- NORML Summary: PASS (+0.8, +0.7) — Accurately cites registry data.\n- European Spine Journal: PASS (+0.7, +0.6) — Rigorous 10-year observational study.",
       "Researchers tracked cannabis-naive patients with chronic low back pain over a decade, revealing dramatic sustained decreases in reliance on opioids and prescription drugs.",
       "The Bright Side:\nSubstantial reduction in opioid consumption offers a viable, safer alternative for managing chronic treatment-resistant pain.",
       "The Breakdown & Plane Error:\nEvaluating WHO (chronic pain sufferers) and WHAT (observational outcome metrics) with clear methodological caveats.",
       "Social Physics Analysis:\nResearchers and advocates operate in a Smart Altruistic Loop, transparently sharing long-term patient registry data to address systemic opioid crises.",
-      "The Trajectory: The Path of Redemption.\nWhen you map clinical outcomes against chronic pain burdens, it plots a direct trajectory toward Greater Good. F_net calculations reflect strong positive health outcomes.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map clinical outcomes against chronic pain burdens, it plots a direct trajectory toward Greater Good. F_net calculations reflect strong positive health outcomes.",
       "The Unavoidable Truth: Long-term observational data shows significant reductions in opioid dependency among chronic pain patients using cannabis.\n\nThe Unavoidable Lie: Observational registry studies prove absolute clinical causation without randomized controlled validation.",
       "Alethekanon:\nObservational data highlights profound opioid-sparing potential, warranting rigorous randomized trials.",
       "Awwthekanon:\nFinding relief from chronic pain brings immense dignity and healing back to suffering patients.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NORML Summary",
@@ -146,6 +208,7 @@
         "sub_psi": 0.6,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

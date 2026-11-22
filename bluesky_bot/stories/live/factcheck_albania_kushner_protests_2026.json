@@ -7,14 +7,14 @@
     "target_url": "https://bsky.app/profile/winnipegfreepress.com/post/3muzxeu3j3q2q",
     "claim_u": 0.7,
     "claim_psi": 0.4,
-    "real_u": -0.93,
-    "real_psi": -0.7,
+    "real_u": -0.05,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "A coastal paradise becomes a battleground as citizens fight to protect their land from elite development.\n\nAlbanian Protests Against Kushner-Linked Coastal Development\nEvidence: Modernization, Land grab, Oligarchic enrichment\n#Aletheia #Albania #Kushner",
-      "The Albanian government claims the luxury coastal development is a vital modernization project that will boost tourism, create jobs, and elevate the nation's global economic standing.\nStated Judgement: (+0.70, +0.40) — Lesser Good",
-      "In reality, the project represents an oligarchic land grab that threatens ecological destruction, strips public coastal access, and relies on state-backed violence to suppress local dissent.\nResulting Judgement: (-0.93, -0.70) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction.\nState power is weaponized to enrich foreign elites and local oligarchs at the direct expense of public heritage and environmental stability.\nIntegrity: Trustworthy (Hypocrisy: 1.63, z: 1)",
+      "The Albanian government claims the luxury coastal development is a vital modernization project that will boost tourism, create jobs, and elevate the nation's global economic standing.\nStated Judgement: (+0.70, +0.40) — Greater Good",
+      "In reality, the project represents an oligarchic land grab that threatens ecological destruction, strips public coastal access, and relies on state-backed violence to suppress local dissent.\nResulting Judgement: (-0.05, -0.35) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nState power is weaponized to enrich foreign elites and local oligarchs at the direct expense of public heritage and environmental stability.\nIntegrity: Trustworthy (Hypocrisy: 1.63, z: 1)",
       "- Winnipeg Free Press: PASS (0.80, 0.10) — Objective reporting on protests.\n- Albanian Government: FAIL (-0.90, -0.80) — Obfuscates elite role and labels dissent as anti-modern.",
       "Protests in Tirana against a luxury resort linked to Jared Kushner marked their 100th day with violent clashes. Citizens oppose the project over environmental damage and loss of public beach access.",
       "The Bright Side:\nThe 'flamingo revolution' has united diverse segments of Albanian society, fostering a robust grassroots movement for environmental justice and democratic accountability.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Winnipeg Free Press Reporting",
@@ -162,6 +224,7 @@
         "name": "Albania",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

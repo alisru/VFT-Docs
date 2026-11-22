@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/politico.eu/post/3mva5yfwkct2u",
     "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": -0.2,
-    "real_psi": -0.1,
+    "real_u": -0.07,
+    "real_psi": -0.07,
     "mode": "root",
     "posts": [
       "Satirical column examines EU space ambitions and regulatory red tape.\nEvidence: Bromo satellite project, EU Space Act, von der Leyen goals\n#Space #EU",
-      "The piece adopts a satirical tone regarding European ambitions to rival commercial space ventures through heavy bureaucracy.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "While humorous, it underscores the systemic lag and regulatory overreach hobbling European technological competitiveness.\nResulting Judgement: (-0.20, -0.10) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Stasis.\nSatire highlights institutional sluggishness without malicious intent.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "The piece adopts a satirical tone regarding European ambitions to rival commercial space ventures through heavy bureaucracy.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "While humorous, it underscores the systemic lag and regulatory overreach hobbling European technological competitiveness.\nResulting Judgement: (-0.07, -0.07) — Greater Evil",
+      "Verdict: CONDITIONAL — Destruction.\nSatire highlights institutional sluggishness without malicious intent.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- European Commission: COND (-0.25, -0.15) — Bureaucratic friction.\n- Satirical Framing: PASS (0.10, 0.0) — Honest critique.",
       "The European Union is pushing space initiatives like the IRIS² constellation and EU Space Act, balancing bureaucratic oversight with commercial pressures.",
       "The Bright Side:\nSatire provides a vital mirror for institutional inertia, encouraging transparent adaptation in high-tech policy.",
       "The Breakdown & Plane Error:\nConfusing satirical commentary on regulation with actual structural failure in aerospace engineering.",
       "Social Physics Analysis:\nInstitutions navigate between transparent collaboration and bureaucratic self-preservation, where over-regulation risks stifling genuine innovation.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between stated ambitions and institutional speed, it plots a stasis trajectory. F_i forces balance out across bureaucratic inertia.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated ambitions and institutional speed, it plots a stasis trajectory. F_i forces balance out across bureaucratic inertia.",
       "The Unavoidable Truth: Innovation requires agility that heavy bureaucracy struggles to match.\n\nThe Unavoidable Lie: Regulation alone can manufacture technological leadership.",
       "Alethekanon:\nSatire exposes the friction between grand bureaucratic visions and nimble technological realities.",
       "Awwthekanon:\nIt's amusing to poke fun at Brussels, but dreaming among the stars takes genuine cooperation and care.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "European Commission",
@@ -156,6 +218,7 @@
         "name": "Ursula von der Leyen",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

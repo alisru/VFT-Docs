@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": -0.28,
+    "real_psi": -0.42,
     "mode": "root",
     "posts": [
       "When street-level vox pops replace serious policy analysis, political discourse becomes entertainment.\nEvidence: Vox pop interviews, Gallup poll data, partisan media framing\n#Aletheia #USPol #Media",
-      "Fox News reports that residents in the liberal enclave of Takoma Park struggle to define socialism while national favorability polls reach 43%.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "The segment exploits ideological ambiguity to frame mainstream public services as slippery slopes to totalitarian property confiscation.\nResulting Judgement: (-0.75, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA partisan street interview uses leading questions to conflate municipal utilities with property seizures.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Fox News reports that residents in the liberal enclave of Takoma Park struggle to define socialism while national favorability polls reach 43%.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "The segment exploits ideological ambiguity to frame mainstream public services as slippery slopes to totalitarian property confiscation.\nResulting Judgement: (-0.28, -0.42) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA partisan street interview uses leading questions to conflate municipal utilities with property seizures.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "- Fox News Vox Pop: FAIL (-0.75, -0.85) — Conflates public goods with tyranny.\n- Gallup Poll Citation: COND (0.2, 0.0) — Cited poll lacks ideological definitions.",
       "At a Maryland street festival, residents offered varied views on socialism when pressed by reporters about collective property ownership.",
       "The Poison:\nWeaponizing casual festival banter to discredit public services under the guise of exploring political definitions.",
       "The Breakdown & Plane Error:\nConfusing conversational definitions (WHAT) with systemic economic restructuring (WHO) to manufacture partisan alarm.",
       "Social Physics Analysis:\nFox News runs a smart selfish maneuver: taking genuine public goodwill toward social services and projecting totalitarian threats onto it to manufacture a partisan panic.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Editorial framing manufactures false dilemmas to polarize voters.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Editorial framing manufactures false dilemmas to polarize voters.",
       "The Unavoidable Truth: Casual festival interviews cannot capture complex macroeconomic philosophies.\n\nThe Unavoidable Lie: Asking citizens if they want their homes seized misrepresents democratic socialism.",
       "Alethekanon:\nPartisan media exploits casual street chatter to manufacture ideological panic, substituting caricature for serious debate.",
       "Awwthekanon:\nIt is disheartening when everyday conversations are weaponized into tribal ammunition rather than building mutual understanding.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fox News Vox Pop",
@@ -158,6 +220,7 @@
       "Aletheia",
       "USPol",
       "Media"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

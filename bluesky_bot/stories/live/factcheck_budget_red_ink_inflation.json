@@ -6,21 +6,21 @@
     "link": "https://www.washingtonexaminer.com/premium/4693813/budget-red-ink-threatens-spike-inflation-unemployment/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
+    "claim_psi": 1.0,
     "real_u": 1.0,
-    "real_psi": 0.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A stark warning on the horizon as the national debt crosses a historic milestone, raising alarms about long-term economic stability.\n\nBudget red ink threatens to spike inflation\nEvidence: fiscal warning, systemic risk, economic stability\n#Aletheia #Economy",
-      "The claim warns that crossing the $40 trillion national debt threshold could trigger a severe fiscal crisis, leading to high inflation, rising interest rates, and spiking unemployment.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The reality aligns with the warning, as economists and policy analysts from across the political spectrum agree that unchecked debt expansion poses severe structural risks to the economy.\nResulting Judgement: (+1.0, 0.0) — Good Preference",
-      "Verdict: PASS — Stasis in Grace.\nThe warning is a structurally sound and honest appraisal of long-term fiscal risks, supported by bipartisan policy experts.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The claim warns that crossing the $40 trillion national debt threshold could trigger a severe fiscal crisis, leading to high inflation, rising interest rates, and spiking unemployment.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality aligns with the warning, as economists and policy analysts from across the political spectrum agree that unchecked debt expansion poses severe structural risks to the economy.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nThe warning is a structurally sound and honest appraisal of long-term fiscal risks, supported by bipartisan policy experts.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Concord Coalition: PASS (1.0, 0.0) — Honest warning on debt spiral.\n- Cato Institute: PASS (1.0, 0.0) — Realistic assessment of timeline.",
       "The national debt has crossed the $40 trillion mark, prompting warnings from fiscal policy analysts that the growing interest burden could eventually trigger a stagflationary crisis.",
       "The Bright Side:\nAnalysts openly acknowledge the high uncertainty and lack of an immediate timeline, preventing sensationalism and keeping the focus on long-term structural reform.",
       "The Breakdown & Plane Error:\nNo plane error detected. The warning is logically consistent across physical predictions (debt levels) and logical causal chains (interest rate spirals).",
       "Social Physics Analysis:\nBy transparently presenting the long-term risks without claiming immediate catastrophe, the analysis avoids manipulative panic. It invites collaborative, long-term planning rather than using fear as a pretext for short-term political leverage.",
-      "The Trajectory: Stasis in Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The honest alignment of warning and structural reality maintains systemic trust.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The honest alignment of warning and structural reality maintains systemic trust.",
       "The Unavoidable Truth: Unchecked debt accumulation eventually forces a choice between inflation and fiscal contraction.\n\nThe Unavoidable Lie: We can expand debt indefinitely without ever facing structural economic consequences.",
       "Alethekanon:\nThe analysis presents a mathematically coherent warning of debt-servicing feedback loops. It maintains high integrity by explicitly bounding its predictions with acknowledged uncertainty.",
       "Awwthekanon:\nIt is vital to look ahead and protect the shared economic future of our communities, ensuring that future generations are not left to bear the heavy burden of our unresolved choices.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Concord Coalition Fiscal Warning",
@@ -298,6 +360,7 @@
         "name": "David Ditch",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

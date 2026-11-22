@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "An innocent worker is killed by a stray bullet in a tragic display of urban lawlessness.\nEvidence: Sam's Club wall penetrated, Frito-Lay worker killed, Lavo Lounge dispute\n#Aletheia #Nashville",
-      "An argument outside a nearby lounge tragically spills over, sending a stray bullet through a store wall and killing an innocent worker doing inventory.\nStated Judgement: (+0.5, 0.0) — Lesser Good",
-      "Unchecked neighborhood violence and poor venue security allow a petty street dispute to result in a fatal, random tragedy miles away from safety.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA petty lounge dispute escalates unchecked, tearing through building walls and destroying an innocent worker's life.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "An argument outside a nearby lounge tragically spills over, sending a stray bullet through a store wall and killing an innocent worker doing inventory.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Unchecked neighborhood violence and poor venue security allow a petty street dispute to result in a fatal, random tragedy miles away from safety.\nResulting Judgement: (-0.80, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA petty lounge dispute escalates unchecked, tearing through building walls and destroying an innocent worker's life.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "Sub-Audits Breakdown:\n- Fox News: COND (-0.8, -0.9) — Focuses on crime tragedy.\n- NY Post: COND (-0.8, -0.9) — Highlights random violence.",
       "A routine early-morning inventory at a Nashville Sam's Club turned fatal when gunfire from a nearby lounge dispute penetrated the building's exterior wall.",
       "The Poison:\nThe complete breakdown of public safety and basic accountability in nightlife districts, leaving innocent bystanders vulnerable to stray violence.",
       "The Breakdown & Plane Error:\nConfusing a random criminal tragedy (Physical plane Q3) with abstract policy debates, obscuring the direct failure of local security.",
       "Social Physics Analysis:\nThe actors running the lounge dispute exhibit a Smart Selfish Maneuver, prioritizing immediate impulse over public safety and projecting total disregard for community welfare.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked anti-social conflict compounds civic decay.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked anti-social conflict compounds civic decay.",
       "The Unavoidable Truth: Random street violence destroys innocent lives across communities.\n\nThe Unavoidable Lie: Nightlife disputes remain safely contained outside commercial venues.",
       "Alethekanon:\nCivic breakdown transforms public spaces into zones of unmitigated hazard.",
       "Awwthekanon:\nMy heart breaks for Paris Carlock's family and coworkers. No one should ever lose their life while simply doing an honest day's work.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fox News Coverage",
@@ -154,6 +216,7 @@
         "name": "Frito-Lay",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

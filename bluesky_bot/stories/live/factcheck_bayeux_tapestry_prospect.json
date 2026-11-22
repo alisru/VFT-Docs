@@ -5,22 +5,22 @@
     "subject": "Who needs the Bayeux Tapestry, anyway?",
     "link": "https://www.prospectmagazine.co.uk/culture/74589/bayeux-tapestry-at-the-british-museum",
     "target_url": "https://bsky.app/profile/prospectmagazine.co.uk/post/3mvxmvtgdx72u",
-    "claim_u": 0.85,
-    "claim_psi": 0.75,
-    "real_u": 0.78,
-    "real_psi": 0.65,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.93,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Can a lost bedroom poem outshine a 1,000-year-old masterpiece? The British Museum's Bayeux Tapestry exhibition sparks a deeper debate on what survived history.\nEvidence: Cultural preservation, Historical context, Artistic legacy\n#BayeuxTapestry #History #Art 🌐",
-      "The claim: The Bayeux Tapestry, while famous, is merely one survivor of a vast, lost tradition of richer medieval textiles that put it to shame.\nStated Judgement: (+0.85, +0.75) — Greater Good",
-      "The reality: While other textiles existed, the Bayeux Tapestry's unique survival makes it an irreplaceable historical record, not a lesser substitute.\nResulting Judgement: (+0.78, +0.65) — Lesser Good",
-      "Verdict: PASS — Awakening into Redemption. The essay successfully contextualizes the tapestry within a broader, lost medieval artistic landscape without devaluing its physical survival.\nIntegrity: Trustworthy (Hypocrisy: 0.07, z: 0)",
+      "The claim: The Bayeux Tapestry, while famous, is merely one survivor of a vast, lost tradition of richer medieval textiles that put it to shame.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality: While other textiles existed, the Bayeux Tapestry's unique survival makes it an irreplaceable historical record, not a lesser substitute.\nResulting Judgement: (+0.93, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.07, z: 0)",
       "- Prospect Magazine: PASS (0.78, 0.65) — Thoughtful historical context.\n- British Museum Exhibition: PASS (0.82, 0.70) — Cultural preservation.",
       "The Bayeux Tapestry is exhibited at the British Museum for the first time in nearly 1,000 years, prompting debates over its fragility and historical uniqueness.",
       "The Poison:\nFraming a priceless survivor as \"overrated\" risks feeding contrarian clickbait that devalues rare historical preservation.",
       "The Breakdown & Plane Error:\nThe Plane Error is logical: comparing a physically surviving artifact (WHAT is here) to lost, idealized descriptions in poetry (WHAT could have been) creates a false equivalence.",
       "Social Physics Analysis:\nThe actors engage in a Smart Altruistic Maneuver, using the exhibition to foster shared cultural empathy and historical transparency. Rather than hoarding cultural power, the loan empowers a broader public to engage with shared European heritage.",
-      "The Trajectory: The Path of Awakening into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good, driven by genuine educational value.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good, driven by genuine educational value.",
       "The Unavoidable Truth: The Bayeux Tapestry is a miraculous survivor of a fragile medium.\nThe Unavoidable Lie: We can easily replace its historical value with poetic descriptions.",
       "Alethekanon:\nThe analysis holds. Comparing physical reality to lost ideals is a classic category error, but here it serves to enrich, rather than erase, our historical understanding.",
       "Awwthekanon:\nIt's beautiful to think of all the lost art stitched with gold and love, but we must cherish the fragile threads that actually survived the centuries to reach us today.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Prospect Magazine Editorial",
@@ -211,6 +273,7 @@
         "name": "Baudri of Bourgueil",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://www.optimistdaily.com/2026/09/podcast-transcript-september-25th-2026-the-tilcayo-cancer-sniffing-dogs-and-8-more-things-going-right/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.9,
-    "real_psi": 0.7,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Solutions journalism highlights cancer-sniffing dogs and ecological wins.\nEvidence: Positive reporting, scientific progress, verified innovations\n#Aletheia #Solutions",
-      "The Optimist Daily podcast highlights inspiring global solutions, including cancer-detecting dogs and environmental restoration.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The broadcast accurately details verified conservation and medical breakthroughs that empower local communities worldwide.\nResulting Judgement: (+0.9, +0.7) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nUplifting solutions journalism accurately highlights verifiable global progress.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "The Optimist Daily podcast highlights inspiring global solutions, including cancer-detecting dogs and environmental restoration.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The broadcast accurately details verified conservation and medical breakthroughs that empower local communities worldwide.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nUplifting solutions journalism accurately highlights verifiable global progress.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Cancer-Sniffing Dogs: PASS (+0.9, +0.7) — Verified medical innovation.\n- Ecological Restoration: PASS (+0.9, +0.7) — Accurate conservation data.",
       "The Optimist Daily produces regular roundups focusing on constructive innovations and grassroots achievements rather than perpetual crisis.",
       "The Bright Side:\nCounterbalances media negativity bias by spotlighting actionable, successful problem-solving.",
       "The Breakdown & Plane Error:\nFocusing on constructive outcomes without minimizing real-world challenges.",
       "Social Physics Analysis:\nThis reporting embodies a Smart Altruistic loop, sharing transparent innovations and empowering audiences through collaborative problem-solving models.",
-      "The Trajectory: The Path of Redemption.\nWhen you map constructive reporting with real-world progress, it plots a direct trajectory toward Grace. Sharing solutions inspires replicable success.",
+      "The Trajectory: The Path of Grace.\nWhen you map constructive reporting with real-world progress, it plots a direct trajectory toward Grace. Sharing solutions inspires replicable success.",
       "The Unavoidable Truth: Constructive journalism highlights real innovations that improve human lives.\n\nThe Unavoidable Lie: Highlighting positive news ignores systemic global suffering.",
       "Alethekanon:\nSolutions journalism successfully bridges the gap between verified scientific progress and public awareness.",
       "Awwthekanon:\nIt is so deeply encouraging to hear about dogs saving lives and nature healing itself every single day!",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Solutions Journalism Coverage",
@@ -206,6 +268,7 @@
         "name": "World Business Academy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

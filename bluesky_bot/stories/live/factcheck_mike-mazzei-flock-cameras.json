@@ -5,22 +5,22 @@
     "subject": "Exclusive - OK Gov. Candidate Mike Mazzei: Flock Cameras Should Only Be Used 'for Proper Law Enforcement Work'",
     "link": "https://www.breitbart.com/politics/2026/08/22/exclusive-mike-mazzei-flock-cameras-should-only-be-used-proper-law-enforcement-work/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.85,
-    "real_psi": 0.8,
+    "claim_u": 0.84,
+    "claim_psi": 1.0,
+    "real_u": 0.93,
+    "real_psi": 0.89,
     "mode": "root",
     "posts": [
       "OK gubernatorial candidate Mike Mazzei draws a hard line on automated surveillance, arguing Flock cameras need judicial warrants.\n\nMike Mazzei on Flock Cameras\nEvidence: unwarranted mass data collection, judicial warrant demand, constitutional rights defense\n#Aletheia #Oklahoma #Privacy🌐",
-      "Stated claim: Automated surveillance networks like Flock cameras must be strictly restricted to legitimate law enforcement work backed by judicial warrants.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "Actual reality: Mazzei's policy stance defends constitutional Fourth Amendment protections against unregulated state-level mass data harvesting.\nResulting Judgement: (0.85, 0.80) — Saintly",
-      "Verdict: PASS — The Path of Grace. Mazzei's policy stance directly champions Fourth Amendment protections and limits warrantless mass surveillance.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "Stated claim: Automated surveillance networks like Flock cameras must be strictly restricted to legitimate law enforcement work backed by judicial warrants.\nStated Judgement: (+0.84, +1.00) — Greater Good",
+      "Actual reality: Mazzei's policy stance defends constitutional Fourth Amendment protections against unregulated state-level mass data harvesting.\nResulting Judgement: (+0.93, +0.89) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Constitutional Privacy: PASS (0.9, 0.85) — Champions strict warrant requirements.\n- Surveillance Overreach: PASS (0.8, 0.75) — Exposes mission creep in automated tracking.",
       "Oklahoma gubernatorial candidate Mike Mazzei criticized the unchecked expansion of Flock automated license plate reader cameras for civilian tracking.",
       "The Bright Side:\nElected figures are increasingly pushing back against unchecked municipal surveillance creep and protecting civilian privacy rights.",
       "The Breakdown & Plane Error:\nConfusing administrative convenience (WHAT) with constitutional liberties (WHO). The systemic creep transforms traffic safety tools into blanket tracking.",
       "Social Physics Analysis:\nBy demanding upfront transparency and judicial warrants, Mazzei's policy replaces secretive administrative overreach with accountable legal guardrails.",
-      "The Trajectory: The Path of Grace. When you map the alignment between stated constitutional protections and proposed oversight, it plots toward Grace.\n\nIntegrity: Trustworthy",
+      "The Trajectory: The Path of Small Fall from Grace.\n\nIntegrity: Trustworthy",
       "The Unavoidable Truth: Automated surveillance systems easily suffer mission creep without strict legal boundaries.\n\nThe Unavoidable Lie: Passive traffic cameras are purely benign tools with zero privacy implications.",
       "Alethekanon:\nLimiting automated surveillance to warranted investigations honors civil liberties and curtails mission creep.",
       "Awwthekanon:\nIt is reassuring to see leaders stand up for personal privacy, ensuring our daily movements remain our own business.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Constitutional Privacy Defense",
@@ -204,6 +266,7 @@
         "name": "Gentner Drummond",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

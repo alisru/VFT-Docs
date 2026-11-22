@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Residents wage a bitter battle in Avenal, CA, filing a lawsuit against landfill operators over toxic gases and foul odors making homes unlivable. 🌐\nEvidence: health risks, corporate denial, local turmoil\n#Aletheia #California",
-      "Operators claim routine waste management complies with standards, minimizing local environmental and health impacts as standard operations.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Decades of unchecked toxic gas and leachate exposure have sickened locals, turning a California oil boomtown into a site of severe corporate neglect and political turmoil.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nCorporate neglect and systemic regulatory failure allowed toxic landfill hazards to poison an entire community.\n\nIntegrity: Severe Deception (Hypocrisy: 11.5, z: 4)",
+      "Operators claim routine waste management complies with standards, minimizing local environmental and health impacts as standard operations.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Decades of unchecked toxic gas and leachate exposure have sickened locals, turning a California oil boomtown into a site of severe corporate neglect and political turmoil.\nResulting Judgement: (-0.85, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nCorporate neglect and systemic regulatory failure allowed toxic landfill hazards to poison an entire community.\n\nIntegrity: Severe Deception (Hypocrisy: 11.5, z: 4)",
       "- Waste Connections: FAIL (-0.90, -0.85) — Externalizes toxic burdens onto vulnerable residents.\n- Local Governance: FAIL (-0.80, -0.90) — Delayed action until voter recalls upended City Hall.",
       "Avenal residents filed a federal lawsuit against landfill operators over toxic odors and health hazards, mirroring political chaos that saw four city council members recalled.",
       "The Poison:\nProfits are privatized while the devastating health and environmental burdens are dumped entirely onto a vulnerable rural community.",
       "The Breakdown & Plane Error:\nConfusing regulatory compliance paperwork with actual human safety, operators treated environmental protection as a bureaucratic checkbox.",
       "Social Physics Analysis:\nOperators ran a classic Smart Selfish Maneuver, hiding extraction behind standard compliance pretexts while shifting the heavy health burdens onto residents.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated safety and ground-level toxic realities, it plots a direct trajectory toward Greater Evil. F_neg >> F_pos drives system collapse.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated safety and ground-level toxic realities, it plots a direct trajectory toward Greater Evil. F_neg >> F_pos drives system collapse.",
       "The Unavoidable Truth: Profit-driven waste management systems routinely externalize toxic hazards onto vulnerable local populations.\n\nThe Unavoidable Lie: Industrial facilities claim their operations cause zero harm while residents suffer chronic health issues.",
       "Alethekanon:\nWhen corporate convenience trumps community survival, institutional trust collapses into open civil conflict. The numbers lay bare the extraction.",
       "Awwthekanon:\nIt breaks my heart to imagine families sealing their windows tight on warm days, too afraid to let their kids play outside because the air itself feels unsafe.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Waste Connections Landfill Ops",
@@ -157,6 +219,7 @@
         "name": "City of Avenal",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

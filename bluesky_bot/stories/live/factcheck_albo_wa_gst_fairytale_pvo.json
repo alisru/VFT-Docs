@@ -5,22 +5,22 @@
     "subject": "Albanese's Western Australia GST Deal",
     "link": "https://www.dailymail.com/news/article-16086157/pvo-albo-WA-gst.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.74,
-    "claim_psi": 0.68,
-    "real_u": -0.84,
-    "real_psi": -0.81,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.97,
+    "real_psi": -0.94,
     "mode": "root",
     "posts": [
       "Defending electoral strongholds by promising infinite federal cash distorts national fiscal equity.\n\nAlbanese's WA GST Deal\nEvidence: fair federation, interstate austerity, electoral seat defense\n#Aletheia #AusPol",
-      "The Prime Minister claims Western Australia can permanently keep its lucrative GST floor while all other states remain fully protected, as the Commonwealth magically absorbs the multibillion-dollar difference.\nStated Judgement: (+0.74, +0.68) — Greater Good",
-      "The Commonwealth cannot conjure free capital. Protecting WA's deal costs taxpayers over $23 billion, forcing debt expansion and stealth clawbacks from eastern state hospital and infrastructure funding.\nResulting Judgement: (-0.84, -0.81) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nElectoral pandering masquerading as national harmony shifts massive fiscal strain onto future service delivery.\n\nIntegrity: Severe Deception (Hypocrisy: 14.8, Uncertainty z: 3)",
+      "The Prime Minister claims Western Australia can permanently keep its lucrative GST floor while all other states remain fully protected, as the Commonwealth magically absorbs the multibillion-dollar difference.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The Commonwealth cannot conjure free capital. Protecting WA's deal costs taxpayers over $23 billion, forcing debt expansion and stealth clawbacks from eastern state hospital and infrastructure funding.\nResulting Judgement: (-0.97, -0.94) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nElectoral pandering masquerading as national harmony shifts massive fiscal strain onto future service delivery.\n\nIntegrity: Severe Deception (Hypocrisy: 14.8, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Anthony Albanese: FAIL (-0.84, -0.81) — Obfuscates fiscal arithmetic.\n- State Parity: FAIL (-0.78, -0.72) — Eastern states bear hidden costs.\n- Fiscal Transparency: FAIL (-0.86, -0.85) — Hides future funding clawbacks.",
       "Labor faces rising electoral pressure in Western Australia, prompting federal commitments to preserve the 2018 GST floor despite Productivity Commission warnings that it heavily disadvantages the rest of the country.",
       "The Bright Side:\nWestern Australia's mining exports generate immense national wealth, and retaining local revenue prevents the state from feeling unrewarded for driving Australia's resources economy.",
       "The Breakdown & Plane Error:\nThe failure lies in the Logical Plane (HOW vs WHO). You cannot guarantee equal payouts from a finite pool without either inflating national debt or quietly siphoning money from other public services.",
       "**Social Physics Analysis:**\nBy using post-hoc fiscal justifications to defend political seats in Perth, the administration creates interstate resentment. Shifting deficits into hidden grant cuts replaces transparent cooperation with zero-sum political maneuvering.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Masking fiscal imbalances through federal debt guarantees long-term systemic decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Masking fiscal imbalances through federal debt guarantees long-term systemic decay.",
       "The Unavoidable Truth: The federal budget cannot provide infinite subsidies without cutting public services elsewhere.\nThe Unavoidable Lie: Other Australian states will suffer zero financial impact from WA's special deal.",
       "Alethekanon:\nZero-sum fiscal guarantees framed as universal windfalls violate basic arithmetic. Deferring the burden into national debt merely trades long-term fiscal stability for short-term electoral survival.",
       "Awwthekanon:\nPitting communities against each other over who deserves hospital and school funding damages the trust that binds a country together. True fairness shouldn't feel like a competition between neighbors.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.85,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Anthony Albanese Fiscal Guarantee",
@@ -297,6 +359,7 @@
         "name": "Australia",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

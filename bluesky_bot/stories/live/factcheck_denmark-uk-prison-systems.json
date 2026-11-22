@@ -5,22 +5,22 @@
     "subject": "Inside two prison systems: why Denmark and the UK punish so differently",
     "link": "https://tcnv.link/j8otorl",
     "target_url": "https://bsky.app/profile/uk.theconversation.com/post/3mxr4ex6tjg2p",
-    "claim_u": 0.86,
-    "claim_psi": 0.91,
-    "real_u": 0.21,
-    "real_psi": -0.24,
+    "claim_u": 0.9,
+    "claim_psi": 0.93,
+    "real_u": 0.2,
+    "real_psi": 0.31,
     "mode": "root",
     "posts": [
       "A society shows its soul in how it treats its lawbreakers.\nInside two prison systems: why Denmark and the UK punish so differently\nEvidence: Universal Welfare Safety, Recidivism Disparity, Rehabilitative Justice\n#Justice #Rehabilitation",
-      "Criminological analysis argues Denmark’s universal welfare model fosters trust and rehabilitates offenders, whereas the UK's punitive turn since the 1980s prioritizes deterrence, driving divergent prison cultures.\nStated Judgement: (+0.86, +0.91) — Greater Good",
-      "Data confirms the divide: UK short-term reoffending hits 66% versus 34% in Denmark. Yet both buckle under severe strain: staffing dropped 30% in Denmark amid preventable cell deaths, while UK staff turnover fuels crisis.\nResulting Judgement: (+0.21, -0.24) — Lesser Good",
-      "Verdict: PASS — Fall into Redemption.\nThe comparative study accurately exposes how welfare foundations curb reoffending, while candidly documenting how austerity and staffing collapses erode both systems.\nIntegrity: Trustworthy (Hypocrisy: 1.18, z: 1)",
+      "Criminological analysis argues Denmark’s universal welfare model fosters trust and rehabilitates offenders, whereas the UK's punitive turn since the 1980s prioritizes deterrence, driving divergent prison cultures.\nStated Judgement: (+0.90, +0.93) — Greater Good",
+      "Data confirms the divide: UK short-term reoffending hits 66% versus 34% in Denmark. Yet both buckle under severe strain: staffing dropped 30% in Denmark amid preventable cell deaths, while UK staff turnover fuels crisis.\nResulting Judgement: (+0.20, +0.31) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nThe comparative study accurately exposes how welfare foundations curb reoffending, while candidly documenting how austerity and staffing collapses erode both systems.\nIntegrity: Trustworthy (Hypocrisy: 1.18, z: 1)",
       "- UK Penal Policy: FAIL (-0.78, -0.65) — Austere churn.\n- Danish Model: PASS (0.52, 0.41) — Welfare halts recidivism.\n- Julie Laursen Audit: PASS (0.86, 0.78) — Empirical rigor.",
       "Criminologist Julie Laursen compared Danish and UK prisons, revealing that while overall reoffending sits near 30%, UK short-sentence releases reoffend at double the Danish rate due to shredded social safety nets.",
       "The Bright Side:\nDenmark proves that treating prisoners as citizens with voting rights and welfare support halts the revolving door of short sentences, offering a proven blueprint for institutional redemption.",
       "The Breakdown & Plane Error:\nThe plane error is WHAT vs WHO (Possible vs Metaphysical). Punitive policies treat containment as crime reduction, ignoring who bears the cost when unsupported short-term inmates return to broken communities.",
       "Social Physics Analysis:\nUK penal policy operates on a smart selfish loop: politicians manufacture tough-on-crime rhetoric to project authority, hiding the extraction of prison budgets. Denmark’s model practices systemic empathy, preserving trust by solving reintegration strains.",
-      "The Trajectory: The Path of Fall into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Sustaining rehabilitation requires funding social infrastructure before austerity breaks it.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Sustaining rehabilitation requires funding social infrastructure before austerity breaks it.",
       "The Unavoidable Truth: Locking people up without welfare guarantees they will commit crimes again upon release.\n\nThe Unavoidable Lie: Slashing prison staffing and social services saves taxpayers money in the long run.",
       "Alethekanon:\nCages cannot substitute for social contracts. When a state cuts post-release support to posture as tough on crime, it merely subsidizes its own recidivism crisis.",
       "Awwthekanon:\nSeeing someone as a human being worthy of care, education, and family contact changes everything. We heal communities not by locking away pain, but by giving people a real bridge back to belonging.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.3,
+        "O": 0.07,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.07
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.07,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.07,
+        "O": 1.1,
+        "N": 0.07
+      },
+      "GP": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.77,
+        "O": 0.53,
+        "N": 0.13
+      },
+      "GE": {
+        "S": 0.47,
+        "O": 0.73,
+        "N": 0.13
+      },
+      "LG": {
+        "S": 0.77,
+        "O": 0.4,
+        "N": 0.13
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.57,
+        "N": 0.13
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.43,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.73,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UK Penal Policy",
@@ -379,6 +441,7 @@
     "tags": [
       "Justice",
       "Rehabilitation"
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

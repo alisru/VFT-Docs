@@ -5,22 +5,22 @@
     "subject": "Three surprising reasons to slow down for a thoughtful, nutritious breakfast",
     "link": "https://www.positive.news/environment/food/three-surprising-reasons-to-slow-down-for-a-thoughtful-nutritious-breakfast/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.7,
-    "real_u": 0.6,
+    "claim_u": 0.7,
+    "claim_psi": 0.55,
+    "real_u": 0.65,
     "real_psi": 0.5,
     "mode": "root",
     "posts": [
       "Mindful mornings and protein power may boost cognitive health, but wellness framing often serves brand promotion. 🍳\nEvidence: Wellbeing advice, commercial promotion, consumer research\n#Health #Nutrition",
-      "Positive News highlights three scientific and social reasons to slow down for a nutritious breakfast, from brain health to family connection. Stated Judgement: (+0.8, +0.7) — Grace",
-      "While healthy eating tips are valid, the article functions as a soft promotional vehicle for St. Ewe Free Range Eggs and their B Corp marketing campaign. Resulting Judgement: (+0.6, +0.5) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nThoughtful breakfast habits offer real wellbeing gains despite being commercially packaged.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, Uncertainty z: 1)",
+      "Positive News highlights three scientific and social reasons to slow down for a nutritious breakfast, from brain health to family connection. Stated Judgement: (+0.70, +0.55) — Greater Good",
+      "While healthy eating tips are valid, the article functions as a soft promotional vehicle for St. Ewe Free Range Eggs and their B Corp marketing campaign. Resulting Judgement: (+0.65, +0.50) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThoughtful breakfast habits offer real wellbeing gains despite being commercially packaged.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Nutritional Science: PASS (+0.8, +0.6) — Backed by published dietary studies.\n- Brand Promotion: COND (+0.5, +0.4) — Blends wellness with commercial marketing.",
       "Modern lifestyles make breakfast the most skipped meal, yet research shows intentional nutrition and family dining significantly boost psychological health.",
       "The Bright Side:\nCommercial branding successfully aligns corporate success with high-welfare farming practices that benefit consumers.",
       "The Breakdown & Plane Error:\nMistaking a commercial brand campaign (WHO/PRODUCT) for pure nutritional altruism (WHAT) while the underlying dietary science remains sound.",
       "Social Physics Analysis:\nSt. Ewe uses a smart altruistic loop, aligning commercial success with higher animal welfare and transparent farming standards rather than coercive extraction.",
-      "The Trajectory: The Path of Redemption.\nWhen you map intentional living against commercial realities, it plots toward Grace. Mathematical equilibrium maintains positive social value.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map intentional living against commercial realities, it plots toward Grace. Mathematical equilibrium maintains positive social value.",
       "The Unavoidable Truth: Mindful nutrition and family meals genuinely improve physical and mental wellbeing.\n\nThe Unavoidable Lie: Commercial egg branding represents purely disinterested public health philanthropy.",
       "Alethekanon:\nWellness journalism frequently bridges personal health advice with brand marketing, requiring readers to discern nutritional science from commercial storytelling.",
       "Awwthekanon:\nIt's so easy to rush through mornings, but taking even ten minutes to share a warm breakfast with loved ones grounds our entire day in peace and connection.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Nutritional Science",
@@ -157,6 +219,7 @@
         "name": "Positive News",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

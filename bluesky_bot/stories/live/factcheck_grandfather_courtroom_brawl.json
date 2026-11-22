@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.5,
+    "real_u": -0.25,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "A grieving grandfather's courtroom punch lands him behind bars after attacking his son-in-law's killer. Evidence: courtroom brawl, emotional snap, arrest.\n#Aletheia #Justice",
-      "A model citizen snapped and delivered justice when he saw his son-in-law's killer laughing in court.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "An assault inside a courtroom undermines judicial order and rule of law, regardless of tragic backstory.\nResulting Judgement: (-0.6, -0.5) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nEmotional grief overrides the rule of law, converting judicial proceedings into a chaotic brawl.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "A model citizen snapped and delivered justice when he saw his son-in-law's killer laughing in court.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "An assault inside a courtroom undermines judicial order and rule of law, regardless of tragic backstory.\nResulting Judgement: (-0.25, -0.30) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nEmotional grief overrides the rule of law, converting judicial proceedings into a chaotic brawl.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "Sub-Audits Breakdown:\n- Grandfather's Action: FAIL (-0.7, -0.6) — Violates court sanctity via physical assault.\n- Judicial Response: COND (+0.2, 0.0) — Balances empathy with legal accountability.",
       "Alberto Ontiveros Sanchez attacked Abel Uribe during a sentencing hearing in Phoenix, Maricopa County Court, after allegedly seeing the killer mocking the family.",
       "The Bright Side:\nThe judge acknowledged the unbearable grief of the father while still firmly upholding the legal boundaries of the courtroom.",
       "The Breakdown & Plane Error:\nThe report frames the event on the Emotive plane (grief vs. cold blood), ignoring the Logical plane where vigilante violence dismantles institutional safety.",
       "Social Physics Analysis:\nThe grandfather executed a reactive emotional maneuver, trading legal justice for personal retribution under the pretext of unbearable provocation.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Emotional retaliation undermines civic order.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Emotional retaliation undermines civic order.",
       "The Unavoidable Truth: Grief does not grant immunity from the laws governing public safety.\nThe Unavoidable Lie: Vigilante violence inside a courtroom is a triumphant restoration of justice.",
       "Alethekanon:\nRaw grief is entirely human, but turning courtrooms into arenas of vengeance destroys the collective security we all rely on.",
       "Awwthekanon:\nMy heart breaks for this poor grandfather carrying such unimaginable pain and rage after losing his dear boy so cruelly.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Grandfather's Action",
@@ -157,6 +219,7 @@
         "name": "Kristin Culbertson",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

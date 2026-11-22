@@ -5,22 +5,22 @@
     "subject": "These Michigan swing voters are bracing for higher prices from trade war with Canada",
     "link": "https://www.npr.org/2026/09/11/nx-s1-5963884/michigan-focus-groups-canada-trump-tariffs",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.4,
-    "real_u": -0.78,
-    "real_psi": -0.65,
+    "claim_u": 0.8,
+    "claim_psi": 0.7,
+    "real_u": 0.01,
+    "real_psi": -0.28,
     "mode": "root",
     "posts": [
       "The heavy price of a border trade war. Michigan swing voters who backed Trump in 2024 are now bracing for severe price hikes as his tariff standoff with Canada hits everyday goods.\nEvidence: Tariff Protection, Consumer Inflation, Regressive Tax\n#Aletheia #Econ 🌐",
-      "The administration claims that aggressive tariffs on Canadian imports will protect American manufacturing, force fair trade, and ultimately lower costs for domestic consumers.\nStated Judgement: (+0.60, +0.40) — Good Preference",
-      "In focus groups, 11 of 13 Michigan swing voters warn the trade war is actively damaging. They expect immediate price hikes on lumber, shampoo, and everyday goods, worsening the cost-of-living crisis.\nResulting Judgement: (-0.78, -0.65) — Greater Evil",
-      "Verdict: FAIL — Fall into Deception. The tariff standoff with Canada acts as a regressive tax on border-state consumers, exposing the gap between protectionist rhetoric and inflationary reality.\nIntegrity: Trustworthy (Hypocrisy: 1.38, z: 0)",
+      "The administration claims that aggressive tariffs on Canadian imports will protect American manufacturing, force fair trade, and ultimately lower costs for domestic consumers.\nStated Judgement: (+0.80, +0.70) — Greater Good",
+      "In focus groups, 11 of 13 Michigan swing voters warn the trade war is actively damaging. They expect immediate price hikes on lumber, shampoo, and everyday goods, worsening the cost-of-living crisis.\nResulting Judgement: (+0.01, -0.28) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.38, z: 0)",
       "Sub-Audits Breakdown:\n- Tariff Policy: FAIL (-0.78, -0.65) — Regressive tax disguised as protection.\n- Swing Voter Focus Group: PASS (+0.80, +0.10) — Accurate reflection of proximate economic pain.",
       "Michigan swing voters who switched from Biden to Trump are expressing deep anxiety over the administration's tariff war with Canada, warning that the policy is driving up the cost of everyday goods and threatening local border commerce.",
       "The Bright Side:\nThis economic friction is forcing voters to look past partisan slogans and directly observe the physical flow of cross-border commerce, building a grounded understanding of global supply chains.",
       "The Breakdown & Plane Error:\nThe policy commits a Physical Plane Error (WHERE vs WHAT) by projecting a nationalistic victory (WHAT) while ignoring the concrete, localized physical reality (WHERE) of integrated border economies that rely on daily, low-friction trade.",
       "Social Physics Analysis:\nThe tariff standoff represents a Smart Selfish Maneuver where the administration uses the pretext of protecting American jobs to justify aggressive trade barriers. The actual effect is the extraction of wealth from domestic consumers through regressive price increases, while projecting blame onto Canada. By presenting trade as a zero-sum conflict, the policy manufactures a crisis to maintain political leverage, ignoring the transparent, cooperative solutions that border communities actually rely on to survive.",
-      "The Trajectory: The Path of Fall into Deception.\nMapping the gap between protectionist promises and the immediate inflation felt by border-state consumers plots a direct trajectory toward localized economic stagnation and voter alienation.",
+      "The Trajectory: The Path of Fall from Grace.\nMapping the gap between protectionist promises and the immediate inflation felt by border-state consumers plots a direct trajectory toward localized economic stagnation and voter alienation.",
       "The Unavoidable Truth: Tariffs are paid by domestic importers and consumers, not the exporting country.\nThe Unavoidable Lie: The claim that trade wars are easy to win and carry no personal financial cost for working-class voters.",
       "Alethekanon:\nEconomic reality is local and physical. When a border state's swing voters collectively realize that nationalistic trade policies translate directly to more expensive shampoo and lumber, the ideological narrative collapses under its own weight.",
       "Awwthekanon:\nIt is so stressful to feel like your everyday budget is a casualty in a political chess match. These voters are just trying to afford basic necessities, and having their proximity to Canada turned into a financial penalty is deeply unfair.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tariff Policy Economic Impact",
@@ -161,6 +223,7 @@
         "name": "Canada",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

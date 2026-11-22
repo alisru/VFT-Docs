@@ -5,22 +5,22 @@
     "subject": "Germany's Sovereigntist AfD Triples Vote in Lower Saxony Election Results",
     "link": "https://www.breitbart.com/europe/2026/09/14/germanys-sovereigntist-afd-triples-vote-in-lower-saxony-election-results/",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.25,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": -0.25,
+    "real_psi": -0.6,
     "mode": "root",
     "posts": [
       "AfD triples its vote share in Lower Saxony municipal elections as legacy centrist parties suffer historic losses across western Germany.🌐\nEvidence: election results, candidate bans, mainstream decline\n#Aletheia #Germany #Politics",
-      "AfD leaders frame the surge as a triumphant democratic correction and a mandate to sweep away a failing Berlin governing coalition.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While voter backlash against establishment stagnation is real, the gains capitalize on radical polarization and political exclusion tactics.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: COND — The Path of Revelation.\nElectoral protest translates into voter gains, but exposes deep institutional fractures and polarizing friction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 2)",
+      "AfD leaders frame the surge as a triumphant democratic correction and a mandate to sweep away a failing Berlin governing coalition.\nStated Judgement: (+0.25, +0.00) — Lesser Good",
+      "While voter backlash against establishment stagnation is real, the gains capitalize on radical polarization and political exclusion tactics.\nResulting Judgement: (-0.25, -0.60) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nElectoral protest translates into voter gains, but exposes deep institutional fractures and polarizing friction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 2)",
       "- AfD Leadership: COND (0.2, -0.4) — Capitalizes on legitimate citizen grievances.\n- Mainstream Parties: FAIL (-0.7, -0.8) — Entrenched governance failures.",
       "Voters in Lower Saxony dealt historic blows to mainstream Christian and Social Democrats, boosting AfD amid state-level candidate bans.",
       "The Bright Side:\nVoters retain a powerful electoral mechanism to penalize unresponsive establishment governance.",
       "The Breakdown & Plane Error:\nConfusing a protest vote against incumbents (WHAT) with a mandate for systemic nationalist transformation (WHO).",
       "Social Physics Analysis:\nThe AfD runs a reactive loop, converting state overreach and candidate bans into fuel while establishment parties project blame instead of addressing policy failures.",
-      "The Trajectory: The Path of Revelation.\nWhen you map voter frustration against institutional resistance, it plots a volatile trajectory toward systemic polarization. Systemic strain rises as exclusion backfires.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map voter frustration against institutional resistance, it plots a volatile trajectory toward systemic polarization. Systemic strain rises as exclusion backfires.",
       "The Unavoidable Truth: Voter rejection of mainstream parties is accelerating across western German states.\n\nThe Unavoidable Lie: Electoral protest votes equate to a stable governing mandate.",
       "Alethekanon:\nIncumbent overreach backfires predictably when administrative bans convert anti-establishment grievance into electoral momentum. The ballot box remains an unyielding mirror.",
       "Awwthekanon:\nIt hurts watching communities fracture into angry camps when basic economic and social needs go unmet. People just want to feel heard and secure in their homes.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "AfD Leadership",
@@ -162,6 +224,7 @@
         "name": "Germany",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

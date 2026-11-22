@@ -5,22 +5,22 @@
     "subject": "Fresh war breaks out over looted Nazi art being displayed in Los Angeles as new lawsuits filed",
     "link": "https://nypost.com/2026/09/20/us-news/new-lawsuits-reignite-fight-over-looted-nazi-art-displayed-in-la/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.72,
-    "real_psi": -0.65,
+    "claim_u": 0.65,
+    "claim_psi": 0.35,
+    "real_u": -0.15,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "New lawsuits in Los Angeles ignite renewed legal battles over Nazi-looted art held by museums.\nEvidence: Holocaust restitution, legal changes, museum pushback\n#Aletheia #History #Law",
-      "New state and federal laws empower Holocaust survivors and heirs to reclaim priceless art stolen by the Nazi regime across Europe.\nStated Judgement: (+0.8, +0.5) — Trustworthy Good",
-      "Decades-old museum titles, international provenance disputes, and contentious definitions of duress turn restitution into endless legal gridlock.\nResulting Judgement: (-0.72, -0.65) — Meaningful Distortion",
-      "Verdict: FAIL — The Path of Deception.\nLegal mechanisms designed for justice collide with entrenched institutional possession, fueling perpetual proxy battles.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, Uncertainty z: 3)",
+      "New state and federal laws empower Holocaust survivors and heirs to reclaim priceless art stolen by the Nazi regime across Europe.\nStated Judgement: (+0.65, +0.35) — Greater Good",
+      "Decades-old museum titles, international provenance disputes, and contentious definitions of duress turn restitution into endless legal gridlock.\nResulting Judgement: (-0.15, -0.15) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nLegal mechanisms designed for justice collide with entrenched institutional possession, fueling perpetual proxy battles.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Claimants & Heirs: COND (0.5, 0.4) — Rightful moral claims trapped in legal loops.\n- Museums & Memorials: FAIL (-0.8, -0.7) — Defending possession via historical technicalities.",
       "New California and federal laws have revived decades-old restitution battles, pitting heirs against prominent institutions like the Norton Simon Museum and Auschwitz Memorial.",
       "The Poison:\nPerpetual litigation allows cultural institutions and heirs to fight proxy battles over tragic history while resolution remains elusive.",
       "The Breakdown & Plane Error:\nConfusing WHAT (legal possession) with WHO (historical justice), turning moral imperative into an endless jurisdictional maze.",
       "Social Physics Analysis:\nMuseums and claimants operate within a friction-heavy loop where historical trauma is weaponized for institutional defense or restitution, prioritizing legal dominance over moral reconciliation.",
-      "The Trajectory: The Path of Deception.\nWhen you map stated ethical restitution against procedural gridlock, it plots a direct trajectory toward Deception. Frictional legal maneuvers replace genuine historical reckoning.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map stated ethical restitution against procedural gridlock, it plots a direct trajectory toward Deception. Frictional legal maneuvers replace genuine historical reckoning.",
       "The Unavoidable Truth: Stolen art from the Holocaust represents an unhealed wound of unprecedented cultural theft.\n\nThe Unavoidable Lie: Modern legal statutes can cleanly resolve eighty-year-old provenance disputes without endless friction.",
       "Alethekanon:\nLegal technicalities cannot undo historical atrocities, yet they routinely substitute justice with procedural endurance.",
       "Awwthekanon:\nBehind every disputed canvas lies a family torn apart and a stolen heritage waiting in vain for peace and restoration.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Claimants & Heirs",
@@ -162,6 +224,7 @@
         "name": "Dinah Gottliebova Babbitt",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

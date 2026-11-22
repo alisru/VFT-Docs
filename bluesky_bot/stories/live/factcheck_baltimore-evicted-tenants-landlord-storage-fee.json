@@ -5,22 +5,22 @@
     "subject": "Baltimore landlords would pay storage fees for evicted tenants under council proposal",
     "link": "https://www.thebanner.com/community/housing/baltimore-evicted-tenants-landlord-storage-fee-3GK52TBM5JDGBMJ7RLW7EDKTNQ/",
     "target_url": "https://bsky.app/profile/thebaltimorebanner.com/post/3mtzlsaf6322i",
-    "claim_u": 0.6,
-    "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.2,
+    "claim_u": 0.79,
+    "claim_psi": 1.0,
+    "real_u": 0.08,
+    "real_psi": 0.82,
     "mode": "root",
     "posts": [
       "Baltimore debates giving evicted tenants more time and storage options, but landlords warn of rising costs.\nEvidence: tenant losses, landlord cost protests, bill refinement\n#Aletheia #Housing #Baltimore",
-      "Baltimore lawmakers propose extending eviction notice and requiring landlords to store belongings for tenants, aiming to ease displacement trauma.\nStated Judgement: (+0.6, 0.0) — Good Preference",
-      "While well-intentioned, the bill triggers intense landlord pushback over storage costs and liability, exposing systemic gaps in housing security.\nResulting Judgement: (-0.4, -0.2) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nBalancing tenant dignity against landlord overhead requires careful structural calibration to avoid unintended rent spikes.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 1)",
+      "Baltimore lawmakers propose extending eviction notice and requiring landlords to store belongings for tenants, aiming to ease displacement trauma.\nStated Judgement: (+0.79, +1.00) — Greater Good",
+      "While well-intentioned, the bill triggers intense landlord pushback over storage costs and liability, exposing systemic gaps in housing security.\nResulting Judgement: (+0.08, +0.82) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nBalancing tenant dignity against landlord overhead requires careful structural calibration to avoid unintended rent spikes.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 1)",
       "- Baltimore City Council: COND (+0.5, 0.0) — Seeks compassion but lacks complete answers.\n- Landlord Associations: COND (-0.3, -0.2) — Protects margins against uncompensated storage.",
       "Baltimore is debating legislation to give evicted tenants more time and storage options for belongings after past unconstitutional surprise evictions sparked outcry.",
       "The Bright Side:\nBrings humane visibility to the devastating loss of personal heirlooms and essentials during sudden evictions.",
       "The Breakdown & Plane Error:\nConfuses WHO bears the immediate cost of displacement (landlords vs tenants) without solving underlying rent affordability.\n\nIt is a structural tension between tenant protection and property overhead.",
       "Social Physics Analysis:\nBy attempting to enforce empathy through municipal mandates without resolving underlying economic strains, the policy triggers defensive pushback. Transparent dialogue between tenants and providers is essential.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good through iterative policy reform. V_net balances out.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good through iterative policy reform. V_net balances out.",
       "The Unavoidable Truth: Displaced families lose irreplaceable personal history during hasty evictions.\n\nThe Unavoidable Lie: Mandating free storage alone solves the affordable housing crisis.",
       "Alethekanon:\nLegislative compassion must account for economic friction or risk shifting costs onto the very vulnerable populations it aims to protect.",
       "Awwthekanon:\nIt is heartbreaking to lose cherished family memories and life possessions simply due to housing instability.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Baltimore City Council",
@@ -206,6 +268,7 @@
         "name": "Maryland Multi-Housing Association",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

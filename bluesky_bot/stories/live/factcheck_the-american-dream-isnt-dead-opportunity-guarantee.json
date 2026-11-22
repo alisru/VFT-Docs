@@ -5,22 +5,22 @@
     "subject": "The American dream isn’t dead....",
     "link": "https://www.washingtonexaminer.com/op-eds/4730307/american-dream-opportunity-guarantee/",
     "target_url": "",
-    "claim_u": 0.7,
-    "claim_psi": 0.4,
-    "real_u": 0.22,
-    "real_psi": -0.15,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.09,
+    "real_psi": 0.29,
     "mode": "root",
     "posts": [
       "As America marks its 250th year, polls reveal a profound split between valuing the dream and believing hard work guarantees success.\nEvidence: Gallup 78%, AP-NORC 34%, youth debt\n#Aletheia #Culture",
-      "The American Dream remains a vital cultural aspiration, requiring a pivot from viewing it as a guaranteed outcome to an attainable opportunity.\nStated Judgement: (+0.7, +0.4) — Good Preference",
-      "Rising housing costs, educational debt, and plummeting youth trust in meritocracy expose structural barriers that make the traditional dream feel out of reach.\nResulting Judgement: (+0.22, -0.15) — Lesser Good",
-      "Verdict: COND — The Path of Awakening.\nThe cultural desire for upward mobility remains strong, but structural economic walls make traditional attainment exceedingly difficult for youth.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.82, z: 1)",
+      "The American Dream remains a vital cultural aspiration, requiring a pivot from viewing it as a guaranteed outcome to an attainable opportunity.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Rising housing costs, educational debt, and plummeting youth trust in meritocracy expose structural barriers that make the traditional dream feel out of reach.\nResulting Judgement: (+0.09, +0.29) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nThe cultural desire for upward mobility remains strong, but structural economic walls make traditional attainment exceedingly difficult for youth.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.82, z: 1)",
       "Sub-Audits Breakdown:\n- Washington Examiner Op-Ed: COND (0.3, -0.1) — Frames economic anxiety as semantic confusion.\n- Gallup Poll Data: PASS (0.6, 0.2) — Accurate 2026 figures on aspiration vs belief.\n- AP-NORC Survey: PASS (0.5, -0.2) — Validates declining faith in meritocracy.",
       "A June 2026 Gallup report shows 78% of Americans still value the American Dream, yet an AP-NORC poll reveals only 34% believe hard work reliably leads to success.",
       "The Bright Side:\nRe-evaluating the American Dream allows society to address real structural impediments like housing and debt rather than relying on empty platitudes.",
       "The Breakdown & Plane Error:\nConfusing personal aspiration (WHAT people want) with systemic economic reality (HOW markets function). The bait-and-switch equates cultural persistence with economic fairness.",
       "Social Physics Analysis:\nCommentators run a defensive framing maneuver, projecting systemic economic failure onto personal mindset shifts while ignoring soaring living costs and stagnant mobility.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Cultural aspiration collides with structural limits.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Cultural aspiration collides with structural limits.",
       "The Unavoidable Truth: Most Americans still cherish the ideal of upward mobility and personal achievement.\n\nThe Unavoidable Lie: Hard work alone overcomes insurmountable housing and debt barriers for the rising generation.",
       "Alethekanon:\nRenaming structural economic exclusion as a mere definition shift papers over the material reality of declining generational mobility.",
       "Awwthekanon:\nWhen young dreamers face crushing walls of debt and overpriced housing, telling them to just reframe their expectations offers little comfort.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.7,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Washington Examiner Op-Ed",
@@ -216,6 +278,7 @@
         "name": "American Public",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

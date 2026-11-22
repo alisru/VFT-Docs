@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": -0.8,
     "claim_psi": -0.7,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "real_u": -0.8,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "A South African farm attack survivor recounts harrowing anti-white violence.\nEvidence: Amanda Platt interview, farm invasions, visa restrictions\n#Aletheia #Global",
-      "Systemic hostility enables brutal targeted violence against agricultural minorities.\nStated Judgement: (-0.8, -0.7) — Lesser Evil",
-      "Horrific criminal violence targets vulnerable rural families amidst state instability and economic strain.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nUnchecked rural crime and racial animus inflict severe human trauma.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Systemic hostility enables brutal targeted violence against agricultural minorities.\nStated Judgement: (-0.80, -0.70) — Greater Evil",
+      "Horrific criminal violence targets vulnerable rural families amidst state instability and economic strain.\nResulting Judgement: (-0.80, -0.75) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nUnchecked rural crime and racial animus inflict severe human trauma.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "Sub-Audits Breakdown:\n- Survivor Testimony: COND (-0.7, -0.6) — Captures genuine trauma but frames systemic political intent.\n- Geopolitical Framing: FAIL (-0.9, -0.9) — Exploits localized crime for external political narratives.",
       "An Afrikaner farm attack survivor detailed a brutal home invasion, highlighting government complicity and new U.S. visa restrictions.",
       "The Poison:\nAmplifies ethnic polarization while flattening complex rural crime dynamics into a simplistic geopolitical weapon.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Survivor Testimony",
@@ -164,6 +226,7 @@
         "name": "Marco Rubio",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

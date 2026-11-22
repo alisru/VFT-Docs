@@ -6,21 +6,21 @@
     "link": "https://www.foxnews.com/politics/dhs-hits-back-james-talarico-democrat-claims-ice-kidnapped-5-year-old-boy-deported-father",
     "target_url": "",
     "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.85,
-    "real_psi": -0.75,
+    "claim_psi": 0.35,
+    "real_u": -0.02,
+    "real_psi": -0.28,
     "mode": "root",
     "posts": [
       "A political campaign uses a child's deportation as a weapon, but the facts tell a different story. 🌐\n\nDHS hits back at James Talarico\nEvidence: Child kidnapped, Parent chose family unity, Political exploitation\n#Aletheia #USPol #Immigration",
-      "Texas Senate candidate James Talarico claimed ICE 'kidnapped' a 5-year-old boy on his way to a soccer game, throwing him into a prison camp instead of kindergarten.\n\nStated Judgement: (+0.80, +0.50) — Greater Good",
-      "DHS confirmed ICE does not separate families. The father, a repeat illegal crosser, was offered the choice to place his son with a safe guardian or keep him. He chose deportation together.\n\nResulting Judgement: (-0.85, -0.75) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nTalarico used inflammatory, false framing to exploit a standard family-unity deportation for campaign points.\n\nIntegrity: Severe Deception (Hypocrisy: 15.6, z: 4)",
+      "Texas Senate candidate James Talarico claimed ICE 'kidnapped' a 5-year-old boy on his way to a soccer game, throwing him into a prison camp instead of kindergarten.\n\nStated Judgement: (+0.80, +0.35) — Greater Good",
+      "DHS confirmed ICE does not separate families. The father, a repeat illegal crosser, was offered the choice to place his son with a safe guardian or keep him. He chose deportation together.\n\nResulting Judgement: (-0.02, -0.28) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nTalarico used inflammatory, false framing to exploit a standard family-unity deportation for campaign points.\n\nIntegrity: Severe Deception (Hypocrisy: 15.6, z: 4)",
       "Sub-Audits Breakdown:\n- James Talarico: FAIL (-0.85, -0.75) — Exploits child for political theater.\n- DHS Response: PASS (+0.80, +0.20) — Clarifies policy and parent's choice.",
       "Texas Senate candidate James Talarico accused ICE of kidnapping a 5-year-old boy. DHS responded that the father, who had repeatedly entered the U.S. illegally, chose to keep his son with him during deportation.",
       "The Poison:\nEven in highly sensitive immigration cases, the emotional trauma of a child is reduced to a rhetorical weapon, ignoring the actual choices made by the parent to keep the family together.",
       "The Breakdown & Plane Error:\nThis is a Metaphysical (WHO) error. The narrative claims to protect the child (the stated beneficiary), but the actual beneficiary is the politician's campaign seeking outrage.",
       "Social Physics Analysis:\nBy projecting 'kidnapping' onto standard law enforcement, the actor creates a post-hoc pretext to generate outrage. This avoids addressing the father's repeated illegal entries and the agency's offer of local guardianship.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The manipulation of a child's situation for political gain deepens social division.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The manipulation of a child's situation for political gain deepens social division.",
       "The Unavoidable Truth: ICE offered the father a choice to leave his son with a safe guardian, and he chose to keep him.\n\nThe Unavoidable Lie: The government 'kidnapped' the child and forced family separation.",
       "Alethekanon:\nUsing the term 'kidnapping' to describe a parent's choice to keep their child during deportation is a severe distortion of reality. It replaces objective policy analysis with emotional manipulation.",
       "Awwthekanon:\nIt is heartbreaking to see a five-year-old caught in the middle of complex immigration laws and political crossfire. Children deserve safety, stability, and love, not to be used as shields or talking points.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "James Talarico Political Intervention",
@@ -160,6 +222,7 @@
         "name": "Immigration and Customs Enforcement",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Knowledge & Humanity: Shaping AI for the Common Good",
     "link": "https://acuevents.swoogo.com/PanelDiscussionKnowledgeHumanityShapingAIfortheCommonGood",
     "target_url": "https://bsky.app/profile/cameronwilson.bsky.social/post/3mxbo5r74qd26",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.92,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Exploring AI ethics with Father Paolo Benanti and ABC's Cameron Wilson at ACU.\nEvidence: Academic lecture, ethical framework, public discourse\n#Aletheia #AI #Ethics #Australia",
-      "Stated claim emphasizes exploring ethical implications of AI for the human condition and common good.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Actual event provides high-level academic discourse on AI ethics, balancing tech innovation with moral theology.\nResulting Judgement: (+0.6, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nAcademic exploration of AI ethics fosters genuine public reflection on technology's societal impact.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Stated claim emphasizes exploring ethical implications of AI for the human condition and common good.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Actual event provides high-level academic discourse on AI ethics, balancing tech innovation with moral theology.\nResulting Judgement: (+0.92, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAcademic exploration of AI ethics fosters genuine public reflection on technology's societal impact.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Father Paolo Benanti: PASS (+0.8, +0.5) — Rigorous moral theological perspective.\n- ACU Event Hosting: PASS (+0.7, +0.4) — Promotes thoughtful public engagement.",
       "Father Paolo Benanti, papal advisor on AI ethics, delivers a keynote at Australian Catholic University, moderated by ABC's national AI reporter Cameron Wilson.",
       "The Bright Side:\nElevates public discourse on technology beyond mere commercial hype into deep moral and human dimensions.",
       "The Breakdown & Plane Error:\nFocuses correctly on the metaphysical WHO (human dignity) rather than reducing AI purely to utilitarian economic utility.",
       "Social Physics Analysis:\nActors engage in a Smart Altruistic Loop, combining transparent academic inquiry with shared human values to foster empowerment rather than distraction or fear.",
-      "The Trajectory: The Path of Grace.\nWhen you map intentions to results, it plots toward Greater Good. Ethical frameworks guide tech development responsibly.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map intentions to results, it plots toward Greater Good. Ethical frameworks guide tech development responsibly.",
       "The Unavoidable Truth: Technology must serve human dignity rather than diminish it.\n\nThe Unavoidable Lie: Academic discourse alone solves structural tech monopolies.",
       "Alethekanon:\nRigorous moral theology provides a vital counterweight to uncritical tech accelerationism.",
       "Awwthekanon:\nIt is deeply heartening to see brilliant minds gather to ensure technology heals rather than harms our shared human community.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Father Paolo Benanti",
@@ -216,6 +278,7 @@
         "name": "Australian Catholic University",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

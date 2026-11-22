@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.13,
+    "real_u": 0.17,
     "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A pre-election patch is dressed up as proactive leadership. The House returns to pass a stopgap bill, punting real decisions. 🌐\n\nHouse returns from recess with...\nEvidence: Proactive funding plan, Temporary stopgap patch, Bipartisan election delay\n#Aletheia #USPol",
-      "The House claims to return from summer recess with a proactive, orderly plan to fund the government weeks ahead of the September 30 deadline, demonstrating stable governance.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, the House is passing a temporary continuing resolution to punt major spending decisions past the November midterms, avoiding a politically risky shutdown fight.\nResulting Judgement: (+0.13, -1.0) — Lesser Good",
-      "Verdict: PASS — Fall into Redemption. The House successfully avoids a shutdown, but does so via a temporary patch designed to protect political campaigns rather than resolve the budget.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.0, z: 0)",
+      "The House claims to return from summer recess with a proactive, orderly plan to fund the government weeks ahead of the September 30 deadline, demonstrating stable governance.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the House is passing a temporary continuing resolution to punt major spending decisions past the November midterms, avoiding a politically risky shutdown fight.\nResulting Judgement: (+0.17, -1.00) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.0, z: 0)",
       "- Washington Times: COND (+0.13, -1.0) — Stopgap as plan.\n- Bipartisan Strategy: PASS (+0.20, -1.0) — Delay conflict.",
       "The House is voting on a Senate-passed stopgap bill to extend government funding through December 11, 2026. This fast-tracked continuing resolution punts major spending decisions until after the November midterm elections.",
       "The Bright Side:\nWhile the stopgap is a temporary band-aid, it successfully prevents a disruptive government shutdown, ensuring federal services continue uninterrupted through the election season.",
       "The Breakdown & Plane Error:\nThe framing commits a Lyrical error (WHY). It presents a defensive political delay tactic as a proactive governance victory, substituting campaign self-preservation for genuine fiscal planning.",
       "Social Physics Analysis:\nPoliticians use the pretext of proactive funding to mask their true goal of avoiding pre-election voter backlash. By delaying the budget fight, they minimize immediate friction but increase long-term systemic strain.",
-      "The Trajectory: The Path of Fall into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward a Lesser Good. Kicking the can down the road preserves immediate stability.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward a Lesser Good. Kicking the can down the road preserves immediate stability.",
       "The Unavoidable Truth: A government shutdown will be avoided before the midterms.\n\nThe Unavoidable Lie: This stopgap represents a proactive, long-term solution to federal funding.",
       "Alethekanon:\nThe continuing resolution is not a plan; it is a truce. True governance requires resolving structural deficits, not merely rescheduling the conflict to suit electoral calendars.",
       "Awwthekanon:\nIt is a relief that a shutdown is avoided, protecting families and workers from sudden instability. Yet, we must hope for a day when leaders cooperate out of shared care rather than shared political fear.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Washington Times Editorial",
@@ -152,6 +214,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

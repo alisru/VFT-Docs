@@ -5,22 +5,22 @@
     "subject": "Teen charged with murder over...",
     "link": "https://www.dailymail.com/news/article-16206757/sydney-murder.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": -0.9,
+    "claim_u": -0.85,
     "claim_psi": -0.8,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "real_u": -0.85,
+    "real_psi": -0.8,
     "mode": "root",
     "posts": [
       "A 19-year-old man is charged with murder following the tragic shooting death of a 12-year-old boy in Sydney's Hills District.\nEvidence: Police statements, court records, media reports.\n#Aletheia #TrueCrime 🌐",
-      "Authorities report a swift criminal investigation leading to murder charges after a fatal shooting inside a suburban home in September 2026.\nStated Judgement: (-0.9, -0.8) — Greater Evil",
-      "A child lost his life to gun violence, and police operations successfully apprehended suspects and secured legal indictments through formal judicial channels.\nResulting Judgement: (-0.9, -0.9) — Reckoning",
-      "Verdict: PASS — The Path of Reckoning. Institutional law enforcement acted decisively to hold perpetrators accountable for a heinous crime.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Authorities report a swift criminal investigation leading to murder charges after a fatal shooting inside a suburban home in September 2026.\nStated Judgement: (-0.85, -0.80) — Greater Evil",
+      "A child lost his life to gun violence, and police operations successfully apprehended suspects and secured legal indictments through formal judicial channels.\nResulting Judgement: (-0.85, -0.80) — Greater Evil",
+      "Verdict: FAIL — Destruction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "- NSW Police: PASS (-0.9, -0.9) — Swift investigation and murder charges.\n- Media Reporting: PASS (-0.8, -0.7) — Objective, factual crime reporting.",
       "Police arrested a young man in connection with the fatal shooting of a 12-year-old boy at a Norwest residential unit in Sydney's northwest.",
       "The Poison:\nThe irreversible loss of a 12-year-old child highlights the devastating real-world human cost of community violence.",
       "The Breakdown & Plane Error:\nConflating localized violent crime with systemic policy failures without examining immediate causal factors (WHERE vs WHO plane error).",
       "Social Physics Analysis:\nThe tragic loss of a child exposes the destructive collapse of safety. Law enforcement restored order through transparent investigation, replacing chaos with judicial accountability.",
-      "The Trajectory: The Path of Reckoning.\nWhen severe violence shatters community safety, the institutional response maps a direct trajectory toward judicial accountability.",
+      "The Trajectory: The Path of Destruction.\nWhen severe violence shatters community safety, the institutional response maps a direct trajectory toward judicial accountability.",
       "The Unavoidable Truth: The loss of a child leaves an unfillable void that legal verdicts cannot reverse.\n\nThe Unavoidable Lie: Pretending criminal charges alone solve the root drivers of youth violence.",
       "Alethekanon:\nInstitutional justice addresses the aftermath of violence, but true societal preservation requires confronting the roots of tragedy before lives are lost.",
       "Awwthekanon:\nMy heart breaks for the family of that young boy. No parent should ever have to bury a child taken by such senseless violence.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NSW Police",
@@ -157,6 +219,7 @@
     "tags": [
       "Aletheia",
       "TrueCrime"
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

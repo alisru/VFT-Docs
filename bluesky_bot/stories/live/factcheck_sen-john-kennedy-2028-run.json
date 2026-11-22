@@ -5,22 +5,22 @@
     "subject": "Sen. John Kennedy: I'm Thinking About Running for President",
     "link": "https://www.breitbart.com/clips/2026/10/04/sen-john-kennedy-im-thinking-about-running-for-president/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
     "real_u": -0.6,
     "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Sen. John Kennedy flirts with a 2028 presidential run, telling Meet the Press he might jump in if 'a bunch of goobers run.'\nEvidence: Folksy charm, 2028 speculation, populist posturing\n#Aletheia #USPol",
-      "Sen. Kennedy claimed his potential 2028 presidential bid is motivated purely by ensuring capable leadership steps up if the field lacks quality candidates.\nStated Judgement: (+0.8, +0.5) — Lesser Good 🌐",
-      "Behind the folksy soundbites lies classic political positioning, using condescending insults like 'goobers' to generate viral media buzz and secure leverage.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPlaying populist gatekeeper while fishing for national headlines exposes tactical self-interest over genuine public service.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.50, z: 4)",
+      "Sen. Kennedy claimed his potential 2028 presidential bid is motivated purely by ensuring capable leadership steps up if the field lacks quality candidates.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "Behind the folksy soundbites lies classic political positioning, using condescending insults like 'goobers' to generate viral media buzz and secure leverage.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPlaying populist gatekeeper while fishing for national headlines exposes tactical self-interest over genuine public service.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.50, z: 4)",
       "Sub-Audits Breakdown:\n- NBC Interview: COND (+0.5, +0.0) — Leverages folksy persona for reach.\n- 2028 Speculation: FAIL (-0.7, -0.8) — Pretextual positioning for clout.",
       "Appearing on NBC's Meet the Press, Louisiana Senator John Kennedy kept the door open for a 2028 presidential run while offering sharp commentary on fellow Republicans.",
       "The Bright Side:\nKennedy’s blunt candor cuts through scripted political boilerplate, injecting genuine personality and humor into an otherwise rigid national discourse.",
       "This is a Metaphysical and Lyrical plane error (WHO vs WHY). The senator substitutes authentic policy vision for folksy performance art, prioritizing personal brand over substance.",
       "Social Physics Analysis:\nKennedy runs a classic Smart Selfish Maneuver. He uses homespun humor and manufactured disdain for opponents as a pretext to hoard media attention while projecting principled oversight.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated public service and actual media posturing, it plots a direct trajectory toward Deception. (F_pos > F_neg).",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated public service and actual media posturing, it plots a direct trajectory toward Deception. (F_pos > F_neg).",
       "The Unavoidable Truth: Witticisms and media soundbites are powerful tools for capturing attention in modern politics.\n\nThe Unavoidable Lie: Entertaining a presidential run out of sheer disdain for others constitutes selfless public duty.",
       "Alethekanon:\nFusing folksy charm with condescending dismissal is a tried-and-true branding strategy. When political posturing masquerades as public duty, transparency dies beneath the punchlines.",
       "Awwthekanon:\nIt's easy to laugh along with the folksy charm, but true leadership asks how we lift each other up rather than dismissing rivals as mere goobers. Let's seek genuine connection instead.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NBC Interview",
@@ -164,6 +226,7 @@
         "name": "Tom Cotton",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

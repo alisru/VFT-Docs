@@ -5,16 +5,16 @@
     "subject": "The Case for ‘Working-Class Liberalism’",
     "link": "https://www.prospectmagazine.co.uk/politics/democracy/liberal-democracy/74513/the-case-for-working-class-liberalism",
     "target_url": "https://bsky.app/profile/prospectmagazine.co.uk/post/3mvezk5akkg2k",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.7,
-    "real_psi": 0.6,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Liberal democracy requires a renewed governing philosophy focused on shared prosperity and working-class empowerment.\nEvidence: Declining trust, wage stagnation, Acemoglu book\n#Aletheia #Democracy",
-      "Proposing working-class liberalism to rebuild institutional trust, shared prosperity, and bridge cultural divides.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Intellectual framework addresses economic inequality and institutional decay through systemic public investments.\nResulting Judgement: (+0.7, +0.6) — Grace",
-      "Verdict: PASS — The Path of Grace.\nSystemic focus on shared prosperity and institutional renewal addresses the root causes of democratic decay.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Proposing working-class liberalism to rebuild institutional trust, shared prosperity, and bridge cultural divides.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Intellectual framework addresses economic inequality and institutional decay through systemic public investments.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nSystemic focus on shared prosperity and institutional renewal addresses the root causes of democratic decay.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- Prospect Essay: PASS (+0.75, +0.65) — Rigorous diagnosis of decay.\n- Acemoglu Thesis: PASS (+0.80, +0.70) — Solid structural framework.",
       "Global democracies face a governability crisis driven by stagnating wages and cultural polarization.",
       "The Bright Side:\nA clear intellectual roadmap back to bread-and-butter economic solidarity.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Prospect Analysis",
@@ -205,6 +267,7 @@
         "name": "Prospect Magazine",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

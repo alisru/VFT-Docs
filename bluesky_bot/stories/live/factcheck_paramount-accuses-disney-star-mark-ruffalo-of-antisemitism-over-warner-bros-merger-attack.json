@@ -5,22 +5,22 @@
     "subject": "Paramount Accuses Disney Star Mark Ruffalo of Antisemitism Over Warner Bros. Merger Attack",
     "link": "https://www.breitbart.com/entertainment/2026/08/23/paramount-accuses-disney-star-mark-ruffalo-of-antisemitism-over-warner-bros-merger-attack/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.7,
+    "claim_u": 0.5,
+    "claim_psi": 0.78,
+    "real_u": -0.94,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "Paramount hits back at Mark Ruffalo, accusing the actor of antisemitism over merger attacks.\n\nParamount Accuses Disney Star Mark Ruffalo\nEvidence: corporate merger dispute, activist rhetoric, antisemitism accusation\n#Aletheia #Entertainment",
-      "Paramount condemned Mark Ruffalo's \"inhuman\" and genocide-linked attacks against the Ellison family, calling them antisemitic tropes that cheapen real suffering.\nStated Judgement: (+1.0, 0.0) — Good Preference 🌐",
-      "A high-stakes corporate merger dispute is weaponized into an ideological culture war, mutual accusations replacing objective regulatory review.\nResulting Judgement: (-0.8, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nCorporate defense invokes serious bigotry charges to deflect valid antitrust and foreign-money scrutiny.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, Uncertainty z: 3)",
+      "Paramount condemned Mark Ruffalo's \"inhuman\" and genocide-linked attacks against the Ellison family, calling them antisemitic tropes that cheapen real suffering.\nStated Judgement: (+0.50, +0.78) — Greater Good",
+      "A high-stakes corporate merger dispute is weaponized into an ideological culture war, mutual accusations replacing objective regulatory review.\nResulting Judgement: (-0.94, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nCorporate defense invokes serious bigotry charges to deflect valid antitrust and foreign-money scrutiny.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Paramount: COND (+0.4, -0.6) — Defends execs via bigotry claims.\n- Mark Ruffalo: FAIL (-0.7, -0.8) — Mixes geopolitics with corporate M&A.",
       "Paramount accused actor Mark Ruffalo of antisemitism after he criticized executives David and Larry Ellison over Oracle's tech ties and opposed the Warner Bros. Discovery merger.",
       "The Poison:\nWeaponizing accusations of antisemitism to shield a massive $111 billion corporate merger from rigorous public scrutiny.",
       "The Plane Error mistakes corporate monopoly power (WHAT) for personal moral character (WHO). Paramount shifts focus from antitrust concerns to personal ethics.",
       "Social Physics Analysis:\nBy framing legitimate policy criticism of corporate consolidation as prejudice, the studio uses defensive projection to shut down antitrust debate.",
-      "The Trajectory: The Path of Deception.\nWhen corporate defense wraps itself in serious bigotry claims to deflect monopoly oversight, it plots toward deception.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen corporate defense wraps itself in serious bigotry claims to deflect monopoly oversight, it plots toward deception.",
       "The Unavoidable Truth: Huge media mergers demand rigorous national security and antitrust oversight.\nThe Unavoidable Lie: Criticizing corporate executives equals antisemitism.",
       "Alethekanon:\nConflating antitrust critique with bigotry distorts public debate. A $111B merger deserves regulatory scrutiny, not name-calling.",
       "Awwthekanon:\nWords carry deep historical pain, and weaponizing them in business disputes hurts everyone seeking genuine justice and mutual respect.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Paramount Corporate Defense",
@@ -291,6 +353,7 @@
         "sub_psi": -0.6,
         "sub_verdict": "COND"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

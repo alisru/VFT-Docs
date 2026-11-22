@@ -5,22 +5,22 @@
     "subject": "MPs and Lords call for new law...",
     "link": "https://www.bbc.co.uk/news/articles/cwyzvgj70y4o?at_medium=RSS&at_campaign=rss",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": -0.3,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.4,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "UK politicians warn existing laws are blind to AI human rights threats, urging a dedicated statutory regulator.\nEvidence: JCHR Report, Deepfake Abuses, Facial Scans\n#Aletheia #AI #UK 🌐",
-      "A cross-party parliamentary committee argues current legal frameworks are ill-equipped to handle AI risks, demanding a new binding AI bill and oversight body.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While lawmakers sound alarms, the government prioritizes economic growth and relies on fragmented existing rules, resisting rigid new mandates.\nResulting Judgement: (+0.2, -0.3) — Lesser Good",
-      "Verdict: COND — The Path of Awakening. Parliamentary warnings highlight glaring regulatory gaps, but executive caution delays binding safeguards.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "A cross-party parliamentary committee argues current legal frameworks are ill-equipped to handle AI risks, demanding a new binding AI bill and oversight body.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "While lawmakers sound alarms, the government prioritizes economic growth and relies on fragmented existing rules, resisting rigid new mandates.\nResulting Judgement: (+0.40, +0.10) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- JCHR Report: PASS (+0.7, +0.6) — Identifies clear human rights gaps.\n- UK Government: COND (+0.1, -0.4) — Favors growth over binding new laws.",
       "The Joint Committee on Human Rights published a landmark report calling for an independent AI regulator, exposing friction between parliamentary ambition and executive caution.",
       "The Poison:\nWhile reports highlight severe risks like unauthorized facial scans, the government's watch-and-wait stance leaves critical guardrails hanging in limbo.",
       "The Breakdown & Plane Error:\nThe report confuses the WHAT (policy goals) with WHO holds enforcement power, assuming parliamentary declarations automatically translate to binding statutes.",
       "Social Physics Analysis:\nLawmakers run a transparent coalition loop to demand protections, while the executive operates a cautious containment loop, balancing innovation against systemic risks without full alignment.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between parliamentary warnings and executive hesitation, it plots a trajectory toward incremental reform. F = S_LG * LG - O_LG * LG.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between parliamentary warnings and executive hesitation, it plots a trajectory toward incremental reform. F = S_LG * LG - O_LG * LG.",
       "The Unavoidable Truth: AI technologies outpace existing legal frameworks faster than parliaments can draft statutes.\n\nThe Unavoidable Lie: Voluntary industry safeguards match the speed and scale of state-level enforcement.",
       "Alethekanon:\nLegislative alarms expose a glaring regulatory vacuum, yet executive inertia prevents meaningful binding safeguards. Bureaucratic caution ultimately stalls structural adaptation.",
       "Awwthekanon:\nIt is painful to watch citizens face unregulated biometric scans and deepfake exploitation while leaders debate jurisdiction instead of securing basic human dignity.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "JCHR Report",
@@ -177,6 +239,7 @@
         "name": "Anthropic",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

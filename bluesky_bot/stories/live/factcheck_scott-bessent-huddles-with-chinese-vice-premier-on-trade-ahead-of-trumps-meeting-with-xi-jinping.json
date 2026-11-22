@@ -5,22 +5,22 @@
     "subject": "Scott Bessent huddles with Chinese vice premier on trade ahead of Trump’s meeting with Xi Jinping",
     "link": "https://nypost.com/2026/09/20/us-news/scott-bessent-huddles-with-chinese-vice-premier-on-trade-ahead-of-trumps-meeting-with-xi-jinping/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
+    "claim_u": 0.75,
+    "claim_psi": 0.35,
     "real_u": 0.4,
-    "real_psi": 0.2,
+    "real_psi": 0.15,
     "mode": "root",
     "posts": [
       "Treasury Secretary Scott Bessent meets Chinese Vice Premier He Lifeng in NY for trade and AI talks ahead of the Trump-Xi summit.\nEvidence: High-stakes talks, Tariffs looming, AI guardrails\n#Aletheia #Trade #USChina",
-      "Officials present the eight-hour talks as a constructive step toward balanced trade and AI safety guardrails ahead of the presidential summit.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Behind the diplomatic framing, both nations leverage looming tariff threats and strategic tech competition to extract concessions ahead of the summit.\nResulting Judgement: (+0.4, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nConstructive bilateral engagement successfully keeps channels open despite deep systemic friction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.45, z: 0)",
+      "Officials present the eight-hour talks as a constructive step toward balanced trade and AI safety guardrails ahead of the presidential summit.\nStated Judgement: (+0.75, +0.35) — Greater Good",
+      "Behind the diplomatic framing, both nations leverage looming tariff threats and strategic tech competition to extract concessions ahead of the summit.\nResulting Judgement: (+0.40, +0.15) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nConstructive bilateral engagement successfully keeps channels open despite deep systemic friction.\n\nIntegrity: Trustworthy (Hypocrisy: 1.45, z: 0)",
       "Sub-Audits Breakdown:\n- Treasury Dept: PASS (+0.5, +0.3) — Direct diplomatic engagement.\n- Trade Talks: COND (+0.3, +0.0) — Masking intense leverage battles.",
       "Treasury Secretary Scott Bessent and Vice Premier He Lifeng held an eight-hour meeting in New York to negotiate trade terms and AI safeguards ahead of Thursday's summit.",
       "The Bright Side:\nHigh-level dialogue continues, reducing immediate risks of an unmanaged trade war and establishing basic safety frameworks for AI.",
       "The Breakdown & Plane Error:\nConfusing the immediate diplomatic theater (WHAT) with the underlying structural economic competition (WHY).",
       "Social Physics Analysis:\nBoth superpowers engage in a managed friction loop, balancing strategic coercion with pragmatic economic necessity to avert catastrophic decoupling.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated cooperation and actual leverage maneuvering, it plots a stable trajectory toward Lesser Good. F_pos outweighs F_neg through active diplomatic channels.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated cooperation and actual leverage maneuvering, it plots a stable trajectory toward Lesser Good. F_pos outweighs F_neg through active diplomatic channels.",
       "The Unavoidable Truth: Economic interdependence forces both superpowers to negotiate despite deep mutual distrust.\n\nThe Unavoidable Lie: High-stakes tariff leverage is purely driven by friendly cooperation.",
       "Alethekanon:\nPragmatic bilateral engagement prevails over unmitigated conflict when economic survival demands a working detente. 🌐",
       "Awwthekanon:\nIt is a relief to see leaders sitting down across a table for eight long hours, choosing dialogue and shared safety over shouting across an ocean.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Treasury Diplomacy",
@@ -165,6 +227,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -14,13 +14,13 @@
       "Honoring the fallen through a lifetime of dedicated service.\n\nNYPD Legacy Promotion\nEvidence: Generational sacrifice, Continued service, Community honor\n#Aletheia #NYPD #911",
       "Joseph Vigiano Jr. is promoted to sergeant, carrying forward the legacy of his father and uncle who died saving others on September 11, 2001.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "Vigiano Jr. has earned his promotion through years of dedicated service in the Emergency Service Unit, embodying genuine duty and community integration.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — Grace into Grace.\nA rare alignment of stated institutional ideals and actual human sacrifice, demonstrating the power of generational duty and community support.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\nA rare alignment of stated institutional ideals and actual human sacrifice, demonstrating the power of generational duty and community support.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Joseph Vigiano Jr.: PASS (1.0, 1.0) — Earned promotion honoring family sacrifice.\n- NYPD Legacy Support: PASS (1.0, 1.0) — Genuine institutional care for 9/11 families.",
       "Joseph Vigiano Jr., whose father (NYPD) and uncle (FDNY) died on 9/11, was promoted to sergeant alongside 100 other officers at 1 Police Plaza.",
       "The Bright Side:\nThis story highlights how institutional support and family legacy can inspire genuine, selfless service across generations.",
       "The Breakdown & Plane Error:\nNo plane error detected. The physical actions of service (WHERE) perfectly align with the moral intentions of honoring the fallen (WHY).",
       "Social Physics Analysis:\nBy integrating the family into the department's community, the NYPD minimized systemic friction, turning a tragic loss into a source of shared strength.",
-      "The Trajectory: Grace into Grace.\nWhen stated intentions and ground-level results align perfectly, the trajectory remains stable within the zone of genuine public service.",
+      "The Trajectory: The Path of Grace.\nWhen stated intentions and ground-level results align perfectly, the trajectory remains stable within the zone of genuine public service.",
       "The Unavoidable Truth: True legacy is built on quiet, daily dedication.\n\nThe Unavoidable Lie: Generational duty is easy or without deep personal cost.",
       "Alethekanon:\nWhen institutional honor matches individual sacrifice, the social contract is renewed. This is the baseline of functional community governance.",
       "Awwthekanon:\nSeeing little Joey hold his father's side, dreaming of flying helicopters, shows that love and bravery are passed down like the most precious gifts.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Joseph Vigiano Jr.",
@@ -289,6 +351,7 @@
         "name": "FDNY",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

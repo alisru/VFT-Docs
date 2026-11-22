@@ -5,22 +5,22 @@
     "subject": "Russian troops allegedly using civilians as 'human shields' to flee via Kupiansk pipeline, Khartiia Corps says",
     "link": "https://kyivindependent.com/russian-troops-allegedly-using-civilians-as-human-shields-to-flee-via-kupiansk-pipeline-khartiia-corps-says/",
     "target_url": "https://bsky.app/profile/kyivindependent.com/post/3mwnucnd6uk2b",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "claim_u": 0.75,
+    "claim_psi": 0.25,
+    "real_u": -0.05,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Russian troops allegedly forced civilians into a Kupiansk gas pipeline as human shields during retreat.\nEvidence: Drone footage, Khartiia Corps report, civilian movement\n#Ukraine #Kupiansk",
-      "Reports allege Russian forces used civilians as human shields to navigate an underground gas pipeline during retreat.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Military forces exploit vulnerable civilians—including children and the elderly—as tactical cover during retreat operations.\nResulting Judgement: (-0.85, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nTactical exploitation of non-combatants during military retreat reveals severe humanitarian violations.\n\nIntegrity: Severe Deception (Hypocrisy: 6.2, z: 2)",
+      "Reports allege Russian forces used civilians as human shields to navigate an underground gas pipeline during retreat.\nStated Judgement: (+0.75, +0.25) — Greater Good",
+      "Military forces exploit vulnerable civilians—including children and the elderly—as tactical cover during retreat operations.\nResulting Judgement: (-0.05, -0.10) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nTactical exploitation of non-combatants during military retreat reveals severe humanitarian violations.\n\nIntegrity: Severe Deception (Hypocrisy: 6.2, z: 2)",
       "- Khartiia Corps Reconnaissance: PASS (0.8, 0.7) — Drone documentation of civilian movement.\n- Russian Military Retreat: FAIL (-0.9, -0.9) — Using civilians as human shields.",
       "Ukrainian reconnaissance drones recorded Russian troops moving civilians through the Shebelinka-Ostrogozhsk gas pipeline near Kupiansk to avoid targeting during retreat.",
       "The Poison:\nThe tactical callousness of utilizing non-combatant lives as moving shields during active military disengagement.",
       "The Breakdown & Plane Error:\nConfusing tactical survival of combat units with civilian humanitarian protection under the Law of War.",
       "Social Physics Analysis:\nRussian forces execute a Smart Selfish maneuver, prioritizing military survival by deploying human shields behind manufactured frontline chaos.",
-      "The Trajectory: The Path of Destruction.\nWhen combat units use civilians as human shields, it plots a direct trajectory toward Greater Evil. Force vectors show severe negative alignment.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen combat units use civilians as human shields, it plots a direct trajectory toward Greater Evil. Force vectors show severe negative alignment.",
       "The Unavoidable Truth: Retreating troops exploited vulnerable civilians as tactical cover.\n\nThe Unavoidable Lie: The movement was an organized humanitarian evacuation.",
       "Alethekanon:\nDeploying non-combatants as human shields during a military retreat exposes a total collapse of basic operational ethics.🌐",
       "Awwthekanon:\nMy heart aches for those children, the elderly, and the vulnerable souls forced into cold underground pipes as mere bargaining chips.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Khartiia Corps Reconnaissance",
@@ -161,6 +223,7 @@
         "name": "Russian Armed Forces",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Iran to Declare New ‘Restricted Area’ in Persian Gulf",
     "link": "https://www.breitbart.com/national-security/2026/09/07/iran-to-declare-new-restricted-area-persian-gulf/",
     "target_url": "",
-    "claim_u": 0.4,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_u": 0.45,
+    "claim_psi": 0.25,
+    "real_u": -0.05,
+    "real_psi": -0.08,
     "mode": "root",
     "posts": [
       "Tehran threatens a new Persian Gulf exclusion zone as U.S. naval escorts keep tanker traffic moving.\nEvidence: Restricted zone threat, US tanker strikes, rising oil prices\n#Aletheia #Geopolitics",
-      "Tehran claims it maintains control over Gulf waterways and will establish a restricted transit corridor requiring Iranian permits.\nStated Judgement: (+0.4, 0.0) — Good Preference",
-      "U.S. escorts and strikes bypass Iranian blockades while Tehran bluffs with unenforceable exclusion threats amid economic strain.\nResulting Judgement: (-0.85, -0.80) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nTehran's escalation masks military vulnerability with provocative maritime threats that inflate regional energy risk.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 3)",
+      "Tehran claims it maintains control over Gulf waterways and will establish a restricted transit corridor requiring Iranian permits.\nStated Judgement: (+0.45, +0.25) — Greater Good",
+      "U.S. escorts and strikes bypass Iranian blockades while Tehran bluffs with unenforceable exclusion threats amid economic strain.\nResulting Judgement: (-0.05, -0.08) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nTehran's escalation masks military vulnerability with provocative maritime threats that inflate regional energy risk.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 3)",
       "Sub-Audits Breakdown:\n- Iranian Maritime Policy: FAIL (-0.85, -0.80) — Bluffs control despite strikes.\n- US Naval Protection: PASS (0.75, 0.65) — Secures strait traffic.",
       "Following months of military clashes and naval blockades, Iranian officials are attempting to reassert authority over regional shipping lanes against U.S. naval escorts.",
       "The Bright Side:\nHigh energy prices and naval patrols force direct diplomatic engagement between Gulf intermediaries like Oman and Tehran.",
       "The Breakdown & Plane Error:\nConfuses metaphysical declarations of sovereignty (WHO owns the sea) with physical ballistic realities (WHERE warships patrol).",
       "Social Physics Analysis:\nIran runs a Smart Selfish Maneuver, using manufactured crisis and projected blame to mask domestic economic failure while extracting political leverage.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Stated defensive control hides aggressive escalation.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Stated defensive control hides aggressive escalation.",
       "The Unavoidable Truth: Regional shipping remains vulnerable to asymmetric harassment.\n\nThe Unavoidable Lie: Tehran commands full operational control of the Persian Gulf.",
       "Alethekanon:\nPaper exclusion zones cannot repeal naval reality; bravado replaces lost operational capacity in a desperate bid for leverage.",
       "Awwthekanon:\nIt is heartbreaking to watch ordinary people bear the brutal economic costs while leaders trade empty threats across burning waters.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Iranian Maritime Policy",
@@ -164,6 +226,7 @@
         "name": "Mohammad Baqer Qalibaf",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

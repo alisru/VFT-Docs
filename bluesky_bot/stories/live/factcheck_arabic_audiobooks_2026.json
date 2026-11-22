@@ -14,13 +14,13 @@
       "Bridging cultures through the power of voice. Arabic literature finds a new home in audiobooks. Evidence: Nobel laureates, professional narration, cultural exchange. #Literature #Audiobooks 🌐",
       "The claim asserts that these audiobooks provide a vital window into Arabic culture through high-quality translations and professional narration. Stated Judgement: (+0.74, +0.80) — Greater Good",
       "The reality confirms that these productions are professionally curated and serve as an effective bridge for international audiences. Resulting Judgement: (+0.74, +0.80) — Greater Good",
-      "Verdict: PASS — The Path of Awakening. The project successfully integrates cultural depth with accessible formats, fostering genuine understanding. Integrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.",
       "Sub-Audits Breakdown:\n- Digital Arabic Library: PASS (0.8, 0.9) — Expands access to 5,000 works.\n- Translation Quality: PASS (0.8, 0.9) — Uses acclaimed translators like Sawad Hussain and Sinan Antoon.",
       "The National highlights 10 Arabic novels now available as English audiobooks. These works, ranging from Nobel-winning authors to contemporary voices, are performed by professional actors to reach a global audience.",
       "The Bright Side:\nThe project actively dismantles barriers to entry for non-Arabic speakers, turning complex literary traditions into an accessible, empathetic experience.",
       "The Breakdown & Plane Error:\nThere is no plane error here. The WHAT (audiobooks) aligns perfectly with the WHO (international readers) and the WHY (cultural exchange).",
       "Social Physics Analysis:\nBy prioritizing high-quality translation and professional narration, the project empowers authors to reach new audiences. It replaces the friction of language barriers with the transparency of shared narrative.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment is nearly 1:1.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment is nearly 1:1.",
       "The Unavoidable Truth: Literature is the most effective bridge between cultures.\n\nThe Unavoidable Lie: Language barriers are insurmountable.",
       "Alethekanon:\nThis is a model of structural alignment. By leveraging existing literary prestige and professional performance, the project minimizes systemic strain and maximizes cultural resonance.",
       "Awwthekanon:\nIt is so beautiful to see these stories being shared. Every voice matters, and hearing these narratives in English will surely touch many hearts across the world.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Digital Arabic Library",
@@ -269,6 +331,7 @@
         "name": "Sinan Antoon",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

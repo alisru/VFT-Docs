@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "Hamas and Hezbollah marked the anniversary of the October 7 massacre by praising the atrocities as a strategic milestone.\nEvidence: Statements from Hamas and Hezbollah, ICC proceedings, Knesset reports\n#Aletheia #MiddleEast #Israel",
-      "The October 7 attack was a historic, legitimate military achievement in the Palestinian struggle against occupation.\nStated Judgement: (-1.0, -1.0) — Greater Evil",
-      "Celebrating the slaughter, rape, and abduction of civilians as an honorable milestone proves an active commitment to terror and destruction.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nGlorifying mass violence against civilians locks militant groups into permanent war and inevitable reckoning.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "The October 7 attack was a historic, legitimate military achievement in the Palestinian struggle against occupation.\nStated Judgement: (-1.00, -1.00) — Greater Evil",
+      "Celebrating the slaughter, rape, and abduction of civilians as an honorable milestone proves an active commitment to terror and destruction.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nGlorifying mass violence against civilians locks militant groups into permanent war and inevitable reckoning.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Hamas: FAIL (-1.0, -1.0) — Commemorates civilian atrocities as strategic victory.\n- Hezbollah: FAIL (-1.0, -1.0) — Validates terror tactics as global resistance.",
       "Militant groups Hamas and Hezbollah marked the third anniversary of the October 7, 2023 massacres in southern Israel by lauding the attacks as extraordinary military achievements.",
       "The Bright Side:\nBrings total transparency regarding the uncompromising ideological stance of militant leadership.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Hamas & Hezbollah Statements",
@@ -149,6 +211,7 @@
         "name": "Israel",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

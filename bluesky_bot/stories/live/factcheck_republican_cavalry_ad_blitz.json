@@ -5,22 +5,22 @@
     "subject": "Republican 'cavalry' arrives with a Trump-backed $150 million ad blitz in key races",
     "link": "https://www.npr.org/2026/09/18/nx-s1-5971202/trump-super-pac-midterm-spending-republicans-democrats",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.4,
-    "real_u": -0.65,
-    "real_psi": -0.75,
+    "claim_u": 0.3,
+    "claim_psi": 0.2,
+    "real_u": -0.43,
+    "real_psi": -0.57,
     "mode": "root",
     "posts": [
       "A massive $150 million dark money ad blitz floods competitive races, shifting the electoral landscape by drowning out local campaigns.\nEvidence: Healthy debate, Protecting incumbents, Financial saturation\n#Aletheia #USPol #Elections",
-      "Republican strategists claim this massive influx of super PAC cash is the \"cavalry\" arriving to enable a \"real debate\" and draw \"real contrasts\" in a difficult political environment.\nStated Judgement: (+0.60, +0.40) — Lesser Good",
-      "In reality, unlimited dark money is being deployed to bail out scandal-plagued incumbents and swamp grassroots-funded opponents, replacing democratic debate with financial saturation.\nResulting Judgement: (-0.65, -0.75) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nThe \"cavalry\" is a financial shield designed to protect compromised party elites from local accountability through overwhelming ad saturation.\nIntegrity: Severe Deception (Hypocrisy: 1.25, z: 0)",
+      "Republican strategists claim this massive influx of super PAC cash is the \"cavalry\" arriving to enable a \"real debate\" and draw \"real contrasts\" in a difficult political environment.\nStated Judgement: (+0.30, +0.20) — Greater Good",
+      "In reality, unlimited dark money is being deployed to bail out scandal-plagued incumbents and swamp grassroots-funded opponents, replacing democratic debate with financial saturation.\nResulting Judgement: (-0.43, -0.57) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe \"cavalry\" is a financial shield designed to protect compromised party elites from local accountability through overwhelming ad saturation.\nIntegrity: Severe Deception (Hypocrisy: 1.25, z: 0)",
       "- MAGA Inc. Ad Blitz: FAIL (-0.65, -0.75) — Shields scandal-plagued candidates.\n- Campaign Finance: COND (-0.20, -0.40) — Highlights systemic dark money capture.",
       "Two Trump-aligned super PACs have reserved over $150 million in ads, targeting competitive and deep-red races to boost struggling Republican candidates like Texas Attorney General Ken Paxton.",
       "The Poison:\nEven when grassroots candidates build massive, genuine local support, the system allows unlimited external capital to instantly erase their financial advantage and distort local races.",
       "The Breakdown & Plane Error:\nThe campaign commits a Metaphysical error (WHO) by framing the super PACs as \"the cavalry\" representing the voters, when they actually represent a tiny group of ultra-wealthy donors buying political influence.",
       "Social Physics Analysis:\nThe actors execute a Smart Selfish Maneuver. They use the pretext of \"enabling debate\" (Justification) to flood the airwaves, projecting blame onto opponents while using raw financial power to bypass genuine democratic engagement.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between \"enabling debate\" and financial saturation, it plots a direct trajectory toward Deception. The systemic strain of dark money erodes the value of individual votes.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between \"enabling debate\" and financial saturation, it plots a direct trajectory toward Deception. The systemic strain of dark money erodes the value of individual votes.",
       "The Unavoidable Truth: Unlimited dark money allows wealthy donors to override local grassroots momentum.\nThe Unavoidable Lie: The claim that massive ad blitzes are meant to foster a healthy, balanced democratic debate.",
       "Alethekanon:\nThe marketization of speech ensures that the wealthiest actors always hold the loudest megaphone. When democracy is reduced to ad buy volume, representation becomes a transaction.",
       "Awwthekanon:\nIt is so disheartening to see passionate, community-driven campaigns get completely overwhelmed by a tidal wave of outside money. We need a system that values the voices of real people over the depth of corporate pockets.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "MAGA Inc. Ad Blitz",
@@ -162,6 +224,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

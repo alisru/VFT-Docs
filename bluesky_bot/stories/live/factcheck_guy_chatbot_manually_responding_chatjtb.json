@@ -14,7 +14,7 @@
       "Ever wonder if your brilliant AI assistant is just a stressed guy in San Francisco writing haikus about crows? Meet ChatTJB!\nEvidence: satirical art, cognitive surrender, human reality\n#Aletheia #Tech",
       "Stated claim: Tucker Bryant created ChatTJB to satirize AI over-reliance by manually answering queries as an artisanal, delightfully inconvenient human chatbot.\nStated Judgement: (+1.0, 1.0) — Greater Good",
       "Actual reality: ChatTJB functions exactly as advertised, offering a transparent, witty critique of AI hype through genuine human interaction and artistic engagement.\nResulting Judgement: (+1.0, 1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. A brilliantly transparent satirical project that successfully exposes cognitive surrender while fostering genuine human connection.",
+      "Verdict: PASS — Grace.",
       "Sub-Audits Breakdown:\n- Tucker Bryant: PASS (1.0, 1.0) — Bryant honestly delivers manual human responses without deception, fulfilling his stated artistic premise.",
       "Tucker Bryant launched a billboard in San Francisco advertising an AI service called ChatTJB. The catch? The 'AI' is just Bryant manually answering messages to poke fun at blind trust in large language models and encourage critical thinking.",
       "The Bright Side:\nIt brilliantly injects humor and necessary friction into a tech landscape overly obsessed with frictionless automation and cognitive surrender.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Tucker Bryant",
@@ -262,6 +324,7 @@
         "name": "San Francisco",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

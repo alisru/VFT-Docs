@@ -5,22 +5,22 @@
     "subject": "Convicted cab driver rapist Gurmeet Singh stripped of US citizenship",
     "link": "https://nypost.com/2026/08/31/us-news/convicted-cabdriver-rapist-gurmeet-singh-stripped-of-us-citizenship-15-years-after-assaulting-passenger/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "claim_u": 0.83,
+    "claim_psi": 1.0,
+    "real_u": 0.07,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Justice delivered as violent offender loses citizenship.\nEvidence: 2014 conviction, citizenship fraud, 2029 deportation\n#Aletheia #Justice",
-      "An India-born cab driver convicted of a brutal 2011 kidnapping and rape has had his U.S. citizenship revoked for naturalization fraud.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "Gurmeet Singh concealed his violent crimes to obtain citizenship weeks after the assault, and is now stripped of his status ahead of deportation.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: PASS — The Path of Redemption.\nLawful denaturalization corrects a fraudulent naturalization process for a violent criminal.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "An India-born cab driver convicted of a brutal 2011 kidnapping and rape has had his U.S. citizenship revoked for naturalization fraud.\nStated Judgement: (+0.83, +1.00) — Greater Good",
+      "Gurmeet Singh concealed his violent crimes to obtain citizenship weeks after the assault, and is now stripped of his status ahead of deportation.\nResulting Judgement: (+0.07, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nLawful denaturalization corrects a fraudulent naturalization process for a violent criminal.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- U.S. Justice Department: PASS (1.0, 1.0) — Enforcing immigration and criminal law.\n- Gurmeet Singh: FAIL (-1.0, -1.0) — Concealed violent assault during naturalization.",
       "Gurmeet Singh was convicted in 2014 of kidnapping and raping a passenger at knifepoint in May 2011. He managed to become a U.S. citizen later that year by hiding his crimes.",
       "The Bright Side:\nThe federal court successfully utilized denaturalization statutes to strip citizenship obtained via fraud, closing loopholes for violent felons.",
       "The Breakdown & Plane Error:\nThe case centers on the metaphysical discrepancy between a lawful citizen facade and an actual violent criminal identity hiding fraud.",
       "Social Physics Analysis:\nWhen an individual uses deception to secure legal protections while committing violent acts against others, justice requires restoring equilibrium by removing fraudulent privileges.",
-      "The Trajectory: The Path of Redemption.\nWhen legal systems systematically purge fraudulent credentials of violent offenders, it restores order and public safety.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen legal systems systematically purge fraudulent credentials of violent offenders, it restores order and public safety.",
       "The Unavoidable Truth: Fraudulent naturalization obtained by concealing violent felonies cannot stand against the rule of law.\n\nThe Unavoidable Lie: Criminal acts committed before citizenship can be indefinitely shielded by procedural technicalities.",
       "Alethekanon:\nDenaturalization correctly strips legal protection from an offender who defrauded the immigration system. Justice requires accountability without exception. 🌐",
       "Awwthekanon:\nNo legal status can ever erase the profound trauma inflicted upon the survivor. May she find enduring peace and safety.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "U.S. Justice Department Denaturalization",
@@ -210,6 +272,7 @@
         "name": "New York Federal Court",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

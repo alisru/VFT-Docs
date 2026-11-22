@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/micaylah.bsky.social/post/3mvm22blt6c2w",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "real_u": 0.23,
+    "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "A lavish private island wedding celebration funded by a Putin-linked oligarch triggers a federal corruption probe.\n\nDonald Trump Jr. Under Investigation for Wedding Party Funded by Friend of Putin\nEvidence: Personal friendship, Foreign financial influence, Access buying",
-      "Donald Trump Jr. and his wife defend hundreds of thousands of dollars in wedding expenses paid by Russian oligarch Umar Kremlev as a generous, non-political gift from a personal friend.\n\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The secret funding of a political family's private event by a foreign oligarch with close ties to a hostile state's leader represents a severe national security risk and potential influence peddling.\n\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction.\nThe defense of \"personal friendship\" is a pretext to normalize massive, undisclosed foreign financial influence within the highest levels of American political families.\n\nIntegrity: Severe Deception (Hypocrisy: 2.0, z: 4)",
+      "Donald Trump Jr. and his wife defend hundreds of thousands of dollars in wedding expenses paid by Russian oligarch Umar Kremlev as a generous, non-political gift from a personal friend.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The secret funding of a political family's private event by a foreign oligarch with close ties to a hostile state's leader represents a severe national security risk and potential influence peddling.\n\nResulting Judgement: (+0.23, +0.20) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nThe defense of \"personal friendship\" is a pretext to normalize massive, undisclosed foreign financial influence within the highest levels of American political families.\n\nIntegrity: Severe Deception (Hypocrisy: 2.0, z: 4)",
       "- Donald Trump Jr. Defense: FAIL (-0.90, -0.80) — Pretext of \"friendship\" to mask oligarch cash.\n- ProPublica Investigation: PASS (0.90, 0.80) — Rigorous exposure of secret funding.\n- Congressional Inquiry: PASS (0.70, 0.60) — Necessary oversight on foreign influence.",
       "Representative Robert Garcia launched an investigation after reports revealed Russian oligarch Umar Kremlev secretly funded Donald Trump Jr.'s Bahamas wedding celebrations, raising deep corruption concerns.",
       "The Poison:\nCharacterizing a six-figure luxury gift from a foreign state-linked actor as mere \"friendship\" attempts to redefine blatant influence buying as a normal, private social interaction.",
       "The Breakdown & Plane Error:\nThe defense commits a Metaphysical error (WHO) by claiming the beneficiary is just a private groom, ignoring that the recipient is a key surrogate of a US presidential administration.",
       "Social Physics Analysis:\nThe actors execute a Smart Selfish Maneuver. They use the pretext of personal friendship to justify accepting massive foreign funding, projecting political bias onto investigators to distract from the cash.",
-      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Normalizing foreign oligarch funding erodes democratic sovereignty.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Normalizing foreign oligarch funding erodes democratic sovereignty.",
       "The Unavoidable Truth: Oligarchs do not spend hundreds of thousands on political weddings out of pure, agenda-free love.\n\nThe Unavoidable Lie: Accepting secret foreign luxury gifts has zero impact on political influence.",
       "Alethekanon:\nThe \"friendship\" defense is a transparent attempt to bypass foreign influence laws. When a state-linked oligarch pays for your private island, you are no longer a private citizen.",
       "Awwthekanon:\nIt's heartbreaking to see how easily money can blur the lines of duty. True friendship doesn't require secret islands or massive fireworks; it requires honesty and keeping our country safe.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Donald Trump Jr. Defense",
@@ -183,6 +245,7 @@
         "name": "ProPublica",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

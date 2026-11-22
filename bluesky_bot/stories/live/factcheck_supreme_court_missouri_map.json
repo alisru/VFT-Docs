@@ -20,7 +20,7 @@
       "The Bright Side:\nVoters cast ballots on stable, predictable district lines rather than chaotic last-minute judicial switches.",
       "The Breakdown & Plane Error:\nConfusing WHAT (judicial process) with WHO (partisan winners), ignoring the systemic flaw of partisan redistricting.",
       "Social Physics Analysis:\nPolitical actors run Smart Selfish loops by rewriting district lines under the pretext of fairness, while the court steps in to freeze the board to prevent administrative collapse.",
-      "The Trajectory: The Path of Awakening.\nThe collision between partisan map manipulation and judicial docket stabilization reveals a system caught between procedural survival and partisan extraction.",
+      "The Trajectory: The Path of Fall into Destruction.\nThe collision between partisan map manipulation and judicial docket stabilization reveals a system caught between procedural survival and partisan extraction.",
       "The Unavoidable Truth: Procedural deadlines sometimes trump ideal democratic reforms.\nThe Unavoidable Lie: Maps drawn on the eve of an election are purely about citizen representation.",
       "Alethekanon:\nCourts halt eleventh-hour map changes to preserve ballot integrity, exposing how partisan ambition crashes against administrative reality.",
       "Awwthekanon:\nIt is exhausting when the rules of the game are constantly being rewritten right as the race is starting, leaving everyday voters feeling like pawns.",
@@ -37,7 +37,7 @@
     "macro_claim_psi": null,
     "macro_real_u": null,
     "macro_real_psi": null,
-    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "status": "QUARANTINED (Flagged for Re-Audit)",
     "claim_rnet": 1.0,
     "real_rnet": 1.6,
     "claim_z": 0,
@@ -175,6 +175,8 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "exclude_from_analytics": true,
+    "quarantine_reason": "Severe partisan collapse (Delta-u = -1.5) from washingtonexaminer.com without wire counter-grounding"
   }
 ]

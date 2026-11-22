@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/09/05/us-news/fresno-planes-crash-leaves-several-dead-and-injured/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "claim_psi": 1.0,
+    "real_u": 0.94,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A small plane crash near a Fresno airport left two children dead and two adults critically injured.\nEvidence: Small plane crash, 2 children killed, NTSB investigation\n#Aletheia #News",
-      "An unexpected aviation tragedy unfolded as a small plane plunged near Sierra Sky Park.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Emergency responders faced a devastating scene with fatalities and critical injuries under active investigation.\nResulting Judgement: (+0.4, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nA tragic accident met with immediate transparent emergency response and federal investigation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 28)",
+      "An unexpected aviation tragedy unfolded as a small plane plunged near Sierra Sky Park.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Emergency responders faced a devastating scene with fatalities and critical injuries under active investigation.\nResulting Judgement: (+0.94, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nA tragic accident met with immediate transparent emergency response and federal investigation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 28)",
       "- Emergency Responders: PASS (0.9, 0.8) — Rapid rescue efforts.\n- NTSB & FAA: PASS (0.8, 0.7) — Transparent federal investigation.",
       "A small plane carrying four people crashed near the San Joaquin River close to Sierra Sky Park Airport in Fresno, resulting in two fatalities and two critical injuries.",
       "The Poison:\nThe sudden and devastating loss of young lives in an ordinary recreational flight.",
       "The Breakdown & Plane Error:\nEvaluating physical aviation tragedy (Q3) without political pretexts, maintaining logical alignment with rescue realities.",
       "Social Physics Analysis:\nEmergency responders and investigators operated via a Smart Altruistic Loop, coordinating transparently to secure the scene, assist survivors, and investigate the cause.",
-      "The Trajectory: The Path of Awakening.\nWhen you map transparent emergency response against tragic reality, it plots a direct trajectory toward Awakening through shared sorrow and rigorous safety review.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map transparent emergency response against tragic reality, it plots a direct trajectory toward Awakening through shared sorrow and rigorous safety review.",
       "The Unavoidable Truth: Aviation accidents carry catastrophic risks that demand rigorous regulatory oversight.\n\nThe Unavoidable Lie: Tragic accidents can always be prevented by sheer human willpower.",
       "Alethekanon:\nTragedy reminds us of life's fragility. Transparent investigation honors the victims by seeking objective truth.",
       "Awwthekanon:\nSuch heartbreak touches us all. May comfort surround the families and survivors during this dark hour.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.2
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Emergency Responders",
@@ -210,6 +272,7 @@
         "name": "Fresno County Sheriff's Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

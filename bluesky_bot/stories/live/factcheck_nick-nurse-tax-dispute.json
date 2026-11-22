@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Former Raptors coach Nick Nurse fights Ontario over a denied $700K foreign buyer tax rebate.\nEvidence: tax dispute, legal appeal, residency\n#Aletheia #Sports #Canada",
-      "Nurse and his wife argue they contributed immense economic and social value and shouldn't face speculator taxes.\nStated Judgement: (+0.79, +0.91) — Good Preference",
-      "The province enforced strict administrative criteria regarding home occupancy dates at the time of application.\nResulting Judgement: (+0.42, +0.78) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption. A legitimate legal dispute over tax rebate eligibility rules without systemic malice.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 1)",
+      "Nurse and his wife argue they contributed immense economic and social value and shouldn't face speculator taxes.\nStated Judgement: (+0.79, +0.91) — Greater Good",
+      "The province enforced strict administrative criteria regarding home occupancy dates at the time of application.\nResulting Judgement: (+0.42, +0.78) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Nick Nurse & Family: PASS (+0.8, 0.0) — Seeking rightful recovery of taxes paid under specialized worker provisions.\n- Ontario Ministry of Finance: COND (0.0, -0.4) — Rigid enforcement of statutory application deadlines over substantive economic contribution.",
       "Former Toronto Raptors head coach Nick Nurse and his wife are appealing the Ontario government's refusal to refund nearly $700,000 in non-resident speculation tax paid on their Mississauga home.",
       "The Poison:\nRigid bureaucratic cutoff rules penalize individuals who contributed significantly to the province but missed technical filing windows.",
       "The Breakdown & Plane Error:\nThe plane error confuses WHERE (jurisdictional tax rules) with WHO (targeted speculators vs. resident foreign workers). The tension lies between statutory literalism and equitable intent.",
       "Social Physics Analysis:\nThis dispute highlights procedural friction where rigid bureaucratic frameworks clash with substantive contributions, operating through legal appeals rather than deceptive manipulation.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between rigid tax enforcement and equitable worker contributions, it plots a direct trajectory toward Redemption through judicial resolution.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between rigid tax enforcement and equitable worker contributions, it plots a direct trajectory toward Redemption through judicial resolution.",
       "The Unavoidable Truth: Tax laws require clear statutory boundaries to prevent administrative chaos.\n\nThe Unavoidable Lie: Strict cutoff rules perfectly capture the intended class of foreign speculators.",
       "Alethekanon:\nNick Nurse's legal challenge tests whether tax exemptions for foreign workers honor substance or rigid form. Courts exist precisely to adjudicate these interpretive boundaries.",
       "Awwthekanon:\nIt's frustrating to face stiff financial penalties after pouring years of hard work and community spirit into building a home and a championship legacy in Ontario.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.25
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.1,
+        "N": 0.4
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.35,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Nick Nurse Tax Appeal",
@@ -268,6 +330,7 @@
         "name": "Mike Collinge",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

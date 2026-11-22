@@ -5,16 +5,16 @@
     "subject": "Walmart customer, 77, beaten to death after shopping cart dispute",
     "link": "https://nypost.com/2026/09/19/us-news/walmart-customer-bert-atienza-killed-after-teen-employee-parents-attack-him-over-cart-dispute/",
     "target_url": "",
-    "claim_u": 0.4,
-    "claim_psi": -0.2,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "An argument over a shopping cart ends in a fatal beating of a 77-year-old man.\nEvidence: Family Protection, Lethal Mob Violence, Disproportionate Vengeance\n#Aletheia #Norfolk #Walmart",
-      "The defense claims the parents acted spontaneously to protect their distraught teenage daughter from an aggressive customer, framing the fatal encounter as a simple misdemeanor assault.\nStated Judgement: (+0.4, -0.2) — Lesser Good",
+      "The defense claims the parents acted spontaneously to protect their distraught teenage daughter from an aggressive customer, framing the fatal encounter as a simple misdemeanor assault.\nStated Judgement: (+1.00, +1.00) — Greater Good",
       "Surveillance footage shows the parents hunting down the 77-year-old man, shoving him from behind, and kicking him while he lay bleeding on the floor. He died of blunt head trauma.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. A minor verbal dispute was met with lethal mob violence, exposing a complete collapse of basic human empathy and restraint.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- Defense Claim: FAIL (-0.8, -0.6) — Minimizes murder.\n- Parents' Actions: FAIL (-1.0, -1.0) — Mob violence.",
       "Bert Atienza, 77, was shopping with his wife when a teen employee nearly hit her with a cart. After a brief argument, the teen called her parents, who arrived and brutally beat Atienza to death.",
       "The Poison:\nEven if the teenage daughter felt distressed by the verbal confrontation, the parents' response was a grotesque, criminal overreaction that bypassed all legal and moral boundaries.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Defense Attorney Claim",
@@ -293,6 +355,7 @@
         "name": "Walmart",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

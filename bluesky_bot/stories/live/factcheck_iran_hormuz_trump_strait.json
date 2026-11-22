@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "When tweets and carriers clash with regional realities, shipping lanes pay the price.\n\nIran rebuffs Trump's claim over Strait of Hormuz amid report of another ship being struck\nEvidence: rhetorical sovereignty, naval blockades, higher gas prices\n#Aletheia #Geopolitics",
-      "Trump claimed the Strait of Hormuz would soon become U.S. territory after defeating Iran, while Tehran insisted the waterway remains strictly under Iranian command.\nStated Judgement: (+0.60, +0.88) — Good Preference",
-      "In reality, a perpetual naval blockade, ongoing ship strikes, and soaring U.S. fuel prices reveal an escalating conflict with no diplomatic resolution in sight.\nResulting Judgement: (-1.00, -1.00) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nRhetorical assertions of easy territorial conquest mask a grinding, indefinite maritime blockade that inflates global energy costs.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, Uncertainty z: 2)",
+      "Trump claimed the Strait of Hormuz would soon become U.S. territory after defeating Iran, while Tehran insisted the waterway remains strictly under Iranian command.\nStated Judgement: (+0.60, +0.88) — Greater Good",
+      "In reality, a perpetual naval blockade, ongoing ship strikes, and soaring U.S. fuel prices reveal an escalating conflict with no diplomatic resolution in sight.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nRhetorical assertions of easy territorial conquest mask a grinding, indefinite maritime blockade that inflates global energy costs.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- US Territorial Claims: FAIL (-0.9, -0.85) — Unilateral declarations ignore on-the-ground military stalemate and sovereignty.\n- Iranian Maritime Control: COND (-0.5, -0.4) — Maintains control via asymmetric force while absorbing severe economic isolation.",
       "Iran's deputy foreign minister rebuffed U.S. President Donald Trump's claim that the Strait of Hormuz would become U.S. territory. Amid naval blockades, a bulk carrier was struck by an unknown projectile, highlighting the ongoing dangers to commercial shipping in the Persian Gulf.",
       "The Bright Side:\nActive diplomatic channels via Qatar and Pakistan are at least maintaining communication lines between the estranged adversaries, preventing total diplomatic isolation.",
       "The Breakdown & Plane Error:\nConfusing rhetorical posturing (WHAT) with strategic operational reality (WHERE/HOW). Declaring a waterway 'territory by tweet' ignores physical naval geography and active combat risks.",
       "Social Physics Analysis:\nBy framing higher fuel costs as a patriotic duty against terrorism rather than a consequence of blockade strategy, leadership deploys pretexts to deflect accountability for economic strain.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Ground friction (u=-0.85) and negative will (psi=-0.80) overpower diplomatic pretexts.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Ground friction (u=-0.85) and negative will (psi=-0.80) overpower diplomatic pretexts.",
       "The Unavoidable Truth: Maritime chokepoints cannot be seized by political declarations alone while active naval forces contest them.\n\nThe Unavoidable Lie: Economic hardships from blockades are purely minor inconveniences rather than systemic costs.",
       "Alethekanon:\nRhetorical conquest replaces military strategy. When leaders claim ownership over contested waters via social media, they substitute performative bravado for the grinding friction of protracted naval conflict. The toll is paid at the pump by citizens.",
       "Awwthekanon:\nEvery ship struck and every spike in gas prices touches families just trying to get by. Behind these grand geopolitical chess moves are real sailors facing danger and everyday people burdened by costs they didn't vote for.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.25
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.75
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "US Territorial Claims",
@@ -282,6 +344,7 @@
         "sub_psi": -0.4,
         "sub_verdict": "COND"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Death toll from Russian missile strike on Pryluky rises to nine: bodies of three children recovered from under rubble – video",
     "link": "https://www.pravda.com.ua/eng/news/2026/10/07/8056855/",
     "target_url": "https://bsky.app/profile/pravda.ua/post/3mxbp6p3i4s2g",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.95,
-    "real_psi": -0.9,
+    "claim_u": 0.85,
+    "claim_psi": 0.65,
+    "real_u": -0.04,
+    "real_psi": -0.07,
     "mode": "root",
     "posts": [
       "Tragic civilian toll in Pryluky after missile strike.\nEvidence: missile attack, 9 dead, 3 children recovered\n#Ukraine #Pryluky #Aletheia",
-      "Stated reports document rescue operations and rising civilian casualties following a devastating missile strike.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Ground reality reveals targeted destruction of residential areas, ending young lives and shattering communities.\nResulting Judgement: (-0.95, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nIndiscriminate strikes on apartment blocks crush innocent families, driving catastrophic human loss.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Stated reports document rescue operations and rising civilian casualties following a devastating missile strike.\nStated Judgement: (+0.85, +0.65) — Greater Good",
+      "Ground reality reveals targeted destruction of residential areas, ending young lives and shattering communities.\nResulting Judgement: (-0.04, -0.07) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIndiscriminate strikes on apartment blocks crush innocent families, driving catastrophic human loss.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Russian Military: FAIL (-0.98, -0.95) — Conducts unlawful strikes on civilian apartments.\n- Ukrainian Rescue Services: PASS (+0.9, +0.8) — Tirelessly clears rubble to save survivors.",
       "Rescue workers recovered three children's bodies from beneath the rubble in Pryluky, raising the death toll to nine with 38 injured.",
       "The Bright Side:\nTireless emergency responders working around the clock to save trapped residents.",
       "The Breakdown & Plane Error:\nThe report confuses a tactical military pretense with pure humanitarian devastation, framing state violence as routine conflict.",
       "Social Physics Analysis:\nThe aggressor runs a smart selfish maneuver, projecting geopolitical grievances while inflicting raw destruction on civilian housing to enforce compliance.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated strategic objectives and ground-level fatalities, it plots a direct trajectory toward Greater Evil. F_geom = -0.95 due to systemic violence.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated strategic objectives and ground-level fatalities, it plots a direct trajectory toward Greater Evil. F_geom = -0.95 due to systemic violence.",
       "The Unavoidable Truth: Missiles striking residential apartment buildings slaughter innocent children and civilians.\n\nThe Unavoidable Lie: Such catastrophic civilian losses are merely regrettable collateral damage of war.",
       "Alethekanon:\nViolence against children strips away all pretense of strategic necessity, exposing raw systemic cruelty. 🌐",
       "Awwthekanon:\nMy heart breaks for the families and little ones lost beneath the rubble in Pryluky today. No political ambition is worth a single child's laughter silenced forever.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Russian Missile Strike",
@@ -170,6 +232,7 @@
         "name": "Ukrainian Civilians",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

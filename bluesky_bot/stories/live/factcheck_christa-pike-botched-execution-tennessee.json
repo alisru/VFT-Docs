@@ -5,16 +5,16 @@
     "subject": "Christa Pike is walking with h...",
     "link": "https://www.npr.org/2026/10/09/nx-s1-5996402/christa-pike-updates",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.75,
-    "real_u": -0.92,
-    "real_psi": -0.88,
+    "claim_u": 0.82,
+    "claim_psi": 0.62,
+    "real_u": -0.9,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "A clinical death sentence collapsed into an unmonitored chemical trauma ward.\n\nChrista Pike Botched Execution\nEvidence: Clinical legal execution, Severe chemical tissue burns, Institutional accountability\n#Aletheia #DeathPenalty 🌐",
-      "The state of Tennessee claimed its revised lethal injection protocols deliver a lawful, humane, and clinical administration of capital punishment with rigorous medical oversight.\n\nStated Judgement: (+0.85, +0.75) — Greater Good",
-      "Executioners missed veins, pumping pentobarbital into soft tissue to cause blistering burns and 90 minutes of agony before hospitalization. The prison head resigned while officials stayed silent.\n\nResulting Judgement: (-0.92, -0.88) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Tennessee's lethal injection apparatus traded medical competence for bureaucratic haste, turning a legal sentence into chemical torture.\nIntegrity: Severe Deception (Hypocrisy: 14.80, z: 4)",
+      "The state of Tennessee claimed its revised lethal injection protocols deliver a lawful, humane, and clinical administration of capital punishment with rigorous medical oversight.\n\nStated Judgement: (+0.82, +0.62) — Greater Good",
+      "Executioners missed veins, pumping pentobarbital into soft tissue to cause blistering burns and 90 minutes of agony before hospitalization. The prison head resigned while officials stayed silent.\n\nResulting Judgement: (-0.90, -0.85) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 14.80, z: 4)",
       "- TDOC Protocol: FAIL (-0.92, -0.88) — Botched IV burned tissue.\n- State Oversight: FAIL (-0.88, -0.82) — Court froze evidence.",
       "Eight days after surviving two lethal doses of pentobarbital, 50-year-old Christa Pike is recovering in a hospital, walking with assistance, and eating as a state judge orders all execution evidence preserved.",
       "The Bright Side:\nThe judicial order freezing all execution chamber evidence breaks institutional secrecy, forcing full forensic discovery that may prevent future state-administered torture.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "TDOC Lethal Injection Protocol Execution",
@@ -167,6 +229,7 @@
         "name": "Colleen Slemmer",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

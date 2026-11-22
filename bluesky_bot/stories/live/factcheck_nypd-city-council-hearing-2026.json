@@ -5,22 +5,22 @@
     "subject": "City Council Set to Grill NYPD Officials Over NYC Crime Trends",
     "link": "https://nypost.com/2026/09/16/us-news/nypd-officials-grilled-by-city-council-over-nyc-crime-trends/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.3,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.62,
+    "real_psi": 0.58,
     "mode": "root",
     "posts": [
       "City lawmakers confront NYPD brass over crime statistics and reporting compliance.\nEvidence: Felony assaults up, report friction, crime trends\n#Aletheia #NYPD",
-      "Councilmembers argue oversight ensures accurate crime reporting and addresses neighborhood safety gaps.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Political theater collides with police defensiveness, masking whether crime is genuinely falling or under-reported.\nResulting Judgement: (-0.4, -0.3) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Deception.\nOversight hearings expose friction between public perception and official metrics.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Councilmembers argue oversight ensures accurate crime reporting and addresses neighborhood safety gaps.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Political theater collides with police defensiveness, masking whether crime is genuinely falling or under-reported.\nResulting Judgement: (-0.62, +0.58) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nOversight hearings expose friction between public perception and official metrics.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- City Council Oversight: COND (0.3, 0.1) — Mix of genuine policy and political theater.\n- NYPD Crime Reporting: FAIL (-0.6, -0.5) — Opacity over complaint audits.",
       "The City Council held a high-profile oversight hearing scrutinizing NYPD crime data and allegations that officers discourage filing complaints.",
       "The Poison:\nThe poison lies in the weaponization of crime stats for political posturing while actual street-level friction remains unaddressed.",
       "Confusing political performance (WHO) with systemic operational reform (HOW). Blaming brass doesn't fix precinct-level reporting culture.",
       "Social Physics Analysis:\nActors use a Smart Selfish Maneuver. Council members deploy oversight as political theater to project accountability, while NYPD hides behind macro-stats to deflect precinct-level friction.",
-      "The Trajectory: The Path of Deception.\nWhen you map stated transparency against defensive opacity, it plots a trajectory toward Lesser Evil. Systemic strain is managed via PR rather than reform.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map stated transparency against defensive opacity, it plots a trajectory toward Lesser Evil. Systemic strain is managed via PR rather than reform.",
       "The Unavoidable Truth: Public perception of crime often diverges from official statistical reductions.\n\nThe Unavoidable Lie: Oversight hearings alone resolve complex policing bottlenecks.",
       "Alethekanon:\nWhen institutions trade transparency for defensive PR, numbers become battlegrounds rather than tools for truth.",
       "Awwthekanon:\nIt's exhausting for everyday New Yorkers caught in the middle when leaders argue over spreadsheets instead of listening to real neighborhood pain.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "City Council Oversight",
@@ -287,6 +349,7 @@
         "name": "Jessica Tisch",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

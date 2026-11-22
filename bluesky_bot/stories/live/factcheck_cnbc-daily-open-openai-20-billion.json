@@ -5,16 +5,16 @@
     "subject": "CNBC Daily Open: What happened to the $20 billion?",
     "link": "https://cnb.cx/4i9mRHE",
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mxgf4v3ac52c",
-    "claim_u": 0.82,
-    "claim_psi": 0.65,
-    "real_u": -0.88,
-    "real_psi": -0.85,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.71,
+    "real_psi": -0.68,
     "mode": "root",
     "posts": [
       "A $20 billion accounting phantom just punctured Silicon Valley's private bubble.\nCNBC Daily Open: What Happened to the $20 Billion?\nEvidence: Transparent Growth Metrics, $18B Revenue Write-Down, Preserving Private Valuations\n#Aletheia #AI 🌐",
-      "OpenAI assured investors its annualized revenue reached a staggering milestone, with enterprise sales doubling and rapid momentum justifying an $852 billion valuation ahead of a planned 2027 IPO.\nStated Judgement: (+0.82, +0.65) — Greater Good",
-      "The actual run rate was $50 billion, not the $68 billion previously floated. OpenAI quietly bundled gross partner sales to match Anthropic, sparking an AI sell-off across Nvidia, Oracle, and CoreWeave.\nResulting Judgement: (-0.88, -0.85) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Aggressive revenue definitions and partner gross-ups unraveled, pulling down hardware suppliers and puncturing inflated private metrics.\nIntegrity: Severe Deception (Hypocrisy: 52.00, z: 4)",
+      "OpenAI assured investors its annualized revenue reached a staggering milestone, with enterprise sales doubling and rapid momentum justifying an $852 billion valuation ahead of a planned 2027 IPO.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The actual run rate was $50 billion, not the $68 billion previously floated. OpenAI quietly bundled gross partner sales to match Anthropic, sparking an AI sell-off across Nvidia, Oracle, and CoreWeave.\nResulting Judgement: (-0.71, -0.68) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 52.00, z: 4)",
       "- OpenAI: FAIL (-0.88, -0.85) — Bundled partner gross sales.\n- CNBC: COND (-0.42, +0.35) — Tracks gap, omits bubble risk.\n- AI Ecosystem: FAIL (-0.75, -0.60) — Built on opaque math.",
       "OpenAI clarified its annual revenue run rate is $50 billion rather than $68 billion after stripping out cloud partner sales. The revision spooked investors, triggering sell-offs in Nvidia, Oracle, and CoreWeave ahead of planned tech IPOs.",
       "The Bright Side:\nA $50 billion direct run rate still represents genuine 77% quarterly growth, proving enterprise AI demand is real even if private equity packaging temporarily outran audited reality.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.95,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.15,
+        "O": 0.95,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.55,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.2,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.1,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.05,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "OpenAI Revenue Disclosure",
@@ -292,6 +354,7 @@
         "name": "Nvidia",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

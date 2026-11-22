@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/meduza.io/post/3mx675xowl22f",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "real_u": -0.93,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "An absentee sentence exposes how authoritarian regimes weaponize courts to silence cartoonists and anti-war voices.\nEvidence: Cartoon satire, Absentee court, Penal colony sentence\n#Aletheia #Russia #FreeSpeech",
-      "Moscow claims the court sentencing of \"Masyanya\" creator Oleg Kuvayev upholds state security and foreign agent transparency laws.\nStated Judgement: (+0.5, 0.0) — Good Preference 🌐",
-      "In reality, the four-year penal colony sentence is an authoritarian reprisal against anti-war satire and dissent against the Ukraine invasion.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. A punitive show trial weaponizes legal pretexts to crush anti-war expression and exile dissent.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
+      "Moscow claims the court sentencing of \"Masyanya\" creator Oleg Kuvayev upholds state security and foreign agent transparency laws.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "In reality, the four-year penal colony sentence is an authoritarian reprisal against anti-war satire and dissent against the Ukraine invasion.\nResulting Judgement: (-0.93, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
       "Sub-Audits Breakdown:\n- Russian Judiciary: FAIL (-0.95, -0.90) — Acts as political weapon.\n- State Media Pretexts: FAIL (-0.90, -0.85) — Fabricates security threats.",
       "Animator Oleg Kuvayev was sentenced in absentia to over four years in a penal colony after an episode of \"Masyanya\" urged Russian soldiers to surrender.",
       "The Poison:\nExiles abroad are not safe from financial and legal persecution, as Russia expands its extraterritorial reach to intimidate critics.",
       "The Plane Error & Switch:\nThe Plane Error confuses WHO is threatened: peaceful cartoon satire is reframed as an existential threat to national security to justify tyranny.",
       "Social Physics Analysis:\nThe state runs a Smart Selfish Maneuver, manufacturing legal pretexts around \"foreign agents\" to mask political extraction and suppress dissent.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated security and actual repression, it plots a direct trajectory toward Greater Evil. F_neg dominates.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated security and actual repression, it plots a direct trajectory toward Greater Evil. F_neg dominates.",
       "The Unavoidable Truth: Authoritarian regimes cannot tolerate satire that punctures the sanctity of imperial war.\nThe Unavoidable Lie: This verdict represents impartial justice rather than political vengeance.",
       "Alethekanon:\nWeaponizing legal codes against artists in absentia reveals the regime's profound fragility when facing creative moral clarity.",
       "Awwthekanon:\nIt breaks my heart that creators like Kuvayev are forced into exile just for drawing cartoons calling for peace and saving young lives.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Russian Judiciary",
@@ -168,6 +230,7 @@
         "name": "Russian State",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

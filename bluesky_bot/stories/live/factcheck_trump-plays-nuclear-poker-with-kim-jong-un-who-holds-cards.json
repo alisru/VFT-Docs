@@ -5,22 +5,22 @@
     "subject": "Trump plays nuclear poker with Kim Jong Un — but who holds the cards?",
     "link": "https://www.foxnews.com/politics/trump-plays-nuclear-poker-kim-jong-un-who-holds-cards",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.2,
-    "real_psi": -0.3,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.71,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Hook: Trump seeks summit diplomacy with Kim Jong Un, but Pyongyang's nuclear arsenal and Russian alliance tilt the poker table.\n\nTrump plays nuclear poker with Kim Jong Un\nEvidence: denuclearization goal, mature nuke arsenal, limited deal outcome\n#Geopolitics #US",
-      "Claim: Trump argues personal rapport can revive diplomacy and curb North Korea's nuclear threat through limited agreements and crisis channels.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "Reality: Pyongyang holds a mature arsenal of 50-70 nukes and Russian backing, leaving denuclearization dead and forcing Washington to settle for minor risk-reduction steps.\nResulting Judgement: (-0.2, -0.3) — Stasis",
-      "Verdict: PASS — The Path of Redemption.\nManaging a dangerous nuclear standoff through pragmatic risk reduction rather than impossible grand bargains prevents catastrophic escalation.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 3)",
+      "Claim: Trump argues personal rapport can revive diplomacy and curb North Korea's nuclear threat through limited agreements and crisis channels.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Reality: Pyongyang holds a mature arsenal of 50-70 nukes and Russian backing, leaving denuclearization dead and forcing Washington to settle for minor risk-reduction steps.\nResulting Judgement: (-0.71, -0.75) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nManaging a dangerous nuclear standoff through pragmatic risk reduction rather than impossible grand bargains prevents catastrophic escalation.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 3)",
       "- Diplomatic Outreach: PASS (+0.5, +0.3) — Seeks practical risk reduction.\n- Nuclear Reality: COND (-0.2, -0.4) — Arsenal is permanent.",
       "President Trump is seeking to restart summit diplomacy with North Korean leader Kim Jong Un, aiming for limited concessions like test freezes and crisis hotlines.",
       "The Poison:\nFraming limited risk management as a grand diplomatic triumph obscures the permanent reality of a nuclear-armed North Korea allied with Moscow.",
       "The Breakdown & Plane Error:\nConfusing the WHAT (denuclearization) with the WHO (summit optics). The goal shifted from disarmament to mere risk management.",
       "Social Physics Analysis:\nBy swapping impossible grand bargains for pragmatic risk reduction, diplomats substituted rigid posturing with realistic channels, lowering immediate military friction.",
-      "The Trajectory: The Path of Redemption.\nWhen you map ground-level constraints against stated aims, it plots toward Redemption. Pragmatic alignment reduces active conflict strain.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map ground-level constraints against stated aims, it plots toward Fall into Destruction. Pragmatic alignment reduces active conflict strain.",
       "The Unavoidable Truth: North Korea's nuclear arsenal is permanent and fully established.\n\nThe Unavoidable Lie: Summit diplomacy will rollback Pyongyang's nuclear capabilities.",
       "Alethekanon:\nSummit diplomacy cannot erase a mature nuclear reality, but open communication channels reduce catastrophic miscalculation risks in a tense standoff.",
       "Awwthekanon:\nIt's heavy watching leaders play poker with nuclear stakes, but every small line of communication opened is a tiny prayer for peace.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Diplomatic Outreach",
@@ -208,6 +270,7 @@
         "name": "Kelsey Davenport",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

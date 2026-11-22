@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "real_u": 0.1,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "Meta opens up its Muse AI firmware for DIY hardware tinkerers.\nEvidence: Open-source SDK, Muse Home Link, hardware ecosystem expansion\n#Aletheia #Tech #AI",
-      "Meta is open-sourcing its Muse AI firmware and SDK, enabling developers and hobbyists to build custom smart hardware and connect home devices.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "By distributing open-source code for custom gadgets, Meta strategically expands its AI ecosystem footprint, locking hardware developers into its proprietary assistant.\nResulting Judgement: (-0.4, -0.6) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nOpen-sourcing hardware SDKs expands developer freedom while quietly cementing corporate AI ecosystem dominance.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Meta is open-sourcing its Muse AI firmware and SDK, enabling developers and hobbyists to build custom smart hardware and connect home devices.\nStated Judgement: (+0.80, +0.00) — Lesser Good",
+      "By distributing open-source code for custom gadgets, Meta strategically expands its AI ecosystem footprint, locking hardware developers into its proprietary assistant.\nResulting Judgement: (+0.10, -0.25) — Lesser Good",
+      "Verdict: PASS — Compromise.\nOpen-sourcing hardware SDKs expands developer freedom while quietly cementing corporate AI ecosystem dominance.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Meta Open Source Strategy: COND (-0.3, -0.5) — Empowers tinkerers while locking in Meta's backend AI.\n- TechCrunch Coverage: PASS (0.5, 0.0) — Accurate reporting on hardware rollouts.",
       "Meta is pushing its generative AI model, Muse, beyond smartphones by releasing open-source firmware and hardware kits for custom smart devices and home links.",
       "The Bright Side:\nHobbyists gain free development kits and open-source tools to build custom hardware integrations without starting from scratch.",
       "The Breakdown & Plane Error:\nThe breakdown confuses the technical level (HOW developers build gadgets) with the metaphysical level (WHO truly captures long-term ecosystem value).",
       "Social Physics Analysis:\nMeta runs a smart tech-ecosystem maneuver. By offering free dev kits and open-source code, they frame corporate expansion as community empowerment.",
-      "The Trajectory: The Path of Redemption.\nWhen stated ecosystem generosity meets corporate market capture, it plots a conditional path toward equilibrium. (ψ = -0.6)",
+      "The Trajectory: The Path of Compromise.\nWhen stated ecosystem generosity meets corporate market capture, it plots a conditional path toward equilibrium. (ψ = -0.6)",
       "The Unavoidable Truth: Open-sourcing hardware SDKs genuinely empowers developers to build novel edge devices.\nThe Unavoidable Lie: This grassroots tinker project is entirely divorced from corporate user-acquisition strategies.",
       "Alethekanon:\nTrue technical openness requires untethered local control, not proprietary cloud dependencies masquerading as hardware freedom.",
       "Awwthekanon:\nIt's delightful seeing hackers build fun little gadgets with e-ink screens and custom home links, even if big tech is watching!",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Meta Open Source Strategy",
@@ -161,6 +223,7 @@
         "sub_psi": 0.0,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

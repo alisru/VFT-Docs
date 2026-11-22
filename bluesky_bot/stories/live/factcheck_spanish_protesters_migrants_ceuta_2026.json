@@ -5,22 +5,22 @@
     "subject": "Spanish protesters and migrants clash with police in Ceuta one month after surge",
     "link": "https://www.washingtonexaminer.com/news/world/4704287/spanish-protesters-migrants-clash-with-police-ceuta-month-after-surge/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.8,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Tensions explode in Ceuta as locals and migrants clash after a massive summer surge of arrivals.\nEvidence: border surge, camp torched, military vehicle ambushed\n#Aletheia #Ceuta",
-      "Officials present migration tensions as a localized administrative hurdle requiring standard policing.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Ground reality reveals systemic abandonment, violent riots, military vehicle ambushes, and total institutional failure.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nInstitutional paralysis and policy failures allow social fabric to collapse into sectarian violence.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
+      "Officials present migration tensions as a localized administrative hurdle requiring standard policing.\nStated Judgement: (+0.80, +1.00) — Greater Good",
+      "Ground reality reveals systemic abandonment, violent riots, military vehicle ambushes, and total institutional failure.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nInstitutional paralysis and policy failures allow social fabric to collapse into sectarian violence.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
       "- Spanish Government: FAIL (-0.85, -0.90) — Failed to manage border influx.\n- Local Protesters: FAIL (-0.75, -0.85) — Resort to vigilantism and arson.",
       "One month after over 70,000 migrants crossed into Ceuta, remaining populations and local residents face severe friction, culminating in violent clashes and military vehicle attacks.",
       "The Poison:\nPolitical opportunism weaponizes human misery while ordinary citizens and stranded migrants bear the brunt of institutional vacuum.",
       "The Breakdown & Plane Error:\nConfusing administrative bookkeeping (WHAT) with human suffering and security collapse (WHO).",
       "Social Physics Analysis:\nWhen leaders ignore mounting strain and leave communities isolated, people abandon cooperative systems for tribal self-help, turning fear into destructive tribal conflict.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked institutional neglect yields systemic violence.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked institutional neglect yields systemic violence.",
       "The Unavoidable Truth: Borders without infrastructure or humane policy breed predictable chaos.\n\nThe Unavoidable Lie: Pretending the crisis is contained while communities fracture.",
       "Alethekanon:\nGovernance requires active stewardship, not administrative absence followed by shocked commentary.",
       "Awwthekanon:\nBehind every political statistic are terrified families and overwhelmed neighbors caught in a storm neither created.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Spanish Government Response",
@@ -215,6 +277,7 @@
         "name": "Ceuta local government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

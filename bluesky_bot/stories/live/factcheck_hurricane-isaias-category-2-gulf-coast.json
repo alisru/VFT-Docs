@@ -5,22 +5,22 @@
     "subject": "Isaias strengthens into Catego...",
     "link": "https://www.npr.org/2026/10/09/nx-s1-5996396/hurricane-isaias-updates",
     "target_url": "",
-    "claim_u": 0.95,
+    "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.82,
-    "real_psi": 0.89,
+    "real_u": 0.91,
+    "real_psi": 0.95,
     "mode": "root",
     "posts": [
       "A major hurricane threatens the northern Gulf Coast as coastal communities brace for landfall.\nEvidence: Rapid storm warnings, Evacuation orders executed, Public safety prioritized\n#Aletheia #HurricaneIsaias",
-      "NPR reports that Hurricane Isaias strengthened into a Category 2 storm with 105 mph winds, prompting emergency declarations, beach evacuations, and oil production shutdowns across the Gulf Coast.\nStated Judgement: (+0.95, +1.00) — Greater Good",
-      "NOAA data and emergency agencies confirm Isaias rapidly intensified over warm waters. Mandatory and voluntary evacuations were enacted smoothly, while energy operators shut 63% of offshore crude output safely.\nResulting Judgement: (+0.82, +0.89) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Institutional forecasting and emergency protocols operated transparently to protect coastal populations ahead of dangerous storm surge.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "NPR reports that Hurricane Isaias strengthened into a Category 2 storm with 105 mph winds, prompting emergency declarations, beach evacuations, and oil production shutdowns across the Gulf Coast.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "NOAA data and emergency agencies confirm Isaias rapidly intensified over warm waters. Mandatory and voluntary evacuations were enacted smoothly, while energy operators shut 63% of offshore crude output safely.\nResulting Judgement: (+0.91, +0.95) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- NOAA / NHC: PASS (+0.92, +0.88) — Precise surge warnings.\n- State Response: PASS (+0.85, +0.84) — Timely evacuations.\n- NPR / AP News: PASS (+0.88, +0.86) — Factual risk data.",
       "Forming late after a quiet El Niño summer, Isaias pushed 105 mph winds toward Florida, Alabama, and Mississippi, triggering emergency mobilizations across the northern Gulf.",
       "The Bright Side:\nEarly satellite tracking and proactive municipal warnings gave coastal residents and offshore energy operators adequate runway to secure life and critical infrastructure before impact.",
       "The Breakdown & Plane Error:\nNo plane error detected. Physical meteorology aligns directly with public messaging. Agencies transparently communicated uncertainty in storm tracks without sensationalizing risk.",
       "Social Physics Analysis:\nInstitutions operated in high-trust coordination. Forecasters prioritized upfront transparency over sensationalism, enabling local mayors and emergency managers to empower communities to prepare without panic.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace, where predictive foresight minimizes human suffering and infrastructure loss.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace, where predictive foresight minimizes human suffering and infrastructure loss.",
       "The Unavoidable Truth: Accurate meteorology and rapid civil preparation save lives before severe natural disasters strike.\n\nThe Unavoidable Lie: Precautionary evacuations and offshore shutdowns represent unnecessary panic.",
       "Alethekanon:\nInstitutional competence in disaster mitigation depends on unbroken causal chains from sensor telemetry to public action. Here, the system functioned exactly as engineered.",
       "Awwthekanon:\nSeeing neighbors check on elderly friends and farmers writing phone numbers on their animals' hooves shows how much care and community emerge when a storm rolls in.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.53,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.53,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.07,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.43,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.43,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.43,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.13,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.17,
+        "O": 0.5,
+        "N": 0.03
+      },
+      "GP": {
+        "S": 1.33,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.03,
+        "O": 1.3,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "National Oceanic and Atmospheric Administration",
@@ -374,6 +436,7 @@
         "name": "National Weather Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

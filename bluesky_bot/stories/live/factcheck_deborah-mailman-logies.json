@@ -14,7 +14,7 @@
       "A historic milestone for Australian television as Deborah Mailman enters the Logies Hall of Fame. \nEvidence: First Indigenous inductee, career recognition, industry shift. #Logies #DeborahMailman",
       "The claim celebrates Deborah Mailman as the first Indigenous person inducted into the Logie Awards Hall of Fame, highlighting her significant contributions to Australian storytelling. \nStated Judgement: (+1.00, +1.00) — Greater Good",
       "Reality confirms the induction and the industry-wide recognition of Mailman's career, which has consistently elevated Indigenous narratives in mainstream media. \nResulting Judgement: (+1.00, +1.00) — Greater Good",
-      "Verdict: PASS — The Path of Grace. The induction is a genuine recognition of long-overdue representation and artistic excellence in the Australian screen industry. \nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Deborah Mailman: PASS (1.0, 0.9) — Her career trajectory and advocacy have fundamentally shifted the landscape of Australian television.\n- Logie Awards Hall of Fame: PASS (0.9, 0.8) — This induction marks a necessary evolution in the institution's recognition of diversity.",
       "Deborah Mailman, a Bidjara and Maori actor, is being inducted into the Logie Awards Hall of Fame. This is a significant moment for the Australian television industry, marking the first time an Indigenous person has received this honour.",
       "The Bright Side:\nMailman's induction serves as a catalyst for further inclusion, proving that diverse storytelling is both artistically vital and commercially successful.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Deborah Mailman",
@@ -270,6 +332,7 @@
         "name": "ABC",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

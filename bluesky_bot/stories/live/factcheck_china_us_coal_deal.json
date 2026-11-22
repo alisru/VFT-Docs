@@ -5,22 +5,22 @@
     "subject": "China agrees to buy 10M tons o...",
     "link": "https://nypost.com/2026/09/26/world-news/china-to-buy-us-coal-as-countries-talk-trade/",
     "target_url": "",
-    "claim_u": 0.75,
-    "claim_psi": 0.65,
-    "real_u": 0.65,
-    "real_psi": 0.55,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "China agrees to buy 10 million tons of US coal following the Trump-Xi summit, marking a major transactional shift in trade relations.\nSubject: US-China Coal Deal\nEvidence: Trade easing, Coal exports, Transactional peace #Aletheia #Trade 🌐",
-      "The article reports that China has agreed to purchase 10 million tons of US coal as part of a broader package to ease trade frictions.\nStated Judgement: (+0.75, +0.65) — Lesser Good",
-      "In reality, the bilateral agreement is verified, representing a concrete transactional deal that stabilizes economic relations.\nResulting Judgement: (+0.65, +0.55) — Lesser Good",
-      "Verdict: PASS — Awakening into Redemption. A real, verified bilateral trade agreement that stabilizes economic relations through transactional diplomacy.\nIntegrity: Trustworthy (Hypocrisy: 0.1, z: 1)",
+      "The article reports that China has agreed to purchase 10 million tons of US coal as part of a broader package to ease trade frictions.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the bilateral agreement is verified, representing a concrete transactional deal that stabilizes economic relations.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.1, z: 1)",
       "Sub-Audits Breakdown:\n- US-China Trade Deal: PASS (0.65, 0.55) — Real transactional agreement.\n- NY Post Reporting: PASS (0.70, 0.60) — Accurately reports the coal deal.",
       "Following a summit in Washington, China agreed to import 10 million metric tons of US coal in 2027 and 2028 to ease trade tensions.",
       "The Poison:\nExpanding coal production contradicts global climate goals, prioritizing short-term economic peace over ecological health.",
       "The Breakdown & Plane Error:\nThe report is structurally sound, though it downplays the environmental trade-offs of reviving fossil fuel exports.",
       "Social Physics Analysis:\nThis is a Smart Altruistic Maneuver in a transactional frame. Both nations align on a shared economic goal, using transparent trade concessions to resolve systemic friction and establish a stable equilibrium.",
-      "The Trajectory: The Path of Awakening into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Transactional diplomacy stabilizes relations.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Transactional diplomacy stabilizes relations.",
       "The Unavoidable Truth: The US and China have secured a real, mutually beneficial trade deal.\nThe Unavoidable Lie: This deal resolves the long-term environmental contradictions of fossil fuels.",
       "Alethekanon:\nThe US-China coal deal represents a classic transactional equilibrium. While it stabilizes trade relations in the short term, it prioritizes immediate economic concessions over long-term ecological sustainability.",
       "Awwthekanon:\nIt is comforting to see nations choosing dialogue and trade over conflict. Even small steps toward cooperation can help ease global tensions and bring a sense of stability to working families.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "US-China Trade Deal",
@@ -291,6 +353,7 @@
         "sub_psi": 0.55,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

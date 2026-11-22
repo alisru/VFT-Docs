@@ -8,19 +8,19 @@
     "claim_u": 0.6,
     "claim_psi": 0.0,
     "real_u": -0.85,
-    "real_psi": -0.92,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "Botched execution leaves death row inmate Christa Pike conscious and speaking after horrific medical failures in Tennessee.\nEvidence: Lawful execution, Botched torture, State secrecy\n#Aletheia #DeathPenalty",
-      "The state claimed capital punishment would be administered swiftly, professionally, and humanely as lawful retribution for a heinous crime.\nStated Judgement: (+0.6, 0.0) — Good Preference 🌐",
-      "Seven needles bent and failed over an hour, leaving Pike screaming and burned while surviving two lethal doses of pentobarbital.\nResulting Judgement: (-0.85, -0.92) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nState execution machinery broke down into medieval torture, exposing profound administrative failure.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "The state claimed capital punishment would be administered swiftly, professionally, and humanely as lawful retribution for a heinous crime.\nStated Judgement: (+0.60, +0.00) — Lesser Good",
+      "Seven needles bent and failed over an hour, leaving Pike screaming and burned while surviving two lethal doses of pentobarbital.\nResulting Judgement: (-0.85, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nState execution machinery broke down into medieval torture, exposing profound administrative failure.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Tennessee DOC: FAIL (-0.9, -0.9) — Incompetent execution protocol.\n- State Legal Defense: FAIL (-0.8, -0.85) — Obfuscates systemic cruelty.",
       "Christa Pike survived a botched execution in Tennessee after multiple failed IV attempts, prompting Gov. Bill Lee to order an independent review and halt another execution.",
       "The Poison:\nState machinery hides behind judicial solemnity while inflicting grotesque, unregulated physical trauma during botched lethal injections.",
       "The Breakdown & Plane Error:\nThe state commits a metaphysical plane error by confusing administrative retribution with moral justice, ignoring physical reality and human pain.",
       "Social Physics Analysis:\nThe state runs a Smart Selfish maneuver, hiding institutional brutality behind legalistic pretexts of justice while projecting blame onto technical glitches rather than systemic failure.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_pos < F_neg driving psi toward -1.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_pos < F_neg driving psi toward -1.",
       "The Unavoidable Truth: Lethal injection protocols routinely mask horrific mechanical failures under sterile state secrecy.\n\nThe Unavoidable Lie: State executions are administered cleanly, painlessly, and without error.",
       "Alethekanon:\nWhen state vengeance masquerades as justice, administrative incompetence exposes the inherent barbarism of the execution chamber.",
       "Awwthekanon:\nIt is heartbreaking to witness human suffering prolonged in such a cruel manner, reminding us of our shared fragility and the urgent need for mercy.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tennessee DOC Execution Protocol",
@@ -157,6 +219,7 @@
         "name": "Bill Lee",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

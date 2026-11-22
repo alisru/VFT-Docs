@@ -5,22 +5,22 @@
     "subject": "The founder’s secret weapon: W...",
     "link": "https://techcrunch.com/2026/08/19/the-founders-secret-weapon-work-at-techcrunch-disrupt-2026-and-learn-how-the-pros-do-it/",
     "target_url": "",
-    "claim_u": 1.2,
-    "claim_psi": 0.2,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.82,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "TechCrunch is pitching unpaid volunteer labor at Disrupt 2026 as a \"secret weapon\" for startup founders. Is this genuine mentorship or just clever exploitation? 🌐\n\nThe founder’s secret weapon: W...\nEvidence: free labor, educational spin, extraction\n#Aletheia #Tech",
-      "TechCrunch claims that volunteering at Disrupt 2026 is a \"secret weapon\" that teaches founders how the tech ecosystem works, offering invaluable insider knowledge and networking opportunities that pay massive career dividends.\nStated Judgement: (1.2, 0.2) — Good Preference",
-      "In reality, this is a highly extractive framing of unpaid manual labor for a commercial, highly profitable event. While volunteers get free admission, they spend their time working shifts rather than freely networking or learning.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
+      "TechCrunch claims that volunteering at Disrupt 2026 is a \"secret weapon\" that teaches founders how the tech ecosystem works, offering invaluable insider knowledge and networking opportunities that pay massive career dividends.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, this is a highly extractive framing of unpaid manual labor for a commercial, highly profitable event. While volunteers get free admission, they spend their time working shifts rather than freely networking or learning.\nResulting Judgement: (-0.82, -1.00) — Greater Evil",
       "Verdict: FAIL — Fall into Destruction.\nTechCrunch rebrands unpaid event labor as an exclusive educational opportunity, extracting free work from hopeful founders under the guise of career empowerment.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 5)",
       "- Volunteer Program: FAIL (-0.8, -0.9) — Extractive labor framing.\n- Educational Value: COND (-0.3, -0.5) — Limited by work shifts.\n- Event Commercialism: FAIL (-0.9, -0.8) — High-profit free labor.",
       "TechCrunch is recruiting unpaid volunteers for its Disrupt 2026 conference in San Francisco, promising \"insider access\" and networking in exchange for working shifts to help run the commercial event.",
       "The Bright Side:\nVolunteers do receive free general admission to the three-day event, which would otherwise cost hundreds of dollars, providing a lower-cost entry point for cash-strapped founders who are willing to trade labor for access.",
       "The Breakdown & Plane Error:\nThe error is metaphysical (WHO). The stated beneficiary is the volunteer founder gaining \"secret\" knowledge, but the actual beneficiary is the commercial media company securing free operational labor to run its event.",
       "Social Physics Analysis:\nBy framing manual labor as a \"secret weapon,\" the organizers use a clever pretext to bypass fair compensation. This projection of high-value mentorship onto basic event operations exploits the desperation of early-stage founders.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated empowerment and actual labor extraction, it plots a direct trajectory toward Destruction. The model relies on exploiting hopeful founders to subsidize commercial event operations.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated empowerment and actual labor extraction, it plots a direct trajectory toward Destruction. The model relies on exploiting hopeful founders to subsidize commercial event operations.",
       "The Unavoidable Truth: Working a registration desk is not a secret masterclass in venture capital.\nThe Unavoidable Lie: Unpaid labor at a commercial conference is a highly exclusive mentorship opportunity.",
       "Alethekanon:\nA classic corporate bait-and-switch. TechCrunch leverages its brand authority to extract free labor from the very demographic it claims to support, replacing fair compensation with vague promises of \"networking.\"",
       "Awwthekanon:\nIt breaks my heart to see eager, hopeful founders being told that their path to success requires giving away their hard work for free. Everyone deserves to have their labor valued and respected, especially those just starting out.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Volunteer Program",
@@ -193,6 +255,7 @@
         "name": "TechCrunch",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

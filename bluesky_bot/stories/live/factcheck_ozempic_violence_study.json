@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Could weight-loss drugs be a key to curbing violence? A new study explores the link between GLP-1 medications and impulse control. Evidence: Rutgers study, dopamine signaling, reduced aggression. #Health #Science",
-      "The study suggests that GLP-1 drugs like Ozempic may weaken the link between impulsivity and violence by affecting the brain's reward system. Stated Judgement: (+0.94, +0.94) — Good Preference",
-      "Researchers found a significant reduction in the association between impulsivity and violence among current GLP-1 users, though the mechanism remains preliminary. Resulting Judgement: (+0.77, +0.79) — Good Preference",
-      "Verdict: PASS — The Path of Grace. The study provides a transparent, data-driven look at a potential public health breakthrough without overstating its current clinical certainty. Integrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "The study suggests that GLP-1 drugs like Ozempic may weaken the link between impulsivity and violence by affecting the brain's reward system. Stated Judgement: (+0.94, +0.94) — Greater Good",
+      "Researchers found a significant reduction in the association between impulsivity and violence among current GLP-1 users, though the mechanism remains preliminary. Resulting Judgement: (+0.77, +0.79) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.",
       "Sub-Audits Breakdown:\n- Rutgers Research Team: PASS (0.7, 0.8) — The team maintains scientific rigor by noting the findings are preliminary.\n- The Trace Reporting: PASS (0.6, 0.6) — The reporting clearly distinguishes between correlation and causation.",
       "A recent study published in Criminology suggests that GLP-1 receptor agonists, commonly used for weight loss, may blunt the links between impulsivity, alcohol use, and violent behavior in U.S. adults.",
       "The Poison:\nOver-reliance on pharmacological solutions for complex social issues like violence could lead to systemic neglect of the underlying socioeconomic drivers of crime.",
       "The Breakdown & Plane Error:\nThere is no plane error; the study correctly identifies the WHAT (GLP-1 impact) and the HOW (dopamine signaling) without claiming a universal cure.",
       "Social Physics Analysis:\nBy investigating biological factors in violence, the researchers are attempting to empower individuals with new tools for self-regulation, shifting the focus from purely punitive measures to health-based interventions.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The research expands the horizon of potential interventions for public safety.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The research expands the horizon of potential interventions for public safety.",
       "The Unavoidable Truth: Biological interventions can influence behavioral outcomes in complex social systems.\n\nThe Unavoidable Lie: That a pill can replace the need for addressing the root causes of societal violence.",
       "Alethekanon:\nThis is a fascinating intersection of neurology and criminology. The data-driven approach to mapping impulsivity is a necessary step toward more nuanced public health policy.",
       "Awwthekanon:\nIt is so heartening to see researchers looking for ways to help people struggling with impulses. If this can prevent even one act of violence, it is a beautiful step forward for our communities.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.05,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.05,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.6,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.15,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.05,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Rutgers Research Team",
@@ -269,6 +331,7 @@
         "name": "Gun Violence Research Center",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.95,
-    "real_psi": 0.9,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Meet Axel, a deaf rescued Dogo Argentino gearing up to deploy with the Michigan National Guard as an official ministry dog.\nEvidence: Rescue dog, ASL training, Guard deployment\n#Aletheia #NationalGuard",
       "A shelter dog overcomes deafness through ASL training to serve soldiers' emotional health.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Axel masters over 50 commands via hand signals, offering vital support to the 125th Infantry Regiment.\nResulting Judgement: (+0.95, +0.90) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nA heartwarming tale of resilience and genuine military community support.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Axel masters over 50 commands via hand signals, offering vital support to the 125th Infantry Regiment.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nA heartwarming tale of resilience and genuine military community support.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Michigan National Guard: PASS (0.95, 0.90) — Empowers soldiers with unique animal support.\n- Handler Dedication: PASS (0.98, 0.95) — Personally finances specialized training.",
       "A rescued deaf dog becomes a certified ministry dog, training via American Sign Language to deploy with the Michigan National Guard.",
       "The Bright Side:\nOvercoming sensory disability to bring authentic comfort and morale support to military service members.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Michigan National Guard Integration",
@@ -218,6 +280,7 @@
         "name": "Mollie Karazim",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

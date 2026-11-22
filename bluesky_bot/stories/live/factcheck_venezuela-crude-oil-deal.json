@@ -5,22 +5,22 @@
     "subject": "Trumps says Venezuelan oil will fill up US petroleum reserve",
     "link": "https://www.upi.com/Top_News/US/2026/08/30/venezuela-crude-oil/5321788131123/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.75,
+    "claim_psi": 0.35,
+    "real_u": -0.3,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "US President Trump claims Venezuelan oil will refill the drained Strategic Petroleum Reserve.\nEvidence: oil deal, reserve lows, geopolitical control\n#Aletheia #USPol #Energy",
-      "Trump frames the massive Venezuelan oil agreement as a patriotic gift that will quickly top off America's depleted reserves.\nStated Judgement: (1.0, 0.5) — Good Preference",
-      "The deal bypasses immediate relief, locking in long-term extraction under heavy geopolitical leverage while ordinary citizens face sustained price pressures.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nGeopolitical resource extraction is spun as an immediate domestic windfall.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.2, z: 2)",
+      "Trump frames the massive Venezuelan oil agreement as a patriotic gift that will quickly top off America's depleted reserves.\nStated Judgement: (+0.75, +0.35) — Greater Good",
+      "The deal bypasses immediate relief, locking in long-term extraction under heavy geopolitical leverage while ordinary citizens face sustained price pressures.\nResulting Judgement: (-0.30, -0.65) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nGeopolitical resource extraction is spun as an immediate domestic windfall.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.2, z: 2)",
       "- U.S. Strategic Reserve: COND (0.2, -0.4) — Drained reserves prompt high-stakes deals.\n- Venezuelan Oil Deal: FAIL (-0.8, -0.9) — Long-term extraction under US terms.",
       "President Trump announced that crude oil from Venezuela under a newly negotiated deal will be used to replenish the U.S. Strategic Petroleum Reserve, which sits near 44-year lows.",
       "The Bright Side:\nSecuring long-term strategic energy reserves helps cushion future global supply shocks.",
       "The Breakdown & Plane Error:\nConfusing WHAT (replenishing reserves) with WHO (beneficiary of immediate price relief vs. long-term state control).",
       "Social Physics Analysis:\nPolitical leaders often reframe geopolitical resource acquisitions as direct altruistic gifts to citizens, masking the underlying strategic maneuvers and delayed timelines.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic extraction is dressed up as immediate consumer relief.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic extraction is dressed up as immediate consumer relief.",
       "The Unavoidable Truth: Strategic petroleum reserves need replenishment after years of drawdowns.\n\nThe Unavoidable Lie: This agreement provides immediate relief to American motorists today.",
       "Alethekanon:\nStrategic resource extraction cannot be disguised as instant domestic charity without distorting reality.",
       "Awwthekanon:\nIt's tough when energy policies feel distant from the daily struggles of ordinary people at the pump.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "U.S. Strategic Reserve",
@@ -172,6 +234,7 @@
         "name": "Venezuela",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

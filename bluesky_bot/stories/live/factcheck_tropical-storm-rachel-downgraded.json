@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.7,
-    "real_psi": 0.8,
+    "real_u": 0.75,
+    "real_psi": 0.75,
     "mode": "root",
     "posts": [
       "California braces for extreme El Niño weather as Tropical Storm Rachel drops heavy rain and coastal flooding across the region. Evidence: Weather advisories, state flood barriers, emergency declarations #Aletheia #Weather",
-      "Officials warn that downgraded Tropical Storm Rachel and incoming El Niño patterns threaten severe flooding, requiring extensive emergency preparations.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "State and local agencies actively pre-position millions of sandbags and barriers as extreme weather events threaten vulnerable coastal infrastructure.\nResulting Judgement: (+0.7, +0.8) — Grace",
-      "Verdict: PASS — The Path of Grace.\nState agencies proactively mobilized flood defenses to mitigate extreme El Niño storm risks.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Officials warn that downgraded Tropical Storm Rachel and incoming El Niño patterns threaten severe flooding, requiring extensive emergency preparations.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "State and local agencies actively pre-position millions of sandbags and barriers as extreme weather events threaten vulnerable coastal infrastructure.\nResulting Judgement: (+0.75, +0.75) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nState agencies proactively mobilized flood defenses to mitigate extreme El Niño storm risks.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- NPR Reporting: PASS (+0.7, +0.8) — Accurate meteorological coverage.\n- State Preparedness: PASS (+0.8, +0.7) — Proactive infrastructure defense.",
       "Tropical Storm Rachel triggered coastal flooding in southern California before moving inland, serving as a warning for a severe El Niño winter.",
       "The Bright Side:\nProactive emergency pre-positioning significantly minimizes property destruction before storms hit.",
       "The Breakdown & Plane Error:\nEvaluating climate response on the physical plane rather than getting bogged down in political blame.",
       "Social Physics Analysis:\nAuthorities ran a smart altruistic loop by transparently identifying weather threats, pre-positioning emergency supplies, and empowering communities.",
-      "The Trajectory: The Path of Grace.\nWhen you map transparent preparation against actual weather threats, it plots a direct trajectory toward structural resilience.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map transparent preparation against actual weather threats, it plots a direct trajectory toward structural resilience.",
       "The Unavoidable Truth: Extreme weather requires proactive municipal preparation.\nThe Unavoidable Lie: Natural disasters can be entirely prevented by political fiat.",
       "Alethekanon:\nProactive disaster management bridges institutional duty with tangible public protection against severe weather risks.",
       "Awwthekanon:\nIt's terrifying to watch coastal waters breach your home, but seeing communities rally with sandbags gives real hope.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NPR Reporting",
@@ -162,6 +224,7 @@
     "tags": [
       "Aletheia",
       "Weather"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

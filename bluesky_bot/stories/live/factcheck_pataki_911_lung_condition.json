@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.6,
-    "real_u": -0.45,
-    "real_psi": -0.55,
+    "real_u": -0.53,
+    "real_psi": -0.62,
     "mode": "root",
     "posts": [
       "Ex-Gov. Pataki reveals a 9/11-related lung condition ahead of the 25th anniversary, but uses the moment to launch political attacks. 🌐\nEvidence: Health awareness, partisan exclusion, political leverage\n#Aletheia #Pataki #911",
-      "Pataki claims his disclosure is purely about honoring Ground Zero responders and raising awareness of the ongoing health crisis affecting hundreds of thousands of survivors.\nStated Judgement: (+0.80, +0.60) — Lesser Good",
-      "While his illness is real, weaponizing it to demand the exclusion of political opponents like Zohran Mamdani from the memorial service reveals a partisan motive.\nResulting Judgement: (-0.45, -0.55) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Revelation. While the physical diagnosis is tragic and real, using a solemn memorial to score partisan points reveals a deep co-optation of shared grief.\nIntegrity: Conditionally Sound (Hypocrisy: 1.25, z: 2)",
+      "Pataki claims his disclosure is purely about honoring Ground Zero responders and raising awareness of the ongoing health crisis affecting hundreds of thousands of survivors.\nStated Judgement: (+0.80, +0.60) — Greater Good",
+      "While his illness is real, weaponizing it to demand the exclusion of political opponents like Zohran Mamdani from the memorial service reveals a partisan motive.\nResulting Judgement: (-0.53, -0.62) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Conditionally Sound (Hypocrisy: 1.25, z: 2)",
       "- George Pataki: COND (-0.45, -0.55) — Real illness used for political exclusion.\n- Memorial Politics: FAIL (-0.60, -0.70) — Weaponizing tragedy.",
       "Former NY Governor George Pataki revealed he has restrictive airway disease from Ground Zero, but quickly pivoted to demand NYC mayoral candidate Zohran Mamdani be barred from the 9/11 memorial.",
       "The Bright Side:\nPataki's disclosure highlights the very real, ongoing health crisis faced by over 125,000 Ground Zero responders and survivors enrolled in federal health programs.",
       "The Breakdown & Plane Error:\nThis is a WHO vs WHY error. The physical reality of Pataki's illness is undeniable, but the underlying motive is redirected to enforce political gatekeeping over a shared national tragedy.",
       "Social Physics Analysis:\nPataki executes a Smart Selfish Maneuver. He uses a genuine, high-empathy personal tragedy (9/11 illness) as a pretext to project division and justify the exclusion of a political rival, turning a unifying memorial into a partisan weapon.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between honoring victims and enforcing political exclusion, it plots a trajectory toward Lesser Evil. The moral coordinate decays as sacred memory is traded for political leverage.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between honoring victims and enforcing political exclusion, it plots a trajectory toward Lesser Evil. The moral coordinate decays as sacred memory is traded for political leverage.",
       "The Unavoidable Truth: Thousands of 9/11 survivors still suffer from toxic exposure.\nThe Unavoidable Lie: Excluding political rivals from a memorial honors the victims.",
       "Alethekanon:\nSacred grief is the ultimate political shield. By wrapping partisan exclusion in the shroud of Ground Zero, actors attempt to make their political maneuvers immune to criticism.",
       "Awwthekanon:\nIt is heartbreaking that those who stood at Ground Zero are still paying with their health. We should wrap them in care, not use their pain to build higher walls between us.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "George Pataki",
@@ -169,6 +231,7 @@
         "name": "Zohran Mamdani",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

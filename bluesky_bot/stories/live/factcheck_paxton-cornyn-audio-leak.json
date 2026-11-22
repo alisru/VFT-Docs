@@ -5,22 +5,22 @@
     "subject": "Paxton caught complaining about Cornyn’s lack of support in another leaked audio",
     "link": "https://www.washingtonexaminer.com/news/campaigns/congressional/4760751/paxton-caught-complaining-cornyn-lack-support-another-leaked-audio/",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.25,
     "claim_psi": 0.0,
-    "real_u": -0.65,
-    "real_psi": -0.75,
+    "real_u": -0.5,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Leaked fundraiser audio catches Texas Senate nominee Ken Paxton whining that GOP Sen. John Cornyn wants him to lose.\nEvidence: Secret recording, primary defeat, withheld endorsement\n#TexasPolitics #Aletheia",
-      "Paxton frames himself as the victim of party establishment sabotage by a retiring colleague who refuses to endorse him after a bitter primary.\nStated Judgement: (+0.5, 0.0) — Conditional Good",
-      "Behind closed fundraiser doors, factional infighting is weaponized for grievance while party unity is sacrificed for personal political dominance.\nResulting Judgement: (-0.65, -0.75) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nIntraparty factionalism is exploited for grievance theater, masking self-serving political warfare as betrayal.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Paxton frames himself as the victim of party establishment sabotage by a retiring colleague who refuses to endorse him after a bitter primary.\nStated Judgement: (+0.25, +0.00) — Lesser Good",
+      "Behind closed fundraiser doors, factional infighting is weaponized for grievance while party unity is sacrificed for personal political dominance.\nResulting Judgement: (-0.50, -0.45) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nIntraparty factionalism is exploited for grievance theater, masking self-serving political warfare as betrayal.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "- Ken Paxton: FAIL (-0.70, -0.80) — Weaponizes leaked audio for tribal victimhood.\n- John Cornyn: COND (-0.30, -0.10) — Withholds endorsement amid bitter primary fallout.",
       "Texas Attorney General Ken Paxton was caught in another leaked fundraiser audio complaining that outgoing Sen. John Cornyn wants him to lose to teach the GOP a lesson.",
       "The Bright Side:\nIntraparty divisions are exposed openly rather than festering entirely behind closed doors.",
       "The Breakdown & Plane Error:\nConfusing private donor grumbling with systemic institutional betrayal. The error is treating factional sore points as existential persecution.",
       "Social Physics Analysis:\nPaxton runs a classic smart selfish maneuver: defeating an incumbent in a brutal primary, then playing the aggrieved victim when party elders decline to enthusiastically embrace the insurgency.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated victimhood and ground-level factional warfare, it plots a direct trajectory toward Lesser Evil. Friction is artificially stoked for tribal clout.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated victimhood and ground-level factional warfare, it plots a direct trajectory toward Lesser Evil. Friction is artificially stoked for tribal clout.",
       "The Unavoidable Truth: Leaked fundraiser audio exposes bitter division within the Texas Republican establishment.\n\nThe Unavoidable Lie: Paxton's pretense of being a helpless victim rather than an aggressive factional combatant.",
       "Alethekanon:\nPrivate grumbling is repackaged as external persecution to fuel tribal fundraising. Accountability is drowned out by perpetual grievance.",
       "Awwthekanon:\nIt's exhausting watching political leaders tear each other apart for leverage while everyday people look for genuine stability and honest representation.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Ken Paxton Leaked Audio",
@@ -157,6 +219,7 @@
     "tags": [
       "TexasPolitics",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

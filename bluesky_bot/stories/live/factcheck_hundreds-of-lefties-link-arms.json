@@ -5,22 +5,22 @@
     "subject": "Hundreds of lefties link arms for bizarre ‘hands across the sand’ protest against California oil drilling",
     "link": "https://nypost.com/2026/09/28/us-news/hundreds-form-human-chain-on-california-beach-to-protest-offshore-drilling/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.4,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.6,
     "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "Hundreds of activists linked arms on a Santa Barbara beach in an annual protest against offshore oil drilling.\nEvidence: coastal protest, beach gathering, oil opposition\n#Aletheia #Environment",
-      "Activists framed the human chain as a vital stand for ecological preservation and climate action along vulnerable coastlines.\nStated Judgement: (+0.8, +0.5) — Trustworthy Good",
-      "The peaceful demonstration effectively raised local awareness for the California Coastal Act's legacy without direct policy changes.\nResulting Judgement: (+0.4, +0.2) — Conditional Good",
-      "Verdict: PASS — The Path of Awakening.\nThe protest genuinely engaged environmental stewardship, though its direct legislative impact remains largely symbolic.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Activists framed the human chain as a vital stand for ecological preservation and climate action along vulnerable coastlines.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "The peaceful demonstration effectively raised local awareness for the California Coastal Act's legacy without direct policy changes.\nResulting Judgement: (+0.60, +0.20) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe protest genuinely engaged environmental stewardship, though its direct legislative impact remains largely symbolic.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- Environmental Advocates: PASS (+0.7, +0.4) — Sincere coastal protection advocacy.\n- Media Framing: COND (+0.5, +0.0) — Highlights fringe elements over core policy.",
       "Hundreds gathered on West Beach for 'Hands Across the Sand' to mark the 50th anniversary of the California Coastal Act, voicing opposition to offshore oil infrastructure.",
       "The Bright Side:\nIt fosters grassroots community cohesion and keeps coastal preservation in the public spotlight.",
       "The Breakdown & Plane Error:\nThe report frames a peaceful ecological commemoration through a mildly mocking lens, confusing symbolic public speech with policy failure.",
       "Social Physics Analysis:\nActivists ran a Smart Altruistic Loop by uniting around a shared environmental goal and transparently calling for sustainable alternatives, avoiding manipulation.",
-      "The Trajectory: The Path of Awakening.\nWhen you map stated ecological goals against tangible community mobilization, it plots a direct trajectory toward Redemption through grassroots awareness.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map stated ecological goals against tangible community mobilization, it plots a direct trajectory toward Destruction through grassroots awareness.",
       "The Unavoidable Truth: Symbolic coastal protests successfully maintain public vigilance against offshore oil drilling expansion.\n\nThe Unavoidable Lie: Human-chain demonstrations instantly halt industrial fossil fuel extraction.",
       "Alethekanon:\nSymbolic environmental protests honor conservation milestones, yet local theater must not be mistaken for systemic regulatory reform.",
       "Awwthekanon:\nIt is beautiful to see people linking arms by the ocean to protect the natural beauty we all share and cherish.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Environmental Advocates",
@@ -159,6 +221,7 @@
         "name": "Sierra Club",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

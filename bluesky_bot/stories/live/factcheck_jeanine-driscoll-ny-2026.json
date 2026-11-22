@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_u": -0.25,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "Jeanine Driscoll targets crime and Democratic Socialism in her NY-4 congressional campaign.\nEvidence: Campaign interview, voter safety concerns, partisan framing\n#Aletheia #USPol #NewYork",
-      "Republican congressional candidate Jeanine Driscoll argues that voter anxiety over rising crime and DSA policies will help flip her lean-Democrat seat.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While crime and taxes are genuine local concerns, framing them entirely around partisan attacks utilizes fear-based political projection.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nThe campaign highlights real local anxieties but weaponizes them through partisan division.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Republican congressional candidate Jeanine Driscoll argues that voter anxiety over rising crime and DSA policies will help flip her lean-Democrat seat.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While crime and taxes are genuine local concerns, framing them entirely around partisan attacks utilizes fear-based political projection.\nResulting Judgement: (-0.25, -0.40) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nThe campaign highlights real local anxieties but weaponizes them through partisan division.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Crime Concerns: COND (0.0, -0.2) — Real issue framed for partisan gain.\n- DSA Opposition: COND (-0.5, -0.6) — Standard political posturing.",
       "Jeanine Driscoll, a Republican candidate in New York's 4th District, emphasized voter unease regarding urban crime and progressive policies ahead of midterms.",
       "The Poison:\nAmplifying localized fears of crime and socialism without offering concrete legislative remedies risks deepening political polarization.",
       "The Breakdown & Plane Error:\nThe analysis confuses the Metaphysical (WHO is to blame) with the Logical (HOW policy impacts crime), leveraging fear for electoral traction.",
       "Social Physics Analysis:\nThe campaign runs a partial Smart Selfish maneuver, utilizing real community anxieties as a pretext to consolidate partisan opposition.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated public safety goals and partisan fear-mongering, it plots a trajectory toward Lesser Evil.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated public safety goals and partisan fear-mongering, it plots a trajectory toward Lesser Evil.",
       "The Unavoidable Truth: Public safety and taxation are central concerns for suburban New York voters.\n\nThe Unavoidable Lie: Partisan electoral control alone instantly resolves complex urban crime trends.",
       "Alethekanon:\nWeaponizing genuine local anxiety about crime into partisan talking points substitutes political theater for systemic solutions.",
       "Awwthekanon:\nFamilies worried about safety deserve genuine community support, not political campaigns playing on their fears.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Crime Concerns",
@@ -163,6 +225,7 @@
         "name": "Democratic Socialists of America",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

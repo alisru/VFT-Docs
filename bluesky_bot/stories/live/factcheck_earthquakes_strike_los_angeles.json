@@ -5,22 +5,22 @@
     "subject": "Barrage of earthquakes suddenly strike Los Angeles",
     "link": "https://nypost.com/2026/09/12/us-news/earthquake-cluster-hits-los-angeles/",
     "target_url": "",
-    "claim_u": 0.2,
-    "claim_psi": 0.0,
-    "real_u": 0.1,
-    "real_psi": 0.0,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Dozens of micro-quakes rattle Southern California, fueling renewed anxiety over major fault lines.\nEvidence: USGS seismic data, Micro-quakes swarm, Fault line anxiety 🌐\n#Aletheia #Earthquake",
-      "Dozens of small earthquakes struck Southern California with a major cluster concentrated around South Los Angeles.\nStated Judgement: (+0.2, 0.0) — Neutral Report",
-      "USGS recorded numerous micro-quakes along the Newport-Inglewood Fault, which is standard tectonic adjustment rather than immediate cataclysm.\nResulting Judgement: (+0.1, 0.0) — Stable Equilibrium",
-      "Verdict: PASS — The Path of Awakening.\nNatural seismic swarm reported accurately alongside scientific context on regional fault lines.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Dozens of small earthquakes struck Southern California with a major cluster concentrated around South Los Angeles.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "USGS recorded numerous micro-quakes along the Newport-Inglewood Fault, which is standard tectonic adjustment rather than immediate cataclysm.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nNatural seismic swarm reported accurately alongside scientific context on regional fault lines.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- USGS Reporting: PASS (+0.2, 0.0) — Accurate seismic tracking.\n- Media Framing: COND (+0.1, 0.0) — Sensationalizes normal swarms.",
       "Dozens of small earthquakes ranging from 1.0 to 2.7 hit Southern California near Lennox and Westmont along the Newport-Inglewood Fault zone.",
       "The Bright Side:\nNatural seismic monitoring allows scientists to better understand stress accumulation along major fault zones.",
       "The Breakdown & Plane Error:\nConfusing routine micro-seismic activity (PHYSICAL) with imminent catastrophic disaster (METAPHYSICAL) for sensational clicks.",
       "Social Physics Analysis:\nSeismologists operate in a Smart Altruistic Loop, providing transparent monitoring to help communities prepare without manufacturing panic.",
-      "The Trajectory: The Path of Awakening.\nWhen you map scientific observation against natural tectonic shifts, it plots a direct trajectory toward Grace through transparent data sharing.",
+      "The Trajectory: The Path of Grace.\nWhen you map scientific observation against natural tectonic shifts, it plots a direct trajectory toward Grace through transparent data sharing.",
       "The Unavoidable Truth: Micro-quakes are normal occurrences in seismically active Southern California.\nThe Unavoidable Lie: A cluster of small quakes guarantees an immediate catastrophic Big One.",
       "Alethekanon:\nTectonic reality demands preparation, not panic over routine micro-swarms.",
       "Awwthekanon:\nIt is completely understandable to feel unsettled when the ground shakes, but science helps us understand and prepare safely together.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "USGS Reporting",
@@ -205,6 +267,7 @@
         "name": "Dr. Lucy Jones",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

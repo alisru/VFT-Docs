@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.3,
-    "real_psi": -0.4,
+    "real_u": -0.05,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "Celebrity defection sparks political waves in New York as affordability concerns take center stage. Debra Messing ditches Democrat... Evidence: Hochul criticism, Blakeman endorsement, tax grievances. #Aletheia #USPol 🌐",
-      "Actress Debra Messing publicly endorsed Republican Bruce Blakeman over Democrat Kathy Hochul, citing soaring living costs, congestion pricing, and urban decline as drivers for her shift.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While urban economic strain is genuine, celebrity political pivots frequently leverage real public grievances for partisan signaling without offering systemic economic solutions.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Lesser Evil. A celebrity endorsement highlights voter fatigue over living costs, but leverages personal shifts for partisan theater.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Actress Debra Messing publicly endorsed Republican Bruce Blakeman over Democrat Kathy Hochul, citing soaring living costs, congestion pricing, and urban decline as drivers for her shift.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While urban economic strain is genuine, celebrity political pivots frequently leverage real public grievances for partisan signaling without offering systemic economic solutions.\nResulting Judgement: (-0.05, -0.30) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Debra Messing Alignment: COND (0.2, -0.2) — Voices valid cost-of-living frustrations.\n- Fox News Framing: COND (-0.3, -0.4) — Amplifies partisan celebrity pivot.",
       "Debra Messing announced her support for Republican Nassau County Executive Bruce Blakeman in New York's 2026 gubernatorial race, breaking from her traditional Democratic backing.",
       "The Poison:\nUsing individual celebrity frustration as a proxy for systemic reform obscures actual policy trade-offs behind partisan posturing.",
       "This story mistakes individual celebrity sentiment (WHO/WHAT) for systemic policy efficacy (HOW), framing personal political defection as a broad economic roadmap.",
       "Social Physics Analysis:\nActors channel genuine cost-of-living anxiety into partisan realignment. Rather than fostering transparent economic dialogue, this runs a superficial Smart Selfish maneuver.",
-      "The Trajectory: The Path of Lesser Evil.\nWhen you map public frustration onto partisan celebrity endorsements, it trends toward superficial polarization. (u = -0.3, psi = -0.4)",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map public frustration onto partisan celebrity endorsements, it trends toward superficial polarization. (u = -0.3, psi = -0.4)",
       "The Unavoidable Truth: New York living costs and congestion pricing impose heavy burdens on residents.\n\nThe Unavoidable Lie: A celebrity endorsement constitutes a coherent economic strategy.",
       "Alethekanon:\nShifting political allegiance in response to economic pain reflects personal grievance rather than systemic architectural reform.",
       "Awwthekanon:\nIt's completely understandable to feel overwhelmed by rising bills and a city changing beneath your feet, but real relief takes deep community work.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Debra Messing Alignment",
@@ -160,6 +222,7 @@
         "name": "Kathy Hochul",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

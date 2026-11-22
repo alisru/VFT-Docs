@@ -13,14 +13,14 @@
     "posts": [
       "Federal appeals court revived a lawsuit seeking to restore EPA climate grants terminated under Trump.\n\nAppeals Court Ruling Offers Hope to Climate Grants\nEvidence: procedural remand, mootness question, ticking clock\n#Aletheia #Climate",
       "Plaintiffs and advocates claimed the ruling guarantees a path to restore vital environmental funding for communities like Springfield.\nStated Judgement: (+0.67, +0.76) — Greater Good",
-      "The ruling merely forces a lower court to review mootness, offering procedural hope rather than substantive financial restoration.\nResulting Judgement: (+0.33, +0.51) — Lesser Evil",
-      "Verdict: PASS — The Path of Redemption.\nJudicial review keeps legal avenues open, even if administrative hurdles and congressional funding cuts threaten ultimate success.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 0)",
+      "The ruling merely forces a lower court to review mootness, offering procedural hope rather than substantive financial restoration.\nResulting Judgement: (+0.33, +0.51) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nJudicial review keeps legal avenues open, even if administrative hurdles and congressional funding cuts threaten ultimate success.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 0)",
       "- DC Circuit Panel: PASS (-0.5, -0.2) — Corrects procedural dismissal without guaranteeing funds.\n- Springfield Climate Grants: COND (+0.5, +0.0) — Funding hangs on mootness review.",
       "A federal appeals court vacated a lower court's dismissal of a lawsuit challenging the termination of EPA climate grants, sending the case back to address whether congressional rescissions mooted the funding.",
       "The Poison:\nA procedural remand delays actual money reaching communities, letting administrative rollbacks run out the clock.",
       "The Breakdown & Plane Error:\nConfusing WHERE (judicial venue for claims) with HOW (substantive statutory protection), creating false hope from procedural corrections.",
       "Social Physics Analysis:\nBy pushing the dispute back to the district court, the judiciary maintains legal process over executive fiat, though communities still bear the strain of delayed climate funding.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Legal checks endure despite delays.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Legal checks endure despite delays.",
       "The Unavoidable Truth: Procedural victories keep legal fights alive without guaranteeing funding.\n\nThe Unavoidable Lie: Appellate remands equal immediate financial restoration for local programs.",
       "Alethekanon:\nRemanding the case on jurisdictional grounds keeps the lawsuit alive, but congressional funding rescissions still threaten the grants 🌐",
       "Awwthekanon:\nCommunities counting on these green grants deserve stability, not endless legal ping-pong while local projects hang in the balance.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.45,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.55,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.45,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.45,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 0.65,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "DC Circuit Panel",
@@ -269,6 +331,7 @@
         "name": "Environmental Protection Agency",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

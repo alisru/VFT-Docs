@@ -6,21 +6,21 @@
     "link": "https://chicago.suntimes.com/city-hall/2026/10/02/mental-health-response-teams-now-have-night-time-hours-city-officials-say?utm_campaign=mrf-bluesky-chicago.suntimes.com&utm_source=bluesky&utm_medium=social&mrfcid=202610026ac0326e3b19ff64c191995b",
     "target_url": "https://bsky.app/profile/chicago.suntimes.com/post/3mwwi4nnyzz26",
     "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.7,
-    "real_psi": 0.6,
+    "claim_psi": 0.55,
+    "real_u": 0.75,
+    "real_psi": 0.65,
     "mode": "root",
     "posts": [
       "Expanding Chicago's CARE program to double evening hours for mental health emergency response.\nEvidence: Extended hours, 51% call surge, professional deployment\n#Aletheia #Chicago",
-      "City officials claim expanding CARE mental health teams to 10 PM will replace police response for non-violent crises and reduce trauma.\nStated Judgement: (+0.8, +0.5) — Greater Good",
-      "The city successfully expanded evening hours and deployed fully staffed teams, providing real non-enforcement care during crisis calls.\nResulting Judgement: (+0.7, +0.6) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nChicago's expansion of mental health response hours successfully matches stated humanitarian intent with concrete public service delivery.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "City officials claim expanding CARE mental health teams to 10 PM will replace police response for non-violent crises and reduce trauma.\nStated Judgement: (+0.80, +0.55) — Greater Good",
+      "The city successfully expanded evening hours and deployed fully staffed teams, providing real non-enforcement care during crisis calls.\nResulting Judgement: (+0.75, +0.65) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nChicago's expansion of mental health response hours successfully matches stated humanitarian intent with concrete public service delivery.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- City Administration: PASS (+0.7, +0.6) — Fulfills promise with operational resources.\n- Public Health Dept: PASS (+0.8, +0.7) — Effectively scales specialized crisis care.",
       "Chicago is extending its Crisis Assistance Response and Engagement (CARE) program hours to 8 a.m. to 10 p.m. weekdays, backed by federal funds and proposed local revenue.",
       "The Bright Side:\nTrained mental health professionals are increasingly handling socio-emotional crises instead of armed police officers.",
       "The Breakdown & Plane Error:\nEvaluating WHO handles crises. The city aligns its operational tools with the actual needs of vulnerable populations rather than relying on default police intervention.",
       "Social Physics Analysis:\nCity officials run a Smart Altruistic loop: transparently scaling a proven community care model, coordinating interdepartmental dispatch, and empowering mental health clinicians to resolve non-violent crises safely.",
-      "The Trajectory: The Path of Grace.\nWhen stated humanitarian goals align with measurable institutional scaling, it plots a direct trajectory toward Grace. R_net remains low and stable.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen stated humanitarian goals align with measurable institutional scaling, it plots a direct trajectory toward Grace. R_net remains low and stable.",
       "The Unavoidable Truth: Expanding professional mental health response hours directly reduces traumatic police interventions during non-violent crises.\n\nThe Unavoidable Lie: Sustainable funding entirely depends on controversial local tax mechanisms without future budget battles.",
       "Alethekanon:\nOperationalizing mental health crisis response bridges the gap between rhetoric and tangible community care. 🌐",
       "Awwthekanon:\nIt is deeply heartening to see cities step up with actual compassion and professional care when people are hurting most.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "City Administration",
@@ -157,6 +219,7 @@
         "name": "City of Chicago",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.6,
-    "real_psi": 0.2,
+    "real_u": 0.7,
+    "real_psi": 0.35,
     "mode": "root",
     "posts": [
       "Save up to $200 on TechCrunch Disrupt 2026 passes before the Sept 25 deadline!\nEvidence: Ticket discounts, 10k attendees, startup showcase\n#TechCrunch #Disrupt2026",
-      "TechCrunch promotes its upcoming startup event as a vital gathering for founders and investors to discover the next big trend.\nStated Judgement: (+0.8, +0.5) — Conditional Good",
-      "The article functions fundamentally as promotional advertising to drive ticket sales ahead of the early-bird deadline.\nResulting Judgement: (+0.6, +0.2) — Trustworthy",
-      "Verdict: PASS — The Path of Redemption.\nAn honest promotional push that clearly links ticket savings to a genuine industry networking event without deception.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "TechCrunch promotes its upcoming startup event as a vital gathering for founders and investors to discover the next big trend.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "The article functions fundamentally as promotional advertising to drive ticket sales ahead of the early-bird deadline.\nResulting Judgement: (+0.70, +0.35) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAn honest promotional push that clearly links ticket savings to a genuine industry networking event without deception.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- TechCrunch Promotion: PASS (0.8, 0.5) — Transparent marketing campaign.\n- Ticket Discount Offer: PASS (0.6, 0.2) — Clear pricing and deadlines.",
       "TechCrunch is running a standard promotional campaign for its annual Disrupt conference in San Francisco, offering discounts to boost registrations.",
       "The Bright Side:\nProvides genuine opportunities for early-stage founders and investors to connect and showcase innovations.",
       "The Breakdown & Plane Error:\nConfusing commercial promotion (WHAT) with pure altruistic community service (WHO), though transparently executed.",
       "Social Physics Analysis:\nTechCrunch operates through a straightforward commercial exchange loop, offering tangible networking value in exchange for ticket revenue without hidden pretexts or manufactured crises.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the alignment between promotional marketing and real event value, it plots a stable trajectory toward Grace and mutual benefit.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between promotional marketing and real event value, it plots a stable trajectory toward Grace and mutual benefit.",
       "The Unavoidable Truth: Industry conferences provide valuable networking for early-stage founders.\n\nThe Unavoidable Lie: Ticket discounts are scarce philanthropic gifts rather than standard marketing.",
       "Alethekanon:\nTransparent commercial promotion does not require moral disguise to be legitimate.",
       "Awwthekanon:\nIt's exciting to see founders and dreamers gathering to share what they've built and find their community!",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "TechCrunch Promotion",
@@ -151,6 +213,7 @@
         "name": "Startup Battlefield",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Warsh in Wyoming speech: High inflation should be policy priority",
     "link": "https://www.upi.com/Top_News/US/2026/08/28/kevin-warsh-federal-reserve-symposium-wyoming/4011787924809/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
-    "real_psi": -0.3,
+    "claim_u": 0.5,
+    "claim_psi": 0.78,
+    "real_u": 0.33,
+    "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "Fed Chair Kevin Warsh signals a hard line on inflation at the Jackson Hole symposium.\nEvidence: PCE above 2%, hawkish tone, market reaction\n#Aletheia #Economy",
-      "The Federal Reserve remains steadfastly focused on crushing inflation to protect working Americans from rising costs.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "Central bankers navigate conflicting pressures, balancing rate stability with subtle hawkish threats that roil financial markets.\nResulting Judgement: (+0.2, -0.3) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nCandid acknowledgment of persistent inflation guides the central bank toward necessary monetary discipline.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "The Federal Reserve remains steadfastly focused on crushing inflation to protect working Americans from rising costs.\nStated Judgement: (+0.50, +0.78) — Greater Good",
+      "Central bankers navigate conflicting pressures, balancing rate stability with subtle hawkish threats that roil financial markets.\nResulting Judgement: (+0.33, +0.40) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nCandid acknowledgment of persistent inflation guides the central bank toward necessary monetary discipline.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Fed Policy Stance: PASS (0.5, 0.0) — Focus on price stability.\n- Market Impact: COND (-0.2, -0.5) — Sudden rate hike speculation.",
       "Federal Reserve Chairman Kevin Warsh delivered a key speech at Jackson Hole emphasizing that price stability remains the primary mandate.",
       "The Bright Side:\nTransparent commitment to defending consumers against runaway inflation rather than pandering to short-term market trades.",
       "The Breakdown & Plane Error:\nConfusing short-term market anxiety with long-term macroeconomic health (HOW vs WHO).",
       "Social Physics Analysis:\nBy communicating structural economic strain directly, the central bank attempts to align public expectations with fiscal reality, reducing speculative distortion.",
-      "The Trajectory: The Path of Redemption.\nWhen policymakers confront inflation openly, it plots a direct trajectory toward stable economic equilibrium.\n\nF_net resolves toward disciplined price management.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen policymakers confront inflation openly, it plots a direct trajectory toward stable economic equilibrium.\n\nF_net resolves toward disciplined price management.",
       "The Unavoidable Truth: Sustained high inflation erodes the purchasing power of everyday workers.\n\nThe Unavoidable Lie: Central bank communication can ever completely eliminate market speculation.",
       "Alethekanon:\nWarsh pivots toward disciplined monetary signaling, reminding markets that price stability outweighs cheap credit.",
       "Awwthekanon:\nMay economic policy truly shelter hardworking families from the grinding burden of high prices.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.3,
+        "N": 0.2
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.6,
+        "N": 0.2
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.3,
+        "N": 0.3
+      },
+      "LE": {
+        "S": 0.3,
+        "O": 0.5,
+        "N": 0.2
+      },
+      "GP": {
+        "S": 0.7,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Fed Policy Stance",
@@ -217,6 +279,7 @@
         "name": "Heather Long",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

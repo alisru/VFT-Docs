@@ -14,7 +14,7 @@
       "Radical Italian farm uses biomimicry and agroecology to thrive in extreme weather.\nEvidence: sustainable farming, natural resilience, community food\n#Aletheia #Environment 🌐",
       "Quintosapore farm uses natural selection and no-till methods instead of synthetic fertilizers, building self-sustaining ecosystems.\nStated Judgement: (+0.83, +1.00) — Greater Good",
       "The farm genuinely reduces synthetic dependency, lowers costs by 30%, and fosters rich biodiversity.\nResulting Judgement: (+0.86, +1.00) — Greater Good",
-      "Verdict: PASS — The Path of Grace. True agroecological innovation reduces soil strain and empowers sustainable local food systems.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Agroecology: PASS (+1.2, +1.0) — Natural resilience works.\n- Community Model: PASS (+1.0, +1.0) — Serves local needs.",
       "An Umbrian farm turned living laboratory is pioneering climate-resilient agriculture by replacing chemical fertilizers with natural microorganisms.",
       "The Bright Side:\nProving that regenerative farming is economically viable and naturally restorative without chemical monopolies.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Agroecological Innovation",
@@ -201,6 +263,7 @@
         "name": "Quintosapore",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

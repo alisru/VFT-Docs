@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "When tech utopias collide with corporate reality, the friction reveals who holds the power.\n\nGoogle Walkouts & Memoir\nEvidence: utopian ideals, employee retaliation, corporate power #Aletheia #Tech 🌐",
-      "Google promised to organize the world's information and never be evil, fostering open innovation and decentralization.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "Beneath the idealism lay aggressive suppression of dissent, retaliatory firings, and massive centralized power concentration.\nResulting Judgement: (-0.11, -0.27) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Corporate self-preservation consistently overrode utopian ethics when internal dissent challenged executive power.\nIntegrity: Meaningful Distortion (Hypocrisy: 5.5, Uncertainty z: 2)",
+      "Google promised to organize the world's information and never be evil, fostering open innovation and decentralization.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Beneath the idealism lay aggressive suppression of dissent, retaliatory firings, and massive centralized power concentration.\nResulting Judgement: (-0.11, -0.27) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 5.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Corporate Leadership: FAIL (-0.7, -0.8) — Suppressed internal dissent to protect image.\n- Employee Activism: PASS (+0.8, +0.6) — Demanded accountability for misconduct.",
       "Claire Stapleton reflects on leading the 2018 Google walkouts and how the tech giant lost its moral compass amidst corporate bloat.",
       "The Bright Side:\nEmployee activism successfully brought systemic executive misconduct into public view, sparking broader industry reckoning.",
       "The Breakdown & Plane Error:\nConfusing WHAT (organizing information) with WHO (empowering workers vs protecting executives). A classic structural bait-and-switch.",
       "Social Physics Analysis:\nGoogle replaced transparent collaboration with top-down control, treating employee dissent as a threat to be managed rather than a signal to be heeded.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Utopian rhetoric masked authoritarian corporate structures.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Utopian rhetoric masked authoritarian corporate structures.",
       "The Unavoidable Truth: Founding ideals cannot survive unchecked corporate scaling.\nThe Unavoidable Lie: Tech monopolies are neutral tools for grassroots decentralization.",
       "Alethekanon:\nUtopian marketing language serves primarily to obscure the centralization of corporate power and suppress internal accountability. 🌐",
       "Awwthekanon:\nIt hurts to watch ideals you believed in get corporatized, but speaking truth to power always plants seeds for real change.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Corporate Leadership",
@@ -264,6 +326,7 @@
         "name": "YouTube",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,16 +5,16 @@
     "subject": "Who will win the 2026 Nobel Prize in economics & chemistry?",
     "link": "https://www.npr.org/sections/planet-money/2026/10/07/g-s1-146828/who-will-win-the-2026-nobel-prize-in-economics",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 1.0,
-    "real_psi": 0.9,
+    "claim_u": 0.9,
+    "claim_psi": 0.75,
+    "real_u": 0.9,
+    "real_psi": 0.75,
     "mode": "root",
     "posts": [
       "Celebrating foundational scientific breakthroughs and economic inquiry. 🌐\nEvidence: Nobel prize, Scientific research, Prediction markets\n#Aletheia #Science",
-      "The Royal Swedish Academy awards the Nobel Prize in Chemistry for asymmetric organic synthesis, alongside economic predictions.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "Rigorous peer-reviewed chemistry solved a century-old chemical mystery, expanding humanity's mastery over molecular synthesis.\nResulting Judgement: (+1.0, +0.9) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nDecades of dedicated scientific inquiry successfully unbar new frontiers of human knowledge.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "The Royal Swedish Academy awards the Nobel Prize in Chemistry for asymmetric organic synthesis, alongside economic predictions.\nStated Judgement: (+0.90, +0.75) — Greater Good",
+      "Rigorous peer-reviewed chemistry solved a century-old chemical mystery, expanding humanity's mastery over molecular synthesis.\nResulting Judgement: (+0.90, +0.75) — Greater Good",
+      "Verdict: PASS — Grace.\nDecades of dedicated scientific inquiry successfully unbar new frontiers of human knowledge.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Nobel Chemistry Prize: PASS (+1.0, +1.0) — Solves century-old mystery.\n- Economics Markets: PASS (+0.8, +0.5) — Accurate forecasting reporting.",
       "As October rolls around, the scientific and economic communities celebrate monumental intellectual achievements recognized by Nobel committees.",
       "The Bright Side:\nHonoring fundamental research inspires future generations of scientists to tackle complex global challenges.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Nobel Chemistry Prize",
@@ -169,6 +231,7 @@
         "name": "NPR",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

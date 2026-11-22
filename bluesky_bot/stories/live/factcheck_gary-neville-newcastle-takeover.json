@@ -5,22 +5,22 @@
     "subject": "Gary Neville smashed it with insight into the Newcastle United takeover issues",
     "link": "https://www.themag.co.uk/2026/10/gary-neville-smashed-it-with-insight-into-the-newcastle-united-takeover-issues/?fsp_sid=14762",
     "target_url": "https://bsky.app/profile/themag.co.uk/post/3mxbfwi2it52i",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.88,
+    "real_psi": -0.81,
     "mode": "root",
     "posts": [
       "Reflecting on Gary Neville's past commentary defending the Saudi takeover of Newcastle United.\nEvidence: Pragmatic engagement, geopolitical sportswashing, commercial realism\n#Aletheia #NUFC",
-      "Gary Neville argued that engaging with state-backed ownership offers a path to pressure regimes into reform rather than freezing them out of sport.\nStated Judgement: (+0.8, +0.5) — Constructive Engagement",
-      "State-backed takeovers function as sportswashing tools, leveraging Western sports prestige to normalize regimes without enacting genuine domestic human rights reforms.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nCommercial pragmatism masks the ethical surrender of sporting integrity to authoritarian state actors.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.80, z: 3)",
+      "Gary Neville argued that engaging with state-backed ownership offers a path to pressure regimes into reform rather than freezing them out of sport.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "State-backed takeovers function as sportswashing tools, leveraging Western sports prestige to normalize regimes without enacting genuine domestic human rights reforms.\nResulting Judgement: (-0.88, -0.81) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nCommercial pragmatism masks the ethical surrender of sporting integrity to authoritarian state actors.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.80, z: 3)",
       "Sub-Audits Breakdown:\n- Gary Neville Commentary: COND (0.5, 0.4) — Pragmatic engagement mixed with naive reform hopes.\n- The Mag Editorial: FAIL (-0.7, -0.8) — Romanticizes billionaire and state buyouts.",
       "Five years after Mike Ashley's departure, fans reflect on Gary Neville's defense of Saudi Arabia's acquisition of Newcastle United amidst ongoing debate over state ownership.",
       "The Bright Side:\nHonestly confronts the hypocrisy of selective outrage when other clubs already rely on petrodollar investments.",
       "The Breakdown & Plane Error:\nConfuses commercial realism (WHAT is profitable) with ethical leadership (WHO bears the human cost).",
       "Social Physics Analysis:\nGary Neville runs a smart defensive maneuver, framing ethical compromise as enlightened engagement. By highlighting existing petrodollar hypocrisy at other clubs, he normalizes state-backed ownership as an inevitable economic reality rather than an avoidable moral failure.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated progressive reform and ground-level sportswashing, it plots a direct trajectory toward Lesser Evil. F_neg dominates through systemic normalisation of authoritarian influence.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated progressive reform and ground-level sportswashing, it plots a direct trajectory toward Lesser Evil. F_neg dominates through systemic normalisation of authoritarian influence.",
       "The Unavoidable Truth: Premier League football is increasingly shaped by authoritarian state capital seeking international legitimacy.\n\nThe Unavoidable Lie: Sporting engagement acts as an effective catalyst for rapid human rights reform in autocratic states.",
       "Alethekanon:\nPragmatic economic integration is dressed up as progressive diplomacy, masking the uncritical sale of sporting heritage to authoritarian states.",
       "Awwthekanon:\nIt is heartbreaking to watch cherished community clubs become instruments for authoritarian image laundering, leaving loyal fans caught in moral crosswinds.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.65,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Gary Neville Commentary",
@@ -291,6 +353,7 @@
         "name": "Premier League",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

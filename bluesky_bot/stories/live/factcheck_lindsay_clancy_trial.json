@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A devastating look inside a family tragedy as a mother's mental health spiral is laid bare in court.\n\nLindsay Clancy Trial Testimony\nEvidence: medical crisis, tragic loss, systemic failure\n#Aletheia #MentalHealth #Law",
-      "The defense and family claim Lindsay Clancy suffered from severe postpartum psychosis and disjointed medical care, rendering her not criminally responsible.\nStated Judgement: (+0.97, +1.00) — Good Preference",
-      "Court testimony confirms a severe, documented mental decline and systemic medical gaps, though prosecutors argue the actions were planned.\nResulting Judgement: (+0.08, +0.30) — Good Preference",
-      "Verdict: PASS — Grace into Grace. The reporting accurately conveys the tragic reality of severe postpartum illness and systemic medical failures.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "The defense and family claim Lindsay Clancy suffered from severe postpartum psychosis and disjointed medical care, rendering her not criminally responsible.\nStated Judgement: (+0.97, +1.00) — Greater Good",
+      "Court testimony confirms a severe, documented mental decline and systemic medical gaps, though prosecutors argue the actions were planned.\nResulting Judgement: (+0.08, +0.30) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Courtroom Reporting: PASS (0.8, 0.5) — Accurate coverage.\n- Mental Health System: FAIL (-0.4, -0.6) — Disjointed care.",
       "During the murder trial of Lindsay Clancy, her mother and sister testified about her rapid mental decline, severe insomnia, paranoia, and suicidal thoughts before the tragedy.",
       "The Bright Side:\nThis tragic case shines a critical light on postpartum psychosis, potentially helping other families recognize these severe warning signs before it is too late.",
       "The Breakdown & Plane Error:\nNo reporting error. However, the systemic error lies in the medical treatment: treating severe psychosis with disjointed, uncoordinated prescriptions.",
       "Social Physics Analysis:\nWhen a patient's desperate cries for help are met with fragmented medical responses, the systemic strain multiplies. The tragedy highlights the fatal cost of uncoordinated care.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The reporting remains objective and truthful.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The reporting remains objective and truthful.",
       "The Unavoidable Truth: Postpartum psychosis is a medical emergency.\nThe Unavoidable Lie: The healthcare system handled her case with perfect coordination.",
       "Alethekanon:\nThe trial records reveal a clear timeline of severe clinical deterioration that went tragically unaddressed by a fragmented psychiatric care network.",
       "Awwthekanon:\nMy heart breaks for this family. The pain of watching a loved one slip away into darkness, begging for help, is an unimaginable burden to carry.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Courtroom Testimony Reporting",
@@ -260,6 +322,7 @@
         "name": "Massachusetts General Hospital",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

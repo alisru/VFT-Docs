@@ -5,22 +5,22 @@
     "subject": "Longevity doctor reveals what matters most for aging well, beyond pricey biohacks",
     "link": "https://www.foxnews.com/health/longevity-doctor-reveals-what-matters-most-aging-well-beyond-pricey-biohacks",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": 0.92,
-    "real_psi": 0.88,
+    "claim_u": 0.25,
+    "claim_psi": 0.75,
+    "real_u": 0.31,
+    "real_psi": 0.64,
     "mode": "root",
     "posts": [
       "A longevity expert cuts through the expensive biohacking hype to offer simple, accessible truths.\nLongevity doctor reveals what matters most for aging well, beyond pricey biohacks\nEvidence: Health span, Empowering habits, Natural wellness\n#Aletheia #Health #Longevity",
-      "Dr. Annu Navani claims that the foundation of a long, healthy life relies on four low-cost, accessible habits—sleep, stress management, nutrition, and resistance training—rather than expensive, unproven biohacks.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Medical consensus supports Navani's focus on \"health span\" over \"immortality.\" Her advice democratizes wellness, shifting power from high-priced commercial clinics back to individual daily choices.\nResulting Judgement: (+0.92, +0.88) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Navani's insights align perfectly with scientific reality, offering empowering, low-cost solutions that bypass commercial exploitation.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Dr. Annu Navani claims that the foundation of a long, healthy life relies on four low-cost, accessible habits—sleep, stress management, nutrition, and resistance training—rather than expensive, unproven biohacks.\nStated Judgement: (+0.25, +0.75) — Greater Good",
+      "Medical consensus supports Navani's focus on \"health span\" over \"immortality.\" Her advice democratizes wellness, shifting power from high-priced commercial clinics back to individual daily choices.\nResulting Judgement: (+0.31, +0.64) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Dr. Annu Navani: PASS (0.92, 0.88) — Empowers individuals with low-cost habits.\n- Biohack Industry: COND (-0.30, 0.40) — Often prioritizes profit over proven science.",
       "Dr. Annu Navani emphasizes that extending \"health span\"—the quality of our years—is far more achievable and important than chasing extreme lifespans through expensive, unproven technological interventions.",
       "The Poison:\nWhile low-cost habits are highly effective, they require consistent personal discipline and systemic support, which can be difficult to maintain in high-stress modern environments.",
       "The Breakdown & Plane Error:\nThe biohacking industry commits a Metaphysical error by treating aging as a disease to be cured with expensive tools (WHAT) rather than a natural process managed through daily stewardship of the body (WHO).",
       "Social Physics Analysis:\nNavani executes a Smart Altruistic Maneuver, using transparency to dismantle the high-priced pretexts of the biohacking industry. By focusing on accessible solutions, she empowers individuals to take control of their health.",
-      "The Trajectory: The Path of Grace.\nWhen you map the alignment between scientific evidence and accessible wellness, it plots a direct trajectory toward Greater Good. Empowering individuals with simple truths fosters systemic health.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between scientific evidence and accessible wellness, it plots a direct trajectory toward Greater Good. Empowering individuals with simple truths fosters systemic health.",
       "The Unavoidable Truth: Basic lifestyle habits are the most scientifically proven drivers of longevity.\nThe Unavoidable Lie: You must buy expensive gadgets and supplements to live a long, healthy life.",
       "Alethekanon:\nNavani's framework correctly identifies that systemic health cannot be purchased; it must be cultivated through consistent, low-entropy daily practices.",
       "Awwthekanon:\nIt is so comforting to know that the best things for our bodies are free. Sleep, quiet reflection, and simple movement are gentle gifts we can all give ourselves every day.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Dr. Annu Navani Advice",
@@ -152,6 +214,7 @@
         "name": "Le Reve Wellness",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

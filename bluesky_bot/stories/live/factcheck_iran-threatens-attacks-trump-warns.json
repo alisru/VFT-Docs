@@ -5,22 +5,22 @@
     "subject": "Iran Threatens ‘Sustained, Effective and Painful’ Attacks on U.S., Allies — Trump Warns ‘Very Big Things’ Coming",
     "link": "https://www.breitbart.com/politics/2026/09/20/iran-threatens-sustained-effective-and-painful-attacks-on-u-s-allies-trump-warns-very-big-things-coming/",
     "target_url": "",
-    "claim_u": 0.2,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.85,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.89,
     "mode": "root",
     "posts": [
       "Tehran vows painful strikes on U.S. bases as Trump warns of major impending moves.\nEvidence: Military threats, CENTCOM blockade, Presidential warnings\n#Aletheia #Geopolitics",
-      "Iran's military warns of sustained attacks if Washington strikes again, while Trump weighs wiping out the nation or forcing a deal.\nStated Judgement: (+0.2, 0.0) — Lesser Good",
-      "Both regimes lock into an escalatory spiral, weaponizing blockades and mutual threats while regional stability collapses.\nResulting Judgement: (-0.8, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nMutual militarism and blockade enforcement drive a dangerous escalation cycle toward open conflict.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Iran's military warns of sustained attacks if Washington strikes again, while Trump weighs wiping out the nation or forcing a deal.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Both regimes lock into an escalatory spiral, weaponizing blockades and mutual threats while regional stability collapses.\nResulting Judgement: (-0.94, -0.89) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nMutual militarism and blockade enforcement drive a dangerous escalation cycle toward open conflict.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Iranian Military Command: FAIL (-0.85, -0.9) — Threatens total regional warfare.\n- U.S. Administration Posture: FAIL (-0.75, -0.8) — Leverages economic blockades.",
       "As CENTCOM enforces a strict oil blockade, Iranian leadership threatens regional retaliation, prompting U.S. travel warnings across nine nations.",
       "The Poison:\nBoth leaderships exploit external threats to silence internal dissent and justify permanent militarization.",
       "The Breakdown & Plane Error:\nConfusing tactical deterrence (WHAT) with long-term regional peace (WHO), locking actors into a zero-sum loop.",
       "Social Physics Analysis:\nBoth actors run Smart Selfish maneuvers, manufacturing external crises and projecting blame to justify aggressive force projection rather than systemic resolution.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated defense and actual escalation, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as deterrence fails.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated defense and actual escalation, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as deterrence fails.",
       "The Unavoidable Truth: Mutual escalation inevitably forecloses peaceful diplomatic resolutions.\n\nThe Unavoidable Lie: Total military dominance guarantees lasting regional security.",
       "Alethekanon:\nBoth states weaponize existential rhetoric to obscure the avoidable human costs of blockades and strikes.",
       "Awwthekanon:\nMy heart aches for the innocent families caught in the crossfire of political posturing and blockades.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Iranian Military Command",
@@ -290,6 +352,7 @@
         "name": "Khatam al-Anbiya Central Headquarters",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

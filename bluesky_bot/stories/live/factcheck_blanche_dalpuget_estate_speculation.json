@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.73,
-    "real_psi": 0.85,
+    "real_u": -0.38,
+    "real_psi": 0.42,
     "mode": "root",
     "posts": [
       "Tabloids weaponize a widow's passing to manufacture a speculative family inheritance war.\nEvidence: Speculative Feud, Historical Grievances, Clickbait Revenue\n#Aletheia #Australia #Media",
-      "Stated Claim: The death of Bob Hawke's widow, Blanche d'Alpuget, is highly likely to trigger a bitter new legal battle over her multi-million dollar estate.\nStated Judgement: (0.50, 0.00) — Good Preference",
-      "Ground Reality: The article relies entirely on speculative framing and old 2019 disputes, manufacturing a current crisis before any actual will has been read or contested.\nResulting Judgement: (-0.73, 0.85) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The reporting exploits a family's grief to manufacture a speculative legal conflict, prioritizing sensationalism over verified facts.\nIntegrity: Severe Deception (Hypocrisy: 1.25, Uncertainty z: 6)",
+      "Stated Claim: The death of Bob Hawke's widow, Blanche d'Alpuget, is highly likely to trigger a bitter new legal battle over her multi-million dollar estate.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Ground Reality: The article relies entirely on speculative framing and old 2019 disputes, manufacturing a current crisis before any actual will has been read or contested.\nResulting Judgement: (-0.38, +0.42) — Greatest Lie",
+      "Verdict: FAIL — Awakening into Deception.\nIntegrity: Severe Deception (Hypocrisy: 1.25, Uncertainty z: 6)",
       "Sub-Audits Breakdown:\n- Daily Mail Speculation: FAIL (-0.75, 0.85) — Manufactures a crisis for clicks.\n- Hawke Family Estate: COND (0.00, 0.00) — Private matter with no active dispute.",
       "Context: Following the death of author Blanche d'Alpuget at 82, media outlets immediately began speculating on a renewed inheritance battle with her step-children, citing past 2019 disputes.",
       "The Poison:\nBy framing a family's private grief through the lens of historical legal battles, the reporting preemptively poisons relationships before any actual decisions are made.",
       "The Breakdown & Plane Error:\nThe article commits a logical error by treating past litigation as a guaranteed future outcome, substituting speculative drama for concrete legal filings.",
       "Social Physics Analysis:\nThe media executes a Smart Selfish Maneuver, manufacturing a crisis (an imminent family war) to extract attention. They project greed onto the grieving family while hiding their own financial motive behind the pretext of public interest.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between speculative headlines and actual legal silence, it plots a direct trajectory toward manufactured conflict.",
+      "The Trajectory: The Path of Awakening into Deception.\nWhen you map the gap between speculative headlines and actual legal silence, it plots a direct trajectory toward manufactured conflict.",
       "The Unavoidable Truth: Grief is being monetized.\nThe Unavoidable Lie: A lawsuit is already underway.",
       "Alethekanon:\nA textbook example of narrative manufacturing. Tabloids use historical friction as a predictive engine, creating a self-fulfilling prophecy of conflict to drive engagement.",
       "Awwthekanon:\nIt is heartbreaking that a family cannot even begin to mourn their mother and stepmother without the world projecting greed and division onto their private sorrow.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Daily Mail Speculation",
@@ -178,6 +240,7 @@
         "sub_psi": 0.85,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Awakening into Deception"
   }
 ]

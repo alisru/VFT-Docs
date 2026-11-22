@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.8,
+    "real_u": -0.05,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "Georgia's youngest mayor is ousted after 10 months following serious misconduct probes!\nEvidence: 3-1 council vote, $4K misuse, explicit chats\n#Aletheia #LocalPol",
-      "Jayden Williams took office as Georgia's youngest mayor, framed as a milestone for youthful public service.\nStated Judgement: (+0.5, 0.0) — Neutral Good Stated",
-      "Investigations revealed extensive personal use of city funds, fuel cards, and vehicles, alongside inappropriate communications.\nResulting Judgement: (-0.8, -0.8) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nA historic mayoral tenure collapsed into institutional abuse and misconduct, forcing a swift council ouster.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
+      "Jayden Williams took office as Georgia's youngest mayor, framed as a milestone for youthful public service.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Investigations revealed extensive personal use of city funds, fuel cards, and vehicles, alongside inappropriate communications.\nResulting Judgement: (-0.05, -0.15) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nA historic mayoral tenure collapsed into institutional abuse and misconduct, forcing a swift council ouster.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
       "Sub-Audits Breakdown:\n- Mayoral Administration: FAIL (-0.9, -0.9) — Widespread misuse of public funds.\n- City Council Action: PASS (+0.8, +0.6) — Swift accountability upheld.",
       "Stockbridge City Council voted 3-1 to remove 23-year-old Mayor Jayden Williams after a 10-hour hearing detailing thousands in personal expenses charged to public accounts.",
       "The Poison:\nExploiting public trust and municipal resources for personal luxury under the guise of civic pioneering.",
       "The Breakdown & Plane Error:\nConfusing personal privilege with public stewardship (Plane Q1 vs Q5), treating public office as private extraction.",
       "Social Physics Analysis:\nWilliams executed a Smart Selfish maneuver, hiding personal enrichment behind a progressive youth pretext until internal auditing exposed the breach.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map hidden extraction onto institutional accountability, it plots a direct trajectory toward immediate removal and disgrace.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map hidden extraction onto institutional accountability, it plots a direct trajectory toward immediate removal and disgrace.",
       "The Unavoidable Truth: Public office demands strict adherence to fiduciary and ethical standards.\n\nThe Unavoidable Lie: Financial misuse of city cards was entirely unintentional.",
       "Alethekanon:\nYouthful ambition without foundational integrity swiftly collapses under the weight of public accountability.",
       "Awwthekanon:\nIt is heartbreaking to watch a promising start unravel through poor choices, but accountability is essential for community healing.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Mayoral Administration",
@@ -156,6 +218,7 @@
         "name": "Robert Kenner",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

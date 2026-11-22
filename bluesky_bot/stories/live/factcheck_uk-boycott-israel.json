@@ -5,22 +5,22 @@
     "subject": "The UK’s disastrous decision to boycott Israel",
     "link": "https://www.washingtonexaminer.com/opinion/4724215/uk-disastrous-decision-boycott-israel/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": -0.5,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "British sanctions on Israeli settlements spark diplomatic fallout and domestic division.\nEvidence: human rights pretext, diplomatic friction, political pandering\n#Aletheia #Geopolitics 🌐",
-      "The UK's boycott of Israeli settlement goods defends international law and human rights.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "The sanctions inflame regional tensions, strain alliances, and serve domestic political posturing over practical peace.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSanctions framed as human rights enforcement function primarily as domestic political pandering that deepens geopolitical fractures.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 3)",
+      "The UK's boycott of Israeli settlement goods defends international law and human rights.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "The sanctions inflame regional tensions, strain alliances, and serve domestic political posturing over practical peace.\nResulting Judgement: (-0.50, -0.50) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nSanctions framed as human rights enforcement function primarily as domestic political pandering that deepens geopolitical fractures.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 3)",
       "- UK Foreign Office: FAIL (-0.7, -0.8) — Uses sanctions for domestic posturing.\n- Critic Opposition: COND (-0.3, -0.2) — Warns of rising antisemitism risks.",
       "On Sept 8, UK Foreign Secretary Ed Miliband announced a ban on imports from Israeli-controlled West Bank areas, triggering severe diplomatic backlash.",
       "The Poison:\nPosing unilateral economic coercion as moral clarity while ignoring complex regional security realities.",
       "The Breakdown & Plane Error:\nConfusing diplomatic posturing (WHAT) with genuine conflict resolution (HOW), substituting moral pretexts for practical diplomacy.",
       "Social Physics Analysis:\nActors execute a Smart Selfish Maneuver: deploying a moral pretext (human rights) to secure domestic political alignment while manufacturing further diplomatic friction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated humanitarian goals and actual diplomatic discord, it plots a direct trajectory toward Lesser Evil. Mathematical forces converge on negative will.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated humanitarian goals and actual diplomatic discord, it plots a direct trajectory toward Lesser Evil. Mathematical forces converge on negative will.",
       "The Unavoidable Truth: Settlement expansion remains a profound legal and diplomatic flashpoint.\n\nThe Unavoidable Lie: Unilateral economic boycotts act as neutral catalysts for lasting peace.",
       "Alethekanon:\nMoral grandstanding in foreign policy often sacrifices durable stability for immediate domestic applause.",
       "Awwthekanon:\nTrue peace requires bridging divides through honest dialogue, not erecting economic walls that harden hearts on every side.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UK Foreign Office",
@@ -156,6 +218,7 @@
         "name": "Israel",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

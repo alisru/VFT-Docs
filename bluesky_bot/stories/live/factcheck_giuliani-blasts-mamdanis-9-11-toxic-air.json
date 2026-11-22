@@ -5,22 +5,22 @@
     "subject": "Giuliani Blasts Mamdani’s 9/11 Toxic Air Blame as Buried City Records Come to Light",
     "link": "https://www.foxnews.com/politics/giuliani-blasts-mamdanis-9-11-toxic-air-blame-buried-city-records-come-light",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.88,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.43,
+    "real_psi": 0.6,
     "mode": "root",
     "posts": [
       "Buried city records explode into daylight, exposing how officials traded public safety for political narrative after 9/11.\nEvidence: 170k pages released, DEP memo on 35k plaintiffs, 2 lawsuits settled\n#Aletheia #NYC #911History 🌐",
-      "Mayor Zohran Mamdani released 170,000 pages of 9/11 records revealing past administrations misled the public on toxic air, drawing fierce pushback from Rudy Giuliani's team.\nStated Judgement: (+0.5, 0.0) — Neutral Stated Claim",
-      "Internal memos prove city leadership knew about severe air contamination and toxic hazards immediately after 2001 but actively suppressed warnings to prevent panic and liability.\nResulting Judgement: (-0.85, -0.88) — Severe Deception",
-      "Verdict: FAIL — The Path of Deception.\nInstitutional self-preservation and liability shielding consistently override public health transparency.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
+      "Mayor Zohran Mamdani released 170,000 pages of 9/11 records revealing past administrations misled the public on toxic air, drawing fierce pushback from Rudy Giuliani's team.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Internal memos prove city leadership knew about severe air contamination and toxic hazards immediately after 2001 but actively suppressed warnings to prevent panic and liability.\nResulting Judgement: (-0.43, +0.60) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nInstitutional self-preservation and liability shielding consistently override public health transparency.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
       "- Mayor Zohran Mamdani: PASS (0.75, 0.65) — Transparency release.\n- Rudy Giuliani Team: FAIL (-0.90, -0.92) — Defensive deflection.",
       "New York City released over 170,000 pages of historical 9/11 documents, settling lawsuits and laying bare decades-old memos that confirmed officials knew the air around Ground Zero was hazardous.",
       "The Bright Side:\nThe eventual release of long-suppressed government records provides legal and historical closure for sick responders and researchers.",
       "The Breakdown & Plane Error:\nThe analysis confuses WHAT happened (air toxicity suppression) with WHO is to blame (successive mayoral administrations dodging liability).",
       "Social Physics Analysis:\nPast city administrations executed a Smart Selfish Maneuver, prioritizing rapid economic reopening over civilian respiratory safety while burying internal warnings. Giuliani's defense relies on projecting blame entirely onto terrorists while ducking administrative accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between reassuring public statements and suppressed internal toxicity memos, it plots a direct trajectory toward Deception. R_net scaling confirms severe institutional obfuscation.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between reassuring public statements and suppressed internal toxicity memos, it plots a direct trajectory toward Deception. R_net scaling confirms severe institutional obfuscation.",
       "The Unavoidable Truth: City leaders knowingly allowed thousands to breathe toxic air without adequate warnings to protect institutional image.\n\nThe Unavoidable Lie: Public health advisories were fully transparent and based on the best available science at the time.",
       "Alethekanon:\nWhen institutions conceal hazards to preserve order, the delayed cost is paid in the poisoned lungs of the citizens who trusted them. 🌐",
       "Awwthekanon:\nIt is heartbreaking to realize that the people rushing into the dust were told they were safe when the books in the back rooms already knew the truth.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.3,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Mamdani Document Release",
@@ -289,6 +351,7 @@
         "name": "New York City",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

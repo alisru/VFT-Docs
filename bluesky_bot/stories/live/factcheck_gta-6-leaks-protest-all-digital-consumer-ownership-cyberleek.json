@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.85,
     "claim_psi": 0.25,
-    "real_u": -0.78,
-    "real_psi": -0.65,
+    "real_u": -0.53,
+    "real_psi": -0.42,
     "mode": "root",
     "posts": [
       "A cyber heist gets rebranded as a consumer rights crusade. The GTA 6 leak wasn't a noble protest against digital ownership—it was a calculated crypto cash grab.\nEvidence: Consumer Protest, Crypto Scheme, Financial Extraction\n#Aletheia #GTA6 #Gaming",
-      "The op-ed claims the GTA 6 hackers exposed a profound truth: consumers no longer own their digital goods, framing the massive leak as a righteous rebellion against corporate licensing models.\nStated Judgement: (+0.85, +0.25) — Good Preference",
-      "In reality, the hacker group Cyberleek operated a predatory crypto scheme, using a meme coin to let users vote on which stolen clips to release. It was financial exploitation, not consumer advocacy.\nResulting Judgement: (-0.78, -0.65) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The narrative romanticizes a financial scam as a principled protest, obscuring predatory extraction behind consumer rights rhetoric.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "The op-ed claims the GTA 6 hackers exposed a profound truth: consumers no longer own their digital goods, framing the massive leak as a righteous rebellion against corporate licensing models.\nStated Judgement: (+0.85, +0.25) — Greater Good",
+      "In reality, the hacker group Cyberleek operated a predatory crypto scheme, using a meme coin to let users vote on which stolen clips to release. It was financial exploitation, not consumer advocacy.\nResulting Judgement: (-0.53, -0.42) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "- Cyberleek Hackers: FAIL (-0.85, -0.75) — Ran a crypto scam.\n- Washington Examiner: COND (-0.20, -0.10) — Romanticized theft.",
       "In August 2026, hackers leaked early builds of Grand Theft Auto 6. While commentators used the event to critique digital licensing, the hackers themselves were running a meme-coin voting scheme to profit off the stolen data.",
       "The Poison:\nBy framing a standard extortion and crypto speculation scheme as a consumer rights protest, the commentary legitimizes cybercriminals and distracts from genuine, legal efforts to reform digital ownership laws.",
       "The Breakdown & Plane Error:\nThe article commits a Metaphysical error (WHO), confusing the actual beneficiary (scammers extracting crypto) with the stated beneficiary (consumers fighting corporate overreach). A financial heist is dressed up as a philosophical crusade.",
       "Social Physics Analysis:\nThe actors executed a Smart Selfish Maneuver. They manufactured a crisis of corporate greed as a pretext to run a speculative meme-coin scheme, projecting themselves as consumer heroes while extracting wealth from gullible fans.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The narrative collapses under the weight of its own romanticized pretexts.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The narrative collapses under the weight of its own romanticized pretexts.",
       "The Unavoidable Truth: Digital ownership is a real legal issue that needs addressing.\nThe Unavoidable Lie: The GTA 6 hackers cared about consumer rights.",
       "Alethekanon:\nCommentators who mistake a crypto extortion scheme for a consumer rights protest reveal their own analytical blindness. Elevating thieves to philosophers only degrades the actual fight for digital ownership.",
       "Awwthekanon:\nIt's sad to see people's genuine frustration with digital ownership being exploited by scammers who don't care about rights, only about filling their own pockets with crypto.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Cyberleek Hackers",
@@ -152,6 +214,7 @@
         "name": "Rockstar Games",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

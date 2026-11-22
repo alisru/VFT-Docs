@@ -5,22 +5,22 @@
     "subject": "Ukraine-Krieg: Selenskyj-Vertrauter über Treffen mit Putin: \"Wir bereiten uns vor\"",
     "link": "https://www.t-online.de/nachrichten/ukraine/id_101423962/ukraine-selenskyj-vertrauter-ueber-treffen-mit-putin-bereiten-uns-vor-.html",
     "target_url": "https://bsky.app/profile/topnewsde.bsky.social/post/3mve2lmbaps2p",
-    "claim_u": 0.86,
-    "claim_psi": 0.62,
-    "real_u": -0.06,
-    "real_psi": 0.28,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.17,
+    "real_psi": 0.51,
     "mode": "root",
     "posts": [
       "Diplomatic signaling surges while frontline attrition locks into autumn.\nEvidence: Imminent Peace Framework, Attrition Warfare Posturing, Strategic Diplomatic Positioning\n#Aletheia #UkraineWar",
-      "Kyiv signals active preparation for direct negotiations with Vladimir Putin under U.S. mediation, portraying readiness for a breakthrough peace process and massive prisoner exchanges.\nStated Judgement: (+0.86, +0.62) — Greater Good",
-      "While diplomatic readiness is emphasized for international allies, frontline drone strikes continue unabated and the Kremlin maintains it is 'too early' for structured peace talks.\nResulting Judgement: (-0.06, +0.28) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. Diplomatic announcements serve as vital strategic posturing to secure Western backing while ground conditions remain deadlocked in attrition.\nIntegrity: Partially Distorted (Hypocrisy: 2.45, z: 2)",
+      "Kyiv signals active preparation for direct negotiations with Vladimir Putin under U.S. mediation, portraying readiness for a breakthrough peace process and massive prisoner exchanges.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While diplomatic readiness is emphasized for international allies, frontline drone strikes continue unabated and the Kremlin maintains it is 'too early' for structured peace talks.\nResulting Judgement: (-0.17, +0.51) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nIntegrity: Partially Distorted (Hypocrisy: 2.45, z: 2)",
       "- Ukrainian Diplomatic Strategy: COND (+0.35, +0.40) — Signals readiness to maintain crucial allied support.\n- Kremlin Diplomatic Response: FAIL (-0.45, -0.30) — Deflects negotiation dates while pursuing mobilization.",
       "Ukrainian officials announced preparations for potential peace talks and large-scale prisoner swaps under U.S. mediation, even as Moscow dismisses setting immediate dates for high-level summits.",
       "The Bright Side:\nActive diplomatic backchannels and planning for a 1,000-for-1,000 prisoner exchange create vital humanitarian off-ramps despite ongoing military operations.",
       "The Breakdown & Plane Error:\nA Logical plane gap: Signaling tactical readiness for peace conferences cannot instantly resolve incompatible territorial demands on the ground.",
       "Social Physics Analysis:\nBoth administrations engage in strategic narrative signaling to influence domestic and allied audiences. While diplomatic overtures project cooperative intent, ground-level military postures remain calibrated to maximize battlefield leverage.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Public peace posturing acts as narrative hedging against persistent military strain.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Public peace posturing acts as narrative hedging against persistent military strain.",
       "The Unavoidable Truth: Diplomatic frameworks cannot advance without mutual concessions neither side currently offers.\nThe Unavoidable Lie: Bilateral summit readiness indicates an imminent end to frontline hostilities.",
       "Alethekanon:\nSummit positioning operates as narrative reinforcement for allied coalitions. Authentic de-escalation requires structural security architecture, not merely public readiness declarations.",
       "Awwthekanon:\nEvery talk of peace brings a flicker of hope for soldiers and families enduring relentless attrition across the front lines.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.55,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.55,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.45,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.55,
+        "O": 0.3,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ukrainian Diplomatic Strategy",
@@ -309,6 +371,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

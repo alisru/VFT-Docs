@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.2,
-    "real_psi": 0.0,
+    "real_u": 0.35,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "OpenAI implements text watermarking to comply with EU rules.\nEvidence: textGrain EU rollout, API opt-in, regulatory mandate\n#Aletheia #AI",
-      "OpenAI states it is rolling out invisible text watermarking in the EU to ensure transparency and comply with the EU AI Act.\nStated Judgement: (+0.8, +0.5) — Greater Good",
-      "OpenAI is reluctantly deploying regional watermarking solely to meet legal mandates while keeping global defaults off and noting technical fragility.\nResulting Judgement: (+0.2, 0.0) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nOpenAI complies with regulatory transparency mandates, even if limited geographically and technically fragile.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "OpenAI states it is rolling out invisible text watermarking in the EU to ensure transparency and comply with the EU AI Act.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "OpenAI is reluctantly deploying regional watermarking solely to meet legal mandates while keeping global defaults off and noting technical fragility.\nResulting Judgement: (+0.35, +0.10) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nOpenAI complies with regulatory transparency mandates, even if limited geographically and technically fragile.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- OpenAI Compliance: PASS (+0.2, 0.0) — Implementing textGrain in EU.\n- Regulatory Mandate: PASS (+0.5, +0.2) — Enforcing EU AI Act transparency rules.",
       "OpenAI announced plans to introduce an invisible text watermark using textGrain for ChatGPT and Codex in the European Union to adhere to the EU AI Act's transparency rules.",
       "The Bright Side:\nRegulatory frameworks are successfully forcing AI developers to build provenance tools, establishing foundational transparency standards.",
       "The Breakdown & Plane Error:\nConfusing HOW (technical implementation) with WHY (regulatory compliance). Watermarks mitigate fraud risks but remain bypassable via simple editing.",
       "Social Physics Analysis:\nOpenAI balances global innovation desires with regional regulatory friction. By limiting watermarking to the EU, it meets legal demands without encumbering its primary global user base.",
-      "The Trajectory: The Path of Awakening.\nWhen you map stated transparency against compliance realities, it plots a direct trajectory toward Lesser Good. Pragmatic adaptation supersedes resistance.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map stated transparency against compliance realities, it plots a direct trajectory toward Lesser Good. Pragmatic adaptation supersedes resistance.",
       "The Unavoidable Truth: Technical watermarks provide fragile provenance that determined editing can erode.\n\nThe Unavoidable Lie: Regional compliance represents a proactive global standard.",
       "Alethekanon:\nRegulatory compliance forces reluctant transparency, proving that institutional guardrails are essential when voluntary ethics stall.",
       "Awwthekanon:\nIt is reassuring to see technology companies take small steps toward accountability. Every verified tool helps build trust in a complex digital age.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "OpenAI Compliance",
@@ -164,6 +226,7 @@
         "name": "European Union",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

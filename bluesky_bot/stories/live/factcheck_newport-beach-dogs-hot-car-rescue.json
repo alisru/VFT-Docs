@@ -6,15 +6,15 @@
     "link": "https://nypost.com/2026/08/22/us-news/cops-rescue-5-dogs-from-hot-newport-beach-car-as-temps-reach-deadly-levels/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.58,
-    "real_u": 0.96,
-    "real_psi": 0.51,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Body-cam video shows a Newport Beach officer smashing a window to rescue five caged dogs trapped in dangerous heat.\n\nEvidence: Animal Welfare, Timely Rescue, Responsible Ownership\n#AnimalRescue #NewportBeach",
-      "Police warn that parked cars rapidly turn into lethal ovens even with cracked windows, justifying immediate forced entry.\nStated Judgement: (+1.00, +0.58) — Greater Good",
-      "All five dogs were saved, treated by a veterinarian for severe heat stress, and the owner was cited under animal protection laws.\nResulting Judgement: (+0.96, +0.51) — Active Protection",
-      "Verdict: PASS — The Path of Grace.\nDirect lawful action averted animal mortality and reinforced public accountability.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.00, z: 0)",
+      "Police warn that parked cars rapidly turn into lethal ovens even with cracked windows, justifying immediate forced entry.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "All five dogs were saved, treated by a veterinarian for severe heat stress, and the owner was cited under animal protection laws.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nDirect lawful action averted animal mortality and reinforced public accountability.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.00, z: 0)",
       "- Newport Beach Police: PASS (0.96, 0.51) — Decisive intervention preventing death.\n- Pet Owner Accountability: COND (-0.60, -0.40) — Misdemeanor citation issued.",
       "An officer in Newport Beach broke a car window on Holly Lane to pull five caged dogs out of lethal interior temperatures.",
       "The Bright Side:\nAll five animals survived, received prompt veterinary attention, and three are now thriving while awaiting adoption.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.55,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Newport Beach Police Department",
@@ -270,6 +332,7 @@
         "name": "Orange County District Attorney's Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

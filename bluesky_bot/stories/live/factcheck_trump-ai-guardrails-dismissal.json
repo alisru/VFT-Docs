@@ -5,22 +5,22 @@
     "subject": "President Trump Dismisses Need for AI Guardrails",
     "link": "https://www.bbc.co.uk/sounds/play/p0p9l053?at_medium=RSS&at_campaign=rss",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.88,
+    "real_psi": -0.77,
     "mode": "root",
     "posts": [
       "Discarding safety guardrails to win the AI race ignores systemic risk for nationalist dominance. #Aletheia #AI #USPolitics",
-      "Trump dismissed AI regulation calls, claiming the race against China means whoever wins AI wins everything.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Rejecting oversight accelerates unmitigated systemic vulnerabilities and weaponized concentration of power.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nDismissing safety protocols under nationalist pretexts prioritizes geopolitical dominance over public security.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, Uncertainty z: 2)",
+      "Trump dismissed AI regulation calls, claiming the race against China means whoever wins AI wins everything.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Rejecting oversight accelerates unmitigated systemic vulnerabilities and weaponized concentration of power.\nResulting Judgement: (-0.88, -0.77) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nDismissing safety protocols under nationalist pretexts prioritizes geopolitical dominance over public security.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, Uncertainty z: 2)",
       "- Trump Administration: FAIL (-0.7, -0.8) — Rejects guardrails for speed.\n- Tech Industry Response: COND (-0.3, -0.4) — Divided on self-regulation.",
       "President Trump dismissed weekend calls for AI regulation, arguing that American dominance in the AI race renders safety guardrails unnecessary.",
       "The Poison:\nFraming essential safety oversight as a hoax or conspiracy jeopardizes global technological stability.",
       "The Breakdown & Plane Error:\nConfusing WHAT (technological dominance) with WHO (public safety), treating existential risk as a competitive hurdle.",
       "Social Physics Analysis:\nRunning a Smart Selfish Maneuver, leadership deploys nationalist pretexts to dismantle regulatory barriers, externalizing existential risks onto society while hoarding competitive advantage.",
-      "The Trajectory: The Path of Deception.\nWhen you map stated acceleration against actual systemic hazards, it plots a direct trajectory toward Lesser Evil. F_neg dominates via unchecked technical extraction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map stated acceleration against actual systemic hazards, it plots a direct trajectory toward Lesser Evil. F_neg dominates via unchecked technical extraction.",
       "The Unavoidable Truth: Unchecked AI development accelerates profound societal risks without systemic buffers.\n\nThe Unavoidable Lie: National competitiveness requires abandoning all regulatory safeguards.",
       "Alethekanon:\nTreating technological supremacy as an excuse to discard safety rules is a classic exercise in self-serving pretexts.",
       "Awwthekanon:\nIt is heartbreaking to watch safety and ethics pushed aside in a frantic race for dominance, leaving ordinary people to bear the unseen risks.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Trump Administration",
@@ -290,6 +352,7 @@
         "name": "Anthropic",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

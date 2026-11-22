@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/theregister.com/post/3mvzasxz3ez2m",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.94,
+    "real_u": -1.0,
     "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Tech giants sell the cloud as an indestructible, infinite utility, but real-world wars and physical shortages are exposing the fragile truth.\nEvidence: Cloud resilience, Data loss, Infrastructure limits\n#Tech #Cloud #Security",
-      "AWS and critical infrastructure providers claim their cloud systems offer seamless, redundant safety that insulates users from physical disasters.\nStated Judgement: (+1.0, +1.0) — Grace",
-      "Wartime damage permanently destroyed AWS data in Bahrain, while the UK's air traffic control ran without backups, proving physical reality overrides digital promises.\nResulting Judgement: (-0.94, +1.0) — Deception",
+      "AWS and critical infrastructure providers claim their cloud systems offer seamless, redundant safety that insulates users from physical disasters.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Wartime damage permanently destroyed AWS data in Bahrain, while the UK's air traffic control ran without backups, proving physical reality overrides digital promises.\nResulting Judgement: (-1.00, +1.00) — Greatest Lie",
       "Verdict: FAIL — Fall into Deception.\nTech providers hoarded power by selling the illusion of absolute digital safety, only to shift the catastrophic risk of physical failure onto their users.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- AWS Bahrain: FAIL (-1.0, 1.0) — Lost data permanently in war.\n- NATS UK: FAIL (-1.0, 1.0) — Ran air traffic without active backups.",
       "Recent conflicts and system overhauls have exposed massive vulnerabilities in global tech infrastructure, from permanently lost AWS servers in the Middle East to grounded flights in the UK.",
       "The Bright Side:\nThese high-profile failures force organizations to abandon blind faith in third-party clouds and return to robust, independent, multi-region backup strategies.",
       "The Breakdown & Plane Error:\nTech firms commit a Logical error by treating physical infrastructure as a metaphysical abstraction. They sold \"the cloud\" as an ethereal concept, ignoring that servers are physical boxes in war zones.",
       "Social Physics Analysis:\nThis is a classic Smart Selfish Maneuver. Tech giants hoard power by charging premiums for \"resilience\" (Pretext), but when physical crises strike, they project blame onto \"unforeseeable war\" while users bear the loss.",
-      "The Trajectory: Fall into Deception.\nMapping the gap between marketing hype and physical vulnerability reveals a direct path to systemic fragility. Blind trust in centralized tech leads to sudden collapse.",
+      "The Trajectory: The Path of Fall into Deception.\nMapping the gap between marketing hype and physical vulnerability reveals a direct path to systemic fragility. Blind trust in centralized tech leads to sudden collapse.",
       "The Unavoidable Truth: No amount of digital redundancy can save your data if the physical server farm is blown up.\nThe Unavoidable Lie: The cloud is a magical, placeless realm immune to the laws of physics.",
       "Alethekanon:\nTrue resilience requires acknowledging physical limits. Outsourcing your infrastructure does not mean outsourcing your responsibility for survival.",
       "Awwthekanon:\nIt's so stressful when the systems we rely on suddenly break down, leaving people stranded and businesses ruined. We need to build tech that truly protects and cares for everyone.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Amazon Web Services",
@@ -157,6 +219,7 @@
         "name": "The Register",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

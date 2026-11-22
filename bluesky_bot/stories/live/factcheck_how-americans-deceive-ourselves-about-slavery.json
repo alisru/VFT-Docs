@@ -14,7 +14,7 @@
       "Unearthing the roots of historical mythmaking in America.\n\nHow Americans deceive ourselves about slavery\nEvidence: historical denial, cultural reckoning, systemic truth\n#Aletheia #History🌐",
       "Clint Smith's work explores how slavery is taught and remembered, dissecting the comforting myths that mask historical reality across the United States.\nStated Judgement: (1.0, 1.0) — Greater Good",
       "Confronting historical archives reveals how the Lost Cause mythology systematically obscured the economic and human realities of American slavery.\nResulting Judgement: (1.0, 1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Direct historical inquiry exposes comforting myths, empowering a truthful reckoning with America's foundational trauma.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Clint Smith's Historical Inquiry: PASS (1.0, 1.0) — Rigorous archival and on-the-ground exploration dismantles sanitized narratives.\n- Cultural Reckoning: PASS (1.0, 1.0) — Transparent engagement with difficult history fosters collective maturity.",
       "Clint Smith, author of 'How the Word Is Passed,' discusses how historical memory is shaped in America, examining monuments, plantations, and school curriculums that perpetuate sanitized versions of the past.",
       "The Poison:\nThe uncomfortable friction of confronting how deeply foundational myths are embedded in everyday civic spaces and public monuments.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Clint Smith's Historical Inquiry",
@@ -267,6 +329,7 @@
         "name": "National Public Radio",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

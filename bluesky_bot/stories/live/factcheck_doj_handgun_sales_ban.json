@@ -5,22 +5,22 @@
     "subject": "DOJ: Ban on Handgun Sales to 18- Through 20-Year-Olds Unconstitutional, Cannot Be Enforced",
     "link": "https://www.breitbart.com/2nd-amendment/2026/09/18/doj-ban-on-handgun-sales-to-18-through-20-year-olds-unconstitutional-cannot-be-enforced/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.85,
-    "real_psi": 0.2,
+    "claim_u": 0.25,
+    "claim_psi": 0.15,
+    "real_u": 0.28,
+    "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "A major shift in federal gun enforcement. DOJ: Ban on Handgun Sales to 18- Through 20-Year-Olds Unconstitutional, Cannot Be Enforced.\nEvidence: Constitutional alignment, Executive non-enforcement, Second Amendment rights\n#USPol #2A",
-      "The DOJ announced that the federal ban on handgun sales to 18- through 20-year-olds is unconstitutional and cannot be criminally enforced, protecting the rights of young adults.\nStated Judgement: (0.80, 0.50) — Lesser Good",
-      "The DOJ's Office of Legal Counsel issued a binding opinion stating the ban violates the Second Amendment. While the federal statute remains, DOJ will not prosecute dealers who sell to law-abiding 18-20-year-olds.\nResulting Judgement: (0.85, 0.20) — Lesser Good",
-      "Verdict: PASS — Stasis.\nThe DOJ is aligning its enforcement policy with constitutional jurisprudence, restoring rights to legal adults.\nIntegrity: Absolute Truth (Hypocrisy: 0.05, z: 0)",
+      "The DOJ announced that the federal ban on handgun sales to 18- through 20-year-olds is unconstitutional and cannot be criminally enforced, protecting the rights of young adults.\nStated Judgement: (+0.25, +0.15) — Greater Good",
+      "The DOJ's Office of Legal Counsel issued a binding opinion stating the ban violates the Second Amendment. While the federal statute remains, DOJ will not prosecute dealers who sell to law-abiding 18-20-year-olds.\nResulting Judgement: (+0.28, +0.00) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nThe DOJ is aligning its enforcement policy with constitutional jurisprudence, restoring rights to legal adults.\nIntegrity: Absolute Truth (Hypocrisy: 0.05, z: 0)",
       "- DOJ Office of Legal Counsel: PASS (0.85, 0.20) — Aligns policy with constitutional rights.\n- Gun Control Groups: COND (-0.30, -0.20) — Oppose non-enforcement due to safety concerns.",
       "The DOJ's decision follows recent Supreme Court rulings expanding gun rights, concluding that 18-to-20-year-olds are part of 'the people' protected by the Second Amendment.",
       "The Poison:\nWhile federal prosecution is halted, state-level bans on handgun sales to under-21s remain fully enforceable, creating a complex patchwork of legal rights across the country.",
       "The Breakdown & Plane Error:\nThere is no plane error here. The logical and metaphysical planes align perfectly: the stated goal of protecting constitutional rights matches the actual legal mechanism of binding executive non-enforcement.",
       "Social Physics Analysis:\nBy voluntarily relinquishing enforcement power over an unconstitutional statute, the DOJ shifts from hoarding power to empowering citizens. This transparent alignment of action with constitutional principles reduces systemic legal strain.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The alignment of executive policy with constitutional law maintains a stable, low-strain equilibrium.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The alignment of executive policy with constitutional law maintains a stable, low-strain equilibrium.",
       "The Unavoidable Truth: Legal adults who bear adult societal responsibilities possess the constitutional right to self-defense.\nThe Unavoidable Lie: Executive non-enforcement of an unconstitutional law is a threat to public safety.",
       "Alethekanon:\nThe DOJ's OLC opinion is a rare instance of institutional self-correction, aligning executive enforcement power with constitutional limits rather than expanding state authority.",
       "Awwthekanon:\nIt's heartening to see young adults recognized as full members of our community, trusted with the same rights and responsibilities as everyone else. True safety comes from mutual trust and respecting everyone's inherent dignity.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DOJ Office of Legal Counsel",
@@ -156,6 +218,7 @@
         "name": "T. Elliot Gaiser",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

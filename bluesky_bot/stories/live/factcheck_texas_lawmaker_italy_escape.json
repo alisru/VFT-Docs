@@ -5,16 +5,16 @@
     "subject": "Texas lawmaker warns accused w...",
     "link": "https://www.foxnews.com/us/texas-lawmaker-warns-accused-wife-killers-italy-escape-could-open-pandoras-box-future-suspects",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "claim_u": 0.25,
+    "claim_psi": 0.25,
+    "real_u": -0.85,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "A Texas lawmaker warns that a murder suspect's flight to Italy opens a \"Pandora's box\" of foreign interference. But is it a sovereignty crisis, or just standard international treaty law?\nEvidence: Sovereignty, Treaty Compliance, Political Posturing\n#Aletheia #Texas #Justice 🌐",
-      "State Rep. Brian Harrison claims that Italy forcing Texas to waive the death penalty to extradite Lee Gilley allows foreign courts to dictate local criminal justice, creating a dangerous loophole for future fugitives.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, extradition treaties have always required death penalty waivers for countries that abolished it. Waiving capital punishment is the only pragmatic way to bring the suspect to trial, not a loss of sovereignty.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Politicizing standard international treaty obligations to manufacture a sovereignty crisis undermines the pragmatic legal processes required to bring fugitives to justice.\nIntegrity: Severe Deception (Hypocrisy: 64.0, z: 1)",
+      "State Rep. Brian Harrison claims that Italy forcing Texas to waive the death penalty to extradite Lee Gilley allows foreign courts to dictate local criminal justice, creating a dangerous loophole for future fugitives.\nStated Judgement: (+0.25, +0.25) — Greater Good",
+      "In reality, extradition treaties have always required death penalty waivers for countries that abolished it. Waiving capital punishment is the only pragmatic way to bring the suspect to trial, not a loss of sovereignty.\nResulting Judgement: (-0.85, -0.85) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 64.0, z: 1)",
       "- Lee Gilley: FAIL (-0.9, -0.8) — Fled to evade justice.\n- Rep. Harrison: FAIL (-0.8, -0.9) — Political theater.",
       "Lee Gilley fled to Italy after being charged with the capital murder of his pregnant wife. To secure his extradition, Texas prosecutors had to waive the death penalty, prompting political backlash from local lawmakers.",
       "The Poison:\nWhile the suspect avoids the death penalty, the alternative—refusing to waive it—would mean Italy denies extradition entirely, allowing an accused wife-killer to remain free abroad. Pragmatism must trump political theater.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Lee Gilley Evasion",
@@ -171,6 +233,7 @@
         "name": "Italy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

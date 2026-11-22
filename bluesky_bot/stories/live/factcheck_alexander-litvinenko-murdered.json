@@ -6,21 +6,21 @@
     "link": "https://www.the-independent.com/news/uk/crime/alexander-litvinenko-murdered-because-he-accused-putin-of-being-a-paedophile-a6824806.html",
     "target_url": "https://bsky.app/profile/justmeanybody.bsky.social/post/3mweahsc4h22c",
     "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.92,
+    "claim_psi": 0.25,
+    "real_u": -0.15,
+    "real_psi": -0.27,
     "mode": "root",
     "posts": [
       "Uncovering state-directed assassinations exposes the brutal suppression of dissent.\nEvidence: Owen Inquiry, Polonium-210, Chechenpress article\n#Geopolitics #Truth",
-      "Official accounts treat the inquiry as a transparent pursuit of justice for a poisoned dissident.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "State power was leveraged for lethal retaliation against personal whistleblowing, proving total impunity.\nResulting Judgement: (-0.85, -0.92) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning into Destruction.\nLethal state retribution shatters the illusion of legal norms.\n\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 2)",
+      "Official accounts treat the inquiry as a transparent pursuit of justice for a poisoned dissident.\nStated Judgement: (+0.50, +0.25) — Greater Good",
+      "State power was leveraged for lethal retaliation against personal whistleblowing, proving total impunity.\nResulting Judgement: (-0.15, -0.27) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nLethal state retribution shatters the illusion of legal norms.\n\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 2)",
       "Sub-Audits Breakdown:\n- Owen Inquiry: PASS (0.8, 0.5) — Uncovered strong probability of state backing.\n- State Retaliation: FAIL (-0.9, -0.95) — Lethal elimination of a dissident.",
       "An official British inquiry concluded there was a strong probability that the Russian secret service directed Litvinenko's 2006 assassination, approved by Putin following severe personal accusations.",
       "The Bright Side:\nInvestigative inquiries can pierce state secrecy decades later.",
       "The Breakdown & Plane Error:\nConfusing judicial exposure (WHAT) with actual systemic accountability (WHO).",
       "Social Physics Analysis:\nThe state operates on a Smart Selfish Loop, masking raw power preservation behind pretexts of national security while eliminating critics.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nThe widening chasm between claimed state innocence and lethal reality charts a direct course toward systemic destruction.",
+      "The Trajectory: The Path of Fall into Destruction.\nThe widening chasm between claimed state innocence and lethal reality charts a direct course toward systemic destruction.",
       "The Unavoidable Truth: Absolute power brooks no dissent and punishes whistleblowers with lethal finality.\n\nThe Unavoidable Lie: State-sanctioned assassinations can be permanently hidden behind official denials.",
       "Alethekanon:\nWhen power views critique as treason, inquiry becomes an act of delayed excavation.",
       "Awwthekanon:\nEvery life silenced for speaking truth leaves an open wound in our shared humanity.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Owen Inquiry",
@@ -164,6 +226,7 @@
         "name": "Russian Secret Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

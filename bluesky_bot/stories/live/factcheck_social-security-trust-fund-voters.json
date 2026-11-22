@@ -5,22 +5,22 @@
     "subject": "The Social Security trust fund is running out, and yet it's not a top campaign issue",
     "link": "https://www.npr.org/2026/08/28/nx-s1-5898447/social-security-trust-fund-voters",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.85,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "While a looming financial shortfall threatens millions of retirees, political leaders avoid debating Social Security reform.\n\nSocial Security Trust Fund Shortfall\nEvidence: Trust depletion in 2032, 22% benefit cuts, public misunderstanding\n#Aletheia #Economy #SocialSecurity",
-      "Lawmakers and campaign strategists treat the impending Social Security insolvency as too politically toxic to address openly before elections.\nStated Judgement: (0.5, 0.0) — Neutral Stasis",
-      "Ignoring the structural shortfall pushes the system closer to automatic 22% benefit cuts, shifting the severe financial burden directly onto vulnerable seniors.\nResulting Judgement: (-0.75, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nElected leaders duck necessary fiscal reforms to protect short-term electoral prospects, gambling with retirees' basic survival.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "Lawmakers and campaign strategists treat the impending Social Security insolvency as too politically toxic to address openly before elections.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Ignoring the structural shortfall pushes the system closer to automatic 22% benefit cuts, shifting the severe financial burden directly onto vulnerable seniors.\nResulting Judgement: (-0.85, +1.00) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nElected leaders duck necessary fiscal reforms to protect short-term electoral prospects, gambling with retirees' basic survival.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "- Political Leadership: FAIL (-0.8, -0.85) — Avoids necessary fiscal reform.\n- Public Awareness: COND (-0.5, -0.4) — Widespread confusion on shortfall.",
       "The Social Security trust fund is projected to exhaust reserves by 2032, triggering automatic 22% benefit cuts if Congress fails to enact tax or structural reforms.",
       "The Bright Side:\nPublic awareness campaigns by groups like AARP are beginning to pressure lawmakers to confront the math before the deadline hits.",
       "The Breakdown & Plane Error:\nThis is a Logical (HOW) versus Metaphysical (WHO) error. Leaders frame the problem as an abstract future math puzzle while shifting the real human cost onto retirees.",
       "Social Physics Analysis:\nBy prioritizing electoral self-preservation over transparent governance, leaders maintain conflict and kick the can down the road, leaving citizens to absorb the systemic shock.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Avoidance of structural truth compounds systemic risk.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Avoidance of structural truth compounds systemic risk.",
       "The Unavoidable Truth: The trust fund shortfall is an undeniable mathematical reality that cannot be wished away by political silence.\n\nThe Unavoidable Lie: Pretending that ignoring the deficit protects seniors rather than guaranteeing a harsher shock later.",
       "Alethekanon:\nSilence is not a fiscal policy; it is a deferred default on society's most vulnerable.",
       "Awwthekanon:\nBehind the political cold calculus are real grandparents wondering if they can afford groceries.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Political Leadership",
@@ -213,6 +275,7 @@
         "name": "Social Security Administration",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

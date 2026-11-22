@@ -5,16 +5,16 @@
     "subject": "Chris Mason: From inside the room, how Burnham survived first Trump meeting",
     "link": "https://www.bbc.co.uk/news/articles/cm158y74n5vxo?at_medium=RSS&at_campaign=rss",
     "target_url": "",
-    "claim_u": 0.62,
-    "claim_psi": 0.72,
-    "real_u": -0.4,
-    "real_psi": 0.36,
+    "claim_u": 0.58,
+    "claim_psi": 0.65,
+    "real_u": -0.34,
+    "real_psi": 0.35,
     "mode": "root",
     "posts": [
       "Inside the UN basement, diplomatic survival becomes a masterclass in performative flattery.\nEvidence: Diplomatic Acumen, Strategic Concession, Tactical Appeasement\n#Aletheia #UKPol #Trump",
-      "BBC editor Chris Mason reports UK Prime Minister Andy Burnham deftly navigated his first meeting with Donald Trump, winning praise as a 'natural business person' and securing diplomatic stability.\nStated Judgement: (+0.62, +0.72) — Greater Good",
-      "Burnham survived the encounter through rapid retreat. When Trump attacked the UK-Mauritius Chagos treaty as 'terrible', Burnham distanced himself, calling it an 'inherited' deal to appease the president.\nResulting Judgement: (-0.40, +0.36) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. Diplomatic bonhomie was purchased by quietly abandoning foreign policy continuity under pressure.\nIntegrity: Severe Deception (Hypocrisy: 26.46, z: 2)",
+      "BBC editor Chris Mason reports UK Prime Minister Andy Burnham deftly navigated his first meeting with Donald Trump, winning praise as a 'natural business person' and securing diplomatic stability.\nStated Judgement: (+0.58, +0.65) — Greater Good",
+      "Burnham survived the encounter through rapid retreat. When Trump attacked the UK-Mauritius Chagos treaty as 'terrible', Burnham distanced himself, calling it an 'inherited' deal to appease the president.\nResulting Judgement: (-0.34, +0.35) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nIntegrity: Severe Deception (Hypocrisy: 26.46, z: 2)",
       "- Andy Burnham: COND (-0.38, +0.35) — Yields on Chagos deal to stay in Trump's favor.\n- Donald Trump: FAIL (-0.45, +0.40) — Leverages flattery to force UK policy reversals.\n- BBC Mason: PASS (-0.20, +0.30) — Clearly captures behind-the-scenes theater.",
       "Taking office in July 2026, Prime Minister Andy Burnham faced his first high-stakes bilateral summit with Donald Trump in New York, where personal rapport often dictates strategic policy outcomes.",
       "The Bright Side:\nAvoiding an immediate public fallout with the US administration prevents short-term trade retaliations and preserves open diplomatic channels for urgent international crises.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Andy Burnham Diplomatic Maneuvering",
@@ -184,6 +246,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

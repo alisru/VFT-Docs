@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_u": -0.75,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "Former Senator Claire McCaskill calls Trump's mental fitness frightening on MS NOW.\nEvidence: partisan rhetoric, convention criticism, cognitive fitness claims\n#Aletheia #USPol",
-      "Political commentary should prioritize objective national wellbeing and sober institutional analysis above partisan theater.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Partisan media hits weaponize psychological diagnoses for political warfare during midterm conventions to polarize voters.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Partisan commentators deploy clinical-sounding rhetoric as political weapons, masking partisan warfare as civic concern.\n\nIntegrity: Severe Deception (Hypocrisy: 10.5, z: 3)",
+      "Political commentary should prioritize objective national wellbeing and sober institutional analysis above partisan theater.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Partisan media hits weaponize psychological diagnoses for political warfare during midterm conventions to polarize voters.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 10.5, z: 3)",
       "Sub-Audits Breakdown:\n- Claire McCaskill Commentary: FAIL (-0.8, -0.9) — Uses partisan attacks framed as public safety concern.\n- Media Platforming (MS NOW): FAIL (-0.7, -0.8) — Amplifies unverified psychological smears.",
       "Former Senator Claire McCaskill appeared on MS NOW to lambost Donald Trump's mental state following events surrounding the Republican midterm convention.",
       "The Poison:\nWeaponizing mental health tropes in political discourse degrades public debate and stigmatizes real cognitive struggles for partisan gain.",
       "The Breakdown & Plane Error:\nConfusing political disagreement with clinical incapacity (Plane Error: WHO/WHAT), substituting ad hominem attacks for substantive policy critique.",
       "Social Physics Analysis:\nMcCaskill runs a classic Smart Selfish Maneuver. Secret goal: delegitimize political opponents. Pretext: genuine concern for national leadership. Projection: attributing absolute cognitive collapse to rivals while ignoring partisan blind spots.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Negative actual will forces pull the system into antagonistic political polarization.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Negative actual will forces pull the system into antagonistic political polarization.",
       "The Unavoidable Truth: Political commentators frequently weaponize psychological labels to discredit opponents without evidence.\n\nThe Unavoidable Lie: Such partisan attacks stem from pure civic altruism rather than electoral strategy.",
       "Alethekanon:\nFraming political hostility as psychiatric evaluation reduces public discourse to weaponized diagnostic theater. True accountability requires engaging policy over ad hominem speculation.",
       "Awwthekanon:\nIt hurts to watch our national conversation sink into mutual distrust and name-calling. We need leaders who heal divides rather than diagnosing each other's minds.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Claire McCaskill Commentary",
@@ -159,6 +221,7 @@
         "name": "Nicolle Wallace",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

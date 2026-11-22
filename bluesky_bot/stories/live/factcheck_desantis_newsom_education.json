@@ -5,22 +5,22 @@
     "subject": "DeSantis shows Newsom how high...",
     "link": "https://www.washingtonexaminer.com/op-eds/4727713/florida-illegal-immigrant-student-college-ban/",
     "target_url": "",
-    "claim_u": 0.82,
-    "claim_psi": 0.75,
-    "real_u": -0.69,
-    "real_psi": -0.7,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.78,
+    "real_psi": -0.81,
     "mode": "root",
     "posts": [
       "A culture war masquerading as educational stewardship.\n\nDeSantis shows Newsom how higher education should work: Citizens first\n\nEvidence: Protecting citizen spots, Excluding integrated youth, Political signaling\n\n#USPol #Education",
-      "Florida's policy prioritizes legal residents by barring undocumented students from state colleges, ensuring public resources only benefit citizens.\n\nStated Judgement: (+0.82, +0.75) — Greater Good",
-      "Excluding integrated high school graduates who grew up in Florida reduces the state's future tax base and economic potential to score political points.\n\nResulting Judgement: (-0.69, -0.70) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. Banning integrated high school graduates from higher education manufactures a zero-sum crisis to hoard political power.\n\nIntegrity: Severe Deception (Hypocrisy: 64.0, z: 6)",
+      "Florida's policy prioritizes legal residents by barring undocumented students from state colleges, ensuring public resources only benefit citizens.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Excluding integrated high school graduates who grew up in Florida reduces the state's future tax base and economic potential to score political points.\n\nResulting Judgement: (-0.78, -0.81) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 64.0, z: 6)",
       "Sub-Audits Breakdown:\n- Florida Board of Ed: FAIL (-0.69, -0.70) — Excludes students to signal political compliance.\n- Op-Ed Framing: FAIL (-0.75, -0.80) — Uses zero-sum pretexts to justify exclusion.",
       "Florida's education boards banned undocumented students from state colleges and selective universities, affecting thousands of local high school graduates.",
       "The Poison:\nEven if intended to prioritize citizens, the policy actively shrinks the state's future economic potential and leaves thousands of integrated youth without a path to legal productivity.",
       "The Breakdown & Plane Error:\nThe op-ed commits a Metaphysical Error (WHO) by claiming the beneficiary is the citizen student, when the actual beneficiary is the political actor seeking base mobilization through manufactured scarcity.",
       "Social Physics Analysis:\nThe actors execute a Smart Selfish Maneuver. They manufacture a zero-sum crisis (scarcity of college spots) to justify an exclusionary policy (pretext), projecting blame onto undocumented students (scapegoat) to hoard political power.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The policy trades systemic empowerment for exclusionary political signaling.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The policy trades systemic empowerment for exclusionary political signaling.",
       "The Unavoidable Truth: Banning undocumented students reduces Florida's future tax base and skilled workforce.\n\nThe Unavoidable Lie: Banning these students magically creates more university spots for citizens.",
       "Alethekanon:\nThe policy manufactures a zero-sum crisis to justify exclusion. By framing education as a finite hoard rather than a systemic multiplier, it trades long-term economic and social development for short-term political theater.",
       "Awwthekanon:\nIt breaks my heart to see young people who studied hard and dreamed of contributing to their communities suddenly locked out. Education should be a bridge that lifts everyone up, not a wall used to divide us.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.05,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.35,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.15,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.1,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.05,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Florida Board of Ed Exclusion Policy",
@@ -289,6 +351,7 @@
         "name": "State University System of Florida",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

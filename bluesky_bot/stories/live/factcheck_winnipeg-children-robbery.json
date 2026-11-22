@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/winnipegfreepress.com/post/3mxhrosx44k2t",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.82,
+    "real_u": -0.7,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Surveillance footage captures two children robbed walking home from a Winnipeg library, sparking widespread community concern.\nEvidence: Video evidence, police response, mother's testimony\n#Winnipeg #ChildSafety #Community",
-      "Police acknowledge a circulating video showing two children robbed on their way home, prompting public concern and community outreach.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Beneath police awareness lies an alarming urban safety breakdown where vulnerable children face predatory street crime in neglected neighborhoods.\nResulting Judgement: (-0.75, -0.82) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nAn isolated robbery video exposes deep systemic failure to secure public spaces for children.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.50, z: 2)",
+      "Police acknowledge a circulating video showing two children robbed on their way home, prompting public concern and community outreach.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Beneath police awareness lies an alarming urban safety breakdown where vulnerable children face predatory street crime in neglected neighborhoods.\nResulting Judgement: (-0.70, -0.70) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nAn isolated robbery video exposes deep systemic failure to secure public spaces for children.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.50, z: 2)",
       "Sub-Audits Breakdown:\n- Winnipeg Police Service: COND (-0.60, -0.50) — Acknowledges video but lacks preventative safety.\n- Community Safety Net: FAIL (-0.80, -0.90) — Fails to protect children in public spaces.",
       "Two children, 14 and 9, were robbed of a backpack containing toys and snacks by an impaired man on Andrews Street, captured on local family centre cameras.",
       "The Bright Side:\nThe incredible composure of 14-year-old Mason protecting his sister, and the overwhelming outpouring of local community support.",
       "The Breakdown & Plane Error:\nThe analysis mistakes a routine police blotter update (WHAT) for a comprehensive solution to systemic urban crime and poverty (WHO/WHERE).",
       "Social Physics Analysis:\nMason and his sister bore the brunt of a street-level predatory encounter while institutions react reactively via social media footage rather than proactive safety.",
-      "The Trajectory: The Path of Deception.\nWhen public safety relies on viral videos rather than systemic protection, it plots a direct trajectory toward Greater Evil. Strain accumulates where vulnerability meets neglect.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen public safety relies on viral videos rather than systemic protection, it plots a direct trajectory toward Greater Evil. Strain accumulates where vulnerability meets neglect.",
       "The Unavoidable Truth: Viral videos expose street crimes that routine patrols fail to prevent.\n\nThe Unavoidable Lie: Police awareness of a video equates to systemic neighborhood security.",
       "Alethekanon:\nViral outrage replaces systemic child protection. Institutions govern by retroactive video review rather than preventative safety.",
       "Awwthekanon:\nMy heart breaks for young Mason and Kenzie. No child walking home from the library should ever face fear and predatory theft on their own street.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Winnipeg Police Service",
@@ -173,6 +235,7 @@
       "Winnipeg",
       "ChildSafety",
       "Community"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

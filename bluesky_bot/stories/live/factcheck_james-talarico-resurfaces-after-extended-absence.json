@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.7,
+    "real_u": -0.02,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "Texas Senate candidate James Talarico resurfaces at a music festival after a 12-day flu absence, defusing wild online rumors.\nEvidence: Flu diagnosis, ACL festival appearance, Trump/Paxton attacks\n#Aletheia #USPol",
-      "Opponents claimed Talarico's extended absence was a mysterious disappearance or evasion, questioning his fitness for office.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Medical reality proved he was recovering from the flu while his opponents weaponized illness into bad-faith conspiracy theories.\nResulting Judgement: (-0.75, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPartisan actors weaponized a routine medical absence into a sensationalized conspiracy to score cheap political points.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Opponents claimed Talarico's extended absence was a mysterious disappearance or evasion, questioning his fitness for office.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Medical reality proved he was recovering from the flu while his opponents weaponized illness into bad-faith conspiracy theories.\nResulting Judgement: (-0.02, -0.15) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nPartisan actors weaponized a routine medical absence into a sensationalized conspiracy to score cheap political points.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "Sub-Audits Breakdown:\n- Campaign Transparency: PASS (0.80, 0.50) — Quick correction of false claims.\n- Partisan Attacks: FAIL (-0.85, -0.80) — Exploited illness for theater.",
       "Texas state Rep. James Talarico returned to the campaign trail following a bout with the flu, ending viral speculation amplified by Donald Trump and Ken Paxton.",
       "The Bright Side:\nTalarico's swift reappearance at the Austin City Limits festival instantly popped the inflated balloon of online conspiracy theories.",
       "The Breakdown & Plane Error:\nCritics confused a private medical recovery (Physical plane) with a political cover-up (Metaphysical plane), manufacturing a false scandal.",
       "Social Physics Analysis:\nPolitical opponents ran a Smart Selfish Maneuver, taking a routine flu absence, framing it as a sinister disappearance, and projecting evasion to manufacture a fake crisis.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Manufactured conspiracy forces u < 0.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Manufactured conspiracy forces u < 0.",
       "The Unavoidable Truth: A candidate falling ill with the flu is a normal human event rather than a political conspiracy.\n\nThe Unavoidable Lie: Claiming a temporary medical absence is a nefarious cover-up ignores verifiable health facts.",
       "Alethekanon:\nWeaponizing a routine illness into a sensational conspiracy exposes the moral bankruptcy of modern campaign attack politics.",
       "Awwthekanon:\nIt is exhausting when basic human vulnerability like catching the flu gets twisted into cruel political ammunition instead of basic empathy.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Campaign Transparency",
@@ -174,6 +236,7 @@
     "tags": [
       "Aletheia",
       "USPol"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

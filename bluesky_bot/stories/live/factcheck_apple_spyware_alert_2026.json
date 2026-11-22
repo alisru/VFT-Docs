@@ -14,7 +14,7 @@
       "Apple alerts spark global concern as spyware notifications hit record highs.\nEvidence: apple warnings, investigator reports, mercenary malware\n#Privacy #Security 🌐",
       "Apple's threat notifications aim to warn users targeted by sophisticated mercenary spyware across 110 countries.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "Security investigators and digital rights groups confirm an unprecedented surge in targeted spyware alerts worldwide.\nResulting Judgement: (+1.00, +1.00) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nTransparency empowers users to defend against state-backed mercenary spyware.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nTransparency empowers users to defend against state-backed mercenary spyware.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "- Apple Inc.: PASS (0.9, 0.5) — Proactive threat notification.\n- Access Now: PASS (0.8, 0.4) — Independent verification and support.",
       "Apple sent out a massive wave of threat notifications to users in 110 countries, sparking record-breaking inquiries at digital rights helplines.",
       "The Bright Side:\nProactive user warnings disrupt secretive state-sponsored surveillance operations.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Apple Inc.",
@@ -268,6 +330,7 @@
         "name": "The Citizen Lab",
         "role": "acted_upon"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.3,
-    "real_psi": -0.4,
+    "real_u": -0.05,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "Political friction flares as Ted Cruz calls out JD Vance over 2028 speculation.\nEvidence: Cruz interview, Vance NBC statements, midterm focus\n#Aletheia #USPol",
-      "Sen. Ted Cruz frames his response to VP JD Vance’s 2028 presidential claims as mere background noise while emphasizing his relentless midterm campaigning across America.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Beneath the surface of unity, ambition and personal friction fuel public sparring between key GOP figures jockeying for future influence and positioning.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nSensationalized political rivalry masks strategic positioning for 2028 under the guise of midterm focus.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
+      "Sen. Ted Cruz frames his response to VP JD Vance’s 2028 presidential claims as mere background noise while emphasizing his relentless midterm campaigning across America.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Beneath the surface of unity, ambition and personal friction fuel public sparring between key GOP figures jockeying for future influence and positioning.\nResulting Judgement: (-0.05, -0.30) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nSensationalized political rivalry masks strategic positioning for 2028 under the guise of midterm focus.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
       "Sub-Audits Breakdown:\n- Ted Cruz Framing: COND (0.2, -0.2) — Downplays ambition while trading jabs.\n- Media Amplification: COND (-0.3, -0.4) — Elevates personal friction for clicks.",
       "As the midterm elections approach, Republican heavyweights are balancing active campaigning with early positioning for potential future presidential runs.",
       "The Poison:\nInternal friction among rising party leaders risks distracting from immediate electoral goals and fueling media division.",
       "The Breakdown & Plane Error:\nConfusing personal political ambition with substantive legislative policy debates, reducing governance to personality clashes.",
       "Social Physics Analysis:\nActors run a subtle strategic maneuver, using public spats and defensive posturing to maintain relevance and project insecurity onto opponents while claiming pure electoral focus.",
-      "The Trajectory: The Path of Deception.\nThe gap between altruistic midterm focus and tactical personal positioning plots a minor descent into political posturing.",
+      "The Trajectory: The Path of Awakening into Destruction.\nThe gap between altruistic midterm focus and tactical personal positioning plots a minor descent into political posturing.",
       "The Unavoidable Truth: Political ambition naturally drives friction among potential presidential contenders.\n\nThe Unavoidable Lie: Public spats are entirely accidental rather than calculated positioning.",
       "Alethekanon:\nPersonal rivalries dressed up as policy disagreements reveal the underlying mechanics of ambition-driven political theater.",
       "Awwthekanon:\nIt's exhausting when leaders spend precious energy trading jabs instead of building bridges together.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Ted Cruz Framing",
@@ -160,6 +222,7 @@
         "name": "Republican Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

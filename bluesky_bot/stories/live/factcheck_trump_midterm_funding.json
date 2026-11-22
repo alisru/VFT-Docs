@@ -14,13 +14,13 @@
       "Trump shifts millions to GOP candidates as midterm anxiety rises. \nEvidence: Strategic funding, polling decline, internal party friction. #USPol #Trump",
       "The claim suggests a strategic, proactive move to secure GOP majorities in the upcoming midterms through targeted financial support. \nStated Judgement: (+1.00, +1.00) — Good Preference",
       "Reality reveals a reactive attempt to stem polling losses and address internal party anger, as Trump's influence wanes among key voters. \nResulting Judgement: (-0.42, -0.58) — Lesser Evil",
-      "Verdict: FAIL — The Path of Revelation. This trajectory stems from a reactive shift to maintain power amidst declining influence. \nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, Uncertainty z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, Uncertainty z: 2)",
       "- Financial Strategy: COND (-0.2, -0.3) — Reactive, not proactive.\n- Party Unity: FAIL (-0.6, -0.8) — Driven by internal friction.",
       "The GOP faces significant headwinds in the midterms, with Trump's personal popularity declining and internal party dissatisfaction growing.",
       "The Poison:\nUsing campaign funds to patch over systemic political decline rather than addressing voter concerns directly.",
       "The Breakdown & Plane Error:\nThis is a WHO vs WHY error; the focus is on the donor's identity rather than the underlying cause of the party's electoral instability.",
       "Social Physics Analysis:\nInstead of empowering candidates through shared vision, the campaign relies on top-down financial intervention to mask deep-seated voter anger and internal party fractures.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The system is contracting to preserve authority.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The system is contracting to preserve authority.",
       "The Unavoidable Truth: Political funding cannot substitute for genuine voter alignment.\n\nThe Unavoidable Lie: The party remains united under a single, unchallenged leader.",
       "Alethekanon:\nThis is a classic case of power preservation masquerading as strategic electoral support. The structural strain is evident in the reactive nature of the funding.",
       "Awwthekanon:\nIt is painful to see a party so divided, where money is used to silence internal dissent rather than fostering real dialogue and healing.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Financial Strategy",
@@ -264,6 +326,7 @@
         "name": "USA",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

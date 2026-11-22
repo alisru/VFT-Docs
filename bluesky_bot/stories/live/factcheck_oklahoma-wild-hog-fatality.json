@@ -5,22 +5,22 @@
     "subject": "Recently retired Oklahoma man, 63, dies after colliding with pack of wild hogs",
     "link": "https://nypost.com/2026/09/05/us-news/recently-retired-oklahoma-man-63-dies-after-colliding-with-pack-of-wild-hogs/",
     "target_url": "",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": -0.5,
-    "real_psi": -0.5,
+    "claim_u": 0.75,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Tragic collision with feral hogs claims the life of a newly retired Oklahoman.\n\nRecently retired Oklahoma man, 63, dies after colliding with pack of wild hogs\nEvidence: fatal crash, wild hogs, unbelted\n#Aletheia #Oklahoma 🌐",
-      "News reports detail the accidental death of 63-year-old Roger Cummings after swerving to avoid wild hogs in Oklahoma.\nStated Judgement: (0.0, 0.0) — Neutral Report",
-      "Feral hog proliferation creates severe road and farm hazards across Oklahoma, turning a routine night drive into a fatal rollover.\nResulting Judgement: (-0.5, -0.5) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nA tragic accident highlighting systemic wildlife hazards without deceptive intent.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 2)",
+      "News reports detail the accidental death of 63-year-old Roger Cummings after swerving to avoid wild hogs in Oklahoma.\nStated Judgement: (+0.75, +1.00) — Greater Good",
+      "Feral hog proliferation creates severe road and farm hazards across Oklahoma, turning a routine night drive into a fatal rollover.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA tragic accident highlighting systemic wildlife hazards without deceptive intent.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 2)",
       "- Oklahoma Highway Patrol: PASS (0.0, 0.0) — Objective reporting of collision.\n- Wildlife Department: PASS (0.5, 0.0) — Transparent data on feral hogs.",
       "Roger Cummings died after his vehicle struck a feral hog on a rural Oklahoma road, reflecting a growing regional wildlife hazard.",
       "The Poison:\nFeral swine populations span 70 of 77 Oklahoma counties, presenting escalating safety and agricultural threats.",
       "The Breakdown & Plane Error:\nPhysical plane impact (Q3). The tragedy stems from an unyielding physical hazard rather than human deception.",
       "Social Physics Analysis:\nThis event underscores systemic environmental strain rather than anti-social manipulation. Nature operates via physical laws where lack of mitigation leads directly to hazard.",
-      "The Trajectory: The Path of Awakening.\nWhen evaluating an accidental tragedy, the path leads to sober recognition of physical vulnerabilities.\n\nMathematical divergence is minimal.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen evaluating an accidental tragedy, the path leads to sober recognition of physical vulnerabilities.\n\nMathematical divergence is minimal.",
       "The Unavoidable Truth: Unchecked wildlife proliferation creates severe physical hazards for motorists.\n\nThe Unavoidable Lie: Fatalities from animal strikes are purely isolated anomalies.",
       "Alethekanon:\nTragedy reveals the unyielding friction between human transit and expanding feral ecosystems.",
       "Awwthekanon:\nOur hearts go out to Soyna Cummings and the family mourning a life cut short after four decades of hard work and enduring love.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Oklahoma Highway Patrol",
@@ -210,6 +272,7 @@
         "name": "Oklahoma Wildlife Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

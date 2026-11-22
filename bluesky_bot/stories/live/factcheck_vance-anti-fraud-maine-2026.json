@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "real_u": -0.96,
+    "real_psi": -0.92,
     "mode": "root",
     "posts": [
       "Campaign trail rhetoric meets ground-level political maneuvering in Maine.\n\nVance pushes anti-fraud message in Maine\nEvidence: anti-fraud crusade, partisan house flip, selective framing #Aletheia #USPol 🌐",
-      "Vice President J.D. Vance launched an anti-fraud campaign pitch in Maine, urging voters to elect Republican Paul LePage to eliminate government waste and fix past auditing failures.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Ground reality reveals a partisan push to flip a congressional seat using selective past scandals, while sidestepping federal policies like trade tariffs harming local industries.\nResulting Judgement: (-0.75, -0.80) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA selective anti-fraud crusade is deployed as a political pretext to capture a House seat while ignoring broader economic strain.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "Vice President J.D. Vance launched an anti-fraud campaign pitch in Maine, urging voters to elect Republican Paul LePage to eliminate government waste and fix past auditing failures.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Ground reality reveals a partisan push to flip a congressional seat using selective past scandals, while sidestepping federal policies like trade tariffs harming local industries.\nResulting Judgement: (-0.96, -0.92) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA selective anti-fraud crusade is deployed as a political pretext to capture a House seat while ignoring broader economic strain.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "- J.D. Vance Campaign: FAIL (-0.75, -0.80) — Partisan framing of local audit failures.\n- Paul LePage Record: COND (-0.50, -0.50) — Past welfare claims weaponized.",
       "VP J.D. Vance campaigned in Brewer, Maine, for Republican congressional candidate Paul LePage, attacking state auditor Matthew Dunlap over past CPA exam delays and welfare administration.",
       "The Poison:\nWeaponizing past bureaucratic compliance issues to brand an entire state as a fraud capital while ignoring federal economic policies that actively hurt Maine workers.",
       "The Breakdown & Plane Error:\nThis is a Q1/Q5 plane error (WHO vs HOW). Stated beneficiary is taxpayers, but actual beneficiary is partisan electoral expansion under the guise of fiscal purity.",
       "Social Physics Analysis:\nRather than transparently addressing economic strain, the campaign uses projection and pretexts, painting opponents as corrupt facilitators while shielding its own policy contradictions.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Net force calculation yields negative will due to selective weaponization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Net force calculation yields negative will due to selective weaponization.",
       "The Unavoidable Truth: Fiscal oversight is essential for maintaining public trust in government institutions.\nThe Unavoidable Lie: Selective partisan attacks are genuine crusades against public waste.",
       "Alethekanon:\nTrue accountability requires consistent institutional critique rather than convenient electoral theater. When oversight is deployed solely as a weapon for partisan gains, public trust dissolves into noise.",
       "Awwthekanon:\nIt hurts to watch genuine concerns about public funds get wrapped up in political point-scoring. Maine families deserve honest leaders who genuinely listen to their economic struggles instead of fighting proxy wars.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Meaningful Distortion",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "J.D. Vance Campaign",
@@ -287,6 +349,7 @@
         "name": "Jared Golden",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

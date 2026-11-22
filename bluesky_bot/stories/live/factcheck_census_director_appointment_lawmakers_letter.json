@@ -5,22 +5,22 @@
     "subject": "142 State Lawmakers Urge Trump To Appoint Census Director",
     "link": "https://thefederalist.com/2026/08/24/exclusive-142-state-lawmakers-urge-trump-to-appoint-census-director-to-ensure-accurate-2030-citizen-count/?utm_source=rss&utm_medium=rss&utm_campaign=exclusive-142-state-lawmakers-urge-trump-to-appoint-census-director-to-ensure-accurate-2030-citizen-count",
     "target_url": "",
-    "claim_u": 0.75,
-    "claim_psi": 0.6,
-    "real_u": -0.78,
-    "real_psi": -0.72,
+    "claim_u": 0.96,
+    "claim_psi": 1.0,
+    "real_u": -0.56,
+    "real_psi": -0.56,
     "mode": "root",
     "posts": [
       "Redefining the census to reshape political representation tests the limits of constitutional text.\n\nState Lawmakers 2030 Census Push\nEvidence: Accurate Enumeration, Partisan Redistricting, Constitutional Mandate\n#Aletheia #USPol",
-      "State lawmakers claim appointing a new Census director to exclude noncitizens ensures fair representation and restores the constitutional intent of enumeration.\nStated Judgement: (+0.75, +0.60) — Greater Good",
-      "The Constitution explicitly mandates counting the \"whole number of persons\" for apportionment, making the proposal a partisan effort to shift House seats.\nResulting Judgement: (-0.78, -0.72) — Greater Evil",
-      "Verdict: FAIL — Fall into Deception. Reinterpreting plain constitutional language manufactures an electoral pretext to reallocate congressional power.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.4, z: 2)",
+      "State lawmakers claim appointing a new Census director to exclude noncitizens ensures fair representation and restores the constitutional intent of enumeration.\nStated Judgement: (+0.96, +1.00) — Greater Good",
+      "The Constitution explicitly mandates counting the \"whole number of persons\" for apportionment, making the proposal a partisan effort to shift House seats.\nResulting Judgement: (-0.56, -0.56) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.4, z: 2)",
       "Sub-Audits Breakdown:\n- Freedom Caucus Coalition: FAIL (-0.80, -0.75) — Distorts constitutional text.\n- Census Bureau Baseline: COND (+0.25, +0.10) — Operational delays persist.",
       "Over 140 Republican state lawmakers urged President Trump to appoint a Census Bureau director committed to excluding noncitizens from the 2030 congressional count.",
       "The Bright Side:\nHighlighting the need for timely leadership at the Census Bureau ensures adequate operational planning ahead of the massive 2030 decennial count.",
       "The Breakdown & Plane Error:\nA fundamental WHAT vs WHO error: framing the exclusion of noncitizens as statistical accuracy while bypassing the 14th Amendment's explicit \"whole number of persons\" mandate.",
       "Social Physics Analysis:\nBy redefining constitutional enumeration as an immigration enforcement tool, lawmakers use demographic anxiety to justify altering baseline representation rules for partisan advantage.",
-      "The Trajectory: Fall into Deception.\nMapping stated concerns for census accuracy against legal reality reveals an intentional maneuver to reshape the electoral map through administrative leverage.",
+      "The Trajectory: The Path of Fall into Destruction.\nMapping stated concerns for census accuracy against legal reality reveals an intentional maneuver to reshape the electoral map through administrative leverage.",
       "The Unavoidable Truth: The 14th Amendment requires counting all residents, not just citizens.\nThe Unavoidable Lie: Altering the apportionment baseline is about neutral data accuracy.",
       "Alethekanon:\nFraming constitutional deviation as data integrity is a classic inversion: the 14th Amendment specifies persons, not electors, for congressional apportionment.",
       "Awwthekanon:\nEvery community deserves to be seen and counted fairly. Dividing neighbors into who counts and who doesn't weakens the shared fabric of our representation.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.65,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.2,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.15,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "State Freedom Caucus Network Coalition",
@@ -290,6 +352,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

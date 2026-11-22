@@ -14,13 +14,13 @@
       "A quiet revolution is reshaping Latin America as centuries of Catholic dominance give way to a highly organized, politically potent pluralism.\n\nLatin America's religious revolution\nEvidence: Catholic hegemony, pluralist shift, representation\n#Aletheia #LatinAmerica",
       "The claim states that Latin America's religious landscape is diversifying, with evangelical and Pentecostal growth creating powerful, organized political blocs like Brazil's Bancada Evangélica.\n\nStated Judgement: (1.0, 1.0) — Good Preference",
       "The reality aligns perfectly with the analysis. Demographic data and legislative records confirm a shift toward pluralism, with organized religious groups actively participating in democratic debates.\n\nResulting Judgement: (1.0, 1.0) — Good Preference",
-      "Verdict: PASS — Grace into Grace.\n\nThe analysis accurately maps demographic shifts and political organization without overstating evangelical homogeneity, maintaining high analytical integrity.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\n\nThe analysis accurately maps demographic shifts and political organization without overstating evangelical homogeneity, maintaining high analytical integrity.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Demographic Analysis: PASS (1.0, 1.0) — Accurately tracks the decline of Catholic dominance.\n- Political Representation: PASS (1.0, 1.0) — Correctly identifies the organized influence of the Bancada Evangélica.",
       "A UPI report highlights how Latin America is transitioning from a Catholic monopoly to a pluralistic religious landscape, with evangelical networks translating spiritual growth into significant legislative power.",
       "The Poison:\n\nWhile pluralism strengthens democratic representation, highly organized religious blocs can also deepen polarization by framing policy debates in rigid, non-negotiable moral terms.",
       "The Breakdown & Plane Error:\n\nThere is no plane error here. The analysis successfully connects the metaphysical shift (WHO people worship) with the physical reality (WHERE they vote and HOW they organize).",
       "Social Physics Analysis:\n\nBy analyzing the shift through structural organization rather than ideological bias, the report reveals how decentralized networks empower local communities to build cohesive political influence.",
-      "The Trajectory: The Path of Grace into Grace.\n\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The data and narrative remain fully aligned.",
+      "The Trajectory: The Path of Grace.\n\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The data and narrative remain fully aligned.",
       "The Unavoidable Truth: Religious monopoly in Latin America has permanently ended.\n\nThe Unavoidable Lie: That evangelical growth represents a single, monolithic political conspiracy.",
       "Alethekanon:\nAn exceptionally clean audit. The causal chain from demographic shift to legislative bloc is backed by verifiable data, and the narrative carefully avoids overgeneralization.",
       "Awwthekanon:\n\nIt is beautiful to see communities finding their voice and creating spaces where they feel seen and supported, fostering a more diverse tapestry of shared human experience.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Demographic Analysis",
@@ -264,6 +326,7 @@
         "name": "Catholic Church",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

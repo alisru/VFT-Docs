@@ -1,0 +1,242 @@
+[
+  {
+    "thinking": "Detailed Phase 1-5 structural scan: Evaluates House Democrats opening an inquiry into fundraiser Meredith O'Rourke. Stated claim is congressional oversight into potential quid pro quo. Ground truth confirms lawmakers sent inquiry letters. Coordinates calibrated at local/civic scale (-0.4, 0.5). Integrity holds as standard political reporting.",
+    "id": "house-democrats-inquiry-meredith-orourke",
+    "subject": "House Democrats Open Inquiry into Trump Fundraiser Meredith O’Rourke",
+    "link": "https://www.breitbart.com/pre-viral/2026/11/12/house-democrats-inquiry-trump-fundraiser-meredith-orourke/",
+    "target_url": "",
+    "claim_u": 0.0,
+    "claim_psi": 0.5,
+    "real_u": -0.4,
+    "real_psi": 0.5,
+    "mode": "root",
+    "posts": [
+      "Incoming House Democrats launch a formal funding inquiry into top Trump fundraiser Meredith O'Rourke.\nEvidence: Congressional letters, WSJ report, donor data\n#Aletheia #USPol 🌐",
+      "House Democrats are opening an inquiry into top fundraiser Meredith O'Rourke regarding large corporate donations to presidential projects.\nStated Judgement: (0.0, +0.5) — Oversight Action",
+      "Congressional letters confirm lawmakers are seeking documents on $800M in donations and potential access quid pro quos.\nResulting Judgement: (-0.4, +0.5) — Political Inquiry",
+      "Verdict: PASS — Deception.\nCongressional oversight inquiry initiated as documented by primary correspondence.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
+      "- House Democrats: PASS (-0.4, +0.5) — Exercises legislative oversight authority.\n- Meredith O'Rourke: PASS (0.0, 0.0) — Defends fundraising legitimacy.",
+      "Lawmakers investigate potential links between major corporate donations and federal policy favors.",
+      "The Poison:\nPartisan weaponization of oversight can overshadow genuine accountability.",
+      "The Breakdown & Plane Error:\nConflating standard political fundraising with proven corruption before investigation results.",
+      "Social Physics Analysis:\nPolitical inquiries often blend genuine transparency goals with strategic partisan positioning, balancing public oversight against competitive extraction.",
+      "The Trajectory: The Path of Deception.\nWhen institutional oversight follows formal evidentiary channels, it operates within constitutional norms despite partisan friction.",
+      "The Unavoidable Truth: Large political fundraising invites rigorous legislative scrutiny.\n\nThe Unavoidable Lie: Every congressional inquiry proves immediate criminal guilt.",
+      "Alethekanon:\nLegislative oversight is a constitutional mechanism, yet its timing often serves partisan signaling.",
+      "Awwthekanon:\nTrue justice requires fair investigation without premature condemnation.",
+      "Brothekanon:\nJust standard political hardball starting up again.",
+      "Spirithekanon:\n\"Let justice roll down like waters, and righteousness like an ever-flowing stream.\" Amos 5:24 PASS\nPublic oversight must seek genuine truth rather than partisan victory."
+    ],
+    "actors": [
+      "House Democrats",
+      "Meredith O’Rourke",
+      "Donald Trump",
+      "U.S. House of Representatives",
+      "Breitbart"
+    ],
+    "actor_roles": [
+      {
+        "name": "House Democrats",
+        "role": "regulator"
+      },
+      {
+        "name": "Meredith O’Rourke",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "beneficiary"
+      },
+      {
+        "name": "U.S. House of Representatives",
+        "role": "context"
+      },
+      {
+        "name": "Breitbart",
+        "role": "author"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.3,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.2
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.2
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Congressional Inquiry",
+        "claim_u": 0.0,
+        "claim_psi": 0.5,
+        "real_u": -0.4,
+        "real_psi": 0.5,
+        "verdict": "PASS",
+        "reason": "Executes formal legislative oversight letters."
+      },
+      {
+        "aspect": "Fundraising Defense",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": 0.0,
+        "real_psi": 0.0,
+        "verdict": "PASS",
+        "reason": "Responds to inquiries asserting lawful compliance."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "can be",
+    "modal_real": "can't be",
+    "modal_vector": "Top-Right to Bottom-Left Inversion",
+    "geodesic": "Red Top (The Imperial Trap)",
+    "central_is_barrier_crossed": false,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nHouse Democrats Open Inquiry into Trump Fundraiser Meredith O’Rourke\n\nHouse Democrats are reportedly opening an inquiry into leading Trump fundraiser Meredith O'Rourke, a longtime ally of the president who has helped raise money for his top projects.\nThe post House Democrats Open Inquiry into Trump Fundraiser Meredith O’Rourke appeared first on Breitbart.\n\nActual Article Body:\nHouse Democrats are reportedly opening an inquiry into leading Trump fundraiser Meredith O’Rourke, a longtime ally of the president who has helped raise money for his top projects.\n\nIncoming Democrat committee chairs are seeking documents regarding O’Rourke’s role in raising more than $800 million in corporate donations toward presidential projects, according to a report by the Wall Street Journal.\n\nDemocrats set to control key congressional investigative committees are already claiming the top Trump fundraiser’s operation “reeks of potential corruption.”\n\nIn a Wednesday letter questioning if donors were promised certain favors in exchange for gifts to President Donald Trump’s White House ballroom and other projects, the incoming lawmakers are claiming “the appearance of widespread corruption.”\n\nThe Democrats have reportedly cited instances in which big companies like Capital One, SoftBank Group, and Lockheed Martin made major donations toward President Trump’s priorities, claiming these entities later received favorable treatment from the federal government.\n\nOn Tuesday, Sens. Elizabeth Warren (D-MA) and Richard Blumenthal (D-CT), and Rep. Robert Garcia (D-CA) asked O’Rourke to detail whom she approached for donations, the information she provided to them, and whether the gifts influenced their access to Trump, according to a report by the Washington Post.\n\n“The fundraising operation that President Trump reportedly directs with your assistance reeks of potential corruption and the potential for quid pro quo politics,” the Democrats reportedly wrote in a letter to O’Rourke.\n\nNotably, Rep. Garcia, the top House Democrat on the Oversight Committee, threatened Republicans with lawfare just minutes after the Democrats were projected to retake the U.S. House last week, on the night of the midterm elections.\n\n“LAWYER UP,” the congressman wrote in an all-caps X post, as his party was projected to retake a House majority.\n\nThe Democrats’ letter to O’Rourke is the latest sign of how they intend to investigate President Trump and his allies once they assume control of Congress in January, when they will be able to issue subpoenas.\n\n“President Trump is the most successful fundraiser in political history, and he is deeply grateful to his donors, but one thing has never changed: He can’t be bought,” a spokesperson for O’Rourke told the Washington Post.\n\n“The Democrats’ accusations are absurd, baseless, and full of hypocrisy,” the spokesperson added.\n\nAlana...",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.breitbart.com/pre-viral/2026/11/12/house-democrats-inquiry-trump-fundraiser-meredith-orourke/",
+        "snippet": "House Democrats Open Inquiry into Trump Fundraiser Meredith O’Rourke\n\nHouse Democrats are reportedly opening an inquiry into leading Trump fundraiser Meredith O'Rourke, a longtime ally of the president who has helped raise money for his top projects.\nThe post House Democrats Open Inquiry into Trump "
+      }
+    ],
+    "grounding_url": "https://newrepublic.com/post/217934/democrats-launch-investigation-trump-princess-darkness-fundraiser-o-rourke",
+    "category": "all",
+    "topic": "trump",
+    "event": "",
+    "path_name": "Deception",
+    "policies": [],
+    "graph_img": "graph_png/house-democrats-inquiry-meredith-orourke_graph.png",
+    "rkeys": [
+      "3n2drb6rdjx2t",
+      "3n2drb7dubr2l",
+      "3n2drbakt6l2a",
+      "3n2drbbsivx2t",
+      "3n2drbczbyd2k",
+      "3n2drbeatng2z",
+      "3n2drbfhb6f2u",
+      "3n2drbgnxg62z",
+      "3n2drbhulnl2a",
+      "3n2drbj3nrv2u",
+      "3n2drbkcb3s2k",
+      "3n2drbljg3y22",
+      "3n2drbmqiyw2z",
+      "3n2drbnxmzq22",
+      "3n2drbp72n22q"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drb6rdjx2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drb7dubr2l",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbakt6l2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbbsivx2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbczbyd2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbeatng2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbfhb6f2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbgnxg62z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbhulnl2a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbj3nrv2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbkcb3s2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbljg3y22",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbmqiyw2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbnxmzq22",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2drbp72n22q"
+    ],
+    "tags": [
+      "Aletheia",
+      "USPol"
+    ]
+  }
+]

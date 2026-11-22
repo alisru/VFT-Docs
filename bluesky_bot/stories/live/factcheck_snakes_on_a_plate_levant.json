@@ -14,7 +14,7 @@
       "A 15,000-year-old menu reveals that snakes were a steady snack in the ancient Levant.\n\nSnakes on a plate: Reptiles eaten by foragers\nEvidence: ancient diet, fossil remains, dietary staple\n#Aletheia #Archaeology #Science",
       "Researchers claim that Natufian hunter-gatherers consistently ate snakes and lizards as a reliable, culturally inherited dietary supplement over three millennia.\nStated Judgement: (+1.0, +1.0) — Grace",
       "Fossil evidence of butchered bones confirms that reptile consumption was a stable, long-term adaptation to rising population density and resource pressure.\nResulting Judgement: (+1.0, +1.0) — Grace",
-      "Verdict: PASS — Grace into Grace. The study provides robust, empirical evidence of prehistoric dietary adaptation without narrative distortion.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- University of Haifa: PASS (1.0, 1.0) — Rigorous analysis.\n- Archaeological Evidence: PASS (1.0, 1.0) — Clear cut marks.",
       "Archaeologists analyzing fossils from El Wad Terrace in Israel discovered that squamates made up over a third of animal remains, showing a long-term reliance on reptiles.",
       "The Poison:\nWhile fascinating, the reliance on snakes was driven by intense population pressure, meaning ancient foragers ate them out of necessity rather than preference.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "University of Haifa Research Team",
@@ -260,6 +322,7 @@
         "name": "Israel",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

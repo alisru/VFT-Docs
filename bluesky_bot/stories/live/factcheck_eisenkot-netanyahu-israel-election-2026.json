@@ -5,22 +5,22 @@
     "subject": "'Everything Netanyahu is not': The 'straight' shooter looking to rule Israel",
     "link": "https://www.abc.net.au/news/2026-09-14/benjamin-netanyahu-gadi-eisenkot-israeli-election/107106990",
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3mvhjvenqgm2p",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
+    "claim_u": 0.1,
+    "claim_psi": -0.2,
     "real_u": -0.2,
     "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "Political shake-up in Israel as former military chief Gadi Eisenkot challenges PM Benjamin Netanyahu.\nEvidence: polling leads, political fragmentation, policy continuity\n#Aletheia #WorldPolitics",
-      "Gadi Eisenkot's Yashar party presents a 'straight' and honest alternative to years of political obstruction and deceit under Netanyahu.\nStated Judgement: (+0.6, +0.2) — Conditionally Sound",
-      "Despite leadership changes, policy stances on West Bank and Gaza remain entrenched, substituting personal style for systemic reform.\nResulting Judgement: (-0.2, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nElectoral shifts offer a fresh face, but underlying structural conflict and policy trajectories remain largely unchanged.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Gadi Eisenkot's Yashar party presents a 'straight' and honest alternative to years of political obstruction and deceit under Netanyahu.\nStated Judgement: (+0.10, -0.20) — Lesser Good",
+      "Despite leadership changes, policy stances on West Bank and Gaza remain entrenched, substituting personal style for systemic reform.\nResulting Judgement: (-0.20, -0.40) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nElectoral shifts offer a fresh face, but underlying structural conflict and policy trajectories remain largely unchanged.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Gadi Eisenkot: COND (0.0, -0.2) — Offers personal integrity without major policy shifts.\n- Benjamin Netanyahu: FAIL (-0.4, -0.6) — Entrenched right-wing coalition tactics.",
       "As Israel's October 27 election approaches, former IDF chief Gadi Eisenkot's Yashar party is neck-and-neck with Benjamin Netanyahu's Likud in fragmented polls.",
       "The Bright Side:\nVoters have a viable democratic avenue to challenge entrenched leadership without destabilizing state institutions entirely.",
       "The Breakdown & Plane Error:\nThe analysis confuses WHO (individual leadership style) with WHAT (systemic policy outcomes), ignoring that core regional policies persist.",
       "Social Physics Analysis:\nEisenkot runs a mild Smart Altruistic pretext of transparency, contrasting his 'straight' persona against Netanyahu's tactical polarization, yet structural imperatives remain locked in power preservation.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Divergence stems from personal branding masking policy stasis.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Divergence stems from personal branding masking policy stasis.",
       "The Unavoidable Truth: Changing leaders does not automatically alter deep-seated geopolitical conflicts.\n\nThe Unavoidable Lie: A new political party can instantly resolve systemic national polarization.",
       "Alethekanon:\nPersonal moral rectitude in a candidate is frequently conflated with systemic policy transformation.",
       "Awwthekanon:\nIt is heartbreaking to witness a nation torn by prolonged conflict pinning its hopes entirely on a single new face, yearning for genuine peace.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Gadi Eisenkot",
@@ -172,6 +234,7 @@
         "name": "Israel",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

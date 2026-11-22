@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 0.75,
     "claim_psi": 0.6,
-    "real_u": -0.65,
-    "real_psi": 0.45,
+    "real_u": -0.25,
+    "real_psi": 0.12,
     "mode": "root",
     "posts": [
       "Surveillance disguised as safety. Discord rolls out global age verification, claiming 90% of users will bypass manual checks through behavioral tracking. Evidence: Child safety pretext, Behavioral profiling, Regulatory compliance. #Aletheia #Privacy #Discord",
-      "Discord claims its new age verification system protects children while preserving privacy, using machine learning to estimate ages based on behavioral \"signals\" rather than invasive ID scans. Stated Judgement: (+0.75, +0.60) — Lesser Good",
-      "In reality, Discord is implementing a massive behavioral surveillance model to dodge global regulatory fines, shifting the privacy risk to automated profiling and third-party vendors with a history of data leaks. Resulting Judgement: (-0.65, +0.45) — Lesser Evil",
-      "Verdict: FAIL — The Path of Fall into Deception. Discord's solution to regulatory pressure is a classic bait-and-switch, replacing invasive ID scans with continuous behavioral surveillance.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.8, z: 2)",
+      "Discord claims its new age verification system protects children while preserving privacy, using machine learning to estimate ages based on behavioral \"signals\" rather than invasive ID scans. Stated Judgement: (+0.75, +0.60) — Greater Good",
+      "In reality, Discord is implementing a massive behavioral surveillance model to dodge global regulatory fines, shifting the privacy risk to automated profiling and third-party vendors with a history of data leaks. Resulting Judgement: (-0.25, +0.12) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.8, z: 2)",
       "- Discord Corporate: FAIL (-0.65, 0.45) — Replaces ID scans with continuous behavioral tracking.\n- TechCrunch Reporting: COND (0.15, -0.20) — Mentions the 2025 breach but accepts the 90% claim.",
       "To comply with expanding global age-assurance laws, Discord is rolling out a system that uses machine learning to estimate user ages based on activity patterns, attempting to avoid the backlash of manual ID checks.",
       "The Bright Side:\nTeens are automatically shielded from adult servers and unsolicited messages, providing a genuine layer of protection against online predators.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Discord Corporate",
@@ -152,6 +214,7 @@
         "name": "Stanislav Vishnevskiy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

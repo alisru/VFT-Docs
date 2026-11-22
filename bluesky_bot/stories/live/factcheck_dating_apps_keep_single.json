@@ -8,19 +8,19 @@
     "claim_u": -0.5,
     "claim_psi": -0.6,
     "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "Do dating apps profit from keeping you swiping forever?\nEvidence: Falling marriage rates, retention-driven design, endless options\n#Aletheia #Tech #Relationships",
-      "Dating apps offer endless choice but are engineered for user retention over successful matchmaking, driving down marriage rates.\nStated Judgement: (-0.5, -0.6) — Lesser Evil",
-      "While monetization models favor engagement, blaming apps entirely oversimplifies massive demographic and economic shifts in modern romance.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nApp design certainly incentivizes retention, but reducing multi-decade marriage declines solely to app algorithms is reductive.\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
+      "Dating apps offer endless choice but are engineered for user retention over successful matchmaking, driving down marriage rates.\nStated Judgement: (-0.50, -0.60) — Greater Evil",
+      "While monetization models favor engagement, blaming apps entirely oversimplifies massive demographic and economic shifts in modern romance.\nResulting Judgement: (-0.40, -0.40) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nApp design certainly incentivizes retention, but reducing multi-decade marriage declines solely to app algorithms is reductive.\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 1)",
       "Sub-Audits Breakdown:\n- Platform Incentives: PASS (-0.6, -0.5) — Engagement models delay pairing.\n- Macro Attribution: COND (-0.2, -0.3) — Overstates app causality in marriage drops.",
       "With marriage rates falling significantly since 2000, critics argue that swipe-based platforms monetize loneliness rather than resolve it.",
       "The Poison:\nCynical framing can lead single people to despair of human connection entirely, misattributing systemic social shifts to software bugs.",
       "The Breakdown & Plane Error:\nConfusing commercial software optimization (WHAT) with the metaphysical causes of modern marital decline (WHY).",
       "Social Physics Analysis:\nApp developers run a smart selfish monetization loop, trading long-term user fulfillment for short-term engagement metrics while critics project systemic cultural collapse onto corporate code.",
-      "The Trajectory: The Path of Deception.\nWhen you map corporate profit motives against human romantic aspirations, it plots a trajectory toward commercialized isolation.",
+      "The Trajectory: The Path of Destruction.\nWhen you map corporate profit motives against human romantic aspirations, it plots a trajectory toward commercialized isolation.",
       "The Unavoidable Truth: Engagement apps profit from endless user retention.\n\nThe Unavoidable Lie: Algorithms alone are responsible for society's marriage decline.",
       "Alethekanon:\nBlaming algorithms for sociological shifts ignores that markets supply what isolated cultures demand.",
       "Awwthekanon:\nSeeking love is tender and vulnerable. Don't let cynical app mechanics make your heart close off to genuine human warmth.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Platform Incentives",
@@ -158,6 +220,7 @@
         "name": "Match Group",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

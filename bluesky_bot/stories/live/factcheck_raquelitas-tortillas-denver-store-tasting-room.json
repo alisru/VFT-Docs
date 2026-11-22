@@ -14,7 +14,7 @@
       "Local tortilla factory opens doors just 12 hours a week, sparking a cult following with hyper-local Colorado ingredients.\n\nRaquelitas Tortillas Denver\nEvidence: local heritage, limited retail, community joy\n#Denver #Food 🌐",
       "Raquelitas expanded from pure wholesale into a tiny weekend retail shop, serving artisanal heirloom corn and brisket-tallow tortillas to eager lines.\nStated Judgement: (+1.0, 1.0) — Greater Good",
       "Ground reality matches the hype: authentic local sourcing, multigenerational family pride, and genuine community connection in RiNo.\nResulting Judgement: (+1.0, 1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Local tradition successfully bridges wholesale scale with intimate community connection.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Raquelitas Family Business: PASS (1.0, 1.0) — Maintained authentic local sourcing and heritage.\n- Retail Expansion: PASS (1.0, 1.0) — Successfully tested direct consumer engagement without losing quality.",
       "Raquelitas Tortillas, a Denver staple since 1960, resisted retail sales for decades before opening a tiny tasting room in the RiNo district for 12 hours a week, celebrating hyper-local Colorado ingredients.",
       "The Bright Side:\nScarcity breeds genuine appreciation; limiting sales to 12 hours a week transforms buying tortillas into an exciting community ritual.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Raquelitas Family Business",
@@ -264,6 +326,7 @@
         "name": "Ute Mountain Ute Tribe",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

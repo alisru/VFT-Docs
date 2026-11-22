@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Seattle passes a ban on rental junk fees to protect tenants, but small landlords warn costs will just shift elsewhere.\nEvidence: fee transparency, housing affordability, market adaptation\n#Aletheia #USPol",
-      "Stated claim: Seattle legislation bans hidden rental junk fees and pet rent to make housing costs transparent and affordable for renters.\nStated Judgement: (1.0, 1.0) — Greater Good",
-      "Actual reality: While eliminating hidden fees brings transparency, economic pressures mean landlords may bundle costs into base rent, impacting small operators.\nResulting Judgement: (+0.40, +0.45) — Lesser Good",
-      "Verdict: COND — The Path of Redemption. A well-intentioned regulatory push that successfully targets hidden fees, though secondary market adaptations create friction.",
+      "Stated claim: Seattle legislation bans hidden rental junk fees and pet rent to make housing costs transparent and affordable for renters.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Actual reality: While eliminating hidden fees brings transparency, economic pressures mean landlords may bundle costs into base rent, impacting small operators.\nResulting Judgement: (+0.40, +0.45) — Greater Good",
+      "Verdict: PASS — Fall from Grace.",
       "Sub-Audits Breakdown:\n- Seattle City Council: COND (0.6, 0.5) — The council successfully bans deceptive fee stacking, though economic trade-offs persist for small landlords.",
       "The Seattle City Council passed legislation banning pet rent and other hidden junk fees, requiring upfront rent disclosures and empowering inspectors, though the rules don't take effect until July 2027.",
       "The Poison:\nBanning specific fees without addressing root housing supply shortages may simply force landlords to roll those costs directly into higher base rents.",
       "The Breakdown & Plane Error:\nThe plane error conflates WHAT (banning fee categories) with HOW (market pricing adjustments), assuming price structures remain static.",
       "Social Physics Analysis:\nBy attempting to enforce financial transparency, the legislation seeks to reduce tenant exploitation. However, without balancing burdens for smaller independent providers, it risks shifting friction rather than eliminating strain.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between regulatory ideals and complex market realities, it plots a trajectory toward Lesser Good. Structural adjustments stabilize the outcome.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between regulatory ideals and complex market realities, it plots a trajectory toward Lesser Good. Structural adjustments stabilize the outcome.",
       "The Unavoidable Truth: Hidden rental fees burden tenants and obscure true housing costs.\n\nThe Unavoidable Lie: Banning fees automatically lowers overall housing expenses without altering base rents.",
       "Alethekanon:\nFee transparency is a necessary step, but price controls without supply expansion often manifest as squeezed flexibility elsewhere in the rental ecosystem.",
       "Awwthekanon:\nIt is heartbreaking to pay extra just for having a little furry companion. I hope this brings real relief to families trying to find a stable home.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.3,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.55,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.55,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Seattle City Council Legislation",
@@ -274,6 +336,7 @@
         "name": "Rental Housing Association of Washington",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

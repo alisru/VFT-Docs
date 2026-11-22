@@ -7,13 +7,13 @@
     "target_url": "https://bsky.app/profile/chicagotribune.com/post/3mx4goc5jps2x",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.76,
-    "real_psi": -0.62,
+    "real_u": -0.38,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "A defensive coordinator walks off the field mid-game and gets fired immediately. Talk about a total collapse of leadership.\nColorado State fires Tyson Summers\nEvidence: Team Duty, Mid-Game Abandonment, Self-Preservation\n#Aletheia #CollegeFootball 🌐",
-      "The program claims a standard of accountability, framing the firing as a necessary disciplinary action after a defensive coordinator was relieved of play-calling duties.\nStated Judgement: (0.80, 0.50) — Good Preference",
-      "The reality is a chaotic breakdown of professional duty. The coordinator abandoned his team mid-game on his own accord, leaving players and staff stranded during a blowout loss.\nResulting Judgement: (-0.76, -0.62) — Greater Evil",
+      "The program claims a standard of accountability, framing the firing as a necessary disciplinary action after a defensive coordinator was relieved of play-calling duties.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "The reality is a chaotic breakdown of professional duty. The coordinator abandoned his team mid-game on his own accord, leaving players and staff stranded during a blowout loss.\nResulting Judgement: (-0.38, -0.50) — Greater Evil",
       "Verdict: FAIL — Fall into Destruction.\nA complete abdication of professional duty mid-game under pressure, fracturing team cohesion and forcing an immediate termination.\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Tyson Summers: FAIL (-0.85, -0.70) — Abandoned team mid-game.\n- Jim Mora Management: COND (0.10, -0.30) — Stripped duties mid-game.",
       "Colorado State fired defensive coordinator Tyson Summers after he walked off the field during a 56-26 loss to Oregon State, following a series of severe defensive struggles.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tyson Summers Sideline Abandonment",
@@ -164,6 +226,7 @@
         "name": "Colorado State Rams",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

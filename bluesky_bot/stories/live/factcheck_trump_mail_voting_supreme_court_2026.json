@@ -5,22 +5,22 @@
     "subject": "Supreme Court gives Trump an interim win on his mail voting order, but hurdles loom",
     "link": "https://www.npr.org/2026/08/24/nx-s1-5909592/trump-mail-voting-order-supreme-court",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.5,
-    "real_u": -0.6,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.76,
+    "real_psi": -0.72,
     "mode": "root",
     "posts": [
       "Supreme Court grants an interim win on mail-in voting restrictions, yet operational chaos threatens the midterms. 🌐\n\nSupreme Court gives Trump an interim win on his mail voting order\nEvidence: procedural win, administrative chaos, voting friction\n#Aletheia #USPolitics",
-      "Stated Claim: The administration frames the Supreme Court pause as a valid defense of executive authority over election rules, ensuring orderly administration.\nStated Judgement: (+0.5, +0.5) — Good Preference",
-      "Reality: The executive order bypasses normal legislative channels, injecting severe operational chaos and threatening voter access right before midterms.\nResulting Judgement: (-0.6, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nJudicial reprieves mask profound administrative disruption that suppresses voter access.\n\nIntegrity: Severe Deception (Hypocrisy: 8.5, Uncertainty z: 2)",
+      "Stated Claim: The administration frames the Supreme Court pause as a valid defense of executive authority over election rules, ensuring orderly administration.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Reality: The executive order bypasses normal legislative channels, injecting severe operational chaos and threatening voter access right before midterms.\nResulting Judgement: (-0.76, -0.72) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nJudicial reprieves mask profound administrative disruption that suppresses voter access.\n\nIntegrity: Severe Deception (Hypocrisy: 8.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Supreme Court Ruling: COND (+0.5, +0.2) — Grants procedural interim relief.\n- Electoral Impact: FAIL (-0.8, -0.9) — Creates chaos & voter suppression.",
       "Context: The Supreme Court paused a lower court ruling blocking parts of Trump's mail-in voting restrictions, leaving postal service rules tangled in separate injunctions.",
       "The Poison:\nFraming administrative hurdles as routine oversight conceals the deliberate friction imposed on eligible mail-in voters.",
       "The Breakdown & Plane Error:\nConfusing procedural jurisdiction (WHAT) with substantive voting rights (WHO). The systemic bait-and-switch trades democratic access for executive control.",
       "Social Physics Analysis:\nBy imposing top-down restrictions under administrative pretexts, the administration hoards power while projecting blame for voting chaos onto the states.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between procedural victories and actual voter disenfranchisement, it plots a direct trajectory toward Lesser Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between procedural victories and actual voter disenfranchisement, it plots a direct trajectory toward Lesser Evil.",
       "The Unavoidable Truth: Procedural victories do not eliminate the tangible chaos inflicted on upcoming elections.\n\nThe Unavoidable Lie: Executive interference in voting logistics is neutral administrative housekeeping.",
       "Alethekanon:\nLegal wins that fracture electoral trust are pyrrhic victories. When administrative machinery is weaponized to win, the democratic compact decays beneath the paperwork.",
       "Awwthekanon:\nElections should be celebrations of civic voice, not bureaucratic obstacle courses. Every voter deserves clear, calm pathways to cast their ballot without fear.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.15,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Supreme Court Interim Ruling",
@@ -285,6 +347,7 @@
         "name": "Ketanji Brown Jackson",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

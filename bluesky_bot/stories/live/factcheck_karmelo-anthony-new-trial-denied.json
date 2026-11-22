@@ -5,22 +5,22 @@
     "subject": "Judge denies Karmelo Anthony’s request for a new trial",
     "link": "https://nypost.com/2026/08/22/us-news/judge-makes-decision-on-karmelo-anthonys-request-for-a-new-trial/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "claim_u": 0.8,
+    "claim_psi": 1.0,
+    "real_u": -0.21,
+    "real_psi": -0.33,
     "mode": "root",
     "posts": [
       "A Texas judge shuts down convicted killer Karmelo Anthony’s retrial bid after a fatal track meet stabbing.\nEvidence: fair trial, concealed threats, violent reality\n#Aletheia #Legal #Texas",
-      "Anthony’s defense argued strict rules and jury instructions compromised his trial, seeking a retrial for the fatal stabbing.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Court revelations exposed hidden texts where Anthony threatened to shoot his school, cementing his violent intent.\nResulting Judgement: (-0.85, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nConcealed violent threats shatter the self-defense narrative, revealing systemic escalation.\nIntegrity: Severe Deception (Hypocrisy: 18.5, Uncertainty z: 2)",
+      "Anthony’s defense argued strict rules and jury instructions compromised his trial, seeking a retrial for the fatal stabbing.\nStated Judgement: (+0.80, +1.00) — Greater Good",
+      "Court revelations exposed hidden texts where Anthony threatened to shoot his school, cementing his violent intent.\nResulting Judgement: (-0.21, -0.33) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nConcealed violent threats shatter the self-defense narrative, revealing systemic escalation.\nIntegrity: Severe Deception (Hypocrisy: 18.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Karmelo Anthony: FAIL (-0.85, -0.9) — Concealed severe violent history from trial.\n- Judicial Process: COND (0.0, 0.0) — Handled initial bias but unsealed true record.",
       "A Texas judge denied convicted killer Karmelo Anthony’s bid for a new trial after discovering a chilling 2023 text where he threatened to shoot up his school.",
       "The Poison:\nHidden evidence of premeditated violence undermines claims of mere situational self-defense.",
       "The Breakdown & Plane Error:\nThe error mistakes WHO is accountable (focusing only on courtroom procedural rules rather than the perpetrator's concealed violent history).",
       "Social Physics Analysis:\nThe defense used a smart selfish loop, hiding extreme violent threats behind a pretext of procedural unfairness to secure a lighter outcome.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Active contraction of futures (-1.5) overwhelms stasis.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Active contraction of futures (-1.5) overwhelms stasis.",
       "The Unavoidable Truth: Concealed violent threats destroy claims of spontaneous self-defense.\nThe Unavoidable Lie: The trial was merely compromised by courtroom technicalities.",
       "Alethekanon:\n🌐 Procedural technicalities cannot erase a documented record of lethal intent. The concealment of prior violent threats exposes a deep systemic failure.",
       "Awwthekanon:\nSuch unimaginable tragedy touches so many young lives, leaving families devastated by violence that could have been prevented with early intervention.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Karmelo Anthony Defense",
@@ -279,6 +341,7 @@
         "name": "Texas Courts",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

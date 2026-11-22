@@ -5,22 +5,22 @@
     "subject": "How AI Could Make It Harder for Governments to Use Hacking Tools",
     "link": "https://techcrunch.com/2026/08/31/how-ai-could-make-it-harder-for-governments-to-use-hacking-tools/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.72,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "As artificial intelligence supercharges software security, intelligence agencies may soon find themselves locked out of traditional cyber surveillance.\nEvidence: Matthew Green analysis, expert commentary, vulnerability scarcity\n#Aletheia #AI #Cybersecurity",
-      "Explores how AI-driven software hardening might starve law enforcement of digital bugs and spark new debates over device backdoors.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "Examines the complex dual-use reality where AI enhances both offensive exploits and defensive patching, leaving the ultimate outcome contested.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: PASS — The Path of Redemption.\nThe article provides a balanced, forward-looking exploration of a genuine technological dilemma without succumbing to alarmism.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Explores how AI-driven software hardening might starve law enforcement of digital bugs and spark new debates over device backdoors.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Examines the complex dual-use reality where AI enhances both offensive exploits and defensive patching, leaving the ultimate outcome contested.\nResulting Judgement: (-0.72, +1.00) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nThe article provides a balanced, forward-looking exploration of a genuine technological dilemma without succumbing to alarmism.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Expert Analysis: PASS (0.6, 0.0) — Engages credible cryptographers and researchers.\n- Policy Implications: PASS (0.4, -0.3) — Fairly weights competing national security views.",
       "Cryptographers and cybersecurity experts are debating whether rapid advancements in AI vulnerability detection will make software so secure that governments lose access to essential hacking tools for catching criminals.",
       "The Bright Side:\nStronger automated defense mechanisms will dramatically raise baseline security for everyday users.",
       "The Breakdown & Plane Error:\nConfusing technical hardening with absolute deterrence. Governments adapt by shifting tactics rather than abandoning surveillance.",
       "Social Physics Analysis:\nWhen technology alters the balance between privacy and state power, institutional actors inevitably seek alternative vectors to maintain control.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Open debate on cybersecurity futures prevents unchecked overreach.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Open debate on cybersecurity futures prevents unchecked overreach.",
       "The Unavoidable Truth: AI will fundamentally alter the economics of software vulnerabilities and cyber intelligence.\n\nThe Unavoidable Lie: Governments will ever truly abandon digital surveillance capabilities.",
       "Alethekanon:\nCode security is an arms race. AI accelerates both the shield and the spear.",
       "Awwthekanon:\nIt's reassuring to see privacy championed, but we must stay mindful of how security shifts impact vulnerable populations everywhere.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Expert Analysis",
@@ -211,6 +273,7 @@
         "name": "Crowdfense",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

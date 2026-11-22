@@ -6,15 +6,15 @@
     "link": "https://nypost.com/2026/09/16/us-news/army-veteran-sean-michael-lee-who-rescued-fox-news-benjamin-hill-dead-at-50-to-cancer/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 1.0,
+    "claim_psi": 0.95,
     "real_u": 1.0,
-    "real_psi": 1.0,
+    "real_psi": 0.95,
     "mode": "root",
     "posts": [
       "An extraordinary Army paratrooper who ran toward global crises to rescue the vulnerable has passed away at 50 from cancer.\nEvidence: 20-year service, Ukraine rescue, VA work.\n#Aletheia #Veterans #Hero",
-      "Sean Michael Lee dedicated his life to military service in the 82nd Airborne, later risking his life with Save Our Allies and The Independence Fund to evacuate the stranded.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Lee embodied absolute selflessness, living out of a tent in North Carolina after Helene and serving veterans at the VA until his final breath against esophageal cancer.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nLee's life of quiet, relentless selflessness across global conflict zones and domestic disasters exemplifies the pinnacle of altruistic duty.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Sean Michael Lee dedicated his life to military service in the 82nd Airborne, later risking his life with Save Our Allies and The Independence Fund to evacuate the stranded.\nStated Judgement: (+1.00, +0.95) — Greater Good",
+      "Lee embodied absolute selflessness, living out of a tent in North Carolina after Helene and serving veterans at the VA until his final breath against esophageal cancer.\nResulting Judgement: (+1.00, +0.95) — Greater Good",
+      "Verdict: PASS — Grace.\nLee's life of quiet, relentless selflessness across global conflict zones and domestic disasters exemplifies the pinnacle of altruistic duty.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Sean Michael Lee: PASS (1.0, 1.0) — Exemplary humanitarian and combat veteran service.\n- Save Our Allies: PASS (1.0, 0.9) — Effective coalition relief in collapsed zones.",
       "Sean Michael Lee, a 20-year Army veteran who evacuated thousands from Afghanistan and helped extract injured journalist Benjamin Hall from Ukraine, died of cancer at 50.",
       "The Bright Side:\nLee's legacy proves that true honor and competence under pressure leave an indelible, life-saving impact on thousands across the globe.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sean Michael Lee",
@@ -168,6 +230,7 @@
         "name": "U.S. Department of Veterans Affairs",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

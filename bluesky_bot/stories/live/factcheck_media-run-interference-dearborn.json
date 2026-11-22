@@ -6,21 +6,21 @@
     "link": "https://thefederalist.com/2026/09/21/media-run-interference-for-michigan-city-accused-of-prioritizing-islam-over-other-religions/?utm_source=rss&utm_medium=rss&utm_campaign=media-run-interference-for-michigan-city-accused-of-prioritizing-islam-over-other-religions",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_psi": 1.0,
+    "real_u": -0.1,
+    "real_psi": 0.55,
     "mode": "root",
     "posts": [
       "When cultural grievances shape municipal lawsuits, corporate media narratives often rush to sanitize local power structures.\nEvidence: Lawsuit filed, AP defense, media silence\n#Aletheia #Media",
-      "Corporate media runs interference for Dearborn, Michigan, ignoring a lawsuit over public funding for religious holidays while parroting the city's defense of diversity.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Local governance friction and selective media framing obscure actual civil rights complaints under defensive cultural talking points.\nResulting Judgement: (-0.75, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nWhen reporting mirrors municipal PR rather than investigating fiscal neutrality, public accountability collapses into tribal defense.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
+      "Corporate media runs interference for Dearborn, Michigan, ignoring a lawsuit over public funding for religious holidays while parroting the city's defense of diversity.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Local governance friction and selective media framing obscure actual civil rights complaints under defensive cultural talking points.\nResulting Judgement: (-0.10, +0.55) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nWhen reporting mirrors municipal PR rather than investigating fiscal neutrality, public accountability collapses into tribal defense.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 3)",
       "Sub-Audits Breakdown:\n- The Federalist Reporting: COND (0.5, 0.2) — Exposes gap but drives tribal wedge.\n- Corporate Media Pickup: FAIL (-0.8, -0.9) — Parrots PR without scrutiny.",
       "A federal lawsuit accuses Dearborn, Michigan of funding Muslim holidays while ignoring other faiths, prompting predictable media polarization.",
       "The Bright Side:\nBrings hidden municipal expenditure disputes into the federal judicial spotlight.",
       "The Breakdown & Plane Error:\nConfusing a local administrative church-state dispute (Logical Plane) with an existential culture war (Metaphysical Plane) to manufacture outrage.",
       "Social Physics Analysis:\nActors deploy a Smart Selfish Maneuver, using diversity pretexts to shield municipal resource allocation while critics leverage cultural anxiety to score political points.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The systemic reliance on pretexts over transparency forces institutional decay.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The systemic reliance on pretexts over transparency forces institutional decay.",
       "The Unavoidable Truth: Local government funding must treat all faiths equitably under constitutional norms.\n\nThe Unavoidable Lie: Corporate media coverage of civil lawsuits is entirely objective and neutral.",
       "Alethekanon:\nWhen journalism becomes public relations for municipal power, accountability dissolves into partisan protectionism.",
       "Awwthekanon:\nIt hurts when our communities feel unseen or unfairly treated by the very local leaders meant to serve everyone with equal warmth.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "The Federalist Reporting",
@@ -215,6 +277,7 @@
         "name": "City of Dearborn",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

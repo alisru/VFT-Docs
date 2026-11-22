@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A 54-year-old chimpanzee named Pierre regained his sight following successful cataract surgery at Chimp Haven.\nEvidence: Veterinary records, sanctuary care, post-op recovery\n#Aletheia #Animals",
-      "Specialized veterinary care and patient training successfully restored functional vision for an aging resident.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Months of positive reinforcement and expert surgery enabled Pierre to reconnect with companions and familiar routines.\nResulting Judgement: (+0.95, +0.9) — Grace",
-      "Verdict: PASS — The Path of Grace.\nDedicated animal husbandry and advanced veterinary medicine deliver genuine welfare outcomes.\n\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "Specialized veterinary care and patient training successfully restored functional vision for an aging resident.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Months of positive reinforcement and expert surgery enabled Pierre to reconnect with companions and familiar routines.\nResulting Judgement: (+0.95, +0.90) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nDedicated animal husbandry and advanced veterinary medicine deliver genuine welfare outcomes.\n\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
       "- Chimp Haven Medical Team: PASS (0.95, 0.90) — Compassionate specialized care.\n- Veterinary Ophthalmology: PASS (0.95, 0.90) — Successful surgical execution.",
       "Pierre, a 54-year-old chimpanzee at Chimp Haven, successfully underwent cataract surgery after months of training to accept post-operative eye care.",
       "The Bright Side:\nDemonstrating high standards of individualized geriatric care and trust-building for sanctuary animals.",
       "The Breakdown & Plane Error:\nFocusing on biological welfare and tangible medical rehabilitation (Q3/Q5) rather than abstract proxies.",
       "Social Physics Analysis:\nCaregivers and veterinary specialists operate through transparent collaboration and active empathy, directly resolving animal suffering and fostering robust well-being.",
-      "The Trajectory: The Path of Grace.\nWhen you map the alignment between stated medical care and actual recovery, it plots a direct trajectory toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between stated medical care and actual recovery, it plots a direct trajectory toward Grace.",
       "The Unavoidable Truth: Compassionate veterinary care significantly improves the quality of life for aging animals.\n\nThe Unavoidable Lie: Advanced medical procedures require zero preparation or patient trust.",
       "Alethekanon:\nExemplary veterinary stewardship bridges institutional duty and animal welfare with absolute integrity.",
       "Awwthekanon:\nWatching Pierre look at his long-time caregivers and companions with newly restored sight is pure magic.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Chimp Haven Medical Team",
@@ -161,6 +223,7 @@
         "name": "Dr. DaShaunté Coleman",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

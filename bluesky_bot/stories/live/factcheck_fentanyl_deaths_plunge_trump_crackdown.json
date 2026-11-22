@@ -5,22 +5,22 @@
     "subject": "EXCLUSIVE: Fentanyl deaths plu...",
     "link": "https://www.foxnews.com/politics/exclusive-fentanyl-deaths-plunge-22-trump-white-house-touts-crackdown-deadly-drug-crisis",
     "target_url": "",
-    "claim_u": 1.2,
-    "claim_psi": 0.8,
-    "real_u": 0.8,
-    "real_psi": 0.6,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.73,
+    "real_psi": 0.93,
     "mode": "root",
     "posts": [
       "Fentanyl deaths drop by 22% in a year. While the administration claims full credit through border enforcement, the reality of drug supply chains is complex.\n\nEvidence: CDC data, policy enforcement, political framing\n#Aletheia #Politics #PublicHealth",
-      "The Trump White House credits its border crackdown and ICE arrests for a 22% drop in synthetic opioid deaths, citing CDC figures from 2024 to 2025.\nStated Judgement: (+1.2, +0.8) — Good Preference",
-      "CDC data confirms a significant drop in overdose deaths. While border enforcement played a role, experts note that drug market shifts and local harm reduction also contribute.\nResulting Judgement: (+0.8, +0.6) — Lesser Good",
-      "Verdict: CONDITIONAL — Awakening into Redemption. The drop in deaths is real and welcome, but attributing it solely to federal border policy oversimplifies a complex crisis.\n\nIntegrity: Trustworthy (Hypocrisy: 1.43, Uncertainty z: 3)",
+      "The Trump White House credits its border crackdown and ICE arrests for a 22% drop in synthetic opioid deaths, citing CDC figures from 2024 to 2025.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "CDC data confirms a significant drop in overdose deaths. While border enforcement played a role, experts note that drug market shifts and local harm reduction also contribute.\nResulting Judgement: (+0.73, +0.93) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.43, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- White House PR: COND (0.7, 0.5) — Maximizes political credit for complex health trends.\n- CDC Data Integrity: PASS (1.2, 0.8) — Solid, verifiable statistical reporting.",
       "The Trump administration highlighted a 22% decline in synthetic opioid deaths (from 48,913 to 38,084) and a 14% drop in overall overdose deaths, attributing the success to border security and cartel crackdowns.",
       "The Bright Side:\nRegardless of political spin, thousands of American lives have been saved as synthetic opioid deaths fell by over 10,000 in a single year.",
       "The Breakdown & Plane Error:\nAn error of WHY (Lyrical) and HOW (Logical). The administration presents a direct causal link between border seizures and fewer deaths, ignoring domestic demand and treatment factors.",
       "Social Physics Analysis:\nBy framing a complex public health victory as a unilateral triumph of border enforcement, the administration seeks to build political capital. This top-down narrative obscures the collaborative efforts of local health workers.",
-      "The Trajectory: Awakening into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The reduction in harm is real, even if the narrative is politically leveraged.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The reduction in harm is real, even if the narrative is politically leveraged.",
       "The Unavoidable Truth: Fewer Americans are dying of fentanyl overdoses, which is an objective victory.\nThe Unavoidable Lie: A single policy or administration can claim exclusive credit for shifting global drug markets.",
       "Alethekanon:\nWhile political actors will always claim sole credit for positive statistical trends, public health crises are rarely solved by enforcement alone.",
       "Awwthekanon:\nEvery single one of those ten thousand lives saved represents a family kept whole, a mother who didn't have to bury her child. Let's celebrate the healing.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "White House PR",
@@ -292,6 +354,7 @@
         "name": "DHS",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

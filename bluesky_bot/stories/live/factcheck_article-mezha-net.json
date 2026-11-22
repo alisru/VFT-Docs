@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/epicurusofsamos.bsky.social/post/3mvc53tfs7k2j",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": 0.0,
+    "real_u": 0.25,
     "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "News aggregators curate fragmented global events, balancing public awareness with sensationalist media incentives.\nEvidence: Mezha headlines, geopolitical reports, local crime\n#Aletheia #News",
-      "News portals present a comprehensive overview of international conflicts, economic deals, and local administrative updates.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Aggregated news feeds mix high-stakes geopolitical reporting with routine police blots and commercial affiliate clutter, creating uneven epistemic quality.\nResulting Judgement: (0.0, 0.0) — Neutral",
-      "Verdict: PASS — The Path of Awakening.\nMixed news aggregation reflects the chaotic reality of global information flows without systemic malice.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
+      "News portals present a comprehensive overview of international conflicts, economic deals, and local administrative updates.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Aggregated news feeds mix high-stakes geopolitical reporting with routine police blots and commercial affiliate clutter, creating uneven epistemic quality.\nResulting Judgement: (+0.25, +0.00) — Lesser Good",
+      "Verdict: PASS — Compromise.\nMixed news aggregation reflects the chaotic reality of global information flows without systemic malice.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
       "- Geopolitical News: PASS (0.5, 0.0) — Critical regional updates.\n- Commercial Clutter: COND (0.0, 0.0) — Mixed incentives.",
       "Digital news aggregators pull together diverse headlines spanning European geopolitics, defense contracts, regional crime, and technological developments in real time.",
       "The Bright Side:\nAggregated news feeds provide readers with a broad cross-section of global developments in a single portal, expanding situational awareness.",
       "The Breakdown, Plane Error & Switch:\nThe reporting mixes high-priority geopolitical threats with routine local police blotter items, requiring readers to filter signal from noise across disparate planes.",
       "Social Physics Analysis:\nNews aggregators operate in a mixed zone. While they distribute vital information transparently, commercial pressures often encourage sensational headline framing, leaning toward mild attention extraction rather than pure empowerment.",
-      "The Trajectory: The Path of Awakening.\nWhen you map mixed news curation against actual reader outcomes, it plots a direct trajectory toward Awakening through critical filtering. Diverse reporting demands active epistemic engagement.",
+      "The Trajectory: The Path of Compromise.\nWhen you map mixed news curation against actual reader outcomes, it plots a direct trajectory toward Awakening through critical filtering. Diverse reporting demands active epistemic engagement.",
       "The Unavoidable Truth: Curated news feeds offer a convenient window into global affairs but require critical evaluation of individual sources.\n\nThe Unavoidable Lie: Automated news aggregators provide a perfectly objective and unified portrait of world events.",
       "Alethekanon:\nNews aggregation serves as an epistemic mirror, reflecting the fragmented and sensationalist nature of modern information ecosystems.",
       "Awwthekanon:\nIt is overwhelming to take in so much heavy news all at once, from conflicts abroad to local struggles, but seeing people document it shows our shared human endurance.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Geopolitical News",
@@ -164,6 +226,7 @@
         "name": "European Regulators",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

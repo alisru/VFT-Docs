@@ -5,22 +5,22 @@
     "subject": "Vance makes direct pitch to yo...",
     "link": "https://www.washingtonexaminer.com/news/white-house/4722774/vance-rnc-convention-speech-2026/",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.15,
-    "real_u": -0.78,
-    "real_psi": -0.82,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A theatrical clash on the convention floor masks deep policy failures. Vice President JD Vance pitches to disaffected young men at the RNC midterm convention in Dallas. 🌐\nEvidence: Economic Relief, Partisan Theater, Power Retention\n#Aletheia #USPol",
-      "Vance claims to champion families and disaffected independents by directly addressing inflation and gas prices, offering a path of traditional values and national strength.\nStated Judgement: (+0.85, +0.15) — Good Preference",
-      "In reality, Vance uses xenophobic theater and flag-waving distractions to deflect from the administration's low approval ratings and the ongoing Iran war, offering no systemic solutions.\nResulting Judgement: (-0.78, -0.82) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. Vance exploits economic pain and cultural grievances to secure partisan power rather than resolving systemic crises.\nIntegrity: Severe Deception (Hypocrisy: 1.63, z: 6)",
+      "Vance claims to champion families and disaffected independents by directly addressing inflation and gas prices, offering a path of traditional values and national strength.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, Vance uses xenophobic theater and flag-waving distractions to deflect from the administration's low approval ratings and the ongoing Iran war, offering no systemic solutions.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 1.63, z: 6)",
       "- JD Vance: FAIL (-0.78, -0.82) — Deflects policy failures with theater.\n- RNC Convention: FAIL (-0.80, -0.85) — Partisan rally masking low approval.",
       "Delivered on September 11, 2026, Vance's keynote address came as the Trump administration faced severe public backlash over rising gas prices, high inflation, and the six-month-old Iran war.",
       "The Bright Side:\nAcknowledging voter disaffection and economic pain is a necessary first step, even if the subsequent framing is entirely designed for partisan deflection.",
       "The Breakdown & Plane Error:\nThe speech commits a Metaphysical Error (WHO vs WHAT). It swaps the systemic WHAT (inflation, war) for a theatrical WHO (foreign protesters), using a flag-waving heckler to bypass policy accountability.",
       "Social Physics Analysis:\nVance executes a Smart Selfish Maneuver. He takes real public pain (inflation, war) and manufactures a cultural crisis, projecting blame onto 'foreign fraudsters' to hoard power rather than empowering citizens with transparent solutions.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic strain of war and inflation is amplified by active polarization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic strain of war and inflation is amplified by active polarization.",
       "The Unavoidable Truth: The administration's foreign and economic policies are driving voter disaffection.\nThe Unavoidable Lie: A single protester's flag is the source of America's national decline.",
       "Alethekanon:\nPolarization is the ultimate shield for policy failure. By transforming economic distress into a cultural battleground, the actor successfully evades the logical burden of governance.",
       "Awwthekanon:\nPeople are genuinely hurting from high prices and the fear of war. They deserve real comfort and systemic help, not theatrical anger that pits neighbor against neighbor.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "JD Vance Keynote Speech",
@@ -296,6 +358,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

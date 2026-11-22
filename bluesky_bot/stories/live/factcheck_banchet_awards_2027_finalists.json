@@ -8,19 +8,19 @@
     "claim_u": 1.0,
     "claim_psi": 1.0,
     "real_u": 0.9,
-    "real_psi": 0.85,
+    "real_psi": 0.92,
     "mode": "root",
     "posts": [
       "Celebrating culinary icons and sustainability in Chicago.\nEvidence: Awards finalists, mentorship focus, community dedication\n#Aletheia #ChicagoDining",
       "The Banchet Awards transparently honor Chicago's premier culinary talent, sustainability leaders, and enduring neighborhood dining institutions.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Independent panels select finalists based on merit, honoring local mentorship, equity, and sustainable farming advocacy across Chicago's food scene.\nResulting Judgement: (+0.9, +0.85) — Grace",
-      "Verdict: PASS — The Path of Grace.\nLocal culinary recognition faithfully uplifts community mentors, sustainable agriculture advocates, and iconic neighborhood eateries.\n\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "Independent panels select finalists based on merit, honoring local mentorship, equity, and sustainable farming advocacy across Chicago's food scene.\nResulting Judgement: (+0.90, +0.92) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nLocal culinary recognition faithfully uplifts community mentors, sustainable agriculture advocates, and iconic neighborhood eateries.\n\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
       "- Banchet Foundation: PASS (0.95, 0.9) — Transparent peer selection and mentorship focus.\n- Culinary Community: PASS (0.85, 0.8) — Real support for local farming and equity.",
       "The Banchet Awards mark their 25th anniversary by expanding to the Harris Theater, celebrating local chefs, neighborhood staples, and a new environmental award.",
       "The Bright Side:\nElevating sustainable farming advocates like Sarah Stegner connects urban dining directly to regional agricultural networks.",
       "The Breakdown & Plane Error:\nEvaluating the actual beneficiaries reveals genuine alignment between the awards' stated non-profit mission and the honored chefs and venues.",
       "Social Physics Analysis:\nThe Banchet Foundation operates through a Smart Altruistic loop, uniting food professionals through transparent peer recognition, open mentorship, and shared regional pride without hidden extraction.",
-      "The Trajectory: The Path of Grace.\nWhen you map the alignment between stated community support and actual cultural recognition, it plots a direct trajectory toward Grace. The causal chain holds robustly under public scrutiny.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between stated community support and actual cultural recognition, it plots a direct trajectory toward Grace. The causal chain holds robustly under public scrutiny.",
       "The Unavoidable Truth: Local culinary awards successfully spotlight grassroots mentorship and sustainable agriculture.\n\nThe Unavoidable Lie: High-profile food awards always ignore neighborhood institutions in favor of elitism.",
       "Alethekanon:\nTrue cultural recognition reinforces community bonds when institutions honor authentic service over commercial hype.",
       "Awwthekanon:\nIt is deeply heartwarming to see decades of quiet dedication to local farming, mentorship, and neighborhood hospitality finally celebrated on a grand stage.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.1
+      }
+    },
     "aspects": [
       {
         "name": "Banchet Foundation Selection",
@@ -216,6 +278,7 @@
         "name": "Sarah Stegner",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

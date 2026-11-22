@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.9,
+    "real_u": -0.93,
     "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "Cuba's regime rewrites history in new schoolbooks, dismissing the massive July 2021 anti-communist protests as fake news. 🌐\nEvidence: State propaganda, 2021 protests, textbook rewrite\n#Cuba #Aletheia",
-      "The communist regime presents its new tenth-grade Political Culture textbooks as factual civic education for the upcoming school year.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "State officials are weaponizing the education system to gaslight students about historic protests, erasing mass arrests and systemic collapse.\nResulting Judgement: (-0.9, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nTotalitarian indoctrination replaces historical reality with manufactured state fiction.\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 2)",
+      "The communist regime presents its new tenth-grade Political Culture textbooks as factual civic education for the upcoming school year.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "State officials are weaponizing the education system to gaslight students about historic protests, erasing mass arrests and systemic collapse.\nResulting Judgement: (-0.93, -0.85) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nTotalitarian indoctrination replaces historical reality with manufactured state fiction.\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 2)",
       "- Cuban Regime: FAIL (-0.95, -0.9) — Enforces ideological conformity.\n- Education Ministry: FAIL (-0.9, -0.8) — Publishes falsified history.",
       "As Cuba suffers nationwide blackouts and severe supply shortages, the regime prioritizes ideological indoctrination over basic economic survival.",
       "The Bright Side:\nParents courageous enough to speak out on social media are piercing the state's monopoly on narrative.",
       "The Breakdown & Plane Error:\nConfusing WHAT (textbook revision) for WHO (protecting totalitarian survival), masking systemic coercion as civic education.",
       "Social Physics Analysis:\nThe regime executes a Smart Selfish Maneuver, manufacturing a false narrative pretext to deflect blame for systemic economic collapse and suppress dissent.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated education and totalitarian gaslighting, it plots a direct trajectory toward Greater Evil through institutionalized lying.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated education and totalitarian gaslighting, it plots a direct trajectory toward Greater Evil through institutionalized lying.",
       "The Unavoidable Truth: Totalitarian regimes must erase their own violent crackdowns to maintain absolute control over the population.\n\nThe Unavoidable Lie: Calling historic anti-government uprisings fake news protects the legitimacy of the ruling elite.",
       "Alethekanon:\nWhen a state brands historical truth as foreign falsehood, it reveals a regime terrified of its own citizens' memory.",
       "Awwthekanon:\nMy heart breaks for the children trapped in a system that forces them to deny the very suffering their families endure daily.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Cuban Regime Indoctrination",
@@ -159,6 +221,7 @@
         "name": "Cuban Ministry of Education",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

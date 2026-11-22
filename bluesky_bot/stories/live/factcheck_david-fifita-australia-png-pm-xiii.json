@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.4,
+    "real_u": 0.5,
     "real_psi": 0.6,
     "mode": "root",
     "posts": [
       "Australia romped to a 60-10 victory over PNG in the men's PM's XIII clash, led by captain David Fifita.\nEvidence: 11 tries, blowout score, experimental lineup\n#RugbyLeague #Aletheia",
-      "Stated claim of an elite international rugby league fixture showcasing competitive Pacific talent.\nStated Judgement: (+0.8, +0.5) — Trustworthy",
-      "Actual reality of an experimental, chaotic blowout that highlights structural skill gaps while offering entertaining, high-scoring footy.\nResulting Judgement: (+0.4, +0.6) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nA one-sided rugby mismatch that prioritized entertainment, development, and sports diplomacy over tight competition.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Stated claim of an elite international rugby league fixture showcasing competitive Pacific talent.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Actual reality of an experimental, chaotic blowout that highlights structural skill gaps while offering entertaining, high-scoring footy.\nResulting Judgement: (+0.50, +0.60) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nA one-sided rugby mismatch that prioritized entertainment, development, and sports diplomacy over tight competition.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Match Competitiveness: COND (+0.2, +0.3) — Complete mismatch with 11 tries.\n- Sports Diplomacy: PASS (+0.8, +0.9) — Fosters regional ties and development.",
       "Australia cruised past PNG 60-10 in the annual Prime Minister's XIII match in Port Moresby, featuring makeshift positions and high-octane tries.",
       "The Bright Side:\nYoung talent like Jada Taylor and Ezra Mam gained invaluable representative experience on the international stage.",
       "The Breakdown & Plane Error:\nConfusing a developmental exhibition match for a tight test match creates false expectations of parity.",
       "Social Physics Analysis:\nThe match operated on a transparent, alt-driven model where both nations pursued sports diplomacy and player development despite structural disparities.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between promotional hype and on-field blowouts, it plots a direct trajectory toward structural growth and regional goodwill.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between promotional hype and on-field blowouts, it plots a direct trajectory toward structural growth and regional goodwill.",
       "The Unavoidable Truth: The talent gap between Australian and PNG domestic pathways remains substantial.\n\nThe Unavoidable Lie: This fixture was billed as a tightly contested international showdown.",
       "Alethekanon:\nExhibition fixtures often sacrifice competitive balance for developmental and diplomatic engagement. 🌐",
       "Awwthekanon:\nIt is wonderful to see rugby league uniting communities across the Pacific, even when the scoreboard blows out in a wave of tries!",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Match Competitiveness",
@@ -167,6 +229,7 @@
         "name": "Australian Rugby League Commission",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

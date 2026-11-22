@@ -14,7 +14,7 @@
       "85 years ago, the Atlantic Charter laid the groundwork for a post-war world built on cooperation rather than conquest. A moment of historical clarity that still resonates today. Evidence: Atlantic Charter, UN formation. #History #Peace",
       "The Atlantic Charter was a joint declaration by FDR and Churchill setting out goals for a peaceful, cooperative post-war world. Stated Judgement: (+0.88, +0.91) — Greater Good",
       "The charter successfully established the principles of self-determination and global cooperation that underpin the modern United Nations. Resulting Judgement: (+0.88, +0.91) — Greater Good",
-      "Verdict: PASS — The Path of Grace. The charter represents a rare moment of alignment between power and principle, creating a stable foundation for international order. Integrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.",
       "Sub-Audits Breakdown:\n- FDR/Churchill: PASS (0.9, 0.9) — Their joint declaration prioritized long-term stability over immediate territorial gain.\n- Atlantic Charter: PASS (1.0, 1.0) — The document remains a cornerstone of international human rights law.",
       "The Atlantic Charter, signed in 1941, outlined eight principles for the post-war world, including no territorial aggrandizement and the right to self-determination. It served as the blueprint for the United Nations Declaration.",
       "The Poison:\nWhile the charter championed self-determination, it was initially interpreted by many colonial powers as applying primarily to European nations, leaving many colonized peoples waiting for their own liberation.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.8,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.1,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.8,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.1,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "FDR and Churchill",
@@ -264,6 +326,7 @@
         "name": "United Nations",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

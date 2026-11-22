@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
+    "real_u": -0.85,
     "real_psi": -0.9,
     "mode": "root",
     "posts": [
       "Death row inmate Christa Pike demands an all-women execution team citing trauma.\nEvidence: Death row demand, Childhood trauma, Legal stalling\n#Aletheia #Crime",
-      "Pike's legal team frames the request around protecting her from PTSD triggers caused by male involvement during her execution.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "The demand functions as a late-stage legal hurdle and media distraction from her brutal 1995 torture-murder conviction.\nResulting Judgement: (-0.8, -0.9) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nA legal and media maneuver uses trauma narratives to contest execution protocols rather than engage the underlying sentence.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Pike's legal team frames the request around protecting her from PTSD triggers caused by male involvement during her execution.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "The demand functions as a late-stage legal hurdle and media distraction from her brutal 1995 torture-murder conviction.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA legal and media maneuver uses trauma narratives to contest execution protocols rather than engage the underlying sentence.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- Christa Pike's Legal Defense: FAIL (-0.85, -0.90) — Leverages trauma framing for procedural delays.\n- Media Framing: COND (-0.60, -0.50) — Sensationalizes sensational claims.",
       "Christa Pike, the only woman on Tennessee's death row, is scheduled for execution on Sept 30, 2026, for a 1995 murder, prompting last-minute legal challenges over protocols.",
       "The Poison:\nReducing a historic capital case debate into a sensationalized spectacle over staff demographics.",
       "The Breakdown & Plane Error:\nConfusing WHAT (the state execution protocol and sentence) with WHO (the gender of the correctional staff).",
       "Social Physics Analysis:\nPike's defense runs a Smart Selfish Maneuver, utilizing a sensitive trauma pretext to shift focus toward staff gender while delaying a lawful execution.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg under high perceptual distortion.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg under high perceptual distortion.",
       "The Unavoidable Truth: Childhood trauma deeply marks offenders, but legal maneuvers cannot erase violent historical crimes.\n\nThe Unavoidable Lie: Staff gender determines the moral legitimacy of a state-mandated execution.",
       "Alethekanon:\nFraming capital punishment debates around staff gender bypasses the core moral weight of state execution.",
       "Awwthekanon:\nIt is heartbreaking to confront the depths of childhood abuse, yet we must also honor the enduring grief of victims' families.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Legal Defense Strategy",
@@ -148,6 +210,7 @@
         "name": "Tennessee Department of Correction",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

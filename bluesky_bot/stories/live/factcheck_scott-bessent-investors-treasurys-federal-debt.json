@@ -5,22 +5,22 @@
     "subject": "The Week Investors Forced Uncle Sam To Confront Government’s Debt Addiction",
     "link": "https://dailycaller.com/2026/08/22/scott-bessent-investors-treasurys-federal-debt",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.66,
+    "claim_psi": 0.74,
+    "real_u": -0.83,
+    "real_psi": -0.89,
     "mode": "root",
     "posts": [
       "Bond investors just delivered a harsh reality check to Washington as national debt smashed past $40 trillion. 🌐\n\nThe Week Investors Forced Uncle Sam To Confront Debt Addiction\nEvidence: liquidity spin, bond yield revolt, structural inflation risk\n#Economics #Debt #USPol",
-      "Claim: Treasury Secretary Scott Bessent claimed buybacks inject liquidity and that the U.S. can grow out of $40T debt via fraud cuts.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Reality: Bond vigilantes demanded 5.3% yields while experts like Ray Dalio warn of currency debasement and inevitable inflation.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Revelation into Destruction. Fiscal spin masks mounting debt insolvency risks.\n\nIntegrity: Severe Deception (Hypocrisy: 6.8, Uncertainty z: 2)",
+      "Claim: Treasury Secretary Scott Bessent claimed buybacks inject liquidity and that the U.S. can grow out of $40T debt via fraud cuts.\nStated Judgement: (+0.66, +0.74) — Greater Good",
+      "Reality: Bond vigilantes demanded 5.3% yields while experts like Ray Dalio warn of currency debasement and inevitable inflation.\nResulting Judgement: (-0.83, -0.89) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 6.8, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Treasury Spin: FAIL (-0.7, -0.8) — Hides structural deficits.\n- Bond Market: PASS (+0.8, +0.7) — Exposes hard math.\n- Expert Warning: PASS (+0.9, +0.8) — Validates historical debt collapse.",
       "Context: As national debt tops $40 trillion and budget deficits pass $2 trillion, investors are demanding higher yields, forcing Washington to confront its spending addiction.",
       "The Poison:\nPretending that minor administrative grant cuts and fraud crackdowns can outpace a $40 trillion debt tsunami ignores foundational fiscal arithmetic.",
       "The Breakdown & Plane Error:\nConfusing WHAT (liquidity management) with WHO (taxpayers bearing inflation costs). It's a classic smoke-and-mirrors deflection away from runaway congressional spending.",
       "Social Physics Analysis:\nWashington maintains power through debt expansion while projecting fiscal stability, forcing future citizens to bear the catastrophic cost of unaddressed structural deficits.",
-      "The Trajectory: The Path of Revelation into Destruction.\nThe gap between political spin and bond market reality plots a direct collision with currency debasement and insolvency.",
+      "The Trajectory: The Path of Fall into Destruction.\nThe gap between political spin and bond market reality plots a direct collision with currency debasement and insolvency.",
       "The Unavoidable Truth: Investors will not fund limitless deficits indefinitely without demanding punishing risk premiums.\n\nThe Unavoidable Lie: Administrative grant cuts can outgrow a $40 trillion debt burden.",
       "Alethekanon:\nMarkets care little for political optimism when bond yields breach 5.3%. Fiscal reality always collects its debts in the end.",
       "Awwthekanon:\nIt breaks my heart seeing working families carry the heavy burden of soaring inflation while leaders play political games with our nation's future.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Partially Distorted",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.3,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Treasury Spin & Debt Management",
@@ -221,6 +283,7 @@
         "name": "Congress",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

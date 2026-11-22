@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "A weekend of mixed fortunes on the pitch. Bedford Hockey Club's latest fixtures bring a wave of results across 14 adult teams, proving that local sport is as unpredictable as it is vibrant.\nEvidence: Community Sport, Mixed Results, Honest Reporting\n#Aletheia #Hockey",
-      "The local independent outlet reports on a full card of hockey fixtures, highlighting both the hard-fought victories and the tough losses of the club's 1st XI teams.\nStated Judgement: (+1.0, +1.0) — Grace",
-      "The ground reality perfectly matches the reporting. The detailed breakdown of all 14 matches shows a transparent, unvarnished look at grassroots sports.\nResulting Judgement: (+1.0, +1.0) — Grace",
-      "Verdict: PASS — Grace. A refreshing, transparent, and accurate account of local community sports that celebrates wins and owns losses without spin.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The local independent outlet reports on a full card of hockey fixtures, highlighting both the hard-fought victories and the tough losses of the club's 1st XI teams.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The ground reality perfectly matches the reporting. The detailed breakdown of all 14 matches shows a transparent, unvarnished look at grassroots sports.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Bedford Independent: PASS (1.0, 1.0) — Accurate local sports reporting.\n- Bedford Hockey Club: PASS (1.0, 1.0) — Transparent community engagement.",
       "Bedford Hockey Club hosted a full card of 14 adult teams over the weekend, resulting in a mix of impressive wins for lower squads and tough losses for both the Men's and Ladies' 1st XI.",
       "The Bright Side:\nEven in defeat, the club's development squads continue to blood young talent as young as 12, building a sustainable foundation for the future of local sport.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Bedford Independent",
@@ -152,6 +214,7 @@
         "name": "Bedford Independent",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

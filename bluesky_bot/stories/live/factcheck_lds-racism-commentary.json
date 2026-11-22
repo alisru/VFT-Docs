@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Are Latter-day Saints leading out against racism as their prophets urged? Scholars ask whether high-level calls match local reality. #Aletheia #Religion #Utah",
-      "Prophetic calls urge members to abandon prejudice, build bridges, and lead out against racism, presenting an active institutional push toward moral equality.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Despite prophetic exhortations and global mission service fostering empathy, white members still face unaddressed prejudice, institutional past echoes, and political divides.\nResulting Judgement: (0.0, -0.2) — Lesser Evil",
-      "Verdict: COND — The Path of Stasis.\nProphetic visions of racial harmony clash with slow grassroots execution and political friction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 0.8, z: 2)",
+      "Prophetic calls urge members to abandon prejudice, build bridges, and lead out against racism, presenting an active institutional push toward moral equality.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Despite prophetic exhortations and global mission service fostering empathy, white members still face unaddressed prejudice, institutional past echoes, and political divides.\nResulting Judgement: (+0.00, -0.20) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nProphetic visions of racial harmony clash with slow grassroots execution and political friction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 0.8, z: 2)",
       "Sub-Audits Breakdown:\n- Prophetic Directives: COND (+0.8, +0.5) — High moral rhetoric, mixed congregational follow-through.\n- Grassroots Reality: COND (0.0, -0.2) — Persistent gaps despite global missions.",
       "Religious scholars examine whether members of The Church of Jesus Christ of Latter-day Saints are genuinely fulfilling prophetic appeals to eradicate racism.",
       "The Bright Side:\nGlobal missionary service exposes young members to diverse cultures, driving higher approval of diversity than many peer Christian groups.",
       "The Breakdown & Plane Error:\nConfusing top-down prophetic declarations (WHO should lead) with bottom-up sociological compliance across diverse congregations (WHAT is actually practiced).",
       "Social Physics Analysis:\nThe church leadership runs a genuine moral appeal, but members often slip into a Smart Selfish routine—claiming non-racism via rhetoric while retaining unexamined cultural biases.",
-      "The Trajectory: The Path of Stasis.\nWhen lofty institutional ideals meet entrenched social inertia, change stalls in incremental friction.\nMathematical vector equilibrium balances moral intent against tribal drag.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen lofty institutional ideals meet entrenched social inertia, change stalls in incremental friction.\nMathematical vector equilibrium balances moral intent against tribal drag.",
       "The Unavoidable Truth: Prophetic leaders have clearly condemned racism and white supremacy.\nThe Unavoidable Lie: Institutional pronouncements alone guarantee local cultural transformation.",
       "Alethekanon:\nProphetic anti-racism calls establish a high moral standard, but cultural inertia and political sorting hinder complete congregational alignment.",
       "Awwthekanon:\nIt takes immense courage to look inward and heal historical wounds. Let's celebrate every bridge built across cultural divides with patience and love.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Prophetic Directives",
@@ -158,6 +220,7 @@
         "name": "Dallin H. Oaks",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

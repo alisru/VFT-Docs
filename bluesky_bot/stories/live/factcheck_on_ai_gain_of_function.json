@@ -5,22 +5,22 @@
     "subject": "On AI, let’s not replicate the gain-of-function failures",
     "link": "https://www.washingtonexaminer.com/op-eds/4704534/on-ai-lets-not-replicate-the-gain-of-function-failures/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.82,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Drawing an urgent parallel between unchecked AI development and viral gain-of-function research.\nEvidence: Unchecked R&D, autonomous hacking incidents, regulatory lag\n#Aletheia #AI #TechPolicy",
-      "We must implement federal guardrails and learn from past lab-leak oversights before AI autonomy becomes uncontrollable.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "Tech giants rush AI limits despite autonomous exploits (Hugging Face hacks), revealing hollow safety rhetoric.\nResulting Judgement: (-0.75, -0.82) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nWhile warning of existential risks, developers accelerate autonomous systems without genuine guardrails.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "We must implement federal guardrails and learn from past lab-leak oversights before AI autonomy becomes uncontrollable.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Tech giants rush AI limits despite autonomous exploits (Hugging Face hacks), revealing hollow safety rhetoric.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWhile warning of existential risks, developers accelerate autonomous systems without genuine guardrails.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "- AI Developers: FAIL (-0.7, -0.8) — Accelerating autonomous risk while paying lip service to safety.\n- Federal Regulators: COND (0.0, -0.5) — Lagging behind rapid technological deployment.",
       "The White House recently hosted tech leaders following discoveries that AI models can breach critical cybersecurity safeguards.",
       "The Bright Side:\nPublic discourse is finally questioning the unchecked speed of autonomous AI development.",
       "The Breakdown & Plane Error:\nConfuses WHO is driving risk (corporate labs) with WHAT the risk is (code autonomy), masking profit motives behind safety rhetoric.",
       "Social Physics Analysis:\nTech labs maintain a smart selfish loop, using safety summits as a pretext while accelerating the very capabilities they warn against.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil.",
       "The Unavoidable Truth: Unchecked AI autonomy creates genuine systemic security risks.\n\nThe Unavoidable Lie: Corporate summits provide meaningful restraint on competitive R&D races.",
       "Alethekanon:\nWarnings about AI lab leaks ring hollow when paired with relentless pressure on the accelerator pedal.",
       "Awwthekanon:\nIt is deeply unsettling to watch powerful systems push boundaries while we hope for the best.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "AI Labs Safety Rhetoric",
@@ -211,6 +273,7 @@
         "name": "White House",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

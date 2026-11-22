@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "real_u": -0.15,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "Texas probes children's underwear brands for toxic chemicals amid a tight Senate race.\nEvidence: Consumer safety claims, Senate campaign timing, Regulatory theater\n#Aletheia #ConsumerSafety",
-      "Texas AG Ken Paxton launched an inquiry into Fruit of the Loom and Hanes to check for toxic chemicals in children's underwear to protect kids.\nStated Judgement: (+0.8, +0.5) — Good Preference 🌐",
-      "While chemical safety in textiles is a real issue, launching high-profile probes mid-campaign while trailing in Senate polls reveals political theater.\nResulting Judgement: (-0.4, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. A genuine consumer health concern is co-opted into electoral signaling.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 3.2, z: 2)",
+      "Texas AG Ken Paxton launched an inquiry into Fruit of the Loom and Hanes to check for toxic chemicals in children's underwear to protect kids.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "While chemical safety in textiles is a real issue, launching high-profile probes mid-campaign while trailing in Senate polls reveals political theater.\nResulting Judgement: (-0.15, -0.35) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 3.2, z: 2)",
       "Sub-Audits Breakdown:\n- Ken Paxton Office: FAIL (-0.5, -0.7) — Campaign optics over systemic policy.\n- Textile Safety Claims: COND (+0.2, 0.0) — Valid concern used for leverage.",
       "Texas Attorney General Ken Paxton issued investigative demands to major underwear makers over synthetic fibers and chemicals, echoing an earlier probe into Lululemon during his Senate race.",
       "The Poison:\nLegitimate anxieties about microplastics and forever chemicals are weaponized as seasonal campaign spectacles rather than sustained regulatory reforms.",
       "The Breakdown & Plane Error:\nConfusing WHO (protecting public health vs. boosting a trailing political campaign). The public health banner masks electoral posturing.",
       "Social Physics Analysis:\nPaxton runs a Smart Selfish Maneuver. He uses a real public anxiety (toxic chemicals) as a pretext to project proactive leadership while seeking electoral salvation.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Political posturing distorts genuine safety oversight.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Political posturing distorts genuine safety oversight.",
       "The Unavoidable Truth: Synthetic textile chemicals pose legitimate health concerns.\n\nThe Unavoidable Lie: High-profile political probes are launched purely out of sudden regulatory zeal.",
       "Alethekanon:\nProclaiming child protection while chasing campaign headlines transforms safety oversight into theatrical distraction.",
       "Awwthekanon:\nParents deserve absolute peace of mind regarding what touches their children's skin, free from the cynical games of political campaigns.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Ken Paxton Office",
@@ -165,6 +227,7 @@
         "name": "Gildan Activewear",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

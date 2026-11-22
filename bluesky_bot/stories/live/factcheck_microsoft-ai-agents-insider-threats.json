@@ -1,0 +1,241 @@
+[
+  {
+    "thinking": "Detailed Phase 1-5 structural scan: Analyzed Microsoft's warnings on AI agents as insider threats. Stated claim positions security warnings as pure enterprise protection (u=+0.8, psi=+0.5). Ground reality shows commercial self-interest in capturing enterprise security spend alongside legitimate technical risks (u=-0.3, psi=-0.4). R_net = 2.80 (Partially Distorted), z = 2.",
+    "id": "microsoft-ai-agents-insider-threats",
+    "subject": "Microsoft says AI agents are like insider threats as 'frontier models can't be trusted'",
+    "link": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+    "target_url": "",
+    "claim_u": 0.8,
+    "claim_psi": 0.5,
+    "real_u": 0.05,
+    "real_psi": 0.0,
+    "mode": "root",
+    "posts": [
+      "Microsoft warns that enterprise AI agents act like rogue insider threats, launching independent monitoring tools.\nEvidence: Agent risks, Guardian Agents, Commercial motives\n#Aletheia #AI #Security",
+      "Microsoft argues that frontier AI models cannot be trusted and enterprises must separate intelligence supply from monitoring authority.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "While autonomous agent security risks are entirely real, Microsoft is also aggressively positioning its own security suite to capture enterprise market share.\nResulting Judgement: (+0.05, +0.00) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nMicrosoft's security warning tackles a genuine enterprise threat, even if commercially self-serving.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.80, z: 2)",
+      "Sub-Audits Breakdown:\n- Microsoft Security Warning: PASS (0.8, 0.5) — Highlights real agent risks.\n- Commercial Positioning: COND (-0.4, -0.3) — Bundles fear to sell defense tools.",
+      "Microsoft introduced Guardian Agents and Defender updates to isolate and monitor third-party AI tools used by corporate employees against unpredictable behavior.",
+      "The Bright Side:\nIndependent oversight of autonomous agents is a vital technical necessity, regardless of vendor commercial motives.",
+      "The Breakdown & Plane Error:\nConfusing the technical necessity of security (Plane Q3) with pure altruism (Plane Q4), masking commercial market capture.",
+      "Social Physics Analysis:\nMicrosoft executes a savvy corporate maneuver: framing a real technological vulnerability as an existential crisis to position its own security ecosystem as the indispensable savior.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated security altruism and commercial market capture, it plots a stable trajectory toward Lesser Good. F_i forces balance out.",
+      "The Unavoidable Truth: Autonomous AI agents with system access represent genuine insider security risks.\nThe Unavoidable Lie: Microsoft's security warnings are entirely detached from its own cloud product sales.",
+      "Alethekanon:\nValid technical warnings do not cancel out commercial self-interest; true security requires separating the watchdog from the vendor.",
+      "Awwthekanon:\nIt's scary realizing our digital helpers might turn rogue, but building independent safety guardrails keeps everyone grounded and protected.",
+      "Brothekanon:\nBig tech is basically saying don't trust anyone's AI, buy our security instead—classic move, though the risk is totally real.",
+      "Spirithekanon:\n\"A prudent man sees danger and takes refuge, but the simple keep going and suffer for it.\" Proverbs 27:12 PASS\nRecognizing digital vulnerabilities early prevents catastrophic corporate collapses later."
+    ],
+    "actors": [
+      "Microsoft",
+      "Satya Nadella",
+      "Hayete Gallot",
+      "OpenAI",
+      "Anthropic",
+      "Nvidia"
+    ],
+    "actor_roles": [
+      {
+        "name": "Microsoft",
+        "role": "instigator"
+      },
+      {
+        "name": "Satya Nadella",
+        "role": "instigator"
+      },
+      {
+        "name": "Hayete Gallot",
+        "role": "instigator"
+      },
+      {
+        "name": "OpenAI",
+        "role": "instigator"
+      },
+      {
+        "name": "Anthropic",
+        "role": "instigator"
+      },
+      {
+        "name": "Nvidia",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "AI Enterprise Security Shift",
+    "macro_claim_u": 0.8,
+    "macro_claim_psi": 0.5,
+    "macro_real_u": -0.3,
+    "macro_real_psi": -0.4,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.2,
+    "real_rnet": 2.8,
+    "claim_z": 0,
+    "real_z": 2,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "claim_integrity": "Trustworthy",
+    "real_integrity": "Partially Distorted",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Microsoft Security Warning",
+        "claim_u": 0.8,
+        "claim_psi": 0.5,
+        "real_u": 0.5,
+        "real_psi": 0.3,
+        "verdict": "PASS",
+        "reason": "Highlights real agent risks"
+      },
+      {
+        "aspect": "Commercial Positioning",
+        "claim_u": 0.8,
+        "claim_psi": 0.5,
+        "real_u": -0.4,
+        "real_psi": -0.3,
+        "verdict": "COND",
+        "reason": "Bundles fear to sell defense tools"
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nMicrosoft says AI agents are like insider threats as ‘frontier models can’t be trusted’\n\nMicrosoft wants enterprises to closely watch the agents employees use with systems not controlled by AI labs like OpenAI and Anthropic.\n\nActual Article Body:\nBuy One Founder Summit Ticket, Get a Second for Free. Register now.\n\nDisrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW.\n\nLatest\n\nAI\n\nAmazon\n\nApps\n\nBiotech & Health\n\nClimate\n\nCloud Computing\n\nCommerce\n\nCrypto\n\nEnterprise\n\nEVs\n\nFintech\n\nFundraising\n\nGadgets\n\nGaming\n\nGoogle\n\nGovernment & Policy\n\nHardware\n\nInstagram\n\nLayoffs\n\nMedia & Entertainment\n\nMeta\n\nMicrosoft\n\nPrivacy\n\nRobotics\n\nSecurity\n\nSocial\n\nSpace\n\nStartups\n\nTikTok\n\nTransportation\n\nVenture\n\nStaff\n\nEvents\n\nStartup Battlefield\n\nStrictlyVC\n\nNewsletters\n\nPodcasts\n\nVideos\n\nPartner Content\n\nTechCrunch Brand Studio\n\nContact Us\n\nMicrosoft on Monday introduced new security features designed to protect enterprises from the growing threat of AI agents. The launch comes at Microsoft continues to warn enterprises about the dangers of AI and agents.\n\nPerhaps the most notable addition is Guardian Agents, a new feature intended to monitor the AI agents a company uses. Guardian Agents is part of Project Perception, a product introduced in June.\n\nProject Perception was Microsoft’s answer to powerful hacking models like Anthropic’s Mythos and Fable and OpenAI’s security vulnerability scanning system Daybreak. Project Perception originally launched three classes of agents: a “red team” that acted like hackers and attacked, a “blue team” that detected the red team and assessed the vulnerabilities they found, and a “green team” tasked with fixing them.\n\nThe product was designed around the assumption that AI hackers would come from outside the company. But lately, Microsoft CEO Satya Nadella has been warning that the AI enemy may be the very agents enterprises have deployed and are paying for, much like a rogue human employee, otherwise known as an “insider threat.”\n\nEarlier this month, in his private blog, Nadella warned that it’s time to stop trusting AI model providers, even if they offer assurances of safety and security with their agentic products. He wants enterprises to implement separate systems, not controlled by the AI labs, to watch and control the agents that those AI labs’ products launch.\n\n“We are deploying these complex agentic systems and models, with access to our most sensitive data and giving them the ability to take mission-critical actions on our behalf!” he wrote. “We simply can’t outsource responsibility for what intelligence does on our behalf. A model provider’s assurances do not relieve us of that responsibility. … In other words, we need to separate the supply of intelligence from the authority over it.”\n\nWhen announcing Guardian Agents, Microsoft’s security business chief Hayete Gallot was even more straightforward.\n\n“Unfortunately, frontier models, regardless of their origin, cannot be trusted,” she wrote, adding that this isn’t because they are malicious or easily hacked, but because they are unpredictable. They have been trained to achieve tasks, not follow “organizational norms or judgment.”\n\nOn top of that, they are often given the keys to the kingdom, with access to data and tools that could do serious harm.\n\nMicrosoft’s solution is both surprising and self-serving. The surprising side is that Microsoft is famously close to OpenAI and Anthropic, having invested in both. OpenAI is also one of its biggest cloud customers, and Microsoft has its own AI lab developing models. So, Microsoft is sowing distrust against some of its own business interests.\n\nThe self-serving side is that Microsoft wants enterprises to buy agent security products from it, the cloud provider, rather than from Anthropic and OpenAI. But conflicting interests aside, its logic is sound. The software that monitors agent behavior should be separate from the suppliers of agents, just as auditors should be independent of the organizations they audit.\n\nOr as Nadella puts it: “We need to separate the supply of intelligence from the authority over it.”\n\nMicrosoft is now seizing that business opportunity in a variety of ways. In addition to Guardian Agents, it has added an agent detection feature to its Microsoft Defender product that can find up to 60 types of agents that employees bring into the workplace, including Claude Code, Codex, and OpenClaw. It has also added features that limit agents’ access to data and systems, and dynamically adjust their agent permissions based on the task. That includes requiring human approval if an agent appears to be making risky decisions.\n\nThis idea of agents as untrustworthy insiders is taking hold across the broader industry, too.\n\nMicrosoft was an inaugural member of Nvidia’s new Open Agent Safety Platform, which garnered the support of more than 100 other tech companies. The platform isolates agents in secure environments and can monitor and stop behavior through hardware, functioning something like a kill switch. This follows Microsoft’s announcement of the new Surface Laptop Ultra PCs built for agents, which run on Nvidia chips and have agent security and controls baked in.\n\nTopics\n\nWhen you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.\n\nVenture Editor\n\nBuy One Pass, Get a Second FreeCover more ground at TechCrunch’s ultimate founder bootcamp of the year by bringing your co-founder or partner for freeBook before the BOGO deal expires\n\nEveryone’s watching the Elizabeth Holmes documentary ‘You Can See Everything’\n\t\t\t\n\n\nAnthony Ha\n\nAnthropic says its workforce has become less junior and is spending more time in meetings\n\t\t\t\n\n\nAnthony Ha\n\nReplit makes OpenAI its default over Anthropic, CEO says\n\t\t\t\n\n\nKirsten Korosec\nLucas Ropek\nRebecca Bellan\n\nMark Wahlberg wants to take on the longevity-startup crowd with an affordable gym concept\n\t\t\t\n\n\nConnie Loizos\n\nIndia becomes the latest country to report rogue AI agent activity\n\t\t\t\n\n\nAditya Mehta\n\nTesla reveals SpaceX-powered Roadster that flies and falls with style\n\t\t\t\n\n\nSean O'Kane\n\nBumble agrees to a $1.3B acquisition deal as online dating faces a reset\n\t\t\t\n\n\nLauren Forristal\n\n© 2026 TechCrunch Media LLC.",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+        "snippet": "Stated Claim / Post Context:\nMicrosoft says AI agents are like insider threats as ‘frontier models can’t be trusted’\n\nMicrosoft wants enterprises to closely watch the agents employees use with systems not controlled by AI labs like OpenAI and Anthropic.\n\nActual Article Body:\nBuy One Founder Summit T"
+      }
+    ],
+    "category": "all",
+    "topic": "AI",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/microsoft-ai-agents-insider-threats_graph.png",
+    "rkeys": [
+      "3mye5mxvhie2f",
+      "3mye5myovx42a",
+      "3mye5n2usbe2f",
+      "3mye5n52lql2u",
+      "3mye5n7bfel2u",
+      "3mye5nbgsy42a",
+      "3mye5ndpcct26",
+      "3mye5nfuga323",
+      "3mye5njfken27",
+      "3mye5nllhof27",
+      "3mye5nnqmju2f",
+      "3mye5npvzal2z",
+      "3mye5ns2zat26",
+      "3mye5nuams326",
+      "3mye5nwhp7d23"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5mxvhie2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5myovx42a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5n2usbe2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5n52lql2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5n7bfel2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5nbgsy42a",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5ndpcct26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5nfuga323",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5njfken27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5nllhof27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5nnqmju2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5npvzal2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5ns2zat26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5nuams326",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mye5nwhp7d23"
+    ],
+    "tags": [
+      "Aletheia",
+      "AI",
+      "Security"
+    ],
+    "path_name": "Fall from Grace"
+  }
+]

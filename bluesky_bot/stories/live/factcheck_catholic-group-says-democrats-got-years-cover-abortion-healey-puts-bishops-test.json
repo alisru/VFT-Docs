@@ -5,22 +5,22 @@
     "subject": "‘Barbaric’ abortion provision...",
     "link": "https://www.foxnews.com/politics/catholic-group-says-democrats-got-years-cover-abortion-healey-puts-bishops-test",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.95,
+    "real_psi": -0.91,
     "mode": "root",
     "posts": [
       "CatholicVote urges bishops to excommunicate Mass. Gov. Maura Healey over a new late-term abortion law.\nEvidence: moral defense, political weaponization, cultural division\n#Politics #Religion 🌐",
-      "CatholicVote argues that signing a law permitting abortions up to birth makes Gov. Healey an accomplice under canon law, demanding formal church discipline.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Religious outrage clashes with political realities, turning sacred sacraments into partisan ammunition while deepening cultural polarization without resolving moral strain.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nWeaponizing religious sacraments for political leverage deepens social fractures.\n\nIntegrity: Severe Deception (Hypocrisy: 6.8, Uncertainty z: 3)",
+      "CatholicVote argues that signing a law permitting abortions up to birth makes Gov. Healey an accomplice under canon law, demanding formal church discipline.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Religious outrage clashes with political realities, turning sacred sacraments into partisan ammunition while deepening cultural polarization without resolving moral strain.\nResulting Judgement: (-0.95, -0.91) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWeaponizing religious sacraments for political leverage deepens social fractures.\n\nIntegrity: Severe Deception (Hypocrisy: 6.8, Uncertainty z: 3)",
       "- CatholicVote: COND (0.5, -0.6) — Demands moral consistency.\n- Gov. Healey: FAIL (-0.7, -0.8) — Expands late-term access.",
       "CatholicVote pressed Massachusetts bishops to excommunicate Gov. Maura Healey after she signed a law eliminating restrictions on abortions after 24 weeks.",
       "The Poison:\nUsing the threat of excommunication as a political cudgel weaponizes sacred traditions to score partisan points rather than heal souls.",
       "The Breakdown & Plane Error:\nThis is a Plane Error (WHAT vs WHO): framing a legislative policy debate as a test of personal spiritual purity to force compliance.",
       "Social Physics Analysis:\nRather than fostering open dialogue or compassionate understanding, both sides project corrupt motives onto opponents, using moral mandates to secure power.",
-      "The Trajectory: The Path of Deception.\nThe gap between moral pretexts and political polarization plots a direct trajectory toward Lesser Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nThe gap between moral pretexts and political polarization plots a direct trajectory toward Lesser Evil.",
       "The Unavoidable Truth: Laws governing life and abortion touch deeply held, irreconcilable moral convictions.\n\nThe Unavoidable Lie: Excommunication is a neutral administrative tool.",
       "Alethekanon:\nWhen sacred rituals become partisan instruments, religion ceases to offer sanctuary and instead becomes another battlefield in the culture war.",
       "Awwthekanon:\nIt is heartbreaking to watch sacred bonds of faith get pulled into political warfare, leaving believers caught between deep moral convictions and partisan shouting.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Severe Deception",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.35,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "CatholicVote Moral Pressure",
@@ -285,6 +347,7 @@
         "name": "Roman Catholic Church",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

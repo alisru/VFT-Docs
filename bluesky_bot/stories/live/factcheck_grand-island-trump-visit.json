@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/1011now.com/post/3mwwptknh7h2b",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "real_u": 0.88,
+    "real_psi": 0.88,
     "mode": "root",
     "posts": [
       "Police and airport officials coordinate security and airspace restrictions for President Trump's upcoming visit to Grand Island.\nEvidence: Grand Island Police Department, Secret Service, local overtime tracking\n#Aletheia #LocalNews #Nebraska",
       "Law enforcement agencies are efficiently coordinating logistics, public safety, and airspace management to ensure a secure presidential visit.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Security preparations proceed smoothly, though local taxpayers bear municipal overtime costs while federal coordination handles high-level logistics.\nResulting Judgement: (+0.6, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nLogistics and security are managed transparently across agencies despite local resource strains.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Security preparations proceed smoothly, though local taxpayers bear municipal overtime costs while federal coordination handles high-level logistics.\nResulting Judgement: (+0.88, +0.88) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nLogistics and security are managed transparently across agencies despite local resource strains.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- Grand Island Police: PASS (+0.8, +0.6) — Transparent coordination.\n- Regional Airport: PASS (+0.7, +0.5) — Clear airspace planning.",
       "Local law enforcement in Grand Island is collaborating with federal and state agencies to manage crowd control, security, and airspace restrictions for a planned presidential visit.",
       "The Bright Side:\nInter-agency cooperation ensures public safety during high-profile political visits.",
       "The Breakdown & Plane Error:\nEvaluating operational logistics (WHERE/HOW) rather than political motivations.",
       "Social Physics Analysis:\nMunicipal and federal actors coordinate security through standard institutional protocols rather than hidden extraction or manipulation, fulfilling public safety duties transparently.",
-      "The Trajectory: The Path of Redemption.\nWhen you map logistical cooperation against municipal strain, it plots a stable trajectory toward collaborative order.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map logistical cooperation against municipal strain, it plots a stable trajectory toward collaborative order.",
       "The Unavoidable Truth: High-profile political visits impose real municipal costs and logistical burdens.\n\nThe Unavoidable Lie: Security preparations are entirely cost-free for local taxpayers.",
       "Alethekanon:\nOperational readiness requires careful inter-agency coordination, balancing public safety mandates with local resource realities. 🌐",
       "Awwthekanon:\nIt takes a massive community effort behind the scenes to keep everyone safe during major events like this. Kudos to the local officers working hard!",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Grand Island Police Department",
@@ -212,6 +274,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

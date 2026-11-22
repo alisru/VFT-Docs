@@ -5,22 +5,22 @@
     "subject": "Woman Sleeps Her Way To Top Of Family",
     "link": "https://theonion.com/woman-sleeps-her-way-to-top-of-family/",
     "target_url": "https://bsky.app/profile/theonion.com/post/3mvbrlar7ml2i",
-    "claim_u": -0.5,
-    "claim_psi": -0.5,
-    "real_u": 0.2,
-    "real_psi": 0.3,
+    "claim_u": 0.15,
+    "claim_psi": 0.1,
+    "real_u": 0.15,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Satirical commentary meets solemn memorial accountability.\nEvidence: satire, family dynamics, 9/11 archives\n#Satire #News",
-      "Satirical publications deploy biting absurdity to critique domestic power dynamics and traditional hierarchical roles.\nStated Judgement: (-0.5, -0.5) — Lesser Evil",
-      "While satire uses crude tropes for comedic effect, parallel reporting highlights genuine citizen demands for government transparency on historical atrocities.\nResulting Judgement: (+0.2, +0.3) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nThe juxtaposition of pure satire with earnest memorial demands exposes the stark contrast between public absurdity and real-world justice.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Satirical publications deploy biting absurdity to critique domestic power dynamics and traditional hierarchical roles.\nStated Judgement: (+0.15, +0.10) — Greater Good",
+      "While satire uses crude tropes for comedic effect, parallel reporting highlights genuine citizen demands for government transparency on historical atrocities.\nResulting Judgement: (+0.15, +0.10) — Greater Good",
+      "Verdict: PASS — Grace.\nThe juxtaposition of pure satire with earnest memorial demands exposes the stark contrast between public absurdity and real-world justice.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- The Onion Satire: PASS (-0.5, -0.5) — Delivers standard satirical critique.\n- Daily Caller Report: PASS (0.8, 0.7) — Accurate reporting on 9/11 demands.",
       "A satirical article poking fun at domestic power structures appears alongside real-world demands from 9/11 victims' families for the release of classified documents.",
       "The Bright Side:\nIt juxtaposes trivial domestic satire with grave civic demands for state accountability.",
       "The Breakdown & Plane Error:\nMixes comedic satire with serious geopolitical reporting (Plane error: Lyrical vs Physical), reminding readers of the duality of media feeds.",
       "Social Physics Analysis:\nThe juxtaposition of Onion satire with 9/11 memorial demands illustrates a stark shift between manufactured comedic absurdity and transparent civic pursuit of justice. Citizens seeking declassified documents operate via a smart altruistic loop demanding institutional truth.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between comedic satire and solemn historical accountability, it plots a direct trajectory toward Awakening. Exposing institutional opacity resolves civic strain.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between comedic satire and solemn historical accountability, it plots a direct trajectory toward Awakening. Exposing institutional opacity resolves civic strain.",
       "The Unavoidable Truth: Public institutions must remain fully accountable to victims of historical tragedies.\n\nThe Unavoidable Lie: Satirical marital commentary carries the same moral weight as government document concealment.",
       "Alethekanon:\nSatirical levity and solemn demands for state transparency coexist in the fractured mirror of the modern information ecosystem.",
       "Awwthekanon:\nIt is heartbreaking that families still have to fight for answers decades after unimaginable loss. May truth bring them some measure of peace.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Onion Satire",
@@ -159,6 +221,7 @@
         "name": "Terry Strada",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

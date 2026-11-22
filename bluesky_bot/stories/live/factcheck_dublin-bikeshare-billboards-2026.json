@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/dublininquirer.com/post/3mvro2zpp332y",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.45,
-    "real_psi": -0.5,
+    "real_u": 0.1,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "As Dublin prepares for a new bikeshare scheme, local leaders question the future of the massive advertising billboards tied to the expiring JC Decaux concession.\nEvidence: expiring contract, community billboard audits, geographic inequality\n#Aletheia #Dublin",
-      "Stated claims suggest the upcoming bikeshare transition offers a clean slate to reevaluate public advertising clutter and ensure fair municipal infrastructure.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, decades of 'bikes for billboards' deals have left northern and working-class districts heavily blighted by commercial displays while lacking proportional bike infrastructure.\nResulting Judgement: (-0.45, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nPublic transit upgrades are overshadowed by legacy commercial clutter and uneven neighborhood burdens.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.45, z: 2)",
+      "Stated claims suggest the upcoming bikeshare transition offers a clean slate to reevaluate public advertising clutter and ensure fair municipal infrastructure.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "In reality, decades of 'bikes for billboards' deals have left northern and working-class districts heavily blighted by commercial displays while lacking proportional bike infrastructure.\nResulting Judgement: (+0.10, +0.05) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nPublic transit upgrades are overshadowed by legacy commercial clutter and uneven neighborhood burdens.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.45, z: 2)",
       "Sub-Audits Breakdown:\n- Dublin City Council: COND (-0.3, -0.4) — Balances transit gains with legacy clutter.\n- Local Communities: PASS (0.5, 0.5) — Highlights geographic inequities.",
       "Dublin City Council's contract with JC Decaux for 1,600 bikes and 82 advertising billboards expires on September 30, 2027, sparking intense debate over commercial blight in areas like Ballybough.",
       "The Bright Side:\nThe upcoming contract expiration gives the city a rare legislative window to reclaim public spaces and directly own municipal transit infrastructure.",
       "The Breakdown & Plane Error:\nThe analysis confuses WHAT (transit expansion) with WHO (unequal geographic distribution of visual blight vs. mobility access), masking commercial extraction as public service.",
       "Social Physics Analysis:\nCommercial operators utilized a Smart Selfish Maneuver, trading essential mobility infrastructure for lucrative public advertising monopolies concentrated in working-class neighborhoods.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic friction forces municipal renegotiation toward civic balance.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic friction forces municipal renegotiation toward civic balance.",
       "The Unavoidable Truth: Public infrastructure funded by private advertising concessions inevitably creates geographic inequality in visual blight.\n\nThe Unavoidable Lie: Advertising-for-bikes trades are neutral exchanges that benefit all urban communities equally.",
       "Alethekanon:\nMunicipal advertising concessions often externalize visual blight onto marginalized neighborhoods while centralizing transit benefits.",
       "Awwthekanon:\nEvery neighborhood deserves clean public spaces and equal access to green mobility, free from towering corporate distractions.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Dublin City Council",
@@ -159,6 +221,7 @@
         "name": "Ballybough Pride of Place",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

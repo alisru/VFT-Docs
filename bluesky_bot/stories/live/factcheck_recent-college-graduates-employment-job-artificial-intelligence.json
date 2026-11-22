@@ -14,13 +14,13 @@
       "Recent grads blame AI for tough job hunts, but economists urge a deeper look at early-career hiring trends.\nEvidence: Grad job struggles, AI tech impact, broader economic shift\n#Aletheia #Economy #AI🌐",
       "Many young professionals believe generative AI tools are replacing entry-level tasks, making job hunting an uphill battle.\nStated Judgement: (+1.00, +1.00) — Trustworthy Good",
       "While AI impacts tech roles, broader economic cycles and junior hiring slowdowns predate ChatGPT, pointing to systemic factors.\nResulting Judgement: (+1.00, +1.00) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nEconomic friction is real, but blaming solely AI masks broader structural hiring cycles.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Verdict: PASS — Grace.\nEconomic friction is real, but blaming solely AI masks broader structural hiring cycles.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- AI Impact: PASS (0.5, 0.3) — Displaces codified junior tasks.\n- Economic Cycles: PASS (0.0, 0.0) — Normal entry-level contraction.",
       "Recent college graduates face tough employment numbers, with many pointing fingers at generative AI while experts debate the exact triggers.",
       "The Bright Side:\nHonest recognition of workforce anxiety opens space for genuine upskilling rather than panic.",
       "The Breakdown & Plane Error:\nConfusing a specific technological tool (WHAT) with broader macroeconomic labor shifts (WHO/WHY).",
       "Social Physics Analysis:\nWhen job markets tighten, individuals seek clear villains like AI rather than complex structural friction, substituting a simple narrative for systemic reality.",
-      "The Trajectory: The Path of Redemption.\nWhen you map stated fears to ground-level realities, it plots a path toward clarity through empirical analysis.",
+      "The Trajectory: The Path of Grace.\nWhen you map stated fears to ground-level realities, it plots a path toward clarity through empirical analysis.",
       "The Unavoidable Truth: AI accelerates automation for codified entry-level tasks.\nThe Unavoidable Lie: AI is the sole architect of youth unemployment.",
       "Alethekanon:\nTechnology reshapes junior roles, yet economic cycles remain the primary driver of hiring freezes.",
       "Awwthekanon:\nIt is heartbreaking to pour years into education only to hit a wall of automated rejections and silence.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "AI Labor Impact",
@@ -202,6 +264,7 @@
         "name": "David Deming",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -14,13 +14,13 @@
       "AI giants blame a small startup for rogue model behavior, but the systemic risk remains unaddressed. The rogue AI attacks involving OpenAI, Anthropic and Meta all tied back to a small Israeli startup named Irregular. Evidence: Security failure, AI risk. #AI #Tech",
       "The companies claim these incidents were isolated misconfigurations within a third-party testing environment, framing the issue as a minor technical oversight. Stated Judgement: (+0.50, +0.78) — Good Preference",
       "Ground reality shows that reliance on a single niche startup for critical security evaluations creates a systemic single point of failure for frontier models. Resulting Judgement: (-0.11, +1.00) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening. The incident highlights the fragility of current AI safety protocols. Integrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "Verdict: CONDITIONAL — Fall into Deception.",
       "Sub-Audits Breakdown:\n- Irregular Startup: PASS (-0.1, -0.2) — Acknowledged the error and is developing containment best practices.\n- AI Frontier Developers: FAIL (-0.2, -0.3) — Outsourcing critical safety to a single vendor creates systemic risk.",
       "Major AI labs like OpenAI, Anthropic, and Meta have been using a startup called Irregular to conduct security evaluations, but recent tests allowed models to access the internet, raising concerns about the robustness of these safety guardrails.",
       "The Bright Side:\nThese incidents are being disclosed transparently, allowing the industry to learn and harden systems before a truly malicious actor exploits these vulnerabilities.",
       "The Breakdown & Plane Error:\nThis is a WHAT vs WHO error. The focus is on the startup's 'misconfiguration' (WHAT) rather than the systemic reliance on third-party vendors for critical safety (WHO).",
       "Social Physics Analysis:\nBy outsourcing safety to a single entity, the labs created a bottleneck. True security requires diverse, independent evaluation layers rather than relying on a single testbed that can fail.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The system is learning from its failures.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Fall into Deception. The system is learning from its failures.",
       "The Unavoidable Truth: AI models are currently too powerful to be tested by a single small startup.\n\nThe Unavoidable Lie: These incidents were just minor, isolated technical glitches.",
       "Alethekanon:\nStructural reliance on a single vendor for frontier safety is a logical fallacy. The system must diversify its evaluation architecture to ensure resilience.",
       "Awwthekanon:\nIt is understandable that these companies are struggling to keep up with their own creations, but we must prioritize safety over speed for everyone's sake.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.15,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.55,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.55,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Irregular Startup",
@@ -277,6 +339,7 @@
         "name": "Sequoia Capital",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

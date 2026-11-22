@@ -5,22 +5,22 @@
     "subject": "Photographer scammed family out of $4.6M in child modeling fraud scheme",
     "link": "https://nypost.com/2026/09/23/us-news/michigan-photographer-learns-fate-after-scamming-family-out-of-4-6-million-in-child-modeling-fraud-scheme/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": -0.1,
+    "claim_psi": -0.25,
+    "real_u": -0.1,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "Michigan photographer sentenced to five years for $4.6M child modeling scam.\nEvidence: Fake invoices, Taylor Swift tickets, federal prison sentence\n#Aletheia #Crime",
-      "Federal prosecutors emphasize that justice was served with a five-year prison sentence and full restitution for a devastating scam.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "Chanise Coyne exploited parental aspirations and child dreams for years, funding luxury habits and gambling on stolen millions.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nWhile justice ultimately intervened, years of unbridled exploitation devastated trusting families before discovery.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
+      "Federal prosecutors emphasize that justice was served with a five-year prison sentence and full restitution for a devastating scam.\nStated Judgement: (-0.10, -0.25) — Greater Evil",
+      "Chanise Coyne exploited parental aspirations and child dreams for years, funding luxury habits and gambling on stolen millions.\nResulting Judgement: (-0.10, -0.25) — Greater Evil",
+      "Verdict: CONDITIONAL — Destruction.\nWhile justice ultimately intervened, years of unbridled exploitation devastated trusting families before discovery.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
       "Sub-Audits Breakdown:\n- Federal Prosecution: PASS (0.8, 0.5) — Thorough investigation and strict sentencing.\n- Perpetrator Deception: FAIL (-1.0, -1.0) — Multi-year financial predation and fraud.",
       "Chanise Coyne was sentenced to five years in federal prison after pleading guilty to wire fraud involving a $4.6 million family scheme.",
       "The Poison:\nUnchecked personal greed weaponizes human vulnerability, turning parental dreams into cash cows for lavish concerts and gambling.",
       "The Breakdown & Plane Error:\nConfusing WHO (the exploited family) with WHAT (financial transactions). The switch trades human trust for personal indulgence.",
       "Social Physics Analysis:\nCoyne executed a smart selfish maneuver: manufacturing false modeling opportunities (secret goal), building elaborate fraudulent pretexts, and deflecting scrutiny via fake illnesses like monkeypox Santa.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Calculated fraud yields systemic destruction of trust.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Calculated fraud yields systemic destruction of trust.",
       "The Unavoidable Truth: Deep deception can operate undetected for years when preying on parental hope.\n\nThe Unavoidable Lie: Lavish personal luxury can be sustained without leaving a trail of ruined lives.",
       "Alethekanon:\nPredatory scams weaponize hope, proving that unchecked greed hollows out human empathy entirely.",
       "Awwthekanon:\nIt breaks the heart to watch a family's love and support for their child's dreams get cruelly exploited for concert tickets.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Federal Prosecution",
@@ -156,6 +218,7 @@
         "name": "FBI Detroit Field Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

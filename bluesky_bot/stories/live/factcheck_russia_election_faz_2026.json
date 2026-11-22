@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/topnewsde.bsky.social/post/3mvyleeriq324",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -0.95,
+    "real_u": -0.1,
+    "real_psi": -0.42,
     "mode": "root",
     "posts": [
       "Russia's ruling party claims a landslide victory in legislative elections, celebrating a 'democratic triumph' even as voting is forced in occupied Ukrainian territories. \n\nKremlpartei Wahlsiegerin\nEvidence: Democratic Process, Coerced Voting, Autocratic Grip",
-      "The Kremlin claims United Russia's landslide victory represents the democratic will of the people, achieved transparently despite alleged Western cyberattacks trying to disrupt the vote.\nStated Judgement: (+1.0, 1.0) — Greater Good",
-      "In reality, the election was a highly controlled sham. Opposition parties were barred, independent monitors were excluded, and voting was coerced under military occupation in Ukrainian territories.\nResulting Judgement: (-1.0, -0.95) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. The Kremlin uses the facade of democratic elections to legitimize military occupation and domestic autocracy.\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 5)",
+      "The Kremlin claims United Russia's landslide victory represents the democratic will of the people, achieved transparently despite alleged Western cyberattacks trying to disrupt the vote.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the election was a highly controlled sham. Opposition parties were barred, independent monitors were excluded, and voting was coerced under military occupation in Ukrainian territories.\nResulting Judgement: (-0.10, -0.42) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 5)",
       "- Kremlin Election: FAIL (-1.00, -0.95) — Controlled sham to legitimize power.\n- FAZ Reporting: PASS (0.80, 0.10) — Accurate reporting on the sham vote.",
       "The Russian legislative elections concluded with the ruling United Russia party claiming a two-thirds majority, conducted amid the ongoing war and extended into occupied regions of Ukraine.",
       "The Bright Side:\nDespite severe repression, brave citizens staged 'noon against Putin' protests at polling stations, signaling that the desire for genuine democracy remains alive.",
       "The Breakdown & Plane Error:\nThe Kremlin commits a Metaphysical error (WHO). It claims the beneficiary is the Russian electorate, but the actual beneficiary is an autocratic regime seeking domestic and international validation.",
       "Social Physics Analysis:\nThe Kremlin executes a classic Smart Selfish Maneuver. They manufacture a democratic exercise as a pretext to consolidate absolute power. By projecting blame onto foreign cyberattacks, they distract from the systemic exclusion of opposition candidates.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The simulation shows total power hoarding through systemic coercion.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The simulation shows total power hoarding through systemic coercion.",
       "The Unavoidable Truth: The election was a pre-determined exercise in autocratic consolidation.\nThe Unavoidable Lie: The vote represents a free and fair expression of the Russian people's will.",
       "Alethekanon:\nElections under military occupation are not democratic exercises; they are administrative rituals of conquest. True legitimacy cannot be manufactured at gunpoint.",
       "Awwthekanon:\nMy heart goes out to the millions of people whose voices have been silenced, and to those who risked their safety just to stand in line and silently protest for a better future.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Kremlin Election",
@@ -162,6 +224,7 @@
         "name": "FAZ",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

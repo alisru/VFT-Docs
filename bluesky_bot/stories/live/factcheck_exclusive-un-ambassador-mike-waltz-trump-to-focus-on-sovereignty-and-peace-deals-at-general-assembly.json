@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_u": 0.1,
+    "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "Navigating global institutions while prioritizing national sovereignty at the UN General Assembly.\nEvidence: diplomatic engagement, peace deals, globalist friction\n#Aletheia #UN #USPol",
-      "Ambassador Mike Waltz outlines President Trump's UN General Assembly focus on sovereignty, peace deals, and countering globalist overreach.\nStated Judgement: (+1.0, +0.5) — Greater Good",
-      "While framing around peace, actual maneuvers leverage multilateral stages primarily for nationalist posturing and unilateral leverage.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nDiplomatic framing masks bilateral power projection behind multilateral rhetoric.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Ambassador Mike Waltz outlines President Trump's UN General Assembly focus on sovereignty, peace deals, and countering globalist overreach.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "While framing around peace, actual maneuvers leverage multilateral stages primarily for nationalist posturing and unilateral leverage.\nResulting Judgement: (+0.10, +0.00) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nDiplomatic framing masks bilateral power projection behind multilateral rhetoric.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- UN Diplomacy: PASS (0.5, 0.4) — Active engagement at global forum.\n- Sovereignty Framing: COND (-0.3, -0.4) — Uses multilateral venue to attack multilateralism.",
       "U.S. Ambassador to the UN Mike Waltz previewed President Trump's upcoming UN General Assembly address, emphasizing sovereignty, peace negotiations, and pushing back on globalism.",
       "The Bright Side:\nActive diplomatic engagement keeps the U.S. at the table rather than ceding global rulemaking entirely to rival powers.",
       "The Breakdown & Plane Error:\nConfusing the tool (the UN forum) with the actor's objective (unilateral leverage), creating a structural plane error.",
       "Social Physics Analysis:\nActors use the Smart Selfish loop, wrapping nationalist geopolitical goals in the pretext of global peacekeeping while projecting blame onto prior administrations.",
-      "The Trajectory: The Path of Redemption.\nThe gap between internationalist rhetoric and nationalist execution pulls toward friction and strategic recalibration.\n\nMathematical convergence reflects guarded pragmatism.",
+      "The Trajectory: The Path of Fall from Grace.\nThe gap between internationalist rhetoric and nationalist execution pulls toward friction and strategic recalibration.\n\nMathematical convergence reflects guarded pragmatism.",
       "The Unavoidable Truth: Global forums remain essential arenas even for leaders who decry multilateralism.\n\nThe Unavoidable Lie: Pure national sovereignty can be achieved entirely through international organizational platforms.",
       "Alethekanon:\nFraming nationalist deterrence as global peacebuilding reveals the enduring tension between sovereignty and internationalism.",
       "Awwthekanon:\nWhen leaders gather in grand halls, the hope for peace must transcend the friction of competing national ambitions.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UN Diplomacy",
@@ -157,6 +219,7 @@
         "name": "United Nations",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

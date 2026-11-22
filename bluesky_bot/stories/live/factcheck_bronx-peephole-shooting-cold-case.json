@@ -5,22 +5,22 @@
     "subject": "Woman Stunningly Claims Her City Worker Son Killed Bronx Mom in Peephole Shooting Cold Case",
     "link": "https://nypost.com/2026/09/03/us-news/woman-stunningly-claims-her-city-worker-son-killed-bronx-mom-in-peephole-shooting-cold-case/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.5,
-    "real_u": -0.8,
-    "real_psi": -0.7,
+    "claim_u": 0.3,
+    "claim_psi": 0.2,
+    "real_u": -0.15,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "A mother secretly recorded her city-worker son confessing to the 2018 fatal peephole shooting of Bronx hospital worker Wendy Martinez.\n\nBronx Cold Case Confession\nEvidence: secret audio, 2018 murder, gang retaliation\n#Aletheia #TrueCrime 🌐",
-      "Reports reveal a mother’s recorded confession from years ago where her city-worker son admits to gunning down Wendy Martinez in a tragic mistaken-identity gang hit.\nStated Judgement: (0.5, 0.5) — Constructive Truth",
-      "A mother sat on a damning murder confession for years while her son worked a city job, highlighting how family loyalty and trauma shield violent criminals from justice.\nResulting Judgement: (-0.8, -0.7) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nConcealing a murder confession out of maternal protection allows violent killers to evade justice.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 3)",
+      "Reports reveal a mother’s recorded confession from years ago where her city-worker son admits to gunning down Wendy Martinez in a tragic mistaken-identity gang hit.\nStated Judgement: (+0.30, +0.20) — Greater Good",
+      "A mother sat on a damning murder confession for years while her son worked a city job, highlighting how family loyalty and trauma shield violent criminals from justice.\nResulting Judgement: (-0.15, -0.20) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nConcealing a murder confession out of maternal protection allows violent killers to evade justice.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 3)",
       "Sub-Audits Breakdown:\n- Mother's Disclosure: PASS (0.6, 0.4) — Breaks silence via PI.\n- Family Complicity: FAIL (-0.9, -0.8) — Sat on confession for years.",
       "Wendy Martinez was killed in 2018 through her apartment door peephole in a botched gang hit meant for her son. Now, a new recording revives the cold case.",
       "The Poison:\nShielding a killer son while an innocent mother died in his place exposes a devastating moral collapse within domestic complicity networks.",
       "Plane Error: Q1 (WHO) vs Q5 (HOW).\nThe confession shifts focus to maternal anguish, obscuring years of active civilian silence protecting a murderer.",
       "Social Physics Analysis:\nProtecting a guilty family member shifts the burden of violence onto innocent neighbors. True safety requires transparent accountability over protective silence.",
-      "The Trajectory: The Path of Deception.\nWhen family loyalty suppresses murder confessions, it plots a direct trajectory toward Greater Evil and systemic impunity.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen family loyalty suppresses murder confessions, it plots a direct trajectory toward Greater Evil and systemic impunity.",
       "The Unavoidable Truth: Sitting on a murder confession for years makes maternal protection an accomplice to ongoing community terror.\n\nAn innocent mother lost her life because gang violence and familial silence swallowed the truth.",
       "Alethekanon:\nPrivate confessions mean nothing without public accountability. Hiding a killer under the guise of family loyalty poisons the entire civic fabric.",
       "Awwthekanon:\nMy heart aches for Wendy Martinez, who answered a knock and lost everything. The weight a mother carries hiding such a horrific truth is unimaginable.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Mother's Disclosure",
@@ -156,6 +218,7 @@
         "name": "Manuel Gomez",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

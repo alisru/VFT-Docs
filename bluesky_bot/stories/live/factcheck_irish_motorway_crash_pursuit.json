@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Irish police were told to disengage before a tragic wrong-way motorway crash killed five teenagers.\nEvidence: disengage order, lack of pursuit training, public shock\n#Aletheia #Ireland",
-      "Police unions state officers acted correctly by disengaging from the dangerously driven vehicle to protect lives.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "Systemic gaps in pursuit training and viral social media challenges exposed dangerous operational vulnerabilities.\nResulting Judgement: (-0.18, +0.38) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nOperational disengagement prevented direct police collision, but systemic training failures enabled a fatal outcome.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.45, z: 2)",
+      "Police unions state officers acted correctly by disengaging from the dangerously driven vehicle to protect lives.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Systemic gaps in pursuit training and viral social media challenges exposed dangerous operational vulnerabilities.\nResulting Judgement: (-0.18, +0.38) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nOperational disengagement prevented direct police collision, but systemic training failures enabled a fatal outcome.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.45, z: 2)",
       "- Garda Representative Association: PASS (0.80, 0.50) — Correctly ordered disengagement to avoid escalation.\n- State Institutions: FAIL (-0.75, -0.65) — Delayed pursuit training and platform accountability.",
       "Five teenagers died in a head-on M9 crash after driving the wrong way, sparking urgent calls for police pursuit training and social media platform regulation.",
       "The Bright Side:\n Swift calls for mandatory pursuit training and platform oversight to curb viral reckless driving trends.",
       "The Breakdown & Plane Error:\nConfusing operational disengagement (WHAT) with systemic preparedness (WHO/HOW). The blame shifts to officers while institutional training gaps persist.",
       "Social Physics Analysis:\nBy masking structural training deficiencies behind tactical compliance, authorities protect institutional cover while young lives and public safety bear the devastating cost.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated tactical caution and ground-level training neglect, it plots a direct trajectory toward Lesser Evil. Systemic gaps override tactical disengagement.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated tactical caution and ground-level training neglect, it plots a direct trajectory toward Lesser Evil. Systemic gaps override tactical disengagement.",
       "The Unavoidable Truth: Tactical disengagement prevented an immediate police-involved collision on the motorway.\n\nThe Unavoidable Lie: The claim that police departments were fully prepared for wrong-way pursuit dynamics.",
       "Alethekanon:\nOperational compliance does not absolve institutional unpreparedness in high-speed crises. 🌐",
       "Awwthekanon:\nSuch profound heartbreak for the families and communities shattered by this tragedy. May healing find those left behind in the darkest grief.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.85,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Garda Representative Association",
@@ -270,6 +332,7 @@
         "name": "Ireland",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

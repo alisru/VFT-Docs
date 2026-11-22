@@ -5,22 +5,22 @@
     "subject": "Bill Maher Blasts Professors for Trashing Western Civilization and Israel",
     "link": "https://nypost.com/2026/08/29/us-news/bill-maher-blasts-profs-for-trashing-western-civilization-israel/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.69,
+    "real_psi": 0.85,
     "mode": "root",
     "posts": [
       "Bill Maher calls out elite academics for disparaging Western values while thriving within them.\nEvidence: Maher commentary, Roth dialogue, campus trends\n🌐 #Aletheia #Culture",
-      "Comedian Bill Maher challenges university leaders over progressive campus rhetoric criticizing Western civilization and Israel.\nStated Judgement: (+0.8, +0.5) — Constructive Defense",
-      "While cultural debates rage, elite universities navigate complex student activism and administrative friction over foreign policy.\nResulting Judgement: (+0.4, +0.2) — Conditional Engagement",
-      "Verdict: PASS — The Path of Awakening.\nMaher's critique highlights a genuine cultural contradiction in academic discourse, though framed through comedic hyperbole.\nIntegrity: Trustworthy (Hypocrisy: 1.45, z: 1)",
+      "Comedian Bill Maher challenges university leaders over progressive campus rhetoric criticizing Western civilization and Israel.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While cultural debates rage, elite universities navigate complex student activism and administrative friction over foreign policy.\nResulting Judgement: (+0.69, +0.85) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nMaher's critique highlights a genuine cultural contradiction in academic discourse, though framed through comedic hyperbole.\nIntegrity: Trustworthy (Hypocrisy: 1.45, z: 1)",
       "- Bill Maher: PASS (+0.8, +0.5) — Highlights cultural contradictions.\n- Michael Roth: COND (+0.2, 0.0) — Acknowledges student climate.",
       "Bill Maher used his HBO show to spar with Wesleyan President Michael Roth over how students and professors view Western civilization and Israel.",
       "The Bright Side:\nOpen dialogue between media figures and university presidents highlights real campus ideological tensions.",
       "The Breakdown & Plane Error:\nEvaluating cultural rhetoric (WHAT) rather than institutional policy changes (WHO).\n\nThe bait-and-switch conflates general student posturing with systemic pedagogical mandates.",
       "Social Physics Analysis:\nCultural critique often amplifies existing polarization instead of resolving ideological friction. By framing academic discourse as purely hostile, both sides entrench their tribal positions.",
-      "The Trajectory: The Path of Awakening.\nWhen public figures interrogate elite institutional messaging, it pushes hidden ideological assumptions into open debate, fostering necessary cultural reckoning.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen public figures interrogate elite institutional messaging, it pushes hidden ideological assumptions into open debate, fostering necessary cultural reckoning.",
       "The Unavoidable Truth: Western liberal values underpin the very academic freedoms used to critique them.\n\nThe Unavoidable Lie: All university campuses universally reject foundational democratic principles.",
       "Alethekanon:\nCultural critiques expose institutional contradictions, yet treating campus rhetoric as monolithic distorts complex sociological realities.",
       "Awwthekanon:\nIt is painful when educational spaces feel fractured by geopolitical storms, but honest dialogue remains our best bridge forward.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Bill Maher Commentary",
@@ -210,6 +272,7 @@
         "name": "Wesleyan University",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

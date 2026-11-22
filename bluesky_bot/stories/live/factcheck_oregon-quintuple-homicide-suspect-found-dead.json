@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/24/us-news/quintuple-homicide-suspect-found-dead-after-5-bodies-multiple-dead-animals-discovered-on-rural-oregon-property/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -1.5,
-    "real_psi": -1.5,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Five bodies and slaughtered animals were found on a remote Oregon property before the suspect died by suicide.\nEvidence: brutal murders, community horror, tragic end\n#Oregon #TrueCrime",
-      "Authorities launched an urgent investigation into a complex quintuple homicide to secure public safety.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "A horrific scene of five murders and dead animals left a community shattered before the killer took his own life.\nResulting Judgement: (-1.5, -1.5) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nAn unspeakable act of violence culminates in suicide, leaving a community devastated.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 0)",
+      "Authorities launched an urgent investigation into a complex quintuple homicide to secure public safety.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "A horrific scene of five murders and dead animals left a community shattered before the killer took his own life.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAn unspeakable act of violence culminates in suicide, leaving a community devastated.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 0)",
       "- Washington County Sheriff: COND (0.0, -1.0) — Responding to an unprecedented mass tragedy.\n- Benjamin Charles Parker: FAIL (-2.0, -2.0) — Perpetrator of mass murder and suicide.",
       "Firefighters responding to a vehicle fire stumbled upon five bodies and dead animals outside Forest Grove, leading police to trace the suspect across state lines.",
       "The Poison:\nThe sheer brutality and complexity of the crime scene left veteran law enforcement officers shaken to the core.",
       "The Breakdown & Plane Error:\nThis is a failure of Q2 (Possible/WHAT) regarding safety and prevention, as unimaginable violence unfolds before intervention is possible.",
       "Social Physics Analysis:\nThe perpetrator engaged in extreme destructive contraction, shattering community trust and ending multiple lives before evading earthly justice entirely.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Total collapse of safety and life.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Total collapse of safety and life.",
       "The Unavoidable Truth: Five innocent lives and multiple animals were brutally ended in a remote Oregon property.\n\nThe Unavoidable Lie: Such sudden tragedies can always be predicted or prevented by local patrols.",
       "Alethekanon:\nWhen reality exceeds the limits of ordinary comprehension, sterile investigations struggle to measure the depth of human ruin.",
       "Awwthekanon:\nMy heart breaks for the families and the community carrying the heavy weight of this unimaginable sorrow.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Washington County Sheriff's Office",
@@ -270,6 +332,7 @@
         "name": "Washington County Sheriff's Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

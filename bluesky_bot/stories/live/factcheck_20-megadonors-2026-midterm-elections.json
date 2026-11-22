@@ -5,22 +5,22 @@
     "subject": "Here Are The 20 Biggest Donors In The 2026 Midterm Election Cycle So Far",
     "link": "https://dailycaller.com/2026/08/31/20-megadonors-2026-midterm-elections",
     "target_url": "",
-    "claim_u": 0.2,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Billionaires flood the 2026 midterms with historic cash.\n\nHere Are The 20 Biggest Donors In The 2026 Midterm Election Cycle So Far\nEvidence: $1.6B contributed, tech/crypto titans dominate, policy capture\n#Aletheia #USPol",
-      "Reports detail how the top 20 megadonors poured $1.2 billion into 2026 midterms, driven by tech, crypto, and ideological commitments.\nStated Judgement: (+0.2, 0.0) — Good Preference",
-      "Unprecedented billionaire spending warps the electoral landscape, prioritizing narrow industry and ideological goals over broad democratic representation.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nMassive financial concentration by a tiny elite distorts democratic accountability under the guise of civic participation.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 2)",
+      "Reports detail how the top 20 megadonors poured $1.2 billion into 2026 midterms, driven by tech, crypto, and ideological commitments.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "Unprecedented billionaire spending warps the electoral landscape, prioritizing narrow industry and ideological goals over broad democratic representation.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nMassive financial concentration by a tiny elite distorts democratic accountability under the guise of civic participation.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 2)",
       "- Tech & Crypto Megadonors: FAIL (-0.75, -0.8) — Buys legislative outcomes.\n- Political Super PACs: FAIL (-0.65, -0.75) — Amplifies partisan division.",
       "As the 2026 midterms approach, megadonors have already contributed over $1.6 billion, with tech titans and billionaires steering unprecedented sums into super PACs.",
       "The Poison:\nUnchecked financial clout drowns out ordinary citizens and ties elected officials directly to billionaire patrons.",
       "The Breakdown & Plane Error:\nConfusing private financial investment with democratic participation (WHAT vs WHO).",
       "Social Physics Analysis:\nBy funneling vast sums into super PACs, donors bypass traditional party structures to secure direct policy influence, concentrating power away from voters.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Financial concentration inexorably erodes democratic equality.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Financial concentration inexorably erodes democratic equality.",
       "The Unavoidable Truth: Heavy financial concentration shapes legislative priorities away from the public interest.\nThe Unavoidable Lie: Megadonor spending is merely robust public discourse.",
       "Alethekanon:\nBillionaire dominance of midterm funding turns elections into auctions for concentrated special interests.",
       "Awwthekanon:\nIt is heartbreaking when everyday voices feel entirely drowned out by billionaires buying elections.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Megadonor Funding",
@@ -225,6 +287,7 @@
         "name": "Jeff Yass",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

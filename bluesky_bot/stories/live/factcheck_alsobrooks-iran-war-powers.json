@@ -5,16 +5,16 @@
     "subject": "Dem Sen. Alsobrooks on How to End War: That's Trump's Job, I Did My Job by Voting to End It",
     "link": "https://www.breitbart.com/clips/2026/09/12/dem-sen-alsobrooks-on-how-to-end-war-thats-trumps-job-i-did-my-job-by-voting-to-end-it/",
     "target_url": "",
-    "claim_u": 0.88,
-    "claim_psi": 0.94,
-    "real_u": -0.28,
-    "real_psi": 0.4,
+    "claim_u": 0.69,
+    "claim_psi": 0.47,
+    "real_u": -0.36,
+    "real_psi": 0.03,
     "mode": "root",
     "posts": [
       "A Maryland senator claims voting against war absolves Congress of ending it.\nDem Sen. Alsobrooks on How to End War: That's Trump's Job, I Did My Job\nEvidence: Legislative duty, Buck-passing reality, Executive blame\n#Alsobrooks #IranWar #USPol",
-      "Senator Angela Alsobrooks argued on MS NOW that ending the Iran war rests entirely on the President, claiming Congress did its job by voting against it a dozen times and bears no responsibility for crafting an exit.\nStated Judgement: (+0.88, +0.94) — Greater Good",
-      "While Alsobrooks consistently voted for war powers resolutions like H. Con. Res. 86, reducing legislative duty to casting votes while disclaiming any role in war termination is partisan buck-passing.\nResulting Judgement: (-0.28, +0.40) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. Alsobrooks retreats from co-equal constitutional war powers into passive legislative buck-passing, treating roll-call votes as complete absolution.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.4, z: 2)",
+      "Senator Angela Alsobrooks argued on MS NOW that ending the Iran war rests entirely on the President, claiming Congress did its job by voting against it a dozen times and bears no responsibility for crafting an exit.\nStated Judgement: (+0.69, +0.47) — Greater Good",
+      "While Alsobrooks consistently voted for war powers resolutions like H. Con. Res. 86, reducing legislative duty to casting votes while disclaiming any role in war termination is partisan buck-passing.\nResulting Judgement: (-0.36, +0.03) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.4, z: 2)",
       "- Sen. Alsobrooks: COND (-0.28, +0.40) — Votes against war but abdicates strategic oversight.\n- Breitbart News: COND (-0.45, -0.35) — Exposes buck-passing while omitting valid peace votes.",
       "Asked on MSNBC how Democrats would end the war in Iran if they win in November, Maryland Senator Angela Alsobrooks insisted the exit strategy is solely President Trump's responsibility because he initiated the conflict.",
       "The Bright Side:\nAlsobrooks' voting record proves consistent resistance to unauthorized executive conflict in Iran, using available legislative war powers to register formal congressional opposition.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sen. Angela Alsobrooks Oversight Record",
@@ -167,6 +229,7 @@
         "name": "Breitbart News",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

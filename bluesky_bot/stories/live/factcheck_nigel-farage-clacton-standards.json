@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Nigel Farage returns to Parliament for Clacton just as old funding questions flare up.\n\nWhat Next For Nigel Farage After The Clacton By-Election?\nEvidence: public mandate, £5m gift probe, political survival\n#Aletheia #UKPolitics 🌐",
-      "The political narrative frames this by-election victory as a triumphant democratic mandate and a fresh start for Reform UK's parliamentary footprint.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "Behind the podcast hype and electoral wins, the parliamentary standards probe into a controversial £5m gift hangs heavily over his return.\nResulting Judgement: (-0.84, -0.70) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Electoral triumph is weaponized to obscure ongoing ethical investigations into large personal political gifts.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, Uncertainty z: 2)",
+      "The political narrative frames this by-election victory as a triumphant democratic mandate and a fresh start for Reform UK's parliamentary footprint.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Behind the podcast hype and electoral wins, the parliamentary standards probe into a controversial £5m gift hangs heavily over his return.\nResulting Judgement: (-0.84, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Nigel Farage: FAIL (-0.75, -0.85) — Leverages public electoral wins to deflect from personal financial scrutiny.\n- Standards Investigation: COND (-0.2, -0.1) — Bureaucratic oversight crawls while political spectacle accelerates.",
       "Nigel Farage was re-elected as the MP for Clacton following a triggered by-election. Concurrently, parliamentary standards investigators reopened inquiries into a substantial £5m gift he received, casting a shadow over his political comeback.",
       "The Bright Side:\nActive media scrutiny ensures that high-profile politicians cannot easily bury unresolved financial inquiries beneath electoral fanfare.",
       "The Breakdown & Plane Error:\nThis is a classic WHO vs WHAT plane error. The broadcast focuses on the theatrical WHAT (election results) while glossing over the institutional WHO (accountability for large gifts).",
       "Social Physics Analysis:\nPolitical figures often deploy high-energy electoral victories as pretexts to shield themselves from accountability, trading transparency for charismatic projection and distraction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The structural friction between public claims and private finance drives negative will.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The structural friction between public claims and private finance drives negative will.",
       "The Unavoidable Truth: Electoral victories do not erase active parliamentary standards investigations into opaque personal funding.\n\nThe Unavoidable Lie: Political comebacks wipe the slate clean of past ethical obligations.",
       "Alethekanon:\n🌐 Verifying the parliamentary standards investigation into Farage's £5m gift confirms ongoing scrutiny. Spectacle must never replace structural accountability in our democratic institutions.",
       "Awwthekanon:\nIt is exhausting when public trust is constantly tested by political theater masking personal financial entanglements. Voters deserve complete transparency.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Nigel Farage Political Return",
@@ -267,6 +329,7 @@
         "name": "Parliamentary Commissioner for Standards",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

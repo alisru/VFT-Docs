@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "White House press secretary Karoline Leavitt steps down to shape the MAGA movement's future.\nEvidence: family focus, strategic exit, media shift\n🌐 #Aletheia #USPol",
-      "Leavitt frames her departure around spending time with her young family while continuing her advocacy work.\nStated Judgement: (+0.73, +0.86) — Good Preference",
-      "Behind the family rationale lies a calculated realignment to shape external political messaging and media access controls.\nResulting Judgement: (-0.49, -0.51) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. A personal career move and family transition framed around public service, masking tighter media control.\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, Uncertainty z: 1)",
+      "Leavitt frames her departure around spending time with her young family while continuing her advocacy work.\nStated Judgement: (+0.73, +0.86) — Greater Good",
+      "Behind the family rationale lies a calculated realignment to shape external political messaging and media access controls.\nResulting Judgement: (-0.49, -0.51) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Karoline Leavitt: COND (+0.5, +0.2) — Balancing personal family milestones with high-level partisan political strategy.\n- White House Press Access: FAIL (-0.8, -0.9) — Restructuring media access creates partisan rewards at the expense of open transparency.",
       "White House Press Secretary Karoline Leavitt is leaving her post at month's end to serve as an outside communications adviser for Donald Trump's movement, concluding a tenure marked by major shifts in press relations.",
       "The Poison:\nThe administration's replacement of traditional press pool rotations with hand-picked 'new media' seats institutionalizes partisan favoritism.",
       "The Breakdown & Plane Error:\nThe plane error confuses WHAT (personal family leave) with WHO (political operatives reshaping media access). The bait-and-switch trades institutional press access for partisan narrative control.",
       "Social Physics Analysis:\nBy replacing transparent institutional norms with hand-picked access, the administration hoards information power while using personal milestones as a protective pretext.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated family motives and actual partisan realignment, it plots a direct trajectory toward Lesser Evil through strategic message control.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated family motives and actual partisan realignment, it plots a direct trajectory toward Lesser Evil through strategic message control.",
       "The Unavoidable Truth: High-profile political departures routinely blend personal milestones with strategic repositioning.\n\nThe Unavoidable Lie: Press access restructuring is merely modernization rather than partisan filtering.",
       "Alethekanon:\nKaroline Leavitt's departure highlights the friction between institutional press norms and modern partisan communication strategies. The personal narrative is real, but it doubles as political insulation.",
       "Awwthekanon:\nBalancing demanding public roles with raising young children is an immense challenge. We can honor her dedication to her family while remaining clear-eyed about political shifts.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.15,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Karoline Leavitt Transition",
@@ -272,6 +334,7 @@
         "name": "Harrison Fields",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

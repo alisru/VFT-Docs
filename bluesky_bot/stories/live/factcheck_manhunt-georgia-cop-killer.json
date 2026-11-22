@@ -5,16 +5,16 @@
     "subject": "Manhunt for Georgia cop killer...",
     "link": "https://nypost.com/2026/09/02/us-news/manhunt-for-georgia-cop-killer-after-he-targeted-gunned-down-officer-who-arrested-him-days-earlier/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.2,
-    "real_u": -0.6,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.79,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A tragic end to a manhunt reveals the swift rebound of violence.\n\nManhunt for Georgia cop killer...\nEvidence: Active manhunt, Suspect captured, Threat neutralized\n#Aletheia #USNews",
-      "The media reported an active, dangerous manhunt for Jimmie Lee Steverson after he allegedly targeted and killed Officer Chris Fischer in retaliation for an arrest.\nStated Judgement: (0.8, 0.2) — Good Preference",
-      "While the murder was a horrific tragedy, the active manhunt ended rapidly when Steverson was captured in South Carolina with a self-inflicted gunshot wound.\nResulting Judgement: (-0.6, -0.8) — Greater Evil",
-      "Verdict: CONDITIONAL — Fall into Destruction. The reporting lagged behind the rapid resolution of the physical threat, maintaining high public anxiety.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "The media reported an active, dangerous manhunt for Jimmie Lee Steverson after he allegedly targeted and killed Officer Chris Fischer in retaliation for an arrest.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While the murder was a horrific tragedy, the active manhunt ended rapidly when Steverson was captured in South Carolina with a self-inflicted gunshot wound.\nResulting Judgement: (-0.79, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- NY Post Reporting: COND (0.2, -0.4) — Lagged on capturing the suspect's arrest.\n- Public Safety Threat: PASS (-0.8, -0.9) — Threat was neutralized quickly.",
       "Officer Chris Fischer was tragically shot and killed in Warm Springs, Georgia. The suspect, Jimmie Lee Steverson, was captured shortly after in South Carolina.",
       "The Bright Side:\nLaw enforcement coordinated across state lines to swiftly neutralize the threat before further harm could occur.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NY Post Reporting",
@@ -215,6 +277,7 @@
         "name": "Georgia Bureau of Investigation",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

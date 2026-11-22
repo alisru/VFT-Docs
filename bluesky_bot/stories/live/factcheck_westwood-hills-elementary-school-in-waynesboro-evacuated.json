@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.8,
-    "real_psi": 0.5,
+    "real_u": 0.75,
+    "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "Law enforcement swarms a Virginia elementary school following a reported shooting incident that triggered rapid lockdowns.\nEvidence: police response, staff injury, gunman deceased\n#Aletheia #News",
-      "Initial reports flagged an active shooter situation at Westwood Hills Elementary School, prompting emergency evacuations and community alarm.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "A heavily armed 19-year-old breached the school, injuring one staff member before taking his own life, with swift police response ensuring student safety.\nResulting Judgement: (+0.8, +0.5) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nRapid law enforcement containment prevented mass student casualties during a critical security failure.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Initial reports flagged an active shooter situation at Westwood Hills Elementary School, prompting emergency evacuations and community alarm.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "A heavily armed 19-year-old breached the school, injuring one staff member before taking his own life, with swift police response ensuring student safety.\nResulting Judgement: (+0.75, +0.40) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nRapid law enforcement containment prevented mass student casualties during a critical security failure.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Law Enforcement Response: PASS (1.0, 0.8) — Swift containment minimized tragedy.\n- School Safety Protocols: COND (0.5, 0.0) — Evacuation worked, but breach vulnerability exposed.",
       "Waynesboro police and federal ATF units responded to Westwood Hills Elementary after a gunman forced entry, resulting in one staff injury and no student casualties.",
       "The Poison:\nThe constant vulnerability of soft targets and schools to active threats remains a terrifying reality for communities.",
       "The Breakdown & Plane Error:\nConfusing WHERE (the specific school building) with HOW (systemic security breakdown). The physical response was swift, but the underlying threat persists.",
       "Social Physics Analysis:\nFirst responders and school staff acted with transparent coordination to protect students, restoring stability under extreme crisis. Quick containment minimized structural panic.",
-      "The Trajectory: The Path of Redemption.\nWhen emergency protocols successfully contain a violent breach, it plots a direct trajectory toward Redemption. Systemic resilience triumphs over chaos.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen emergency protocols successfully contain a violent breach, it plots a direct trajectory toward Destruction. Systemic resilience triumphs over chaos.",
       "The Unavoidable Truth: Quick tactical response and school protocols saved children from a catastrophic tragedy.\n\nThe Unavoidable Lie: Incidents like this can be completely prevented by local policing alone without addressing root causes.",
       "Alethekanon:\nSwift operational containment averted mass disaster, proving the efficacy of emergency protocols. Yet the underlying vulnerability of educational spaces remains unaddressed.",
       "Awwthekanon:\nMy heart aches for the injured staff member and the terrified families. Thank God the children are safe, but no one should ever face such terror at school.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Law Enforcement Response",
@@ -156,6 +218,7 @@
         "name": "Augusta County Sheriff's Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

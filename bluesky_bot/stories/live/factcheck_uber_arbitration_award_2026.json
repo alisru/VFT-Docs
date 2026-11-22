@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.7,
     "claim_psi": 0.0,
-    "real_u": -0.72,
-    "real_psi": -0.85,
+    "real_u": -0.85,
+    "real_psi": -0.9,
     "mode": "root",
     "posts": [
       "Uber ordered to pay $40M after a driver abandoned a UCLA grad on a California freeway.\nEvidence: $40M arbitration award, freeway abandonment, gag order attempt\n#Aletheia #Safety #Legal",
-      "Ride-sharing platforms provide safe, reliable transit options backed by robust safety commitments.\nStated Judgement: (+0.7, 0.0) — Good Preference",
-      "A reckless driver abandoned intoxicated passengers on a dark freeway gore point for vomiting, leading to a fatal collision while management fought to silence the grieving family.\nResulting Judgement: (-0.72, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nCorporate liability evasion and callous driver behavior turned a routine ride into a tragedy, met with aggressive non-disclosure tactics.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
+      "Ride-sharing platforms provide safe, reliable transit options backed by robust safety commitments.\nStated Judgement: (+0.70, +0.00) — Lesser Good",
+      "A reckless driver abandoned intoxicated passengers on a dark freeway gore point for vomiting, leading to a fatal collision while management fought to silence the grieving family.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nCorporate liability evasion and callous driver behavior turned a routine ride into a tragedy, met with aggressive non-disclosure tactics.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
       "Sub-Audits Breakdown:\n- Ride-Share Platform (Uber): FAIL (-0.8, -0.9) — Evades liability and suppresses accountability.\n- Driver Conduct: FAIL (-0.9, -0.9) — Abandoned passengers in grave danger.",
       "An arbitrator ordered Uber to pay $40M to the parents of Emily Normandin-Parker, who was killed on State Route 73 after her driver dumped her and her friend on the freeway following a minor dispute.",
       "The Poison:\nCorporate legal machinery attempted to enforce a $10 million gag order penalty to bury the arbitration award and shield the company from public accountability.",
       "The Plane Error & Switch:\nConflating the WHAT (providing convenient urban mobility) with the WHO (shielding corporate balance sheets from accountability for driver recklessness).",
       "Social Physics Analysis:\nUber executed a Smart Selfish Maneuver. Their secret goal is protecting profit margins and avoiding liability, using the pretext of safety compliance while projecting blame onto victims and deploying gag orders as distraction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Prioritizing brand protection over human life institutionalizes hazard.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Prioritizing brand protection over human life institutionalizes hazard.",
       "The Unavoidable Truth: Ride-share platforms profit from decentralized transport while fighting tooth and nail to evade legal responsibility for fatal driver negligence.\n\nThe Unavoidable Lie: Corporate arbitration and non-disclosure agreements serve primarily to protect passenger privacy and fair dispute resolution.",
       "Alethekanon:\nWhen convenience overrides duty of care, corporate arbitration becomes an instrument for silencing grief and laundering negligence.",
       "Awwthekanon:",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Ride-Share Platform (Uber)",
@@ -160,6 +222,7 @@
         "name": "Emily Normandin-Parker Foundation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

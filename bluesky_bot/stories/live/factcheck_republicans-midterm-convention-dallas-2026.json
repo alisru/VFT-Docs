@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Republicans launch their first-ever midterm convention in Dallas with a Trump-headlined spectacle focused on border security and tax cuts.\nEvidence: Partisan rally, Policy framing, Electoral staging\n#Aletheia #USPol",
-      "The convention aims to unite the party around core economic and security priorities for the upcoming midterms.\nStated Judgement: (+0.8, +0.5) — Constructive Focus",
-      "Beneath the populist branding lies a calculated partisan maneuver to lock in donor loyalty and sideline internal dissent.\nResulting Judgement: (-0.6, -0.7) — Subversive Manipulation",
-      "Verdict: FAIL — The Path of Deception.\nA partisan spectacle masquerading as a substantive policy summit merely deepens institutional divides.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "The convention aims to unite the party around core economic and security priorities for the upcoming midterms.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Beneath the populist branding lies a calculated partisan maneuver to lock in donor loyalty and sideline internal dissent.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA partisan spectacle masquerading as a substantive policy summit merely deepens institutional divides.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "Sub-Audits Breakdown:\n- Convention Messaging: FAIL (-0.6, -0.7) — Spectacle over substance.\n- Electoral Strategy: FAIL (-0.5, -0.6) — Polarizing base mobilization.",
       "The GOP's inaugural midterm convention in Dallas features high-profile speeches emphasizing border security and tax policy ahead of upcoming elections.",
       "The Bright Side:\nIt brings legislative priorities like tax cuts into sharp public focus for voter evaluation.",
       "The Breakdown & Plane Error:\nConfusing a partisan campaign rally (WHO: party insiders) with a broad public policy debate (WHAT: national welfare).",
       "Social Physics Analysis:\nActors deploy a Smart Selfish Maneuver, using manufactured border and tax crises as pretexts to hoard political power while projecting blame onto opponents.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated policy focus and ground-level partisan theater, it plots a direct trajectory toward Deception.\nF_pos < F_neg.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated policy focus and ground-level partisan theater, it plots a direct trajectory toward Deception.\nF_pos < F_neg.",
       "The Unavoidable Truth: Political conventions prioritize electoral mobilization over objective policy analysis.\nThe Unavoidable Lie: Partisan campaign rallies represent holistic national consensus.",
       "Alethekanon:\nSpectacle replaces substance when party survival supersedes democratic transparency. A classic inversion of civic purpose.",
       "Awwthekanon:\nIt's sad to watch genuine concerns about taxes and borders get wrapped up in so much divisive political theater instead of real healing.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Convention Messaging",
@@ -150,6 +212,7 @@
         "name": "Republican Party Chairman",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

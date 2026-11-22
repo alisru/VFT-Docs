@@ -5,16 +5,16 @@
     "subject": "Suspect Freed After 2003 Attack Charged in Stabbing",
     "link": "https://www.breitbart.com/crime/2026/10/10/video-suspect-freed-after-attacking-two-boys-in-2003-charged-for-stabbing-toddler-and-mother-that-mans-evil/",
     "target_url": "",
-    "claim_u": -0.8,
-    "claim_psi": -0.8,
-    "real_u": -0.9,
-    "real_psi": -0.89,
+    "claim_u": -0.75,
+    "claim_psi": -0.75,
+    "real_u": -0.8,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "A man with a severe mental health history is charged with stabbing a mother and toddler in Providence.\nEvidence: Criminal history, hospital commitment, tragic stabbing\n#Aletheia #Crime",
-      "A dangerous repeat offender with a history of violent assaults was freed due to state competency laws, leading to a brutal stabbing.\nStated Judgement: (-0.8, -0.8) — Lesser Evil",
-      "Institutional failures in mental healthcare and legal competency frameworks allowed a severely ill individual to slip through recurring safety nets.\nResulting Judgement: (-0.9, -0.89) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA tragic institutional failure of mental health systems and legal competency loops results in horrific preventable violence against innocent victims.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 1)",
+      "A dangerous repeat offender with a history of violent assaults was freed due to state competency laws, leading to a brutal stabbing.\nStated Judgement: (-0.75, -0.75) — Greater Evil",
+      "Institutional failures in mental healthcare and legal competency frameworks allowed a severely ill individual to slip through recurring safety nets.\nResulting Judgement: (-0.80, -0.75) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nA tragic institutional failure of mental health systems and legal competency loops results in horrific preventable violence against innocent victims.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Mental Health System: FAIL (-0.9, -0.9) — Repeated competency release failures.\n- Legal Framework: COND (-0.7, -0.6) — Statutory caps force premature release.",
       "A Rhode Island man with a history of violent attacks and psychiatric hospitalizations was arrested for stabbing a mother and her toddler in Providence.",
       "The Poison:\nFocusing solely on individual evil while ignoring systemic breakdowns in mental health commitment laws ensures such tragedies will happen again.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Mental Health System",
@@ -164,6 +226,7 @@
     "tags": [
       "Aletheia",
       "Crime"
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

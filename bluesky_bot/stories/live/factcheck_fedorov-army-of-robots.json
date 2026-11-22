@@ -5,22 +5,22 @@
     "subject": "Ex-defense minister Fedorov announces new 'Army of Robots' initiative in latest move since leaving office",
     "link": "https://kyivindependent.com/ex-defense-minister-fedorov-announces-new-army-of-robots-initiative-in-latest-move-since-leaving-office/",
     "target_url": "https://bsky.app/profile/kyivindependent.com/post/3mwgi5engsk24",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.83,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Ex-minister Fedorov launches 'Army of Robots' to build defense tech ecosystem.\nEvidence: Defense tech ecosystem, Humanoid infantry replacement, Private sector spin-off\n#Aletheia #Ukraine #DefenseTech",
-      "Fedorov claims the new initiative will build a robust ecosystem to invest in robotics, save soldiers' lives, and scale up battlefield solutions.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While framed as a humanitarian defense effort, the project follows Fedorov's political ousting and private venture moves with tech elites like Alex Karp.\nResulting Judgement: (-0.75, -0.8) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nA technological push to replace human infantry masks private sector commercialization and post-dismissal political repositioning.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Fedorov claims the new initiative will build a robust ecosystem to invest in robotics, save soldiers' lives, and scale up battlefield solutions.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While framed as a humanitarian defense effort, the project follows Fedorov's political ousting and private venture moves with tech elites like Alex Karp.\nResulting Judgement: (-0.83, +1.00) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nA technological push to replace human infantry masks private sector commercialization and post-dismissal political repositioning.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "- Fedorov's Initiative: COND (-0.75, -0.8) — Merges national defense with private tech ventures.\n- Public Framing: FAIL (-0.8, -0.85) — Obscures commercial and political ambitions.",
       "Following his controversial dismissal in July 2026, former Ukrainian Defense Minister Mykhailo Fedorov announced the 'Army of Robots' initiative to develop autonomous combat systems.",
       "The Bright Side:\nRapid advancement in unmanned combat systems could reduce frontline human casualties if deployed effectively.",
       "The Breakdown & Plane Error:\nConfuses WHO benefits (national survival vs. private defense tech equity and political survival) by framing commercial enterprise as pure altruism.",
       "Social Physics Analysis:\nFedorov runs a smart selfish maneuver: he utilizes a genuine national security crisis (protecting soldiers) as a pretext to anchor a private defense-tech ecosystem and re-establish political leverage after his ouster.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated altruism and private commercial ambitions, it plots a direct trajectory toward Lesser Evil. Systemic vulnerability is leveraged for technological capital.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated altruism and private commercial ambitions, it plots a direct trajectory toward Lesser Evil. Systemic vulnerability is leveraged for technological capital.",
       "The Unavoidable Truth: Autonomous military robotics are rapidly transforming modern warfare into corporate-backed industrial scales.\n\nThe Unavoidable Lie: This private tech ecosystem is driven purely by philanthropic defense altruism.",
       "Alethekanon:\nFraming private defense tech ventures as humanitarian ecosystem projects masks the underlying pursuit of political and corporate capital.",
       "Awwthekanon:\nIt is heartbreaking to see the urgent need to protect soldiers' lives become entangled with corporate branding and political maneuvering.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Fedorov's Initiative",
@@ -217,6 +279,7 @@
         "name": "Ukraine",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

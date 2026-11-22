@@ -8,19 +8,19 @@
     "claim_u": 1.0,
     "claim_psi": 0.0,
     "real_u": 0.8,
-    "real_psi": 0.9,
+    "real_psi": 0.85,
     "mode": "root",
     "posts": [
       "Remembering young Celeste Rivas as her family calls for justice on her 16th birthday.\nEvidence: Family plea, Legal proceedings, DA review\n#Aletheia #Justice",
-      "The family publicly supports capital punishment for the accused singer, stating it fits a conscience-free crime.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The legal system moves deliberately through procedural reviews and mitigation packets while grieving parents demand direct accountability.\nResulting Judgement: (+0.8, +0.9) — Grace",
-      "Verdict: PASS — The Path of Redemption.\nGrief and systemic legal rigor intersect as a grieving family seeks proportional justice within institutional bounds.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "The family publicly supports capital punishment for the accused singer, stating it fits a conscience-free crime.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The legal system moves deliberately through procedural reviews and mitigation packets while grieving parents demand direct accountability.\nResulting Judgement: (+0.80, +0.85) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nGrief and systemic legal rigor intersect as a grieving family seeks proportional justice within institutional bounds.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Family Plea: PASS (+0.9, +0.9) — Authentic raw grief demanding proportional accountability.\n- DA Office Review: PASS (+0.7, +0.8) — Procedural adherence balancing state norms.",
       "The family of Celeste Rivas Hernandez has voiced support for the death penalty against singer David Burke ahead of his trial and her 16th birthday.",
       "The Bright Side:\nTransparent public engagement ensures victims' families retain a voice in high-stakes capital determinations.",
       "The Breakdown & Plane Error:\nConfusing the emotional plane of parental trauma (WHO should suffer) with the metaphysical plane of institutional sentencing standards (WHAT is legal).",
       "Social Physics Analysis:\nThe Rivas family operates from authentic pain seeking transparent resolution, avoiding hidden extractions. The legal apparatus balances public grief with institutional safeguards.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the alignment between human tragedy and institutional procedural review, it plots a direct trajectory toward Grace. (R_net: 1.2)",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the alignment between human tragedy and institutional procedural review, it plots a direct trajectory toward Grace. (R_net: 1.2)",
       "The Unavoidable Truth: Raw parental grief demands ultimate accountability for unspeakable crimes.\n\nThe Unavoidable Lie: Legal bureaucracy can fully heal the profound void left by violent murder.",
       "Alethekanon:\nTrue justice must honor the depth of human devastation while navigating the cold machinery of law.",
       "Awwthekanon:\nMy heart aches for the Rivas family, whose unimaginable pain echoes through every courtroom hearing. May they find peace and steadfast support in their darkest hour.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Family Plea",
@@ -156,6 +218,7 @@
         "name": "Nathan Hochman",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

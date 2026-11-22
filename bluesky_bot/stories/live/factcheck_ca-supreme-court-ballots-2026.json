@@ -5,22 +5,22 @@
     "subject": "California Supreme Court hears arguments over sheriff's seizure of ballots",
     "link": "https://www.washingtontimes.com/news/2026/aug/24/california-supreme-court-hears-arguments-sheriffs-seizure-ballots/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.5,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.08,
+    "real_psi": -0.22,
     "mode": "root",
     "posts": [
       "Legal battles erupt over election materials seized during a bitter political cycle.\n\nCalifornia Supreme Court weighs ballot seizure\nEvidence: safeguarding evidence, rogue political seizure, electoral distrust #Aletheia #Law 🌐",
-      "Riverside County Sheriff Chad Bianco defended seizing 650,000 ballots from a special election, arguing he acted as a lawful custodian investigating public complaints of voting irregularities.\nStated Judgement: (+0.5, +0.5) — Lesser Good",
-      "Ground reality shows a political candidate conducting a rogue seizure outside established legal review mechanisms, designed to sow electoral distrust during a gubernatorial run.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA sheriff bypasses statutory oversight to seize ballots during an active political campaign, severely undermining democratic stability.\n\nIntegrity: Severe Deception (Hypocrisy: 14.0, z: 3)",
+      "Riverside County Sheriff Chad Bianco defended seizing 650,000 ballots from a special election, arguing he acted as a lawful custodian investigating public complaints of voting irregularities.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Ground reality shows a political candidate conducting a rogue seizure outside established legal review mechanisms, designed to sow electoral distrust during a gubernatorial run.\nResulting Judgement: (-0.08, -0.22) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nA sheriff bypasses statutory oversight to seize ballots during an active political campaign, severely undermining democratic stability.\n\nIntegrity: Severe Deception (Hypocrisy: 14.0, z: 3)",
       "- Sheriff Chad Bianco: FAIL (-0.85, -0.90) — Rogue seizure bypassing statutory law.\n- State Legal Challenge: PASS (+0.80, +0.70) — Enforcing constitutional election boundaries.",
       "The California Supreme Court heard oral arguments regarding Riverside County Sheriff Chad Bianco's unprecedented seizure of election ballots from a 2025 redistricting special election.",
       "The Poison:\nFraming an unauthorized seizure of sensitive election materials as routine evidence safeguarding, establishing a dangerous precedent that undermines public faith in democratic processes.",
       "The Breakdown & Plane Error:\nThis is a Q3/Q6 plane error (WHERE vs CAUSE). Stated cause is criminal investigation, but actual cause is political theater and institutional disruption by a candidate.",
       "Social Physics Analysis:\nBy overriding established legal channels for contesting elections, the action substitutes unilateral executive force for transparent institutional rules, generating high system strain.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Unilateral seizure forces negative systemic expansion.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Unilateral seizure forces negative systemic expansion.",
       "The Unavoidable Truth: Election administration requires strict adherence to statutory channels and legal oversight.\nThe Unavoidable Lie: Unauthorized ballot seizures by candidates constitute neutral evidence preservation.",
       "Alethekanon:\nWhen law enforcement officers arrogate electoral oversight powers for political theater, they fracture the rule of law. Security of the ballot box depends entirely on strict adherence to established legal boundaries.",
       "Awwthekanon:\nElections belong to the people, and trusting the process is sacred. It's deeply unsettling when those sworn to protect us turn electoral administration into a political weapon.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Severe Deception",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Sheriff Chad Bianco",
@@ -287,6 +349,7 @@
         "name": "Xavier Becerra",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://www.ms.now/news/russia-election-influencing-campaign-targeting-democrats",
     "target_url": "https://bsky.app/profile/thecovey.bsky.social/post/3mvbnm6z7ak2c",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.92,
+    "claim_psi": 1.0,
+    "real_u": -0.95,
+    "real_psi": -0.89,
     "mode": "root",
     "posts": [
       "Foreign state actors deploy AI voice clones and doctored celebrity videos to meddle in midterm elections.\nEvidence: Matryoshka operation, fake CNN branding, AI-cloned audio\n#Aletheia #Disinformation",
-      "Reports reveal a Kremlin-backed operation using AI to create deceptive celebrity videos urging voters to reject Democrats.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "State-sponsored cyber operations weaponize synthetic media and forged news branding to erode democratic trust and manipulate electoral outcomes.\nResulting Judgement: (-0.85, -0.92) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nForeign covert operations exploit artificial intelligence to manufacture political hostility and subvert democratic elections.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Reports reveal a Kremlin-backed operation using AI to create deceptive celebrity videos urging voters to reject Democrats.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "State-sponsored cyber operations weaponize synthetic media and forged news branding to erode democratic trust and manipulate electoral outcomes.\nResulting Judgement: (-0.95, -0.89) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nForeign covert operations exploit artificial intelligence to manufacture political hostility and subvert democratic elections.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- Russian State Actors: FAIL (-0.90, -0.95) — Orchestrates deceptive AI influence ops.\n- Synthetic Media Campaign: FAIL (-0.80, -0.89) — Propagates forged CNN-branded clips.",
       "A Kremlin-backed disinformation network dubbed 'Matryoshka' has been caught utilizing AI voice-cloning and unauthorized news branding to spread defamatory, polarized content targeting U.S. midterm candidates.",
       "The Poison:\nThe exploitation of advanced generative AI tools to effortlessly manufacture believable disinformation at scale poses a severe systemic challenge to public trust and electoral integrity.",
       "The Breakdown & Plane Error:\nThe analysis confuses the technical mechanics of AI generation (WHAT) with the deliberate geopolitical intent of foreign subversion (WHO/WHY), masking covert state aggression as organic social media discourse.",
       "Social Physics Analysis:\nThe Kremlin-backed operation runs a classic Smart Selfish Maneuver. It conceals aggressive foreign interference behind manufactured domestic political outrage, projecting corruption onto democratic institutions while extracting geopolitical instability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Covert synthetic media fabrication actively collapses trust into hostile fragmentation.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Covert synthetic media fabrication actively collapses trust into hostile fragmentation.",
       "The Unavoidable Truth: Synthetic media and AI voice-cloning are actively being weaponized by state actors to subvert elections.\nThe Unavoidable Lie: These isolated, bot-amplified falsehoods represent authentic grassroots political expression.",
       "Alethekanon:\nCovert state-sponsored disinformation weaponizes generative AI to manufacture political friction and erode public trust in democratic institutions.",
       "Awwthekanon:\nIt is heartbreaking to watch cutting-edge technology, which holds so much promise for human creativity, hijacked into a weapon of deception designed to turn neighbors against one another.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Russian State Actors",
@@ -213,6 +275,7 @@
         "name": "U.S. Electorate",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

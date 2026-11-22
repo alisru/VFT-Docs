@@ -14,13 +14,13 @@
       "Consumers face a bitter pill as water bills rise to fund infrastructure. Water bills set to rise for many after firms permitted extra funding. Evidence: 3.4bn increase, infrastructure pressure, public anger. #Aletheia #UKPol 🌐",
       "Ofwat provisionally approves extra funding for water firms to address pollution and infrastructure needs, citing climate change and growth. Stated Judgement: (+0.00, +0.50) — Bad Preference",
       "Reality reveals a cycle of underinvestment and pollution, where consumers pay for past failures under the guise of future improvements. Resulting Judgement: (-0.89, -0.91) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. The systemic failure to maintain infrastructure is being offloaded onto consumers, creating a cycle of resentment. Integrity: Severe Deception (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "Verdict: FAIL — Revelation into Destruction.",
       "Sub-Audits Breakdown:\n- Ofwat: FAIL (-0.8, -0.9) — The regulator prioritizes firm solvency over consumer protection.\n- Water Companies: FAIL (-0.9, -0.9) — Decades of underinvestment have created a high-strain, unstable configuration.",
       "Ofwat has provisionally approved 13 water companies to increase bills by £3.4bn to fund infrastructure upgrades, growth, and pollution control, sparking significant public and political backlash.",
       "The Poison:\nThe 'clawback' mechanism is a hollow promise; once the capital is extracted, the systemic damage to consumer trust is already irreversible.",
       "The Breakdown & Plane Error:\nThe error is in the WHO plane; they frame this as a 'growth' necessity (WHAT) while ignoring the 'who' (the families struggling with costs).",
       "Social Physics Analysis:\nThis is a classic case of maintaining conflict to preserve authority. By framing failure as an 'insurmountable mountain' of infrastructure needs, they justify extraction.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The extraction of capital for past failures accelerates systemic decay.",
+      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The extraction of capital for past failures accelerates systemic decay.",
       "The Unavoidable Truth: Infrastructure requires investment, but the burden is unfairly distributed.\n\nThe Unavoidable Lie: This funding will definitively solve the pollution crisis.",
       "Alethekanon:\nThis is a structural failure of accountability. The regulator has become a facilitator for corporate extraction rather than a guardian of the public good.",
       "Awwthekanon:\nMy heart goes out to the families who are already struggling and are now being asked to pay for the mistakes of companies that failed to protect our rivers.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.1,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.8,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.8,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ofwat",
@@ -269,6 +331,7 @@
         "name": "Thames Water",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Revelation into Destruction"
   }
 ]

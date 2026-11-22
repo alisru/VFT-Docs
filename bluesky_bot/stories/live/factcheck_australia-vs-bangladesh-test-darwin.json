@@ -14,13 +14,13 @@
       "Battling against the odds in Darwin, Australia's cricketers fight to stay alive in a gripping Test match against Bangladesh.\n\nAustralia vs Bangladesh Test\nEvidence: competitive resilience, top-order collapse, gritty recovery\n#Cricket #TestCricket",
       "Stating a firm resolve to save the first Test match after slipping behind against a disciplined Bangladeshi bowling attack.\nStated Judgement: (+1.00, +1.00) — Constructive Effort",
       "Facing severe pressure after losing early wickets, yet grinding out a valuable late partnership to keep the contest alive.\nResulting Judgement: (+1.00, +1.00) — Conditional Resilience",
-      "Verdict: PASS — The Path of Redemption.\nThrough grit and disciplined lower-order partnerships, Australia clawed back into a challenging contest.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nThrough grit and disciplined lower-order partnerships, Australia clawed back into a challenging contest.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Australian Batting Resilience: PASS (+0.3, +0.4) — Green and Carey stabilized the innings under extreme pressure.\n- Bangladeshi Bowling Discipline: PASS (+0.4, +0.5) — Bangladesh maintained relentless pressure with key wickets.",
       "On day three of the first Test in Darwin, Australia slumped to 4-161 in their second innings, still trailing Bangladesh by 67 runs. Josh Hazlewood took his 300th Test wicket and a five-wicket haul, while Alex Carey and Cameron Green dug in with an unbeaten 39-run partnership.",
       "The Bright Side:\nCameron Green and Alex Carey showed immense character, proving that lower-order resistance can salvage tough situations.",
       "The Breakdown & Plane Error:\nEvaluating athletic performance requires measuring physical execution (Q3) rather than abstract intent. The team adapted to physical strain on the pitch.",
       "Social Physics Analysis:\nBy replacing early individual failures with collaborative partnerships, the team reduced structural strain. Transparency in confronting scoreboard pressure enabled a resilient collective recovery.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between initial collapse and resolute recovery, it plots a direct trajectory toward Redemption. Mathematical equilibrium resolves toward positive adaptation.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between initial collapse and resolute recovery, it plots a direct trajectory toward Redemption. Mathematical equilibrium resolves toward positive adaptation.",
       "The Unavoidable Truth: Resilience under pressure changes the game's momentum.\n\nThe Unavoidable Lie: Early collapses mean an inevitable blowout defeat.",
       "Alethekanon:\nSporting contests lay bare the friction between expectation and execution. Australia's top order faltered under pressure, but resilience from the middle order demonstrated structural adaptation.",
       "Awwthekanon:\nIt's tough seeing hometown favorites struggle early, but seeing players fight back together with heart reminds us that resilience always shines through the darkest innings.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Australian Batting Resilience",
@@ -274,6 +336,7 @@
         "name": "Alex Carey",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "A downed U.S. airman recounts an extraordinary 50-hour evasion and rescue behind enemy lines in Iran.\nEvidence: 50-hour evasion, severe injuries, 90+ troops deployed\n🌐 #Aletheia #Military",
-      "An injured weapons officer survives a harrowing ejection and hostile hunt, praising divine providence and military rescue.\nStated Judgement: (+0.8, +0.8) — Greater Good",
-      "A massive, high-risk military operation successfully extracts downed personnel from deep inside hostile territory against heavy odds.\nResulting Judgement: (+0.9, +0.8) — Grace",
-      "Verdict: PASS — The Path of Grace.\nExtraordinary military coordination and human resilience achieved a successful rescue against extreme odds.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "An injured weapons officer survives a harrowing ejection and hostile hunt, praising divine providence and military rescue.\nStated Judgement: (+0.80, +0.80) — Greater Good",
+      "A massive, high-risk military operation successfully extracts downed personnel from deep inside hostile territory against heavy odds.\nResulting Judgement: (+0.90, +0.80) — Greater Good",
+      "Verdict: PASS — Grace.\nExtraordinary military coordination and human resilience achieved a successful rescue against extreme odds.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Military Rescue Operation: PASS (0.9, 0.9) — Flawless tactical execution.\n- Airman Personal Account: PASS (0.8, 0.8) — Authentic survival narrative.",
       "Following an F-15E strike mission near Isfahan, U.S. forces executed their first ground rescue operation inside Iran in 46 years.",
       "The Bright Side:\nUnprecedented inter-service coordination saved an isolated, severely injured airman from enemy capture.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Rescue Operation Integrity",
@@ -157,6 +219,7 @@
         "name": "Brad Cooper",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

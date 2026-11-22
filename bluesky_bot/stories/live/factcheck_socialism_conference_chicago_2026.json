@@ -5,22 +5,22 @@
     "subject": "VIDEO: Socialism Conference Draws Radicals for Lessons on Marxism, Fighting Fascism in Chicago",
     "link": "https://www.breitbart.com/education/2026/09/04/video-socialism-conference-draws-radicals-lessons-marxism-fighting-fascism-chicago/",
     "target_url": "",
-    "claim_u": -0.75,
-    "claim_psi": -0.8,
-    "real_u": -0.35,
-    "real_psi": -0.45,
+    "claim_u": 0.03,
+    "claim_psi": 0.0,
+    "real_u": -0.28,
+    "real_psi": -0.38,
     "mode": "root",
     "posts": [
       "A look inside the ideological battleground in Chicago.\n\nVIDEO: Socialism Conference Draws Radicals for Lessons on Marxism, Fighting Fascism in Chicago\nEvidence: ideological education, partisan outrage, public political conference\n#Aletheia #USPol",
-      "Breitbart claims the Socialism 2026 Conference is a dangerous gathering of far-left radicals aiming to subvert American democracy and push the nation toward communism.\nStated Judgement: (-0.75, -0.80) — Greater Evil",
-      "The conference is a real, publicly advertised event with verified schedules, pricing, and speakers. While the framing is highly partisan, the physical details of the event are accurate.\nResulting Judgement: (-0.35, -0.45) — Lesser Evil",
-      "Verdict: CONDITIONAL — Fall into Deception.\nWhile the event's physical details are accurate, the framing exaggerates a standard political conference into an existential conspiracy.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.8, z: 2)",
+      "Breitbart claims the Socialism 2026 Conference is a dangerous gathering of far-left radicals aiming to subvert American democracy and push the nation toward communism.\nStated Judgement: (+0.03, +0.00) — Lesser Good",
+      "The conference is a real, publicly advertised event with verified schedules, pricing, and speakers. While the framing is highly partisan, the physical details of the event are accurate.\nResulting Judgement: (-0.28, -0.38) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nWhile the event's physical details are accurate, the framing exaggerates a standard political conference into an existential conspiracy.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.8, z: 2)",
       "Sub-Audits Breakdown:\n- Breitbart News: COND (-0.35, -0.45) — Accurate details with heavy partisan framing.\n- Conference Organizers: COND (-0.20, -0.30) — High ticket prices for anti-capitalist lessons.",
       "The Socialism 2026 Conference in Chicago features workshops on Marxism, anti-fascism, and decolonization, drawing criticism from conservative leaders who warn of rising far-left influence.",
       "The Bright Side:\nProviding transparent schedules and pricing allows the public to openly evaluate and debate the conference's ideas rather than leaving them to backroom speculation.",
       "The Breakdown & Plane Error:\nConfusing the WHO with the WHAT. Breitbart focuses on the radical identities of the speakers (WHO) to dismiss the entire event as a national threat, rather than engaging with the actual policy ideas (WHAT).",
       "Social Physics Analysis:\nBy framing a public, voluntary conference as an active national security threat, the reporting uses projection to rally its base. This maintains a high-strain conflict loop, prioritizing partisan outrage over constructive dialogue.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between the existential threat narrative and a standard ticketed conference, it plots a trajectory toward Deception. The exaggeration feeds polarization.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between the existential threat narrative and a standard ticketed conference, it plots a trajectory toward Deception. The exaggeration feeds polarization.",
       "The Unavoidable Truth: The conference is a real, legally organized event with public details.\nThe Unavoidable Lie: This single gathering represents an imminent, coordinated communist takeover of America.",
       "Alethekanon:\nOutrage-driven reporting often elevates minor ideological gatherings into existential threats. True analysis separates the physical reality of an event from its narrative inflation.",
       "Awwthekanon:\nIt is sad to see how fear divides us. When we look at each other through the lens of political labels, we lose the ability to listen, understand, and find common ground as human beings.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Breitbart News Reporting",
@@ -161,6 +223,7 @@
         "name": "Black Rose Anarchist Federation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

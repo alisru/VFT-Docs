@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Chaos strikes a strip mall near Cal State Northridge, leaving two dead and dozens detained after a late-night shooting.\nEvidence: 2 dead, 1 stabbed, dozens detained\n#Aletheia #USNews 🌐",
-      "Reports frame the incident as an isolated late-night party disturbance near campus where police swiftly intervened.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "The reality reveals a lethal failure of public safety and a massive containment sweep with zero immediate clarity or arrests.\nResulting Judgement: (-0.85, -0.80) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nAn information vacuum masks deep systemic safety failures, substituting mass detentions for genuine community protection.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Reports frame the incident as an isolated late-night party disturbance near campus where police swiftly intervened.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "The reality reveals a lethal failure of public safety and a massive containment sweep with zero immediate clarity or arrests.\nResulting Judgement: (-0.85, -0.80) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAn information vacuum masks deep systemic safety failures, substituting mass detentions for genuine community protection.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "Sub-Audits Breakdown:\n- LAPD Response: FAIL (-0.80, -0.75) — Mass detentions obscure facts.\n- Media Framing: FAIL (-0.90, -0.85) — Sanitizes systemic violence.",
       "A late-night gathering at University Plaza near Cal State Northridge erupted into gunfire and stubs, resulting in two fatalities and numerous detentions.",
       "The Poison:\nTreating public carnage as a routine blotter item while mass-detaining witnesses normalizes civic decay.",
       "The Breakdown & Plane Error:\nConfusing WHAT (the violent crime) with WHO (the institutional duty to protect), suppressing accountability behind police cordons.",
       "Social Physics Analysis:\nAuthorities and media run a reactive containment loop, replacing transparent public protection with heavy-handed detentions and opaque silence to mask systemic urban safety failures.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Opaque institutional containment suppresses structural truth.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Opaque institutional containment suppresses structural truth.",
       "The Unavoidable Truth: Violence near college hubs shatters community safety.\n\nThe Unavoidable Lie: Mass detentions equate to restored order.",
       "Alethekanon:\nWhen public safety collapses into cordoned-off black boxes, official silence reveals institutional paralysis. The state manages optics rather than safety.",
       "Awwthekanon:\nMy heart breaks for the families grieving sudden loss amidst the confusion and cold police tape. We deserve communities built on care, not chaos.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "LAPD Response",
@@ -152,6 +214,7 @@
         "name": "Los Angeles Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

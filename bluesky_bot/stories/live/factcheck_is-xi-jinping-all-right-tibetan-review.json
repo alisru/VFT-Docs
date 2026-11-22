@@ -8,19 +8,19 @@
     "claim_u": 0.0,
     "claim_psi": 0.0,
     "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Speculation swirls over Chinese President Xi Jinping's health following unusual travel accommodations during recent high-level diplomatic visits.\nEvidence: Rest breaks, private hold rooms, skipped dinners\n#Aletheia #Geopolitics #China",
-      "Recent high-level visits to New Delhi and Washington have ignited widespread international rumors regarding Chinese President Xi Jinping's physical well-being and stamina.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "Autocratic secrecy turns basic human aging into a high-stakes intelligence puzzle, as strict information controls fuel intense speculation over leadership stability.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Deception.\nUnverified health rumors highlight the inherent instability of opaque, highly centralized political systems.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
+      "Recent high-level visits to New Delhi and Washington have ignited widespread international rumors regarding Chinese President Xi Jinping's physical well-being and stamina.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Autocratic secrecy turns basic human aging into a high-stakes intelligence puzzle, as strict information controls fuel intense speculation over leadership stability.\nResulting Judgement: (-0.40, -0.45) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nUnverified health rumors highlight the inherent instability of opaque, highly centralized political systems.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
       "Sub-Audits Breakdown:\n- Tibetan Review: COND (0.0, -0.2) — Fair reporting of WSJ leaks.\n- Autocratic Opacity: FAIL (-0.8, -0.7) — Hides baseline health data.",
       "Chinese President Xi Jinping's delegation requested unusual rest breaks and private hold rooms during his US and Indian visits, sparking renewed international interest in his health.",
       "The Bright Side:\nEven the tightest information controls cannot entirely mask the biological reality that absolute power is held by mortal human beings.",
       "The Breakdown & Plane Error:\nThis report confuses physical aging with hidden political crisis, projecting institutional anxiety onto normal medical privacy needs while systemic opacity obscures the truth.",
       "Social Physics Analysis:\nState secrecy creates a manufactured information vacuum. By hiding routine health accommodations behind ironclad walls, Beijing invites speculation, running a defensive loop that backfires.",
-      "The Trajectory: The Path of Deception.\nWhen governance relies on absolute opacity, routine human vulnerability triggers systemic anxiety, plotting a trajectory toward institutional instability.",
+      "The Trajectory: The Path of Destruction.\nWhen governance relies on absolute opacity, routine human vulnerability triggers systemic anxiety, plotting a trajectory toward institutional instability.",
       "The Unavoidable Truth: Absolute power cannot exempt any mortal leader from the physical realities of aging.\n\nThe Unavoidable Lie: Every minor schedule adjustment in an autocracy signals an immediate regime collapse.",
       "Alethekanon:\nOpaque political systems weaponize secrecy, turning ordinary human frailty into geopolitical theater. When truth is locked away, speculation becomes inevitable.",
       "Awwthekanon:\nGetting older happens to everyone, even world leaders! It is a gentle reminder that behind every towering political title is simply a human being needing rest.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tibetan Review Reporting",
@@ -163,6 +225,7 @@
         "name": "India",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

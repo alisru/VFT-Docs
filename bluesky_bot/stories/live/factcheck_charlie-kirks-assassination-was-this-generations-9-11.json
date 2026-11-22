@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.55,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Reframing national trauma around partisan assassination.\nEvidence: Ideological martyrdom, Sectarian grief, Political weaponization\n#Aletheia #USPol",
-      "Charlie Kirk's tragic assassination stands as the defining generational trauma of our era, matching 9/11's cultural impact.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The tragedy is leveraged to fuel sectarian rage and factional score-settling rather than genuine national healing or unity.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA tragedy is co-opted to deepen political division rather than foster solidarity.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Charlie Kirk's tragic assassination stands as the defining generational trauma of our era, matching 9/11's cultural impact.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The tragedy is leveraged to fuel sectarian rage and factional score-settling rather than genuine national healing or unity.\nResulting Judgement: (-0.55, -0.65) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA tragedy is co-opted to deepen political division rather than foster solidarity.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "Sub-Audits Breakdown:\n- Editorial Framing: FAIL (-0.7, -0.8) — Equates a political murder with 9/11 to amplify grievance.\n- Movement Analysis: COND (-0.4, -0.5) — Spotlights internal right-wing bickering accurately.",
       "Reflecting on the one-year mark of Charlie Kirk's assassination, commentators debate its enduring cultural and political fallout across American society.",
       "The Poison:\nPackaging raw partisan sectarianism as sacred spiritual reflection.",
       "The Breakdown & Plane Error:\nConfusing the profound grief of an individual political murder (Q3/Physical) with a foundational national cataclysm (Q6/Historical).",
       "Social Physics Analysis:\nThe article runs a Smart Selfish Maneuver by utilizing a genuine tragedy as a pretext to attack political rivals and police internal ideological purity.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. F_neg heavily outweighs F_pos due to weaponized grief.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. F_neg heavily outweighs F_pos due to weaponized grief.",
       "The Unavoidable Truth: Political assassinations leave deep, lasting scars on national consciousness.\n\nThe Unavoidable Lie: One political figure's murder equals the systemic shock of 3,000 innocents dying on 9/11.",
       "Alethekanon:\nElevating factional outrage to sacred status mocks true historical proportion.",
       "Awwthekanon:\nEvery life lost to political violence is a heartbreak for families, but weaponizing grief only deepens the nation's wounds.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Editorial Framing",
@@ -156,6 +218,7 @@
         "name": "The Federalist",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

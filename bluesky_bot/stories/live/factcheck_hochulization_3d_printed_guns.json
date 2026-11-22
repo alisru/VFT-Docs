@@ -5,22 +5,22 @@
     "subject": "The cat-and-mouse game over 3D-printed guns has begun",
     "link": "https://www.theverge.com/tech/983244/3d-printed-guns-hashes-hochul",
     "target_url": "https://bsky.app/profile/theverge.com/post/3mtw43hjzv22c",
-    "claim_u": 0.5,
-    "claim_psi": 0.5,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -0.87,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "A new tool aims to bypass software blocks on 3D printers, sparking a fresh regulatory cat-and-mouse game.\nEvidence: software bypass, ghost guns, regulators\n#Aletheia #Tech #Policy",
-      "The creator of the first 3D-printed gun claims a method to thwart government-mandated safety blocks on 3D printers.\nStated Judgement: (+0.5, +0.5) — Lesser Good",
-      "Development of evasion tools accelerates the proliferation of untraceable firearms, undermining public safety measures.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA technical workaround is packaged as innovation while eroding public safety protocols.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 4)",
+      "The creator of the first 3D-printed gun claims a method to thwart government-mandated safety blocks on 3D printers.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "Development of evasion tools accelerates the proliferation of untraceable firearms, undermining public safety measures.\nResulting Judgement: (-0.87, -0.75) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA technical workaround is packaged as innovation while eroding public safety protocols.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 4)",
       "- The Verge: COND (-0.8, -0.9) — Highlights tech evasion without deep structural critique.\n- Creator Claims: FAIL (-0.9, -0.9) — Frames circumvention as pure free expression.",
       "Tech developers and regulators are locking horns as new software workarounds allow 3D printers to bypass firearm manufacturing blocks.",
       "The Bright Side:\nExposes the inherent fragility of trying to regulate physical manufacturing through software restriction alone.",
       "The Breakdown & Plane Error:\nConfuses technical feasibility (HOW) with societal safety outcomes (EFFECT).\n\nIt treats regulatory evasion as a neutral design feature.",
       "Social Physics Analysis:\nBy engineering ways around safety checks, creators prioritize unilateral technical cleverness over collective security, shifting risk onto the public.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between technical freedom and public risk, it plots a direct trajectory toward Lesser Evil. Mathematical strain increases with proliferation.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between technical freedom and public risk, it plots a direct trajectory toward Lesser Evil. Mathematical strain increases with proliferation.",
       "The Unavoidable Truth: Software restrictions alone cannot stop determined individuals from manufacturing physical weapons.\n\nThe Unavoidable Lie: Creating bypass tools is a neutral act of open-source engineering.",
       "Alethekanon:\nTechnology designed explicitly to bypass safety guardrails is a predictable exercise in friction maximization.",
       "Awwthekanon:\nIt's worrying to see innovation weaponized in ways that make our communities feel less secure and protected.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "The Verge Coverage",
@@ -199,6 +261,7 @@
         "name": "The Verge",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

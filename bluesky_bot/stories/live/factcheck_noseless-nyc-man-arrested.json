@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A Brooklynite's Florida drug arrest highlights regional trafficking operations.\nEvidence: Meth & Cocaine, Loaded Firearm, Phony ID\n#Aletheia #Crime",
-      "Routine traffic stops uncover fugitive narcotics dealers operating across state lines.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Interstate drug trafficking networks rely on mobile distribution vectors and falsified identity documents to evade capture.\nResulting Judgement: (-0.85, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nUnlawful narcotics distribution and weapons possession undermine community safety despite superficial media framing.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Routine traffic stops uncover fugitive narcotics dealers operating across state lines.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Interstate drug trafficking networks rely on mobile distribution vectors and falsified identity documents to evade capture.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nUnlawful narcotics distribution and weapons possession undermine community safety despite superficial media framing.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Narcotics Evidence: PASS (-0.8, -0.9) — Confirmed via K-9 sniff and police report.\n- Suspect Framing: COND (-0.9, -0.9) — Highlights anomaly over systemic trafficking.",
       "Charles Wilson Pastore was pulled over in Fort Lauderdale, leading to the discovery of drugs, cash, and a firearm.",
       "The Poison:\nMedia focus on physical appearance distracts from the severity of interstate narcotics distribution.",
       "The Breakdown & Plane Error:\nFocusing on the physical anomaly (WHAT) rather than the illicit trafficking mechanics (HOW).",
       "Social Physics Analysis:\nThe actors engage in a Smart Selfish maneuver, utilizing illicit supply chains for personal extraction while concealing operations behind routine travel pretexts.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Illicit distribution networks generate active contraction.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Illicit distribution networks generate active contraction.",
       "The Unavoidable Truth: Interstate trafficking networks exploit mobility to distribute illegal substances.\n\nThe Unavoidable Lie: Unusual physical appearances define the reality of criminal enterprises.",
       "Alethekanon:\nSensationalized imagery obscures the structural mechanics of illegal drug distribution.",
       "Awwthekanon:\nBehind every mugshot lies a tragic entanglement with addiction and destructive choices that demands healing rather than mere spectacle.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Narcotics Evidence",
@@ -151,6 +213,7 @@
         "name": "Fort Lauderdale Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

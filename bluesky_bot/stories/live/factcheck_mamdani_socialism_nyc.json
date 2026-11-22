@@ -6,15 +6,15 @@
     "link": "https://www.washingtonexaminer.com/op-eds/4694926/mamdani-socialism-private-property-threat-new-york-city/",
     "target_url": "",
     "claim_u": 0.8,
-    "claim_psi": 0.2,
-    "real_u": -0.3,
-    "real_psi": 0.4,
+    "claim_psi": 1.0,
+    "real_u": -0.12,
+    "real_psi": 0.82,
     "mode": "root",
     "posts": [
       "A warning from history or ideological alarmism? The battle over NYC's economic soul heats up.\n\nSocialism didn’t die with the...\nEvidence: Free market protection, Rent control & public stores, Socialist governance\n#Aletheia #NYC #USPol",
-      "The claim warns that Mayor Mamdani's democratic socialist policies, like rent freezes and city-owned grocery stores, represent an active, dangerous threat to private property rights and economic freedom.\nStated Judgement: (+0.80, +0.20) — Good Preference",
-      "In reality, Mayor Mamdani is openly implementing progressive policies to address affordability. While these challenge traditional market dynamics, framing them as a Soviet-style collapse is highly hyperbolic.\nResulting Judgement: (-0.30, +0.40) — Lesser Evil",
-      "Verdict: CONDITIONAL — Fall into Deception. The op-ed correctly identifies market-disrupting policies but uses extreme historical hyperbole to frame local reforms as an existential threat.\nIntegrity: Conditionally Sound (Hypocrisy: 1.80, z: 2)",
+      "The claim warns that Mayor Mamdani's democratic socialist policies, like rent freezes and city-owned grocery stores, represent an active, dangerous threat to private property rights and economic freedom.\nStated Judgement: (+0.80, +1.00) — Greater Good",
+      "In reality, Mayor Mamdani is openly implementing progressive policies to address affordability. While these challenge traditional market dynamics, framing them as a Soviet-style collapse is highly hyperbolic.\nResulting Judgement: (-0.12, +0.82) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nIntegrity: Conditionally Sound (Hypocrisy: 1.80, z: 2)",
       "- Zohran Mamdani: COND (-0.20, +0.30) — Openly socialist but faces fiscal questions.\n- Washington Examiner: COND (-0.30, +0.40) — Uses alarmist framing to critique local policy.",
       "NYC Mayor Zohran Mamdani has proposed rent freezes on nearly one million apartments and a $30 million city-owned grocery store in East Harlem, sparking intense debate over private property rights and municipal intervention.",
       "The Bright Side:\nPublicly owned grocery stores and rent freezes aim to directly protect low-income residents from food insecurity and displacement in an increasingly unaffordable urban housing market.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.15,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.3,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.35,
+        "O": 0.15,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Zohran Mamdani Policy Implementation",
@@ -283,6 +345,7 @@
         "name": "New York City",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

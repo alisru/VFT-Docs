@@ -5,22 +5,22 @@
     "subject": "Inside the dangerous US mission that cleared Iran’s mines from Hormuz shipping lanes",
     "link": "https://www.foxnews.com/politics/inside-dangerous-us-mission-cleared-irans-mines-hormuz-shipping-lanes",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.8,
-    "real_u": 0.5,
-    "real_psi": 0.4,
+    "claim_u": 0.82,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "CENTCOM details how Navy divers and air power successfully cleared Iranian sea mines from the Strait of Hormuz.\nEvidence: mine clearance, open lanes, severe threats\n#Aletheia #Defense #Navy",
-      "Official reports highlight the complete clearance of international shipping lanes in the Strait of Hormuz by U.S. forces.\nStated Judgement: (1.0, 0.8) — Good Preference",
-      "While established lanes are cleared, broader regional threat levels remain severe and commercial traffic is recovering cautiously.\nResulting Judgement: (0.5, 0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nCritical maritime chokepoints successfully secured, though underlying geopolitical volatility remains active.\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
+      "Official reports highlight the complete clearance of international shipping lanes in the Strait of Hormuz by U.S. forces.\nStated Judgement: (+0.82, +1.00) — Greater Good",
+      "While established lanes are cleared, broader regional threat levels remain severe and commercial traffic is recovering cautiously.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nCritical maritime chokepoints successfully secured, though underlying geopolitical volatility remains active.\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
       "Sub-Audits Breakdown:\n- CENTCOM Operations: PASS (0.8, 0.6) — Cleared primary lanes.\n- Regional Security: COND (0.2, 0.0) — Threat level remains severe.",
       "U.S. Central Command successfully concluded a dangerous monthslong operation utilizing Navy divers, SEALs, and air power to neutralize Iranian sea mines in the Strait of Hormuz.",
       "The Bright Side:\nPrimary international shipping lanes were successfully cleared of thousands of naval mines, restoring vital transit safety for commercial vessels.",
       "The Breakdown & Plane Error:\nConfusing tactical clearance of specific lanes with total regional pacification. The lanes are open, but threat assessments remain severe.",
       "Social Physics Analysis:\nBy applying overwhelming technical capability to neutralize active military hazards, U.S. forces restored baseline security to a vital global commons.",
-      "The Trajectory: The Path of Redemption.\nWhen you map tactical security gains against residual regional tensions, it plots a direct trajectory toward Lesser Good. Swift operational execution restored order.",
+      "The Trajectory: The Path of Grace.\nWhen you map tactical security gains against residual regional tensions, it plots a direct trajectory toward Lesser Good. Swift operational execution restored order.",
       "The Unavoidable Truth: U.S. forces successfully cleared sea mines from the Strait's lanes.\n\nThe Unavoidable Lie: All regional maritime security threats have been permanently eliminated.",
       "Alethekanon:\nClearing immediate physical hazards restores vital transit, but enduring security requires sustained vigilance.",
       "Awwthekanon:\nThank God for the brave divers and service members who risked their lives in dangerous waters so commerce and peace could move freely.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "CENTCOM Operations",
@@ -216,6 +278,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

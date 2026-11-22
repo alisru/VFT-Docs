@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.6,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": -0.7,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Immigration enforcement turns physical in Texas as a fleeing suspect is struck by an ICE vehicle, sparking a political blame game.\nEvidence: Official ICE operation, pedestrian struck, media blame-shifting\n#Immigration #Texas #Aletheia",
-      "Law enforcement courageously targets violent criminal fugitives, only to be obstructed by reckless sanctuary policies that endanger public safety.\nStated Judgement: (+0.6, 0.0) — Good Preference",
-      "An enforcement pursuit resulted in a man being struck by a federal vehicle and hospitalized, while outlets weaponized the injury to score political points.\nResulting Judgement: (-0.75, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. A chaotic enforcement accident is exploited as partisan ammunition, obscuring human injury behind political posturing.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, Uncertainty z: 3)",
+      "Law enforcement courageously targets violent criminal fugitives, only to be obstructed by reckless sanctuary policies that endanger public safety.\nStated Judgement: (+0.60, +0.00) — Lesser Good",
+      "An enforcement pursuit resulted in a man being struck by a federal vehicle and hospitalized, while outlets weaponized the injury to score political points.\nResulting Judgement: (-0.70, -0.65) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- ICE Operation: COND (-0.5, -0.4) — Legitimate operation ending in vehicle collision.\n- Breitbart Editorial: FAIL (-0.9, -0.9) — Weaponizes injury for sanctuary politics.",
       "ICE agents in Harris County, Texas, conducted a targeted operation on Saturday morning. During the ensuing foot chase, a fleeing individual was struck by an official vehicle and hospitalized.",
       "The Poison:\nReal human trauma and operational risks are reduced to a partisan football to attack sanctuary city policies, ignoring basic duty of care.",
       "The Breakdown & Plane Error:\nPlane Error (WHO vs WHAT / Emotive vs Physical): The report confuses a tactical enforcement accident with a sweeping ideological indictment of municipal policies.",
       "Social Physics Analysis:\nActors deploy a Smart Selfish Maneuver by seizing on a chaotic accident to manufacture outrage against political opponents. Instead of transparent accountability, they project blame outward.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated security and ground-level partisan exploitation, it plots a direct trajectory toward Lesser Evil. F_neg dominates via aggressive co-optation.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated security and ground-level partisan exploitation, it plots a direct trajectory toward Lesser Evil. F_neg dominates via aggressive co-optation.",
       "The Unavoidable Truth: A man was struck and injured by an enforcement vehicle during a chaotic high-speed operation.\n\nThe Unavoidable Lie: The collision is solely caused by distant sanctuary politicians.",
       "Alethekanon:\nInstitutions weaponize physical mishaps to validate pre-existing political vendettas, sacrificing factual integrity for tribal mobilization.",
       "Awwthekanon:\nEmpathetic reflection: A human being was struck by a vehicle and hospitalized, yet the public discourse cares only about scoring political hits. Where is our basic compassion for the injured?",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "ICE Operation",
@@ -163,6 +225,7 @@
       "Immigration",
       "Texas",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

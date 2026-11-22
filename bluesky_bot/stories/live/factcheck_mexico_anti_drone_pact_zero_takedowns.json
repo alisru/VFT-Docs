@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.73,
-    "real_psi": -0.76,
+    "real_u": -0.04,
+    "real_psi": -0.6,
     "mode": "root",
     "posts": [
       "Mexico's military admits to zero cartel drone takedowns under a joint U.S. pact, exposing a massive enforcement gap.\nEvidence: Joint border security, Zero physical results, Passive avoidance\n#Aletheia #BorderSecurity",
-      "The \"High Eagle\" binational pact represents an active, balanced security partnership where both nations aggressively intercept cartel surveillance drones.\nStated Judgement: (+1.00, +1.00) — Grace",
-      "Mexican forces have intercepted zero drones despite deploying 800 troops, leaving the U.S. to unilaterally neutralize over 300 drones using advanced laser systems.\nResulting Judgement: (-0.73, -0.76) — Destruction",
-      "Verdict: FAIL — Fall into Destruction. The binational pact serves as a diplomatic shield masking Mexico's operational paralysis and technological deficit.\nIntegrity: Severe Deception (Hypocrisy: 16.0, z: 4)",
+      "The \"High Eagle\" binational pact represents an active, balanced security partnership where both nations aggressively intercept cartel surveillance drones.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Mexican forces have intercepted zero drones despite deploying 800 troops, leaving the U.S. to unilaterally neutralize over 300 drones using advanced laser systems.\nResulting Judgement: (-0.04, -0.60) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 16.0, z: 4)",
       "- Mexican Armed Forces: FAIL (-0.73, -0.76) — Zero results despite troop deployment.\n- U.S. Border Interceptions: PASS (0.65, -0.45) — Active neutralization of 300+ drones.",
       "Mexico's Army Secretary confirmed zero drone interceptions under Operation High Eagle, claiming cartels only use commercial drones for surveillance, while the U.S. uses lasers to down hundreds.",
       "The Bright Side:\nMexico's candid admission of zero takedowns prevents the perpetuation of a false security narrative, forcing a realistic reassessment of bilateral capabilities.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Mexican Armed Forces",
@@ -158,6 +220,7 @@
         "name": "USNORTHCOM",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

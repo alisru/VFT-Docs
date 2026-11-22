@@ -5,22 +5,22 @@
     "subject": "Pentagon Adds OpenAI's ChatGPT and Elon Musk's Grok to Military AI Portal",
     "link": "https://www.breitbart.com/tech/2026/09/02/pentagon-adds-chatgpt-and-grok-to-military-ai-portal-as-openai-expands-into-patient-records/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
-    "real_psi": 0.4,
+    "claim_u": 0.79,
+    "claim_psi": 1.0,
+    "real_u": 0.76,
+    "real_psi": 0.71,
     "mode": "root",
     "posts": [
       "The Pentagon expands its GenAI.mil portal by integrating custom versions of ChatGPT and Grok for 3 million personnel.\nEvidence: secure deployment, warfighter productivity, vendor shift\n#Aletheia #Tech",
-      "The Department of Defense integrates secure commercial AI models to boost administrative and logistical efficiency.\nStated Judgement: (+1.0, 0.5) — Good Preference",
-      "Practical efficiency gains are real, though driven by defense contracting consolidation and political vendor blacklists.\nResulting Judgement: (+0.2, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nPragmatic technological adoption succeeds in scaling utility, despite defense procurement politics.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
+      "The Department of Defense integrates secure commercial AI models to boost administrative and logistical efficiency.\nStated Judgement: (+0.79, +1.00) — Greater Good",
+      "Practical efficiency gains are real, though driven by defense contracting consolidation and political vendor blacklists.\nResulting Judgement: (+0.76, +0.71) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPragmatic technological adoption succeeds in scaling utility, despite defense procurement politics.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 1)",
       "- Pentagon GenAI Portal: PASS (+0.4, +0.5) — Secures AI for 1.7M users.\n- Commercial AI Vendors: COND (+0.1, +0.2) — Balances utility with defense politics.",
       "The Pentagon added ChatGPT Mil and Grok for Government to GenAI.mil, serving millions of defense personnel while excluding Anthropic over guardrail disputes.",
       "The Bright Side:\nProviding accredited CUI Impact Level 5 tools lets personnel leverage cutting-edge tech securely without leaking classified data.",
       "The Breakdown & Plane Error:\nFocusing on tool utility (WHAT) while obscuring vendor geopolitical filtering (WHO).\n\nA functional triumph masking procurement politics.",
       "Social Physics Analysis:\nBy centralizing secure AI access, the Pentagon reduces friction for routine administrative tasks. Transparent tech deployment empowers personnel without chaotic shadow IT.",
-      "The Trajectory: The Path of Redemption.\nIt plots toward Lesser Good because functional utility outweighs procurement disputes, stabilizing institutional capability.\n\nPositive potential shifts futures upward.",
+      "The Trajectory: The Path of Small Fall from Grace.\nIt plots toward Lesser Good because functional utility outweighs procurement disputes, stabilizing institutional capability.\n\nPositive potential shifts futures upward.",
       "The Unavoidable Truth: Military agencies require secure, accredited AI infrastructure.\n\nThe Unavoidable Lie: Commercial AI procurement is purely meritocratic and devoid of politics.",
       "Alethekanon:\nPragmatic technological integration succeeds functionally while navigating geopolitical guardrails. Utility triumphs where procurement politics collide.",
       "Awwthekanon:\nGiving civil servants and military personnel reliable, secure tools lightens their daily burdens and helps them focus on serving others.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Pentagon GenAI Portal",
@@ -210,6 +272,7 @@
         "name": "xAI",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

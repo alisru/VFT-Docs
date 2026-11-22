@@ -5,22 +5,22 @@
     "subject": "Bond market meltdown shows MAGA needs a deficit-reducing response before election day",
     "link": "https://www.washingtonexaminer.com/premium/4691442/tiana-take-bond-market-meltdown-maga-needs-deficit-reduction-response-before-election-day/",
     "target_url": "",
-    "claim_u": 0.7,
-    "claim_psi": 0.6,
-    "real_u": 0.6,
-    "real_psi": 0.5,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Rising bond yields and a $40 trillion national debt demand immediate fiscal action from lawmakers.\n\nBond Market Meltdown & Fiscal Reality\nEvidence: surging treasury yields, cbo deficit projections, reconciliation necessity\n#Aletheia #Economy #USPolitics",
-      "Proposing targeted deficit reduction through budget reconciliation can reassure rattled bond markets without raising taxes.\nStated Judgement: (+0.7, +0.6) — Good Preference",
-      "While targeting Medicare waste and noncitizen spending offers a path forward, congressional friction makes quick legislative execution challenging.\nResulting Judgement: (+0.6, +0.5) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nTargeted fiscal reforms address real debt pressures, though political hurdles remain steep.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, Uncertainty z: 1)",
+      "Proposing targeted deficit reduction through budget reconciliation can reassure rattled bond markets without raising taxes.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While targeting Medicare waste and noncitizen spending offers a path forward, congressional friction makes quick legislative execution challenging.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nTargeted fiscal reforms address real debt pressures, though political hurdles remain steep.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Fiscal Diagnosis: PASS (0.8, 0.7) — Bond selloff signals real debt strain.\n- Reconciliation Strategy: COND (0.5, 0.4) — Politically narrow path.",
       "Global bond markets are reacting to ballooning U.S. deficits, prompting calls for the administration to pursue targeted spending cuts via budget reconciliation before the midterms.",
       "The Poison:\nNavigating complex entitlement and health care reforms through a narrow legislative reconciliation window is intensely difficult.",
       "The Breakdown & Plane Error:\nFocuses on WHAT (budget mechanisms) while navigating the WHO (partisan gridlock) through procedural shortcuts like reconciliation.",
       "Social Physics Analysis:\nAcknowledges systemic financial strain transparently rather than relying on deflection, proposing structural adjustments to restore equilibrium.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between fiscal reality and political feasibility, it plots a direct trajectory toward Redemption. Calculations balance structural strain with procedural mechanics.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between fiscal reality and political feasibility, it plots a direct trajectory toward Redemption. Calculations balance structural strain with procedural mechanics.",
       "The Unavoidable Truth: Exploding debt and rising bond yields require genuine fiscal correction.\n\nThe Unavoidable Lie: Comprehensive deficit reduction can easily bypass deep political conflict.",
       "Alethekanon:\nFiscal discipline is an urgent systemic imperative, but legislative execution requires overcoming fierce partisan barriers.",
       "Awwthekanon:\nIt is stressful when national economic numbers feel overwhelming, but thoughtful reforms offer hope for stability.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Fiscal Diagnosis & Reconciliation",
@@ -206,6 +268,7 @@
         "name": "Mike Johnson",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

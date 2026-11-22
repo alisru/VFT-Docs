@@ -5,22 +5,22 @@
     "subject": "A brief history of AI executives calling for regulation",
     "link": "https://www.theverge.com/policy/995534/a-brief-history-of-ai-executives-calling-for-regulation",
     "target_url": "https://bsky.app/profile/theverge.com/post/3mvn54fd4f32a",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": -0.45,
+    "claim_psi": -0.45,
+    "real_u": -0.45,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Tech executives keep sounding alarm bells about AI doom and calling for regulation, but history shows few meaningful guardrails have emerged. Evidence: CEO warnings, EO shifts, lobbying #AI #Policy",
-      "Tech leaders claim they want proactive federal regulation and legal guardrails to prevent existential harm from runaway artificial intelligence. Stated Judgement: (+0.5, 0.0) — Good Preference",
-      "Public warnings serve as a smart selfish maneuver to secure regulatory moats, locking out smaller competitors while incumbents retain unfettered deployment power. Resulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nCalls for regulation mask incumbent moat-building behind manufactured existential pretexts.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.5, z: 2)",
+      "Tech leaders claim they want proactive federal regulation and legal guardrails to prevent existential harm from runaway artificial intelligence. Stated Judgement: (-0.45, -0.45) — Greater Evil",
+      "Public warnings serve as a smart selfish maneuver to secure regulatory moats, locking out smaller competitors while incumbents retain unfettered deployment power. Resulting Judgement: (-0.45, -0.45) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nCalls for regulation mask incumbent moat-building behind manufactured existential pretexts.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.5, z: 2)",
       "Sub-Audits Breakdown:\n- Tech Executive Warnings: FAIL (-0.7, -0.6) — Regulatory capture and moat building.\n- Government Response: COND (-0.2, -0.3) — Partisan gridlock and policy vacuum.",
       "Despite decades of warnings from computer pioneers and modern tech CEOs about AI risks, federal policymaking remains paralyzed by partisanship and lobbying influence.",
       "The Poison:\nFraming commercial competition as an existential safety crisis shifts regulatory burdens onto open-source innovators while cementing monopolies.",
       "The Plane Error mistakes commercial risk control (WHAT) for moral stewardship (WHO). Incumbents use safety pretexts to erect barriers against nimble startups.",
       "Social Physics Analysis:\nActors run a Smart Selfish maneuver: deploying manufactured existential anxiety (pretext) to lobby for rules that protect incumbent market dominance (power hoarding).",
-      "The Trajectory: The Path of Deception.\nWhen you map stated safety altruism against actual market capture, it plots toward Lesser Evil. Power concentrates via regulatory capture.",
+      "The Trajectory: The Path of Destruction.\nWhen you map stated safety altruism against actual market capture, it plots toward Lesser Evil. Power concentrates via regulatory capture.",
       "The Unavoidable Truth: Incumbents love regulation that keeps new rivals out of the market.\n\nThe Unavoidable Lie: Tech executives are lobbying for safety out of pure altruism.",
       "Alethekanon:\nIncumbents invoke existential threats to secure regulatory protection, trading public safety for monopolistic moats.",
       "Awwthekanon:\nIt's heartbreaking when genuine fears about advanced technology are weaponized by powerful corporations just to crush smaller innovators.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tech Executive Warnings",
@@ -166,6 +228,7 @@
         "name": "Elon Musk",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

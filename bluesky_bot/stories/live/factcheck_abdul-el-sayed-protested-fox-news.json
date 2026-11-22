@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.82,
-    "real_psi": -0.85,
+    "real_u": -0.79,
+    "real_psi": -0.82,
     "mode": "root",
     "posts": [
       "Unearthed college activism becomes ammunition in a high-stakes Senate race as past protests face scrutiny.\nEvidence: 2007 MSA Protest, Opposition Research, Campaign Attacks\n#Aletheia #USPol",
-      "Campaign defenders characterize the 2007 student protest as standing against discredited speakers spreading misinformation.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Critics weaponize decades-old student union politics to paint candidates with broad brushstrokes, ignoring context for electoral advantage.\nResulting Judgement: (-0.82, -0.85) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nDistant collegiate disputes are recycled into modern partisan weapons, subverting nuanced evaluation.\n\nIntegrity: Severe Deception (Hypocrisy: 14.8, z: 2)",
+      "Campaign defenders characterize the 2007 student protest as standing against discredited speakers spreading misinformation.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Critics weaponize decades-old student union politics to paint candidates with broad brushstrokes, ignoring context for electoral advantage.\nResulting Judgement: (-0.79, -0.82) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nDistant collegiate disputes are recycled into modern partisan weapons, subverting nuanced evaluation.\n\nIntegrity: Severe Deception (Hypocrisy: 14.8, z: 2)",
       "Sub-Audits Breakdown:\n- Abdul El-Sayed Campaign: COND (-0.70, -0.75) — Downplays past student activism context.\n- Fox News Reporting: FAIL (-0.88, -0.90) — Frames historical college protest as active radicalism.",
       "Michigan Senate candidate Abdul El-Sayed faces scrutiny over a 2007 student protest he led while vice president of the Muslim Students Association at the University of Michigan.",
       "The Poison:\nBurying voters under decades-old collegiate controversies prevents meaningful debate on current economic and legislative challenges.",
       "The Breakdown & Plane Error:\nEvaluating historical student union affiliations (WHO) as definitive indicators of current legislative capability (HOW).",
       "Social Physics Analysis:\nPolitical opponents deploy Smart Selfish Maneuvers, unearthing ancient collegiate footnotes to manufacture outrage and distract from pressing economic realities.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Manufactured historical scandals block systemic progress.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Manufactured historical scandals block systemic progress.",
       "The Unavoidable Truth: Past collegiate activism is routinely weaponized for modern electoral leverage.\n\nThe Unavoidable Lie: Student union protests from twenty years ago dictate current governance capacity.",
       "Alethekanon:\nRecycling ancient campus disputes as modern political scandals substitutes manufactured outrage for genuine policy scrutiny.",
       "Awwthekanon:\nPeople grow, evolve, and learn over decades. Judging a candidate entirely by college-era protests strips away our shared capacity for grace and maturation.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Abdul El-Sayed Campaign",
@@ -162,6 +224,7 @@
         "name": "Mike Rogers",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

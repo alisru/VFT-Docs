@@ -5,22 +5,22 @@
     "subject": "Dallas Goes Dystopia, Outfits Garbage Trucks With ‘AI Cameras’ To Generate ‘Blight’ Citations",
     "link": "https://www.techdirt.com/2026/09/29/dallas-goes-dystopia-outfits-garbage-trucks-with-ai-cameras-to-generate-blight-citations/",
     "target_url": "https://bsky.app/profile/techdirt.com/post/3mwoturdohv5o",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "claim_u": 0.9,
+    "claim_psi": 0.75,
+    "real_u": -0.68,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Dallas deployed AI cameras on garbage trucks, generating thousands of blight citations primarily targeting poor neighborhoods.\nEvidence: City records, NBC 5 Investigation, 21000 properties rated\n#Aletheia #Tech #Governance",
-      "Proponents claimed automated blight detection modernizes code enforcement and cleans neighborhoods efficiently for everyone.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Algorithms disproportionately flagged low-income and minority ZIP codes, transforming routine trash pickup into an automated revenue trap.\nResulting Judgement: (-0.85, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nAutomated surveillance under the pretext of civic improvement targeted vulnerable populations for revenue extraction.\n\nIntegrity: Severe Deception (Hypocrisy: 3.2, z: 2)",
+      "Proponents claimed automated blight detection modernizes code enforcement and cleans neighborhoods efficiently for everyone.\nStated Judgement: (+0.90, +0.75) — Greater Good",
+      "Algorithms disproportionately flagged low-income and minority ZIP codes, transforming routine trash pickup into an automated revenue trap.\nResulting Judgement: (-0.68, -0.65) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAutomated surveillance under the pretext of civic improvement targeted vulnerable populations for revenue extraction.\n\nIntegrity: Severe Deception (Hypocrisy: 3.2, z: 2)",
       "Sub-Audits Breakdown:\n- Dallas City Council: FAIL (-0.85, -0.9) — Deployed automated penalties on the poor.\n- City Detect Tech: COND (-0.5, -0.4) — Defends software neutrality despite disparate impact.",
       "Dallas outfitted trash trucks with AI cameras to photograph and score 21,000 properties, disproportionately issuing warning notices in low-income southern ZIP codes.",
       "The Bright Side:\nPublic exposure by NBC 5 and swift budget pushback from Councilmember Chad West show democratic resistance is still viable.",
       "The Breakdown & Plane Error:\nConfusing WHAT (automated administrative efficiency) with WHO (punishing the poorest citizens for revenue).",
       "Social Physics Analysis:\nDallas leaders ran a Smart Selfish Maneuver: hiding revenue extraction and gentrification pressures behind a manufactured crisis of property blight, using automated cameras to shift blame onto vulnerable residents.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map stated civic enhancement against automated penalty concentration, it plots a direct trajectory toward Greater Evil. F_net calculations reveal systemic extraction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map stated civic enhancement against automated penalty concentration, it plots a direct trajectory toward Greater Evil. F_net calculations reveal systemic extraction.",
       "The Unavoidable Truth: Automated surveillance disproportionately penalizes economically vulnerable communities under neutral pretexts.\n\nThe Unavoidable Lie: Technology is entirely objective and immune to regressive socioeconomic biases.",
       "Alethekanon:\nAutomated algorithms do not eliminate human bias; they merely automate and launder it through computational authority. 🌐",
       "Awwthekanon:\nIt breaks my heart to see families already struggling to make ends meet facing cold, automated judgments from the very trucks that haul their trash away.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Dallas City Council Governance",
@@ -169,6 +231,7 @@
         "name": "Chad West",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

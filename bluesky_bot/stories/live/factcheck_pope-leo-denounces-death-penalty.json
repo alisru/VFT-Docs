@@ -5,22 +5,22 @@
     "subject": "Pope Leo denounces death penalty 'inadmissible' ahead of Pentagon's planned livestreamed execution",
     "link": "https://www.foxnews.com/world/pope-leo-denounces-death-penalty-inadmissible-ahead-pentagons-planned-livestreamed-execution",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
-    "real_psi": -0.3,
+    "claim_u": 0.4,
+    "claim_psi": 0.1,
+    "real_u": 0.25,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "Pope Leo XIV condemns capital punishment as 'inadmissible' as the Pentagon plans a historic livestreamed execution.\nEvidence: Vatican doctrine, Pentagon schedule, political debate\n#Aletheia #Ethics #ChurchAndState",
-      "Pope Leo XIV declared capital punishment inadmissible, aligning with Catholic doctrine on human dignity, while officials debate publicizing the execution.\nStated Judgement: (+0.6, +0.5) — Trustworthy",
-      "While the Vatican upholds moral opposition to the death penalty, the U.S. military proceeds with a high-profile execution, exposing deep societal fractures.\nResulting Judgement: (+0.2, -0.3) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nPope Leo's moral stance challenges state violence, though institutional machinery pushes forward with unprecedented public spectacles.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.5, z: 2)",
+      "Pope Leo XIV declared capital punishment inadmissible, aligning with Catholic doctrine on human dignity, while officials debate publicizing the execution.\nStated Judgement: (+0.40, +0.10) — Greater Good",
+      "While the Vatican upholds moral opposition to the death penalty, the U.S. military proceeds with a high-profile execution, exposing deep societal fractures.\nResulting Judgement: (+0.25, +0.05) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPope Leo's moral stance challenges state violence, though institutional machinery pushes forward with unprecedented public spectacles.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.5, z: 2)",
       "Sub-Audits Breakdown:\n- Vatican Moral Stance: PASS (+0.8, +0.7) — Consistent defense of human dignity.\n- Pentagon Execution Plan: COND (0.0, -0.5) — Unprecedented public spectacle risks norms.",
       "Pope Leo XIV condemned the death penalty as inadmissible on World Day Against the Death Penalty, coinciding with the Pentagon's controversial plan to livestream the execution of Fort Hood shooter Nidal Hasan.",
       "The Bright Side:\nGlobal moral leadership continues to advocate for human dignity and prisoner redemption despite state-level escalation of punishment.",
       "The Breakdown & Plane Error:\nConfusing the moral plane of human dignity (WHO/WHY) with the administrative plane of state penal policy (WHAT/HOW).",
       "Social Physics Analysis:\nThe Vatican operates via transparent moral alignment (+u), while state actors navigate a complex tension between retributive justice and public spectacle, testing institutional norms.",
-      "The Trajectory: The Path of Redemption.\nThe gap between absolute moral doctrines and practical state penal execution plots a trajectory toward ethical friction and systemic reassessment.\n\nDeterministic formula: Δ(p·t + n) > 0 via moral witness.",
+      "The Trajectory: The Path of Small Fall from Grace.\nThe gap between absolute moral doctrines and practical state penal execution plots a trajectory toward ethical friction and systemic reassessment.\n\nDeterministic formula: Δ(p·t + n) > 0 via moral witness.",
       "The Unavoidable Truth: State executions provoke deep moral questions about human dignity and the limits of retributive justice.\n\nThe Unavoidable Lie: Publicizing state killings serves as an unambiguous deterrent rather than a spectacle.",
       "Alethekanon:\nMoral doctrines challenge state practices, forcing society to confront the ethical limits of institutional violence.",
       "Awwthekanon:\nEvery human life carries inherent dignity, and witnessing the normalization of state violence leaves a heavy mark on our collective conscience.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Vatican Moral Stance",
@@ -168,6 +230,7 @@
       "Aletheia",
       "Ethics",
       "ChurchAndState"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

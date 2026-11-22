@@ -5,22 +5,22 @@
     "subject": "Australia sets a new renewable...",
     "link": "https://www.optimistdaily.com/2026/10/australia-sets-a-new-renewable-energy-record-with-rooftop-solar-leading-the-way/",
     "target_url": "",
-    "claim_u": 0.84,
-    "claim_psi": 0.92,
-    "real_u": 0.67,
-    "real_psi": 0.83,
+    "claim_u": 0.85,
+    "claim_psi": 0.9,
+    "real_u": 0.71,
+    "real_psi": 0.74,
     "mode": "root",
     "posts": [
       "Sunshine and suburban roofs rewrite the energy playbook.\nAustralia sets a new renewable generation record led by rooftop solar.\nEvidence: 80.4% grid peak, 4.3M home panels, Real annual baseline\n#Aletheia #Energy",
-      "Australia's main grid reached a historic 80.4% renewable share during a sunny spring weekend, with 4.3 million rooftop solar setups supplying over half the nation's midday power demand.\nStated Judgement: (+0.84, +0.92) — Greater Good",
-      "The midday milestone is real and demonstrates distributed scale, though grid constraints caused curtailment, and the annual renewable average sits at 44%, highlighting the major storage buildout still needed.\nResulting Judgement: (+0.67, +0.83) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Genuine decentralized generation carried the grid, backed by transparent reporting that acknowledges the long bridge to 2030 targets.\nIntegrity: Trustworthy (Hypocrisy: 1.18, z: 0)",
+      "Australia's main grid reached a historic 80.4% renewable share during a sunny spring weekend, with 4.3 million rooftop solar setups supplying over half the nation's midday power demand.\nStated Judgement: (+0.85, +0.90) — Greater Good",
+      "The midday milestone is real and demonstrates distributed scale, though grid constraints caused curtailment, and the annual renewable average sits at 44%, highlighting the major storage buildout still needed.\nResulting Judgement: (+0.71, +0.74) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.18, z: 0)",
       "- Optimist: PASS (+0.72, +0.78) — Pairs peak record with 44% baseline.\n- UNSW: PASS (+0.82, +0.80) — Contextualizes total coal emissions.\n- Ministry: COND (+0.58, +0.65) — Downplays grid storage limits.",
       "Rooftop solar on 4.3 million Australian buildings pushed renewable energy past 80% on the National Electricity Market during a mild, sunny midday window.",
       "The Poison:\nWithout rapid expansion of transmission lines, batteries, and pumped storage, clean power gets curtailed while coal plants continue running to supply nighttime demand.",
       "The Breakdown & Plane Error:\nThe risk is WHAT vs WHERE (Possible vs Physical). Celebrating an instantaneous lunchtime peak must not mask the physical infrastructure gap required to maintain high renewable penetration year-round.",
       "Social Physics Analysis:\nDistributed rooftop solar exemplifies a Smart Altruistic dynamic: millions of citizens build decentralized energy resilience, empowering households while reducing reliance on centralized fossil fuel cartels.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Steady distributed investment proves that clean energy transitions become self-reinforcing.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Steady distributed investment proves that clean energy transitions become self-reinforcing.",
       "The Unavoidable Truth: Millions of solar rooftops can overpower national midday energy demand.\nThe Unavoidable Lie: A half-hour sunny record solves overnight grid storage.",
       "Alethekanon:\nDecentralized physical infrastructure creates real momentum. The engineering challenge is no longer generating solar electrons, but synchronizing storage before curtailment becomes routine.",
       "Awwthekanon:\nSeeing millions of regular families putting solar panels on their roofs and quietly powering their country together is genuinely uplifting. That is community climate action at its best.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Optimist Daily Editorial",
@@ -181,6 +243,7 @@
     "tags": [
       "Aletheia",
       "Energy"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.8,
-    "real_psi": 0.5,
+    "real_u": 0.85,
+    "real_psi": 0.65,
     "mode": "root",
     "posts": [
       "Federal prosecutors indict two cartel commanders for multi-decade drug trafficking and firearms offenses.\nEvidence: DOJ indictment, CJNG ties, cartel violence\n#Aletheia #Justice #Cartels",
-      "The Department of Justice aims to dismantle transnational cartels and cut off drug trafficking into the United States.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Federal indictments target regional cartel commanders involved in drug trafficking, bringing formal U.S. charges for long-standing criminal enterprises.\nResulting Judgement: (+0.8, +0.5) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nThe U.S. prosecution successfully brings formal charges against transnational cartel leaders, advancing international accountability.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "The Department of Justice aims to dismantle transnational cartels and cut off drug trafficking into the United States.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Federal indictments target regional cartel commanders involved in drug trafficking, bringing formal U.S. charges for long-standing criminal enterprises.\nResulting Judgement: (+0.85, +0.65) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe U.S. prosecution successfully brings formal charges against transnational cartel leaders, advancing international accountability.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- DOJ Prosecution: PASS (0.9, 0.8) — Direct legal action against cartel commanders.\n- Inter-agency Task Force: PASS (0.8, 0.5) — Cross-border law enforcement cooperation.",
       "The U.S. Justice Department indicted two brothers serving as regional commanders for the Jalisco New Generation Cartel, charging them with drug trafficking and firearms crimes spanning two decades.",
       "The Bright Side:\nInternational cooperation between U.S. and Mexican authorities helps dismantle violent transnational criminal networks.",
       "The Breakdown & Plane Error:\nEvaluating WHO faces prosecution versus WHAT crimes were committed.\n\nIt correctly targets the perpetrators of violent drug trafficking operations.",
       "Social Physics Analysis:\nBy applying transparent legal frameworks against transnational cartels, law enforcement replaces violent extortion with structured judicial accountability, empowering public safety.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the alignment between stated law enforcement goals and actual indictments, it plots a direct trajectory toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between stated law enforcement goals and actual indictments, it plots a direct trajectory toward Grace.",
       "The Unavoidable Truth: Transnational cartels rely on systemic violence and drug trafficking to maintain illicit power.\n\nThe Unavoidable Lie: Local criminal cells operate entirely independent of international cartel leadership.",
       "Alethekanon:\nRigorous prosecution of cartel commanders directly confronts transnational crime networks with structural accountability.",
       "Awwthekanon:\nEvery violent crime leaves behind grieving families; holding perpetrators accountable is a vital step toward healing communities.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DOJ Prosecution",
@@ -155,6 +217,7 @@
         "name": "U.S. Department of Justice",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

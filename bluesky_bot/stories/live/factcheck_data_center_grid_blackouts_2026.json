@@ -5,22 +5,22 @@
     "subject": "Data Center Boom Could Supercharge Blackouts Nationwide By 2030, Pennsylvania Regulators Warn",
     "link": "https://dailycaller.com/2026/09/16/data-centers-blackouts-pennsylvania-public-utility-commission",
     "target_url": "",
-    "claim_u": 0.6,
+    "claim_u": 0.7,
     "claim_psi": 0.5,
-    "real_u": -0.75,
-    "real_psi": -0.68,
+    "real_u": 0.02,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "A looming power crisis threatens the American grid. Data Center Boom Could Supercharge Blackouts Nationwide By 2030, Pennsylvania Regulators Warn.\nEvidence: Stated progress, actual grid strain, private profit extraction.\n#Aletheia #Energy #Tech 🌐",
-      "Tech advocates claim the AI boom drives economic growth and innovation, with grid operators fully capable of adapting to the increased demand.\nStated Judgement: (+0.60, +0.50) — Lesser Good",
-      "Regulators warn that data centers are consuming power faster than new generation can be built, risking up to 13 blackouts a year by 2030 to fuel private computation.\nResulting Judgement: (-0.75, -0.68) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Private AI expansion externalizes massive reliability risks and costs onto the public grid, threatening basic utility stability for families.\nIntegrity: Trustworthy (Hypocrisy: 1.35, z: 1)",
+      "Tech advocates claim the AI boom drives economic growth and innovation, with grid operators fully capable of adapting to the increased demand.\nStated Judgement: (+0.70, +0.50) — Greater Good",
+      "Regulators warn that data centers are consuming power faster than new generation can be built, risking up to 13 blackouts a year by 2030 to fuel private computation.\nResulting Judgement: (+0.02, -0.05) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.35, z: 1)",
       "- Daily Caller: PASS (0.85, 0.60) — Accurate grid warning.\n- Tech Industry: FAIL (-0.80, -0.70) — Externalizes risks.",
       "The Pennsylvania Public Utility Commission released an independent study warning that rapid data center growth could cause severe regional grid failures and blackouts by 2030.",
       "The Poison:\nThe rapid expansion of AI data centers consumes public energy reserves, forcing ordinary ratepayers to subsidize the grid upgrades needed to prevent blackouts.",
       "The Breakdown & Plane Error:\nThe error is logical (HOW). Tech firms treat public grid capacity as an infinite resource, ignoring the physical limits of power generation and the time required to build new plants.",
       "Social Physics Analysis:\nTech giants execute a Smart Selfish Maneuver. They hoard energy for private AI profits (Secret Goal) under the pretext of technological progress, while projecting the blame for potential blackouts onto grid operators and environmental regulations.",
-      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated innovation and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked private demand collapses public utility stability.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated innovation and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked private demand collapses public utility stability.",
       "The Unavoidable Truth: Private AI profits are being prioritized over the basic reliability of the public electrical grid.\nThe Unavoidable Lie: Tech companies can expand their energy consumption infinitely without harming ordinary consumers.",
       "Alethekanon:\nThe physical reality of power generation cannot be bypassed by digital optimization. Externalizing infrastructure costs onto the public to subsidize private computation is a systemic failure of governance.",
       "Awwthekanon:\nIt is deeply unfair that families might face cold winters or hot summers in the dark, just so massive corporations can run faster algorithms. We must protect the vulnerable.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Daily Caller Reporting",
@@ -157,6 +219,7 @@
         "name": "Synapse Energy Economics",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

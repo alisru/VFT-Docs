@@ -5,22 +5,22 @@
     "subject": "Newsom Signs the 'Stop Nick Shirley Act' into Law, a Blow to Investigative Reporting Say Critics",
     "link": "https://www.breitbart.com/immigration/2026/08/23/33541507newsom-signs-the-stop-nick-shirley-act-into-law-a-blow-to-investigative-reporting-say-critics/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.5,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.83,
+    "claim_psi": 1.0,
+    "real_u": -0.97,
+    "real_psi": -0.95,
     "mode": "root",
     "posts": [
       "California signs a controversial bill shielding immigrant non-profits, drawing fierce debate over press freedom and investigative journalism.\n\nNewsom Signs the 'Stop Nick Shirley Act'\nEvidence: worker safety, suppressing reporting, shield for fraud\n#Aletheia #Newsom 🌐",
-      "Gov. Newsom signed AB 2624 to protect vulnerable immigrant service non-profit workers from targeted doxxing and harassment by political extremists.\nStated Judgement: (0.5, 0.5) — Greater Good",
-      "The law shields state-funded non-profits from investigative scrutiny into alleged fraud while criminalizing independent journalism under severe penalties.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nShielding administrative operations from independent oversight under the guise of safety suppresses transparency.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.2, Uncertainty z: 6)",
+      "Gov. Newsom signed AB 2624 to protect vulnerable immigrant service non-profit workers from targeted doxxing and harassment by political extremists.\nStated Judgement: (+0.83, +1.00) — Greater Good",
+      "The law shields state-funded non-profits from investigative scrutiny into alleged fraud while criminalizing independent journalism under severe penalties.\nResulting Judgement: (-0.97, -0.95) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nShielding administrative operations from independent oversight under the guise of safety suppresses transparency.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.2, Uncertainty z: 6)",
       "Sub-Audits Breakdown:\n- AB 2624 Legislation: COND (0.5, 0.5) — Framed as safety.\n- Press Freedom: FAIL (-0.9, -0.9) — Criminalizes inquiry.",
       "California enacted AB 2624, expanding safe-address protections to immigrant service workers just as independent journalists began exposing alleged financial fraud.",
       "The Poison:\nWeaponizing legitimate safety concerns to criminalize independent journalism and shield public-funded entities from embarrassing oversight.",
       "The Breakdown & Plane Error:\nExplanation of the plane error: mistakes WHO for WHAT, framing accountability reporting as harassment to protect institutional budgets.",
       "Social Physics Analysis:\nBy erecting legal walls against transparency, authorities substitute coercive power for public trust, accelerating institutional decay.",
-      "The Trajectory: The Path of Deception.\nThe gap between stated worker protection and actual suppression of oversight plots a direct trajectory toward Greater Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nThe gap between stated worker protection and actual suppression of oversight plots a direct trajectory toward Greater Evil.",
       "The Unavoidable Truth: Workers face genuine hostility in polarized climates.\n\nThe Unavoidable Lie: The law targets doxxing rather than investigative journalism.",
       "Alethekanon:\nLegislative shielding of public-funded entities from independent inquiry turns anti-harassment statutes into tools of political insulation.",
       "Awwthekanon:\nWhen transparency is legally muffled and fear rules public discourse, both truth and community trust wither away in the shadows of self-protection.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "AB 2624 Legislation",
@@ -285,6 +347,7 @@
         "name": "Terry Schanz",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

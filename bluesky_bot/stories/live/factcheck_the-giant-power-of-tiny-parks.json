@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/motherjones.com/post/3mxgwdjz6vd23",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "real_u": 0.2,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "Urban mini-parks offer massive health and ecological benefits, but political funding cuts leave vulnerable neighborhoods high and dry. 🌐\nEvidence: Mini-park benefits, IRA grant freezes, community disparities\n#Environment #UrbanEcology",
-      "Proponents argue that urban greening and 10-minute walk standards improve public health, while critics label community-targeted green grants as wasteful political spending.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While tiny parks drive proven ecological and health gains, political blockades of federal grants starve low-income communities of funds while wealthy enclaves easily self-fund.\nResulting Judgement: (-0.4, -0.6) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nPolitical obstruction of grassroots environmental grants creates severe inequality between affluent and marginalized zip codes.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Proponents argue that urban greening and 10-minute walk standards improve public health, while critics label community-targeted green grants as wasteful political spending.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While tiny parks drive proven ecological and health gains, political blockades of federal grants starve low-income communities of funds while wealthy enclaves easily self-fund.\nResulting Judgement: (+0.20, +0.05) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nPolitical obstruction of grassroots environmental grants creates severe inequality between affluent and marginalized zip codes.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Mother Jones: PASS (0.8, 0.7) — Accurate reporting on grassroots greening.\n- Federal Grants: COND (-0.4, -0.6) — Blocked funds create severe equity gaps.",
       "Urban planning traditionally favored massive national parks, but recent data shows that scattered micro-parks deliver cumulative health and biodiversity wins for both humans and wildlife.",
       "The Poison:\nWeaponizing political friction against urban greening grants starves vulnerable neighborhoods of essential resilience while preserving disparities under partisan pretexts.",
       "This is a Plane Error (confusing WHAT community needs with WHO controls the purse strings) paired with a bait-and-switch where climate justice funds are politicized and frozen.",
       "Social Physics Analysis:\nFederal authorities run a smart selfish maneuver by freezing community grants under partisan pretexts, projecting blame while leaving impoverished areas to shoulder ecological neglect.",
-      "The Trajectory: The Path of Deception.\nWhen political actors freeze grassroots grants under ideological pretexts, it plots a trajectory toward Lesser Evil. F_pos=0.8, F_neg=1.2.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen political actors freeze grassroots grants under ideological pretexts, it plots a trajectory toward Lesser Evil. F_pos=0.8, F_neg=1.2.",
       "The Unavoidable Truth: Tiny green spaces provide disproportionate ecological and health benefits to urban populations.\n\nThe Unavoidable Lie: Freezing community grants is fiscal prudence rather than partisan obstruction.",
       "Alethekanon:\nPartisan obstruction of urban greening grants sacrifices public health and ecological resilience on the altar of manufactured political grievance.",
       "Awwthekanon:\nEvery neighborhood deserves a breath of fresh green life, not neglected asphalt traps where children and wildlife struggle to find a quiet place to rest and thrive.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Mother Jones Reporting",
@@ -167,6 +229,7 @@
     "tags": [
       "Environment",
       "UrbanEcology"
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

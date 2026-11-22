@@ -5,22 +5,22 @@
     "subject": "Maryland DoorDash customer picks up order from driver at crash scene",
     "link": "https://nypost.com/2026/09/23/us-news/maryland-doordash-customer-picks-up-order-from-driver-at-crash-scene-i-think-thats-my-food/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.3,
+    "claim_u": 0.65,
+    "claim_psi": 0.4,
+    "real_u": -0.4,
     "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "A DoorDash customer walked across a crash scene to grab his food while his driver's car smoked nearby.\nEvidence: viral video, totaled car, GoFundMe\n#Aletheia #GigEconomy",
-      "Social media framed the incident as a quirky, lighthearted viral moment of transactional determination overcoming minor obstacles.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "Beneath the viral absurdity lies gig-economy precarity, where drivers lack safety nets and customers prioritize immediate food delivery over human crisis.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Awakening.\nA bizarre viral moment exposes the grim reality of gig-economy precarity and desensitized consumerism.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 2)",
+      "Social media framed the incident as a quirky, lighthearted viral moment of transactional determination overcoming minor obstacles.\nStated Judgement: (+0.65, +0.40) — Greater Good",
+      "Beneath the viral absurdity lies gig-economy precarity, where drivers lack safety nets and customers prioritize immediate food delivery over human crisis.\nResulting Judgement: (-0.40, -0.40) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA bizarre viral moment exposes the grim reality of gig-economy precarity and desensitized consumerism.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 2)",
       "Sub-Audits Breakdown:\n- Viral Media Framing: COND (0.5, 0.3) — Sanitizes systemic precarity as quirk.\n- Driver Experience: FAIL (-0.6, -0.5) — Bearer of uninsured crash risk.",
       "When William Koroma crashed due to brake failure, customer Glenn Ndibnu filmed himself retrieving his meal, sparking viral debate over gig-economy detachment.",
       "The Bright Side:\nThe viral attention inadvertently propelled Koroma's GoFundMe past $14,000, offering unexpected financial relief after losing his job.",
       "The Breakdown & Plane Error:\nConfusing WHAT (getting takeout) with WHO (a human being in crisis). The framing turns structural labor exploitation into internet comedy.",
       "Social Physics Analysis:\nConsumers operate under a smart selfish loop, treating platform workers as disposable vending machines while viral algorithms reward detached voyeurism.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic alienation drives transactional coldness.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic alienation drives transactional coldness.",
       "The Unavoidable Truth: Viral convenience culture desensitizes us to human suffering.\n\nThe Unavoidable Lie: This was just a harmless, funny internet coincidence.",
       "Alethekanon:\nWhen algorithms turn car crashes into dinner delivery updates, the human soul has already been outsourced to the lowest bidder.",
       "Awwthekanon:\nPoor William lost his car and livelihood in a terrifying wreck, only to watch his customer film the aftermath for clout. Let's send him love and healing.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Viral Media Framing",
@@ -156,6 +218,7 @@
         "name": "DoorDash",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

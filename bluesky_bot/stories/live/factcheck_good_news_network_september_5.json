@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Reflecting on 252 years of history, today's archive highlights the First Continental Congress.\nEvidence: 1774 Philadelphia, historical milestones, cultural milestones\n#Aletheia #History",
-      "The archive presents historical milestones and positive cultural anniversaries to inspire readers.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "The retrospective successfully provides accurate historical documentation and uplifting cultural context.\nResulting Judgement: (1.0, 0.0) — Good Preference",
-      "Verdict: PASS — The Path of Grace.\nAccurate historical documentation and cultural retrospectives foster shared human understanding.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "The archive presents historical milestones and positive cultural anniversaries to inspire readers.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The retrospective successfully provides accurate historical documentation and uplifting cultural context.\nResulting Judgement: (+1.00, +0.00) — Lesser Good",
+      "Verdict: PASS — Compromise.\nAccurate historical documentation and cultural retrospectives foster shared human understanding.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Historical Archive: PASS (1.0, 0.0) — Accurate record of 1774 Congress.\n- Cultural Retrospective: PASS (1.0, 0.0) — Faithful tribute to milestones.",
       "The Good News Network highlights historical milestones, including the 1774 convening in Philadelphia and cultural anniversaries.",
       "The Bright Side:\nFostering historical appreciation and shared cultural heritage without partisan distortion.",
       "The Breakdown & Plane Error:\nEvaluating a historical retrospective plane (WHEN/WHAT) rather than contemporary political polemics.",
       "Social Physics Analysis:\nBy preserving historical facts and cultural touchstones transparently, the platform empowers readers to connect with collective heritage without manipulation.",
-      "The Trajectory: The Path of Grace.\nWhen historical documentation is maintained accurately, it reinforces stable societal memory and collective continuity.\n\nThe Unavoidable Truth: History provides foundational lessons for navigating present challenges.\n\nThe Unavoidable Lie: The past can be completely sanitized to avoid all uncomfortable truths.",
+      "The Trajectory: The Path of Compromise.\nWhen historical documentation is maintained accurately, it reinforces stable societal memory and collective continuity.\n\nThe Unavoidable Truth: History provides foundational lessons for navigating present challenges.\n\nThe Unavoidable Lie: The past can be completely sanitized to avoid all uncomfortable truths.",
       "The Unavoidable Truth: History provides foundational lessons for navigating present challenges.\n\nThe Unavoidable Lie: The past can be completely sanitized to avoid all uncomfortable truths.",
       "Alethekanon:\nAccurate historical reflection strengthens the structural integrity of civic memory.",
       "Awwthekanon:\nCelebrating our shared cultural milestones brings light and community connection to our daily lives.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Historical Archive",
@@ -156,6 +218,7 @@
         "name": "Freddie Mercury",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

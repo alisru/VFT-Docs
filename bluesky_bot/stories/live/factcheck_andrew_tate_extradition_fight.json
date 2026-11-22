@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "The limits of political transactionalism are tested when serious criminal charges meet the reality of federal extradition.\n\nAndrew Tate's extradition fight\nEvidence: political ties, human trafficking charges, federal arrest\n#Aletheia #Tech #USPol",
-      "Andrew Tate claimed his political alignment with the MAGA movement would guarantee his freedom, framing his legal troubles as political persecution of traditional masculinity.\nStated Judgement: (+1.00, +1.00) — Good Preference",
+      "Andrew Tate claimed his political alignment with the MAGA movement would guarantee his freedom, framing his legal troubles as political persecution of traditional masculinity.\nStated Judgement: (+1.00, +1.00) — Greater Good",
       "Despite years of cultivating right-wing political ties, Tate and his brother are held in a Florida prison facing extradition to the UK on serious rape and human trafficking charges.\nResulting Judgement: (-0.85, -0.87) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nTate's attempt to use political influence to evade serious criminal prosecution has collapsed under federal law.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 4)",
+      "Verdict: FAIL — Fall into Destruction.\nTate's attempt to use political influence to evade serious criminal prosecution has collapsed under federal law.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 4)",
       "Sub-Audits Breakdown:\n- Andrew Tate: FAIL (-0.92, -0.88) — Attempted to leverage political ties to escape severe criminal charges.\n- MAGA Media Alignment: FAIL (-0.6, -0.5) — Fractured support as serious charges made defense untenable.",
       "Controversial influencer Andrew Tate and his brother Tristan are currently jailed in Florida, fighting extradition to the United Kingdom where they face over 50 charges, including rape and human trafficking.",
       "The Bright Side:\nFederal law enforcement and the judicial system are demonstrating that political connections do not grant immunity from severe criminal charges.",
       "The Breakdown & Plane Error:\nThis is a WHO vs WHAT error. Tate framed his situation around WHO he knows (political allies), but the legal system is operating on WHAT he is accused of doing.",
       "Social Physics Analysis:\nTate utilized a classic projection loop, claiming his platform ban and legal indictments were a coordinated attack on masculinity to distract from the severe exploitation and trafficking charges he faces.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The math shows a complete collapse of political shielding.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The math shows a complete collapse of political shielding.",
       "The Unavoidable Truth: Tate is facing highly serious criminal charges that political ties cannot erase.\n\nThe Unavoidable Lie: Tate's legal troubles are merely a political conspiracy against free speech.",
       "Alethekanon:\nThe transactional nature of political influence has clear boundaries. When the gravity of criminal charges exceeds political utility, the shield dissolves instantly.",
       "Awwthekanon:\nMy heart goes out to the victims of exploitation. True justice must prioritize the healing of those harmed over the influence of the powerful.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.15,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.4,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.4,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Andrew Tate",
@@ -278,6 +340,7 @@
         "name": "Romania",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

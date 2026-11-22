@@ -5,22 +5,22 @@
     "subject": "Macklemore Controversy: Ed Sheeran Apologizes, Speaks on Gaza",
     "link": "https://balleralert.com/macklemore-controversy-ed-sheeran-gaza-philadelphia/?utm_source=dlvr.it&utm_medium=bluesky",
     "target_url": "https://bsky.app/profile/balleralert.com/post/3mvwa2i2juq22",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.2,
-    "real_psi": -0.3,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": -0.3,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "Ed Sheeran addresses the Gaza controversy and tour fallout in Philadelphia.\nEvidence: Tour cancellations, public apologies, Gaza statements\n#Aletheia #Music #Gaza",
-      "Stated that music should unite and artists should navigate political pressures transparently without censorship.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Economic leverage and promoter pressure forced blacklists, exposing underlying industry censorship and polarization.\nResulting Judgement: (-0.2, -0.3) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nCommercial pressure forced a reactive stance, but public reckoning initiated genuine dialogue.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Stated that music should unite and artists should navigate political pressures transparently without censorship.\nStated Judgement: (+0.65, +0.25) — Greater Good",
+      "Economic leverage and promoter pressure forced blacklists, exposing underlying industry censorship and polarization.\nResulting Judgement: (-0.30, -0.40) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nCommercial pressure forced a reactive stance, but public reckoning initiated genuine dialogue.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Ed Sheeran: COND (0.2, -0.1) — Caught between economic leverage and personal conviction.\n- Robert Kraft: FAIL (-0.8, -0.7) — Imposed stadium bans to suppress political speech.",
       "Ed Sheeran addressed the Gaza controversy during his Philadelphia concert, apologizing for difficult tour decisions after Macklemore's removal.",
       "The Bright Side:\nArtists are refusing silence despite severe economic retaliation and venue blacklists.",
       "The Breakdown & Plane Error:\nConfusing commercial venue management (WHO/WHERE) with artistic expression rights (WHAT/WHY).",
       "Social Physics Analysis:\nVenues and owners executed a Smart Selfish maneuver by suppressing controversial speech under security pretexts, while artists pushed back toward transparent solidarity.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between commercial constraints and moral expression, it plots a trajectory toward conditional resolution. u=-0.2, psi=-0.3.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between commercial constraints and moral expression, it plots a trajectory toward conditional resolution. u=-0.2, psi=-0.3.",
       "The Unavoidable Truth: Economic leverage is frequently deployed to police political speech in major venues.\n\nThe Unavoidable Lie: Major stadium tours are entirely apolitical spaces unaffected by global conflicts.",
       "Alethekanon:\nEconomic coercion in cultural spaces exposes the fragile boundary between corporate curation and free expression. 🌐",
       "Awwthekanon:\nIt takes immense courage to stand before thousands and speak of human suffering when massive financial penalties loom. Compassion must transcend comfort.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Ed Sheeran Position",
@@ -157,6 +219,7 @@
         "name": "Robert Kraft",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://www.foxnews.com/entertainment/ben-affleck-clears-gone-girl-shower-scene-rumor-years-speculation",
     "target_url": "",
     "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "claim_psi": 0.05,
+    "real_u": 0.45,
+    "real_psi": 0.15,
     "mode": "root",
     "posts": [
       "Ben Affleck settles a decade-old Hollywood rumor by confirming he wore no prosthetic in his Gone Girl shower scene.\nEvidence: Variety interview, film archives\n#Aletheia #Culture",
-      "Ben Affleck clarifies movie trivia regarding his full-frontal scene in David Fincher's 2014 thriller.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "The actor candidly confirmed the lack of prosthetics while promoting his career and discussing director trust.\nResulting Judgement: (+0.4, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nHarmless cinematic trivia clarification provides lighthearted closure to long-running public speculation.\n\nIntegrity: Trustworthy (Hypocrisy: 0.2, z: 0)",
+      "Ben Affleck clarifies movie trivia regarding his full-frontal scene in David Fincher's 2014 thriller.\nStated Judgement: (+0.50, +0.05) — Greater Good",
+      "The actor candidly confirmed the lack of prosthetics while promoting his career and discussing director trust.\nResulting Judgement: (+0.45, +0.15) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nHarmless cinematic trivia clarification provides lighthearted closure to long-running public speculation.\n\nIntegrity: Trustworthy (Hypocrisy: 0.2, z: 0)",
       "Sub-Audits Breakdown:\n- Ben Affleck: PASS (+0.6, +0.3) — Honest, self-deprecating humor.\n- Fox News Entertainment: COND (+0.3, 0.0) — Sensationalized clickbait packaging.",
       "Actor Ben Affleck put years of internet speculation to rest by confirming that his full-frontal shower scene in the 2014 psychological thriller Gone Girl used no prosthetic enhancements.",
       "The Bright Side:\nSelf-deprecating humor humanizes Hollywood actors and demystifies absurd internet body rumors.",
       "The Breakdown & Plane Error:\nTreating celebrity physical trivia as hard news conflates entertainment gossip (WHAT) with substantive cultural analysis (WHY).",
       "Social Physics Analysis:\nThe actor uses transparent, humorous self-disclosure rather than defensive projection, keeping interactions light and avoiding manufactured conflict loops.",
-      "The Trajectory: The Path of Redemption.\nTransparent engagement with pop culture trivia replaces speculation with lighthearted clarity, maintaining social stasis.\n\nDelta: (+0.45)",
+      "The Trajectory: The Path of Small Fall from Grace.\nTransparent engagement with pop culture trivia replaces speculation with lighthearted clarity, maintaining social stasis.\n\nDelta: (+0.45)",
       "The Unavoidable Truth: Actors often rely on director trust and specific camera angles for sensitive cinematic scenes.\n\nThe Unavoidable Lie: Hollywood red-carpet gossip represents vital public interest journalism.",
       "Alethekanon:\nCelebrity trivia satisfies idle curiosity without shifting institutional power dynamics or altering material reality.",
       "Awwthekanon:\nHonestly, good for him for laughing it off! Living under a microscope is brutal, and a little self-deprecation keeps everyone grounded.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Ben Affleck Transparency",
@@ -157,6 +219,7 @@
     "tags": [
       "Aletheia",
       "Culture"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

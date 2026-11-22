@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.2,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": -0.7,
+    "real_psi": -0.8,
     "mode": "root",
     "posts": [
       "Speaker Mike Johnson stumps for Rep. Mariannette Miller-Meeks in Iowa.\nEvidence: campaign speech, leadership endorsement, tight race\n#Aletheia #USPol",
-      "House Speaker Mike Johnson praises Rep. Mariannette Miller-Meeks as a key conference peacemaker who can calm contentious rooms.\nStated Judgement: (+0.8, +0.2) — Good Preference",
-      "Behind the campaign praise lies partisan positioning for a tight Iowa congressional race, papering over deep internal party fractures.\nResulting Judgement: (-0.75, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA campaign stump speech frames political survival as legislative peacemaking.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "House Speaker Mike Johnson praises Rep. Mariannette Miller-Meeks as a key conference peacemaker who can calm contentious rooms.\nStated Judgement: (+0.80, +0.20) — Greater Good",
+      "Behind the campaign praise lies partisan positioning for a tight Iowa congressional race, papering over deep internal party fractures.\nResulting Judgement: (-0.70, -0.80) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA campaign stump speech frames political survival as legislative peacemaking.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "- Campaign Stumping: COND (0.5, 0.0) — Standard political messaging.\n- Conference Peacemaking: FAIL (-0.8, -0.8) — Hides GOP divisions.",
       "House Speaker Mike Johnson traveled to Davenport, Iowa, to campaign for vulnerable Republican Representative Mariannette Miller-Meeks ahead of her tight reelection battle.",
       "The Poison:\nPackaging partisan survival tactics as neutral legislative mediation obscures the reality of fierce intra-party ideological battles.",
       "The Breakdown & Plane Error:\nThe analysis confuses political expediency (WHO wins votes) with institutional mediation (WHAT actually resolves gridlock).",
       "Social Physics Analysis:\nSpeaker Johnson executes a Smart Selfish Maneuver by deploying leadership branding as a pretext to protect a vulnerable seat, projecting an image of party harmony while papering over deep legislative dysfunction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated campaign praise and ground-level legislative reality, it plots a direct trajectory toward Lesser Evil. u = -0.75, psi = -0.85.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated campaign praise and ground-level legislative reality, it plots a direct trajectory toward Lesser Evil. u = -0.75, psi = -0.85.",
       "The Unavoidable Truth: Political campaigns routinely rebrand legislative alignment as bipartisan peacemaking.\n\nThe Unavoidable Lie: Bumper-sticker praise solves systemic caucus dysfunction.",
       "Alethekanon:\nCampaign rhetoric often substitutes flattering character sketches for genuine institutional accountability.",
       "Awwthekanon:\nIt's tough when elections force leaders to spin every alliance as a masterclass in harmony instead of addressing real policy divides.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Campaign Stumping",
@@ -158,6 +220,7 @@
     "tags": [
       "Aletheia",
       "USPol"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

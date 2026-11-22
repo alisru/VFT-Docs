@@ -5,22 +5,22 @@
     "subject": "The Social Security trust fund is running out. Why is it not a top campaign issue?",
     "link": "https://www.npr.org/2026/09/13/nx-s1-5898447-e1/the-social-security-trust-fund-is-running-out-why-is-it-not-a-top-campaign-issue",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "NPR highlights why Social Security's looming 2032 insolvency is missing from campaigns.\nEvidence: Trustees report, expert concerns, political silence\n#Aletheia #Economy",
-      "Elected leaders and campaigns should actively address the looming Social Security shortfall to prepare the public.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Political actors actively avoid discussing trust fund depletion to dodge painful voter backlash, leaving the public unprepared for benefit cuts.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Awakening.\nMedia outlets highlight structural fiscal cliffs, but politicians maintain strategic silence until crisis forces action.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Elected leaders and campaigns should actively address the looming Social Security shortfall to prepare the public.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Political actors actively avoid discussing trust fund depletion to dodge painful voter backlash, leaving the public unprepared for benefit cuts.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nMedia outlets highlight structural fiscal cliffs, but politicians maintain strategic silence until crisis forces action.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- NPR Reporting: PASS (0.8, 0.7) — Exposes a vital policy blind spot.\n- Political Campaigns: FAIL (-0.8, -0.9) — Avoids insolvency reality.",
       "Experts warn that public understanding of Social Security's 2032 depletion date remains dangerously low due to political avoidance.",
       "The Bright Side:\nBringing national attention to the looming insolvency forces the issue back into the public consciousness.",
       "The Breakdown & Plane Error:\nConfusing WHAT structural math requires with WHO pays the political price.",
       "Social Physics Analysis:\nPolitical actors operate on a smart selfish loop, kicking the can down the road to avoid short-term electoral costs while manufacturing a worse future crisis.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Awakening. Realizing structural deficits forces eventual reform.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Awakening. Realizing structural deficits forces eventual reform.",
       "The Unavoidable Truth: Social Security faces insolvency by 2032 without legislative intervention.\n\nThe Unavoidable Lie: Ignoring the shortfall will make it magically resolve itself.",
       "Alethekanon:\nElectoral silence on looming fiscal insolvency proves that short-term survival trumps long-term stewardship.",
       "Awwthekanon:\nIt is terrifying for retirees to wonder if their lifelong contributions will be honored when they need them most.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NPR Reporting",
@@ -212,6 +274,7 @@
         "name": "US Congress",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

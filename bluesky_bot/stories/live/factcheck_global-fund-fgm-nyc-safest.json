@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.8,
-    "real_psi": 0.8,
+    "real_u": 0.85,
+    "real_psi": 0.85,
     "mode": "root",
     "posts": [
       "Global fund launched against FGM, NYC hits record summer safety lows, and Bhutan eliminates rabies.\nEvidence: FGM fund, NYPD stats, WHO validation\n#Aletheia #PublicHealth 🌐",
-      "Reports highlight international coalitions tackling FGM, historic lows in NYC violent crime, and Bhutan's WHO-validated rabies elimination.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Public health data confirms historic summer lows in NYC shootings and Bhutan's zero-rabies milestone, though FGM eradication remains fragile.\nResulting Judgement: (+0.8, +0.8) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Verifiable public health milestones and coordinated global funding demonstrate structural efficacy.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
+      "Reports highlight international coalitions tackling FGM, historic lows in NYC violent crime, and Bhutan's WHO-validated rabies elimination.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Public health data confirms historic summer lows in NYC shootings and Bhutan's zero-rabies milestone, though FGM eradication remains fragile.\nResulting Judgement: (+0.85, +0.85) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
       "Sub-Audits Breakdown:\n- Bhutan Rabies Elimination: PASS (0.9, 0.9) — WHO validated.\n- NYC Summer Safety: PASS (0.8, 0.8) — Record low shooting incidents.",
       "International public health initiatives and municipal safety records converge to highlight measurable improvements in human well-being.",
       "The Bright Side:\nBhutan's successful elimination of canine rabies proves that targeted veterinary vaccination works at a national scale.",
       "The Breakdown & Plane Error:\n conflating initial funding announcements (WHAT) with generational cultural transformation (WHO).",
       "Social Physics Analysis:\nBhutan's rabies elimination and NYC's targeted policing show that transparent public health campaigns directly reduce systemic risk without relying on pretexts.",
-      "The Trajectory: The Path of Grace.\nWhen you map verifiable public health outcomes against institutional effort, it plots a direct trajectory toward Greater Good. Effective interventions yield permanent safety gains.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map verifiable public health outcomes against institutional effort, it plots a direct trajectory toward Greater Good. Effective interventions yield permanent safety gains.",
       "The Unavoidable Truth: Bhutan eliminated canine rabies and NYC recorded its safest summer on record.\n\nThe Unavoidable Lie: Global funding alone instantly eliminates deeply entrenched cultural practices like FGM.",
       "Alethekanon:\nVerifiable epidemiological milestones and municipal crime drops demonstrate that systematic public health strategies succeed.",
       "Awwthekanon:\nSeeing communities freed from the threat of rabies and violence brings profound relief and well-deserved safety.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Bhutan Rabies Elimination",
@@ -159,6 +221,7 @@
         "sub_psi": 0.9,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

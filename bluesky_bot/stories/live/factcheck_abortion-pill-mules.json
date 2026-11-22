@@ -6,21 +6,21 @@
     "link": "https://www.motherjones.com/politics/2026/09/underground-abortion-activists-mifepristone-misoprostol-medical/",
     "target_url": "https://bsky.app/profile/motherjones.com/post/3mwwopvf65s2i",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": 0.75,
-    "real_psi": 0.82,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "When legal access closes, underground networks step in to keep essential healthcare moving.\nEvidence: Clandestine couriers, Cross-border supply runs, Activist resilience\n#Aletheia #Health",
-      "Reproductive healthcare access should be restricted and monitored strictly by state and federal laws.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Grassroots activists building clandestine supply chains ensure medical autonomy despite restrictive bans.\nResulting Judgement: (+0.75, +0.82) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nGrassroots couriers establishing underground supply lines demonstrate resilient adaptation against prohibitive bans.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Reproductive healthcare access should be restricted and monitored strictly by state and federal laws.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Grassroots activists building clandestine supply chains ensure medical autonomy despite restrictive bans.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nGrassroots couriers establishing underground supply lines demonstrate resilient adaptation against prohibitive bans.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Mother Jones Reporting: PASS (0.8, 0.85) — Captures underground logistics accurately.\n- Underground Activists: PASS (0.7, 0.8) — Provides vital access under legal risk.",
       "Underground abortion activists are operating clandestine supply chains to courier abortion pills across borders amid tightening bans.",
       "The Bright Side:\nDedicated networks ensure that individuals in restrictive jurisdictions retain access to safe medication.",
       "The Breakdown & Plane Error:\nConfusing administrative prohibition (HOW) with fundamental bodily autonomy (WHO) drives the underground logistics crisis.",
       "Social Physics Analysis:\nActivists run a Smart Altruistic maneuver, building transparent mutual aid networks to empower vulnerable communities against restrictive institutional force.",
-      "The Trajectory: The Path of Redemption.\nWhen you map community resilience against legal restrictions, it plots a direct trajectory toward Redemption. Net positive force elevates collective empowerment.",
+      "The Trajectory: The Path of Grace.\nWhen you map community resilience against legal restrictions, it plots a direct trajectory toward Redemption. Net positive force elevates collective empowerment.",
       "The Unavoidable Truth: Restrictive laws drive vital healthcare underground rather than eliminating the underlying need.\n\nThe Unavoidable Lie: Clandestine distribution networks are driven by criminal motives rather than mutual aid.",
       "Alethekanon:\nProhibition never stops demand; it merely fosters solidarity and underground logistics. When laws deny care, communities build bridges.",
       "Awwthekanon:\nIn the quiet courage of every courier carrying hope across borders, we see the enduring power of human compassion.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Underground Activists",
@@ -220,6 +282,7 @@
         "name": "Las Libres",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

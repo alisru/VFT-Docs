@@ -8,19 +8,19 @@
     "claim_u": 1.0,
     "claim_psi": 0.0,
     "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "Deadly Houthi drone strikes hit Saudi airports in Riyadh and Dammam, killing 14, including an American citizen, and injuring over 300.\nEvidence: Houthi drones, 14 killed, regional escalation\n#Aletheia #MiddleEast",
-      "Reports frame the Houthi strikes purely as unprovoked Iranian-backed aggression targeting regional stability and aviation infrastructure.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Behind the rhetoric lies active regional proxy warfare where civilian lives are spent as leverage in high-stakes great power collisions.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nEscalating proxy conflicts extract a devastating civilian toll while leaders trade threats.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Reports frame the Houthi strikes purely as unprovoked Iranian-backed aggression targeting regional stability and aviation infrastructure.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Behind the rhetoric lies active regional proxy warfare where civilian lives are spent as leverage in high-stakes great power collisions.\nResulting Judgement: (-0.80, -0.85) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nEscalating proxy conflicts extract a devastating civilian toll while leaders trade threats.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "- Houthi Leadership: FAIL (-0.9, -0.9) — Targets civilian aviation.\n- Regional Escalation: FAIL (-0.8, -0.8) — Brinkmanship risks war.",
       "Iran-backed Houthis struck Saudi airports in Riyadh and Dammam, killing 14 people including an American, prompting threats of retaliation.",
       "The Bright Side:\nInternational focus on civilian protection forces diplomatic channels to remain open despite high tensions.",
       "The Breakdown & Plane Error:\nConfusing political posturing with humanitarian reality; treating civilian deaths as strategic chess pieces.",
       "Social Physics Analysis:\nActors deploy a Smart Selfish Maneuver, using retaliatory rhetoric and geopolitical posturing to justify wider military entanglement while ordinary civilians bear the lethal costs.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Active destructive forces outweigh protective stasis.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Active destructive forces outweigh protective stasis.",
       "The Unavoidable Truth: Civilian passengers and flight crews pay the ultimate price for regional proxy wars.\n\nThe Unavoidable Lie: Military retaliation guarantees lasting regional security and stability.",
       "Alethekanon:\nProxy warfare treats human lives as expendable tokens in a game of mutual destruction. Rhetoric cannot wash away civilian blood.",
       "Awwthekanon:\nMy heart breaks for the families of the pilots, flight attendants, and innocent travelers caught in the crossfire of distant wars.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Houthi Strike Reporting",
@@ -162,6 +224,7 @@
     "tags": [
       "Aletheia",
       "MiddleEast"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

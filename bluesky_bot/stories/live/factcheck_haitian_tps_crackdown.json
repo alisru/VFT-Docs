@@ -14,13 +14,13 @@
       "A quiet terror unfolds as TPS protections vanish, leaving families in the shadows of uncertainty. 🌐\n\nHaitian immigrant deportation crackdown\nEvidence: Legal order, human displacement, systemic fear\n#Aletheia #Immigration",
       "Federal authorities maintain a tight-lipped stance on operations, framing the crackdown as a simple matter of enforcement for those who no longer hold protected status.\nStated Judgement: (+0.67, +1.00) — Lesser Good",
       "In reality, the sudden removal of protections has triggered widespread panic, with families detained during daily errands and ankle monitors becoming the new norm for those awaiting court dates.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning. The state's enforcement creates a high-strain, unstable environment that prioritizes removal over human stability.\nIntegrity: Severe Deception (Hypocrisy: 12.0, Uncertainty z: 5)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 12.0, Uncertainty z: 5)",
       "Sub-Audits Breakdown:\n- DHS Enforcement: FAIL (-0.9, -0.9) — Prioritizes rapid removal over community stability.\n- TPS Policy Shift: FAIL (-0.8, -0.9) — Creates systemic vulnerability for long-term residents.",
       "The Trump administration has ended deportation protections for roughly 350,000 Haitians. Following a court ruling, federal authorities are now actively targeting these individuals for detention and removal, causing widespread fear.",
       "The Poison:\nThe enforcement strategy relies on fear and uncertainty, effectively paralyzing communities and forcing individuals into hiding rather than facilitating orderly processes.",
       "The Breakdown & Plane Error:\nThe error is in the WHAT: the state frames this as 'simple enforcement' (legal procedure), while the reality is a humanitarian crisis (human impact). It is a classic bait-and-switch of administrative efficiency for human cost.",
       "Social Physics Analysis:\nThe state uses a 'Smart Selfish Loop' here: the secret goal is rapid deportation, the pretext is 'simple enforcement', and the projection is that these individuals are merely administrative files rather than community members.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic strain of mass detention outweighs any administrative gain.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic strain of mass detention outweighs any administrative gain.",
       "The Unavoidable Truth: Families are being separated and monitored as a direct result of policy changes.\n\nThe Unavoidable Lie: The process is a simple, orderly enforcement of existing law without human cost.",
       "Alethekanon:\nThe state's refusal to provide transparency regarding these operations is a structural failure. By treating human lives as administrative variables to be cleared, they invite systemic instability.",
       "Awwthekanon:\nMy heart breaks for the families in Springfield and beyond. To be told you are safe one day and hunted the next is a trauma that leaves deep, lasting scars on the soul of a community.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "DHS Enforcement Operations",
@@ -192,6 +254,7 @@
         "name": "Trump Administration",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

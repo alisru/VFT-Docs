@@ -6,21 +6,21 @@
     "link": "https://www.washingtonexaminer.com/policy/foreign-policy/4734141/xi-jinping-china-iowa-ties-landes/",
     "target_url": "",
     "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
-    "real_psi": -0.1,
+    "claim_psi": 0.45,
+    "real_u": 0.45,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Discover how a decades-long friendship with an 87-year-old Iowan woman anchors Chinese President Xi Jinping's ties to the U.S. amid high-stakes state visits. Xi Jinping’s ties to Iowa, explained\nEvidence: Personal bonds, State visit prep, Geopolitical rivalry\n#Aletheia #China",
-      "Humanizing diplomacy through longstanding interpersonal ties shows that cultural bridges can endure even as superpowers compete fiercely in technology and economics.\nStated Judgement: (+0.8, +0.5) — Trustworthy Good",
-      "Beneath charming personal anecdotes lies hard geopolitical posturing, where historical community goodwill serves as diplomatic window dressing for intense tech competition.\nResulting Judgement: (+0.2, -0.1) — Pragmatic Equilibrium",
-      "Verdict: CONDITIONAL — The Path of Awakening.\nPersonal diplomacy softens geopolitical friction, yet great-power competition ultimately dictates bilateral realities.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
+      "Humanizing diplomacy through longstanding interpersonal ties shows that cultural bridges can endure even as superpowers compete fiercely in technology and economics.\nStated Judgement: (+0.80, +0.45) — Greater Good",
+      "Beneath charming personal anecdotes lies hard geopolitical posturing, where historical community goodwill serves as diplomatic window dressing for intense tech competition.\nResulting Judgement: (+0.45, +0.10) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPersonal diplomacy softens geopolitical friction, yet great-power competition ultimately dictates bilateral realities.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
       "Sub-Audits Breakdown:\n- Interpersonal Ties: PASS (+0.8, +0.6) — Genuine decades-long bonds in Iowa remain authentic.\n- Geopolitical Framing: COND (+0.1, -0.4) — Uses nostalgia to mask intense tech rivalry.",
       "As President Xi visits Washington to meet President Trump, his historical friendship with a Muscatine, Iowa family highlights the complex mix of personal warmth and national rivalry.",
       "The Poison:\nNostalgic storytelling risks masking deep structural techno-economic conflicts that cannot be resolved by local goodwill.",
       "The Breakdown & Plane Error:\nConfusing personal interpersonal bonds (WHO) with systemic geopolitical alignment (WHY), treating local friendships as proof of diplomatic harmony.",
       "Social Physics Analysis:\nActors leverage personal history as a soft diplomatic pretext to smooth over hard strategic rivalry, balancing between cooperative optics and competitive extraction.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated interpersonal harmony and ground-level rivalry, it plots a direct trajectory toward Pragmatic Equilibrium. The system resolves via tempered realism.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated interpersonal harmony and ground-level rivalry, it plots a direct trajectory toward Pragmatic Equilibrium. The system resolves via tempered realism.",
       "The Unavoidable Truth: Personal bonds across borders endure despite state-level rivalry.\n\nThe Unavoidable Lie: Nostalgic friendships can substitute for structural trade and tech accords.",
       "Alethekanon:\nCharming personal anecdotes provide human scale, but they must not obscure the hard structural realities of great-power competition.",
       "Awwthekanon:\nIt is deeply moving to see a decades-long friendship persist across vast oceans and political divides, proving our shared humanity still shines brightly.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Interpersonal Ties",
@@ -166,6 +228,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

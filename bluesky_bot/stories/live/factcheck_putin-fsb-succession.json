@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/topnewsde.bsky.social/post/3mvf26wco5j2w",
     "claim_u": -0.4,
     "claim_psi": -0.5,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": -0.55,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Rumors swirl over FSB chief succession as Russia weighs security shakeup.\nEvidence: Bortnikov retirement, elite rivalry, Kremlin control\n#Aletheia #Russia",
-      "Reports suggest Russia's domestic intelligence agency is facing a major shakeup with potential leadership changes at the top.\nStated Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Speculation masks the unchanging core of authoritarian power, where elite jockeying serves only to reinforce Kremlin survival.\nResulting Judgement: (-0.6, -0.7) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nPersonnel churn within the security apparatus is managed strictly to preserve autocratic power, not reform the state.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.4, z: 1)",
+      "Reports suggest Russia's domestic intelligence agency is facing a major shakeup with potential leadership changes at the top.\nStated Judgement: (-0.40, -0.50) — Greater Evil",
+      "Speculation masks the unchanging core of authoritarian power, where elite jockeying serves only to reinforce Kremlin survival.\nResulting Judgement: (-0.55, -0.65) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nPersonnel churn within the security apparatus is managed strictly to preserve autocratic power, not reform the state.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.4, z: 1)",
       "- FSB Restructuring: FAIL (-0.5, -0.6) — Internal power consolidation disguised as reform.\n- Succession Speculation: COND (-0.6, -0.7) — Elite jockeying under strict presidential control.",
       "Speculation grows over a potential leadership transition at Russia's FSB as long-serving director Alexander Bortnikov approaches retirement.",
       "The Poison:\nObscures the structural rigidity of the security state beneath palace gossip.",
       "The Breakdown & Plane Error:\nConfusing tactical personnel swaps with systemic political evolution.",
       "Social Physics Analysis:\nKremlin insiders engage in smart selfish maneuvers, utilizing internal security reallocations to preemptively neutralize rival factions while maintaining absolute autocratic control.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Elite musical chairs only tightens the authoritarian grip.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Elite musical chairs only tightens the authoritarian grip.",
       "The Unavoidable Truth: Intelligence agency leadership changes in autocracies reflect shifting elite loyalties, not democratic reforms.\n\nThe Unavoidable Lie: Speculated successors represent a departure from the regime's hardline security policies.",
       "Alethekanon:\nPalace intrigue in closed autocracies is designed to distract observers from the unchanging permanence of coercion.",
       "Awwthekanon:\nIt is tragic how ordinary lives remain hostage to the endless power struggles of entrenched intelligence elites.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "FSB Restructuring",
@@ -161,6 +223,7 @@
         "name": "Sergei Korolyov",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

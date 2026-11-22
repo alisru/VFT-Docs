@@ -5,22 +5,22 @@
     "subject": "How ‘housing first’ is helping...",
     "link": "https://www.positive.news/society/how-housing-first-is-helping-people-leave-rough-sleeping-behind/",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.8,
-    "real_u": 0.82,
-    "real_psi": 0.75,
+    "claim_u": 0.85,
+    "claim_psi": 0.65,
+    "real_u": 0.62,
+    "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "England integrates 'Housing First' into its £442m rough sleeping program, prioritizing homes before treatment.\nEvidence: Housing stability, Cost savings, Policy debate\n#Aletheia #HousingFirst #UKPol",
-      "The article claims that providing permanent housing first, without making it conditional on treatment, achieves striking results in ending chronic homelessness.\nStated Judgement: (+0.90, +0.80) — Greater Good",
-      "HUD studies show Housing First decreases homelessness by 88%. However, critics point to rising overall homelessness and a 2026 study showing higher overdose risks for veterans in these programs.\nResulting Judgement: (+0.82, +0.75) — Greater Good",
-      "Verdict: PASS — Grace. Despite intense political debates and implementation challenges, the systemic data overwhelmingly proves that stable housing is the most effective foundation for recovery.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "The article claims that providing permanent housing first, without making it conditional on treatment, achieves striking results in ending chronic homelessness.\nStated Judgement: (+0.85, +0.65) — Greater Good",
+      "HUD studies show Housing First decreases homelessness by 88%. However, critics point to rising overall homelessness and a 2026 study showing higher overdose risks for veterans in these programs.\nResulting Judgement: (+0.62, +0.20) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- UK Rough Sleeping: PASS (0.85, 0.70) — Solid integration.\n- US Policy Debate: COND (0.40, -0.30) — Omitted overdose risk data.",
       "England's new £442m rough sleeping initiative combines immediate emergency shelter with long-term, stable housing, building on the proven principles of the Housing First model.",
       "The Poison:\nWithout robust, ongoing mental health and addiction support, simply providing a physical structure can lead to isolated individuals facing severe health crises alone.",
       "The Breakdown & Plane Error:\nOpponents commit a Logical error by blaming the housing model for rising homelessness, ignoring systemic economic drivers like soaring rents and stagnant wages.",
       "Social Physics Analysis:\nHousing First executes a Smart Altruistic Loop. By addressing the physical need for shelter upfront, it eliminates the manufactured crisis of 'housing readiness,' empowering individuals to resolve deeper trauma.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Providing stable shelter reduces systemic strain on emergency services and courts.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Providing stable shelter reduces systemic strain on emergency services and courts.",
       "The Unavoidable Truth: You cannot treat addiction or mental illness effectively while someone is freezing on the street.\nThe Unavoidable Lie: Homelessness is purely an individual moral failure.",
       "Alethekanon:\nHousing First operates on sound causal logic. Stabilizing the physical environment reduces systemic strain, making psychological and behavioral recovery mathematically viable.",
       "Awwthekanon:\nEveryone deserves a safe place to call home. Having a key to your own door gives people the dignity and security they need to start healing and rebuilding their lives.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UK Rough Sleeping Programme",
@@ -152,6 +214,7 @@
         "name": "Department of Housing and Urban Development",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

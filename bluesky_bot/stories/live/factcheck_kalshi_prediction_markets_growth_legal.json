@@ -5,22 +5,22 @@
     "subject": "Kalshi and Prediction Markets Growth",
     "link": "https://www.washingtonexaminer.com/premium/4693714/prediction-markets-grow-but-face-legal-challenges/",
     "target_url": "",
-    "claim_u": 0.95,
-    "claim_psi": 0.22,
-    "real_u": 0.32,
-    "real_psi": 0.18,
+    "claim_u": 0.93,
+    "claim_psi": 1.0,
+    "real_u": 0.17,
+    "real_psi": 0.34,
     "mode": "root",
     "posts": [
       "Prediction markets are surging into mainstream finance, but legal battles loom.\n\nKalshi Growth & Legal Clashes\nEvidence: Market Forecasting, Trading Friction, Regulated Exchange\n#Aletheia #Fintech",
-      "Kalshi frames event contracts as vital risk-hedging infrastructure and distributed forecasting tools overseen by federal regulators.\n\nStated Judgement: (+0.95, +0.22) — Greater Good",
-      "While Kalshi secured CFTC approval as an exchange, state regulators and critics argue binary event contracts blur the line into retail gambling.\n\nResulting Judgement: (+0.32, +0.18) — Lesser Good",
-      "Verdict: CONDITIONAL — The Path of Awakening.\nKalshi navigates genuine regulatory compliance, though legal challenges highlight systemic gray areas.\n\nIntegrity: Trustworthy (Hypocrisy: 1.48, Uncertainty z: 2)",
+      "Kalshi frames event contracts as vital risk-hedging infrastructure and distributed forecasting tools overseen by federal regulators.\n\nStated Judgement: (+0.93, +1.00) — Greater Good",
+      "While Kalshi secured CFTC approval as an exchange, state regulators and critics argue binary event contracts blur the line into retail gambling.\n\nResulting Judgement: (+0.17, +0.34) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nKalshi navigates genuine regulatory compliance, though legal challenges highlight systemic gray areas.\n\nIntegrity: Trustworthy (Hypocrisy: 1.48, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Kalshi Regulatory Strategy: PASS (+0.42, +0.25) — Proactive CFTC compliance.\n- State Gambling Oversight: COND (+0.18, +0.10) — Jurisdictional friction.",
       "Kalshi surpassed $37 billion in monthly trading volume, but faces lawsuits from state and tribal regulators over whether event contracts constitute gambling.",
       "The Bright Side:\nUnlike offshore crypto competitors, Kalshi sought formal federal registration and standard KYC procedures from inception.",
       "The Breakdown & Plane Error:\nThe tension lies between WHAT (financial risk management) and HOW (binary event betting). Legitimate hedging tools overlap with speculative wager dynamics.",
       "Social Physics Analysis:\nBy pursuing upfront regulatory approval rather than operating off-grid, Kalshi reduces friction with federal frameworks. Yet expanding into cultural events sparks conflict with local gambling authorities.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace through institutional integration.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace through institutional integration.",
       "The Unavoidable Truth: Event contracts aggregate distributed knowledge efficiently.\n\nThe Unavoidable Lie: Binary event betting carries zero gambling risk.",
       "Alethekanon:\nKalshi chose structural compliance over evasion, yet binary outcome trading inherently attracts regulatory boundary tests.",
       "Awwthekanon:\nPeople want clear signals about the future, but rapid financialization can easily turn collective curiosity into high-stakes stress.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.7,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.45,
+        "O": 0.3,
+        "N": 0.25
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.45,
+        "N": 0.2
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.2,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.55,
+        "O": 0.25,
+        "N": 0.15
+      },
+      "GP": {
+        "S": 0.7,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.45,
+        "O": 0.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Kalshi Regulatory Strategy",
@@ -288,6 +350,7 @@
         "name": "Luana Lopes Lara",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

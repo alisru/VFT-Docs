@@ -14,13 +14,13 @@
       "In an era of AI-driven mass outreach, genuine human connection becomes the ultimate competitive advantage. True success is built on depth, not volume.\n\nRelationships in the AI Era\nEvidence: deep connections, trust building, mutual value #Aletheia #Business #AI",
       "The claim advocates for shifting from transactional, high-volume networking to fostering fewer, deeper, and longer-lasting professional relationships.\nStated Judgement: (+0.53, +0.62) — Greater Good",
       "In reality, authentic relationships require vulnerability and time, acting as the invisible engine of career opportunities and trust.\nResulting Judgement: (+0.14, +0.39) — Greater Good",
-      "Verdict: PASS — Grace. The advice aligns perfectly with human social physics, prioritizing mutual empowerment over transactional exploitation.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- William Arruda: PASS (1.0, 1.0) — Sound relationship advice.\n- AI Networking: COND (0.0, 0.0) — High volume, low trust.",
       "Author William Arruda argues that as AI makes mass communication effortless, genuine human connection becomes increasingly rare and valuable, requiring intentional time and generosity.",
       "The Poison:\nFocusing entirely on deep relationships can sometimes lead to insular networks if one does not actively seek out diverse new perspectives.",
       "The Breakdown & Plane Error:\nNo plane error detected. The article correctly identifies that the value of networking lies in the quality of the relationships (WHO) rather than the sheer volume of outreach (WHAT).",
       "Social Physics Analysis:\nBy prioritizing mutual value and upfront transparency, this approach minimizes systemic friction. It rejects the pretext of transactional networking, instead empowering both parties to build long-term trust.",
-      "The Trajectory: The Path of Grace.\nWhen you map the alignment between stated intentions and actual human dynamics, it plots a direct trajectory toward Greater Good. Deep connections expand future possibilities for all involved.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between stated intentions and actual human dynamics, it plots a direct trajectory toward Greater Good. Deep connections expand future possibilities for all involved.",
       "The Unavoidable Truth: Trust cannot be automated or outsourced to an algorithm.\nThe Unavoidable Lie: Sending hundreds of automated messages builds a real network.",
       "Alethekanon:\nValue is a function of scarcity. As AI commoditizes outreach, authentic human attention and vulnerability become the most valuable assets in any professional ecosystem.",
       "Awwthekanon:\nIt is so beautiful to remember that we are not just nodes in a network. Taking the time to truly care for and help others is how we heal our workplaces.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.85,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.85,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "William Arruda Relationship Strategy",
@@ -260,6 +322,7 @@
         "name": "Forbes",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

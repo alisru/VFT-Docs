@@ -5,22 +5,22 @@
     "subject": "Mom’s chilling warning to cops...",
     "link": "https://nypost.com/2026/09/24/us-news/moms-chilling-warning-to-cops-before-they-discovered-boyfriends-decomposing-remains-inside-her-home/",
     "target_url": "",
-    "claim_u": 0.52,
-    "claim_psi": 0.05,
-    "real_u": -0.96,
-    "real_psi": -0.92,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.82,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "A horrific domestic homicide in Colorado uncovers months of concealed abuse and dismemberment.\nEvidence: Vulnerable Caregiving, Extreme Domestic Violence, Concealment of Homicide\n#Aletheia #Colorado #Crime",
-      "Charging documents describe a caregiver struggling with personal trauma and blackouts, claiming an incapacitated partner passed away overnight during an alcoholic episode.\nStated Judgement: (+0.52, +0.05) — Lesser Good",
-      "The victim suffered prolonged physical beatings while unable to defend himself, followed by deliberate dismemberment and months of concealment in plastic totes while misleading family and police.\nResulting Judgement: (-0.96, -0.92) — Greater Evil",
-      "Verdict: FAIL — Reckoning into Destruction. Severe physical violence and post-mortem concealment completely violate the fundamental duty of care.\n\nIntegrity: Severe Deception (Hypocrisy: 48.0, z: 4)",
+      "Charging documents describe a caregiver struggling with personal trauma and blackouts, claiming an incapacitated partner passed away overnight during an alcoholic episode.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The victim suffered prolonged physical beatings while unable to defend himself, followed by deliberate dismemberment and months of concealment in plastic totes while misleading family and police.\nResulting Judgement: (-0.82, -0.85) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 48.0, z: 4)",
       "- Sheldon Wilson: FAIL (-0.96, -0.92) — Concealed fatal domestic abuse for months.\n- Prior Welfare Checks: COND (-0.45, -0.20) — 18 prior visits failed to stop escalating abuse.",
       "Colorado Springs police arrested 62-year-old Sheldon Wilson after her daughter assisted her surrender, discovering the remains of her incapacitated partner stored in plastic totes since March.",
       "The Bright Side:\nThe suspect's daughter broke the cycle of silence by walking her mother to police, finally ending months of deception and ensuring legal accountability.",
       "The Breakdown & Plane Error:\nThe primary breakdown is Metaphysical and Physical (WHO vs WHERE). A supposed domestic caregiver weaponized total isolation over an incapacitated stroke survivor, substituting lethal abuse for palliative care.",
       "Social Physics Analysis:\nWilson operated a severe Smart Selfish loop: total control over a defenseless victim, blackout violence masked by pretexts of caregiving, and ongoing fabrications to neighbors and police to conceal physical destruction.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Active systemic abuse collapses entirely under forensic scrutiny.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Active systemic abuse collapses entirely under forensic scrutiny.",
       "The Unavoidable Truth: An incapacitated stroke victim was repeatedly abused and dismembered.\n\nThe Unavoidable Lie: The victim simply passed away peacefully without prior violence.",
       "Alethekanon:\nConcealment cannot outrun entropy. When extreme domestic predation is masked as hospice care, the physical evidence inevitably forces a total systemic collapse.",
       "Awwthekanon:\nMy heart breaks for the victim who spent his final days in terrifying vulnerability, and for the daughters who had to carry the painful burden of bringing the truth to light.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.15,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.25,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Sheldon Wilson Actions",
@@ -279,6 +341,7 @@
         "name": "Colorado Springs Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

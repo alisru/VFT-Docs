@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.47,
-    "real_psi": 1.0,
+    "real_u": 0.65,
+    "real_psi": 0.55,
     "mode": "root",
     "posts": [
       "Seven House Republicans join Democrats to pass a war powers resolution reining in Trump's military engagement in Iran. Is this a constitutional victory or symbolic theater?\nEvidence: War Powers, Policy Stasis, Constitutional Balance\n#Aletheia #USPol #IranWar 🌐",
-      "The resolution's supporters claim the vote is a crucial constitutional assertion of congressional authority to prevent another endless war and limit unilateral executive military action.\nStated Judgement: (1.0, 1.0) — Greater Good",
-      "While the vote represents a genuine bipartisan effort to assert war powers, the concurrent resolution is legally non-binding and symbolic, failing to physically halt the ongoing conflict.\nResulting Judgement: (0.47, 1.0) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nThe bipartisan vote is a genuine assertion of constitutional principles, though its real-world impact is limited by its symbolic, non-binding nature.\n\nIntegrity: Trustworthy (Hypocrisy: 1.43, Uncertainty z: 0)",
+      "The resolution's supporters claim the vote is a crucial constitutional assertion of congressional authority to prevent another endless war and limit unilateral executive military action.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While the vote represents a genuine bipartisan effort to assert war powers, the concurrent resolution is legally non-binding and symbolic, failing to physically halt the ongoing conflict.\nResulting Judgement: (+0.65, +0.55) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe bipartisan vote is a genuine assertion of constitutional principles, though its real-world impact is limited by its symbolic, non-binding nature.\n\nIntegrity: Trustworthy (Hypocrisy: 1.43, Uncertainty z: 0)",
       "- GOP Rebels: PASS (0.8, 0.9) — Principled constitutional stand.\n- War Powers Resolution: COND (0.5, 0.2) — Symbolic action with no binding policy impact.",
       "The House voted 220-204 to pass a war powers resolution limiting President Trump's military engagement in Iran. Seven Republicans broke ranks to support the measure, which remains largely symbolic.",
       "The Poison:\nBy relying on non-binding concurrent resolutions, Congress risks creating an illusion of oversight while leaving the actual machinery of executive war-making completely untouched.",
       "The Breakdown & Plane Error:\nThe debate commits a HOW vs WHY error, focusing on the constitutional process of declaring war (HOW) while failing to address the underlying geopolitical drivers of the conflict (WHY).",
       "Social Physics Analysis:\nThe rebel Republicans execute a Smart Altruistic Maneuver, prioritizing constitutional transparency over party loyalty. However, the broader system remains locked in a justification loop of endless conflict.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Bipartisan alignment offers a path back to constitutional balance.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Bipartisan alignment offers a path back to constitutional balance.",
       "The Unavoidable Truth: Congress has the sole constitutional authority to declare war.\nThe Unavoidable Lie: A symbolic, non-binding resolution will physically force a president to withdraw troops.",
       "Alethekanon:\nBipartisan rebellion is a rare sign of systemic health. Yet, a constitution without teeth is merely a scroll; symbolic votes cannot substitute for binding legislative power.",
       "Awwthekanon:\nIt is heartening to see leaders cross the aisle to stand up for peace and the rule of law. Every step away from conflict and toward shared responsibility is a step toward healing.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "GOP Rebels",
@@ -162,6 +224,7 @@
         "name": "U.S. House of Representatives",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

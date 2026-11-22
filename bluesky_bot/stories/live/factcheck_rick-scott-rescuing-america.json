@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Outlining Senator Rick Scott's economic blueprint focused on fiscal balance and anti-socialism messaging.\nEvidence: Breitbart interview, Rescuing America plan, economic commentary\n#Aletheia #Economy #USPol",
-      "Senator asserts that stopping socialism and balancing the budget will restore the American dream and lower living costs.\nStated Judgement: (+0.6, +0.2) — Good Preference",
-      "Broad anti-socialism rhetoric conflates standard government spending and public programs with systemic collapse while sidestepping structural fiscal drivers.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. Broad ideological framing obscures complex fiscal trade-offs behind partisan campaign slogans.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Senator asserts that stopping socialism and balancing the budget will restore the American dream and lower living costs.\nStated Judgement: (+0.60, +0.20) — Greater Good",
+      "Broad anti-socialism rhetoric conflates standard government spending and public programs with systemic collapse while sidestepping structural fiscal drivers.\nResulting Judgement: (-0.40, -0.50) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "Sub-Audits Breakdown:\n- Economic Plan: COND (0.0, 0.0) — Mixes sound tax cuts with broad partisan rhetoric.\n- Media Interview: FAIL (-0.5, -0.6) — Polarizing framing of political opponents.",
       "Senator Rick Scott discusses his 'Rescuing America' economic framework on Breitbart News Daily, emphasizing fiscal discipline and tax relief.",
       "The Bright Side:\nHighlighting economic mobility and tax relief for working families.",
       "The Breakdown & Plane Error:\nConfusing specific fiscal policy tools (HOW) with sweeping ideological enemy labels (WHO).",
       "Social Physics Analysis:\nActors employ a smart selfish maneuver by packaging standard economic policy positions inside an existential battle against socialism, projecting blame onto opponents.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Ideological pretexts mask policy nuances.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Ideological pretexts mask policy nuances.",
       "The Unavoidable Truth: Fiscal sustainability and cost-of-living pressures are central concerns for American families.\n\nIdentical political slogans rarely substitute for rigorous long-term budgetary reforms.",
       "Alethekanon:\nBroad anti-socialism rhetoric is routinely deployed as an umbrella pretext to frame policy disagreements as civilizational struggles.",
       "Awwthekanon:\nEvery family wants an economy where hard work pays off and housing is affordable. True security comes from building together, not dividing.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Media Interview",
@@ -148,6 +210,7 @@
         "name": "Breitbart News",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

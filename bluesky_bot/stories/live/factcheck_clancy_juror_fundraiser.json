@@ -14,13 +14,13 @@
       "A fundraiser for the lone holdout juror in the Lindsay Clancy trial has raised nearly $85K, but his own violent past is raising serious questions. 🌐\nEvidence: Juror protection, Funding domestic abuse suspect, Narrative capture\n#Aletheia #LindsayClancy #Justice",
       "The fundraiser claims the holdout juror is a heroic defender of the reasonable doubt standard who stood strong against an SSRI-medicated mob to demand a real trial.\nStated Judgement: (1.0, 1.0) — Greater Good",
       "The juror has a history of domestic violence allegations, including grabbing his wife by the throat, and reportedly mimicked strangling children with an exercise band during deliberations.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. A fundraiser framed as protecting judicial integrity is actually financing and glorifying an individual with a history of domestic strangulation.\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 4)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 4)",
       "- Tom Hennessey Fundraiser: FAIL (-1.0, -1.0) — Spins domestic abuse suspect as a hero.\n- Ron DeSantis Asylum Offer: FAIL (-0.8, -0.9) — Uses a tragic trial to score cheap partisan points.",
       "A GiveSendGo campaign raised $84,750 for the lone juror who forced a mistrial in the Lindsay Clancy triple-infanticide case, despite reports of his own violent criminal history.",
       "The Poison:\nBy turning a juror with a history of domestic violence into a political martyr, partisan actors degrade the jury system into a culture-war battlefield.",
       "The Breakdown & Plane Error:\nThe fundraiser commits a Metaphysical Error (WHO vs WHY). It uses the abstract ideal of \"reasonable doubt\" to mask the physical reality of funding a man accused of the very violence he was trial-bound to judge.",
       "Social Physics Analysis:\nThis is a classic Smart Selfish Maneuver. Political actors manufacture a crisis of \"media smears\" to justify raising money for a compromised individual, projecting blame onto the \"medicated mob\" to distract from the juror's own violent record.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Funding domestic violence suspects under the guise of justice accelerates systemic decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Funding domestic violence suspects under the guise of justice accelerates systemic decay.",
       "The Unavoidable Truth: The holdout juror's history of domestic violence severely compromises his standing as an objective arbiter of violent crime.\nThe Unavoidable Lie: The fundraiser is about protecting the legal standard of reasonable doubt.",
       "Alethekanon:\nThe exploitation of a tragic mistrial to fund a domestic abuse suspect exposes how easily legal principles are weaponized for financial and political extraction.",
       "Awwthekanon:\nIt is heartbreaking to see the tragic loss of three innocent children turned into a polarized circus, where the pain of a family is overshadowed by political posturing and fundraising.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Tom Hennessey Fundraiser",
@@ -288,6 +350,7 @@
         "name": "NBC10 Boston",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

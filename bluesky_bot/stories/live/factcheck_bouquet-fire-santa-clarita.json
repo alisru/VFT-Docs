@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.0,
-    "real_psi": -0.4,
+    "real_u": 0.75,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "A fast-moving brush fire erupted near Santa Clarita, exploding from 5 to 100 acres in under an hour. 🌐\nEvidence: Bouquet Canyon Road, 100 acres, evacuations\n#Aletheia #Wildfire",
-      "Local reporting details the rapid expansion of the Bouquet Fire in the Angeles National Forest amid extreme heat.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Extreme heat and dry brush fueled a sudden 100-acre blaze, forcing emergency evacuations and straining local firefighting resources.\nResulting Judgement: (0.0, -0.4) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nRapid emergency response met a sudden environmental crisis with transparent coordination.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Local reporting details the rapid expansion of the Bouquet Fire in the Angeles National Forest amid extreme heat.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Extreme heat and dry brush fueled a sudden 100-acre blaze, forcing emergency evacuations and straining local firefighting resources.\nResulting Judgement: (+0.75, +0.10) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nRapid emergency response met a sudden environmental crisis with transparent coordination.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Emergency Response: PASS (0.5, 0.2) — Swift deployment.\n- Media Reporting: PASS (1.0, 0.0) — Accurate crisis tracking.",
       "A sudden brush fire broke out in the Angeles National Forest near Santa Clarita, expanding rapidly and triggering immediate evacuation warnings.",
       "The Poison:\nClimate stress and extreme heat waves increasingly transform routine brush into volatile, fast-moving conflagrations.",
       "The Breakdown & Plane Error:\nConfusing physical weather conditions with human intent; the crisis is ecological, not conspiratorial.",
       "Social Physics Analysis:\nEmergency responders and residents engaged in a transparent safety loop, addressing immediate physical threats without political deflection.",
-      "The Trajectory: The Path of Awakening.\nWhen you map environmental crises against prompt containment, it plots a direct trajectory toward resilience.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map environmental crises against prompt containment, it plots a direct trajectory toward resilience.",
       "The Unavoidable Truth: Natural heat waves demand constant vigilance against sudden brush fires.\n\nThe Unavoidable Lie: Disasters can be entirely prevented by administrative decree.",
       "Alethekanon:\nPhysical reality brooks no rhetorical spin; rapid response remains the sole currency against natural entropy.",
       "Awwthekanon:\nOur hearts go out to everyone under evacuation warnings, holding fast as firefighters rush toward the flames to protect homes and families.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Emergency Response",
@@ -152,6 +214,7 @@
         "name": "Los Angeles County Fire Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

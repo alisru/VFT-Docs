@@ -8,7 +8,7 @@
     "real_u": -1.0,
     "real_psi": -1.0,
     "mode": "reply",
-    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "status": "QUARANTINED (Flagged for Re-Audit)",
     "posts": [
       "When the process of counting votes is framed as the enemy, the foundation of the republic begins to crack. A dangerous shift from democratic participation to institutional sabotage.\n\nPresidential Allies Attack Vote Counting\nEvidence: election integrity, systemic sabotage, democratic process #Aletheia #USPol",
       "The claim is that these attacks are necessary to ensure election integrity and protect the democratic process from fraud.\nStated Judgement: (+1.0, +1.0) — Greater Good",
@@ -60,6 +60,8 @@
     "actors": [],
     "topic": "USPol",
     "policies": [],
-    "actor_roles": []
+    "actor_roles": [],
+    "exclude_from_analytics": true,
+    "quarantine_reason": "Severe partisan collapse (Delta-u = -2.0) from on.wsj.com without wire counter-grounding"
   }
 ]

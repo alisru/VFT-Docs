@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Brazil orders Discord to halt livestreaming features following tragic youth harm, sparking major digital sovereignty debates.\n\nBrazil orders Discord to suspe...\nEvidence: child safety claim, platform suspension, state control 🌐\n#Brazil #TechPolicy",
-      "Brazil's data protection authority ordered Discord to suspend livestreaming features until robust child safety and age verification measures are adopted.\nStated Judgement: (+0.67, +1.00) — Good Preference",
-      "While framed as protective oversight, state mandates coercive platform restrictions without solving root societal alienation driving youth distress.\nResulting Judgement: (-0.56, -0.58) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nState intervention targets platform features rather than addressing systemic digital safety roots.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 0)",
+      "Brazil's data protection authority ordered Discord to suspend livestreaming features until robust child safety and age verification measures are adopted.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "While framed as protective oversight, state mandates coercive platform restrictions without solving root societal alienation driving youth distress.\nResulting Judgement: (-0.56, -0.58) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nState intervention targets platform features rather than addressing systemic digital safety roots.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Brazil ANPD: PASS (0.5, 0.2) — Enforcing legal protections for minors against negligent platforms.\n- Discord Platform Safety: FAIL (-0.8, -0.6) — Failing to prevent criminal grooming networks due to flawed architecture.",
       "Brazil's ANPD ordered Discord to voluntarily suspend livestreaming after a 13-year-old girl was coerced into self-harm during a live broadcast, highlighting severe moderation gaps.",
       "The Bright Side:\nImmediate regulatory pressure forces multi-billion-dollar tech firms to finally invest in regional child protection mechanisms.",
       "The Breakdown & Plane Error:\nConfusing WHAT (feature suspension) with WHO (corporate accountability vs systemic youth mental health).\n\nIt is a structural mismatch: banning tools rather than fixing root systemic grooming networks.",
       "Social Physics Analysis:\nBy imposing top-down bans rather than fostering transparent digital hygiene coalitions, regulators enforce compliance through punitive friction rather than solving the underlying vulnerability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Punitive platform bans mask deeper social decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Punitive platform bans mask deeper social decay.",
       "The Unavoidable Truth: Tech platforms must protect vulnerable minors from predatory extremist grooming networks.\n\nThe Unavoidable Lie: Banning a livestreaming feature alone solves youth mental health crises.",
       "Alethekanon:\n🌐 Regulatory interventions targeting architectural flaws highlight the friction between sovereign jurisdiction and global tech governance. Accountability remains essential.",
       "Awwthekanon:\nEvery tragedy involving a young life cuts deep. We must build digital spaces rooted in genuine care and safety rather than reactive punitive bans.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.85,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Brazil ANPD Regulatory Action",
@@ -267,6 +329,7 @@
         "name": "Vanessa Cavalieri",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

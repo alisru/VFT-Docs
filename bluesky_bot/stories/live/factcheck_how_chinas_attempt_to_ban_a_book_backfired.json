@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "real_u": -0.09,
+    "real_psi": -0.26,
     "mode": "root",
     "posts": [
       "A heavy-handed crackdown on a book about identity in Xi Jinping's China backfires, sparking an emergency reprint in Taiwan.\n\nHow China’s Attempt To Ban A Book Backfired\nEvidence: Censorship, High Demand, Free Expression\n#Aletheia #China #FreeSpeech",
-      "The Chinese state claims that raiding independent bookstores and arresting citizens for \"seditious\" books protects national security and social harmony.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, the state uses national security laws to enforce absolute conformity, silencing ethnic minorities and dissenters to preserve Party control.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Reckoning into Destruction.\nThe state's heavy-handed attempt to enforce conformity through censorship backfired, amplifying the very voices of dissent it sought to silence.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "The Chinese state claims that raiding independent bookstores and arresting citizens for \"seditious\" books protects national security and social harmony.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the state uses national security laws to enforce absolute conformity, silencing ethnic minorities and dissenters to preserve Party control.\nResulting Judgement: (-0.09, -0.26) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nThe state's heavy-handed attempt to enforce conformity through censorship backfired, amplifying the very voices of dissent it sought to silence.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Chinese State: FAIL (-1.0, -1.0) — Suppresses dissent to enforce conformity.\n- Emily Feng's Book: PASS (1.0, 1.0) — Nuanced stories that resonated globally.",
       "On July 15, 2026, Hong Kong police raided bookstores and arrested five people for selling Emily Feng's book. In response, demand surged, forcing an emergency reprint of 10,000 copies in Taiwan.",
       "The Poison:\nWhile the book's popularity surged abroad, the physical spaces for intellectual freedom and independent bookstores in Hong Kong continue to be systematically dismantled.",
       "The Breakdown & Plane Error:\nThe state confuses physical control (WHAT) with ideological alignment (WHO). By physically seizing books, they validated the author's core argument: that the regime is terrified of independent identity.",
       "Social Physics Analysis:\nAuthoritarian censorship operates on a high-strain model of forced conformity. When the state projects its own fear of collapse onto peaceful narratives, it creates a pressure cooker that drives demand to external markets.",
-      "The Trajectory: Reckoning into Destruction.\nWhen you map the gap between the state's promise of harmony and its brutal suppression, it plots a direct trajectory toward Greater Evil. Forced conformity inevitably breeds systemic instability.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between the state's promise of harmony and its brutal suppression, it plots a direct trajectory toward Greater Evil. Forced conformity inevitably breeds systemic instability.",
       "The Unavoidable Truth: Censorship cannot kill an idea; it only subsidizes its marketing.\n\nThe Unavoidable Lie: The state claims that silencing stories of identity creates a unified, harmonious society.",
       "Alethekanon:\nThe state's actions are mathematically self-defeating. By labeling a nuanced critique as seditious, they transformed a quiet collection of personal portraits into a loud, undeniable symbol of resistance.",
       "Awwthekanon:\nMy heart goes out to the brave bookstore owners and readers in Hong Kong who risk their safety just to share stories. True belonging cannot be forced by a state; it is found in the quiet empathy of listening to one another.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Chinese State Censorship",
@@ -286,6 +348,7 @@
         "name": "Hong Kong National Security Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

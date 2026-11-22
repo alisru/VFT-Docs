@@ -5,22 +5,22 @@
     "subject": "ICE Deports Violent Gang Members Convicted of Abduction, Drug Trafficking, Assault",
     "link": "https://www.breitbart.com/politics/2026/09/02/ice-deports-violent-gang-members-convicted-of-abduction-drug-trafficking-assault/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
-    "real_psi": -0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.86,
+    "real_psi": 0.87,
     "mode": "root",
     "posts": [
       "ICE deports violent transnational gang members convicted of serious felonies, highlighting ongoing interior enforcement efforts.\nEvidence: deportation records, prior felonies, border security\n#Aletheia #Immigration",
-      "Stated claim frames these deportations as a direct triumph over lax border policies, restoring public safety.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While removing violent offenders is necessary law enforcement, the framing weaponizes individual criminal cases for partisan narratives.\nResulting Judgement: (+0.2, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nLawful deportations of violent felons are real, but framed primarily to fuel political narratives.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Stated claim frames these deportations as a direct triumph over lax border policies, restoring public safety.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While removing violent offenders is necessary law enforcement, the framing weaponizes individual criminal cases for partisan narratives.\nResulting Judgement: (+0.86, +0.87) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nLawful deportations of violent felons are real, but framed primarily to fuel political narratives.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- ICE Enforcement: PASS (+0.7, +0.6) — Lawful removal of violent cartel and gang members.\n- Editorial Framing: FAIL (-0.5, -0.8) — Politicizes criminal acts for border narratives.",
       "ICE removed several foreign nationals linked to MS-13, the Sinaloa Cartel, and Latin Kings who had multiple felony convictions and illegal re-entries.",
       "The Bright Side:\nDangerous transnational criminals with violent felony records are successfully removed from U.S. communities.",
       "The Breakdown & Plane Error:\nConfuses WHO is executing the law with WHAT the broader systemic border policy achieves. It conflates routine enforcement with total policy vindication.",
       "Social Physics Analysis:\nBy highlighting extreme criminal cases, authorities project systemic failure onto a broader demographic, maintaining perpetual conflict rather than focusing on technical policy reform.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Enforcement is real, but instrumentalized.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Enforcement is real, but instrumentalized.",
       "The Unavoidable Truth: Removing violent gang members makes local communities objectively safer.\n\nThe Unavoidable Lie: Individual deportations prove total systemic policy failure.",
       "Alethekanon:\nLawful enforcement against violent felons is valid, yet partisan framing distorts systemic reality.",
       "Awwthekanon:\nEvery community deserves safety from violence, free from the shadow of transnational gangs.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "ICE Enforcement Actions",
@@ -230,6 +292,7 @@
         "name": "Latin Kings",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

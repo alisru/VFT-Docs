@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mxpcnrhwwj23",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": 0.8,
-    "real_psi": 0.6,
+    "real_u": 0.75,
+    "real_psi": 0.55,
     "mode": "root",
     "posts": [
       "Longevity doctor shares simple daily habits for a sharp brain and vibrant health.\nEvidence: Dr. Suzanne Ferree, salsa dancing, toxin tracking app\n#Aletheia #Health #Longevity",
-      "A 53-year-old physician offers practical, low-barrier daily habits that anyone can adopt to preserve cognitive and physical healthspan.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Grounded in genuine preventative medicine, everyday routines like mindful eating order and cognitive novelty successfully foster long-term vitality.\nResulting Judgement: (+0.8, +0.6) — Redemption",
-      "Verdict: PASS — The Path of Awakening.\nPragmatic wellness advice aligns lived practice with empirical health science without predatory extraction.\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
+      "A 53-year-old physician offers practical, low-barrier daily habits that anyone can adopt to preserve cognitive and physical healthspan.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Grounded in genuine preventative medicine, everyday routines like mindful eating order and cognitive novelty successfully foster long-term vitality.\nResulting Judgement: (+0.75, +0.55) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nPragmatic wellness advice aligns lived practice with empirical health science without predatory extraction.\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
       "Sub-Audits Breakdown:\n- Dr. Suzanne Ferree: PASS (+0.8, +0.6) — Authentic lifestyle and medical advice.\n- Wellness Media Framing: PASS (+0.7, +0.5) — Constructive, non-alarmist health guidance.",
       "Dr. Suzanne Ferree shares accessible lifestyle adjustments—from sequencing meal macros to brain-challenging dance forms—to combat midlife cognitive decline.",
       "The Bright Side:\nEmpowers readers with low-cost, scientifically backed behavioral tools rather than expensive supplement scams.",
       "The Breakdown & Plane Error:\nConfusing lifestyle optimization (HOW) with complex medical treatments (WHO). The advice remains grounded and practical.",
       "Social Physics Analysis:\nDr. Ferree executes a Smart Altruistic Loop by sharing transparent, empowering health habits that encourage personal agency without manufacturing fake medical crises.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the alignment between health advice and positive vitality, it plots a direct trajectory toward Grace. Delta(p*t + n) > 0 through active expansion.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the alignment between health advice and positive vitality, it plots a direct trajectory toward Grace. Delta(p*t + n) > 0 through active expansion.",
       "The Unavoidable Truth: Small daily physical and cognitive habits compound into remarkable long-term healthspan.\n\nThe Unavoidable Lie: Quick-fix longevity apps can entirely replace fundamental biological discipline.",
       "Alethekanon:\nTrue wisdom lies in simple, consistent daily practices rather than complex pharmacological interventions.",
       "Awwthekanon:\nIt is so comforting to know we can protect our minds and bodies through joyful things like dancing and good food!",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Dr. Suzanne Ferree",
@@ -165,6 +227,7 @@
       "Aletheia",
       "Health",
       "Longevity"
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

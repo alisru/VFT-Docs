@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/aibizmatome-eng.bsky.social/post/3mvmzrzzjba2e",
     "claim_u": 0.6,
     "claim_psi": 0.2,
-    "real_u": -0.3,
-    "real_psi": -0.4,
+    "real_u": 0.4,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Senator Sanders proposes 20-year prison sentences for unauthorized superintelligent AI development.\nEvidence: Ban AI Act, 20-year prison terms, federal agency\n#Aletheia #AI",
-      "Proponents frame the legislation as a vital safeguard to prevent uncontrollable AI existential risks and protect the public from corporate recklessness.\nStated Judgement: (+0.6, 0.2) — Good Preference",
-      "While existential anxiety is real, imposing 20-year prison terms and heavy state controls risks entrenching tech monopolies, stifling open innovation, and driving AI underground.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. Attempting to legislate innovation out of existence via draconian prison sentences creates heavy-handed state controls with perverse market distortions.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 3)",
+      "Proponents frame the legislation as a vital safeguard to prevent uncontrollable AI existential risks and protect the public from corporate recklessness.\nStated Judgement: (+0.60, +0.20) — Greater Good",
+      "While existential anxiety is real, imposing 20-year prison terms and heavy state controls risks entrenching tech monopolies, stifling open innovation, and driving AI underground.\nResulting Judgement: (+0.40, +0.10) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 3)",
       "Sub-Audits Breakdown:\n- Biz-Matome: COND (+0.3, 0.0) — Sensationalizes penalty without structural critique.\n- Legislative Bill: COND (+0.5, +0.2) — Seeks safety via extreme criminalization.",
       "Senator Bernie Sanders and Rep. Greg Casar announced the 'Ban Artificial Superintelligence Act,' aiming to pause advanced AI development and criminalize unauthorized superintelligence research.",
       "The Poison:\nTreating frontier software code with nuclear-grade criminal penalties conflates scientific exploration with destructive weaponry, suppressing open scientific discourse.",
       "This is a Logical plane error: assuming legislative prohibition and draconian prison sentences (HOW) can halt global technological momentum without addressing underlying market incentives.",
       "Social Physics Analysis:\nLawmakers run a defensive maneuver, using catastrophic risk pretexts ('nuclear-level threat') to justify expanding state regulatory power, inadvertently entrenching corporate incumbents who can afford compliance.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between existential panic and punitive bureaucratic prohibition, it plots a trajectory toward Lesser Evil. F_LE dominates via heavy state coercion.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between existential panic and punitive bureaucratic prohibition, it plots a trajectory toward Lesser Evil. F_LE dominates via heavy state coercion.",
       "The Unavoidable Truth: Punitive state bans cannot permanently suppress decentralized technological evolution.\n\nThe Unavoidable Lie: Equating advanced software training runs with unlawful nuclear weapon fabrication.",
       "Alethekanon:\nLegislative panic that reaches for 20-year prison sentences mistakes authoritarian prohibition for genuine technological stewardship.",
       "Awwthekanon:\nWe need wisdom and ethical guardrails, not fear-driven prison threats that turn human curiosity into a criminal offense.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Biz-Matome Summary",
@@ -163,6 +225,7 @@
         "name": "Anthropic",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

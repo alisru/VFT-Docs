@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/26/us-news/pop-and-tv-star-jaye-p-morgan-dead-at-94/",
     "target_url": "",
     "claim_u": 0.0,
-    "claim_psi": 0.0,
+    "claim_psi": 1.0,
     "real_u": 0.0,
-    "real_psi": 0.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Remembering Jaye P. Morgan, iconic 1950s pop star and flamboyant Gong Show panelist, who passed away at 94.\nEvidence: Natural causes, age 94, historical career record\n#Aletheia #Obituary #TVHistory",
-      "Obituary details the life, musical hits, and television career of Jaye P. Morgan.\nStated Judgement: (0.0, 0.0) — Neutral Stasis",
-      "Historical accounting of her career and passing is accurate and straightforward.\nResulting Judgement: (0.0, 0.0) — Neutral Stasis",
-      "Verdict: PASS — The Path of Grace.\nAccurate obituary honoring a notable mid-century entertainer's life and career.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 28)",
+      "Obituary details the life, musical hits, and television career of Jaye P. Morgan.\nStated Judgement: (+0.00, +1.00) — Greatest Lie",
+      "Historical accounting of her career and passing is accurate and straightforward.\nResulting Judgement: (+0.00, +1.00) — Greatest Lie",
+      "Verdict: CONDITIONAL — Deception.\nAccurate obituary honoring a notable mid-century entertainer's life and career.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 28)",
       "- Obituary Reporting: PASS (0.0, 0.0) — Factual biographical account.",
       "Jaye P. Morgan, a prominent 1950s vocalist and eccentric television personality best known for her run on 'The Gong Show,' died at age 94.",
       "The Bright Side:\nA life well-lived in entertainment, remembered accurately and respectfully.",
       "The Breakdown & Plane Error:\nObject state applies; historical biographical recording with zero causal distortion.",
       "Social Physics Analysis:\nHonest biographical reporting preserves cultural memory without manufactured friction or hidden agendas.",
-      "The Trajectory: The Path of Grace.\nWhen historical reporting remains faithful to facts, it anchors cultural continuity without distortion.",
+      "The Trajectory: The Path of Deception.\nWhen historical reporting remains faithful to facts, it anchors cultural continuity without distortion.",
       "The Unavoidable Truth: All public figures eventually complete their life's journey.\n\nThe Unavoidable Lie: Entertainment fame grants permanent immunity from mortality.",
       "Alethekanon:\nA straightforward historical accounting of a notable entertainer's long life and career.",
       "Awwthekanon:\nRest in peace, Jaye. Thank you for bringing laughter and music to so many.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      }
+    },
     "aspects": [
       {
         "name": "Obituary Reporting",
@@ -201,6 +263,7 @@
         "name": "Jaye P. Morgan",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Deception"
   }
 ]

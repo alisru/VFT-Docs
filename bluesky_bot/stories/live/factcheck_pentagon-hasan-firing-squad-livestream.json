@@ -5,16 +5,16 @@
     "subject": "Pentagon says the firing squad...",
     "link": "https://www.npr.org/2026/10/09/g-s1-147419/fort-hood-shooter-execution",
     "target_url": "",
-    "claim_u": 0.73,
-    "claim_psi": 0.82,
-    "real_u": -0.77,
-    "real_psi": -0.8,
+    "claim_u": 0.67,
+    "claim_psi": 0.77,
+    "real_u": -0.78,
+    "real_psi": -0.81,
     "mode": "root",
     "posts": [
       "State-sanctioned justice curdles into gladiatorial media theater.\nPentagon Plans Livestreamed Firing Squad Execution\nEvidence: Transparent Public Deterrence, Televised Snuff Spectacle, Restrained Constitutional Justice\n#Aletheia #USPol 🌐",
-      "The Pentagon claims broadcasting Major Nidal Hasan's firing squad execution ensures transparency and decisive deterrence for military terrorism, framing a public death as lawful accountability.\nStated Judgement: (+0.73, +0.82) — Greater Good",
-      "In reality, the Pentagon stages unprecedented voyeurism, granting a paralyzed mass killer the public martyrdom he sought while hyping 'lethality culture' despite condemning foreign public executions.\nResulting Judgement: (-0.77, -0.80) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Turning capital punishment into a televised state spectacle abandons constitutional gravity for performative bloodlust.\nIntegrity: Severe Deception (Hypocrisy: 18.50, z: 4)",
+      "The Pentagon claims broadcasting Major Nidal Hasan's firing squad execution ensures transparency and decisive deterrence for military terrorism, framing a public death as lawful accountability.\nStated Judgement: (+0.67, +0.77) — Greater Good",
+      "In reality, the Pentagon stages unprecedented voyeurism, granting a paralyzed mass killer the public martyrdom he sought while hyping 'lethality culture' despite condemning foreign public executions.\nResulting Judgement: (-0.78, -0.81) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 18.50, z: 4)",
       "- Pete Hegseth: FAIL (-0.77, -0.80) — Pushes violent theater.\n- Pentagon: FAIL (-0.75, -0.78) — Breaks execution precedent.\n- Nidal Hasan: FAIL (-0.85, -0.90) — Granted martyrdom stage.\n- News Coverage: COND (0.10, 0.20) — Details legal hurdles.",
       "Hegseth announced the Dec. 3 firing squad execution of Fort Hood shooter Nidal Hasan will be publicly livestreamed. The military hasn't executed anyone since 1961 or used a firing squad since World War II.",
       "The Bright Side:\nLegal experts note that forced public scrutiny could expose the raw reality of state-sanctioned violence and prompt judicial review through pending habeas corpus filings before irreparable precedent is set.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.17,
+        "O": 0.13,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.13,
+        "O": 1.2,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.23,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.23,
+        "O": 1.0,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.13,
+        "N": 0.17
+      },
+      "BP": {
+        "S": 0.13,
+        "O": 1.1,
+        "N": 0.1
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.5,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 1.4,
+        "O": 0.17,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.1,
+        "O": 1.3,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.17,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 0.1,
+        "O": 1.4,
+        "N": 0.1
+      },
+      "BP": {
+        "S": 1.4,
+        "O": 0.1,
+        "N": 0.1
+      }
+    },
     "aspects": [
       {
         "actual_forces": {
@@ -369,6 +431,7 @@
         "name": "U.S. Department of Defense",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

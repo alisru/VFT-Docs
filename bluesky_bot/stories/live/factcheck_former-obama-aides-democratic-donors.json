@@ -5,22 +5,22 @@
     "subject": "Former Obama aides claim Democratic donors still holding back after being burned by 2024 loss",
     "link": "https://www.foxnews.com/media/former-obama-aides-claim-democratic-donors-still-holding-back-burned-2024-loss",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_u": 0.4,
+    "claim_psi": 0.25,
+    "real_u": -0.68,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Former Obama aides lament donor wallets staying shut after 2024.\nEvidence: Pod Save America hosts, Texas Tribune Festival, donor hesitation\n#Aletheia #USPol",
-      "Democratic elites claim megadonors are missing a historic midterm opportunity out of mere fear or post-2024 fatigue.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "Behind the complaints lies elite insulation and self-preservation, deflecting responsibility for strategic failures onto cautious donors.\nResulting Judgement: (-0.85, -0.8) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nElite operatives shift blame onto cautious donors while shielding their own failed political models from scrutiny.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Democratic elites claim megadonors are missing a historic midterm opportunity out of mere fear or post-2024 fatigue.\nStated Judgement: (+0.40, +0.25) — Greater Good",
+      "Behind the complaints lies elite insulation and self-preservation, deflecting responsibility for strategic failures onto cautious donors.\nResulting Judgement: (-0.68, -0.65) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nElite operatives shift blame onto cautious donors while shielding their own failed political models from scrutiny.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "- Pod Save America Hosts: FAIL (-0.85, -0.8) — Deflecting blame onto donors.\n- Donor Community: COND (-0.5, -0.5) — Hedging bets amid political volatility.",
       "Former Obama administration advisers hosting Pod Save America expressed frustration that major Democratic donors are holding back funds despite favorable midterm signs.",
       "The Poison:\nMasking institutional strategy failures as donor cowardice.",
       "The Breakdown & Plane Error:\nConfusing WHAT (donor hesitation mechanics) with WHO (elite accountability for past electoral losses).",
       "Social Physics Analysis:\nPodcasters run a classic Smart Selfish maneuver. They protect their brand equity and blame wealthy donors for holding back cash, using the pretext of a missed historic opportunity to distract from systemic party disconnection.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Negative will forces dominate as elites project blame outward.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Negative will forces dominate as elites project blame outward.",
       "The Unavoidable Truth: Donors are withholding funds because elite strategies failed to connect with working-class voters.\n\nThe Unavoidable Lie: Megadonors are simply cowering in fear rather than reacting rationally to poor returns.",
       "Alethekanon:\nElite pundits decry donor caution while refusing to audit their own detachment. Blaming the pocketbooks shields the architects from accountability. 🌐",
       "Awwthekanon:\nIt is painful to watch political insiders point fingers at each other when what people really need is genuine connection and honest self-reflection.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Pod Save America Hosts",
@@ -157,6 +219,7 @@
         "name": "Barack Obama",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Moment brazen thieves steal $300K Corvette C8 ZR1 straight from California driveway",
     "link": "https://nypost.com/2026/08/28/us-news/video-shows-thieves-steal-corvette-c8-zr1-straight-from-santa-clarita-driveway/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Brazen thieves hook a $300K customized Corvette C8 ZR1 from a Valencia driveway in broad daylight using a tow truck.\nEvidence: surveillance video, police report, owner interview\n#Aletheia #AutoTheft",
-      "A rare, fully-customized supercar is cleanly heisted from a residential driveway, leaving the owner heartbroken over a profound personal and material loss.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Sophisticated criminal networks utilize repo-style tow trucks and electronic bypasses to target high-value assets, exploiting residential security gaps.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA brazen high-value theft disguised as a simple crime wave exposes underlying vulnerabilities in suburban vehicle security.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "A rare, fully-customized supercar is cleanly heisted from a residential driveway, leaving the owner heartbroken over a profound personal and material loss.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Sophisticated criminal networks utilize repo-style tow trucks and electronic bypasses to target high-value assets, exploiting residential security gaps.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA brazen high-value theft disguised as a simple crime wave exposes underlying vulnerabilities in suburban vehicle security.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- Mario Jaramillo: FAIL (-0.7, -0.8) — Victim of high-value asset targeting.\n- Local Law Enforcement: COND (-0.5, -0.5) — Investigating systemic suburban auto thefts.",
       "Thieves in Santa Clarita used a repo-style tow truck to steal a customized 2026 Corvette C8 ZR1 worth $300,000 from a residential driveway in under a minute.",
       "The Bright Side:\nThe theft galvanized community awareness and highlighted surveillance gaps, prompting tighter neighborhood watch protocols.",
       "The Breakdown & Plane Error:\nConfusing WHAT (the physical loss of a car) with WHO (the organized criminal network operating unchecked in suburban enclaves).",
       "Social Physics Analysis:\nThe criminals exploited passive residential trust and lack of perimeter hardening. Rather than transparent community building, they deployed deceptive extraction tactics to reap asymmetric personal gains at the victim's expense.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated security and ground-level vulnerabilities, it plots a direct trajectory toward Lesser Evil. Systemic property crime undermines neighborhood stability.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated security and ground-level vulnerabilities, it plots a direct trajectory toward Lesser Evil. Systemic property crime undermines neighborhood stability.",
       "The Unavoidable Truth: High-value luxury vehicles parked in open driveways remain prime targets for organized professional theft rings.\n\nThe Unavoidable Lie: Standard residential security and neighborhood watch groups are sufficient to deter sophisticated repo-style automotive heists.",
       "Alethekanon:\nSophisticated property crime exploits the comfortable assumptions of suburban infrastructure. Material loss is compounded by the systemic failure of local deterrence.",
       "Awwthekanon:\nLosing a cherished dream car that brought so much joy and community connection is heartbreaking. May justice catch up to those who take away others' hard work.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Mario Jaramillo",
@@ -205,6 +267,7 @@
         "name": "Santa Clarita Sheriff's Station",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "A quiet night of local public broadcasting highlights the real, unvarnished issues facing Alaskans.\n\nAlaska News Nightly: Friday, September 18, 2026\nEvidence: Public Broadcast, Local Realities, Informational Service\n#Alaska #LocalNews",
-      "Alaska Public Media reports on crowded Anchorage classrooms, the retirement of the Senate president, and a Ketchikan oyster business seeking national recognition.\nStated Judgement: (+1.0, +1.0) — Grace",
-      "The broadcast delivers straightforward, factual reporting on local community developments without sensationalism or hidden political agendas.\nResulting Judgement: (+1.0, +1.0) — Grace",
-      "Verdict: PASS — Grace. A textbook example of public service journalism delivering unvarnished local facts directly to the community.\nIntegrity: Absolute Truth (Hypocrisy: 0.0, z: 0)",
+      "Alaska Public Media reports on crowded Anchorage classrooms, the retirement of the Senate president, and a Ketchikan oyster business seeking national recognition.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The broadcast delivers straightforward, factual reporting on local community developments without sensationalism or hidden political agendas.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 0.0, z: 0)",
       "- Alaska Public Media: PASS (1.0, 1.0) — Straightforward public service reporting.\n- Local Coverage: PASS (1.0, 1.0) — Balanced and factual community news.",
       "The September 18, 2026 broadcast covers routine but vital state issues, including school crowding in Anchorage and legislative leadership transitions.",
       "The Bright Side:\nIn an era of hyper-partisan national media, local public outlets continue to provide essential, low-drama civic information.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Alaska Public Media",
@@ -147,6 +209,7 @@
         "name": "Anchorage School District",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

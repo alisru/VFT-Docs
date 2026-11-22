@@ -5,22 +5,22 @@
     "subject": "Geopolitics and grain don't mix, say these Montana farmers",
     "link": "https://www.npr.org/2026/09/15/nx-s1-5964930/canada-tariffs-hurting-montana-farmers",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.5,
-    "real_psi": -0.6,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.77,
+    "real_psi": -0.62,
     "mode": "root",
     "posts": [
       "Tariffs hit Montana farmers hard as retaliatory trade wars disrupt cross-border grain and cattle supply chains.\nEvidence: retaliatory tariffs, rising input costs, border friction\n#Aletheia #Ag #USPol",
-      "Trade wars create headwinds for farmers, but producers can adapt by pivoting to local markets and alternative soil inputs.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Retaliatory Canadian tariffs on U.S. farm equipment and goods squeeze border state producers caught in geopolitical crossfire.\nResulting Judgement: (-0.5, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nTrade conflicts disrupt local agricultural economies while official pretexts downplay collateral damage.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.4, z: 2)",
+      "Trade wars create headwinds for farmers, but producers can adapt by pivoting to local markets and alternative soil inputs.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Retaliatory Canadian tariffs on U.S. farm equipment and goods squeeze border state producers caught in geopolitical crossfire.\nResulting Judgement: (-0.77, -0.62) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nTrade conflicts disrupt local agricultural economies while official pretexts downplay collateral damage.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.4, z: 2)",
       "Sub-Audits Breakdown:\n- Tariff Impacts: FAIL (-0.6, -0.7) — Squeezes equipment and fertilizer costs.\n- Adaptation Narrative: COND (0.2, 0.0) — Highlights local resource pivots.",
       "Montana grain and cattle farmers bordering Canada face sudden 15% retaliatory tariffs on equipment after U.S. trade policy shifts.",
       "The Bright Side:\nFarmers are innovating with soil probiotics and crop rotations to reduce chemical fertilizer dependency.",
       "The Breakdown & Plane Error:\nConfusing WHAT (geopolitical bargaining chips) with WHO (border producers bearing the direct cost).",
       "Social Physics Analysis:\nFederal actors run a Smart Selfish Maneuver by using broad trade tariffs as macroeconomic leverage while shifting adjustment burdens onto localized border producers who must scramble for workarounds.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Trade friction creates systemic drag while masking costs behind political rhetoric.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Trade friction creates systemic drag while masking costs behind political rhetoric.",
       "The Unavoidable Truth: Macro trade wars impose micro pain on border communities.\n\nThe Unavoidable Lie: Geopolitical bargaining chips carry no local collateral cost.",
       "Alethekanon:\nMacro trade postures inevitably extract tolls from localized supply chains while framing disruption as mere adaptation.",
       "Awwthekanon:\nIt's heartbreaking to see hardworking multi-generational family farms squeezed by trade fights they had no voice in shaping.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.1,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Tariff Impacts",
@@ -290,6 +352,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

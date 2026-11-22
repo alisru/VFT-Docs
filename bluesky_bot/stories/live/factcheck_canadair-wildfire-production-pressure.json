@@ -14,13 +14,13 @@
       "As global wildfires surge, the pressure is on for Canadair Super Scoopers to ramp up production—if the orders and supply chains can align.\n\nCanadair Production\nEvidence: manufacturing boost, multi-year backlogs, federal bulk orders needed\n#Aletheia #Wildfires",
       "Producers and political leaders emphasize an urgent push to scale up Canadair water bomber manufacturing to meet unprecedented global wildfire demands.\nStated Judgement: (+0.80, +1.00) — Good Preference",
       "Reviving a 1960s hand-built aircraft line faces real-world bottlenecks, with delivery wait times stretching to 2032-2033 barring firm federal bulk orders.\nResulting Judgement: (+0.80, +0.68) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nIndustrial reality meets extreme demand, requiring firm governmental backing to overcome vintage supply chain constraints.\n\nIntegrity: Trustworthy (Hypocrisy: 1.35, z: 0)",
+      "Verdict: PASS — Small Fall from Grace.\nIndustrial reality meets extreme demand, requiring firm governmental backing to overcome vintage supply chain constraints.\n\nIntegrity: Trustworthy (Hypocrisy: 1.35, z: 0)",
       "Sub-Audits Breakdown:\n- De Havilland Production: PASS (0.50, 0.60) — Actively reviving lines but constrained by complex 1960s supply chains.\n- Government Procurement: COND (0.40, 0.44) — Political pressure mounts, but firm multi-year funding commitments remain slow.",
       "As severe wildfire seasons strain global firefighting fleets, attention turns to Calgary's De Havilland, the sole producer of Canadair Super Scooper water bombers, as they attempt to revive and expand production.",
       "The Poison:\nDecades-old manufacturing blueprints and complex supply chains mean quick fixes are impossible, leaving fleets vulnerable for years.",
       "The Breakdown & Plane Error:\nConfusing immediate political urgency (WHAT) with long-term industrial capacity (HOW). Planes take years to build by hand.",
       "Social Physics Analysis:\nMeeting global environmental crises requires transparent cooperation between private manufacturers and public buyers. Without firm multi-year commitments, systemic friction stalls expansion.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between urgent demand and manufacturing reality, it plots a direct trajectory toward structural adaptation and potential recovery.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between urgent demand and manufacturing reality, it plots a direct trajectory toward structural adaptation and potential recovery.",
       "The Unavoidable Truth: Specialized firefighting aircraft require long lead times and stable bulk commitments to scale production safely.\n\nThe Unavoidable Lie: Politicians claiming they can instantly summon fleets of water bombers without long-term industrial planning.",
       "Alethekanon:\nThe physical reality of hand-building complex amphibious aircraft dictates the timeline. Good intentions cannot bypass the laws of supply chain physics.",
       "Awwthekanon:\nIt is heartbreaking to watch communities face devastating fires while waiting years for the tools they urgently need to protect their homes.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.7,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.7,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "De Havilland Production Capacity",
@@ -269,6 +331,7 @@
         "name": "Neil Sweeney",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -14,13 +14,13 @@
       "House Ethics is investigating Rep. Jimmy Gomez over sexual misconduct allegations, including inappropriate contact with a staffer.\n\nRep. Jimmy Gomez investigated\nEvidence: personal conduct, ethical breach, denial\n#Aletheia #USPol",
       "Gomez admitted personal mistakes outside his marriage but maintained his actions were consensual and followed House rules.\nStated Judgement: (+0.67, +1.00) — Good Preference",
       "The ethics inquiry exposes potential abuse of power dynamics within congressional offices involving staff members.\nResulting Judgement: (-0.97, -0.94) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPrivate misconduct wrapped in institutional deflection undermines public trust in legislative integrity.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, Uncertainty z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nPrivate misconduct wrapped in institutional deflection undermines public trust in legislative integrity.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Rep. Jimmy Gomez: FAIL (-0.8, -0.75) — Engaged in improper staff relationships and misconduct.\n- House Ethics Committee: PASS (0.7, 0.6) — Pursuing impartial review of member conduct.",
       "The Ethics Committee opened an inquiry following reports of Gomez kissing a congressional staffer, echoing wider accountability issues in Congress.",
       "The Bright Side:\nFormal ethics investigations ensure that allegations against powerful officials face independent institutional scrutiny.",
       "The Breakdown & Plane Error:\nConfusing WHAT (consensual personal mistakes) with WHO (unequal power dynamics involving staff).\n\nIt is a structural bait-and-switch: ethical breach framed as private affair.",
       "Social Physics Analysis:\nPower asymmetry makes staff relationships inherently coercive. Instead of transparent accountability, initial denials obscure institutional misconduct until forced by inquiry.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Asymmetric force produces ethical decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Asymmetric force produces ethical decay.",
       "The Unavoidable Truth: Positional power in congressional offices makes staff relationships prone to coercion.\n\nThe Unavoidable Lie: Personal conduct of lawmakers has no bearing on official integrity.",
       "Alethekanon:\nDismissing staff misconduct as a private personal matter ignores the inherent power imbalances of legislative offices. 🌐",
       "Awwthekanon:\nIt is heartbreaking to witness those entrusted with public office abusing their positions, leaving emotional fallout for families and vulnerable staffers alike.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Rep. Jimmy Gomez Conduct",
@@ -269,6 +331,7 @@
         "sub_psi": 0.6,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

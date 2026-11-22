@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": -0.3,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Militant nurse unions accused of targeting a billionaire healthcare CEO and his family at their homes.\nEvidence: Union fliers, neighborhood protests, legal complaint\n#Aletheia #Labor #Healthcare",
-      "Prime Healthcare claims union activists crossed the line into harassment by targeting executives' private homes and families to exert economic pressure.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "Labor disputes weaponize residential protests, raising safety concerns while corporate leadership uses litigation to criminalize aggressive union pressure.\nResulting Judgement: (-0.75, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nEscalating labor disputes into personal residential intimidation breeds mutual hostility.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
+      "Prime Healthcare claims union activists crossed the line into harassment by targeting executives' private homes and families to exert economic pressure.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Labor disputes weaponize residential protests, raising safety concerns while corporate leadership uses litigation to criminalize aggressive union pressure.\nResulting Judgement: (-0.30, -0.45) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nEscalating labor disputes into personal residential intimidation breeds mutual hostility.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
       "Sub-Audits Breakdown:\n- California Nurses Assn: FAIL (-0.8, -0.9) — Weaponizes personal intimidation.\n- Prime Healthcare: COND (0.2, 0.0) — Uses litigation to shield power.",
       "Prime Healthcare filed a lawsuit against the California Nurses Association, alleging activists targeted executives' homes with fliers and aerial photos.",
       "The Poison:\nTurning contract negotiations into residential harassment destroys community trust and invites dangerous escalations.",
       "The Breakdown & Plane Error:\nConfusing personal harassment of families (WHO) with legitimate collective bargaining rights (WHAT).",
       "Social Physics Analysis:\nBoth sides run strategic maneuvers. The union uses aggressive personal targeting as a hidden lever under the pretext of worker advocacy, while corporate leadership leverages legal action to paint all labor resistance as criminal mobs.",
-      "The Trajectory: The Path of Deception.\nWhen you map stated worker advocacy against residential harassment tactics, it plots a direct trajectory toward Lesser Evil. Mutual escalation bypasses genuine labor reconciliation.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map stated worker advocacy against residential harassment tactics, it plots a direct trajectory toward Lesser Evil. Mutual escalation bypasses genuine labor reconciliation.",
       "The Unavoidable Truth: Aggressive neighborhood targeting crosses the line from public protest into intimidation.\n\nThe Unavoidable Lie: Painting all labor pushback as violent extremism ignores underlying contract disputes.",
       "Alethekanon:\nWhen labor disputes migrate to private doorsteps, both sides abandon principled negotiation for raw intimidation.",
       "Awwthekanon:\nIt is heartbreaking to see families caught in the crossfire of bitter corporate and union battles.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "California Nurses Association",
@@ -173,6 +235,7 @@
         "name": "Sunitha Reddy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

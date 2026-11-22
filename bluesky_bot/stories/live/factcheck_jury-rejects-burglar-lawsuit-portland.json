@@ -5,22 +5,22 @@
     "subject": "Jury Rejects $10 Million Suit By Burglar Against Urine-Tossing Business Owner Who Shot Him",
     "link": "https://dailycaller.com/2026/08/21/jury-rejects-10-million-suit-by-burglar-against-business-owner-who-shot-him",
     "target_url": "",
-    "claim_u": -1.5,
+    "claim_u": -0.85,
     "claim_psi": -1.0,
-    "real_u": 1.2,
+    "real_u": 1.0,
     "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A Portland jury rejects a burglar's absurd $10M lawsuit against a business owner who shot him.\n\nJury Rejects $10 Million Suit\nEvidence: break-in, self-defense, common-sense verdict #Aletheia #Legal 🌐",
-      "Burglar Kenneth Voyles sued business owner James Grant for $10 million after being shot during a 2023 break-in, claiming excessive force during his criminal intrusion.\nStated Judgement: (-1.5, -1.0) — Greater Evil",
-      "A Multnomah County jury rightly rejected the suit, establishing that the burglar's own unlawful entry was the substantial factor in his injuries, upholding basic property defense.\nResulting Judgement: (+1.2, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Common-sense justice prevailed as a jury rejected predatory litigation and affirmed the right to defend one's dwelling.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Burglar Kenneth Voyles sued business owner James Grant for $10 million after being shot during a 2023 break-in, claiming excessive force during his criminal intrusion.\nStated Judgement: (-0.85, -1.00) — Greater Evil",
+      "A Multnomah County jury rightly rejected the suit, establishing that the burglar's own unlawful entry was the substantial factor in his injuries, upholding basic property defense.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Reckoning into Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Jury Verdict: PASS (+1.2, +1.0) — Affirmed self-defense rights.\n- Burglar's Lawsuit: FAIL (-1.5, -1.0) — Predatory legal abuse rejected.",
       "A Portland jury unanimously rejected a $10 million civil suit brought by an intruder against a 70-year-old business owner who defended his living quarters with a firearm.",
       "The Bright Side:\nEven in a notoriously lenient legal environment, common-sense citizens stepped up to stop predatory lawsuits against victims defending their homes.",
       "The Breakdown & Plane Error:\nConfusing victim and perpetrator (WHO), testing whether a criminal can profit from his own unlawful trespass.",
       "Social Physics Analysis:\nBy holding accountable actors who manufacture grievances through unlawful intrusion, the judicial process restored alignment between personal responsibility and legal consequences.",
-      "The Trajectory: The Path of Grace.\nWhen you map the alignment between justice and ground-level outcomes, it plots a direct trajectory toward societal restoration and legal clarity.",
+      "The Trajectory: The Path of Reckoning into Grace.\nWhen you map the alignment between justice and ground-level outcomes, it plots a direct trajectory toward societal restoration and legal clarity.",
       "The Unavoidable Truth: Criminals cannot use the civil court system to monetize their own violent trespasses.\nThe Unavoidable Lie: Breaking into a home creates a valid claim for multi-million dollar damages.",
       "Alethekanon:\nJustice holds when courts refuse to let bad actors weaponize the legal system against citizens protecting their lives and property.",
       "Awwthekanon:\nNo one should have to live in fear of both a criminal breaking into their home and a subsequent lawsuit seeking to destroy what little they have left.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Jury Verdict",
@@ -270,6 +332,7 @@
         "name": "James Grant",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Reckoning into Grace"
   }
 ]

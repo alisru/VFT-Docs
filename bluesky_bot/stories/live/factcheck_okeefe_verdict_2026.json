@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.3,
-    "real_psi": 0.2,
+    "real_u": 0.6,
+    "real_psi": 0.68,
     "mode": "root",
     "posts": [
       "Federal appeals court tosses $130K judgment against James O'Keefe over 2016 undercover sting. 🌐\n\nAppeals court tosses $130,000 verdict\nEvidence: Free speech protection, overbroad jury award, reversed wiretap\n#Aletheia #Law #USPol",
-      "Journalist James O'Keefe argued his 2016 'Rigging the Election' sting was protected newsgathering rather than actionable tort or wiretapping.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The D.C. Circuit ruled the damages violated the First Amendment by penalizing speech without proving unlawful conduct caused contract losses, tossing the wiretap verdict.\nResulting Judgement: (+0.3, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption. A federal appeals court correctly checked an overbroad civil damages award that punished protected newsgathering.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 0)",
+      "Journalist James O'Keefe argued his 2016 'Rigging the Election' sting was protected newsgathering rather than actionable tort or wiretapping.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The D.C. Circuit ruled the damages violated the First Amendment by penalizing speech without proving unlawful conduct caused contract losses, tossing the wiretap verdict.\nResulting Judgement: (+0.60, +0.68) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 0)",
       "Sub-Audits Breakdown:\n- First Amendment Protections: PASS (+0.8, +0.5) — Correctly shielded journalism from punitive civil damages.\n- Undercover Infiltration: COND (-0.4, -0.3) — Deceptive internship tactics sparked valid legal scrutiny.",
       "A federal appeals court overturned a $130,000 civil judgment against James O'Keefe, ruling that a jury improperly mixed protected reporting with deceptive tactics.",
       "The Bright Side:\nStrong judicial reaffirmation that news publication cannot be heavily penalized without direct proof that unlawful acts drove the damages.",
       "The Breakdown & Plane Error:\nThe trial court confused WHAT (the explosive news impact) with WHO (the intern's deception), penalizing protected speech for political friction.\n\nIt is a structural correction protecting press freedom.",
       "Social Physics Analysis:\nThe judicial review replaced a punitive civil penalty with constitutional guardrails, ensuring that political friction does not justify overriding core press freedoms through overbroad tort claims.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good through lawful correction.\n\nMathematical balance yields constructive resolution.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good through lawful correction.\n\nMathematical balance yields constructive resolution.",
       "The Unavoidable Truth: Protected newsgathering cannot be penalized by juries without proving unlawful conduct directly caused the economic harm.\n\nThe Unavoidable Lie: The undercover sting was entirely free of deceptive infiltration tactics.",
       "Alethekanon:\nThe D.C. Circuit correctly applied constitutional standards to separate protected journalistic publication from isolated tortious conduct. 🌐",
       "Awwthekanon:\nIt's a relief to see the courts maintain firm boundaries protecting free expression, ensuring journalists aren't crushed by politicized civil damages.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "First Amendment Protections",
@@ -281,6 +343,7 @@
         "name": "Democracy Partners",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Youth from 34 nations unite in Seoul, launching a global network for Korean peace amid regional tensions.\nEvidence: peace dialogue, regional missile tests, youth solidarity\n#Aletheia #Peace",
-      "Youth groups gathered to establish Youth Solidarity for One Korea, pledging international cooperation for peace and reunification based on humanitarian ideals.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Roughly 200 young people and diverse defectors formed a cross-border coalition to propose sustainable development and peace projects despite regional missile friction.\nResulting Judgement: (+0.82, +0.93) — Redemption",
-      "Verdict: PASS — The Path of Grace.\nAuthentic grassroots youth mobilization bridges divides where state-level diplomacy often stalls.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "Youth groups gathered to establish Youth Solidarity for One Korea, pledging international cooperation for peace and reunification based on humanitarian ideals.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Roughly 200 young people and diverse defectors formed a cross-border coalition to propose sustainable development and peace projects despite regional missile friction.\nResulting Judgement: (+0.82, +0.93) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAuthentic grassroots youth mobilization bridges divides where state-level diplomacy often stalls.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Youth Solidarity Initiative: PASS (+0.9, +0.85) — Genuine international participation in peace-building and sustainable development planning.\n- Geopolitical Context: COND (0.0, 0.0) — Launched under the shadow of missile threats, highlighting the urgency of dialogue.",
       "About 200 young people from 34 countries gathered in Seoul to launch the Youth Solidarity for One Korea network, proposing peace innovations and environmental projects like turning the DMZ into a park.",
       "The Bright Side:\nEmpowering youth across diverse backgrounds to collaborate on tangible peace frameworks fosters genuine cross-border empathy.",
       "The Breakdown & Plane Error:\nEvaluated on the Lyrical and Logical planes. The initiative shifts focus from perpetual state antagonism to constructive youth-led problem solving.",
       "Social Physics Analysis:\nBy fostering transparent cross-border dialogue and shared humanitarian goals, the coalition replaces division with collaborative empowerment.",
-      "The Trajectory: The Path of Grace.\nWhen you map the alignment between stated collaborative intentions and grassroots outcomes, it plots a direct trajectory toward Grace. Positive potential expands stability.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between stated collaborative intentions and grassroots outcomes, it plots a direct trajectory toward Grace. Positive potential expands stability.",
       "The Unavoidable Truth: Grassroots youth networks can build resilient bridges across historical divides.\n\nThe Unavoidable Lie: Declarations alone can instantly neutralize hardened state-level military standoffs.",
       "Alethekanon:\nTrue unification begins not in legislative halls, but in the shared imagination of the next generation. This youth-led coalition models structural coherence.",
       "Awwthekanon:\nListening to diverse histories and family stories heals old wounds. It is inspiring to see young people choose hope and connection over endless cycles of fear.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.3
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.1,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Youth Solidarity Initiative",
@@ -269,6 +331,7 @@
         "name": "North Korea",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

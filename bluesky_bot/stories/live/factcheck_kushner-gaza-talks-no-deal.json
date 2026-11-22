@@ -14,13 +14,13 @@
       "Kushner's Gaza peace mission wraps up with no breakthrough as Israel and Hamas dig in.\nEvidence: diplomatic push, stalled negotiations, continued conflict\n#Gaza #Diplomacy 🌐",
       "Jared Kushner met with Israeli and Hamas leaders to advance a 15-point Board of Peace roadmap for disarmament and rebuilding.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "Talks collapsed as Netanyahu demanded total disarmament before reconstruction while maintaining military control, and Hamas refused to surrender arms first.\nResulting Judgement: (-1.00, -1.00) — Deception",
-      "Verdict: FAIL — The Path of Deception. The diplomatic push masks intractable military preconditions and political posturing, preventing any genuine breakthrough.\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
       "- Jared Kushner: FAIL (-0.85, -0.80) — Diplomatic push stalls on hardline terms.\n- Benjamin Netanyahu: FAIL (-0.90, -0.85) — Rejects withdrawal prior to disarmament.",
       "Jared Kushner concluded two days of high-stakes meetings with Israeli Prime Minister Benjamin Netanyahu and Hamas officials in Egypt, seeking to revive a stalled US peace roadmap.",
       "The Poison:\nThe insistence on total disarmament as a rigid precondition ensures reconstruction remains deadlocked while humanitarian suffering continues.",
       "The Breakdown & Plane Error:\nThe plan confuses the WHAT (disarmament sequencing) with WHO (occupying power vs governing body), treating symptoms while ignoring political realities.",
       "Social Physics Analysis:\nBy imposing unilateral preconditions rather than building shared trust, both sides maintain conflict structures. The diplomatic effort functions as a pretext rather than a bridge.",
-      "The Trajectory: The Path of Deception. When you map the gap between stated diplomatic intentions and ground-level military realities, it plots a direct trajectory toward Deception.",
+      "The Trajectory: The Path of Fall into Destruction.",
       "The Unavoidable Truth: Peace talks cannot succeed while both factions insist on mutually exclusive prior surrenders.\n\nThe Unavoidable Lie: Proposing a Board of Peace roadmap bypasses the core sovereignty demands of the conflict.",
       "Alethekanon:\nDiplomatic frameworks without mutual concessions remain administrative pretexts for continued military control.",
       "Awwthekanon:\nEvery stalled meeting echoes the heartbreak of families waiting for an end to violence. True peace requires humbling power to heal the wounded land.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Jared Kushner Diplomatic Push",
@@ -268,6 +330,7 @@
         "name": "Hamas",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

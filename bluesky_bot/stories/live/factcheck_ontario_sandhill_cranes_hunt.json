@@ -5,22 +5,22 @@
     "subject": "Ontario’s hunt reopens for once-threatened bird | The Narwhal",
     "link": "https://thenarwhal.ca/ontario-sandhill-cranes-hunting-reopens/",
     "target_url": "https://bsky.app/profile/thenarwhal.ca/post/3mtgqctrass2f",
-    "claim_u": 0.8,
-    "claim_psi": 0.2,
-    "real_u": 0.8,
-    "real_psi": 0.2,
+    "claim_u": 0.85,
+    "claim_psi": 1.0,
+    "real_u": 0.85,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A fascinating look at the delicate, high-stakes balance between wildlife conservation and agricultural survival.\n\nOntario’s hunt reopens for once-threatened bird | The Narwhal\nEvidence: ecological balance, crop protection, hunting\n#Aletheia #Environment",
-      "The Narwhal reports on Ontario reopening the sandhill crane hunt, framing it as a complex clash between a remarkable conservation success story and severe agricultural crop damage.\nStated Judgement: (+0.80, +0.20) — Lesser Good",
-      "The reporting is highly balanced, giving equal weight to the awe of bird conservationists and the genuine economic strain of farmers losing up to 30% of their crops without compensation.\nResulting Judgement: (+0.80, +0.20) — Lesser Good",
-      "Verdict: PASS — Stasis in Redemption.\nAn exceptionally fair piece of environmental journalism that navigates a genuine ecological and economic dilemma without taking easy sides.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The Narwhal reports on Ontario reopening the sandhill crane hunt, framing it as a complex clash between a remarkable conservation success story and severe agricultural crop damage.\nStated Judgement: (+0.85, +1.00) — Greater Good",
+      "The reporting is highly balanced, giving equal weight to the awe of bird conservationists and the genuine economic strain of farmers losing up to 30% of their crops without compensation.\nResulting Judgement: (+0.85, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nAn exceptionally fair piece of environmental journalism that navigates a genuine ecological and economic dilemma without taking easy sides.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- The Narwhal: PASS (+0.80, +0.20) — Balanced environmental reporting.\n- Wildlife Management: PASS (+0.80, +0.20) — Science-based policy.",
       "Ontario is reopening its sandhill crane hunt for the first time in a century, responding to farmers' crop losses after the bird population successfully recovered to over 103,000.",
       "The Poison:\nEven a scientifically backed, conservative hunt brings ethical discomfort to conservationists who have spent decades celebrating the return of this iconic, dancing bird.",
       "The Breakdown & Plane Error:\nNo plane error detected. The logical chain (HOW) connects the physical recovery of the species (WHERE) directly to the economic impact on farmers and the policy response.",
       "Social Physics Analysis:\nRather than inventing problems or projecting malice, this story highlights a genuine resource strain. It shows the friction between two valid goals—ecological preservation and food production—seeking equilibrium.",
-      "The Trajectory: Stasis in Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The balanced narrative resolves strain by acknowledging all sides of the conflict.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The balanced narrative resolves strain by acknowledging all sides of the conflict.",
       "The Unavoidable Truth: Conservation successes can create real economic challenges for local communities.\n\nThe Unavoidable Lie: We can manage complex ecosystems without making difficult trade-offs.",
       "Alethekanon:\nA pristine example of objective journalism. By presenting verifiable ecological data alongside direct economic impacts, the article maintains high logical and empirical integrity.",
       "Awwthekanon:\nIt is beautiful that these magnificent birds have returned to dance in our skies, but we must also hear the farmers who work hard to feed us. May we find a gentle way to share this earth in harmony.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "The Narwhal Reporting",
@@ -211,6 +273,7 @@
         "name": "Environment and Climate Change Canada",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

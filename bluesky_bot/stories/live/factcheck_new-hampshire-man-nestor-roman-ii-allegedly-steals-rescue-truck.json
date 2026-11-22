@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.92,
+    "real_u": -1.8,
+    "real_psi": -1.9,
     "mode": "root",
     "posts": [
       "When a man's home caught fire in Dalton, NH, emergency crews rushed in to help—only to have their own rescue truck allegedly stolen by the homeowner.\nEvidence: structural emergency, vehicle theft, responder endangerment\n#Aletheia #NewHampshire",
-      "Reports framed the event as an extreme crisis response breakdown involving a distressed homeowner.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, Nestor Roman II allegedly stole a fire rescue vehicle, drove over hoses, struck emergency apparatus, and endangered firefighters.\nResulting Judgement: (-0.85, -0.92) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA desperate crisis transformed into reckless endangerment of emergency personnel through direct criminal action.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
+      "Reports framed the event as an extreme crisis response breakdown involving a distressed homeowner.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "In reality, Nestor Roman II allegedly stole a fire rescue vehicle, drove over hoses, struck emergency apparatus, and endangered firefighters.\nResulting Judgement: (-1.80, -1.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA desperate crisis transformed into reckless endangerment of emergency personnel through direct criminal action.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
       "- Dalton Fire & Rescue: PASS (0.5, 0.8) — Responded professionally.\n- Nestor Roman II: FAIL (-1.8, -1.9) — Stole rescue truck and attacked scene.",
       "In the early hours of Tuesday, August 25, 2026, firefighters battled a fully involved blaze at a Dalton, NH home, where the homeowner allegedly hijacked an F550 rescue truck.",
       "The Bright Side:\nMiraculously, no firefighters were seriously injured despite being nearly pinned and having their vital water supply lines driven over.",
       "The Breakdown & Plane Error:\nThe error confuses WHO is aiding whom (Plane 1 vs Plane 5). The public assumes mutual aid; the actor treats emergency resources as personal instruments.",
       "Social Physics Analysis:\nInstead of engaging in transparent collaboration during a crisis, the actor reverted to destructive impulse, subverting community defense infrastructure for erratic self-preservation.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated crisis distress and actual violent disruption, it plots a direct trajectory toward Greater Evil. F_neg >> F_pos driving psi negative.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated crisis distress and actual violent disruption, it plots a direct trajectory toward Greater Evil. F_neg >> F_pos driving psi negative.",
       "The Unavoidable Truth: Emergency responders risk their lives to save homes while facing erratic internal threats.\n\nThe Unavoidable Lie: Personal crisis excuses endangering the lives of those trying to help.",
       "Alethekanon:\nWhen those protected by community sacrifice turn their weapons upon their rescuers, social order collapses into entropy. The structural inversion here is total.",
       "Awwthekanon:\nIt is heartbreaking to watch a home burn, but turning fear into violence against firefighters who came to help only deepens the tragedy for everyone involved.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Nestor Roman II Actions",
@@ -152,6 +214,7 @@
         "name": "New Hampshire State Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Climate isn't a hot topic for Democrats",
     "link": "https://www.washingtontimes.com/news/2026/aug/29/climate-isnt-hot-topic-democrats-years-campaigns/",
     "target_url": "",
-    "claim_u": 0.74,
-    "claim_psi": 0.15,
-    "real_u": -0.45,
-    "real_psi": 0.65,
+    "claim_u": 0.89,
+    "claim_psi": 1.0,
+    "real_u": -0.16,
+    "real_psi": -0.39,
     "mode": "root",
     "posts": [
       "Politicians are quiet on climate, but the planet is still burning. Is 'climate hushing' a smart strategy or a fatal blunder?\n\nClimate isn't a hot topic for Democrats\nEvidence: Short-term survival, Silent campaigns, Long-term crisis\n#Aletheia #Climate #USPol 🌐",
-      "Campaigns claim that sidelining climate change is a necessary tactical pivot to focus on immediate voter anxieties like inflation, healthcare, and defending democracy.\nStated Judgement: (+0.74, +0.15) — Good Preference",
-      "In reality, ignoring the crisis doesn't stop its economic impacts. Rising temperatures are already battering home insurance and property values, making 'hushing' a short-sighted gamble.\nResulting Judgement: (-0.45, +0.65) — Deception",
-      "Verdict: FAIL — Fall into Deception.\nSidelining long-term existential threats for short-term electoral gains creates a dangerous feedback loop of policy neglect.\n\nIntegrity: Trustworthy (Hypocrisy: 1.19, Uncertainty z: 0)",
+      "Campaigns claim that sidelining climate change is a necessary tactical pivot to focus on immediate voter anxieties like inflation, healthcare, and defending democracy.\nStated Judgement: (+0.89, +1.00) — Greater Good",
+      "In reality, ignoring the crisis doesn't stop its economic impacts. Rising temperatures are already battering home insurance and property values, making 'hushing' a short-sighted gamble.\nResulting Judgement: (-0.16, -0.39) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nSidelining long-term existential threats for short-term electoral gains creates a dangerous feedback loop of policy neglect.\n\nIntegrity: Trustworthy (Hypocrisy: 1.19, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Democratic Campaigns: FAIL (-0.45, 0.65) — Sidelining climate for votes.\n- Sunrise Movement: COND (0.10, 0.40) — Shifted focus to anti-authoritarianism.",
       "As the 2026 midterm campaigns heat up, Democratic candidates are quiet on climate change, shifting focus to inflation and immediate political battles, even as 2026 tracks to be the hottest year on record.",
       "The Bright Side:\nFocusing on immediate economic pain points like inflation and healthcare helps campaigns connect with working-class voters who cannot afford to prioritize long-term existential crises.",
       "The Breakdown & Plane Error:\nThis is a Metaphysical error (WHO). Campaigns treat voters as short-term consumers of political messaging rather than stakeholders in a long-term physical reality, swapping systemic solutions for tactical silence.",
       "Social Physics Analysis:\nBy prioritizing immediate survival over systemic crisis, political actors use tactical silence as a shield. This avoids the hard work of building a green coalition, trading long-term stability for short-term peace.",
-      "The Trajectory: Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Tactical silence on systemic crises inevitably erodes public trust and delays vital action.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Tactical silence on systemic crises inevitably erodes public trust and delays vital action.",
       "The Unavoidable Truth: Sidelining climate change does not stop its accelerating economic and physical damage.\n\nThe Unavoidable Lie: Political silence on existential crises is a harmless, purely tactical campaign maneuver.",
       "Alethekanon:\nTactical silence is the precursor to policy paralysis. When survival instincts override systemic foresight, the future is mortgaged for a temporary lease on the present.",
       "Awwthekanon:\nIt is heartbreaking to see young advocates forced to choose between fighting for their physical future and defending their immediate democratic rights. Both struggles deserve our full hearts.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.35,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.3,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Democratic Campaigns",
@@ -295,6 +357,7 @@
         "name": "Sheldon Whitehouse",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

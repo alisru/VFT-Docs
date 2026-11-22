@@ -5,22 +5,22 @@
     "subject": "Japanese space tech startup Letara expands beyond satellite thrusters with $16M",
     "link": "https://techcrunch.com/2026/08/21/japanese-space-tech-startup-letara-expands-beyond-satellite-thrusters-with-16m/",
     "target_url": "",
-    "claim_u": 1.0,
+    "claim_u": 0.93,
     "claim_psi": 1.0,
-    "real_u": 0.9,
-    "real_psi": 0.85,
+    "real_u": 0.84,
+    "real_psi": 0.87,
     "mode": "root",
     "posts": [
       "Japanese startup Letara secures $16M to scale hybrid rocket tech beyond satellites into defense and space markets.\n\nJapanese Space Tech Startup Letara Expands Beyond Satellite Thrusters with $16M\nEvidence: academic roots, $16M venture round, dual-use aerospace expansion\n#Aletheia #SpaceTech #Japan 🌐",
-      "Letara claims its $16M funding will commercialize efficient hybrid rocket propulsion for space exploration and security applications.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Ground reality confirms a legitimate venture-backed scaling of hybrid propulsion into commercial and security aerospace markets.\nResulting Judgement: (+0.9, +0.85) — Grace",
-      "Verdict: PASS — The Path of Grace.\nCommercializing efficient hybrid rocket propulsion expands sustainable space access and dual-use aerospace innovation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 1)",
+      "Letara claims its $16M funding will commercialize efficient hybrid rocket propulsion for space exploration and security applications.\nStated Judgement: (+0.93, +1.00) — Greater Good",
+      "Ground reality confirms a legitimate venture-backed scaling of hybrid propulsion into commercial and security aerospace markets.\nResulting Judgement: (+0.84, +0.87) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nCommercializing efficient hybrid rocket propulsion expands sustainable space access and dual-use aerospace innovation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 1)",
       "- Letara Propulsion Tech: PASS (+0.9, +0.9) — Validated hybrid tech scaling.\n- Venture Funding Round: PASS (+0.8, +0.8) — Strong institutional backing.",
       "Japanese startup Letara raised ¥2.6B (~$16M) from investors including JAXA-backed Frontier Innovations to scale hybrid rocket systems for space and defense.",
       "The Bright Side:\nTransitioning clean, efficient hybrid propulsion into broader markets cuts waste compared to traditional paraffin wax rockets.",
       "The Breakdown & Plane Error:\nEvaluated on WHAT (hybrid tech) and WHO (startup founders). There is no bait-and-switch; stated commercialization matches actual venture growth.",
       "Social Physics Analysis:\nBy combining academic research with transparent venture backing, Letara aligns shared technical goals with open market collaboration, minimizing friction.",
-      "The Trajectory: The Path of Grace.\nWhen you map transparent technological development and venture funding against actual growth, it plots directly toward sustainable space innovation.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map transparent technological development and venture funding against actual growth, it plots directly toward sustainable space innovation.",
       "The Unavoidable Truth: Hybrid rocket propulsion offers a safer, simpler alternative to traditional systems.\n\nThe Unavoidable Lie: Dual-use expansion entirely avoids defense entanglements.",
       "Alethekanon:\nLetara's transition from satellite thrusters to broader aerospace systems demonstrates coherent execution of its stated commercial roadmap.",
       "Awwthekanon:\nIt's inspiring to see rigorous academic research blossom into tangible innovation that opens up the stars safely and efficiently for everyone.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.1,
+        "O": 0.9,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Letara Aerospace Development",
@@ -281,6 +343,7 @@
         "name": "Headline Asia",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

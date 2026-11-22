@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/stilgherrian.com/post/3mvf6xbzn722k",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_u": -0.5,
+    "real_psi": -0.6,
     "mode": "root",
     "posts": [
       "Exposing the performative machinery of digital extremism through a prominent influencer's candid disillusionment. 🌐\nEvidence: Media Career, Audience Incentives, Disillusionment\n#Aletheia #Media",
-      "Stated Claim: A decade in conservative media was driven by genuine ideological conviction before organic disillusionment set in.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Ground Reality: The ecosystem operated primarily as a monetized fandom and attention rat race where influencers played parasocial archetypes for profit.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nAcknowledging the performative incentives of the culture war allows for genuine departure from toxic online loops.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Stated Claim: A decade in conservative media was driven by genuine ideological conviction before organic disillusionment set in.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Ground Reality: The ecosystem operated primarily as a monetized fandom and attention rat race where influencers played parasocial archetypes for profit.\nResulting Judgement: (-0.50, -0.60) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nAcknowledging the performative incentives of the culture war allows for genuine departure from toxic online loops.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Lauren Southern: PASS (-0.3, -0.4) — Reflects candidly on performative incentives.\n- Online Media Ecosystem: FAIL (-0.7, -0.8) — Exploits outrage for monetization.",
       "After a decade shaping right-wing online media, former influencer Lauren Southern reflects on the performative mechanics, financial incentives, and parasocial dynamics that fuel the digital culture war.",
       "The Bright Side:\nCandid institutional self-reflection exposes how audience capture turns political discourse into hollow entertainment.",
       "The Breakdown & Plane Error:\nConfusing the structural mechanics of online audience capture (WHO/HOW) with genuine grassroots ideological movements (WHAT).",
       "Social Physics Analysis:\nActors run a smart selfish loop where outrage and persona adoption maximize engagement, treating political beliefs as commodified fandom rather than civic duty.",
-      "The Trajectory: The Path of Awakening.\nWhen actors recognize systemic exploitation and step outside the feedback loop, the trajectory shifts from deception toward awakening.\nψ = -0.5, u = -0.4.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen actors recognize systemic exploitation and step outside the feedback loop, the trajectory shifts from deception toward awakening.\nψ = -0.5, u = -0.4.",
       "The Unavoidable Truth: Political infotainment incentivizes extreme caricatures over genuine dialogue.\nThe Unavoidable Lie: Digital culture war factions represent authentic grassroots community values.",
       "Alethekanon:\nWhen politics becomes a parasocial fandom, ideological purity is just a monetization strategy. Stepping outside the illusion is the first step toward clarity.",
       "Awwthekanon:\nIt takes immense courage to walk away from a lucrative tribe when you realize the game is rigged to feed on human division.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Lauren Southern Memoir",
@@ -164,6 +226,7 @@
         "name": "Yannick Veilleux-Lepage",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -8,19 +8,19 @@
     "claim_u": 1.0,
     "claim_psi": 0.0,
     "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "Trump and tech leaders sign a 'morally binding' AI safety accord.\nEvidence: voluntary pact, no hard enforcement, industry self-policing\n#Aletheia #AI #Tech",
-      "Tech executives and the administration claim voluntary oversight fosters innovation while ensuring robust safety guardrails.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Voluntary pacts bypass federal safety laws, leaving critical security vulnerabilities unchecked while entrenching corporate dominance.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nA voluntary industry accord substitutes for binding regulation, protecting corporate tech interests over public safety.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 4)",
+      "Tech executives and the administration claim voluntary oversight fosters innovation while ensuring robust safety guardrails.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Voluntary pacts bypass federal safety laws, leaving critical security vulnerabilities unchecked while entrenching corporate dominance.\nResulting Judgement: (-0.80, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA voluntary industry accord substitutes for binding regulation, protecting corporate tech interests over public safety.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 4)",
       "- Tech Executives: FAIL (-0.85, -0.90) — Avoids statutory oversight via voluntary pacts.\n- White House: FAIL (-0.75, -0.85) — Replaces public regulation with industry PR.",
       "President Trump signed a voluntary AI safety agreement with tech leaders, attempting to set industry standards in the absence of congressional action.",
       "The Bright Side:\nEncourages active industry dialogue on AI safety risks without immediate bureaucratic gridlock.",
       "The Breakdown & Plane Error:\nConfusing corporate self-governance (WHAT) with public democratic accountability (WHO).",
       "Social Physics Analysis:\nTech leaders and officials run a smart selfish maneuver: trading binding public oversight for a voluntary PR accord. They project safety commitments while insulating themselves from legal accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_pos=0.0, F_neg=2.8, driving ψ toward -0.9.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. F_pos=0.0, F_neg=2.8, driving ψ toward -0.9.",
       "The Unavoidable Truth: Voluntary corporate pledges cannot substitute for enforceable federal AI safety regulations.\n\nThe Unavoidable Lie: A handshake agreement with tech giants constitutes real public accountability.",
       "Alethekanon:\nVoluntary industry accords substitute corporate self-interest for enforceable public safety, ensuring zero accountability.",
       "Awwthekanon:\nIt is heartbreaking to watch public safety sidelined for corporate convenience when real lives and digital infrastructure hang in the balance.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tech Executives",
@@ -172,6 +234,7 @@
         "name": "White House",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

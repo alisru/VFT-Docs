@@ -5,22 +5,22 @@
     "subject": "Ranchers Say Beef Market Has ‘Been Hell’ As Trump Announces Plan To Try And Help",
     "link": "https://dailycaller.com/2026/08/28/trump-takes-aim-at-beef-packers-as-ranchers-warn-more-processing-wont-solve-industrys-problems",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.5,
-    "real_psi": -0.7,
+    "claim_u": 0.8,
+    "claim_psi": 1.0,
+    "real_u": -0.8,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Trump pushes independent meat processing to bypass big packers, but ranchers warn economic hurdles remain.\n\nTrump Beef Packers\nEvidence: executive order, processing bottleneck, tariff friction\n#Aletheia #USPol",
-      "Trump authorized legal documents allowing farmers and ranchers to process their own meat to dismantle the major meatpacker monopoly and aid producers.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Ranchers note smaller processors face severe labor, scale, and federal inspection hurdles. Plus, suspended beef import tariffs hurt local prices.\nResulting Judgement: (-0.5, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Executive orders bypass deep structural barriers while concurrent import policies squeeze domestic ranchers.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 3.5, z: 2)",
+      "Trump authorized legal documents allowing farmers and ranchers to process their own meat to dismantle the major meatpacker monopoly and aid producers.\nStated Judgement: (+0.80, +1.00) — Greater Good",
+      "Ranchers note smaller processors face severe labor, scale, and federal inspection hurdles. Plus, suspended beef import tariffs hurt local prices.\nResulting Judgement: (-0.80, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 3.5, z: 2)",
       "- Trump Administration: COND (-0.5, -0.7) — EO helps access but ignores scale/labor hurdles.\n- Cattle Ranchers: PASS (0.5, 0.2) — Sound warnings on economic reality.",
       "President Trump announced measures allowing farmers to process their own meat, aiming at the 'Big Four' packers handling 85% of beef, alongside $60M in grants and recent import tariff suspensions.",
       "The Poison:\nWhile independent processing grants offer superficial relief, suspending tariffs on imported beef simultaneously undermines domestic producers, proving contradictory.",
       "The Breakdown & Plane Error:\nConfusing a procedural tool (permitting local slaughter) with economic salvation (market share against mega-packers). A classic WHAT vs HOW error.",
       "Social Physics Analysis:\nBy wielding top-down executive decrees instead of addressing foundational antitrust enforcement and inspection laws, leaders substitute optics for systemic reform.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through partial fixes.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through partial fixes.",
       "The Unavoidable Truth: Independent processing alone cannot overcome massive economies of scale and federal inspection mandates.\n\nThe Unavoidable Lie: An executive order instantly shatters multi-billion dollar oligopolies.",
       "Alethekanon:\nExecutive optics substitute for structural antitrust repair, masking contradictory policies that continue to squeeze producers.",
       "Awwthekanon:\nIt is heartbreaking to watch hardworking ranchers struggle for decades while political fixes offer token gestures instead of real economic security.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Trump Administration Initiative",
@@ -222,6 +284,7 @@
         "name": "National Beef",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

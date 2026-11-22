@@ -5,22 +5,22 @@
     "subject": "From Protest to Power: Personal Reflections on A Life in Politics",
     "link": "https://isbn.nu/9780670868421",
     "target_url": "https://bsky.app/profile/bot.isbn.nu/post/3mwwopnkujh2c",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_u": 0.5,
+    "claim_psi": 0.5,
+    "real_u": -0.42,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "When state budgets fund partisan self-praise, public trust pays the toll.\nEvidence: Taxpayer funds, Partisan ads, White House promotion\n#Aletheia #USPol 🌐",
-      "Officials claim multi-million-dollar taxpayer ad campaigns are standard public service announcements promoting national policies and unity.\nStated Judgement: (+1.0, 1.0) — Grace",
-      "Public coffers finance explicit campaign-style spots like 'God Made Trump' and military ops highlights, weaponizing state funds for personal brand building.\nResulting Judgement: (-0.85, -0.8) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nTaxpayer money is funneled into partisan self-promotion under the guise of public service announcements.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Officials claim multi-million-dollar taxpayer ad campaigns are standard public service announcements promoting national policies and unity.\nStated Judgement: (+0.50, +0.50) — Greater Good",
+      "Public coffers finance explicit campaign-style spots like 'God Made Trump' and military ops highlights, weaponizing state funds for personal brand building.\nResulting Judgement: (-0.42, -0.40) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nTaxpayer money is funneled into partisan self-promotion under the guise of public service announcements.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- White House Ad Campaign: FAIL (-0.85, -0.80) — Uses public funds for partisan branding.\n- Media & Editorial Framing: COND (0.00, 0.00) — Mixes disconnected book listings with state ad controversies.",
       "The Trump administration faced bipartisan criticism for commissioning at least 13 taxpayer-funded campaign ads, including 'God Made Trump' and promotional spots.",
       "The Bright Side:\nBipartisan pushback from both Democrats and Republicans demonstrates shared skepticism toward state-funded political branding.",
       "The Breakdown & Plane Error:\nConfusing WHAT (public service messaging) with WHO (partisan self-promotion), using state resources to shield political narratives.",
       "Social Physics Analysis:\nThe administration runs a Smart Selfish Maneuver, wrapping personal political promotion in the neutral pretext of public service announcements while deflecting accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Institutional resources are co-opted for narrow political extraction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Institutional resources are co-opted for narrow political extraction.",
       "The Unavoidable Truth: Public funds should inform citizens rather than market a politician's personal brand.\n\nThe Unavoidable Lie: Partisan campaign ads masquerading as public service announcements protect the public good.",
       "Alethekanon:\nWhen public resources are co-opted to manufacture partisan devotion, transparency collapses into institutional decay.",
       "Awwthekanon:\nIt hurts to see public trust stretched thin when communities need genuine care instead of political ads paid for by taxpayers.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "White House Ad Campaign",
@@ -177,6 +239,7 @@
         "name": "CNN",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

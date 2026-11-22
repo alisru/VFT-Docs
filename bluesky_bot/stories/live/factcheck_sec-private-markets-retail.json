@@ -5,22 +5,22 @@
     "subject": "SEC opens the door to more retail money in private markets — as investors face fresh risks getting out",
     "link": "https://cnb.cx/4iTw2gj",
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mwsaiehib62r",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "claim_u": 0.68,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Opening private equity to retail 401ks sounds like populist wealth-building, but who really gets trapped in illiquid Wall Street funds? 🌐\nEvidence: democratizing access, high fee structures, redemption freezes\n#Aletheia #Finance #SEC",
-      "The SEC claims expanding retail access to private assets lets everyday Americans share in corporate wealth rather than hoarding it for the rich.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, ordinary investors face severe illiquidity, heavy fee burdens, and sudden redemption halts when underlying debt turns sour.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nWall Street captures liquidity and high performance fees under the populist banner of democratization while retail bears the exit risk.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
+      "The SEC claims expanding retail access to private assets lets everyday Americans share in corporate wealth rather than hoarding it for the rich.\nStated Judgement: (+0.68, +1.00) — Greater Good",
+      "In reality, ordinary investors face severe illiquidity, heavy fee burdens, and sudden redemption halts when underlying debt turns sour.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWall Street captures liquidity and high performance fees under the populist banner of democratization while retail bears the exit risk.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
       "Sub-Audits Breakdown:\n- SEC Regulatory Push: FAIL (-0.70, -0.80) — Pretext of fairness masks fee extraction.\n- Wall Street Asset Mgrs: FAIL (-0.80, -0.90) — Captures retail liquidity safely.",
       "The SEC approved rules allowing retail and retirement investors broader access to private equity, credit, and real estate, following executive orders to democratize alternative investments.",
       "The Poison:\nSemi-liquid private credit funds routinely freeze redemptions during market stress, locking retail investors out of their own cash when they need it most.",
       "The Breakdown & Plane Error:\nConfusing the tool (private market access) with the beneficiary (Wall Street asset managers). The retail investor is framed as a partner but treated as exit liquidity.",
       "Social Physics Analysis:\nActors deploy a Smart Selfish maneuver under the pretext of democratization. They manufacture a narrative of financial inclusion to mask the extraction of high performance fees and offload illiquid risk onto retail portfolios.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Pretextual inclusion masks structural wealth extraction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Pretextual inclusion masks structural wealth extraction.",
       "The Unavoidable Truth: Democratizing private markets without strict liquidity guardrails turns everyday retail investors into captive exit liquidity for Wall Street.\n\nThe Unavoidable Lie: Unlocking high-yielding alternative assets for 401(k)s is purely designed to empower ordinary workers financially.",
       "Alethekanon:\nFraming liquidity risk as a helpful feature rather than a bug reveals institutional capture disguised as populist economic reform.",
       "Awwthekanon:\nIt breaks my heart seeing everyday workers trust their hard-earned retirement savings to complex, locked-up funds while insiders cash out.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "SEC Regulatory Push",
@@ -222,6 +284,7 @@
         "name": "Blackstone",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

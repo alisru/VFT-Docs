@@ -6,21 +6,21 @@
     "link": "https://techcrunch.com/2026/08/31/a16z-brings-growth-fund-to-8-5b-days-after-launching-new-1-1b-fund/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.06,
-    "real_u": 0.68,
-    "real_psi": 0.12,
+    "claim_psi": 1.0,
+    "real_u": 0.71,
+    "real_psi": 0.78,
     "mode": "root",
     "posts": [
       "A massive capital injection reshapes the venture landscape as a16z expands its war chest.\n\na16z brings growth fund to $8.5B\nEvidence: funding innovation, lobbying power, market consolidation\n#Aletheia #VentureCapital #AI",
-      "Andreessen Horowitz claims its expanded $8.5B growth fund and $1.1B Machine Age fund will empower the next generation of tech, AI, and healthcare startups.\nStated Judgement: (+1.0, 0.06) — Good Preference",
-      "While funding startups, a16z is increasingly directing massive capital toward political lobbying, defense tech, and consolidating market power in the AI stack.\nResulting Judgement: (+0.68, +0.12) — Lesser Good",
-      "Verdict: PASS — Awakening into Grace.\nThe expansion represents genuine capital deployment, though heavily leveraged for political and market influence.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
+      "Andreessen Horowitz claims its expanded $8.5B growth fund and $1.1B Machine Age fund will empower the next generation of tech, AI, and healthcare startups.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While funding startups, a16z is increasingly directing massive capital toward political lobbying, defense tech, and consolidating market power in the AI stack.\nResulting Judgement: (+0.71, +0.78) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe expansion represents genuine capital deployment, though heavily leveraged for political and market influence.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
       "Sub-Audits Breakdown:\n- a16z Growth Fund: PASS (+0.68, +0.12) — Massive capital with lobbying focus.\n- TechCrunch Reporting: PASS (+0.90, +0.10) — Accurate coverage of fund expansion.",
       "Andreessen Horowitz expanded its fifth growth fund to $8.5 billion and launched a $1.1 billion AI hardware fund, aiming to back growth-stage startups across AI, defense, and health tech.",
       "The Poison:\nConcentrating such vast capital and lobbying power in a single firm risks distorting the startup ecosystem, favoring politically aligned players over pure innovation.",
       "The Breakdown & Plane Error:\nThe narrative focuses on the WHO (empowering startups) while obscuring the WHAT (building a massive political and regulatory lobbying apparatus to protect their portfolio).",
       "Social Physics Analysis:\nBy hoarding capital and deploying it for political leverage, the firm shifts from a cooperative ecosystem model to a unilateral power dynamic, increasing systemic friction for independent competitors.",
-      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Capital is deployed, but with heavy political strings.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Capital is deployed, but with heavy political strings.",
       "The Unavoidable Truth: Billions are flowing into AI and defense tech.\nThe Unavoidable Lie: This capital is purely for neutral technological advancement.",
       "Alethekanon:\nThe consolidation of multi-billion dollar war chests under a single venture banner signals a shift from market-driven innovation to political and regulatory capture.",
       "Awwthekanon:\nIt's dizzying to see billions moving around while everyday founders struggle to get their dreams off the ground. I hope some of this warmth reaches the quiet creators who just want to build things that help people.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.3,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "a16z Growth Fund",
@@ -208,6 +270,7 @@
         "name": "David George",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Short Selling And Information Warfare: A Bet Against America",
     "link": "https://dailycaller.com/2026/09/21/opinion-short-selling-and-information-warfare-a-bet-against-america-jon-schweppe",
     "target_url": "",
-    "claim_u": 0.72,
-    "claim_psi": 0.62,
-    "real_u": -0.68,
-    "real_psi": -0.58,
+    "claim_u": 0.61,
+    "claim_psi": 0.46,
+    "real_u": -0.44,
+    "real_psi": -0.36,
     "mode": "root",
     "posts": [
       "An opinion piece attacks short selling as 'theft dressed up as opportunity,' targeting activist research firms like Hunterbrook.\nEvidence: Selective history, Suppressed market utility, Emotive framing\n#Aletheia #Finance #Markets",
-      "The author claims to defend the integrity of American capital markets and protect retail investors from predatory, manipulative short-selling cartels.\nStated Judgement: (+0.72, +0.62) — Greater Good",
-      "In reality, the piece presents a highly one-sided attack on short selling, ignoring its vital role in price discovery, hedging, and exposing corporate fraud.\nResulting Judgement: (-0.68, -0.58) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe narrative relies on selective outrage and emotional framing to delegitimize a core market mechanism, risking systemic opacity.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.20, Uncertainty z: 2)",
+      "The author claims to defend the integrity of American capital markets and protect retail investors from predatory, manipulative short-selling cartels.\nStated Judgement: (+0.61, +0.46) — Greater Good",
+      "In reality, the piece presents a highly one-sided attack on short selling, ignoring its vital role in price discovery, hedging, and exposing corporate fraud.\nResulting Judgement: (-0.44, -0.36) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe narrative relies on selective outrage and emotional framing to delegitimize a core market mechanism, risking systemic opacity.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.20, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Jon Schweppe Opinion: FAIL (-0.68, -0.58) — Suppresses the fraud-exposure utility of shorting.\n- Hunterbrook Critique: COND (-0.20, -0.15) — Valid conflict-of-interest questions raised.",
       "An opinion piece by Jon Schweppe criticizes the rise of 'activist journalism' hedge funds like Hunterbrook Capital, arguing that combining investigative reporting with short selling creates corrupt incentives.",
       "The Bright Side:\nRaising awareness about the potential conflicts of interest in hybrid media-trading models like Hunterbrook is a valid and necessary conversation.",
       "The Breakdown & Plane Error:\nThe piece commits a WHAT vs WHY error. It focuses on the negative emotions of betting on failure (WHY) while ignoring the systemic necessity of short selling in popping speculative bubbles and exposing corporate fraud (WHAT).",
       "**Social Physics Analysis:**\nThe author executes a Smart Selfish Maneuver by manufacturing a moral crisis around short selling. By projecting corrupt motives onto all short sellers and using retail investors as a scapegoat, the narrative seeks to justify restricting market mechanisms that challenge corporate management.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. This path leads to reduced market transparency and delayed exposure of corporate misconduct.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. This path leads to reduced market transparency and delayed exposure of corporate misconduct.",
       "The Unavoidable Truth: Short selling is a critical mechanism for exposing corporate fraud and balancing market valuations.\n\nThe Unavoidable Lie: Short selling is inherently predatory and serves no legitimate economic purpose.",
       "Alethekanon:\nTo condemn short selling is to demand a market where only optimism is permitted. Such asymmetry is a breeding ground for fraud, as history repeatedly demonstrates.",
       "Awwthekanon:\nIt is hard to watch people profit from a company's decline, but we must remember that truth and balance sometimes require painful corrections.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Jon Schweppe Opinion",
@@ -165,6 +227,7 @@
         "name": "Muddy Waters Research",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

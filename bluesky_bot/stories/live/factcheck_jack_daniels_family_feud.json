@@ -5,22 +5,22 @@
     "subject": "Heirs to $11 billion Jack Daniel's fortune locked in bitter family feud",
     "link": "https://www.dailymail.com/news/article-16090319/Jack-daniels-heirs-family-feud.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.65,
-    "real_psi": -0.75,
+    "claim_u": 0.68,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "When legacy whiskey brands meet modern corporate squabbles, generational wealth turns into courtroom theater.\nHeirs to $11 billion Jack Daniel's...\nEvidence: rebel brothers' scathing letter, 60% stock plunge, $15B buyout bid\n#Aletheia #Business",
-      "Rebel heirs argue that Brown-Forman's board rewarded failure and rejected a lucrative takeover, demanding operational turnaround.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The feud exposes deep fractures over lost family wealth, ousted relatives seeking retribution, and looming hostile takeover pressures.\nResulting Judgement: (-0.65, -0.75) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nA high-stakes corporate rebellion is framed as pure shareholder advocacy while masking bitter intergenerational control battles.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
+      "Rebel heirs argue that Brown-Forman's board rewarded failure and rejected a lucrative takeover, demanding operational turnaround.\nStated Judgement: (+0.68, +1.00) — Greater Good",
+      "The feud exposes deep fractures over lost family wealth, ousted relatives seeking retribution, and looming hostile takeover pressures.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA high-stakes corporate rebellion is framed as pure shareholder advocacy while masking bitter intergenerational control battles.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
       "- Brown-Forman Board: FAIL (-0.70, -0.75) — Struggled with declining stock and failed merger bids.\n- Rebel Brothers (Brown): COND (-0.40, -0.50) — Exposes governance flaws while pushing self-interested takeover deals.",
       "Whiskey heirs WL Lyons Brown III and Stuart R Brown lambasted company leadership in a scorching letter, urging relatives to weigh a $15B takeover.",
       "The Bright Side:\nBringing corporate accountability and transparency failures into the open after steep stock declines.",
       "The Breakdown & Plane Error:\nConfusing WHO (family legacy control and personal compensation disputes) with WHAT (operational asset management).",
       "Social Physics Analysis:\nBy prioritizing factional control and public corporate attacks over transparent coalition-building, the family feud deepens systemic instability rather than solving governance strain.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Internal power struggles cloak themselves in shareholder protection pretexts.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Internal power struggles cloak themselves in shareholder protection pretexts.",
       "The Unavoidable Truth: Family-controlled corporations remain vulnerable to severe generational and strategic fragmentation.\n\nThe Unavoidable Lie: Rebel heirs are motivated purely by altruistic concern for external shareholders.",
       "Alethekanon:\nGenerational wealth quarrels lay bare the fragility of dynastic governance when market winds turn adverse.",
       "Awwthekanon:\nIt is heartbreaking to watch a historic family legacy fractured by bitterness and public infighting over money.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Brown-Forman Board",
@@ -287,6 +349,7 @@
         "name": "Jack Daniel's",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

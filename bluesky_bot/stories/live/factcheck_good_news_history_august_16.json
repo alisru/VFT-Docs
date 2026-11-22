@@ -14,13 +14,13 @@
       "A look back at historical milestones of conservation, human achievement, and artistic collaboration.\n\nGood News in History, August 16\nEvidence: historical progress, accurate reporting, documented milestones\n#Aletheia #History",
       "The article highlights key historical events on August 16, including the 1916 Migratory Bird Treaty, Joe Kittinger's 1960 space jump, Madonna's philanthropy, and Neil Young joining CSN in 1969.\n\nStated Judgement: (+1.0, +1.0) — Grace",
       "These events are well-documented historical facts. The treaty successfully protected over 800 species, Kittinger set records, Madonna funded schools, and CSNY made rock history.\n\nResulting Judgement: (+1.0, +1.0) — Grace",
-      "Verdict: PASS — Grace. The retrospective accurately celebrates genuine human achievements and conservation milestones without distortion.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Migratory Bird Treaty: PASS (1.0, 1.0) — Saved 800+ species.\n- Joe Kittinger Jump: PASS (1.0, 1.0) — Documented records.\n- Madonna Philanthropy: PASS (1.0, 1.0) — Built 10 schools.\n- Neil Young CSN: PASS (1.0, 1.0) — Historic collaboration.",
       "This historical roundup reflects on significant environmental, scientific, and cultural milestones that shaped modern conservation, aerospace research, and music history.",
       "The Bright Side:\nHighlighting these milestones reminds us of the power of international cooperation, scientific courage, and creative collaboration to drive lasting positive change.",
       "The Breakdown & Plane Error:\nNo plane errors detected. The narrative (WHY) aligns perfectly with the physical facts (WHERE) and historical records (CAUSE), maintaining absolute structural integrity.",
       "Social Physics Analysis:\nBy celebrating shared human achievements, the narrative fosters social cohesion and inspires future progress. It avoids pretexts or projection, relying entirely on transparent, verifiable historical facts.",
-      "The Trajectory: Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of historical facts and positive framing creates zero systemic strain.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of historical facts and positive framing creates zero systemic strain.",
       "The Unavoidable Truth: Human progress is built on cooperation and courage.\n\nThe Unavoidable Lie: History is purely a sequence of decay without positive milestones.",
       "Alethekanon:\nThe data is structurally sound. Verifiable historical records confirm every claim, demonstrating how transparent documentation preserves cultural and scientific truth.",
       "Awwthekanon:\nIt is so beautiful to look back and see how we have protected innocent birds, reached for the stars, and created music that heals. These moments show the true warmth of our shared human spirit.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Migratory Bird Treaty",
@@ -281,6 +343,7 @@
         "name": "Crosby, Stills, Nash & Young",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.45,
-    "real_psi": -0.5,
+    "real_u": -0.1,
+    "real_psi": -0.17,
     "mode": "root",
     "posts": [
       "Travis Kalanick's Atoms is fueling speculation about entering the robotaxi race.\nEvidence: $1.7B funding, Pronto acquisition, Uber talks\n#Aletheia #Tech #Mobility",
-      "Kalanick claims Atoms is building industrial software and unfinished business ventures rather than just a simple ride-hailing clone.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Behind the PR spin of enterprise software, Atoms is quietly positioning itself for autonomous vehicle acquisitions and robotaxi integration.\nResulting Judgement: (-0.45, -0.50) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nSpeculative corporate maneuvers mask aggressive market re-entry behind vague software pretexts.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.45, z: 2)",
+      "Kalanick claims Atoms is building industrial software and unfinished business ventures rather than just a simple ride-hailing clone.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Behind the PR spin of enterprise software, Atoms is quietly positioning itself for autonomous vehicle acquisitions and robotaxi integration.\nResulting Judgement: (-0.10, -0.17) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nSpeculative corporate maneuvers mask aggressive market re-entry behind vague software pretexts.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.45, z: 2)",
       "Sub-Audits Breakdown:\n- Atoms Corporate Strategy: COND (-0.40, -0.45) — Vague enterprise claims mask robotaxi ambitions.\n- Media Speculation: PASS (0.20, 0.10) — Financial Times tracking real hiring and talks.",
       "Travis Kalanick, the controversial former CEO of Uber, is back in the spotlight as his holding company Atoms expands its autonomous vehicle footprint after raising $1.7 billion.",
       "The Bright Side:\nCompetition and fresh capital could accelerate safe autonomous driving tech innovations despite past regulatory and legal hurdles.",
       "The Breakdown & Plane Error:\nConfusing WHAT (building software) with WHO (Kalanick settling personal scores and market dominance).",
       "Social Physics Analysis:\nKalanick runs a classic Smart Selfish Maneuver. He uses vague pretexts of industrial software to obscure aggressive autonomous vehicle recruitment, protecting brand equity while reclaiming lost turf.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through strategic concealment.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through strategic concealment.",
       "The Unavoidable Truth: Billion-dollar tech holding companies rarely stay out of lucrative autonomous markets.\n\nThe Unavoidable Lie: Atoms is purely an industrial software company with no interest in robotaxis.",
       "Alethekanon:\nCorporate vagueness is rarely a sign of peaceful software building; it is the prelude to turf wars.",
       "Awwthekanon:\nIt's tough watching old industry battles reignite when everyone just wants safe, reliable transit without the corporate drama.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Atoms Corporate Strategy",
@@ -165,6 +227,7 @@
         "name": "Anthony Levandowski",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

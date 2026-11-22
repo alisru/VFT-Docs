@@ -5,22 +5,22 @@
     "subject": "Syrian regime planned American journalist's kidnapping for weeks",
     "link": "https://www.npr.org/2026/09/18/nx-s1-5974166/assad-austin-tice-kidnapping-bbc-embedded",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -0.95,
-    "real_psi": -0.92,
+    "claim_u": 0.5,
+    "claim_psi": 0.5,
+    "real_u": -0.02,
+    "real_psi": -0.01,
     "mode": "root",
     "posts": [
       "New BBC and NPR reporting reveals the Assad regime meticulously planned the 2012 abduction of American journalist Austin Tice. 🌐\nEvidence: Whistleblower testimony, Regime records, Intelligence files\n#Aletheia #Syria #Journalism",
-      "Stated accounts long suggested freelance reporter Austin Tice stumbled into a random government checkpoint in 2012 by sheer chance.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Investigative files and insider testimony expose a calculated, weeks-long state operation sanctioned directly by Bashar al-Assad.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nSecret state terror and targeted abductions of journalists shatter diplomatic norms.\n\nIntegrity: Severe Deception (Hypocrisy: 18.2, z: 5)",
+      "Stated accounts long suggested freelance reporter Austin Tice stumbled into a random government checkpoint in 2012 by sheer chance.\nStated Judgement: (+0.50, +0.50) — Greater Good",
+      "Investigative files and insider testimony expose a calculated, weeks-long state operation sanctioned directly by Bashar al-Assad.\nResulting Judgement: (-0.02, -0.01) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nSecret state terror and targeted abductions of journalists shatter diplomatic norms.\n\nIntegrity: Severe Deception (Hypocrisy: 18.2, z: 5)",
       "Sub-Audits Breakdown:\n- BBC / NPR Investigation: PASS (1.0, 1.0) — Uncovers verified intelligence files.\n- Assad Regime Denials: FAIL (-0.95, -0.92) — Exposed as systematic state falsehoods.",
       "A multi-year investigation by BBC's Embedded and Radio 4 uncovered secret Syrian intelligence documents detailing the deliberate targeting of Austin Tice.",
       "The Poison:\nThe harrowing confirmation that state-sponsored abduction of journalists was authorized at the highest levels of the Syrian government.",
       "The plane error confuses tactical state security pretexts with random journalistic mishap, masking state-sanctioned human rights violations as fog of war.",
       "Social Physics Analysis:\nThe Syrian regime executed a Smart Selfish Maneuver, using secret intelligence networks to target independent reporting while publicly projecting plausible deniability through manufactured confusion and border chaos.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map the gap between stated accidental disappearance and ground-level state capture, it plots a direct trajectory toward Greater Evil. Systemic state brutality meets ultimate historical accountability.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated accidental disappearance and ground-level state capture, it plots a direct trajectory toward Greater Evil. Systemic state brutality meets ultimate historical accountability.",
       "The Unavoidable Truth: State-level intelligence records prove the Assad regime deliberately targeted and abducted Austin Tice.\n\nThe Unavoidable Lie: The disappearance was merely an unfortunate chance encounter at a routine wartime checkpoint.",
       "Alethekanon:\nState terror disguised as bureaucratic chaos collapses under archival light. Truth survives the tyrant's archive.",
       "Awwthekanon:\nFor over a decade, a family has carried the agonizing weight of not knowing. May this hard truth bring light to the darkness and guide Austin home.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "BBC / NPR Investigation",
@@ -173,6 +235,7 @@
         "name": "Syrian Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

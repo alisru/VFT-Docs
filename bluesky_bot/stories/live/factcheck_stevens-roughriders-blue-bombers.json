@@ -8,19 +8,19 @@
     "claim_u": 1.0,
     "claim_psi": 0.5,
     "real_u": 0.6,
-    "real_psi": 0.5,
+    "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "Tommy Stevens shines with three touchdowns as the Roughriders edge the Blue Bombers in an overtime thriller.\nEvidence: 32-26 score, 3 TDs, OT finish\n#CFL #Football #Roughriders",
-      "Saskatchewan secured a crucial 32-26 overtime victory over Winnipeg behind stellar play from quarterback Tommy Stevens.\nStated Judgement: (+1.0, +0.5) — Greater Good",
-      "Competitive athletics provide transparent, high-stakes engagement where performance directly determines outcomes under pressure.\nResulting Judgement: (+0.6, +0.5) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nAthletic competition delivers honest contest and clear, verifiable results.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Saskatchewan secured a crucial 32-26 overtime victory over Winnipeg behind stellar play from quarterback Tommy Stevens.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "Competitive athletics provide transparent, high-stakes engagement where performance directly determines outcomes under pressure.\nResulting Judgement: (+0.60, +0.40) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAthletic competition delivers honest contest and clear, verifiable results.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Saskatchewan Roughriders: PASS (+0.7, +0.5) — Executed clutch plays in OT.\n- Winnipeg Blue Bombers: PASS (+0.5, +0.3) — Fought back to force overtime.",
       "The Saskatchewan Roughriders improved to 8-4 in the CFL West Division after stopping Winnipeg in a tense overtime finish.",
       "The Bright Side:\nPure athletic competition offers unambiguous results and shared communal excitement.",
       "The Breakdown & Plane Error:\nAccurately tracks physical performance (WHERE/HOW) without ideological distortion.",
       "Social Physics Analysis:\nAthletes engage in transparent collaboration and mutual test of skill, aligning fully with smart altruistic principles under clear rules.",
-      "The Trajectory: The Path of Grace.\nWhen you map athletic effort against game outcomes, it plots a direct trajectory toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map athletic effort against game outcomes, it plots a direct trajectory toward Grace.",
       "The Unavoidable Truth: Hard work and execution under pressure decide the winner on the field.\n\nThe Unavoidable Lie: Every team can win without defensive stops in overtime.",
       "Alethekanon:\nFair competition yields indisputable truths on the gridiron.",
       "Awwthekanon:\nIt is wonderful to witness athletes pouring their hearts into a hard-fought game that brings fans together.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Saskatchewan Roughriders",
@@ -168,6 +230,7 @@
         "name": "Zach Collaros",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

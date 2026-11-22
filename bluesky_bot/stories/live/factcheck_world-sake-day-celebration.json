@@ -7,14 +7,14 @@
     "target_url": "https://bsky.app/profile/stilgherrian.com/post/3mwrfom7c5czh",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.9,
-    "real_psi": 0.9,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "World Sake Day unites global communities to celebrate Japanese craftsmanship, culture, and brewing heritage.\nEvidence: cultural events, brewing traditions, international wine awards\n#Aletheia #Culture #Sake",
       "World Sake Day celebrates cultural heritage, traditional craftsmanship, and global connection through the appreciation of sake.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Communities and breweries worldwide observe the day by honoring ancient brewing traditions and sharing cultural appreciation.\nResulting Judgement: (+0.9, +0.9) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nGlobal cultural celebration fosters genuine community connection and heritage preservation.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Communities and breweries worldwide observe the day by honoring ancient brewing traditions and sharing cultural appreciation.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nGlobal cultural celebration fosters genuine community connection and heritage preservation.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Japan Sake Makers Association: PASS (+0.9, +0.9) — Authentic promotion of cultural heritage.\n- Global Communities: PASS (+0.9, +0.9) — Meaningful cross-cultural engagement.",
       "World Sake Day marks the official start of the sake-brewing season in Japan, fostering international appreciation for artisanal brewing.",
       "The Bright Side:\nHonoring centuries-old craftsmanship bridges cultural divides and supports local artisans worldwide.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "World Sake Day Organization",
@@ -214,6 +276,7 @@
         "name": "Choshu Sake Brewery",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

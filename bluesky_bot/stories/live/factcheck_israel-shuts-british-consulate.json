@@ -5,16 +5,16 @@
     "subject": "Israel shuts British consulate in response to sanctions",
     "link": "https://www.dailymail.com/news/article-16114263/Ed-Miliband-sanctions-West-Bank-settlements-US-Israel-Argentina-Falklands.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": -0.5,
-    "claim_psi": -0.6,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": -0.45,
+    "claim_psi": -0.55,
+    "real_u": -0.65,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Israel shuts the British consulate in East Jerusalem following UK sanctions on West Bank settlements.\nEvidence: Consulate closure, Diplomatic expulsion, Settlement sanctions\n#Aletheia #MiddleEast",
-      "Israeli officials characterize UK sanctions as biased interference in sovereign affairs and moral distortion.\nStated Judgement: (-0.5, -0.6) — Lesser Evil / Retaliation",
-      "Retaliatory closures and travel bans suppress diplomatic oversight of occupied territories and penalize human rights critics.\nResulting Judgement: (-0.8, -0.9) — Greater Evil / Coercion",
-      "Verdict: FAIL — The Path of Destruction.\nDiplomatic retaliations shut down channels of accountability and escalate regional hostility under the guise of sovereign defense.\n\nIntegrity: Severe Deception (Hypocrisy: 18.4, z: 4)",
+      "Israeli officials characterize UK sanctions as biased interference in sovereign affairs and moral distortion.\nStated Judgement: (-0.45, -0.55) — Greater Evil",
+      "Retaliatory closures and travel bans suppress diplomatic oversight of occupied territories and penalize human rights critics.\nResulting Judgement: (-0.65, -0.75) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nDiplomatic retaliations shut down channels of accountability and escalate regional hostility under the guise of sovereign defense.\n\nIntegrity: Severe Deception (Hypocrisy: 18.4, z: 4)",
       "Sub-Audits Breakdown:\n- Daily Mail Coverage: COND (-0.7, -0.8) — Details diplomatic fallout and accusations.\n- BBC News Reporting: COND (-0.6, -0.7) — Highlights UK sanctions and Israeli fury.",
       "Following UK sanctions against violent West Bank settlement expansion, Israel ordered the closure of the British consulate in East Jerusalem and expelled monitors.",
       "The Poison:\nPunitive diplomatic expulsions and travel bans on parliamentarians foreclose peaceful mediation and entrench illegal expansion.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Daily Mail Coverage",
@@ -168,6 +230,7 @@
         "name": "Israel",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

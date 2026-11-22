@@ -5,22 +5,22 @@
     "subject": "More than 1,500 pounds of imported meat recalled over Listeria concerns",
     "link": "https://nypost.com/2026/09/07/us-news/more-than-1500-pounds-of-imported-meat-shipped-to-ny-nj-and-six-other-states-recalled-over-listeria-concerns/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.4,
-    "real_psi": 0.0,
+    "claim_u": 0.9,
+    "claim_psi": 0.25,
+    "real_u": 0.5,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "USDA issues Class I recall for 1,513 pounds of imported pork guanciale tainted with Listeria monocytogenes across eight states. #FoodSafety #USDA 🌐",
-      "Regulators and distributors emphasize public health protection through swift voluntary and mandatory recall coordination. Stated Judgement: (+1.0, 0.5) — Good Preference",
-      "Contaminated meat slipped past initial checks into eight states, exposing vulnerabilities in imported supply chain safety protocols. Resulting Judgement: (0.4, 0.0) — Neutral Equilibrium",
-      "Verdict: PASS — The Path of Grace. Routine inspection successfully intercepted contaminated meat before reported illnesses occurred, proving regulatory safeguards work.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Regulators and distributors emphasize public health protection through swift voluntary and mandatory recall coordination. Stated Judgement: (+0.90, +0.25) — Greater Good",
+      "Contaminated meat slipped past initial checks into eight states, exposing vulnerabilities in imported supply chain safety protocols. Resulting Judgement: (+0.50, -0.10) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- USDA FSIS: PASS (0.8, 0.0) — Promptly caught and flagged Listeria contamination.\n- Importing Firms: COND (0.2, -0.2) — Shipped tainted meat requiring broad recall.",
       "Routine import reinspection by the USDA flagged Listeria in Italian pork guanciale imported by Prime Line and Ferrarini, triggering a multi-state recall.",
       "The Bright Side:\nRigorous border and market testing caught the pathogen before any consumer illnesses were reported.",
       "The Breakdown & Plane Error:\nConfusing regulatory diligence (WHAT happened) with supply chain flaw (WHO allowed contamination). The system functioned correctly.",
       "Social Physics Analysis:\nRegulatory bodies executed transparent intervention, prioritizing public safety over corporate concealment. Importers faced accountability via mandatory recalls.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between initial contamination and regulatory containment, it plots a direct trajectory toward structural resilience.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between initial contamination and regulatory containment, it plots a direct trajectory toward structural resilience.",
       "The Unavoidable Truth: Pathogens in imported food supply chains require constant surveillance.\n\nThe Unavoidable Lie: Global supply chains are inherently sterile without inspection.",
       "Alethekanon:\nSystems designed for public protection succeeded in isolating risk before harm materialized, validating institutional oversight.",
       "Awwthekanon:\nIt's frightening to think what could have happened, but thank goodness inspectors caught the listeria before anyone got sick. Stay safe out there!",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "USDA FSIS Inspection",
@@ -159,6 +221,7 @@
         "sub_psi": 0.0,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

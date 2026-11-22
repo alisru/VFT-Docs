@@ -5,22 +5,22 @@
     "subject": "Democrats condemn anti-Israel journalist Rula Jebreal over Hakeem Jeffries remark",
     "link": "https://www.washingtonexaminer.com/news/house/4715170/democrats-anti-israel-journalist-hakeem-jeffries-aipac-monkey/",
     "target_url": "",
-    "claim_u": 0.4,
+    "claim_u": 0.45,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_u": -0.15,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "Lawmakers unite to condemn journalist Rula Jebreal for using racist trope against Hakeem Jeffries.\nEvidence: racial slur, apology, bipartisan condemnation\n#Aletheia #USPol",
-      "Stated claim frames the commentary as harsh foreign policy critique of Democratic leadership funding positions.\nStated Judgement: (+0.4, 0.0) — Good Preference",
-      "In reality, discourse collapsed into toxic racial dehumanization under the guise of geopolitical activism.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nDehumanizing language corrupts political critique, triggering justified bipartisan condemnation.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Stated claim frames the commentary as harsh foreign policy critique of Democratic leadership funding positions.\nStated Judgement: (+0.45, +0.00) — Lesser Good",
+      "In reality, discourse collapsed into toxic racial dehumanization under the guise of geopolitical activism.\nResulting Judgement: (-0.15, -0.20) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nDehumanizing language corrupts political critique, triggering justified bipartisan condemnation.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "Sub-Audits Breakdown:\n- Rula Jebreal: FAIL (-0.9, -0.9) — Deploys dehumanizing language disguised as critique.\n- Congressional Black Caucus: PASS (0.6, 0.5) — Swiftly denounces open bigotry in discourse.",
       "Journalist Rula Jebreal apologized after calling House Minority Leader Hakeem Jeffries an 'AIPAC monkey' and an 'errand boy' during a podcast interview.",
       "The Bright Side:\nImmediate bipartisan and caucus pushback demonstrates strong normative boundaries against racist tropes in public debate.",
       "The Breakdown & Plane Error:\nConfusing WHO (identity-based personal slurs) with WHAT (foreign policy funding policy disagreements) to inflame partisan polarization.",
       "Social Physics Analysis:\nActors run a Smart Selfish Maneuver by elevating sensational insults over reasoned policy debate, manufacturing deep outrage loops to capture attention and polarize coalitions.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Escalating ethnic slurs degrades the entire public sphere.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Escalating ethnic slurs degrades the entire public sphere.",
       "The Unavoidable Truth: Bigoted terminology destroys the credibility of legitimate foreign policy critiques.\n\nThe Unavoidable Lie: Pretending racial slurs were accidental slips devoid of historical baggage.",
       "Alethekanon:\nWeaponized dehumanization hollows out political debate, reducing complex legislative disagreements to tribal degradation. 🌐",
       "Awwthekanon:\nWords carry heavy historical scars. When we hurl dehumanizing insults at one another, we wound the entire human family and push true peace further away.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Rula Jebreal Commentary",
@@ -172,6 +234,7 @@
         "name": "Ritchie Torres",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

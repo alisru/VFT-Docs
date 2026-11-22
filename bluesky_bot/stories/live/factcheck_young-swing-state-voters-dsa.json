@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_u": -0.1,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "Young swing-state voters embrace Democratic Socialists, demanding the party establishment heed their populist wins.\nEvidence: Grassroots sentiment, Primary upsets, Establishment complacency\n#Aletheia #USPol",
-      "Young voters in Michigan argue that Democratic Socialist policies like Medicare for All offer genuine people-centric alternatives to a rigged, corporate-dominated political system.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "While populist economic frustrations are valid, the proposed remedies—such as abolishing the U.S. Senate and dismantling institutional guardrails—court systemic instability and political sectarianism.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Awakening.\nWhen establishment complacency ignores working-class strain, it invites radical restructuring that risks deeper constitutional fracture.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.8, z: 2)",
+      "Young voters in Michigan argue that Democratic Socialist policies like Medicare for All offer genuine people-centric alternatives to a rigged, corporate-dominated political system.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While populist economic frustrations are valid, the proposed remedies—such as abolishing the U.S. Senate and dismantling institutional guardrails—court systemic instability and political sectarianism.\nResulting Judgement: (-0.10, -0.30) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nWhen establishment complacency ignores working-class strain, it invites radical restructuring that risks deeper constitutional fracture.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.8, z: 2)",
       "Sub-Audits Breakdown:\n- Grassroots Sentiment: PASS (0.6, 0.2) — Genuine frustration with rising costs.\n- Radical Proposals: FAIL (-0.7, -0.8) — Abolishing Senate destabilizes checks.",
       "Michigan college students and young urban voters are rallying behind democratic socialist candidates, arguing that the traditional party leadership has lost touch with economic realities.",
       "The Poison:\nChanneling legitimate economic grievances into constitutional subversion like abolishing the Senate threatens broader democratic stability.",
       "The Breakdown & Plane Error:\nConfusing the structural symptoms of economic inequality (WHO) with the constitutional machinery of governance (WHAT), proposing regime-level overhauls as quick fixes.",
       "Social Physics Analysis:\nYoung voters are running a Smart Altruistic impulse against entrenched establishment apathy, demanding transparent popular empowerment. However, some allied actors slip into Smart Selfish maneuvers by weaponizing legitimate economic pain to push ideological institutional teardowns.",
-      "The Trajectory: The Path of Awakening.\nWhen economic distress meets institutional rigidity, it triggers systemic friction that forces political realignment.\nΔ(p·t + n) < 0 due to destabilizing constitutional demands.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen economic distress meets institutional rigidity, it triggers systemic friction that forces political realignment.\nΔ(p·t + n) < 0 due to destabilizing constitutional demands.",
       "The Unavoidable Truth: Economic complacency from party elites inevitably breeds radical anti-establishment insurgencies.\n\nThe Unavoidable Lie: Dismantling foundational democratic institutions is a harmless fix for economic inequality.",
       "Alethekanon:\nTreating democratic constitutional frameworks as disposable obstacles to economic justice trades one form of vulnerability for total institutional collapse.",
       "Awwthekanon:\nIt breaks my heart to see young people so desperate for security that they want to tear down the house just to feel warmth. We can fix the economy without breaking our shared home.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Grassroots Sentiment",
@@ -158,6 +220,7 @@
         "name": "Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

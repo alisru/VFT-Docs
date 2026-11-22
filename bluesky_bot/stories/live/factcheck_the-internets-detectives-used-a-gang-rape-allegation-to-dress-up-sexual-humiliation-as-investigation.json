@@ -6,21 +6,21 @@
     "link": "http://jrnl.ie/7179435t",
     "target_url": "https://bsky.app/profile/thejournal.ie/post/3mwzvcmizbb2i",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.22,
+    "real_psi": -0.33,
     "mode": "root",
     "posts": [
       "An online mob weaponizes a horrific gang rape allegation at Cornell to unleash targeted sexual harassment and doxxing under the guise of 'justice.' 🌐\nEvidence: Seeking justice, Sexual humiliation, Prurient entertainment\n#Aletheia #Cornell #OnlineHarassment",
-      "Amateur sleuths claim they are investigating a serious crime to support the victim and expose systemic failures.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The reality is a sadistic campaign of doxxing, mistaken identity, and explicit sexual humiliation targeting unverified individuals.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Revelation into Destruction.\nOnline vigilantism quickly decays into a vehicle for misogynistic harassment, using a victim's trauma as a pretext for digital sadism.\nIntegrity: Severe Deception (Hypocrisy: 14.20, z: 4)",
+      "Amateur sleuths claim they are investigating a serious crime to support the victim and expose systemic failures.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality is a sadistic campaign of doxxing, mistaken identity, and explicit sexual humiliation targeting unverified individuals.\nResulting Judgement: (-0.22, -0.33) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nOnline vigilantism quickly decays into a vehicle for misogynistic harassment, using a victim's trauma as a pretext for digital sadism.\nIntegrity: Severe Deception (Hypocrisy: 14.20, z: 4)",
       "Sub-Audits Breakdown:\n- Online Sleuths: FAIL (-1.00, -1.00) — Sadistic harassment masked as justice.\n- The Journal Reporting: PASS (0.80, 0.50) — Accurately exposes the mob's hypocrisy.",
       "New York Governor Kathy Hochul called for an investigation into Cornell University's handling of a 2024 gang rape allegation. Meanwhile, online mobs hijacked the case, doxxing and sexually harassing unverified individuals under the pretext of 'sleuthing.'",
       "The Bright Side:\nResponsible journalists and observers are calling out this behavior, drawing a clear line between genuine legal advocacy and digital voyeurism.",
       "The Breakdown & Plane Error:\nThe mob commits a Metaphysical error (WHO), claiming to act for the victim's empowerment while actually exploiting her trauma to justify their own prurient desires and inflict public humiliation.",
       "Social Physics Analysis:\nThis is a classic Smart Selfish Maneuver. The mob manufactures a pretext of 'investigation' and 'justice' to hide their secret goal of voyeuristic entertainment, projecting their own corrupt motives onto the targets they mock.",
-      "The Trajectory: The Path of Revelation into Destruction.\nWhen you map the gap between stated justice and actual digital violence, it plots a direct trajectory toward Greater Evil. The pretexts of accountability collapse into pure, unadulterated sadism.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated justice and actual digital violence, it plots a direct trajectory toward Greater Evil. The pretexts of accountability collapse into pure, unadulterated sadism.",
       "The Unavoidable Truth: Online vigilantism is rarely about justice and almost always about the mob's desire to exert power and humiliate others.\nThe Unavoidable Lie: Believing that batch-downloading a stranger's photos is a form of investigative journalism.",
       "Alethekanon:\nThe mob's 'investigation' is merely a skin-suit worn by digital sadism. True justice requires due process and empathy, not the prurient thrill of public humiliation.",
       "Awwthekanon:\nIt is heartbreaking to see a survivor's pain weaponized by strangers. True healing cannot grow in a soil watered by cruelty, doxxing, and digital violence.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.9,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Online Sleuths",
@@ -292,6 +354,7 @@
         "sub_psi": 0.5,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "real_u": 0.05,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "A wealthy Southern California car collector turns an apartment complex's accessible parking into his personal garage.\n\nLuxury Car Owner Busted Using Fake Disabled Placards\nEvidence: wealthy car owner, fake disabled placards, police arrest\n#Aletheia #California",
-      "The suspect utilized fraudulent disabled placards to park a fleet of high-end luxury vehicles without paying or respecting accessibility rules.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Police arrested the suspect after discovering a scheme storing multiple luxury cars in reserved handicap spots using forged government documents.\nResulting Judgement: (-0.85, -0.9) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nGreed and entitlement led a wealthy individual to exploit infrastructure meant for vulnerable people, resulting in criminal arrest.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 2)",
+      "The suspect utilized fraudulent disabled placards to park a fleet of high-end luxury vehicles without paying or respecting accessibility rules.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Police arrested the suspect after discovering a scheme storing multiple luxury cars in reserved handicap spots using forged government documents.\nResulting Judgement: (+0.05, +0.05) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nGreed and entitlement led a wealthy individual to exploit infrastructure meant for vulnerable people, resulting in criminal arrest.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 2)",
       "- Irvine Police Department: PASS (1.0, 1.0) — Promptly investigated tip and seized fraudulent placards.\n- Luxury Car Owner: FAIL (-0.9, -0.9) — Exploited disabled spaces for personal storage.",
       "An Orange County apartment resident used bogus disabled placards to store a fleet of luxury cars, dodging parking fees and depriving disabled residents of vital access.",
       "The Poison:\nUnbridled entitlement weaponizes accommodations designed for the vulnerable to service elite convenience.",
       "The Breakdown & Plane Error:\nConfusing personal wealth privileges with public right of way (WHAT vs WHO error).\n\nIt is a classic bait-and-switch: claiming standard parking while hoarding public utility.",
       "Social Physics Analysis:\nInstead of respecting shared civic rules, the individual used deception to siphon common resources for personal luxury, forcing authorities to intervene and restore equilibrium.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Selfish hoarding of public goods inevitably collapses into legal liability.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Selfish hoarding of public goods inevitably collapses into legal liability.",
       "The Unavoidable Truth: Rules protecting vulnerable access apply equally to the wealthy.\n\nThe Unavoidable Lie: Privileged convenience excuses the forgery of government documents.",
       "Alethekanon:\nEntitlement hides behind forged credentials until public accountability shatters the illusion.",
       "Awwthekanon:\nIt is heartbreaking to see spaces meant for those in physical need stolen away by sheer greed.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Irvine Police Department",
@@ -146,6 +208,7 @@
         "name": "Irvine Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

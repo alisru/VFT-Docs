@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Thrill rides depend on flawless mechanical safety, but system failures turn recreation into tragedy.\nEvidence: Nicki Parker, Copper Mountain Coaster, traumatic injury\n#Aletheia #Colorado",
-      "Resorts market alpine coasters as secure family thrills backed by failsafe mechanical safeguards.\nStated Judgement: (+0.9, +0.8) — Good Preference",
+      "Resorts market alpine coasters as secure family thrills backed by failsafe mechanical safeguards.\nStated Judgement: (+0.90, +0.80) — Greater Good",
       "A 60-year-old rider was ejected and dragged along the tracks, suffering severe trauma due to structural breakdown.\nResulting Judgement: (-0.85, -0.88) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nCatastrophic safety failures on high-speed attractions expose severe maintenance and operational negligence.\nIntegrity: Severe Deception (Hypocrisy: 12.0, z: 3)",
+      "Verdict: FAIL — Fall into Destruction.\nCatastrophic safety failures on high-speed attractions expose severe maintenance and operational negligence.\nIntegrity: Severe Deception (Hypocrisy: 12.0, z: 3)",
       "- Copper Mountain Resort: FAIL (-0.85, -0.85) — Failed safety barriers.\n- Legal Representation: PASS (0.80, 0.70) — Demanding accountability.",
       "Nicki Parker suffered severe trauma after being ejected from the Rocky Mountain Coaster at Copper Mountain, prompting a state safety investigation.",
       "The Poison:\nMarketing extreme rides as entirely safe while overlooking critical restraint mechanisms creates lethal hazards for unsuspecting visitors.",
       "The Breakdown & Plane Error:\nConfusing the WHERE (scenic resort) with the HOW (mechanical engineering integrity), operators neglected basic physical safeguards.",
       "Social Physics Analysis:\nWhen profit-driven recreation skimps on rigorous safety maintenance, it treats human lives as expendable inputs for adrenaline tourism.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Negligence destroys innocent lives.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Negligence destroys innocent lives.",
       "The Unavoidable Truth: High-speed mechanical attractions require absolute zero-tolerance safety standards.\n\nThe Unavoidable Lie: Standard restraints guarantee complete rider security during malfunctions.",
       "Alethekanon:\nCorporate assurances of safety ring hollow when structural safeguards fail ordinary patrons. Physical reality brooks no compromises with mechanical maintenance.",
       "Awwthekanon:\nMy heart breaks for Nicki and her husband, who witnessed such a terrifying ordeal while seeking a joyful family getaway.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Copper Mountain Safety",
@@ -147,6 +209,7 @@
         "name": "Colorado Division of Oil and Public Safety",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

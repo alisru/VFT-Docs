@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": -0.55,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "A beloved Long Island grandmother's murder by her ex-boyfriend culminates in a fatal police shootout across state lines.\nEvidence: 62-year-old victim, Sayville home stabbing, Massachusetts motel shootout\n#Aletheia #TrueCrime #LongIsland",
-      "Domestic violence tragically claims a grandmother's life, ending swiftly when law enforcement intercepts the armed suspect in Massachusetts.\nStated Judgement: (0.0, 0.0) — Neutral Orbit",
-      "An unravelling domestic abuse cycle escalates to extreme violence and lethal force, laying bare deep systemic failures in domestic safety nets.\nResulting Judgement: (-0.75, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA preventable domestic tragedy escalated unchecked across state lines until lethal force became the only containment.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
+      "Domestic violence tragically claims a grandmother's life, ending swiftly when law enforcement intercepts the armed suspect in Massachusetts.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "An unravelling domestic abuse cycle escalates to extreme violence and lethal force, laying bare deep systemic failures in domestic safety nets.\nResulting Judgement: (-0.55, -0.50) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nA preventable domestic tragedy escalated unchecked across state lines until lethal force became the only containment.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
       "Sub-Audits Breakdown:\n- NY Post Coverage: COND (-0.7, -0.8) — Sensationalized headline framing.\n- Law Enforcement Response: PASS (-0.4, -0.2) — Rapid cross-state apprehension.",
       "Rachel Frislid, a 62-year-old grandmother from Sayville, was found stabbed to death in her home. Her ex-boyfriend, Brandon Hampson, fled to Massachusetts where he was fatally shot after charging police.",
       "The Poison:\nTabloid sensationalism treats a horrific domestic violence murder as an action-thriller spectacle rather than examining systemic safety gaps.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NY Post Coverage",
@@ -157,6 +219,7 @@
         "name": "Suffolk County Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

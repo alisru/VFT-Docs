@@ -5,22 +5,22 @@
     "subject": "What does ‘Never Forget’ mean for a generation with no memory of 9/11?",
     "link": "https://www.foxnews.com/politics/what-does-never-forget-mean-generation-no-memory-9-11",
     "target_url": "",
-    "claim_u": 0.84,
-    "claim_psi": 0.78,
-    "real_u": 0.75,
-    "real_psi": 0.64,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.76,
+    "real_psi": 0.82,
     "mode": "root",
     "posts": [
       "As living memory fades into history, the Pentagon breaks ground on a long-delayed visitor education center.\nEvidence: Civic Education, Historical Memory, Public Remembrance\n#Aletheia #USNews",
-      "Organizers plan a dedicated education center at the Pentagon memorial to connect over 100 million younger Americans to the reality of the 9/11 attacks.\nStated Judgement: (+0.84, +0.78) — Greater Good",
-      "The initiative directly preserves primary historical truth and honors 184 victims, though significant funding deficits ($16M of $100M) slow completion.\nResulting Judgement: (+0.75, +0.64) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nA transparent civic initiative confronts generational memory loss to preserve historical truth against distortion.\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 1)",
+      "Organizers plan a dedicated education center at the Pentagon memorial to connect over 100 million younger Americans to the reality of the 9/11 attacks.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The initiative directly preserves primary historical truth and honors 184 victims, though significant funding deficits ($16M of $100M) slow completion.\nResulting Judgement: (+0.76, +0.82) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nA transparent civic initiative confronts generational memory loss to preserve historical truth against distortion.\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 1)",
       "- Pentagon Memorial Fund: PASS (+0.78, +0.68) — Transparent educational mission.\n- Fox News Coverage: PASS (+0.72, +0.60) — Straightforward reporting on civic memory.",
       "The Pentagon Memorial Fund is breaking ground on a $100 million Visitor Education Center in Arlington to educate generations who did not experience 9/11 firsthand.",
       "The Poison:\nA $84 million private fundraising shortfall risks leaving the Pentagon as the only underfunded, incomplete memorial among the three attack sites.",
       "The Breakdown & Plane Error:\nUnlike political spin where stated goals mask covert extraction, this civic effort aligns intent with public historical preservation without structural bait-and-switch.",
       "Social Physics Analysis:\nThe project operates on a Smart Altruistic loop. Organizers openly share their educational goals, acknowledge the generational divide, and seek to resolve widespread historical illiteracy through institutional memory rather than manipulative pretexts.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Transparent civic education sustains democratic cohesion against revisionism.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Transparent civic education sustains democratic cohesion against revisionism.",
       "The Unavoidable Truth: Over 100 million living Americans have no personal recollection of the September 11 terrorist attacks.\nThe Unavoidable Lie: Passive cultural slogans like 'Never Forget' can survive without concrete institutional education.",
       "Alethekanon:\nMemory is an active civic discipline, not an inherited trait; without physical archives and rigorous teaching, lived tragedy rapidly dissolves into myth.",
       "Awwthekanon:\nIt takes conscious love and shared grief to make sure that people who weren't even born yet can still feel compassion for the souls who were lost that morning.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.05
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.1,
+        "N": 0.05
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.95,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 0.7,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Pentagon Memorial Fund Mission",
@@ -287,6 +349,7 @@
         "name": "National September 11 Memorial & Museum",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

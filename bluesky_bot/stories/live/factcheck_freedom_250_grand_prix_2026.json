@@ -5,16 +5,16 @@
     "subject": "Freedom 250 Grand Prix Brings Heartland American Culture To Deep-Blue D.C.",
     "link": "https://thefederalist.com/2026/08/24/freedom-250-grand-prix-brings-heartland-american-culture-to-deep-blue-d-c/?utm_source=rss&utm_medium=rss&utm_campaign=freedom-250-grand-prix-brings-heartland-american-culture-to-deep-blue-d-c",
     "target_url": "",
-    "claim_u": 1.0,
+    "claim_u": 0.82,
     "claim_psi": 1.0,
-    "real_u": 0.8,
-    "real_psi": 0.6,
+    "real_u": 0.9,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "IndyCar racing roars down the National Mall for the first time in a historic semiquincentennial sports spectacle.\n\nFreedom 250 Grand Prix\nEvidence: cultural celebration, civic pride, public unity\n#IndyCar #DC",
-      "The event brings heartland American culture and world-class motorsport to the nation's capital to celebrate our 250th anniversary.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Fans and residents enjoyed thrilling racing and downtown beauty, blending community joy with presidential pageantry and fundraising.\nResulting Judgement: (+0.8, +0.6) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nShared cultural celebration bridges regional divides and fosters genuine civic joy.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "The event brings heartland American culture and world-class motorsport to the nation's capital to celebrate our 250th anniversary.\nStated Judgement: (+0.82, +1.00) — Greater Good",
+      "Fans and residents enjoyed thrilling racing and downtown beauty, blending community joy with presidential pageantry and fundraising.\nResulting Judgement: (+0.90, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nShared cultural celebration bridges regional divides and fosters genuine civic joy.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- IndyCar Series: PASS (+1.0, +0.8) — Delivers accessible, world-class sport.\n- Community Reception: PASS (+0.9, +0.7) — Residents rediscover city beauty.",
       "The Freedom 250 Grand Prix brought IndyCar racing to the National Mall for the first time, featuring a presidential flag-wave and celebrating America's 250th.",
       "The Bright Side:\nA vibrant public event successfully re-engages citizens with their capital's monumental architecture and shared heritage.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.1,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "IndyCar Series",
@@ -280,6 +342,7 @@
         "name": "Washington D.C.",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

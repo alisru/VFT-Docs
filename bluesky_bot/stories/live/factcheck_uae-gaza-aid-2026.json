@@ -5,22 +5,22 @@
     "subject": "UAE sends 781 tonnes of food and shelter supplies and nine water tankers to Gaza",
     "link": "https://www.thenationalnews.com/news/uae/2026/09/20/uae-sends-781-tonnes-of-food-and-shelter-supplies-and-nine-water-tankers-to-gaza/?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1789911931",
     "target_url": "https://bsky.app/profile/thenationalnews.com/post/3mvxn6n6r7x2r",
-    "claim_u": 1.0,
-    "claim_psi": 0.8,
-    "real_u": 0.8,
+    "claim_u": 0.95,
+    "claim_psi": 0.75,
+    "real_u": 0.75,
     "real_psi": 0.6,
     "mode": "root",
     "posts": [
       "Delivering 781 tonnes of vital relief supplies to Gaza, the UAE sustains its massive humanitarian campaign.\nEvidence: 781 tonnes aid, 9 water tankers, 14,290 lorries total\n#Aletheia #Gaza #UAE",
-      "The UAE continues its massive relief effort, delivering hundreds of tonnes of food, shelter supplies, and water tankers to support suffering civilians in Gaza.\nStated Judgement: (+1.0, +0.8) — Greater Good",
-      "Substantial material aid is successfully delivered amidst a brutal, prolonged conflict, providing genuine relief while operating within complex geopolitical realities.\nResulting Judgement: (+0.8, +0.6) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nSustained material aid delivery provides real relief to civilians trapped in a humanitarian crisis.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "The UAE continues its massive relief effort, delivering hundreds of tonnes of food, shelter supplies, and water tankers to support suffering civilians in Gaza.\nStated Judgement: (+0.95, +0.75) — Greater Good",
+      "Substantial material aid is successfully delivered amidst a brutal, prolonged conflict, providing genuine relief while operating within complex geopolitical realities.\nResulting Judgement: (+0.75, +0.60) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nSustained material aid delivery provides real relief to civilians trapped in a humanitarian crisis.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- UAE Humanitarian Efforts: PASS (+0.8, +0.7) — Consistent large-scale material support.\n- Regional Logistics: PASS (+0.7, +0.5) — Effective coordination via Al Arish.",
       "The UAE has maintained a continuous humanitarian lifeline to Gaza, delivering over 136,000 tonnes of aid, funding a floating hospital, and providing prosthetic limbs.",
       "The Bright Side:\n Tangible, life-saving material support reaches civilians who desperately need food, water, and medical care.",
       "The Breakdown & Plane Error:\nFocusing solely on the geopolitical friction while ignoring the concrete delivery of 781 tonnes of food and water commits a basic physical plane error.",
       "Social Physics Analysis:\nThe UAE operates through a smart altruistic loop, aligning stated humanitarian goals with transparent logistical execution and direct community empowerment.",
-      "The Trajectory: The Path of Grace.\nWhen you map the alignment between stated humanitarian relief and actual logistical delivery, it plots a direct trajectory toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between stated humanitarian relief and actual logistical delivery, it plots a direct trajectory toward Grace.",
       "The Unavoidable Truth: Material aid provides immediate relief to suffering civilians.\nThe Unavoidable Lie: Humanitarian relief alone resolves deep geopolitical conflicts.",
       "Alethekanon:\nTangible material aid bridges the gap between diplomatic promises and human survival in active conflict zones. 🌐",
       "Awwthekanon:\nEvery truckload of food and clean water is a beacon of hope for families enduring unimaginable hardships.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UAE Humanitarian Efforts",
@@ -152,6 +214,7 @@
         "name": "Gaza Strip",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Hayden Panettiere’s ex-fiancé files for temporary guardianship of her estate on behalf of their daughter Kaya",
     "link": "https://www.1011now.com/2026/09/29/hayden-panettieres-ex-fianc-files-temporary-guardianship-her-estate-behalf-their-daughter-kaya/",
     "target_url": "https://bsky.app/profile/1011now.com/post/3mwntxshx4626",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.7,
-    "real_psi": 0.65,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "When Wladimir Klitschko files for temporary guardianship of Hayden Panettiere's estate for their daughter Kaya, legal channels protect a child's inheritance.\nEvidence: court filing, temporary guardianship, sole heir\n#Aletheia #Law",
-      "Legal filings seek to protect a minor child's rightful inheritance from being compromised following a parental tragedy.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "Judicial oversight safeguards the estate assets for 11-year-old Kaya, ensuring transparent distribution without predatory exploitation.\nResulting Judgement: (+0.7, +0.65) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nTransparent legal stewardship protects a child's rightful inheritance during family tragedy.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
+      "Legal filings seek to protect a minor child's rightful inheritance from being compromised following a parental tragedy.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Judicial oversight safeguards the estate assets for 11-year-old Kaya, ensuring transparent distribution without predatory exploitation.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nTransparent legal stewardship protects a child's rightful inheritance during family tragedy.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
       "Sub-Audits Breakdown:\n- Legal Guardianship: PASS (+0.7, +0.6) — Protects minor heir.\n- Estate Protection: PASS (+0.7, +0.7) — Prevents asset dissipation.",
       "Context paragraph:\nWladimir Klitschko has filed for temporary guardianship of the late Hayden Panettiere's estate on behalf of their 11-year-old daughter Kaya to secure her position as sole heir.",
       "The Bright Side:\nSwift legal action shields a grieving child's financial future from administrative chaos or predatory claims.",
       "The Breakdown & Plane Error:\nAligning the stated legal mechanism (guardianship) with the actual beneficiary (minor daughter Kaya) maintains absolute structural integrity across planes.",
       "Social Physics Analysis:\nKlitschko executes a Smart Altruistic maneuver: a transparent legal petition (transparency) aimed at empowering and protecting the rightful heir (empowerment) without hidden extraction.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Aligned legal stewardship stabilizes a vulnerable family transition.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. Aligned legal stewardship stabilizes a vulnerable family transition.",
       "The Unavoidable Truth: Legal guardianship ensures a minor's inheritance remains intact during estate administration.\nThe Unavoidable Lie: Court filings alone can heal the emotional void left by maternal loss.",
       "Alethekanon:\nProtecting a child's inheritance through transparent legal guardianship honors both maternal legacy and filial rights. 🌐",
       "Awwthekanon:\nIn the wake of unimaginable heartbreak, ensuring a little girl's future is safely guarded offers a quiet anchor of stability and care.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Legal Guardianship Filing",
@@ -211,6 +273,7 @@
         "name": "Kaya Klitschko",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -13,14 +13,14 @@
     "posts": [
       "Progressive victories spark intense debates over Democratic coalition strategy.\n\nDemocratic political advisor discusses the party's wins this week\nEvidence: bold reform agenda, establishment pushback, anti-corruption appeal\n#Aletheia #USPol",
       "Advisors argue that embracing bold anti-corruption agendas and public service investments can unite working-class voters and expand the party's electoral coalition.\nStated Judgement: (+1.00, +1.00) — Greater Good",
-      "While anti-corruption messaging resonates widely, deep intraparty friction between progressives and establishment centrists continues to fracture party unity.\nResulting Judgement: (+0.21, +0.33) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nSystemic reform platforms build broad working-class coalitions when paired with transparent anti-corruption messaging.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
+      "While anti-corruption messaging resonates widely, deep intraparty friction between progressives and establishment centrists continues to fracture party unity.\nResulting Judgement: (+0.21, +0.33) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nSystemic reform platforms build broad working-class coalitions when paired with transparent anti-corruption messaging.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
       "Sub-Audits Breakdown:\n- Progressive Platform: PASS (0.5, 0.4) — Bold economic proposals effectively target corporate monopolies.\n- Party Unity: COND (0.0, -0.4) — Establishment pushback and brand fears create friction.",
       "NPR's Leila Fadel speaks with political advisor Faiz Shakir about progressive primary wins, anti-corruption strategies, and party-building in competitive swing states.",
       "The Bright Side:\nHighlighting corporate corruption and wealth inequality creates a powerful unifying message that bridges traditional partisan divides.",
       "The Breakdown & Plane Error:\nTreating tactical electoral anxiety (WHAT) as a fundamental ideological rejection (WHO). The pushback assumes progressive ideas cannot sell outside deep-blue areas.",
       "Social Physics Analysis:\nStanding firmly against institutional corruption empowers voters who feel ignored. Transparently addressing oligarchy builds durable trust across diverse communities.",
-      "The Trajectory: The Path of Redemption.\nWhen reform strategies focus on genuine public empowerment, it plots a trajectory toward political coalition renewal. (u=0.2, psi=-0.2)",
+      "The Trajectory: The Path of Fall from Grace.\nWhen reform strategies focus on genuine public empowerment, it plots a trajectory toward political coalition renewal. (u=0.2, psi=-0.2)",
       "The Unavoidable Truth: Voters across party lines despise government corruption.\n\nThe Unavoidable Lie: Playing dead and avoiding bold reforms is a winning electoral strategy.",
       "Alethekanon:\nIncrementalism fails when people experience systemic decay. Boldly challenging corporate monopolies and investing in public goods is the only real path forward.",
       "Awwthekanon:\nPeople just want to know their government is fighting for them, not the ultra-wealthy. When leaders speak truth to power, hope wells up.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.45,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.7,
+        "O": 0.65,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Progressive Platform",
@@ -269,6 +331,7 @@
         "name": "Abdul El-Sayed",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

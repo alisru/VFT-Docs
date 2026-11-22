@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": -0.1,
-    "real_psi": -0.2,
+    "real_u": -0.25,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A widower returns to the scene of a tragedy, sparking neighborly unease. \n\nSlain NJ mom Brooke Hanlon’s husband makes weekly visits\nEvidence: Weekly visits, no overnight, homicide investigation. #Aletheia #NJNews",
-      "The claim suggests the husband is merely visiting his home for maintenance, implying a routine return to a site of personal loss. \nStated Judgement: (0.0, 0.0) — Neutral",
-      "The reality is a high-strain environment where a homicide remains unsolved, turning routine yard work into a source of community anxiety and suspicion. \nResulting Judgement: (-0.1, -0.2) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nThis is a report of observable facts without explicit accusation, though the underlying tension remains unresolved.\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "The claim suggests the husband is merely visiting his home for maintenance, implying a routine return to a site of personal loss. \nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "The reality is a high-strain environment where a homicide remains unsolved, turning routine yard work into a source of community anxiety and suspicion. \nResulting Judgement: (-0.25, +1.00) — Greatest Lie",
+      "Verdict: FAIL — Reckoning into Deception.\nThis is a report of observable facts without explicit accusation, though the underlying tension remains unresolved.\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Conor Hanlon: PASS (-0.1, -0.2) — Observed behavior.\n- Community Safety: PASS (-0.1, -0.2) — Heightened anxiety.",
       "Neighbors in Chester, NJ, report seeing Conor Hanlon visit his home weekly for yard work, but he never stays overnight. The home remains the site of his wife Brooke’s unsolved June homicide.",
       "The Bright Side:\nReporting on the husband's movements provides transparency to a community on edge, potentially preventing rumors from spiraling further.",
       "The Breakdown & Plane Error:\nThis is a physical (Q3) report. The error lies in the public's projection of suspicion onto a non-charged individual, confusing proximity with guilt.",
       "Social Physics Analysis:\nWhen a community lacks closure, they project fears onto the nearest available actor. Transparency about the husband's movements helps, but the unresolved homicide maintains a high-strain, unstable configuration.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Awakening. The system is currently in a state of high-strain observation.",
+      "The Trajectory: The Path of Reckoning into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Awakening. The system is currently in a state of high-strain observation.",
       "The Unavoidable Truth: Grief and suspicion often occupy the same space in an unsolved tragedy.\nThe Unavoidable Lie: Proximity to a crime scene is proof of involvement.",
       "Alethekanon:\nObservational reporting must balance the right to privacy with the public's need for safety. The current state is one of suspended judgment.",
       "Awwthekanon:\nIt is deeply painful to lose a loved one, and even harder when the world watches your every move. May the truth bring peace to all involved.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Conor Hanlon Behavior",
@@ -278,6 +340,7 @@
         "name": "Morris County Prosecutor’s Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Reckoning into Deception"
   }
 ]

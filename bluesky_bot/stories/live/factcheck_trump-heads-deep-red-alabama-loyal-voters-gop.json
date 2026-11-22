@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/adambear.bsky.social/post/3mwxnjiv42k2y",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.65,
-    "real_psi": -0.75,
+    "real_u": -0.05,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "Donald Trump returns to Mobile, Alabama, to rally loyal voters and shore up midterm support amid sliding national approval.\nEvidence: Voter Gratitude, Midterm Boost, National Strategy\n#Aletheia #USPol",
-      "The official narrative frames the Mobile visit as a heartfelt thank-you tour for grassroots supporters ahead of crucial midterm contests.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Behind the folksy gratitude lies a defensive political fortification effort to prop up sagging poll numbers and energize wavering districts.\nResulting Judgement: (-0.65, -0.75) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA gratitude tour masking desperate political triage exposes deep electoral anxiety.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "The official narrative frames the Mobile visit as a heartfelt thank-you tour for grassroots supporters ahead of crucial midterm contests.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Behind the folksy gratitude lies a defensive political fortification effort to prop up sagging poll numbers and energize wavering districts.\nResulting Judgement: (-0.05, -0.35) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nA gratitude tour masking desperate political triage exposes deep electoral anxiety.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "Sub-Audits Breakdown:\n- Trump Campaign: COND (-0.6, -0.7) — Uses gratitude framing to mask defensive polling.\n- Local GOP Turnout: PASS (0.5, 0.0) — Genuinely mobilizes base in deep-red territory.",
       "President Donald Trump kicked off a swing through deep-red states in Mobile, Alabama, returning to the site of his 2015 campaign kickoff to energize the conservative base.",
       "The Bright Side:\nGrassroots enthusiasm remains fiercely loyal and highly active in traditional strongholds, providing a reliable foundation for local candidates.",
       "The Breakdown & Plane Error:\nConfusing WHAT (a national approval rescue mission) with WHO (loyal local voters being thanked). The rhetoric frames defensive electoral triage as magnanimity.",
       "Social Physics Analysis:\nActors run a Smart Selfish Maneuver by wrapping a defensive electoral rescue mission in the warm pretext of gratitude, projecting unity while dodging sliding poll realities.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg under electoral stress.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg under electoral stress.",
       "The Unavoidable Truth: Grassroots rallies successfully energize loyal bases in deep-red strongholds.\n\nThe Unavoidable Lie: The tour is merely a selfless thank-you rather than a defensive poll rescue.",
       "Alethekanon:\nGratitude is deployed as tactical armor against sliding approval ratings, turning a victory lap into a defensive fortress.",
       "Awwthekanon:\nIt's completely natural to want to return to where people cheered for you first when the national winds start blowing cold, but let's not pretend it isn't also about survival.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Trump Campaign",
@@ -159,6 +221,7 @@
         "name": "Republican Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

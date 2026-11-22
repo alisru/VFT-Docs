@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
+    "real_u": -0.85,
     "real_psi": -0.9,
     "mode": "root",
     "posts": [
       "Lindy Li pivots from top Dem fundraiser to party exile, teasing a future GOP run and a tell-all memoir.\nEvidence: Principle claim, Memoir release, Future run tease\n#Aletheia #USPol",
-      "Lindy Li presents her break with Democratic leadership as a courageous stand for truth and transparency against hidden cognitive decline.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Beneath the whistleblower veneer lies opportunistic careerism, leveraging party fallout to market a memoir and court conservative patrons.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nMoral outrage is monetized into personal brand advancement, weaponizing insider fallout for career revival.\n\nIntegrity: Severe Deception (Hypocrisy: 14.0, Uncertainty z: 2)",
+      "Lindy Li presents her break with Democratic leadership as a courageous stand for truth and transparency against hidden cognitive decline.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Beneath the whistleblower veneer lies opportunistic careerism, leveraging party fallout to market a memoir and court conservative patrons.\nResulting Judgement: (-0.85, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nMoral outrage is monetized into personal brand advancement, weaponizing insider fallout for career revival.\n\nIntegrity: Severe Deception (Hypocrisy: 14.0, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Fundraiser Integrity: FAIL (-0.8, -0.9) — Monetized loyalty.\n- Memoir Promotion: FAIL (-0.9, -0.9) — Capitalizing on party exile.",
       "Former DNC fundraiser Lindy Li describes how her loyalty to top Democrats collapsed, leading to her party exit and future political ambitions.",
       "The Poison:\nExposing real institutional failures becomes entirely compromised when weaponized solely for personal book sales and opportunistic career pivots.",
       "Plane Error: Confusing WHAT (exposing institutional corruption) with WHO (who profits from the tell-all book and new political alliances).",
       "Social Physics Analysis:\nLi runs a Smart Selfish Maneuver. She uses genuine party dysfunction as a pretext to launch a lucrative memoir and posture for a future congressional run.",
-      "The Trajectory: The Path of Deception.\nWhen stated whistleblowing masks careerist branding, it plots a direct trajectory toward Greater Evil. F = -0.85u, ψ = -0.9.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen stated whistleblowing masks careerist branding, it plots a direct trajectory toward Greater Evil. F = -0.85u, ψ = -0.9.",
       "The Unavoidable Truth: Political insiders often monetize their party breakups.\nThe Unavoidable Lie: This career pivot is purely about selfless public service.",
       "Alethekanon:\nTrue accountability requires stripping away self-promotion; when whistleblowing doubles as a book tour, public trust is treated as collateral.",
       "Awwthekanon:\nIt's sad to watch personal loyalties and political ideals get chewed up by the ruthless machinery of modern political branding and media spectacle.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fundraiser Integrity",
@@ -157,6 +219,7 @@
         "name": "Kamala Harris",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "EU Targets AI Companions In Sweeping New Child Safety Push",
     "link": "https://dailycaller.com/2026/09/14/eu-ai-chatbots-children-social-media-instagram-tiktok",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.75,
-    "real_u": 0.45,
-    "real_psi": 0.35,
+    "claim_u": 0.82,
+    "claim_psi": 0.68,
+    "real_u": 0.53,
+    "real_psi": 0.38,
     "mode": "root",
     "posts": [
       "Can laws cure digital addiction? The EU proposes a sweeping ban on social media and AI companions for kids under 13.\nEvidence: Child Protection, Age Restrictions, State Surveillance\n#Aletheia #Tech #EU",
-      "The EU Kids Act claims to protect children's mental health by banning social media for under-13s and restricting AI companions, forcing tech giants to prove their platforms are safe.\nStated Judgement: (0.85, 0.75) — Grace",
-      "While the mental health crisis is real, the law mandates a massive age-verification infrastructure, shifting the burden of proof to tech giants and increasing state-backed digital surveillance.\nResulting Judgement: (0.45, 0.35) — Redemption",
-      "Verdict: PASS — Awakening into Redemption. The EU's sweeping child safety push addresses a genuine systemic crisis, though it introduces significant digital surveillance trade-offs.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "The EU Kids Act claims to protect children's mental health by banning social media for under-13s and restricting AI companions, forcing tech giants to prove their platforms are safe.\nStated Judgement: (+0.82, +0.68) — Greater Good",
+      "While the mental health crisis is real, the law mandates a massive age-verification infrastructure, shifting the burden of proof to tech giants and increasing state-backed digital surveillance.\nResulting Judgement: (+0.53, +0.38) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- EU Kids Act: PASS (0.45, 0.35) — Real protection with surveillance trade-offs.\n- Daily Caller: PASS (0.60, 0.40) — Accurate reporting with expert context.",
       "European Commission President Ursula von der Leyen announced the EU Kids Act, which establishes strict age tiers and threatens non-compliant tech companies with fines up to 6% of global annual sales.",
       "The Poison:\nTo enforce these age limits, platforms must implement invasive biometric or identity-based age verification, potentially compromising the privacy of all citizens to protect minors.",
       "The Breakdown:\nThe policy conflates access control (WHAT) with systemic design (HOW). Banning kids from platforms doesn't fix the addictive algorithms that remain harmful to those allowed back on.",
       "Social Physics Analysis:\nThe EU attempts a Smart Altruistic Maneuver to protect children from predatory tech. However, by focusing on age bans rather than dismantling addictive algorithms, they risk creating a surveillance pretext that hoards state power over digital identity.",
-      "The Trajectory: The Path of Awakening into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. The system moves toward genuine, if heavily regulated, systemic safety.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. The system moves toward genuine, if heavily regulated, systemic safety.",
       "The Unavoidable Truth: Addictive algorithms and AI companions are actively harming children's development.\n\nThe Unavoidable Lie: Age bans can be effectively enforced without creating a massive digital surveillance apparatus.",
       "Alethekanon:\nRegulating the symptom of access without restructuring the algorithmic incentive of engagement is a structural band-aid. True safety requires changing how platforms profit, not just who they track.",
       "Awwthekanon:\nOur children are losing the space to just be kids, to learn through real-world play and face-to-face friendships. While the rules are complex, any step toward protecting their hearts from artificial intimacy is a step toward healing.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "EU Kids Act",
@@ -162,6 +224,7 @@
         "name": "TikTok",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "MS NOW's Soboroff: 'Barbaric P...",
     "link": "https://www.breitbart.com/clips/2026/10/09/ms-nows-soboroff-barbaric-plan-to-live-stream-an-execution-is-despicable/",
     "target_url": "",
-    "claim_u": 0.89,
-    "claim_psi": 0.95,
-    "real_u": 0.65,
-    "real_psi": 0.79,
+    "claim_u": 0.58,
+    "claim_psi": 0.71,
+    "real_u": -0.13,
+    "real_psi": -0.26,
     "mode": "root",
     "posts": [
       "Broadcasting state executions transforms judicial punishment into a gladiatorial arena.\nMS NOW: Live-Stream Execution Plan\nEvidence: Rule of Law Deterrence, Gladiatorial Public Spectacle, Humanitarian Treaty Protections\n#Aletheia #HumanRights",
-      "Jacob Soboroff and Rep. Ro Khanna argue that live-streaming a military execution is barbaric and despicable, warning it violates humanitarian law, damages global standing, and provides terrorist recruitment propaganda.\nStated Judgement: (+0.89, +0.95) — Greater Good",
-      "International law and the Geneva Conventions strictly ban exposing prisoners to public curiosity. Turning capital punishment into a digital broadcast degrades military honor into public spectacle, confirming the core critique.\nResulting Judgement: (+0.65, +0.79) — Greater Good",
-      "Verdict: PASS — Stasis into Grace. The moral condemnation holds; broadcasting state executions breaches international law and institutional decency.\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 1)",
+      "Jacob Soboroff and Rep. Ro Khanna argue that live-streaming a military execution is barbaric and despicable, warning it violates humanitarian law, damages global standing, and provides terrorist recruitment propaganda.\nStated Judgement: (+0.58, +0.71) — Greater Good",
+      "International law and the Geneva Conventions strictly ban exposing prisoners to public curiosity. Turning capital punishment into a digital broadcast degrades military honor into public spectacle, confirming the core critique.\nResulting Judgement: (-0.13, -0.26) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 1)",
       "- Live-Stream Plan: FAIL (-0.88, -0.92) — Breaches Geneva bans on public curiosity.\n- Media Rebuke: PASS (+0.75, +0.70) — Correctly identifies legal and moral decay.",
       "MS NOW panel rebukes defense leadership proposals to live-stream military executions, highlighting severe backlash from religious leaders, legal scholars, and defense ethicists.",
       "The Poison:\nWhile the critique is legally valid, cable news frequently packages profound constitutional crises as partisan outrage entertainment, generating viral engagement rather than legal injunctions.",
       "The Breakdown & Plane Error:\nThe breakdown is WHAT vs HOW (Plane 2 vs 5). Proponents frame public executions as modern deterrence, but broadcasting state killing destroys the institutional legitimacy and moral discipline required for genuine national defense.",
       "Social Physics Analysis:\nBroadcast execution is an anti-social power play: manufactured spectacle masquerading as strength. By treating judicial violence as entertainment, it trades institutional integrity for sensational deterrence, inviting global retaliation.",
-      "The Trajectory: The Path of Stasis into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Reaffirming core humanitarian boundaries preserves legal sanity against moral regression.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Reaffirming core humanitarian boundaries preserves legal sanity against moral regression.",
       "The Unavoidable Truth: Broadcasting state executions violates international law and reduces military justice to blood sport.\nThe Unavoidable Lie: Publicizing military executions projects national strength rather than systemic moral collapse.",
       "Alethekanon:\nState power that requires televised death to demonstrate authority has already conceded its moral legitimacy. Public spectacle is the hallmark of insecure tyranny, not confident law.",
       "Awwthekanon:\nTurning any human being's final moments into a live-streamed show numbs our collective soul. When we celebrate cruelty as entertainment, we lose the very humanity we are supposed to protect.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.85,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.7,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.85,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.55,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.7,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Military Execution Broadcast",
@@ -301,6 +363,7 @@
     "tags": [
       "Aletheia",
       "HumanRights"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

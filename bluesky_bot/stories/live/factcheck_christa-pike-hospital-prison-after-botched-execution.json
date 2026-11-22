@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "real_u": -0.05,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Death row inmate Christa Pike returns to prison after surviving a brutal, botched execution attempt in Tennessee.🌐\nEvidence: State Execution, Botched Pentobarbital Injection, Prison Return\n#Aletheia #DeathPenalty",
-      "State officials present capital punishment as a swift, orderly, and clinical administration of legal justice.\nStated Judgement: (+0.8, +0.5) — Trustworthy Stated Order",
-      "The execution botched severely; Pike suffered burning sensations and prolonged choking before surviving two pentobarbital doses.\nResulting Judgement: (-0.85, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. State execution machinery failed catastrophically, inflicting prolonged torture instead of justice.\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 3)",
+      "State officials present capital punishment as a swift, orderly, and clinical administration of legal justice.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "The execution botched severely; Pike suffered burning sensations and prolonged choking before surviving two pentobarbital doses.\nResulting Judgement: (-0.05, -0.10) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Tennessee Dept of Correction: FAIL (-0.9, -0.9) — Botched execution and cruel torture.\n- Legal Defense: PASS (0.8, 0.7) — Preserving evidence and medical care.",
       "After surviving a botched execution on Sept. 30 where she choked and gasped after two pentobarbital doses, 50-year-old Christa Pike was discharged from the hospital and returned to a Tennessee prison.",
       "The Poison:\nThe state's machinery of capital punishment cloaks profound operational failure and cruelty behind sterile legal pretexts.",
       "The Plane Error: Confusing WHAT (state-sanctioned retributive justice) with HOW (cruel, incompetent chemical torture). The state hides botched executions behind administrative silence.",
       "Social Physics Analysis:\nState authorities run a smart selfish maneuver: cloaking state-administered violence in clinical legal pretexts while projecting blame away from systemic incompetence and institutional failure.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between clinical state claims and botched torture results, it plots a direct trajectory toward Greater Evil. F = S*A - O*A.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between clinical state claims and botched torture results, it plots a direct trajectory toward Greater Evil. F = S*A - O*A.",
       "The Unavoidable Truth: State execution protocols are prone to catastrophic mechanical and chemical failures that inflict torture.\n\nThe Unavoidable Lie: Capital punishment operates as a seamless, painless application of justice.",
       "Alethekanon:\nWhen institutional execution machinery fails to kill cleanly and instead inflicts prolonged suffering, the state's claim to clinical authority collapses into raw cruelty.",
       "Awwthekanon:\nIt is heartbreaking to witness human life reduced to mechanical processing, where state violence and suffering overshadow any pursuit of true healing or accountability.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Tennessee Dept of Correction",
@@ -162,6 +224,7 @@
     "tags": [
       "Aletheia",
       "DeathPenalty"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

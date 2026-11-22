@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.7,
-    "real_psi": -0.74,
+    "real_u": -0.3,
+    "real_psi": -0.47,
     "mode": "root",
     "posts": [
       "A Cold War relic for a digital frontier. Fox News reports on Trump's potential use of the Defense Production Act to regulate AI.\nEvidence: National security, Executive power expansion, Centralized control. #Aletheia #AI #USPol",
-      "The administration claims existing laws and the Defense Production Act provide \"tremendous power\" to protect national security from catastrophic AI risks.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Applying a 1950 industrial manufacturing law to neural networks is a logical mismatch. It serves as a pretext to expand executive authority over tech companies without clear legislative guardrails.\nResulting Judgement: (-0.70, -0.74) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The administration uses the specter of an \"AI emergency\" to justify retaining sweeping, untested Cold War-era executive powers.\nIntegrity: Severe Deception (Hypocrisy: 16.0, z: 4)",
+      "The administration claims existing laws and the Defense Production Act provide \"tremendous power\" to protect national security from catastrophic AI risks.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Applying a 1950 industrial manufacturing law to neural networks is a logical mismatch. It serves as a pretext to expand executive authority over tech companies without clear legislative guardrails.\nResulting Judgement: (-0.30, -0.47) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 16.0, z: 4)",
       "- Executive AI Policy: FAIL (-0.70, -0.74) — Pretextual power grab.\n- DPA Applicability: COND (0.10, -0.20) — Untested on software.",
       "The Defense Production Act, set to expire in December, is being eyed by the Trump administration as a tool to regulate frontier AI, despite experts warning it was designed for physical wartime manufacturing.",
       "The Poison:\nWhile framing this as a necessary shield against cyber threats, it bypasses Congress to establish unilateral executive control over private technological development.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Executive AI Policy",
@@ -162,6 +224,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

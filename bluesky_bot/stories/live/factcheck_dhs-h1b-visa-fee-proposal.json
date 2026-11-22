@@ -6,21 +6,21 @@
     "link": "https://www.washingtontimes.com/news/2026/aug/24/dhs-proposes-new-103000-fee-hire-foreign-skilled-guest-workers/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.78,
-    "real_psi": -0.63,
+    "claim_psi": 1.0,
+    "real_u": -0.88,
+    "real_psi": -0.92,
     "mode": "root",
     "posts": [
       "A massive $103,000 fee on skilled guest workers is pitched as a shield for American labor, but it functions as a heavy tax on innovation.\n\nDHS proposes new $103,000 fee...\nEvidence: protect American workers, extract corporate rents, fund federal enforcement\n#Aletheia",
-      "The Department of Homeland Security claims a new $103,265 fee on H-1B visas will make American workers more financially attractive and raise $8 billion annually to fund multi-department immigration enforcement.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, the astronomical fee acts as a de facto ban on high-skilled foreign talent, forcing companies to pay massive rents to fund federal bureaucracies rather than addressing actual domestic labor shortages.\nResulting Judgement: (-0.78, -0.63) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe policy uses protectionist rhetoric to justify a massive regulatory rent-extraction scheme that restricts legal immigration pathways.\n\nIntegrity: Severe Deception (Hypocrisy: 41.67, Uncertainty z: 3)",
+      "The Department of Homeland Security claims a new $103,265 fee on H-1B visas will make American workers more financially attractive and raise $8 billion annually to fund multi-department immigration enforcement.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the astronomical fee acts as a de facto ban on high-skilled foreign talent, forcing companies to pay massive rents to fund federal bureaucracies rather than addressing actual domestic labor shortages.\nResulting Judgement: (-0.88, -0.92) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe policy uses protectionist rhetoric to justify a massive regulatory rent-extraction scheme that restricts legal immigration pathways.\n\nIntegrity: Severe Deception (Hypocrisy: 41.67, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- DHS Regulatory Proposal: FAIL (-0.78, -0.63) — Protectionist rhetoric extracts corporate rents.\n- Labor Market Protection Claim: FAIL (-0.85, -0.70) — Restricts high-skilled talent under guise of wage growth.",
       "The Department of Homeland Security has proposed a new $103,265 fee for H-1B visa petitions, aiming to raise $8 billion annually to fund enforcement operations across multiple federal departments.",
       "The Bright Side:\nExempting universities and nonprofit research organizations prevents the fee from completely crippling academic and scientific research institutions.",
       "The Breakdown & Plane Error:\nThe error is WHAT vs WHO. DHS claims the fee is about protecting American workers (WHO), but the actual mechanism (WHAT) is a massive financial barrier designed to fund federal enforcement agencies.",
       "Social Physics Analysis:\nBy framing a massive regulatory tax as a benefit for domestic labor, the policy creates a post-hoc pretext. It projects the blame for wage stagnation onto foreign talent while hoarding power and capital for federal enforcement agencies.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The policy shifts potential from open, talent-driven growth to closed, bureaucratic extraction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The policy shifts potential from open, talent-driven growth to closed, bureaucratic extraction.",
       "The Unavoidable Truth: The fee is a massive tax on high-skilled talent designed to fund federal agencies.\n\nThe Unavoidable Lie: The fee is purely intended to help American workers find jobs.",
       "Alethekanon:\nThe proposal is a classic rent-extraction mechanism. By leveraging protectionist sentiment, the state secures a massive funding stream while restricting the very talent that drives technological innovation.",
       "Awwthekanon:\nIt is heartbreaking to see hopeful, skilled individuals who want to contribute their talents treated as financial leverage. True security comes from building bridges and nurturing potential, not erecting massive financial walls.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.05,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.15,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.05,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.05,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "DHS Regulatory Proposal",
@@ -273,6 +335,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

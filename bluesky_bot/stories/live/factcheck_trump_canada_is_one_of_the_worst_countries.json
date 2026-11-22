@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Donald Trump criticizes Canada during an interview after trade talks collapse.\nEvidence: collapsed trade deal, high tariffs, harsh rhetoric\n#Aletheia #USCan #Trade",
-      "Asserting that trade negotiations failed because foreign partners exploit American markets.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "Escalating trade hostility and diplomatic ruptures degrades regional stability and cooperation.\nResulting Judgement: (-0.80, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPunitive rhetoric and collapsed negotiations highlight deepening economic friction under nationalist pretexts.\n\nIntegrity: Severe Deception (Hypocrisy: 10.5, z: 4)",
+      "Asserting that trade negotiations failed because foreign partners exploit American markets.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "Escalating trade hostility and diplomatic ruptures degrades regional stability and cooperation.\nResulting Judgement: (-0.80, -0.85) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPunitive rhetoric and collapsed negotiations highlight deepening economic friction under nationalist pretexts.\n\nIntegrity: Severe Deception (Hypocrisy: 10.5, z: 4)",
       "- Donald Trump: FAIL (-0.80, -0.85) — Uses trade grievances for political leverage.\n- Trade Diplomacy: FAIL (-0.75, -0.80) — Breakdown of cooperative frameworks.",
       "President Donald Trump stated that Canada is among the worst nations to deal with, following the collapse of bilateral trade negotiations.",
       "The Poison:\nAbrasive public rhetoric hardens negotiating positions and permanently damages cross-border alliances.",
       "The Breakdown & Plane Error:\nConfusing WHERE (bilateral trade policy) with WHO (blaming specific foreign administrations).\n\nIt is a structural bait-and-switch: economic disagreements are framed as moral betrayals.",
       "Social Physics Analysis:\nWeaponizing trade disputes to rally domestic support deepens international friction. Pretexts of defending national sovereignty mask zero-sum economic posturing.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Mathematical friction confirms adversarial escalation.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Mathematical friction confirms adversarial escalation.",
       "The Unavoidable Truth: Collapsed trade talks and hostile rhetoric exacerbate economic isolation.\n\nThe Unavoidable Lie: Blaming foreign neighbors solves domestic structural trade deficits.",
       "Alethekanon:\nHostile diplomatic posturing converts complex economic negotiations into zero-sum nationalist theater.",
       "Awwthekanon:\n Neighbors thrive through open dialogue and mutual respect, not through bitter public condemnations.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Trade Diplomacy Rhetoric",
@@ -157,6 +219,7 @@
         "name": "Justin Trudeau",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

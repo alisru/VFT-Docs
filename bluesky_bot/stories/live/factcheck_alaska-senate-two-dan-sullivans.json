@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Alaska's primary features a bizarre twist with two Dan Sullivans on the ballot.\n\nDemocrats eye potential Senate flip in Alaska with 2 Republican Dan Sullivans on the ballot\nEvidence: ballot confusion, legal battles, strategic maneuvering\n#Aletheia #USPol",
-      "A primary in Alaska features incumbent Sen. Dan Sullivan facing a challenger also named Dan Sullivan, leading to accusations of political trickery.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "The Alaska Supreme Court ruled the challenger can stay on the ballot, highlighting intense strategic maneuvering and voter confusion in the open primary.\nResulting Judgement: (-0.80, -0.64) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Revelation.\nStrategic maneuvering and ballot duplication create friction, though navigated via legal channels.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "A primary in Alaska features incumbent Sen. Dan Sullivan facing a challenger also named Dan Sullivan, leading to accusations of political trickery.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The Alaska Supreme Court ruled the challenger can stay on the ballot, highlighting intense strategic maneuvering and voter confusion in the open primary.\nResulting Judgement: (-0.80, -0.64) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nStrategic maneuvering and ballot duplication create friction, though navigated via legal channels.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Ballot Integrity: COND (-0.2, -0.3) — Potential voter confusion.\n- Candidate Strategy: FAIL (-0.5, -0.6) — Strategic name duplication.",
       "A competitive Alaska primary includes two candidates named Dan Sullivan, prompting Republican backlash and legal fights over ballot fairness before the courts intervened.",
       "The Bright Side:\nAlaska's top-four primary system allows voters broad choices, forcing candidates to appeal across party lines.",
       "The Breakdown & Plane Error:\nConfusing WHAT (ballot rules) with WHO (candidate motivations). The system permits identical names, but political actors exploit this for strategic advantage.",
       "Social Physics Analysis:\nPolitical factions leverage procedural loopholes for tactical advantage rather than transparent engagement, generating unnecessary system friction.",
-      "The Trajectory: The Path of Revelation.\nWhen you map procedural rules against tactical exploitation, it plots a trajectory toward lesser evil friction. Mathematical balance holds through legal checks.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map procedural rules against tactical exploitation, it plots a trajectory toward lesser evil friction. Mathematical balance holds through legal checks.",
       "The Unavoidable Truth: Ballot rules permit candidates with identical names to run.\n\nThe Unavoidable Lie: Name duplication is entirely accidental and devoid of political strategy.",
       "Alethekanon:\nProcedural loopholes are routinely weaponized for electoral leverage under the guise of open participation.",
       "Awwthekanon:\nIt's tough for voters trying to make sense of a ballot when names are duplicated like this.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.25
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ballot Integrity",
@@ -276,6 +338,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

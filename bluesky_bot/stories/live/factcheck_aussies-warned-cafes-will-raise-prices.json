@@ -5,22 +5,22 @@
     "subject": "Aussies warned cafes will raise prices to cope with Anthony Albanese's new card payment ban",
     "link": "https://www.dailymail.com/news/article-16174087/cafe-price-hike-australia.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.25,
     "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "real_u": -0.15,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "Card fee bans promise consumer relief, but small shops warn of price hikes.\nEvidence: RBA surcharge ban, small business strain, consumer savings claims\n#Aletheia #Australia #Economy",
-      "The government claims banning direct card surcharges delivers pure cost-of-living relief and savings for consumers.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Shifting merchant costs without fixing underlying margins forces small businesses to hike prices or absorb losses, squeezing local shops.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nGood intentions clash with blunt regulatory mandates that transfer costs onto vulnerable small merchants.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
+      "The government claims banning direct card surcharges delivers pure cost-of-living relief and savings for consumers.\nStated Judgement: (+0.25, +0.00) — Lesser Good",
+      "Shifting merchant costs without fixing underlying margins forces small businesses to hike prices or absorb losses, squeezing local shops.\nResulting Judgement: (-0.15, -0.25) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nGood intentions clash with blunt regulatory mandates that transfer costs onto vulnerable small merchants.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
       "- Reserve Bank of Australia: COND (0.2, -0.1) — Cuts interchange fees but creates friction.\n- Small Businesses: COND (-0.5, -0.4) — Forced to absorb or raise prices.",
       "Australia's new ban on merchant card surcharges aims to make retail pricing transparent, but independent cafes warn it threatens their survival.",
       "The Bright Side:\nConsumers enjoy more upfront price transparency at the register.",
       "The Breakdown & Plane Error:\nConfusing WHAT (the fee mechanism) with WHO (the small merchant bearing the regulatory burden).",
       "Social Physics Analysis:\nThe government runs a top-down mandate, claiming altruistic cost-of-living relief while ignoring the structural squeeze on small businesses, substituting regulatory fiat for genuine market support.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through administrative burden shifting.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through administrative burden shifting.",
       "The Unavoidable Truth: Upfront pricing transparency benefits consumers only if local businesses survive the transition.\n\nThe Unavoidable Lie: Mandating fee absorption costs businesses nothing.",
       "Alethekanon:\nRegulatory simplifications often conceal the hidden friction transferred to the smallest actors in the supply chain.",
       "Awwthekanon:\nIt hurts to watch hardworking local cafe owners shoulder extra burdens when they are already trying their best to keep their doors open for everyone.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Reserve Bank of Australia",
@@ -158,6 +220,7 @@
         "name": "Jim Chalmers",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

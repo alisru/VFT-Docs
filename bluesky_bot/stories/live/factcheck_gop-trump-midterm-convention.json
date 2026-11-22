@@ -5,22 +5,22 @@
     "subject": "Can the 'best showman in politics' deliver again? GOP bets on Trump at historic midterm convention",
     "link": "https://www.foxnews.com/politics/best-showman-politics-deliver-gop-bets-trump-historic-midterm-convention",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.6,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_u": 0.65,
+    "claim_psi": 0.5,
+    "real_u": -0.6,
+    "real_psi": -0.57,
     "mode": "root",
     "posts": [
       "Donald Trump headlines the GOP's first-ever midterm convention in Dallas to energize base voters for 2026.\nEvidence: Midterm convention, base mobilization, congressional control\n#Aletheia #USPol #Midterms",
-      "The GOP convention frames the midterms as a vital showdown between common sense and the extreme left, using Donald Trump's star power to defy historical midterm trends.\nStated Judgement: (+0.8, +0.6) — Lesser Good",
-      "Beneath the spectacle of a Trump-centric revival, the party faces severe structural headwinds like inflation, gas prices, and low-propensity voter fatigue that stunts true democratic reform.\nResulting Judgement: (-0.75, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe GOP leans on a showman's rally to bypass substantive policy debates, masking systemic voter fatigue behind high-energy partisan pageantry.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 3)",
+      "The GOP convention frames the midterms as a vital showdown between common sense and the extreme left, using Donald Trump's star power to defy historical midterm trends.\nStated Judgement: (+0.65, +0.50) — Greater Good",
+      "Beneath the spectacle of a Trump-centric revival, the party faces severe structural headwinds like inflation, gas prices, and low-propensity voter fatigue that stunts true democratic reform.\nResulting Judgement: (-0.60, -0.57) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe GOP leans on a showman's rally to bypass substantive policy debates, masking systemic voter fatigue behind high-energy partisan pageantry.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- RNC Strategy: FAIL (-0.70, -0.75) — Uses spectacle to mask policy headwinds.\n- Electoral Framing: COND (-0.50, -0.40) — Overstates turnout magic.",
       "Republicans are breaking tradition by holding a full-scale convention ahead of the midterms, betting that Donald Trump can defy historical patterns where the ruling party loses seats.",
       "The Bright Side:\nHigh-energy rallies can successfully mobilize low-propensity voters who typically sit out midterm elections.",
       "The Breakdown & Plane Error:\nConfusing media spectacle (Q2) with systemic legislative reform (Q1). The rally treats voter apathy as a marketing problem rather than a policy failure.",
       "Social Physics Analysis:\nThe GOP runs a Smart Selfish Maneuver, using a manufactured existential threat from the left as a pretext to rally base turnout around a single personality rather than empowering local legislative solutions.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Personality-driven mobilization avoids root structural strains.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Personality-driven mobilization avoids root structural strains.",
       "The Unavoidable Truth: Personality-driven conventions boost short-term base turnout.\n\nThe Unavoidable Lie: Spectacle alone can permanently override economic policy headwinds.",
       "Alethekanon:\nSpectacle replaces substance as the GOP bets its congressional majority on a single political showman.",
       "Awwthekanon:\nIt's tough when people feel unheard and politicians turn politics into a reality TV show just to get them to the ballot box.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "RNC Strategy",
@@ -159,6 +221,7 @@
         "name": "Republican National Committee",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

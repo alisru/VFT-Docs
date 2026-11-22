@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": -0.85,
     "claim_psi": -0.75,
-    "real_u": 0.07,
-    "real_psi": -0.41,
+    "real_u": -0.29,
+    "real_psi": -0.48,
     "mode": "root",
     "posts": [
       "A high-speed chase and crash involving an ICE suspect sparks a fierce political battle over sanctuary policies.\nEvidence: Public Safety, Policy Friction, Political Blame\n#Aletheia #USPol",
       "Critics claim Governor Mikie Sherrill's sanctuary policies are directly responsible for a fleeing suspect crashing into a mayor's wife, arguing that limiting ICE cooperation invites lawlessness.\nStated Judgement: (-0.85, -0.75) — Greater Evil",
-      "The crash occurred during a targeted federal ICE operation, not a local police action. While the sanctuary policy limits local civil cooperation, it does not prevent criminal enforcement or warrant execution.\nResulting Judgement: (0.07, -0.41) — Lesser Good",
-      "Verdict: COND — Awakening into Redemption.\nWhile sanctuary policies create real-world friction, blaming them for a crash during a targeted federal ICE chase is a political stretch.\nIntegrity: Partially Distorted (Hypocrisy: 1.05, Uncertainty z: 2)",
+      "The crash occurred during a targeted federal ICE operation, not a local police action. While the sanctuary policy limits local civil cooperation, it does not prevent criminal enforcement or warrant execution.\nResulting Judgement: (-0.29, -0.48) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nWhile sanctuary policies create real-world friction, blaming them for a crash during a targeted federal ICE chase is a political stretch.\nIntegrity: Partially Distorted (Hypocrisy: 1.05, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Sanctuary Policy Impact: COND (0.07, -0.41) — Creates operational friction.\n- Daily Caller Framing: FAIL (-0.65, -0.55) — Politically weaponizes a federal chase crash.",
       "An unauthorized immigrant fleeing ICE agents in Middlesex County, New Jersey, crashed into a vehicle carrying the wife of East Brunswick's mayor. Republicans blamed Governor Sherrill's 'Trust Directive' sanctuary policy.",
       "The Bright Side:\nSanctuary policies aim to encourage immigrant communities to report local crimes without fear of deportation, but the resulting lack of coordination with federal agencies can create dangerous operational gaps.",
       "The Breakdown & Plane Error:\nThis is a WHY vs HOW error. The debate focuses on the ideological 'why' of sanctuary policies, but the physical crash was a 'how' of tactical execution—a suspect choosing to flee a targeted federal ICE stop.",
       "Social Physics Analysis:\nBoth sides run Smart Selfish Maneuvers. Republicans project the blame for a federal tactical failure onto state policy to score points, while Democrats project blame back onto ICE's 'lawlessness' to avoid addressing the friction of their policies.",
-      "The Trajectory: The Path of Awakening into Redemption.\nWhen you map the gap between ideological policy goals and tactical realities, it plots a trajectory toward Lesser Good. True resolution requires balancing local trust with public safety.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between ideological policy goals and tactical realities, it plots a trajectory toward Lesser Good. True resolution requires balancing local trust with public safety.",
       "The Unavoidable Truth: The suspect crashed while actively fleeing a targeted federal ICE stop, not local police.\nThe Unavoidable Lie: The claim that New Jersey's sanctuary policy legally prevents the arrest of dangerous criminals.",
       "Alethekanon:\nWeaponizing a traffic accident to litigate complex immigration policy is standard partisan theater. It obscures the genuine operational friction between local trust and federal enforcement.",
       "Awwthekanon:\nAn innocent woman was injured in this chaotic chase, and our hearts go out to her. It is so sad when political battles overshadow the real human pain and safety of our communities.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sanctuary Policy Impact",
@@ -171,6 +233,7 @@
         "name": "Bonnie Watson Coleman",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.6,
-    "real_u": 0.8,
-    "real_psi": 0.7,
+    "real_u": 0.85,
+    "real_psi": 0.75,
     "mode": "root",
     "posts": [
       "A routine traffic stop in Alhambra takes a wild turn when a heroic police K-9 sniffs out a massive illicit cargo. California K-9 Otis helps police seize 440 pounds of cocaine\nEvidence: Routine stop, K-9 alert, 440 lbs seized\n#Aletheia #California 🌐",
-      "Law enforcement officials reported that a routine traffic stop in Alhambra escalated successfully when K-9 Otis alerted officers to an SUV packed with 440 pounds of cocaine after the driver offered shifting stories.\nStated Judgement: (+0.8, +0.6) — Lesser Good",
-      "Ground reality confirms the Alhambra Police Department and K-9 Otis executed a textbook interdiction, intercepting a major narcotics shipment and arresting the suspect without incident.\nResulting Judgement: (+0.8, +0.7) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nA sharp interdiction by law enforcement successfully disrupted a major drug trafficking route.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Law enforcement officials reported that a routine traffic stop in Alhambra escalated successfully when K-9 Otis alerted officers to an SUV packed with 440 pounds of cocaine after the driver offered shifting stories.\nStated Judgement: (+0.80, +0.60) — Greater Good",
+      "Ground reality confirms the Alhambra Police Department and K-9 Otis executed a textbook interdiction, intercepting a major narcotics shipment and arresting the suspect without incident.\nResulting Judgement: (+0.85, +0.75) — Greater Good",
+      "Verdict: PASS — Grace.\nA sharp interdiction by law enforcement successfully disrupted a major drug trafficking route.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Alhambra Police: PASS (+0.8, +0.7) — Effective narcotics interdiction.\n- K-9 Otis: PASS (+0.9, +0.8) — Exceptional detection work.",
       "Alhambra police pulled over an SUV where conflicting driver statements prompted a K-9 search, leading to the recovery of roughly 440 pounds of cocaine.",
       "The Bright Side:\nSwift canine deployment prevented a massive illegal drug consignment from reaching local streets.",
       "The Breakdown & Plane Error:\nConfusing procedural traffic stops (WHAT) with systemic drug enforcement outcomes (WHO) is avoided here; the action directly aligns with public safety.",
       "Social Physics Analysis:\nLaw enforcement operated via transparent public safety protocols, replacing hidden extraction with direct risk mitigation and community protection.",
-      "The Trajectory: The Path of Redemption.\nWhen stated interdiction goals match field outcomes, it plots a direct course toward stability and safety. (u = +0.8, psi = +0.7)",
+      "The Trajectory: The Path of Grace.\nWhen stated interdiction goals match field outcomes, it plots a direct course toward stability and safety. (u = +0.8, psi = +0.7)",
       "The Unavoidable Truth: Diligent police work and trained K-9 units successfully disrupt illicit drug distribution networks.\n\nThe Unavoidable Lie: Routine traffic stops always unfold without uncovering major criminal enterprises.",
       "Alethekanon:\nClear operational success demonstrates how tactical vigilance directly intercepts illicit supply chains before harm multiplies.",
       "Awwthekanon:\nWe celebrate the sharp nose and dedication of K-9 Otis and his handler, whose teamwork keeps communities safe from dangerous narcotics.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Alhambra Police Department",
@@ -170,6 +232,7 @@
         "sub_psi": 0.7,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

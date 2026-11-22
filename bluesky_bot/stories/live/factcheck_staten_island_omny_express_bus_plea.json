@@ -5,22 +5,22 @@
     "subject": "Staten Island Teen Pleads for Express Bus OMNY Access",
     "link": "https://nypost.com/2026/08/22/us-news/staten-island-teen-takes-to-instagram-with-special-request-for-mamdani/",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.85,
-    "real_u": 0.75,
-    "real_psi": 0.7,
+    "claim_u": 0.94,
+    "claim_psi": 1.0,
+    "real_u": 0.59,
+    "real_psi": 0.71,
     "mode": "root",
     "posts": [
       "A high school senior's viral plea highlights transit gaps for outer-borough students.\n\nStaten Island Teen OMNY Bus Plea\nEvidence: Free school transit, Express buses excluded, Universal student access\n#TransitEquity #NYC",
-      "Daeun Kim appealed to City Hall to allow student OMNY cards on express buses, saving immigrant families thousands in fares.\nStated Judgement: (+0.85, +0.85) — Greater Good",
-      "Staten Island students face 3-hour commutes on standard transit or $14.50 daily express fares, exposing outer-borough equity gaps.\nResulting Judgement: (+0.75, +0.70) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Grassroots transparency reveals administrative oversights in student transit equity.\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 1)",
+      "Daeun Kim appealed to City Hall to allow student OMNY cards on express buses, saving immigrant families thousands in fares.\nStated Judgement: (+0.94, +1.00) — Greater Good",
+      "Staten Island students face 3-hour commutes on standard transit or $14.50 daily express fares, exposing outer-borough equity gaps.\nResulting Judgement: (+0.59, +0.71) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 1)",
       "- Transit Policy: COND (+0.65, +0.55) — Excludes express buses despite distance.\n- Student Advocacy: PASS (+0.88, +0.82) — Transparent plea for working parents.",
       "Fiorello H. LaGuardia HS student Daeun Kim posted a viral video detailing an $18,270 commute toll on her working-class immigrant family.",
       "The Bright Side:\nCivic engagement via social media effectively bypasses bureaucratic dead ends to spotlight transit policy blind spots.",
       "The Breakdown & Plane Error:\nThe gap is between nominal universal access (WHAT) and real geographic isolation (WHERE). Free transit cards fail if geography blocks usable transit routes.",
       "Social Physics Analysis:\nKim uses direct transparency to highlight systemic friction. Rather than demanding special privilege, she exposes how uniform rules create disproportionate burdens on outer-borough families.",
-      "The Trajectory: The Path of Grace.\nWhen grassroots appeals align with undeniable civic needs, they propel municipal policy toward structural reform.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen grassroots appeals align with undeniable civic needs, they propel municipal policy toward structural reform.",
       "The Unavoidable Truth: Geographic isolation turns equal benefits into unequal access.\n\nThe Unavoidable Lie: Standard transit cards provide equal opportunity across all boroughs.",
       "Alethekanon:\nA standard policy that ignores geography isn't equitable. Kim's data-backed plea provides an unassailable case for structural transit reform.",
       "Awwthekanon:\nSeeing a daughter fight so hard just to give her hardworking mother weekends of rest is deeply moving. She deserves to be heard.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.7,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.25,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.95,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.15,
+        "N": 0.15
+      },
+      "LE": {
+        "S": 0.25,
+        "O": 0.55,
+        "N": 0.15
+      },
+      "GP": {
+        "S": 0.85,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NYC Student Transit Subsidy Policy",
@@ -280,6 +342,7 @@
         "name": "New York City",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

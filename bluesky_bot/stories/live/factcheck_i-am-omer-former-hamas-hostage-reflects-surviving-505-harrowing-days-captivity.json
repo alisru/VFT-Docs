@@ -5,16 +5,16 @@
     "subject": "'I am Omer': Former Hamas hostage reflects on surviving 505 harrowing days in captivity",
     "link": "https://www.foxnews.com/media/i-am-omer-former-hamas-hostage-reflects-surviving-505-harrowing-days-captivity",
     "target_url": "",
-    "claim_u": 1.0,
+    "claim_u": 0.92,
     "claim_psi": 1.0,
-    "real_u": 0.85,
-    "real_psi": 0.9,
+    "real_u": 0.97,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Former Hamas hostage Omer Shem Tov shares his harrowing 505-day journey of survival and spiritual awakening.\nEvidence: Hostage survival, Captivity testimony, Free will\n#Aletheia #Israel #Hostages",
-      "Personal trauma and captivity can be transcended through moral agency, spiritual surrender, and the conscious choice of light over despair.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Omer endured extreme deprivation and terror in Gaza but forged profound inner resilience, reframing suffering into a testament of human agency.\nResulting Judgement: (0.85, 0.90) — Grace",
-      "Verdict: PASS — The Path of Grace.\nAuthentic survival testimony reflects deep spiritual endurance and moral clarity under unimaginable adversity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Personal trauma and captivity can be transcended through moral agency, spiritual surrender, and the conscious choice of light over despair.\nStated Judgement: (+0.92, +1.00) — Greater Good",
+      "Omer endured extreme deprivation and terror in Gaza but forged profound inner resilience, reframing suffering into a testament of human agency.\nResulting Judgement: (+0.97, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nAuthentic survival testimony reflects deep spiritual endurance and moral clarity under unimaginable adversity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Omer Shem Tov: PASS (0.90, 0.95) — Exemplifies profound resilience.\n- Captivity Testimony: PASS (0.80, 0.85) — Honest accounting of trauma.",
       "Kidnapped from the Nova Music Festival on Oct 7, 2023, Omer Shem Tov spent 505 days in brutal captivity before reclaiming his voice and story.",
       "The Bright Side:\nEven within total darkness, human consciousness can reclaim agency and choose light over despair.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.45,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Omer Shem Tov",
@@ -282,6 +344,7 @@
         "name": "Hamas",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

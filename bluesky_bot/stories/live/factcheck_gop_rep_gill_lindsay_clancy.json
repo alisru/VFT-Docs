@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "real_u": -0.38,
+    "real_psi": -0.47,
     "mode": "root",
     "posts": [
       "A tragic family trial becomes a political weapon. GOP Rep. Gill targets the Lindsay Clancy case, calling postpartum psychosis defense 'medicalizing evil.'\nEvidence: Moral clarity, Political posturing, Ideological exploitation\n#USPol #MentalHealth",
-      "Rep. Gill claims to stand for absolute moral clarity and justice for the three young victims, arguing that framing severe mental illness as a defense is a dangerous attempt to excuse evil.\nStated Judgement: (1.0, 1.0) — Greater Good",
-      "In reality, Gill exploits a complex medical-legal tragedy to score political points, flattening severe postpartum psychosis into a simple moral crusade while ignoring clinical realities.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Gill uses a profound family tragedy as an ideological weapon, replacing empathy with political posturing.\nIntegrity: Severe Deception (Hypocrisy: 2.82, Uncertainty z: 3)",
+      "Rep. Gill claims to stand for absolute moral clarity and justice for the three young victims, arguing that framing severe mental illness as a defense is a dangerous attempt to excuse evil.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, Gill exploits a complex medical-legal tragedy to score political points, flattening severe postpartum psychosis into a simple moral crusade while ignoring clinical realities.\nResulting Judgement: (-0.38, -0.47) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 2.82, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Rep. Gill Rhetoric: FAIL (-1.00, -1.00) — Exploits tragedy for political branding.\n- Dr. Phil Commentary: COND (0.20, -0.20) — More balanced but media-centric.",
       "Following a mistrial in the Lindsay Clancy case, where the jury split 11-1 on her postpartum psychosis defense, GOP Rep. Brandon Gill criticized the defense's arguments on Fox News.",
       "The Poison:\nBy reducing a severe, documented clinical condition like postpartum psychosis to pure 'evil,' this rhetoric actively discourages families from seeking help for maternal mental health crises.",
       "The Breakdown & Plane Error:\nThe error is Logical (HOW). Gill breaks the causal chain of severe mental illness to assert pure, unmitigated agency, performing a bait-and-switch that replaces medical reality with moral outrage.",
       "Social Physics Analysis:\nGill executes a Smart Selfish Maneuver. He uses the pretext of defending innocent children to project corrupt motives onto the defense, hoarding political influence by manufacturing a culture war conflict rather than addressing systemic health failures.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated moral clarity and actual political exploitation, it plots a direct trajectory toward Greater Evil. This path deepens social division and stigmatizes mental health.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated moral clarity and actual political exploitation, it plots a direct trajectory toward Greater Evil. This path deepens social division and stigmatizes mental health.",
       "The Unavoidable Truth: Postpartum psychosis is a severe, documented medical emergency, not a moral choice.\nThe Unavoidable Lie: Claiming that clinical diagnoses are just pretexts to excuse evil protects the public.",
       "Alethekanon:\nGill's rhetoric is a textbook example of using moral outrage to bypass logical and medical reality. True justice requires understanding systemic failures, not flattening them into political talking points.",
       "Awwthekanon:\nThis is a heartbreaking tragedy all around. Those three beautiful children are gone, and their mother was lost in a terrifying mental darkness. We need deep compassion and better maternal healthcare, not harsh political judgment that isolates struggling mothers.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.25,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Rep. Brandon Gill Rhetoric",
@@ -289,6 +351,7 @@
         "name": "Phil McGraw",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

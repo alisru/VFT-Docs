@@ -5,22 +5,22 @@
     "subject": "After losing ground with Latino voters, Democrats are turning to influencers for help",
     "link": "https://www.npr.org/2026/10/10/nx-s1-5991897/democrats-latino-voters-influencers-bold-pac",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.6,
-    "real_u": -0.2,
-    "real_psi": -0.4,
+    "claim_u": 0.75,
+    "claim_psi": 0.55,
+    "real_u": 0.0,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Democrats lean on social media influencers to rebuild eroded trust among Latino voters ahead of crucial midterms.\nEvidence: BOLD PAC stipends, swing district events, Pew data\n#Democrat #LatinoVoters 🌐",
-      "Stated Claim: Partnering with trusted local content creators provides authentic dialogue and bridges the political disconnect with Hispanic communities.\nStated Judgement: (+0.8, +0.6) — Lesser Good",
-      "Actual Reality: Influencer stipends and travel grants represent tactical band-aids over a systemic erosion of trust where over 40% feel ignored by both parties.\nResulting Judgement: (-0.2, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nOutreach acknowledges past failures but relies on surface-level media tactics rather than structural policy shifts.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Stated Claim: Partnering with trusted local content creators provides authentic dialogue and bridges the political disconnect with Hispanic communities.\nStated Judgement: (+0.75, +0.55) — Greater Good",
+      "Actual Reality: Influencer stipends and travel grants represent tactical band-aids over a systemic erosion of trust where over 40% feel ignored by both parties.\nResulting Judgement: (+0.00, -0.10) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nOutreach acknowledges past failures but relies on surface-level media tactics rather than structural policy shifts.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- BOLD PAC Outreach: PASS (0.7, 0.5) — Authentic grassroots connection.\n- Democratic Strategy: COND (-0.3, -0.2) — Late tactical spending.",
       "Democrats are launching BOLD PAC influencer programs to connect with persuadable Latino voters in swing districts, relying on trusted content creators instead of traditional ads.",
       "The Bright Side:\nLeveraging trusted local creators replaces sterile political ads with genuine, community-level conversations.",
       "The Breakdown & Plane Error:\nConfusing WHAT (policy and economic security) with WHO (social media influencers). Influencers can spark dialogue, but cannot substitute for substantive policy delivery.",
       "Social Physics Analysis:\nActors execute a tactical maneuver substituting influencer gloss for foundational policy repair. While not outright malicious, it risks treating communities as transactional turnout tools rather than empowered stakeholders.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated community empowerment and transactional outreach, it plots a conditional trajectory toward Lesser Good through modest course correction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated community empowerment and transactional outreach, it plots a conditional trajectory toward Lesser Good through modest course correction.",
       "The Unavoidable Truth: Influencers can spark community dialogue but cannot substitute for real economic policy delivery.\n\nThe Unavoidable Lie: A few social media appearances will permanently reverse multi-cycle political erosion.",
       "Alethekanon:\nSurface-level tactical outreach cannot substitute for deep systemic policy alignment. Trust is earned through sustained action, not influencer adjacency.",
       "Awwthekanon:\nIt hurts to feel like you only matter right before an election. Communities deserve steady, year-round care and genuine respect, not just curated social media charm.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "BOLD PAC Outreach",
@@ -172,6 +234,7 @@
     "tags": [
       "Democrat",
       "LatinoVoters"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://kyivindependent.com/anti-corruption-bureau-investigates-zelenskys-ex-deputy-chief-of-staff-in-corporate-raiding-scheme/",
     "target_url": "https://bsky.app/profile/kyivindependent.com/post/3mtjmyoss722h",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -1.35,
-    "real_psi": -0.95,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A shocking betrayal of public trust in Ukraine as top officials are caught on tape orchestrating hostile takeovers.\n\nZelensky Staffer Corporate Raiding\nEvidence: public service, corporate raiding, private enrichment\n#Aletheia #Ukraine #AntiCorruption",
-      "The state claimed these officials were working to uphold the rule of law and protect national security.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The reality reveals a highly coordinated criminal enterprise using state power, hackers, and bribes to seize private assets.\nResulting Judgement: (-1.35, -0.95) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nState power was weaponized to cannibalize the domestic economy through illicit corporate raiding.\n\nIntegrity: Severe Deception (Hypocrisy: 625.0, Uncertainty z: 5)",
+      "The state claimed these officials were working to uphold the rule of law and protect national security.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality reveals a highly coordinated criminal enterprise using state power, hackers, and bribes to seize private assets.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nState power was weaponized to cannibalize the domestic economy through illicit corporate raiding.\n\nIntegrity: Severe Deception (Hypocrisy: 625.0, Uncertainty z: 5)",
       "Sub-Audits Breakdown:\n- Iryna Mudra: FAIL (-1.35, -0.95) — Abused office for illicit asset seizures.\n- Judicial Integrity: FAIL (-1.40, -0.98) — Systemic bribery of judges exposed.",
       "The National Anti-Corruption Bureau of Ukraine (NABU) released wiretaps implicating former Deputy Chief of Staff Iryna Mudra and other high-ranking officials in a massive corporate raiding and money laundering scheme.",
       "The Bright Side:\nUkraine's anti-corruption institutions (NABU) are actively investigating and exposing high-level corruption, demonstrating functional oversight mechanisms even under extreme pressure.",
       "The Breakdown & Plane Error:\nThe error lies in the Metaphysical plane (WHO). The public believed these officials were guardians of justice, but they acted as predatory corporate raiders, using forged documents and hackers to steal private businesses.",
       "Social Physics Analysis:\nBy abusing state authority to freeze assets and manipulate registries, these actors created massive systemic friction. Instead of protecting property rights, they used legal pretexts to extract wealth, destroying trust in public institutions.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The active weaponization of state mechanisms for private theft collapses institutional trust.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The active weaponization of state mechanisms for private theft collapses institutional trust.",
       "The Unavoidable Truth: No state can survive long-term when its legal guardians double as corporate raiders.\nThe Unavoidable Lie: The pretense of judicial independence is maintained while court orders are bought for $5,000.",
       "Alethekanon:\nThis case exposes the deep structural vulnerability of transition economies where regulatory power is easily converted into a weapon for private capital accumulation.",
       "Awwthekanon:\nIt is heartbreaking to see the courage of ordinary citizens fighting for their country's survival undermined by the greed of those entrusted with its leadership.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.7,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Iryna Mudra Conduct",
@@ -289,6 +351,7 @@
         "name": "Ukraine",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

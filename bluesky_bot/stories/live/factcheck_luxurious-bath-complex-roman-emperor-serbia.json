@@ -6,15 +6,15 @@
     "link": "https://www.goodnewsnetwork.org/luxurious-bath-complex-used-by-roman-emperor-found-in-serbia/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
+    "claim_psi": 1.0,
     "real_u": 1.0,
-    "real_psi": 0.8,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Unearthing ancient luxury in the Balkans!\nEvidence: Archaeological find, 4th-century balneum, Serbia site\n#Aletheia #History #Archaeology",
-      "Archaeologists in Serbia discovered a unique 4th-century Roman bath complex featuring a circular layout, sauna, and heating system built for Emperor Maximinus Daza.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "Excavations at the Vrelo-Šarkamen archaeological site confirmed the structural integrity and historical value of this rare architectural find.\nResulting Judgement: (+1.0, +0.8) — Grace",
-      "Verdict: PASS — The Path of Grace.\nArchaeological preservation and historical discovery expand our understanding of antiquity without hidden pretexts.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "Archaeologists in Serbia discovered a unique 4th-century Roman bath complex featuring a circular layout, sauna, and heating system built for Emperor Maximinus Daza.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Excavations at the Vrelo-Šarkamen archaeological site confirmed the structural integrity and historical value of this rare architectural find.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nArchaeological preservation and historical discovery expand our understanding of antiquity without hidden pretexts.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Institute of Archaeology Serbia: PASS (1.0, 0.8) — Rigorous excavation methodology.\n- Historical Reporting: PASS (1.0, 0.7) — Accurate contextualization.",
       "Archaeologists in eastern Serbia have unearthed a unique, dome-ceilinged Roman bath complex at the Vrelo-Šarkamen site, shedding new light on 4th-century engineering under Emperor Maximinus Daza.",
       "The Bright Side:\nThis remarkable archaeological discovery preserves invaluable ancient architectural history and boosts cultural heritage appreciation.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Institute of Archaeology Serbia",
@@ -207,6 +269,7 @@
         "name": "Institute of Archaeology Serbia",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

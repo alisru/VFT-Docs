@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.5,
-    "real_psi": 0.4,
+    "real_u": 0.6,
+    "real_psi": 0.5,
     "mode": "root",
     "posts": [
       "Nous Research hits $1.5B valuation with $90M Series B.\nEvidence: $90M raised, 24M clones, enterprise pivot, $100M ARR target.\n#TechCrunch #ArtificialIntelligence",
-      "Nous Research raised a $90M Series B at a $1.5B valuation to bring its popular open-source Hermes Agent to enterprise business users.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "While open-source roots built massive adoption, the $90M raise ties the project directly to venture capital return mandates and enterprise data locking.\nResulting Judgement: (+0.5, +0.4) — Conditional Good",
-      "Verdict: PASS — The Path of Redemption.\nOpen-source AI innovation scales successfully, though commercialization pressures shift focus toward enterprise monetization.\n\nIntegrity: Trustworthy (Hypocrisy: 1.35, z: 1)",
+      "Nous Research raised a $90M Series B at a $1.5B valuation to bring its popular open-source Hermes Agent to enterprise business users.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While open-source roots built massive adoption, the $90M raise ties the project directly to venture capital return mandates and enterprise data locking.\nResulting Judgement: (+0.60, +0.50) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nOpen-source AI innovation scales successfully, though commercialization pressures shift focus toward enterprise monetization.\n\nIntegrity: Trustworthy (Hypocrisy: 1.35, z: 1)",
       "Sub-Audits Breakdown:\n- Open Source Growth: PASS (+0.9, +0.8) — Massive developer adoption.\n- Enterprise Monetization: COND (+0.3, +0.2) — Shifts toward corporate lock-in.",
       "Nous Research secured a $90M Series B led by Robot Ventures with backing from Nvidia and Samsung, pushing valuation to $1.5B while launching enterprise tools.",
       "The Bright Side:\nHigh-performance AI tools become accessible and customizable for developers globally, driving massive efficiency gains.",
       "The Breakdown & Plane Error:\nConfusing open-source developer enthusiasm (WHO) with corporate enterprise licensing extraction (WHY).",
       "Social Physics Analysis:\nNous runs a hybrid loop: community-driven open source adoption transitioning into a high-stakes enterprise monetization maneuver.",
-      "The Trajectory: The Path of Redemption.\nWhen you map open-source community ideals against massive venture funding rounds, it plots a trajectory toward commercialized utility.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map open-source community ideals against massive venture funding rounds, it plots a trajectory toward commercialized utility.",
       "The Unavoidable Truth: Open-source models can achieve massive commercial valuations and enterprise traction.\n\nThe Unavoidable Lie: Venture-backed AI infrastructure remains entirely independent of corporate monetization demands.",
       "Alethekanon:\nOpen-source momentum builds immense valuation, yet institutional capital inevitably demands commercial extraction 🌐",
       "Awwthekanon:\nIt is inspiring to see developer-driven projects thrive, bringing powerful tools into the hands of creators everywhere.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Open Source Growth",
@@ -162,6 +224,7 @@
         "name": "Samsung",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

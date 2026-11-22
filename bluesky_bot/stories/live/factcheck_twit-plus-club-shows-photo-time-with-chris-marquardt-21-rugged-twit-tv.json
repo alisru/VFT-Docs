@@ -5,16 +5,16 @@
     "subject": "TWiT+ Club Shows: Photo Time With Chris Marquardt #21: Rugged | TWiT.TV",
     "link": "https://twit.tv/shows/twit-plus-club-shows/episodes/766",
     "target_url": "https://bsky.app/profile/twit.tv/post/3mtnc4k3s4m26",
-    "claim_u": 1.0,
-    "claim_psi": 0.8,
-    "real_u": 0.95,
-    "real_psi": 0.85,
+    "claim_u": 0.82,
+    "claim_psi": 1.0,
+    "real_u": 0.82,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Chris Marquardt and Anthony Nielsen critique community shots exploring \"ruggedness.\"\n\nTWiT+ Club Shows: Photo Time With Chris Marquardt #21: Rugged | TWiT.TV\nEvidence: community critique, creative growth, open learning\n#Aletheia #Photography",
-      "Club members share creative photographs capturing rugged textures and tenacity, supported by expert critique and accessible tech discussions.\nStated Judgement: (+1.0, +0.8) — Greater Good",
-      "Participants engage in collaborative artistic feedback, fostering skill growth and technical mastery through transparent community sharing.\nResulting Judgement: (+0.95, +0.85) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nTransparent creative collaboration and peer critique successfully foster genuine artistic empowerment.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "Club members share creative photographs capturing rugged textures and tenacity, supported by expert critique and accessible tech discussions.\nStated Judgement: (+0.82, +1.00) — Greater Good",
+      "Participants engage in collaborative artistic feedback, fostering skill growth and technical mastery through transparent community sharing.\nResulting Judgement: (+0.82, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nTransparent creative collaboration and peer critique successfully foster genuine artistic empowerment.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Chris Marquardt: PASS (+0.95, +0.85) — Facilitates authentic creative growth.\n- Club TWiT Community: PASS (+0.90, +0.80) — Engages in constructive artistic dialogue.",
       "The episode reviews member submissions around rugged subjects while previewing next month's smooth theme and exploring smartphone gimbals and smart telescopes.",
       "The Poison:\nWhile technically sound, club-exclusive paywalls restrict access to these educational resources for non-paying photography enthusiasts.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Chris Marquardt Photography Workshop",
@@ -276,6 +338,7 @@
         "name": "TWiT.TV",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

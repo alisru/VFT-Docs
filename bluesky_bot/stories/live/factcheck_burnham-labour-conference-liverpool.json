@@ -5,22 +5,22 @@
     "subject": "‘We sound more like Labour’: Burnham brings good vibes to Liverpool",
     "link": "https://www.prospectmagazine.co.uk/politics/75096/labour-conference-burnham-optimism",
     "target_url": "https://bsky.app/profile/prospectmagazine.co.uk/post/3mwvqfdkxpl2g",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
+    "claim_u": 0.75,
+    "claim_psi": 0.55,
     "real_u": 0.65,
-    "real_psi": 0.7,
+    "real_psi": 0.65,
     "mode": "root",
     "posts": [
       "Burnham brings optimism to Labour's Liverpool conference.\nEvidence: Good vibes, mayoral track record, party unity\n#Aletheia #UKPol #Labour",
-      "Andy Burnham's charismatic leadership and authentic message have reinvigorated the Labour Party with a genuine sense of hope and unity.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Burnham's focus on political economy and mayoral style successfully restored morale and bridged factions, though substantive policy tests lie ahead.\nResulting Judgement: (+0.65, +0.7) — Good Preference",
-      "Verdict: PASS — The Path of Awakening.\nCharismatic alignment and authentic local governance experience successfully unified a fractured party.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
+      "Andy Burnham's charismatic leadership and authentic message have reinvigorated the Labour Party with a genuine sense of hope and unity.\nStated Judgement: (+0.75, +0.55) — Greater Good",
+      "Burnham's focus on political economy and mayoral style successfully restored morale and bridged factions, though substantive policy tests lie ahead.\nResulting Judgement: (+0.65, +0.65) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nCharismatic alignment and authentic local governance experience successfully unified a fractured party.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
       "Sub-Audits Breakdown:\n- Prospect Magazine: PASS (0.7, 0.6) — Balanced view of style versus substance.\n- Conference Delegates: PASS (0.8, 0.7) — Highlights genuine enthusiasm and unity.",
       "Prime Minister Andy Burnham opened the Labour Party conference in Liverpool with an upbeat keynote speech, emphasizing political renewal and hope.",
       "The Bright Side:\nCultivating authentic connection and grassroots enthusiasm provides a stable foundation for tackling complex economic challenges.",
       "The Breakdown & Plane Error:\nEvaluating political style (HOW) separately from economic reality (WHAT) without losing structural integrity.",
       "Social Physics Analysis:\nBurnham executed a Smart Altruistic Maneuver, using transparent communication and empathetic mayoral experience to unite a fractured coalition around a shared vision of hope.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Authentic engagement builds durable systemic alignment.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Authentic engagement builds durable systemic alignment.",
       "The Unavoidable Truth: Good vibes and rhetoric successfully rallied a weary party after a decade of political turbulence.\n\nThe Unavoidable Lie: Charisma alone can substitute for difficult fiscal choices and policy trade-offs.",
       "Alethekanon:\nCharm and authentic connection can lift political morale, but the real test is whether good vibes translate into enduring structural reform.",
       "Awwthekanon:\nIt is so refreshing to hear leaders speak with genuine passion and actually listen to people's everyday concerns.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Prospect Magazine",
@@ -163,6 +225,7 @@
         "name": "Labour Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

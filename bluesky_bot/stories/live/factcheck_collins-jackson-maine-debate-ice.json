@@ -5,16 +5,16 @@
     "subject": "Susan Collins and Troy Jackson...",
     "link": "https://www.washingtonexaminer.com/news/campaigns/congressional/4760617/susan-collins-troy-jackson-corruption-allegations-second-debate/",
     "target_url": "",
-    "claim_u": 0.85,
-    "claim_psi": 0.75,
-    "real_u": -0.9,
-    "real_psi": -0.94,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.85,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "Behind closed doors and debate podiums, human accountability is traded for political survival.\nCollins-Jackson Maine Debate Clash\nEvidence: Public Accountability, Unchecked Enforcement, Incumbent Power Retention\n#Aletheia #USPol 🌐",
-      "Susan Collins and Troy Jackson claim unyielding integrity, vehemently denying pay-to-play corruption while promising accountable law enforcement, border reform, and public safety.\nStated Judgement: (+0.85, +0.75) — Greater Good",
-      "Both candidates deflect institutional failure. Collins voted for billions in enforcement while body-cam funding lacked mandates, and ICE killed Johan Durán Guerrero in Biddeford with no cameras active.\nResulting Judgement: (-0.90, -0.94) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. The candidates trade performative outrage and mutual corruption denials while laundering lethal institutional impunity.\nIntegrity: Severe Deception (Hypocrisy: 16.20, Uncertainty z: 4)",
+      "Susan Collins and Troy Jackson claim unyielding integrity, vehemently denying pay-to-play corruption while promising accountable law enforcement, border reform, and public safety.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Both candidates deflect institutional failure. Collins voted for billions in enforcement while body-cam funding lacked mandates, and ICE killed Johan Durán Guerrero in Biddeford with no cameras active.\nResulting Judgement: (-0.85, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 16.20, Uncertainty z: 4)",
       "- Examiner: FAIL (-0.84, -0.78) — Obscures donor probes.\n- Breitbart: FAIL (-0.88, -0.85) — Partisan border wedge.\n- Collins: FAIL (-0.91, -0.89) — Funds agencies sans curbs.\n- Jackson: COND (-0.65, -0.52) — Exploits death for votes.",
       "In Maine's second Senate debate, Collins defended her spending votes and rejected defunding ICE, while Jackson condemned the agency after an agent fatally shot Colombian migrant Johan Durán Guerrero in Biddeford.",
       "The Bright Side:\nHeightened public scrutiny forces both federal funding streams and lethal police actions into the open, giving Maine voters leverage to demand mandatory body-worn camera enforcement and true legal transparency.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.18,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.05,
+        "O": 1.18,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.7,
+        "O": 0.12,
+        "N": 0.03
+      },
+      "LG": {
+        "S": 0.07,
+        "O": 0.62,
+        "N": 0.05
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.05,
+        "N": 0.05
+      },
+      "GP": {
+        "S": 0.07,
+        "O": 0.95,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.07,
+        "O": 0.05,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "actual_forces": {
@@ -451,6 +513,7 @@
         "name": "Customs and Border Protection",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -14,7 +14,7 @@
       "A local grassroots push for transparency in New Mexico elections? Look closer at who is asking the questions.\nEvidence: Local transparency claim, National dark money contact, Partisan influence\n#AskWhyNM #DarkMoney #NMPol",
       "The campaign claims to be a non-partisan effort to demand honesty and transparency from political candidates, empowering local New Mexican voters to get direct answers.\nStated Judgement: (+1.0, +1.0) — Grace",
       "The initiative is a front for the Independent Women's Forum/Voice, a national conservative dark-money group. It uses local branding to mask out-of-state partisan lobbying.\nResulting Judgement: (-1.0, -1.0) — Destruction",
-      "Verdict: FAIL — Fall into Destruction. A national dark-money group uses local grassroots branding to run partisan voter-influence operations under the guise of transparency.\nIntegrity: Severe Deception (Hypocrisy: 11.20, Uncertainty z: 4)",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 11.20, Uncertainty z: 4)",
       "- Ask Why NM: FAIL (-1.00, -1.00) — National partisan front posing as local grassroots.\n- Independent Women's Forum: FAIL (-1.00, -1.00) — Uses deceptive branding to hide lobbying.",
       "The 'Ask Why New Mexico' campaign presents itself as a local civic initiative urging voters to demand transparency from candidates, but its contact info reveals it is run by the Virginia-based Independent Women's Forum.",
       "The Poison:\nBy co-opting the language of civic transparency, the campaign poisons genuine local accountability efforts, making voters cynical of all political questioning.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Ask Why NM Campaign",
@@ -212,6 +274,7 @@
         "name": "New Mexico",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

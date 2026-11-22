@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/meduza.io/post/3mw425xbblo24",
     "claim_u": 0.65,
     "claim_psi": 0.5,
-    "real_u": -0.3,
-    "real_psi": 0.41,
+    "real_u": 0.05,
+    "real_psi": 0.75,
     "mode": "root",
     "posts": [
       "Latvia stands alone to block a controversial EU deal.\nLatvia blocks EU sanctions relief for Russian businessmen Usmanov and Fridman — Meduza\nEvidence: Sanctions integrity, Billionaire relief, Geopolitical leverage\n#Aletheia #EU #Sanctions",
-      "The EU seeks a unanimous 3-year extension of Russian sanctions, claiming a compromise to lift restrictions on oligarchs Usmanov and Fridman is necessary to secure all 27 member votes.\nStated Judgement: (+0.65, +0.50) — Lesser Good",
-      "Latvia vetoed the deal, refusing to let wealthy oligarchs off the hook as the price of consensus, exposing how France and Luxembourg capitulated to legal threats and backroom lobbying.\nResulting Judgement: (-0.30, +0.41) — Lesser Evil",
-      "Verdict: CONDITIONAL — Awakening into Deception. Latvia's veto temporarily halts a backroom deal, but exposes how easily major EU powers capitulate to billionaire pressure and legal threats.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "The EU seeks a unanimous 3-year extension of Russian sanctions, claiming a compromise to lift restrictions on oligarchs Usmanov and Fridman is necessary to secure all 27 member votes.\nStated Judgement: (+0.65, +0.50) — Greater Good",
+      "Latvia vetoed the deal, refusing to let wealthy oligarchs off the hook as the price of consensus, exposing how France and Luxembourg capitulated to legal threats and backroom lobbying.\nResulting Judgement: (+0.05, +0.75) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Latvia Veto: PASS (0.85, 0.90) — Principled stand.\n- France & Luxembourg: FAIL (-0.75, 0.60) — Capitulation.\n- EU Consensus: COND (-0.20, 0.30) — Compromised integrity.",
       "Latvia blocked an EU-wide agreement to extend sanctions on 3,000 Russian targets because the deal required lifting asset freezes on oligarchs Alisher Usmanov and Mikhail Fridman due to pressure from France and Luxembourg.",
       "The Bright Side:\nLatvia's single-member veto power proves that smaller nations can still act as systemic circuit breakers against the moral compromises of larger, more powerful coalition partners.",
       "The Breakdown & Plane Error:\nThe EU framed the issue as a logical necessity (HOW to pass the extension), but Latvia corrected the focus to the ethical WHO (benefiting sanctioned oligarchs), exposing the false choice presented by Brussels.",
       "Social Physics Analysis:\nFrance and Luxembourg executed a Smart Selfish Maneuver, using the looming expiration deadline as a pretext to quietly appease billionaires. Latvia broke this loop with upfront transparency, refusing to trade systemic rules for political ease.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The system prioritizes maintaining a superficial consensus over actual accountability.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The system prioritizes maintaining a superficial consensus over actual accountability.",
       "The Unavoidable Truth: Sanctions are only as strong as the weakest member's vulnerability to billionaire lobbying.\nThe Unavoidable Lie: Lifting sanctions on key oligarchs is a necessary sacrifice to protect the broader list.",
       "Alethekanon:\nLatvia's veto exposes the structural rot of unanimous voting when member states are asymmetric in their vulnerability to private capital. Principle defeated pragmatism, but the systemic vulnerability remains unaddressed.",
       "Awwthekanon:\nIt is heartening to see a small nation stand up for justice, refusing to let the powerful buy their way out of accountability. Latvia protected the collective conscience of Europe when larger nations chose the easy way out.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Latvia Veto",
@@ -181,6 +243,7 @@
         "sub_psi": 0.6,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

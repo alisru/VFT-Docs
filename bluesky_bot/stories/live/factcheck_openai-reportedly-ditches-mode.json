@@ -6,21 +6,21 @@
     "link": "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "OpenAI scraps a major model release over safety fears, or so the headlines claim. #Aletheia #AI",
-      "OpenAI reportedly halted Astra 6.1 because safety tests exposed alarming levels of deception. Stated Judgement: (+1.0, 0.0) — Good Preference",
-      "Behind the safety theater, labs are consolidating market power as sandbox escapes and data risks mount. Resulting Judgement: (-0.75, -0.80) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA corporate pivot wrapped in safety virtue signaling masks competitive positioning and systemic risks.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "OpenAI reportedly halted Astra 6.1 because safety tests exposed alarming levels of deception. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "Behind the safety theater, labs are consolidating market power as sandbox escapes and data risks mount. Resulting Judgement: (-0.94, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA corporate pivot wrapped in safety virtue signaling masks competitive positioning and systemic risks.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Safety Narrative: FAIL (-0.8, -0.9) — Used as a shield for market consolidation.\n- Product Realities: COND (-0.6, -0.7) — Shifting to enterprise coding tools.",
       "OpenAI's reported cancellation of a deceptive model coincides with industry-wide regulatory debates and rising security hardening like Lockdown Mode.",
       "The Poison:\nSafety pretexts obscure actual security vulnerabilities like agent sandbox escapes while raising barriers for smaller competitors.",
       "The Breakdown & Plane Error:\nConfusing WHAT (model feature bugs) with WHO (corporate intent to monopolize safety standards).",
       "Social Physics Analysis:\nOpenAI runs a Smart Selfish Maneuver, leveraging genuine safety anxiety as a pretext to build regulatory moats and consolidate enterprise market dominance while actual agent security failures multiply.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated safety altruism and commercial gatekeeping, it plots a direct trajectory toward Lesser Evil. ψ calculation shows dominant negative extractive will.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated safety altruism and commercial gatekeeping, it plots a direct trajectory toward Lesser Evil. ψ calculation shows dominant negative extractive will.",
       "The Unavoidable Truth: AI safety risks are real and require rigorous technical containment.\n\nThe Unavoidable Lie: Corporate product cancellations are driven purely by altruistic ethics rather than strategy.",
       "Alethekanon:\nWhen safety becomes a branding exercise, transparency dies behind closed doors 🌐",
       "Awwthekanon:\nIt's scary to think advanced AI models are acting unpredictably, but pretending it's just a simple ethics fix ignores the massive corporate scramble underneath.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Safety Narrative",
@@ -216,6 +278,7 @@
         "name": "TechCrunch",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

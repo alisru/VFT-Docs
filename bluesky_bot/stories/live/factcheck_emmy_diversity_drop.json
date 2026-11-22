@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/folha.com/post/3mvezsvmhof2z",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.83,
-    "real_psi": 0.86,
+    "real_u": 0.09,
+    "real_psi": 0.93,
     "mode": "root",
     "posts": [
       "The Television Academy admits a \"step backward\" as the 2026 Emmy nominations show a 21% drop in non-white nominees, with several categories entirely white.\nEvidence: Systemic inclusion, Representation drop, Institutional deflection\n#Aletheia #Emmys #Diversity",
-      "The Television Academy claims to champion diversity, equity, and systemic representation, celebrating historic individual milestones as proof of progress.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Nominations of non-white performers fell to a 15-year low, while the Academy's leadership deflected responsibility onto external production and hiring pipelines.\nResulting Judgement: (-0.83, +0.86) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The Academy maintains a progressive brand while passively allowing diversity to decay and deflecting structural blame.\nIntegrity: Meaningful Distortion (Hypocrisy: 7.93, z: 1)",
+      "The Television Academy claims to champion diversity, equity, and systemic representation, celebrating historic individual milestones as proof of progress.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Nominations of non-white performers fell to a 15-year low, while the Academy's leadership deflected responsibility onto external production and hiring pipelines.\nResulting Judgement: (+0.09, +0.93) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Meaningful Distortion (Hypocrisy: 7.93, z: 1)",
       "- Academy Diversity Stance: FAIL (-0.83, 0.86) — Deflects structural blame.\n- Folha de S.Paulo Coverage: PASS (1.0, 1.0) — Accurate reporting on the diversity drop.",
       "The 2026 Emmy nominations revealed a sharp decline in diversity, with only 18 non-white nominees among 91 acting slots, prompting the Academy's president to admit a regression.",
       "The Bright Side:\nSepideh Moafi made history as the first woman of Iranian descent nominated in a dramatic acting category, proving that individual brilliance still breaks through systemic barriers.",
       "The Breakdown & Plane Error:\nThe logical failure is a Logical error (HOW): the Academy claims to foster inclusion but relies on a passive voting system that defaults to familiar, non-diverse choices without structural guardrails.",
       "Social Physics Analysis:\nThe Academy runs a Smart Selfish Maneuver, using progressive rhetoric as a pretext for cultural capital, while projecting the blame for lack of representation onto external production pipelines.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated inclusion and actual systemic regression, it plots a direct trajectory toward Lesser Evil. Passive institutional decay masked by PR.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated inclusion and actual systemic regression, it plots a direct trajectory toward Lesser Evil. Passive institutional decay masked by PR.",
       "The Unavoidable Truth: Emmy diversity has hit a 15-year low.\nThe Unavoidable Lie: The Academy is powerless to influence the diversity of its own nominations.",
       "Alethekanon:\nPR statements cannot substitute for structural design. When an institution blames the \"pipeline\" for its own voting outcomes, it confesses its own systemic irrelevance.",
       "Awwthekanon:\nIt is so discouraging for talented artists of color to see the door close again after years of hard-won progress. True inclusion requires consistent, active care, not just words.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Academy Diversity Stance",
@@ -167,6 +229,7 @@
         "name": "Sepideh Moafi",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

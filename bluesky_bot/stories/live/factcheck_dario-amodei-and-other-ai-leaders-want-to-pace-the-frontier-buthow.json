@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.6,
-    "real_u": 0.3,
-    "real_psi": 0.1,
+    "real_u": 0.45,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "AI leaders propose safety pacts to tame the frontier, but market pressures and consolidation threaten true accountability.\nEvidence: safety proposals, third-party access, competitive rush\n#Aletheia #AI",
-      "Tech leaders claim voluntary coordination and independent evaluators can successfully pace artificial intelligence development safely.\nStated Judgement: (+0.8, +0.6) — Constructive Stewardship",
-      "Voluntary oversight often masks regulatory capture and deep competitive races toward superintelligence that discard real safety checks.\nResulting Judgement: (+0.3, +0.1) — Fragile Equilibrium",
-      "Verdict: COND — The Path of Awakening.\nWhen competitive survival forces labs to self-regulate, public safety becomes secondary to maintaining market dominance.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.62, z: 1)",
+      "Tech leaders claim voluntary coordination and independent evaluators can successfully pace artificial intelligence development safely.\nStated Judgement: (+0.80, +0.60) — Greater Good",
+      "Voluntary oversight often masks regulatory capture and deep competitive races toward superintelligence that discard real safety checks.\nResulting Judgement: (+0.45, +0.25) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nWhen competitive survival forces labs to self-regulate, public safety becomes secondary to maintaining market dominance.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.62, z: 1)",
       "Sub-Audits Breakdown:\n- TechCrunch Coverage: COND (+0.5, +0.2) — Focuses on executive debate while missing structural risks.\n- AI Lab Leadership: PASS (+0.4, +0.3) — Proposes real evaluators despite competitive pressures.",
       "Tech leaders are attempting to establish voluntary safety guardrails amid mounting regulatory pressure and internal whistleblower warnings over rapid AI scaling.",
       "The Bright Side:\nEmbedding third-party evaluators creates genuine transparency windows previously resisted by major tech monopolies.",
       "The Breakdown & Plane Error:\nConfusing WHAT (voluntary corporate pledges) with WHO (public democratic accountability), ignoring how market incentives override safety.",
       "Social Physics Analysis:\nAI labs execute a delicate balance between public reassurance and intense private competition. While framing policies around altruistic safety, they risk entrenching big-tech moats under the guise of responsible stewardship.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between voluntary corporate pledges and market realities, it plots a cautious path toward fragile equilibrium. Net forces reflect balancing acts between caution and expansion.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between voluntary corporate pledges and market realities, it plots a cautious path toward fragile equilibrium. Net forces reflect balancing acts between caution and expansion.",
       "The Unavoidable Truth: Voluntary safety frameworks protect incumbents while failing to halt the race toward superintelligence.\n\nThe Unavoidable Lie: Tech labs can police their own competitive boundaries without external democratic enforcement.",
       "Alethekanon:\nVoluntary guardrails designed by oligopolies inevitably protect market incumbents rather than the public interest.",
       "Awwthekanon:\nIt is heartbreaking to watch brilliant minds build systems they know could outgrow us, hoping polite handshakes will keep everyone safe.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "TechCrunch Coverage",
@@ -166,6 +228,7 @@
         "name": "Nvidia",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

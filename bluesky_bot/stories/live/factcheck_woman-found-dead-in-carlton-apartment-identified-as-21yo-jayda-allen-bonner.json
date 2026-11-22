@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3mxjb6otnob2f",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "real_u": -0.05,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Tragic death of 21yo Jayda Allen Bonner in Carlton exposes devastating welfare failures.\nEvidence: Family pleas ignored, police inaction, systemic breakdown\n#Aletheia #Melbourne",
-      "Authorities investigate a suspicious death in Carlton while deflecting prior welfare pleas from the victim's grieving family.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Police dismissed prior family calls for help regarding Jayda's safety, exposing a broken welfare system that abandoned a vulnerable Indigenous woman.\nResulting Judgement: (-0.85, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA young Indigenous woman's death follows severe institutional failure after police dismissed frantic family welfare requests.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Authorities investigate a suspicious death in Carlton while deflecting prior welfare pleas from the victim's grieving family.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Police dismissed prior family calls for help regarding Jayda's safety, exposing a broken welfare system that abandoned a vulnerable Indigenous woman.\nResulting Judgement: (-0.05, -0.10) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nA young Indigenous woman's death follows severe institutional failure after police dismissed frantic family welfare requests.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "Sub-Audits Breakdown:\n- Victoria Police: FAIL (-0.9, -0.9) — Dismissed family welfare pleas prior to tragedy.\n- Family Advocacy: PASS (0.8, 0.7) — Transparently exposed systemic failure.",
       "Police discovered 21-year-old Jayda Allen Bonner dead in a Carlton apartment on Saturday. Her family revealed they had repeatedly begged authorities for safety interventions prior to her death.",
       "The Poison:\nInstitutional deflection and silence from police regarding prior emergency welfare calls protect bureaucracy over accountability.",
       "The Breakdown & Plane Error:\nConfusing the immediate criminal homicide investigation with the broader systemic failure of emergency services to act on family welfare pleas.",
       "Social Physics Analysis:\nPolice and welfare agencies operated under a Smart Selfish Maneuver, deflecting responsibility with bureaucratic pretexts ('what do you want us to do?') rather than extending active empathy or protective intervention.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated institutional neutrality and ground-level neglect, it plots a direct trajectory toward Greater Evil. Systemic inaction directly compounds human vulnerability.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated institutional neutrality and ground-level neglect, it plots a direct trajectory toward Greater Evil. Systemic inaction directly compounds human vulnerability.",
       "The Unavoidable Truth: A young woman's life was lost after authorities ignored frantic family pleas for welfare intervention.\n\nThe Unavoidable Lie: Official silence and procedural deflection shield agencies from their failure to protect the vulnerable.",
       "Alethekanon:\nInstitutions that dismiss family pleas for help forfeit their moral authority. Bureaucratic deflection is no substitute for protective duty.",
       "Awwthekanon:\nJayda was a gentle soul with a heart of gold who deserved protection and care. Her family's heartbreak is an unbearable tragedy that demands true accountability.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Victoria Police Response",
@@ -164,6 +226,7 @@
     "tags": [
       "Aletheia",
       "Melbourne"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

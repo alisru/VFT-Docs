@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "When a prominent police reform advocate fights back against alleged institutional retaliation, the truth about internal file access is put on trial. 🌐\n\nEvidence: official denial, retaliatory leaking, judicial survival #Aletheia #NYC",
-      "The city's legal defense denies allegations of untraceable 'ghost access' to sensitive police files and attempts to toss the activist's lawsuit.\nStated Judgement: (+0.72, +0.85) — Good Preference",
-      "Federal Judge Frederic Block allowed Dana Rachlin's suit to proceed, exposing claims that top officials leaked her sexual assault records.\nResulting Judgement: (-0.97, -0.94) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Institutional self-protection overrules victim privacy, hiding retaliation behind legal denials.\n\nIntegrity: Severe Deception (Hypocrisy: 18.2, Uncertainty z: 2)",
+      "The city's legal defense denies allegations of untraceable 'ghost access' to sensitive police files and attempts to toss the activist's lawsuit.\nStated Judgement: (+0.72, +0.85) — Greater Good",
+      "Federal Judge Frederic Block allowed Dana Rachlin's suit to proceed, exposing claims that top officials leaked her sexual assault records.\nResulting Judgement: (-0.97, -0.94) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 18.2, Uncertainty z: 2)",
       "- NYPD Command: FAIL (-0.8, -0.9) — Weaponized private files.\n- Legal Defense: COND (0.0, -0.5) — Defending indefensible leaks.",
       "Federal judge Frederic Block rejected the city's motion to dismiss, letting Rachlin's lawsuit over leaked assault records move forward.",
       "The Poison:\nInstitutional opacity allows powerful officials to weaponize confidential victim data against critics without immediate internal accountability.",
       "The Breakdown & Plane Error:\nConfusing procedural denial with actual innocence (WHAT vs WHO). The city protects leadership rather than addressing the leak.",
       "Social Physics Analysis:\nInstead of transparently investigating internal data leaks, leadership projects denial to preserve power and suppress dissent.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between official denials and judicial findings of retaliation, it plots a direct trajectory toward Deception. F_pos < F_neg.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between official denials and judicial findings of retaliation, it plots a direct trajectory toward Deception. F_pos < F_neg.",
       "The Unavoidable Truth: Confidential police files were weaponized against a vocal critic.\n\nThe Unavoidable Lie: The department maintains strict, impenetrable digital data integrity.",
       "Alethekanon:\nJudge Block's ruling confirms that Rachlin's documented evidence of retaliatory leaks warrants a full trial despite official city stonewalling.",
       "Awwthekanon:\nSurviving a brutal assault is heavy enough; having your private trauma weaponized by the very people sworn to protect you is an unforgivable betrayal.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.9,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NYPD Leadership Accountability",
@@ -269,6 +331,7 @@
         "name": "Frederic Block",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,16 +5,16 @@
     "subject": "Leftists Tearing Down Statues",
     "link": "https://thefederalist.com/2026/09/02/leftists-tearing-down-statues-are-showing-you-what-they-want-to-do-to-america/?utm_source=rss&utm_medium=rss&utm_campaign=leftists-tearing-down-statues-are-showing-you-what-they-want-to-do-to-america",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -0.94,
-    "real_psi": -0.88,
+    "claim_u": 0.0,
+    "claim_psi": 0.0,
+    "real_u": -0.42,
+    "real_psi": -0.59,
     "mode": "root",
     "posts": [
       "A local legislative decision to remove Confederate monuments is spun into an existential war on American history.\n\nLeftists Tearing Down Statues\nEvidence: local monument removal, cultural preservation, existential leftist plot\n#Aletheia #USPol",
-      "Leftists are systematically tearing down American monuments because they hate the nation's heritage and want to destroy classical American identity to seize power.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The removals are legal decisions by local elected bodies regarding Confederate monuments. The claim of a coordinated leftist plot to destroy all history is an ideological projection.\nResulting Judgement: (-0.94, -0.88) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nThe article uses a slippery slope fallacy to frame local legislative actions as an existential threat to all American history.\n\nIntegrity: Severe Deception (Hypocrisy: 64.0, z: 6)",
+      "Leftists are systematically tearing down American monuments because they hate the nation's heritage and want to destroy classical American identity to seize power.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "The removals are legal decisions by local elected bodies regarding Confederate monuments. The claim of a coordinated leftist plot to destroy all history is an ideological projection.\nResulting Judgement: (-0.42, -0.59) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nThe article uses a slippery slope fallacy to frame local legislative actions as an existential threat to all American history.\n\nIntegrity: Severe Deception (Hypocrisy: 64.0, z: 6)",
       "Sub-Audits Breakdown:\n- The Federalist Editorial: FAIL (-0.94, -0.88) — Projects existential malice onto local actions.\n- Richmond Statue Removal: COND (0.1, -0.3) — Legal but highly contested local decision.",
       "Workers removed three Confederate statues from Capitol Square in Richmond, Virginia, following a vote by the Democrat-controlled state legislature, sparking intense cultural debate.",
       "The Bright Side:\nThe debate highlights the deep connection Americans feel to their history, prompting necessary conversations about how we choose to represent our past in public spaces.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Federalist Editorial",
@@ -164,6 +226,7 @@
         "name": "United Daughters of the Confederacy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

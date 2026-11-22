@@ -5,22 +5,22 @@
     "subject": "Mayor of the 'Air Capital of the World' reacts to Trump's threats against Bombardier",
     "link": "https://www.npr.org/2026/09/11/nx-s1-5963499/mayor-of-the-air-capital-of-the-world-reacts-to-trumps-threats-against-bombardier",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
-    "real_u": -0.2,
-    "real_psi": -0.3,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.09,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Wichita's mayor speaks out on trade turbulence!\nEvidence: 1,200 local workers, Bombardier HQ, Tariff threats\n#Aletheia #Aviation",
-      "Wichita Mayor Lily Wu voiced serious concern over presidential tariff threats targeting Bombardier, emphasizing the company's crucial role in the local aviation economy.\nStated Judgement: (+0.6, +0.2) — Good Preference",
-      "Local municipal leadership faces severe policy anxiety as cross-border trade disputes threaten regional manufacturing stability and jobs.\nResulting Judgement: (-0.2, -0.3) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Stasis.\nLocal leaders navigate macro trade conflicts while trying to protect regional manufacturing jobs from political crossfire.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.5, z: 2)",
+      "Wichita Mayor Lily Wu voiced serious concern over presidential tariff threats targeting Bombardier, emphasizing the company's crucial role in the local aviation economy.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Local municipal leadership faces severe policy anxiety as cross-border trade disputes threaten regional manufacturing stability and jobs.\nResulting Judgement: (-0.09, +1.00) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nLocal leaders navigate macro trade conflicts while trying to protect regional manufacturing jobs from political crossfire.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.5, z: 2)",
       "- Mayor Lily Wu: COND (-0.2, -0.3) — Defends local jobs against external tariff pressures.\n- Federal Trade Rhetoric: FAIL (-0.7, -0.6) — Creates uncertainty for cross-border manufacturing.",
       "Wichita Mayor Lily Wu responded to federal threats of banning Bombardier products, highlighting the deep stakes for the city's aviation workforce and cross-border supply chains.",
       "The Bright Side:\nLocal leadership proactively advocates for regional manufacturing stability and open dialogue amid protectionist pressures.",
       "The Breakdown & Plane Error:\nThe report highlights WHO is affected (Wichita workers) while masking the systemic HOW of national trade retaliation mechanics.",
       "Social Physics Analysis:\nNational political actors project generalized trade grievances onto specific cross-border manufacturers, forcing local leaders into defensive postures. This dynamic illustrates a top-down creation of economic anxiety for political leverage.",
-      "The Trajectory: The Path of Stasis.\nWhen you map local economic defense against national tariff posturing, it plots a cyclical trajectory toward Stasis. Political crossfire creates friction without resolving core trade imbalances.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map local economic defense against national tariff posturing, it plots a cyclical trajectory toward Stasis. Political crossfire creates friction without resolving core trade imbalances.",
       "The Unavoidable Truth: National trade disputes directly destabilize local municipal manufacturing hubs.\n\nThe Unavoidable Lie: Sweeping product bans cause no collateral damage to domestic workers.",
       "Alethekanon:\nBroad protectionist rhetoric collides with local economic reality, pitting national political leverage against regional livelihoods.",
       "Awwthekanon:\nIt's heartbreaking to watch hardworking aviation families caught in the crossfire of political trade wars they have no control over.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Wichita Mayor Lily Wu",
@@ -213,6 +275,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

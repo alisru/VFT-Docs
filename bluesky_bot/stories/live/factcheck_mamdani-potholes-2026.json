@@ -5,22 +5,22 @@
     "subject": "Mamdani brags about repairing 200K potholes, but he’s still behind his hero Bill de Blasio",
     "link": "https://nypost.com/2026/09/17/us-news/mamdani-brags-about-repairing-200k-potholes-but-hes-still-behind-his-hero-bill-de-blasio/",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
-    "real_u": -0.3,
-    "real_psi": -0.4,
+    "claim_u": 0.55,
+    "claim_psi": 0.35,
+    "real_u": 0.1,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "Mayor Mamdani celebrates 200,000 pothole repairs as proof of municipal delivery.\nEvidence: Pothole milestone, DOT photo-op, critic pushback.\n#NYC #LocalGov",
-      "Mayor Mamdani frames hitting 200,000 repaired potholes as a triumph of practical socialist governance and responsive public service.\nStated Judgement: (+0.6, +0.2) — Good Preference",
-      "While 200,000 potholes are filled, critics point out it's a fraction of past administrations' output, masking deeper municipal decay.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. Routine infrastructure maintenance is dressed up as a historic socialist milestone, though the work does get done.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
+      "Mayor Mamdani frames hitting 200,000 repaired potholes as a triumph of practical socialist governance and responsive public service.\nStated Judgement: (+0.55, +0.35) — Greater Good",
+      "While 200,000 potholes are filled, critics point out it's a fraction of past administrations' output, masking deeper municipal decay.\nResulting Judgement: (+0.10, +0.05) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
       "Sub-Audits Breakdown:\n- Zohran Mamdani: COND (-0.3, -0.4) — Uses standard pothole repairs for political branding.\n- NYC DOT Workers: PASS (0.5, 0.5) — Actual physical labor of paving roads.",
       "Mayor Zohran Mamdani announced the completion of NYC's 200,000th pothole repair of the year, drawing mixed reviews over pacing and political posturing.",
       "The Poison:\nTurning basic municipal road repairs into self-congratulatory campaign spectacles obscures broader unresolved urban crises.",
       "The Breakdown & Plane Error:\nThe Plane Error confuses WHO is benefiting (taxpayers needing safe roads) with WHAT is happening (publicity stunts vs actual backlog clearing).",
       "Social Physics Analysis:\nMamdani runs a mild Smart Selfish maneuver, taking routine municipal maintenance and packaging it as a visionary socialist achievement to fend off critics.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Stated altruistic public service masks performative political branding.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Stated altruistic public service masks performative political branding.",
       "The Unavoidable Truth: Potholes are getting filled across New York City streets.\n\nThe Unavoidable Lie: This routine milestone represents a uniquely revolutionary municipal turnaround.",
       "Alethekanon:\nPackaging basic paving as a socialist triumph is classic political theater. The asphalt is real, but the spin is pure vanity.",
       "Awwthekanon:\nIt's sweet to see smoother streets for cyclists and drivers dodging bumps, even if the politicians just want a shiny photo-op.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Zohran Mamdani",
@@ -159,6 +221,7 @@
         "name": "NYC Department of Transportation",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

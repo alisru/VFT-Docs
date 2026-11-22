@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Decoding midterm poll trends, Senate battles, and voter sentiment in Texas ahead of November. 🌐\nEvidence: polling data, campaign climate, Trump approval\n#Aletheia #USPol",
-      "Analysts claim polling shows clear movement toward Democrats, highlighting low presidential approval and tight House and Senate races nationwide.\nStated Judgement: (+0.6, +0.5) — Conditional Good",
-      "While trends favor Democrats, polls have wide margins of error and declining quality, making specific predictions precarious as spending dominates.\nResulting Judgement: (+0.4, +0.3) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nPolling analysis provides helpful structural context while honestly acknowledging statistical uncertainty.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 1)",
+      "Analysts claim polling shows clear movement toward Democrats, highlighting low presidential approval and tight House and Senate races nationwide.\nStated Judgement: (+0.60, +0.50) — Greater Good",
+      "While trends favor Democrats, polls have wide margins of error and declining quality, making specific predictions precarious as spending dominates.\nResulting Judgement: (+0.40, +0.30) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPolling analysis provides helpful structural context while honestly acknowledging statistical uncertainty.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 1)",
       "Sub-Audits Breakdown:\n- Polling Data: PASS (+0.5, +0.4) — Acknowledges statistical margins.\n- Editorial Framing: COND (+0.3, +0.2) — Slightly favors opposition trends.",
       "As the midterm elections approach, media outlets are parsing shifting poll numbers and campaign strategies across battleground states.",
       "The Bright Side:\nHonest disclosures about polling limitations help voters avoid overinterpreting noisy data.",
       "Confusing WHAT (statistical noise) with WHO (underlying voter sentiment). The report balances political horse-race metrics with methodological caveats.",
       "Social Physics Analysis:\nAnalysts provide transparent reporting on electoral mechanics, fostering public understanding rather than manufacturing panic.",
-      "The Trajectory: The Path of Redemption.\nWhen weighing statistical uncertainty against transparent reporting, it charts a steady course toward equilibrium.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen weighing statistical uncertainty against transparent reporting, it charts a steady course toward equilibrium.",
       "The Unavoidable Truth: Public polling reflects broad trends but lacks fine-grained predictive precision.\n\nThe Unavoidable Lie: Poll numbers alone guarantee election outcomes.",
       "Alethekanon:\nTransparently separating statistical signal from noise builds civic trust without feeding partisan hysteria.",
       "Awwthekanon:\nElections stir up so much anxiety for voters trying to make sense of the noise. It is comforting when analysts slow down to explain what the numbers actually mean.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Polling Data",
@@ -157,6 +219,7 @@
         "name": "NPR",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

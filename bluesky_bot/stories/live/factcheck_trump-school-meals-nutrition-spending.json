@@ -14,13 +14,13 @@
       "A practical boost to school lunch infrastructure shows that real nutrition requires actual kitchens, not just regulatory mandates.\n\nTrump administration boosts spending on school meals...\nEvidence: upgrade school kitchens, cook nutritious meals\n#Aletheia",
       "The Trump administration claims it is spending $95 million on farm-to-school grants and cafeteria upgrades to help schools cook nutritious, whole-food meals and reduce processed food intake.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "The administration is actively distributing the $95 million to upgrade physical kitchen facilities and source local foods, directly addressing the infrastructure gap that forced schools to rely on processed meals.\nResulting Judgement: (+0.88, +0.94) — Greater Good",
-      "Verdict: PASS — Stasis.\nThe policy successfully aligns stated nutritional goals with concrete funding to rebuild school kitchen infrastructure and support local agriculture.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Small Fall from Grace.\nThe policy successfully aligns stated nutritional goals with concrete funding to rebuild school kitchen infrastructure and support local agriculture.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- USDA Farm-to-School Grants: PASS (0.88, 0.94) — Direct funding to connect local farms with school lunches.\n- HHS DEPEND Initiative: PASS (0.85, 0.90) — Practical support to help schools cook within existing budgets.",
       "The Trump administration has announced $95 million in funding, including farm-to-school grants and cafeteria equipment upgrades, to help schools transition to serving fresh, whole-food meals.",
       "The Poison:\nRelying on voluntary pledges from major private food corporations like Tyson Foods risks corporate capture of the new dietary guidelines if enforcement remains weak.",
       "The Breakdown & Plane Error:\nThere is no plane error here. The physical prediction (WHERE - upgraded kitchens and local beef sourcing) directly matches the metaphysical intent (WHY - healthier children).",
       "Social Physics Analysis:\nBy addressing the physical constraint—the lack of working kitchens—the policy reduces systemic friction. Instead of imposing top-down rules that schools cannot afford, it empowers local communities and farmers to collaborate.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The alignment of capital and physical capability expands potential for child health.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. The alignment of capital and physical capability expands potential for child health.",
       "The Unavoidable Truth: Rebuilding school kitchens is a necessary physical step to serving fresh food.\n\nThe Unavoidable Lie: Schools can serve fresh, unprocessed meals without any infrastructure upgrades.",
       "Alethekanon:\nThis is a structurally sound intervention. By funding the physical means of production—the kitchens—rather than just issuing dietary mandates, the policy resolves the material constraints of school nutrition.",
       "Awwthekanon:\nIt warms the heart to see children getting fresh, wholesome meals cooked right at school. Connecting local farms to lunchrooms nourishes both our kids and our communities, bringing us closer to nature.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.15,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.1,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.15,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "USDA Farm-to-School Grants",
@@ -278,6 +340,7 @@
         "name": "Tyson Foods",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

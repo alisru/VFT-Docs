@@ -8,19 +8,19 @@
     "claim_u": 0.8,
     "claim_psi": 0.2,
     "real_u": 0.6,
-    "real_psi": 0.4,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "SCOTUS prepares for a landmark December showdown on semi-automatic firearm bans, weighing core Second Amendment precedents. Evidence: Judicial review, precedent citation, public safety debate. #SCOTUS #2A 🌐",
-      "The Supreme Court will calmly apply established constitutional jurisprudence to resolve municipal firearms bans with objective judicial neutrality. Stated Judgement: (+0.8, +0.2) — Good Preference",
-      "The Court navigates intense ideological polarization, balancing individual rights against public safety across deep societal divisions. Resulting Judgement: (+0.6, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nThe judiciary methodically balances historical precedent against modern public safety demands through constitutional testing.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
+      "The Supreme Court will calmly apply established constitutional jurisprudence to resolve municipal firearms bans with objective judicial neutrality. Stated Judgement: (+0.80, +0.20) — Greater Good",
+      "The Court navigates intense ideological polarization, balancing individual rights against public safety across deep societal divisions. Resulting Judgement: (+0.60, +0.25) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe judiciary methodically balances historical precedent against modern public safety demands through constitutional testing.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Legal Analysis: PASS (+0.7, +0.3) — Grounded in established 2A case law.\n- Societal Impact: COND (+0.5, +0.2) — Balances rights and safety.",
       "The Supreme Court is set to hear oral arguments in Viramontes v. Cook County on December 2, 2026, addressing modern semi-automatic weapon bans.",
       "The Bright Side:\nRigorous judicial review forces transparent debate on constitutional boundaries rather than bypassing legislative norms.",
       "The Breakdown & Plane Error:\nConfusing the legal mechanism (WHAT precedents to cite) with the ultimate societal outcome (WHO holds security and liberty rights).",
       "Social Physics Analysis:\nActors navigate between individual rights and collective security. The legal framework attempts a transparent resolution of constitutional tension rather than manufacturing crises, aligning toward systemic equilibrium.",
-      "The Trajectory: The Path of Awakening.\nWhen you map judicial intent against constitutional friction, it plots a trajectory toward Lesser Good. A balanced application of precedent reduces ideological strain.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map judicial intent against constitutional friction, it plots a trajectory toward Lesser Good. A balanced application of precedent reduces ideological strain.",
       "The Unavoidable Truth: Constitutional interpretation requires balancing foundational text with evolving societal realities.\n\nThe Unavoidable Lie: Judicial rulings operate in a purely objective vacuum untouched by public pressure.",
       "Alethekanon:\nConstitutional jurisprudence operates as a stress test for institutional integrity. Precedents provide the anchors, but societal friction dictates the strain.",
       "Awwthekanon:\nNavigating these deep constitutional questions touches raw nerves about safety and freedom for every family across the nation.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Legal Analysis",
@@ -153,6 +215,7 @@
         "name": "U.S. Gun Owners",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

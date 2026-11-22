@@ -5,22 +5,22 @@
     "subject": "Jeffries threatens 'serious response' after Democrats help GOP advance anti-socialism vote",
     "link": "https://www.foxnews.com/media/jeffries-threatens-serious-response-democrats-help-gop-advance-anti-socialism-vote",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.92,
-    "real_psi": -0.89,
+    "claim_u": 0.5,
+    "claim_psi": 0.78,
+    "real_u": 0.02,
+    "real_psi": 0.22,
     "mode": "root",
     "posts": [
       "House leadership is threatening moderate Democrats for voting to protect local jobs because it crossed party lines.\n\nJeffries Threatens Democrats Over Anti-Socialism Vote\nEvidence: Party unity, Local representation, Partisan control\n#Aletheia #USPol",
-      "Democratic leadership claims that voting for a GOP-led procedural rule is a significant breach of trust that undermines the party's collective strength and legislative strategy.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The moderate Democrats voted for the rule to advance a critical bill protecting their local lobster industry. Leadership is prioritizing partisan control over the economic survival of working-class districts.\nResulting Judgement: (-0.92, -0.89) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nLeadership is using party discipline as a pretext to punish representatives for serving their constituents' immediate economic needs.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Democratic leadership claims that voting for a GOP-led procedural rule is a significant breach of trust that undermines the party's collective strength and legislative strategy.\nStated Judgement: (+0.50, +0.78) — Greater Good",
+      "The moderate Democrats voted for the rule to advance a critical bill protecting their local lobster industry. Leadership is prioritizing partisan control over the economic survival of working-class districts.\nResulting Judgement: (+0.02, +0.22) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nLeadership is using party discipline as a pretext to punish representatives for serving their constituents' immediate economic needs.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- Hakeem Jeffries: FAIL (-0.92, -0.89) — Demands loyalty.\n- Jared Golden: PASS (0.85, -0.15) — Protected jobs.",
       "Hakeem Jeffries threatened a 'serious response' against Reps. Golden and Perez after they voted for a GOP procedural rule. The rule allowed a vote on Golden's Northeast Lobstermen Protection Act alongside an anti-socialism resolution.",
       "The Poison:\nWhile party discipline is necessary to pass major legislation, enforcing it on procedural votes that directly impact the livelihoods of local fishermen alienates moderate voters and harms working families.",
       "The Breakdown & Plane Error:\nLeadership confuses party loyalty (WHO) with effective governance (WHAT). It is a bait-and-switch: claiming to fight for the working class while punishing representatives who actually vote to protect them.",
       "Social Physics Analysis:\nBy demanding absolute conformity, leadership hoards power and creates systemic friction. They project a narrative of betrayal to distract from the fact that they are sacrificing local economic needs for partisan optics.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Rigid partisanship destroys the trust required for representative democracy.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Rigid partisanship destroys the trust required for representative democracy.",
       "The Unavoidable Truth: Representatives are elected to serve their constituents, not just their party bosses.\nThe Unavoidable Lie: Party loyalty always aligns with the best interests of local communities.",
       "Alethekanon:\nWhen party discipline becomes a suicide pact that forbids helping your own district, the system has ceased to be representative. It is merely a machine for hoarding power at the expense of the governed.",
       "Awwthekanon:\nOur leaders should support those who stand up for their neighbors. Punishing representatives for protecting the livelihoods of local lobstermen only deepens division and hurts real families.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.05
+      },
+      "LG": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.7,
+        "O": 0.5,
+        "N": 0.05
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Hakeem Jeffries Leadership",
@@ -287,6 +349,7 @@
         "name": "U.S. House of Representatives",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "UK announces sanctions on West Bank settlements prompting furious Israeli response",
     "link": "https://www.bbc.co.uk/news/articles/c4g7zen0vveo?at_medium=RSS&at_campaign=rss",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.6,
-    "real_u": -0.42,
-    "real_psi": -0.5,
+    "claim_u": 0.65,
+    "claim_psi": 0.45,
+    "real_u": -0.57,
+    "real_psi": -0.57,
     "mode": "root",
     "posts": [
       "UK bans West Bank settlement goods and sanctions expansion backers, triggering sharp diplomatic retaliation from Israel.\nEvidence: Settlement ban, consulate closure, diplomatic rift\n#Aletheia #Geopolitics",
-      "Sanctions are presented as a principled defense of human rights and international law to preserve the two-state solution.\nStated Judgement: (+0.8, +0.6) — Trustworthy Good",
-      "Unilateral economic measures accelerate diplomatic polarization and retaliatory closures without resolving core territorial disputes.\nResulting Judgement: (-0.42, -0.50) — Partially Distorted",
-      "Verdict: FAIL — The Path of Deception.\nDiplomatic posturing replaces genuine mediation, worsening regional polarization under humanitarian pretexts.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
+      "Sanctions are presented as a principled defense of human rights and international law to preserve the two-state solution.\nStated Judgement: (+0.65, +0.45) — Greater Good",
+      "Unilateral economic measures accelerate diplomatic polarization and retaliatory closures without resolving core territorial disputes.\nResulting Judgement: (-0.57, -0.57) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nDiplomatic posturing replaces genuine mediation, worsening regional polarization under humanitarian pretexts.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
       "Sub-Audits Breakdown:\n- UK Foreign Office: COND (-0.35, -0.40) — Imposes punitive trade bans while deepening diplomatic fractures.\n- Israeli Government: FAIL (-0.80, -0.75) — Responds with aggressive retaliation and diplomatic shutdowns.",
       "Britain announced comprehensive sanctions on illegal West Bank settlements alongside France and Canada, accusing Israeli authorities of tolerating settler violence.",
       "The Poison:\nPunitive economic measures harden political stances on all sides, reducing prospects for negotiated peace.",
       "The Breakdown & Plane Error:\nConfusing diplomatic signaling (WHAT) with systemic conflict resolution (WHO).",
       "Social Physics Analysis:\nActors utilize a Smart Selfish Maneuver, leveraging moral pretexts to score domestic political points while escalating international friction.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Unilateral trade bans harden diplomatic polarization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Unilateral trade bans harden diplomatic polarization.",
       "The Unavoidable Truth: Economic sanctions without inclusive dialogue deepen regional animosity.\n\nThe Unavoidable Lie: Unilateral trade bans alone can resolve complex territorial conflicts.",
       "Alethekanon:\nSanctions wielded as moral theater deepen institutional fractures. True diplomacy requires shared accountability 🌐",
       "Awwthekanon:\nWhen nations trade insults and close doors, ordinary workers and families bear the heaviest toll of political pride.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UK Foreign Office",
@@ -164,6 +226,7 @@
         "sub_psi": -0.75,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

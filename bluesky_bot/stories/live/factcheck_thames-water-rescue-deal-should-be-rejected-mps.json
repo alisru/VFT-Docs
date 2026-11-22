@@ -5,22 +5,22 @@
     "subject": "Thames Water rescue deal should be rejected - MPs",
     "link": "https://www.bbc.co.uk/news/articles/c6qjk9q1wpqeo?at_medium=RSS&at_campaign=rss",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.15,
+    "real_psi": -0.32,
     "mode": "root",
     "posts": [
       "MPs urge rejecting Thames Water's £10bn rescue deal, pushing for public administration.\nEvidence: £20bn debt load, EFRA warning, creditor buyout friction\n#Aletheia #UKWater #Environment",
-      "Creditors claim their £10bn injection is the fastest route to fix Thames Water and protect customers.\nStated Judgement: (+0.8, +0.5) — Greater Good",
-      "Creditors prioritize immediate value extraction while taxpayers risk absorbing a £20bn debt sinkhole.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nCreditors pitch capital rescue while protecting private debt recovery over public ecological stability.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
+      "Creditors claim their £10bn injection is the fastest route to fix Thames Water and protect customers.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Creditors prioritize immediate value extraction while taxpayers risk absorbing a £20bn debt sinkhole.\nResulting Judgement: (-0.15, -0.32) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nCreditors pitch capital rescue while protecting private debt recovery over public ecological stability.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 2)",
       "Sub-Audits Breakdown:\n- EFRA Committee: PASS (0.8, 0.7) — Exposes creditor extraction risks.\n- Creditor Consortium: FAIL (-0.7, -0.8) — Hides debt leverage behind rescue pretexts.",
       "Thames Water serves 16 million customers but struggles under £20bn of debt, triggering cross-party calls for special administration.",
       "The Poison:\nA decade of neglect leaves taxpayers facing immense liabilities while private lenders shield themselves from full losses.",
       "The Breakdown & Plane Error:\nConfusing WHAT (financial recapitalisation) with WHO (public utility vs private creditors) allows extractive actors to pose as saviours.",
       "Social Physics Analysis:\nCreditors run a Smart Selfish Maneuver by manufacturing a financial cliff-edge to force through terms that protect their capital while shifting systemic risks onto the public.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic rescue pretexts conceal private debt extraction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic rescue pretexts conceal private debt extraction.",
       "The Unavoidable Truth: Public infrastructure cannot safely rely on speculative debt models.\n\nThe Unavoidable Lie: Private creditor bailouts protect consumer interests without extracting future rents.",
       "Alethekanon:\nPrivate creditors repackage high-risk debt extraction as public salvation, ignoring structural insolvency.",
       "Awwthekanon:\nIt is heartbreaking to watch vital water resources treated as financial instruments while communities bear the pollution and cost burdens.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.35,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "EFRA Committee Oversight",
@@ -291,6 +353,7 @@
         "name": "Government of the United Kingdom",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

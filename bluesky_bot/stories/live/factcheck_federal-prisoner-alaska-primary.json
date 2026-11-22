@@ -5,22 +5,22 @@
     "subject": "A federal prisoner with no clear ties to Alaska advances in primary for the state's U.S. House seat",
     "link": "https://www.washingtontimes.com/news/2026/aug/26/federal-prisoner-no-clear-ties-alaska-advances-primary-states-us/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -0.82,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "An incarcerated federal inmate advances in an open primary.\n\nPrisoner Advances in Alaska Primary\nEvidence: ranked-choice/open primary, constitutional residency rules, ballot loophole\n#Aletheia #AlaskaPol",
-      "Open primary systems allow any qualified candidate to advance based strictly on vote counts.\nStated Judgement: (0.5, 0.0) — Good Preference",
-      "A federal prisoner serving time in New York advanced due to ballot quirks and candidate dropouts, despite residency rules.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nStructural ballot rules permitted an ineligible incarcerated candidate to advance, exploiting technical loopholes over civic representation.\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 3)",
+      "Open primary systems allow any qualified candidate to advance based strictly on vote counts.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "A federal prisoner serving time in New York advanced due to ballot quirks and candidate dropouts, despite residency rules.\nResulting Judgement: (-0.82, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nStructural ballot rules permitted an ineligible incarcerated candidate to advance, exploiting technical loopholes over civic representation.\nIntegrity: Meaningful Distortion (Hypocrisy: 4.2, z: 3)",
       "- Election System: COND (0.0, 0.0) — Open access flaw.\n- Candidate Eligibility: FAIL (-0.8, -0.9) — Residency violation.",
       "A federal prisoner currently serving time in New York advanced from the primary for Alaska's lone U.S. House seat due to unique ballot dynamics and withdrawals.",
       "The Bright Side:\nExposes structural vulnerabilities in open primary ballot qualification rules.",
       "The Breakdown & Plane Error:\nConfusing procedural ballot access (HOW) with substantive voter representation (WHO).\n\nThe system prioritized technical vote thresholds over basic residency qualifications.",
       "Social Physics Analysis:\nWhen electoral rules operate purely mechanically without common-sense guardrails, they produce absurd outcomes. A closed loop of procedural technicalities overrides the actual intent of public representation.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through procedural blind spots.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through procedural blind spots.",
       "The Unavoidable Truth: Open primary systems require basic eligibility guardrails to maintain democratic credibility.\n\nThe Unavoidable Lie: Technical ballot advancement equates to legitimate political representation.",
       "Alethekanon:\nRules without reason create spectacles that mock the integrity of representation.",
       "Awwthekanon:\nIt is funny how system quirks can create such surreal headlines, but voters deserve genuine connection to their representatives.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Election System",
@@ -213,6 +275,7 @@
         "name": "Matt Schultz",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

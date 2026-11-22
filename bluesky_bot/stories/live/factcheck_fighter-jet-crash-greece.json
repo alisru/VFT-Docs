@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": -0.5,
-    "real_psi": -0.8,
+    "real_u": -0.45,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Tragedy strikes an air show in Greece as a fighter jet crash claims the lives of two pilots.\nEvidence: Tanagra Air Force Base crash, 2 pilots killed\n#WorldNews #Aviation",
-      "An unexpected mechanical or pilot error during a low-altitude maneuver caused a fatal crash.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "Two Greek Air Force pilots died in a fiery F-4 Phantom crash witnessed by thousands of spectators.\nResulting Judgement: (-0.5, -0.8) — Lesser Evil",
-      "Verdict: PASS — The Path of Reckoning.\nA tragic military accident reported with factual gravity and solemn respect for the fallen aviators.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 2)",
+      "An unexpected mechanical or pilot error during a low-altitude maneuver caused a fatal crash.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Two Greek Air Force pilots died in a fiery F-4 Phantom crash witnessed by thousands of spectators.\nResulting Judgement: (-0.45, -0.75) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nA tragic military accident reported with factual gravity and solemn respect for the fallen aviators.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 2)",
       "Sub-Audits Breakdown:\n- Greek Air Force Reporting: PASS (-0.4, -0.7) — Factual casualty confirmation.\n- Media Coverage: PASS (-0.5, -0.8) — Respectful on-site documentation.",
       "A Greek F-4 Phantom crashed during the Athens Flying Week airshow at Tanagra Air Force Base, prompting three days of national mourning.",
       "The Bright Side:\nPrompt emergency response ensured that thousands of civilian spectators present at the base remained completely unharmed.",
       "The Breakdown & Plane Error:\nThe reporting focuses correctly on physical tragedy and loss (WHERE/WHAT) without political distortion.",
       "Social Physics Analysis:\nAn unvarnished physical reality where institutional risk meets sudden tragedy, handled with transparency by authorities.",
-      "The Trajectory: The Path of Reckoning.\nMapped across the stark reality of aviation risk and sudden loss, plotting a direct descent into solemn grief.\n\nMathematical trajectory reflects unavoidable physical strain.",
+      "The Trajectory: The Path of Destruction.\nMapped across the stark reality of aviation risk and sudden loss, plotting a direct descent into solemn grief.\n\nMathematical trajectory reflects unavoidable physical strain.",
       "The Unavoidable Truth: High-performance military aviation carries inherent, fatal risks even during controlled public exhibitions.\n\nThe Unavoidable Lie: Air shows are entirely risk-free environments where safety protocols eliminate all mechanical danger.",
       "Alethekanon:\nTragedy strips away all ideological pretext, leaving only the raw, sobering physical reality of human mortality.",
       "Awwthekanon:\nMy heart aches for the families and colleagues mourning these two brave pilots. May their memory be a comfort.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Greek Air Force Reporting",
@@ -158,6 +220,7 @@
         "name": "Kyriakos Mitsotakis",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

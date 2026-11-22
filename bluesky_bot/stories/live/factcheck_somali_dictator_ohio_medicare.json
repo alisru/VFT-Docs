@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.54,
-    "real_psi": -0.5,
+    "real_u": 0.13,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "A dictator's family in Ohio, a $1.8M Medicare business, and local outrage. But does the sensational headline match the actual financial reality?\nEvidence: Exposing regime wealth, Outrage over closed business, Guilt by association\n#Aletheia #Ohio #Medicare",
-      "The Daily Caller claims the family of genocidal Somali dictator Siad Barre ran a $1.8M Medicare-funded business in Ohio, sparking outrage among refugees who fled his brutal regime.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "While the family lives in Ohio, the Medicare-funded home health business was run legitimately by Barre's daughter, filed proper paperwork, and closed in 2021. There is no evidence of stolen regime funds.\nResulting Judgement: (-0.54, -0.50) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The article uses the horrific history of a dictator to frame a legitimate, closed business as a corrupt scandal, exploiting real trauma for clicks.\nIntegrity: Severe Deception (Hypocrisy: 32.0, z: 5)",
+      "The Daily Caller claims the family of genocidal Somali dictator Siad Barre ran a $1.8M Medicare-funded business in Ohio, sparking outrage among refugees who fled his brutal regime.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While the family lives in Ohio, the Medicare-funded home health business was run legitimately by Barre's daughter, filed proper paperwork, and closed in 2021. There is no evidence of stolen regime funds.\nResulting Judgement: (+0.13, -0.20) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Severe Deception (Hypocrisy: 32.0, z: 5)",
       "Sub-Audits Breakdown:\n- Daily Caller: FAIL (-0.54, -0.50) — Sensationalized guilt-by-association.\n- Vanguard Business: PASS (0.80, 0.10) — Operated legitimately, closed in 2021.",
       "In Columbus, Ohio, home to a large Somali refugee population, the presence of former dictator Siad Barre's children has caused community tension, amplified by reports on their local business activities.",
       "The Poison:\nBy focusing on a legitimate, defunct business, the reporting distracts from genuine questions about the family's role during the dictatorship and their potential inheritance of state assets.",
       "The Plane Error is WHO vs WHAT. The article targets WHO the business owners are related to, rather than WHAT the business actually did, which was standard, legally compliant healthcare.",
       "Social Physics Analysis:\nThe actors run a Smart Selfish Maneuver, using the genuine trauma of a genocidal regime as a pretext to manufacture a financial scandal. By projecting corrupt motives onto a closed business, they hoard attention without offering real systemic solutions.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Sensationalism overrides systemic accountability.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Sensationalism overrides systemic accountability.",
       "The Unavoidable Truth: The family of a brutal dictator lives freely in the US.\nThe Unavoidable Lie: Their Ohio business was a corrupt front for regime money.",
       "Alethekanon:\nGuilt by association is a logical shortcut that replaces rigorous financial auditing with emotional manipulation. The data shows a compliant business, not a money-laundering pipeline.",
       "Awwthekanon:\nIt is deeply painful for refugees to see the children of their oppressor living in comfort. We must hold space for their trauma while ensuring our pursuit of justice remains grounded in truth, not sensationalism.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Daily Caller Reporting",
@@ -173,6 +235,7 @@
         "sub_psi": -0.5,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

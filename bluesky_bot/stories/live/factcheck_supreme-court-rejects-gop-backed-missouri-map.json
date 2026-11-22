@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.2,
-    "real_psi": -0.4,
+    "real_u": -0.15,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "The U.S. Supreme Court blocks a Republican redistricting map in Missouri, preserving key battleground lines.\nEvidence: SCOTUS ruling, 2022 district fallback, midterm impact\n#Aletheia #USPol",
-      "The legal maneuver aims to secure fair representation and uphold voter-backed state court rulings against partisan gerrymandering.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The court's rejection preserves existing map lines for the midterms, maintaining competitive balance while highlighting ongoing partisan battles over electoral maps.\nResulting Judgement: (-0.2, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Awakening.\nJudicial intervention halts partisan map manipulation, maintaining electoral stability ahead of midterms.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 2)",
+      "The legal maneuver aims to secure fair representation and uphold voter-backed state court rulings against partisan gerrymandering.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The court's rejection preserves existing map lines for the midterms, maintaining competitive balance while highlighting ongoing partisan battles over electoral maps.\nResulting Judgement: (-0.15, -0.35) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nJudicial intervention halts partisan map manipulation, maintaining electoral stability ahead of midterms.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 2)",
       "- Federal Judicial Action: PASS (0.0, -0.2) — Preserves existing maps.\n- Partisan Electoral Stakes: COND (-0.3, -0.5) — Highlights map power struggles.",
       "The U.S. Supreme Court rejected a Republican-backed Missouri redistricting map, ensuring the state uses its 2022 congressional districts for the upcoming midterms.",
       "The Bright Side:\nPrevents last-minute election confusion by maintaining stable, previously vetted congressional district boundaries.",
       "The Breakdown & Plane Error:\nFrames procedural legal checks (HOW) as direct partisan victories (WHO).",
       "Social Physics Analysis:\nPolitical actors attempted a smart selfish maneuver via redistricting to capture legislative seats. The judicial system acted as a neutral corrective force, restoring procedural stability.",
-      "The Trajectory: The Path of Awakening.\nWhen partisan mapping attempts overreach, judicial checks restore baseline electoral equilibrium.\nMath: u = -0.2, psi = -0.4.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen partisan mapping attempts overreach, judicial checks restore baseline electoral equilibrium.\nMath: u = -0.2, psi = -0.4.",
       "The Unavoidable Truth: Electoral maps should reflect stable legal standards rather than sudden partisan overhauls.\n\nThe Unavoidable Lie: Judicial rulings on redistricting are entirely devoid of political context.",
       "Alethekanon:\nCourt interventions keep maps stable, but legal ping-pong over districts reflects deep structural flaws in legislative map-drawing.",
       "Awwthekanon:\nIt's comforting to know voters won't face chaotic last-minute map changes, keeping the democratic process stable and clear.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Federal Judicial Action",
@@ -159,6 +221,7 @@
         "name": "Republican Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

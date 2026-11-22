@@ -14,7 +14,7 @@
       "A Memphis bakery provides meaningful employment and job training to help people transition out of homelessness.\nEvidence: living wages, job training, community support\n#Community #Memphis",
       "Local businesses can actively solve invisible urban crises by pairing stable jobs with transitional housing support.\nStated Judgement: (1.0, 1.0) — Greater Good",
       "Lucy J’s Bakery delivers real employment, paying living wages and filling crucial shelter gaps for couples and families.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nDirect community action successfully bridges employment gaps and empowers vulnerable individuals.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\nDirect community action successfully bridges employment gaps and empowers vulnerable individuals.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Job Training: PASS (0.90, 0.85) — Practical skills provided.\n- Living Wage: PASS (0.85, 0.85) — Financial stability enabled.",
       "Lucy J’s Bakery in Memphis partners with local nonprofits to provide employment and stability for people experiencing homelessness.",
       "The Poison:\nScalability remains limited by local volunteer capacity and steady consumer demand for baked goods.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.6,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Community Employment",
@@ -192,6 +254,7 @@
         "name": "Tracy Burgess",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

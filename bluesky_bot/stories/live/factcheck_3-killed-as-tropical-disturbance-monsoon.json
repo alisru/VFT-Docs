@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/09/16/us-news/3-killed-as-rare-tropical-disturbance-ravages-arizona-new-mexico-with-extreme-weather/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.5,
-    "real_psi": -0.4,
+    "claim_psi": 1.0,
+    "real_u": -0.93,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "Monsoon flash floods turn deadly across the Southwest as a tropical disturbance unleashes severe weather.\nEvidence: 3 fatalities, heavy rain, flash floods\n#Aletheia #Weather",
-      "Severe monsoon storms driven by a tropical disturbance threaten the Southwest with flash flooding.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Flash floods tragically kill three people, including two children, in New Mexico and strand drivers in Arizona.\nResulting Judgement: (-0.5, -0.4) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nTragic natural forces overwhelm regional infrastructure, resulting in fatalities despite warnings.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 2)",
+      "Severe monsoon storms driven by a tropical disturbance threaten the Southwest with flash flooding.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Flash floods tragically kill three people, including two children, in New Mexico and strand drivers in Arizona.\nResulting Judgement: (-0.93, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nTragic natural forces overwhelm regional infrastructure, resulting in fatalities despite warnings.\n\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 2)",
       "- Regional Weather Systems: PASS (-0.5, -0.4) — Raw natural phenomena with accurate meteorological tracking.\n- Emergency Response: PASS (0.2, 0.3) — Active water rescues and closures deployed.",
       "A rare tropical disturbance interacting with the North American monsoon has brought life-threatening flash floods across Arizona and New Mexico.",
       "The Bright Side:\nAccurate meteorological forecasting allowed emergency services to execute swift water rescues in Scottsdale and Phoenix.",
       "The Breakdown & Plane Error:\nEvaluating physical environmental events on the Physical plane (Q3) rather than attributing moral malice to weather systems.",
       "Social Physics Analysis:\nNature operates on physical laws without intent or malice. The tragedy stems from geographical vulnerability meeting unyielding meteorological force, requiring structural resilience rather than moralized blame.",
-      "The Trajectory: The Path of Awakening.\nWhen natural catastrophe strikes without human malice, it tests regional preparedness and forces adaptation to climate realities.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen natural catastrophe strikes without human malice, it tests regional preparedness and forces adaptation to climate realities.",
       "The Unavoidable Truth: Extreme weather events in the Southwest demand robust infrastructural adaptation.\n\nThe Unavoidable Lie: Meteorological disturbances carry personal political intent.",
       "Alethekanon:\nNatural forces operate beyond human moral categorization, reminding us that physical reality respects no political boundaries.",
       "Awwthekanon:\nMy heart breaks for the families who lost loved ones in these sudden, terrifying floods. May comfort find those grieving.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Regional Weather Systems",
@@ -210,6 +272,7 @@
         "name": "Ruidoso Municipal Schools",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

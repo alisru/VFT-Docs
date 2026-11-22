@@ -5,22 +5,22 @@
     "subject": "Iran war pressure on Pentagon procurement transformation",
     "link": "https://www.washingtonexaminer.com/in_focus/4689927/iran-war-pressure-pentagon-procurement-transformation/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.7,
-    "real_psi": -0.85,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Six months into the Iran war, Pentagon leaders push aggressive procurement overhauls to revitalize the defense industrial base.\nEvidence: munitions depletion, 21-day deadlines, drone dominance goals\n#Aletheia #Defense",
-      "Officials claim sweeping procurement reforms cut red tape and modernize military production to meet escalating global threats.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Reality reveals severe munitions strain, financial pressure on naval payrolls, and a desperate scramble to rebuild depleted stockpiles.\nResulting Judgement: (-0.70, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nUrgent industrial overhauls expose severe systemic vulnerabilities and prolonged wartime exhaustion.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.1, z: 4)",
+      "Officials claim sweeping procurement reforms cut red tape and modernize military production to meet escalating global threats.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Reality reveals severe munitions strain, financial pressure on naval payrolls, and a desperate scramble to rebuild depleted stockpiles.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nUrgent industrial overhauls expose severe systemic vulnerabilities and prolonged wartime exhaustion.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.1, z: 4)",
       "- Pentagon Procurement: COND (0.30, 0.20) — Overdue reforms under extreme wartime pressure.\n- Defense Industrial Base: FAIL (-0.80, -0.90) — Depleted stockpiles and severe strain.",
       "The Iran war reached its six-month mark, forcing the Pentagon to accelerate weapons production, demand rapid industry plans, and target 200,000 drones.",
       "The Bright Side:\nStreamlining antiquated bureaucracy opens doors for nimble innovators and autonomous tech developers.",
       "The Breakdown & Plane Error:\nConfusing administrative procurement streamlining (HOW) with ultimate strategic security (WHO).",
       "Social Physics Analysis:\nBy framing industrial recalibration as an existential '1939 moment,' leadership leverages crisis urgency to bypass bureaucratic friction and compel rapid compliance.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Industrial mobilization locks the state deeper into permanent wartime posture.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Industrial mobilization locks the state deeper into permanent wartime posture.",
       "The Unavoidable Truth: Decades of consolidated defense contracting left supply chains dangerously unprepared for prolonged state-level conflict.\n\nVivid procurement overhauls will instantly solve complex manufacturing bottlenecks.",
       "Alethekanon:\nIndustrial transformation is driven by acute battlefield depletion, exposing the fragile logistics underpinning global projection.",
       "Awwthekanon:\nBehind every production quota and missile contract lies the heavy toll of resources diverted from human needs into engines of war.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Pentagon Procurement Reform",
@@ -220,6 +282,7 @@
         "name": "Sebastian Gorka",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

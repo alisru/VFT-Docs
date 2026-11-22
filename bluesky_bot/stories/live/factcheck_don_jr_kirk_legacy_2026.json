@@ -5,22 +5,22 @@
     "subject": "Don Jr. urges Republicans to h...",
     "link": "https://www.washingtonexaminer.com/news/campaigns/congressional/4723021/don-jr-republicans-honor-charlie-kirk-save-nation/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.1,
-    "real_u": -0.85,
-    "real_psi": -0.88,
+    "claim_u": 0.92,
+    "claim_psi": 1.0,
+    "real_u": -0.84,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A solemn anniversary is weaponized for partisan mobilization. Donald Trump Jr. urges RNC convention attendees to honor the late Charlie Kirk to 'save this nation.' 🌐\nEvidence: Honoring Legacy, Partisan Mobilization, Power Consolidation\n#Aletheia #USPol",
-      "Trump Jr. claims to honor the pure legacy of a fallen patriot, calling on supporters to carry the torch of faith, family, and freedom to save the country from darkness.\nStated Judgement: (+0.80, +0.10) — Good Preference",
-      "In reality, Trump Jr. exploits the tragic assassination of Charlie Kirk to construct a binary narrative of absolute good versus evil, projecting malice onto political opponents to deflect from low approval ratings.\nResulting Judgement: (-0.85, -0.88) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. Trump Jr. weaponizes personal tragedy to deepen national polarization and consolidate partisan power.\nIntegrity: Severe Deception (Hypocrisy: 1.65, z: 6)",
+      "Trump Jr. claims to honor the pure legacy of a fallen patriot, calling on supporters to carry the torch of faith, family, and freedom to save the country from darkness.\nStated Judgement: (+0.92, +1.00) — Greater Good",
+      "In reality, Trump Jr. exploits the tragic assassination of Charlie Kirk to construct a binary narrative of absolute good versus evil, projecting malice onto political opponents to deflect from low approval ratings.\nResulting Judgement: (-0.84, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 1.65, z: 6)",
       "- Donald Trump Jr.: FAIL (-0.85, -0.88) — Weaponizes tragedy for power.\n- TPUSA Legacy: COND (-0.20, -0.40) — Partisan legacy used as a political shield.",
       "Speaking on September 10, 2026, the one-year anniversary of Charlie Kirk's assassination, Trump Jr. addressed a convention focused on shoring up support ahead of the critical 2026 midterms.",
       "The Bright Side:\nRemembering a victim of political violence and honoring their dedication to their beliefs is a legitimate act of grief and respect.",
       "The Breakdown & Plane Error:\nThe speech commits a Lyrical Error (WHY vs WHO). It uses the tragic WHO (Charlie Kirk) to justify a highly polarized WHY (us versus them), transforming grief into a weapon of political exclusion.",
       "Social Physics Analysis:\nTrump Jr. runs a Smart Selfish Maneuver. By framing political opponents as 'the darkness' that mocked a murder, he projects absolute malice onto critics, manufacturing a moral crisis to avoid transparent accountability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Weaponizing grief accelerates systemic polarization and social decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Weaponizing grief accelerates systemic polarization and social decay.",
       "The Unavoidable Truth: Political violence is a tragedy that should be universally condemned.\nThe Unavoidable Lie: Political opponents are a monolithic force of darkness celebrating assassination.",
       "Alethekanon:\nTragedy is the ultimate political currency. By elevating a fallen ally to martyrdom, the actor constructs an unassailable moral shield that renders all subsequent partisan actions immune to logical critique.",
       "Awwthekanon:\nLosing a close friend to violence is a deep, painful wound. True healing comes from seeking peace and justice, not from using their memory to fuel more hatred and division.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Donald Trump Jr. Speech",
@@ -287,6 +349,7 @@
         "name": "Republican National Committee",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

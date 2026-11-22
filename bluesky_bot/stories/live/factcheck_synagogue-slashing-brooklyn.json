@@ -5,22 +5,22 @@
     "subject": "14-year-old NYC Jewish boy slashed by another congregant, 22, inside Brooklyn synagogue: cops",
     "link": "https://nypost.com/2026/09/14/us-news/14-year-old-nyc-jewish-boy-slashed-by-another-congregant-22-inside-brooklyn-synagogue-cops/",
     "target_url": "",
-    "claim_u": 0.8,
+    "claim_u": 0.65,
     "claim_psi": 0.0,
-    "real_u": -0.65,
-    "real_psi": -0.72,
+    "real_u": -0.1,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "A 14-year-old boy was slashed inside a Brooklyn synagogue by a fellow congregant.\nEvidence: Synagogue incident, police custody, mental health context\n#Aletheia #NYC",
-      "Initial reports framed the synagogue assault as a potential hate crime targeting a Jewish youth.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "Community security confirmed the assailant is an emotionally disturbed congregant, not an antisemitic attack.\nResulting Judgement: (-0.65, -0.72) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nSensationalized initial framing obscured a mental health crisis within the community.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Initial reports framed the synagogue assault as a potential hate crime targeting a Jewish youth.\nStated Judgement: (+0.65, +0.00) — Lesser Good",
+      "Community security confirmed the assailant is an emotionally disturbed congregant, not an antisemitic attack.\nResulting Judgement: (-0.10, +0.05) — Greatest Lie",
+      "Verdict: CONDITIONAL — Awakening into Deception.\nSensationalized initial framing obscured a mental health crisis within the community.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "- Initial Media Framing: FAIL (-0.70, -0.70) — Amplifies fear via premature hate-crime assumptions.\n- Community Security: PASS (0.50, 0.80) — Rapidly clarified mental health reality.",
       "An emotionally disturbed 22-year-old congregant slashed a 14-year-old boy's hand inside a Borough Park synagogue before being taken into custody.",
       "The Bright Side:\nSecurity groups swiftly corrected the narrative to prevent unwarranted community panic.",
       "The Breakdown & Plane Error:\nConfusing WHO was harmed (metaphysical identity) with WHY it happened (mental health vs ideological hate).",
       "Social Physics Analysis:\nThe reporting initially leaned into a Smart Selfish sensational narrative, leveraging a tragic interpersonal conflict as an externalized threat before security intervention restored transparency.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between sensationalized initial reporting and clinical reality, it plots a direct trajectory toward Deception. Mislabeling mental health crises as ideological attacks inflates social strain.",
+      "The Trajectory: The Path of Awakening into Deception.\nWhen you map the gap between sensationalized initial reporting and clinical reality, it plots a direct trajectory toward Deception. Mislabeling mental health crises as ideological attacks inflates social strain.",
       "The Unavoidable Truth: A young boy was injured by a fellow congregant suffering from mental health challenges.\n\nThe Unavoidable Lie: The incident was immediately coded as an ideological hate crime.",
       "Alethekanon:\nPremature threat framing exploits public anxiety while obscuring the underlying mental health crisis.",
       "Awwthekanon:\nMy heart aches for both the young victim and the troubled young man who lashed out in pain. True healing requires compassion and mental health support, not sensationalized division.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Initial Media Framing",
@@ -151,6 +213,7 @@
         "name": "NYPD",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Deception"
   }
 ]

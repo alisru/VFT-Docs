@@ -5,22 +5,22 @@
     "subject": "James Carville says Russia has 'got something on' Trump",
     "link": "https://knewz.com/political-strategist-james-carville-russia-compromised-president-donald-trump-vladimir-putin/?utm_source=smartnews_views",
     "target_url": "https://bsky.app/profile/joecel.bsky.social/post/3mvc66ediis2w",
-    "claim_u": -0.5,
-    "claim_psi": -0.5,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.78,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Is political friction driven by foreign blackmail or partisan routine? James Carville claims Moscow holds kompromat on Donald Trump. Evidence: Podcast commentary, Witkoff meeting references, Longstanding partisan narratives. #Aletheia #USPol",
-      "Veteran strategist James Carville argues that Donald Trump's deferential posture toward Vladimir Putin is best explained by foreign compromising material. Stated Judgement: (-0.5, -0.5) — Lesser Evil",
-      "The assertion relies on speculative behavioral psychoanalysis rather than verifiable empirical evidence, weaponizing espionage tropes for domestic partisan mobilization. Resulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Elevating unverified conspiracy speculation as definitive analytical truth degrades institutional trust and political discourse.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
+      "Veteran strategist James Carville argues that Donald Trump's deferential posture toward Vladimir Putin is best explained by foreign compromising material. Stated Judgement: (+0.78, +1.00) — Greater Good",
+      "The assertion relies on speculative behavioral psychoanalysis rather than verifiable empirical evidence, weaponizing espionage tropes for domestic partisan mobilization. Resulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
       "- James Carville: FAIL (-0.8, -0.9) — Frames speculation as definitive geopolitical insight.\n- Knewz Media Framing: COND (-0.6, -0.7) — Amplifies partisan accusations without substantiating evidence.",
       "Democratic strategist James Carville asserted on a podcast that Russia and Vladimir Putin possess compromising material on Donald Trump, citing diplomatic interactions involving special envoys.",
       "The Bright Side:\nIt keeps a sharp spotlight on foreign policy accountability and the opaque nature of backchannel diplomacy.",
       "The Breakdown & Plane Error:\nThis is a classic WHY-to-WHO substitution. The stated inquiry is about policy motivation (WHY), but the actual mechanism is partisan character assassination of political rivals (WHO).",
       "Social Physics Analysis:\nJames Carville executes a Smart Selfish Maneuver. He takes legitimate concerns regarding foreign policy transparency (pretext) and channels them into a deterministic narrative of treasonous compromise (secret goal). By projecting malicious orchestration onto opponents, the discourse bypasses substantive policy critique in favor of tribal demonization.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between unverified speculation and definitive assertion, it plots a direct trajectory toward Deception. F_pos < F_neg drives ψ negative through polarization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between unverified speculation and definitive assertion, it plots a direct trajectory toward Deception. F_pos < F_neg drives ψ negative through polarization.",
       "The Unavoidable Truth: High-level backchannel diplomacy with autocrats warrants rigorous public scrutiny.\n\nThe Unavoidable Lie: Speculative political commentary constitutes verified intelligence regarding foreign compromise.",
       "Alethekanon:\nSubstituting sensationalist kompromat theories for policy analysis replaces rigorous oversight with tribal paranoia.",
       "Awwthekanon:\nPolitics feels exhausting when every disagreement is framed as betrayal. We need spaces where we can question policies without assuming pure malice.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "James Carville Commentary",
@@ -228,6 +290,7 @@
         "name": "Steve Witkoff",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

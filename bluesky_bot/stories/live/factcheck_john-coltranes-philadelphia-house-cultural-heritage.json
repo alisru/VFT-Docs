@@ -6,21 +6,21 @@
     "link": "https://www.npr.org/2026/09/05/nx-s1-5955500/saxophone-legend-john-coltranes-philadelphia-house-to-become-a-cultural-heritage-site",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": 0.9,
-    "real_psi": 0.85,
+    "claim_psi": 0.95,
+    "real_u": 0.95,
+    "real_psi": 0.88,
     "mode": "root",
     "posts": [
       "Ravi Coltrane discusses turning the jazz legend's historic Philadelphia home into a cultural space.\nEvidence: Family restoration, centennial, historic landmark\n#Aletheia #Jazz #Culture",
-      "Restoring Coltrane's home honors his legacy and provides a community space for future artists.\nStated Judgement: (1.0, 1.0) — Greater Good",
-      "The family and community are successfully reclaiming and preserving a vital piece of musical history.\nResulting Judgement: (0.9, 0.85) — Grace / Redemption",
-      "Verdict: PASS — The Path of Grace.\nPreserving a musical titan's historic home honors authentic cultural heritage and shared human achievement.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Restoring Coltrane's home honors his legacy and provides a community space for future artists.\nStated Judgement: (+1.00, +0.95) — Greater Good",
+      "The family and community are successfully reclaiming and preserving a vital piece of musical history.\nResulting Judgement: (+0.95, +0.88) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPreserving a musical titan's historic home honors authentic cultural heritage and shared human achievement.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Coltrane Family & Restoration: PASS (0.9, 0.8) — Restoring historic cultural landmark.\n- Media Coverage: PASS (1.0, 0.9) — Accurate and respectful reporting.",
       "On the centennial of his birth, Ravi Coltrane is working to transform the North Philadelphia rowhouse where his father overcame addiction into a cultural heritage and community space.",
       "The Bright Side:\nA historic sanctuary of artistic genius is rescued from disrepair to inspire new generations.",
       "The Breakdown & Plane Error:\nConfusing physical real estate decay (WHERE) with spiritual and artistic legacy (WHY).",
       "Social Physics Analysis:\nActors execute a Smart Altruistic Maneuver, uniting around a shared cultural goal, transparently restoring community heritage, and fostering collective empathy through art.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good through authentic preservation.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good through authentic preservation.",
       "The Unavoidable Truth: True artistic masterpieces are forged through deep personal struggle and spiritual awakening.\n\nThe Unavoidable Lie: Cultural heritage can be preserved without active community stewardship.",
       "Alethekanon:\nPreserving the physical crucible where genius was refined ensures that true art endures beyond the artist. 🌐",
       "Awwthekanon:\nIt is deeply moving to witness a family reclaim a place of profound personal healing and turn it into a beacon of hope and music for the entire world.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Coltrane Family & Restoration",
@@ -157,6 +219,7 @@
         "name": "Joel Rose",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "NYT writer Nikole Hannah-Jones...",
     "link": "https://nypost.com/2026/09/27/us-news/nyt-writer-nikole-hannah-jones-daughter-says-she-only-turned-out-fine-after-fighting-for-better-high-school-than-her-mom-wanted/",
     "target_url": "",
-    "claim_u": 0.86,
-    "claim_psi": 0.68,
-    "real_u": -0.79,
-    "real_psi": -0.59,
+    "claim_u": 0.55,
+    "claim_psi": 0.43,
+    "real_u": -0.26,
+    "real_psi": -0.16,
     "mode": "root",
     "posts": [
       "Ideology collided with reality when an author used her child to prove a political point. NYT writer Nikole Hannah-Jones.\n\nEvidence: Public Integration, Academic Stagnation, Ideological Vanity\n#Aletheia #Education #SocialPhysics",
-      "Hannah-Jones claimed that enrolling her child in struggling, segregated schools was a noble sacrifice of status to challenge systemic power dynamics and lift community education.\n\nStated Judgement: (+0.86, +0.68) — Greater Good",
-      "Her daughter fell years behind in basic literacy and math, openly stating she only succeeded after defying her mother to attend a rigorous screened high school.\n\nResulting Judgement: (-0.79, -0.59) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nAn ideological experiment sacrificed a child's foundational learning for narrative prestige without altering systemic school outcomes.\n\nIntegrity: Severe Deception (Hypocrisy: 13.80, z: 4)",
+      "Hannah-Jones claimed that enrolling her child in struggling, segregated schools was a noble sacrifice of status to challenge systemic power dynamics and lift community education.\n\nStated Judgement: (+0.55, +0.43) — Greater Good",
+      "Her daughter fell years behind in basic literacy and math, openly stating she only succeeded after defying her mother to attend a rigorous screened high school.\n\nResulting Judgement: (-0.26, -0.16) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAn ideological experiment sacrificed a child's foundational learning for narrative prestige without altering systemic school outcomes.\n\nIntegrity: Severe Deception (Hypocrisy: 13.80, z: 4)",
       "Sub-Audits Breakdown:\n- Hannah-Jones Experiment: FAIL (-0.85, -0.62) — Ideological vanity.\n- Student Autonomy Outcome: PASS (+0.78, +0.65) — Self-correction.\n- Public School Framing: FAIL (-0.72, -0.50) — Structural deflection.",
       "Nikole Hannah-Jones admitted her daughter fell behind after being placed in underperforming schools for social reform, while her daughter revealed she had to fight her mother's choices to recover academically.",
       "The Bright Side:\nThe daughter exercised self-agency, rejected ideological martyrdom, and caught up academically by choosing a rigorous educational environment.",
       "The Breakdown & Plane Error:\nThis error confuses WHO benefits with WHAT is professed. Subordinating a child's real literacy to political theory treats a dependent human as narrative collateral.",
       "Social Physics Analysis:\nThe Smart Selfish loop uses systemic reform as a pretext for moral status while projecting blame onto institutional standards. True social empowerment gives children concrete skills rather than converting them into ideological props.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil, where grand social theories mask avoidable individual harm.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil, where grand social theories mask avoidable individual harm.",
       "The Unavoidable Truth: Sacrificing your own child's education does not fix underperforming public schools.\n\nThe Unavoidable Lie: Ideological purity is more valuable than foundational literacy and math.",
       "Alethekanon:\nAbstract social theories fail when they treat individuals as test subjects. Instrumentalizing a child for ideological purity is exploitation, not equity.",
       "Awwthekanon:\nIt breaks my heart that a young girl had to fight her own mother just to get a decent education. Every child deserves to be nurtured, not turned into a political statement.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Hannah-Jones Experiment",
@@ -167,6 +229,7 @@
         "name": "This American Life",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "GOP Rep. Tom Tiffany Makes Emergency Landing In Lake After Plane Loses Power",
     "link": "https://dailycaller.com/2026/09/13/tom-tiffany-plane-emergency-landing-lake-wausau",
     "target_url": "",
-    "claim_u": 0.78,
-    "claim_psi": 0.65,
-    "real_u": 0.78,
-    "real_psi": 0.65,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Representative Tom Tiffany and his pilot survived an emergency water landing in Lake Wausau after their aircraft suffered complete engine power loss.\nEvidence: Emergency Landing, Safe Water Evacuation, Mechanical Failure\n#Aletheia #Aviation",
-      "Reports stated that a Beechcraft K35 carrying Rep. Tom Tiffany lost engine power on approach to Wausau Airport, forcing an emergency water landing in Lake Wausau.\nStated Judgement: (+0.78, +0.65) — Lesser Good",
-      "First responders and hospital reports confirmed Tiffany and the pilot evacuated the sinking aircraft, reached shallow water, and sustained only minor injuries.\nResulting Judgement: (+0.78, +0.65) — Lesser Good",
-      "Verdict: PASS — Grace into Stasis. Transparent reporting of an aviation accident where calm pilot execution prevented fatal injuries.\nIntegrity: Trustworthy (Hypocrisy: 1.05, Uncertainty z: 0)",
+      "Reports stated that a Beechcraft K35 carrying Rep. Tom Tiffany lost engine power on approach to Wausau Airport, forcing an emergency water landing in Lake Wausau.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "First responders and hospital reports confirmed Tiffany and the pilot evacuated the sinking aircraft, reached shallow water, and sustained only minor injuries.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.05, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Emergency Response: PASS (+0.82, +0.70) — Prompt water rescue and hospital discharge.\n- Media Reporting: PASS (+0.78, +0.65) — Factual coverage across independent outlets.",
       "Rep. Tom Tiffany was flying back from a political dinner on September 12, 2026, when his plane lost engine power and ditched into Lake Wausau around 8:50 p.m.",
       "The Bright Side:\nThe pilot's swift decision to execute an emergency lake landing allowed both occupants to escape before the aircraft fully submerged.",
       "The Breakdown & Plane Error:\nNo plane error detected. The physical chain of causality from mechanical engine failure to emergency landing is consistent across all witness and FAA reports.",
       "Social Physics Analysis:\nThis event reflects an altruistic coordination loop: transparent reporting of a sudden physical crisis paired with rapid mutual rescue, resolving danger with minimal systemic strain.",
-      "The Trajectory: The Path of Grace into Stasis.\nWhen real-world action aligns with factual disclosure and rapid emergency resolution, system dynamics remain anchored in high-integrity equilibrium.",
+      "The Trajectory: The Path of Grace.\nWhen real-world action aligns with factual disclosure and rapid emergency resolution, system dynamics remain anchored in high-integrity equilibrium.",
       "The Unavoidable Truth: Both men survived a dangerous water landing with only minor injuries.\nThe Unavoidable Lie: There is no evidence of suppressed details or conflicting narratives.",
       "Alethekanon:\nAccident data and emergency response records align completely with official accounts. The landing was managed safely under severe mechanical failure.",
       "Awwthekanon:\nWalking away from a sinking plane in the dark with just a few stitches is an incredible relief. So glad both made it safely back to shore.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Aviation Incident Verification",
@@ -284,6 +346,7 @@
         "name": "Federal Aviation Administration",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

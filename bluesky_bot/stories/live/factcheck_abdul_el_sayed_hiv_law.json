@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": -0.75,
     "claim_psi": -0.6,
-    "real_u": 0.86,
-    "real_psi": 0.94,
+    "real_u": 0.1,
+    "real_psi": 0.11,
     "mode": "root",
     "posts": [
       "A public health campaign weaponized as a moral panic. Senate candidate Abdul El-Sayed faces attacks over his 2018 call to reform Michigan's outdated HIV disclosure laws.\nEvidence: Public Health, Political Attack, Stigma Reduction\n#Aletheia #USPol",
-      "Opponents and media outlets frame El-Sayed's 2018 call to repeal HIV criminalization as an attempt to legalize reckless transmission and endanger the public.\nStated Judgement: (-0.75, -0.60) — Lesser Evil",
-      "El-Sayed advocated for modernizing the law to align with modern science, which actually passed with broad bipartisan support in 2018 to encourage testing and destigmatize the disease.\nResulting Judgement: (+0.86, +0.94) — Greater Good",
-      "Verdict: PASS — Awakening into Grace.\nThe candidate's position was rooted in established epidemiological science, seeking to replace punitive stigma with effective public health solutions.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 1)",
+      "Opponents and media outlets frame El-Sayed's 2018 call to repeal HIV criminalization as an attempt to legalize reckless transmission and endanger the public.\nStated Judgement: (-0.75, -0.60) — Greater Evil",
+      "El-Sayed advocated for modernizing the law to align with modern science, which actually passed with broad bipartisan support in 2018 to encourage testing and destigmatize the disease.\nResulting Judgement: (+0.10, +0.11) — Greater Good",
+      "Verdict: PASS — Reckoning into Grace.\nThe candidate's position was rooted in established epidemiological science, seeking to replace punitive stigma with effective public health solutions.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Abdul El-Sayed: PASS (0.86, 0.94) — Supported science-based reforms that became bipartisan law.\n- NY Post Framing: FAIL (-0.65, -0.72) — Sensationalized past comments to imply reckless endangerment.",
       "During his 2018 gubernatorial run, epidemiologist Abdul El-Sayed called to repeal a 1988 felony HIV law. The law was subsequently reformed by a Republican-led legislature to protect medically suppressed individuals and focus on intent.",
       "The Bright Side:\nThe attack backfires by highlighting a highly successful, bipartisan public health reform that modernized Michigan's laws to reflect 21st-century medical reality.",
       "The Plane Error: Confusing HOW we treat a disease with WHO we are punishing. The attack switches a complex epidemiological strategy (reducing stigma to increase testing) for a simplistic narrative of coddling criminals.",
       "Social Physics Analysis:\nThe critics execute a Smart Selfish Maneuver, manufacturing a public safety crisis out of a successful bipartisan reform. El-Sayed's approach is Smart Altruistic, using transparency and empathy to align legal policy with medical science.",
-      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Science-based policy ultimately reduces transmission rates and saves lives.",
+      "The Trajectory: The Path of Reckoning into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Science-based policy ultimately reduces transmission rates and saves lives.",
       "The Unavoidable Truth: Criminalizing medical conditions drives transmission underground by discouraging testing.\nThe Unavoidable Lie: Reforming outdated laws is equivalent to encouraging the spread of disease.",
       "Alethekanon:\nEpidemiology operates on systemic feedback loops, not moralizing retribution. Punitive laws create a high-strain environment that actively defeats the goal of disease suppression.",
       "Awwthekanon:\nIt is so important to treat people who are sick with love and understanding instead of fear and judgment. Reforming these laws helps people feel safe enough to seek help, get tested, and receive the care they deserve.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Abdul El-Sayed Campaign",
@@ -160,6 +222,7 @@
         "name": "Mike Rogers",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Reckoning into Grace"
   }
 ]

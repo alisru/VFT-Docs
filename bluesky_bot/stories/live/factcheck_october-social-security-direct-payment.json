@@ -5,16 +5,16 @@
     "subject": "October Social Security direct payment goes out 25 days",
     "link": "https://www.washingtonexaminer.com/news/4693280/october-social-security-direct-payment-goes-out-25-days/",
     "target_url": "",
-    "claim_u": 0.8,
+    "claim_u": 0.75,
     "claim_psi": 0.5,
-    "real_u": 0.7,
-    "real_psi": 0.6,
+    "real_u": 0.75,
+    "real_psi": 0.65,
     "mode": "root",
     "posts": [
       "October SSI payments up to $994 are scheduled for release in 25 days, supporting eligible low-income seniors and disabled individuals.\nEvidence: Standard schedule, statutory amounts, routine notice\n#Aletheia #SocialSecurity",
-      "The Washington Examiner reports that the October 2026 Supplemental Security Income payments worth up to $994 will be sent to recipients in 25 days.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "The disbursement follows standard statutory timelines and eligibility rules set by the Social Security Administration without policy shifts.\nResulting Judgement: (+0.7, +0.6) — Trustworthy",
-      "Verdict: PASS — The Path of Grace.\nRoutine administrative scheduling accurately reported with minor urgency framing.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "The Washington Examiner reports that the October 2026 Supplemental Security Income payments worth up to $994 will be sent to recipients in 25 days.\nStated Judgement: (+0.75, +0.50) — Greater Good",
+      "The disbursement follows standard statutory timelines and eligibility rules set by the Social Security Administration without policy shifts.\nResulting Judgement: (+0.75, +0.65) — Greater Good",
+      "Verdict: PASS — Grace.\nRoutine administrative scheduling accurately reported with minor urgency framing.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Disbursement Schedule: PASS (0.8, 0.7) — Accurate timeline.\n- Eligibility Rules: PASS (0.7, 0.6) — Standard criteria.",
       "Supplemental Security Income provides vital financial support to aged, blind, and disabled individuals with limited income and resources.",
       "The Bright Side:\nClear, timely reporting on standard government benefit schedules helps recipients plan household finances effectively.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Disbursement Schedule",
@@ -150,6 +212,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

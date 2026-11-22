@@ -5,22 +5,22 @@
     "subject": "Blackburn Says the DSA Is Calling the Shots — 'It Took Chuck Schumer Less than Hours to Go Endorse El-Sayed'",
     "link": "https://www.breitbart.com/clips/2026/08/22/blackburn-says-the-dsa-is-calling-the-shots-it-took-chuck-schumer-less-than-hours-to-go-endorse-el-sayed/",
     "target_url": "",
-    "claim_u": -0.8,
-    "claim_psi": 0.8,
-    "real_u": -0.5,
-    "real_psi": -0.6,
+    "claim_u": -1.0,
+    "claim_psi": -1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Sen. Marsha Blackburn claims the Democratic Socialists are driving the Democratic Party off a cliff.\n\nBlackburn on DSA Influence\nEvidence: radical takeover, partisan framing, political rhetoric\n#Aletheia #USPol",
-      "Sen. Blackburn argues the Democratic Party has surrendered to the DSA, pushing radical fringe policies designed to destroy the country.\nStated Judgement: (-0.8, 0.8) — Lesser Evil",
-      "While progressive factions hold influence in primaries, painting a major national party as an extremist monolith is standard partisan positioning.\nResulting Judgement: (-0.5, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPartisan caricature replaces institutional nuance to mobilize political base.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, Uncertainty z: 3)",
+      "Sen. Blackburn argues the Democratic Party has surrendered to the DSA, pushing radical fringe policies designed to destroy the country.\nStated Judgement: (-1.00, -1.00) — Greater Evil",
+      "While progressive factions hold influence in primaries, painting a major national party as an extremist monolith is standard partisan positioning.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nPartisan caricature replaces institutional nuance to mobilize political base.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Campaign Rhetoric: FAIL (-0.7, 0.7) — Exaggerates opposition control for leverage.\n- Party Dynamics: COND (-0.3, -0.2) — Complex internal coalition struggles oversimplified.",
       "Sen. Marsha Blackburn argued on Fox News that the Democratic Party is controlled by far-left socialists following high-profile endorsements.",
       "The Poison:\nWeaponizing fringe elements to characterize an entire political coalition deepens national polarization without addressing root policy debates.",
       "The Breakdown & Plane Error:\nConfusing WHO (specific progressive figures) with WHAT (broader voter coalitions). It projects maximum ideological threat onto mainstream governance.",
       "Social Physics Analysis:\nPolitical branding relies on projection and pretexts, painting opponents as existential threats rather than engaging transparently with policy disagreements.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Caricature supersedes structural truth.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Caricature supersedes structural truth.",
       "The Unavoidable Truth: Political parties host wide ideological spectrums.\n\nThe Unavoidable Lie: A single faction dictates every institutional action.",
       "Alethekanon:\nReducing complex coalition dynamics to a monolithic extremist threat serves electoral mobilization at the expense of political reality.",
       "Awwthekanon:\nWhen every political disagreement feels like an existential emergency, we lose the capacity to listen and heal our civic divisions.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Campaign Rhetoric",
@@ -280,6 +342,7 @@
         "name": "Kellyanne Conway",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

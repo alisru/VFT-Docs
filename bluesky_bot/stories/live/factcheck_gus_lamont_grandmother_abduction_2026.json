@@ -5,22 +5,22 @@
     "subject": "Missing boy Gus Lamont's grandmother reveals why she believes he was abducted",
     "link": "https://www.dailymail.com/news/article-16149881/gus-lamont-grandmother-josie-abduction-theory-south-australia.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
     "target_url": "",
-    "claim_u": 0.67,
-    "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "claim_u": 0.25,
+    "claim_psi": 0.5,
+    "real_u": -0.3,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "Grandmother of missing 4-year-old Gus Lamont insists he was abducted by a stranger.\nEvidence: Police investigation, family interviews, major crime status\n#Aletheia #SouthAustralia #TrueCrime",
-      "Family members voice alternate abduction theories while police focus criminal investigations internally.\nStated Judgement: (+0.67, +1.00) — Neutral",
-      "Tragic familial dynamics and intense public scrutiny surround an unsolved missing child case.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nUnresolved trauma and conflicting public narratives obscure an ongoing major crime investigation.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 4)",
+      "Family members voice alternate abduction theories while police focus criminal investigations internally.\nStated Judgement: (+0.25, +0.50) — Greater Good",
+      "Tragic familial dynamics and intense public scrutiny surround an unsolved missing child case.\nResulting Judgement: (-0.30, -0.10) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nUnresolved trauma and conflicting public narratives obscure an ongoing major crime investigation.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 4)",
       "- Family Public Claims: FAIL (-0.80, -0.60) — Media speculation diverts focus from forensic truth.\n- Police Investigation: COND (0.20, 0.40) — Methodical forensic search hampered by conflicting narratives.",
       "Four-year-old Gus Lamont vanished from a remote South Australian sheep station, prompting a major crime investigation where police have ruled out stranger abduction.",
       "The Poison:\nAiring contradictory public theories in a live criminal investigation inflames public distress without uncovering operational facts.",
       "The Breakdown & Plane Error:\nConfusing WHO (suspect accountability) with WHERE (remote station physical geography).",
       "Social Physics Analysis:\nActors navigate profound trauma through defensive posturing and public narrative management, creating manufactured confusion around an ongoing police investigation.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between emotional public appeals and police findings, it plots a trajectory toward Greater Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between emotional public appeals and police findings, it plots a trajectory toward Greater Evil.",
       "The Unavoidable Truth: A young child remains missing under active police investigation.\n\nThe Unavoidable Lie: Public media claims resolve the underlying forensic mystery.",
       "Alethekanon:\nTrauma and narrative projection replace verifiable forensic resolution in a tragic missing persons case.",
       "Awwthekanon:\nBehind the headlines is an unbearable vacuum of grief, where every theory and search brings no peace to a devastated family.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "cluster_sources": [
       {
         "publisher": "",
@@ -149,6 +211,7 @@
         "name": "South Australia Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

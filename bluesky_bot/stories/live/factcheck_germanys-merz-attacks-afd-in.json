@@ -5,22 +5,22 @@
     "subject": "Germany's Merz attacks AfD in stormy debate after far-right election win",
     "link": "https://www.bbc.co.uk/news/articles/c98679wr78do?at_medium=RSS&at_campaign=rss",
     "target_url": "",
-    "claim_u": 0.8,
+    "claim_u": 0.15,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.78,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "Stunning far-right gains in Saxony-Anhalt ignite a furious parliamentary showdown in Berlin.\nEvidence: 43.8% AfD vote, Merz ethnic cleansing claim\n#Aletheia #Germany #AfD #Politics",
-      "Chancellor Friedrich Merz frames his coalition's fight against the AfD as a defense of European security, democratic norms, and essential skilled migration.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "Mainstream parties hemorrhage support while hyper-polarized rhetoric accelerates social fracture and political gridlock across Germany.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nEstablishment finger-pointing fails to address underlying public grievances, accelerating the very populist polarization it condemns.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
+      "Chancellor Friedrich Merz frames his coalition's fight against the AfD as a defense of European security, democratic norms, and essential skilled migration.\nStated Judgement: (+0.15, +0.00) — Lesser Good",
+      "Mainstream parties hemorrhage support while hyper-polarized rhetoric accelerates social fracture and political gridlock across Germany.\nResulting Judgement: (-0.78, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nEstablishment finger-pointing fails to address underlying public grievances, accelerating the very populist polarization it condemns.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 2)",
       "Sub-Audits Breakdown:\n- Chancellor Merz: FAIL (-0.75, -0.85) — Uses moral panic to mask policy failure.\n- AfD Leadership: FAIL (-0.80, -0.90) — Exploits social strain for extremist gains.",
       "German Chancellor Friedrich Merz clashed fiercely with AfD co-leader Alice Weidel in the Bundestag, condemning the far-right's migration policies as 'ethnic cleansing' following their historic 43.8% vote in Saxony-Anhalt.",
       "The Bright Side:\nVoter turnout surged to a record 76.5%, demonstrating robust democratic engagement even amidst profound political realignment.",
       "The Breakdown & Plane Error:\nConfusing democratic discontent (WHO) with technical immigration adjustments (WHAT). Labeling voters or parties without addressing root economic anxiety deepens the crisis.",
       "Social Physics Analysis:\nThe CDU establishment runs a Smart Selfish Maneuver: deflecting from massive electoral losses by deploying apocalyptic rhetoric against rivals, manufacturing moral urgency while avoiding structural policy reforms.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated democratic defense and divisive political combat, it plots a direct trajectory toward Lesser Evil through escalated polarization.\nF_pos=0.0, F_neg=1.5; psi=-0.8.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated democratic defense and divisive political combat, it plots a direct trajectory toward Lesser Evil through escalated polarization.\nF_pos=0.0, F_neg=1.5; psi=-0.8.",
       "The Unavoidable Truth: Discontented electorates turn to extremist alternatives when establishment parties ignore economic and social anxieties.\n\nThe Unavoidable Lie: Slapping moral labels on populist opponents neutralizes the underlying governance failures that birthed them.",
       "Alethekanon:\nMoral outrage is a poor substitute for competent governance. When elites demonize political symptoms instead of healing systemic wounds, extremism feasts.",
       "Awwthekanon:\nPeople are reaching out in frustration because they feel unheard and forgotten by those in power. True leadership listens to the pain beneath the anger rather than shouting back.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Chancellor Merz",
@@ -171,6 +233,7 @@
         "name": "Germany",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

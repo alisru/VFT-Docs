@@ -5,22 +5,22 @@
     "subject": "Man accused in Mexican condo scheme claims he was a victim, too",
     "link": "https://www.cbc.ca/news/world/mexico-fraud-play-del-carmen-9.7338103?cmp=rss",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.2,
-    "real_psi": -0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.59,
+    "real_psi": -0.63,
     "mode": "root",
     "posts": [
       "An accused man caught in an international real estate tangle claims innocence and victimhood.\nEvidence: Unverified bank records, competing claims, missing funds\n#Aletheia #Mexico #Fraud",
-      "Harry Robinson argues he never touched the $280K vanished funds and was frozen out by his co-accused, making him a secondary victim.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "While legal proceedings stall, the money's destination remains unproven by local prosecutors who focus purely on the deceit of selling non-existent condos.\nResulting Judgement: (-0.2, -0.4) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nConflicting accounts and missing funds obscure accountability while both accused parties point fingers.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 3)",
+      "Harry Robinson argues he never touched the $280K vanished funds and was frozen out by his co-accused, making him a secondary victim.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While legal proceedings stall, the money's destination remains unproven by local prosecutors who focus purely on the deceit of selling non-existent condos.\nResulting Judgement: (-0.59, -0.63) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nConflicting accounts and missing funds obscure accountability while both accused parties point fingers.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 3)",
       "Sub-Audits Breakdown:\n- Harry Robinson: FAIL (-0.3, -0.5) — Shifts blame to co-accused.\n- State Prosecutors: COND (0.0, 0.0) — Focuses on deceit over money trail.",
       "A Canadian couple lost $280,000 in a fraudulent Mexican condo flip scheme involving a U.K. man and a Mexican national.",
       "The Poison:\nThe glaring absence of financial auditing leaves victims empty-handed while suspects litigate mutual blame.",
       "The Breakdown & Plane Error:\nConfusing WHO holds the funds (Metaphysical) with WHERE the paperwork was filed (Physical).",
       "Social Physics Analysis:\nThe actors operate a defensive loop, projecting culpability onto each other while dodging systemic transparency to preserve personal survival.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Mutual deflection suppresses true accountability.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Mutual deflection suppresses true accountability.",
       "The Unavoidable Truth: Financial paper trails are being ignored in favor of narrow fraud charges.\n\nThe Unavoidable Lie: One co-accused is entirely innocent of the overarching scheme.",
       "Alethekanon:\nMutual incrimination replaces structural transparency, leaving victims uncompensated while suspects fight state warrants.",
       "Awwthekanon:\nIt is heartbreaking for retirees to lose their life savings while bureaucratic wrangling stalls true justice.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.3,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Harry Robinson Defense",
@@ -219,6 +281,7 @@
         "name": "Glenn Brown",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

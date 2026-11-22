@@ -5,22 +5,22 @@
     "subject": "Have Americans forgotten how to argue?",
     "link": "https://www.washingtonexaminer.com/premium/4729555/have-americans-forgotten-how-to-argue/",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.5,
-    "real_u": -0.45,
-    "real_psi": -0.35,
+    "claim_u": 0.7,
+    "claim_psi": 0.55,
+    "real_u": 0.1,
+    "real_psi": -0.28,
     "mode": "root",
     "posts": [
       "Are we losing the ability to debate, or just avoiding the headache? The Washington Examiner claims Americans have forgotten how to argue, but the data points to a different reality.\nEvidence: Civility crisis, Argument avoidance, Engagement bait\n#Aletheia #USPol 🌐",
-      "The Examiner argues that Americans no longer know how to engage in constructive debate, instead retreating into stubborn, repetitive disagreements that destroy civil discourse and polarize the nation.\nStated Judgement: (+0.60, +0.50) — Lesser Good",
-      "Data shows Americans haven't forgotten how to argue; they are actively avoiding it. 85% sidestepped tough talks recently, yet 80% remain confident in their own civil skills. It's a paradox of avoidance, not inability.\nResulting Judgement: (-0.45, -0.35) — Lesser Evil",
-      "Verdict: FAIL — Revelation into Deception. The article diagnoses a cultural skill failure where there is actually a rational avoidance of high-strain conflict.\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 5)",
+      "The Examiner argues that Americans no longer know how to engage in constructive debate, instead retreating into stubborn, repetitive disagreements that destroy civil discourse and polarize the nation.\nStated Judgement: (+0.70, +0.55) — Greater Good",
+      "Data shows Americans haven't forgotten how to argue; they are actively avoiding it. 85% sidestepped tough talks recently, yet 80% remain confident in their own civil skills. It's a paradox of avoidance, not inability.\nResulting Judgement: (+0.10, -0.28) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 5)",
       "- Washington Examiner: FAIL (-0.45, -0.35) — Premium paywall bait.\n- Public Civility Data: PASS (+0.65, -0.20) — Avoidance over skill.",
       "Recent surveys show a stark contrast: while 53% of Americans view society as uncivil, over 70% still believe common ground is possible and want to restore constructive dialogue.",
       "The Bright Side:\nAmericans' reluctance to argue isn't a loss of democratic capability, but a protective measure to preserve personal relationships and mental health in a hyper-polarized digital environment.",
       "The Breakdown & Plane Error:\nThe article mistakes a change in social behavior (avoiding conflict) for a loss of cognitive capacity (forgetting how to argue). It sells a narrative of cultural decay while hiding the real data behind a paywall.",
       "Social Physics Analysis:\nThe publisher runs a Smart Selfish Maneuver, manufacturing a crisis of \"forgotten skills\" to project blame onto the public. This justifies a paywall pretext while ignoring the systemic stress driving people to avoid conflict.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Panic-mongering about civility only deepens the social alienation it claims to lament.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Panic-mongering about civility only deepens the social alienation it claims to lament.",
       "The Unavoidable Truth: Americans still value common ground but choose peace over futile online fights.\nThe Unavoidable Lie: Society has lost the intellectual capacity to debate.",
       "Alethekanon:\nThe narrative of cultural decline is a highly profitable commodity. By framing rational conflict avoidance as cognitive decay, the media manufactures a crisis to exploit civic anxiety.",
       "Awwthekanon:\nAvoiding a fight isn't weakness; it's a quiet way of keeping our shared humanity alive when the noise gets too loud. It is beautiful that people are choosing to protect their peace and relationships.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Washington Examiner Editorial",
@@ -151,6 +213,7 @@
         "name": "Washington Examiner",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

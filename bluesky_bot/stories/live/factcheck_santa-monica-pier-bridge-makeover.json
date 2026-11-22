@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.92,
+    "real_u": 0.93,
     "real_psi": 0.85,
     "mode": "root",
     "posts": [
       "Santa Monica's historic pier sign is temporarily heading to Vegas as a $35.6M bridge makeover commences.\nEvidence: 1941 sign removal, 87-yr bridge overhaul, seismic upgrades\n#Aletheia #SantaMonica",
-      "The city is dismantling an 87-year-old seismic hazard to construct a modern, safe bridge while fully preserving its iconic neon landmark.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Engineering reality confirms the 1939 bridge scored an 8.2/100 sufficiency rating, making a $35.6M overhaul imperative for public safety.\nResulting Judgement: (+0.92, +0.85) — Grace",
-      "Verdict: PASS — The Path of Grace. Essential infrastructure modernization executed with transparent historic preservation guarantees.\n\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "The city is dismantling an 87-year-old seismic hazard to construct a modern, safe bridge while fully preserving its iconic neon landmark.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Engineering reality confirms the 1939 bridge scored an 8.2/100 sufficiency rating, making a $35.6M overhaul imperative for public safety.\nResulting Judgement: (+0.93, +0.85) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
       "- City of Santa Monica: PASS (+0.95, +0.90) — Transparent about bridge risks and sign restoration.\n- Shimmick Construction: PASS (+0.90, +0.80) — Meets strict seismic engineering standards.",
       "The 20-foot neon Santa Monica Pier sign is being removed for refurbishment by YESCO during a two-year bridge replacement project set to finish by December 2027.",
       "The Bright Side:\nThe historic sign will return fully restored by July 2027, ensuring the pier's charm survives alongside critical seismic safety upgrades.",
       "The Breakdown & Plane Error:\nConfusing temporary aesthetic disruption (WHAT) with permanent cultural erasure (WHO). The city preserves the heritage while fixing structural decay.",
       "Social Physics Analysis:\nThe City of Santa Monica is running a Smart Altruistic Maneuver, replacing a dangerous 1939 bridge through transparent public safety planning rather than hoarding power or hiding risks.",
-      "The Trajectory: The Path of Grace.\nWhen you map stated intentions against ground-level results, it plots a direct trajectory toward Grace. Transparent infrastructure maintenance aligns civic duty with public safety.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map stated intentions against ground-level results, it plots a direct trajectory toward Grace. Transparent infrastructure maintenance aligns civic duty with public safety.",
       "The Unavoidable Truth: Infrastructure must be modernized to prevent catastrophic seismic failure.\n\nThe Unavoidable Lie: Temporary removal of a landmark equals permanent cultural destruction.",
       "Alethekanon:\nCivic authorities transparently balancing structural safety with historic preservation achieve genuine systemic renewal without deceit.",
       "Awwthekanon:\nIt's hard to see the old blue sign come down even for a little while, but knowing it's getting some TLC and coming back stronger brings peace of mind.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "City of Santa Monica",
@@ -156,6 +218,7 @@
         "name": "YESCO",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Poll: More Democrats Plan to Ditch Mail-In Ballots and Vote in Person in Midterms",
     "link": "https://www.breitbart.com/politics/2026/09/20/poll-more-democrats-plan-to-ditch-mail-in-ballots-and-vote-in-person-in-midterms/",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
-    "real_u": 0.4,
-    "real_psi": 0.1,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.93,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "NBC poll reveals shifting voter habits as Democrats embrace early in-person voting for midterms.\nEvidence: NBC poll statistics, voter behavior shifts\n#Aletheia #USPol",
-      "Polling data highlights how Democratic voters are adapting to midterm rules by shifting away from mail-in ballots toward early in-person voting.\nStated Judgement: (+0.6, +0.2) — Good Preference",
-      "Voters adapt pragmatically to changing legal landscapes and party messaging without structural democratic breakdown.\nResulting Judgement: (+0.4, +0.1) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nPragmatic voter adaptation reflects healthy democratic resilience despite polarized election rules.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 1)",
+      "Polling data highlights how Democratic voters are adapting to midterm rules by shifting away from mail-in ballots toward early in-person voting.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Voters adapt pragmatically to changing legal landscapes and party messaging without structural democratic breakdown.\nResulting Judgement: (+0.93, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nPragmatic voter adaptation reflects healthy democratic resilience despite polarized election rules.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 1)",
       "Sub-Audits Breakdown:\n- NBC Polling Data: PASS (0.5, 0.1) — Accurate reflection of shifting trends.\n- Voter Adaptability: PASS (0.4, 0.1) — Pragmatic response to legal changes.",
       "Amid ongoing legal battles over mail ballots, voters adjust their routines to secure their franchise ahead of the midterms.",
       "The Bright Side:\nVoters show high resilience and engagement by successfully utilizing alternative voting methods.",
       "The Breakdown & Plane Error:\nConfusing tactical voting methods (HOW) with democratic participation itself (WHO).",
       "Social Physics Analysis:\nElectorates bypass partisan friction through smart, decentralized adaptation, turning administrative hurdles into routine civic participation.",
-      "The Trajectory: The Path of Redemption.\nWhen you map voter adaptation against procedural changes, it plots a direct trajectory toward Lesser Good. Pragmatic participation overcomes administrative friction.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map voter adaptation against procedural changes, it plots a direct trajectory toward Lesser Good. Pragmatic participation overcomes administrative friction.",
       "The Unavoidable Truth: Voters will alter their habits to ensure their ballots are counted.\n\nThe Unavoidable Lie: Single voting methods dictate election integrity.",
       "Alethekanon:\nPragmatic behavioral shifts among voters demonstrate resilience against top-down procedural friction.",
       "Awwthekanon:\nIt is inspiring to see everyday citizens find new ways to make their voices heard no matter the hurdles.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.2
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NBC Polling Data",
@@ -282,6 +344,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Anthropic partners with IT company Accenture to evaluate frontier AI models",
     "link": "https://www.washingtonexaminer.com/policy/technology/4734317/anthropic-accenture-frontier-ai-models-embedded-evaluation-pace-the-frontier/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.5,
-    "real_u": -0.2,
-    "real_psi": -0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.4,
+    "real_psi": 0.58,
     "mode": "root",
     "posts": [
       "Anthropic teams up with Accenture to audit frontier AI models with a $1B safety pledge.\nEvidence: $1B safety pledge, Accenture partnership, non-exclusive deal\n#Aletheia #Tech",
-      "Anthropic claims its partnership with Accenture establishes independent, rigorous evaluation for frontier AI models.\nStated Judgement: (+0.5, +0.5) — Trustworthy Good",
-      "Accenture brings corporate IT consulting structures into AI safety, blending independent oversight with enterprise advisory incentives.\nResulting Judgement: (-0.2, -0.4) — Conditionally Sound",
-      "Verdict: PASS — The Path of Awakening.\nCorporate safety partnerships expand technical scrutiny while embedding commercial advisory interests into AI governance.\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
+      "Anthropic claims its partnership with Accenture establishes independent, rigorous evaluation for frontier AI models.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Accenture brings corporate IT consulting structures into AI safety, blending independent oversight with enterprise advisory incentives.\nResulting Judgement: (+0.40, +0.58) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nCorporate safety partnerships expand technical scrutiny while embedding commercial advisory interests into AI governance.\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
       "Sub-Audits Breakdown:\n- Anthropic: PASS (+0.5, +0.5) — Proactive safety scaling.\n- Accenture: COND (-0.2, -0.4) — Commercial risk advisory filter.",
       "Anthropic announced a non-exclusive partnership with Accenture to establish embedded independent evaluations for its frontier AI models, backed by significant multi-year safety investments.",
       "The Bright Side:\nBringing external evaluators inside AI labs creates tangible friction against unchecked model deployment.",
       "The Breakdown & Plane Error:\nConfusing corporate IT advisory frameworks (WHO/HOW) with independent public safety oversight (METAPHYSICAL).",
       "Social Physics Analysis:\nAnthropic balances between cooperative transparency and corporate risk management. By partnering with Accenture, they build structural coalitions while insulating their core commercial roadmap behind enterprise consulting credentials.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated safety ambitions and corporate consulting realities, it plots a trajectory toward cautious equilibrium. Net forces stabilize systemic incentives.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated safety ambitions and corporate consulting realities, it plots a trajectory toward cautious equilibrium. Net forces stabilize systemic incentives.",
       "The Unavoidable Truth: External evaluation strengthens model safety protocols.\n\nThe Unavoidable Lie: Corporate consulting guarantees objective public oversight.",
       "Alethekanon:\nSafety partnerships must be judged by their structural independence, not their marketing budgets.",
       "Awwthekanon:\nIt is wonderful to see tech pioneers welcoming outside eyes to ensure our digital future remains safe and beneficial for everyone.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.6,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Anthropic Safety Commitment",
@@ -218,6 +280,7 @@
         "name": "Dario Amodei",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

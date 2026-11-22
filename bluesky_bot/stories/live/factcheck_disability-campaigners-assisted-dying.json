@@ -14,13 +14,13 @@
       "When legislative speed outpaces social support, vulnerable lives bear the strain.\n\nDisability campaigners call for Burnham to delay assisted dying bill\nEvidence: protect disabled, underfunded care risks, social care reform\n#Aletheia #DisabilityRights",
       "Campaigners argue introducing assisted dying before fixing social and palliative care creates a coercive environment where disabled people feel pressured to end their lives prematurely.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "Prime Minister Andy Burnham and disabled activists highlight that underfunded care services must be addressed first to guarantee true autonomy rather than forced scarcity.\nResulting Judgement: (+1.00, +1.00) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nOpen advocacy successfully highlights systemic gaps in social care, steering the legislative debate toward safeguarding vulnerable populations.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nOpen advocacy successfully highlights systemic gaps in social care, steering the legislative debate toward safeguarding vulnerable populations.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Assist Us To Live Group: PASS (+0.8, +0.6) — Effectively highlights critical risks of premature implementation without adequate social care safety nets.",
       "Prominent disabled activists, actors, and campaigners have written to Prime Minister Andy Burnham urging social care reform prior to any assisted dying legislation in England and Wales.",
       "The Bright Side:\nActive coalition-building among disabled artists and advocates successfully forces lawmakers to confront structural poverty and social care neglect before passing irreversible laws.",
       "The Breakdown & Plane Error:\nThe debate shifts from WHO (individual autonomy) to WHERE/WHEN (societal readiness and safety nets), preventing a premature legislative rush that endangers disabled lives.",
       "Social Physics Analysis:\nBy demanding upfront transparency and adequate resourcing before systemic changes occur, campaigners replace coercive state neglect with empowered community protection and shared responsibility.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Open dialogue successfully bridges systemic risk and reform.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Open dialogue successfully bridges systemic risk and reform.",
       "The Unavoidable Truth: Systemic poverty and lack of social support create coercive environments where death can be mistaken for relief.\n\nThe Unavoidable Lie: Legalizing assisted dying without fixing social care is purely an act of absolute compassion.",
       "Alethekanon:\nThe intervention of disabled advocates demonstrates how moral clarity exposes institutional blind spots. True autonomy requires a foundation of robust social support, not bare survival.",
       "Awwthekanon:\nEvery person deserves to feel safe and cherished in life before anyone considers easing their exit. Let's build a society that honors disabled lives with genuine care.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Assist Us To Live Group Advocacy",
@@ -274,6 +336,7 @@
         "name": "Rosie Jones",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

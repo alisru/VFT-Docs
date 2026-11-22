@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.95,
-    "real_psi": 0.9,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "When an emergency call ends, genuine community care often keeps going.\nEvidence: Medical aid provided, Half-finished lawn, Voluntary completion\n#Aletheia #Community #Kindness",
       "First responders do their duty during emergencies, but some go far beyond the call to help citizens in distress.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "After treating an ill resident and ensuring his transport, firefighters noticed his unfinished lawn and quietly finished the job themselves.\nResulting Judgement: (+0.95, +0.90) — Grace",
-      "Verdict: PASS — The Path of Grace.\nTrue community service extends beyond formal duties into quiet acts of human empathy.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "After treating an ill resident and ensuring his transport, firefighters noticed his unfinished lawn and quietly finished the job themselves.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nTrue community service extends beyond formal duties into quiet acts of human empathy.\n\nIntegrity: Absolute Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Oklahoma City Fire Department: PASS (0.95, 0.90) — Exemplifies genuine public service.\n- Community Impact: PASS (0.95, 0.90) — Boosts social trust.",
       "Oklahoma City firefighters responded to a medical call for a man who fell ill while mowing his lawn, completing the chore after he went to the hospital.",
       "The Bright Side:\nA simple, wholesome reminder of everyday human decency and solidarity among neighbors.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Oklahoma City Fire Department",
@@ -201,6 +263,7 @@
         "name": "Oklahoma City Fire Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

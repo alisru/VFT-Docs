@@ -5,22 +5,22 @@
     "subject": "Two Dead, Twelve Missing as Migrant Boat Capsizes Off Tunisian Coast",
     "link": "https://www.breitbart.com/europe/2026/08/22/two-dead-twelve-missing-as-migrant-boat-capsizes-off-tunisian-coast/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.4,
-    "real_u": 0.8,
-    "real_psi": 0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.02,
+    "real_psi": 0.26,
     "mode": "root",
     "posts": [
       "A tragic reminder of the human cost of border policies as another migrant boat capsizes off the Tunisian coast.\n\nTwo Dead, Twelve Missing as Migrant Boat Capsizes\nEvidence: border control, human tragedy, policy failure\n#Aletheia #HumanRights",
-      "The report details the tragic capsizing of a migrant boat off Tunisia, while noting that EU-funded border control has sharply reduced overall departures.\nStated Judgement: (+0.8, 0.4) — Good Preference",
-      "The reality is a balanced account: while the EU-Tunisia deal has reduced numbers, it has trapped vulnerable migrants in a system of severe abuse and violence.\nResulting Judgement: (+0.8, 0.4) — Good Preference",
-      "Verdict: PASS — Grace.\nThe article provides a balanced, factual account of the tragedy and the complex, often abusive realities of the EU-Tunisia migration deal.\n\nIntegrity: Trustworthy (Hypocrisy: 0.1, Uncertainty z: 1)",
+      "The report details the tragic capsizing of a migrant boat off Tunisia, while noting that EU-funded border control has sharply reduced overall departures.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality is a balanced account: while the EU-Tunisia deal has reduced numbers, it has trapped vulnerable migrants in a system of severe abuse and violence.\nResulting Judgement: (+0.02, +0.26) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nThe article provides a balanced, factual account of the tragedy and the complex, often abusive realities of the EU-Tunisia migration deal.\n\nIntegrity: Trustworthy (Hypocrisy: 0.1, Uncertainty z: 1)",
       "- AP/Breitbart Reporting: PASS (0.8, 0.4) — Balanced, factual coverage.\n- EU-Tunisia Migration Deal: FAIL (-0.8, -0.6) — Traps migrants in abuse.",
       "A migrant boat carrying 15 people capsized off southern Tunisia, leaving at least two dead and 12 missing, highlighting the ongoing dangers of Mediterranean crossings despite EU-funded crackdowns.",
       "The Poison:\nWhile the EU-Tunisia deal successfully reduced departure statistics, it did so by outsourcing border enforcement to a system accused of racial violence and arbitrary detention.",
       "The Breakdown & Plane Error:\nThis is a Logical (HOW) error in policy. The EU frames the deal as a solution to human trafficking, but the causal chain merely shifts the strain, trapping migrants in abuse.",
       "Social Physics Analysis:\nBy prioritizing statistical reduction over human welfare, the policy creates a high-strain environment. It uses upfront justification of safety to mask the projection of border enforcement costs onto vulnerable people.",
-      "The Trajectory: Grace.\nBecause the reporting remains honest and transparent about both policy outcomes and human rights abuses, it maintains a trajectory of truth and ethical awareness.",
+      "The Trajectory: The Path of Fall from Grace.\nBecause the reporting remains honest and transparent about both policy outcomes and human rights abuses, it maintains a trajectory of truth and ethical awareness.",
       "The Unavoidable Truth: Border crackdowns do not stop the desperation that drives people to risk their lives.\nThe Unavoidable Lie: Reducing departure numbers means the migration crisis is solved.",
       "Alethekanon:\nThe reporting accurately balances the statistical success of the EU-Tunisia deal with the severe human rights abuses and loss of life it creates on the ground.",
       "Awwthekanon:\nMy heart aches for the families searching for their loved ones lost at sea. No policy or border agreement should ever come at the cost of human dignity and basic safety.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "AP/Breitbart Reporting",
@@ -282,6 +344,7 @@
         "name": "European Union",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

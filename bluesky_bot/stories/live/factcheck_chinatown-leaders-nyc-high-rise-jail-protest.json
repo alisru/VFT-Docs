@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/24/us-news/chinatown-leaders-fire-warning-shot-at-mamdani-to-try-to-sink-nyc-hi-rise-jail-plan/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.76,
-    "real_u": -0.38,
-    "real_psi": 0.42,
+    "claim_psi": 1.0,
+    "real_u": 0.37,
+    "real_psi": 0.34,
     "mode": "root",
     "posts": [
       "Community leaders challenge deep excavation for Manhattan jail tower.\n\nChinatown High-Rise Jail Plan\nEvidence: borough jail equity, foundation sink risk, engineering mitigation\n#Aletheia #NYC",
-      "City leaders assert that borough-based jails safely modernize justice infrastructure using advanced secant pile walls to prevent ground subsidence.\nStated Judgement: (+1.00, +0.76) — Greater Good",
-      "Excavating below the water table at the historic Collect Pond site creates severe structural and environmental strain for adjacent legacy buildings.\nResulting Judgement: (-0.38, +0.42) — Lesser Evil",
-      "Verdict: COND — The Path of Revelation.\nInfrastructure goals clash with dense urban geotechnical vulnerabilities and community impact.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 2)",
+      "City leaders assert that borough-based jails safely modernize justice infrastructure using advanced secant pile walls to prevent ground subsidence.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Excavating below the water table at the historic Collect Pond site creates severe structural and environmental strain for adjacent legacy buildings.\nResulting Judgement: (+0.37, +0.34) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nInfrastructure goals clash with dense urban geotechnical vulnerabilities and community impact.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 2)",
       "- NYC DDC Engineering: COND (+0.12, +0.45) — Secant walls mitigate water risk.\n- Chinatown Community: PASS (+0.72, +0.35) — Legitimate structural concern.",
       "Eighteen Chinatown leaders warn Mayor Mamdani that deep excavation for a 16-story jail tower over waterlogged soil threatens nearby historic foundations.",
       "The Bright Side:\nClosing Rikers Island remains a vital humanitarian necessity for replacing outdated, dangerous detention conditions.",
       "The Breakdown & Plane Error:\nThe Physical error (WHERE) pits geotechnical realities on historic wetlands against top-down municipal facility placement targets.",
       "Social Physics Analysis:\nPushing mega-developments into dense neighborhoods without consensus creates structural friction. When authorities rely on technical assurances alone, affected communities bear the unhedged risks.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Awakening as technical risk meets community oversight.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Awakening as technical risk meets community oversight.",
       "The Unavoidable Truth: Replacing Rikers requires local facilities, but fragile soil demands rigorous safeguards.\nThe Unavoidable Lie: Deep excavation in wetland terrain carries zero risk to legacy foundations.",
       "Alethekanon:\nGeotechnical friction cannot be resolved through administrative mandates when century-old timber foundations sit directly in the zone of subsidence.",
       "Awwthekanon:\nSeniors and long-time residents deserve absolute assurance that their homes and heritage will not be undermined by massive urban construction.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.7,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.45,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.7,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.3,
+        "O": 0.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NYC DDC Engineering Plan",
@@ -280,6 +342,7 @@
         "name": "New York City Department of Design and Construction",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

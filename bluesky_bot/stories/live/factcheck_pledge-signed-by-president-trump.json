@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A high-profile White House AI pledge features a glaring typo.\nEvidence: Voluntary pledge, 'Unites States' typo, tech leaders\n#AI #TechPolicy",
-      "Leaders announce a voluntary Joint Commitment on Frontier Responsibilities for AI safety.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "The signed document misspells 'United States' as 'Unites States', highlighting rushed theater.\nResulting Judgement: (-0.2, -0.3) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA major national AI safety pledge suffers from a basic spelling error, exposing superficial oversight.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Leaders announce a voluntary Joint Commitment on Frontier Responsibilities for AI safety.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "The signed document misspells 'United States' as 'Unites States', highlighting rushed theater.\nResulting Judgement: (-0.20, -0.30) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA major national AI safety pledge suffers from a basic spelling error, exposing superficial oversight.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- AI Pledge Substance: COND (0.2, 0.1) — Voluntary with no teeth.\n- Administrative Care: FAIL (-0.6, -0.7) — Typo undermines seriousness.",
       "Top tech executives gathered at the White House to sign a voluntary accord on artificial intelligence oversight, only for a typo to steal the spotlight.",
       "The Bright Side:\nBrings industry leaders and government figures into a public conversation regarding frontier AI safety controls.",
       "The Breakdown & Plane Error:\nConfusing WHAT (symbolic photo-op pledge) with HOW (enforceable regulatory standards).",
       "Social Physics Analysis:\nActors run a superficial PR maneuver. They prioritize high-visibility symbolic gestures over rigorous administrative care, trading substantive governance for political optics.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Cosmetic optics replace concrete enforcement.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Cosmetic optics replace concrete enforcement.",
       "The Unavoidable Truth: The agreement is entirely voluntary without enforcement.\n\nThe Unavoidable Lie: The document underwent careful vetting.",
       "Alethekanon:\nTypo-ridden governance photo-ops reveal that institutional rigor takes a backseat to fast-paced political theater.",
       "Awwthekanon:\nAttention to detail matters when shaping the future of powerful technologies; rushing announcements breeds avoidable mistakes.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "AI Pledge Substance",
@@ -164,6 +226,7 @@
         "name": "Dario Amodei",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

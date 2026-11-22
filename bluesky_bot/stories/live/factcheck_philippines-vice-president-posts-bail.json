@@ -5,22 +5,22 @@
     "subject": "Philippines Vice President Sara Duterte Posts Bail After Arrest",
     "link": "https://www.npr.org/2026/09/05/g-s1-142148/philippines-vice-president-posts-bail",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.7,
+    "real_u": -0.75,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "High-stakes political warfare erupts in Manila as Vice President Sara Duterte posts bail following an arrest warrant over alleged grave threats.\nEvidence: Duterte posts bail, denies threats, cites political harassment\n#Aletheia #Philippines",
-      "Duterte frames the arrest warrant as targeted political harassment by the Marcos administration, asserting her right to legal defense.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Beneath the legal rhetoric lies a brutal dynastic feud where state institutions are weaponized to neutralize political rivals ahead of 2028.\nResulting Judgement: (-0.8, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nState power is co-opted for retaliatory elite warfare under the guise of the rule of law.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.2, z: 3)",
+      "Duterte frames the arrest warrant as targeted political harassment by the Marcos administration, asserting her right to legal defense.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Beneath the legal rhetoric lies a brutal dynastic feud where state institutions are weaponized to neutralize political rivals ahead of 2028.\nResulting Judgement: (-0.75, -0.75) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nState power is co-opted for retaliatory elite warfare under the guise of the rule of law.\n\nIntegrity: Partially Distorted (Hypocrisy: 3.2, z: 3)",
       "- Sara Duterte: FAIL (-0.7, -0.8) — Leverages victimhood to shield dynastic power.\n- Marcos Administration: FAIL (-0.8, -0.7) — Weaponizes courts for political elimination.",
       "Philippine VP Sara Duterte posted 360,000 pesos bail after an arrest order for alleged 2024 threats against President Marcos, escalating their bitter feud.",
       "The Bright Side:\nThe judiciary functions enough to allow formal bail, preventing outright extrajudicial detention without recourse.",
       "The Breakdown & Plane Error:\nConfuses WHO is wielding institutional power (WHAT vs WHO plane error).\n\nIt substitutes democratic accountability with raw clan warfare.",
       "Social Physics Analysis:\nInstead of transparent governance, rival political dynasties deploy pretexts of legality to project corruption onto opponents while hoarding state power.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between democratic rhetoric and clan warfare, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as institutions are subverted.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between democratic rhetoric and clan warfare, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as institutions are subverted.",
       "The Unavoidable Truth: Legal processes are being weaponized for political elimination.\n\nThe Unavoidable Lie: This is purely an impartial enforcement of criminal law.",
       "Alethekanon:\nWhen state courts become arenas for dynastic bloodsport, the rule of law is hollowed out into a partisan weapon. Legal technicalities merely mask the ruthless consolidation of executive power.",
       "Awwthekanon:\nIt is heartbreaking to watch a nation's democratic institutions dragged into personal vendettas while ordinary citizens bear the true cost of elite instability.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sara Duterte Defense",
@@ -163,6 +225,7 @@
         "name": "Philippine Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

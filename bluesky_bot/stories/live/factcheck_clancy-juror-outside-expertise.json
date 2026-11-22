@@ -6,21 +6,21 @@
     "link": "https://thefederalist.com/2026/09/09/clancy-juror-appears-to-admit-jurors-used-outside-expertise-to-badger-holdout/?utm_source=rss&utm_medium=rss&utm_campaign=clancy-juror-appears-to-admit-jurors-used-outside-expertise-to-badger-holdout",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.87,
     "mode": "root",
     "posts": [
       "Jurors in the Lindsay Clancy trial reportedly used outside nursing expertise to pressure a holdout juror.\nEvidence: trial quotes, juror interviews, legal critique\n#Aletheia #Legal #ClancyTrial",
-      "Media reporting claims that juror misconduct subverted court instructions and bullied a legitimate lone holdout.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Outrage framing weaponizes post-trial venting to delegitimize the jury system and inflame public division over a tragic case.\nResulting Judgement: (-0.75, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nWeaponizing juror post-trial regret into an institutional crisis undermines due process for clicks.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Media reporting claims that juror misconduct subverted court instructions and bullied a legitimate lone holdout.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Outrage framing weaponizes post-trial venting to delegitimize the jury system and inflame public division over a tragic case.\nResulting Judgement: (-0.94, -0.87) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nWeaponizing juror post-trial regret into an institutional crisis undermines due process for clicks.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Juror Deliberation: COND (-0.5, -0.6) — Violated norms by bringing unsworn views.\n- Media Outrage Framing: FAIL (-0.9, -0.9) — Exploited trial chaos for narrative gain.",
       "Following a mistrial in the Lindsay Clancy insanity case, jurors spoke to NBC 10, revealing that nurse jurors used professional backgrounds to challenge a holdout before the judge declared a deadlock.",
       "The Poison:\nTransforming messy human deliberations into an absolute institutional corruption narrative erodes public faith in trials.",
       "The Breakdown & Plane Error:\nConfusing WHAT happened (juror friction) with WHO is to blame (the entire judicial system), executing a classic bait-and-switch.",
       "Social Physics Analysis:\nActors run a Smart Selfish maneuver by taking messy, organic human friction in a locked jury room and manufacturing a systemic crisis to feed outrage loops.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg drives Will negative.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. F_pos < F_neg drives Will negative.",
       "The Unavoidable Truth: Jurors are instructed to rely solely on admitted evidence.\n\nThe Unavoidable Lie: Post-trial media framing captures the entire systemic reality of courtrooms.",
       "Alethekanon:\nOutraged framing converts normal human deliberation friction into a systemic crisis to weaponize public distrust. Facts serve as fuel for outrage.",
       "Awwthekanon:\nIt is heartbreaking when a deeply tragic case spills over into public recrimination, leaving everyone searching for someone to blame in the wreckage.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.6,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.6,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Juror Deliberation",
@@ -283,6 +345,7 @@
         "name": "The Federalist",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

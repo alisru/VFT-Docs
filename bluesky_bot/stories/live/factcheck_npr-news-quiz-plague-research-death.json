@@ -5,22 +5,22 @@
     "subject": "Fill in the blank in the quiz: A plague research employee in Russia died from ____",
     "link": "https://www.npr.org/2026/10/09/g-s1-147111/trump-bts-paramount-tv-el-nino-news-quiz",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Turning deadly biological security incidents into trivial pop-culture trivia games.\nEvidence: Nobel prizes, protests, Russian plague lab death\n#Aletheia #Biosecurity",
-      "Treating lethal lab accidents as harmless trivia points to test public engagement.\nStated Judgement: (+0.5, 0.0) — Neutral Good Preference",
-      "Masking actual biological hazards and fatal institutional failures behind whimsical weekend quiz formats.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nTransforming fatal biosecurity breaches into casual trivia trivializes systemic dangers and institutional negligence.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Treating lethal lab accidents as harmless trivia points to test public engagement.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Masking actual biological hazards and fatal institutional failures behind whimsical weekend quiz formats.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nTransforming fatal biosecurity breaches into casual trivia trivializes systemic dangers and institutional negligence.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "- NPR News Quiz: FAIL (-0.80, -0.90) — Trivializes lethal biological accidents.\n- Editorial Framing: FAIL (-0.75, -0.85) — Masks institutional risks as fun trivia.",
       "NPR published its weekly news quiz featuring celebrity culture alongside a mysterious fatal incident involving a plague research employee in Russia.",
       "The Poison:\nPackaging fatal lab incidents into casual games desensitizes the public to real biological hazards.",
       "The Breakdown & Plane Error:\nThe error is treating a high-stakes WHAT (biosecurity failure) as a trivial WHO/WHAT game show prop for audience retention.",
       "Social Physics Analysis:\nThe quiz runs a smart selfish maneuver by burying genuine lethal risks beneath entertainment. It manufactures engagement by reducing deadly institutional breakdowns into amusing blanks to fill.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between informational duty and entertainment trivialization, it plots a direct trajectory toward Lesser Evil. F_net calculations show negative extraction outweighs public utility.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between informational duty and entertainment trivialization, it plots a direct trajectory toward Lesser Evil. F_net calculations show negative extraction outweighs public utility.",
       "The Unavoidable Truth: Serious biological threats are reduced to pop-culture punchlines for clicks.\n\nThe Unavoidable Lie: Packaging lethal lab incidents as a fun quiz promotes informed public engagement.",
       "Alethekanon:\nWrapping fatal biosecurity failures in game-show trivia treats human life as disposable clickbait. Real institutional accountability vanishes behind amusement.",
       "Awwthekanon:\nIt hurts to see profound tragedies and mysterious deaths reduced to game pieces. People lost their lives, yet we play fill-in-the-blank with their final moments.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NPR News Quiz Framing",
@@ -211,6 +273,7 @@
     "tags": [
       "Aletheia",
       "Biosecurity"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.6,
-    "real_u": 0.3,
+    "real_u": 0.5,
     "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "U.S. State Department warns firms against Afghanistan deals following a $200M oil agreement.\nEvidence: SDGT sanctions, Delta International Energy deal, Khalilzad visit\n#Aletheia #Geopolitics #StateDept",
-      "The U.S. State Department properly warns American companies to exercise extreme caution and avoid illicit transactions with Taliban-linked entities.\nStated Judgement: (+0.8, +0.6) — Lesser Good",
-      "While official warnings maintain sanctions compliance, foreign entities like Saudi firms continue engaging with the Taliban junta, exposing enforcement limits.\nResulting Judgement: (+0.3, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nThe State Department's warning accurately enforces counter-terrorism sanctions amidst shifting regional energy deals.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "The U.S. State Department properly warns American companies to exercise extreme caution and avoid illicit transactions with Taliban-linked entities.\nStated Judgement: (+0.80, +0.60) — Greater Good",
+      "While official warnings maintain sanctions compliance, foreign entities like Saudi firms continue engaging with the Taliban junta, exposing enforcement limits.\nResulting Judgement: (+0.50, +0.20) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nThe State Department's warning accurately enforces counter-terrorism sanctions amidst shifting regional energy deals.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- State Dept Sanctions Warning: PASS (0.8, 0.6) — Upholds legal restrictions on terrorist entities.\n- Regional Energy Deals: COND (0.2, -0.2) — Foreign firms bypass Western isolation.",
       "Following a $200M oil and gas agreement between a Saudi firm and the Taliban, Washington reiterated strict prohibitions against transacting with designated terrorist entities.",
       "The Bright Side:\nClear regulatory boundaries prevent American capital from inadvertently funding sanctioned militant regimes.",
       "The Breakdown & Plane Error:\nConfusing WHO is acting (private foreign firms vs. U.S. corporations) highlights the friction of enforcing unilateral sanctions globally.",
       "Social Physics Analysis:\nThe U.S. government maintains a transparent stance enforcing counter-terrorism norms against state-like militant actors. Rather than a manufactured crisis, it reflects standard geopolitical friction where economic interests collide with security sanctions.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between official sanctions and foreign commercial deals, it plots a trajectory toward Lesser Good. Regulatory frameworks maintain normative boundaries despite enforcement hurdles.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between official sanctions and foreign commercial deals, it plots a trajectory toward Lesser Good. Regulatory frameworks maintain normative boundaries despite enforcement hurdles.",
       "The Unavoidable Truth: Unilateral Western sanctions cannot entirely prevent regional actors from pursuing energy deals with de facto regimes.\n\nThe Unavoidable Lie: State Department warnings completely neutralize foreign commercial engagement with sanctioned authorities.",
       "Alethekanon:\nEnforcing counter-terrorism sanctions against Taliban-linked commerce preserves legal norms, even as regional states pursue separate economic ties.",
       "Awwthekanon:\nNavigating a fractured world requires steady adherence to human safety and security, ensuring that economic expediency does not overshadow fundamental human rights.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "State Dept Sanctions Warning",
@@ -169,6 +231,7 @@
         "name": "Delta International Energy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

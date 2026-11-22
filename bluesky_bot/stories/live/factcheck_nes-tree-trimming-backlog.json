@@ -5,22 +5,22 @@
     "subject": "NES says it’s falling behind on its tree trimming efforts, advocates worry rushing could damage tree canopy",
     "link": "https://www.wsmv.com/2026/09/23/nes-says-its-falling-behind-its-tree-trimming-efforts-advocates-worry-rushing-could-damage-tree-canopy/?utm_campaign=snd-autopilot",
     "target_url": "https://bsky.app/profile/wsmv.com/post/3mw7v7l3llk2n",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.87,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Nashville Electric Service admits a massive backlog in tree trimming, sparking community fears of aggressive canopy damage. 🌐\nEvidence: Backlog Admission, Expanded Clearances, Canopy Loss\n#Aletheia #Nashville",
-      "NES claims expanded tree-clearing zones and accelerated trimming schedules are necessary to ensure grid reliability after severe winter storms.\nStated Judgement: (+0.5, 0.0) — Neutral Preference",
-      "Rushed maintenance execution without transparent cost-benefit analysis threatens local tree canopies while failing to rebuild community trust.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Operational backlog management devolved into aggressive, opaque over-clearing that damages public trust and urban canopy.\nIntegrity: Partially Distorted (Hypocrisy: 2.4, z: 2)",
+      "NES claims expanded tree-clearing zones and accelerated trimming schedules are necessary to ensure grid reliability after severe winter storms.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Rushed maintenance execution without transparent cost-benefit analysis threatens local tree canopies while failing to rebuild community trust.\nResulting Judgement: (-0.87, -0.75) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Partially Distorted (Hypocrisy: 2.4, z: 2)",
       "- NES Operations: FAIL (-0.4, -0.5) — Rushed trimming lacks transparency.\n- Tree Advocates: PASS (+0.7, +0.6) — Defending urban canopy preservation.",
       "Nashville Electric Service revealed a severe backlog in vegetation management, expanding its clearing zone from 10 to 15 feet to prevent future ice storm outages.",
       "The Poison:\nUtilities often mask reactive crisis management behind technical necessity, sacrificing community canopy and trust without genuine public consultation.",
       "The Breakdown & Plane Error:\nConfusing WHAT (clearing utility lines) with HOW (opaque, aggressive execution without community cost-benefit analysis).",
       "Social Physics Analysis:\nNES runs a Smart Selfish maneuver, utilizing a weather pretext to bypass transparent dialogue, externalizing environmental costs onto residents.",
-      "The Trajectory: The Path of Deception.\nWhen utilities rush fixes without community consensus, it plots a direct trajectory toward institutional friction and ecological loss.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen utilities rush fixes without community consensus, it plots a direct trajectory toward institutional friction and ecological loss.",
       "The Unavoidable Truth: Grid resilience requires consistent, balanced maintenance rather than reactive panic.\nThe Unavoidable Lie: Aggressive clearing without transparency builds trust.",
       "Alethekanon:\nOperational failures should not justify heavy-handed executive overreach that damages public goods without accountability.",
       "Awwthekanon:\nTrees give our neighborhoods life and shade. It hurts to see them cut down hastily without anyone listening to community concerns.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "NES Tree Trimming Program",
@@ -217,6 +279,7 @@
         "name": "Metro Council",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

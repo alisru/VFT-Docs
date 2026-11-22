@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.95,
+    "real_u": 0.25,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "Tragedy strikes near Eglin Air Force Base as 26-year-old Senior Airman Tamera Moniq Bolden-Cleckley is found dead inside a burned vehicle.\nEvidence: Burned car, active federal investigation, military mourning\n#Aletheia #Military #Florida",
-      "Initial reports provide factual coverage of a grim discovery near a military installation while federal authorities investigate the circumstances.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "A young service member lost her life in violent and horrific circumstances, highlighting profound security and personal safety failures.\nResulting Judgement: (-0.9, -0.95) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA devastating loss of life under violent circumstances exposes the harsh reality of human vulnerability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Initial reports provide factual coverage of a grim discovery near a military installation while federal authorities investigate the circumstances.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "A young service member lost her life in violent and horrific circumstances, highlighting profound security and personal safety failures.\nResulting Judgement: (+0.25, +0.25) — Greater Good",
+      "Verdict: PASS — Reckoning into Grace.\nA devastating loss of life under violent circumstances exposes the harsh reality of human vulnerability.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Eglin Air Force Base Command: PASS (0.5, 0.5) — Expresses genuine condolences and cooperates with investigators.\n- Federal Investigators: PASS (0.0, 0.0) — Maintains professional silence during active probe.",
       "The body of 26-year-old Senior Airman Tamera Moniq Bolden-Cleckley was discovered by security patrols inside a torched vehicle near Eglin Air Force Base.",
       "The Bright Side:\nTransparent military leadership honoring the fallen service member with community condolences.",
       "The Breakdown & Plane Error:\nFocusing solely on WHAT happened physically while omitting the deeper societal and psychological strains affecting young service members.",
       "Social Physics Analysis:\nThis tragedy reflects the brutal collision of systemic violence and human fragility, far removed from artificial political games or pretexts.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between potential futures and violent terminal reality, it plots a direct trajectory toward Destruction. Unchecked violence annihilates human potential.",
+      "The Trajectory: The Path of Reckoning into Grace.\nWhen you map the gap between potential futures and violent terminal reality, it plots a direct trajectory toward Destruction. Unchecked violence annihilates human potential.",
       "The Unavoidable Truth: Violence shatters lives in silence long before public investigations ever begin.\n\nThe Unavoidable Lie: Institutional safety nets can fully protect individuals from sudden catastrophic harm.",
       "Alethekanon:\nWhen a young life is snuffed out in a torched vehicle, official condolences ring hollow against the raw weight of unpreventable tragedy.",
       "Awwthekanon:\nMay her family and fellow airmen find comfort and peace as they carry the heavy grief of such a sudden, heartbreaking loss.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Eglin Air Force Base Command",
@@ -158,6 +220,7 @@
         "name": "U.S. Air Force",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Reckoning into Grace"
   }
 ]

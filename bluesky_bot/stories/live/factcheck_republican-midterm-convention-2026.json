@@ -5,22 +5,22 @@
     "subject": "Empty seats, socialism and Trump dominate the Republican midterm convention",
     "link": "https://www.npr.org/2026/09/11/nx-s1-5962848/republican-convention-trump-dividend-vance-midterms",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.4,
-    "real_u": -0.85,
-    "real_psi": -0.75,
+    "claim_u": 0.8,
+    "claim_psi": 0.7,
+    "real_u": -0.88,
+    "real_psi": -0.78,
     "mode": "root",
     "posts": [
       "A grand stage of empty seats and impossible promises. At the Dallas midterm convention, Donald Trump pledged a $5,000 dividend to every adult, claiming tariff trillions would fund it.\nEvidence: Tariff Dividend, Fiscal Deficit, Political Bribe\n#Aletheia #USPol 🌐",
-      "The administration claims a $5,000 'Trump dividend' is a realistic reward for voters, funded by trillions in incoming tariff revenues that protect American industry.\nStated Judgement: (+0.60, +0.40) — Good Preference",
-      "Economists warn the pledge costs over $1T. Previous tariff promises never materialized, emergency tariffs were struck down by courts, and the convention saw thousands of empty seats.\nResulting Judgement: (-0.85, -0.75) — Greater Evil",
-      "Verdict: FAIL — Reckoning into Destruction. Trump's impossible $5,000 dividend is a desperate political bribe designed to mask a fractured base and the inflationary reality of his trade policies.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "The administration claims a $5,000 'Trump dividend' is a realistic reward for voters, funded by trillions in incoming tariff revenues that protect American industry.\nStated Judgement: (+0.80, +0.70) — Greater Good",
+      "Economists warn the pledge costs over $1T. Previous tariff promises never materialized, emergency tariffs were struck down by courts, and the convention saw thousands of empty seats.\nResulting Judgement: (-0.88, -0.78) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Donald Trump: FAIL (-0.85, -0.75) — Impossible $5k bribe to mask tariff failures.\n- Convention Attendance: FAIL (-0.90, -0.80) — Claimed packed arena despite empty upper decks.",
       "At the Republican midterm convention in Dallas, Donald Trump and J.D. Vance urged voters to treat the election as if Trump were on the ballot, offering a $5,000 cash promise while facing a fractured base and rising economic anxiety.",
       "The Bright Side:\nThe empty seats and voter skepticism show that even highly partisan bases are beginning to develop immunity to unbacked financial promises and post-hoc economic justifications.",
       "The Breakdown & Plane Error:\nThe campaign commits a Logical Plane Error (HOW vs WHAT) by presenting a massive cash payout (WHAT) without any viable causal mechanism (HOW), relying on struck-down tariffs and non-existent trillions to justify a transparent electoral bribe.",
       "Social Physics Analysis:\nTrump is running a classic Smart Selfish Maneuver. The secret goal is the consolidation of personal power and the evasion of accountability. The pretext is a manufactured 'common sense versus crazy' cultural war and the promise of a $5,000 dividend. When confronted with the reality of empty seats and economic anxiety, the strategy shifts to projection—blaming Democrats as the 'party of hatred' and threatening critics. This hoards power while shifting the systemic strain of inflation onto the working class.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nWhen you map the gap between stated populist prosperity and the reality of unconstitutional tariffs and empty arenas, it plots a direct trajectory toward systemic fiscal decay and democratic erosion.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated populist prosperity and the reality of unconstitutional tariffs and empty arenas, it plots a direct trajectory toward systemic fiscal decay and democratic erosion.",
       "The Unavoidable Truth: You cannot fund a trillion-dollar dividend with tariffs that have already been struck down by the Supreme Court.\nThe Unavoidable Lie: The claim that the Dallas arena was packed and that trillions are flowing into the treasury.",
       "Alethekanon:\nThe $5,000 dividend is a mathematical phantom. When political survival requires fabricating trillions in non-existent revenue, the underlying system has entered a state of advanced structural instability.",
       "Awwthekanon:\nIt is heartbreaking to see families struggling with rising gas prices and everyday costs being offered empty promises of quick cash. People deserve real, stable economic security, not theatrical illusions that leave them holding the bag when the curtain falls.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Donald Trump Campaign Promises",
@@ -162,6 +224,7 @@
         "name": "Republican Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

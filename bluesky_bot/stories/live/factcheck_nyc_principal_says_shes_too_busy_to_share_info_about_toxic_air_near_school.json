@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/29/us-news/nyc-principal-says-shes-too-busy-to-share-info-about-toxic-air-near-school/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Parents clash with school leadership over toxic air contamination near a Brooklyn elementary school.\nEvidence: PS 372, Gowanus Canal, benzene\n#Aletheia #Education",
-      "Official administrative posture claims student safety is prioritized and communication channels remain fully functional.\nStated Judgement: (1.0, 0.5) — Good Preference",
-      "Principal Rosa Amato admitted she is 'too busy' to share critical toxic vapor data, while cancer-causing benzene persists.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nAdministrative self-preservation overrides child safety, leaving parents in the dark regarding toxic chemical exposure.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 3)",
+      "Official administrative posture claims student safety is prioritized and communication channels remain fully functional.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Principal Rosa Amato admitted she is 'too busy' to share critical toxic vapor data, while cancer-causing benzene persists.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nAdministrative self-preservation overrides child safety, leaving parents in the dark regarding toxic chemical exposure.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 3)",
       "- Principal Rosa Amato: FAIL (-0.9, -0.9) — Dismissive of parental health concerns.\n- NYC DOE / State Agencies: FAIL (-0.7, -0.8) — Failed mitigation efforts.",
       "Parents at PS 372 in Brooklyn discovered mitigation for cancer-causing benzene and xylene failed, while leadership brushed off safety alerts.",
       "The Bright Side:\nEngaged parents are organizing petitions and demanding accountability, refusing to let children absorb silent chemical risks.",
       "The Breakdown & Plane Error:\nConfusing WHAT (mitigating toxic vapor) with WHO (protecting administrative reputation).",
       "Social Physics Analysis:\nWhen institutional leaders shield themselves from liability, they invert their primary duty of care, forcing vulnerable families to bear invisible physical hazards.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Burying safety hazards behind administrative stonewalling destroys community trust.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Burying safety hazards behind administrative stonewalling destroys community trust.",
       "The Unavoidable Truth: Children cannot learn safely in environments tainted by unmitigated toxic vapors.\n\nThe Unavoidable Lie: Administrative busyness excuses failing to disclose cancer-causing air pollutants.",
       "Alethekanon:\nInstitutional self-preservation transforms public servants into gatekeepers of hazard.",
       "Awwthekanon:\nProtect the little ones whose breath depends on adults finding the courage to face hard truths.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Rosa Amato",
@@ -210,6 +272,7 @@
         "name": "Kathy Hochul",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

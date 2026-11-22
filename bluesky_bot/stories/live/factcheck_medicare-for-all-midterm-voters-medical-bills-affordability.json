@@ -5,22 +5,22 @@
     "subject": "'Medicare for All' message attracts midterm voters buckling under medical bills",
     "link": "https://www.npr.org/2026/10/07/nx-s1-5992772/medicare-for-all-midterm-voters-medical-bills-affordability",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.45,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.75,
+    "real_u": -0.7,
+    "real_psi": -0.6,
     "mode": "root",
     "posts": [
       "Voters drowning in medical debt flock to populist healthcare slogans.\nEvidence: High medical bills, 66% poll support, vague reform blueprints\n#Aletheia #USPol #Healthcare",
-      "Midterm candidates championing Medicare for All tap into widespread public frustration, offering a powerful symbol of radical change for Americans crushed by medical debt.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While two-thirds embrace the catchphrase for relief, voters admit they have no idea how it works, masking a lack of viable legislative pathways and fiscal plans.\nResulting Judgement: (-0.85, -0.75) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nCampaigns weaponize popular economic anxiety as a rhetorical banner while bypassing concrete implementation realities.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 7.4, z: 2)",
+      "Midterm candidates championing Medicare for All tap into widespread public frustration, offering a powerful symbol of radical change for Americans crushed by medical debt.\nStated Judgement: (+0.45, +0.00) — Lesser Good",
+      "While two-thirds embrace the catchphrase for relief, voters admit they have no idea how it works, masking a lack of viable legislative pathways and fiscal plans.\nResulting Judgement: (-0.70, -0.60) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nCampaigns weaponize popular economic anxiety as a rhetorical banner while bypassing concrete implementation realities.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 7.4, z: 2)",
       "- Political Candidates: FAIL (-0.80, -0.70) — Sells vague slogans for votes.\n- Electoral Framing: COND (-0.60, -0.50) — Captures angst, omits costs.",
       "As healthcare costs soar, midterm candidates are wielding Medicare for All as a progressive rallying cry to connect with voters facing crippling medical expenses.",
       "The Poison:\nRelying on symbolic catchphrases without honest debate on fiscal mechanics creates false hope and polarizes actual health policy solutions.",
       "The Breakdown & Plane Error:\nThe analysis confuses WHO wants relief (patients) with WHAT policy can deliver solvency, substituting emotional slogans for systemic design.",
       "Social Physics Analysis:\nPoliticians run a smart selfish loop, packaging widespread economic pain into catchy pretexts to capture votes while avoiding the hard policy trade-offs required.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Rhetorical mobilization replaces systemic reform.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Rhetorical mobilization replaces systemic reform.",
       "The Unavoidable Truth: Millions of Americans face devastating medical bills that current insurance systems fail to mitigate.\n\nThe Unavoidable Lie: Sponsoring a catchphrase constitutes a workable legislative guarantee for universal healthcare.",
       "Alethekanon:\nRhetorical symbols of radical change offer emotional comfort while evading the rigorous structural mechanics required for true reform.",
       "Awwthekanon:\nIt breaks my heart seeing hardworking people like Christina choose between basic dignity and crushing medical debt while politicians just offer catchy slogans.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Political Campaigns",
@@ -160,6 +222,7 @@
         "name": "Jonathan Oberlander",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://thefederalist.com/2026/10/07/new-report-on-biden-targeting-parents-shows-what-dems-will-do-as-soon-as-they-gain-power/?utm_source=rss&utm_medium=rss&utm_campaign=new-report-on-biden-targeting-parents-shows-what-dems-will-do-as-soon-as-they-gain-power",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.15,
-    "real_psi": -0.35,
+    "claim_psi": 1.0,
+    "real_u": 0.07,
+    "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "A report reveals the Biden White House pressured the DOJ to target protesting parents, but the coverage frames it as a midterm campaign weapon.\nEvidence: Exposing overreach, Partisan mobilization, Electoral weapon\n#Aletheia #DOJ #USPol",
-      "The article claims to expose dangerous federal overreach to protect civil liberties and warn voters about the dangers of unchecked partisan power.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "The underlying report documents real White House pressure on the DOJ, but the article weaponizes this serious civil liberties issue for midterm mobilization.\nResulting Judgement: (-0.15, -0.35) — Deception",
-      "Verdict: CONDITIONAL — Revelation into Deception. The article reports on genuine, documented institutional overreach but dilutes its impact with highly partisan electoral fear-mongering.\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 1)",
+      "The article claims to expose dangerous federal overreach to protect civil liberties and warn voters about the dangers of unchecked partisan power.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The underlying report documents real White House pressure on the DOJ, but the article weaponizes this serious civil liberties issue for midterm mobilization.\nResulting Judgement: (+0.07, +0.40) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 1)",
       "- DOJ Weaponization Report: PASS (0.60, -0.20) — Accurately reports White House pressure.\n- Midterm Electoral Framing: FAIL (-0.70, -0.50) — Weaponizes overreach for votes.",
       "A newly released report confirms the Biden White House pressured the DOJ to issue the 2021 Garland memo targeting parents at school board meetings despite constitutional concerns.",
       "The Bright Side:\nThe article successfully highlights critical, documented evidence of executive overreach and the erosion of constitutional boundaries within federal law enforcement.",
       "The Plane Error: Lyrical vs Historical (WHY vs CAUSE). The article uses the historical fact of DOJ overreach to justify a highly partisan, electoral narrative.",
       "Social Physics Analysis:\nThe actors execute a Smart Selfish Maneuver, using the pretext of defending civil liberties to manufacture midterm panic and project all institutional corruption onto one party.",
-      "The Trajectory: The Path of Revelation into Deception.\nWhen you map the gap between exposing government overreach and partisan electoral panic, it plots a direct trajectory toward Deception.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between exposing government overreach and partisan electoral panic, it plots a direct trajectory toward Deception.",
       "The Unavoidable Truth: The White House pressured the DOJ to target protesting parents despite internal constitutional concerns.\n\nThe Unavoidable Lie: Only one political party weaponizes federal law enforcement to target political opponents.",
       "Alethekanon:\nDocumented executive overreach is a grave threat to civil liberties, but reducing it to a partisan midterm campaign slogan dilutes the systemic accountability required.",
       "Awwthekanon:\nParents should always feel safe speaking up for their children without fearing federal investigation. True accountability means protecting everyone's rights, not scoring points.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.45,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.7,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.7,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.55,
+        "O": 0.45,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "DOJ Weaponization Report",
@@ -299,6 +361,7 @@
       "Aletheia",
       "DOJ",
       "USPol"
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

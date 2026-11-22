@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_u": -0.2,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "14 men are arrested for allegedly operating a massive cocaine ring across Penn State fraternities.\nEvidence: 14 arrests, Agostino Abbatiello, synthetic stimulants\n#Aletheia #CampusSafety",
-      "Law enforcement crackdowns on campus drug rings protect students and restore public safety.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The bust exposes a pervasive underground economy of dangerous synthetic stimulants and forced pledge rituals.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA major fraternity drug bust reveals deep-seated dangerous substance networks infecting campus culture.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 2)",
+      "Law enforcement crackdowns on campus drug rings protect students and restore public safety.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The bust exposes a pervasive underground economy of dangerous synthetic stimulants and forced pledge rituals.\nResulting Judgement: (-0.20, -0.20) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA major fraternity drug bust reveals deep-seated dangerous substance networks infecting campus culture.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 2)",
       "- Law Enforcement Action: PASS (0.5, 0.5) — 14 arrests disrupt a major trafficking ring.\n- Campus Drug Culture: FAIL (-0.9, -0.9) — Widespread synthetic stimulants and forced rituals exposed.",
       "Investigators revealed that 14 men allegedly ran a cocaine distribution ring across Penn State fraternities, forcing pledges to cut and pack drugs during initiations.",
       "The Poison:\nThe dangerous mixing of synthetic stimulants and opioids puts unsuspecting students at severe risk of overdose.",
       "The Breakdown & Plane Error:\nFocusing solely on individual arrests (who) obscures the broader systemic supply and demand of illicit campus drugs (why).",
       "Social Physics Analysis:\nFraternity drug rings operate as smart selfish networks where older members exploit pledges for labor and profit, creating manufactured risks masked as brotherhood traditions.",
-      "The Trajectory: The Path of Destruction.\nWhen illicit supply chains embed within campus life, it plots a direct trajectory toward Greater Evil.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen illicit supply chains embed within campus life, it plots a direct trajectory toward Greater Evil.",
       "The Unavoidable Truth: Illicit drug networks on college campuses put student lives at immediate risk.\n\nThe Unavoidable Lie: Individual arrests completely dismantle deeply ingrained campus drug cultures.",
       "Alethekanon:\nBusting a campus drug ring addresses the immediate crime, but treating it as an isolated incident ignores the widespread demand for dangerous synthetic stimulants.",
       "Awwthekanon:\nIt breaks my heart to see young people caught up in dangerous drug rings and toxic initiation rituals when they should be supported and nurtured.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Law Enforcement Action",
@@ -156,6 +218,7 @@
         "name": "Pennsylvania Office of Attorney General",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

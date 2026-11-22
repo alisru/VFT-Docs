@@ -5,22 +5,22 @@
     "subject": "British Woman Fatally Stabbed at German Train Station",
     "link": "https://www.breitbart.com/europe/2026/08/30/british-woman-fatally-stabbed-at-german-train-station/",
     "target_url": "",
-    "claim_u": -1.5,
-    "claim_psi": -1.5,
-    "real_u": -1.5,
-    "real_psi": -1.5,
+    "claim_u": -0.87,
+    "claim_psi": -1.0,
+    "real_u": -0.87,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A tragic and sudden act of violence shatters the peace at a southern German train station.\n\nBritish Woman Fatally Stabbed at German Train Station\nEvidence: Senseless attack, suspect detained, motive unknown\n#Aletheia #Germany #Rosenheim",
-      "A 31-year-old British woman was fatally stabbed at the Rosenheim train station in southern Germany, and a 27-year-old German suspect was immediately detained.\nStated Judgement: (-1.5, -1.5) — Greater Evil",
-      "The police confirmed the tragic stabbing of the British tourist, who was waiting for a train to Austria. The suspect is in custody, and the motive remains under investigation.\nResulting Judgement: (-1.5, -1.5) — Greater Evil",
-      "Verdict: PASS — Reckoning into Destruction.\nThe report accurately conveys the tragic facts of the fatal stabbing as confirmed by local German authorities.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "A 31-year-old British woman was fatally stabbed at the Rosenheim train station in southern Germany, and a 27-year-old German suspect was immediately detained.\nStated Judgement: (-0.87, -1.00) — Greater Evil",
+      "The police confirmed the tragic stabbing of the British tourist, who was waiting for a train to Austria. The suspect is in custody, and the motive remains under investigation.\nResulting Judgement: (-0.87, -1.00) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nThe report accurately conveys the tragic facts of the fatal stabbing as confirmed by local German authorities.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Police Reporting: PASS (-1.5, -1.5) — Accurate and timely public safety updates.\n- Media Coverage: PASS (-1.5, -1.5) — Objective reporting of a tragic event.",
       "A 31-year-old British woman was fatally stabbed early Sunday morning at the Rosenheim train station in Germany. A 27-year-old German suspect was detained immediately.",
       "The Bright Side:\nThe immediate intervention of federal police led to the swift arrest of the suspect, preventing further harm to the public.",
       "The Breakdown & Plane Error:\nThe error is the tragic destruction of life (WHO) in a public space (WHERE). The suddenness of the attack highlights the vulnerability of individuals in transit.",
       "Social Physics Analysis:\nA senseless act of violence instantly disrupts the social fabric, replacing public trust with fear. The swift arrest by law enforcement restores a baseline of security but cannot heal the profound loss.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nWhen you map the sudden and violent loss of life, it plots a direct trajectory toward Greater Evil. The event represents a severe rupture of social peace.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the sudden and violent loss of life, it plots a direct trajectory toward Greater Evil. The event represents a severe rupture of social peace.",
       "The Unavoidable Truth: Public spaces require constant vigilance.\n\nThe Unavoidable Lie: This tragedy could have been easily predicted.",
       "Alethekanon:\nThe swift arrest demonstrates operational readiness by local transit security, but the lack of an apparent motive underscores the difficulty of preventing random violence.",
       "Awwthekanon:\nOur hearts go out to the family of the young woman whose journey was so cruelly cut short. May they find strength in this time of unimaginable grief.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Police Reporting",
@@ -283,6 +345,7 @@
         "name": "United Kingdom",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

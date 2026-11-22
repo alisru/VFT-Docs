@@ -5,22 +5,22 @@
     "subject": "UAE Calls Flydubai Attack ‘Terrorist Act’ for First Time as Israel Probes if Hijacker ‘Was Sent’",
     "link": "https://www.breitbart.com/politics/2026/10/02/uae-calls-flydubai-attack-terrorist-act-for-first-time-as-israel-probes-if-hijacker-was-sent/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.89,
     "mode": "root",
     "posts": [
       "UAE calls Flydubai cockpit attack a terrorist act as security probes expand.\nEvidence: diplomatic labeling, pilot bravery praise, Oman vetting probe\n#Aletheia #Geopolitics",
-      "Officials frame the terror designation as transparent security cooperation to protect regional aviation and identify foreign sponsors.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Beneath diplomatic praise lies systemic failure concealment regarding Oman's known pilot vetting lapse and political exploitation of a near-tragedy.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nA near-miss cockpit attack is weaponized for geopolitical positioning while institutional vetting failures are deflected.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "Officials frame the terror designation as transparent security cooperation to protect regional aviation and identify foreign sponsors.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Beneath diplomatic praise lies systemic failure concealment regarding Oman's known pilot vetting lapse and political exploitation of a near-tragedy.\nResulting Judgement: (-0.94, -0.89) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA near-miss cockpit attack is weaponized for geopolitical positioning while institutional vetting failures are deflected.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "- UAE Diplomacy: COND (0.2, -0.1) — Praises hero pilot but deflects vetting flaws.\n- Israeli Investigation: COND (-0.3, -0.4) — Seeks foreign sponsors amid political optics.",
       "An Omani co-pilot attempted to crash a Flydubai flight to Tel Aviv, prompting senior UAE adviser Anwar Gargash to label it terrorism while Israel investigates possible state sponsorship.",
       "The Bright Side:\nHeroic intervention by the Indian captain and Israeli passengers averted catastrophic mass loss of life.",
       "The Breakdown & Plane Error:\nThe analysis confuses plane safety protocols (WHAT) with geopolitical posturing and intelligence blame-shifting (WHO).",
       "Social Physics Analysis:\nActors run a smart selfish maneuver, leveraging a violent cockpit crisis as a pretext to project blame and obscure systemic regional intelligence failures regarding radicalized pilots.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The negative attractor forces outweigh constructive transparency.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The negative attractor forces outweigh constructive transparency.",
       "The Unavoidable Truth: A radicalized co-pilot nearly brought down a passenger jet over the Middle East.\n\nThe Unavoidable Lie: State officials are treating this purely as an open security matter free of political posturing.",
       "Alethekanon:\nStates rush to brand violence as external terror while hiding their own aviation screening lapses. 🌐",
       "Awwthekanon:\nOur hearts ache for the terror faced by passengers and the heroic crew who stood against unimaginable danger in the skies above.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "UAE Diplomatic Framing",
@@ -221,6 +283,7 @@
         "name": "Israel",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

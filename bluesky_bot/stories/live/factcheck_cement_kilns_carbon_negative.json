@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Innovative research shows cement kilns powered by clean energy could capture more CO2 than they emit via calcium looping!\nEvidence: lab model, energy intensive, 2050 targets\n#Aletheia #ClimateTech 🌐",
-      "Researchers at ETH Zurich and Heirloom Carbon Technologies demonstrate that integrating calcium looping DAC into electric cement kilns could offset 78% of emissions.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "While scientifically sound, the lifecycle analysis relies heavily on future renewable energy buildouts and massive energy inputs for carbon capture.\nResulting Judgement: (+0.75, +0.74) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nRigorous lifecycle modeling outlines a credible path to mitigation, though execution hurdles remain high.\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
+      "Researchers at ETH Zurich and Heirloom Carbon Technologies demonstrate that integrating calcium looping DAC into electric cement kilns could offset 78% of emissions.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While scientifically sound, the lifecycle analysis relies heavily on future renewable energy buildouts and massive energy inputs for carbon capture.\nResulting Judgement: (+0.75, +0.74) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nRigorous lifecycle modeling outlines a credible path to mitigation, though execution hurdles remain high.\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- ETH Zurich Study: PASS (+0.9, +0.8) — Rigorous prospective lifecycle modeling.\n- Heirloom Collaboration: COND (+0.7, +0.6) — Scalability tied to clean energy.",
       "Researchers evaluated different energy scenarios for running calcium looping DAC plants, showing net-negative potential by 2050 if decarbonization succeeds.",
       "The Bright Side:\nTurning a major industrial polluter into an atmospheric carbon sink is a monumental climate breakthrough.",
       "The Breakdown & Plane Error:\nConfusing a prospective technological projection (WHAT) with an immediate operational reality (WHERE/HOW).",
       "Social Physics Analysis:\nBy aligning industrial production with ecological restoration, the project replaces extractive friction with regenerative synergy, empowering sustainable infrastructure.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between optimistic projections and current energy constraints, it plots a direct trajectory toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between optimistic projections and current energy constraints, it plots a direct trajectory toward Grace.",
       "The Unavoidable Truth: Calcium looping can theoretically turn limestone production into a net carbon sink.\n\nThe Unavoidable Lie: This technology solves current emissions today without massive green energy scaling.",
       "Alethekanon:\nProspective models require rigorous real-world validation against energy grid constraints.",
       "Awwthekanon:\nIt is inspiring to see human ingenuity finding ways to heal the very systems we built to build our modern world.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.15,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "ETH Zurich Research",
@@ -273,6 +335,7 @@
         "name": "Vittoria Bolognaro",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

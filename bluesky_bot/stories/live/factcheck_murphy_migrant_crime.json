@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.86,
+    "real_u": -0.88,
+    "real_psi": -0.83,
     "mode": "root",
     "posts": [
       "A prominent senator claims that migrant crime is a \"fake problem,\" using aggregate statistics to dismiss the very real, preventable tragedies affecting American families.\nTop Democrat: Migrant Crime Is a 'Fake Problem'\nEvidence: Public Safety, Narrative, Truth\n#Aletheia #USPol",
-      "Senator Chris Murphy claims that migrant crime is a \"fake problem\" because first-generation and undocumented immigrants commit crimes at lower rates than native-born Americans, suggesting communities with more migrants are safer.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, calling migrant crime \"fake\" erases real victims of preventable crimes committed by illegal aliens, including gang members deported from Murphy's own state who illegally re-entered and committed violent offenses.\nResulting Judgement: (-0.90, -0.86) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction.\nUsing statistical averages to gaslight the public and dismiss individual human tragedies is a cynical attempt to protect a political narrative at the expense of public safety.\n\nIntegrity: Severe Deception (Hypocrisy: 64.0, z: 0)",
+      "Senator Chris Murphy claims that migrant crime is a \"fake problem\" because first-generation and undocumented immigrants commit crimes at lower rates than native-born Americans, suggesting communities with more migrants are safer.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "In reality, calling migrant crime \"fake\" erases real victims of preventable crimes committed by illegal aliens, including gang members deported from Murphy's own state who illegally re-entered and committed violent offenses.\nResulting Judgement: (-0.88, -0.83) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nUsing statistical averages to gaslight the public and dismiss individual human tragedies is a cynical attempt to protect a political narrative at the expense of public safety.\n\nIntegrity: Severe Deception (Hypocrisy: 64.0, z: 0)",
       "- Sen. Chris Murphy: FAIL (-0.90, -0.86) — Dismisses real, preventable crimes as a \"fake problem.\"\n- Statistical Framing: FAIL (-0.85, -0.80) — Uses aggregate rates to erase individual violent crimes.",
       "Connecticut Senator Chris Murphy argued that communities with more immigrants are safer, while critics point out that any crime committed by an illegal alien is entirely preventable through proper border enforcement.",
       "The Poison:\nBy focusing strictly on relative crime rates, advocates ignore the absolute number of victims and the systemic failure of allowing previously deported violent criminals to re-enter the country and commit further harm.",
       "The Breakdown & Plane Error:\nThis is a Logical (HOW) error. The causal claim that \"immigrants lower crime rates\" is used to justify a lack of border enforcement, ignoring the direct causal link between open borders and preventable violent crimes.",
       "Social Physics Analysis:\nThe \"fake problem\" narrative is a classic projection loop. By labeling public concern over migrant crime as xenophobic or \"fake,\" politicians avoid accountability for their failed policies, prioritizing ideology over human lives.",
-      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Dismissing public safety concerns leads to a breakdown of trust and social cohesion.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Dismissing public safety concerns leads to a breakdown of trust and social cohesion.",
       "The Unavoidable Truth: Every crime committed by an illegal alien is a preventable tragedy that proper border enforcement would have stopped.\n\nThe Unavoidable Lie: Calling migrant crime a \"fake problem\" makes communities safer or honors the victims.",
       "Alethekanon:\nReducing human lives to statistical ratios to shield a political agenda from scrutiny is a severe ethical failure. It reveals a preference for ideological purity over the physical security of citizens.",
       "Awwthekanon:\nEvery single life lost to violence is a profound tragedy, and the pain of the families left behind is entirely real. We must never let cold statistics blind us to the sacred value of a human life or the need to protect one another.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sen. Chris Murphy",
@@ -156,6 +218,7 @@
         "name": "Center for Immigration Studies",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

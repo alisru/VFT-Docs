@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.9,
     "claim_psi": 0.8,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "real_u": 0.75,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "Cloudflare acquires Node.js creator Ryan Dahl's startup Deno to supercharge its serverless Workers platform.\nEvidence: Deno acquisition, Kenton Varda, Ryan Dahl\n#Aletheia #CloudComputing #Tech",
-      "Cloudflare announced it is acquiring Deno to simplify self-hosting and improve its Workers programming model, proving open-source collaboration is great business.\nStated Judgement: (+0.9, +0.8) — Good Preference",
-      "While Deno's team joins Cloudflare to mainstream the Workers model, the deal also represents strategic industry consolidation by a dominant cloud provider absorbing an open-source challenger.\nResulting Judgement: (+0.6, +0.4) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nCloudflare integrates Deno's runtime expertise, securing developer talent while reinforcing its serverless ecosystem.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
+      "Cloudflare announced it is acquiring Deno to simplify self-hosting and improve its Workers programming model, proving open-source collaboration is great business.\nStated Judgement: (+0.90, +0.80) — Greater Good",
+      "While Deno's team joins Cloudflare to mainstream the Workers model, the deal also represents strategic industry consolidation by a dominant cloud provider absorbing an open-source challenger.\nResulting Judgement: (+0.75, +0.45) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nCloudflare integrates Deno's runtime expertise, securing developer talent while reinforcing its serverless ecosystem.\n\nIntegrity: Trustworthy (Hypocrisy: 1.15, z: 0)",
       "- Cloudflare Strategy: PASS (0.8, 0.5) — Strengthens developer ecosystem.\n- Deno Integration: PASS (0.7, 0.4) — Secures funding and platform scale for creators.",
       "Cloudflare has acquired Deno, the runtime startup co-founded by Ryan Dahl and Bert Belder, to integrate its open-source Workers implementation and simplify self-hosting.",
       "The Bright Side:\nCombining forces brings top-tier runtime talent together to make serverless architectures vastly simpler for developers.",
       "The Breakdown & Plane Error:\nFraming a corporate buyout purely as an open-source altruistic alignment (WHAT) rather than strategic platform consolidation (WHO).",
       "Social Physics Analysis:\nCloudflare operates on a mixed loop: leveraging transparent developer tooling (Smart Altruistic) while consolidating platform dominance to capture developer mindshare (Smart Selfish).",
-      "The Trajectory: The Path of Redemption.\nWhen you map corporate consolidation against developer empowerment, it plots a trajectory toward ecosystem standardization. Mutual technical utility overcomes competitive friction.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map corporate consolidation against developer empowerment, it plots a trajectory toward ecosystem standardization. Mutual technical utility overcomes competitive friction.",
       "The Unavoidable Truth: Deno's team secures vital resources and massive distribution through Cloudflare's global network.\n\nThe Unavoidable Lie: This acquisition was driven entirely by philanthropic devotion to open-source decentralization.",
       "Alethekanon:\nOpen-source challengers frequently merge into platform giants when infrastructure scale becomes imperative for survival.",
       "Awwthekanon:\nIt's wonderful that Ryan Dahl and his team found a supportive home to scale their vision for simpler serverless development.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Cloudflare Strategy",
@@ -168,6 +230,7 @@
       "Aletheia",
       "CloudComputing",
       "Tech"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

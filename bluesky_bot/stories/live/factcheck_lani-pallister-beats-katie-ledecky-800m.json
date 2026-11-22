@@ -14,7 +14,7 @@
       "Lani Pallister shatters Katie Ledecky's 16-year 800m win streak at the Pan Pacs.\nEvidence: historical victory, record times, mutual respect\n#Swimming #Sports #Australia",
       "Lani Pallister became the first swimmer to defeat Katie Ledecky over 800m at an international meet, claiming four gold medals.\nStated Judgement: (+1.00, +1.00) — Graceful Excellence",
       "Australia's Dolphins flexed massive middle-distance muscle with stunning record-breaking swims across the board.\nResulting Judgement: (+1.00, +1.00) — Graceful Excellence",
-      "Verdict: PASS — The Path of Grace.\nAn inspiring athletic milestone achieved through relentless dedication and mutual sportsmanship.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nAn inspiring athletic milestone achieved through relentless dedication and mutual sportsmanship.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Lani Pallister: PASS (1.0, 0.5) — Historic gold sweep.\n- Katie Ledecky: PASS (1.0, 0.5) — Gracious sporting icon.",
       "Lani Pallister conquered the 800m freestyle at the Pan Pacific Swimming Championships, defeating the legendary Katie Ledecky in her signature event.",
       "The Bright Side:\nTrue sporting greatness inspires the next generation, echoing Ledecky's own advice to a young Pallister a decade ago.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Lani Pallister Performance",
@@ -279,6 +341,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

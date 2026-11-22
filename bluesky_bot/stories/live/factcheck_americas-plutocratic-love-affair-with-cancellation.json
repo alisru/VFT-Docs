@@ -5,22 +5,22 @@
     "subject": "America’s Plutocratic Love Affair with Cancellation",
     "link": "https://thebaffler.com/salvos/on-the-rudeness-of-mobs-pogue?utm_source=twitter&utm_medium=feed&utm_campaign=archival",
     "target_url": "https://bsky.app/profile/thebaffler.com/post/3mxpsi7vi6k2f",
-    "claim_u": 0.4,
-    "claim_psi": 0.2,
-    "real_u": -0.75,
-    "real_psi": -0.8,
+    "claim_u": 0.0,
+    "claim_psi": -0.1,
+    "real_u": -0.1,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "America’s Plutocratic Love Affair with Cancellation\nEvidence: historical riots, elite co-optation, performative corporate allyship\n#Aletheia #History",
-      "The essay claims that cancel culture and mob rule are not modern departures from American norms, but the very foundational mechanisms through which elite merchants forged the nation.\nStated Judgement: (+0.4, +0.2) — Good Preference",
-      "In reality, populist outrage across American history—from the Stamp Act mobs to modern corporate PR—has consistently been steered by economic elites to mask class rule and protect property.\nResulting Judgement: (-0.75, -0.8) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nExposes how ruling elites weaponize popular anger while preserving oligarchy.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 1)",
+      "The essay claims that cancel culture and mob rule are not modern departures from American norms, but the very foundational mechanisms through which elite merchants forged the nation.\nStated Judgement: (+0.00, -0.10) — Greater Evil",
+      "In reality, populist outrage across American history—from the Stamp Act mobs to modern corporate PR—has consistently been steered by economic elites to mask class rule and protect property.\nResulting Judgement: (-0.10, -0.20) — Greater Evil",
+      "Verdict: CONDITIONAL — Destruction.\nExposes how ruling elites weaponize popular anger while preserving oligarchy.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 1)",
       "Sub-Audits Breakdown:\n- Historical Framing: PASS (+0.5, +0.4) — Exposes colonial elite manipulation.\n- Modern Corporate PR: PASS (-0.7, -0.8) — Highlights performative allyship.",
       "James Pogue examines the deep historical ties between American populism, elite merchant interests, and corporate co-optation from 1769 to the modern era in The Baffler.",
       "The Poison:\nConflating all popular movements with elite orchestration risks fatalism, obscuring genuine grassroots emancipation behind cynical institutional cynicism.",
       "Plane Error (WHAT vs WHO): Mistaking the surface phenomenon of cultural shouting matches (WHAT) for the underlying structural mechanics of elite wealth extraction and class control (WHO).",
       "Social Physics Analysis:\nElites run a smart selfish maneuver: they stoke or accommodate populist outrage as a pretext, channeling popular energy away from real economic redistribution while preserving oligarchic power.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated democratic ideals and elite economic capture, it plots a direct trajectory toward Deception. (ψ=-0.8, u=-0.75).",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated democratic ideals and elite economic capture, it plots a direct trajectory toward Deception. (ψ=-0.8, u=-0.75).",
       "The Unavoidable Truth: American populism has perpetually served as an instrument for rising economic elites to capture state power.\n\nThe Unavoidable Lie: Ruling institutions genuinely champion free speech or equality.",
       "Alethekanon:\nMob rule and elite capture are two sides of the same historical coin in America. Pretending cancel culture is a recent invention ignores its foundational role in oligarchic rule.",
       "Awwthekanon:\nIt hurts to realize that the righteous fires of popular protest are so often harvested by the powerful to cement their own rule. But naming this trick is the first step toward true liberation.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Historical Framing",
@@ -162,6 +224,7 @@
     "tags": [
       "Aletheia",
       "History"
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

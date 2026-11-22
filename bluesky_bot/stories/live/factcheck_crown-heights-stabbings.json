@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_u": -0.65,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Early morning violence strikes Brooklyn.\nEvidence: 3 hospitalized, parade kickoff, NYPD deployment\n#Aletheia #NYC",
-      "Parade security and community events aim for peaceful celebration.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Twin stabbings leave three men hospitalized ahead of festivities.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Reckoning.\nSudden violence shatters public safety prior to the parade.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Parade security and community events aim for peaceful celebration.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Twin stabbings leave three men hospitalized ahead of festivities.\nResulting Judgement: (-0.65, -0.70) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nSudden violence shatters public safety prior to the parade.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "- NYPD Deployment: COND (-0.5, -0.5) — Massive police presence unable to prevent pre-dawn stabbings.\n- Community Safety: FAIL (-0.8, -0.9) — Recurring violent incidents undermine public trust.",
       "Three men were stabbed in Crown Heights, Brooklyn, early Monday morning just hours before the West Indian American Day parade.",
       "The Poison:\nRecurring pre-dawn violence mars community celebrations and strains emergency medical systems.",
       "The Breakdown & Plane Error:\nConfusing the festive intent (WHO) with the violent execution (WHAT) leads to security failures.",
       "Social Physics Analysis:\nPerpetrators run a smart selfish maneuver using chaos to inflict harm, while authorities struggle to establish genuine safety.",
-      "The Trajectory: The Path of Reckoning.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked violence compounds systemic risk.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked violence compounds systemic risk.",
       "The Unavoidable Truth: Public safety requires proactive prevention rather than reactive deployments.\n\nThe Unavoidable Lie: Heavy police presence alone guarantees community peace.",
       "Alethekanon:\nViolence in public spaces shatters the social contract before celebrations even begin.",
       "Awwthekanon:\nMy heart aches for the victims and their families whose morning turned into a nightmare of pain and hospital visits.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NYPD Deployment",
@@ -151,6 +213,7 @@
         "name": "West Indian American Day Carnival Association",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

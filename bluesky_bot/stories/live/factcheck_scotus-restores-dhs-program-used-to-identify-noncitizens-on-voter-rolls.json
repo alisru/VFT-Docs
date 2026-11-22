@@ -5,22 +5,22 @@
     "subject": "SCOTUS Restores DHS Program Used To Identify Noncitizens On Voter Rolls",
     "link": "https://thefederalist.com/2026/09/25/scotus-restores-dhs-program-used-to-identify-noncitizens-on-voter-rolls/?utm_source=rss&utm_medium=rss&utm_campaign=scotus-restores-dhs-program-used-to-identify-noncitizens-on-voter-rolls",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
-    "real_psi": -0.3,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.16,
+    "real_psi": 0.71,
     "mode": "root",
     "posts": [
       "SCOTUS steps in to restore voter verification tools.\nEvidence: DHS database, 6-3 ruling, lower court pause\n#Aletheia #USPol",
-      "The Supreme Court's emergency order temporarily restores a DHS database for voter roll verification, framing it purely as a neutral defense of election integrity against lower court blocks.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "The revamped SAVE database allows massive bulk searches using Social Security numbers close to midterms, carrying substantial risks of purging valid voters under procedural pretexts.\nResulting Judgement: (+0.2, -0.3) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nA legally grounded stay preserves administrative authority while bypassing immediate electoral protections, favoring state verification machinery over broad enfranchisement.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
+      "The Supreme Court's emergency order temporarily restores a DHS database for voter roll verification, framing it purely as a neutral defense of election integrity against lower court blocks.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The revamped SAVE database allows massive bulk searches using Social Security numbers close to midterms, carrying substantial risks of purging valid voters under procedural pretexts.\nResulting Judgement: (-0.16, +0.71) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nA legally grounded stay preserves administrative authority while bypassing immediate electoral protections, favoring state verification machinery over broad enfranchisement.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 1)",
       "- Supreme Court Majority: COND (+0.4, +0.1) — Upholds administrative authority under statutory text.\n- Dissenting Justices: PASS (+0.7, +0.4) — Highlights statutory overreach and risk to voter rolls.",
       "The Supreme Court paused a lower court injunction, allowing states to use the Department of Homeland Security's SAVE database to verify voter rolls ahead of midterms.",
       "The Bright Side:\nAdministrative databases gain clear statutory backing from existing immigration reform laws rather than executive fiat.",
       "The Breakdown & Plane Error:\nThe analysis shifts from WHO benefits (election security vs voter access) to WHAT technical statutes apply, glossing over mass purge risks.",
       "Social Physics Analysis:\nThe administration uses a Smart Selfish Maneuver by framing mass data scraping as neutral election hygiene, projecting partisan motives onto critics while quietly expanding state power over voter rolls.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Administrative efficiency overrides broad civic protection.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Administrative efficiency overrides broad civic protection.",
       "The Unavoidable Truth: The SAVE database allows bulk citizenship checks across massive voter registries.\n\nThe Unavoidable Lie: This administrative tool operates entirely free of partisan electoral weaponization.",
       "Alethekanon:\nAdministrative streamlining routinely becomes a partisan weapon when deployed at scale right before an election 🌐",
       "Awwthekanon:\nIt's unsettling to think that bureaucratic database checks might accidentally lock legitimate voters out of their sacred right to participate in democracy.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.3,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Supreme Court Majority",
@@ -214,6 +276,7 @@
         "name": "Sonia Sotomayor",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

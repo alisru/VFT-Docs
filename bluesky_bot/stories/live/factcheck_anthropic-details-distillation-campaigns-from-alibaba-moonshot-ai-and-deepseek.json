@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.2,
-    "real_u": -0.62,
-    "real_psi": -0.81,
+    "real_u": -0.03,
+    "real_psi": -0.22,
     "mode": "root",
     "posts": [
       "Industrial model scraping exposed. Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek.\nEvidence: Fair AI Research, Model Distillation Attacks, Systemic Capability Extraction\n#Aletheia #AI",
-      "Chinese frontier AI labs claim open competition and independent development of reasoning models.\nStated Judgement: (+0.8, +0.2) — Greater Good",
-      "190M+ illicit exchanges harvested Claude's hidden reasoning chains via thousands of fraudulent accounts.\nResulting Judgement: (-0.62, -0.81) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Systematic bypass of safety guardrails and intellectual property extraction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, Uncertainty z: 3)",
+      "Chinese frontier AI labs claim open competition and independent development of reasoning models.\nStated Judgement: (+0.80, +0.20) — Greater Good",
+      "190M+ illicit exchanges harvested Claude's hidden reasoning chains via thousands of fraudulent accounts.\nResulting Judgement: (-0.03, -0.22) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, Uncertainty z: 3)",
       "- Distillation Campaigns: FAIL (-0.72, -0.85) — Illicit scraping via fraudulent accounts.\n- Defensive Security: PASS (+0.65, +0.40) — Active detection and exposure.",
       "Anthropic exposed industrial-scale distillation attacks where labs used over 150M prompts through fake accounts to scrape Claude's internal reasoning systems.",
       "The Bright Side:\nModel transparency mechanisms are forcing illicit harvesting attempts into the public eye, enabling faster defensive security patches across frontier AI infrastructure.",
       "The Breakdown & Plane Error:\nThe report exposes a Metaphysical and Logical Plane failure where stated open research acts as a pretext for automated intellectual property scraping without attribution or consent.",
       "Social Physics Analysis:\nActors run a Smart Selfish Loop using the pretext of open scientific advancement while extracting high-value reasoning chains. They project accusations of unfair market dominance onto Western frontier labs while covertly leveraging fraudulent proxy networks to subsidize their own training costs.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil, degrading trust in open research ecosystems.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil, degrading trust in open research ecosystems.",
       "The Unavoidable Truth: Synthetic reasoning capabilities are actively harvested through systematic API bypasses.\nThe Unavoidable Lie: Industrial model distillation is merely standard academic bench-marking.",
       "Alethekanon:\nSystematic model extraction exposes the structural fragility of public API boundaries under persistent adversarial fine-tuning campaigns. Defensive monitoring must evolve faster than prompt translation bypasses.",
       "Awwthekanon:\nIt is disheartening to see shared technological progress marred by covert exploitation, undermining the trust needed to build AI safely for everyone.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Distillation Campaigns",
@@ -167,6 +229,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

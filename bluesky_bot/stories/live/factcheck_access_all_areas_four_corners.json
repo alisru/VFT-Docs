@@ -5,22 +5,22 @@
     "subject": "Access All Areas",
     "link": "https://www.abc.net.au/news/2026-08-24/access-all-areas/107072218",
     "target_url": "https://bsky.app/profile/grogsgamut.bsky.social/post/3mtuuk3nmjk22",
-    "claim_u": 0.95,
-    "claim_psi": 0.82,
-    "real_u": -0.97,
-    "real_psi": -0.88,
+    "claim_u": 0.94,
+    "claim_psi": 0.95,
+    "real_u": -0.35,
+    "real_psi": -0.41,
     "mode": "root",
     "posts": [
       "Canberra's morning soccer match wasn't just fitness—it was a paid corporate access pipeline.\n\nAccess All Areas: Four Corners\nEvidence: Healthy Morning Sport, Paid Lobbying Access, Transparent Governance\n#Aletheia #AusPol",
-      "The Parliamentary Sports Club presented itself as an innocent, bipartisan social outlet for MPs and staffers to build cross-party camaraderie before legislative chamber sessions.\nStated Judgement: (+0.95, +0.82) — Greater Good",
-      "The club operated as a registered lobbying firm secretly funded by gambling, alcohol, and fossil fuel groups to corner politicians off-guard, expelling David Pocock for raising alarms.\nResulting Judgement: (-0.97, -0.88) — Greater Evil",
-      "Verdict: FAIL — Fall into Deception. Wholesome collegiality was weaponised into commercial influence peddling.\n\nIntegrity: Severe Deception (Hypocrisy: 24.8, z: 2)",
+      "The Parliamentary Sports Club presented itself as an innocent, bipartisan social outlet for MPs and staffers to build cross-party camaraderie before legislative chamber sessions.\nStated Judgement: (+0.94, +0.95) — Greater Good",
+      "The club operated as a registered lobbying firm secretly funded by gambling, alcohol, and fossil fuel groups to corner politicians off-guard, expelling David Pocock for raising alarms.\nResulting Judgement: (-0.35, -0.41) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 24.8, z: 2)",
       "Sub-Audits Breakdown:\n- Parliament Sports Club: FAIL (-0.97, -0.88) — Disguised lobbying vehicle.\n- David Pocock Whistleblowing: PASS (+0.92, +0.85) — Resisted corrupt access.\n- Wagering Lobby: FAIL (-0.95, -0.90) — Buying early morning access.",
       "Four Corners revealed that Canberra's Parliament Sports Club secretly registered as a lobbyist, taking money from sports betting giants to give corporate figures casual access to politicians.",
       "The Poison:\nCamaraderie and physical wellness were converted into covert lobbying assets, eroding democratic accountability while silencing whistleblowers who exposed the conflict.",
       "The Breakdown & Plane Error:\nThis is a WHO vs WHAT inversion. Bipartisan wellness (WHAT) was sold as the mission, but privileged access for predatory corporate lobbies (WHO) was the actual business model.",
       "Social Physics Analysis:\nBy cloaking corporate lobbying in casual morning sport, commercial actors bypassed democratic transparency. When challenged, they used institutional exclusion to protect their pay-to-play pipeline.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil through institutional capture.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil through institutional capture.",
       "The Unavoidable Truth: Corporate lobbyists bought early morning access to off-guard lawmakers.\n\nThe Unavoidable Lie: The club was merely a friendly social outlet for parliamentary staff.",
       "Alethekanon:\nMonetising informal social spaces transforms civil collegiality into predatory commercial capture. When accountability triggers expulsion, institutional corruption has become the baseline.",
       "Awwthekanon:\nIt hurts to see genuine human connection and friendly sport turned into a sneaky corporate trap. Lawmakers deserve honest recreation, not disguised sales pitches.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.97,
+        "O": 0.07,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.97,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.73,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.67,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.87,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.43,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.67,
+        "O": 0.43,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.27,
+        "O": 0.47,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.9,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.77,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.83,
+        "O": 0.37,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Parliament Sports Club Access Conduit",
@@ -370,6 +432,7 @@
         "name": "Kai Cantwell",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Excluding the ideological fringe may either clarify a party's brand or fracture its electoral coalition.\n\nRahm Emanuel on Party Purity\nEvidence: ideological boundary set, big tent challenged, 2028 positioning\n#Aletheia #USPol",
-      "Emanuel argues that democratic socialists do not belong in the Democratic Party and should run independently.\nStated Judgement: (+0.6, +0.4) — Good Preference",
-      "The hard-line stance functions as a preemptive brand defense and positioning maneuver for a 2028 presidential run.\nResulting Judgement: (-0.5, -0.6) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nExclusionary rhetoric masks personal political positioning under the guise of platform clarity.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.0, z: 2)",
+      "Emanuel argues that democratic socialists do not belong in the Democratic Party and should run independently.\nStated Judgement: (+0.60, +0.40) — Greater Good",
+      "The hard-line stance functions as a preemptive brand defense and positioning maneuver for a 2028 presidential run.\nResulting Judgement: (-0.50, -0.60) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nExclusionary rhetoric masks personal political positioning under the guise of platform clarity.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.0, z: 2)",
       "Sub-Audits Breakdown:\n- Platform Clarity: PASS (0.6, 0.4) — Demands clear ideological lines.\n- Political Positioning: FAIL (-0.5, -0.6) — Uses gatekeeping for 2028 bid.",
       "Former Obama adviser Rahm Emanuel stated on Fox News Sunday that democratic socialists should be locked out of the Democratic Party.",
       "The Bright Side:\nForces transparent debate over core party principles.",
       "The Breakdown & Plane Error:\nConfusing WHO (ideological faction) with HOW (electoral strategy).",
       "Social Physics Analysis:\nEmanuel projects ideological purity as a rescue mission for the party while using exclusion to carve out a distinct centrist brand for himself.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Factional gatekeeping deepens internal polarization.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Factional gatekeeping deepens internal polarization.",
       "The Unavoidable Truth: Big-tent parties constantly struggle to reconcile moderate and radical wings.\n\nThe Unavoidable Lie: Exclusionary purity tests are motivated purely by institutional health.",
       "Alethekanon:\nDefining boundaries protects brand identity, but gatekeeping driven by personal ambition only accelerates factional warfare.",
       "Awwthekanon:\nPoliticians fighting over who belongs in the family leave everyday voters feeling like unwanted strangers in their own home.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Platform Clarity",
@@ -147,6 +209,7 @@
         "name": "Chris Murphy",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

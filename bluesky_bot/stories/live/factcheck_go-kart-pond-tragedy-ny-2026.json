@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.7,
+    "real_u": -0.78,
+    "real_psi": -0.68,
     "mode": "root",
     "posts": [
       "An 11-year-old boy tragically died just days before starting middle school when his go-kart overturned into an upstate NY pond.\nEvidence: Fatal accident, Pond rollover, Young victim Parker Mitchell\n#Aletheia #NewYork",
-      "Reports detail a heartbreaking recreational accident where a young boy's go-kart flipped into water, trapping him underneath.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "The stark reality is a devastating physical tragedy claiming a young life through a sudden, fatal mishap during routine recreation.\nResulting Judgement: (-0.8, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA freak recreational accident ends a young life, highlighting the fragility of safety in everyday activities.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, z: 2)",
+      "Reports detail a heartbreaking recreational accident where a young boy's go-kart flipped into water, trapping him underneath.\nStated Judgement: (+0.80, +0.00) — Lesser Good",
+      "The stark reality is a devastating physical tragedy claiming a young life through a sudden, fatal mishap during routine recreation.\nResulting Judgement: (-0.78, -0.68) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA freak recreational accident ends a young life, highlighting the fragility of safety in everyday activities.\n\nIntegrity: Severe Deception (Hypocrisy: 12.0, z: 2)",
       "- Recreational Safety: FAIL (-0.75, -0.65) — Lack of physical barriers around deep water.\n- Family Oversight: FAIL (-0.8, -0.7) — Tragic accidental entrapment.",
       "Parker Mitchell, 11, was operating a go-kart with his 8-year-old sister in Darien, NY, when the vehicle rolled into a pond, pinning him underwater before responders could save him.",
       "The Poison:\nThe suddenness of recreational hazards turning fatal underscores how quickly routine family moments can shatter.",
       "The Breakdown & Plane Error:\nThe reporting mixes up the WHERE (the specific pond location) with the WHAT (the mechanical rollover and drowning mechanics).",
       "Social Physics Analysis:\nNo malicious actor or Smart Selfish Loop is present; this is a tragic physical accident compounded by environmental hazards lacking safeguards.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between recreational fun and fatal entrapment, it plots a direct trajectory toward Lesser Evil (-0.8, -0.7).",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between recreational fun and fatal entrapment, it plots a direct trajectory toward Lesser Evil (-0.8, -0.7).",
       "The Unavoidable Truth: Unfenced rural bodies of water pose severe hidden risks to children playing nearby.\n\nThe Unavoidable Lie: That standard recreational equipment carries zero lethal risk.",
       "Alethekanon:\nA heartbreaking reminder of how fragile life is when playful youth intersects with hidden environmental hazards.🌐",
       "Awwthekanon:\nMy heart aches for Parker's family and little Teagan. Losing a child right before middle school is a pain no family should ever have to bear.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Recreational Safety",
@@ -156,6 +218,7 @@
         "name": "Genesee County Sheriff's Office",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

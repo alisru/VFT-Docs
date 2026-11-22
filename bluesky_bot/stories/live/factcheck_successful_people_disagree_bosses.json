@@ -6,21 +6,21 @@
     "link": "https://cnb.cx/3UpuG2w",
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mtjmkt5x5727",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
+    "claim_psi": 1.0,
     "real_u": 1.0,
-    "real_psi": 0.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Navigating corporate hierarchy doesn't have to mean silent compliance. Here is how to disagree productively.\n\nManaging Up Strategies\nEvidence: tactful disagreement, mutual trust, constructive alignment\n#Aletheia #Career #Management",
-      "The claim is that using specific, non-confrontational phrases to disagree with leaders builds trust and respect.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The reality aligns: framing disagreement around shared goals and objective risks reduces defensive reactions.\nResulting Judgement: (+1.0, 0.0) — Good Preference",
-      "Verdict: PASS — Stasis in Grace.\nThe advice provides actionable, psychologically sound communication tools that reduce workplace friction.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The claim is that using specific, non-confrontational phrases to disagree with leaders builds trust and respect.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality aligns: framing disagreement around shared goals and objective risks reduces defensive reactions.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nThe advice provides actionable, psychologically sound communication tools that reduce workplace friction.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Melody Wilding: PASS (1.00, 0.00) — Practical, evidence-based coaching advice.\n- Corporate Communication: PASS (1.00, 0.00) — Reduces systemic friction.",
       "Executive coach Melody Wilding outlines five diplomatic phrases designed to help professionals disagree with senior leaders without damaging their professional relationships or triggering defensive reactions.",
       "The Poison:\nWhile these phrases are highly effective in healthy organizations, using them under highly toxic, authoritarian leadership may still result in retaliatory behavior.",
       "The Breakdown & Plane Error:\nNo plane error detected. The advice is logically consistent across all planes, matching its stated intent (Lyrical) with practical, real-world application (Physical).",
       "Social Physics Analysis:\nBy replacing confrontational language with collaborative framing, these techniques minimize interpersonal friction. They shift the dynamic from a power struggle to a shared problem-solving exercise, maximizing constructive potential.",
-      "The Trajectory: Stasis in Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of transparent intent and constructive action maintains low systemic strain.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of transparent intent and constructive action maintains low systemic strain.",
       "The Unavoidable Truth: Respect is earned by solving problems, not by blind agreement.\nThe Unavoidable Lie: You do not have to pretend your boss is always right to keep your job.",
       "Alethekanon:\nConstructive dissent is the lifeblood of resilient organizations; suppressing it leads to systemic blindness and eventual operational failure.",
       "Awwthekanon:\nSpeaking up can be terrifying, but finding gentle ways to share your truth honors both your own expertise and the relationship.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.85,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Melody Wilding Coaching",
@@ -274,6 +336,7 @@
         "name": "CNBC",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

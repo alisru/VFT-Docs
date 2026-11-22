@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.9,
     "claim_psi": 0.8,
-    "real_u": 0.3,
-    "real_psi": 0.1,
+    "real_u": 0.15,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "Rep. Thomas Massie uses congressional floor time to accuse Prince Andrew of US sex crimes.\nEvidence: Epstein files, civil settlement, floor speech\n#Aletheia #USPol #Justice",
-      "Massie claims unredacted Epstein document releases will force accountability for powerful abusers.\nStated Judgement: (0.9, 0.8) — Good Preference",
-      "Ground reality shows uncharged allegations backed by civil settlements and political pressure from departing lawmakers.\nResulting Judgement: (0.3, 0.1) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nExposing institutional complicity in elite trafficking networks serves justice, despite political theater motives.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Massie claims unredacted Epstein document releases will force accountability for powerful abusers.\nStated Judgement: (+0.90, +0.80) — Greater Good",
+      "Ground reality shows uncharged allegations backed by civil settlements and political pressure from departing lawmakers.\nResulting Judgement: (+0.15, +0.05) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nExposing institutional complicity in elite trafficking networks serves justice, despite political theater motives.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Rep. Thomas Massie: PASS (0.5, 0.4) — Pushes transparency but leverages departing status.\n- Department of Justice: COND (-0.2, -0.3) — Withholds document transparency amid political stalling.",
       "Rep. Thomas Massie publicly accused Prince Andrew and other prominent figures of committing sex crimes while demanding the release of millions of Epstein documents.",
       "The Bright Side:\nUnflinching congressional pressure forces institutional accountability regarding elite abuse networks.",
       "The Breakdown & Plane Error:\nExamines Q6 Historical origins of abuse networks versus Q1 Metaphysical accountability of elites.",
       "Social Physics Analysis:\nMassie bypassed institutional reticence by weaponizing congressional privilege, forcing uncomfortable truths into public view despite personal political departure.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Demanding transparent records dismantles impunity.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Demanding transparent records dismantles impunity.",
       "The Unavoidable Truth: Powerful elites shielded by institutional privilege must face public accountability.\n\nThe Unavoidable Lie: Congressional floor declarations substitute for formal criminal indictments.",
       "Alethekanon:\nCongressional privilege provides a rare battering ram against elite impunity. Transparency remains the ultimate disinfectant.",
       "Awwthekanon:\nMay every victim of horrific abuse finally find truth, validation, and true restorative justice without obstruction.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Rep. Thomas Massie",
@@ -172,6 +234,7 @@
         "name": "Virginia Giuffre",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

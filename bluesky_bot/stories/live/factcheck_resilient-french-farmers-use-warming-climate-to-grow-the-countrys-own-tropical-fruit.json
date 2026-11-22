@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.7,
-    "real_psi": 0.8,
+    "real_u": 0.8,
+    "real_psi": 0.7,
     "mode": "root",
     "posts": [
       "French farmers pivot to tropical fruits and resilient crops as regional climates warm.\nEvidence: agricultural adaptation, local innovation, warming climate\n#Aletheia #Agriculture #Climate",
-      "Farmers in the south of France embrace a warming climate to successfully cultivate bananas, papayas, and drought-hardy sorghum.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Pragmatic adaptation allows local growers to replace failing crops with resilient alternatives, maintaining high agricultural standards.\nResulting Judgement: (+0.7, +0.8) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nPractical ecological adaptation turns environmental strain into agricultural innovation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Farmers in the south of France embrace a warming climate to successfully cultivate bananas, papayas, and drought-hardy sorghum.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Pragmatic adaptation allows local growers to replace failing crops with resilient alternatives, maintaining high agricultural standards.\nResulting Judgement: (+0.80, +0.70) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nPractical ecological adaptation turns environmental strain into agricultural innovation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Agricultural Innovation: PASS (0.9, 0.8) — Successful shift to climate-resilient crops.\n- Ecological Framing: PASS (0.7, 0.6) — Pragmatic response to environmental reality.",
       "French farmers are adapting to increasing summer heat by cultivating tropical produce like bananas and papayas, proving resilience in shifting conditions.",
       "The Bright Side:\nDemonstrates remarkable human ingenuity and local agricultural flexibility in the face of climate change.",
       "The Breakdown & Plane Error:\nFocusing on physical survival and crop selection (WHERE/HOW) rather than political rhetoric, anchoring solutions in material reality.",
       "Social Physics Analysis:\nActors deploy smart altruistic problem-solving, transparently adapting to environmental strain and sharing resilient techniques.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Empirical adaptation minimizes systemic friction.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Empirical adaptation minimizes systemic friction.",
       "The Unavoidable Truth: Changing climate conditions demand radical shifts in traditional farming.\n\nThe Unavoidable Lie: Traditional regional crop layouts can be preserved without modification.",
       "Alethekanon:\nPragmatic adaptation demonstrates that survival requires shedding rigid attachments to historical norms.",
       "Awwthekanon:\nWhen the earth shifts beneath their feet, these growers find new ways to nurture life and sustain their communities with quiet courage.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Agricultural Innovation",
@@ -163,6 +225,7 @@
         "name": "Good News Network",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

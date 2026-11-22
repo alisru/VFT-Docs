@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/groundup.org.za/post/3mx4e63fmr222",
     "claim_u": 0.85,
     "claim_psi": 0.75,
-    "real_u": 0.65,
-    "real_psi": 0.55,
+    "real_u": 0.55,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "Thousands of voices unite in Cape Town to demand an end to the humanitarian crisis in Palestine.\nThousands march in Cape Town for freedom in Palestine\nEvidence: Human rights, Grassroots solidarity, Systemic empowerment\n#Aletheia #Palestine #SouthAfrica",
-      "Organizers claim the march is a peaceful, inclusive mobilization of global conscience demanding an end to genocide, war crimes, and state repression in Palestine.\nStated Judgement: (0.85, 0.75) — Greater Good",
-      "The march successfully mobilized thousands in peaceful solidarity, emphasizing human rights and explicitly condemning hate speech, though some political actors used the platform for domestic leverage.\nResulting Judgement: (0.65, 0.55) — Lesser Good",
-      "Verdict: PASS — Awakening into Grace. A powerful grassroots demonstration of solidarity and human rights advocacy, despite minor dilution from opportunistic political alignments.\nIntegrity: Trustworthy (Hypocrisy: 0.28, z: 1)",
+      "Organizers claim the march is a peaceful, inclusive mobilization of global conscience demanding an end to genocide, war crimes, and state repression in Palestine.\nStated Judgement: (+0.85, +0.75) — Greater Good",
+      "The march successfully mobilized thousands in peaceful solidarity, emphasizing human rights and explicitly condemning hate speech, though some political actors used the platform for domestic leverage.\nResulting Judgement: (+0.55, +0.45) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.28, z: 1)",
       "- Palestine Solidarity Campaign: PASS (0.75, 0.65) — Organized peaceful, inclusive march demanding human rights.\n- Political Alignments (ANC/EFF/Galloway): COND (0.35, 0.25) — Uses humanitarian crisis for domestic political leverage.",
       "Thousands of protesters marched along Cape Town's Sea Point promenade, calling for an end to Israel's military campaign in Gaza and demanding international accountability for war crimes.",
       "The Bright Side:\nOrganizers proactively set ethical boundaries by explicitly condemning antisemitism, homophobia, and xenophobia, preserving the moral core of the protest.",
       "The event bridges the Lyrical (narratives of historical colonization) and the Physical (the immediate demand to stop the loss of civilian lives), keeping the focus on human suffering.",
       "Social Physics Analysis:\nThe grassroots marchers execute a Smart Altruistic Loop, seeking systemic empowerment and global empathy. However, political parties attempt a Smart Selfish Maneuver, co-opting the moral weight of the crisis to boost their own domestic standing.",
-      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The overwhelming moral clarity of the grassroots participants overrides the opportunistic noise.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The overwhelming moral clarity of the grassroots participants overrides the opportunistic noise.",
       "The Unavoidable Truth: Grassroots solidarity is a vital tool for keeping international human rights violations in the spotlight.\nThe Unavoidable Lie: Every political figure speaking at a human rights rally is motivated solely by altruism.",
       "Alethekanon:\nA significant public mobilization that maintains its ethical integrity through explicit rejection of hate speech. The core message of human rights remains clear despite political co-optation.",
       "Awwthekanon:\nSeeing thousands of people walk side-by-side to stand up for families they have never met is so beautiful. It reminds us that our hearts can reach across oceans to offer comfort and hope.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Palestine Solidarity Campaign",
@@ -168,6 +230,7 @@
         "name": "SA Jews For a Free Palestine",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

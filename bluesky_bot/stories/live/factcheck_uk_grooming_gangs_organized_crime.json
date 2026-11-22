@@ -5,22 +5,22 @@
     "subject": "UK Child Rape Grooming Gangs Tied to Organised Crime Groups, Research Project Finds",
     "link": "https://www.breitbart.com/europe/2026/08/30/uk-child-rape-grooming-gangs-tied-to-organised-crime-groups-research-project-finds/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.8,
-    "real_u": -0.7,
-    "real_psi": -0.6,
+    "claim_u": 0.67,
+    "claim_psi": 1.0,
+    "real_u": -0.94,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "New 'Network Map' research ties UK child grooming gangs to organized crime and drug networks.\nEvidence: Network Map project, Casey review, police data\n#Aletheia #UK #Crime",
-      "The project aims to expose systemic institutional cover-ups and trafficking rings behind child exploitation.\nStated Judgement: (+1.0, +0.8) — Greater Good",
-      "While uncovering criminal syndicates, the reality involves profound institutional negligence, trauma of victims, and highly polarized political blame.\nResulting Judgement: (-0.7, -0.6) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\n Institutional silence and criminal exploitation created a massive blind spot that harmed hundreds of thousands.\n\nIntegrity: Severe Deception (Hypocrisy: 8.4, z: 2)",
+      "The project aims to expose systemic institutional cover-ups and trafficking rings behind child exploitation.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "While uncovering criminal syndicates, the reality involves profound institutional negligence, trauma of victims, and highly polarized political blame.\nResulting Judgement: (-0.94, -0.88) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n Institutional silence and criminal exploitation created a massive blind spot that harmed hundreds of thousands.\n\nIntegrity: Severe Deception (Hypocrisy: 8.4, z: 2)",
       "- Network Map Project: PASS (+0.6, +0.5) — Shines light on hidden criminal trafficking networks.\n- Institutional Response: FAIL (-0.9, -0.8) — Decades of cover-ups and political cowardice.",
       "An independent research project linked over a thousand grooming gang predators to drug networks and organized crime across Britain.",
       "The Poison:\nThe realization that institutional fear of racial tensions allowed horrific abuse to continue unchecked for decades.",
       "The Breakdown & Plane Error:\nConfusing administrative self-preservation (WHAT) with child protection (WHO).",
       "Social Physics Analysis:\nAuthorities prioritized bureaucratic reputation over transparency, allowing anti-social grooming networks to thrive under institutional protection.",
-      "The Trajectory: The Path of Reckoning.\nWhen institutional cowardice masks systemic abuse, it plots a direct trajectory toward severe social reckoning.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen institutional cowardice masks systemic abuse, it plots a direct trajectory toward severe social reckoning.",
       "The Unavoidable Truth: Protecting vulnerable children must always supersede political or ethnic sensitivities.\n\nThe Unavoidable Lie: Institutional failures can be permanently buried without catastrophic social costs.",
       "Alethekanon:\nBureaucratic self-preservation and political cowardice enabled horrific abuse of vulnerable children.",
       "Awwthekanon:\nMay every survivor find justice, healing, and a society brave enough to protect the innocent.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Network Map Project",
@@ -216,6 +278,7 @@
         "name": "Baroness Louise Casey",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Creators of October 7 play cal...",
     "link": "https://www.foxnews.com/media/creators-october-7-play-call-fire-alarm-disruption-northwestern-cowardly-attempt-intimidation",
     "target_url": "",
-    "claim_u": 0.76,
-    "claim_psi": 0.74,
-    "real_u": 0.7,
-    "real_psi": 0.78,
+    "claim_u": 0.31,
+    "claim_psi": 0.44,
+    "real_u": 0.02,
+    "real_psi": 0.2,
     "mode": "root",
     "posts": [
       "A false fire alarm emptied the auditorium, but audience members refused to be silenced.\nCreators of October 7 Play Condemn Campus Disruption\nEvidence: Verbatim testimony, Sabotaged venue, Defiant ovation\n#Aletheia #FreeSpeech",
-      "Playwrights Phelim McAleer and Ann McElhinney state an intentional fire alarm was pulled during their Northwestern University performance to intimidate attendees and suppress Oct 7 survivor stories.\nStated Judgement: (+0.76, +0.74) — Greater Good",
-      "Northwestern police confirmed the false alarm evacuation, but attendees returned after security sweeps to complete the performance, turning an act of censorship into a standing ovation for survivor truth.\nResulting Judgement: (+0.70, +0.78) — Greater Good",
-      "Verdict: PASS — Stasis into Grace. Documented facts confirm the malicious disruption and validate the creators' account of audience defiance.\nIntegrity: Trustworthy (Hypocrisy: 1.12, z: 0)",
+      "Playwrights Phelim McAleer and Ann McElhinney state an intentional fire alarm was pulled during their Northwestern University performance to intimidate attendees and suppress Oct 7 survivor stories.\nStated Judgement: (+0.31, +0.44) — Greater Good",
+      "Northwestern police confirmed the false alarm evacuation, but attendees returned after security sweeps to complete the performance, turning an act of censorship into a standing ovation for survivor truth.\nResulting Judgement: (+0.02, +0.20) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.12, z: 0)",
       "- Disrupter: FAIL (-0.88, -0.92) — Abused safety systems.\n- Audience & Cast: PASS (+0.85, +0.80) — Defiantly resumed.\n- Northwestern Admin: COND (+0.30, +0.10) — Cleared venue.",
       "The verbatim play 'OCTOBER 7' was disrupted at Cahn Auditorium on Oct 6, 2026. Police cleared the building within an hour, allowing the performance to finish before a full audience.",
       "The Bright Side:\nThe attempt to intimidate backfired completely, as the audience collectively chose courage over fear, creating unity around the testimonies being shared.",
       "The Breakdown & Plane Error:\nThe disrupter confused Physical evacuation with Metaphysical silencing. Pulling an alarm creates acoustic noise, but it cannot erase the moral weight of documented human suffering.",
       "Social Physics Analysis:\nWeaponizing emergency infrastructure is a cowardly extraction tactic: manufacturing danger to suppress speech without facing debate. The community defused it through transparent solidarity and civic resolve.",
-      "The Trajectory: The Path of Stasis into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Courageous engagement neutralized the sabotage.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Courageous engagement neutralized the sabotage.",
       "The Unavoidable Truth: Pulling a fire alarm to silence survivor testimonies is harassment, not protest.\nThe Unavoidable Lie: Intimidation tactics on university campuses foster genuine political discourse.",
       "Alethekanon:\nUsing emergency alarms as a heckler's veto degrades civic infrastructure. When audiences return anyway, the sabotage only highlights the necessity of the speech being targeted.",
       "Awwthekanon:\nTo listen to stories of grief takes immense heart, and to walk right back inside after sirens blare shows real love and solidarity. You cannot extinguish human empathy with an alarm.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.67,
+        "O": 0.3,
+        "N": 0.17
+      },
+      "GE": {
+        "S": 0.27,
+        "O": 0.6,
+        "N": 0.13
+      },
+      "LG": {
+        "S": 0.6,
+        "O": 0.27,
+        "N": 0.17
+      },
+      "LE": {
+        "S": 0.3,
+        "O": 0.43,
+        "N": 0.13
+      },
+      "GP": {
+        "S": 0.63,
+        "O": 0.27,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.3,
+        "O": 0.57,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.6,
+        "N": 0.17
+      },
+      "GE": {
+        "S": 0.47,
+        "O": 0.57,
+        "N": 0.13
+      },
+      "LG": {
+        "S": 0.57,
+        "O": 0.43,
+        "N": 0.17
+      },
+      "LE": {
+        "S": 0.57,
+        "O": 0.4,
+        "N": 0.17
+      },
+      "GP": {
+        "S": 0.6,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.53,
+        "O": 0.53,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Fire Alarm Perpetrator",
@@ -374,6 +436,7 @@
     "tags": [
       "Aletheia",
       "FreeSpeech"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

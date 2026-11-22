@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.7,
-    "real_u": 0.12,
-    "real_psi": -0.35,
+    "real_u": 0.17,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "Is Bolivia's capitalist pivot a genuine economic liberation or a desperate bid for survival?\n\nPRESIDENT PAZ: Bolivia has rejected socialism and is open for business\nEvidence: Economic freedom, Geopolitical pivot, Resource extraction\n#Aletheia #Bolivia",
-      "President Rodrigo Paz outlines a transition to 'capitalism for everyone,' inviting US investment in lithium and gas while promising to protect national wealth and create local jobs.\nStated Judgement: (0.80, 0.70) — Grace",
-      "The pivot is a top-down survival strategy to rescue a collapsing economy with depleted reserves. Domestic instability, protests, and a state of emergency reveal deep internal fractures.\nResulting Judgement: (0.12, -0.35) — Lesser Good",
-      "Verdict: CONDITIONAL — Fall into Redemption. The economic pivot is necessary, but ignoring severe domestic instability risks selling a fragile peace for foreign capital.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 3)",
+      "President Rodrigo Paz outlines a transition to 'capitalism for everyone,' inviting US investment in lithium and gas while promising to protect national wealth and create local jobs.\nStated Judgement: (+0.80, +0.70) — Greater Good",
+      "The pivot is a top-down survival strategy to rescue a collapsing economy with depleted reserves. Domestic instability, protests, and a state of emergency reveal deep internal fractures.\nResulting Judgement: (+0.17, -0.20) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 3)",
       "Sub-Audits Breakdown:\n- Rodrigo Paz: COND (0.20, -0.30) — Top-down economic pivot.\n- Bolivian Economy: FAIL (-0.10, -0.50) — Depleted reserves.\n- US-Bolivia Ties: PASS (0.40, 0.20) — Strategic mineral race.",
       "Bolivian President Rodrigo Paz announced a shift away from the socialist policies of the past two decades, seeking US partnerships to develop lithium and natural gas while rebuilding depleted central bank reserves.",
       "The Poison:\nInviting foreign capital into a highly fractured nation without domestic consensus risks repeating historical cycles of resource exploitation and fueling further civil unrest.",
       "The Breakdown & Plane Error:\nThe Plane Error is WHAT vs HOW. The administration focuses on WHAT they want to achieve (capitalism, US investment) while suppressing the HOW: managing the severe domestic protests and political fractures.",
       "Social Physics Analysis:\nPaz attempts a Smart Altruistic framing of shared prosperity, but the underlying dynamic is a Smart Selfish Maneuver to secure regime survival. By projecting the blame onto past socialism, he avoids addressing current domestic unrest.",
-      "The Trajectory: The Path of Fall into Redemption.\nWhen you map the gap between the promised 'capitalism for everyone' and the reality of domestic protests, it plots a trajectory toward fragile, debt-driven stability.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between the promised 'capitalism for everyone' and the reality of domestic protests, it plots a trajectory toward fragile, debt-driven stability.",
       "The Unavoidable Truth: Rebuilding reserves requires foreign investment.\nThe Unavoidable Lie: Changing the economic label instantly resolves deep-seated social and political fractures.",
       "Alethekanon:\nLithium diplomacy is a high-stakes game. Paz is leveraging the US-China critical minerals race to secure capital, but domestic instability remains the primary systemic bottleneck.",
       "Awwthekanon:\nI hope the Bolivian people finally get to see the benefits of their country's incredible natural wealth, instead of just bearing the burden of political transitions and shortages.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Rodrigo Paz Rhetoric",
@@ -177,6 +239,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

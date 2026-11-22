@@ -5,22 +5,22 @@
     "subject": "Trump Gave $45,000 Cash Gifts to Aides",
     "link": "https://www.washingtonexaminer.com/news/white-house/4718078/trump-cash-gifts-natalie-harp-aides-holidays/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.6,
+    "claim_u": 0.5,
+    "claim_psi": 0.2,
+    "real_u": -0.8,
     "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Trump gave $45,000 cash gifts to Natalie Harp and other aides for holidays.\nEvidence: Financial disclosures, White House defense, ethics concerns\n#Aletheia #USPol",
-      "The administration defended the $150,000+ in cash holiday gifts to top aides as a longstanding private sector practice entirely permissible under ethics rules.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Substantial cash bonuses equal to a third of annual salaries for close political staff skirt federal salary supplementation bans, raising serious conflicts of interest.\nResulting Judgement: (-0.6, -0.7) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nCash gifts to political aides mask outside salary supplementation under holiday traditions.\n\nIntegrity: Severe Deception (Hypocrisy: 4.2, z: 2)",
+      "The administration defended the $150,000+ in cash holiday gifts to top aides as a longstanding private sector practice entirely permissible under ethics rules.\nStated Judgement: (+0.50, +0.20) — Greater Good",
+      "Substantial cash bonuses equal to a third of annual salaries for close political staff skirt federal salary supplementation bans, raising serious conflicts of interest.\nResulting Judgement: (-0.80, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nCash gifts to political aides mask outside salary supplementation under holiday traditions.\n\nIntegrity: Severe Deception (Hypocrisy: 4.2, z: 2)",
       "Sub-Audits Breakdown:\n- White House Defense: COND (0.5, 0.2) — Frames cash gifts as traditional bonuses.\n- Ethics Compliance: FAIL (-0.8, -0.7) — Violates federal salary rules.",
       "President Trump distributed over $150,000 in cash gifts to key White House aides, sparking immediate debate among ethics lawyers regarding federal employee compensation laws.",
       "The Poison:\nNormalizing large cash gifts to close government aides blurs the line between public service and personal patronage, eroding institutional integrity.",
       "The Breakdown & Plane Error:\nThe audit error mistakes WHAT (private gift traditions) for WHO (public servants bound by federal anti-supplementation statutes).",
       "Social Physics Analysis:\nActors deploy a Smart Selfish maneuver, using traditional holiday pretexts to channel financial benefits to loyal aides while projecting compliance.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Personal patronage supersedes public law.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Personal patronage supersedes public law.",
       "The Unavoidable Truth: Executive aides received large cash gifts outside standard payroll.\n\nThe Unavoidable Lie: These payments have no relation to official duties.",
       "Alethekanon:\nBlurring lines between personal patronage and public office turns state apparatuses into loyalty fiefdoms. Accountability dies in the cash envelope. 🌐",
       "Awwthekanon:\nIt's tough when political loyalty and personal finances tangle so tightly, making everyone question where public duty ends and personal favor begins.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "White House Defense",
@@ -177,6 +239,7 @@
         "sub_psi": 0.2,
         "sub_verdict": "COND"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

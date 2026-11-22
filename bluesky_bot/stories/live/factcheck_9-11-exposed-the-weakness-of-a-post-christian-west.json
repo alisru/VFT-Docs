@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.6,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "Twenty-five years after 9/11, critics argue that Western secularism blinded leaders to the theological realities of geopolitical conflict.\nEvidence: Post-Christian critique, immigration policies\n#911 #History",
-      "The article argues that Western leaders fatally misunderstood 9/11 because secular liberalism dismissed religion, leading to failed multiculturalism.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Reduces complex intelligence failures, disastrous regime-change wars, and foreign policy overreach into a simple grievance against secular pluralism.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nGeopolitical failures are retrospectively recast as spiritual decay to attack modern pluralism.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 3)",
+      "The article argues that Western leaders fatally misunderstood 9/11 because secular liberalism dismissed religion, leading to failed multiculturalism.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Reduces complex intelligence failures, disastrous regime-change wars, and foreign policy overreach into a simple grievance against secular pluralism.\nResulting Judgement: (-0.60, -0.70) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nGeopolitical failures are retrospectively recast as spiritual decay to attack modern pluralism.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 3)",
       "Sub-Audits Breakdown:\n- Theological Critique: COND (-0.4, -0.5) — Highlights real blind spots.\n- Cultural Blame: FAIL (-0.8, -0.9) — Erases geopolitical causes.",
       "Reflecting on the 25th anniversary of 9/11, commentators debate whether Western political philosophy fundamentally misread the motivations of Islamist extremists.",
       "The Poison:\nBlames domestic political grievances on foreign attacks, turning national tragedy into an argument against pluralism.",
       "The Breakdown & Plane Error:\nConfuses concrete foreign policy and military miscalculations with metaphysical civilizational collapse.",
       "Social Physics Analysis:\nAuthors project internal culture-war frustrations onto historical terrorist acts, treating global conflict as proof of domestic policy errors.",
-      "The Trajectory: The Path of Deception.\nWhen complex geopolitical tragedies are flattened into domestic culture-war talking points, it leads straight to division. (R_net: 6.2)",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen complex geopolitical tragedies are flattened into domestic culture-war talking points, it leads straight to division. (R_net: 6.2)",
       "The Unavoidable Truth: Western leaders in 2001 gravely underestimated the role of radical religious ideology in motivating terrorism.\n\nThe Unavoidable Lie: The 9/11 attacks were primarily enabled by domestic multiculturalism and secular liberalism.",
       "Alethekanon:\nTracing historical tragedies back to domestic culture-war pet peeves obscures actual geopolitical history.",
       "Awwthekanon:\nIt hurts to watch profound national trauma get weaponized for partisan arguments about immigration and culture.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Theological Critique",
@@ -151,6 +213,7 @@
         "name": "Ayaan Hirsi Ali",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

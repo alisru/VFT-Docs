@@ -5,22 +5,22 @@
     "subject": "After Supreme Court setback, Trump again targets immigration by expanding definition of birthright citizenship",
     "link": "https://theconversation.com/after-supreme-court-setback-trump-targets-immigration-by-expanding-definition-of-birthright-citizenship-289465",
     "target_url": "https://bsky.app/profile/us.theconversation.com/post/3mtjn2e3usm2f",
-    "claim_u": 0.0,
-    "claim_psi": 0.5,
-    "real_u": -0.75,
-    "real_psi": -0.82,
+    "claim_u": 0.64,
+    "claim_psi": 1.0,
+    "real_u": -0.9,
+    "real_psi": -0.8,
     "mode": "root",
     "posts": [
       "New executive orders target birthright citizenship loopholes following the Supreme Court's June 2026 ruling.\nEvidence: legalistic avoidance, constitutional challenge, statutory authority\n#Aletheia #USPol #Law",
-      "Proponents frame the executive actions as lawful regulatory enforcement utilizing statutory authority under the Immigration and Nationality Act.\nStated Judgement: (0.0, 0.5) — Lesser Good",
-      "Critics and legal scholars identify the orders as a calculated circumvention of clear constitutional protections established by the Fourteenth Amendment.\nResulting Judgement: (-0.75, -0.82) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Legalistic avoidance mechanisms are deployed to bypass judicial rulings on constitutional rights.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, Uncertainty z: 3)",
+      "Proponents frame the executive actions as lawful regulatory enforcement utilizing statutory authority under the Immigration and Nationality Act.\nStated Judgement: (+0.64, +1.00) — Greater Good",
+      "Critics and legal scholars identify the orders as a calculated circumvention of clear constitutional protections established by the Fourteenth Amendment.\nResulting Judgement: (-0.90, -0.80) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Executive Legal Strategy: COND (-0.5, -0.6) — Uses statutory loopholes to challenge judicial precedent.\n- Constitutional Protection: FAIL (-1.0, -1.0) — Undermines Fourteenth Amendment citizenship guarantees.",
       "President Trump issued two new executive orders targeting birthright citizenship for alien enemies and birth tourism, leveraging statutory powers after a Supreme Court setback.",
       "The Poison:\nWrapping executive defiance of constitutional norms in sterile tax-law terminology ('avoidance') normalizes systematic erosion of judicial authority.",
       "The Breakdown & Plane Error:\nConfusing HOW (statutory loophole mechanics) with WHO (children born on U.S. soil protected by the Fourteenth Amendment).",
       "Social Physics Analysis:\nBy redefining statutory discretion to override constitutional precedent, the administration substitutes administrative fiat for transparent legislative reform.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Legalistic evasion erodes constitutional stability.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Legalistic evasion erodes constitutional stability.",
       "The Unavoidable Truth: The executive orders exploit statutory loopholes in federal immigration law to bypass recent judicial setbacks.\n\nThe Unavoidable Lie: These measures represent routine administrative enforcement rather than a direct challenge to the Fourteenth Amendment.",
       "Alethekanon:\nLegalistic avoidance is just clever architecture built to bypass constitutional boundaries.",
       "Awwthekanon:\nEvery child born on our soil carries inherent dignity and worth. May our laws always protect the vulnerable rather than seeking ways to exclude them.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Executive Legal Strategy",
@@ -283,6 +345,7 @@
         "name": "Steve Vladeck",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

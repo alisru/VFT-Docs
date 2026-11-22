@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "A data center CEO highlights how tech development can uplift local communities.🌐\nEvidence: Community investment, job creation, resource management\n#Aletheia #CommunityDevelopment",
-      "The claim is that data centers can be powerful engines for community benefit through local investment, job creation, and responsible resource management.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Compass Datacenters in Red Oak, Texas, created 900 jobs, funded a $15M animal shelter, and built a $12.6M training facility. They use water-free cooling and co-invest in grid upgrades.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nThis trajectory shows genuine alignment between stated intentions and verifiable actions, leading to systemic empowerment and positive community impact.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The claim is that data centers can be powerful engines for community benefit through local investment, job creation, and responsible resource management.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Compass Datacenters in Red Oak, Texas, created 900 jobs, funded a $15M animal shelter, and built a $12.6M training facility. They use water-free cooling and co-invest in grid upgrades.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nThis trajectory shows genuine alignment between stated intentions and verifiable actions, leading to systemic empowerment and positive community impact.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Compass Datacenters: PASS (+1.0, +1.0) — Delivers on community investment and responsible operations.\n- Fox News Digital: PASS (+1.0, +1.0) — Reports verifiable positive actions and corporate responsibility.",
       "Compass Datacenters CEO Chris Crosby details how their Red Oak, Texas, campus integrates into the community, addressing concerns about resource impact while creating local opportunities.",
       "The Bright Side:\nThis case demonstrates that large-scale tech infrastructure can be developed with genuine community partnership and environmental responsibility, challenging common negative perceptions.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Compass Datacenters' Community Engagement",
@@ -173,6 +235,7 @@
     "tags": [
       "Aletheia",
       "CommunityDevelopment"
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

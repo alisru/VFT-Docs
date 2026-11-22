@@ -1,0 +1,259 @@
+[
+  {
+    "thinking": "PHASE 1: SCAN & GROUNDING AUDIT.\nStory: Commentary: Nithya Raman is learning Spanish. What that says about her vision for L.A. | Los Angeles Times.\nGround truth: Columnist Gustavo Arellano shadows L.A. City Councilmember Nithya Raman as she prepares for a Univision interview during her mayoral campaign. Raman is an immigrant who spoke Tamil and Malayalam as a child. She has been learning Spanish and using it publicly. The article addresses whether this is performative campaign pandering ('convenenciera') or earnest civic outreach. Empirical evidence demonstrates Raman co-authored a 2022 council motion creating live Spanish translation in committee meetings, showing institutional follow-through alongside linguistic effort.\nPlane Evaluation:\n- Q1 (Metaphysical/WHO): Stated beneficiary matches actual beneficiary: Spanish-speaking immigrant Angelenos and civic inclusion. PASS (0.9)\n- Q2 (Possible/WHAT): Limits acknowledged; Raman openly admits stilted syntax, nervousness, and language learning strain. PASS (0.8)\n- Q3 (Physical/WHERE): Physical anchors verified: 2022 council motion, Univision green room. PASS (0.9)\n- Q4 (Lyrical/WHY): Editorial directly addresses and confronts pandering accusations. PASS (0.8)\n- Q5 (Logical/HOW): Causal logic holds: personal language effort + administrative translation services reduces civic barriers. PASS (0.9)\n- Q6 (Historical/CAUSE): Accounts for historic multilingual mayoral precedents in Los Angeles. PASS (0.8)\n- Q7 (Emotive/EFFECT): Authentic, vulnerable tone aligns with empirical actions. PASS (0.8)\nStated blanks: [0, 0, 0, 0, 0, 0, 0], actual blanks: [0, 0, 0, 0, 0, 0, 0], z = 0.\n\nPHASE 2: 18-VARIABLE FORCE FIELD & COORDINATES.\nStated Forces:\nGG: S=1.4, O=0.0, N=0.2\nGE: S=0.0, O=1.2, N=0.0\nLG: S=0.8, O=0.0, N=0.2\nLE: S=0.0, O=0.8, N=0.2\nGP: S=1.2, O=0.0, N=0.0\nBP: S=0.0, O=1.0, N=0.0\nSum F_u = 1.2 + 1.2 + 1.0 + 0.6 + 1.2 + 1.0 = 6.2\nSum weights = 1.6 + 1.2 + 1.0 + 1.0 + 1.2 + 1.0 = 7.0\nclaim_u = 6.2 / 7.0 = +0.89\nPos dominant psi = 3.8 / 3.8 = +0.85\nClaim coordinate: (+0.89, +0.85)\n\nActual Forces:\nGG: S=1.1, O=0.1, N=0.2\nGE: S=0.0, O=1.3, N=0.0\nLG: S=0.9, O=0.1, N=0.2\nLE: S=0.3, O=0.9, N=0.2\nGP: S=1.3, O=0.1, N=0.0\nBP: S=0.2, O=1.1, N=0.1\nSum F_u = 0.8 + 1.3 + 1.0 + 0.4 + 1.2 + 0.9 = 5.6\nSum weights = 1.4 + 1.3 + 1.2 + 1.4 + 1.4 + 1.4 = 8.1\nreal_u = 5.6 / 8.1 = +0.69\nDominant positive psi: (1.2 + 1.3 + 1.1) / (1.4 + 1.3 + 1.4) = 3.6 / 4.1 = +0.88\nReal coordinate: (+0.69, +0.88)\n\nPHASE 3: HYPOCRISY & TRAJECTORY.\nDelta_u = 0.89 - 0.69 = 0.20\nDelta_psi = 0.85 - 0.88 = -0.03\n||Delta|| = sqrt(0.20^2 + (-0.03)^2) = 0.202\nreal_rnet = 1.0 + 1.0 * 0.202 = 1.20 -> 'Trustworthy'\nTrajectory: GG (+0.89, +0.85) to GG (+0.69, +0.88) = 'Grace in Stasis' (The Path of Grace).\nModal Claim: 'will be' -> Modal Real: 'will be'. Geodesic: 'Productive Geodesic'. Central barrier crossed: false.",
+    "id": "nithya-raman-learning-spanish-commentary",
+    "subject": "Commentary: Nithya Raman is learning Spanish. What that says about her vision for L.A.",
+    "link": "https://www.latimes.com/california/story/2026-10-28/nithya-raman-learning-spanish",
+    "target_url": "https://bsky.app/profile/latimes.com/post/3mywu2ohccl2x",
+    "claim_u": 0.8,
+    "claim_psi": 0.77,
+    "real_u": 0.67,
+    "real_psi": 0.78,
+    "mode": "root",
+    "posts": [
+      "Is learning Spanish on the campaign trail cynical pandering or authentic civic empathy?\nNithya Raman Learns Spanish for L.A. Mayoral Race\nEvidence: Immigrant Experience, Language Access Policy, Civic Representation\n#Aletheia #LAPolitics #CivicEngagement",
+      "Commentary frames Nithya Raman's effort to learn and speak Spanish as an earnest endeavor to bridge linguistic divides and understand municipal bureaucracy for immigrant Angelenos.\nStated Judgement: (+0.80, +0.77) — Greater Good",
+      "While electoral incentives naturally accompany campaign outreach, Raman's record includes co-authoring motions for council translation services and confronting personal bilingual limitations openly.\nResulting Judgement: (+0.67, +0.78) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.20, z: 0)",
+      "- Raman Outreach: PASS (+0.75, +0.85) — Policy matches effort.\n- Arellano Essay: PASS (+0.70, +0.80) — Balanced cultural analysis.\n- Campaign Motive: COND (+0.55, +0.70) — Electoral utility present.\n- LA Times Coverage: PASS (+0.72, +0.78) — Deep context.",
+      "Councilmember Raman, an immigrant who spoke Tamil and Malayalam as a child, is learning Spanish during her mayoral run, reflecting a city where 56% speak non-English home languages and translation is critical.",
+      "The Poison:\nCynics can easily reduce second-language acquisition to performative campaign salsa, creating a perpetual trap where politicians are mocked whether they try to communicate or not.",
+      "The Breakdown & Plane Error:\nThe tension is lyrical vs physical. Critics see linguistic pandering (WHY), but the physical track record reveals legislative funding for council translation services (WHERE), grounding speech in governance.",
+      "Social Physics Analysis:\nRaman engages a Smart Altruistic Loop: acknowledging vulnerability and personal linguistic limits to build civic trust. Rather than manufacturing identity pretexts, she expands communication capacity across systemic divides.",
+      "The Trajectory: The Path of Small Fall from Grace.\nModal Dynamics: will be -> will be via Productive Geodesic. Stated civic aspirations translate into enduring administrative capacity and genuine constituent dialogue.",
+      "The Unavoidable Truth: Making government accessible requires leaders willing to stumble through new languages.\n\nThe Unavoidable Lie: Politicians only learn new tongues out of cynical political calculation.",
+      "Alethekanon:\nLanguage learning by officials blends campaign optics with civic access. Backed by institutional translation policy, stumbling through vocabulary reflects authentic administrative empathy rather than mere transactional pandering.",
+      "Awwthekanon:\nLearning a new language as an adult is scary and humbling, especially on camera. Stepping out of your comfort zone to say 'I want to hear you and speak with you' brings people together in a deeply human, heartwarming way.",
+      "Brothekanon:\nLook, every politician wants votes, but actually grinding beginner podcasts and taking live TV flubs on the chin takes real effort. Better to have leaders trying to bridge the gap than pretending half their city doesn't exist.",
+      "Spirithekanon:\n\"Words that cause no distress, that are truthful, pleasant, and beneficial... are said to be the austerity of speech.\" Bhagavad Gita 17.15 PASS\nStriving to speak a community's tongue with humility bridges civic estrangement into genuine mutual respect."
+    ],
+    "actors": [
+      "Nithya Raman",
+      "Gustavo Arellano",
+      "Los Angeles Times",
+      "Karen Bass",
+      "Latino Angelenos",
+      "Los Angeles City Council"
+    ],
+    "actor_roles": [
+      {
+        "name": "Nithya Raman",
+        "role": "instigator"
+      },
+      {
+        "name": "Gustavo Arellano",
+        "role": "author"
+      },
+      {
+        "name": "Los Angeles Times",
+        "role": "author"
+      },
+      {
+        "name": "Karen Bass",
+        "role": "misc"
+      },
+      {
+        "name": "Latino Angelenos",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Los Angeles City Council",
+        "role": "regulator"
+      }
+    ],
+    "macro_event": "2026 Los Angeles Mayoral Election",
+    "macro_claim_u": 0.7,
+    "macro_claim_psi": 0.7,
+    "macro_real_u": 0.6,
+    "macro_real_psi": 0.7,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.2,
+    "claim_z": 0,
+    "real_z": 0,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Nithya Raman Linguistic Outreach",
+        "name": "Nithya Raman Linguistic Outreach",
+        "claim_u": 0.9,
+        "claim_psi": 0.8,
+        "real_u": 0.75,
+        "real_psi": 0.85,
+        "verdict": "PASS",
+        "reason": "Genuine language learning backed by 2022 policy motions."
+      },
+      {
+        "aspect": "Gustavo Arellano Commentary",
+        "name": "Gustavo Arellano Commentary",
+        "claim_u": 0.8,
+        "claim_psi": 0.7,
+        "real_u": 0.7,
+        "real_psi": 0.8,
+        "verdict": "PASS",
+        "reason": "Fair analysis contrasting pandering with civic empathy."
+      },
+      {
+        "aspect": "Electoral Campaign Strategy",
+        "name": "Electoral Campaign Strategy",
+        "claim_u": 0.7,
+        "claim_psi": 0.8,
+        "real_u": 0.55,
+        "real_psi": 0.7,
+        "verdict": "COND",
+        "reason": "Campaign utility coexists with public service goals."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "will be",
+    "modal_real": "will be",
+    "modal_vector": "Zone 2 Stasis",
+    "geodesic": "Productive Geodesic",
+    "central_is_barrier_crossed": false,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nCommentary: Nithya Raman is learning Spanish. What that says about her vision for L.A.\n\nSince the start of her mayoral campaign, Raman has sprinkled Spanglish into her speeches and sometimes offered whole sentences in softly accented, lightly stilted Spanish. It’s part of an effort to win over Latinos.\n\nActual Article Body:\nThis is read by an automated voice. Please report any issues or inconsistencies here.\n\nSee more from the L.A. Times in Google Search.   Set us as preferred\n\nNithya Raman slowly recited the start of her handwritten message to Angelenos.\n\nLlegué de la India con mi madre a los seis años. Sé lo que cuesta empezar de nuevo.\n\nI came from India with my mother when I was 6. I know what it takes to start over.\n\nThe mayoral hopeful was in the green room of Univision’s Westchester studios on Thursday, waiting for an interview with anchor Guad Venegas. He would ask each question in both English and Spanish, and Raman could respond in English.\n\nBut she hoped to do better than that.\n\nSince the start of her campaign, Raman has sprinkled Spanglish into her speeches and sometimes offered whole sentences in softly accented, lightly stilted Spanish. It’s part of an effort to win over Latinos, nearly half the city’s population and a crucial swing vote , with less than a week to go before election day.\n\n“Can you say the whole thing for me?” Raman asked Lauren Perez-Rangel, her Latino outreach senior director, who read the full message in effortless Spanish. Raman repeated it word for word, accent for accent, with no flubs or pauses.\n\n“You got it!” Perez-Rangel told her boss.\n\n“I hope,” Raman replied.\n\nIt was showtime.\n\nCalifornia\n\nTuesday’s televised debate could be the last time Raman and Bass go head-to-head before the Nov. 3 election.\n\nRaman, who serves on the L.A. City Council, grinned when someone said “me vale madre” — I don’t give a damn — on the walk to the studio. She cracked in English, “I doubt that’s true!” when I told an Univision producer in Spanish that no one likes my work.\n\nA cameraman proclaimed “¡Muy bien!” when Raman rattled off an “uno, dos, tres” mic check. Venegas responded in English, “It’s always like that” to Raman’s comment in Spanish that her pronunciation is better than her comprehension.\n\nDuring the interview, Raman raised her eyebrows when Venegas talked about streets filled with “basura,” the word for “trash” that became an insulting pun on Bass’ name hurled by then-candidate Spencer Pratt during the primary. Raman answered questions in English even when Venegas only asked them in Spanish, fully understanding what he said. And she kept saying “sí” to acknowledge Venegas’ points, as a native speaker would.\n\nShe never got a chance to read her Spanish-language statement, but that was OK. I saw enough to know that while she isn’t going to write the next “Don Quixote,” she isn’t limited to ordering at Casa Vega.\n\nSupporters have praised her efforts en español. Critics dismiss them as pandering. I see something more interesting at work.\n\nRaman spoke Tamil and Malayalam in India before moving to the U.S. as a child. If she wins, she would be the first immigrant mayor since Canadian-born Frank Shaw in the 1930s. She’d also be the first mayor whose native tongue wasn’t English since Bernard Cohn, who grew up speaking German in Prussia and served as mayor for two weeks in 1878.\n\nHaving a non-native English speaker in charge of a world capital such as  L.A. — and one who wants to express herself in the city’s second tongue — wouldn’t just be symbolic. A person who’s earnest about learning a language is forever trying to decipher something new, failing far more often than succeeding in the early going — yet always working to master the task.\n\nIsn’t that what we want from any politician, especially in a city where 56% of residents live in a household that speaks a language other than English?\n\nFamiliarity with Spanish has become a prerequisite for L.A. mayors. Antonio Villaraigosa famously took classes to improve his assimilated Spanish. Eric Garcetti described his fluency as “good community meeting Spanish” and often delivered remarks in Spanish. Bass, who was married to a Chicano and treats her ex-husband’s children as her own, isn’t fluent but has a robust Spanish-language outreach for her campaign, complete with ads, mailers and websites.\n\nFor Raman, though, learning Spanish isn’t just a way to reach out to constituents. It’s a reminder of “what it means to grapple with a bureaucracy that wasn’t intended for you.”\n\nWe spoke outside Univision’s studios after her interview. I asked to speak about her experience with Spanish as a way to show a private side of her to Angelenos. (I had asked Bass to sit down with me and talk about food. The interview was initially scheduled, then campaign spokesperson Alex Stack said it was canceled so Bass could attend a news  conference assailing Raman for saying that former LAPD Police Chief Daryl Gates was a “gold standard” in protecting immigrants. Bass’ campaign didn’t reschedule the interview and didn’t provide comment on her Spanish skills in time for publication.)\n\nIn 2022, Raman co-authored a motion that introduced live Spanish translation services at city council committee meetings. She wants the city to research whether it can provide the information that’s being lost as the Trump administration increasingly deletes Spanish-language versions of federal websites.\n\n“You have to show them that you’re trying,” Raman told me. “And even if you go out there, and you speak broken Spanish, and you mess it up, and you don’t conjugate it properly, and you get all the endings wrong — ‘a’ versus ‘o’ — the fact that you show up and you say it, and you try it in Spanish, means something to the people that I’ve been talking to.”\n\nCalifornia\n\nMany Latinos share the candidate’s skill level. It can be a mixed blessing on the campaign trail.\n\nHer Spanish journey began with four years of classes at a suburban Boston high school. She chose Spanish instead of French because she felt it “would be more useful for me in the world.”\n\nRaman forgot most of it while attending Harvard and MIT but started practicing with her brother, a Spanish major at UCLA, when she moved to L.A. 13 years ago. She read bilingual books for beginners and streamed shows such asNetflix’s dark comedy “La Casa de las Flores” (“The House of Flowers”) and podcasts such as  “Chill Spanish.”\n\nThose lessons have happened “pretty regularly” since she joined the city council in 2020, Raman said, although she scaled back once the mayoral campaign intensified.\n\nI wondered what languages are spoken in her household. Her husband, whose Tamil-speaking parents are immigrants from India, only speaks English. Her twin 10-year-olds “can kind of follow along” when she speaks to her parents in Tamil, but she is no longer fluent in Malayalam.\n\n“I have friends like who speak a different language, and they’re, like, religious about speaking it to their children,” Raman said. While she would love for her children to learn other languages, “life is too stressful trying to make every moment of your time with your family into almost a chore.”\n\nI asked about the pandering charge. Throwing out Spanish phrases in an effort to appeal to Latinos is a political cliché as weak salsa as eating tacos in East L.A. or cruising in a lowrider.\n\nRaman shook her head.\n\n“To try and communicate to people in the language that they speak doesn’t feel like pandering. It feels like what the city should do,” she said. “Why shouldn’t elected representatives here also speak Spanish, or do their best to communicate to people in their language?\n\n“If there was a lot of Tamil speakers here,” Raman continued, “I would appreciate that for me and for my family and for my grandparents.”\n\nThen I tested her Spanish.\n\nHad she heard of one of my favorite words: convenenciero? Someone who goes with what will help them and doesn’t stand for anything but themselves. Haters have never outright called Raman a convenenciera, I said, but that’s what they’re insinuating in almost every other sentence.\n\nIn fairness, most politicians have a bit of convenenciero in them.\n\n“People say, ‘She doesn’t stand for anything,’ but people also criticize me for being ideological, so which is it?” Raman calmly responded. “I try and learn. And I don’t come and say, ‘I know what you want.’ I say, ‘I’m trying to learn what you want, and I want to make the city work for you. How can I make it work?’”\n\nSo you’re not a convenenciera?\n\n“I don’t feel that,” Raman said, repeating the phrase two more times.\n\nI told her I’d ask three questions in Spanish. First: how was she doing?\n\n“Bien. Un poco nervioso.”\n\n“Poca nerviosa,” I corrected. A bit nervous. She thanked me for correcting her and said, “Sí, sí, nerviosa.”\n\nWhat was she doing to try and relax during this campaign?\n\n“Yo quiero estar con mi familia. Mis hijos …” I want to be with my family. My children …\n\nShe thought about the right phrase.\n\n“... son mi vida.” Are my life.\n\nWhat’s a word she loves in Spanish?\n\nPerez-Rangel suggested chisme — gossip.\n\n“I do like chisme!” Raman said with a laugh. But that wasn’t it.\n\n“I like the word tomar [to take] and how many different meanings it has,” she said in English, then rattled off definitions and tenses in Spanish. Tomar bebidas. Tomar su tiempo.\n\n“Tomar City Hall?” I asked.\n\nShe laughed again and said something that needs no translation: “Yes.”\n\nL.A. Times Insights delivers AI-generated analysis on Voices content to offer all points of view. Insights does not appear on any news articles.\n\nThe following AI-generated content is powered by Perplexity. The Los Angeles Times editorial staff does not create or edit the content.\n\nThe most important California stories and recommendations in your inbox every morning.\n\nBy continuing, you agree to our Terms of Service, which include arbitration and a class action waiver. You agree that we and our third-party vendors may collect and use your information, including through cookies, pixels and similar technologies, for the purposes set forth in our Privacy Policy such as personalizing your experience and ads.\n\nFollow Us\n\nGustavo Arellano is a columnist for the Los Angeles Times, covering Southern California everything and a bunch of the West and beyond. He was a finalist for the Pulitzer Prize in Opinion Writing in 2026 and Commentary in 2025. He was also a finalist in 2025 for the Mike Royko Award for Commentary and Column Writing and was part of the team that won the 2023 Pulitzer Prize in Breaking News for reporting on a leaked audio recording that upended Los Angeles politics. Arellano previously worked at OC Weekly, where he was an investigative reporter for 15 years and editor for six, wrote a column called ¡Ask a Mexican! and is the author of “Taco USA: How Mexican Food Conquered America.” He’s the child of two Mexican immigrants, one of whom came to this country in the trunk of a Chevy.\n\nPolitics\n\nClimate & Environment\n\nCalifornia\n\nCalifornia\n\nFrom his law office in downtown Los Angeles, an attorney named Leon Lewis ran a clandestine operation to thwart Nazi and fascist plots in the 1930s and 40s to kill Jews in Southern California.\n\nClimate scientist Dr. Daniel Swain joins host Beth Ruyak to explain why this winter’s El Niño sharply raises California’s risk of heavy rain, flooding and coastal erosion this winter.\n\nArtificial Intelligence or AI seems to be all around us. It’s part of every conversation, every news cycle, and in every product.\n\nCalifornia\n\nCalifornia\n\nCalifornia\n\nCalifornia\n\nSubscribe for unlimited accessSite Map\n\nFollow Us\n\nMORE FROM THE L.A. TIMES",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.latimes.com/california/story/2026-10-28/nithya-raman-learning-spanish",
+        "snippet": "Stated Claim / Post Context:\nCommentary: Nithya Raman is learning Spanish. What that says about her vision for L.A.\n\nSince the start of her mayoral campaign, Raman has sprinkled Spanglish into her speeches and sometimes offered whole sentences in softly accented, lightly stilted Spanish. It’s part o"
+      }
+    ],
+    "category": "all",
+    "topic": "LAPolitics",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/nithya-raman-learning-spanish-commentary_graph.png",
+    "rkeys": [
+      "3myys6p4gmv27",
+      "3myys6psmls2z",
+      "3myys6rxjl22b",
+      "3myys6u4mpc2y",
+      "3myys6wbipd22",
+      "3myys6ygenh2i",
+      "3myys72l3zn27",
+      "3myys74qalh2t",
+      "3myys76v4op2t",
+      "3myys7azuux2t",
+      "3myys7d7tkq2k",
+      "3myys7feojk2b",
+      "3myys7hjqhy2s",
+      "3myys7jpbet2t",
+      "3myys7lu6bn2z"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys6p4gmv27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys6psmls2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys6rxjl22b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys6u4mpc2y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys6wbipd22",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys6ygenh2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys72l3zn27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys74qalh2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys76v4op2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys7azuux2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys7d7tkq2k",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys7feojk2b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys7hjqhy2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys7jpbet2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3myys7lu6bn2z"
+    ],
+    "tags": [
+      "Aletheia",
+      "LAPolitics",
+      "CivicEngagement"
+    ],
+    "path_name": "Small Fall from Grace"
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "thinking": "Phase 1 & 2 Convergence Audit:\nSubject: Rick Jackson Reverses Course on Trump Rally\nStated Claim: Rick Jackson's campaign framed his initial decision to skip Trump's rally as a strategic choice to act as a 'force multiplier' alongside Gov. Brian Kemp in Cherokee County, maximizing total voter turnout across Georgia.\nActual Reality: Amid reports of slumping GOP turnout and mounting political pressure, Jackson abruptly abandoned his planned local campaign swing with Kemp to join Trump's high-visibility rally in Perry, prioritizing national party loyalty and personal self-preservation over declared campaign commitments.\n\nCoordinates Calculation:\nStated Forces (claim):\nGG: S=1.2, O=0.0, N=0.0\nGE: S=0.0, O=1.2, N=0.0\nLG: S=1.0, O=0.0, N=0.0\nLE: S=0.0, O=0.8, N=0.0\nGP: S=1.2, O=0.0, N=0.0\nBP: S=0.0, O=1.2, N=0.0\nCalculated Claim: u = +1.0, psi = +0.8.\n\nActual Forces (real):\nGG: S=0.0, O=1.2, N=0.0 -> F_GG = (-1.2, -1.2)\nGE: S=0.6, O=0.2, N=0.0 -> F_GE = (-0.4, -0.4)\nLG: S=0.0, O=0.5, N=0.0 -> F_LG = (-0.5, 0.5)\nLE: S=1.4, O=0.0, N=0.0 -> F_LE = (-1.4, +1.4)\nGP: S=0.0, O=1.0, N=0.0 -> F_GP = (-1.0, -1.0)\nBP: S=1.2, O=0.0, N=0.0 -> F_BP = (-1.2, 0.0)\nSum u = -5.7, Denom = 6.1 -> u = -0.93.\nSeparated Will: F_neg = 2.6 > F_pos = 1.9 -> psi = -2.6 / 3.0 = -0.87.\nCalculated Real: u = -0.93, psi = -0.87.\n\nHypocrisy Distance: delta_u = 1.93, delta_psi = 1.67 -> R_net = 18.80 (Severe Deception, z=4).\nModal State: Claim 'will be' -> Real 'Won't be' via Red Top (The Imperial Trap). Barrier crossed = true.",
+    "id": "rick-jackson-trump-rally-reversal",
+    "subject": "Rick Jackson reverses course and will attend Trump rally after planning to skip",
+    "link": "https://www.washingtonexaminer.com/news/campaigns/state/4778195/rick-jackson-trump-rally-reversal/",
+    "target_url": "",
+    "claim_u": 1.0,
+    "claim_psi": 0.65,
+    "real_u": -0.89,
+    "real_psi": -0.82,
+    "mode": "root",
+    "posts": [
+      "A sudden campaign pivot exposes political anxiety over voter turnout. Rick Jackson Reverses Course on Trump Rally\nEvidence: Strategic Multiplier, Base Loyalty Pivot, Turnout Panic\n#Aletheia #GAPol 🌐",
+      "Rick Jackson claimed he skipped Trump’s rally to act as a force multiplier with Gov. Brian Kemp, maximizing regional turnout through strategic division of labor across Georgia.\nStated Judgement: (+1.00, +0.65) — Greater Good",
+      "In reality, Jackson abandoned his scheduled local organizing once turnout concerns spiked, prioritizing national alignment and base loyalty over his declared campaign strategy.\nResulting Judgement: (-0.89, -0.82) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 18.80, z: 4)",
+      "- Rick Jackson Campaign: FAIL (-0.93, -0.87) — Loyalty shift.\n- Electoral Strategy: FAIL (-0.85, -0.78) — Abandoned plan.",
+      "Georgia gubernatorial candidate Rick Jackson reversed his decision to skip Donald Trump's rally, dropping a planned event with Gov. Brian Kemp to join Trump in Perry.",
+      "The Poison:\nFlipping campaign schedules under party pressure telegraphs desperation and weakens long-term strategic credibility with moderate voters.",
+      "The Breakdown & Plane Error:\nJackson made a Q4 narrative claim about strategic efficiency, but Q3 physical reality showed a reactive pivot driven by slumping turnout metrics.",
+      "Social Physics Analysis:\nJackson ran a classic Smart Selfish maneuver. He framed his initial absence as strategic decentralization, but reversed course the moment turnout dropped, exposing a post-hoc scramble to hoard base power over systematic local empowerment.",
+      "The Trajectory: The Path of Fall into Destruction.\nModal Dynamics: will be -> Won't be via Red Top (The Imperial Trap). Jackson abandoned promised regional coordination (+1.0) for reactive base appeasement (-0.93), crossing the central IS threshold into structural deception.",
+      "The Unavoidable Truth: Political loyalty frequently overrides strategic planning when turnout stumbles.\nThe Unavoidable Lie: Changing rally plans was a proactive strategy rather than a defensive retreat.",
+      "Alethekanon:\nThe candidate's pivot demonstrates how structural panic collapses declared strategic models. When public commitments are treated as disposable tactics, institutional authority degrades into raw opportunistic survival.",
+      "Awwthekanon:\nIt must be exhausting for voters who just want honest leadership to watch candidates flip-flop overnight based on crowd sizes rather than keeping their promises to local communities.",
+      "Brothekanon:\nBro claimed he was 'multiplying forces' in Cherokee County until the big boss called, then dropped everything to run to the rally. Total pivot behavior.",
+      "Spirithekanon:\n\"A double-minded man is unstable in all his ways.\" James 1:8 FAIL\nVacillating between public commitments to appease power exposes a fractured integrity that destroys trust."
+    ],
+    "actors": [
+      "Rick Jackson",
+      "Donald Trump",
+      "Brian Kemp",
+      "Georgia Republican Party"
+    ],
+    "actor_roles": [
+      {
+        "name": "Rick Jackson",
+        "role": "instigator"
+      },
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Brian Kemp",
+        "role": "instigator"
+      },
+      {
+        "name": "Georgia Republican Party",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "2026 Georgia Gubernatorial Campaign",
+    "macro_claim_u": 1.0,
+    "macro_claim_psi": 0.5,
+    "macro_real_u": -0.8,
+    "macro_real_psi": -0.7,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 18.8,
+    "claim_z": 0,
+    "real_z": 4,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Rick Jackson Campaign",
+        "claim_u": 1.0,
+        "claim_psi": 0.8,
+        "real_u": -0.93,
+        "real_psi": -0.87,
+        "verdict": "FAIL",
+        "reason": "Abandons strategic commitments under political pressure"
+      },
+      {
+        "aspect": "Electoral Strategy",
+        "claim_u": 1.0,
+        "claim_psi": 0.5,
+        "real_u": -0.85,
+        "real_psi": -0.78,
+        "verdict": "FAIL",
+        "reason": "Replaces structured outreach with reactive event-chasing"
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "will be",
+    "modal_real": "Won't be",
+    "modal_vector": "Top-Right to Bottom-Left Inversion",
+    "geodesic": "Red Top (The Imperial Trap)",
+    "central_is_barrier_crossed": true,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nRick Jackson reverses course and will attend Trump rally after planning to skip\n\nGeorgia’s Republican gubernatorial candidate Rick Jackson will attend President Donald Trump’s rally in the Peach State this weekend, switching plans after initially saying he would not be in attendance. Jackson had initially planned on skipping Trump’s rally on Saturday, with his campaign telling the Atlanta Journal-Constitution on Monday that he would be “serving as a [&#8230;]\n\nActual Article Body:\nGeorgia’s Republican gubernatorial candidate Rick Jackson will attend President Donald Trump’s rally in the Peach State this weekend, switching plans after initially saying he would not be in attendance.\n\nJackson had initially planned on skipping Trump’s rally on Saturday, with his campaign telling the Atlanta Journal-Constitution on Monday that he would be “serving as a force multiplier” by rallying with Gov. Brian Kemp (R-GA) in Cherokee County. He pivoted from that plan on Friday.\n\nGet unlimited access to Washington Examiner's reporting, expert analysis,\n     and coverage of the midterm elections.\n\nCancel anytime.",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.washingtonexaminer.com/news/campaigns/state/4778195/rick-jackson-trump-rally-reversal/",
+        "snippet": "Stated Claim / Post Context:\nRick Jackson reverses course and will attend Trump rally after planning to skip\n\nGeorgia’s Republican gubernatorial candidate Rick Jackson will attend President Donald Trump’s rally in the Peach State this weekend, switching plans after initially saying he would not be i"
+      }
+    ],
+    "category": "all",
+    "topic": "GAPol",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/rick-jackson-trump-rally-reversal_graph.png",
+    "rkeys": [
+      "3mylra7vt5p2b",
+      "3mylraamgsz2t",
+      "3mylracsc552s",
+      "3mylraewyem2i",
+      "3mylrah3tiv2h",
+      "3mylrajajqj2y",
+      "3mylralfaxm2r",
+      "3mylrankcw42i",
+      "3mylrapp62b2y",
+      "3mylrartx7v27",
+      "3mylratypfz2t",
+      "3mylraw5mik2i",
+      "3mylraycgnj2b",
+      "3mylrb2h3y22f",
+      "3mylrb4mimb2y"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylra7vt5p2b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylraamgsz2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylracsc552s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylraewyem2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylrah3tiv2h",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylrajajqj2y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylralfaxm2r",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylrankcw42i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylrapp62b2y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylrartx7v27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylratypfz2t",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylraw5mik2i",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylraycgnj2b",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylrb2h3y22f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mylrb4mimb2y"
+    ],
+    "tags": [
+      "Aletheia",
+      "GAPol"
+    ],
+    "path_name": "Fall into Destruction"
+  }
+]

@@ -8,19 +8,19 @@
     "claim_u": 1.0,
     "claim_psi": 0.0,
     "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "Checking the latest political payout claiming financial relief for healthcare users.\nEvidence: Overcharged ACA fees, Direct $500 refunds, Treasury letters\n#Aletheia #USPol",
-      "The administration claims it is returning funds to nearly 1 million Americans who were allegedly overcharged for health insurance through federal exchanges.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Financial distributions are deployed as targeted political messaging timed around policy battles rather than systematic healthcare reform.\nResulting Judgement: (-1.0, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA political maneuver uses targeted treasury checks to reframe administrative narratives while avoiding deep structural reform.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "The administration claims it is returning funds to nearly 1 million Americans who were allegedly overcharged for health insurance through federal exchanges.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Financial distributions are deployed as targeted political messaging timed around policy battles rather than systematic healthcare reform.\nResulting Judgement: (-0.80, -0.85) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA political maneuver uses targeted treasury checks to reframe administrative narratives while avoiding deep structural reform.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Treasury Distribution: FAIL (-0.8, -0.9) — Politically timed financial payout.\n- Policy Framing: FAIL (-0.8, -0.8) — Blames prior administration selectively.",
       "The administration initiated $500 refund checks to nearly 1 million Americans, attributing the returned funds to alleged overcharges by the previous administration on HealthCare.gov.",
       "The Bright Side:\nSome citizens receive direct financial relief, putting cash back into consumer pockets during inflationary pressures.",
       "The Breakdown & Plane Error:\nConfusing WHAT (targeted financial distribution) with WHO (beneficiaries of systemic healthcare reform), masking political targeting as broad restitution.",
       "Social Physics Analysis:\nActors deploy a Smart Selfish maneuver by turning routine bureaucratic adjustments into a personalized political gift, projecting blame onto rivals while securing short-term leverage.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. R_net scaling reveals hidden extraction behind public relations.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. R_net scaling reveals hidden extraction behind public relations.",
       "The Unavoidable Truth: Citizens receive actual cash refunds in their mailboxes.\n\nThe Unavoidable Lie: The payouts represent systematic relief rather than targeted political messaging.",
       "Alethekanon:\nTreasury mechanisms are co-opted for personal brand reinforcement under the guise of restitution.🌐",
       "Awwthekanon:\nIt is understandable to feel glad for any unexpected cash assistance when bills are tight, but we should look closely at why relief arrives only when political stakes are high.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Treasury Distribution",
@@ -166,6 +228,7 @@
         "name": "Affordable Care Act Exchanges",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

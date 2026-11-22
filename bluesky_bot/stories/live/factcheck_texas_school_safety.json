@@ -5,22 +5,22 @@
     "subject": "Texas Tells Students to Report Threats. It Should Give Us a Seat at the Safety Table.",
     "link": "https://www.texasobserver.org/give-students-a-seat-at-school-safety-table/",
     "target_url": "https://bsky.app/profile/texasobserver.org/post/3mx33kzs2cm2m",
-    "claim_u": 0.95,
-    "claim_psi": 0.85,
-    "real_u": 0.88,
-    "real_psi": 0.78,
+    "claim_u": 0.72,
+    "claim_psi": 0.42,
+    "real_u": 0.21,
+    "real_psi": 0.09,
     "mode": "root",
     "posts": [
       "Students are expected to report school threats, but they are locked out of the safety decisions. Texas Tells Students to Report Threats. Evidence: Student safety, Bureaucratic exclusion, Shared agency. #Aletheia #SchoolSafety 🌐",
-      "The Texas Observer argues that if students are trusted to act as the primary sensors for school threats, they must be given a formal seat on district safety committees. Stated Judgement: (+0.95, +0.85) — Greater Good",
-      "Texas law mandates safety committee seats for police, parents, and administrators, but completely excludes the students who bear the actual physical risk and hold the ground-level data. Resulting Judgement: (+0.88, +0.78) — Greater Good",
-      "Verdict: PASS — Grace. The student's call for representation is a logically sound and morally urgent demand to align responsibility with agency in school safety.\nIntegrity: Absolute Truth (Hypocrisy: 0.10, Uncertainty z: 0)",
+      "The Texas Observer argues that if students are trusted to act as the primary sensors for school threats, they must be given a formal seat on district safety committees. Stated Judgement: (+0.72, +0.42) — Greater Good",
+      "Texas law mandates safety committee seats for police, parents, and administrators, but completely excludes the students who bear the actual physical risk and hold the ground-level data. Resulting Judgement: (+0.21, +0.09) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Absolute Truth (Hypocrisy: 0.10, Uncertainty z: 0)",
       "- Arjun Sharda (Author): PASS (0.88, 0.78) — Constructive advocacy for student agency.\n- Texas School Safety Policy: FAIL (-0.45, -0.60) — Demands reporting but denies representation.",
       "The Texas School Safety Center launched a \"Threats Are No Joke\" campaign urging students to report dangers, highlighting the policy gap where state law excludes students from school safety committees.",
       "The Poison:\nGiving students a seat at the table requires careful structuring to ensure their participation is meaningful, rather than a tokenistic PR exercise that shields administrators from accountability.",
       "The Breakdown & Plane Error:\nThe Plane Error is metaphysical (WHO vs WHAT). The state treats students as passive data-gathering tools (WHAT) rather than active, stakeholders (WHO) whose lived experience is vital to designing real safety.",
       "Social Physics Analysis:\nThe state executes a Smart Selfish maneuver, offloading the cognitive and emotional burden of threat detection onto students while hoarding decision-making power. True safety requires a Smart Altruistic loop of shared agency and trust.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Aligning student responsibility with formal agency resolves systemic strain.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Aligning student responsibility with formal agency resolves systemic strain.",
       "The Unavoidable Truth: Students are the most effective early warning system for school threats.\nThe Unavoidable Lie: Top-down safety committees can protect schools without student-level insights.",
       "Alethekanon:\nResponsibility without authority is a classic organizational failure mode. If you deputize students as your primary intelligence network, excluding them from the command structure is illogical.",
       "Awwthekanon:\nOur kids are carrying such a heavy burden, constantly looking out for danger just to stay safe at school. The very least we can do is listen to them and let them help shape their own safety.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Arjun Sharda (Author)",
@@ -164,6 +226,7 @@
         "name": "Texas Observer",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

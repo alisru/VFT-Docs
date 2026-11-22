@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 1.0,
-    "real_psi": 1.0,
+    "real_u": 0.9,
+    "real_psi": 0.9,
     "mode": "root",
     "posts": [
       "An advocate shares her personal grief to push for earlier Alzheimer's diagnoses and better policy.\nDementia stole my grandmother...\nEvidence: Patient care, Early diagnosis, Access barriers\n#Aletheia #Health",
-      "Rachel Conant argues that breakthroughs in early diagnostics and treatments offer hope, and we must now focus on ensuring patients can access these life-changing advancements.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The advocacy is genuine and aligned with patient needs. However, the narrative glosses over the high costs, severe side effects (like brain bleeding), and systemic inequities in accessing these new drugs.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — Stasis in Grace. A deeply authentic push for systemic healthcare reform, though it must address clinical risks and drug access barriers.\nIntegrity: Trustworthy (Hypocrisy: 0.1, z: 1)",
+      "Rachel Conant argues that breakthroughs in early diagnostics and treatments offer hope, and we must now focus on ensuring patients can access these life-changing advancements.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The advocacy is genuine and aligned with patient needs. However, the narrative glosses over the high costs, severe side effects (like brain bleeding), and systemic inequities in accessing these new drugs.\nResulting Judgement: (+0.90, +0.90) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 0.1, z: 1)",
       "- Rachel Conant: PASS (1.0, 1.0) — Authentic advocacy for patients.\n- Alzheimer's Association: COND (0.8, 0.8) — Needs to address drug side effects.",
       "Alzheimer's Association VP Rachel Conant uses her family's experience with vascular dementia to advocate for federal funding, early blood tests, and equitable access to new cognitive treatments.",
       "The Poison:\nWhile celebrating breakthroughs is vital, overhyping expensive treatments with serious side effects can lead to financial exploitation and medical harm for desperate families.",
       "The Breakdown & Plane Error:\nThe article commits a minor Possible error (WHAT) by downplaying the clinical failure modes and severe side effects of new amyloid-targeting drugs in favor of a purely hopeful narrative.",
       "Social Physics Analysis:\nConant executes a Smart Altruistic Maneuver. She leverages personal tragedy to build a transparent coalition, seeking to empower families and resolve the systemic strain of late-stage dementia diagnoses.",
-      "The Trajectory: The Path of Stasis in Grace.\nWhen you map the alignment between personal grief and systemic advocacy, it plots a direct trajectory toward Greater Good. Empowering caregivers creates lasting societal resilience.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between personal grief and systemic advocacy, it plots a direct trajectory toward Greater Good. Empowering caregivers creates lasting societal resilience.",
       "The Unavoidable Truth: Early diagnosis dramatically improves the quality of life for dementia patients.\nThe Unavoidable Lie: New treatments are a simple, risk-free cure accessible to everyone.",
       "Alethekanon:\nAdvocacy is structurally sound when it bridges personal experience and policy. However, complete transparency requires acknowledging the clinical limitations and risks of emerging therapies.",
       "Awwthekanon:\nLosing someone to dementia is like watching a beautiful library burn down book by book. Turning that profound heartbreak into a shield to protect other families is a beautiful act of love.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Rachel Conant",
@@ -156,6 +218,7 @@
         "name": "vascular dementia patients",
         "role": "acted_upon"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

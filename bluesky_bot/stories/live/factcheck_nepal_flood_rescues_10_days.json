@@ -14,13 +14,13 @@
       "A miracle of survival in Nepal. Two people are rescued 10 days after devastating floods and landslides trapped them in mud and tunnels.\nEvidence: Human solidarity, Lifesaving action, Active empathy\n#Nepal #Rescue #Survival",
       "The rescue operations represent a triumph of human resilience and international cooperation, bringing hope amidst a massive natural disaster that has claimed over 1,300 lives.\nStated Judgement: (1.0, 1.0) — Greater Good",
       "The reality perfectly aligns with the claim. The tireless efforts of local and international rescue teams successfully saved lives against overwhelming physical odds.\nResulting Judgement: (1.0, 1.0) — Greater Good",
-      "Verdict: PASS — Grace. A genuine, heroic effort of human solidarity and survival that brings light to a devastating disaster.\nIntegrity: Absolute Truth (Hypocrisy: 0.0, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 0.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Rescue Operations: PASS (1.00, 1.00) — Genuine, heroic lifesaving efforts.\n- Media Reporting: PASS (1.00, 1.00) — Accurate reporting of a miraculous survival.",
       "Ten days after devastating floods hit Nepal, rescue crews pulled a Chinese national from a hydropower tunnel and a 60-year-old woman from a mud-covered home, bringing hope to a disaster zone.",
       "The Poison:\nWhile these individual rescues are miraculous, they highlight the immense scale of the ongoing disaster, with hundreds of workers still missing and trapped in tunnels.",
       "The Breakdown & Plane Error:\nNo plane error. The physical reality of the rescue matches the lyrical narrative of hope and the logical coordination of international rescue teams.",
       "Social Physics Analysis:\nThis event demonstrates a Smart Altruistic Maneuver. Rescue teams and survivors aligned toward a shared goal of saving lives, utilizing transparent coordination and active empathy to overcome extreme physical strain and achieve a stable resolution.",
-      "The Trajectory: Grace.\nWhen stated intentions of saving lives align perfectly with ground-level results, the trajectory leads directly to Grace, reinforcing human solidarity and resilience in the face of tragedy.",
+      "The Trajectory: The Path of Grace.\nWhen stated intentions of saving lives align perfectly with ground-level results, the trajectory leads directly to Grace, reinforcing human solidarity and resilience in the face of tragedy.",
       "The Unavoidable Truth: Even in the darkest disasters, human cooperation and determination can achieve the seemingly impossible.\nThe Unavoidable Lie: Believing that rescue efforts are futile prevents miracles from happening.",
       "Alethekanon:\nThis rescue is a powerful demonstration of physical and logical alignment. When resources and empathy are directed toward a clear, transparent goal, humanity can overcome immense natural strain.",
       "Awwthekanon:\nOh, my heart is so full seeing this! To be found and held after ten days in the dark, and to have your family's grief turned into pure joy—this is the beautiful power of love and community in action.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Rescue Operations",
@@ -278,6 +340,7 @@
         "name": "Chandika Shrestha",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.8,
+    "real_u": 0.85,
     "real_psi": 0.9,
     "mode": "root",
     "posts": [
       "Border Patrol and local police seize 560 pounds of cocaine off the coast of Puerto Rico.\nEvidence: CBP report, FURA interdiction, DEA handover\n#Aletheia #BorderSecurity",
-      "Federal and local law enforcement successfully intercepted a maritime smuggling vessel, seizing 560 pounds of cocaine and arresting two suspects.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Joint operations by U.S. Border Patrol and Puerto Rico's FURA effectively disrupted a major drug smuggling run, protecting coastal borders.\nResulting Judgement: (+0.8, +0.9) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nCoordinated interdiction successfully neutralized transnational narcotics trafficking and secured maritime borders.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Federal and local law enforcement successfully intercepted a maritime smuggling vessel, seizing 560 pounds of cocaine and arresting two suspects.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Joint operations by U.S. Border Patrol and Puerto Rico's FURA effectively disrupted a major drug smuggling run, protecting coastal borders.\nResulting Judgement: (+0.85, +0.90) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nCoordinated interdiction successfully neutralized transnational narcotics trafficking and secured maritime borders.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- U.S. Border Patrol: PASS (0.9, 0.9) — Effective maritime interdiction.\n- Puerto Rico FURA: PASS (0.8, 0.9) — Strong tactical cooperation.",
       "U.S. Border Patrol agents and Puerto Rico's FURA intercepted a vessel west of Aguadilla, seizing 231 packages of cocaine worth an estimated $7.5 million.",
       "The Bright Side:\nSeamless multi-agency cooperation successfully kept dangerous narcotics off mainland streets.",
       "The Breakdown & Plane Error:\nAligning institutional claims with concrete operational achievements and physical evidence.",
       "Social Physics Analysis:\nLaw enforcement executed a smart altruistic maneuver, combining transparent agency partnerships with direct tactical resolution to safeguard public welfare.",
-      "The Trajectory: The Path of Grace.\nWhen you map effective interdiction against public safety outcomes, it plots a direct trajectory toward Greater Good. Joint operations successfully eliminate immediate harm.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map effective interdiction against public safety outcomes, it plots a direct trajectory toward Greater Good. Joint operations successfully eliminate immediate harm.",
       "The Unavoidable Truth: Multi-agency maritime patrols actively disrupt major drug smuggling corridors.\n\nThe Unavoidable Lie: Local interdictions alone cannot eliminate the broader transnational drug economy.",
       "Alethekanon:\nEffective interdiction dismantles immediate smuggling threats through coordinated agency execution.",
       "Awwthekanon:\nIt brings peace of mind knowing dedicated officers work tirelessly on the water to protect communities from dangerous drugs.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "U.S. Border Patrol Operations",
@@ -167,6 +229,7 @@
         "name": "Reggie Johnson",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

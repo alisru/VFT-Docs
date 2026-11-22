@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.7,
     "claim_psi": 0.6,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": -0.2,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "As law enforcement ballot seizures become a live threat, legal experts rush to equip judges with guides to navigate dubious search warrants.\nEvidence: Fulton County search warrant, UCLA Safeguarding Democracy guide\n#Aletheia #USPol",
-      "Legal scholars and election defenders frame these preparations as a proactive, neutral shield to protect the democratic chain of custody.\nStated Judgement: (+0.7, +0.6) — Good Preference",
-      "Ground reality shows that the mere contemplation of armed federal agents seizing ballots shatters democratic norms and normalizes political interference.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPreparedness for unprecedented seizures normalizes an authoritarian attack on election integrity.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.8, z: 3)",
+      "Legal scholars and election defenders frame these preparations as a proactive, neutral shield to protect the democratic chain of custody.\nStated Judgement: (+0.70, +0.60) — Greater Good",
+      "Ground reality shows that the mere contemplation of armed federal agents seizing ballots shatters democratic norms and normalizes political interference.\nResulting Judgement: (-0.20, -0.30) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPreparedness for unprecedented seizures normalizes an authoritarian attack on election integrity.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.8, z: 3)",
       "Sub-Audits Breakdown:\n- UCLA Legal Guide: PASS (0.6, 0.5) — Pragmatic defensive tool for magistrates facing dubious affidavits.\n- Law Enforcement Seizure Threat: FAIL (-0.8, -0.9) — Shatters chain of custody under conspiracy pretexts.",
       "UCLA's Safeguarding Democracy Project released a new guide urging judges to consult election administrators before signing search warrants for ballots.",
       "The Bright Side:\nLegal experts are actively building defensive frameworks to help judges spot and reject bad-faith conspiracy warrants.",
       "The Breakdown & Plane Error:\nConfusing judicial risk mitigation (WHAT) with institutional stability (WHO). Preparing for a breach is treated as a substitute for preventing it.",
       "Social Physics Analysis:\nActors exploit institutional anxiety. Discredited conspiracy theories create manufactured crises, weaponizing administrative friction to project doubt onto legitimate results.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil by normalizing armed state interference.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil by normalizing armed state interference.",
       "The Unavoidable Truth: When search warrants target active elections based on conspiracy theories, the judiciary becomes a frontline battlefield.\n\nThe Unavoidable Lie: Ballot seizures are routine administrative checks.",
       "Alethekanon:\nTraining judges to handle armed ballot seizures acknowledges an unprecedented descent into institutional breakdown disguised as legal prudence.",
       "Awwthekanon:\nIt is terrifying for poll workers to imagine armed agents storming local offices to confiscate the very votes citizens poured their hearts into casting.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "UCLA Legal Guide",
@@ -166,6 +228,7 @@
         "name": "UCLA Safeguarding Democracy Project",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "AI Usage Is Soaring, But Americans Still Want Humans To Be In Control",
     "link": "https://dailycaller.com/2026/09/13/americans-ai-use-making-decisions-rutgers-survey",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.3,
-    "real_psi": 0.1,
+    "claim_u": 0.65,
+    "claim_psi": 0.45,
+    "real_u": 0.65,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "AI adoption surges among Americans, but public trust stalls when automated tools make high-stakes decisions without oversight.\nEvidence: 72% AI usage, 59% want regulation, Rutgers survey\n#Aletheia #Tech",
-      "Public adoption of AI tools is soaring while consumers prudently demand human oversight for critical life decisions.\nStated Judgement: (+0.8, +0.5) — Lesser Good",
-      "While usage climbs, deep public anxiety persists regarding algorithmic overreach and accountability in high-stakes domains.\nResulting Judgement: (+0.3, +0.1) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nRapid technological adoption outpaces trust infrastructure, highlighting the urgent need for human-in-the-loop governance.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Public adoption of AI tools is soaring while consumers prudently demand human oversight for critical life decisions.\nStated Judgement: (+0.65, +0.45) — Greater Good",
+      "While usage climbs, deep public anxiety persists regarding algorithmic overreach and accountability in high-stakes domains.\nResulting Judgement: (+0.65, +0.45) — Greater Good",
+      "Verdict: PASS — Grace.\nRapid technological adoption outpaces trust infrastructure, highlighting the urgent need for human-in-the-loop governance.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- AI Adoption: PASS (0.8, 0.6) — 72% of adults now use AI tools.\n- Governance Demand: PASS (0.5, 0.3) — 59% want strict oversight.",
       "A Rutgers University survey reveals that while 72% of American adults use AI products, fewer than 1 in 10 support unsupervised high-stakes decisions.",
       "The Bright Side:\nPublic caution and demand for regulatory frameworks ensure technology remains a tool serving human agency rather than replacing it.",
       "The Breakdown & Plane Error:\nConfusing personal utility and convenience (WHAT) with institutional trust and ethical governance (WHO).",
       "Social Physics Analysis:\nTech developers run a speed-first adoption loop, while the public demands a transparent, human-governed empowerment loop.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between rapid technological integration and cautious public oversight, it plots a direct trajectory toward Lesser Good.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between rapid technological integration and cautious public oversight, it plots a direct trajectory toward Lesser Good.",
       "The Unavoidable Truth: Utility drives tool adoption, but safety requires rigorous institutional guardrails.\n\nThe Unavoidable Lie: Consumers will blindly accept autonomous AI decisions without verified trust mechanisms.",
       "Alethekanon:\nAdoption is a function of utility, but lasting integration depends entirely on trust architecture and transparent human oversight.",
       "Awwthekanon:\nIt's entirely natural to want a human heart and mind behind life-altering choices like healthcare, loans, and justice.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "AI Adoption",
@@ -156,6 +218,7 @@
         "name": "International Center for Law & Economics",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

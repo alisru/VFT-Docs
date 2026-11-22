@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.92,
-    "real_psi": -0.85,
+    "real_u": -0.84,
+    "real_psi": -0.89,
     "mode": "root",
     "posts": [
       "Escalating threats of total economic warfare face immediate global resistance.\n\nIran rejects Trump's threat of economic warfare\nEvidence: crushing economic isolation, global friction & inflation, stable diplomatic settlement #Aletheia #USPol",
-      "The US administration claims an 'Economic D-Day' will completely isolate Iran, defeat national security threats, and force a lasting peace deal through maximum pressure.\n\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, unilateral economic threats push major trading partners away, increase domestic energy price risks, and lock both nations in an escalation loop without a viable exit.\n\nResulting Judgement: (-0.92, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Maximum pressure tactics without diplomatic offramps amplify economic instability.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.4, z: 3)",
+      "The US administration claims an 'Economic D-Day' will completely isolate Iran, defeat national security threats, and force a lasting peace deal through maximum pressure.\n\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, unilateral economic threats push major trading partners away, increase domestic energy price risks, and lock both nations in an escalation loop without a viable exit.\n\nResulting Judgement: (-0.84, -0.89) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.4, z: 3)",
       "Sub-Audits Breakdown:\n- US Economic Coercion: FAIL (-0.92, -0.86) — Coercion lacks exit strategy.\n- Iranian Response: COND (-0.45, -0.32) — Exposes limits of US escalation.",
       "Following the expiration of a 60-day negotiating window, the US threatened unprecedented sanctions against Iran and any nation aiding its economy, drawing immediate pushback from Tehran and Beijing.",
       "The Bright Side:\nInternational pushback from major economies reinforces the necessity of diplomatic channels over unilateral economic threats.",
       "The Breakdown & Plane Error:\nThe claim confuses physical force (coercive threats) with logical outcomes (lasting stability). Threatening allies and trading partners creates systemic friction rather than enforced isolation.",
       "Social Physics Analysis:\nWhen leadership uses unilateral threats to force compliance, it generates defensive alignment among target nations. True leverage requires upfront transparency and mutual offramps rather than post-hoc economic warfare.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Maximum economic pressure creates systemic instability without forcing surrender.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Maximum economic pressure creates systemic instability without forcing surrender.",
       "The Unavoidable Truth: Sanctions alone cannot force strategic surrender when target nations hold key economic lifelines.\n\nThe Unavoidable Lie: Escalating economic threats guarantees global compliance without domestic costs.",
       "Alethekanon:\nCoercion without an offramp is structurally unsound. When economic pressure threatens global supply chains, target states absorb the pain while costs rebound on the originator.",
       "Awwthekanon:\nBehind these high-level political threats are ordinary families bearing the brunt of inflation and economic warfare. True strength lies in building peace, not inflicting lingering hardship.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.95,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.85,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.3,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "US Economic Coercion Campaign",
@@ -290,6 +352,7 @@
         "name": "China",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

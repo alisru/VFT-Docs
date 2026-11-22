@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.1,
-    "real_psi": 0.93,
+    "real_u": 0.18,
+    "real_psi": 0.95,
     "mode": "root",
     "posts": [
       "A quiet diplomatic upgrade in New York restores direct flights and full embassies between Israel and Morocco. But behind the handshakes lies a complex web of regional strain and transactional geopolitics. 🌐\nEvidence: Diplomatic peace, Restoring ties, Transactional deal",
       "US Ambassador Mike Waltz announces a major breakthrough deepening diplomatic and economic ties between Israel and Morocco, proving the Abraham Accords remain strong despite regional conflict.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "The agreement restores liaison-level ties suspended during the Gaza war, driven by a transactional US recognition of Moroccan sovereignty over Western Sahara rather than organic regional integration.\nResulting Judgement: (+0.10, +0.93) — Lesser Good",
-      "Verdict: PASS — Awakening into Redemption. The deal achieves real diplomatic progress and economic cooperation, though it relies heavily on transactional geopolitics and sanitizes regional tensions.\nIntegrity: Trustworthy (Hypocrisy: 1.8, z: 2)",
+      "The agreement restores liaison-level ties suspended during the Gaza war, driven by a transactional US recognition of Moroccan sovereignty over Western Sahara rather than organic regional integration.\nResulting Judgement: (+0.18, +0.95) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.8, z: 2)",
       "- Mike Waltz's Announcement: COND (0.10, 0.93) — Real progress but heavily sanitized.\n- Morocco-Israel Relations: COND (0.15, 0.85) — Restoring ties suspended by war.",
       "US Ambassador Mike Waltz hosted a trilateral meeting in New York where Israel and Morocco agreed to upgrade diplomatic missions to full embassies and resume direct commercial flights by the end of 2026.",
       "The Poison:\nBy framing this as a pure triumph of peace, the announcement glosses over the intense domestic backlash in Morocco and the controversial US recognition of Moroccan sovereignty over Western Sahara.",
       "The Breakdown & Plane Error:\nThe announcement stumbles on the Lyrical plane (WHY). It frames the deal as a spontaneous outbreak of regional harmony, when it is actually a highly transactional quid pro quo leveraged by US diplomatic concessions.",
       "Social Physics Analysis:\nThe actors execute a Smart Altruistic Maneuver with transactional limits. They resolve real diplomatic strain and build economic integration, but use post-hoc justifications to project an image of seamless regional harmony.",
-      "The Trajectory: Awakening into Redemption.\nWhen you map the gap between the sanitized peace narrative and the transactional reality, it plots a trajectory toward a fragile but functional regional coexistence.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between the sanitized peace narrative and the transactional reality, it plots a trajectory toward a fragile but functional regional coexistence.",
       "The Unavoidable Truth: Real diplomatic channels are being restored and upgraded.\nThe Unavoidable Lie: This deal proves regional relations are completely unaffected by the ongoing Gaza conflict.",
       "Alethekanon:\nTransactional diplomacy is still diplomacy. While the public narrative is heavily sanitized for political consumption, the physical restoration of embassies and flights represents a concrete step toward regional stability.",
       "Awwthekanon:\nIt is beautiful to see people choosing connection over division, even when the politics behind it are complicated. Every flight restored and embassy opened is a bridge for families and cultures to meet in peace.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.55,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.55,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.55,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.55,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.45,
+        "O": 0.55,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.85,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.65,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.15,
+        "O": 0.65,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Mike Waltz's Announcement",
@@ -292,6 +354,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

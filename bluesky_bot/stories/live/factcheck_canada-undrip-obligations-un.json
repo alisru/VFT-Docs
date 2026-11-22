@@ -5,22 +5,22 @@
     "subject": "Canada has ‘serious problems’ respecting UNDRIP obligations, UN racism envoy says - The Hill Times",
     "link": "https://www.hilltimes.com/2026/10/09/canada-has-serious-problems-respecting-undrip-obligations-un-racism-envoy-says/521754/",
     "target_url": "https://bsky.app/profile/hilltimes.com/post/3mxk5wrht6o23",
-    "claim_u": 0.6,
+    "claim_u": 0.55,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": 0.05,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "UN racism envoy warns Canada struggles with UNDRIP obligations, highlighting systematic failures in securing Indigenous consent. #Aletheia #Canada #Indigenous\nEvidence: Reconciliation rhetoric, Consent ignored, Resource extraction prioritized",
-      "Canada officially adopted the UN Declaration on the Rights of Indigenous Peoples, portraying a national commitment to full reconciliation and human rights.\nStated Judgement: (+0.6, 0.0) — Good Preference",
-      "Years later, free, prior, and informed consent is routinely sidelined for major projects, leaving Indigenous communities fighting for basic self-determination.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. State reconciliation promises mask ongoing structural violations of Indigenous rights.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 3)",
+      "Canada officially adopted the UN Declaration on the Rights of Indigenous Peoples, portraying a national commitment to full reconciliation and human rights.\nStated Judgement: (+0.55, +0.00) — Lesser Good",
+      "Years later, free, prior, and informed consent is routinely sidelined for major projects, leaving Indigenous communities fighting for basic self-determination.\nResulting Judgement: (+0.05, -0.15) — Lesser Good",
+      "Verdict: PASS — Compromise.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.2, z: 3)",
       "Sub-Audits Breakdown:\n- Federal Reconciliation Claims: FAIL (-0.70, -0.80) — Rhetoric hides extraction push.\n- UN Rapporteur Assessment: PASS (0.80, 0.50) — Exposes consent failures.",
       "The UN Special Rapporteur on Contemporary Forms of Racism highlighted that Canada faces severe hurdles upholding UNDRIP, exposing gaps between federal laws and local realities.",
       "The Poison:\nAdopting international human rights declarations into law provides diplomatic cover while domestic resource development overrides Indigenous vetoes.",
       "The Breakdown & Plane Error:\nConfusing legislative symbolism (WHAT) with lived human rights reality (WHO). Passing a law is treated as substitute for securing actual consent.",
       "Social Physics Analysis:\nCanada runs a Smart Selfish Maneuver: using high-minded human rights rhetoric as a pretext to project moral leadership while maintaining extractive state power over Indigenous lands.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a trajectory toward Greater Evil. Systemic extraction overrides legal promises.",
+      "The Trajectory: The Path of Compromise.\nWhen you map the gap between stated intentions and ground-level results, it plots a trajectory toward Greater Evil. Systemic extraction overrides legal promises.",
       "The Unavoidable Truth: Legislative adoption without consent enforcement is empty symbolism.\n\nThe Unavoidable Lie: UNDRIP integration guarantees Indigenous veto power.",
       "Alethekanon:\nDiplomatic prestige is maintained through nominal ratification while material extraction proceeds unabated. True sovereignty requires structural relinquishment of state control.",
       "Awwthekanon:\nIt breaks my heart that Indigenous peoples must constantly battle the state just to have their voices heard on their own ancestral homelands.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Federal Reconciliation Claims",
@@ -158,6 +220,7 @@
       "Aletheia",
       "Canada",
       "Indigenous"
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

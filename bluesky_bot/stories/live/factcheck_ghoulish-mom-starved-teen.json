@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "real_u": -0.68,
+    "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "A mother's grotesque neglect ends in a 13-year-old weighing just 35 pounds. 🌐\nEvidence: Starvation, Murder, Neglect\n#NorthCarolina #ChildAbuse",
-      "Reports highlight a horrific case of parental starvation and child abuse in North Carolina, resulting in first-degree murder charges.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Years of severe neglect and deliberate starvation killed a 13-year-old girl while her twin brother languished in filth and trauma.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. A mother's horrific starvation of her children exposes catastrophic domestic abuse and systemic failure.\n\nIntegrity: Severe Deception (Hypocrisy: 18.50, z: 4)",
+      "Reports highlight a horrific case of parental starvation and child abuse in North Carolina, resulting in first-degree murder charges.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Years of severe neglect and deliberate starvation killed a 13-year-old girl while her twin brother languished in filth and trauma.\nResulting Judgement: (-0.68, -0.55) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 18.50, z: 4)",
       "Sub-Audits Breakdown:\n- Kymberli Bowden: FAIL (-0.95, -0.90) — Deliberate starvation & murder.\n- Child Welfare: COND (-0.40, -0.20) — Neighbors reported, response delayed.\n- NY Post Reporting: PASS (+0.80, +0.70) — Accurate grim facts exposed.",
       "Police discovered the deceased 13-year-old girl weighing 35 pounds after months of isolation, alongside her malnourished twin brother living in filth.",
       "The Poison:\nNeighbors repeatedly called for welfare checks, yet bureaucratic blind spots allowed the horrific abuse to persist behind closed doors until death.",
       "This is a tragic failure of physical care and child protection, where parental duty inverted into lethal torture while institutional checks lagged behind.",
       "Social Physics Analysis:\nThe perpetrator operated via extreme smart selfish extraction, locking away vulnerable children to evade oversight while projecting normalcy outwardly.",
-      "The Trajectory: The Path of Destruction.\nWhen you map extreme child neglect against basic survival, it plots a direct trajectory toward Greater Evil. F = S_GE * GE - O_GE.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map extreme child neglect against basic survival, it plots a direct trajectory toward Greater Evil. F = S_GE * GE - O_GE.",
       "The Unavoidable Truth: Extreme parental abuse leaves permanent scars and fatal devastation for vulnerable children.\n\nThe Unavoidable Lie: Neighbors' warnings were adequately investigated in real time.",
       "Alethekanon:\nWhen parental authority becomes an instrument of systematic starvation, the social contract collapses entirely into destructive predation.",
       "Awwthekanon:\nLittle ZT suffered in unspeakable silence for years while the world kept turning outside. No child should ever endure such unimaginable terror and hunger. Rest in peace, sweet soul.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Kymberli Bowden Parental Duty",
@@ -157,6 +219,7 @@
     "tags": [
       "NorthCarolina",
       "ChildAbuse"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

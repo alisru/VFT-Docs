@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.82,
+    "real_u": 0.07,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "Investigative overreach crosses into civil liberties violations as federal probes sweep up private banking data of thousands of ordinary donors. 🌐\nEvidence: Seizure of 5,000 checks, Whistleblower disclosures, Committee hearings\n#Aletheia #USPol",
-      "Special Counsel investigations operated with rigorous adherence to narrow legal boundaries regarding Jan 6.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Federal investigators subpoenaed and hoovered up personal checks and sensitive financial data of nearly 5,000 everyday citizens.\nResulting Judgement: (-0.75, -0.82) — Deception",
-      "Verdict: FAIL — The Path of Deception. Sweeping up the private financial records of thousands of everyday donors under a broad investigative umbrella reveals deep overreach.\n\nIntegrity: Severe Deception (Hypocrisy: 14.20, Uncertainty z: 4)",
+      "Special Counsel investigations operated with rigorous adherence to narrow legal boundaries regarding Jan 6.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Federal investigators subpoenaed and hoovered up personal checks and sensitive financial data of nearly 5,000 everyday citizens.\nResulting Judgement: (+0.07, -0.20) — Lesser Good",
+      "Verdict: PASS — Compromise.\n\nIntegrity: Severe Deception (Hypocrisy: 14.20, Uncertainty z: 4)",
       "Sub-Audits Breakdown:\n- Jack Smith Probe: FAIL (-0.72, -0.80) — Broad data collection on citizens.\n- Committee Disclosures: PASS (0.85, 0.40) — Exposes federal overreach.",
       "Whistleblower disclosures released by Senate Judiciary Chairman Chuck Grassley reveal that Special Counsel Jack Smith's team acquired nearly 5,000 personal checks from small-dollar Trump donors.",
       "The Poison:\nBroad prosecutorial dragnets treat ordinary citizens' financial contributions as investigative targets, eroding donor privacy and chilling political participation.",
       "The Breakdown & Plane Error:\nConfusing procedural power (WHO) with constitutional restraint (WHAT). Investigators treated citizen banking data as fair game without weighing privacy harms.",
       "Social Physics Analysis:\nProsecutors ran a Smart Selfish Maneuver, using broad subpoenas under a high-profile pretext to harvest deep personal financial data of thousands of ordinary citizens while projecting righteousness.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Institutional overreach expands power by eroding public trust.",
+      "The Trajectory: The Path of Compromise.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Institutional overreach expands power by eroding public trust.",
       "The Unavoidable Truth: Sweeping up personal checks of everyday donors expands state surveillance over ordinary political participation.\n\nThe Unavoidable Lie: Routine investigative subpoenas never compromise the financial privacy of innocent citizens.",
       "Alethekanon:\nWhen broad legal powers target political donors, the machinery of justice becomes an instrument of intimidation.",
       "Awwthekanon:\nIt hurts to see everyday people caught in political crossfire simply for supporting a candidate they believe in.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Jack Smith Probe",
@@ -177,6 +239,7 @@
         "name": "U.S. Senate Judiciary Committee",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

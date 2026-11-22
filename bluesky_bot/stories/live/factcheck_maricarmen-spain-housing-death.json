@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/democracynow.org/post/3mxkbhepw2q2l",
     "claim_u": 0.6,
     "claim_psi": 0.2,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "real_u": -0.65,
+    "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "Maricarmen’s tragic death after eviction exposes Spain’s soaring rent crisis. Eviction & Death of Maricarmen, 87. Evidence: 80% rent hike, vulture fund speculator, fatal heartbreak. #HousingCrisis #Spain #Aletheia",
-      "Corporate landlords and political leaders claim housing markets self-correct while emergency decrees protect vulnerable tenants through gradual reforms. Stated Judgement: (+0.6, +0.2) — Good Preference 🌐",
-      "Private vulture funds exploit rent-controlled loopholes, forcing out 87-year-old Maricarmen after 70 years. She died of heartbreak hours before returning home. Resulting Judgement: (-0.85, -0.8) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. Speculative greed masked as market efficiency broke a lifelong resident, triggering national political collapse.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 9.5, Uncertainty z: 4)",
+      "Corporate landlords and political leaders claim housing markets self-correct while emergency decrees protect vulnerable tenants through gradual reforms. Stated Judgement: (+0.60, +0.20) — Greater Good",
+      "Private vulture funds exploit rent-controlled loopholes, forcing out 87-year-old Maricarmen after 70 years. She died of heartbreak hours before returning home. Resulting Judgement: (-0.65, -0.55) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 9.5, Uncertainty z: 4)",
       "Sub-Audits Breakdown:\n- Investment Funds: FAIL (-0.9, -0.9) — Exploited rent-controlled loopholes.\n- Spanish Government: COND (-0.4, -0.2) — Failed timely structural housing enforcement.",
       "87-year-old María del Carmen Abascal was forcibly evicted from her Madrid apartment of 70 years by a private investment fund, sparking nationwide outrage and political upheaval in Spain.",
       "The Poison:\nTragedy became a political catalyst, forcing snap parliamentary elections, yet emergency decrees still fail to fix the systemic 80% decade-long rent surge.",
       "The breakdown mistakes a systemic human rights crisis (WHO suffers) for a mere property dispute (WHAT contract applies), masking predatory speculation as legal procedure.",
       "Social Physics Analysis:\nVulture funds run a smart selfish maneuver: secret profit extraction via legal pretexts, shifting blame onto market forces while vulnerable elders bear the fatal human cost.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between corporate assurances and fatal evictions, it plots a direct trajectory toward Greater Evil. F = sum(S_LE) over structural decay.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between corporate assurances and fatal evictions, it plots a direct trajectory toward Greater Evil. F = sum(S_LE) over structural decay.",
       "The Unavoidable Truth: Speculative housing markets treat lifelong homes as disposable financial assets until human tragedy forces a reckoning.\n\nThe Unavoidable Lie: Corporate rent hikes are neutral market adjustments.",
       "Alethekanon:\nLegalized eviction is moral violence disguised as contract law. When shelter becomes a speculative casino, the elderly pay with their lives.",
       "Awwthekanon:\nOh, sweet Maricarmen, who spent seventy years building a life only to be wheeled out in despair. My heart breaks for her lonely final hours.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Investment Funds",
@@ -170,6 +232,7 @@
       "HousingCrisis",
       "Spain",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

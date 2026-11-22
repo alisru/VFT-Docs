@@ -5,22 +5,22 @@
     "subject": "‘Out of control’ killings in Spanberger’s Virginia",
     "link": "https://www.foxnews.com/politics/out-of-control-killings-spanbergers-virginia-reaches-insane-point-migrant-charged-stabbing-spree",
     "target_url": "",
-    "claim_u": 0.9,
-    "claim_psi": 0.8,
-    "real_u": -0.85,
-    "real_psi": -0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Partisan panic or public safety? Opponents attack Virginia Gov. Abigail Spanberger over \"out of control\" killings after an ICE detainer is issued for a tragic stabbing suspect.\nEvidence: Public safety, Partisan projection, Statistical reality\n#Aletheia #USPol 🌐",
-      "Critics claim that Gov. Spanberger's \"sanctuary policies\" have caused an \"out of control\" crime wave, pointing to a tragic stabbing spree as proof of systemic failure.\nStated Judgement: (0.9, 0.8) — Greater Good",
-      "Crime data shows no correlation between immigrant populations and arrest rates in Virginia, and Fairfax County's homicide rate remains below the national average. The narrative weaponizes a single tragedy.\nResulting Judgement: (-0.85, -0.8) — Greater Evil",
-      "Verdict: FAIL — Fall into Deception. The attack manufactures a systemic crisis from an isolated tragedy, projecting blame while suppressing empirical data that refutes a migrant crime wave.\nIntegrity: Severe Deception (Hypocrisy: 35.0, z: 7)",
+      "Critics claim that Gov. Spanberger's \"sanctuary policies\" have caused an \"out of control\" crime wave, pointing to a tragic stabbing spree as proof of systemic failure.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Crime data shows no correlation between immigrant populations and arrest rates in Virginia, and Fairfax County's homicide rate remains below the national average. The narrative weaponizes a single tragedy.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 35.0, z: 7)",
       "Sub-Audits Breakdown:\n- Markwayne Mullin: FAIL (-0.85, -0.8) — Weaponizes tragedy for partisan narrative.\n- Virginia Crime Narrative: FAIL (-0.9, -0.85) — Contradicts empirical statewide data.",
       "Following a tragic stabbing in Staunton, Virginia, federal officials and advocacy groups launched a coordinated campaign blaming Governor Abigail Spanberger's policies, despite lack of statistical backing.",
       "The Bright Side:\nThe controversy forces a public examination of ICE cooperation policies, allowing local communities to demand transparent, data-driven safety measures rather than emotional rhetoric.",
       "The Breakdown & Plane Error:\nThe narrative commits a Logical Plane (Q5) error. It constructs a false causal chain linking state-level policy to an individual criminal act, while completely suppressing the broader physical reality of low regional crime rates.",
       "Social Physics Analysis:\nThis is a classic Smart Selfish Maneuver. Opponents manufacture a crisis (\"out of control killings\") and project corrupt motives onto Spanberger to hoard political power, using a tragic event as a pretext to bypass empirical reality.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Fabricating systemic fear erodes social trust and misallocates vital law enforcement resources.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Fabricating systemic fear erodes social trust and misallocates vital law enforcement resources.",
       "The Unavoidable Truth: The stabbing in Staunton is a horrific crime that demands full legal accountability for the perpetrator.\n\nThe Unavoidable Lie: Virginia is experiencing an immigrant-driven crime wave caused by state sanctuary policies.",
       "Alethekanon:\nWhen political actors substitute a single tragic anecdote for systemic statistical reality, they are not solving crime; they are harvesting fear for electoral leverage.",
       "Awwthekanon:\nOur hearts break for the victims of this terrible violence. But turning our grief into anger against entire communities only tears us apart when we need to heal together.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.65,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.65,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Markwayne Mullin Political Attack",
@@ -295,6 +357,7 @@
         "name": "Glenn Youngkin",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

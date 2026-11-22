@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "A Portland teen took the law into his own hands after receiving vile CSAM, resulting in a prison sentence while the suspect faces separate charges.\nEvidence: Vigilante stabbing, CSAM allegations, 5-year prison term\n#Aletheia #Portland #Justice",
-      "Reports highlight a harrowing confrontation where a teenager stabbed an older man over illicit material, sparking debates on vigilante justice.\nStated Judgement: (-0.5, -0.5) — Lesser Evil",
+      "Reports highlight a harrowing confrontation where a teenager stabbed an older man over illicit material, sparking debates on vigilante justice.\nStated Judgement: (-0.50, -0.50) — Greater Evil",
       "Institutional failure to police online predators drove a traumatized youth into violent vigilantism, resulting in incarceration while predators evade local justice.\nResulting Judgement: (-0.80, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nVigilante justice born from systemic law enforcement failure collapses civil order.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
+      "Verdict: FAIL — Destruction.\nVigilante justice born from systemic law enforcement failure collapses civil order.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 3)",
       "Sub-Audits Breakdown:\n- Legal System: FAIL (-0.85, -0.90) — Fails to protect youth proactively.\n- Vigilante Action: FAIL (-0.75, -0.80) — Replaces law with violence.",
       "Elijah Cruz Valenzuela stabbed Joshua Field in Portland after Field allegedly sent him child abuse videos. Valenzuela received a five-year prison sentence.",
       "The Poison:\nThe narrative sensationalizes individual vigilantism while masking the systemic failure of online safety enforcement and institutional child protection.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Legal System",
@@ -157,6 +219,7 @@
         "name": "Portland Police Bureau",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.6,
-    "real_u": 0.75,
-    "real_psi": 0.7,
+    "real_u": 0.61,
+    "real_psi": 0.46,
     "mode": "root",
     "posts": [
       "A quiet walk past an armored synagogue in Istanbul reveals the fragile nature of minority existence and the deep human longing for a permanent home.\nEvidence: Safe Home, Armored Security, Sovereign Survival\n#Zionism #HumanRights",
-      "The author claims that Jewish life should not depend entirely on the goodwill of host societies, defining Zionism as the search for a home where existence is not contingent on majority tolerance.\nStated Judgement: (+0.80, +0.60) — Good Preference",
-      "The reality of historical and ongoing threats forces communities to live behind steel barriers, proving that tolerance is often conditional and security requires self-reliance.\nResulting Judgement: (+0.75, +0.70) — Greater Good",
-      "Verdict: PASS — Awakening into Grace. The honest exploration of historical impermanence and the universal human need for a secure home aligns with systemic empowerment.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
+      "The author claims that Jewish life should not depend entirely on the goodwill of host societies, defining Zionism as the search for a home where existence is not contingent on majority tolerance.\nStated Judgement: (+0.80, +0.60) — Greater Good",
+      "The reality of historical and ongoing threats forces communities to live behind steel barriers, proving that tolerance is often conditional and security requires self-reliance.\nResulting Judgement: (+0.61, +0.46) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.05, z: 0)",
       "- Author's Reflection: PASS (0.78, 0.72) — Honest look at historical impermanence.\n- Turkish Jewish Security: COND (0.45, 0.20) — Highlights the heavy toll of armored existence.",
       "Reflecting on the 1986 and 2003 terrorist attacks on Istanbul's Neve Shalom Synagogue, the author examines the tension between being tolerated by a host society and having a secure, permanent home.",
       "The Poison:\nFocusing solely on the necessity of self-reliance can sometimes obscure the beautiful, albeit fragile, moments of cross-cultural coexistence that still persist.",
       "The Breakdown & Plane Error:\nThere is no plane error here; the author correctly aligns the physical reality of armored security (WHERE) with the existential need for self-determination (WHY), avoiding pretexts.",
       "Social Physics Analysis:\nThis narrative operates on a Smart Altruistic Loop, seeking transparency about historical trauma to build empathy. Rather than projecting blame, it focuses on the systemic solution of self-determination to resolve the strain of conditional tolerance.",
-      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Seeking a secure home empowers a community to move from survival to flourishing.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Good. Seeking a secure home empowers a community to move from survival to flourishing.",
       "The Unavoidable Truth: True security cannot rely solely on the tolerance of others.\nThe Unavoidable Lie: Armored barriers are a sign of peaceful coexistence.",
       "Alethekanon:\nSovereignty is the transition from conditional tolerance to inherent right. The physical reality of steel barriers is a falsifiable proof of that necessity.",
       "Awwthekanon:\nEvery family deserves to feel safe in their home without needing armed guards at the door. My heart goes out to those who must pray behind steel barriers.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Author's Reflection",
@@ -161,6 +223,7 @@
         "name": "Israel",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

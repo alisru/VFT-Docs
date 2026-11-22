@@ -7,14 +7,14 @@
     "target_url": "https://bsky.app/profile/mississippifreepress.org/post/3mvvbmlugwr27",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.85,
-    "real_psi": 0.9,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Mississippi Free Press launches a 2026 fundraising campaign celebrating 24 years of community journalism.\nEvidence: Fundraising appeal, non-profit registry, public reporting\n#Aletheia #Journalism",
       "The appeal invites public support to grow local newsrooms and strengthen systemic investigative reporting in Mississippi.\nStated Judgement: (+1.0, 1.0) — Greater Good",
-      "Donations directly fund local reporting capacity, upholding public accountability and community empowerment without hidden extraction.\nResulting Judgement: (0.85, 0.9) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nGrassroots funding campaigns sustain independent public interest journalism and community empowerment.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Donations directly fund local reporting capacity, upholding public accountability and community empowerment without hidden extraction.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nGrassroots funding campaigns sustain independent public interest journalism and community empowerment.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- MFP Fundraising Appeal: PASS (0.85, 0.9) — Transparent support for local journalism.\n- Nonprofit Transparency: PASS (0.9, 0.95) — Verified 501(c)(3) status.",
       "The Mississippi Journalism and Education Group is celebrating 24 years of operation, relying on public donations to sustain independent local news in Mississippi.",
       "The Bright Side:\nDirectly strengthens independent local newsrooms against financial pressures and media consolidation.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "MFP Fundraising Appeal",
@@ -200,6 +262,7 @@
         "name": "Mississippi Journalism and Education Group",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

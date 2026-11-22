@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.9,
+    "real_u": -0.8,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "When political friction turns into inflammatory hyperbole, minority communities are treated as electoral monoliths.\nEvidence: Inflammatory Rhetoric, Racial Hyperbole, Partisan Weaponization\n#Aletheia #USPol",
-      "A Michigan state lawmaker warned voters against progressive candidate Abdul El-Sayed, claiming socialist politicians are 'more racist than the KKK.'\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Using extreme historical minimization to attack political rivals exploits racial trauma for partisan entrenchment, distorting actual political discourse.\nResulting Judgement: (-0.85, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nInflammatory rhetoric weaponizes racial history to defend political turf, abandoning substantive policy debate.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 3)",
+      "A Michigan state lawmaker warned voters against progressive candidate Abdul El-Sayed, claiming socialist politicians are 'more racist than the KKK.'\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Using extreme historical minimization to attack political rivals exploits racial trauma for partisan entrenchment, distorting actual political discourse.\nResulting Judgement: (-0.80, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nInflammatory rhetoric weaponizes racial history to defend political turf, abandoning substantive policy debate.\n\nIntegrity: Severe Deception (Hypocrisy: 15.2, z: 3)",
       "Sub-Audits Breakdown:\n- Karen Whitsett: FAIL (-0.9, -0.95) — Uses extreme racial comparisons for political attacks.\n- Breitbart Framing: COND (-0.7, -0.8) — Amplifies divisive rhetoric to fracture coalitions.",
       "As Michigan politics sees intense clashes between moderate and progressive wings, polarizing language has replaced policy debates over healthcare and economic equity.",
       "The Poison:\nTrivialsing hate groups like the KKK to score partisan points degrades public discourse and deepens racial hostility.",
       "The Breakdown & Plane Error:\nConfusing policy disagreements (WHAT) with existential racial enmity (WHO) substitutes emotional slander for governance.",
       "Social Physics Analysis:\nKaren Whitsett runs a Smart Selfish Maneuver, using manufactured outrage and extreme historical comparisons as a pretext to project malicious intent onto progressive rivals while defending party factionalism.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. High negative will and moral contradiction drive systemic instability.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. High negative will and moral contradiction drive systemic instability.",
       "The Unavoidable Truth: Inflammatory racial comparisons obscure real policy debates over healthcare and the economy.\n\nThe Unavoidable Lie: Progressive political movements are morally equivalent to white supremacist terror groups.",
       "Alethekanon:\nInflammatory hyperbole weaponizes historical trauma to protect political silos. Substance is sacrificed for shock value.",
       "Awwthekanon:\nWhen political debates descend into painful comparisons with historical horrors, communities seeking healing and practical help are left behind in the crossfire.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Karen Whitsett Commentary",
@@ -164,6 +226,7 @@
         "name": "Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

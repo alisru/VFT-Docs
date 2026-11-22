@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": -0.5,
     "claim_psi": -0.5,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": -0.55,
+    "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "Jail release timing sparks community panic.\n\nSchool Threat Suspect Released\nEvidence: felony indictments, pre-class release, public anxiety\n#Aletheia #Crime",
-      "A man indicted for mass shooting threats against schools is released from jail days before classes begin.\nStated Judgement: (-0.5, -0.5) — Lesser Evil",
-      "Legal protocols governed his release after pre-trial detention limits, though community fear remains acute.\nResulting Judgement: (-0.6, -0.7) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nProcedural legal releases clash violently with public safety anxiety at the start of the school year.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "A man indicted for mass shooting threats against schools is released from jail days before classes begin.\nStated Judgement: (-0.50, -0.50) — Greater Evil",
+      "Legal protocols governed his release after pre-trial detention limits, though community fear remains acute.\nResulting Judgement: (-0.55, -0.55) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nProcedural legal releases clash violently with public safety anxiety at the start of the school year.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "- NY Post Coverage: COND (-0.5, -0.4) — Sensationalizes release timing.\n- Judicial System: COND (-0.6, -0.7) — Follows rules but sparks terror.",
       "Drew Andres Owens, indicted on felony counts for threatening mass violence at five schools, was released from jail just before classes started.",
       "The Bright Side:\nThe legal system upheld pre-trial constitutional constraints, even amid emotionally charged timing.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NY Post Coverage",
@@ -149,6 +211,7 @@
         "name": "Charlotte-Mecklenburg Schools",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "U.A.E. warned Netanyahu of major Hamas operation days before Oct. 7 attack",
     "link": "https://www.cbc.ca/news/world/united-arab-emirates-hamas-october-7-netanyahu-9.7335494?cmp=rss",
     "target_url": "",
-    "claim_u": 1.0,
+    "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "real_u": -0.45,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Reports reveal the UAE warned Netanyahu of an impending Hamas offensive days before October 7, sparking fierce political fallout in Israel.\nEvidence: Haaretz report, UAE warning call, official denials.\n#Aletheia #Israel #MiddleEast 🌐",
-      "Prime Minister Netanyahu received a direct warning from UAE President Mohammed bin Zayed about a major Hamas operation 10 days before October 7.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Intelligence warnings were allegedly dismissed with relative calm while leadership prioritized political survival and avoided accountability for catastrophic security failures.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nDismissal of high-level warnings precedes catastrophic loss of life and systemic denial of accountability.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "Prime Minister Netanyahu received a direct warning from UAE President Mohammed bin Zayed about a major Hamas operation 10 days before October 7.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Intelligence warnings were allegedly dismissed with relative calm while leadership prioritized political survival and avoided accountability for catastrophic security failures.\nResulting Judgement: (-0.45, -0.45) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nDismissal of high-level warnings precedes catastrophic loss of life and systemic denial of accountability.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "Sub-Audits Breakdown:\n- Haaretz Report: PASS (0.0, 0.0) — Exposes high-level intelligence channels.\n- Netanyahu Office: FAIL (-0.9, -0.9) — Denies warnings to evade political accountability.",
       "An Israeli newspaper report claims UAE President bin Zayed warned Netanyahu of Hamas leader Yahya Sinwar's plans days before the October 7 attacks.",
       "The Poison:\nPoliticizing intelligence failures and denying foreign warnings shields leaders at the cost of public trust and national security.",
       "The Breakdown & Plane Error:\nConfusing operational accountability (WHO ignored warnings) with tactical friction (WHAT Hamas planned). Pretexts suppress inquiries.",
       "Social Physics Analysis:\nPolitical actors run a smart selfish maneuver: ignoring actionable intelligence, manufacturing distractions, and projecting blame onto rivals to evade responsibility for catastrophe.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between dismissed warnings and mass casualties, it plots a direct trajectory toward Greater Evil. F = -O_GE * GE - S_GE * GE.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between dismissed warnings and mass casualties, it plots a direct trajectory toward Greater Evil. F = -O_GE * GE - S_GE * GE.",
       "The Unavoidable Truth: Ignoring high-level intelligence warnings carries catastrophic human costs.\n\nThe Unavoidable Lie: Denying accountability protects national security.",
       "Alethekanon:\nDismissing warnings to preserve political survival is the apex of systemic rot. Power shielding itself from truth ensures repeated catastrophe.",
       "Awwthekanon:\nSo many families shattered because warnings were brushed aside. It breaks my heart that political pride matters more than human lives.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Haaretz Report",
@@ -160,6 +222,7 @@
         "sub_psi": 0.0,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

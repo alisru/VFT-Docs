@@ -5,22 +5,22 @@
     "subject": "Dem Governor Candidate Promise...",
     "link": "https://dailycaller.com/2026/08/26/david-crowley-tax-hikes-milwaukee-democrat-governor-wisconsin-services-pensions",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A promised era of fiscal stability instead delivers mounting deficits and legacy debt absorption.\n\nDem Governor Candidate Promise...\nEvidence: fiscal stability, pension absorption, mounting deficits\n#Aletheia #WIpolitics",
-      "David Crowley claimed that doubling the county sales tax would stabilize Milwaukee's budget, secure public services, and provide lasting relief.\nStated Judgement: (+0.60, +0.20) — Good Preference",
-      "In reality, the tax hikes were consumed by legacy pension debts, leaving a projected $46.7M deficit for 2026 while Crowley accepted an 8.5% raise.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nPromised public services were bypassed to fund legacy liabilities and administrative raises.\n\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 2)",
+      "David Crowley claimed that doubling the county sales tax would stabilize Milwaukee's budget, secure public services, and provide lasting relief.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the tax hikes were consumed by legacy pension debts, leaving a projected $46.7M deficit for 2026 while Crowley accepted an 8.5% raise.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPromised public services were bypassed to fund legacy liabilities and administrative raises.\n\nIntegrity: Severe Deception (Hypocrisy: 15.4, z: 2)",
       "- David Crowley: FAIL (-0.75, -0.85) — Promised service expansion but delivered debt absorption.\n- Tom Tiffany Campaign: COND (+0.20, -0.10) — Uses local fiscal strain for partisan leverage.",
       "Milwaukee County Executive David Crowley championed a sales tax hike to 0.9% to prevent a financial crisis, but long-term deficits remain unresolved.",
       "The Bright Side:\nThe sales tax increase temporarily prevented an immediate municipal insolvency and secured pension funding.",
       "The Breakdown & Plane Error:\nThe error is WHO benefits vs WHAT is promised. Taxpayers were promised expanded services, but the revenue went to legacy debt and administrative raises.",
       "Social Physics Analysis:\nBy using the pretext of public service expansion, the administration hoarded financial power to cover systemic deficits. This projection of fiscal responsibility masked a high-strain transfer of wealth from citizens to legacy liabilities.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The extraction of public wealth to fund systemic debt increases overall community strain.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The extraction of public wealth to fund systemic debt increases overall community strain.",
       "The Unavoidable Truth: Tax hikes went to legacy pensions, not new services.\n\nThe Unavoidable Lie: The budget is stabilized and services are expanded.",
       "Alethekanon:\nPromising public expansion while delivering legacy debt absorption is a classic structural bait-and-switch. The math reveals that the public bears the burden while the administration avoids the consequences.",
       "Awwthekanon:\nIt is deeply painful when families agree to pay more, hoping for better parks and transit, only to find their hard-earned money swallowed by old debts.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "David Crowley Fiscal Policy",
@@ -217,6 +279,7 @@
         "name": "Milwaukee County",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

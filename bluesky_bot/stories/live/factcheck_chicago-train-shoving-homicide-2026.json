@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.0,
-    "real_u": -0.95,
-    "real_psi": -0.9,
+    "real_u": -0.93,
+    "real_psi": -0.88,
     "mode": "root",
     "posts": [
       "A young Amazon worker heading home from an overnight shift was senselessly shoved off a moving CTA train to his death.\nEvidence: Tragic homicide, 15yo suspect arrested, Family devastation\n#Aletheia #Chicago",
-      "Reports detail a horrific, unprovoked attack where three individuals forced a hardworking man off a moving train into an electrified rail.\nStated Judgement: (+0.8, 0.0) — Good Preference",
-      "The grim reality reveals an act of extreme urban violence and cruelty, cutting short a devoted young man's life and shattering his family.\nResulting Judgement: (-0.95, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nA senseless act of violence ends a young worker's life, driven by pure malice and antisocial destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 2)",
+      "Reports detail a horrific, unprovoked attack where three individuals forced a hardworking man off a moving train into an electrified rail.\nStated Judgement: (+0.80, +0.00) — Lesser Good",
+      "The grim reality reveals an act of extreme urban violence and cruelty, cutting short a devoted young man's life and shattering his family.\nResulting Judgement: (-0.93, -0.88) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA senseless act of violence ends a young worker's life, driven by pure malice and antisocial destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 2)",
       "- Chicago Transit Safety: FAIL (-0.9, -0.85) — Public transit security failures.\n- Juvenile Violence: FAIL (-0.95, -0.9) — Lethal assault by minors.",
       "Kyle Bickham, 29, was commuting home from an overnight Amazon shift when he was allegedly shoved from a CTA Red Line train by three individuals, falling onto the third rail.",
       "The Poison:\nThe utter senselessness of the attack exposes deep fractures in basic civic safety and youth accountability.",
       "The Breakdown & Plane Error:\nThe report confuses the WHAT (the tragic mechanics of the fall) with the WHO (the malicious actors perpetrating the lethal assault).",
       "Social Physics Analysis:\nThe perpetrators operated within a pure Smart Selfish Loop, sacrificing an innocent worker's life for immediate, destructive impulses without pretext.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between civil safety and lethal violence, it plots a direct trajectory toward Greater Evil (-0.95, -0.9).",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between civil safety and lethal violence, it plots a direct trajectory toward Greater Evil (-0.95, -0.9).",
       "The Unavoidable Truth: An innocent man lost his life to senseless violence on a public commute.\n\nThe Unavoidable Lie: That urban transit systems currently offer adequate baseline security.",
       "Alethekanon:\nA devastating breakdown of social cohesion where senseless malice destroys an innocent life.🌐",
       "Awwthekanon:\nMy heart breaks for Kyle's family. He worked so hard just to build a simple, honest life, and to have it stolen like this is an unimaginable tragedy.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Chicago Transit Safety",
@@ -156,6 +218,7 @@
         "name": "Chicago Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

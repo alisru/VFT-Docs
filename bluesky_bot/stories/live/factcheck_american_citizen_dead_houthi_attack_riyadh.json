@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": 0.1,
+    "real_psi": -0.1,
     "mode": "root",
     "posts": [
       "An American life lost in Riyadh sparks urgent diplomatic condemnation as Houthi strikes escalate regional conflict.\nEvidence: Houthi strike, American fatality, Rubio condemnation\n#Geopolitics #MiddleEast 🌐",
       "Secretary of State Marco Rubio strongly condemned the Houthi drone/missile strike on King Khalid International Airport, emphasizing the tragic death of an American citizen and over 300 injuries, demanding an immediate halt to terrorist attacks.",
-      "While the civilian casualty and American death are tragic facts, diplomatic statements often instrumentalize localized terror to justify broader military escalations and arms sales without addressing root conflict drivers.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: COND — The Path of Revelation.\nWhile the attack and casualty are verified facts, state framing weaponizes tragedy to reinforce geopolitical alliances.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 2)",
+      "While the civilian casualty and American death are tragic facts, diplomatic statements often instrumentalize localized terror to justify broader military escalations and arms sales without addressing root conflict drivers.\nResulting Judgement: (+0.10, -0.10) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nWhile the attack and casualty are verified facts, state framing weaponizes tragedy to reinforce geopolitical alliances.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Washington Examiner: PASS (0.8, 0.5) — Accurate reporting of official U.S. casualty statement.\n- State Department Framing: COND (-0.6, -0.7) — Weaponizes tragedy for alliance projection.",
       "The Iran-backed Houthis launched a major strike on Riyadh's King Khalid International Airport, injuring over 300 people and killing an American citizen, drawing swift condemnation from Washington.",
       "The Poison:\nTragic civilian deaths are routinely leveraged as moral capital to lock in endless military commitments rather than pursuing diplomatic de-escalation.",
       "The Breakdown & Plane Error:\nConfusing the immediate human tragedy (WHAT) with geopolitical posturing and alliance justification (WHO), masking underlying policy failures.",
       "Social Physics Analysis:\nState actors deploy a smart selfish maneuver: leveraging a genuine human tragedy as a moral pretext to project blame onto adversaries while shielding allied military postures from systemic accountability.",
-      "The Trajectory: The Path of Revelation.\nWhen stated counter-terrorism resolve meets perpetual regional militarization, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as retaliation replaces durable resolution.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen stated counter-terrorism resolve meets perpetual regional militarization, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as retaliation replaces durable resolution.",
       "The Unavoidable Truth: Civilian lives are brutally cut short in regional proxy conflicts.\nThe Unavoidable Lie: Official rhetoric offers genuine security rather than escalating cycles of retaliation.",
       "Alethekanon:\nState condemnations correctly identify terrorist violence but mask the broader structural complicity of proxy warfare. Real accountability requires dismantling the machinery of endless escalation.",
       "Awwthekanon:\nBehind every geopolitical tally and diplomatic statement is a grieving family facing an unimaginable void. No political posturing can ever replace a lost loved one.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Washington Examiner",
@@ -169,6 +231,7 @@
     "tags": [
       "Geopolitics",
       "MiddleEast"
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

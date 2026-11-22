@@ -6,21 +6,21 @@
     "link": "https://thefederalist.com/2026/08/31/florida-bar-rejects-leftist-scheme-to-probe-dhs-attorney-for-criticizing-rogue-judges/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.8,
-    "real_psi": 0.4,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Florida Bar dismisses political complaints against DHS counsel James Percival.\nEvidence: bar rejection letter, 128 judges' petition, AG Uthmeier defense\n#Aletheia #USPol",
-      "Leftist groups and 128 former judges urged the Florida Bar to probe DHS General Counsel James Percival over critical immigration posts.\nStated Judgement: (+1.0, 0.5) — Good Preference",
-      "The Florida Bar rightly rejected the petition, noting it lacks authority to discipline sitting federal constitutional officers.\nResulting Judgement: (+0.8, +0.4) — Trustworthy",
-      "Verdict: PASS — The Path of Awakening.\nThe Florida Bar protected constitutional boundaries by refusing partisan lawfare against a federal official.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Leftist groups and 128 former judges urged the Florida Bar to probe DHS General Counsel James Percival over critical immigration posts.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The Florida Bar rightly rejected the petition, noting it lacks authority to discipline sitting federal constitutional officers.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nThe Florida Bar protected constitutional boundaries by refusing partisan lawfare against a federal official.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Florida Bar: PASS (+0.8, +0.4) — Upheld constitutional boundaries against partisan lawfare.\n- Complainants: FAIL (-0.7, -0.6) — Attempted weaponized professional discipline.",
       "Left-wing groups petitioned the Florida Bar to discipline DHS counsel James Percival for social media posts criticizing immigration judges.",
       "The Bright Side:\nThe Bar correctly defended institutional limits by declining to police federal executive officers.",
       "The Breakdown & Plane Error:\nConfusing political disagreement with professional misconduct (WHAT vs WHO error). The complainant groups weaponized bar rules to silence executive branch criticism.",
       "Social Physics Analysis:\nBy upholding structural boundaries, the Bar prevented the weaponization of professional oversight into partisan censorship, maintaining institutional separation.",
-      "The Trajectory: The Path of Awakening.\nWhen institutional gatekeepers reject partisan lawfare, it plots a direct trajectory toward structural restoration.",
+      "The Trajectory: The Path of Grace.\nWhen institutional gatekeepers reject partisan lawfare, it plots a direct trajectory toward structural restoration.",
       "The Unavoidable Truth: Public criticism of judicial overreach is protected political speech.\n\nThe Unavoidable Lie: Professional bar rules can be weaponized to silence federal officials.",
       "Alethekanon:\nRejecting partisan bar complaints protects the separation of powers against administrative weaponization. Professional bodies must not become tools of political censorship.",
       "Awwthekanon:\nIt is reassuring to see clear institutional boundaries honored when political pressures push for overreach.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Florida Bar",
@@ -215,6 +277,7 @@
         "name": "James Uthmeier",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

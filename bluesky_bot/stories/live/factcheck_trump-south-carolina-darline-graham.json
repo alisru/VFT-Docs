@@ -5,22 +5,22 @@
     "subject": "Trump to speak in South Carolina at Darline Graham rally",
     "link": "https://www.upi.com/Top_News/US/2026/08/21/trump-south-carolina-darline-graham/9471787323066/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.5,
-    "real_u": -0.3,
-    "real_psi": -0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.65,
+    "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "Donald Trump rallies for Darline Graham in South Carolina's high-stakes primary runoff battle.\n\nTrump SC Rally for Darline Graham\nEvidence: dynastic appointment, political endorsement, policy gaps\n#Aletheia #USPol",
-      "The campaign frames the rally as a crucial test of voter alignment with conservative leadership and presidential backing in the Senate race.\nStated Judgement: (0.5, 0.5) — Good Preference",
-      "In reality, the race highlights dynastic succession and severe candidate unpreparedness on vital national security issues, masked by high-profile rallies.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: COND — The Path of Stasis.\nHigh-profile endorsements obscure glaring policy deficits in a dynastic primary contest.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 1)",
+      "The campaign frames the rally as a crucial test of voter alignment with conservative leadership and presidential backing in the Senate race.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, the race highlights dynastic succession and severe candidate unpreparedness on vital national security issues, masked by high-profile rallies.\nResulting Judgement: (-0.65, -0.55) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nHigh-profile endorsements obscure glaring policy deficits in a dynastic primary contest.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, Uncertainty z: 1)",
       "Sub-Audits Breakdown:\n- Campaign Endorsement: COND (0.2, 0.3) — Leverages presidential clout.\n- Candidate Competence: FAIL (-0.6, -0.7) — Admits national security gaps.",
       "President Trump is holding a Myrtle Beach rally for Darline Graham, appointed to fill her late brother Lindsey Graham's Senate seat, ahead of a tight primary runoff against Ralph Norman.",
       "The Poison:\nInheriting a Senate seat without foundational knowledge of national security reduces legislative office to a family brand rather than a public trust.",
       "The Breakdown & Plane Error:\nThe analysis substitutes personal loyalty to Trump for genuine policy competence (WHAT vs WHO plane error), ignoring critical gaps in national security knowledge.",
       "Social Physics Analysis:\nThe campaign relies on pretexts and brand association rather than transparent merit, leaning on presidential gravity to shield a weak candidate from scrutiny.",
-      "The Trajectory: The Path of Stasis.\nWhen you map the gap between stated intentions and ground-level results, it plots a stasis loop between dynastic entitlement and populist loyalty.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a stasis loop between dynastic entitlement and populist loyalty.",
       "The Unavoidable Truth: Voter enthusiasm is heavily driven by loyalty to political figures rather than institutional knowledge.\nThe Unavoidable Lie: Legislative acumen is something easily inherited like family property.",
       "Alethekanon:\nTreating public office as a hereditary estate traded on celebrity endorsements cheapens the republic and abandons the rigorous duty of governance. 🌐",
       "Awwthekanon:\nIt is tough when families grieve a sudden loss, but turning public service into an inheritance leaves citizens feeling unseen and unrepresented.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Campaign Endorsement",
@@ -290,6 +352,7 @@
         "name": "Mick Mulvaney",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

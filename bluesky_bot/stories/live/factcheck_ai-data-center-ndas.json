@@ -5,16 +5,16 @@
     "subject": "Can the AI industry persuade d...",
     "link": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
     "target_url": "",
-    "claim_u": 0.68,
-    "claim_psi": 0.52,
-    "real_u": -0.88,
-    "real_psi": -0.88,
+    "claim_u": 0.59,
+    "claim_psi": 0.41,
+    "real_u": -0.38,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "Tech giants claim dropping NDAs proves goodwill, but public grids are still paying the price.\nAI Data Centers & Secret NDAs\nEvidence: Community Transparency, Grid Depletion, Resource Accountability\n#Aletheia #Tech #AI",
-      "Amazon and Microsoft claim that abandoning nondisclosure agreements will rebuild local trust and fix their communication problem, proving data center expansion benefits communities.\nStated Judgement: (+0.68, +0.52) — Lesser Good",
-      "Dropping NDAs is PR cover. Communities resist because data centers consume massive water and power, hike utility bills, and extract tax subsidies while Big Tech frames genuine infrastructure strain as mere public confusion.\nResulting Judgement: (-0.88, -0.88) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Tech monopolies offer superficial transparency while offloading massive grid strain onto local towns.\nIntegrity: Severe Deception (Hypocrisy: 18.5, z: 4)",
+      "Amazon and Microsoft claim that abandoning nondisclosure agreements will rebuild local trust and fix their communication problem, proving data center expansion benefits communities.\nStated Judgement: (+0.59, +0.41) — Greater Good",
+      "Dropping NDAs is PR cover. Communities resist because data centers consume massive water and power, hike utility bills, and extract tax subsidies while Big Tech frames genuine infrastructure strain as mere public confusion.\nResulting Judgement: (-0.38, -0.30) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 18.5, z: 4)",
       "- Big Tech Policy: FAIL (-0.88, -0.85) — PR hides grid strain.\n- TechCrunch Equity: COND (+0.12, +0.25) — Frames physical limits as a messaging flaw.",
       "Amazon joined Microsoft in ending municipal NDAs after cities imposed moratoriums on new data centers over water depletion, surging residential electric rates, and grid stability risks.",
       "The Bright Side:\nEnding NDAs strips away the legal muzzle on local councils. Even if intended as public relations, public disclosure gives residents a paper trail to audit tax giveaways and demand water guarantees before permits are signed.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Big Tech Municipal Transparency",
@@ -173,6 +235,7 @@
       "Aletheia",
       "Tech",
       "AI"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/latimes.com/post/3mxpt26jl3s2z",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": -0.35,
+    "real_psi": -0.4,
     "mode": "root",
     "posts": [
       "A historic Black church in South L.A. burns for a third time, raising deep alarms over community heritage and urban neglect. 🌐\nEvidence: Historic Loss, Urban Decay, Arson Probe\n#LosAngeles #History #Aletheia",
-      "Reports frame the third catastrophic fire at the historic Crouch Memorial Church as a sudden disaster striking an abandoned cultural landmark.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "The vacant church has been a blighted hazard plagued by squatters and illegal dumping since its 2013 fire, leading to recent city orders to clear debris.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: COND — The Path of Revelation.\nA historic landmark collapsed into an abandoned hazard due to long-term neglect and municipal inaction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Reports frame the third catastrophic fire at the historic Crouch Memorial Church as a sudden disaster striking an abandoned cultural landmark.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "The vacant church has been a blighted hazard plagued by squatters and illegal dumping since its 2013 fire, leading to recent city orders to clear debris.\nResulting Judgement: (-0.35, -0.40) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA historic landmark collapsed into an abandoned hazard due to long-term neglect and municipal inaction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- L.A. Times Coverage: PASS (0.0, 0.0) — Factual reporting on fire and history.\n- City Safety Record: FAIL (-0.7, -0.8) — Failed to enforce prompt debris removal.",
       "The 27th Street Historic District structure burned in 2013, 2024, and October 2026, forcing LAFD to protect dozens of nearby neighborhood homes.",
       "The Poison:\nFocusing solely on the sudden fire obscures the decade of municipal neglect, illegal dumping, and safety complaints that left the site vulnerable.",
       "The Breakdown & Plane Error:\nThe reporting mistakes a chronic institutional and structural failure (WHERE/HOW) for a purely sudden criminal event (WHO/WHAT).",
       "Social Physics Analysis:\nCity agencies and owners engaged in a passive decay loop, letting a historic site rot into a hazard until an emergency forced reactive intervention.",
-      "The Trajectory: The Path of Revelation.\nWhen municipal neglect meets abandoned historic assets, it plots a direct path toward structural collapse and community trauma.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen municipal neglect meets abandoned historic assets, it plots a direct path toward structural collapse and community trauma.",
       "The Unavoidable Truth: Abandoned historic properties left without protection become dangerous public hazards.\n\nThe Unavoidable Lie: Sudden fires occur without years of prior municipal neglect.",
       "Alethekanon:\nInstitutional neglect transforms cultural landmarks into neglected fire traps, proving that abandonment is an active form of destruction.",
       "Awwthekanon:\nIt breaks my heart to see a piece of Black history reduced to charred rubble while neighbors had to live next to a dangerous eyesore for years.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "L.A. Times Coverage",
@@ -158,6 +220,7 @@
       "LosAngeles",
       "History",
       "Aletheia"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

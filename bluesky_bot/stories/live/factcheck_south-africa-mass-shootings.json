@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "At least 27 people were killed in two separate mass shootings across South African townships by heavily armed gunmen.\nEvidence: 27 dead, AK-47 rifles, township bars\n#SouthAfrica #Violence",
-      "Initial police reports detail coordinated massacres by multiple gunmen using military-grade firearms in Johannesburg and Cape Town.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "Unchecked proliferation of illegal automatic weapons and deep socio-economic fractures fuel compounding spirals of township violence.\nResulting Judgement: (-0.9, -0.95) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nDevastating loss of life exposes severe security failures and systemic vulnerability in urban townships.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "Initial police reports detail coordinated massacres by multiple gunmen using military-grade firearms in Johannesburg and Cape Town.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Unchecked proliferation of illegal automatic weapons and deep socio-economic fractures fuel compounding spirals of township violence.\nResulting Judgement: (-0.90, -0.95) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nDevastating loss of life exposes severe security failures and systemic vulnerability in urban townships.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "- Police Reports: PASS (0.0, 0.0) — Accurate casualty reporting.",
       "The rapid succession of mass shootings highlights profound policing deficits and the unchecked circulation of high-powered assault rifles.",
       "The Poison:\nThe grim normalization of mass casualty violence within marginalized communities.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Police Reporting",
@@ -143,6 +205,7 @@
         "name": "South African Police Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

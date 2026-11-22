@@ -5,22 +5,22 @@
     "subject": "Florida death row inmate William Thompson spared from execution, 50 years after torture murder",
     "link": "https://nypost.com/2026/10/09/us-news/florida-death-row-inmate-william-thompson-spared-from-execution-50-years-after-brutal-torture-murder/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.2,
-    "real_psi": -0.4,
+    "claim_u": 0.4,
+    "claim_psi": 0.3,
+    "real_u": 0.4,
+    "real_psi": 0.3,
     "mode": "root",
     "posts": [
       "Longest-serving Florida death row inmate William Thompson is spared from execution at age 74 amid severe dementia, 50 years after a brutal 1976 murder. Evidence: Legal filing, Dementia diagnosis, Exec warrant withdrawn. #Aletheia #Justice #Florida 🌐",
-      "The justice system operates with transparent constitutional safeguards to halt executions when inmates lose mental competence.\nStated Judgement: (+0.8, +0.5) — Constructive Good",
-      "While constitutional 8th Amendment protections correctly halt executions of the incompetent, this case highlights a 50-year carceral limbo burdened by endless appeals and severe cognitive decline.\nResulting Judgement: (-0.2, -0.4) — Lesser Evil",
-      "Verdict: PASS — The Path of Redemption. Constitutional safeguards successfully halted the execution of a mentally incompetent inmate, though 50 years of delay expose systemic carceral stagnation.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 1)",
+      "The justice system operates with transparent constitutional safeguards to halt executions when inmates lose mental competence.\nStated Judgement: (+0.40, +0.30) — Greater Good",
+      "While constitutional 8th Amendment protections correctly halt executions of the incompetent, this case highlights a 50-year carceral limbo burdened by endless appeals and severe cognitive decline.\nResulting Judgement: (+0.40, +0.30) — Greater Good",
+      "Verdict: PASS — Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.4, z: 1)",
       "Sub-Audits Breakdown:\n- NY Post Reporting: PASS (0.5, 0.4) — Detailed legal filings and medical findings.\n- State Executive Action: PASS (0.3, 0.2) — Follows 8th Amendment mandate.",
       "Florida Gov. Ron DeSantis withdrew the death warrant for 74-year-old William Thompson after neuropsychological evaluations confirmed severe dementia.",
       "The Poison:\nThe agonizing 50-year delay between a horrific torture-murder and final legal resolution leaves victims' families without closure while straining resources.",
       "The Breakdown & Plane Error:\nConfusing the WHAT (legal mechanics of 8th Amendment competency) with the WHO (the brutal reality of the 1976 crime versus the incapacitated elderly inmate today).",
       "Social Physics Analysis:\nThe state balances retributive justice against constitutional mercy. While executing a demented inmate violates the Eighth Amendment, the 50-year legal lag reveals a system caught between endless procedural delays and closure.",
-      "The Trajectory: The Path of Redemption.\nWhen legal institutions uphold constitutional limits against executing the incompetent, it prevents moral decay despite procedural delays.",
+      "The Trajectory: The Path of Grace.\nWhen legal institutions uphold constitutional limits against executing the incompetent, it prevents moral decay despite procedural delays.",
       "The Unavoidable Truth: The Eighth Amendment rightly prohibits executing individuals who lack mental competence to understand their punishment.\n\nThe Unavoidable Lie: Fifty years of appellate purgatory represents an efficient or prompt administration of justice.",
       "Alethekanon:\nConstitutional mercy respects human dignity even in the shadow of unspeakable past crimes, preventing state-sponsored cruelty against the incapacitated.",
       "Awwthekanon:\nWhen decades slip away in sterile cells, we are left to ponder the tragic weight of ancient violence and the quiet decay of human memory.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "NY Post Reporting",
@@ -175,6 +237,7 @@
       "Aletheia",
       "Justice",
       "Florida"
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/thehindu.com/post/3mxbgtp3tba26",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.6,
+    "real_u": 0.7,
     "real_psi": 0.4,
     "mode": "root",
     "posts": [
       "European AI champion Mistral launches its trillion-parameter multimodal model 'Le Chonk' to challenge US closed models and Chinese open-weights. #AI #Tech",
-      "Mistral claims Le Chonk provides open, competitive capability that proves European tech can rival global frontier models.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "While technically robust and competitive, the release relies on commercial positioning against geopolitical rivals while gating full weights behind safety red-teaming.\nResulting Judgement: (+0.6, +0.4) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nDelivering a competitive European open-weight model advances ecosystem diversity, despite commercial posturing and safety gating.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Mistral claims Le Chonk provides open, competitive capability that proves European tech can rival global frontier models.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "While technically robust and competitive, the release relies on commercial positioning against geopolitical rivals while gating full weights behind safety red-teaming.\nResulting Judgement: (+0.70, +0.40) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nDelivering a competitive European open-weight model advances ecosystem diversity, despite commercial posturing and safety gating.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- The Hindu: PASS (0.7, 0.4) — Balanced reporting on technical benchmarks and industry context.",
       "French AI startup Mistral unveiled Mistral Large 4, nicknamed 'Le Chonk', a 1-trillion parameter model trained on European infrastructure to compete globally.",
       "The Bright Side:\nProvides high-performance open-weight alternatives to closed US ecosystems and boosts European tech sovereignty.",
       "The Breakdown & Plane Error:\nThe analysis sometimes confuses corporate market positioning (WHO) with pure open-source democratization (WHAT).",
       "Social Physics Analysis:\nMistral operates via a Smart Altruistic Loop, building transparent coalitions and open models that empower developers while securing commercial viability.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Open-weight innovation expands global developer capability.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Open-weight innovation expands global developer capability.",
       "The Unavoidable Truth: Open-weight frontier models democratize advanced capabilities for developers worldwide.\n\nThe Unavoidable Lie: Commercial AI releases are entirely free of geopolitical maneuvering and market positioning.",
       "Alethekanon:\nTechnological sovereignty requires building competitive open systems rather than relying on imported closed infrastructure. 🌐",
       "Awwthekanon:\nIt is wonderful to see open innovation thriving and giving builders everywhere powerful tools to create good.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Hindu Coverage",
@@ -148,6 +210,7 @@
         "name": "The Hindu",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

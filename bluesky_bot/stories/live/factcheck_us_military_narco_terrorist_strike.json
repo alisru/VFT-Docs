@@ -6,21 +6,21 @@
     "link": "https://www.foxnews.com/politics/us-kills-two-narco-terrorists-strike-2-months-since-last-announced-anti-narco-trafficking-attack",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.93,
-    "real_psi": -0.89,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Lethal military force replaces judicial process on the high seas as the war on drugs takes a kinetic turn.\n\nUS Narco-Terrorist Strike\nEvidence: national security, extrajudicial strike, military expansion #Aletheia #Defense #USNews",
-      "The military frames the strike as a precise, necessary action to protect American communities from destabilizing narco-terrorist networks and deadly poison.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "In reality, executing kinetic military strikes against suspected drug vessels bypasses civilian law enforcement and international legal frameworks, normalizing extrajudicial executions.\nResulting Judgement: (-0.93, -0.89) — Greater Evil",
+      "The military frames the strike as a precise, necessary action to protect American communities from destabilizing narco-terrorist networks and deadly poison.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, executing kinetic military strikes against suspected drug vessels bypasses civilian law enforcement and international legal frameworks, normalizing extrajudicial executions.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
       "Verdict: FAIL — Fall into Destruction.\nThe normalization of military execution over judicial process represents a severe contraction of systemic accountability.\n\nIntegrity: Severe Deception (Hypocrisy: 64.0, Uncertainty z: 6)",
       "Sub-Audits Breakdown:\n- US Southern Command: FAIL (-0.93, -0.89) — Normalizes extrajudicial kinetic strikes.\n- Judicial Due Process: FAIL (-0.96, -0.92) — Bypasses legal systems entirely.",
       "U.S. Southern Command executed a lethal kinetic strike on a low-profile vessel in the Eastern Pacific, killing two individuals labeled as 'narco-terrorists,' marking a continuation of controversial military-led drug interdictions.",
       "The Poison:\nWhile stopping drug trafficking is a valid security goal, using military strikes to execute suspects without trial establishes a dangerous precedent of unchecked executive power.",
       "The Breakdown & Plane Error:\nThe error lies in substituting military execution (HOW) for judicial determination of guilt (WHO). By labeling suspects as 'terrorists' to justify kinetic strikes, the state bypasses the legal standards of proof and trial.",
       "Social Physics Analysis:\nBy replacing transparent legal prosecution with unilateral military force, the state minimizes its own accountability while maximizing raw power. This creates a high-strain environment where suspected crimes are met with immediate, irreversible execution.",
-      "The Trajectory: Fall into Destruction.\nWhen you map the gap between protecting communities and executing suspects without trial, it plots a direct trajectory toward Greater Evil. Unchecked military force inevitably erodes the rule of law.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between protecting communities and executing suspects without trial, it plots a direct trajectory toward Greater Evil. Unchecked military force inevitably erodes the rule of law.",
       "The Unavoidable Truth: True security cannot be built on the systematic bypass of due process.\n\nThe Unavoidable Lie: Labeling suspects as 'narco-terrorists' automatically grants the military the legal right to execute them.",
       "Alethekanon:\nThe state uses the specter of drug trafficking to normalize extrajudicial military executions. When the battlefield is expanded to encompass criminal law enforcement, the rule of law is the first casualty.",
       "Awwthekanon:\nEvery human life has value, and bypassing justice to deliver immediate death only deepens the cycle of violence. We must seek paths of restoration and true justice, rather than relying on the cold precision of weapons.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.45,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.15,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.55,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.45,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "US Southern Command",
@@ -283,6 +345,7 @@
         "name": "Pete Hegseth",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

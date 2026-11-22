@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/kuow.org/post/3mvbuqi7pb52c",
     "claim_u": 1.0,
     "claim_psi": 0.8,
-    "real_u": 0.7,
-    "real_psi": 0.6,
+    "real_u": 0.85,
+    "real_psi": 0.7,
     "mode": "root",
     "posts": [
       "Remembering the visionary architect whose serene designs shaped skylines and saved thousands of lives.\nEvidence: Architectural design, 9/11 evacuation, historical legacy\n#Architecture #WTC #History",
-      "Minoru Yamasaki envisioned the World Trade Center towers as serene, elegant symbols of democracy and an aspirational future, not targets of hate.\nStated Judgement: (+1.0, +0.8) — Greater Good",
-      "Yamasaki's exterior load-bearing column design accidentally helped thousands escape on 9/11 before collapse, preserving his humanitarian intent amid tragedy.\nResulting Judgement: (+0.7, +0.6) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nA visionary architect's democratic ideals survived structural destruction through lifesaving engineering resilience.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Minoru Yamasaki envisioned the World Trade Center towers as serene, elegant symbols of democracy and an aspirational future, not targets of hate.\nStated Judgement: (+1.00, +0.80) — Greater Good",
+      "Yamasaki's exterior load-bearing column design accidentally helped thousands escape on 9/11 before collapse, preserving his humanitarian intent amid tragedy.\nResulting Judgement: (+0.85, +0.70) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nA visionary architect's democratic ideals survived structural destruction through lifesaving engineering resilience.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "- Architectural Intent: PASS (1.0, 0.8) — Serene democratic vision.\n- Engineering Impact: PASS (0.7, 0.6) — Exterior frame saved lives.",
       "An interview with journalist Knute Berger explores Seattle-born architect Minoru Yamasaki's vision behind the original World Trade Center Twin Towers.",
       "The Bright Side:\nYamasaki's structural innovation of exterior columns prevented immediate collapse, enabling thousands to evacuate safely.",
       "The Breakdown & Plane Error:\nEvaluated on the Metaphysical and Historical planes (WHO & CAUSE), examining the genuine humanitarian intent versus the tragic historical outcome.",
       "Social Physics Analysis:\nYamasaki operated in a Smart Altruistic loop, aiming to foster civic grace through elegant design. Though subverted by external malice, his structural choices embodied deep empathy and practical safety.",
-      "The Trajectory: The Path of Awakening.\nWhen you map architectural idealism against historical catastrophe, it plots a trajectory toward Redemption. Initial creative harmony endures through tragedy.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map architectural idealism against historical catastrophe, it plots a trajectory toward Destruction. Initial creative harmony endures through tragedy.",
       "The Unavoidable Truth: Thoughtful design can save lives even when buildings face unimaginable malice.\n\nThe Unavoidable Lie: Architectural beauty can permanently insulate structures from human geopolitics.",
       "Alethekanon:\nTrue artistry aims for human uplift, yet leaves creations vulnerable to the dark tides of history.",
       "Awwthekanon:\nIt is heartbreaking that a man who sought only to build serene spaces for human connection had his greatest work touched by such profound sorrow. Yet his legacy lives on in every life saved.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Architectural Intent",
@@ -158,6 +220,7 @@
         "name": "Kim Malcolm",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

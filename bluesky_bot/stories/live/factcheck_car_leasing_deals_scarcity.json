@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mve3dqcqb72h",
     "claim_u": 0.67,
     "claim_psi": 1.0,
-    "real_u": -0.52,
-    "real_psi": -0.5,
+    "real_u": -0.25,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "Car leasing has plummeted to nearly half of its pre-pandemic levels. While experts blame lean inventories, is there a deeper corporate strategy at play to squeeze consumers?\nEvidence: Lean inventories, High margins, Suppressed lease deals\n#Aletheia #Automotive #Finance",
-      "Automakers claim that lean inventories and reduced lease subsidies are natural market adjustments following pandemic-era supply chain disruptions.\nStated Judgement: (+0.67, 1.0) — Good Preference",
-      "In reality, automakers are intentionally keeping supply tight to permanently eliminate consumer discounts and maintain high profit margins, forcing buyers into high-interest, long-term loans.\nResulting Judgement: (-0.52, -0.50) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Automakers are using the pretext of pandemic recovery to institutionalize artificial scarcity and maximize corporate extraction.\nIntegrity: Partially Distorted (Hypocrisy: 2.2, z: 3)",
+      "Automakers claim that lean inventories and reduced lease subsidies are natural market adjustments following pandemic-era supply chain disruptions.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "In reality, automakers are intentionally keeping supply tight to permanently eliminate consumer discounts and maintain high profit margins, forcing buyers into high-interest, long-term loans.\nResulting Judgement: (-0.25, -0.35) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Partially Distorted (Hypocrisy: 2.2, z: 3)",
       "- Inventory Strategy: FAIL (-0.60, -0.50) — Artificial scarcity to kill discounts.\n- EV Lease Incentives: COND (0.10, -0.20) — Plentiful but dropping fast.",
       "Car leasing has dropped from 30% to 18.4% of transactions as automakers maintain tight inventories to avoid discounting, leaving consumers with fewer affordable options.",
       "The Bright Side:\nFor consumers who still want to lease, popular models like the Honda Accord and Toyota Corolla still offer lower monthly and down payments compared to long-term financing.",
       "The Breakdown & Plane Error:\nThe error is historical (CAUSE). The narrative attributes lean inventories to lingering pandemic effects, erasing the active corporate decision to maintain artificial scarcity for margin expansion.",
       "Social Physics Analysis:\nAutomakers are running a Smart Selfish Maneuver. They use the pretext of \"pandemic lessons\" to justify keeping supply low. This manufactured problem forces consumers into high-interest 72-month loans, transferring wealth upward.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated market forces and active supply suppression, it plots a direct trajectory toward Lesser Evil. The shift from volume to margin permanently reduces consumer power.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated market forces and active supply suppression, it plots a direct trajectory toward Lesser Evil. The shift from volume to margin permanently reduces consumer power.",
       "The Unavoidable Truth: Automakers have realized that selling fewer cars at higher prices is far more profitable than offering consumer-friendly lease deals.\n\nThe Unavoidable Lie: The claim that lean inventories are an unavoidable result of market forces.",
       "Alethekanon:\nThe \"lean inventory\" strategy is a euphemism for manufactured scarcity. Having tasted the high-margin fruits of pandemic-era supply shocks, automakers are actively suppressing supply to permanently kill consumer leverage.",
       "Awwthekanon:\nIt's so disheartening that families who just need a reliable car to get to work are being priced out. When companies prioritize high margins over accessibility, it's the everyday people who pay the price.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Automaker Inventory Strategy",
@@ -157,6 +219,7 @@
         "name": "GoodCar",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

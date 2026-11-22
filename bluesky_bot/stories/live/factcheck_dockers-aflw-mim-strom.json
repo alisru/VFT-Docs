@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.82,
-    "real_psi": 0.85,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Injured AFLW star Mim Strom trades the ruck for the coaching box, helping Fremantle seal a gritty win over Richmond.\nEvidence: Injury, Ruck coach, Team victory\n#Aletheia #AFLW",
       "Athletes facing sudden injury setbacks find constructive ways to support team success from the sidelines. Stated Judgement: (+1.0, +1.0) — Greater Good",
-      "Strom immediately assumed mentoring duties on the bench, guiding teammates to secure a 25-point victory. Resulting Judgement: (0.82, 0.85) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nAn unexpected physical setback transforms into an empowering leadership opportunity for the team.\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Strom immediately assumed mentoring duties on the bench, guiding teammates to secure a 25-point victory. Resulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nAn unexpected physical setback transforms into an empowering leadership opportunity for the team.\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Mim Strom: PASS (0.85, 0.90) — Instantly steps into coaching.\n- Fremantle Dockers: PASS (0.80, 0.80) — Rallies around injured teammate.",
       "Fremantle All-Australian ruck Mim Strom suffered a shoulder injury in the first quarter against Richmond but spent the rest of the match coaching teammates.",
       "The Poison:\nThe looming risk that Strom's shoulder injury will sideline her for critical upcoming finals matches.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Mim Strom Transition",
@@ -220,6 +282,7 @@
         "name": "Richmond Tigers",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": -1.0,
     "claim_psi": -1.0,
-    "real_u": 0.12,
-    "real_psi": 0.65,
+    "real_u": -0.25,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "A five-year-old staff webpage is resurrected to fuel back-to-school outrage. 🌐\n\nHarvard offers 'anti-racist' resources\nEvidence: Official Campaign, Outdated Staff Page, Manufactured Outrage\n#Aletheia #Education #CultureWar",
-      "Harvard University is actively promoting controversial 'anti-racist' books containing inflammatory anti-White rhetoric to parents as students head back to school.\nStated Judgement: (-1.0, -1.0) — Greater Evil",
-      "The recommended book list is on an unofficial, five-year-old staff webpage, not a newly launched or official Faculty of Arts and Sciences resource. The timing and official nature of the page have been highly exaggerated.\nResulting Judgement: (+0.12, +0.65) — Grace",
-      "Verdict: FAIL — Awakening into Redemption.\nResurrecting an old, unofficial staff page to spark a back-to-school culture war exaggerates institutional intent to drive media engagement.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 1.99, z: 1)",
+      "Harvard University is actively promoting controversial 'anti-racist' books containing inflammatory anti-White rhetoric to parents as students head back to school.\nStated Judgement: (-1.00, -1.00) — Greater Evil",
+      "The recommended book list is on an unofficial, five-year-old staff webpage, not a newly launched or official Faculty of Arts and Sciences resource. The timing and official nature of the page have been highly exaggerated.\nResulting Judgement: (-0.25, -0.25) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nResurrecting an old, unofficial staff page to spark a back-to-school culture war exaggerates institutional intent to drive media engagement.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 1.99, z: 1)",
       "- Fox News: FAIL (-0.60, -0.70) — Exaggerates backing.\n- Harvard: COND (0.10, 0.20) — Outdated staff resources.",
       "An article highlighted a Harvard parent resource page featuring books by Ibram X. Kendi and Robin DiAngelo. Harvard clarified the page was created by staff over five years ago and is not an official faculty resource.",
       "The Poison:\nEven as an unofficial resource, the inclusion of highly polarizing texts on a university domain reflects a lack of institutional oversight and vetting for parent-facing materials.",
       "The Breakdown & Plane Error:\nConfusing an unofficial staff-curated list (WHO) with an active, official university policy (WHAT). The framing presents a static, archived webpage as a deliberate back-to-school initiative.",
       "Social Physics Analysis:\nBy resurrecting an old, obscure page, the reporting creates a pretext of immediate threat to justify outrage. This projection of a coordinated institutional campaign distracts from the reality of a passive, unvetted archive.",
-      "The Trajectory: The Path of Awakening into Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Exposing the exaggeration defuses the manufactured crisis.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Exposing the exaggeration defuses the manufactured crisis.",
       "The Unavoidable Truth: The controversial book list exists on a Harvard-hosted webpage.\n\nThe Unavoidable Lie: Harvard launched this list as an official back-to-school initiative for the current academic year.",
       "Alethekanon:\nResurrecting an obscure, five-year-old staff webpage and framing it as an active, official university campaign is a classic exercise in manufactured outrage. It prioritizes culture-war engagement over honest institutional critique.",
       "Awwthekanon:\nIt is sad to see old resources, meant to help parents navigate difficult conversations about race, being weaponized to create fear and division. We should be building bridges of understanding, not tearing each other down.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fox News reporting on Harvard resources",
@@ -162,6 +224,7 @@
         "name": "Robin DiAngelo",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

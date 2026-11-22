@@ -14,13 +14,13 @@
       "Military efficiency takes a back seat to retro whims as carrier redesigns spark outrage.\n\nRage erupts as Trump's 'foolish whims' hit Navy with another 'extraordinary' cost\nEvidence: aesthetic whims, billions in waste, deteriorating morale\n#Aletheia #USPolitics #Navy 🌐",
       "Reports indicate the Navy is weighing a major redesign of Ford-class carriers to move command towers because Donald Trump prefers World War II aesthetics.\nStated Judgement: (+0.83, +1.00) — Good Preference",
       "Arbitrary aesthetic mandates impose billions in wasteful costs and massive delays while sailors endure severe mental health crises on prolonged deployments.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nWhimsical executive interference diverts critical resources from service member welfare into multi-billion-dollar vanity projects.\nIntegrity: Severe Deception (Hypocrisy: 18.5, Uncertainty z: 3)",
+      "Verdict: FAIL — Fall into Destruction.\nWhimsical executive interference diverts critical resources from service member welfare into multi-billion-dollar vanity projects.\nIntegrity: Severe Deception (Hypocrisy: 18.5, Uncertainty z: 3)",
       "- Donald Trump: FAIL (-0.95, -0.9) — Prioritizes personal aesthetics over military utility.\n- U.S. Navy Command: COND (-0.6, -0.5) — Absorbs costly whims under institutional pressure.",
       "The Navy is considering moving aircraft carrier command towers and replacing electromagnetic catapults to satisfy Trump's preference for WWII-era ship designs.",
       "The Poison:\nCostly aesthetic mandates divert billions from supporting overextended sailors facing severe psychological distress during nine-month deployments.",
       "The Breakdown & Plane Error:\nConfusing surface appearance (WHAT) with core operational capability (HOW). Vanity is masquerading as tactical upgrades.",
       "Social Physics Analysis:\nBy imposing top-down autocratic whims without transparent operational justification, leadership creates massive internal friction and demoralizes personnel.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated military readiness and actual vanity-driven waste, it plots directly toward Greater Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated military readiness and actual vanity-driven waste, it plots directly toward Greater Evil.",
       "The Unavoidable Truth: Vanity-driven military redesigns waste billions while active-duty service members face severe mental health crises.\n\nThe Unavoidable Lie: Aesthetic retrofitting of modern aircraft carriers constitutes a vital national security enhancement.",
       "Alethekanon:\nExecutive whims overriding engineering consensus for cosmetic nostalgia represents systemic decay disguised as tactical oversight. 🌐",
       "Awwthekanon:\nSailors are jumping overboard in despair while billions get squandered because a leader wants ships to look like old movies. This is heartbreaking.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Donald Trump Intervention",
@@ -265,6 +327,7 @@
         "name": "USS Abraham Lincoln",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/alpineentomology.pensoft.net/post/3mwsv3ovwbc2v",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.9,
-    "real_psi": 0.9,
+    "real_u": 0.96,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "The call for abstracts for the 11th International Congress of Dipterology in Zagreb is officially open!\nEvidence: Academic call, dates, venue, submission guidelines\n#Science #Dipterology #Entomology",
       "Researchers worldwide are invited to share findings on true flies, fostering global scientific collaboration.\nStated Judgement: (+1.0, 1.0) — Greater Good",
-      "The scientific community engages transparently in peer exchange, supporting ecological and taxonomic research.\nResulting Judgement: (+0.9, +0.9) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nTransparent academic coordination fosters genuine global collaboration and knowledge expansion.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
+      "The scientific community engages transparently in peer exchange, supporting ecological and taxonomic research.\nResulting Judgement: (+0.96, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nTransparent academic coordination fosters genuine global collaboration and knowledge expansion.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Pensoft Announcement: PASS (1.0, 1.0) — Clear, verifiable conference details.\n- Organizing Committee: PASS (0.9, 0.9) — Transparent scholarly administration.",
       "The 11th International Congress of Dipterology invites global specialists to submit research for its July 2027 gathering in Zagreb, Croatia.",
       "The Bright Side:\nGlobal scientific gatherings foster vital cross-border collaboration in biodiversity, ecology, and vector research.",
       "The Breakdown & Plane Error:\nClear alignment between stated academic goals (WHO/WHAT) and transparent operational execution.",
       "Social Physics Analysis:\nOrganizers operate through transparent coalition-building and shared scholarly goals, embodying a textbook Smart Altruistic loop focused on empowering scientific inquiry.",
-      "The Trajectory: The Path of Grace.\nWhen you map open scholarly coordination to empirical knowledge growth, it plots a direct trajectory toward Greater Good.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map open scholarly coordination to empirical knowledge growth, it plots a direct trajectory toward Greater Good.",
       "The Unavoidable Truth: Rigorous taxonomy and ecological study provide foundational data for planetary health.\n\nThe Unavoidable Lie: Academic conferences alone solve systemic funding deficits in biodiversity science.",
       "Alethekanon:\nOpen scientific collaboration represents institutional integrity operating at its highest structural level.",
       "Awwthekanon:\nIt is wonderful to see dedicated scientists gathering across borders to celebrate and protect the intricate web of life.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Pensoft Announcement",
@@ -207,6 +269,7 @@
         "name": "Croatian Association of Freshwater Ecologists",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

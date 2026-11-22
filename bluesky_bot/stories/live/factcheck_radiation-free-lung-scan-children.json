@@ -14,7 +14,7 @@
       "New radiation-free MRI tech spots pediatric lung disease safely without ionizing radiation.\n\nNew Radiation-Free Lung Scan C...\nEvidence: health innovation, safe imaging, better care\n#Health #Innovation 🌐",
       "Researchers at the University of Sheffield pioneered hyperpolarized Xenon-129 MRI, enabling detailed lung function maps for children with cystic fibrosis without radiation.\nStated Judgement: (+1.00, +1.00) — Grace",
       "Ground reality matches medical innovation claims: real clinical deployment at Sheffield Children's Hospital successfully maps lung ventilation and gas exchange safely.\nResulting Judgement: (+1.00, +1.00) — Grace",
-      "Verdict: PASS — The Path of Grace. This medical innovation successfully delivers radiation-free diagnostic safety, directly benefiting pediatric patients with chronic lung conditions.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: PASS — Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- POLARIS Research Group: PASS (1.0, 0.5) — Successfully developed clinical hyperpolarized xenon MRI technology.\n- Sheffield Children's Hospital: PASS (1.0, 0.5) — Effectively integrated radiation-free lung scans into pediatric patient care.",
       "Researchers at the University of Sheffield developed a technique using hyperpolarized Xenon-129 gas in MRI scanners, letting doctors safely map lung function in kids without radiation.",
       "The Poison:\nHardware and software scaling across existing global MRI hospital systems requires ongoing collaboration and regulatory approvals.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "POLARIS Research Group",
@@ -267,6 +329,7 @@
         "name": "GE HealthCare",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

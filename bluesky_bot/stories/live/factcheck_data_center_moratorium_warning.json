@@ -6,21 +6,21 @@
     "link": "https://www.foxnews.com/politics/crackdown-critical-tech-could-open-americans-new-national-security-threat",
     "target_url": "",
     "claim_u": 0.8,
-    "claim_psi": 0.6,
-    "real_u": -0.64,
-    "real_psi": -1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.39,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "A national security warning that doubles as a corporate sales pitch.\n\nCrackdown on critical tech cou...\nEvidence: public safety, commercial promotion, national security\n#Aletheia #Tech #NationalSecurity",
-      "Industry experts warn that data center restrictions will force American companies to process sensitive data overseas, creating massive national security risks.\nStated Judgement: (+0.80, +0.60) — Good Preference",
-      "The warning is delivered by the CEO of a company building off-grid data centers, using public safety fears to drive demand for her own commercial services.\nResulting Judgement: (-0.64, -1.00) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception.\nA public interest warning is co-opted as a marketing vehicle for a private data center developer.\n\nIntegrity: Severe Deception (Hypocrisy: 12.50, Uncertainty z: 4)",
+      "Industry experts warn that data center restrictions will force American companies to process sensitive data overseas, creating massive national security risks.\nStated Judgement: (+0.80, +1.00) — Greater Good",
+      "The warning is delivered by the CEO of a company building off-grid data centers, using public safety fears to drive demand for her own commercial services.\nResulting Judgement: (-0.39, -0.70) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA public interest warning is co-opted as a marketing vehicle for a private data center developer.\n\nIntegrity: Severe Deception (Hypocrisy: 12.50, Uncertainty z: 4)",
       "- Brittany Kaiser: FAIL (-0.64, -1.00) — Commercial interest masked as advocacy.\n- Data Center Security: COND (-0.20, -0.50) — Real risks but exaggerated for profit.",
       "Data privacy advocate Brittany Kaiser warned that local moratoriums on data centers could force US companies to process AI data overseas, exposing sensitive information to foreign adversaries.",
       "The Bright Side:\nData center energy consumption and grid reliability are genuine challenges that require innovative solutions, including off-grid power generation.",
       "The Breakdown & Plane Error:\nConfusing the WHAT with the WHO. The warning about data security (WHAT) is used to obscure the commercial interests of the specific company offering the solution (WHO).",
       "Social Physics Analysis:\nBy framing a commercial pitch as a national security warning, the actor uses fear to bypass regulatory scrutiny. This projection of public concern masks a smart selfish loop.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between public advocacy and private profit, it plots a direct trajectory toward Deception. Commercial co-optation of policy debates.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between public advocacy and private profit, it plots a direct trajectory toward Deception. Commercial co-optation of policy debates.",
       "The Unavoidable Truth: Data center regulations do impact where computing power is built.\n\nThe Unavoidable Lie: This warning is purely motivated by national security concerns.",
       "Alethekanon:\nFear-mongering is a highly effective marketing strategy. When national security is used as a sales pitch, the integrity of the debate is compromised.",
       "Awwthekanon:\nIt's tough when genuine concerns about our environment and energy grids get tangled up in corporate marketing. We need honest conversations to protect both.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.25,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Brittany Kaiser Advocacy",
@@ -283,6 +345,7 @@
         "name": "Federal Communications Commission",
         "role": "regulator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

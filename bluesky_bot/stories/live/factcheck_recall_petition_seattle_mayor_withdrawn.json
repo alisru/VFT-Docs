@@ -5,22 +5,22 @@
     "subject": "Recall petition for Seattle's socialist mayor withdrawn",
     "link": "https://www.washingtontimes.com/news/2026/aug/28/recall-petition-katie-wilson-seattles-socialist-mayor-withdrawn/",
     "target_url": "",
-    "claim_u": 0.82,
-    "claim_psi": 0.45,
-    "real_u": -0.15,
-    "real_psi": 0.25,
+    "claim_u": 0.91,
+    "claim_psi": 0.23,
+    "real_u": 0.42,
+    "real_psi": 0.12,
     "mode": "root",
     "posts": [
       "A tactical retreat in Seattle's political arena leaves a mayor safe for now.\n\nRecall petition for Seattle's socialist mayor withdrawn\nEvidence: Accountability, Premature Filing, Regrouping\n#Aletheia #Seattle #USPol",
-      "Petitioners claimed Mayor Katie Wilson committed misfeasance and malfeasance regarding public safety, demanding immediate accountability through a recall.\nStated Judgement: (+0.82, 0.45) — Good Preference",
-      "Petitioners withdrew their filing just days before the hearing, admitting they lacked legal readiness and needed further investigation.\nResulting Judgement: (-0.15, 0.25) — Lesser Evil",
-      "Verdict: FAIL — Awakening into Deception. Petitioners withdrew their premature recall effort to regroup, exposing a gap between political theater and legal readiness.\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
+      "Petitioners claimed Mayor Katie Wilson committed misfeasance and malfeasance regarding public safety, demanding immediate accountability through a recall.\nStated Judgement: (+0.91, +0.23) — Greater Good",
+      "Petitioners withdrew their filing just days before the hearing, admitting they lacked legal readiness and needed further investigation.\nResulting Judgement: (+0.42, +0.12) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.25, z: 0)",
       "- Washington Times: PASS (0.1, -0.2) — Balanced reporting.\n- Recall Petitioners: FAIL (-0.3, 0.4) — Premature filing.",
       "Seattle residents withdrew their recall petition against Mayor Katie Wilson just days before a scheduled sufficiency hearing, citing the need for further investigation and new legal counsel.",
       "The Poison:\nWhile the mayor avoids immediate legal scrutiny, the dismissal is without prejudice, meaning the threat of a refiled recall and ongoing political pressure remains active.",
       "The Breakdown & Plane Error:\nThe petitioners confused political disagreement (WHY) with the narrow legal threshold of misfeasance (HOW). This created a premature legal filing that had to be withdrawn when faced with actual judicial scrutiny.",
       "Social Physics Analysis:\nBy launching a high-profile legal challenge before securing solid evidence or counsel, the petitioners relied on public outrage rather than structural facts. This created high systemic friction, forcing a tactical retreat under pressure.",
-      "The Trajectory: The Path of Awakening into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Premature legal maneuvers collapse when forced to transition from rhetoric to courtroom proof.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Premature legal maneuvers collapse when forced to transition from rhetoric to courtroom proof.",
       "The Unavoidable Truth: Political grievances cannot bypass strict legal standards for recalling elected officials.\nThe Unavoidable Lie: The withdrawal was purely due to 'new information' rather than a lack of legal readiness.",
       "Alethekanon:\nThis withdrawal exposes the limits of using the judiciary as a stage for political theater. Without rigorous legal grounding, public outrage is a force without a lever.",
       "Awwthekanon:\nIt is exhausting when community anxiety over safety turns into legal battles that leave everyone feeling unheard. True healing starts when we address the pain in our neighborhoods together, rather than through divisive court battles.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Washington Times Reporting",
@@ -167,6 +229,7 @@
         "name": "Seattle",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

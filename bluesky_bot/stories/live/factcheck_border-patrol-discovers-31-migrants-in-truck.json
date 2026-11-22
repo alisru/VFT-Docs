@@ -5,22 +5,22 @@
     "subject": "Border Patrol agents make shocking discovery as dozens of illegal migrants stuffed in back of truck in California desert",
     "link": "https://nypost.com/2026/09/16/us-news/border-patrol-discovers-31-migrants-in-truck-near-us-mexico-border/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
+    "claim_u": 0.0,
+    "claim_psi": -0.5,
     "real_u": -0.8,
-    "real_psi": -0.7,
+    "real_psi": -0.75,
     "mode": "root",
     "posts": [
       "Border Patrol agents intercepted 31 migrants stuffed into a utility truck in the California desert.\nEvidence: Smuggling interdiction, Desert heat, Driver arrested\n#Aletheia #BorderSecurity",
-      "Law enforcement successfully intercepted a dangerous human-smuggling operation in the scorching California desert, saving lives.\nStated Judgement: (1.0, 0.0) — Good Preference",
-      "Vulnerable migrants were treated like cargo in extreme heat by smugglers, highlighting ongoing border exploitation crises.\nResulting Judgement: (-0.8, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nBorder enforcement frames interdiction as humanitarian rescue while structural border policies continue driving desperate people into deadly smuggling networks.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Law enforcement successfully intercepted a dangerous human-smuggling operation in the scorching California desert, saving lives.\nStated Judgement: (+0.00, -0.50) — Greater Evil",
+      "Vulnerable migrants were treated like cargo in extreme heat by smugglers, highlighting ongoing border exploitation crises.\nResulting Judgement: (-0.80, -0.75) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nBorder enforcement frames interdiction as humanitarian rescue while structural border policies continue driving desperate people into deadly smuggling networks.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Border Patrol: PASS (-0.7, -0.6) — Intercepted dangerous transport.\n- Smuggling Cartels: FAIL (-0.9, -0.9) — Exploited migrants for profit.",
       "Border Patrol agents in Imperial County discovered 31 migrants crammed into a modified utility truck near Ocotillo, California, while the driver fled across the border.",
       "The Bright Side:\nSwift law enforcement intervention prevented severe dehydration or death in the brutal 120-degree desert heat.",
       "The Breakdown & Plane Error:\nConfusing the tactical interception (WHAT) with systemic migration solutions (WHO/WHY). The reporting highlights the heroic catch while ignoring the root causes.",
       "Social Physics Analysis:\nSmugglers run a smart selfish maneuver by treating human lives as disposable cargo for profit. Border agencies use tactical successes as pretexts to project systemic control while the underlying humanitarian crisis persists unchecked.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic enforcement friction generates recurring loops of illicit exploitation.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic enforcement friction generates recurring loops of illicit exploitation.",
       "The Unavoidable Truth: Law enforcement successfully rescued 31 migrants from deadly desert conditions.\n\nThe Unavoidable Lie: Tactical border interdictions solve the underlying humanitarian smuggling crisis.",
       "Alethekanon:\nMedia framing treats criminal smuggling interdictions as definitive victories, masking the persistent structural pressures driving desperate border crossings.",
       "Awwthekanon:\nIt is heartbreaking to imagine the sheer terror and suffocating heat those thirty-one human beings endured trapped inside a dark truck.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Border Patrol",
@@ -156,6 +218,7 @@
         "name": "Migrants",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Chilling audio captures moment...",
     "link": "https://nypost.com/2026/10/03/us-news/audio-captures-moments-before-boston-bound-plane-vanished/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": 0.1,
-    "real_psi": -0.2,
+    "claim_u": 0.65,
+    "claim_psi": 0.25,
+    "real_u": 0.65,
+    "real_psi": 0.25,
     "mode": "root",
     "posts": [
       "Chilling audio transmissions reveal the tense final moments before a Boston-bound medical plane vanished off Nantucket. Evidence: ATC audio, search & rescue, 6 missing. #Aviation #News",
-      "Stated Claim / Post Context: Air traffic control recordings expose the frantic communication right before a medical flight dropped off radar. Stated Judgement: (+0.5, 0.0) — Neutral",
-      "Actual Article Body: A Latitude Air Ambulance flight carrying six people from Bermuda to Boston plummeted over 10,000 feet, prompting an active Coast Guard search. Resulting Judgement: (+0.1, -0.2) — Lesser Evil",
-      "Verdict: PASS — The Path of Redemption.\nTransparent reporting of emergency search efforts in response to sudden aviation tragedy.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Stated Claim / Post Context: Air traffic control recordings expose the frantic communication right before a medical flight dropped off radar. Stated Judgement: (+0.65, +0.25) — Greater Good",
+      "Actual Article Body: A Latitude Air Ambulance flight carrying six people from Bermuda to Boston plummeted over 10,000 feet, prompting an active Coast Guard search. Resulting Judgement: (+0.65, +0.25) — Greater Good",
+      "Verdict: PASS — Grace.\nTransparent reporting of emergency search efforts in response to sudden aviation tragedy.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- ATC Audio Reports: PASS (0.5, 0.0) — Accurate transmission transcription.\n- SAR Coordination: PASS (0.8, 0.5) — Transparent multi-agency response.",
       "A medical flight carrying four Canadians and two Bermudians lost radio contact 13 miles off Nantucket, triggering a massive international search effort.",
       "The Bright Side:\nImmediate multi-agency coordination and cross-border cooperation demonstrate swift mobilization for search and rescue operations.",
       "The Plane Error & Switch:\nEvaluating tragedy through mechanical reporting; no hidden manipulation by reporters, but systemic physical vulnerability is laid bare.",
       "Social Physics Analysis:\nEmergency responders operate in a smart altruistic loop, coordinating transparent rescue efforts to confront a catastrophic physical failure.",
-      "The Trajectory: The Path of Redemption.\nWhen emergency actors mobilize transparently against sudden tragedy, it plots a trajectory toward cooperative rescue and institutional solidarity.",
+      "The Trajectory: The Path of Grace.\nWhen emergency actors mobilize transparently against sudden tragedy, it plots a trajectory toward cooperative rescue and institutional solidarity.",
       "The Unavoidable Truth: Aviation transport involves inherent physical risks requiring absolute vigilance.\nThe Unavoidable Lie: Technology eliminates all margins of catastrophic error.",
       "Alethekanon:\nReporting on catastrophic loss exposes the fragility of human logistics, demanding rigorous transparency in rescue operations.",
       "Awwthekanon:\nMy heart aches for the families waiting for word on their loved ones. Praying for strength and resolve for every rescue crew searching the dark waters.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "ATC Audio Reports",
@@ -157,6 +219,7 @@
         "name": "Federal Aviation Administration",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

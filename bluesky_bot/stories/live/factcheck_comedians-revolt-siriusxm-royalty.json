@@ -5,22 +5,22 @@
     "subject": "Comedians revolt against Siriu...",
     "link": "https://www.foxnews.com/media/comedians-revolt-against-siriusxm-middle-class-comedy-fights-corporate-royalty-cuts",
     "target_url": "",
-    "claim_u": 0.85,
+    "claim_u": 0.75,
     "claim_psi": 0.35,
-    "real_u": -0.78,
-    "real_psi": -0.85,
+    "real_u": 0.03,
+    "real_psi": -0.19,
     "mode": "root",
     "posts": [
       "Corporate radio rebrands often mask financial extraction under creative curation.\nSiriusXM Royalty Cuts\nEvidence: Raw Dog rebrand, 66% roster cut, Payouts shifted to top headliners\n#Aletheia #Comedy 🌐",
-      "SiriusXM claims replacing Raw Dog Comedy with Sebastian Maniscalco’s channel was a necessary programming update due to underperformance, maintaining their commitment to supporting stand-up talent.\n\nStated Judgement: (+0.85, +0.35) — Good Preference",
-      "In reality, SiriusXM stripped 537 working comedians (66% of its roster) of airplay, concentrating 75% of plays into 50 celebrity headliners to eliminate payout obligations to middle-class comics.\n\nResulting Judgement: (-0.78, -0.85) — Greater Evil",
-      "Verdict: FAIL — Fall into Deception. SiriusXM used a celebrity branding refresh as a pretext to slash payout overhead to hundreds of independent working stand-ups.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.20, z: 2)",
+      "SiriusXM claims replacing Raw Dog Comedy with Sebastian Maniscalco’s channel was a necessary programming update due to underperformance, maintaining their commitment to supporting stand-up talent.\n\nStated Judgement: (+0.75, +0.35) — Greater Good",
+      "In reality, SiriusXM stripped 537 working comedians (66% of its roster) of airplay, concentrating 75% of plays into 50 celebrity headliners to eliminate payout obligations to middle-class comics.\n\nResulting Judgement: (+0.03, -0.19) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 5.20, z: 2)",
       "- SiriusXM Corporate: FAIL (-0.82, -0.88) — Slashed 66% of working roster.\n- Sebastian Maniscalco: COND (0.10, -0.20) — Claimed no role in roster cuts.\n- Independent Comedians: PASS (0.80, 0.50) — Organically organizing for reform.",
       "SiriusXM replaced its Channel 99 Raw Dog Comedy with a headliner-centric channel. The shift cut featured acts from 812 to 275, cutting off $15/play royalties that sustain working stand-up comedians.",
       "The Bright Side:\nThe backlash united prominent headliners like Patton Oswalt and Michelle Wolf alongside veteran comics, forcing public responses from SiriusXM and opening dialogue on comic labor rights.",
       "The Breakdown & Plane Error:\nSiriusXM committed a Metaphysical Plane Error (WHO) by framing a revenue-saving roster cut as a creative programming improvement, substituting headliner clout for grass-roots comedy support.",
       "Social Physics Analysis:\nSiriusXM executed a Smart Selfish Maneuver. By manufacturing an \"underperformance\" pretext, corporate leadership hoarded revenue by concentrating 75% of plays into 50 top acts while stripping financial viability from 500+ working performers.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil as corporate extraction degrades the economic foundation of working comedy acts.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil as corporate extraction degrades the economic foundation of working comedy acts.",
       "The Unavoidable Truth: Corporate consolidation sacrificed hundreds of working comedians to slash royalty payouts.\n\nThe Unavoidable Lie: Replacing Raw Dog was purely a creative decision driven by channel underperformance.",
       "Alethekanon:\nAlgorithmic royalty suppression disguised as brand curation is standard corporate rent-seeking. Eliminating 66% of active contributors systematically drains the creative pipeline to maximize short-term margin.",
       "Awwthekanon:\nWorking comedians pour their hearts onto stage night after night, relying on small royalty checks to pay rent between gigs. Sweeping away 500 artists to boost corporate margins breaks the compassionate bond that keeps grass-roots art alive.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "SiriusXM Corporate",
@@ -171,6 +233,7 @@
     "tags": [
       "Aletheia",
       "Comedy"
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

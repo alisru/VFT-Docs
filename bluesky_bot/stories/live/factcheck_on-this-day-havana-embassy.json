@@ -14,7 +14,7 @@
       "A look back at the 2015 diplomatic thaw between the U.S. and Cuba. On This Day, Aug. 14: U.S. reopens embassy in Havana after 54 years. Evidence: Diplomatic history, Thawing relations, Historical record. #History #Diplomacy",
       "The claim recounts the 2015 reopening of the U.S. Embassy in Havana as a significant step toward normalizing relations after 54 years of isolation. Stated Judgement: (1.0, 1.0) — Greater Good",
       "The historical record confirms this event as a genuine attempt at diplomatic reconciliation, marking a shift from decades of hostility to engagement. Resulting Judgement: (+1.00, +1.00) — Greater Good",
-      "Verdict: PASS — Awakening into Grace. The event represents a rare moment of diplomatic progress where stated intent aligned with the physical act of reopening communication. Integrity: Absolute Truth (Hypocrisy: 0.1, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.",
       "Sub-Audits Breakdown:\n- U.S. State Department: PASS (0.9, 0.8) — Successfully executed the reopening of the embassy.\n- Cuban Government: PASS (0.8, 0.7) — Facilitated the diplomatic thaw through mutual agreement.",
       "On August 14, 2015, the U.S. officially reopened its embassy in Havana, Cuba, ending over five decades of severed diplomatic ties and signaling a new era of engagement between the two nations.",
       "The Bright Side:\nThis event serves as a reminder that even long-standing geopolitical conflicts can be bridged through persistent diplomatic effort and mutual interest.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "U.S. State Department",
@@ -267,6 +329,7 @@
         "name": "Barack Obama",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

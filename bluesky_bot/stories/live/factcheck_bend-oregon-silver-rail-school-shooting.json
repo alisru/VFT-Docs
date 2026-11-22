@@ -1,0 +1,256 @@
+[
+  {
+    "thinking": "Phase 1 & 2 Convergence Analysis:\nEvaluating the Bend, Oregon elementary school shooting cluster.\nStated Claim: Public schools are safe, protected spaces where children learn under institutional safeguards.\nActual Event: A 16-year-old obtained his mother's shotgun, shot through locked glass doors at Silver Rail Elementary, and murdered three children (ages 5, 8, 11) and a teacher before an armed citizen killed him.\n\nCoordinates Calculation:\nStated (u_claim, psi_claim):\nForces: GG(S=1.2), GE(O=1.2), LG(S=1.0), LE(O=0.8), GP(S=1.2), BP(O=1.2)\nu_claim = +0.80, psi_claim = +0.20 (Good Preference)\n\nActual (u_real, psi_real):\nForces: GG(O=1.5), GE(S=1.6), LG(O=1.0), LE(S=1.2), GP(O=1.2), BP(S=1.5)\nu_real = -0.88, psi_real = -0.89 (Greater Evil / Destruction)\n\nIntegrity Metrics:\nR_net = 145.20 ('Baseless Lies'), Delta Hypocrisy = 144.20, Uncertainty z = 3.\n\nAspects:\n1. Daily Mail Coverage: PASS (+0.10, -0.40) — Factual documentation of news.\n2. Daily Caller Noise: FAIL (-0.80, -0.50) — Off-topic commentary noise.\n3. School Safeguards: FAIL (-0.90, -0.85) — Fatal security and access failure.",
+    "id": "bend-oregon-silver-rail-school-shooting",
+    "subject": "Teen gunman, 16, kills three c...",
+    "link": "https://www.dailymail.com/news/article-16213137/Active-shooter-Bend-Oregon-elementary-school.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+    "target_url": "",
+    "claim_u": 0.53,
+    "claim_psi": 0.13,
+    "real_u": -0.53,
+    "real_psi": -0.58,
+    "mode": "root",
+    "posts": [
+      "A peaceful school day shattered by violent failure. Teen Gunman Kills 4 in Oregon School Shooting.\nEvidence: Safe school ideal, Four lives lost, Systemic failure\n#BendOregon #SchoolSafety 🌐",
+      "Schools claim to provide secure environments where children learn safely, protected by institutional safeguards and community vigilance.\nStated Judgement: (+0.53, +0.13) — Greater Good",
+      "A 16-year-old armed with his mother's shotgun easily breached locked doors to murder 3 young children and a teacher before a civilian intervened.\nResulting Judgement: (-0.53, -0.58) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Baseless Lies (Hypocrisy: 145.20, z: 3)",
+      "Sub-Audits Breakdown:\n- Daily Mail Coverage: PASS (+0.10, -0.40) — Factual documentation of news.\n- Daily Caller Noise: FAIL (-0.80, -0.50) — Off-topic commentary noise.\n- School Safeguards: FAIL (-0.90, -0.85) — Fatal security and access failure.",
+      "A 16-year-old shooter drove to Silver Rail Elementary in Bend, Oregon, shot through locked doors, and killed three pupils aged 5, 8, and 11, plus a teacher, before an armed community member shot him dead.",
+      "The Bright Side:\nAn armed citizen acted instantly to stop the shooter, saving dozens of children and staff from further carnage when institutional barriers failed.",
+      "The Breakdown:\nThe plane error mistakes surface access controls for genuine systemic prevention. Claiming locked doors protect kids hides the fatal reality of unmonitored firearm access at home.",
+      "Social Physics Analysis:\nInstitutions rely on post-tragedy grief pretexts rather than upfront gun security transparency. By treating domestic firearm storage as a private choice rather than a public duty, system safety collapses onto defenseless children.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between safety promises and real-world weapons access, it plots a direct trajectory toward Greater Evil. Stated protection collapses under unaddressed systemic vulnerabilities.",
+      "The Unavoidable Truth: Firearm access without responsible domestic storage makes locked doors useless.\nThe Unavoidable Lie: Proclaiming schools are safe without enforcing preventative gun security.",
+      "Alethekanon:\nSystemic failure occurs when passive safeguards like locked glass doors are treated as sufficient barriers against high-velocity kinetic force. Security without upstream access control is mere illusion.",
+      "Awwthekanon:\nMy heart breaks for the families in Bend who sent their beautiful children off to picture day, only to receive unimaginable horror. Every child deserves to feel safe and loved at school.",
+      "Brothekanon:\nBro, a 16-year-old taking his mom's shotgun and shooting through locked school doors is terrifying. Props to the local citizen who ran in and ended it, but how did it even get that far?",
+      "Spirithekanon:\n\"Defend the weak and the fatherless; uphold the cause of the poor and the oppressed. Rescue the weak and needy.\" Psalm 82:3-4 FAIL\nTrue spiritual duty requires proactive guardianship of the helpless before catastrophe strikes."
+    ],
+    "actors": [
+      "16-Year-Old Gunman",
+      "Elementary Students & Teachers",
+      "Intervening Community Member",
+      "Bend Police Department & Local Authorities",
+      "Bend, Oregon"
+    ],
+    "actor_roles": [
+      {
+        "name": "16-Year-Old Gunman",
+        "role": "instigator"
+      },
+      {
+        "name": "Elementary Students & Teachers",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Intervening Community Member",
+        "role": "acted_upon"
+      },
+      {
+        "name": "Bend Police Department & Local Authorities",
+        "role": "regulator"
+      },
+      {
+        "name": "Bend, Oregon",
+        "role": "context"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 1.0,
+    "real_rnet": 145.2,
+    "claim_z": 0,
+    "real_z": 3,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Baseless Lies",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Daily Mail Coverage",
+        "claim_u": 0.8,
+        "claim_psi": 0.2,
+        "real_u": 0.1,
+        "real_psi": -0.4,
+        "verdict": "PASS",
+        "reason": "Factual documentation of news."
+      },
+      {
+        "aspect": "Daily Caller Commentary",
+        "claim_u": 0.0,
+        "claim_psi": 0.0,
+        "real_u": -0.8,
+        "real_psi": -0.5,
+        "verdict": "FAIL",
+        "reason": "Off-topic commentary noise."
+      },
+      {
+        "aspect": "School Safeguards",
+        "claim_u": 0.8,
+        "claim_psi": 0.2,
+        "real_u": -0.9,
+        "real_psi": -0.85,
+        "verdict": "FAIL",
+        "reason": "Fatal security and access failure."
+      }
+    ],
+    "multiAspect": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nTeen gunman, 16, kills three c...\n\n=== MULTI-SOURCE TOPIC CLUSTER: Teen gunman, 16, kills three c... ===\n\n[Source 1 — www.dailymail.com] (URL: https://www.dailymail.com/news/article-16213137/Active-shooter-Bend-Oregon-elementary-school.html?ns_mchannel=rss&ns_campaign=1490&ito=1490):\nStated Claim / Post Context:\nTeen gunman, 16, kills three children aged 5, 8 and 11 and a teacher in Oregon elementary school after shooting locked doors to get inside\n\nA 16-year-old gunman killed three children and a teacher when he opened fire at Silver Rail Elementary School in Bend, Oregon on Thursday afternoon.\n\nActual Article Body:\nBy MELISSA KOENIG, US REPORTER and EMMA RICHTER, US SENIOR NEWS REPORTER\n\nPublished:  08:08 AEDT, 16 October 2026   |  Updated:  13:19 AEDT, 16 October 2026\n\nA teenage gunman killed three children and a teacher when he opened fire at an elementary school in Oregon on Thursday afternoon.\n\nThe unidentified shooter, 16, shot at the locked doors of Silver Rail Elementary School in the city of Bend on Thursday afternoon before killing three children, ages five, eight and 11, and one teacher whose age was not disclosed.\n\nHe was then gunned down by a good Samaritan whom authorities said followed him into the building.\n\nA seven-year-old and another 54-year-old teacher were also transported to a local hospital with critical injuries.\n\nA motive for the shooting remains unclear, and authorities would not confirm on Thursday night whether the suspect knew anybody at the school or if he had attended it when he was younger.\n\n'Today is an awful day for our community,' Bend Mayor Melanie Kebler declared. 'Our hearts are broken as we mourn this tragedy and the profound impact it has had on so many people, especially the children, families, educators and school staff whose lives have been forever changed.\n\n'A school should be a safe place where children can learn and feel secure,' Kebler continued, as she called for the community to lean on one another.\n\n'We are here for you. We grieve alongside you and we will get through this together.'\n\nThree children and a teacher were killed when a teenage gunman broke into an elementary school in Bend, Oregon on Thursday\n\nEmergency personnel direct traffic at the Journey Church family reunification location\n\nFamily members are pictured walking to a reunification center following the shooting\n\nThe tragedy began when a man driving a red Toyota Tacoma pickup truck in the school parking lot spotted the teen carrying a long gun approach the building, according to The Source.\n\nThe driver then confronted the teenager, who in turn fired numerous shots at the civilian and his truck, shattering a rear window and leaving six large bullet holes in the vehicle.\n\nAt that point, the assailant allegedly threw his gun over the school fence and hopped over - prompting the driver to call Deschutes County dispatchers at around 12.59pm.\n\nWithin just one minute, the Bend police department sent out an alert to respond to a critical scene.\n\nBut as officers then raced to the school, the suspect forced his way into the building by shooting at locked doors - at which point dispatchers started receiving 'dozens' of 911 calls, Police Chief Mike Krantz said at a news conference Thursday night.\n\nCops arrived at the scene by 1.02pm and just moments later, the lone shooter was killed by an unidentified community member.\n\nThe school was placed under lockdown following the shooting, as police officers went room by room to evacuate the building, Miller said. The school has a student body of between 400 to 450 pupils and a staff of more than 40.\n\nOfficers clad in bullet proof vests and carrying assault rifles were also seen in the aftermath peering into the vehicles parked at the school's lot, while parents, teachers and children huddled together, embracing and wiping tears from their faces.\n\nBend Police Chief Mike Krantz announced on Thursday night the victims include a five year old, an eight year old and an 11 year old\n\nA police officer was seen setting up police tape outside of the elementary school\n\nOfficers have asked the public to avoid the area as the school remains under lockdown, as a large crowd of concerned parents gathered outside the school after hearing the reports\n\nPolice had asked the public to avoid the area amid the investigation, but a large crowd of concerned parents were seen gathering outside the school after hearing the reports.\n\nThose worried parents have since rushed to the nearby Journey Church, to be reunited with their loved ones as officials evacuated the youngest children first.\n\nAs she waited for her nephew, Mindy Corley, the aunt of a fifth-grader at the school, told NBC News how he was left 'very scared' in the aftermath of the shooting.\n\nShe said he has a cellphone and was able to tell his mother he was OK, but 'he was clearly very, very scared and wanted to go home.'\n\nSteven and Angela Nuchols also told how they got their eight-year-old daughter, Charlotte, dressed up for picture day earlier on Thursday.\n\nThey then had to race to the school just a few hours later.\n\n'It was crawling with police officers from all over the country,' Angela said. 'You've got guys in tactical gear, rifles. You're just scared to death wondering is your child OK? You don't know.'\n\nThe couple was later reunited with their daughter, but Angela said it was 'like the worst three hours of our lives.'\n\nMeanwhile, Federal agents from the FBI's Portland Bureau and agents from the Bureau of Alcohol, Tobacco, Firearms and Explosives have descended on the scene to aid in the investigation, with FBI Director Kash Patel vowing to 'make every resource [local law enforcement needs] available.'\n\nIt has since been determined that the suspect used a pump-action shotgun that was purchased by his mother, a law enforcement source told the Associated Press.\n\nA sheriff's deputy is seen standing guard outside of the elementary school on Thursday as the investigation continued\n\nBend police officers rushed to the scene of the shooting on Thursday afternoon. A child is pictured walking near police tape following the tragedy\n\nBystanders had earlier gathered outside the elementary school on Thursday following reports of an active shooter\n\nAt a press conference on Thursday night, Oregon Governor Tina Kotek praised the community member she said 'heroically intervened' and told how she had visited the school nearly one year ago.\n\n'My heart is absolutely broken today,' she said. 'No parent should have to have this kind of day.'\n\nShe then said it was time for the community to grieve.\n\n'There is going to be time for answering all those questions we all have right now and searching for more ways to prevent this from happening in the future,' said Kotek, a Democrat. 'But for now, let's hold each other close in grief and put as much love into the world as possible.'\n\nBend-La Pine Schools Superintendent Steven Cook also called the incident on Thursday 'an unthinkable tragedy.\n\n'No community should have to do what we are doing right now,' he said at the news conference, visibly shaken by what had happened. 'I don't have any words for what this community is feeling right now.'\n\nAt least four people, including children, have died in the shooting. Police spokeswoman Sheila Miller is pictured speaking with reporters\n\nThe Bend Police Department announced on social media that officers responded to the scene of the shooting and asked the public to avoid the area\n\nPolice spokeswoman Sheila Miller had made a similar remark earlier in the day.\n\n'This is the kind of thing we never want to see happen in Bend,' police spokeswoman she said, choking up as she spoke.\n\n'And our hearts go out to this community, and we ask our community to really work together and come together at this time.'\n\nThe school district has now canceled all classes, activities and athletic events that were scheduled for Friday.\n\nFollowing the tragedy, Congresswoman Janelle Bynum also announced that she is halting all campaign activity, saying she is 'focused on supporting and being with the community as it responds to this tragedy.\n\nEvacuated students were taken by bus to an off-site reunification center\n\n'I feel this deep, deep, deep in my soul,' she said in a statement. 'Our whole community does. Our whole state does. And the whole nation should.\n\n'Our babies are supposed to do arts and crafts at school, not use their desks as cover from gunfire. They're supposed to make friends, not mourn them. This is every parent's worst fear.\n\n'My heart and my prayers and everything else I got is with the families at Silver Rail Elementary. When will it end?'\n\nSenator Ron Wyden also said: 'My heart is with the victims of today's shooting at Silver Rail Elementary School and their loved ones now facing the consequences of another school shooting in America.'\n\n'Once again we must ask how many schools must be shot up before Republicans agree to act to curb gun violence,' he continued.\n\n[Source 2 — dailycaller.com] (URL: https://dailycaller.com/2026/10/14/duke-apple-advertisement-homeview-cucked-liberal-helpless-family-ai):\nStated Claim / Post Context:\nDUKE: Apple’s New Ad Is Three Minutes Of Hell In A Smart Home\n\nThe best argument yet for unplugging\n\nActual Article Body:\nScreenshot from X / @Austen / Edited by Daily Caller Staff\n\nHey y’all, welcome back to Unfit to Print.\n\nTHE FUTURE IS CUCKED\n\nApple has unveiled its vision for the future of the American family and it’s … very, very bleak.\n\nIn an advertisement for the HomeView, Apple’s new $299 smart home device, the tech giant introduces us to a family of helpless suburban liberals who can’t cook breakfast, find their car keys, or organize rides to school without the help of a robot.\n\nThe chaotic, anxiety-inducing three minute spot is the Big Tech equivalent of Uncut Gems or Marty Supreme. No one watches those films and wants to be the main character. In fact, they leave the theater exceptionally grateful to be literally anybody else.\n\nAnd yet Apple seems to think we’ll watch three minutes of an insufferable family careening toward a collective nervous breakdown and say, “Gee, I wish that were my life.”\n\nTo continue reading this newsletter, please become a paid Substack subscriber.\n\nTRENDING\n\n©2026 The Daily Caller, Inc.\n\nThe Daily Caller | 1750 H Street NW | Suite 360-290 | Washington, DC 20006\n\n[Source 3 — www.washingtonexaminer.com] (URL: https://www.washingtonexaminer.com/news/crime/4768124/bend-oregon-elementary-school-shooting/):\nStated Claim / Post Context:\nFour dead, including three children, in Oregon elementary school shooting\n\nFour people, including three children, were killed by an active shooter on Thursday at an elementary school in Bend, Oregon. The victims included a 5-year-old, an 8-year-old, an 11-year-old, and a teacher, Bend Police Chief Mike Krantz said. The 16-year-old gunman was killed after a member of the community followed him inside the school and [&#8230;]\n\nActual Article Body:\nFour people, including three children, were killed by an active shooter on Thursday at an elementary school in Bend, Oregon.\n\nThe victims included a 5-year-old, an 8-year-old, an 11-year-old, and a teacher, Bend Police Chief Mike Krantz said. The 16-year-old gunman was killed after a member of the community followed him inside the school and shot him. Two people, a 7-year-old and a 54-year-old teacher, were hospitalized with critical injuries.\n\nJoin Washington Examiner for unlimited access to the news, analysis, and commentary that matter most.\n\nAlready a member? Log in\n\nSubscribe for full access to Washington Examiner coverage, expert political analysis,\n      and subscriber-only journalism.\n\nAlready a member? Log in\n\nCancel anytime.",
+    "cluster_sources": [
+      {
+        "publisher": "www.dailymail.com",
+        "url": "https://www.dailymail.com/news/article-16213137/Active-shooter-Bend-Oregon-elementary-school.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+        "snippet": "Stated Claim / Post Context:\nTeen gunman, 16, kills three children aged 5, 8 and 11 and a teacher in Oregon elementary school after shooting locked doors to get inside\n\nA 16-year-old gunman killed three children and a teacher when he opened fire at Silver Rail Elementary School in Bend, Oregon on Thursday afternoon.\n\nActual Article Body:\nBy MELISSA KOENIG, US REPORTER and EMMA RICHTER, US SENIOR N"
+      },
+      {
+        "publisher": "dailycaller.com",
+        "url": "https://dailycaller.com/2026/10/14/duke-apple-advertisement-homeview-cucked-liberal-helpless-family-ai",
+        "snippet": "Stated Claim / Post Context:\nDUKE: Apple’s New Ad Is Three Minutes Of Hell In A Smart Home\n\nThe best argument yet for unplugging\n\nActual Article Body:\nScreenshot from X / @Austen / Edited by Daily Caller Staff\n\nHey y’all, welcome back to Unfit to Print.\n\nTHE FUTURE IS CUCKED\n\nApple has unveiled its vision for the future of the American family and it’s … very, very bleak.\n\nIn an advertisement for t"
+      },
+      {
+        "publisher": "www.washingtonexaminer.com",
+        "url": "https://www.washingtonexaminer.com/news/crime/4768124/bend-oregon-elementary-school-shooting/",
+        "snippet": "Stated Claim / Post Context:\nFour dead, including three children, in Oregon elementary school shooting\n\nFour people, including three children, were killed by an active shooter on Thursday at an elementary school in Bend, Oregon. The victims included a 5-year-old, an 8-year-old, an 11-year-old, and a teacher, Bend Police Chief Mike Krantz said. The 16-year-old gunman was killed after a member of th"
+      }
+    ],
+    "is_multi_source": true,
+    "cross_source_dossier": "=== MULTI-SOURCE TOPIC CLUSTER: Teen gunman, 16, kills three c... ===\n\n[Source 1 — www.dailymail.com] (URL: https://www.dailymail.com/news/article-16213137/Active-shooter-Bend-Oregon-elementary-school.html?ns_mchannel=rss&ns_campaign=1490&ito=1490):\nStated Claim / Post Context:\nTeen gunman, 16, kills three children aged 5, 8 and 11 and a teacher in Oregon elementary school after shooting locked doors to get inside\n\nA 16-year-old gunman killed three children and a teacher when he opened fire at Silver Rail Elementary School in Bend, Oregon on Thursday afternoon.\n\nActual Article Body:\nBy MELISSA KOENIG, US REPORTER and EMMA RICHTER, US SENIOR NEWS REPORTER\n\nPublished:  08:08 AEDT, 16 October 2026   |  Updated:  13:19 AEDT, 16 October 2026\n\nA teenage gunman killed three children and a teacher when he opened fire at an elementary school in Oregon on Thursday afternoon.\n\nThe unidentified shooter, 16, shot at the locked doors of Silver Rail Elementary School in the city of Bend on Thursday afternoon before killing three children, ages five, eight and 11, and one teacher whose age was not disclosed.\n\nHe was then gunned down by a good Samaritan whom authorities said followed him into the building.\n\nA seven-year-old and another 54-year-old teacher were also transported to a local hospital with critical injuries.\n\nA motive for the shooting remains unclear, and authorities would not confirm on Thursday night whether the suspect knew anybody at the school or if he had attended it when he was younger.\n\n'Today is an awful day for our community,' Bend Mayor Melanie Kebler declared. 'Our hearts are broken as we mourn this tragedy and the profound impact it has had on so many people, especially the children, families, educators and school staff whose lives have been forever changed.\n\n'A school should be a safe place where children can learn and feel secure,' Kebler continued, as she called for the community to lean on one another.\n\n'We are here for you. We grieve alongside you and we will get through this together.'\n\nThree children and a teacher were killed when a teenage gunman broke into an elementary school in Bend, Oregon on Thursday\n\nEmergency personnel direct traffic at the Journey Church family reunification location\n\nFamily members are pictured walking to a reunification center following the shooting\n\nThe tragedy began when a man driving a red Toyota Tacoma pickup truck in the school parking lot spotted the teen carrying a long gun approach the building, according to The Source.\n\nThe driver then confronted the teenager, who in turn fired numerous shots at the civilian and his truck, shattering a rear window and leaving six large bullet holes in the vehicle.\n\nAt that point, the assailant allegedly threw his gun over the school fence and hopped over - prompting the driver to call Deschutes County dispatchers at around 12.59pm.\n\nWithin just one minute, the Bend police department sent out an alert to respond to a critical scene.\n\nBut as officers then raced to the school, the suspect forced his way into the building by shooting at locked doors - at which point dispatchers started receiving 'dozens' of 911 calls, Police Chief Mike Krantz said at a news conference Thursday night.\n\nCops arrived at the scene by 1.02pm and just moments later, the lone shooter was killed by an unidentified community member.\n\nThe school was placed under lockdown following the shooting, as police officers went room by room to evacuate the building, Miller said. The school has a student body of between 400 to 450 pupils and a staff of more than 40.\n\nOfficers clad in bullet proof vests and carrying assault rifles were also seen in the aftermath peering into the vehicles parked at the school's lot, while parents, teachers and children huddled together, embracing and wiping tears from their faces.\n\nBend Police Chief Mike Krantz announced on Thursday night the victims include a five year old, an eight year old and an 11 year old\n\nA police officer was seen setting up police tape outside of the elementary school\n\nOfficers have asked the public to avoid the area as the school remains under lockdown, as a large crowd of concerned parents gathered outside the school after hearing the reports\n\nPolice had asked the public to avoid the area amid the investigation, but a large crowd of concerned parents were seen gathering outside the school after hearing the reports.\n\nThose worried parents have since rushed to the nearby Journey Church, to be reunited with their loved ones as officials evacuated the youngest children first.\n\nAs she waited for her nephew, Mindy Corley, the aunt of a fifth-grader at the school, told NBC News how he was left 'very scared' in the aftermath of the shooting.\n\nShe said he has a cellphone and was able to tell his mother he was OK, but 'he was clearly very, very scared and wanted to go home.'\n\nSteven and Angela Nuchols also told how they got their eight-year-old daughter, Charlotte, dressed up for picture day earlier on Thursday.\n\nThey then had to race to the school just a few hours later.\n\n'It was crawling with police officers from all over the country,' Angela said. 'You've got guys in tactical gear, rifles. You're just scared to death wondering is your child OK? You don't know.'\n\nThe couple was later reunited with their daughter, but Angela said it was 'like the worst three hours of our lives.'\n\nMeanwhile, Federal agents from the FBI's Portland Bureau and agents from the Bureau of Alcohol, Tobacco, Firearms and Explosives have descended on the scene to aid in the investigation, with FBI Director Kash Patel vowing to 'make every resource [local law enforcement needs] available.'\n\nIt has since been determined that the suspect used a pump-action shotgun that was purchased by his mother, a law enforcement source told the Associated Press.\n\nA sheriff's deputy is seen standing guard outside of the elementary school on Thursday as the investigation continued\n\nBend police officers rushed to the scene of the shooting on Thursday afternoon. A child is pictured walking near police tape following the tragedy\n\nBystanders had earlier gathered outside the elementary school on Thursday following reports of an active shooter\n\nAt a press conference on Thursday night, Oregon Governor Tina Kotek praised the community member she said 'heroically intervened' and told how she had visited the school nearly one year ago.\n\n'My heart is absolutely broken today,' she said. 'No parent should have to have this kind of day.'\n\nShe then said it was time for the community to grieve.\n\n'There is going to be time for answering all those questions we all have right now and searching for more ways to prevent this from happening in the future,' said Kotek, a Democrat. 'But for now, let's hold each other close in grief and put as much love into the world as possible.'\n\nBend-La Pine Schools Superintendent Steven Cook also called the incident on Thursday 'an unthinkable tragedy.\n\n'No community should have to do what we are doing right now,' he said at the news conference, visibly shaken by what had happened. 'I don't have any words for what this community is feeling right now.'\n\nAt least four people, including children, have died in the shooting. Police spokeswoman Sheila Miller is pictured speaking with reporters\n\nThe Bend Police Department announced on social media that officers responded to the scene of the shooting and asked the public to avoid the area\n\nPolice spokeswoman Sheila Miller had made a similar remark earlier in the day.\n\n'This is the kind of thing we never want to see happen in Bend,' police spokeswoman she said, choking up as she spoke.\n\n'And our hearts go out to this community, and we ask our community to really work together and come together at this time.'\n\nThe school district has now canceled all classes, activities and athletic events that were scheduled for Friday.\n\nFollowing the tragedy, Congresswoman Janelle Bynum also announced that she is halting all campaign activity, saying she is 'focused on supporting and being with the community as it responds to this tragedy.\n\nEvacuated students were taken by bus to an off-site reunification center\n\n'I feel this deep, deep, deep in my soul,' she said in a statement. 'Our whole community does. Our whole state does. And the whole nation should.\n\n'Our babies are supposed to do arts and crafts at school, not use their desks as cover from gunfire. They're supposed to make friends, not mourn them. This is every parent's worst fear.\n\n'My heart and my prayers and everything else I got is with the families at Silver Rail Elementary. When will it end?'\n\nSenator Ron Wyden also said: 'My heart is with the victims of today's shooting at Silver Rail Elementary School and their loved ones now facing the consequences of another school shooting in America.'\n\n'Once again we must ask how many schools must be shot up before Republicans agree to act to curb gun violence,' he continued.\n\n[Source 2 — dailycaller.com] (URL: https://dailycaller.com/2026/10/14/duke-apple-advertisement-homeview-cucked-liberal-helpless-family-ai):\nStated Claim / Post Context:\nDUKE: Apple’s New Ad Is Three Minutes Of Hell In A Smart Home\n\nThe best argument yet for unplugging\n\nActual Article Body:\nScreenshot from X / @Austen / Edited by Daily Caller Staff\n\nHey y’all, welcome back to Unfit to Print.\n\nTHE FUTURE IS CUCKED\n\nApple has unveiled its vision for the future of the American family and it’s … very, very bleak.\n\nIn an advertisement for the HomeView, Apple’s new $299 smart home device, the tech giant introduces us to a family of helpless suburban liberals who can’t cook breakfast, find their car keys, or organize rides to school without the help of a robot.\n\nThe chaotic, anxiety-inducing three minute spot is the Big Tech equivalent of Uncut Gems or Marty Supreme. No one watches those films and wants to be the main character. In fact, they leave the theater exceptionally grateful to be literally anybody else.\n\nAnd yet Apple seems to think we’ll watch three minutes of an insufferable family careening toward a collective nervous breakdown and say, “Gee, I wish that were my life.”\n\nTo continue reading this newsletter, please become a paid Substack subscriber.\n\nTRENDING\n\n©2026 The Daily Caller, Inc.\n\nThe Daily Caller | 1750 H Street NW | Suite 360-290 | Washington, DC 20006\n\n[Source 3 — www.washingtonexaminer.com] (URL: https://www.washingtonexaminer.com/news/crime/4768124/bend-oregon-elementary-school-shooting/):\nStated Claim / Post Context:\nFour dead, including three children, in Oregon elementary school shooting\n\nFour people, including three children, were killed by an active shooter on Thursday at an elementary school in Bend, Oregon. The victims included a 5-year-old, an 8-year-old, an 11-year-old, and a teacher, Bend Police Chief Mike Krantz said. The 16-year-old gunman was killed after a member of the community followed him inside the school and [&#8230;]\n\nActual Article Body:\nFour people, including three children, were killed by an active shooter on Thursday at an elementary school in Bend, Oregon.\n\nThe victims included a 5-year-old, an 8-year-old, an 11-year-old, and a teacher, Bend Police Chief Mike Krantz said. The 16-year-old gunman was killed after a member of the community followed him inside the school and shot him. Two people, a 7-year-old and a 54-year-old teacher, were hospitalized with critical injuries.\n\nJoin Washington Examiner for unlimited access to the news, analysis, and commentary that matter most.\n\nAlready a member? Log in\n\nSubscribe for full access to Washington Examiner coverage, expert political analysis,\n      and subscriber-only journalism.\n\nAlready a member? Log in\n\nCancel anytime.",
+    "category": "all",
+    "topic": "BendOregon",
+    "event": "",
+    "policies": [],
+    "graph_img": "graph_png/bend-oregon-silver-rail-school-shooting_graph.png",
+    "rkeys": [
+      "3mxyeqjvcdl2p",
+      "3mxyeqkmhak25",
+      "3mxyeqmsatw2f",
+      "3mxyeqpgj4z26",
+      "3mxyeqrlflz23",
+      "3mxyeqtqesg2u",
+      "3mxyeqwo7762f",
+      "3mxyeqyt7222j",
+      "3mxyer2y52o2n",
+      "3mxyer566hw2f",
+      "3mxyer7d5zw2u",
+      "3mxyerbitsk2j",
+      "3mxyerdnrud2j",
+      "3mxyerggble2x",
+      "3mxyerizb6j2x"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyeqjvcdl2p",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyeqkmhak25",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyeqmsatw2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyeqpgj4z26",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyeqrlflz23",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyeqtqesg2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyeqwo7762f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyeqyt7222j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyer2y52o2n",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyer566hw2f",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyer7d5zw2u",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyerbitsk2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyerdnrud2j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyerggble2x",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3mxyerizb6j2x"
+    ],
+    "tags": [
+      "BendOregon",
+      "SchoolSafety"
+    ],
+    "path_name": "Fall into Destruction"
+  }
+]

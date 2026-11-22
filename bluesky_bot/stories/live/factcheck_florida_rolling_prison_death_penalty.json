@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "real_u": -0.2,
+    "real_psi": 0.37,
     "mode": "root",
     "posts": [
       "A horrific \"rolling prison\" exposed in Florida. Florida AG seeks death penalty for couple who allegedly held 4 children in a truck cab for nearly 7 years. Evidence: Child Protection, Systemic Torture, Ultimate Justice. #Aletheia #Florida #Justice",
-      "The state promises to protect the vulnerable and enforce the ultimate penalty against those who violate children, asserting a system of absolute moral order and swift justice. Stated Judgement: (+1.0, +1.0) — Greater Good",
-      "For over six years, four young children were subjected to horrific sexual abuse, physical violence, and extreme confinement in a tractor-trailer cab, showing a catastrophic failure of protection. Resulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Reckoning into Destruction. The horrific abuse represents a complete descent into systemic cruelty, met now by the state's ultimate legal reckoning.\n\nIntegrity: Trustworthy (Hypocrisy: 2.0, z: 0)",
+      "The state promises to protect the vulnerable and enforce the ultimate penalty against those who violate children, asserting a system of absolute moral order and swift justice. Stated Judgement: (+1.00, +1.00) — Greater Good",
+      "For over six years, four young children were subjected to horrific sexual abuse, physical violence, and extreme confinement in a tractor-trailer cab, showing a catastrophic failure of protection. Resulting Judgement: (-0.20, +0.37) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\n\nIntegrity: Trustworthy (Hypocrisy: 2.0, z: 0)",
       "- Keisha Epps & Tamra Stewart: FAIL (-1.0, -1.0) — Six years of horrific abuse.\n- Florida AG Prosecution: PASS (1.0, 1.0) — Seeking death penalty.",
       "Florida prosecutors are seeking the death penalty for a couple accused of keeping four children locked in a truck cab for years, subjecting them to severe sexual and physical abuse.",
       "The Bright Side:\nThe rescue of the children finally ends their multi-year nightmare, and the state's aggressive prosecution seeks to establish a clear, unyielding deterrent against child exploitation.",
       "The Breakdown & Plane Error:\nThe plane error is confusing the legal response (WHO is prosecuting) with the systemic failure that allowed four children to be tortured in a mobile prison for six years undetected (WHAT occurred).",
       "Social Physics Analysis:\nThe abusers ran a horrific Smart Selfish Loop, using custody to hide extreme exploitation. The AG's response uses state power to enforce transparency and ultimate consequences, attempting to restore equilibrium to a shattered moral space.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nWhen you map the gap between the ideal of child safety and the reality of undetected torture, it plots a direct trajectory toward Greater Evil, requiring the state's most severe legal intervention.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between the ideal of child safety and the reality of undetected torture, it plots a direct trajectory toward Greater Evil, requiring the state's most severe legal intervention.",
       "The Unavoidable Truth: Systemic gaps allowed four children to be tortured in plain sight for six years.\n\nThe Unavoidable Lie: A swift prosecution undoes the years of physical and psychological trauma.",
       "Alethekanon:\nThe legal system's ultimate penalty is a necessary reaction, but it cannot mask the systemic failure of child welfare monitoring that allowed a mobile prison to operate for over half a decade.",
       "Awwthekanon:\nMy heart breaks for these precious children who endured such unimaginable cruelty. May they find deep healing, safety, and the gentle, loving care they have been denied for so long.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.75,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Keisha Epps & Tamra Stewart Abuse",
@@ -288,6 +350,7 @@
         "name": "Florida Office of the Attorney General",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

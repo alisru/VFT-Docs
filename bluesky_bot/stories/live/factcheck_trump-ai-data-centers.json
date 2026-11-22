@@ -1,0 +1,239 @@
+[
+  {
+    "thinking": "Thinking: Candidate 1 (Trump AI Data Centers). Stated Claim: Trump proposes banning/taxing overseas AI data centers. Reality: Protectionist policy proposal. Coordinates: Claim (+0.5, +0.5), Real (-0.2, +0.2). Forces: GG(S:0.2, O:0.5), GE(S:0.5, O:0.2), LG(S:0.8, O:0.0), LE(S:0.5, O:0.0), GP(S:0.5, O:0.0), BP(S:0.5, O:0.0). Integrity: 1.8 (Conditionally Sound). Path: Constructive Geodesic (Nationalist policy). Candidate 2 (FBI Hack). Stated Claim: FBI database hacked. Reality: Security breach confirmed. Coordinates: Claim (-0.5, -0.5), Real (-1.0, -1.0). Forces: GG(S:0.0, O:1.5), GE(S:1.5, O:0.0), LG(S:0.0, O:0.5), LE(S:1.0, O:0.0), GP(S:0.0, O:1.0), BP(S:0.5, O:0.0). Integrity: 12.5 (Severe Deception). Path: Fall into Destruction.",
+    "id": "trump-ai-data-centers",
+    "subject": "Trump threatens ban on US firms building AI data centres overseas",
+    "link": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.5,
+    "real_u": -0.2,
+    "real_psi": 0.2,
+    "mode": "root",
+    "posts": [
+      "Trump proposes protectionist policy to keep AI infrastructure domestic. Evidence: Policy threat, economic nationalism, tech infrastructure. #AI #Trump 🌐",
+      "Trump threatens to ban or tax US firms building AI data centers overseas to keep AI benefits in the US. Stated Judgement: (+0.5, +0.5) — Good Preference",
+      "Trump announced a protectionist policy to force AI infrastructure investment within the US, risking global market efficiency. Resulting Judgement: (-0.2, +0.2) — Lesser Evil",
+      "Verdict: PASS — Fall into Deception.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "- Trump (Instigator): PASS (+0.2, +0.2) — Proposing national policy.\n- Public Impact: COND (-0.2, +0.2) — Potential market disruption.",
+      "Trump's proposal aims to secure domestic AI dominance by restricting overseas investment, a classic nationalist economic strategy.",
+      "The Bright Side:\nFocusing on domestic infrastructure could accelerate local AI development and job creation.",
+      "The Breakdown & Plane Error:\nConfusing national economic interest with global systemic efficiency; the plane error is in the scope of the benefit.",
+      "Social Physics Analysis:\nTrump uses a Smart Selfish Maneuver: framing global trade as a threat to domestic AI dominance to consolidate nationalist support.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a trajectory toward Lesser Evil. Policy proposals are constructive.",
+      "The Unavoidable Truth: Protectionism can secure domestic capacity.\nThe Unavoidable Lie: Global markets will ignore such restrictions.",
+      "Alethekanon:\nThis is a standard protectionist maneuver. It prioritizes national control over global efficiency, which is a political choice, not a systemic crime.",
+      "Awwthekanon:\nIt is understandable to want to keep jobs and technology at home, but we must be careful not to isolate ourselves from the world's progress.",
+      "Brothekanon:\nTrump's just playing the nationalist card again. It's all about keeping the tech giants under his thumb and the jobs in the US.",
+      "Spirithekanon:\n\"A house divided against itself cannot stand.\" Mark 3:25 PASS\nProtectionism risks isolating the nation from global innovation."
+    ],
+    "actors": [
+      "Donald Trump",
+      "United States",
+      "AI Industry"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "United States",
+        "role": "context"
+      },
+      {
+        "name": "AI Industry",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "claim_rnet": 0.5,
+    "real_rnet": 1.8,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Good Preference",
+    "real_integrity": "Conditionally Sound",
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Instigator Action",
+        "claim_u": 0.5,
+        "claim_psi": 0.5,
+        "real_u": -0.2,
+        "real_psi": 0.2,
+        "verdict": "PASS",
+        "reason": "Proposing national policy."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "will be",
+    "modal_real": "is like",
+    "modal_vector": "Top-Right to Bottom-Left Inversion",
+    "geodesic": "Constructive Geodesic",
+    "central_is_barrier_crossed": false,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nTrump threatens ban on US firms building AI data centres overseas\n\n=== MULTI-SOURCE TOPIC CLUSTER: Trump threatens ban on US firms building AI data centres overseas ===\n\n[Source 1 — www.bbc.co.uk (Bias: Center / Public Broadcaster)] (URL: https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss):\nTrump threatens ban on US firms building AI data centres overseas\n\nThe US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time.\n\n[Source 2 — www.breitbart.com (Bias: Far Right / Populist Nationalist)] (URL: https://www.breitbart.com/politics/2026/11/20/trump-tax-companies-build-data-centers-overseas/):\nTrump to Tax Companies That Build Data Centers Overseas\n\nPresident Donald Trump unveiled plans Friday to impose a lofty tax on companies that build data centers overseas.\nThe post Trump to Tax Companies That Build Data Centers Overseas appeared first on Breitbart.\n\n[Source 3 — www.washingtontimes.com (Bias: Right / Conservative)] (URL: https://www.washingtontimes.com/news/2026/nov/20/trump-ban-us-companies-building-data-centers-overseas/):\nTrump to ban U.S. companies from building data centers overseas\n\nPresident Trump said he will ban American companies from building data centers overseas or charge them a high tax for doing so, a sweeping proposal aimed at keeping the rapidly expanding artificial intelligence industry and its economic benefits in the U.S.",
+    "cluster_sources": [
+      {
+        "publisher": "www.bbc.co.uk",
+        "editorial_bias": "Center / Public Broadcaster",
+        "url": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
+        "snippet": "Trump threatens ban on US firms building AI data centres overseas\n\nThe US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time."
+      },
+      {
+        "publisher": "www.breitbart.com",
+        "editorial_bias": "Far Right / Populist Nationalist",
+        "url": "https://www.breitbart.com/politics/2026/11/20/trump-tax-companies-build-data-centers-overseas/",
+        "snippet": "Trump to Tax Companies That Build Data Centers Overseas\n\nPresident Donald Trump unveiled plans Friday to impose a lofty tax on companies that build data centers overseas.\nThe post Trump to Tax Companies That Build Data Centers Overseas appeared first on Breitbart."
+      },
+      {
+        "publisher": "www.washingtontimes.com",
+        "editorial_bias": "Right / Conservative",
+        "url": "https://www.washingtontimes.com/news/2026/nov/20/trump-ban-us-companies-building-data-centers-overseas/",
+        "snippet": "Trump to ban U.S. companies from building data centers overseas\n\nPresident Trump said he will ban American companies from building data centers overseas or charge them a high tax for doing so, a sweeping proposal aimed at keeping the rapidly expanding artificial intelligence industry and its economic benefits in the U.S."
+      }
+    ],
+    "is_multi_source": true,
+    "cross_source_dossier": "=== MULTI-SOURCE TOPIC CLUSTER: Trump threatens ban on US firms building AI data centres overseas ===\n\n[Source 1 — www.bbc.co.uk (Bias: Center / Public Broadcaster)] (URL: https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss):\nTrump threatens ban on US firms building AI data centres overseas\n\nThe US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time.\n\n[Source 2 — www.breitbart.com (Bias: Far Right / Populist Nationalist)] (URL: https://www.breitbart.com/politics/2026/11/20/trump-tax-companies-build-data-centers-overseas/):\nTrump to Tax Companies That Build Data Centers Overseas\n\nPresident Donald Trump unveiled plans Friday to impose a lofty tax on companies that build data centers overseas.\nThe post Trump to Tax Companies That Build Data Centers Overseas appeared first on Breitbart.\n\n[Source 3 — www.washingtontimes.com (Bias: Right / Conservative)] (URL: https://www.washingtontimes.com/news/2026/nov/20/trump-ban-us-companies-building-data-centers-overseas/):\nTrump to ban U.S. companies from building data centers overseas\n\nPresident Trump said he will ban American companies from building data centers overseas or charge them a high tax for doing so, a sweeping proposal aimed at keeping the rapidly expanding artificial intelligence industry and its economic benefits in the U.S.",
+    "grounding_url": "https://www.breitbart.com/politics/2026/11/20/trump-tax-companies-build-data-centers-overseas/",
+    "secondary_url": "https://www.washingtontimes.com/news/2026/nov/20/trump-ban-us-companies-building-data-centers-overseas/",
+    "category": "all",
+    "topic": "AI",
+    "event": "",
+    "path_name": "Fall into Deception",
+    "policies": [],
+    "graph_img": "graph_png/trump-ai-data-centers_graph.png",
+    "rkeys": [
+      "3n2u3muipqn2y",
+      "3n2u3mv7n4z2g",
+      "3n2u3mwjjwf2q",
+      "3n2u3mylvxz2g",
+      "3n2u3mzslai2z",
+      "3n2u3n2zhgb27",
+      "3n2u3n4a2ub2m",
+      "3n2u3n5gszf2y",
+      "3n2u3n6o2rw2d",
+      "3n2u3n7up652q",
+      "3n2u3nb3mb52s",
+      "3n2u3nccdkz2g",
+      "3n2u3ndivx72j",
+      "3n2u3nepcfv2s",
+      "3n2u3nfwken2f"
+    ],
+    "post_urls": [
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3muipqn2y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3mv7n4z2g",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3mwjjwf2q",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3mylvxz2g",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3mzslai2z",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3n2zhgb27",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3n4a2ub2m",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3n5gszf2y",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3n6o2rw2d",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3n7up652q",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3nb3mb52s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3nccdkz2g",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3ndivx72j",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3nepcfv2s",
+      "https://bsky.app/profile/judgement-bot.bsky.social/post/3n2u3nfwken2f"
+    ],
+    "tags": [
+      "AI",
+      "Trump"
+    ]
+  }
+]

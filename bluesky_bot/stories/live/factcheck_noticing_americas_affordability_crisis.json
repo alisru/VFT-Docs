@@ -6,21 +6,21 @@
     "link": "https://thefederalist.com/2026/08/21/noticing-americas-affordability-crisis-doesnt-make-you-a-socialist/?utm_source=rss&utm_medium=rss&utm_campaign=noticing-americas-affordability-crisis-doesnt-make-you-a-socialist",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.2,
-    "real_psi": -0.1,
+    "claim_psi": 1.0,
+    "real_u": 0.28,
+    "real_psi": 0.54,
     "mode": "root",
     "posts": [
       "Noticing America’s economic squeeze does not make you a socialist.\n\nNoticing America’s Affordability Crisis Doesn’t Make You A Socialist\nEvidence: defending families, government bloat, working-class costs\n#Aletheia #Economy #USPol",
-      "Defending working families from crushing costs and federal overreach is not socialism; it is common-sense reform against a corrupted establishment.\nStated Judgement: (1.0, 0.5) — Good Preference",
-      "While highlighting real government waste and NGO bloat, the narrative frames systemic policy issues through partisan culture wars without structural fixes.\nResulting Judgement: (0.2, -0.1) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nWhile calling out genuine government waste, the analysis deflects systemic economic failure onto culture-war scapegoats.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, Uncertainty z: 2)",
+      "Defending working families from crushing costs and federal overreach is not socialism; it is common-sense reform against a corrupted establishment.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While highlighting real government waste and NGO bloat, the narrative frames systemic policy issues through partisan culture wars without structural fixes.\nResulting Judgement: (+0.28, +0.54) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nWhile calling out genuine government waste, the analysis deflects systemic economic failure onto culture-war scapegoats.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Working Family Costs: COND (0.5, 0.0) — Highlights real burdens but lacks broad solutions.\n- Government Spending: PASS (0.4, -0.2) — Exposes genuine federal waste and NGO bloat.",
       "The essay challenges the reflexive dismissal of economic anxiety as socialism, pointing out real misallocations of federal taxpayer funds toward NGOs and bureaucracy.",
       "The Poison:\nConflating legitimate economic reform with culture-war grievances risks masking deep structural failures in housing and labor markets.",
       "The Breakdown & Plane Error:\nConfuses WHAT (structural economic stagnation) with WHO (bureaucrats and NGOs), treating symptoms of misallocated funds as the root cause.",
       "Social Physics Analysis:\nThe commentary highlights real financial friction placed on working families by administrative bloat, pointing out how funds are diverted away from public infrastructure.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated economic populism and actual partisan framing, it plots a conditional path toward stability.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated economic populism and actual partisan framing, it plots a conditional path toward stability.",
       "The Unavoidable Truth: Working families face severe affordability barriers created by decades of policy neglect.\n\nThe Unavoidable Lie: Blaming partisan NGOs alone solves the complex structural housing and wage crisis.",
       "Alethekanon:\nNaming government waste is valid, but reducing systemic economic precarity to cultural spending ignores structural market failures.",
       "Awwthekanon:\nEvery family struggling to buy a home deserves an economy that works for them, not a system bogged down by political point-scoring.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.55,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.15,
+        "O": 0.85,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.15,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.45,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.55,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.45,
+        "O": 0.55,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Working Family Costs",
@@ -276,6 +338,7 @@
         "name": "NGOs",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

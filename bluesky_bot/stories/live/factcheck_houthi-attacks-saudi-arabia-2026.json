@@ -5,22 +5,22 @@
     "subject": "Houthi attacks on Saudi Arabia ignite fires at oil facilities and wound 73 people",
     "link": "https://www.npr.org/2026/09/08/g-s1-142296/houthi-attacks-saudi-arabia",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.78,
-    "real_psi": -0.85,
+    "claim_u": 0.65,
+    "claim_psi": 0.35,
+    "real_u": -0.64,
+    "real_psi": -0.59,
     "mode": "root",
     "posts": [
       "Houthi drone and missile strikes hit southern Saudi Arabia, injuring 73 and halting vital energy infrastructure.\nEvidence: 73 wounded, oil fires, regional escalation\n#Aletheia #MiddleEast",
-      "The strikes are framed as defensive retaliation against coalition actions in Yemen to protect sovereignty.\nStated Judgement: (+0.8, +0.5) — Trustworthy Good",
-      "Coordinated kinetic strikes on civilian oil installations and population centers exacerbate humanitarian crises and global energy stress.\nResulting Judgement: (-0.78, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nMilitary escalation against civilian energy targets deepens regional warfare under defensive pretexts.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
+      "The strikes are framed as defensive retaliation against coalition actions in Yemen to protect sovereignty.\nStated Judgement: (+0.65, +0.35) — Greater Good",
+      "Coordinated kinetic strikes on civilian oil installations and population centers exacerbate humanitarian crises and global energy stress.\nResulting Judgement: (-0.64, -0.59) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nMilitary escalation against civilian energy targets deepens regional warfare under defensive pretexts.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
       "Sub-Audits Breakdown:\n- Houthi Leadership: FAIL (-0.82, -0.88) — Escalates kinetic warfare while masking aggressive aims.\n- Saudi-led Coalition: COND (-0.45, -0.30) — Retaliates defensively amidst prolonged regional stalemate.",
       "A wave of Houthi ballistic missile and drone strikes targeted four southern Saudi cities on Tuesday, injuring 73 civilians and igniting fires at key oil facilities.",
       "The Poison:\nPerpetual cycles of kinetic retaliation sacrifice civilian safety and global energy stability for territorial leverage.",
       "The Breakdown & Plane Error:\nConfusing tactical retaliation (WHAT) with legitimate defense of civilian populations (WHO).",
       "Social Physics Analysis:\nActors deploy a Smart Selfish Maneuver, using retaliatory pretexts to justify destructive kinetic strikes while projecting total blame onto opponents.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked retaliatory violence creates runaway systemic collapse.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Unchecked retaliatory violence creates runaway systemic collapse.",
       "The Unavoidable Truth: Retaliatory strikes on civilian energy infrastructure worsen humanitarian suffering.\n\nThe Unavoidable Lie: Military escalation serves as a guarantor of regional peace.",
       "Alethekanon:\nKinetic warfare disguised as defensive necessity accelerates structural devastation. Pretext dissolves upon impact.",
       "Awwthekanon:\nEvery missile strike shatters innocent lives and deepens the wounds of communities already broken by years of war.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Houthi Leadership",
@@ -164,6 +226,7 @@
         "name": "Saudi Arabia",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

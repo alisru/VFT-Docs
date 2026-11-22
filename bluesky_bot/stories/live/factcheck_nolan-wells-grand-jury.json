@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.9,
     "claim_psi": 0.8,
-    "real_u": -0.2,
-    "real_psi": 0.3,
+    "real_u": 0.15,
+    "real_psi": 0.15,
     "mode": "root",
     "posts": [
       "Grand jury rules Nolan Wells' tragic death consistent with drowning, refuting online conspiracy theories.\nEvidence: autopsy, witness testimony, grand jury report\n#Aletheia #Mississippi #Justice",
-      "Grand jury finds no criminal conduct or racial motivation in the tragic drowning of 18-year-old Nolan Wells.\nStated Judgement: (+0.9, +0.8) — Greater Good",
-      "Extensive forensic evidence and witness testimony confirmed accidental drowning while putting online harassment to rest.\nResulting Judgement: (-0.2, +0.3) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nRigorous judicial review cuts through malicious social media speculation to establish factual reality.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "Grand jury finds no criminal conduct or racial motivation in the tragic drowning of 18-year-old Nolan Wells.\nStated Judgement: (+0.90, +0.80) — Greater Good",
+      "Extensive forensic evidence and witness testimony confirmed accidental drowning while putting online harassment to rest.\nResulting Judgement: (+0.15, +0.15) — Greater Good",
+      "Verdict: PASS — Fall from Grace.\nRigorous judicial review cuts through malicious social media speculation to establish factual reality.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- Grand Jury Investigation: PASS (+0.8, +0.7) — Comprehensive evidence review.\n- Social Media Reporting: COND (-0.5, -0.4) — Amplified baseless conspiracy theories.",
       "A Mississippi grand jury concluded a thorough review of phone records, autopsies, and witness accounts regarding the July 4 drowning of Nolan Wells.",
       "The Bright Side:\nTransparent judicial examination successfully dismantled harmful online rumors and provided closure.",
       "The Breakdown & Plane Error:\nConfusing online emotional outrage (EMOTIVE) with objective forensic physical evidence (PHYSICAL).",
       "Social Physics Analysis:\nInvestigators and the grand jury deployed transparent evidence review to dismantle a manufactured crisis driven by online speculation and bad-faith projection.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between viral conspiracy theories and empirical forensic findings, it plots a direct trajectory toward Greater Good.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between viral conspiracy theories and empirical forensic findings, it plots a direct trajectory toward Greater Good.",
       "The Unavoidable Truth: Rigorous forensic investigation remains the ultimate antidote to viral social media hysteria.\n\nThe Unavoidable Lie: Unsubstantiated online accusations carry equal weight to sworn grand jury testimony.",
       "Alethekanon:\nSystemic transparency successfully countered malicious digital noise, restoring factual integrity to a tragic case. 🌐",
       "Awwthekanon:\nNo family should have to endure both the unimaginable grief of losing a child and a storm of cruel online rumors. May truth bring peace.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Grand Jury Investigation",
@@ -157,6 +219,7 @@
         "name": "Dr. Roger Mitchell",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

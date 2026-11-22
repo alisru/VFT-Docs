@@ -5,22 +5,22 @@
     "subject": "Rep Eric Burlison: 'Most of my colleagues' are 'drunk on spending other people's money, even Republicans'",
     "link": "https://www.foxnews.com/politics/rep-eric-burlison-most-colleagues-drunk-spending-other-peoples-money-even-republicans",
     "target_url": "",
-    "claim_u": 0.6,
+    "claim_u": 0.3,
     "claim_psi": 0.0,
-    "real_u": 0.09,
-    "real_psi": -0.42,
+    "real_u": -0.33,
+    "real_psi": -0.6,
     "mode": "root",
     "posts": [
       "A lawmaker calls out his own party's spending habits while pitching a healthcare fix. Rep. Eric Burlison slams colleagues as 'drunk on spending other people's money.'\nEvidence: Fiscal purity, Bipartisan spending, Midterm messaging\n#Aletheia #USPol #Finance",
-      "Burlison claims to offer a genuine, systemic solution to healthcare affordability and national debt by fighting his own party's spending habits.\nStated Judgement: (+0.6, 0.0) — Good Preference",
-      "While the critique of bipartisan spending is accurate, the proposed solutions function primarily as electoral branding ahead of the midterms.\nResulting Judgement: (+0.09, -0.42) — Lesser Good",
-      "Verdict: CONDITIONAL — The Path of Redemption. The diagnosis of fiscal irresponsibility is sound, but the legislative solutions serve largely as campaign-season messaging.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Burlison claims to offer a genuine, systemic solution to healthcare affordability and national debt by fighting his own party's spending habits.\nStated Judgement: (+0.30, +0.00) — Lesser Good",
+      "While the critique of bipartisan spending is accurate, the proposed solutions function primarily as electoral branding ahead of the midterms.\nResulting Judgement: (-0.33, -0.60) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- Rep. Eric Burlison: COND (0.15, -0.3) — Accurate critique paired with electoral branding.\n- Congressional Spending: FAIL (-0.8, -0.9) — Bipartisan failure to address systemic debt.",
       "Missouri Rep. Eric Burlison criticized lawmakers on both sides of the aisle for excessive spending and proposed the 'Great American healthcare plan' to address rising insurance premiums.",
       "The Bright Side:\nCalling out fiscal hypocrisy within one's own party is a necessary step toward breaking the bipartisan consensus on deficit spending.",
       "The Breakdown & Plane Error:\nThe error is confusing the accurate diagnosis of a problem (WHY) with the actual capacity or political will to implement the solution (HOW) within a gridlocked system.",
       "Social Physics Analysis:\nBurlison executes a partial Smart Altruistic Loop by transparently identifying the systemic strain of healthcare costs and national debt. However, the proximity to midterm elections introduces a Smart Selfish element, where the crisis is leveraged to build a personal brand of fiscal purity without a viable path to legislative execution.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The truth of the critique prevents a slide into pure deception.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Good. The truth of the critique prevents a slide into pure deception.",
       "The Unavoidable Truth: Bipartisan spending habits have created an unsustainable national debt that neither party has the courage to cut.\nThe Unavoidable Lie: A single freshman representative's plan can easily fix the deeply entrenched healthcare lobby.",
       "Alethekanon:\nDiagnosing the disease is easy; administering the cure requires risking political suicide. Calling colleagues 'drunk' is good theater, but sobriety requires structural reform.",
       "Awwthekanon:\nIt is exhausting for families to watch their healthcare costs climb while politicians use their pain as a talking point. We need real relief, not just speeches.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Rep. Eric Burlison",
@@ -159,6 +221,7 @@
         "name": "Democratic Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

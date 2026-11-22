@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.7,
+    "real_u": -0.65,
+    "real_psi": -0.68,
     "mode": "root",
     "posts": [
       "Chinese electric vehicles pose an existential threat to domestic manufacturing and national security via hidden surveillance tech.\nEvidence: auto manufacturing, subsidies, data risks\n#Aletheia #Economy",
-      "Tariffs and trade barriers purely defend national security and fair market competition against predatory state subsidies.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Protectionist policies shield legacy automakers from competitive innovation while weaponizing security fears for political mobilization.\nResulting Judgement: (-0.75, -0.70) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nLegitimate data security risks are weaponized as protectionist pretexts to block affordable green technology.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 2)",
+      "Tariffs and trade barriers purely defend national security and fair market competition against predatory state subsidies.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Protectionist policies shield legacy automakers from competitive innovation while weaponizing security fears for political mobilization.\nResulting Judgement: (-0.65, -0.68) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nLegitimate data security risks are weaponized as protectionist pretexts to block affordable green technology.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 2)",
       "- National Security Framing: COND (-0.50, -0.60) — Mixes real risks with protectionism.\n- Economic Nationalism: FAIL (-0.80, -0.75) — Ignores consumer benefits.",
       "The opinion piece argues that Chinese state-subsidized EVs threaten American auto jobs and serve as rolling collection devices for Beijing.",
       "The Poison:\nThe cynical framing that locks consumers out of affordable green transitions under the banner of national defense.",
       "The Breakdown & Plane Error:\nThe error mistakes commercial competition and market failure (WHAT) for absolute geopolitical existential survival (WHO).",
       "Social Physics Analysis:\nDomestic auto interests run a smart selfish maneuver by manufacturing an acute surveillance crisis to justify protectionist tariffs without solving structural innovation lags.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between national security rhetoric and market protection, it plots a direct trajectory toward Lesser Evil.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between national security rhetoric and market protection, it plots a direct trajectory toward Lesser Evil.",
       "The Unavoidable Truth: Connected vehicles present genuine telemetry and data aggregation security concerns.\n\nThe Unavoidable Lie: Trade barriers are driven entirely by benevolence rather than corporate lobbying protectionism.",
       "Alethekanon:\nLegitimate telemetry vulnerabilities are routinely hijacked as protectionist armor to stifle foreign competition.",
       "Awwthekanon:\nEveryone deserves access to clean, affordable transportation without getting caught in geopolitical trade wars.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "National Security Framing",
@@ -158,6 +220,7 @@
         "name": "US Automotive Industry",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

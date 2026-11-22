@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "When public figures mourn a tragedy they helped fuel with relentless media pile-ons, hypocrisy takes center stage.\n\nJason Arday death 'tragedy on so many levels' says PM\nEvidence: institutional mourning, media hounding, systemic racism\n#Aletheia #UK",
-      "Political leaders and peers express deep shock over the tragic death of former Cambridge professor Jason Arday following an intense public plagiarism controversy.\nStated Judgement: (+0.50, +0.78) — Good Preference",
-      "The outpouring of grief masks the brutal reality of an unrelenting public hounding and media takedown that drove a gentle academic to despair.\nResulting Judgement: (-0.97, -0.95) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nLeaders lament a tragic loss while ignoring how the toxic machinery of modern media and academic scrutiny created the fatal pressure.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 3)",
+      "Political leaders and peers express deep shock over the tragic death of former Cambridge professor Jason Arday following an intense public plagiarism controversy.\nStated Judgement: (+0.50, +0.78) — Greater Good",
+      "The outpouring of grief masks the brutal reality of an unrelenting public hounding and media takedown that drove a gentle academic to despair.\nResulting Judgement: (-0.97, -0.95) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nLeaders lament a tragic loss while ignoring how the toxic machinery of modern media and academic scrutiny created the fatal pressure.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- Political Tributes: COND (0.2, -0.3) — Expresses sorrow but deflects systemic complicity.\n- Media & Academic Scrutiny: FAIL (-1.5, -1.2) — Unrelenting public shaming directly caused the fatal outcome.",
       "Following allegations of plagiarism and intense media scrutiny, former Cambridge professor Jason Arday tragically died at age 41, prompting widespread tributes and condemnation of the harassment he faced.",
       "The Poison:\n crocodile tears from institutions and outlets that eagerly amplified the takedown before discovering sudden empathy in his absence.",
       "The Breakdown & Plane Error:\nEvaluating WHO caused the tragedy versus WHAT procedures failed. The system targets individuals for destruction, then pivots to performative grief.",
       "Social Physics Analysis:\nInstitutions deploy proactive destruction to purge non-conforming elements, hiding behind procedural pretexts, then project sorrow once the damage is irreversible.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic cruelty generates performative remorse.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic cruelty generates performative remorse.",
       "The Unavoidable Truth: Relentless public hounding destroys vulnerable human lives regardless of institutional prestige.\n\nThe Unavoidable Lie: Tributes from leaders erase their own complicity in fueling toxic media circuses.",
       "Alethekanon:\n🌐 The institutional rush to offer condolences after participating in a brutal public takedown exemplifies profound systemic hypocrisy. Mourning a victim one helped corner reveals a broken moral compass.",
       "Awwthekanon:\nSuch a heartbreaking loss of a gentle soul who deserved support and kindness, not a relentless storm of public cruelty. Rest in peace, Jason.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.25,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.25,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Political Tributes",
@@ -269,6 +331,7 @@
         "name": "Kehinde Andrews",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

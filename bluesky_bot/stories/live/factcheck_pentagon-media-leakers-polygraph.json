@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.85,
-    "real_psi": -0.88,
+    "real_u": -0.82,
+    "real_psi": -0.86,
     "mode": "root",
     "posts": [
       "The Pentagon is ordering polygraph exams for Joint Staff members to plug sensitive press leaks.\nEvidence: National security, Polygraph pressure, Leaks clampdown\n#Aletheia #USMil #Defense",
-      "Securing classified information is vital to protecting U.S. troops and national security worldwide.\nStated Judgement: (1.0, 1.0) — Greater Good",
-      "Forcing military personnel onto lie detectors masks administrative embarrassment over munitions shortages during the Iran War.\nResulting Judgement: (-0.85, -0.88) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe Pentagon frames coercive polygraph testing as national security defense while suppressing internal criticism over depleted missile stockpiles.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Securing classified information is vital to protecting U.S. troops and national security worldwide.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Forcing military personnel onto lie detectors masks administrative embarrassment over munitions shortages during the Iran War.\nResulting Judgement: (-0.82, -0.86) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nThe Pentagon frames coercive polygraph testing as national security defense while suppressing internal criticism over depleted missile stockpiles.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Pentagon Leadership: FAIL (-0.85, -0.88) — Uses security pretexts to muzzle internal dissent.\n- Media Leaks & Munitions: FAIL (-0.80, -0.85) — Masks operational supply deficits under secrecy.",
       "Following reports that U.S. forces depleted major Patriot and THAAD interceptor reserves during the Iran War, Pentagon leadership mandated polygraph exams for dozens of Joint Staff personnel to stamp out leaks.",
       "The Bright Side:\nHeightened scrutiny protects sensitive military operations from adversary espionage.",
       "The Breakdown & Plane Error:\nConfusing administrative embarrassment with treason (WHO vs WHAT), the Pentagon uses coercive polygraph testing to punish whistleblowers rather than fix munitions shortfalls.",
       "Social Physics Analysis:\nThe Pentagon runs a Smart Selfish Maneuver, using national security pretexts to hunt leakers and project blame onto internal critics while concealing real operational vulnerabilities from Congress and the public.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated security goals and punitive internal coercion, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as institutional defensiveness replaces transparency.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated security goals and punitive internal coercion, it plots a direct trajectory toward Lesser Evil. Systemic strain rises as institutional defensiveness replaces transparency.",
       "The Unavoidable Truth: Protecting military secrets is a legitimate duty of defense leadership.\n\nThe Unavoidable Lie: Polygraph tests infallibly root out bad actors without intimidating loyal whistleblowers.",
       "Alethekanon:\nInstitutions that confuse reputational preservation with national security inevitably criminalize truth-telling to protect their own institutional blind spots.",
       "Awwthekanon:\nIt is heartbreaking to see service members treated with suspicion and fear when they only want to ensure our troops have the munitions they need to stay safe.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Pentagon Leadership",
@@ -162,6 +224,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

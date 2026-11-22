@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_u": -0.3,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "A new college survey reveals startling ideological shifts among undergraduates, sparking intense national debate over campus culture. Evidence: Survey data, partisan framing, campus sentiment. #Aletheia #CampusPoll 🌐",
-      "The Buckley Institute survey claims 22% of undergraduates think America deserved 9/11 and 45% endorse violence against hate speech.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "While polling exposes real campus polarization, media amplification weaponizes these statistics for tribal warfare rather than structural reform.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nExploiting student surveys to fuel culture wars creates recursive tribal hostility.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 4)",
+      "The Buckley Institute survey claims 22% of undergraduates think America deserved 9/11 and 45% endorse violence against hate speech.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While polling exposes real campus polarization, media amplification weaponizes these statistics for tribal warfare rather than structural reform.\nResulting Judgement: (-0.30, -0.50) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nExploiting student surveys to fuel culture wars creates recursive tribal hostility.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 4)",
       "Sub-Audits Breakdown:\n- Buckley Survey: COND (0.2, -0.1) — Captures real sentiment amid polarization.\n- The Federalist: FAIL (-0.8, -0.9) — Weaponizes data for culture-war division.",
       "The Buckley Institute polled 803 undergraduates, revealing high support for socialism, violence against hate speech, and controversial views on 9/11.",
       "The Poison:\nWeaponizing youth alienation for political point-scoring deepens generational divides without addressing why students reject institutional trust.",
       "The Breakdown & Plane Error:\nThis is a Plane Error (confusing survey metrics with systemic remedies) and a bait-and-switch: trading genuine educational reform for partisan outrage.",
       "Social Physics Analysis:\nMedia outlets run a smart selfish maneuver, using campus shock statistics as a pretext to project moral decay onto opponents while evading systemic fixes.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Tribal grievance feeds recursive societal decay.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Tribal grievance feeds recursive societal decay.",
       "The Unavoidable Truth: Campus ideological polarization is a documented, urgent sociological reality.\n\nThe Unavoidable Lie: Outrage media offers this data as an honest probe rather than tribal ammunition.",
       "Alethekanon:\nWeaponizing student alienation for clicks hollows out intellectual inquiry, trading genuine critique for predictable culture-war theater.",
       "Awwthekanon:\nIt hurts to watch young minds drift into cynicism and anger, caught between broken institutions and media outlets cashing in on their pain.",
@@ -76,8 +76,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Buckley Survey",
@@ -157,6 +219,7 @@
     "tags": [
       "Aletheia",
       "CampusPoll"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

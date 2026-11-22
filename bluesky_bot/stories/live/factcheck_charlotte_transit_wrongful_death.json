@@ -5,22 +5,22 @@
     "subject": "Iryna Zarutska’s family files wrongful death lawsuit against Charlotte",
     "link": "https://nypost.com/2026/08/22/us-news/iryna-zarutskas-family-files-wrongful-death-lawsuit-against-charlotte-after-train-stabbing/",
     "target_url": "",
-    "claim_u": 1.35,
-    "claim_psi": 1.25,
-    "real_u": -0.85,
-    "real_psi": -0.92,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "A family's tragic loss exposes the deadly cost of municipal corner-cutting.\n\nIryna Zarutska’s family files wrongful death lawsuit against Charlotte\nEvidence: funded security, understaffed guards, preventable tragedy\n#Aletheia #PublicSafety #Charlotte",
-      "The lawsuit alleges systemic failures in Charlotte's transit system, claiming a private contractor left trains dangerously understaffed and failed to enforce basic fares, leading to a preventable murder.\nStated Judgement: (+1.35, +1.25) — Greater Good",
-      "Public records show the security contractor was funded for 219 personnel but hired only 183, leaving just 11 armed guards instead of the authorized 39, creating a severe security vacuum.\nResulting Judgement: (-0.85, -0.92) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPrivate security underserving and municipal neglect directly compromised public safety for financial or administrative convenience.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The lawsuit alleges systemic failures in Charlotte's transit system, claiming a private contractor left trains dangerously understaffed and failed to enforce basic fares, leading to a preventable murder.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Public records show the security contractor was funded for 219 personnel but hired only 183, leaving just 11 armed guards instead of the authorized 39, creating a severe security vacuum.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nPrivate security underserving and municipal neglect directly compromised public safety for financial or administrative convenience.\n\nIntegrity: Trustworthy (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Charlotte Transit: FAIL (-0.80, -0.85) — Neglected oversight of safety contracts.\n- Professional Security Services: FAIL (-0.90, -0.95) — Understaffed critical security roles.",
       "The family of Iryna Zarutska is suing Charlotte and its security contractor, Professional Security Services, alleging that severe understaffing and lack of fare enforcement led to her fatal stabbing on a light-rail train.",
       "The Bright Side:\nThis lawsuit forces public transparency on private municipal contracts, ensuring cities cannot quietly outsource their safety obligations without accountability.",
       "The Breakdown & Plane Error:\nThe city confused the administrative act of signing a security contract (WHAT) with the actual physical presence of guards on trains (WHO), leaving riders completely unprotected.",
       "Social Physics Analysis:\nBy treating public safety as a budget line to be optimized rather than a physical reality to be maintained, the contractor hoarded resources while shifting the physical risk entirely onto unsuspecting transit passengers.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between funded safety measures and actual empty platforms, it plots a direct trajectory toward Deception. Administrative compliance masked physical vulnerability.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between funded safety measures and actual empty platforms, it plots a direct trajectory toward Deception. Administrative compliance masked physical vulnerability.",
       "The Unavoidable Truth: A contract for security is completely useless if the guards are not physically present.\n\nThe Unavoidable Lie: Pretending that outsourcing liability absolves a city of its duty to protect citizens.",
       "Alethekanon:\nThe data reveals a classic principal-agent failure where the city paid for protection but failed to audit the contractor's actual staffing levels, resulting in a fatal security gap.",
       "Awwthekanon:\nOur hearts break for Iryna's family, who must carry the heavy burden of knowing her loss was entirely preventable if those trusted with her safety had simply done their jobs.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "City of Charlotte Transit Oversight",
@@ -284,6 +346,7 @@
         "name": "Charlotte Area Transit System",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -40,7 +40,7 @@
     "macro_claim_psi": 1.0,
     "macro_real_u": -0.5,
     "macro_real_psi": -0.5,
-    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "status": "QUARANTINED (Flagged for Re-Audit)",
     "claim_rnet": 1.0,
     "real_rnet": 12.5,
     "claim_z": 0,
@@ -172,6 +172,8 @@
         "name": "White House",
         "role": "instigator"
       }
-    ]
+    ],
+    "exclude_from_analytics": true,
+    "quarantine_reason": "Severe partisan collapse (Delta-u = -1.75) from nypost.com without wire counter-grounding"
   }
 ]

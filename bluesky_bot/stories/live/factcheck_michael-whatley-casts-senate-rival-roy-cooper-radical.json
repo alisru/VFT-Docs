@@ -6,15 +6,15 @@
     "link": "https://www.washingtontimes.com/news/2026/sep/9/michael-whatley-casts-senate-rival-roy-cooper-radical-gop-convention/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 1.0,
-    "real_u": -1.0,
-    "real_psi": -1.0,
+    "claim_psi": 0.5,
+    "real_u": -0.65,
+    "real_psi": -0.6,
     "mode": "root",
     "posts": [
       "A struggling campaign turns to extreme scapegoating at the Dallas convention.\nMichael Whatley casts Senate rival Roy Cooper as 'radical'\nEvidence: Protecting families, Deflecting poll deficit, Scapegoating tragedy\n#USPol #NorthCarolina #Aletheia 🌐",
-      "Michael Whatley claims he is fighting to protect the American dream and North Carolina families from a 'radical, extreme, far-left agenda' that threatens their safety and economic well-being.\nStated Judgement: (1.0, 1.0) — Greater Good",
-      "In reality, Whatley is trailing Cooper by up to 11 points and facing a massive fundraising deficit. He uses a tragic death to project blame, deflecting from his own campaign's struggles and unpopular national issues.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — Fall into Destruction. Whatley's rhetoric abandons constructive policy to execute a desperate scapegoating maneuver, exploiting a tragedy to close a double-digit polling gap.\nIntegrity: Severe Deception (Hypocrisy: 37.0, z: 0)",
+      "Michael Whatley claims he is fighting to protect the American dream and North Carolina families from a 'radical, extreme, far-left agenda' that threatens their safety and economic well-being.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "In reality, Whatley is trailing Cooper by up to 11 points and facing a massive fundraising deficit. He uses a tragic death to project blame, deflecting from his own campaign's struggles and unpopular national issues.\nResulting Judgement: (-0.65, -0.60) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 37.0, z: 0)",
       "- Whatley Rhetoric: FAIL (-1.00, -1.00) — Exploits tragedy to deflect from poll deficit.\n- Washington Times: COND (-0.30, -0.20) — Contextualizes race but amplifies claims.",
       "At the GOP midterm convention in Dallas, Senate candidate Michael Whatley framed former Governor Roy Cooper as a 'radical' and blamed him for a refugee's tragic death, attempting to revive his struggling campaign.",
       "The Poison:\nBy framing a complex local crime as the direct fault of a political rival, the campaign degrades public discourse, replacing systemic policy debate with highly charged emotional manipulation.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Michael Whatley Rhetoric",
@@ -162,6 +224,7 @@
         "name": "The Washington Times",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

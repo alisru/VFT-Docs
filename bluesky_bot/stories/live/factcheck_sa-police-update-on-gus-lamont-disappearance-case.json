@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/abcnewsbot.bsky.social/post/3mw5ogon33r2u",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.05,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "SA Police share a solemn 12-month update on young Gus Lamont. 🕊️\nEvidence: Missing child case, major crime probe, family plea\n#Aletheia #SouthAustralia #TrueCrime",
-      "Police provide an update on the 12-month search for missing four-year-old Gus Lamont.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Behind the updates lies the grim reality of a stagnant major crime investigation where key family members have clammed up behind legal counsel.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nUnresolved tragedy compounded by stonewalling hides accountability behind legal barriers.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
+      "Police provide an update on the 12-month search for missing four-year-old Gus Lamont.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Behind the updates lies the grim reality of a stagnant major crime investigation where key family members have clammed up behind legal counsel.\nResulting Judgement: (-0.05, -0.20) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nUnresolved tragedy compounded by stonewalling hides accountability behind legal barriers.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.5, z: 2)",
       "- South Australian Police: PASS (+0.8, +0.5) — Persists with relentless investigative rigor.\n- Uncooperative Associates: FAIL (-0.9, -0.9) — Obstructs justice via legal silence.",
       "As nearly a full year passes since four-year-old Gus Lamont vanished from an outback station, investigators press for answers amid tightening legal walls.",
       "The Poison:\nThe tragic silence of individuals close to the investigation deepens the community's anguish and stalls closure.",
       "The Breakdown & Plane Error:\nConfusing public relations updates (Lyrical/WHY) with tangible investigative breakthroughs (Physical/WHERE).",
       "Social Physics Analysis:\nInvestigators seek truth through transparency, while reluctant actors deploy legal insulation—exhibiting defensive self-preservation over shared community empathy.",
-      "The Trajectory: The Path of Deception.\nWhen stonewalling replaces cooperation, investigations drift toward painful ambiguity and systemic frustration.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen stonewalling replaces cooperation, investigations drift toward painful ambiguity and systemic frustration.",
       "The Unavoidable Truth: Silence from those present at the disappearance deepens suspicion.\n\nThe Unavoidable Lie: Routine press updates signify active breakthrough momentum.",
       "Alethekanon:\nWhen witnesses retreat behind legal shields, public updates substitute administrative ritual for genuine resolution.",
       "Awwthekanon:\nLittle Gus deserves truth and peace. Our hearts ache for a family torn apart by unspeakable silence.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "South Australian Police",
@@ -162,6 +224,7 @@
         "name": "Joshua Lamont",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

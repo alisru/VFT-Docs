@@ -14,13 +14,13 @@
       "A tragic mass shooting leaves two dead and nine wounded at an unauthorized street gathering in New Jersey.\n\nTrenton: 11 People Shot at 'Large, Unauthorized Adult Gathering'\nEvidence: Mass shooting, Public safety\n#Aletheia #Trenton 🌐",
       "Breitbart reports that eleven people were shot, with two fatalities, during an unauthorized late-night cookout of over 200 people on a residential street in Trenton, raising severe public safety concerns.\nStated Judgement: (-0.76, -1.0) — Greater Evil",
       "Official police and mayoral statements confirm the details: multiple suspects fired over 50 rounds into a crowd of hundreds gathered on Locust Street, killing two and hospitalizing nine others.\nResulting Judgement: (-0.76, -1.0) — Greater Evil",
-      "Verdict: PASS — Reckoning into Destruction.\nThe reporting is entirely accurate, detailing a tragic outbreak of violence at an unpermitted street gathering that overwhelmed local public safety resources.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Verdict: FAIL — Destruction.\nThe reporting is entirely accurate, detailing a tragic outbreak of violence at an unpermitted street gathering that overwhelmed local public safety resources.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Trenton Police: PASS (-0.76, -1.0) — Confirmed details.\n- Mayor Reed Gusciora: PASS (-0.20, -0.50) — Addressed risk.\n- Breitbart News: PASS (0.90, -0.10) — Accurate reporting.",
       "Around 12:25 a.m. on August 30, 2026, gunfire erupted at a large 90s-themed street party on Locust Street in Trenton. Multiple shooters fired into the crowd of over 200 people, leaving two dead and nine injured.",
       "The Bright Side:\nLocal community leaders and the city are actively working to implement proactive measures to prevent unauthorized street takeovers while supporting safe, permitted community gatherings.",
       "The Breakdown & Plane Error:\nThere is no plane error here; the physical reality of the violence matches the reported details. The tragedy highlights the physical danger when large gatherings lack basic security and crowd control.",
       "Social Physics Analysis:\nThe incident represents a catastrophic collapse of social order. When large, unpermitted gatherings occupy public spaces without security, they create high-strain environments easily exploited by bad actors seeking to inflict maximum harm.",
-      "The Trajectory: The Path of Reckoning into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Unchecked street violence leads directly to community trauma and loss of life.",
+      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Unchecked street violence leads directly to community trauma and loss of life.",
       "The Unavoidable Truth: Unsecured, massive street gatherings are highly vulnerable to sudden outbreaks of violence.\n\nThe Unavoidable Lie: Claiming that local authorities can guarantee safety at completely unpermitted, late-night street takeovers.",
       "Alethekanon:\nThe physical evidence is undeniable: fifty shell casings and eleven victims. When public spaces are occupied without coordination, security vacuums inevitably invite tragedy.",
       "Awwthekanon:\nOur hearts go out to the families of the victims, especially the young man who was working so hard to turn his life around. Every community deserves safe spaces to gather and celebrate.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Trenton Police Department Incident Report",
@@ -277,6 +339,7 @@
         "name": "Trenton Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

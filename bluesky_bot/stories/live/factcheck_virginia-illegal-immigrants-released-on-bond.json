@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_u": -0.75,
+    "real_psi": -0.85,
     "mode": "root",
     "posts": [
       "Three illegal immigrants arrested in a Fairfax County child exploitation sting were released on bond, sparking intense political fallout.\nEvidence: Arrests made, Bond granted, DHS outcry\n#Aletheia #USNews",
-      "DHS claims federal immigration policies and local sanctuary rules drove the release of dangerous suspects into the community.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Judicial bond rules and administrative oversights led to the release, while partisan actors weaponize the tragedy for policy friction.\nResulting Judgement: (-0.8, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nPartisan framing exploits a genuine public safety failure to score political points.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
+      "DHS claims federal immigration policies and local sanctuary rules drove the release of dangerous suspects into the community.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Judicial bond rules and administrative oversights led to the release, while partisan actors weaponize the tragedy for policy friction.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nPartisan framing exploits a genuine public safety failure to score political points.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 4)",
       "Sub-Audits Breakdown:\n- DHS Messaging: FAIL (-0.8, -0.9) — Weaponizes tragedy for political narrative.\n- Local Judicial System: FAIL (-0.7, -0.8) — Bond system fails community safety.",
       "Three men arrested in a Fairfax County child exploitation sting were released on bond, drawing severe scrutiny from federal immigration authorities.",
       "The Bright Side:\nUndercover police successfully apprehended the suspects before further harm could be inflicted on minors.",
       "The Breakdown & Plane Error:\nConfuses WHO (bureaucratic judicial failure) with WHAT (political border narratives).\n\nA classic bait-and-switch framing local bail issues as federal border policy.",
       "Social Physics Analysis:\nBy casting local bail decisions exclusively as national partisan battles, institutional actors avoid fixing broken bond laws while keeping public outrage perpetually inflamed.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic failure of child protection is leveraged for partisan leverage.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systemic failure of child protection is leveraged for partisan leverage.",
       "The Unavoidable Truth: Child exploitation suspects were released on bond due to local judicial rules.\n\nThe Unavoidable Lie: This administrative failure proves a coordinated national border conspiracy.",
       "Alethekanon:\nPartisan actors weaponize judicial failures to score cheap political points while ignoring local bail reform.",
       "Awwthekanon:\nIt is heartbreaking to watch the absolute vulnerability of children exploited for political point-scoring and media outrage cycles.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DHS Messaging",
@@ -166,6 +228,7 @@
         "name": "Fairfax County Police",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 0.0,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.65,
+    "real_psi": -0.65,
     "mode": "root",
     "posts": [
       "Dramatic video shows floodwaters bursting through glass doors at a Rowan student home.\nEvidence: 5 inches rain, French doors caved in, 7 students displaced\n#Aletheia #Weather",
-      "A sudden severe flash flood overwhelmed residential glass doors, capturing a shocking natural disaster.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "Severe local flooding driven by infrastructure strain and intense storms destroyed student housing right after move-in.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Destruction.\nUnrelenting rainfall exposed vulnerable off-campus housing infrastructure to sudden flash floods.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
+      "A sudden severe flash flood overwhelmed residential glass doors, capturing a shocking natural disaster.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Severe local flooding driven by infrastructure strain and intense storms destroyed student housing right after move-in.\nResulting Judgement: (-0.65, -0.65) — Greater Evil",
+      "Verdict: FAIL — Destruction.\nUnrelenting rainfall exposed vulnerable off-campus housing infrastructure to sudden flash floods.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.2, z: 2)",
       "Sub-Audits Breakdown:\n- Local Infrastructure: FAIL (-0.8, -0.9) — Inadequate drainage systems.\n- Media Framing: COND (-0.5, -0.4) — Amplifying shock value over causes.",
       "Seven Rowan University sophomores were displaced after over five inches of rain in Gloucester County caused floodwaters to shatter the glass doors of their off-campus home just days after moving in.",
       "The Bright Side:\nNo injuries were reported despite the terrifying sudden collapse of the glass doors.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Local Infrastructure",
@@ -156,6 +218,7 @@
         "name": "National Weather Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Destruction"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.9,
+    "real_u": -0.88,
     "real_psi": -0.9,
     "mode": "root",
     "posts": [
       "A columnist demands NYC’s mayor answer loaded questions on Gaza, weaponizing foreign tragedy for domestic point-scoring.\nEvidence: Rhetorical trap, foreign policy proxy, partisan framing.\n#Aletheia #USPol",
-      "Reporters should interrogate Mayor Mamdani with five tough questions exposing his Oct 7 statement and alleged hypocrisy on Gaza.🌐\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "A partisan hit piece uses loaded hypotheticals to smear a municipal official over international conflicts he does not control.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nA hit piece masquerades as journalistic inquiry, exploiting Middle Eastern tragedy to attack a domestic political opponent.\n\nIntegrity: Severe Deception (Hypocrisy: 18.5, z: 2)",
+      "Reporters should interrogate Mayor Mamdani with five tough questions exposing his Oct 7 statement and alleged hypocrisy on Gaza.🌐\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "A partisan hit piece uses loaded hypotheticals to smear a municipal official over international conflicts he does not control.\nResulting Judgement: (-0.88, -0.90) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA hit piece masquerades as journalistic inquiry, exploiting Middle Eastern tragedy to attack a domestic political opponent.\n\nIntegrity: Severe Deception (Hypocrisy: 18.5, z: 2)",
       "Sub-Audits Breakdown:\n- Michael Levin Framing: FAIL (-0.85, -0.90) — Uses loaded entrapment questions.\n- Washington Examiner: FAIL (-0.90, -0.90) — Weaponizes foreign war for partisan hits.",
       "Washington Examiner published an opinion piece targeting New York City Mayor Zohran Mamdani with provocative questions regarding Gaza and Hamas.",
       "The Poison:\nDressing up partisan attack points as journalistic accountability trivializes genuine humanitarian crises in Gaza for domestic media sport.",
       "Plane Error: Confusing WHAT (local municipal governance) with WHO (international geopolitical actors). The author uses proxy shaming to score points.",
       "Social Physics Analysis:\nThe author runs a Smart Selfish Maneuver, manufacturing an artificial accountability crisis to project moral corruption onto a political rival while exploiting distant suffering.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated journalistic inquiry and partisan extraction, it plots a direct trajectory toward Greater Evil. F = S_LE - O_GE.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated journalistic inquiry and partisan extraction, it plots a direct trajectory toward Greater Evil. F = S_LE - O_GE.",
       "The Unavoidable Truth: Local mayors do not dictate Middle Eastern foreign policy.\nThe Unavoidable Lie: Asking impossible rhetorical traps equals genuine journalism.",
       "Alethekanon:\nThis op-ed is pure rhetorical entrapment, weaponizing an international tragedy to manufacture domestic outrage against a local elected official.",
       "Awwthekanon:\nUsing real human suffering and hostages as ammunition for political blog hits leaves everyone colder and further from actual peace.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Michael Levin Framing",
@@ -162,6 +224,7 @@
     "tags": [
       "Aletheia",
       "USPol"
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

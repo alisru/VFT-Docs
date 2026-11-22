@@ -5,22 +5,22 @@
     "subject": "Seneca Nation leader calls Trump's Lake America renaming 'unpresidential,' demands reversal",
     "link": "https://www.foxnews.com/politics/seneca-nation-leader-calls-trumps-lake-america-renaming-unpresidential-demands-reversal",
     "target_url": "",
-    "claim_u": 0.0,
-    "claim_psi": 0.5,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "claim_u": 0.75,
+    "claim_psi": 0.25,
+    "real_u": 0.05,
+    "real_psi": -0.2,
     "mode": "root",
     "posts": [
       "Trump's executive order renaming Lake Ontario to Lake America sparks swift backlash from the Seneca Nation.\nEvidence: Executive Order, Canandaigua Treaty, trade dispute\n#Aletheia #USPol 🌐",
-      "Proponents frame the renaming as a bold assertion of national pride amid an escalating trade dispute with Canada.\nStated Judgement: (0.0, 0.5) — Good Preference",
-      "The order disregards Indigenous heritage and violates the 1794 Canandaigua Treaty, weaponizing geography for political posturing.\nResulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nUsing executive renamings to wage trade wars rides roughshod over indigenous treaties and historical heritage.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
+      "Proponents frame the renaming as a bold assertion of national pride amid an escalating trade dispute with Canada.\nStated Judgement: (+0.75, +0.25) — Greater Good",
+      "The order disregards Indigenous heritage and violates the 1794 Canandaigua Treaty, weaponizing geography for political posturing.\nResulting Judgement: (+0.05, -0.20) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nUsing executive renamings to wage trade wars rides roughshod over indigenous treaties and historical heritage.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 3)",
       "Sub-Audits Breakdown:\n- Trump Administration: FAIL (-0.8, -0.9) — Weaponizes geographic names for political posturing.\n- Seneca Nation: PASS (0.9, 0.5) — Defends indigenous heritage and treaties.",
       "President Trump signed an executive order renaming Lake Ontario to 'Lake America' during an escalating trade dispute with Canada, prompting fierce condemnation from Seneca Nation President J. Conrad Seneca.",
       "The Bright Side:\nBrought renewed public attention to the historic 1794 Canandaigua Treaty and the rich indigenous heritage of the region.",
       "The Breakdown & Plane Error:\nConfusing geopolitical posturing (WHAT) with cultural erasure of indigenous peoples (WHO). The executive order treats sovereign indigenous heritage as a political pawn.",
       "Social Physics Analysis:\nBy imposing unilateral name changes to score points in a trade war, leadership projects national dominance while trampling local treaties and erasing centuries of cultural identity.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between nationalist posturing and cultural destruction, it plots a direct trajectory toward Lesser Evil. Performative dominance creates lasting friction.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between nationalist posturing and cultural destruction, it plots a direct trajectory toward Lesser Evil. Performative dominance creates lasting friction.",
       "The Unavoidable Truth: Sovereign treaties like the 1794 Canandaigua agreement protect indigenous cultural rights.\n\nThe Unavoidable Lie: Renaming a historic lake by executive fiat solves international trade disputes.",
       "Alethekanon:\nGeopolitical grandstanding that erases indigenous heritage violates both legal treaties and historical truth. 🌐",
       "Awwthekanon:\nNames carry the deep heartbeat of ancestors; we should honor history rather than rewrite it for political fights.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Trump Executive Order",
@@ -162,6 +224,7 @@
         "sub_psi": 0.5,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

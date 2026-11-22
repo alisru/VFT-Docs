@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.4,
     "claim_psi": 0.2,
-    "real_u": -0.75,
-    "real_psi": -0.71,
+    "real_u": -0.62,
+    "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "A global stage used for local posturing. Pakistani PM Sharif Condemns India, Houthis, and Israel at U.N. General Assembly. Evidence: Regional peace, projecting blame, domestic survival. #Aletheia #GlobalPolitics 🌐",
-      "Prime Minister Sharif presented Pakistan as a proactive peacemaker mediating US-Iran tensions, defending holy sites against Houthi threats, and standing firm against Indian aggression. Stated Judgement: (+0.40, +0.20) — Good Preference",
-      "Sharif used the UNGA to project blame onto India, claim a disputed military victory, and praise Donald Trump to secure political favor, masking Pakistan's deep internal instability and lack of action. Resulting Judgement: (-0.75, -0.71) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Sharif's address prioritizes domestic political survival and regional blame-shifting over genuine diplomatic resolution.\nIntegrity: Meaningful Distortion (Hypocrisy: 1.15, z: 2)",
+      "Prime Minister Sharif presented Pakistan as a proactive peacemaker mediating US-Iran tensions, defending holy sites against Houthi threats, and standing firm against Indian aggression. Stated Judgement: (+0.40, +0.20) — Greater Good",
+      "Sharif used the UNGA to project blame onto India, claim a disputed military victory, and praise Donald Trump to secure political favor, masking Pakistan's deep internal instability and lack of action. Resulting Judgement: (-0.62, -0.55) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 1.15, z: 2)",
       "- Sharif UNGA Address: FAIL (-0.75, -0.71) — Projects blame to hide instability.\n- Breitbart Framing: COND (-0.50, -0.40) — Focuses on Trump praise over regional context.",
       "Pakistani Prime Minister Shehbaz Sharif addressed the UN General Assembly, using the platform to criticize India over Kashmir, praise former US President Trump's 2025 intervention, and condemn Houthi attacks.",
       "The Bright Side:\nCondemning Houthi threats to holy sites like Mecca establishes a clear, shared red line for the Islamic world, promoting a rare moment of regional theological alignment.",
       "The Plane Error is confusing WHY with WHO. The speech frames regional conflicts as the fault of specific external adversaries (WHO), while ignoring the underlying systemic water and territorial disputes (WHY) that drive the tension.",
       "Social Physics Analysis:\nSharif executes a Smart Selfish Maneuver. Facing severe domestic instability, he uses the UNGA to manufacture external crises, projecting blame onto India and the Houthis while using Trump's praise as a shield to hoard power.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Using global diplomacy for domestic posturing deepens regional distrust.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Using global diplomacy for domestic posturing deepens regional distrust.",
       "The Unavoidable Truth: Sharif's speech was designed for domestic consumption and currying favor with the US.\nThe Unavoidable Lie: Pakistan is a stable, neutral mediator capable of resolving deep Middle Eastern conflicts.",
       "Alethekanon:\nInternational diplomacy is frequently reduced to a theater of projection, where leaders manufacture external adversaries to distract from domestic structural failures.",
       "Awwthekanon:\nIt is heartbreaking to see global leaders use their platforms for division and blame, when the people of both India and Pakistan deserve cooperative paths to peace.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Sharif UNGA Address",
@@ -167,6 +229,7 @@
         "name": "Saudi Arabia",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

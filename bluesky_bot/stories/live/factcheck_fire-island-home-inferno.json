@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": 0.1,
-    "real_psi": -0.2,
+    "real_u": 0.3,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "A stunning architectural masterpiece on Fire Island was reduced to ash in a sudden beachfront blaze.\nEvidence: Sprawling wooden home, 13 fire departments, Total structural loss\n#Aletheia #FireIsland",
-      "A massive blaze wiped out a sprawling beachfront vacation house in Fire Island Pines, though everyone escaped safely before the roof collapsed.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "A historic architectural home was completely destroyed by fire during severe coastal conditions, illustrating the vulnerability of wooden beachfront structures.\nResulting Judgement: (+0.1, -0.2) — Lesser Evil",
-      "Verdict: PASS — The Path of Awakening.\nThirteen fire departments mobilized rapidly to contain the blaze and prevent spread, minimizing community catastrophe.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 2)",
+      "A massive blaze wiped out a sprawling beachfront vacation house in Fire Island Pines, though everyone escaped safely before the roof collapsed.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "A historic architectural home was completely destroyed by fire during severe coastal conditions, illustrating the vulnerability of wooden beachfront structures.\nResulting Judgement: (+0.30, +0.10) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nThirteen fire departments mobilized rapidly to contain the blaze and prevent spread, minimizing community catastrophe.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, z: 2)",
       "Sub-Audits Breakdown:\n- Fire Department Response: PASS (0.8, 0.5) — 13 departments contained blaze.\n- Property Loss: COND (-0.2, -0.3) — Historic home destroyed.",
       "Thirteen fire departments responded to a massive blaze that destroyed a historic beachfront home in Fire Island Pines, successfully preventing the fire from spreading to neighboring properties.",
       "The Bright Side:\nThirteen local fire departments successfully contained the aggressive blaze, preventing a broader community disaster in the tightly packed beach community.",
       "The Breakdown & Plane Error:\nThe report focuses on the physical destruction of property (WHERE/WHAT) rather than systemic governance failures, keeping analysis grounded in concrete reality.",
       "Social Physics Analysis:\nThe incident reflects natural physical hazards rather than human malice. Firefighters engaged in a collaborative Smart Altruistic response to protect neighboring properties.",
-      "The Trajectory: The Path of Awakening.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Awakening. Emergency response aligned with public safety.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Awakening. Emergency response aligned with public safety.",
       "The Unavoidable Truth: Coastal wooden structures remain highly vulnerable to sudden, devastating fires.\n\nThe Unavoidable Lie: Modern firefighting can always preserve historic beachfront architecture against intense blazes.",
       "Alethekanon:\nNatural disasters and accidental fires remind us of our physical fragility. Swift community response is our best defense against elemental entropy.",
       "Awwthekanon:\nIt is heartbreaking to see a beloved historic home reduced to rubble, but we are deeply grateful that everyone escaped safely and firefighters risked their safety to protect others.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fire Department Response",
@@ -156,6 +218,7 @@
         "name": "Steven Robinson",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

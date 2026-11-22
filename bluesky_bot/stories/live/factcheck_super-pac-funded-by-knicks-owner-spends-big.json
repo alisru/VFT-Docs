@@ -5,22 +5,22 @@
     "subject": "Super PAC funded by Knicks owner spends big to back AG candidate Saritha Komatireddy",
     "link": "https://nypost.com/2026/10/11/us-news/super-pac-funded-by-knicks-owner-spends-big-to-back-ag-candidate-saritha-komatireddy/",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.2,
-    "real_u": -0.75,
-    "real_psi": -0.7,
+    "claim_u": 0.55,
+    "claim_psi": 0.15,
+    "real_u": -0.45,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "Billionaire-backed PAC pours millions into New York AG race to boost Republican challenger.\nEvidence: Super PAC funding, anti-crime messaging, partisan alignment.\n#Aletheia #NYPol #Elections",
-      "A billionaire-funded Super PAC argues its massive seven-figure ad buy will restore public safety by unseating the incumbent attorney general.\nStated Judgement: (+0.6, +0.2) — Good Preference 🌐",
-      "In reality, Knicks owner James Dolan's PAC is bankrolling an uphill partisan race, shifting loyalties after previously funding Democrats to buy political influence.\nResulting Judgement: (-0.75, -0.7) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nBillionaire donor shifting funds between parties exposes self-serving political extraction disguised as public safety advocacy.\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 4)",
+      "A billionaire-funded Super PAC argues its massive seven-figure ad buy will restore public safety by unseating the incumbent attorney general.\nStated Judgement: (+0.55, +0.15) — Greater Good",
+      "In reality, Knicks owner James Dolan's PAC is bankrolling an uphill partisan race, shifting loyalties after previously funding Democrats to buy political influence.\nResulting Judgement: (-0.45, -0.35) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nBillionaire donor shifting funds between parties exposes self-serving political extraction disguised as public safety advocacy.\nIntegrity: Severe Deception (Hypocrisy: 12.5, Uncertainty z: 4)",
       "Sub-Audits Breakdown:\n- Super PAC Messaging: FAIL (-0.7, -0.6) — Masks donor's shifting political bets.\n- Candidate Platform: COND (-0.2, -0.1) — Legitimate experience wrapped in partisan cash.",
       "Knicks owner James Dolan and casino mogul Steve Wynn are bankrolling a seven-figure ad campaign through 'Strong and Safe New York' to support GOP candidates against New York's incumbent Democrats.",
       "The Poison:\nMega-donors fluidly bankroll whichever political faction serves their immediate leverage, treating state elections like corporate lobbying investments.",
       "The Breakdown & Plane Error:\nThe error mistakes billionaire financial muscle for grassroots citizen empowerment (Metaphysical Plane error: WHO benefits).",
       "Social Physics Analysis:\nDolan's PAC runs a Smart Selfish Maneuver: using public safety anxieties as a pretext to project blame onto Democrats while buying backstage political leverage.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated public safety altruism and billionaire donor chess, it plots a direct trajectory toward Deception.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated public safety altruism and billionaire donor chess, it plots a direct trajectory toward Deception.",
       "The Unavoidable Truth: Billionaires fund campaigns to secure favorable political access, not out of civic charity.\nThe Unavoidable Lie: Megadonor super PACs represent organic grassroots anger.",
       "Alethekanon:\nWhen oligarchs pivot funding between opposing parties based on utility, public safety rhetoric becomes mere currency for political extraction.",
       "Awwthekanon:\nIt's heartbreaking to see genuine community safety concerns treated as game pieces by billionaires who flip allegiances whenever it suits their bottom line.",
@@ -86,8 +86,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Super PAC Messaging",
@@ -168,6 +230,7 @@
       "Aletheia",
       "NYPol",
       "Elections"
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "A governor claims ignorance of his own home's luxury amenities while selling it for millions.\nEvidence: Stated ignorance, actual ownership, public skepticism.\n#Aletheia #Newsom",
-      "Newsom claims he was unaware of the 5,000-bottle wine cellar in his $7.5M home, insisting he only kept books there.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "The governor's claim of ignorance regarding a massive, built-in home feature strains credulity, suggesting a performative distancing from wealth.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. The governor's attempt to rebrand a luxury cellar as a library creates a hypocrisy gap that undermines public trust.\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 3)",
+      "Newsom claims he was unaware of the 5,000-bottle wine cellar in his $7.5M home, insisting he only kept books there.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "The governor's claim of ignorance regarding a massive, built-in home feature strains credulity, suggesting a performative distancing from wealth.\nResulting Judgement: (-0.70, -0.80) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 15.0, Uncertainty z: 3)",
       "- Newsom's Claim: FAIL (-0.7, -0.8) — Implausible denial of property features.\n- Public Perception: COND (-0.5, -0.5) — Skepticism of political optics.",
       "California Governor Gavin Newsom is selling his $7.5 million Sacramento home, sparking questions about his lifestyle and transparency.",
       "The Poison:\nUsing 'inheritance' and 'books' as a shield against scrutiny of extreme wealth creates a false narrative of humble living.",
       "The Breakdown & Plane Error:\nThis is a WHO vs. WHAT error; the governor focuses on the 'what' (books) to distract from the 'who' (a wealthy politician distancing himself from his own assets).",
       "Social Physics Analysis:\nBy projecting a persona of ignorance, the governor attempts to avoid the strain of public scrutiny. This pretextual defense fails to resolve the underlying tension between his political image and his actual economic reality.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The dissonance between the claim and the physical reality creates a negative feedback loop.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. The dissonance between the claim and the physical reality creates a negative feedback loop.",
       "The Unavoidable Truth: A 5,000-bottle cellar is a significant architectural feature that an owner would reasonably know exists.\nThe Unavoidable Lie: The claim that the cellar was exclusively used for books is a transparent attempt to sanitize political optics.",
       "Alethekanon:\nPerformative ignorance is a hallmark of political fragility. When the truth is inconvenient, the narrative becomes a fortress of denial.",
       "Awwthekanon:\nIt is sad to see a leader feel so pressured by public perception that they must invent stories about their own home. We all deserve to be seen for who we are, not just the image we project.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Newsom's Claim",
@@ -143,6 +205,7 @@
         "name": "Jennifer Siebel Newsom",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

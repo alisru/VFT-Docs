@@ -14,13 +14,13 @@
       "Farrah Abraham reacts after a $13M civil verdict against former Mayor Dominic Foppoli for sexual assault.\nEvidence: $13M civil verdict, 7 plaintiffs, Foppoli denial\n#Aletheia #Justice",
       "Civil verdicts offer accountability and a stepping stone toward justice for victims of sexual assault.\nStated Judgement: (+1.0, 0.0) — Good Preference",
       "While a civil jury found Foppoli liable and awarded $13M, criminal charges remain absent due to investigative hurdles.\nResulting Judgement: (-0.5, -0.6) — Lesser Evil",
-      "Verdict: PASS — The Path of Redemption.\nA major civil victory provides accountability for victims, even as criminal justice systems lag.\n\nIntegrity: Conditionally Sound (Hypocrisy: 2.4, z: 1)",
+      "Verdict: PASS — The Path of Awakening into Destruction.\nA major civil victory provides accountability for victims, even as criminal justice systems lag.\n\nIntegrity: Conditionally Sound (Hypocrisy: 2.4, z: 1)",
       "- Civil Trial Outcome: PASS (-0.5, -0.5) — $13M verdict delivers financial and moral accountability.\n- Criminal Prosecution Gap: FAIL (-0.8, -0.7) — Authorities failed to bring criminal charges.",
       "Farrah Abraham and other survivors have spent years seeking accountability from former Windsor Mayor Dominic Foppoli following multiple sexual assault allegations.",
       "The Bright Side:\nCivil courts provide a viable path to accountability when criminal investigations stall.",
       "The Breakdown & Plane Error:\nConfusing civil liability (what) with criminal prosecution (who) highlights systemic gaps in pursuing powerful offenders.",
       "Social Physics Analysis:\nActors navigate power dynamics where influencers use public platforms to shatter institutional silence. The system exposes how wealth and status delay justice until collective pressure forces accountability.",
-      "The Trajectory: The Path of Redemption.\nWhen civil accountability breaches institutional walls, it plots a direct trajectory toward structural reform.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen civil accountability breaches institutional walls, it plots a direct trajectory toward structural reform.",
       "The Unavoidable Truth: Civil verdicts can deliver meaningful accountability when criminal systems fail.\n\nThe Unavoidable Lie: Financial settlements fully substitute for systemic criminal justice.",
       "Alethekanon:\nCivil victories provide vital leverage for survivors when criminal justice stalls, but they expose deep institutional shortcomings in prosecuting powerful offenders.",
       "Awwthekanon:\nMy heart aches for every survivor who has to fight tooth and nail just to be heard. No verdict can erase the pain, but may this bring a measure of peace.",
@@ -37,7 +37,7 @@
     "macro_claim_psi": null,
     "macro_real_u": null,
     "macro_real_psi": null,
-    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "status": "QUARANTINED (Flagged for Re-Audit)",
     "claim_rnet": 1.0,
     "real_rnet": 2.4,
     "claim_z": 0,
@@ -149,6 +149,8 @@
         "name": "Windsor",
         "role": "instigator"
       }
-    ]
+    ],
+    "exclude_from_analytics": true,
+    "quarantine_reason": "Severe partisan collapse (Delta-u = -1.5) from nypost.com without wire counter-grounding"
   }
 ]

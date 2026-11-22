@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/28/us-news/mom-made-plans-wiht-best-friend-hours-before-brother-killed-her-7-relatives-in-montana/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -1.8,
-    "real_psi": -1.9,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Heartbreaking final plans shattered by sudden mass violence.\nEvidence: Christmas plans, 8 relatives murdered, Alan Smith suspect\n#Aletheia #Montana",
-      "A cherished mother was happily making holiday plans with her best friend hours before an unimaginable family tragedy.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Her older brother, Alan Smith, ruthlessly massacred eight family members including children and elderly relatives during Sunday dinner.\nResulting Judgement: (-1.8, -1.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction.\nUnfathomable violence ripped through a three-generation family dinner, destroying lives instantly.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "A cherished mother was happily making holiday plans with her best friend hours before an unimaginable family tragedy.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Her older brother, Alan Smith, ruthlessly massacred eight family members including children and elderly relatives during Sunday dinner.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nUnfathomable violence ripped through a three-generation family dinner, destroying lives instantly.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Megan Ireland-Ghekiere: PASS (1.0, 1.0) — Innocent victim of sudden violence.\n- Alan Smith: FAIL (-2.0, -2.0) — Perpetrator of horrific family massacre.",
       "A Billings, Montana family gathering turned fatal when a relative allegedly murdered eight family members, leaving a community reeling in shock and grief.",
       "The Bright Side:\nSurvivors and friends honoring the victims' kind memories through community support and mutual solidarity.",
       "The Breakdown & Plane Error:\nConfusing personal family bonds (WHO) with lethal domestic betrayal (WHAT).\n\nThe tragic gap between warm holiday dreams and sudden slaughter.",
       "**Social Physics Analysis:**\nTotal societal breakdown when internal protective bounds collapse into extreme violence, leaving defenseless family members exposed to sudden destruction.",
-      "The Trajectory: The Path of Destruction.\nWhen familial trust shatters into lethal violence, it plots a direct trajectory toward Greater Evil. Total breakdown of human social fabric.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen familial trust shatters into lethal violence, it plots a direct trajectory toward Greater Evil. Total breakdown of human social fabric.",
       "The Unavoidable Truth: Innocent lives can be snuffed out in an instant by those closest to them.\n\nThe Unavoidable Lie: Domestic safety is permanently guaranteed within family walls.",
       "Alethekanon:\nWhen domestic sanctuary becomes a slaughterhouse, all human projections of safety collapse into the raw void of sudden grief.",
       "Awwthekanon:\nMy heart breaks for the children and families whose bright futures and loving bonds were stolen in a single dark moment.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Victim Framing",
@@ -215,6 +277,7 @@
         "name": "Kelsey Garland",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

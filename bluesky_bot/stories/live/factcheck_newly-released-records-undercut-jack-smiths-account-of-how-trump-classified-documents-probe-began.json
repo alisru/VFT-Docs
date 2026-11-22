@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": -0.5,
+    "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "New documents suggest special counsel Jack Smith mischaracterized the origin of the Trump classified documents probe.\nEvidence: NARA OIG reports, FBI spillage notes, congressional disclosures\n#Aletheia #USPol",
-      "Jack Smith claimed the investigation was prompted by a formal criminal referral from NARA in February 2022.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Internal NARA and FBI records show the initial message was only a standard referral for assessment, not a criminal one.\nResulting Judgement: (-0.75, -0.85) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nMisrepresenting administrative referrals as criminal triggers distorts institutional processes.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
+      "Jack Smith claimed the investigation was prompted by a formal criminal referral from NARA in February 2022.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Internal NARA and FBI records show the initial message was only a standard referral for assessment, not a criminal one.\nResulting Judgement: (-0.50, -0.50) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nMisrepresenting administrative referrals as criminal triggers distorts institutional processes.\n\nIntegrity: Severe Deception (Hypocrisy: 11.2, z: 4)",
       "Sub-Audits Breakdown:\n- Jack Smith Statements: FAIL (-0.80, -0.90) — Framed assessment as criminal referral.\n- NARA OIG Logs: PASS (-0.20, -0.10) — Correctly classified inquiry as -R.",
       "Newly disclosed documents obtained by Senate Judiciary Chairman Chuck Grassley reveal that NARA's initial February 2022 notification to the DOJ was categorized as a standard referral, not a criminal referral for prosecution.",
       "The Bright Side:\nCongressional oversight successfully surfaces internal agency communications for public review.",
       "The Breakdown & Plane Error:\nConfusing administrative assessment protocols (WHAT) with formal criminal intent (WHO/WHY) alters the legal narrative.",
       "Social Physics Analysis:\nActors use pretexts of routine administrative referrals to manufacture high-stakes criminal investigations, projecting legal necessity while shielding institutional framing choices.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Administrative nuances are weaponized to project definitive criminal guilt.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Administrative nuances are weaponized to project definitive criminal guilt.",
       "The Unavoidable Truth: Internal records confirm NARA's initial message was a non-criminal referral for assessment.\n\nThe Unavoidable Lie: The investigation originated from a straightforward, pre-packaged criminal referral.",
       "Alethekanon:\nInstitutional narratives often inflate administrative spillage into criminal referrals to justify extraordinary investigative measures.",
       "Awwthekanon:\nIt is painful when public trust is strained by bureaucratic framing that obscures the humble origins of complex legal battles.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Jack Smith Statements",
@@ -165,6 +227,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

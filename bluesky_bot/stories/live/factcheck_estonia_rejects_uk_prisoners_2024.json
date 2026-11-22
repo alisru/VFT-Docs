@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Renting foreign cells exposed as a political mirage.\n\nEstonia rejects proposals to take prisoners from UK jails\nEvidence: foreign rental claims, outright Estonian rejection, domestic posturing\n#Aletheia #UKPol",
-      "UK political factions proposed renting empty prison cells in Estonia as a swift, pragmatic solution to ease the domestic overcrowding crisis and prevent early releases.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "Estonia's Justice Minister flatly rejected the idea, revealing no formal proposal was even made, exposing the policy as an unviable distraction from domestic capacity failures.\nResulting Judgement: (-0.09, +0.28) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nPoliticians floated an international quick-fix that had already been rejected, using it to deflect from systemic domestic infrastructure neglect.\n\nIntegrity: Severe Deception (Hypocrisy: 5.8, Uncertainty z: 5)",
+      "UK political factions proposed renting empty prison cells in Estonia as a swift, pragmatic solution to ease the domestic overcrowding crisis and prevent early releases.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Estonia's Justice Minister flatly rejected the idea, revealing no formal proposal was even made, exposing the policy as an unviable distraction from domestic capacity failures.\nResulting Judgement: (-0.09, +0.28) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nPoliticians floated an international quick-fix that had already been rejected, using it to deflect from systemic domestic infrastructure neglect.\n\nIntegrity: Severe Deception (Hypocrisy: 5.8, Uncertainty z: 5)",
       "Sub-Audits Breakdown:\n- Reform UK & Conservative Proposals: FAIL (-0.9, -0.85) — Promoted unviable foreign cell rentals to gain cheap political points.\n- Estonian Justice Ministry: PASS (0.95, 0.05) — Provided clear, decisive, and realistic boundaries regarding their sovereign infrastructure.",
       "Estonia's Justice Minister Liisa Pakosta strongly rejected suggestions by UK politicians to rent out Tartu prison cells, stating they would give an unequivocal 'No' to any such proposal.",
       "The Bright Side:\nEstonia's blunt refusal forces UK policymakers to confront the reality that domestic infrastructure crises cannot be outsourced to sovereign partners on a whim.",
       "The Breakdown & Plane Error:\nThis is a classic WHAT vs WHO error. Politicians presented a complex international legal impossibility (WHAT) as a simple, ready-to-go logistical transaction (WHO).",
       "Social Physics Analysis:\nRather than addressing the structural strain of domestic prison capacity, politicians used foreign rentals as a convenient pretext. This projection shifts blame outward while avoiding the hard choices of domestic reform.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The math reveals a heavy reliance on deceptive, unviable pretexts.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The math reveals a heavy reliance on deceptive, unviable pretexts.",
       "The Unavoidable Truth: You cannot outsource domestic judicial infrastructure to sovereign nations without their consent.\n\nThe Unavoidable Lie: That renting foreign prison cells was a viable, near-term solution to the UK overcrowding crisis.",
       "Alethekanon:\nThe data shows a complete lack of structural viability. Floating a policy that has already been rejected is not governance; it is a public relations exercise designed to temporarily lower political pressure.",
       "Awwthekanon:\nIt is painful to see systemic domestic problems treated as political footballs. True healing requires taking responsibility at home rather than looking for distant places to hold our burdens.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.45,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.45,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.85,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.65,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Reform UK & Conservative Proposals",
@@ -285,6 +347,7 @@
         "sub_psi": 0.05,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

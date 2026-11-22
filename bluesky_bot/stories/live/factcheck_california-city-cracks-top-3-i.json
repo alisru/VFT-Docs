@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.7,
-    "real_psi": 0.4,
+    "real_u": 0.75,
+    "real_psi": 0.45,
     "mode": "root",
     "posts": [
       "San Francisco lands in WalletHub's top 3 best US foodie cities, balancing rich dining options with relative affordability.\nEvidence: WalletHub ranking, Michelin stars, Local markets\n#Aletheia #Foodie",
-      "WalletHub's rankings spotlight San Francisco for its high restaurant density, Michelin stars, and diverse food culture.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "The city offers an exceptional culinary landscape, though high living costs constrain universal access for residents.\nResulting Judgement: (+0.7, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nAccurate celebration of urban culture despite inherent economic trade-offs.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
+      "WalletHub's rankings spotlight San Francisco for its high restaurant density, Michelin stars, and diverse food culture.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "The city offers an exceptional culinary landscape, though high living costs constrain universal access for residents.\nResulting Judgement: (+0.75, +0.45) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nAccurate celebration of urban culture despite inherent economic trade-offs.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 0)",
       "Sub-Audits Breakdown:\n- WalletHub Methodology: PASS (0.8, 0.5) — Comprehensive metrics.\n- SF Culinary Scene: PASS (0.7, 0.4) — Genuine diversity.",
       "WalletHub's annual study ranked San Francisco third nationwide among foodie destinations, citing diverse dining and specialty markets.",
       "The Bright Side:\nVibrant culinary entrepreneurship and multicultural food scenes thrive despite economic pressures.",
       "The Breakdown & Plane Error:\nConfusing lifestyle rankings with macroeconomic cost-of-living indicators represents a Logical plane error.",
       "Social Physics Analysis:\nThe city's food scene operates through a Smart Altruistic loop of cultural exchange and local enterprise, enriching community life.",
-      "The Trajectory: The Path of Redemption.\nWhen urban rankings reflect genuine cultural vitality and local commerce, they plot a trajectory toward Lesser Good.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen urban rankings reflect genuine cultural vitality and local commerce, they plot a trajectory toward Lesser Good.",
       "The Unavoidable Truth: San Francisco boasts world-class culinary diversity.\n\nThe Unavoidable Lie: High urban living costs do not affect everyday dining access.",
       "Alethekanon:\nCelebrating cultural vibrancy must be weighed against the structural economic strains faced by local residents.",
       "Awwthekanon:\nSF has such amazing food culture, from sourdough to incredible diverse neighborhood spots!",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "WalletHub Methodology",
@@ -155,6 +217,7 @@
         "name": "San Francisco",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

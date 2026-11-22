@@ -5,22 +5,22 @@
     "subject": "EXCLUSIVE: 25 years after 9/11, ICE says more than 2K known or suspected terrorists have been deported",
     "link": "https://www.foxnews.com/politics/exclusive-25-years-after-911-ice-says-more-than-2k-known-suspected-terrorists-deported",
     "target_url": "",
-    "claim_u": 0.8,
+    "claim_u": 0.65,
     "claim_psi": 0.5,
-    "real_u": -0.5,
-    "real_psi": -0.6,
+    "real_u": -0.25,
+    "real_psi": -0.35,
     "mode": "root",
     "posts": [
       "Marking 25 years since 9/11, ICE reports over 2,000 suspected terrorists deported under the current administration.\nEvidence: DHS statements, ICE arrest data, national security focus\n#Aletheia #USPol #NationalSecurity",
-      "DHS highlights aggressive ICE counter-terrorism efforts and historic deportations ahead of the 9/11 anniversary to protect the homeland.\nStated Judgement: (+0.8, +0.5) — Trustworthy Good",
-      "While real counter-terrorism targets are apprehended, the framing weaponizes national security milestones to justify sweeping broader immigration crackdowns.\nResulting Judgement: (-0.5, -0.6) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nNational security milestones are leveraged to boost broad enforcement narratives.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 2)",
+      "DHS highlights aggressive ICE counter-terrorism efforts and historic deportations ahead of the 9/11 anniversary to protect the homeland.\nStated Judgement: (+0.65, +0.50) — Greater Good",
+      "While real counter-terrorism targets are apprehended, the framing weaponizes national security milestones to justify sweeping broader immigration crackdowns.\nResulting Judgement: (-0.25, -0.35) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nNational security milestones are leveraged to boost broad enforcement narratives.\n\nIntegrity: Partially Distorted (Hypocrisy: 4.5, z: 2)",
       "Sub-Audits Breakdown:\n- DHS Reporting: COND (0.5, 0.4) — Uses real arrests for broader messaging.\n- Border Policy Framing: FAIL (-0.7, -0.8) — Blends terror with general enforcement.",
       "As the nation approaches the 25th anniversary of 9/11, immigration enforcement agencies have leaned heavily into national security messaging.",
       "The Poison:\nLeveraging sacred national trauma to score political points on routine border enforcement.",
       "The Breakdown & Plane Error:\nConfusing WHAT (specific terror plots) with WHO (general immigration enforcement targets) to inflate threat metrics.",
       "Social Physics Analysis:\nActors run a Smart Selfish Maneuver by wrapping broad border enforcement inside the untouchable mantle of 9/11 counter-terrorism protection to immunize policy from debate.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic fear is co-opted for political leverage.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic fear is co-opted for political leverage.",
       "The Unavoidable Truth: Dangerous individuals have indeed been intercepted and deported by federal authorities.\n\nThe Unavoidable Lie: All broad immigration enforcement statistics equate directly to high-threat counter-terrorism actions.",
       "Alethekanon:\nInstitutions routinely wrap routine border actions in the sacred shroud of 9/11 to deflect scrutiny.",
       "Awwthekanon:\nIt is painful to watch the profound grief of 9/11 turned into a political talking point.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "DHS Reporting",
@@ -157,6 +219,7 @@
         "name": "Donald Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

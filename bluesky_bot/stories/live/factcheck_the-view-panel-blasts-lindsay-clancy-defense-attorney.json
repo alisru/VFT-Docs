@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "real_u": -0.2,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "When legal theatrics collide with profound tragedy, the courtroom becomes a stage for shifting goalposts.\nEvidence: trial defense strategy, media punditry, public outrage\n#Aletheia #USPol #Law",
-      "Defense arguments shift from admitting tragedy via postpartum psychosis to questioning basic evidence of the crime itself.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Such abrupt tactical pivots inflame public trauma and weaponize legal technicalities rather than seeking restorative justice.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: COND — The Path of Revelation.\nLegal maneuvering exposes the deep friction between psychiatric defense and trial adversarialism.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Defense arguments shift from admitting tragedy via postpartum psychosis to questioning basic evidence of the crime itself.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Such abrupt tactical pivots inflame public trauma and weaponize legal technicalities rather than seeking restorative justice.\nResulting Judgement: (-0.20, -0.30) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nLegal maneuvering exposes the deep friction between psychiatric defense and trial adversarialism.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Defense Strategy: COND (-0.6, -0.7) — Strategic shifts create public confusion.\n- Media Commentary: PASS (0.2, 0.1) — Highlights glaring legal contradictions.",
       "During an episode of 'The View,' co-hosts criticized defense attorney Kevin Reddington for questioning the existence of evidence that Lindsay Clancy killed her children, despite previously relying on an insanity defense.",
       "The Bright Side:\nPublic scrutiny forces legal advocates to articulate their contradictory courtroom positions clearly before society.",
       "The Breakdown & Plane Error:\nConfusing WHAT (the legal defense strategy) with WHO (the tragedy of the victims), treating human devastation as a tactical game.",
       "Social Physics Analysis:\nThe defense runs a procedural maneuver, shifting from mental health culpability to evidentiary denial. This protects the client via technical friction while manufacturing public confusion.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between psychiatric admissions and evidentiary denials, it plots a trajectory toward Deception. The tactical pivot forces a high-strain collision.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between psychiatric admissions and evidentiary denials, it plots a trajectory toward Deception. The tactical pivot forces a high-strain collision.",
       "The Unavoidable Truth: Legal defense strategies often prioritize technical acquittal over narrative consistency.\n\nThe Unavoidable Lie: Shifting core premises mid-trial has no corrosive effect on public trust.",
       "Alethekanon:\nShifting from an insanity defense to denying physical evidence tears apart the logical thread of accountability. 🌐",
       "Awwthekanon:\nBehind every legal maneuver and television debate lies an unimaginable human tragedy. May healing touch all touched by this pain.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Defense Strategy",
@@ -158,6 +220,7 @@
         "name": "The View",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

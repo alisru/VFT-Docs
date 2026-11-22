@@ -6,21 +6,21 @@
     "link": "https://globalvoices.org/2026/08/19/the-invisible-crisis-that-strips-people-of-citizenship/",
     "target_url": "https://bsky.app/profile/globalvoices.org/post/3mtgqolqnp22k",
     "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": 0.95,
-    "real_psi": 0.45,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "A powerful look at how administrative traps and changing laws quietly strip people of their basic rights.\n\nThe invisible crisis that strips people of citizenship\nEvidence: raising awareness, genuine advocacy, human rights\n#Aletheia #HumanRights",
-      "Global Voices claims to expose the hidden, devastating crisis of statelessness, highlighting how bureaucracy, bigotry, and shifting borders leave millions without a legal identity.\nStated Judgement: (+1.00, +0.50) — Good Preference",
-      "The reporting is a deeply researched, authentic exploration of statelessness, partnering with advocacy groups to map real-world bureaucratic traps and authoritarian overreach.\nResulting Judgement: (+0.95, +0.45) — Good Preference",
-      "Verdict: PASS — Stasis in Grace.\nAn honest, vital piece of journalism that matches its advocacy goals with transparent, deeply human reporting.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "Global Voices claims to expose the hidden, devastating crisis of statelessness, highlighting how bureaucracy, bigotry, and shifting borders leave millions without a legal identity.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reporting is a deeply researched, authentic exploration of statelessness, partnering with advocacy groups to map real-world bureaucratic traps and authoritarian overreach.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nAn honest, vital piece of journalism that matches its advocacy goals with transparent, deeply human reporting.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Global Voices: PASS (+0.95, +0.45) — Authentic advocacy.\n- Statelessness Coverage: PASS (+0.95, +0.45) — Deeply researched.",
       "Global Voices partnered with the Global Movement Against Statelessness to highlight the diverse, often bureaucratic ways people lose their citizenship and legal rights globally.",
       "The Poison:\nWhile the journalism is stellar, the urgent fundraising appeals interspersed throughout remind us of the precarious financial model underpinning independent global media.",
       "The Breakdown & Plane Error:\nThere is no plane error here. The narrative (WHY) aligns perfectly with the physical realities (WHERE) of changing laws in India, Cambodia, and Nicaragua.",
       "Social Physics Analysis:\nBy centering the lived experiences of stateless individuals, the narrative builds active empathy rather than projecting political division. It addresses a systemic problem with upfront transparency, minimizing rhetorical friction.",
-      "The Trajectory: Stasis in Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of advocacy and reporting maintains a stable, low-strain ethical state.",
+      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. The alignment of advocacy and reporting maintains a stable, low-strain ethical state.",
       "The Unavoidable Truth: Bureaucracy is often weaponized to exclude the vulnerable.\n\nThe Unavoidable Lie: Citizenship is a permanent, guaranteed right for everyone.",
       "Alethekanon:\nA structurally sound audit. The alignment between the stated educational mission and the actual investigative output is exceptionally high, demonstrating robust institutional integrity.",
       "Awwthekanon:\nMy heart aches for those trapped in these invisible borders. To have your home, your identity, and your safety erased by a paper trail is a heavy burden. We must see and hold each other as human first.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.4,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Global Voices Advocacy",
@@ -201,6 +263,7 @@
         "name": "Global Movement Against Statelessness",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

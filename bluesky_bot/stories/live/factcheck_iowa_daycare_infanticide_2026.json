@@ -5,22 +5,22 @@
     "subject": "20-Year-Old Iowa Daycare Worker Accused of Murdering Newborn After Giving Birth in Bathroom",
     "link": "https://www.breitbart.com/crime/2026/09/20/20-year-old-iowa-daycare-worker-accused-of-murdering-newborn-after-giving-birth-in-bathroom/",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "claim_u": 0.25,
+    "claim_psi": 0.25,
+    "real_u": -0.25,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "Tragedy strikes an Iowa daycare as a young worker is charged with murder following a clandestine birth and infant death. Evidence: police report, confession, safe-haven reminder. #Crime #Iowa 🌐",
-      "The report details a horrific criminal case while emphasizing state safe-haven laws and resources for at-risk mothers. Stated Judgement: (0.5, 0.0) — Good Preference",
-      "A newborn lost its life in a horrific act of desperation and violence, highlighting severe gaps in crisis support and individual crisis management. Resulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. A catastrophic moral failure resulting from extreme personal crisis devoid of institutional safety nets.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "The report details a horrific criminal case while emphasizing state safe-haven laws and resources for at-risk mothers. Stated Judgement: (+0.25, +0.25) — Greater Good",
+      "A newborn lost its life in a horrific act of desperation and violence, highlighting severe gaps in crisis support and individual crisis management. Resulting Judgement: (-0.25, -0.25) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Police Dept: PASS (0.5, 0.5) — Transparent reporting & safe-haven push.\n- Offender: FAIL (-1.0, -1.0) — Extreme act of violence.",
       "Emergency crews responded to a Perry, Iowa daycare for bleeding, uncovering a dead newborn in the trash and leading to first-degree murder charges against 20-year-old Stephanie Ubaldo.",
       "The Poison:\nHighlighting safe-haven laws is vital, yet it starkly underscores how easily desperate young mothers slip past societal safety nets before tragedy strikes.",
       "Confusing the acute psychological crisis of an individual with systemic policy debates represents a Metaphysical Plane Error, misattributing root causes.",
       "Social Physics Analysis:\nThis case exposes a tragic breakdown across all social physics axes, where total isolation replaces transparency and overwhelming strain ends in catastrophic destruction.",
-      "The Trajectory: The Path of Destruction.\nWhen evaluating acute crises without effective early intervention, the vector plunges directly into Greater Evil. F_net = -1.8.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen evaluating acute crises without effective early intervention, the vector plunges directly into Greater Evil. F_net = -1.8.",
       "The Unavoidable Truth: Desperate individuals in total isolation often make horrific, irreversible choices.\n\nThe Unavoidable Lie: Simple awareness campaigns alone prevent deep-seated crises.",
       "Alethekanon:\nThis horrific crime reflects total personal collapse rather than institutional conspiracy, demanding strict accountability and profound structural empathy.",
       "Awwthekanon:\nMy heart aches for the helpless infant lost and the profound despair that drove a young mother to such a dark, irreversible extremity. May healing find this community.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Police Dept",
@@ -151,6 +213,7 @@
         "name": "Perry Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

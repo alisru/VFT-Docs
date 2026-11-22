@@ -5,22 +5,22 @@
     "subject": "Fauci’s role in top aide’s guilty plea to COVID-19 origins conspiracy",
     "link": "https://www.washingtonexaminer.com/policy/healthcare/4696539/anthony-fauci-role-david-morens-guilty-plea-covid-19/",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.9,
-    "real_psi": -0.9,
+    "claim_u": 0.5,
+    "claim_psi": 0.78,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Top aide's guilty plea revives intense scrutiny over COVID-19 origins transparency and high-level accountability.\nFauci’s role in top aide’s guilty plea to COVID-19 origins conspiracy\nEvidence: official denial, record destruction, ongoing congressional probe\n#Aletheia #COVID19 #USPol",
-      "Congressional investigators and critics argue that top health officials must be held accountable if they helped conceal government records regarding pandemic origins.\nStated Judgement: (+1.0, 0.0) — Good Preference 🌐",
-      "Ground reality reveals systematic record concealment, evasive congressional testimony, and protected grants that obscured high-stakes lab safety questions.\nResulting Judgement: (-0.9, -0.9) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception. Bureaucratic self-preservation overrides transparency, shielding leadership through document destruction.\nIntegrity: Severe Deception (Hypocrisy: 18.4, Uncertainty z: 2)",
+      "Congressional investigators and critics argue that top health officials must be held accountable if they helped conceal government records regarding pandemic origins.\nStated Judgement: (+0.50, +0.78) — Greater Good",
+      "Ground reality reveals systematic record concealment, evasive congressional testimony, and protected grants that obscured high-stakes lab safety questions.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 18.4, Uncertainty z: 2)",
       "Sub-Audits Breakdown:\n- Bureaucratic Cover-up: FAIL (-0.9, -0.9) — Systematic record destruction.\n- Congressional Scrutiny: PASS (1.0, 0.8) — Exposing hidden ties.",
       "David Morens's guilty plea for destroying federal records has reignited intense political battles over whether Anthony Fauci knew about efforts to shield EcoHealth Alliance.",
       "The Poison:\nWeaponizing institutional opacity to evade oversight erodes public trust in federal scientific integrity for generations.",
       "The Plane Error conflates administrative compliance (WHAT) with individual criminal culpability (WHO). It's a classic institutional shield protecting power.",
       "Social Physics Analysis:\nBy prioritizing institutional self-preservation over transparent disclosure, officials deployed secrecy as a shield against legitimate public accountability.",
-      "The Trajectory: The Path of Deception.\nThe structural gap between professed scientific objectivity and hidden bureaucratic maneuvering drives the system toward Greater Evil.",
+      "The Trajectory: The Path of Fall into Destruction.\nThe structural gap between professed scientific objectivity and hidden bureaucratic maneuvering drives the system toward Greater Evil.",
       "The Unavoidable Truth: Suppressing records inevitably invites severe legislative and public retaliation.\nThe Unavoidable Lie: Bureaucratic ignorance insulates leadership from accountability.",
       "Alethekanon:\nInstitutional power cannot permanently sanitize its record through deleted emails and guarded silence. Truth outlives administrative evasion.",
       "Awwthekanon:\nWhen public health institutions lose transparency, public trust shatters. Healing requires radical honesty and full accountability.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Bureaucratic Cover-up",
@@ -214,6 +276,7 @@
         "name": "U.S. Congress",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

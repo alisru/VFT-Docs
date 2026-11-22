@@ -14,13 +14,13 @@
       "Cameron Green earns an extended run after scoring his maiden home Test century.\n\nGreen's Century Breakthrough\nEvidence: maiden home ton, team loss, batting stability\n#Cricket #Aletheia",
       "Captain Pat Cummins confirmed Cameron Green will secure an extended run at number five after scoring a brilliant 104 against Bangladesh in Darwin.\nStated Judgement: (+0.80, +1.00) — Good Preference",
       "While Green's century proved a rare bright spot, Australia suffered a shock nine-wicket defeat due to collective top-order batting failures.\nResulting Judgement: (+0.77, +0.83) — Lesser Good",
-      "Verdict: PASS — The Path of Grace.\nIndividual excellence shines through team adversity, securing deserved stability for a talented young all-rounder.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Verdict: PASS — Small Fall from Grace.\nIndividual excellence shines through team adversity, securing deserved stability for a talented young all-rounder.\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "- Cameron Green: PASS (0.8, 0.5) — Delivers under immense pressure with a stellar ton.\n- Pat Cummins: PASS (0.7, 0.5) — Provides supportive leadership amidst team struggle.",
       "Cameron Green's 104 in the second innings broke an 11-innings dry spell, cementing his place in the Test squad as Australia prepares for the second Test in Mackay.",
       "The Bright Side:\nGreen rediscovered his natural rhythm, providing a blueprint for success in future Test matches.",
       "The Breakdown & Plane Error:\nConfusing the WHAT of individual statistical success with the WHO of collective team victory. Green excelled while the broader batting lineup collapsed.",
       "Social Physics Analysis:\nTransparent feedback and returning to foundational mechanics allowed Green to overcome external criticism and anchor his performance in proven technique.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between individual brilliance and collective team defeat, it plots a constructive trajectory toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between individual brilliance and collective team defeat, it plots a constructive trajectory toward Grace.",
       "The Unavoidable Truth: An exceptional individual performance can occur even when the wider team suffers an unexpected defeat.\n\nThe Unavoidable Lie: A single century instantly resolves all systemic flaws in a struggling batting lineup.",
       "Alethekanon:\nTrue skill reasserts itself when a player discards confusion and returns to fundamental principles. Excellence persists despite surrounding turmoil.",
       "Awwthekanon:\nIt is wonderful to see Cameron Green find his confidence again after weathering so much harsh criticism from fans and pundits alike.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.2
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.2
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Cameron Green Performance",
@@ -196,6 +258,7 @@
         "name": "Bangladesh Cricket Team",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "The Met puts a modern artist f...",
     "link": "https://www.npr.org/2026/10/10/nx-s1-5920376/lee-krasner-jackson-pollock-met",
     "target_url": "",
-    "claim_u": 0.88,
-    "claim_psi": 0.82,
-    "real_u": 0.85,
-    "real_psi": 0.78,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.97,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "The Met reframes Abstract Expressionism by placing Lee Krasner alongside Jackson Pollock as an equal titan.\nThe Met: Krasner & Pollock\nEvidence: Artistic parity, Historic recognition, Cultural truth\n#Aletheia #Art",
-      "NPR reports that The Metropolitan Museum of Art’s exhibition 'Past Continuous' centers Lee Krasner with 74 works alongside Jackson Pollock, reclaiming her rightful status beyond being his helpmate.\nStated Judgement: (+0.88, +0.82) — Greater Good",
-      "Curatorial records and historical evidence demonstrate Krasner was a relentless innovator who recycled discards into masterpieces and astutely guided the modern art market, proving autonomous genius.\nResulting Judgement: (+0.85, +0.78) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Rigorous curation and historical truth restore an overlooked master's autonomy on her own terms.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.08, z: 0)",
+      "NPR reports that The Metropolitan Museum of Art’s exhibition 'Past Continuous' centers Lee Krasner with 74 works alongside Jackson Pollock, reclaiming her rightful status beyond being his helpmate.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Curatorial records and historical evidence demonstrate Krasner was a relentless innovator who recycled discards into masterpieces and astutely guided the modern art market, proving autonomous genius.\nResulting Judgement: (+0.97, +1.00) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.08, z: 0)",
       "- The Met: PASS (+0.88, +0.82) — Rectifies historical omission.\n- NPR Reporting: PASS (+0.85, +0.78) — Balanced, nuanced arts journalism.\n- Lee Krasner Legacy: PASS (+0.92, +0.85) — Autonomous mastery.",
       "The Metropolitan Museum of Art opened 'Past Continuous,' featuring over 120 works by married painters Lee Krasner and Jackson Pollock, re-evaluating Krasner's vital role in Abstract Expressionism.",
       "The Poison:\nMarket capitalism and institutional prestige long required a male icon to sell art, forcing Krasner to spend decades navigating gender bias before gaining full parity in top institutions.",
       "The Breakdown & Plane Error:\nTraditional art history committed a Metaphysical error (WHO creates vs WHO is marketed) by subsuming Krasner under Pollock's myth. This exhibition aligns physical evidence with narrative truth.",
       "Social Physics Analysis:\nThis curation follows a Smart Altruistic path: transparently exploring mutual artistic influence without erasing individual identity. It replaces patriarchal mythmaking with open creative scholarship.",
-      "The Trajectory: The Path of Grace.\nWhen institutional curation aligns narrative claims with archival reality, it moves toward lasting cultural empowerment, establishing a stable equilibrium of historical justice.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen institutional curation aligns narrative claims with archival reality, it moves toward lasting cultural empowerment, establishing a stable equilibrium of historical justice.",
       "The Unavoidable Truth: Krasner was an essential pioneer of modern art whose mastery stood entirely on its own merits.\n\nThe Unavoidable Lie: Pollock succeeded in creative isolation without her mutual inspiration.",
       "Alethekanon:\nInstitutional archives finally reflect creative reality. By showing Krasner’s deliberate reinventions rather than a supportive footnote, the exhibit dissolves decades of synthetic hero-worship.",
       "Awwthekanon:\nSeeing Krasner get her flowers brings genuine joy. Working tirelessly in the background while believing in your art takes immense courage, and seeing her shine today is deeply inspiring.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.3,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.7,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.3,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.1
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.05,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.05,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "The Met Curatorial Framing",
@@ -304,6 +366,7 @@
     "tags": [
       "Aletheia",
       "Art"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

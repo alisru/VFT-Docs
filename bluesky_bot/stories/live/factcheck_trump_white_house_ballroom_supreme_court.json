@@ -37,7 +37,7 @@
     "macro_claim_psi": null,
     "macro_real_u": null,
     "macro_real_psi": null,
-    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "status": "QUARANTINED (Flagged for Re-Audit)",
     "claim_rnet": 1.2,
     "real_rnet": 4.5,
     "claim_z": 1,
@@ -277,6 +277,8 @@
         "name": "Supreme Court of the United States",
         "role": "regulator"
       }
-    ]
+    ],
+    "exclude_from_analytics": true,
+    "quarantine_reason": "Severe partisan collapse (Delta-u = -1.4) from breitbart.com without wire counter-grounding"
   }
 ]

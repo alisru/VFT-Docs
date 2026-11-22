@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "The revolving door of combative comms meets reality as Karoline Leavitt steps down, leaving big shoes to fill in Trump's press shop.\n\nWhy Trump may struggle to find another Karoline Leavitt\nEvidence: media strategy, staff turnover, political theater #Aletheia #USPolitics",
-      "Karoline Leavitt's tenure as White House press secretary is examined, highlighting her aggressive media strategy and strong praise from Donald Trump as the youngest in history.\nStated Judgement: (+0.71, +0.85) — Good Preference",
-      "Behind the viral press briefings lies a combative media strategy designed to weaponize information rather than inform, creating high turnover and constant friction.\nResulting Judgement: (-0.90, -0.81) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA combative communications style frames partisan friction as effective governance, masking institutional erosion.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.3, z: 2)",
+      "Karoline Leavitt's tenure as White House press secretary is examined, highlighting her aggressive media strategy and strong praise from Donald Trump as the youngest in history.\nStated Judgement: (+0.71, +0.85) — Greater Good",
+      "Behind the viral press briefings lies a combative media strategy designed to weaponize information rather than inform, creating high turnover and constant friction.\nResulting Judgement: (-0.90, -0.81) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA combative communications style frames partisan friction as effective governance, masking institutional erosion.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.3, z: 2)",
       "Sub-Audits Breakdown:\n- Karoline Leavitt: PASS (+0.5, +0.4) — Executed aggressive comms strategy effectively according to administration goals.\n- Media Access Policy: FAIL (-0.8, -0.9) — Restructuring press access increased polarization and reduced transparency.",
       "Karoline Leavitt is officially stepping down from her role as White House press secretary. CBC's 'About That' explores how her combative approach reshaped White House media access and earned praise from Donald Trump.",
       "The Poison:\nFraming hostility toward the press as a badge of competence normalizes antagonism as standard political communication.",
       "The Breakdown & Plane Error:\nThe analysis confuses media combativeness (WHAT) with effective public communication (WHO/HOW). It treats conflict as a measure of success.",
       "Social Physics Analysis:\nBy treating the press corps as an adversarial enemy rather than an institution for public accountability, the administration leverages confrontation to rally supporters, prioritizing loyalty over open dialogue.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The systemic friction of constant conflict undermines long-term trust.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The systemic friction of constant conflict undermines long-term trust.",
       "The Unavoidable Truth: Aggressive media management successfully dominates the news cycle for its target audience.\n\nThe Unavoidable Lie: Combative press tactics represent transparent governance rather than tactical political theater.",
       "Alethekanon:\nWhen press strategy is measured solely by how effectively it fights reporters, communication degrades into pure spectacle. A press secretary's true metric is clarity, not casualties.",
       "Awwthekanon:\nIt's exhausting watching information turn into a battlefield. When every press briefing becomes a test of who can shout the loudest, genuine understanding gets lost in the noise.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.0,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.65,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.15,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Karoline Leavitt",
@@ -267,6 +329,7 @@
         "name": "White House",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Former UK Prime Minister Tony Blair Warns Europe on War Without US Support",
     "link": "https://www.foxnews.com/media/former-uk-prime-minister-tony-blair-warns-europe-dont-win-war-without-us-support",
     "target_url": "",
-    "claim_u": 0.5,
-    "claim_psi": 0.0,
-    "real_u": -0.2,
-    "real_psi": -0.4,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.38,
+    "real_psi": -0.68,
     "mode": "root",
     "posts": [
       "Tony Blair warns Europe cannot win against Russia without U.S. backing.\nEvidence: Blair warning, US-UK alliance, Putin threat debate\n#Aletheia #Geopolitics",
-      "European defense relies entirely on sustaining strong alliances with Washington to deter adversaries.\nStated Judgement: (+0.5, 0.0) — Conditional Good",
-      "Warning serves to reinforce Atlanticist security dependencies while papering over internal European defense capability gaps.\nResulting Judgement: (-0.2, -0.4) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nBlair's security realism masks institutional failure to build autonomous European deterrence.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "European defense relies entirely on sustaining strong alliances with Washington to deter adversaries.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Warning serves to reinforce Atlanticist security dependencies while papering over internal European defense capability gaps.\nResulting Judgement: (-0.38, -0.68) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nBlair's security realism masks institutional failure to build autonomous European deterrence.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "Sub-Audits Breakdown:\n- Blair Security Warning: COND (-0.2, -0.4) — Pragmatic realism masking dependency.\n- Transatlantic Alliance: PASS (+0.5, +0.2) — Essential deterrent baseline.",
       "Former UK PM Tony Blair warned European nations that they cannot prevail in a military conflict against Russia without American support, urging leaders to preserve close ties with Donald Trump.",
       "The Poison:\nPerpetuates permanent European strategic dependency on American political cycles rather than fostering true defense sovereignty.",
       "The Breakdown & Plane Error:\nConfuses tactical necessity (WHAT alliance to use) with strategic failure (WHO bears ultimate responsibility for continental defense).",
       "Social Physics Analysis:\nBlair operates via a smart pragmatic loop, highlighting real geopolitical vulnerabilities to urge alignment, yet reinforcing systemic dependency rather than genuine empowerment.",
-      "The Trajectory: The Path of Deception.\nWhen you map stated alliance ideals against permanent strategic dependency, it plots a trajectory toward Lesser Evil through chronic external reliance.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map stated alliance ideals against permanent strategic dependency, it plots a trajectory toward Lesser Evil through chronic external reliance.",
       "The Unavoidable Truth: Europe lacks unified military deterrence independent of Washington.\n\nThe Unavoidable Lie: Relying on foreign superpower patronage equals true sovereign defense.",
       "Alethekanon:\nPragmatic security warnings often preserve the very dependencies that make nations vulnerable to external political volatility.",
       "Awwthekanon:\nIt is scary to face major security threats, but leaning entirely on others prevents us from finding our own inner strength.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.2,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Blair Security Warning",
@@ -221,6 +283,7 @@
         "name": "NATO",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

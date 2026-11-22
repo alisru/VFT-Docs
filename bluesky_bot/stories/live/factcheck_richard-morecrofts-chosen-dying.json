@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.9,
-    "real_psi": 0.8,
+    "real_u": 0.95,
+    "real_psi": 0.9,
     "mode": "root",
     "posts": [
       "Veteran broadcaster Richard Morecroft's peaceful passing at 70 sparks public discussions on Australia's voluntary assisted dying framework.\nEvidence: NSW VAD Act 2022, terminal diagnosis, peaceful family farewell\n#Aletheia #Australia #VAD",
-      "Public confusion arose regarding the legality of Richard Morecroft choosing voluntary assisted dying after his terminal cancer diagnosis.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Morecroft utilized legally established Voluntary Assisted Dying provisions in NSW, passing peacefully alongside his partner of 36 years.\nResulting Judgement: (+0.9, +0.8) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nA beloved broadcaster's final chapter aligns transparently with legal medical frameworks and profound personal dignity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Public confusion arose regarding the legality of Richard Morecroft choosing voluntary assisted dying after his terminal cancer diagnosis.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Morecroft utilized legally established Voluntary Assisted Dying provisions in NSW, passing peacefully alongside his partner of 36 years.\nResulting Judgement: (+0.95, +0.90) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nA beloved broadcaster's final chapter aligns transparently with legal medical frameworks and profound personal dignity.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Media Framing: PASS (0.9, 0.8) — Accurately clarifies VAD legality.\n- Family Tribute: PASS (1.0, 1.0) — Honors a dignified, peaceful farewell.",
       "Richard Morecroft, former ABC news anchor and host of SBS's Letters and Numbers, chose voluntary assisted dying in NSW after an early-year cancer diagnosis.",
       "The Bright Side:\nBrings compassionate public awareness to legal end-of-life choices and emotional dignity.",
       "The Breakdown & Plane Error:\nConfusing personal grief and end-of-life autonomy (WHO) with legal illegality (WHAT).",
       "Social Physics Analysis:\nActors operated via transparent alignment rather than deception. Morecroft's choice exemplified personal empowerment and legal integrity within a compassionate framework.",
-      "The Trajectory: The Path of Grace.\nWhen personal autonomy meets established legal compassion, it plots a direct trajectory toward Greater Good. Δ(p·t + n) > 0 via humane choices.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen personal autonomy meets established legal compassion, it plots a direct trajectory toward Greater Good. Δ(p·t + n) > 0 via humane choices.",
       "The Unavoidable Truth: Voluntary assisted dying provides legal dignity for the terminally ill in NSW.\n\nThe Unavoidable Lie: Personal end-of-life choices imply legal ambiguity or wrongdoing.",
       "Alethekanon:\nTransparent reporting on voluntary assisted dying respects personal autonomy and legal reality.",
       "Awwthekanon:\nMay Richard's gentle legacy and quiet courage bring deep comfort to all who loved him.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Media Framing",
@@ -163,6 +225,7 @@
         "name": "New South Wales Government",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

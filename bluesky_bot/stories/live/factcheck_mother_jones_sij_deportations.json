@@ -14,13 +14,13 @@
       "Young immigrants fleeing abuse face deportation nightmares despite holding valid legal protection statuses.\n\nA young immigrant's deportation nightmare\nEvidence: legal protection, administrative betrayal, systematic detention\n#Immigration #HumanRights",
       "The government claims immigration enforcement respects established legal pathways and safeguards for vulnerable youth with special immigrant juvenile status.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "In reality, immigration officers systematically bypass court protections, detaining and deporting vulnerable young adults trapped in bureaucratic backlogs.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. DHS officers actively circumvent court blocks to target vulnerable youth, turning statutory safe harbor into a deportation trap.\n\nIntegrity: Severe Deception (Hypocrisy: 25.0, Uncertainty z: 3)",
+      "Verdict: FAIL — Fall into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 25.0, Uncertainty z: 3)",
       "Sub-Audits Breakdown:\n- ICE Enforcement Actions: FAIL (-1.6, -1.7) — Officers bypass court orders to detain and deport SIJ-status youth individually.\n- DHS Policy Compliance: FAIL (-1.4, -1.5) — Agency dismantles statutory protections through administrative subversion.",
       "Thousands of youth granted Special Immigrant Juvenile status for enduring abuse or neglect face arbitrary detention and deportation while awaiting visa cap backlogs.",
       "The Poison:\nStatutory promises of safety become empty traps as immigration agencies exploit administrative backlogs to remove vulnerable youth.",
       "The Breakdown & Plane Error:\nConfusing WHAT (statutory protection) with WHO (vulnerable abused children). A severe bait-and-switch where promised refuge becomes active deportation enforcement.",
       "Social Physics Analysis:\nBy weaponizing bureaucratic delays against vulnerable youth, authorities project systemic failure onto victims. Genuine protection requires upholding legal promises and fair due process.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Severe negative force (-1.55) collapses humanitarian norms.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Severe negative force (-1.55) collapses humanitarian norms.",
       "The Unavoidable Truth: Statutory safe harbors for abused youth are being systematically undermined by ICE.\n\nThe Unavoidable Lie: Deported youth are treated in accordance with established humanitarian laws.",
       "Alethekanon:\nCongress created Special Immigrant Juvenile status in 1990 to protect abused kids. Hunting them down on technicalities while courts block policy rollbacks is institutional cruelty. 🌐",
       "Awwthekanon:\nImagine fleeing horrific abuse, following every legal rule for years, only to be thrown onto a plane to a country you’ve never seen. It is a heartbreaking betrayal of trust.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 2.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 1.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.9,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "ICE Enforcement Actions on SIJ Youth",
@@ -269,6 +331,7 @@
         "name": "Molly Huffaker",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "U.S. designates Ecuador's Los Tiguerones as a terrorist group, targeting cartel networks and corrupt officials.\nEvidence: State Dept action, $45M aid, sanctions\n#Aletheia #Geopolitics",
-      "The U.S. government is aggressively shutting down violent narcoterrorist networks and targeting corrupt state officials in Ecuador.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "While cracking down on violent gangs disrupts cartels, it also expands regional security intervention and economic leverage.\nResulting Judgement: (-0.4, -0.3) — Lesser Evil",
-      "Verdict: CONDITIONAL — The Path of Redemption.\nTargeted security measures help dismantle violent cartels, but external interventions carry geopolitical strings.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "The U.S. government is aggressively shutting down violent narcoterrorist networks and targeting corrupt state officials in Ecuador.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "While cracking down on violent gangs disrupts cartels, it also expands regional security intervention and economic leverage.\nResulting Judgement: (-0.40, -0.30) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nTargeted security measures help dismantle violent cartels, but external interventions carry geopolitical strings.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- U.S. State Department: CONDITIONAL (-0.3, -0.2) — Direct counter-narcotics action.\n- Ecuadorian Government: CONDITIONAL (-0.5, -0.4) — Seeking external security aid.",
       "Secretary of State Marco Rubio announced the terrorist designation for Los Tiguerones during a visit to Quito, alongside new anti-corruption sanctions and aid.",
       "The Poison:\nExternal security interventions risk deepening foreign leverage over domestic sovereign governance.",
       "The Breakdown & Plane Error:\nConfusing tactical law enforcement gains (WHAT) with long-term systemic stability (WHO).",
       "Social Physics Analysis:\nActors use justified security threats to expand state power and regional influence. While targeting violent cartels solves an acute public safety crisis, it operates through top-down geopolitical leverage rather than true local empowerment.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated humanitarian security and actual geopolitical control, it plots a moderate trajectory toward lesser structural friction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated humanitarian security and actual geopolitical control, it plots a moderate trajectory toward lesser structural friction.",
       "The Unavoidable Truth: Violent gangs trafficking drugs pose a severe threat to civilian safety and democratic stability.\n\nThe Unavoidable Lie: Foreign terrorist designations and aid packages completely resolve deep-seated domestic corruption.",
       "Alethekanon:\nTargeting violent cartels is operationally necessary, but weaponizing sanctions substitutes sovereign reform with external control.",
       "Awwthekanon:\nIt is heartbreaking to see ordinary communities terrorized by ruthless cartels, and while security help is vital, true peace must grow from within Ecuador's own empowered society.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "U.S. State Department",
@@ -156,6 +218,7 @@
         "name": "Los Tiguerones",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

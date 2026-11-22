@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "The search for a new voice in the White House reveals more about midterm strategy than public service. Who could replace Karoline Leavitt as White House press secretary? | CNN Politics\nEvidence: Personnel change, Midterm asset, Strategic speculation\n#USPol #CNN",
-      "The claim frames the search for a successor as a necessary administrative transition to maintain the president's communication operation before the midterms. Stated Judgement: (+0.67, +1.00) — Good Preference",
-      "Reality reveals the role is being treated as a 'deployable asset' for political gain, prioritizing campaign optics over institutional stability. Resulting Judgement: (-0.17, +0.50) — Lesser Evil",
-      "Verdict: PASS — The Path of Revelation. The transition is a standard political staffing cycle, though framed through the lens of campaign utility rather than governance. Integrity: Conditionally Sound (Hypocrisy: 0.4, Uncertainty z: 0)",
+      "The claim frames the search for a successor as a necessary administrative transition to maintain the president's communication operation before the midterms. Stated Judgement: (+0.67, +1.00) — Greater Good",
+      "Reality reveals the role is being treated as a 'deployable asset' for political gain, prioritizing campaign optics over institutional stability. Resulting Judgement: (-0.17, +0.50) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.",
       "Sub-Audits Breakdown:\n- Karoline Leavitt: PASS (0.2, 0.1) — Her departure is a personal choice framed as a professional transition.\n- Trump Campaign Strategy: COND (-0.4, 0.7) — The framing of staff as 'assets' prioritizes political utility over public service.",
       "The White House press secretary role is a high-profile position responsible for communicating the administration's agenda. With Leavitt departing, the administration faces a vacuum in its public-facing communications strategy during a critical election period.",
       "The Bright Side:\nTransparency regarding the political nature of the role allows the public to understand that these positions are inherently tied to the administration's electoral goals.",
       "The Breakdown & Plane Error:\nThis is a WHAT vs WHO error; the article focuses on the 'who' of the replacement while ignoring the 'what' of the underlying political strategy.",
       "Social Physics Analysis:\nBy treating staff as deployable assets, the campaign maintains a high-strain, high-control environment. This approach prioritizes immediate electoral impact over long-term institutional stability.",
-      "The Trajectory: The Path of Revelation.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The political utility of the role outweighs the administrative function.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The political utility of the role outweighs the administrative function.",
       "The Unavoidable Truth: The role is a political tool.\n\nThe Unavoidable Lie: The role is purely administrative.",
       "Alethekanon:\nPersonnel shifts are the heartbeat of political cycles. When a spokesperson becomes an 'asset,' the institution is already subsumed by the campaign.",
       "Awwthekanon:\nIt is understandable that a young family needs time, and we should respect that transition while observing the political machinery around it.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.1,
+        "O": 0.4,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.05,
+        "O": 0.05,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.6,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.4,
+        "O": 0.1,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Karoline Leavitt Departure",
@@ -282,6 +344,7 @@
         "name": "Lara Trump",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

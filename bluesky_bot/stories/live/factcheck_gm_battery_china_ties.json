@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.54,
-    "real_psi": -0.5,
+    "real_u": -0.45,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "GM promises a domestic battery supply chain by 2029 while the Trump administration attacks Ford's Chinese partnerships. But what is the current reality behind the green nationalism?\nEvidence: Domestic battery plans, Undisclosed Chinese imports, Political posturing",
-      "GM claims it is developing a fully domestic sodium-ion battery supply chain to leapfrog Chinese dominance and secure US energy independence.\nStated Judgement: (+1.0, 1.0) — Greater Good",
-      "While GM hypes a 2029 target, it continues to use undisclosed amounts of Chinese materials. Meanwhile, the DOT uses Ford's licensed tech as a political target, ignoring Ford's massive US manufacturing footprint.\nResulting Judgement: (-0.54, -0.50) — Lesser Evil",
-      "Verdict: COND — The Path of Deception. GM uses long-term domestic promises to secure political favor today while quietly relying on Chinese supply chains.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "GM claims it is developing a fully domestic sodium-ion battery supply chain to leapfrog Chinese dominance and secure US energy independence.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While GM hypes a 2029 target, it continues to use undisclosed amounts of Chinese materials. Meanwhile, the DOT uses Ford's licensed tech as a political target, ignoring Ford's massive US manufacturing footprint.\nResulting Judgement: (-0.45, -0.45) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- GM Domestic Claim: COND (-0.20, -0.30) — 2029 target hides current reliance.\n- DOT Attack on Ford: FAIL (-0.70, -0.60) — Political theater ignoring US jobs.",
       "General Motors is partnering with Peak Energy to develop sodium-ion batteries by 2029, amid escalating political pressure from the Trump administration on automakers over Chinese supply chain ties.",
       "The Bright Side:\nSodium-ion technology is genuinely promising, utilizing abundant domestic materials like soda ash instead of scarce lithium, which could eventually lead to true supply chain independence.",
       "The Breakdown & Plane Error:\nThe error is logical (HOW). The causal chain of \"domestic independence\" is broken by the multi-year gap where GM continues to rely on Chinese imports while using future promises to dodge current political scrutiny.",
       "Social Physics Analysis:\nGM executes a Smart Selfish Maneuver. By projecting a future of domestic purity, they escape the political attacks currently hitting Ford. The DOT manufactures a crisis around Ford's licensed tech to score nationalistic points, ignoring real-world manufacturing.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The delta between 2029 promises and 2026 reality reveals a calculated political shield.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. The delta between 2029 promises and 2026 reality reveals a calculated political shield.",
       "The Unavoidable Truth: True battery independence is still years away, and every major automaker currently relies on Chinese materials.\n\nThe Unavoidable Lie: The claim that licensing foreign technology is inherently unpatriotic or harms American workers.",
       "Alethekanon:\nGM's domestic battery pivot is a classic temporal displacement maneuver. By promising self-reliance in 2029, they secure political immunity today while continuing to import Chinese materials under the cover of nationalistic rhetoric.",
       "Awwthekanon:\nIt's tough seeing companies caught in political crossfire. Ford employs so many local workers, yet they're being scolded for trying to make affordable EVs. We need cooperation, not division, to build a cleaner future for everyone.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "GM Domestic Battery Claim",
@@ -162,6 +224,7 @@
         "name": "CATL",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

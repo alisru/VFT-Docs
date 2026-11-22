@@ -5,22 +5,22 @@
     "subject": "Whatever Happened to the U.S. Campaign to Ban Child Marriage?",
     "link": "https://www.npr.org/2026/09/04/g-s1-141468/child-marriage-united-states-india-global",
     "target_url": "",
-    "claim_u": 1.0,
-    "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.3,
+    "claim_u": 0.0,
+    "claim_psi": 0.0,
+    "real_u": 0.05,
+    "real_psi": 0.0,
     "mode": "root",
     "posts": [
       "Despite renewed federal legislation and global advocacy, thousands of minors remain legally vulnerable to child marriage across dozens of U.S. states.\nEvidence: 315,000 minors married, 33 states allow it, new federal bill proposed\n#Aletheia #HumanRights",
-      "Lawmakers present the Child Marriage Prevention Act as a decisive moral stand to eradicate a predatory practice across all 50 states.\nStated Judgement: (+1.0, 0.5) — Good Preference",
-      "Deep-rooted legislative resistance and state-level loopholes allow hundreds of thousands of child marriages to persist under archaic legal exceptions.\nResulting Judgement: (-0.4, -0.3) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nMoral rhetoric collides with institutional inertia, leaving legal loopholes for predators intact.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 2)",
+      "Lawmakers present the Child Marriage Prevention Act as a decisive moral stand to eradicate a predatory practice across all 50 states.\nStated Judgement: (+0.00, +0.00) — Greater Evil",
+      "Deep-rooted legislative resistance and state-level loopholes allow hundreds of thousands of child marriages to persist under archaic legal exceptions.\nResulting Judgement: (+0.05, +0.00) — Lesser Good",
+      "Verdict: PASS — Reckoning into Redemption.\nMoral rhetoric collides with institutional inertia, leaving legal loopholes for predators intact.\n\nIntegrity: Partially Distorted (Hypocrisy: 2.1, z: 2)",
       "- U.S. Federal Push: PASS (0.8, 0.6) — Raises crucial awareness and legislative intent.\n- State Legislative Loopholes: FAIL (-0.7, -0.6) — Protects archaic marriage-age exemptions.",
       "A federal bill aims to establish an 18 minimum age for marriage nationwide, confronting data showing over 315,000 minors married between 2000 and 2021.",
       "The Bright Side:\nGrowing bipartisan advocacy and new UN awareness days are successfully dragging a hidden human rights violation into the open.",
       "The Breakdown & Plane Error:\nConfuses WHAT is legally prohibited with WHO bears the systemic vulnerability (WHAT vs WHO plane error).\n\nIt exposes the gap between symbolic bills and enforceable protection.",
       "Social Physics Analysis:\nSpecial interests and traditionalist pretexts maintain structural friction, projecting religious or cultural justifications while protecting exploitative loopholes.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between moral legislation and entrenched state loopholes, it plots a direct trajectory toward Lesser Evil. Systemic reform stalls against localized resistance.",
+      "The Trajectory: The Path of Reckoning into Redemption.\nWhen you map the gap between moral legislation and entrenched state loopholes, it plots a direct trajectory toward Lesser Evil. Systemic reform stalls against localized resistance.",
       "The Unavoidable Truth: Child marriage persists in the U.S. due to entrenched statutory exemptions.\n\nThe Unavoidable Lie: State laws already adequately protect minors from predatory unions.",
       "Alethekanon:\nWhen laws permit the legal union of minors to adults, state protection becomes a cruel fiction. Moral posturing at the federal level rings hollow while archaic exceptions shield predators.",
       "Awwthekanon:\nEvery child deserves a childhood free from premature adult burdens. Protecting the most vulnerable requires courage to close every single legal loophole.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partially Distorted",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "U.S. Federal Push",
@@ -163,6 +225,7 @@
         "name": "United Nations",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Reckoning into Redemption"
   }
 ]

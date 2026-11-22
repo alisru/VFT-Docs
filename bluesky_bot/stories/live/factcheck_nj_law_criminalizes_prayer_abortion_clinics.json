@@ -5,22 +5,22 @@
     "subject": "Pro-Life Advocates Warn New Jersey Law Could Criminalize Prayer Outside Abortion Clinics",
     "link": "https://www.breitbart.com/politics/2026/08/24/pro-life-advocates-warn-new-jersey-law-could-criminalize-prayer-outside-abortion-clinics/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.8,
-    "real_u": -0.7,
-    "real_psi": -0.8,
+    "claim_u": 0.64,
+    "claim_psi": 0.88,
+    "real_u": -0.04,
+    "real_psi": 0.27,
     "mode": "root",
     "posts": [
       "New Jersey signed a law criminalizing interference near abortion clinics, sparking fierce debate over free speech rights.\n\nPro-Life Advocates Warn NJ Law Could Criminalize Prayer\nEvidence: Protect care, chill free speech, subjective buffer zones #Aletheia #USPol",
-      "Gov. Mikie Sherill claimed the bill protects patients and healthcare providers from violence and intimidation while preserving personal healthcare choices.\nStated Judgement: (0.8, 0.8) — Greater Good",
-      "Pro-life advocates warn the law creates subjective buffer zones that criminalize peaceful prayer, sidewalk counseling, and filming within 100 feet.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nUsing patient protection as a pretext to criminalize peaceful prayer and sidewalk counseling violates fundamental free expression.\n\nIntegrity: Severe Deception (Hypocrisy: 14.8, Uncertainty z: 3)",
+      "Gov. Mikie Sherill claimed the bill protects patients and healthcare providers from violence and intimidation while preserving personal healthcare choices.\nStated Judgement: (+0.64, +0.88) — Greater Good",
+      "Pro-life advocates warn the law creates subjective buffer zones that criminalize peaceful prayer, sidewalk counseling, and filming within 100 feet.\nResulting Judgement: (-0.04, +0.27) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nUsing patient protection as a pretext to criminalize peaceful prayer and sidewalk counseling violates fundamental free expression.\n\nIntegrity: Severe Deception (Hypocrisy: 14.8, Uncertainty z: 3)",
       "- Governor Mikie Sherill: FAIL (-0.7, -0.8) — Criminalizes peaceful expression.\n- Pro-Life Advocates: PASS (0.8, 0.5) — Defends constitutional free speech.",
       "New Jersey Gov. Mikie Sherill signed legislation creating 100-foot buffer zones around clinics, penalizing violations with up to 18 months in prison.",
       "The Poison:\nWeaponizing vague standards like 'emotional harm' to criminalize peaceful religious expression creates a chilling effect on constitutional rights.",
       "The Breakdown & Plane Error:\nConfusing WHAT (preventing actual violence) with WHO (pro-life advocates engaged in peaceful prayer).\n\nIt is a legal bait-and-switch silencing speech.",
       "Social Physics Analysis:\nBy imposing punitive state authority to suppress opposing viewpoints, the law replaces dialogue with criminal penalties, escalating social friction instead of resolving it.",
-      "The Trajectory: The Path of Deception.\nThe gap between stated patient safety and actual free speech suppression plots a trajectory toward Deception.\nMathematical drift: S_LE > 0 pulls u < 0.",
+      "The Trajectory: The Path of Fall into Deception.\nThe gap between stated patient safety and actual free speech suppression plots a trajectory toward Deception.\nMathematical drift: S_LE > 0 pulls u < 0.",
       "The Unavoidable Truth: The law criminalizes peaceful expression near medical facilities.\n\nThe Unavoidable Lie: The measure solely targets violent intimidation without affecting prayer.",
       "Alethekanon:\nShielding healthcare access cannot justify criminalizing peaceful prayer or sidewalk counseling. Sweeping subjective buffer zones erode fundamental constitutional protections.",
       "Awwthekanon:\nTrue compassion honors both safety and freedom of conscience. When laws criminalize quiet prayer and peaceful witness, we lose the essential spirit of open dialogue.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.5,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.4,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.75,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "New Jersey Legislative Act (S2260)",
@@ -282,6 +344,7 @@
         "name": "New Jersey Right to Life",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "An investigation reveals plans to dismantle the nonpartisan guardrails that protected the 2020 election results.\n\nEvidence: secure elections, systemic takeover, partisan control\n#Aletheia #Democracy #USPol",
-      "The campaign claims its efforts are designed to secure election integrity and prevent future fraud by replacing officials who oversaw the 2020 vote.\nStated Judgement: (+1.00, +1.00) — Good Preference",
-      "The actual strategy involves systematically removing independent, nonpartisan election administrators to ensure future challenges face no institutional resistance.\nResulting Judgement: (-0.01, +0.20) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nThe effort uses the pretext of 'integrity' to dismantle the very guardrails that verified the accuracy of the 2020 election.\n\nIntegrity: Severe Deception (Hypocrisy: 14.3, Uncertainty z: 5)",
+      "The campaign claims its efforts are designed to secure election integrity and prevent future fraud by replacing officials who oversaw the 2020 vote.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The actual strategy involves systematically removing independent, nonpartisan election administrators to ensure future challenges face no institutional resistance.\nResulting Judgement: (-0.01, +0.20) — Greatest Lie",
+      "Verdict: CONDITIONAL — Fall into Deception.\nThe effort uses the pretext of 'integrity' to dismantle the very guardrails that verified the accuracy of the 2020 election.\n\nIntegrity: Severe Deception (Hypocrisy: 14.3, Uncertainty z: 5)",
       "Sub-Audits Breakdown:\n- Election Takeover Strategy: FAIL (-0.96, -0.91) — Systematically targets nonpartisan administrative barriers to enable unilateral control.\n- Institutional Guardrails: PASS (+1.0, +0.0) — Nonpartisan officials successfully verified the 2020 results despite intense pressure.",
       "ProPublica details how the institutional barriers that held during the 2020 election challenges—such as nonpartisan election specialists and DOJ officials—are being systematically targeted for replacement ahead of future contests.",
       "The Poison:\nEven if some efforts fail, the systematic erosion of trust in election administrators permanently weakens the stability of democratic transitions.",
       "The Breakdown & Plane Error:\nThe error is WHY vs WHO. The campaign frames the changes as a necessary response to administrative failures (WHY), but the actual goal is to install loyalists who will prioritize partisan outcomes (WHO).",
       "Social Physics Analysis:\nBy projecting fraud onto nonpartisan civil servants, the strategy creates a pretext for their removal. This replaces transparent, rule-based administration with unilateral loyalty, maximizing systemic strain.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systematic removal of guardrails leads directly to institutional collapse.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. The systematic removal of guardrails leads directly to institutional collapse.",
       "The Unavoidable Truth: Nonpartisan election officials are the primary defense against attempts to overturn legitimate democratic outcomes.\n\nThe Unavoidable Lie: The claim that election machinery was hacked or manipulated in 2020 remains entirely without evidence.",
       "Alethekanon:\nThe structural intent is clear. By targeting the specific nodes of the system that resisted pressure in 2020, the strategy seeks to eliminate the capacity for independent verification. This is a highly calculated optimization for control.",
       "Awwthekanon:\nIt is heartbreaking to see public servants who simply did their jobs with honesty and integrity being targeted and pushed out. We must support the quiet heroes who keep our communities stable and fair.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.75,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.6,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.7,
+        "O": 0.6,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.8,
+        "O": 0.75,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Election Takeover Strategy",
@@ -275,6 +337,7 @@
         "name": "FBI",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

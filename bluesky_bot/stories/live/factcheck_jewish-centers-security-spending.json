@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "real_u": -0.1,
+    "real_psi": -0.3,
     "mode": "root",
     "posts": [
       "Protecting communal spaces or cashing in on fear? Jewish centers topped $1B in security.\nEvidence: rising threats, massive spending, political funding\n#Aletheia #Community #Security",
-      "Stated claim: surging antisemitism forces Jewish institutions to invest over $1 billion in vital security measures to protect communities.\nStated Judgement: (+1.0, +0.5) — Good Preference",
-      "Actual reality: institutional hardening addresses real threats, yet sensationalized reporting capitalizes on fear rather than addressing root causes.\nResulting Judgement: (-0.4, -0.6) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nHardening communal spaces meets an immediate safety need, but systemic friction remains unresolved.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 1)",
+      "Stated claim: surging antisemitism forces Jewish institutions to invest over $1 billion in vital security measures to protect communities.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "Actual reality: institutional hardening addresses real threats, yet sensationalized reporting capitalizes on fear rather than addressing root causes.\nResulting Judgement: (-0.10, -0.30) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nHardening communal spaces meets an immediate safety need, but systemic friction remains unresolved.\nIntegrity: Conditionally Sound (Hypocrisy: 1.85, z: 1)",
       "Sub-Audits Breakdown:\n- JFNA Report: PASS (0.8, 0.4) — Accurate institutional tally.\n- Media Framing: COND (-0.5, -0.7) — Amplifies panic and division.",
       "Jewish institutions nationwide surpassed $1 billion in security spending for 2025 as leaders prepare for major holidays amidst rising hate crime reports.",
       "The Poison:\nPerpetuating a climate of perpetual siege without building bridges or fostering cross-community solidarity.",
       "The Breakdown & Plane Error:\nConfusing the physical symptom (vandalism/threats) with the metaphysical origin (societal polarization and extremist radicalization).",
       "Social Physics Analysis:\nInstitutions run a defensive loop, trading openness for fortresses. While necessary for immediate safety, it cedes ground to polarization, prioritizing containment over systemic peace.",
-      "The Trajectory: The Path of Redemption.\nWhen defensive hardening replaces dialogue, the system trends toward isolation and mutual distrust. Equation: Delta(p*t + n) < 0 due to fortress logic.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen defensive hardening replaces dialogue, the system trends toward isolation and mutual distrust. Equation: Delta(p*t + n) < 0 due to fortress logic.",
       "The Unavoidable Truth: Security spending protects lives during spikes in bigotry.\n\nThe Unavoidable Lie: Fortresses alone can cure the social disease of hatred.",
       "Alethekanon:\nDefensive hardening is a necessary shield, but treating symptoms without repairing the civic fabric leaves communities permanently isolated.",
       "Awwthekanon:\nIt breaks my heart that schools and synagogues need armed guards and steel doors just for children to pray and play in peace. Safety shouldn't require a fortress.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "JFNA Security Data",
@@ -157,6 +219,7 @@
         "name": "FBI",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

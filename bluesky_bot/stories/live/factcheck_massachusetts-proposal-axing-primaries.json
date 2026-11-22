@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Massachusetts voters face a ballot measure eliminating separate party primaries.\nEvidence: Top-two primary system, conservative scholarly warnings, comparative Alaska precedent.\n#Aletheia #Elections #USPol",
-      "Proposals like Massachusetts' top-two primary measure protect voter choice by letting all candidates compete together.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Top-two primaries reshape candidate incentives, potentially squeezing out ideological wings to favor moderate centrists.\nResulting Judgement: (-0.4, -0.3) — Lesser Evil",
-      "Verdict: COND — The Path of Redemption.\nElectoral system reforms alter factional access, sparking legitimate debate over partisan representation versus broad-voter moderation.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Proposals like Massachusetts' top-two primary measure protect voter choice by letting all candidates compete together.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Top-two primaries reshape candidate incentives, potentially squeezing out ideological wings to favor moderate centrists.\nResulting Judgement: (-0.40, -0.30) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nElectoral system reforms alter factional access, sparking legitimate debate over partisan representation versus broad-voter moderation.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "Sub-Audits Breakdown:\n- Electoral Reform: COND (-0.3, -0.2) — Alters primary access rules.\n- Partisan Analysis: COND (-0.5, -0.4) — Highlights ideological exclusion risks.",
       "Massachusetts voters are weighing a ballot question to replace separate party primaries with a single top-two primary system for state elections.",
       "The Bright Side:\nEncourages candidates to appeal beyond a narrow partisan base.",
       "The Breakdown & Plane Error:\nConfusing procedural voting mechanics (WHAT) with ideological suppression (WHO).",
       "Social Physics Analysis:\nAdvocates use procedural efficiency as a pretext to alter electoral dynamics, while critics project deliberate partisan exclusion rather than structural trade-offs.",
-      "The Trajectory: The Path of Redemption.\nWhen structural changes alter political access, it creates friction between factional purity and broader coalition building.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen structural changes alter political access, it creates friction between factional purity and broader coalition building.",
       "The Unavoidable Truth: Electoral rules heavily shape which factions survive the primary filter.\n\nThe Unavoidable Lie: Procedural reforms are always purely neutral administrative tweaks.",
       "Alethekanon:\nElectoral mechanics are never ideologically neutral. They always advantage certain coalitions over others.",
       "Awwthekanon:\nIt is completely understandable for voters on both sides to feel anxious when the rules of political voice shift beneath their feet.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Electoral Reform",
@@ -153,6 +215,7 @@
         "name": "John Eastman",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

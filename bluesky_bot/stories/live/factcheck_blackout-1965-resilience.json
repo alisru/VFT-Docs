@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.9,
+    "real_u": 0.95,
     "real_psi": 0.85,
     "mode": "root",
     "posts": [
       "Reflecting on the 1965 blackout, 800,000 riders trapped in NYC subways found strength in mutual aid rather than panic.\nEvidence: 30 million affected, 6 hours trapped, 5 looting reports\n#Aletheia #History",
-      "Decades later, survivor Lynn Lowin shares how strangers in a dark subway tunnel shared food, encouraged one another, and maintained calm.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Historical records confirm that despite widespread darkness affecting 30 million people, crime plummeted to record lows and communities united.\nResulting Judgement: (+0.9, +0.85) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nAuthentic human resilience in crisis demonstrates organic cooperation over panic.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Decades later, survivor Lynn Lowin shares how strangers in a dark subway tunnel shared food, encouraged one another, and maintained calm.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Historical records confirm that despite widespread darkness affecting 30 million people, crime plummeted to record lows and communities united.\nResulting Judgement: (+0.95, +0.85) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAuthentic human resilience in crisis demonstrates organic cooperation over panic.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Lynn Lowin Account: PASS (0.9, 0.8) — Genuine personal reflection.\n- Historical Record: PASS (1.0, 0.9) — Verified low crime and solidarity.",
       "In November 1965, a massive blackout plunged the Northeast into darkness for hours, leaving hundreds of thousands stranded underground in cramped subway cars.",
       "The Bright Side:\nAdversity stripped away urban isolation, proving that ordinary people naturally choose cooperation and empathy over panic when left to themselves.",
       "The Breakdown & Plane Error:\nConfusing mechanical grid failure (WHO/WHAT) with human character, the narrative rightly highlights that community strength resides in citizens.",
       "Social Physics Analysis:\nCitizens engaged in a Smart Altruistic Loop, sharing scarce resources and offering medical aid transparently without coercive central direction.",
-      "The Trajectory: The Path of Grace.\nWhen you map the alignment between human empathy and crisis response, it plots a direct trajectory toward Grace. Mutual aid naturally overcomes systemic vulnerability.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the alignment between human empathy and crisis response, it plots a direct trajectory toward Grace. Mutual aid naturally overcomes systemic vulnerability.",
       "The Unavoidable Truth: Human beings naturally pull together to support one another during unexpected crises.\n\nThe Unavoidable Lie: Complex urban infrastructure can never withstand unexpected blackouts without total social collapse.",
       "Alethekanon:\nTrue solidarity emerges not from institutional mandates, but from the quiet courage of neighbors sharing a single sandwich in the dark.",
       "Awwthekanon:\nIt is so touching to see how a terrifying moment underground turned into a beautiful tapestry of human kindness, reminding us that we are never truly strangers when we share our hearts.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Lynn Lowin Account",
@@ -156,6 +218,7 @@
         "name": "Good News Network",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

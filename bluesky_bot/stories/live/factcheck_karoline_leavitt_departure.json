@@ -14,13 +14,13 @@
       "Family priority meets political transition as Karoline Leavitt steps down from her demanding White House role to focus on her young children.\n\nTrump says White House press secretary Karoline Leavitt to leave post\nEvidence: family priority, staff rotation, external advisory role\n#Aletheia #USPol",
       "President Trump announced that White House Press Secretary Karoline Leavitt will step down at month's end to spend time with her young children, transitioning to an outside advisory role.\nStated Judgement: (+1.00, +1.00) — Good Preference",
       "Leavitt's departure balances intense public service demands with personal family needs after welcoming her second child, maintaining close alignment with Trump's political apparatus.\nResulting Judgement: (+1.00, +1.00) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nAligning high-pressure political schedules with personal family realities preserves human sustainability and structural integrity.\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nAligning high-pressure political schedules with personal family realities preserves human sustainability and structural integrity.\nIntegrity: Trustworthy (Hypocrisy: 1.15, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- Karoline Leavitt: PASS (+0.5, +0.3) — Prioritizing family health over relentless public service demands is an honest, self-aware pivot.\n- White House Press Office: PASS (+0.3, +0.1) — Transparent staff succession handling maintains operational stability without deception.",
       "White House Press Secretary Karoline Leavitt is stepping down after becoming the youngest person to hold the role. Having returned from maternity leave following the birth of her second child, she cited the immense demands of the job as incompatible with her goals as a mother.",
       "The Bright Side:\nStepping away to prioritize family health sets a powerful human standard in high-stakes political environments.",
       "The Breakdown & Plane Error:\nThis audit examines the WHO plane (individual career-family balance) rather than macro administrative policy. There is no bait-and-switch; stated personal motivations align with transparent career continuity.",
       "Social Physics Analysis:\nBy acknowledging personal limits rather than forcing unsustainable output, the transition avoided artificial conflict. Transparent communication between leadership and staff maintained shared trust and mutual empowerment.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the balance between personal well-being and institutional duties, it plots a direct trajectory toward Lesser Good. Honest acknowledgment of human capacity limits strain.",
+      "The Trajectory: The Path of Grace.\nWhen you map the balance between personal well-being and institutional duties, it plots a direct trajectory toward Lesser Good. Honest acknowledgment of human capacity limits strain.",
       "The Unavoidable Truth: High-demand public roles often conflict with sustainable family life.\n\nThe Unavoidable Lie: Staff transitions in politics are always entirely divorced from personal timing.",
       "Alethekanon:\nAn honest personal assessment under heavy public scrutiny. When the human cost of a role outweighs its function, stepping aside is both logical and morally sound.",
       "Awwthekanon:\nBalancing a demanding global stage with caring for a newborn and a toddler takes immense courage. Wishing her and her sweet family all the very best in this next chapter!",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.9,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.9,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.65,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.75,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.7,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.35,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.4,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.55,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Karoline Leavitt Family Priority",
@@ -267,6 +329,7 @@
         "name": "United States",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

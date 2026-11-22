@@ -5,22 +5,22 @@
     "subject": "Rachel deluges Southwest with rain, but battered coast catches a break",
     "link": "https://www.latimes.com/world-nation/story/2026-10-11/rachel-deluges-southwest-with-rain-but-battered-coast-catches-break",
     "target_url": "https://bsky.app/profile/latimes.com/post/3mxn6mct6bu22",
-    "claim_u": 0.42,
-    "claim_psi": 0.5,
-    "real_u": 0.34,
-    "real_psi": 0.47,
+    "claim_u": 0.68,
+    "claim_psi": 0.75,
+    "real_u": 0.47,
+    "real_psi": 0.57,
     "mode": "root",
     "posts": [
       "Coastal cities dodged catastrophe as Tropical Storm Rachel weakened inland, but eroded beaches expose deeper vulnerabilities.\nEvidence: Coastal Storm Reprieve, Localized Structural Damage, Adaptive Flood Defense\n#Aletheia #Rachel #CAwx",
-      "Official forecasts and media bulletins reported that Rachel's downgrade to a post-tropical cyclone spared Southern California widespread devastation despite desert deluges.\nStated Judgement: (+0.42, +0.50) — Good Preference",
-      "Emergency crews successfully built 12-foot sand berms in Newport Beach, but high surf destroyed boardwalks and undermined beachfront homes on Long Beach's Peninsula.\nResulting Judgement: (+0.34, +0.47) — Good Preference",
-      "Verdict: PASS — Stasis into Grace. Emergency mitigation prevented catastrophic inland and coastal failure, though structural exposure remains acute.\nIntegrity: Trustworthy (Hypocrisy: 1.12, z: 0)",
+      "Official forecasts and media bulletins reported that Rachel's downgrade to a post-tropical cyclone spared Southern California widespread devastation despite desert deluges.\nStated Judgement: (+0.68, +0.75) — Greater Good",
+      "Emergency crews successfully built 12-foot sand berms in Newport Beach, but high surf destroyed boardwalks and undermined beachfront homes on Long Beach's Peninsula.\nResulting Judgement: (+0.47, +0.57) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nIntegrity: Trustworthy (Hypocrisy: 1.12, z: 0)",
       "Sub-Audits Breakdown:\n- LA Times: PASS (+0.42, +0.48) — Balanced report tracking damage and relief.\n- Newport Beach Crews: PASS (+0.55, +0.62) — Proactive 12-foot berm defense held surf.\n- Long Beach Peninsula: COND (+0.12, +0.30) — Homes suffered foundation damage.",
       "Remnants of Tropical Storm Rachel brought heavy rains to Nevada and desert valleys while combining with high tides to batter Southern California beaches through midweek.",
       "The Poison:\nEmergency sand berms offer immediate relief, but temporary bulldozed barriers cannot solve systemic coastal erosion driven by rising sea levels and active El Niño cycles.",
       "The Breakdown & Plane Error:\nThe physical reality of wind downgrades does not eliminate the hydrological reality of long-period ocean swells undermining foundations. Confusing wind speed with flood safety leaves coastal homes at risk.",
       "Social Physics Analysis:\nMunicipal crews demonstrated proactive civic empowerment by operating heavy equipment through the night to protect residences. Yet long-term resilience requires transparent capital infrastructure over recurring stopgaps.",
-      "The Trajectory: The Path of Stasis into Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace, sustained by civic coordination against immediate environmental strain.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace, sustained by civic coordination against immediate environmental strain.",
       "The Unavoidable Truth: Quick municipal barrier construction prevented severe urban seawater flooding.\n\nThe Unavoidable Lie: A downgraded storm label means beachfront properties are out of danger.",
       "Alethekanon:\nMunicipal workers held the line with raw sand, but counting on mechanical berms against rising seas is borrowing against time. True infrastructure demands permanent engineering.",
       "Awwthekanon:\nWatching neighbors stand barefoot by their porches, relieved that the berms held, reminds us of the power of community care. Those overnight excavator operators saved so many families from heartbreak.",
@@ -91,8 +91,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.9,
+        "O": 0.1,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.1,
+        "O": 0.75,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.1,
+        "N": 0.2
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.45,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 0.85,
+        "O": 0.1,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.1,
+        "O": 0.65,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.65,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.75,
+        "O": 0.2,
+        "N": 0.2
+      },
+      "LE": {
+        "S": 0.3,
+        "O": 0.4,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 0.75,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.55,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Los Angeles Times Reporting",
@@ -312,6 +374,7 @@
       "Aletheia",
       "Rachel",
       "CAwx"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

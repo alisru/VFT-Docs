@@ -5,22 +5,22 @@
     "subject": "Letitia James: Postal Service and POTUS Don’t Have Jurisdiction Over Elections",
     "link": "https://www.breitbart.com/clips/2026/08/26/letitia-james-postal-service-and-potus-dont-have-jurisdiction-over-elections/",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": 0.4,
-    "real_psi": 0.2,
+    "claim_u": 0.15,
+    "claim_psi": 0.0,
+    "real_u": 0.05,
+    "real_psi": -0.15,
     "mode": "root",
     "posts": [
       "State officials challenge federal executive overreach into election administration rules.\nEvidence: federal election rule, multi-state lawsuit, state jurisdiction\n#Aletheia #USPol",
-      "State AGs argue the executive branch and postal service lack constitutional jurisdiction to dictate mail-in ballot rules.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Federal intervention forces states into legal defense against administrative centralization of mail-in voting rules.\nResulting Judgement: (+0.4, +0.2) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nState attorneys general successfully check federal executive overreach through lawful judicial resistance.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "State AGs argue the executive branch and postal service lack constitutional jurisdiction to dictate mail-in ballot rules.\nStated Judgement: (+0.15, +0.00) — Lesser Good",
+      "Federal intervention forces states into legal defense against administrative centralization of mail-in voting rules.\nResulting Judgement: (+0.05, -0.15) — Lesser Good",
+      "Verdict: PASS — Compromise.\nState attorneys general successfully check federal executive overreach through lawful judicial resistance.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Letitia James: PASS (0.7, 0.4) — Defends constitutional state election authority.\n- Federal Postal Directive: FAIL (-0.6, -0.7) — Unilateral centralization attempt.",
       "New York AG Letitia James and over two dozen states sued to block a Trump administration rule injecting the USPS into mail-in ballot approvals.",
       "The Bright Side:\nRobust multi-state judicial action successfully provides an immediate constitutional check against executive centralization.",
       "The Breakdown & Plane Error:\nConfusing administrative postal delivery mechanisms with constitutional election sovereignty.\n\nIt is a jurisdictional tug-of-war between federal administrative reach and state powers.",
       "Social Physics Analysis:\nBy mounting a transparent multi-state legal coalition, state leaders resisted unilateral federal overreach and defended established constitutional boundaries.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Judicial resistance restores institutional balance.",
+      "The Trajectory: The Path of Compromise.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Destruction. Judicial resistance restores institutional balance.",
       "The Unavoidable Truth: States retain constitutional authority over the administration of federal and local elections.\n\nThe Unavoidable Lie: Postal service administrative rules can legally override state voter eligibility standards.",
       "Alethekanon:\nConstitutional federalism requires maintaining clear jurisdictional boundaries between federal postal operations and state election governance.",
       "Awwthekanon:\nIt is reassuring to see states standing together to protect the integrity of the voting process for everyone.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "State AG Coalition",
@@ -157,6 +219,7 @@
         "name": "U.S. Postal Service",
         "role": "author"
       }
-    ]
+    ],
+    "path_name": "Compromise"
   }
 ]

@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.6,
     "claim_psi": 0.2,
-    "real_u": -0.3,
-    "real_psi": -0.4,
+    "real_u": 0.05,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "DOJ petitions SCOTUS to bypass lower court blocks on third-country deportations, escalating a high-stakes separation-of-powers showdown.\nEvidence: emergency stay requests, judicial injunctions, appellate friction\n#Aletheia #USPol",
-      "The administration argues that federal immigration enforcement is being unlawfully crippled by activist lower court injunctions that ignore high court precedent.\nStated Judgement: (+0.6, +0.2) — Good Preference",
-      "While lower court judges exercise legitimate review, the administration frames standard judicial friction as malicious sabotage to rally political support for executive authority.\nResulting Judgement: (-0.3, -0.4) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Institutional friction is reframed as treasonous sabotage to manufacture political outrage.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 2.8, z: 2)",
+      "The administration argues that federal immigration enforcement is being unlawfully crippled by activist lower court injunctions that ignore high court precedent.\nStated Judgement: (+0.60, +0.20) — Greater Good",
+      "While lower court judges exercise legitimate review, the administration frames standard judicial friction as malicious sabotage to rally political support for executive authority.\nResulting Judgement: (+0.05, -0.25) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 2.8, z: 2)",
       "Sub-Audits Breakdown:\n- The Federalist: FAIL (-0.4, -0.5) — Hyperbolic framing of routine legal disputes.\n- DOJ Legal Briefs: COND (+0.5, +0.0) — Legitimate stay requests wrapped in grievance.",
       "The Justice Department has returned to the Supreme Court for the third time to lift a Massachusetts judge's block on third-country deportations.",
       "The Poison:\nWeaponizing constitutional disputes into apocalyptic narratives erodes public trust in independent courts while exploiting real policy gridlock.",
       "The Breakdown & Plane Error:\nMistaking structural separation-of-powers tension (HOW) for a moral crusade of good versus evil (WHO), ignoring constitutional checks and balances.",
       "Social Physics Analysis:\nThe actors deploy a Smart Selfish maneuver, taking a genuine administrative hurdle and inflating it into an existential crisis of judicial sabotage to project blame and mobilize public fury.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through weaponized institutional conflict.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through weaponized institutional conflict.",
       "The Unavoidable Truth: Lower court judges and executive agencies are locked in a legitimate structural tug-of-war over deportation authority.\n\nThe Unavoidable Lie: The judiciary is engaged in treasonous sabotage rather than standard constitutional review.",
       "Alethekanon:\nPackaging constitutional disagreements as sabotage transforms legal friction into political theater, hiding institutional decay behind outrage.",
       "Awwthekanon:\nIt's heartbreaking to watch the complex machinery of justice reduced to a shouting match where nobody listens to the actual laws anymore.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "The Federalist",
@@ -164,6 +226,7 @@
         "name": "Trump Administration",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

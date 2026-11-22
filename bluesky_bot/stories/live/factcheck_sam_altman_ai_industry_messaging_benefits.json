@@ -5,22 +5,22 @@
     "subject": "Sam Altman says AI industry has ‘not done a good job’ explaining benefits",
     "link": "https://www.washingtonexaminer.com/policy/technology/4697791/sam-altman-ai-industry-not-done-good-job-explaining-benefit/",
     "target_url": "",
-    "claim_u": 0.84,
-    "claim_psi": 0.72,
-    "real_u": -0.74,
-    "real_psi": 0.68,
+    "claim_u": 0.74,
+    "claim_psi": 0.83,
+    "real_u": -0.26,
+    "real_psi": -0.38,
     "mode": "root",
     "posts": [
       "Sam Altman claims AI skepticism is just a messaging problem, glossing over massive real-world power demands.\n\nAltman AI Benefits Defense\nEvidence: public empowerment, grid strain, PR deflection\n#AI #TechPolicy",
-      "Altman argues the industry merely failed to articulate how AI grants autonomy and freedom, treating public hesitation as solvable through better explanation.\nStated Judgement: (+0.84, +0.72) — Greater Good",
-      "Public and regulatory backlash stems from physical realities: grid overload, higher ratepayer bills, and unaddressed economic displacement, not lack of marketing.\nResulting Judgement: (-0.74, +0.68) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception. Framing structural resource strains and job disruption as a mere public relations hurdle conceals actual externalized costs.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.6, z: 3)",
+      "Altman argues the industry merely failed to articulate how AI grants autonomy and freedom, treating public hesitation as solvable through better explanation.\nStated Judgement: (+0.74, +0.83) — Greater Good",
+      "Public and regulatory backlash stems from physical realities: grid overload, higher ratepayer bills, and unaddressed economic displacement, not lack of marketing.\nResulting Judgement: (-0.26, -0.38) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Meaningful Distortion (Hypocrisy: 8.6, z: 3)",
       "- Sam Altman / OpenAI: FAIL (-0.76, +0.72) — Reframes grid strain as PR gap.\n- State Regulators: PASS (+0.68, +0.55) — Pausing data centers to audit grids.",
       "Governors in PA and TX are imposing restrictions and audits on data center growth as voters push back against surging electricity demand and potential job loss.",
       "The Bright Side:\nAltman rightly acknowledges that public skepticism of sudden technological disruption is a healthy, stabilizing social instinct.",
       "The Breakdown & Plane Error:\nThe plane error is Lyrical vs Physical. Industry leadership treats physical energy constraints and workforce disruption as narrative misunderstandings.",
       "Social Physics Analysis:\nBy labeling community opposition as a failure of explanation, tech leaders shift focus from infrastructure strain to consumer perception, preserving capital velocity without absorbing social costs.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between lofty promises of freedom and unmitigated resource extraction, it plots a direct trajectory toward Lesser Evil through narrative deflection.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between lofty promises of freedom and unmitigated resource extraction, it plots a direct trajectory toward Lesser Evil through narrative deflection.",
       "The Unavoidable Truth: Massive data centers impose concrete energy and financial strains on local utility grids.\n\nThe Unavoidable Lie: The only reason communities resist AI infrastructure is poor public communication.",
       "Alethekanon:\nTreating hard physical constraints like power grid stability as communications deficits is a classic corporate diversion tactic.",
       "Awwthekanon:\nPeople aren't afraid because they misunderstand; they worry because their electric bills and livelihoods face real disruption without their consent.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.05,
+        "N": 0.1
+      },
+      "GE": {
+        "S": 0.05,
+        "O": 0.95,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.15,
+        "N": 0.15
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.75,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 0.95,
+        "O": 0.05,
+        "N": 0.1
+      },
+      "BP": {
+        "S": 0.05,
+        "O": 0.9,
+        "N": 0.1
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.4,
+        "O": 0.8,
+        "N": 0.05
+      },
+      "GE": {
+        "S": 0.7,
+        "O": 0.45,
+        "N": 0.1
+      },
+      "LG": {
+        "S": 0.4,
+        "O": 0.6,
+        "N": 0.15
+      },
+      "LE": {
+        "S": 0.9,
+        "O": 0.35,
+        "N": 0.1
+      },
+      "GP": {
+        "S": 0.45,
+        "O": 0.7,
+        "N": 0.05
+      },
+      "BP": {
+        "S": 0.75,
+        "O": 0.4,
+        "N": 0.1
+      }
+    },
     "aspects": [
       {
         "name": "Sam Altman Narrative Framing",
@@ -280,6 +342,7 @@
         "name": "Greg Abbott",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -6,21 +6,21 @@
     "link": "https://www.washingtonexaminer.com/op-eds/4696952/election-integrity-laws-voting-security-reforms-stuffed-ballots-need-intervention/",
     "target_url": "",
     "claim_u": 0.8,
-    "claim_psi": 0.1,
-    "real_u": -0.75,
-    "real_psi": -0.7,
+    "claim_psi": 1.0,
+    "real_u": -1.0,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "Real local election fraud weaponized into sweeping cultural bigotry. When legitimate security concerns turn xenophobic.\n\nIt shouldn’t take more proof to...\nEvidence: Secure voting, Xenophobic generalizations, Rule of law\n#Aletheia #USPol #ElectionIntegrity",
-      "The claim argues that weak election laws and demographic shifts are causing a collapse in election integrity, pointing to ballot-stuffing cases in Hamtramck to claim that cheating is inherent to 'Islamic politics.'\nStated Judgement: (+0.80, +0.10) — Good Preference",
-      "In reality, while local officials in Hamtramck were indeed caught and prosecuted for absentee ballot fraud, the op-ed uses these specific crimes to launch sweeping, xenophobic attacks against Muslim communities.\nResulting Judgement: (-0.75, -0.70) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. The piece uses real, documented cases of local election fraud as a pretext to push sweeping, bigoted generalizations about immigrant and religious communities.\nIntegrity: Severe Deception (Hypocrisy: 15.50, z: 4)",
+      "The claim argues that weak election laws and demographic shifts are causing a collapse in election integrity, pointing to ballot-stuffing cases in Hamtramck to claim that cheating is inherent to 'Islamic politics.'\nStated Judgement: (+0.80, +1.00) — Greater Good",
+      "In reality, while local officials in Hamtramck were indeed caught and prosecuted for absentee ballot fraud, the op-ed uses these specific crimes to launch sweeping, xenophobic attacks against Muslim communities.\nResulting Judgement: (-1.00, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 15.50, z: 4)",
       "- Hamtramck Fraud: PASS (-0.80, -0.60) — Real crimes occurred and were prosecuted.\n- Washington Examiner: FAIL (-0.75, -0.70) — Weaponizes real fraud for xenophobic generalizations.",
       "In Hamtramck, Michigan, local councilmen were prosecuted for absentee ballot forgery in 2023, and another was filmed stuffing a drop box in 2025. The state AG is currently investigating five council members.",
       "The Bright Side:\nExisting laws and surveillance systems successfully detected, documented, and prosecuted the ballot-stuffing incidents, demonstrating that accountability mechanisms are actively working.",
       "The Breakdown & Plane Error:\nThe op-ed commits a WHO vs WHAT error. It takes the specific illegal actions of individual politicians (WHAT) and attributes them to the entire religious and demographic identity of a community (WHO) to stoke fear.",
       "Social Physics Analysis:\nBy using real criminal acts as a pretext, the author projects corrupt motives onto an entire demographic. This smart selfish loop hoards political power by dividing communities rather than proposing constructive, neutral security reforms.",
-      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated security goals and xenophobic rhetoric, it plots a direct trajectory toward Deception. Legitimate election security is co-opted to fuel cultural division.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated security goals and xenophobic rhetoric, it plots a direct trajectory toward Deception. Legitimate election security is co-opted to fuel cultural division.",
       "The Unavoidable Truth: Local politicians in Hamtramck committed serious, documented election fraud.\n\nThe Unavoidable Lie: Individual criminal acts prove that cheating is culturally inherent to all Muslim politicians.",
       "Alethekanon:\nWeaponizing real crimes to indict an entire religion is a classic propaganda technique. True election integrity requires objective, uniform enforcement of the law, not selective xenophobic panic.",
       "Awwthekanon:\nEvery community deserves honest leaders and secure votes. When individuals break that trust, they should be held accountable, but we must never let their actions poison our hearts against our neighbors.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Hamtramck Election Fraud Incidents",
@@ -293,6 +355,7 @@
         "name": "Hamtramck",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

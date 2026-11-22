@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.6,
-    "real_psi": 0.4,
+    "real_u": 0.75,
+    "real_psi": 0.55,
     "mode": "root",
     "posts": [
       "Historical remains of seven pioneers found near the North Dakota governor's residence.\nEvidence: Archaeological digs, 1870s cemetery records, OMB findings\n#Aletheia #History 🌐",
-      "Archaeologists unearthed seven coffins from an 1800s Bismarck cemetery during construction near the governor's home.\nStated Judgement: (+0.8, +0.5) — Constructive Transparency",
-      "Construction crews uncovered historical graves left behind after 1880s exhumations; state officials are handling reburial respectfully.\nResulting Judgement: (+0.6, +0.4) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nAn unexpected historical discovery managed with institutional care and transparency.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Archaeologists unearthed seven coffins from an 1800s Bismarck cemetery during construction near the governor's home.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Construction crews uncovered historical graves left behind after 1880s exhumations; state officials are handling reburial respectfully.\nResulting Judgement: (+0.75, +0.55) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAn unexpected historical discovery managed with institutional care and transparency.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- Archaeological Team: PASS (+0.8, +0.6) — Rigorous adherence to preservation protocols.\n- State Historical Society: PASS (+0.7, +0.5) — Transparent reporting of historical gaps.",
       "During property excavation in Bismarck, contractors unearthed 19th-century graves from an old community cemetery previously thought fully cleared in the 1880s.",
       "The Bright Side:\nHonoring forgotten pioneers through careful archaeological exhumation and proper reburial instead of destroying local heritage.",
       "The Breakdown & Plane Error:\nConfusing a standard historical revelation (WHERE/WHEN) with an intentional political cover-up (WHO/WHY).",
       "Social Physics Analysis:\nState officials and archaeologists operate on a smart altruistic loop, transparently investigating historical artifacts and engaging heritage experts to ensure respectful reburial.",
-      "The Trajectory: The Path of Redemption.\nGround-level actions match stated preservation goals, plotting a steady course toward systemic alignment.",
+      "The Trajectory: The Path of Small Fall from Grace.\nGround-level actions match stated preservation goals, plotting a steady course toward systemic alignment.",
       "The Unavoidable Truth: Forgotten nineteenth-century pioneers were successfully identified through modern archaeological investigation.\n\nThe Unavoidable Lie: Sensationalist framing implies a sinister modern concealment rather than historical record gaps.",
       "Alethekanon:\nSensational headlines cloak a routine historical excavation. Beneath the video packaging lies diligent archival stewardship.",
       "Awwthekanon:\nRest well, forgotten pioneers of Bismarck. May your final resting place be honored with the dignity and peace you earned in life.",
@@ -81,8 +81,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Archaeological Team",
@@ -162,6 +224,7 @@
     "tags": [
       "Aletheia",
       "History"
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

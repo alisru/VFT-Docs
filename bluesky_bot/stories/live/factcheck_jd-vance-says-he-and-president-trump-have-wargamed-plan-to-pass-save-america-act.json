@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.6,
+    "real_u": -0.35,
+    "real_psi": -0.55,
     "mode": "root",
     "posts": [
       "Wargaming Senate rules to pass election integrity laws reveals hardball party politics.\nEvidence: SAVE America Act, procedural rules, Senate resistance\n#Aletheia #USPol",
-      "Vance and Trump have wargamed a procedural strategy to bypass obstruction and pass the SAVE America Act to secure elections.\nStated Judgement: (+1.0, 0.5) — Good Preference",
-      "The strategy exposes deep intra-party fractures and reliance on procedural force rather than consensus building.\nResulting Judgement: (-0.4, -0.6) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nProcedural hardball exposes Republican Senate fractures while attempting to secure federal election rules.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.65, z: 2)",
+      "Vance and Trump have wargamed a procedural strategy to bypass obstruction and pass the SAVE America Act to secure elections.\nStated Judgement: (+1.00, +0.50) — Greater Good",
+      "The strategy exposes deep intra-party fractures and reliance on procedural force rather than consensus building.\nResulting Judgement: (-0.35, -0.55) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nProcedural hardball exposes Republican Senate fractures while attempting to secure federal election rules.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.65, z: 2)",
       "- JD Vance Strategy: COND (-0.4, -0.6) — Bypassing norms to force votes.\n- Senate Resistance: COND (-0.3, -0.5) — Intra-party opposition stalling legislation.",
       "Vice President JD Vance detailed plans on how the administration evaluated forcing parliamentary changes to pass voter ID laws despite moderate Republican resistance.",
       "The Bright Side:\nIt brings hidden procedural gridlock and intra-party disagreements out into the open for public scrutiny.",
       "The Breakdown & Plane Error:\nConfusing procedural power (HOW) with systemic consensus (WHO), assuming rules changes fix legislative math.",
       "Social Physics Analysis:\nActors employ a smart selfish maneuver, bypassing institutional norms under the pretext of election security while targeting dissenting party members.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through procedural friction.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through procedural friction.",
       "The Unavoidable Truth: Rules battles expose deep structural divisions within the ruling party.\n\nThe Unavoidable Lie: Procedural shortcuts alone can manufacture legislative consensus where none exists.",
       "Alethekanon:\nProcedural force unmasks structural party fractures but cannot substitute for missing majorities.",
       "Awwthekanon:\nIt is painful when leaders must fight their own allies just to agree on basic standards for our shared civic life.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "JD Vance Strategy",
@@ -162,6 +224,7 @@
         "name": "Mitch McConnell",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

@@ -7,14 +7,14 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.9,
-    "real_psi": 0.9,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Alaska expands protections for newborns with safe surrender boxes.\nEvidence: 27th state, 300+ saved globally, anonymous surrender\n#Aletheia #Alaska #Family",
       "Alaska legally established Safe Haven Baby Boxes to give vulnerable parents a secure, anonymous option to surrender newborns safely.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "Governor Dunleavy signed the bipartisan-backed bill, expanding safe surrender windows to 21 days and preventing infant abandonment deaths.\nResulting Judgement: (+0.9, +0.9) — Grace",
-      "Verdict: PASS — The Path of Grace.\nLegislation successfully implements practical safety infrastructure to protect at-risk newborns.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Governor Dunleavy signed the bipartisan-backed bill, expanding safe surrender windows to 21 days and preventing infant abandonment deaths.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nLegislation successfully implements practical safety infrastructure to protect at-risk newborns.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- Safe Haven Baby Boxes: PASS (0.9, 0.9) — Effective life-saving community infrastructure.\n- State Legislature: PASS (0.9, 0.8) — Bipartisan statutory expansion.",
       "Alaska became the 27th state to authorize Safe Haven Baby Boxes, offering temperature-controlled surrender incubators to prevent tragic infant abandonments.",
       "The Bright Side:\nProvides a compassionate, anonymous safety net for parents facing acute crises.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Safe Haven Legislation",
@@ -221,6 +283,7 @@
         "name": "Safe Haven Baby Boxes",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

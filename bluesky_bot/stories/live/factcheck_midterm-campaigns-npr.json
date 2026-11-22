@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.8,
     "claim_psi": 0.5,
-    "real_u": 0.1,
-    "real_psi": -0.2,
+    "real_u": 0.25,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "As the 2026 midterm campaign season officially kicks off, experts weigh in on the fragile congressional balance.\nEvidence: Competitive House, Vulnerable Majorities, Partisan Stakes\n#Aletheia #USPol",
-      "Analysts claim the upcoming midterms offer a neutral, data-driven assessment of voter sentiment across tightly contested congressional districts.\nStated Judgement: (+0.8, +0.5) — Conditionally Sound",
-      "Electoral strategy relies heavily on manufacturing wedge issues and partisan framing to mobilize donor bases rather than fostering objective debate.\nResulting Judgement: (+0.1, -0.2) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nElectoral forecasting maintains a veneer of objectivity while driving hyper-partisan mobilization.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
+      "Analysts claim the upcoming midterms offer a neutral, data-driven assessment of voter sentiment across tightly contested congressional districts.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Electoral strategy relies heavily on manufacturing wedge issues and partisan framing to mobilize donor bases rather than fostering objective debate.\nResulting Judgement: (+0.25, -0.05) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nElectoral forecasting maintains a veneer of objectivity while driving hyper-partisan mobilization.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.6, z: 2)",
       "Sub-Audits Breakdown:\n- Charlie Cook Analysis: PASS (+0.7, +0.4) — Grounded in historical trends and district data.\n- Electoral Framing: COND (-0.2, -0.5) — Weaponized for donor mobilization.",
       "Labor Day marks the unofficial kickoff of the 2026 midterm elections, where Republicans defend razor-thin majorities in both the House and Senate.",
       "The Bright Side:\nVoters retain competitive choices in key marginal districts where shifting demographics could alter control.",
       "The Breakdown & Plane Error:\nConfusing WHAT (electoral math) with WHO (party power consolidation), masking strategic maneuvers as civic duty.",
       "Social Physics Analysis:\nPartisan actors run a clever loop, disguising aggressive power grabs as democratic participation while projecting systemic faults onto opponents.",
-      "The Trajectory: The Path of Deception.\nThe gap between neutral analysis and partisan extraction plots a trajectory toward Lesser Evil. Math: F_pos dominance via institutional framing.",
+      "The Trajectory: The Path of Fall from Grace.\nThe gap between neutral analysis and partisan extraction plots a trajectory toward Lesser Evil. Math: F_pos dominance via institutional framing.",
       "The Unavoidable Truth: Elections determine legislative power distribution.\n\nThe Unavoidable Lie: Campaign coverage is entirely free from partisan incentives.",
       "Alethekanon:\nElectoral forecasts clothe raw partisan competition in the neutral robes of civic science.",
       "Awwthekanon:\nElections stir up so much anxiety for communities caught in the crossfire of political advertising wars.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Charlie Cook Analysis",
@@ -164,6 +226,7 @@
         "name": "U.S. Congress",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "I’m a university president. Our profession should finish what Charlie Kirk started",
     "link": "https://www.foxnews.com/opinion/university-president-profession-should-finish-charlie-kirk-started",
     "target_url": "",
-    "claim_u": 0.8,
-    "claim_psi": 0.2,
+    "claim_u": 0.75,
+    "claim_psi": 0.15,
     "real_u": -0.7,
     "real_psi": -0.8,
     "mode": "root",
     "posts": [
       "One year after Charlie Kirk's tragic assassination, partisan pundits claim universities must 'finish his work.'\nEvidence: Free speech pretext, political weaponization, cultural polarization\n#Aletheia #USPol",
-      "Opinion pieces argue universities have abandoned open debate, and institutions must embrace Charlie Kirk's conservative populist movement to restore campus free speech.\nStated Judgement: (+0.8, +0.2) — Good Preference",
-      "In reality, framing a political assassination as a call to ideological arms bypasses genuine academic freedom, transforming grief into fuel for partisan retribution and tribal conflict.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA tragedy is co-opted as a pretense to escalate institutional warfare rather than foster genuine dialogue.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 3)",
+      "Opinion pieces argue universities have abandoned open debate, and institutions must embrace Charlie Kirk's conservative populist movement to restore campus free speech.\nStated Judgement: (+0.75, +0.15) — Greater Good",
+      "In reality, framing a political assassination as a call to ideological arms bypasses genuine academic freedom, transforming grief into fuel for partisan retribution and tribal conflict.\nResulting Judgement: (-0.70, -0.80) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nA tragedy is co-opted as a pretense to escalate institutional warfare rather than foster genuine dialogue.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 6.8, z: 3)",
       "Sub-Audits Breakdown:\n- Fox News Editorial: FAIL (-0.75, -0.82) — Weaponizes grief for partisan clicks.\n- Academic Framing: FAIL (-0.65, -0.78) — Confuses dogma with free inquiry.",
       "Reflecting on the one-year anniversary of Charlie Kirk's death at Utah Valley University, commentators debate the fragile state of free speech and ideological tolerance across American campuses.",
       "The Poison:\nPackaging partisan retaliation as a noble defense of free speech masks the deliberate escalation of campus hostility.",
       "The Breakdown & Plane Error:\nConfusing WHAT (upholding open inquiry) with WHO (elevating a specific partisan figurehead) substitutes personality cults for structural democratic norms.",
       "Social Physics Analysis:\nActors deploy a Smart Selfish Maneuver, using a genuine cultural trauma as a pretext to project blame onto academic institutions while extracting partisan loyalty.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through manufactured outrage.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil through manufactured outrage.",
       "The Unavoidable Truth: True free inquiry requires protecting open debate without demanding ideological conformity.\nThe Unavoidable Lie: Martyrdom of a partisan figure automatically validates his political platform.",
       "Alethekanon:\nPackaging political polarization as a defense of free speech is a transparent inversion of academic integrity.",
       "Awwthekanon:\nLoss is a heavy burden, but turning a tragic death into fuel for anger only deepens the wounds we all carry.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Fox News Editorial",
@@ -166,6 +228,7 @@
         "sub_psi": -0.82,
         "sub_verdict": "FAIL"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

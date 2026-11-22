@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Post-Assad regional shifts accelerate diplomatic and security ties between Lebanon and Turkey, altering Middle East balances.\n\nAnalysis: What’s behind Lebanon-Turkey’s fast-improving relationship?\nEvidence: Regional shifts, trade coordination, security cooperation\n#MiddleEast #Geopolitics 🌐",
-      "Closer bilateral ties are framed as mutually beneficial, establishing Ankara as a stabilizing political, economic, and security partner for Beirut.\nStated Judgement: (+0.67, +1.00) — Good Preference",
-      "The ouster of Assad and severed Iranian supply lines created a strategic vacuum that Turkey is filling to stabilize its southern border and secure Mediterranean influence.\nResulting Judgement: (+0.38, +0.47) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nRegional alignment and pragmatic cooperation after Assad's fall foster genuine stability and border security between Lebanon and Turkey.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Closer bilateral ties are framed as mutually beneficial, establishing Ankara as a stabilizing political, economic, and security partner for Beirut.\nStated Judgement: (+0.67, +1.00) — Greater Good",
+      "The ouster of Assad and severed Iranian supply lines created a strategic vacuum that Turkey is filling to stabilize its southern border and secure Mediterranean influence.\nResulting Judgement: (+0.38, +0.47) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nRegional alignment and pragmatic cooperation after Assad's fall foster genuine stability and border security between Lebanon and Turkey.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Bilateral Diplomatic Alignment: PASS (0.7, 0.3) — Enhanced coordination on border control and trade serves mutual state interests.\n- Regional Power Rebalancing: PASS (0.5, 0.4) — Filling the post-Iranian void with Turkish partnership stabilizes the Syrian-Lebanese corridor.",
       "Following the fall of Bashar Assad's regime in Syria, Lebanon and Turkey have rapidly improved bilateral relations. Analysts note that with the overland Iranian weapons corridor severed, Turkey has emerged as a key diplomatic and security broker for Beirut.",
       "The Bright Side:\nCooperation between Lebanon, Turkey, and regional partners helps curb illicit smuggling, arms trafficking, and terrorism across porous borders.",
       "The Breakdown & Plane Error:\nObservers sometimes mistake WHAT (tactical security coordination) for WHO (geopolitical influence expansion by Ankara).",
       "Social Physics Analysis:\nThe shift in regional power reduced Iranian proxy influence and enabled transparent state-to-state coordination between Beirut, Damascus, and Ankara to resolve border strains.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Diplomatic alignment aligns with regional stabilization.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Diplomatic alignment aligns with regional stabilization.",
       "The Unavoidable Truth: The fall of Syria's regime fundamentally reconfigured Levant security dynamics.\n\nThe Unavoidable Lie: Turkish partnership will entirely eliminate sectarian competition in Lebanon.",
       "Alethekanon:\nAs Ezgi Başaran and Imad Salamey note, Ankara's pivot into the post-Assad space provides a viable diplomatic bridge for Beirut to manage borders and trade.\n🌐",
       "Awwthekanon:\nBuilding cooperative state institutions offers hope for families exhausted by decades of proxy conflict and economic instability.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.5
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.2
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.6,
+        "O": 0.2,
+        "N": 0.2
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.6,
+        "N": 0.2
+      },
+      "LG": {
+        "S": 0.7,
+        "O": 0.15,
+        "N": 0.15
+      },
+      "LE": {
+        "S": 0.3,
+        "O": 0.4,
+        "N": 0.3
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.2,
+        "O": 0.6,
+        "N": 0.2
+      }
+    },
     "aspects": [
       {
         "name": "Bilateral Diplomatic Alignment",
@@ -274,6 +336,7 @@
         "name": "Bashar Assad",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

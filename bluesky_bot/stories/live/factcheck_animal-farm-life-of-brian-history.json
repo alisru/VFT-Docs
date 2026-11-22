@@ -14,7 +14,7 @@
       "Celebrating the enduring legacies of Orwell's Animal Farm and Monty Python's Life of Brian on this day in history!\n\nGood News in History, Aug 17\nEvidence: literary critique, cultural joy, historical reflection\n#Aletheia #History",
       "Classic satires expose political hypocrisy and authoritarian decay through brilliant allegorical storytelling and timeless comedic art.\nStated Judgement: (+1.0, +1.0) — Greater Good",
       "The works successfully challenge totalitarian corruption and dogmatic control, providing enduring cultural touchstones for human freedom.\nResulting Judgement: (+1.0, +1.0) — Greater Good",
-      "Verdict: PASS — The Path of Grace.\nThese enduring artistic works successfully illuminate human folly and defend intellectual freedom against authoritarian overreach.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.\nThese enduring artistic works successfully illuminate human folly and defend intellectual freedom against authoritarian overreach.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "Sub-Audits Breakdown:\n- George Orwell: PASS (+1.0, +1.0) — Fearless exposure of totalitarian control.\n- Monty Python: PASS (+1.0, +1.0) — Brilliant satire of dogmatic rigidity.",
       "Reflecting on the publication of Animal Farm and the release of Life of Brian highlights humanity's long-standing tradition of using satire to question power.",
       "The Bright Side:\nArtistic masterpieces continue to educate and educate across generations, fostering critical thinking.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "George Orwell Literary Critique",
@@ -269,6 +331,7 @@
         "sub_psi": 1.0,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

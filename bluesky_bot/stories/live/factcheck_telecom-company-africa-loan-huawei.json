@@ -5,22 +5,22 @@
     "subject": "Telecom Company in Africa Gets $100 Million U.S. Loan to Compete with China’s Huawei",
     "link": "https://www.breitbart.com/national-security/2026/09/11/telecom-company-africa-gets-100-million-u-s-loan-to-compete-chinas-huawei/",
     "target_url": "",
-    "claim_u": 0.6,
-    "claim_psi": 0.5,
-    "real_u": 0.3,
-    "real_psi": 0.2,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 0.78,
+    "real_psi": 0.87,
     "mode": "root",
     "posts": [
       "U.S. EXIM Bank backs Africell with a $99.6M loan to expand trusted 5G corridors in Africa and counter Huawei's dominance.\nEvidence: EXIM financing, Angola tech investments, Huawei market share\n#Aletheia #Geopolitics #Tech",
-      "The U.S. administration announced a $99.6 million EXIM loan to Africell to strengthen American technology leadership and introduce trusted communications infrastructure in Angola and the DRC.\nStated Judgement: (+0.6, +0.5) — Good Preference",
-      "While framed around empowering African telecom growth, the direct financing is an explicit strategic counterweight to Huawei's 52% 5G market share across the continent amid U.S. security concerns.\nResulting Judgement: (+0.3, +0.2) — Conditionally Sound",
-      "Verdict: PASS — The Path of Redemption.\nTargeted financial backing successfully fosters technological alternatives, aligning state interests with commercial expansion.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, Uncertainty z: 1)",
+      "The U.S. administration announced a $99.6 million EXIM loan to Africell to strengthen American technology leadership and introduce trusted communications infrastructure in Angola and the DRC.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While framed around empowering African telecom growth, the direct financing is an explicit strategic counterweight to Huawei's 52% 5G market share across the continent amid U.S. security concerns.\nResulting Judgement: (+0.78, +0.87) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nTargeted financial backing successfully fosters technological alternatives, aligning state interests with commercial expansion.\n\nIntegrity: Trustworthy (Hypocrisy: 1.3, Uncertainty z: 1)",
       "- EXIM Bank Loan: PASS (+0.5, +0.4) — Direct funding supports trusted infrastructure.\n- Geopolitical Strategy: COND (+0.1, 0.0) — Countering Huawei mixes aid and competition.",
       "The U.S. Export-Import Bank approved a $99.6 million loan for Africell to procure American and European telecommunications equipment in Angola, countering Chinese market penetration.",
       "The Bright Side:\nProviding well-capitalized, non-state-monopoly telecom options increases network security and digital sovereignty for developing nations.",
       "The Breakdown & Plane Error:\nThe analysis shifts from technical infrastructure support (WHAT) to great-power rivalry and supply chain security (WHY).",
       "Social Physics Analysis:\nThe U.S. actor runs a smart altruistic maneuver by providing transparent economic development capital that simultaneously secures strategic national interests without coercion.",
-      "The Trajectory: The Path of Redemption.\nWhen stated economic partnership aligns with transparent infrastructure deployment, it plots a stable trajectory toward Grace.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen stated economic partnership aligns with transparent infrastructure deployment, it plots a stable trajectory toward Grace.",
       "The Unavoidable Truth: Targeted financing provides viable alternatives to monopolistic telecom dominance.\n\nThe Unavoidable Lie: Geopolitical competition is entirely divorced from commercial lending objectives.",
       "Alethekanon:\nFinancial statecraft is deployed pragmatically to secure allied technological corridors in developing markets.",
       "Awwthekanon:\nIt is encouraging to see investment that respects local digital sovereignty while fostering healthy competition and secure communication networks for millions.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.8,
+        "O": 0.2,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "EXIM Bank Financing",
@@ -222,6 +284,7 @@
         "name": "Angola",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

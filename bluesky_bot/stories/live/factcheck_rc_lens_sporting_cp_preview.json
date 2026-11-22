@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "A deep dive into the history, finances, and soul of French football. A dedicated fan blog previews the upcoming Champions League clash between RC Lens and Sporting CP.\nEvidence: Fan Preview, Historical Context, Analytical Insight\n#Aletheia #UCL",
-      "The blog aims to provide an English-language preview and tactical/historical buildup for the Champions League Matchday 2 fixture between RC Lens and Sporting CP.\nStated Judgement: (+1.0, +1.0) — Grace",
-      "The reality delivers a rich, highly detailed, and historically accurate analysis of RC Lens' financial journey, ownership transitions, and the changing landscape of modern football.\nResulting Judgement: (+1.0, +1.0) — Grace",
-      "Verdict: PASS — Grace. An exceptionally well-researched fan preview that balances tactical anticipation with sharp financial and historical context.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "The blog aims to provide an English-language preview and tactical/historical buildup for the Champions League Matchday 2 fixture between RC Lens and Sporting CP.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "The reality delivers a rich, highly detailed, and historically accurate analysis of RC Lens' financial journey, ownership transitions, and the changing landscape of modern football.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
       "- Outside of the Pride: PASS (1.0, 1.0) — Excellent independent fan journalism.\n- RC Lens Financial History: PASS (1.0, 1.0) — Accurate portrayal of ownership.",
       "The preview sets the stage for the Champions League match between RC Lens and Sporting CP, tracing Lens' rise from financial instability and promotion bans to billionaire ownership and European competition.",
       "The Poison:\nWhile billionaire backing rescued Lens from financial ruin, it highlights the uncomfortable reality that modern football success is increasingly gatekept by massive private capital.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Outside of the Pride",
@@ -157,6 +219,7 @@
         "name": "Joseph Oughourlian",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

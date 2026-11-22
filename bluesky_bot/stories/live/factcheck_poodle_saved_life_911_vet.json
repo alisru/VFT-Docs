@@ -6,21 +6,21 @@
     "link": "https://nypost.com/2026/08/30/us-news/how-poodle-saved-life-of-9-11-responder-and-iraq-war-vet/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.8,
-    "real_u": 1.2,
-    "real_psi": 0.9,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "When invisible scars from Ground Zero and Iraq threatened to consume her, a loyal service poodle named Titan provided the anchor back to life.\nEvidence: Ground Zero service, PTSD recovery, service dog support\n#Aletheia #Veterans #ServiceDog",
-      "A veteran National Guard worker shares how a specially trained poodle pulled her out of severe isolation and panic attacks after deployments.\nStated Judgement: (+1.0, +0.8) — Lesser Good",
-      "Titan provides genuine physical and emotional grounding, turning reclusion into active community engagement and healing.\nResulting Judgement: (+1.2, +0.9) — Greater Good",
-      "Verdict: PASS — The Path of Awakening.\nGenuine recovery and therapeutic support anchor this veteran's inspiring return to community life.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "A veteran National Guard worker shares how a specially trained poodle pulled her out of severe isolation and panic attacks after deployments.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Titan provides genuine physical and emotional grounding, turning reclusion into active community engagement and healing.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\nGenuine recovery and therapeutic support anchor this veteran's inspiring return to community life.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "- K9s For Warriors: PASS (1.2, 0.9) — Direct provision of free service dogs for wounded veterans.\n- Celeste Henry-Kemper: PASS (1.2, 0.9) — Honest navigation of PTSD recovery.",
       "Celeste Henry-Kemper served at Ground Zero after 9/11 and later in Kuwait during the Iraq War, returning with severe PTSD, lupus, and physical injuries.",
       "The Bright Side:\nTitan acts as both a physical mobility brace and a social bridge, dissolving the isolation of trauma.",
       "The Breakdown & Plane Error:\nThe narrative accurately evaluates the personal and emotional planes (WHO/WHY), honoring the profound bond between veteran and animal.",
       "Social Physics Analysis:\nBy replacing isolation with transparent companionship, the pairing reduced systemic personal strain. Mutual empathy replaced trauma-induced withdrawal, empowering the veteran to reclaim agency.",
-      "The Trajectory: The Path of Awakening.\nWhen you map authentic trauma recovery and animal-assisted healing, it plots a direct trajectory toward Grace. The alignment of support and healing creates low-strain stability.",
+      "The Trajectory: The Path of Grace.\nWhen you map authentic trauma recovery and animal-assisted healing, it plots a direct trajectory toward Grace. The alignment of support and healing creates low-strain stability.",
       "The Unavoidable Truth: Service animals provide life-saving anchors for veterans battling invisible wounds of war.\n\nThe Unavoidable Lie: Administrative systems alone can heal the deep psychological trauma of first responders.",
       "Alethekanon:\nTrue recovery requires compassionate bridges rather than clinical isolation. This bond exemplifies the restorative power of animal companionship.",
       "Awwthekanon:\nOh, my heart! Seeing sweet Titan bring comfort and courage to someone who gave so much for others is just pure, beautiful grace.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.2,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "K9s For Warriors",
@@ -211,6 +273,7 @@
         "name": "Titan",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

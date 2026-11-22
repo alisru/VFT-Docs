@@ -5,22 +5,22 @@
     "subject": "13 hurt at Newark Airport after shuttle bus smashes into concrete wall",
     "link": "https://nypost.com/2026/08/31/us-news/newark-airport-shuttle-bus-crash-injures-13/",
     "target_url": "",
-    "claim_u": 0.0,
-    "claim_psi": 0.0,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 0.64,
+    "claim_psi": 0.88,
+    "real_u": -0.22,
+    "real_psi": 0.6,
     "mode": "root",
     "posts": [
       "Thirteen people are injured after an employee shuttle bus crashes into a concrete barrier at Newark Liberty Airport.\nEvidence: Terminal B crash, 13 injured, road closure\n#Aletheia #Newark #TransitCrash",
-      "Thirteen individuals sustained injuries when an airport shuttle bus collided with a concrete barrier during early morning operations.\nStated Judgement: (0.0, 0.0) — Neutral",
-      "Operational failure or mechanical breakdown caused a transit collision, injuring 13 workers and snarling traffic.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nAccidental transit failure disrupts critical airport logistics and causes avoidable harm.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 0)",
+      "Thirteen individuals sustained injuries when an airport shuttle bus collided with a concrete barrier during early morning operations.\nStated Judgement: (+0.64, +0.88) — Greater Good",
+      "Operational failure or mechanical breakdown caused a transit collision, injuring 13 workers and snarling traffic.\nResulting Judgement: (-0.22, +0.60) — Greatest Lie",
+      "Verdict: FAIL — Fall into Deception.\nAccidental transit failure disrupts critical airport logistics and causes avoidable harm.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 0)",
       "- Port Authority Police: PASS (0.5, 0.7) — Rapid emergency response.\n- Airport Transit Ops: FAIL (-0.8, -0.6) — Safety failure causing injuries.",
       "An employee shuttle bus crashed into a concrete barrier at Newark Liberty International Airport's Terminal B early Monday, injuring 13 people.",
       "The Bright Side:\nAll thirteen injuries were reported as non-life-threatening, and emergency crews responded rapidly.",
       "The Breakdown & Plane Error:\nConfusing mechanical/operational breakdown (WHAT) with institutional accountability (WHO).",
       "Social Physics Analysis:\nA systemic breakdown in transport safety generated physical friction, but prompt emergency intervention absorbed the shock and restored operational stability.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Friction mismanagement creates injury.",
+      "The Trajectory: The Path of Fall into Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Friction mismanagement creates injury.",
       "The Unavoidable Truth: Complex transit hubs remain vulnerable to sudden operational accidents.\n\nThe Unavoidable Lie: Routine airport shuttles are entirely free from mechanical or human error risks.",
       "Alethekanon:\nOperational failure induces preventable harm; quick response mitigates disaster.",
       "Awwthekanon:\nHow frightening for those workers starting their early morning shifts. Wishing all thirteen a swift and complete recovery.",
@@ -60,8 +60,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.25,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.25,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.25,
+        "N": 0.25
+      },
+      "LE": {
+        "S": 0.5,
+        "O": 0.25,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      }
+    },
     "aspects": [
       {
         "name": "Port Authority of New York and New Jersey",
@@ -273,6 +335,7 @@
         "name": "Port Authority of New York and New Jersey",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

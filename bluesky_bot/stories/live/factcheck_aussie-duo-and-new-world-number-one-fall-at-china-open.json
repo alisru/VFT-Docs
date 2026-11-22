@@ -12,9 +12,9 @@
     "mode": "root",
     "posts": [
       "Aussie stars and the top seed stumble in Beijing! Evidence: China Open results, upsets, tennis defeats #Aletheia #Tennis",
-      "Stated claims cover early exits for Australian tennis players Kimberley Birrell and Storm Hunter alongside newly minted world number one Elena Rybakina at the China Open.\nStated Judgement: (+0.8, +0.5) — Good Preference",
-      "Ground reality confirms the tournament upsets occurred as reported, reflecting the volatile nature of elite professional tennis competition.\nResulting Judgement: (+0.8, +0.5) — Good Preference",
-      "Verdict: PASS — The Path of Grace.\nStraightforward sports journalism accurately detailing international tennis tournament outcomes.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Stated claims cover early exits for Australian tennis players Kimberley Birrell and Storm Hunter alongside newly minted world number one Elena Rybakina at the China Open.\nStated Judgement: (+0.80, +0.50) — Greater Good",
+      "Ground reality confirms the tournament upsets occurred as reported, reflecting the volatile nature of elite professional tennis competition.\nResulting Judgement: (+0.80, +0.50) — Greater Good",
+      "Verdict: PASS — Grace.\nStraightforward sports journalism accurately detailing international tennis tournament outcomes.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- ABC News Sports: PASS (+0.8, +0.5) — Accurate reporting.\n- Tournament Data: PASS (+0.8, +0.5) — Verified results.",
       "The China Open saw notable early exits, including top-ranked players and Australian contenders falling in hardcourt matches across Beijing.",
       "The Bright Side:\nUnpredictable upsets showcase the incredible depth and fierce competitiveness of the modern women's tennis tour.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "ABC News Sports",
@@ -162,6 +224,7 @@
         "name": "Marie Bouzkova",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

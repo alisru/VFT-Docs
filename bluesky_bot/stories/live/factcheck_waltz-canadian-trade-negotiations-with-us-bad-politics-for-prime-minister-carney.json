@@ -6,21 +6,21 @@
     "link": "https://www.breitbart.com/clips/2026/08/28/waltz-canadian-trade-negotiations-with-u-s-bad-politics-for-prime-minister-carney/",
     "target_url": "",
     "claim_u": 1.0,
-    "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "claim_psi": 1.0,
+    "real_u": -0.82,
+    "real_psi": -1.0,
     "mode": "root",
     "posts": [
       "US Ambassador Mike Waltz claims Canadian PM Mark Carney stalled trade talks for domestic politics.\nEvidence: trade tensions, China transshipment, tariff disputes\n#Aletheia #Trade #USCan",
-      "Stated claim frames Canadian trade delays as political posturing by PM Carney rather than substantive sovereignty protection.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Actual reality shows heavy U.S. tariff demands and anti-transshipment clauses encroaching on Canadian autonomy, leading to collapsed talks.\nResulting Judgement: (-0.6, -0.7) — Deception",
-      "Verdict: FAIL — The Path of Deception.\nTrade negotiations break down over sovereignty demands while officials spin it as foreign political posturing.\n\nIntegrity: Severe Deception (Hypocrisy: 3.2, z: 2)",
+      "Stated claim frames Canadian trade delays as political posturing by PM Carney rather than substantive sovereignty protection.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Actual reality shows heavy U.S. tariff demands and anti-transshipment clauses encroaching on Canadian autonomy, leading to collapsed talks.\nResulting Judgement: (-0.82, -1.00) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nTrade negotiations break down over sovereignty demands while officials spin it as foreign political posturing.\n\nIntegrity: Severe Deception (Hypocrisy: 3.2, z: 2)",
       "- Mike Waltz: FAIL (-0.6, -0.7) — Spins trade breakdown as foreign political weakness.\n- Trade Negotiations: FAIL (-0.5, -0.6) — Uses tariffs as geopolitical leverage.",
       "U.S. officials blamed Canadian leadership for walking away from trade talks, citing Chinese transshipment concerns and domestic political maneuvers.",
       "The Bright Side:\nHighlighting the challenge of transshipment prevents global actors from exploiting bilateral trade pacts.",
       "The Breakdown & Plane Error:\nConfuses WHAT (trade rules) with WHO (political survival of Prime Minister Carney), masking protectionist pressure as righteous security.",
       "Social Physics Analysis:\nBy framing trade partners as political antagonists, leaders project domestic strategic ambitions onto foreign actors, transforming mutual commerce into a zero-sum game of dominance.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Coercive economic demands are masked as defensive security measures.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Deception. Coercive economic demands are masked as defensive security measures.",
       "The Unavoidable Truth: National security encompasses economic resilience against third-party transshipment.\n\nThe Unavoidable Lie: Bilateral trade breakdowns are solely caused by foreign political posturing.",
       "Alethekanon:\nBlaming a foreign leader's political survival masks the coercive economic demands driving trade partners apart.🌐",
       "Awwthekanon:\nIt hurts to watch neighbors turn cooperation into a contest of pride while working families bear the cost of rising tariffs and broken talks.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.5,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 1.2,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Mike Waltz Commentary",
@@ -218,6 +280,7 @@
         "name": "Canada",
         "role": "context"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

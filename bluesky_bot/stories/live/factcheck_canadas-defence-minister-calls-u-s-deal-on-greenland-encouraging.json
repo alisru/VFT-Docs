@@ -5,22 +5,22 @@
     "subject": "Canada's defence minister calls U.S. deal on Greenland 'encouraging'",
     "link": "https://www.winnipegfreepress.com/canada/2026/09/19/canadas-defence-minister-calls-u-s-deal-on-greenland-encouraging",
     "target_url": "https://bsky.app/profile/winnipegfreepress.com/post/3mvvjqkl3xk2u",
-    "claim_u": 0.8,
-    "claim_psi": 0.5,
-    "real_u": -0.4,
-    "real_psi": -0.5,
+    "claim_u": 0.4,
+    "claim_psi": 0.17,
+    "real_u": 0.13,
+    "real_psi": -0.03,
     "mode": "root",
     "posts": [
       "Canada's defence minister welcomes a new U.S.-led Arctic deal.\nEvidence: Greenland defense pact, NATO alignment, sovereignty concerns\n#Aletheia #Geopolitics",
-      "Canada views the U.S. arrangement on Greenland as an encouraging step for collective Arctic security and allied cooperation.\nStated Judgement: (+0.8, +0.5) — Trustworthy Good",
-      "While framed as multilateral security, the deal fast-tracks militarization while sidelining Greenlandic and Danish parliamentary sovereignty.\nResulting Judgement: (-0.4, -0.5) — Lesser Deception",
-      "Verdict: COND — The Path of Revelation.\nGeopolitical realignments mask sovereignty bypasses under cooperative rhetoric.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "Canada views the U.S. arrangement on Greenland as an encouraging step for collective Arctic security and allied cooperation.\nStated Judgement: (+0.40, +0.17) — Greater Good",
+      "While framed as multilateral security, the deal fast-tracks militarization while sidelining Greenlandic and Danish parliamentary sovereignty.\nResulting Judgement: (+0.13, -0.03) — Lesser Good",
+      "Verdict: PASS — Fall from Grace.\nGeopolitical realignments mask sovereignty bypasses under cooperative rhetoric.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Winnipeg Free Press: PASS (0.8, 0.5) — Reports ministerial remarks transparently.\n- CBC News: PASS (0.7, 0.4) — Highlights NATO leadership friction.\n- Breitbart: COND (-0.3, -0.4) — Frames European deals as sovereignty loss.",
       "Canada's defense minister praised an emerging U.S.-Greenland-Denmark pact ahead of the UN General Assembly, balancing Arctic security needs against historical sovereignty pressures.",
       "The Bright Side:\nCloser allied coordination in the Arctic strengthens deterrence against rival powers.",
       "The Breakdown & Plane Error:\nConfusing WHAT (military readiness) with WHO (sovereign self-determination), pushing elite defense pacts over local democratic consent.",
       "Social Physics Analysis:\nActors deploy a Smart Altruistic pretext of collective security to mask strategic power consolidation, bypassing local empowerment in favor of top-down geopolitical control.",
-      "The Trajectory: The Path of Revelation.\nWhen stated cooperative ideals collide with real-world sovereignty bypasses, it plots a trajectory toward Deception. Net force yields minor structural strain.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen stated cooperative ideals collide with real-world sovereignty bypasses, it plots a trajectory toward Deception. Net force yields minor structural strain.",
       "The Unavoidable Truth: Arctic security pacts frequently sacrifice local autonomy for great-power defense.\n\nThe Unavoidable Lie: Military integration fully respects local sovereignty without democratic friction.",
       "Alethekanon:\nStrategic framing obscures the fundamental friction between allied defense expediency and indigenous sovereignty rights. 🌐",
       "Awwthekanon:\nIt is painful when remote capitals negotiate the fate of lands belonging to communities striving for self-determination.",
@@ -65,8 +65,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Winnipeg Free Press",
@@ -192,6 +254,7 @@
         "name": "Denmark",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

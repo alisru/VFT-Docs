@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.6,
-    "real_psi": -0.7,
+    "real_u": 0.0,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "Rep. Byron Donalds spars over vaccine schedules and migrant health on Bill Maher's show.🌐\n\nDonalds on Vaccines & Measles\nEvidence: parental choice, migrant border claims, vaccine hesitancy\n#Aletheia #USPol",
-      "Donalds defended parental choice in vaccine schedules and pointed to detention facility outbreaks as a factor in measles surges.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Blaming immigration deflects from domestic declines in MMR vaccination rates and misrepresents the primary drivers of outbreaks.\nResulting Judgement: (-0.6, -0.7) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nPolitical debate deflects domestic public health realities onto immigration narratives.\n\nIntegrity: Partial Distortion (Hypocrisy: 6.8, z: 1)",
+      "Donalds defended parental choice in vaccine schedules and pointed to detention facility outbreaks as a factor in measles surges.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Blaming immigration deflects from domestic declines in MMR vaccination rates and misrepresents the primary drivers of outbreaks.\nResulting Judgement: (+0.00, -0.25) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nPolitical debate deflects domestic public health realities onto immigration narratives.\n\nIntegrity: Partial Distortion (Hypocrisy: 6.8, z: 1)",
       "- Byron Donalds: COND (0.0, -0.3) — Shifts blame for domestic health trends.\n- Media Panel: COND (0.0, -0.2) — Combines debate with anecdotal downplaying.",
       "Appearing on Bill Maher's show, Republican Rep. Byron Donalds addressed vaccine schedules and measles outbreaks while debating immigration policies.",
       "The Poison:\nPoliticizing infectious disease responses obscures the scientific reality of vaccine uptake and public health management.",
       "The Breakdown & Plane Error:\nIt confuses WHO (domestic vaccination rates) with WHERE (border detention facilities), substituting political talking points for epidemiological facts.",
       "Social Physics Analysis:\nBy projecting public health failures onto external migrant populations, political figures avoid confronting domestic hesitancy directly.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between political rhetoric and epidemiological reality, it plots a trajectory toward Deception.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between political rhetoric and epidemiological reality, it plots a trajectory toward Deception.",
       "The Unavoidable Truth: Measles resurgences stem primarily from declining domestic vaccination rates.\n\nThe Unavoidable Lie: Border immigration accounts for the entirety of domestic vaccine outbreaks.",
       "Alethekanon:\nPolitical deflection replaces rigorous public health discourse with convenient partisan narratives, hindering disease prevention.",
       "Awwthekanon:\nIt's so stressful trying to navigate health concerns when complex medical issues get turned into political weapons instead of care.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Partial Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Byron Donalds",
@@ -156,6 +218,7 @@
         "name": "Bill Maher",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -5,16 +5,16 @@
     "subject": "Why long gaps between meals may not be healthy for older people – new study",
     "link": "https://tcnv.link/CAzupgt",
     "target_url": "https://bsky.app/profile/uk.theconversation.com/post/3mtjl3dkg3p2t",
-    "claim_u": 0.8,
-    "claim_psi": 0.0,
-    "real_u": 0.9,
-    "real_psi": 0.8,
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": 1.0,
+    "real_psi": 1.0,
     "mode": "root",
     "posts": [
       "Fasting is praised for weight loss, but a new Swedish study reveals long meal gaps may speed up chronic illness in adults 78+.\n\nWhy long gaps between meals may not be healthy for older people – new study\nEvidence: fasting promoted, observational link, biological caution #Health #Science",
-      "Researchers tracking nearly 3,000 older adults in Sweden found that those going 14 to 24 hours without eating developed chronic diseases faster.\nStated Judgement: (0.8, 0.0) — Good Preference",
-      "While not proving direct causation, biological factors like reduced nutrient absorption and protein response explain vulnerability in advanced age.\nResulting Judgement: (0.9, 0.8) — Greater Good",
-      "Verdict: PASS — The Path of Grace. Rigorous epidemiological research corrects broad dietary generalizations across age brackets.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
+      "Researchers tracking nearly 3,000 older adults in Sweden found that those going 14 to 24 hours without eating developed chronic diseases faster.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While not proving direct causation, biological factors like reduced nutrient absorption and protein response explain vulnerability in advanced age.\nResulting Judgement: (+1.00, +1.00) — Greater Good",
+      "Verdict: PASS — Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, Uncertainty z: 0)",
       "- Epidemiological Data: PASS (0.9, 0.8) — Robust cohort tracking.\n- Dietary Guidance: PASS (0.8, 0.7) — Age-specific nuance added.",
       "A long-term Swedish study of adults aged 60+ challenges blanket intermittent fasting advice by highlighting age-specific metabolic risks.",
       "The Bright Side:\nPromotes personalized nutritional science rather than one-size-fits-all dietary fads.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.95,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.95,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.35,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.35,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Epidemiological Data",
@@ -275,6 +337,7 @@
         "name": "Older Adults",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

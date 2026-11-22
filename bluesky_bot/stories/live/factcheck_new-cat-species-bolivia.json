@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.95,
-    "real_psi": 0.9,
+    "real_u": 0.93,
+    "real_psi": 0.85,
     "mode": "root",
     "posts": [
       "Scientists discover first new cat species in over a century in Bolivia.\nEvidence: Current Biology journal, genetic testing, Yungas region\n#Aletheia #Science #Nature",
-      "Researchers have identified the Leopardus tilcayo in Bolivia, marking the first new wild cat species discovery in over a hundred years.\nStated Judgement: (+1.0, +1.0) — Grace / Greater Good",
-      "Genetic testing and sanctuary care confirmed the three-pound tiger cat is an entirely new lineage separated over a million years ago.\nResulting Judgement: (+0.95, +0.90) — Grace / Greater Good",
-      "Verdict: PASS — The Path of Grace.\nAuthentic scientific discovery expands human understanding of biodiversity without hidden extraction.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
+      "Researchers have identified the Leopardus tilcayo in Bolivia, marking the first new wild cat species discovery in over a hundred years.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "Genetic testing and sanctuary care confirmed the three-pound tiger cat is an entirely new lineage separated over a million years ago.\nResulting Judgement: (+0.93, +0.85) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nAuthentic scientific discovery expands human understanding of biodiversity without hidden extraction.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, z: 0)",
       "Sub-Audits Breakdown:\n- Scientific Discovery: PASS (0.95, 0.9) — Rigorous genetic confirmation published.\n- Wildlife Sanctuary: PASS (0.90, 0.8) — Rescued and properly analyzed.",
       "A local resident in Bolivia's Yungas region cared for a small wild cat mistaking it for a domestic kitten before bringing it to the Senda Verda animal sanctuary, where scientists confirmed its unique status.",
       "The Bright Side:\nProves that remote ecosystems still hold undiscovered wonders waiting for patient observation.",
       "The Breakdown & Plane Error:\nFocusing on the charming domestic misunderstanding (WHAT) rather than the deep evolutionary significance of a new feline lineage (WHY).",
       "Social Physics Analysis:\nActors execute a Smart Altruistic Loop where local sanctuary workers and scientists collaborate transparently to protect and classify a vulnerable new species.",
-      "The Trajectory: The Path of Grace.\nWhen you map empirical biological exploration and conservation, it plots a direct trajectory toward Greater Good. Transparent inquiry yields enduring ecological enrichment.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map empirical biological exploration and conservation, it plots a direct trajectory toward Greater Good. Transparent inquiry yields enduring ecological enrichment.",
       "The Unavoidable Truth: A new wild cat species has been formally identified through genetic verification.\n\nThe Unavoidable Lie: This tiny feline was successfully raised on instant noodles by an unsuspecting family.",
       "Alethekanon:\nEmpirical biology reaffirms the staggering complexity of natural history hidden in plain sight.",
       "Awwthekanon:\nImagine raising a tiny wild kitten on rice and noodles, only to discover you are sharing your home with a living scientific marvel!",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Absolute Truth",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Scientific Discovery",
@@ -165,6 +227,7 @@
         "sub_psi": 0.8,
         "sub_verdict": "PASS"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

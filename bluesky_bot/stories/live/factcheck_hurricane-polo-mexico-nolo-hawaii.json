@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.2,
-    "real_psi": -0.3,
+    "real_u": 0.65,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Pacific storms threaten Mexico and Hawaii as major hurricanes bring severe flood and landslide risks. \nHurricane Polo & Nolo\nEvidence: Major hurricanes, Flood warnings, Evacuations\n#Aletheia #Weather",
-      "Official meteorological alerts and government evacuations aim to protect vulnerable coastal and rural populations from catastrophic flooding. \nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While warnings are precise, rural poverty in Guerrero and saturated soils in Hawaii expose communities to systemic neglect and severe disaster risks. \nResulting Judgement: (+0.2, -0.3) — Lesser Good",
-      "Verdict: PASS — The Path of Awakening.\nAccurate meteorological reporting documents severe natural hazards, though structural vulnerabilities compound human risk.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Official meteorological alerts and government evacuations aim to protect vulnerable coastal and rural populations from catastrophic flooding. \nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "While warnings are precise, rural poverty in Guerrero and saturated soils in Hawaii expose communities to systemic neglect and severe disaster risks. \nResulting Judgement: (+0.65, +0.10) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nAccurate meteorological reporting documents severe natural hazards, though structural vulnerabilities compound human risk.\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "- Mexican Authorities: PASS (+0.5, 0.0) — Deployed shelters & military units.\n- Meteorological Services: PASS (+0.8, +0.2) — Provided timely hurricane warnings.",
       "As Hurricane Polo skirts Mexico and Tropical Storm Nolo targets Hawaii, authorities urge immediate preparedness against catastrophic flooding and landslides.",
       "The Bright Side:\nAdvanced satellite tracking and early warnings give vulnerable communities vital lead time to evacuate.",
       "The Breakdown & Plane Error:\nConfusing meteorological physical force (WHAT) with socio-economic preparedness (WHO).",
       "Social Physics Analysis:\nMeteorological agencies operate in transparency by tracking physical reality, but systemic poverty leaves rural populations vulnerable to recurring natural shocks.",
-      "The Trajectory: The Path of Awakening.\nWhen mapped against physical realities, accurate warnings prompt proactive resilience despite structural inequities. R_net = 1.2.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen mapped against physical realities, accurate warnings prompt proactive resilience despite structural inequities. R_net = 1.2.",
       "The Unavoidable Truth: Nature's fury respects no borders or socio-economic divides.\n\nThe Unavoidable Lie: Official preparation alone can fully neutralize geographical vulnerability.",
       "Alethekanon:\nAccurate tracking highlights how natural perils intersect with persistent regional poverty. 🌐",
       "Awwthekanon:\nMy heart goes out to every family bracing for these storms, praying their homes and legacies are safely spared from the floods.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Mexican Authorities",
@@ -156,6 +218,7 @@
         "name": "National Weather Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

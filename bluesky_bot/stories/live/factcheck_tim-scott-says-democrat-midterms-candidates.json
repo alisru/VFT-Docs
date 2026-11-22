@@ -38,7 +38,7 @@
     "macro_claim_psi": null,
     "macro_real_u": null,
     "macro_real_psi": null,
-    "status": "LIVE POSTED (judgement-bot.bsky.social)",
+    "status": "QUARANTINED (Flagged for Re-Audit)",
     "claim_rnet": 1.0,
     "real_rnet": 8.5,
     "claim_z": 0,
@@ -162,6 +162,8 @@
         "name": "Abdul El-Sayed",
         "role": "instigator"
       }
-    ]
+    ],
+    "exclude_from_analytics": true,
+    "quarantine_reason": "Severe partisan collapse (Delta-u = -1.5) from breitbart.com without wire counter-grounding"
   }
 ]

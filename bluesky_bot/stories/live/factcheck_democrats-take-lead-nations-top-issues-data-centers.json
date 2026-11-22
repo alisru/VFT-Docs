@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": 0.7,
-    "real_psi": 0.6,
+    "real_u": 0.37,
+    "real_psi": 0.53,
     "mode": "root",
     "posts": [
       "A Democratic opinion argument urges the party to embrace data centers and AI innovation rather than defaulting to blanket local moratoria.\n\nData Centers Lead\nEvidence: constructive tech policy, populist fear, grid upgrades",
-      "Proposing national and state Centers of Excellence to guide transparent local zoning while tech companies fund grid upgrades.\nStated Judgement: (1.0, 1.0) — Greater Good",
-      "While constructive, the proposal navigates intense local populist resistance and partisan friction over energy costs and grid capacity.\nResulting Judgement: (0.7, 0.6) — Conditionally Sound",
-      "Verdict: PASS — The Path of Grace.\nConstructive policy engagement replaces knee-jerk opposition with proactive technological leadership.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "Proposing national and state Centers of Excellence to guide transparent local zoning while tech companies fund grid upgrades.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "While constructive, the proposal navigates intense local populist resistance and partisan friction over energy costs and grid capacity.\nResulting Judgement: (+0.37, +0.53) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nConstructive policy engagement replaces knee-jerk opposition with proactive technological leadership.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
       "Sub-Audits Breakdown:\n- Policy Strategy: PASS (0.8, 0.7) — Pragmatic tech engagement.\n- Local Resistance: COND (0.5, 0.3) — Navigating populist friction.",
       "Elected officials face intense pressure from local town halls halting data center construction over fears of rising electricity rates and grid strain.",
       "The Bright Side:\nShifting from blanket rejection to industry-funded grid upgrades offers a sustainable path for both artificial intelligence growth and local communities.",
       "The Breakdown & Plane Error:\nFocusing on structural solutions (HOW/WHAT) instead of defensive fearmongering aligns policy with physical infrastructure realities.",
       "Social Physics Analysis:\nBy replacing reflexive opposition with transparent stakeholder collaboration, the proposal bridges economic innovation and community concerns.",
-      "The Trajectory: The Path of Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Constructive policy reduces systemic strain.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Grace. Constructive policy reduces systemic strain.",
       "The Unavoidable Truth: Infrastructure growth requires transparent funding and genuine community partnership.\n\nThe Unavoidable Lie: Blanket moratoria solve complex energy demands.",
       "Alethekanon:\nEmbracing technological infrastructure with transparent funding models transforms political friction into sustainable innovation.",
       "Awwthekanon:\nProgress happens when we listen to community fears while building bridges toward a shared, prosperous technological future.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.5,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.1,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.1,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.3,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.45,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.3,
+        "O": 0.45,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.7,
+        "O": 0.3,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.3,
+        "O": 0.7,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Policy Strategy",
@@ -277,6 +339,7 @@
         "name": "Greg Abbott",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Small Fall from Grace"
   }
 ]

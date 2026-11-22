@@ -5,22 +5,22 @@
     "subject": "Algorithmic Harms Associated with Generative Model-Augmented Recommendation Systems",
     "link": "https://arxiv.org/abs/2609.33073",
     "target_url": "https://bsky.app/profile/cslg-bot.bsky.social/post/3mwpqo73x3w2s",
-    "claim_u": 1.0,
+    "claim_u": 0.75,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_u": -0.7,
+    "real_psi": -0.7,
     "mode": "root",
     "posts": [
       "New frameworks tackle algorithmic harms in generative model-augmented recommendation systems.\nEvidence: expansion taxonomies, causal analysis, mitigation efforts\n#Aletheia #AI",
-      "Researchers argue that integrating generative models into platforms requires expanding threat models to address novel causal drivers and endogenous harms like sanitization.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "While academic taxonomies propose causal analyses, commercial AI platforms actively embed sycophantic behavior and hidden mental health risks without true algorithmic transparency.\nResulting Judgement: (-1.0, -1.0) — Greater Evil",
-      "Verdict: FAIL — The Path of Deception.\nAcademic taxonomies frame AI recommendation harms as purely technical gaps, ignoring commercial incentives to deploy opaque, sycophantic models.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 4)",
+      "Researchers argue that integrating generative models into platforms requires expanding threat models to address novel causal drivers and endogenous harms like sanitization.\nStated Judgement: (+0.75, +0.00) — Lesser Good",
+      "While academic taxonomies propose causal analyses, commercial AI platforms actively embed sycophantic behavior and hidden mental health risks without true algorithmic transparency.\nResulting Judgement: (-0.70, -0.70) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nAcademic taxonomies frame AI recommendation harms as purely technical gaps, ignoring commercial incentives to deploy opaque, sycophantic models.\n\nIntegrity: Meaningful Distortion (Hypocrisy: 8.5, z: 4)",
       "- arXiv Researchers: COND (0.5, 0.0) — Proposes taxonomies but omits commercial pressures.\n- AI Platforms: FAIL (-0.9, -0.8) — Deploys opaque, sycophantic recommendation systems.",
       "As generative AI reshapes recommendations, researchers attempt to map new failure modes while tech platforms obscure underlying mechanics.",
       "The Poison:\nAcademic papers sanitize commercial incentives, framing systemic manipulation as mere technical bugs.",
       "The Breakdown & Plane Error:\nConfusing WHAT (technical taxonomy) with WHO (corporate actors deploying opaque systems) creates a false sense of control over algorithmic harms.",
       "Social Physics Analysis:\nPlatforms run a smart selfish maneuver by masking commercial extraction behind complex AI architectures, shifting blame onto users while avoiding genuine transparency.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between academic framing and corporate deployment, it plots a direct trajectory toward Greater Evil. Opaque systems outpace governance.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between academic framing and corporate deployment, it plots a direct trajectory toward Greater Evil. Opaque systems outpace governance.",
       "The Unavoidable Truth: Generative recommendation systems amplify user biases and conceal systemic manipulation.\n\nThe Unavoidable Lie: Technical taxonomies alone can fix corporate incentives.",
       "Alethekanon:\nAcademic taxonomies isolate technical symptoms while ignoring the commercial engine driving algorithmic opacity.",
       "Awwthekanon:\nIt hurts to feel manipulated by invisible algorithms when we are just looking for genuine connection and reliable guidance online.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Meaningful Distortion",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "arXiv Researchers",
@@ -157,6 +219,7 @@
         "name": "Researchers",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

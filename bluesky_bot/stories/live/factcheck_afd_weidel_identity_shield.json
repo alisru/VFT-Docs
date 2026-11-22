@@ -5,15 +5,15 @@
     "subject": "A lesbian Goldman Sachs banker...",
     "link": "https://www.washingtonexaminer.com/op-eds/4711076/afd-germany-populist-shift-weidel/",
     "target_url": "",
-    "claim_u": 0.82,
-    "claim_psi": 0.85,
-    "real_u": -0.78,
-    "real_psi": 0.42,
+    "claim_u": 0.73,
+    "claim_psi": 0.73,
+    "real_u": -0.45,
+    "real_psi": 0.05,
     "mode": "root",
     "posts": [
       "A far-right party leader's identity is weaponized to sanitize an extremist platform.\n\nA lesbian Goldman Sachs banker...\nEvidence: Moderate identity, Extremist platform, Tokenized shielding\n#Aletheia #Germany #Politics",
-      "The author claims Alice Weidel's identity as a lesbian former investment banker proves the AfD is a reasonable conservative party, not a neo-Nazi threat.\nStated Judgement: (+0.82, +0.85) — Greater Good",
-      "The reality is that Weidel's identity is used as a shield to normalize an ethno-nationalist platform whose members openly downplay Nazi history.\nResulting Judgement: (-0.78, +0.42) — Deception",
+      "The author claims Alice Weidel's identity as a lesbian former investment banker proves the AfD is a reasonable conservative party, not a neo-Nazi threat.\nStated Judgement: (+0.73, +0.73) — Greater Good",
+      "The reality is that Weidel's identity is used as a shield to normalize an ethno-nationalist platform whose members openly downplay Nazi history.\nResulting Judgement: (-0.45, +0.05) — Greatest Lie",
       "Verdict: FAIL — Fall into Deception.\nUsing a leader's personal background to sanitize an exclusionary platform is a classic tokenization maneuver.\nIntegrity: Severe Deception (Hypocrisy: 1.78, z: 3)",
       "- Alice Weidel Identity: COND (0.20, 0.50) — Used as shield.\n- AfD Party Platform: FAIL (-0.85, -0.65) — Extremism masked.\n- Media Framing: FAIL (-0.70, 0.30) — Normalizes far-right.",
       "Germany's AfD party has surged in popularity, led by Alice Weidel, whose moderate professional background contrasts sharply with the party's radical anti-immigrant rhetoric.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Alice Weidel Identity",
@@ -166,6 +228,7 @@
         "name": "Germany",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Deception"
   }
 ]

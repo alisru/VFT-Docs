@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "Federal trade judges uphold executive authority to scrap the $800 de minimis loophole, shifting trade enforcement.\n\nCourt upholds Trump's scrapping of de minimis tariff exemption\nEvidence: Executive authority, duty-free imports, federal revenue\n#USPol #Trade 🌐",
-      "The administration framed the scrapping of the $800 de minimis rule as a vital shield against illicit fentanyl and tariff cheats while reclaiming billions in revenue.\nStated Judgement: (+0.64, +1.00) — Good Preference",
+      "The administration framed the scrapping of the $800 de minimis rule as a vital shield against illicit fentanyl and tariff cheats while reclaiming billions in revenue.\nStated Judgement: (+0.64, +1.00) — Greater Good",
       "The U.S. Court of International Trade ruled the executive order under IEEPA is lawful, netting over $1 billion for customs while altering low-value import channels.\nResulting Judgement: (+0.06, -0.47) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nThe executive action legally closed a major trade loophole as affirmed by the trade court, delivering measurable tariff revenue.\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 2)",
+      "Verdict: PASS — Fall from Grace.\nThe executive action legally closed a major trade loophole as affirmed by the trade court, delivering measurable tariff revenue.\nIntegrity: Conditionally Sound (Hypocrisy: 1.4, z: 2)",
       "Sub-Audits Breakdown:\n- Executive Trade Authority: PASS (0.5, -0.1) — The court validated the use of IEEPA to eliminate the exemption without legislative overreach.",
       "A federal trade court rejected a legal challenge by auto-parts distributor Detroit Axle, ruling that scrapping the $800 de minimis exemption under IEEPA does not violate separation of powers or constitute an unlawful exercise of the power of the purse.",
       "The Bright Side:\nClosing the loophole curtails counterfeit goods and fentanyl trafficking pipelines while securing billions in federal tariff revenue.",
       "The Breakdown & Plane Error:\nCritics confuse WHAT (legal authority under IEEPA) with WHO (beneficiaries of duty-free shipping versus domestic manufacturers).",
       "Social Physics Analysis:\nThe administration leveraged executive power to resolve a persistent tariff loophole. While creating friction for low-value shippers, the legal framework held under judicial review.",
-      "The Trajectory: The Path of Redemption.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Ground enforcement matched legal justification.",
+      "The Trajectory: The Path of Fall from Grace.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Redemption. Ground enforcement matched legal justification.",
       "The Unavoidable Truth: Executive action successfully closed a massive duty-free import loophole.\n\nThe Unavoidable Lie: Eliminating de minimis alone solves complex transnational narcotics trafficking.",
       "Alethekanon:\nThe trade court's validation of IEEPA authority demonstrates that executive trade measures can withstand judicial scrutiny when tied to specific statutory powers.",
       "Awwthekanon:\nImport changes create real friction for small businesses, but securing borders against illegal narcotics remains a necessary step.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Conditionally Sound",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.8,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.8,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.0,
+        "N": 0.5
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 1.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.35,
+        "O": 0.3,
+        "N": 0.35
+      },
+      "GE": {
+        "S": 0.2,
+        "O": 0.5,
+        "N": 0.3
+      },
+      "LG": {
+        "S": 0.5,
+        "O": 0.15,
+        "N": 0.35
+      },
+      "LE": {
+        "S": 0.35,
+        "O": 0.35,
+        "N": 0.3
+      },
+      "GP": {
+        "S": 0.3,
+        "O": 0.65,
+        "N": 0.05
+      },
+      "BP": {
+        "S": 0.4,
+        "O": 0.4,
+        "N": 0.2
+      }
+    },
     "aspects": [
       {
         "name": "Executive Trade Authority",
@@ -271,6 +333,7 @@
         "name": "CBP",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall from Grace"
   }
 ]

@@ -5,22 +5,22 @@
     "subject": "Democrats are gaining ground....",
     "link": "https://www.cbc.ca/radio/democrats-election-midterms-united-states-of-america-9.7364969?cmp=rss",
     "target_url": "",
-    "claim_u": 0.5,
+    "claim_u": 0.25,
     "claim_psi": 0.0,
-    "real_u": -0.8,
-    "real_psi": -0.9,
+    "real_u": -0.2,
+    "real_psi": -0.45,
     "mode": "root",
     "posts": [
       "Midterm momentum meets voter roll purges. As Democrats gain ground, administrative maneuvers threaten electoral access. \nEvidence: Polling shifts, voter databases, Supreme Court rulings\n#Aletheia #USPol",
-      "Democrats are seeing positive polling trends across key House and Senate races heading into the midterms, while the Trump administration uses legal databases to scrub rolls. Stated Judgement: (+0.5, 0.0) — Good Preference",
-      "Behind the horse-race coverage, federal database expansions and administrative challenges aim to suppress participation and sow distrust in election integrity. Resulting Judgement: (-0.8, -0.9) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nElectoral horse-race reporting obscures coordinated structural efforts to restrict voter eligibility and manufacture systemic mistrust.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "Democrats are seeing positive polling trends across key House and Senate races heading into the midterms, while the Trump administration uses legal databases to scrub rolls. Stated Judgement: (+0.25, +0.00) — Lesser Good",
+      "Behind the horse-race coverage, federal database expansions and administrative challenges aim to suppress participation and sow distrust in election integrity. Resulting Judgement: (-0.20, -0.45) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nElectoral horse-race reporting obscures coordinated structural efforts to restrict voter eligibility and manufacture systemic mistrust.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
       "Sub-Audits Breakdown:\n- Polling Trends: PASS (0.5, 0.0) — Accurately notes shifting voter enthusiasm.\n- Voting Access: FAIL (-0.9, -0.9) — Downplays systematic voter suppression.",
       "As the midterm elections approach, polling shows competitive races nationwide, prompting executive-branch maneuvers to reshape voter eligibility rules.",
       "The Bright Side:\nIndependent checks by courts are blocking the most disruptive last-minute administrative changes to mail-in voting.",
       "The Breakdown & Plane Error:\nConfusing WHAT (electoral horse race polling) with WHO (systemic disenfranchisement of voters via administrative databases).",
       "Social Physics Analysis:\nActors deploy a smart selfish maneuver, using genuine polling anxieties as a pretext to justify aggressive voter roll purges while projecting corruption onto opponents.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated horse-race narratives and administrative voter suppression, it plots a direct trajectory toward Lesser Evil. Systemic friction replaces transparent democratic empowerment.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated horse-race narratives and administrative voter suppression, it plots a direct trajectory toward Lesser Evil. Systemic friction replaces transparent democratic empowerment.",
       "The Unavoidable Truth: Competitive polls show genuine voter engagement across multiple states.\n\nThe Unavoidable Lie: Administrative database purges are neutral housekeeping rather than partisan exclusion.",
       "Alethekanon:\nTreating democratic erosion as mere entertainment horse-race data blinds the public to structural disenfranchisement.",
       "Awwthekanon:\nEvery voter deserves to have their voice heard without being caught in administrative crossfire or bureaucratic hurdles.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Polling Trends",
@@ -164,6 +226,7 @@
         "name": "Republican Party",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

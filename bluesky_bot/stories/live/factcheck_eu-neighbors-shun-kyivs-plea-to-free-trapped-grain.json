@@ -7,20 +7,20 @@
     "target_url": "https://bsky.app/profile/politico.eu/post/3mwzndpwvxr24",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": -0.4,
+    "real_u": -0.45,
     "real_psi": -0.5,
     "mode": "root",
     "posts": [
       "When regional survival clashes with solidarity, borders harden.\nEvidence: European solidarity, farmer protection, grain blockades\n#Aletheia #Geopolitics",
-      "European neighbors maintain that supporting Ukraine's agricultural transit is an absolute priority for regional stability and food security.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Domestic agricultural lobbies in Poland and Romania successfully block expanded transit to protect local market prices, stranding millions of tons.\nResulting Judgement: (-0.4, -0.5) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nDomestic political realities clash with continental solidarity, resulting in severe logistical bottlenecks.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
+      "European neighbors maintain that supporting Ukraine's agricultural transit is an absolute priority for regional stability and food security.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Domestic agricultural lobbies in Poland and Romania successfully block expanded transit to protect local market prices, stranding millions of tons.\nResulting Judgement: (-0.45, -0.50) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nDomestic political realities clash with continental solidarity, resulting in severe logistical bottlenecks.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 2)",
       "- Poland: COND (-0.5, -0.5) — Protects local farmers.\n- Romania: COND (-0.4, -0.5) — Manages overloaded ports.",
       "As Black Sea blockades choke Ukrainian agricultural exports, neighboring EU states face severe domestic backlash from local farmers.",
       "The Poison:\nShort-term protectionism threatens global food security and long-term Ukrainian stability.",
       "The Breakdown & Plane Error:\nConfusing WHAT (logistical capacity) with WHO (political beneficiaries), masking protectionism as infrastructure limits.",
       "Social Physics Analysis:\nPoland and Romania run a smart selfish maneuver, prioritizing domestic voter bases while citing physical constraints as pretexts.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic strain is managed via local exclusion.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Systemic strain is managed via local exclusion.",
       "The Unavoidable Truth: Domestic political survival always trumps abstract regional solidarity under economic pressure.\n\nThe Unavoidable Lie: Infrastructure limits alone prevent any expansion of transit capacity.",
       "Alethekanon:\nContinental solidarity collapses the moment local economic survival is threatened by unfettered market access.",
       "Awwthekanon:\nIt is heartbreaking to watch farmers and nations struggle alike while systemic blockades starve the world.",
@@ -63,8 +63,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Poland Transit Stance",
@@ -162,6 +224,7 @@
         "name": "European Union",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

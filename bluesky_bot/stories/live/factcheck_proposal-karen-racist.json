@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.85,
-    "real_psi": -0.92,
+    "real_u": -0.17,
+    "real_psi": -0.46,
     "mode": "root",
     "posts": [
       "A scenic Laguna Beach proposal was derailed when a local dog owner hurled vile racist slurs at a Hispanic couple.\nEvidence: Park rules pretext, Xenophobic abuse, Viral outrage\n#Aletheia #California",
-      "The woman claimed she was simply defending public park rules against unauthorized events and commercial disruption.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "She weaponized park regulations as a thin pretext to unleash unprovoked xenophobic bigotry against a Hispanic family.\nResulting Judgement: (-0.85, -0.92) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nA routine park dispute was weaponized into a vicious racist tirade, exposing deep-seated bigotry masked as civic concern.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 4)",
+      "The woman claimed she was simply defending public park rules against unauthorized events and commercial disruption.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "She weaponized park regulations as a thin pretext to unleash unprovoked xenophobic bigotry against a Hispanic family.\nResulting Judgement: (-0.17, -0.46) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nA routine park dispute was weaponized into a vicious racist tirade, exposing deep-seated bigotry masked as civic concern.\n\nIntegrity: Severe Deception (Hypocrisy: 15.0, z: 4)",
       "- Proposal Karen: FAIL (-0.85, -0.92) — Uses park rules as cover for racial abuse.\n- Viral Media Coverage: PASS (0.50, 0.00) — Exposes bigotry accurately.",
       "Emmanuel Banuelos and Hayley Lugos were celebrating their engagement in Laguna Beach when a local dog owner launched into a racist rant, screaming 'Go back to Mexico.'",
       "The Poison:\nA public park should be a sanctuary of shared community joy, yet it became a stage for unchecked racial animosity and harassment.",
       "The Breakdown & Plane Error:\nThe aggressor confused WHO (policing park rules) with WHAT (attacking minority presence), substituting administrative grievances for racial hatred.",
       "Social Physics Analysis:\nThe aggressor ran a classic Smart Selfish maneuver: manufacturing a petty grievance about park permits as a pretext to project xenophobic hostility onto an innocent couple.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated civic concerns and ground-level racial abuse, it plots a direct trajectory toward Lesser Evil. u = -0.85, psi = -0.92.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map the gap between stated civic concerns and ground-level racial abuse, it plots a direct trajectory toward Lesser Evil. u = -0.85, psi = -0.92.",
       "The Unavoidable Truth: Bigotry often hides behind administrative rules to mask its true hostility.\nThe Unavoidable Lie: The outburst was about park permits rather than pure racial animus.",
       "Alethekanon:\nCivic complaints crumble when weaponized into xenophobic slurs, revealing that the real infraction was the couple's heritage. 🌐",
       "Awwthekanon:\nIt is heartbreaking that a moment meant for pure love and joy was marred by such ugliness, yet the couple's resilience shines through.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Proposal Karen",
@@ -157,6 +219,7 @@
         "name": "Laguna Beach",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

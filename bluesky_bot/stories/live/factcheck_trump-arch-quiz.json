@@ -12,15 +12,15 @@
     "mode": "root",
     "posts": [
       "NPR wraps a controversial 250-foot presidential triumphal arch and military base project into a cozy seasonal news quiz.\nEvidence: Quiz prompt, arch plans, military shift\n#Aletheia #USPol",
-      "Treats the monumental Washington DC construction as harmless trivia about gourds and pumpkins.\nStated Judgement: (+0.2, 0.0) — Neutral Preference",
-      "The proposed arch mutated into a militarized drone and sniper complex, sparking veteran lawsuits and severe legal pushback.\nResulting Judgement: (-0.7, -0.8) — Lesser Evil",
-      "Verdict: FAIL — The Path of Deception.\nTrivializing executive militarization of public monuments as a cute quiz normalizes democratic erosion.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
+      "Treats the monumental Washington DC construction as harmless trivia about gourds and pumpkins.\nStated Judgement: (+0.20, +0.00) — Lesser Good",
+      "The proposed arch mutated into a militarized drone and sniper complex, sparking veteran lawsuits and severe legal pushback.\nResulting Judgement: (-0.70, -0.80) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\nTrivializing executive militarization of public monuments as a cute quiz normalizes democratic erosion.\n\nIntegrity: Severe Deception (Hypocrisy: 14.2, z: 2)",
       "Sub-Audits Breakdown:\n- Media Framing: FAIL (-0.6, -0.7) — Masks militarization as cozy trivia.\n- Arch Project: FAIL (-0.8, -0.9) — Unilateral militarization of public land.",
       "NPR's weekly news quiz pairs lighthearted autumn trivia with Donald Trump's controversial redesign of a 250-foot National Mall arch into a military drone base.",
       "The Poison:\nNormalizes institutional capture and executive overreach by burying hard civic conflicts beneath lifestyle infotainment.",
       "The Breakdown & Plane Error:\nConfusing aesthetic celebration (WHAT) with authoritarian power projection (WHO), masking militarization as civic tradition.",
       "Social Physics Analysis:\nOperates via a Smart Selfish maneuver, using trivialized infotainment to mask the unilateral conversion of public monuments into military outposts.",
-      "The Trajectory: The Path of Deception.\nWhen media framing sanitizes executive overreach into cute trivia, it plots a direct trajectory toward Lesser Evil.\nMath: High pretext divergence yields severe systemic distortion.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen media framing sanitizes executive overreach into cute trivia, it plots a direct trajectory toward Lesser Evil.\nMath: High pretext divergence yields severe systemic distortion.",
       "The Unavoidable Truth: Public national monuments are being unilaterally repurposed for partisan military signaling.\n\nThe Unavoidable Lie: Converting civic spaces into armed drone bases is harmless seasonal trivia.",
       "Alethekanon:\nSoft infotainment sanitizes institutional decay, packaging authoritarian militarization as harmless weekend trivia.",
       "Awwthekanon:\nIt's sad when cozy traditions like autumn quizzes get used to distract us from concrete battles over public lands.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Media Framing",
@@ -152,6 +214,7 @@
         "name": "National Park Service",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

@@ -14,7 +14,7 @@
       "Apple is stepping up its defense against mercenary spyware, alerting users globally to potential threats. If Apple sends you a push notification alerting you to a spyware attack, take it seriously. Evidence: Security alerts, Lockdown Mode. #Apple #Security",
       "The claim advises users to treat Apple's new push notifications regarding mercenary spyware attacks as credible and urgent security warnings. Stated Judgement: (+1.00, +1.00) — Good Preference",
       "Apple is proactively identifying and notifying users targeted by state-sponsored spyware, providing actionable security steps like Lockdown Mode to mitigate risks. Resulting Judgement: (+1.00, +1.00) — Good Preference",
-      "Verdict: PASS — The Path of Grace. Apple's transparency in alerting users to state-sponsored threats empowers individuals to protect their data. Integrity: Trustworthy (Hypocrisy: 1.05, Uncertainty z: 0)",
+      "Verdict: PASS — Grace.",
       "Sub-Audits Breakdown:\n- Apple Security Team: PASS (0.9, 0.9) — Proactive disclosure of state-sponsored threats is a high-integrity security practice.\n- Citizen Lab: PASS (0.8, 0.8) — Independent verification confirms the efficacy of these alerts.",
       "Apple has updated its threat notification system to alert users on their lock screens if they are targeted by mercenary spyware. This follows a history of such alerts since 2021, aimed at protecting civil society members from government surveillance.",
       "The Bright Side:\nLockdown Mode provides a robust, verified defense against sophisticated attacks that were previously considered insurmountable.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 1.5,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 1.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 1.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 1.5,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "name": "Apple Security Team",
@@ -270,6 +332,7 @@
         "name": "Zack Whittaker",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Grace"
   }
 ]

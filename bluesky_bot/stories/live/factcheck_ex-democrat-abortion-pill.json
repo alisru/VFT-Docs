@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 1.0,
-    "real_u": -0.45,
-    "real_psi": -0.35,
+    "real_u": -0.15,
+    "real_psi": -0.25,
     "mode": "root",
     "posts": [
       "A personal trauma becomes a political weapon. Ex-Democrat shares abortion pill experience that left her hemorrhaging.\nEvidence: Women's safety, Restricting access, Political leverage\n#Aletheia #USPol #Healthcare",
-      "The claim asserts that restricting mail-order mifepristone is a necessary, compassionate measure to protect women from dangerous, unsupervised medical complications and deceptive marketing.\nStated Judgement: (+1.0, +1.0) — Greater Good",
-      "In reality, while the individual's trauma is real, her experience is leveraged by political advocacy groups to restrict reproductive healthcare access systemically, overriding broader medical safety data.\nResulting Judgement: (-0.45, -0.35) — Lesser Evil",
-      "Verdict: FAIL — Fall into Deception. Personal trauma is co-opted to drive a restrictive legislative agenda under the guise of safety.\nIntegrity: Severe Deception (Hypocrisy: 1.98, z: 3)",
+      "The claim asserts that restricting mail-order mifepristone is a necessary, compassionate measure to protect women from dangerous, unsupervised medical complications and deceptive marketing.\nStated Judgement: (+1.00, +1.00) — Greater Good",
+      "In reality, while the individual's trauma is real, her experience is leveraged by political advocacy groups to restrict reproductive healthcare access systemically, overriding broader medical safety data.\nResulting Judgement: (-0.15, -0.25) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 1.98, z: 3)",
       "- Haile McAnally: COND (0.20, -0.10) — Real trauma used for political lobbying.\n- Planned Parenthood: FAIL (-0.50, -0.40) — Marketing obscured medical risks.",
       "Haile McAnally, a former Democrat, is lobbying Capitol Hill to restrict mail-order mifepristone after experiencing severe hemorrhaging from unsupervised abortion pills.",
       "The Bright Side:\nHighlighting the need for proper medical supervision and patient education during medical procedures is a valid and necessary contribution to women's health discussions.",
       "The Breakdown & Plane Error:\nThe error lies in confusing the WHO with the WHAT. A single patient's tragic complication is used to define the safety profile of a medication, ignoring systemic clinical data to justify a political ban.",
       "Social Physics Analysis:\nThis follows a Smart Selfish Maneuver. Political actors use a real personal crisis as a pretext to manufacture a systemic emergency, projecting blame onto healthcare providers to hoard regulatory power over women's choices.",
-      "The Trajectory: The Path of Deception.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Restricting healthcare access under the guise of protection increases systemic strain.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Lesser Evil. Restricting healthcare access under the guise of protection increases systemic strain.",
       "The Unavoidable Truth: Unsupervised medical procedures carry real physical risks.\nThe Unavoidable Lie: Restricting mail-order access is purely about protecting women's health rather than limiting reproductive choice.",
       "Alethekanon:\nPersonal trauma is a powerful rhetorical shield, but using isolated complications to override systemic medical consensus is a classic logical error designed to manufacture political consent.",
       "Awwthekanon:\nIt is heartbreaking that she had to go through such a terrifying experience alone and felt abandoned by those she trusted. Every woman deserves deep compassion, safe medical care, and a supportive community during her most vulnerable moments.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Haile McAnally",
@@ -159,6 +221,7 @@
         "name": "United States Congress",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

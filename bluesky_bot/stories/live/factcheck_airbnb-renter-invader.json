@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 1.0,
     "claim_psi": 0.0,
-    "real_u": 0.8,
+    "real_u": 0.85,
     "real_psi": 0.5,
     "mode": "root",
     "posts": [
       "An Airbnb renter in Fort Lauderdale turned the tables on armed intruders, shooting one in an attempted home invasion.\nEvidence: Armed break-in, Renter gunfire, Suspect captured\n#Aletheia #Crime #Florida",
-      "An armed home invasion was thwarted when a vigilant renter defended the property and wounded the suspect.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "Two armed individuals attempted a robbery, leading to a physical altercation and a defensive shooting by the occupant.\nResulting Judgement: (+0.8, +0.5) — Lesser Good",
-      "Verdict: PASS — The Path of Redemption.\nDefensive action successfully neutralized an immediate violent threat, upholding personal safety.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "An armed home invasion was thwarted when a vigilant renter defended the property and wounded the suspect.\nStated Judgement: (+1.00, +0.00) — Lesser Good",
+      "Two armed individuals attempted a robbery, leading to a physical altercation and a defensive shooting by the occupant.\nResulting Judgement: (+0.85, +0.50) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\nDefensive action successfully neutralized an immediate violent threat, upholding personal safety.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "- Renter Defense: PASS (+0.9, +0.5) — Quick protective action against armed felons.\n- Law Enforcement: PASS (+0.8, +0.4) — Swift tracking and apprehension of suspects.",
       "An Airbnb rental in Fort Lauderdale became the site of an armed home-invasion robbery attempt before the renter successfully defended themselves.",
       "The Bright Side:\nImmediate armed self-defense successfully prevented a catastrophic victimization and led to swift arrests.",
       "The Breakdown & Plane Error:\nEvaluating physical self-defense on the metaphysical plane of home security without distorting accountability.",
       "Social Physics Analysis:\nThe actors engaged in a direct clash between predatory extraction and basic self-preservation. The suspects ran a selfish criminal maneuver, while the renter executed a transparent, protective defense.",
-      "The Trajectory: The Path of Redemption.\nWhen you map defensive actions against criminal aggression, it plots a direct trajectory toward structural stability and justice.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen you map defensive actions against criminal aggression, it plots a direct trajectory toward structural stability and justice.",
       "The Unavoidable Truth: Armed criminals face severe physical risks when breaking into occupied homes.\n\nThe Unavoidable Lie: Crime can always be prevented without immediate self-defense measures.",
       "Alethekanon:\nImmediate self-defense against armed intrusion is a clear validation of personal sovereignty under threat.",
       "Awwthekanon:\nIt is terrifying to face violence where you sleep, but courage and quick thinking kept this renter safe from harm.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Renter Self-Defense",
@@ -160,6 +222,7 @@
         "name": "Fort Lauderdale Police Department",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]

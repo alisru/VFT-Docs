@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.5,
     "claim_psi": 0.0,
-    "real_u": -0.2,
-    "real_psi": -0.1,
+    "real_u": 0.0,
+    "real_psi": -0.05,
     "mode": "root",
     "posts": [
       "Action star Alan Ritchson and his wife Catherine announce their separation after two decades of marriage and three children.\nEvidence: Instagram statement, 20 years marriage, December filing\n#Aletheia #Entertainment #Celebrity",
-      "Public statements frame celebrity separations as amicable, mutual transitions rooted in enduring respect and shared history.\nStated Judgement: (+0.5, 0.0) — Good Preference",
-      "Underneath the polished PR message, court records show legal separation filings occurred months prior, highlighting private friction.\nResulting Judgement: (-0.2, -0.1) — Lesser Evil",
-      "Verdict: COND — The Path of Deception.\nWhile presented as a recent mutual parting, the underlying timeline reflects standard legal management of public image.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
+      "Public statements frame celebrity separations as amicable, mutual transitions rooted in enduring respect and shared history.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "Underneath the polished PR message, court records show legal separation filings occurred months prior, highlighting private friction.\nResulting Judgement: (+0.00, -0.05) — Greater Evil",
+      "Verdict: CONDITIONAL — Awakening into Destruction.\nWhile presented as a recent mutual parting, the underlying timeline reflects standard legal management of public image.\n\nIntegrity: Conditionally Sound (Hypocrisy: 1.8, z: 1)",
       "- Public Announcement: PASS (0.5, 0.0) — Maintains family dignity.\n- Court Records Reality: COND (-0.2, -0.1) — Delayed disclosure.",
       "Alan Ritchson announced his divorce from Catherine after 20 years of marriage, though court documents reveal filings actually took place months earlier.",
       "The Bright Side:\nThe couple emphasizes ongoing respect and joint commitment to raising their three sons.",
       "The Breakdown & Plane Error:\nConfusing public brand presentation (WHAT) with private legal timelines (WHEN/WHO).",
       "SocialPhysics Analysis:\nPublicists employ a Smart Altruistic framing on the surface to protect family reputation, masking the colder administrative reality of pre-existing legal filings.",
-      "The Trajectory: The Path of Deception.\nWhen you map polished public messaging against private legal timelines, it plots a mild divergence toward deception. Discrepancies remain minor personal matters.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen you map polished public messaging against private legal timelines, it plots a mild divergence toward deception. Discrepancies remain minor personal matters.",
       "The Unavoidable Truth: Public celebrity announcements often curate timelines to soften personal transitions.\n\nThe Unavoidable Lie: Social media statements capture the complete and immediate reality of private relationships.",
       "Alethekanon:\nCurated public vulnerability remains a polished product designed to manage perception before reality catches up.",
       "Awwthekanon:\nEnding a twenty-year journey with three kids is heavy. Wishing everyone gentle grace through the transition.",
@@ -61,8 +61,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Conditionally Sound",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Public Announcement",
@@ -152,6 +214,7 @@
         "name": "Catherine Ritchson",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Destruction"
   }
 ]

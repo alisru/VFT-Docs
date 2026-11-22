@@ -7,20 +7,20 @@
     "target_url": "",
     "claim_u": 0.9,
     "claim_psi": 0.8,
-    "real_u": -0.75,
-    "real_psi": -0.85,
+    "real_u": -0.72,
+    "real_psi": -0.82,
     "mode": "root",
     "posts": [
       "The GOP faces a brutal economic reckoning as inflation persists at 3.4% and consumer confidence hits a 7-month low ahead of the 2026 midterms. 🌐\nEvidence: Affordability promise, persistent inflation, voter anxiety\n#Aletheia #Economy #Trump #Midterms",
       "Trump promised to \"end inflation and make America affordable again,\" claiming his policies would rapidly restore economic dominance and voter prosperity.\nStated Judgement: (+0.90, +0.80) — Greater Good",
-      "Instead, GDP growth slowed to 1.5%, wages are lagging behind inflation, and the national debt has topped $40 trillion, leaving voters highly anxious.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
-      "Verdict: FAIL — The Path of Destruction. Despite sweeping promises to end inflation, the administration's policies have yielded stagnant wages, rising debt, and deep consumer anxiety.\nIntegrity: Severe Deception (Hypocrisy: 1.65, z: 3)",
+      "Instead, GDP growth slowed to 1.5%, wages are lagging behind inflation, and the national debt has topped $40 trillion, leaving voters highly anxious.\nResulting Judgement: (-0.72, -0.82) — Greater Evil",
+      "Verdict: FAIL — Fall into Destruction.\nIntegrity: Severe Deception (Hypocrisy: 1.65, z: 3)",
       "- Economic Policy: FAIL (-0.75, -0.85) — Failed to deliver on affordability.\n- GOP Campaign: FAIL (-0.70, -0.80) — Deflecting blame to the Fed.",
       "Less than two years after voter anger over inflation swept Trump back into office, persistent 3.4% inflation and stagnant wage growth threaten the GOP's congressional majorities.",
       "The Bright Side:\nAugust job growth did bounce back with 162,000 jobs added, and consumer spending remains relatively solid despite low confidence.",
       "The Breakdown & Plane Error:\nThis is a HOW vs WHAT error. The administration focused on the WHAT (promising cheap goods) while ignoring the HOW (the structural reality of national debt and global energy shocks).",
       "Social Physics Analysis:\nTrump executes a Smart Selfish Maneuver. Facing a manufactured crisis of his own policy failures, he projects blame onto the Federal Reserve and trade partners, using post-hoc justifications to maintain power while voters bear the strain.",
-      "The Trajectory: The Path of Destruction.\nWhen you map the gap between the promise of affordability and the reality of a $40T debt, it plots a trajectory toward Greater Evil. The system decays under the weight of unaddressed structural strain.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen you map the gap between the promise of affordability and the reality of a $40T debt, it plots a trajectory toward Greater Evil. The system decays under the weight of unaddressed structural strain.",
       "The Unavoidable Truth: Inflation is still eroding the purchasing power of working families.\nThe Unavoidable Lie: Blaming the Federal Reserve entirely absolves fiscal policy.",
       "Alethekanon:\nEconomic gravity always wins. You can print promises and project blame, but when wages lag behind prices, the voter's wallet remains the ultimate arbiter of truth.",
       "Awwthekanon:\nBehind these cold percentages are families trying to stretch every dollar just to buy groceries. They don't care about political blame; they just need relief and stability.",
@@ -62,8 +62,70 @@
     ],
     "claim_integrity": "Absolute Truth",
     "real_integrity": "Severe Deception",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "Economic Policy",
@@ -160,6 +222,7 @@
         "name": "Federal Reserve",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Fall into Destruction"
   }
 ]

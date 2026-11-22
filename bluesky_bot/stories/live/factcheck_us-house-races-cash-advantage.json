@@ -5,22 +5,22 @@
     "subject": "See which incumbents have the biggest cash advantage in the tightest U.S. House races",
     "link": "https://cnb.cx/4cYDxPm",
     "target_url": "https://bsky.app/profile/cnbc.com/post/3mwdjheury225",
-    "claim_u": 1.0,
+    "claim_u": 0.9,
     "claim_psi": 0.0,
-    "real_u": 0.8,
-    "real_psi": 0.2,
+    "real_u": 0.75,
+    "real_psi": 0.1,
     "mode": "root",
     "posts": [
       "Incumbents wield massive financial firepower in the most fiercely contested 2026 House toss-up races.\nEvidence: FEC disclosures, OpenSecrets data, Toss-up districts.\n#Aletheia #USPol 🌐",
-      "Campaign finance data reveals clear structural cash advantages for incumbents in razor-thin midterm races.\nStated Judgement: (+1.0, 0.0) — Good Preference",
-      "FEC filings accurately map direct campaign balances, though independent Super PAC spending operates entirely outside these totals.\nResulting Judgement: (+0.8, +0.2) — Trustworthy",
-      "Verdict: PASS — The Path of Grace. Transparent financial reporting accurately details structural advantages in high-stakes elections.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
+      "Campaign finance data reveals clear structural cash advantages for incumbents in razor-thin midterm races.\nStated Judgement: (+0.90, +0.00) — Lesser Good",
+      "FEC filings accurately map direct campaign balances, though independent Super PAC spending operates entirely outside these totals.\nResulting Judgement: (+0.75, +0.10) — Greater Good",
+      "Verdict: PASS — Awakening into Grace.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 0)",
       "Sub-Audits Breakdown:\n- FEC Data Accuracy: PASS (1.0, 0.0) — Verified OpenSecrets filings.\n- Scope Completeness: COND (0.5, 0.2) — Excludes dark money Super PACs.",
       "CNBC analysis of mid-2026 OpenSecrets data shows incumbents hold a 2-to-1 cash advantage in 11 of 19 top toss-up U.S. House races.",
       "The Bright Side:\nRigorous nonpartisan data tracking gives voters clear visibility into campaign financial imbalances before voting.",
       "The Breakdown & Plane Error:\nThe error confuses WHERE campaign funds sit (direct committee accounts) with WHAT total political influence exists by omitting independent Super PAC spending.",
       "Social Physics Analysis:\nIncumbents leverage financial incumbency loops to deter challengers, using massive war chests as structural moats while media transparency exposes the raw financial asymmetry.",
-      "The Trajectory: The Path of Grace.\nWhen financial transparency maps structural realities without distortion, it plots a direct trajectory toward systemic empowerment and informed voting.",
+      "The Trajectory: The Path of Awakening into Grace.\nWhen financial transparency maps structural realities without distortion, it plots a direct trajectory toward systemic empowerment and informed voting.",
       "The Unavoidable Truth: Financial reserves give congressional incumbents a massive structural head start in competitive districts.\n\nThe Unavoidable Lie: Direct campaign cash accounts capture the totality of political spending in modern elections.",
       "Alethekanon:\nFinancial disclosures lay bare the institutional gravity protecting entrenched officeholders. Transparency reveals the asymmetry, giving challengers a measured baseline to target.",
       "Awwthekanon:\nIt feels daunting for grassroots challengers trying to outrun millions in war chests, but sunlight is the best disinfectant for shining a light on these massive gaps.",
@@ -64,8 +64,70 @@
     ],
     "claim_integrity": "Trustworthy",
     "real_integrity": "Trustworthy",
-    "stated_forces": null,
-    "actual_forces": null,
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
     "aspects": [
       {
         "aspect": "FEC Data Accuracy",
@@ -167,6 +229,7 @@
         "name": "OpenSecrets",
         "role": "instigator"
       }
-    ]
+    ],
+    "path_name": "Awakening into Grace"
   }
 ]
