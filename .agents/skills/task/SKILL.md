@@ -1,156 +1,77 @@
 ---
 name: task
-description: Manage task state, sessions, and error logging using the No More Fuckups Task Engine v4.
+description: Manage project tasks, desires, and anti-desires using the Semantic Gluon 8-Vertex Modal Topology engine. Automatically tracks goals, anchors comparative improvements ('better'), enforces boundary defense, and cancels unviable paths.
+allowed-tools: call_mcp_tool execute_bash view_file write_to_file
+---
+# Semantic Gluon Task & Project Manager
+
+The `/task` workflow coordinates autonomous task execution, desire tracking, and topological boundary defense using the **Semantic Gluon 8-Vertex Topology Engine** (`semantic-gluon` MCP).
+
 ---
 
-# No More Fuckups Task Engine v4
+## Quick Command Guide
 
-## Quick Start
+When the user types `/task` or asks to track progress, interpret their intent using the Gluon engine:
 
-When user says `/task` with no additional context, run:
+| User Input | Action / MCP Tool Call |
+| :--- | :--- |
+| `/task` (or `/task board`, `/task status`) | Call `gluon_render_board` to display the active 8-vertex project board. |
+| `/task list` | Call `gluon_list_projects` to see all tracked projects. |
+| `/task add <goal>` | Identify if it is a desire or anti-desire and call `gluon_add_desire` or `gluon_add_anti_desire`. |
+| `/task todo <task desc>` | Call `gluon_add_task` to attach an actionable step under the active desire. |
+| `/task done <task_id>` | Call `gluon_update_task` with `status: "completed"`. |
+| `/task start <task_id>` | Call `gluon_update_task` with `status: "in_progress"`. |
+| `/task avoid <boundary/taboo>` | Call `gluon_add_anti_desire` at vertex `is_not` or `cant_be`. |
+| `/task better <metric/goal>` | Call `gluon_anchor_comparative` to ground "better" against a baseline and taboo ceiling. |
+| `/task verify <comp_id>` | Call `gluon_verify_comparative` with empirical measurements. |
+| `/task supersede <old> <new>` | Call `gluon_supersede_desire` to retire the old desire into `was_like` history. |
+| `/task conflicts` | Call `gluon_detect_conflicts` to audit opposition lines. |
+| `/task process <type> <item_id>` | Call `gluon_run_process` (`productive`, `reductive`, `constructive`, `regressive`). |
 
-```powershell
-cd "E:\Vector Field Theory\VFT Docs"
-python .agent/tools/task_manager/task_manager.py preflight
-python .agent/tools/task_manager/task_manager.py status
-python .agent/tools/task_manager/task_manager.py goals
-```
+---
 
-This shows lessons, current status, and goal analysis in one go.
+## Automated Desire & Anti-Desire Tracking
 
-## Natural Language Interpretation
+During normal conversation (even without `/task`), the AI actively:
+1. **Identifies Positive Goals (Desires)**:
+   - Committed target futures $\to$ `will_be`
+   - Active feasible steps $\to$ `can_be`
+   - Speculative ideas $\to$ `may_be`
+   - Proven patterns/templates $\to$ `is_like`
+2. **Identifies Hard Limits & Taboos (Anti-Desires)**:
+   - Forbidden side effects / taboos $\to$ `is_not`
+   - Physical or architectural limits $\to$ `cant_be`
+   - Pruned or rejected scope $\to$ `wont_be`
+   - Obsolete legacy to avoid duplicating $\to$ `was_like`
+3. **Synchronizes State**:
+   - Saves relational data to `semantic_project.db` and exports real-time JSON to `project_desires.json`.
 
-When user says `/task <something>`, interpret their intent:
+---
 
-| User Says | My Action |
-|-----------|-----------|
-| `/task` (no args) | Run preflight + status + goals |
-| `/task what's next?` | Run `next` command |
-| `/task current` | Run `current` command |
-| `/task add <desc>` | Run `add "<desc>"` |
-| `/task done` | Complete current task with `done` (index is auto-detected) |
-| `/task start` | Start next recommended task with `start` (index is auto-detected) |
-| `/task start <n>` | Start task n with `start <n>` |
-| `/task <work request>` | Add as new task and start it with `add "<work request>" --start` |
-| `/task catchup` | Dump context -> Run `diagnose` -> Update state |
+## Topological Contradiction Opposition Lines
 
-## Catch-Up Protocol (Retroactive Analysis)
+When desires or anti-desires are registered, the engine audits the 4 cross-opposition vectors:
 
-When user says `/task catchup`:
-1.  **Dump Context**: Write current chat history to `retro_catchup.log`.
-2.  **Catch Up**: Run `python .agent/tools/task_manager/task_manager.py catchup retro_catchup.log`.
-3.  **Cleanup**: Delete `retro_catchup.log`.
-4.  **Report**: Summarize friction points found and tasks updated.
+1. **`will_be` vs `cant_be` (Red Primary - Fatal Contradiction)**:
+   - Target Goal breaches an Invariant Constraint.
+   - *Engine Action*: The desire and attached tasks are **automatically cancelled** and logged with the reason.
+2. **`can_be` vs `is_not` (Green Primary - Boundary Violation)**:
+   - Active step enters a taboo boundary.
+   - *Engine Action*: Desires/tasks are marked `conflicted` and paused immediately.
+3. **`is_like` vs `wont_be` (Red Secondary - False Analogy)**:
+   - Mimicking a rejected pattern.
+4. **`may_be` vs `was_like` (Green Secondary - Regression Risk)**:
+   - Hypothesis duplicates an obsolete legacy failure.
 
-## Session Flow
+---
 
-```
-SESSION START
-  └→ preflight (lessons, warnings, checklist)
-  └→ status (what's current, what's next)
-  └→ goals (sub-goals, pitfalls, scope guards)
-       ↓
-    WORK...
-       ↓
-  └→ reason <idx> "..." (log decisions)
-  └→ done <idx> (complete with lessons)
-  └→ git commit (after every state change)
-       ↓
-SESSION END
-  └→ global_sync (save to global registry)
-  └→ git commit (final sync commit)
-```
+## The 4 Dynamic Laws of Action
 
-## Behavioral Rules
-
-- **NEVER manually edit task.md** — auto-generated
-- **Run preflight at session start** — mandatory
-- **Run global_sync at session end** — preserves lessons
-- **Tag tasks semantically** — enables auto-pitfall linking
-- **Log reasoning** — enables postmortem analysis
-
-## Project Rule Compliance
-
-> [!IMPORTANT]
-> All rules in `.agent/rules/` are **always-on**. This workflow must obey every one of them.
-
-### 1. Git Commit After Every Edit (`git-commit.md`)
-After **any** task state change (`add`, `start`, `done`, `fail`, `reason`, `mistake`, `global_sync`), immediately run:
-```powershell
-cd "E:\Vector Field Theory\VFT Docs"
-git add -A
-git commit -m "<summarise change>"
-```
-Do **not** run `git push`. Summarise the change in the commit message. If changes are massive, use `"Massive changes"`.
-
-### 2. Literal Instructions Only (`literal-instructions.md`)
-- Execute the user's `/task` command **exactly as interpreted** from the table above.
-- Do **not** add, remove, or modify tasks, files, or content beyond what the user explicitly requested.
-- If the user asks a question (e.g., `/task what's next?`), answer it and do nothing else.
-
-### 3. No Assumptions (`no-assumptions.md`)
-- Do **only** what the user asked.
-- Do **not** invent side-tasks, search for files, or trigger actions the user did not request.
-- If a command is ambiguous, **ask the user** before acting.
-
-### 4. No Summarisation / Max Context (`no-summary-max-context.md`)
-- All task engine outputs (`status`, `goals`, `lessons`, `postmortem`) must be presented in **full** with no summarisation, concatenation, redaction, or reduction.
-- Use maximum context window. Do not truncate outputs unless the user explicitly approves.
-
-### 5. Visible Artifacts (`visible-artifacts.md`)
-- Task engine output files (`task.md`, `goal_analysis.md`, `lessons_learned.md`) are already generated in the project root — this is correct.
-- If the engine or workflow generates **any new file** (report, log, analysis), save it to a **visible workspace folder** (project root, `_AI files and chat logs`, etc.), **not** only to the hidden `.gemini` directory.
-- You may also create an artifact copy for version control, but the **primary deliverable must be visible**.
-
-### 6. Scribe Protocol for Written Output (`scribe.md`)
-- When generating human-readable reports (e.g., `goal_analysis.md`, postmortem summaries, lessons), apply the Scribe Protocol:
-  - Simulate emotional strain before writing.
-  - Use varied sentence rhythm (short, long, fragment).
-  - No forbidden words: "Delve", "Tapestry", "Underscore", "Testament to", "Landscape", "Foster", "Nuanced", "Multifaceted".
-  - Follow Synthesis → Mechanics → Implication flow, not intro-sentence + list dumps.
-
-## Commands Reference
-
-```powershell
-cd "E:\Vector Field Theory\VFT Docs"
-$TASK = "python .agent/tools/task_manager/task_manager.py"
-
-# Session Start
-& $TASK preflight       # MANDATORY: lessons, warnings, checklist
-& $TASK status          # Overview of project
-& $TASK goals           # Goal analysis with pitfalls
-
-# Task Lifecycle
-& $TASK add "Desc" --tags t1,t2   # Add new task
-& $TASK start <idx>               # Start with context awareness
-& $TASK reason <idx> "Why I did X"
-& $TASK done <idx> --lessons "..."
-
-# Views
-& $TASK next            # What to do next
-& $TASK current         # Current task details
-& $TASK lessons         # All lessons learned
-
-# Errors
-& $TASK fail <idx> "Reason"
-& $TASK postmortem <idx> "Hypothesis"
-& $TASK mistake "Name" "Structure" "Example" --tags t1,t2
-
-# Session End
-& $TASK global_sync     # Sync to global registry
-
-# MANDATORY after every state change above:
-git add -A
-git commit -m "<summarise change>"
-```
-
-## Key Files
-
-| File | Purpose |
-|------|---------|
-| `tasks.json` | Source of truth |
-| `task.md` | Auto-generated view |
-| `goal_analysis.md` | AI goal breakdown |
-| `lessons_learned.md` | Error patterns + lessons |
-| `.agent/global_mistakes.json` | Cross-conversation learning |
-<!-- Generated by memories.sh at 2026-09-24T15:15:23.575Z -->
+1. **Reductive Process** (`cant_be` $\to$ `is_not`):
+   - Collapses an impossibility into a hard boundary invariant using `was_like` and `can_be` opposing `is_like`.
+2. **Productive Process** (`can_be` $\to$ `will_be`):
+   - Elevates a feasible capability into a definitive target goal using `is_not` and `is_like` opposing `was_like`.
+3. **Regressive Process** (`wont_be` $\to$ `was_like`):
+   - Retires rejected scope or superseded architecture into historical precedent using `is_not` and `is_like` to oppose `can_be`.
+4. **Constructive Process** (`may_be` $\to$ `is_like`):
+   - Crystallizes a hypothesis into a validated working template using `can_be` and `was_like`.

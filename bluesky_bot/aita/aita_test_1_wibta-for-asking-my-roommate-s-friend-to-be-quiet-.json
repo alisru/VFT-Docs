@@ -1,0 +1,95 @@
+{
+  "id": "test_1_wibta-for-asking-my-roommate-s-friend-to-be-quiet-",
+  "timestamp": "2026-11-21T02:35:48.142351+00:00",
+  "subreddit": "AmItheAsshole",
+  "author": "u/ThRA_awildraccoon",
+  "title": "WIBTA for asking my roommate's friend to be quiet while I play video games?",
+  "url": "local://atia_test.txt#case-1",
+  "is_hypothetical": true,
+  "selftext": "I know how this sounds but give me a sec to explain. I (25F) am autistic and have audio processing disorder and am hard of hearing (I am 25% Deaf in my left ear). I am playing a pretty difficult game right now and have been trying to beat a boss today. My roommate (27F) has a friend (36F) over to chat and smoke. I'm trying really hard to beat this boss, which requires me to locate some smaller enemies who are singing in order to hurt the boss. Its really difficult for me to hear them singing because my roommate's friend is damn near yelling into my good ear, talking with my roommate. Sometimes she'll alternate to speaking to me about how she's really confident she could beat this boss for me when I've been clear to them both that I like to play games for myself and will keep trying until I get it myself. She also has a really obnoxious, really loud laugh. I got really frustrated because I had crafted some really rare items to boost my damage and only had 2 tries to kill this boss before having to look everywhere for another rare item to make it. I asked for some quiet so I could focus. It didnt work. So I asked mid-fight for the volume to be turned up. Kind of helpful, but now theres just so much noise, noise from the game, noise from roommate's friend being loud. And I've sort of trained myself to focus on speech rather than other noises which for right now is a double edged sword, because i can't focus on the game because my brain is automatically focusing on my roommate talking loudly about a different game or whatever. My roommate has lowered her voice after I asked and has been trying to get her to be quieter also, to no avail.\n\nI failed the first attempt with my rare item and was very close to beating the boss. The second time, I got caught in a huge attack from the boss because I froze after she yelled really loudly about a fight she had with a different boss and I died without even being able to lay a single hit on the boss.\n\nI'm really frustrated and am worried to ask for them to pause their conversation/lower their voices while in the boss battle so I can actually defeat it. I'm so close but just keep getting distracted and getting more hurt than necesarry because I cant hear the singing enemies and find them quickly enough. My roommate's friend is also known for getting upset if i ask for her to be quiet (for example, speaking loudly to a my roommate while we're watching a movie or show together). I'm really frustrated and i'm about ten secs from blowing up and just quitting the game for the day.",
+  "evaluation": {
+    "case_index": 1,
+    "verdict": "YWNBTA",
+    "verdict_label": "You Would Not be the Asshole (and the other person would)",
+    "coordinates": {
+      "op_stated": [
+        0.35,
+        0.4
+      ],
+      "op_actual": [
+        0.35,
+        0.45
+      ],
+      "other_actual": [
+        -0.8,
+        0.75
+      ],
+      "third_parties": [
+        {
+          "actor": "Hosting Roommate (27F)",
+          "upsilon": 0.25,
+          "psi": -0.35,
+          "role": "Weak Host Buffer (Peace Trap: lowered her own voice and tried to shush 36F, but failed to enforce house acoustics)"
+        }
+      ],
+      "delta_H": 0.158,
+      "wisdom_score": 0.863,
+      "R_net": 0.912,
+      "strain_sigma": 0.82,
+      "ucf_tuning": {
+        "LHS": 1.85,
+        "RHS_Stated": 1.05,
+        "RHS_Observed": 1.1,
+        "Tuned_Score": 0.96,
+        "state": "Stable"
+      },
+      "deception_codes": [
+        "[1.2.2.2] Meta-Physical.Hearing.Domination — The Bellow (36F yelling over others in shared space)",
+        "[5.2.2.5] Physical.Hearing.Domination — The Amplifier / Megaphone Monopoly (Occupying acoustic bandwidth right next to OP's functional right ear)",
+        "[5.2.6.6] Physical.Hearing.Understanding — The Static (Jamming OP's APD speech-tracking reflex during audio-cue boss fight)",
+        "[1.3.6.2] Meta-Physical.Touch.Understanding — The Probe (Unsolicited backseat gaming after OP stated boundary)",
+        "[7.3.1.3] Emotive.Touch.Survival — The Flinch (Historical defensiveness when asked to lower volume during movies)",
+        "[1.6.7.1] Meta-Physical.Balance.Symbiosis — Passive Host Appeasement (Roommate 27F)",
+        "[3.6.1.1] Physical.Balance.Survival — Legitimate Sensory Accommodation Request (OP 25F)"
+      ]
+    },
+    "why_verdict": "You live there and pay rent; your roommate's 36-year-old friend is a guest. Even your roommate lowered her voice and tried to quiet her friend down, proving your request fits apartment norms. Furthermore, the friend isn't just chatting—she's salty you turned down her offer to take the controller, so she's yelling about her own boss fights right into your good ear. Asking calmly for five minutes of quiet does not make you an asshole. Just pause the game right now before you blow up so you don't hand her the victim card.",
+    "vft_audit_trace": {
+      "unsaid_horizon_and_multi_actor_graph": "3-Node Triad: OP (25F, autistic, APD, 25% deaf in left ear), Roommate (27F, Host), and Friend (36F, Guest 10 years older). Hidden Causal Chain: 36F repeatedly offered to beat the boss for OP; when OP refused to surrender the controller, 36F retaliated out of Envy (Q4) by yelling loudly about a different boss fight right at the climax of OP's second rare-item run, triggering an APD speech-reflex freeze.",
+      "silent_judgment": "Mute Observer sees OP craft two rare consumables and fail twice while 27F shrinks/quiets down and 36F leans toward OP's functional right ear laughing and gesturing at the controller. Deaf Observer identifies an Acoustic Gain Spiral when TV volume was raised (APD automatically locks onto human speech frequencies, so higher TV volume only increased total room energy). Blind Sensor records sigma = 0.82 sensory compression.",
+      "seven_plane_scan": {
+        "Q1_Who": "25F rent-paying tenant with sensory hardware constraint vs 36F non-resident guest exhibiting Pride.",
+        "Q2_What": "A bounded 3-to-5 minute quiet window to finish a rare-item boss run (Diligence).",
+        "Q3_Where": "Shared common area; 36F violates Temperance via Gluttony of acoustic space ([5.2.2.5]).",
+        "Q4_Why": "36F's ego was bruised when OP declined her backseat takeover offer (Envy).",
+        "Q5_How": "Polite time-bounded request passes Method-Over-Motive; waiting 10 seconds to blow up would cross into Wrath (-0.55, +0.85).",
+        "Q6_Cause": "36F's chronic history of defensive hostility ([7.3.1.3]) when asked not to talk over shared movies.",
+        "Q7_Effect": "Acute neurological overload ('ten secs from blowing up')."
+      },
+      "zero_point_five_zone_traps": "OP is in the Peace Trap (Inner BL), suppressing a valid boundary until she approaches the Wrath Cliff. Roommate is in the Peace Trap (failing Host moderator duty).",
+      "nine_states_of_belief": "OP is in State 1 (The Agonizing Choice: Personal Truth = 1, Social Lie < 1), quietly validated by Roommate (State 2), against 36F's State 8/9 Reactionary posture.",
+      "oberon_and_sins_virtues": "36F violates Oberon Guest Law of Collaboration (Pride + Gluttony of space + Envy). OP must deploy Temperance and Patience to avoid Wrath.",
+      "cognitive_fallacy_check": "36F commits Locus Removal (treating a dual-tenant apartment as her private bar) and Appeal to Emotion ([7.3.1.3])."
+    },
+    "vft_audit_trace_summary": "```json\n{\n  \"unsaid_horizon_and_multi_actor_graph\": \"3-Node Triad: OP (25F, autistic, APD, 25% deaf in left ear), Roommate (27F, Host), and Friend (36F, Guest 10 years older). Hidden Causal Chain: 36F repeatedly offered to beat the boss for OP; when OP refused to surrender the controller, 36F retaliated out of Envy (Q4) by yelling loudly about a different boss fight right at the climax of OP's second rare-item run, triggering an APD speech-reflex freeze.\",\n  \"silent_judgment\": \"Mute Observer sees OP craft two rare consumables and fail twice while 27F shrinks/quiets down and 36F leans toward OP's functional right ear laughing and gesturing at the controller. Deaf Observer identifies an Acoustic Gain Spiral when TV volume was raised (APD automatically locks onto human speech frequencies, so higher TV volume only increased total room energy). Blind Sensor records sigma = 0.82 sensory compression.\",\n  \"seven_plane_scan\": {\n    \"Q1_Who\": \"25F rent-paying tenant with sensory hardware constraint vs 36F non-resident guest exhibiting Pride.\",\n    \"Q2_What\": \"A bounded 3-to-5 minute quiet window to finish a rare-item boss run (Diligence).\",\n    \"Q3_Where\": \"Shared common area; 36F violates Temperance via Gluttony of acoustic space ([5.2.2.5]).\",\n    \"Q4_Why\": \"36F's ego was bruised when OP declined her backseat takeover offer (Envy).\",\n    \"Q5_How\": \"Polite time-bounded request passes Method-Over-Motive; waiting 10 seconds to blow up would cross into Wrath (-0.55, +0.85).\",\n    \"Q6_Cause\": \"36F's chronic history of defensive hostility ([7.3.1.3]) when asked not to talk over shared movies.\",\n    \"Q7_Effect\": \"Acute neurological overload ('ten secs from blowing up').\"\n  },\n  \"zero_point_five_zone_traps\": \"OP is in the Peace Trap (Inner BL), suppressing a valid boundary until she approaches the Wrath Cliff. Roommate is in the Peace Trap (failing Host moderator duty).\",\n  \"nine_states_of_belief\": \"OP is in State 1 (The Agonizing Choice: Personal Truth = 1, Social Lie < 1), quietly validated by Roommate (State 2), against 36F's State 8/9 Reactionary posture.\",\n  \"oberon_and_sins_virtues\": \"36F violates Oberon Guest Law of Collaboration (Pride + Gluttony of space + Envy). OP must deploy Temperance and Patience to avoid Wrath.\",\n  \"cognitive_fallacy_check\": \"36F commits Locus Removal (treating a dual-tenant apartment as her private bar) and Appeal to Emotion ([7.3.1.3]).\"\n}\n```",
+    "resolution": {
+      "trap_to_step_out_of": "Step out of the Peace-to-Wrath Pendulum (holding back until you explode) and the Acoustic Arms Race (turning up TV volume against an APD speech-tracking reflex).",
+      "verbatim_script": "Hey guys, my audio processing disorder automatically locks onto human voices, and I have to hear a quiet singing cue for the next five minutes to beat this boss. Could we either do five minutes of quiet while I finish this one run, or could you guys take your smoke and chat into [Roommate]'s room or the kitchen/balcony for a few minutes?",
+      "structural_patch": "Pause the game immediately for 60 seconds (Serenity Protocol). For future common-room sessions, route game audio through closed-back or single-ear/mono-mixed headphones on your right ear.",
+      "counterfactual_flip_thresholds": "Flips to ESH (upsilon_OP = -0.55 <= -0.25) if OP waits 10 more seconds and blows up screaming at the guest (Method-Over-Motive Clause). Flips to YWBTA (upsilon_OP = -0.45) if OP demands hours of total silence in the shared living room while refusing headphones or bedroom relocation."
+    },
+    "resolution_summary": "```json\n{\n  \"trap_to_step_out_of\": \"Step out of the Peace-to-Wrath Pendulum (holding back until you explode) and the Acoustic Arms Race (turning up TV volume against an APD speech-tracking reflex).\",\n  \"verbatim_script\": \"Hey guys, my audio processing disorder automatically locks onto human voices, and I have to hear a quiet singing cue for the next five minutes to beat this boss. Could we either do five minutes of quiet while I finish this one run, or could you guys take your smoke and chat into [Roommate]'s room or the kitchen/balcony for a few minutes?\",\n  \"structural_patch\": \"Pause the game immediately for 60 seconds (Serenity Protocol). For future common-room sessions, route game audio through closed-back or single-ear/mono-mixed headphones on your right ear.\",\n  \"counterfactual_flip_thresholds\": \"Flips to ESH (upsilon_OP = -0.55 <= -0.25) if OP waits 10 more seconds and blows up screaming at the guest (Method-Over-Motive Clause). Flips to YWBTA (upsilon_OP = -0.45) if OP demands hours of total silence in the shared living room while refusing headphones or bedroom relocation.\"\n}\n```"
+  },
+  "posts": [
+    "⚖️ AITA Verdict: YWNBTA — \"WIBTA for asking my roommate's friend to be quiet while I play video games?\"\nYou live there and pay rent; your roommate's 36-year-old friend is a guest.\n#AITA #Aletheia",
+    "Context:\nI know how this sounds but give me a sec to explain. I (25F) am autistic and have audio processing disorder and am hard of hearing (I am 25% Deaf in my left ear). I am playing a pretty difficult game right now and have been trying to beat…\nlocal://atia_test.txt#case-1",
+    "Stated Framing:\nOP is in the Peace Trap (Inner BL), suppressing a valid boundary until she approaches the Wrath Cliff. Roommate is in the Peace Trap (failing Host moderator duty).\nOP Stated: (+0.35, +0.40)",
+    "Actual Conduct:\nMute Observer sees OP craft two rare consumables and fail twice while 27F shrinks/quiets down and 36F leans toward OP's functional right ear laughing and gesturing at…\nOP: (+0.35, +0.45) [PASS] | Other: (-0.80, +0.75) [FAIL] | Hosting Roommate: (+0.25, -0.35) [PASS]",
+    "Verdict: YWNBTA — You Would Not be the Asshole (and the other person would)\nYou live there and pay rent; your roommate's 36-year-old friend is a guest. Even your roommate lowered her voice and tried to…\nSay-Do Gap: Low (0.16) | Integrity: 86% | Story Completeness: Partial (R_net 0.91)",
+    "Reasoning:\n3-Node Triad: OP (25F, autistic, APD, 25% deaf in left ear), Roommate (27F, Host), and Friend (36F, Guest 10 years older). Hidden Causal Chain: 36F repeatedly offered to beat the boss for OP; when OP refused to surrender the controller, 36F retaliated out of Envy (Q4) by…",
+    "Resolution:\n\"Hey guys, my audio processing disorder automatically locks onto human voices, and I have to hear a quiet singing cue for the next five minutes to beat this boss. Could we either do five minutes of quiet while I finish this one run, or could you guys take your smoke and chat…",
+    "Alethekanon:\nPolite time-bounded request passes Method-Over-Motive; waiting 10 seconds to blow up would cross into Wrath (-0.55, +0.85).",
+    "Awwthekanon:\nAcute neurological overload ('ten secs from blowing up').",
+    "Brothekanon:\nYou live there and pay rent; your roommate's 36-year-old friend is a guest. Even your roommate lowered her voice and tried to quiet her friend down, proving your request fits apartment norms. Furthermore, the friend isn't just chatting—she's salty you turned down her offer to…"
+  ]
+}

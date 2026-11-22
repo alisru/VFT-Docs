@@ -1,0 +1,381 @@
+Command exited with code 0.
+
+Command output:
+error: fsmonitor_ipc__send_query: unspecified error on '.git/fsmonitor--daemon.ipc'
+warning: in the working copy of 'bluesky_bot/google_ai_studio_one_shot.py', LF will be replaced by CRLF the next time Git touches it
+diff --git a/bluesky_bot/google_ai_studio_one_shot.py b/bluesky_bot/google_ai_studio_one_shot.py
+index e7dbbc46f..5af602da6 100644
+--- a/bluesky_bot/google_ai_studio_one_shot.py
++++ b/bluesky_bot/google_ai_studio_one_shot.py
+@@ -1,3 +1,20 @@
++BOILERPLATE_PATTERNS = [
++    r'this material may not be published',
++    r'broadcast,\s*rewritten,\s*or redistributed',
++    r'quotes displayed in real-time or delayed',
++    r'market data provided by',
++    r"you've successfully subscribed",
++    r'subscribe to read',
++    r'please subscribe to continue',
++    r'enjoy unlimited website access',
++    r'exclusive content for subscribers',
++    r'log in to your account',
++    r'all rights reserved\.\s*©',
++    r'please enable javascript',
++    r'cookies are required',
++    r'access denied',
++]
++
+ import os
+ import sys
+ import json
+@@ -46,7 +63,9 @@ class ParagraphExtractor(HTMLParser):
+             self.in_p = False
+             para_text = "".join(self.current_para).strip()
+             if para_text:
+-                self.paragraphs.append(para_text)
++                p_lower = para_text.lower()
++                if not any(re.search(bp, p_lower) for bp in BOILERPLATE_PATTERNS):
++                    self.paragraphs.append(para_text)
+             self.current_para = []
+ 
+     def handle_data(self, data):
+@@ -64,7 +83,10 @@ def scrape_article_text(url):
+         
+         parser = ParagraphExtractor()
+         parser.feed(response.text)
+-        return "\n\n".join(parser.paragraphs)
++        clean_body = "\n\n".join(parser.paragraphs).strip()
++        if len(clean_body) < 250:
++            return "Error: Article body too short or blocked by paywall/boilerplate"
++        return clean_body
+     except Exception as e:
+         return f"Error: {e}"
+ 
+@@ -111,7 +133,7 @@ except ImportError:
+ 
+ # Per-request deadline for Gemini calls. Without it a rate-limited/stalled call
+ # hangs with no client-side timeout instead of raising into the fallback path.
+-GEMINI_TIMEOUT_SECS = int(os.environ.get("GEMINI_TIMEOUT_SECS", "90"))
++GEMINI_TIMEOUT_SECS = int(os.environ.get("GEMINI_TIMEOUT_SECS", "60"))
+ 
+ # --- 0. HELPER FUNCTIONS FOR TOKEN MINIFICATION & ALTERNATIVE API ---
+ def minify_markdown(text):
+@@ -214,7 +236,8 @@ def get_gemini_client():
+         print("Warning: google-genai SDK is not installed. Gemini models will be unavailable.")
+         return None
+     try:
+-        client = genai.Client(api_key=api_key)
++        http_options = types.HttpOptions(timeout=GEMINI_TIMEOUT_SECS * 1000) if types and hasattr(types, "HttpOptions") else None
++        client = genai.Client(api_key=api_key, http_options=http_options) if http_options else genai.Client(api_key=api_key)
+         return client
+     except Exception as e:
+         print(f"Warning: Failed to initialize genai.Client: {e}")
+@@ -363,10 +386,30 @@ DYNAMIC_BANNED_DOMAINS = set(UNSCRAPABLE_DOMAINS)
+ SCRAPING_WHITELIST = {
+     'bbc.com', 'bbc.co.uk', 'bbci.co.uk',
+     'abc.net.au',
++    'theguardian.com', 'theguardian.co.uk', 'guardian.co.uk',
++    'apnews.com',
++    'reuters.com', 'reutersconnect.com',
++    'axios.com',
++    'aljazeera.com',
++    'france24.com',
++    'dw.com',
++    'propublica.org',
+     'thesaturdaypaper.com.au', 'saturdaypaper.com.au',
+-    'smh.com.au',
++    'smh.com.au', 'theage.com.au', 'sbs.com.au',
+     'techcrunch.com',
+-    'npr.org'
++    'npr.org',
++    'foxnews.com',
++    'dailymail.co.uk', 'dailymail.com',
++    'nypost.com',
++    'washingtonexaminer.com',
++    'thefederalist.com',
++    'washingtontimes.com',
++    'dailycaller.com',
++    'breitbart.com',
++    'goodnewsnetwork.org',
++    'positive.news',
++    'optimistdaily.com',
++    'squirrel-news.net'
+ }
+ 
+ def is_domain_whitelisted(domain):
+@@ -1031,20 +1074,58 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
+ 
+ # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
+ DEFAULT_FALLBACKS = [
+-    "gemini-3.8-flash",
+     "gemini-3.7-flash",
+     "gemini-2.5-flash",
+-    "gemini-3.5-flash",
+-    "gemini-3.6-flash",
+     "gemini-2.5-flash-lite",
+     "gemini-3.5-flash-lite",
+     "gemini-3.1-flash-lite",
+-    "vertex:gemini-3.8-flash",
+     "vertex:gemini-3.7-flash",
+     "vertex:gemini-3.1-flash-lite",
+     "gemini-3-flash-preview",
+ ]
+ 
++COORDINATE_SCALE_CALIBRATION = """=== COORDINATE SCALE CALIBRATION ANCHORS (CANONICAL VFT HORIZONS) ===
++When judging the morality (υ) and will (ψ) of any action, claim, or policy, you must map the coordinates strictly against the following concentric horizons. Do not moralize — map and calculate:
++
++AXIS υ (Morality) — Who does this benefit?
++  +2 Everyone / All beings (Systemic Justice)
++  +1 Other people (Greater Good)
++  +0 No one / Neutral
++  -1 My group only (Lesser Evil)
++  -2 Only me (Tyranny / Pure Extraction)
++  (Spectrum: Everyone -> Other Beings -> A Being -> No One -> My Group -> Me -> Only Me)
++
++AXIS ψ (Will) — What is the energy doing?
++  +2 Actively creating systemic value for all (Productive Justice)
++  +1 Proactive — creating, building, acting
++  +0 Neutral — no meaningful force applied
++  -1 Passive — allowing, suppressing, withholding
++  -2 Actively destroying or extracting value (Chaos / Collapse)
++
++CANONICAL BENCHMARK HORIZONS:
++- Ring 2.0 (Systemic / Civilizational — Structural Shift across Humanity / Species):
++  * (+2, +2) Salk polio vaccine, Universal Human Rights, municipal water sanitation.
++  * (-2, +2) Atlantic slave trade, WMD war pretext, Big Tobacco 50-yr cancer coverup.
++  * (-2, -2) Holocaust, Chernobyl coverup, Holodomor famine, nuclear war.
++  * (+2, -2) Montreal Protocol (banning CFCs), Cuban Missile Crisis de-escalation.
++- Ring 1.0 (Individual / Human / National — Affects Millions & Legal Architecture):
++  * (+1, +1) Civil Rights Act, Medicare, Apollo program, Robodebt Royal Commission.
++  * (-1, +1) Enron, 2008 subprime mortgage fraud, Watergate, partisan gerrymandering.
++  * (-1, -1) Flint water poisoning, Texas 2021 grid freeze, systemic police corruption.
++  * (+1, -1) Antitrust breakup, peaceful election concession, emergency public health pause.
++- Ring 0.5 (Perceptual Inversion Zone / Local Events / Everyday Civic & Commercial):
++  * (+0.5, +0.5) Local school bond, community clinic, open-sourcing useful software.
++  * (-0.5, +0.5) Misleading campaign ad, corporate astroturfing, hidden junk fees.
++  * (-0.5, -0.5) Fatal 143mph crash, postal ballot theft, localized shelter neglect.
++  * (+0.5, -0.5) Postponing event for weather/safety, temporary union strike / collective bargaining.
++- Neutral Horizon (0.0):
++  * Procedural court scheduling, neutral parliamentary rulings, routine commercial litigation.
++
++MANDATORY CALIBRATION BOUNDS:
++Before scoring any event <= -0.7 or >= +0.7, verify the blast radius against these benchmarks. Is the event structurally comparable to Flint, Michigan (-1.0), Enron (-1.0), or Chernobyl (-2.0)?
++Routine strikes, union protests, campaign debates, and commercial lawsuits belong strictly in the local/civic scale ([-0.3, +0.4]), NOT civilizational catastrophe (<= -0.8).
++"""
++
+ _RULES_CACHE = {}
+ 
+ def _load_rules(use_son=False, use_potential=False):
+@@ -1061,7 +1142,7 @@ def _load_rules(use_son=False, use_potential=False):
+             convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
+             formatting_path = os.path.join(script_dir, "instructions", "thread_formatting.md")
+         with open(convergence_path, "r", encoding="utf-8") as f:
+-            _RULES_CACHE[f"{cache_key}_convergence"] = minify_markdown(f.read())
++            _RULES_CACHE[f"{cache_key}_convergence"] = COORDINATE_SCALE_CALIBRATION + "\n\n" + minify_markdown(f.read())
+         with open(formatting_path, "r", encoding="utf-8") as f:
+             raw_fmt = f.read()
+             clean_fmt = extract_thread_content_rules(raw_fmt)
+@@ -1277,7 +1358,7 @@ def build_output_format(n, use_son=False, use_potential=False, use_multi_aspect=
+         '"Context paragraph."',
+         '"The Bright Side:\\nNuance."',
+         '"The Breakdown & Plane Error:\\nExplanation."',
+-        '"**Social Physics Analysis:**\\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection."',
++        '"Social Physics Analysis:\\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection."',
+         '"The Trajectory: The Path of Deception.\\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence."',
+         '"The Unavoidable Truth: truth in 1 sentence.\\n\\nThe Unavoidable Lie: lie in 1 sentence."',
+         '"Alethekanon:\\nStructural analysis in 1-2 concise sentences."',
+@@ -1699,13 +1780,15 @@ def harvest_search_grounding(genai_client, candidates):
+     for g_model in grounding_models:
+         try:
+             print(f"  [Stage 1 Grounding] Pre-harvesting search facts for {len(candidates)} candidate(s) via {g_model} (Ref Date: {today_str})...")
++            g_http_opts = types.HttpOptions(timeout=GEMINI_TIMEOUT_SECS * 1000) if types and hasattr(types, "HttpOptions") else None
+             resp = genai_client.models.generate_content(
+                 model=g_model,
+                 contents=prompt,
+                 config=types.GenerateContentConfig(
+                     temperature=0.2,
+                     max_output_tokens=16384,
+-                    tools=[types.Tool(google_search=types.GoogleSearch())]
++                    tools=[types.Tool(google_search=types.GoogleSearch())],
++                    http_options=g_http_opts
+                 )
+             )
+             dossier = resp.text.strip() if resp and hasattr(resp, "text") and resp.text else ""
+@@ -1824,6 +1907,9 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
+                     client_args["project"] = project_id
+                     client_args["location"] = location
+                 
++                v_http_opts = vertex_types.HttpOptions(timeout=GEMINI_TIMEOUT_SECS * 1000) if hasattr(vertex_types, "HttpOptions") else None
++                if v_http_opts:
++                    client_args["http_options"] = v_http_opts
+                 print(f"Initializing Vertex AI client (key present: {bool(vertex_key)})...")
+                 v_client = vertex_genai.Client(**client_args)
+                 
+@@ -1869,7 +1955,8 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
+                     system_instruction=system_instruction,
+                     safety_settings=v_safety_settings,
+                     tools=v_tools_list,
+-                    thinking_config=v_thinking_config
++                    thinking_config=v_thinking_config,
++                    http_options=v_http_opts
+                 )
+                 
+                 response = v_client.models.generate_content(
+@@ -1933,13 +2020,15 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
+                             thinking_budget=budget_map.get(thinking_level.upper(), 8192)
+                         )
+ 
++                main_http_opts = types.HttpOptions(timeout=GEMINI_TIMEOUT_SECS * 1000) if types and hasattr(types, "HttpOptions") else None
+                 config = types.GenerateContentConfig(
+                     temperature=0.15,
+                     max_output_tokens=65536,
+                     system_instruction=system_instruction,
+                     safety_settings=safety_settings,
+                     tools=tools_list,
+-                    thinking_config=thinking_config
++                    thinking_config=thinking_config,
++                    http_options=main_http_opts
+                 )
+                 
+                 response = genai_client.models.generate_content(
+@@ -2024,6 +2113,10 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
+                 except Exception as ge:
+                     print(f"  Warning checking grounding chunks: {ge}")
+ 
++            # Preserve pre-harvested URLs if grounding_urls is empty
++            if not grounding_urls and pre_harvested_urls:
++                grounding_urls = list(pre_harvested_urls) if isinstance(pre_harvested_urls, list) else pre_harvested_urls
++
+             return result_text, grounding_urls
+         except Exception as e:
+             err_str = str(e).lower()
+@@ -2031,7 +2124,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
+                 print(f"Server capacity spike (503 Unavailable) on model {model}. Trying fallback...")
+             elif "429" in err_str or "exhausted" in err_str or "quota" in err_str:
+                 print(f"Rate limited or quota exhausted (429) on model {model}. Trying fallback...")
+-            elif "deadline" in err_str or "timeout" in err_str or "504" in err_str:
++            elif "deadline" in err_str or "timeout" in err_str or "504" in err_str or "timed out" in err_str or "timeoutexception" in err_str:
+                 print(f"Model {model} timed out after {GEMINI_TIMEOUT_SECS}s. Trying fallback...")
+             else:
+                 print(f"Warning: Model {model} failed ({e}). Trying fallback...")
+@@ -2060,7 +2153,7 @@ def sanitize_story_posts(posts, use_spiritual=False):
+         clean[-1] = repair_spirithekanon_post(last_p)
+                 
+     # Auto-fit raw text posts destined for Bluesky under 280 chars
+-    for i in range(min(4, len(clean))):
++    for i in range(len(clean)):
+         if len(clean[i]) > 280:
+             lines = clean[i].split("\n")
+             while len("\n".join(lines)) > 280 and len(lines) > 1:
+@@ -2088,6 +2181,10 @@ def sanitize_story_posts(posts, use_spiritual=False):
+     return clean
+ 
+ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", use_potential=False):
++    try:
++        from rebuild_registries_son import calculate_son_coordinates
++    except ImportError:
++        calculate_son_coordinates = None
+     # Strip markdown fences if present
+     content = flat_text.strip()
+     if content.startswith("```json"):
+@@ -2223,6 +2320,21 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
+                 if use_spiritual:
+                     story["spiritual"] = True
+                     story["spiritual_traditions"] = resolve_spiritual_traditions(spiritual_traditions)
++                if calculate_son_coordinates:
++                    if story.get("stated_forces") and isinstance(story["stated_forces"], dict):
++                        try:
++                            c_u, c_psi = calculate_son_coordinates(story["stated_forces"])
++                            story["claim_u"] = c_u
++                            story["claim_psi"] = c_psi
++                        except Exception:
++                            pass
++                    if story.get("actual_forces") and isinstance(story["actual_forces"], dict):
++                        try:
++                            r_u, r_psi = calculate_son_coordinates(story["actual_forces"])
++                            story["real_u"] = r_u
++                            story["real_psi"] = r_psi
++                        except Exception:
++                            pass
+                 evaluations.append(story)
+                 continue
+             except Exception as e:
+@@ -2328,7 +2440,21 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
+             if use_spiritual:
+                 story["spiritual"] = True
+                 story["spiritual_traditions"] = resolve_spiritual_traditions(spiritual_traditions)
+-
++            if calculate_son_coordinates:
++                if story.get("stated_forces") and isinstance(story["stated_forces"], dict):
++                    try:
++                        c_u, c_psi = calculate_son_coordinates(story["stated_forces"])
++                        story["claim_u"] = c_u
++                        story["claim_psi"] = c_psi
++                    except Exception:
++                        pass
++                if story.get("actual_forces") and isinstance(story["actual_forces"], dict):
++                    try:
++                        r_u, r_psi = calculate_son_coordinates(story["actual_forces"])
++                        story["real_u"] = r_u
++                        story["real_psi"] = r_psi
++                    except Exception:
++                        pass
+             evaluations.append(story)
+         except Exception as e:
+             print(f"Warning: Failed to parse item {idx}: {e}")
+@@ -2942,25 +3068,36 @@ def main():
+                 # If search was actually used, append 🌐 to post 1 and record grounding URL as metadata
+                 if grounding_urls:
+                     print(f"  Google Search grounding detected with {len(grounding_urls)} source(s).")
+-                    primary_url = grounding_urls[0]
+-                    # Strip tracking parameters to save character space
+-                    if "?" in primary_url:
+-                        primary_url = primary_url.split("?")[0]
+-                    primary_url = primary_url.strip()
+-                    
+-                    for item in parsed:
+-                        if isinstance(item, dict):
+-                            item["grounding_url"] = primary_url
+-                            posts = item.get("posts", [])
+-                            if posts and len(posts) > 0:
+-                                first_post = posts[0]
+-                                if "🌐" not in first_post:
+-                                    posts[0] = first_post.rstrip() + " 🌐"
+-                        elif isinstance(item, list) and len(item) > 10:
+-                            if isinstance(item[10], list) and len(item[10]) > 0:
+-                                first_post = item[10][0]
+-                                if "🌐" not in first_post:
+-                                    item[10][0] = first_post.rstrip() + " 🌐"
++                    for i, item in enumerate(parsed):
++                        cand_url = None
++                        if isinstance(grounding_urls, dict):
++                            item_id = item.get("id") if isinstance(item, dict) else (item[1] if isinstance(item, list) and len(item) > 1 else None)
++                            item_link = item.get("link") if isinstance(item, dict) else (item[3] if isinstance(item, list) and len(item) > 3 else None)
++                            cand_url = grounding_urls.get(item_id) or grounding_urls.get(item_link) or grounding_urls.get(i)
++                        elif isinstance(grounding_urls, list):
++                            if i < len(grounding_urls):
++                                cand_url = grounding_urls[i]
++                            elif len(grounding_urls) > 0:
++                                cand_url = grounding_urls[0]
++
++                        if cand_url:
++                            # Strip tracking parameters to save character space
++                            if "?" in cand_url:
++                                cand_url = cand_url.split("?")[0]
++                            cand_url = cand_url.strip()
++
++                            if isinstance(item, dict):
++                                item["grounding_url"] = cand_url
++                                posts = item.get("posts", [])
++                                if posts and len(posts) > 0:
++                                    first_post = posts[0]
++                                    if "🌐" not in first_post:
++                                        posts[0] = first_post.rstrip() + " 🌐"
++                            elif isinstance(item, list) and len(item) > 10:
++                                if isinstance(item[10], list) and len(item[10]) > 0:
++                                    first_post = item[10][0]
++                                    if "🌐" not in first_post:
++                                        item[10][0] = first_post.rstrip() + " 🌐"
+ 
+                 chunk_evals.extend(parsed)
+ 

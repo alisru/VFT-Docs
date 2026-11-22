@@ -1,0 +1,2293 @@
+import os
+import sys
+import subprocess
+import re
+import json
+
+
+# Redirect stdout and stderr to dummy writers if running under pythonw.exe (where they are None)
+# to prevent prints, warnings, and library logs from crashing the application.
+if sys.stdout is None or sys.stderr is None:
+    class DummyWriter:
+        def write(self, *args, **kwargs): pass
+        def flush(self, *args, **kwargs): pass
+    if sys.stdout is None:
+        sys.stdout = DummyWriter()
+    if sys.stderr is None:
+        sys.stderr = DummyWriter()
+
+# Self-relaunch inside virtual environment if not already running there
+if sys.platform == "win32":
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    venv_paths = [
+        os.path.join(script_dir, ".venv", "Scripts", "pythonw.exe"),
+        os.path.join(script_dir, "..", ".venv", "Scripts", "pythonw.exe"),
+        os.path.join(script_dir, "bluesky_bot", ".venv", "Scripts", "pythonw.exe"),
+        os.path.join(script_dir, "..", "bluesky_bot", ".venv", "Scripts", "pythonw.exe"),
+    ]
+    venv_pyw = None
+    for p in venv_paths:
+        if os.path.exists(p):
+            venv_pyw = os.path.abspath(p)
+            break
+            
+    in_venv = (sys.prefix != getattr(sys, "base_prefix", sys.prefix)) or (venv_pyw and os.path.dirname(os.path.abspath(sys.executable)).lower() == os.path.dirname(venv_pyw).lower())
+    if venv_pyw and not in_venv:
+        try:
+            full_argv = [venv_pyw, os.path.abspath(__file__)] + sys.argv[1:]
+            subprocess.Popen(full_argv, cwd=script_dir)
+            sys.exit(0)
+        except Exception:
+            pass
+
+# Force Windows to recognize this script as a distinct application for taskbar icon grouping
+if sys.platform == "win32":
+    try:
+        import ctypes
+        myappid = 'aletheia.judgement.launcher.v1'
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+    except Exception:
+        pass
+
+# Import standard Tkinter and Pillow libraries (guaranteed to be inside .venv)
+import threading
+import queue
+import tkinter as tk
+from tkinter import ttk
+import webbrowser
+from PIL import Image, ImageTk
+
+# Define Color Palette (Dark Mode Premium)
+BG_COLOR = "#0f172a"          # Slate 900
+CARD_BG = "#1e293b"           # Slate 800
+TEXT_COLOR = "#f8fafc"        # Slate 50
+TEXT_MUTED = "#94a3b8"        # Slate 400
+ACCENT_CYAN = "#06b6d4"       # Cyan 500
+ACCENT_CYAN_HOVER = "#0891b2" # Cyan 600
+ACCENT_BLUE = "#3b82f6"       # Blue 500
+ACCENT_BLUE_HOVER = "#2563eb" # Blue 600
+BG_BUTTON = "#334155"         # Slate 700
+BG_BUTTON_HOVER = "#475569"   # Slate 600
+SUCCESS_COLOR = "#10b981"     # Emerald 500
+WARNING_COLOR = "#f59e0b"     # Amber 500
+DANGER_COLOR = "#ef4444"      # Red 500
+
+class DragDropListbox(tk.Listbox):
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
+        self.bind("<Button-1>", self.on_click)
+        self.bind("<B1-Motion>", self.on_drag)
+        self.cur_index = None
+        self.on_reorder_callback = None
+
+    def on_click(self, event):
+        self.cur_index = self.nearest(event.y)
+
+    def on_drag(self, event):
+        i = self.nearest(event.y)
+        if i != self.cur_index and i >= 0:
+            text = self.get(self.cur_index)
+            self.delete(self.cur_index)
+            self.insert(i, text)
+            self.select_clear(0, tk.END)
+            self.select_set(i)
+            self.cur_index = i
+            if self.on_reorder_callback:
+                self.on_reorder_callback()
+
+
+class AletheiaLauncherApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Aletheia Bot Operator Console")
+        self.root.configure(bg=BG_COLOR)
+
+        # Load persistent window state (geometry, maximized, sash position)
+        self.last_normal_geometry = None
+        self.saved_state = self.load_launcher_state()
+        saved_geom = self.saved_state.get("geometry")
+        if saved_geom:
+            try:
+                self.root.geometry(saved_geom)
+                self.last_normal_geometry = saved_geom
+            except Exception:
+                self.root.geometry("1200x800")
+        else:
+            self.root.geometry("1200x800")
+
+        if self.saved_state.get("maximized"):
+            try:
+                self.root.state("zoomed")
+            except Exception:
+                pass
+
+        self.root.bind("<Configure>", self.on_window_configure)
+        self.root.protocol("WM_DELETE_WINDOW", self.on_close)
+
+        # Set Window Icon
+        self.set_window_icon()
+
+        # Application state for parallel processes
+        self.eval_process = None
+        self.post_process = None
+        self.reply_process = None
+        self.log_queue = queue.Queue()
+
+        # Dynamically import available/default models from the one-shot script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        if os.path.basename(script_dir) == "bluesky_bot_new":
+            self.bot_dir = script_dir
+            self.root_dir = os.path.abspath(os.path.join(script_dir, ".."))
+        else:
+            cand = os.path.join(script_dir, "bluesky_bot_new")
+            self.bot_dir = cand if os.path.exists(cand) else os.path.join(script_dir, "bluesky_bot")
+            self.root_dir = script_dir
+
+        if self.bot_dir not in sys.path:
+            sys.path.insert(0, self.bot_dir)
+
+        default_banned_categories = "travel, sport, entertainment, obituaries, gardening"
+        try:
+            from evaluator import DEFAULT_FALLBACKS
+            default_list = list(DEFAULT_FALLBACKS)
+        except Exception:
+            try:
+                from google_ai_studio_one_shot import DEFAULT_FALLBACKS, load_banned_topics
+                default_list = list(DEFAULT_FALLBACKS)
+                try:
+                    banned_map = load_banned_topics()
+                    if isinstance(banned_map, dict):
+                        default_banned_categories = ", ".join(list(banned_map.keys()))
+                except Exception as b_err:
+                    print(f"Warning: Failed to load banned categories: {b_err}")
+            except Exception as import_err:
+                print(f"Warning: Failed to dynamically load models from bot script: {import_err}")
+                default_list = [
+                    "gemini-3.8-flash",
+                    "gemini-3.7-flash",
+                    "gemini-3.5-flash",
+                    "gemini-3.5-flash-lite",
+                    "gemini-3.6-flash",
+                    "gemini-2.5-flash",
+                    "gemini-2.5-flash-lite",
+                    "gemini-3.1-flash-lite",
+                    "vertex:gemini-3.8-flash",
+                    "vertex:gemini-3.7-flash",
+                    "vertex:gemini-3.1-flash-lite",
+                    "gemini-3-flash-preview",
+                    "gemma-4-31b-it",
+                    "gemma-4-26b-a4b-it",
+                ]
+        self.default_banned_categories = default_banned_categories
+
+        # Available models also include custom/agnes options
+        self.available_models = list(default_list)
+        if "agnes-2.0-flash" not in self.available_models:
+            self.available_models.append("agnes-2.0-flash")
+
+        # Set default selection list (excluding agnes-2.0-flash unless added manually by checkbox)
+        self.selected_models = [m for m in default_list if m != "agnes-2.0-flash"]
+        self.model_vars = {}
+
+        # Load RSS feeds and Category mapping statically/dynamically from harvester script
+        self.category_feeds, self.feed_definitions = self.load_rss_feeds_from_script()
+        self.feed_vars = {}
+
+        # Spiritual Canon traditions taxonomy
+        self.tradition_definitions = [
+            ("christianity", "✝️ Christianity"),
+            ("hinduism", "🕉️ Hinduism"),
+            ("buddhism", "☸️ Buddhism"),
+            ("taoism", "☯️ Taoism"),
+            ("islam", "☪️ Islam / Sufi"),
+            ("indigenous", "🌿 Indigenous"),
+            ("stoicism", "🏛️ Stoic"),
+            ("other", "🌌 Universal"),
+        ]
+        self.tradition_vars = {}
+
+        # Set clean modern font
+        self.font_title = ("Segoe UI", 12, "bold")
+        self.font_subtitle = ("Segoe UI", 10, "bold")
+        self.font_body = ("Segoe UI", 9)
+        self.font_console = ("Consolas", 9)
+
+        # Style TTK widgets
+        self.style = ttk.Style()
+        self.style.theme_use("clam")
+        self.style.configure(".", background=BG_COLOR, foreground=TEXT_COLOR)
+        self.style.configure("TLabel", background=BG_COLOR, foreground=TEXT_COLOR, font=self.font_body)
+        self.style.configure("TFrame", background=BG_COLOR)
+        self.style.configure("Card.TFrame", background=CARD_BG, relief="flat", borderwidth=0)
+        self.style.configure("TCheckbutton", background=CARD_BG, foreground=TEXT_COLOR, font=self.font_body)
+        self.style.configure("TRadiobutton", background=CARD_BG, foreground=TEXT_COLOR, font=self.font_body)
+        # Style TTK Combobox (Dark mode palette fix for white-on-white text)
+        self.style.configure(
+            "TCombobox",
+            fieldbackground=BG_COLOR,
+            background=CARD_BG,
+            foreground=TEXT_COLOR,
+            arrowcolor=TEXT_COLOR,
+            darkcolor=CARD_BG,
+            lightcolor=CARD_BG,
+            bordercolor=CARD_BG,
+            insertcolor=TEXT_COLOR
+        )
+        self.style.map(
+            "TCombobox",
+            fieldbackground=[("readonly", BG_COLOR), ("!readonly", BG_COLOR)],
+            foreground=[("readonly", TEXT_COLOR), ("!readonly", TEXT_COLOR)],
+            background=[("readonly", CARD_BG), ("!readonly", CARD_BG)],
+            selectbackground=[("readonly", ACCENT_BLUE), ("!readonly", ACCENT_BLUE)],
+            selectforeground=[("readonly", TEXT_COLOR), ("!readonly", TEXT_COLOR)],
+            arrowcolor=[("disabled", TEXT_MUTED), ("!disabled", TEXT_COLOR)]
+        )
+        self.root.option_add("*TCombobox*Listbox.background", BG_COLOR)
+        self.root.option_add("*TCombobox*Listbox.foreground", TEXT_COLOR)
+        self.root.option_add("*TCombobox*Listbox.selectBackground", ACCENT_BLUE)
+        self.root.option_add("*TCombobox*Listbox.selectForeground", TEXT_COLOR)
+
+        # Main Layout
+        self.build_ui()
+
+        # Initial HUD Load and start periodic refresh loop (every 3 seconds)
+        self.periodic_hud_refresh()
+
+        # Start queue reader for console logs
+        self.root.after(100, self.read_log_queue)
+
+        # Restore saved sash position
+        sash_x = self.saved_state.get("sash_pos", 620)
+        self.root.after(120, lambda: self.restore_sash_position(sash_x))
+
+    def get_state_file_path(self):
+        target_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        return os.path.join(target_dir, "launcher_state.json")
+
+    def load_launcher_state(self):
+        state_path = self.get_state_file_path()
+        if os.path.exists(state_path):
+            try:
+                with open(state_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"Warning: Failed to load launcher state: {e}")
+        return {}
+
+    def save_launcher_state(self):
+        state_path = self.get_state_file_path()
+        try:
+            is_max = False
+            try:
+                is_max = (self.root.state() == "zoomed")
+            except Exception:
+                pass
+            
+            geom = self.last_normal_geometry if (is_max and self.last_normal_geometry) else self.root.geometry()
+            
+            sash_pos = None
+            if hasattr(self, 'paned_window'):
+                try:
+                    sash_pos = self.paned_window.sash_coord(0)[0]
+                except Exception:
+                    pass
+
+            state = {
+                "geometry": geom,
+                "maximized": is_max,
+                "sash_pos": sash_pos
+            }
+            with open(state_path, "w", encoding="utf-8") as f:
+                json.dump(state, f, indent=2)
+        except Exception as e:
+            print(f"Warning: Failed to save launcher state: {e}")
+
+    def on_window_configure(self, event):
+        if event.widget == self.root:
+            try:
+                if self.root.state() != "zoomed":
+                    self.last_normal_geometry = self.root.geometry()
+            except Exception:
+                pass
+
+    def on_close(self):
+        self.save_launcher_state()
+        self.root.destroy()
+
+    def restore_sash_position(self, target_x):
+        try:
+            self.root.update_idletasks()
+            if target_x and int(target_x) > 100:
+                self.paned_window.sash_place(0, int(target_x), 0)
+        except Exception as e:
+            print(f"Warning: Could not restore sash position: {e}")
+
+    def get_python_bin(self):
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        bot_dir = getattr(self, "bot_dir", script_dir)
+        root_dir = getattr(self, "root_dir", os.path.dirname(script_dir))
+        candidates = [
+            os.path.join(script_dir, ".venv", "Scripts", "python.exe"),
+            os.path.join(bot_dir, ".venv", "Scripts", "python.exe"),
+            os.path.join(root_dir, ".venv", "Scripts", "python.exe"),
+            os.path.join(root_dir, "bluesky_bot", ".venv", "Scripts", "python.exe"),
+        ]
+        for c in candidates:
+            if os.path.exists(c):
+                return os.path.abspath(c)
+        return sys.executable or "python"
+
+    def set_window_icon(self):
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+        for cand in [os.path.join(bot_dir, "alethekanon.png"), os.path.join(root_dir, "bluesky_bot", "alethekanon.png")]:
+            if os.path.exists(cand):
+                try:
+                    self.icon_image = Image.open(cand)
+                    self.tk_icon = ImageTk.PhotoImage(self.icon_image)
+                    self.root.iconphoto(True, self.tk_icon)
+                    break
+                except Exception as e:
+                    print(f"Failed to set window icon: {e}")
+
+    def load_rss_feeds_from_script(self):
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+        oneshot_path = os.path.join(bot_dir, "google_ai_studio_one_shot.py")
+        if not os.path.exists(oneshot_path):
+            oneshot_path = os.path.join(root_dir, "bluesky_bot", "google_ai_studio_one_shot.py")
+        category_feeds = {}
+        all_feeds = {}
+        if os.path.exists(oneshot_path):
+            try:
+                with open(oneshot_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                for cat_match in re.finditer(r'["\']([a-zA-Z0-9_-]+)["\']\s*:\s*\[([^\]]+)\]', content):
+                    cat_name = cat_match.group(1).lower()
+                    if cat_name in ["china", "asia", "tech", "business", "politics", "science", "world", "general"]:
+                        block = cat_match.group(2)
+                        items = []
+                        for item_match in re.finditer(r'\{\s*["\']name["\']\s*:\s*["\']([^"\']+)["\']\s*,\s*["\']url["\']\s*:\s*["\']([^"\']+)["\']', block):
+                            fname = item_match.group(1)
+                            furl = item_match.group(2)
+                            items.append({"name": fname, "url": furl})
+                            all_feeds[fname] = furl
+                        if items:
+                            category_feeds[cat_name] = items
+            except Exception as e:
+                print(f"Error parsing category feeds from script: {e}")
+
+        # Fallback category feeds dictionary if empty
+        if not category_feeds:
+            category_feeds = {
+                "china": [
+                    {"name": "SCMP China", "url": "https://www.scmp.com/rss/4/feed"},
+                    {"name": "SCMP Asia & World", "url": "https://www.scmp.com/rss/92/feed"},
+                    {"name": "SCMP Economy", "url": "https://www.scmp.com/rss/96/feed"},
+                    {"name": "SCMP Tech", "url": "https://www.scmp.com/rss/318206/feed"},
+                    {"name": "Sixth Tone", "url": "https://www.sixthtone.com/rss"},
+                    {"name": "Hong Kong Free Press", "url": "https://hongkongfp.com/feed/"},
+                    {"name": "China Daily News", "url": "http://www.chinadaily.com.cn/rss/china_rss.xml"},
+                    {"name": "China Daily Biz", "url": "http://www.chinadaily.com.cn/rss/bizchina_rss.xml"},
+                    {"name": "Google News China", "url": "https://news.google.com/rss/search?q=China+when:2d&hl=en-US&gl=US&ceid=US:en"},
+                    {"name": "Google News China Tech/Economy", "url": "https://news.google.com/rss/search?q=China+(economy+OR+tech+OR+diplomacy)+when:2d&hl=en-US&gl=US&ceid=US:en"},
+                ],
+                "asia": [
+                    {"name": "SCMP Asia & World", "url": "https://www.scmp.com/rss/92/feed"},
+                    {"name": "SCMP China", "url": "https://www.scmp.com/rss/4/feed"},
+                    {"name": "Hong Kong Free Press", "url": "https://hongkongfp.com/feed/"},
+                    {"name": "Sixth Tone", "url": "https://www.sixthtone.com/rss"},
+                    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+                    {"name": "Google News Asia", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
+                ],
+                "tech": [
+                    {"name": "BBC Tech", "url": "http://feeds.bbci.co.uk/news/technology/rss.xml"},
+                    {"name": "NYT Tech", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"},
+                    {"name": "TechCrunch", "url": "https://techcrunch.com/feed/"},
+                    {"name": "The Guardian Tech", "url": "https://www.theguardian.com/technology/rss"},
+                    {"name": "SCMP Tech", "url": "https://www.scmp.com/rss/318206/feed"},
+                ],
+                "business": [
+                    {"name": "BBC Business", "url": "http://feeds.bbci.co.uk/news/business/rss.xml"},
+                    {"name": "NYT Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml"},
+                    {"name": "CNBC Business", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147"},
+                    {"name": "The Guardian Business", "url": "https://www.theguardian.com/business/rss"},
+                    {"name": "DW Business", "url": "https://rss.dw.com/xml/rss-en-bus"},
+                    {"name": "SCMP Economy", "url": "https://www.scmp.com/rss/96/feed"},
+                ],
+                "politics": [
+                    {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml"},
+                    {"name": "NYT Politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml"},
+                    {"name": "Fox News Politics", "url": "http://feeds.foxnews.com/foxnews/politics"},
+                    {"name": "Washington Examiner", "url": "https://www.washingtonexaminer.com/feed/"},
+                    {"name": "The Federalist", "url": "https://thefederalist.com/feed/"},
+                    {"name": "Washington Times", "url": "https://www.washingtontimes.com/rss/headlines/news/politics/"},
+                    {"name": "Daily Caller", "url": "https://dailycaller.com/feed/"},
+                    {"name": "Breitbart", "url": "https://feeds.feedburner.com/breitbart"},
+                    {"name": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml"},
+                    {"name": "The Guardian Politics", "url": "https://www.theguardian.com/politics/rss"},
+                ],
+                "science": [
+                    {"name": "BBC Science", "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml"},
+                    {"name": "NYT Science", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml"},
+                    {"name": "The Guardian Science", "url": "https://www.theguardian.com/science/rss"},
+                    {"name": "DW Science", "url": "https://rss.dw.com/xml/rss-en-science"},
+                ],
+                "world": [
+                    {"name": "BBC World", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
+                    {"name": "NYT World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"},
+                    {"name": "Fox News Latest", "url": "http://feeds.foxnews.com/foxnews/latest"},
+                    {"name": "New York Post", "url": "https://nypost.com/news/feed/"},
+                    {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
+                    {"name": "NPR World", "url": "https://feeds.npr.org/1004/rss.xml"},
+                    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+                    {"name": "DW News World", "url": "https://rss.dw.com/xml/rss-en-all"},
+                    {"name": "France 24", "url": "https://www.france24.com/en/rss"},
+                    {"name": "CBC News", "url": "https://rss.cbc.ca/lineup/topstories.xml"},
+                    {"name": "UPI News", "url": "https://rss.upi.com/news/news.rss"},
+                    {"name": "SCMP China", "url": "https://www.scmp.com/rss/4/feed"},
+                    {"name": "Google News World", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
+                ],
+                "general": [
+                    {"name": "ABC News Australia", "url": "https://www.abc.net.au/news/feed/2942460/rss.xml"},
+                    {"name": "9News Australia", "url": "https://www.9news.com.au/rss"},
+                    {"name": "SBS News", "url": "https://www.sbs.com.au/news/feed"},
+                    {"name": "Sydney Morning Herald", "url": "https://www.smh.com.au/rss/feed.xml"},
+                    {"name": "Perth Now", "url": "https://www.perthnow.com.au/feed"},
+                    {"name": "Daily Mail Australia", "url": "https://www.dailymail.co.uk/auhome/index.rss"},
+                    {"name": "The Age", "url": "https://www.theage.com.au/rss/feed.xml"},
+                    {"name": "Brisbane Times", "url": "https://www.brisbanetimes.com.au/rss/feed.xml"},
+                    {"name": "WA Today", "url": "https://www.watoday.com.au/rss/feed.xml"},
+                    {"name": "Canberra Times", "url": "https://www.canberratimes.com.au/rss.xml"},
+                    {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml"},
+                    {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"},
+                    {"name": "Fox News Latest", "url": "http://feeds.foxnews.com/foxnews/latest"},
+                    {"name": "New York Post", "url": "https://nypost.com/news/feed/"},
+                    {"name": "Washington Examiner", "url": "https://www.washingtonexaminer.com/feed/"},
+                    {"name": "The Federalist", "url": "https://thefederalist.com/feed/"},
+                    {"name": "The Guardian UK", "url": "https://www.theguardian.com/uk/rss"},
+                    {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
+                    {"name": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml"},
+                    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+                    {"name": "Google News World", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"},
+                    {"name": "Google News Australia", "url": "https://news.google.com/rss?hl=en-AU&gl=AU&ceid=AU:en"},
+                ],
+            }
+            for cname, flist in category_feeds.items():
+                for fitem in flist:
+                    all_feeds[fitem["name"]] = fitem["url"]
+
+        return category_feeds, all_feeds
+
+    def log_eval(self, text):
+        self.log_queue.put(("eval", text))
+
+    def log_post(self, text):
+        self.log_queue.put(("post", text))
+
+    def log_reply(self, text):
+        self.log_queue.put(("reply", text))
+
+    def clear_reply_console(self):
+        if hasattr(self, 'reply_text'):
+            self.reply_text.delete("1.0", tk.END)
+
+    def read_log_queue(self):
+        try:
+            while True:
+                target, msg = self.log_queue.get_nowait()
+                if target == "eval":
+                    text_widget = self.eval_text
+                elif target == "reply":
+                    text_widget = getattr(self, "reply_text", self.post_text)
+                else:
+                    text_widget = self.post_text
+
+                if msg == '\r':
+                    text_widget.delete("end-1c linestart", "end-1c")
+                else:
+                    text_widget.insert("end-1c", msg)
+                    text_widget.see("end-1c")
+        except queue.Empty:
+            pass
+        self.root.after(50, self.read_log_queue)
+
+    def periodic_hud_refresh(self):
+        try:
+            self.refresh_hud_stats()
+        except Exception:
+            pass
+        self.root.after(3000, self.periodic_hud_refresh)
+
+    def read_stream(self, stream, target):
+        try:
+            while True:
+                line = stream.readline()
+                if not line:
+                    break
+                if '\r' in line:
+                    parts = line.split('\r')
+                    for i, part in enumerate(parts):
+                        if part:
+                            self.log_queue.put((target, part))
+                        if i < len(parts) - 1:
+                            self.log_queue.put((target, '\r'))
+                else:
+                    self.log_queue.put((target, line))
+        except Exception:
+            pass
+
+    def build_ui(self):
+        # Master padding container
+        main_container = tk.Frame(self.root, bg=BG_COLOR)
+        main_container.pack(fill=tk.BOTH, expand=True, padx=12, pady=10)
+
+        # Master PanedWindow for interactive resizing with draggable center sash
+        self.paned_window = tk.PanedWindow(
+            main_container,
+            orient=tk.HORIZONTAL,
+            bg=BG_COLOR,
+            bd=0,
+            sashwidth=8,
+            sashrelief=tk.RAISED,
+            sashcursor="sb_h_double_arrow",
+            showhandle=False,
+            opaqueresize=True
+        )
+        self.paned_window.pack(fill=tk.BOTH, expand=True)
+
+        # ----------------- Left Panel Container -----------------
+        left_container = tk.Frame(self.paned_window, bg=BG_COLOR)
+        
+        left_canvas = tk.Canvas(left_container, bg=BG_COLOR, highlightthickness=0)
+        left_scrollbar = ttk.Scrollbar(left_container, orient="vertical", command=left_canvas.yview)
+        
+        left_canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 2))
+        left_scrollbar.pack(side=tk.RIGHT, fill=tk.Y, padx=(0, 4))
+        
+        left_canvas.configure(yscrollcommand=left_scrollbar.set)
+        
+        left_panel = tk.Frame(left_canvas, bg=BG_COLOR)
+        left_canvas_window = left_canvas.create_window((0, 0), window=left_panel, anchor="nw")
+        
+        def on_frame_configure(event):
+            left_canvas.configure(scrollregion=left_canvas.bbox("all"))
+        left_panel.bind("<Configure>", on_frame_configure)
+        
+        def on_canvas_configure(event):
+            left_canvas.itemconfig(left_canvas_window, width=event.width)
+        left_canvas.bind("<Configure>", on_canvas_configure)
+
+        # Mousewheel scroll event handler
+        def on_mousewheel(event):
+            if left_canvas.winfo_exists():
+                if event.delta:
+                    left_canvas.yview_scroll(int(-3 * (event.delta / 120)), "units")
+                elif event.num == 4:
+                    left_canvas.yview_scroll(-3, "units")
+                elif event.num == 5:
+                    left_canvas.yview_scroll(3, "units")
+
+        # Bind mousewheel to a widget and its children recursively (excluding scrollable components)
+        def bind_mousewheel_recursive(widget):
+            widget.bind("<MouseWheel>", on_mousewheel)
+            widget.bind("<Button-4>", on_mousewheel)
+            widget.bind("<Button-5>", on_mousewheel)
+            for child in widget.winfo_children():
+                if not isinstance(child, (tk.Text, tk.Entry, tk.Listbox)):
+                    bind_mousewheel_recursive(child)
+
+        # Title Card
+        self.create_title_card(left_panel)
+
+        # HUD (Pipeline Health & Stats)
+        self.create_hud_card(left_panel)
+
+        # Row 1: Actions Header Card
+        self.create_actions_card(left_panel)
+
+        # Row 2: Research Probe & Historical Audits Card
+        self.create_probe_card(left_panel)
+
+        # Row 3: Direct Target Post & Reply Dispatcher Card
+        self.create_direct_reply_card(left_panel)
+
+        # Row 4: Story Re-Audit & Correction Dispatcher Card
+        self.create_reaudit_card(left_panel)
+
+        # Row 5: Batch Evaluator Card
+        self.create_batch_card(left_panel)
+
+        # Row 5: Live Posting Card
+        self.create_live_post_card(left_panel)
+
+        # Apply mousewheel binding recursively
+        bind_mousewheel_recursive(left_canvas)
+        bind_mousewheel_recursive(left_panel)
+
+        # ----------------- Right Panel (Dual Console Output) -----------------
+        right_panel = tk.Frame(self.paned_window, bg=BG_COLOR)
+        self.create_eval_console_card(right_panel)
+        self.create_post_console_card(right_panel)
+
+        # Add both panels to the PanedWindow with minimum widths and stretch
+        self.paned_window.add(left_container, minsize=400, stretch="always")
+        self.paned_window.add(right_panel, minsize=350, stretch="always")
+
+    def create_title_card(self, parent):
+        frame = tk.Frame(parent, bg=BG_COLOR)
+        frame.pack(fill=tk.X, pady=(0, 12))
+
+        # Show thumbnail next to the title if icon exists
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+        icon_path = os.path.join(bot_dir, "alethekanon.png")
+        if not os.path.exists(icon_path):
+            icon_path = os.path.join(root_dir, "bluesky_bot", "alethekanon.png")
+        if os.path.exists(icon_path):
+            try:
+                self.icon_img_small = Image.open(icon_path).resize((48, 48), Image.Resampling.LANCZOS)
+                self.tk_icon_small = ImageTk.PhotoImage(self.icon_img_small)
+                lbl_icon = tk.Label(frame, image=self.tk_icon_small, bg=BG_COLOR)
+                lbl_icon.pack(side=tk.LEFT, padx=(0, 12))
+            except Exception as e:
+                print(f"Failed to load small header icon: {e}")
+
+        # Pack text in a sub-frame on the right of the icon
+        text_frame = tk.Frame(frame, bg=BG_COLOR)
+        text_frame.pack(side=tk.LEFT, fill=tk.Y)
+
+        title = tk.Label(text_frame, text="ALETHEIA OPERATOR CONSOLE", font=("Segoe UI", 16, "bold"), fg=TEXT_COLOR, bg=BG_COLOR)
+        title.pack(anchor="w")
+
+        subtitle = tk.Label(text_frame, text="Active Pipeline Control Room & Batch Runner", font=self.font_body, fg=TEXT_MUTED, bg=BG_COLOR)
+        subtitle.pack(anchor="w")
+
+    def create_hud_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        self.lbl_hud_bsky = tk.Label(inner, text="🦋 BSky Auth: CHECKING", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_bsky.pack(side=tk.LEFT, padx=(0, 20))
+
+        self.lbl_hud_gemini = tk.Label(inner, text="♊ Gemini Engine: CHECKING", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_gemini.pack(side=tk.LEFT, padx=(0, 20))
+
+        self.lbl_hud_live = tk.Label(inner, text="📂 Live Stories: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_live.pack(side=tk.LEFT, padx=(0, 20))
+
+        self.lbl_hud_drafts = tk.Label(inner, text="📝 Drafts: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_drafts.pack(side=tk.LEFT, padx=(0, 20))
+
+        self.lbl_hud_failed = tk.Label(inner, text="❌ Failed: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_failed.pack(side=tk.LEFT, padx=(0, 20))
+        self.lbl_hud_queue = tk.Label(inner, text="📥 Queue: --", font=self.font_body, bg=CARD_BG, fg=TEXT_MUTED)
+        self.lbl_hud_queue.pack(side=tk.LEFT)
+
+    def refresh_hud_stats(self):
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        bot_dir = getattr(self, "bot_dir", script_dir)
+        root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+        
+        # 1. Parse env vars
+        env = {}
+        for env_cand in [os.path.join(bot_dir, ".env"), os.path.join(root_dir, ".env"), os.path.join(root_dir, "bluesky_bot", ".env")]:
+            if os.path.exists(env_cand):
+                try:
+                    with open(env_cand, "r", encoding="utf-8") as f:
+                        for line in f:
+                            line = line.strip()
+                            if line and not line.startswith("#") and "=" in line:
+                                k, v = line.split("=", 1)
+                                env[k.strip()] = v.strip()
+                    break
+                except Exception:
+                    pass
+                
+        bsky_ok = bool(env.get("BSKY_HANDLE") and env.get("BSKY_PASSWORD"))
+        gemini_ok = bool(env.get("GEMINI_API_KEY"))
+        
+        # 2. Count files
+        live_count = 0
+        draft_count = 0
+        fail_count = 0
+        
+        live_dir = os.path.join(bot_dir, "stories", "live")
+        if os.path.exists(live_dir):
+            try:
+                live_count = len([f for f in os.listdir(live_dir) if f.endswith(".json")])
+            except Exception:
+                pass
+                
+        stories_dir = os.path.join(bot_dir, "stories")
+        if os.path.exists(stories_dir):
+            try:
+                # Exclude helper config files like index.json, filtered_candidates.json, harvested_candidates.json
+                draft_count = len([
+                    f for f in os.listdir(stories_dir) 
+                    if f.endswith(".json") and (f.startswith("factcheck_") or f.startswith("story_"))
+                ])
+            except Exception:
+                pass
+ 
+        fail_dir = os.path.join(bot_dir, "stories", "fail")
+        if os.path.exists(fail_dir):
+            try:
+                fail_count = len([f for f in os.listdir(fail_dir) if f.endswith(".json")])
+            except Exception:
+                pass
+                
+        # 3. Update Labels
+        if bsky_ok:
+            self.lbl_hud_bsky.config(text="🦋 BSky Auth: ACTIVE", fg=SUCCESS_COLOR)
+        else:
+            self.lbl_hud_bsky.config(text="🦋 BSky Auth: MISSING", fg=DANGER_COLOR)
+            
+        if gemini_ok:
+            self.lbl_hud_gemini.config(text="♊ Gemini Engine: ACTIVE", fg=SUCCESS_COLOR)
+        else:
+            self.lbl_hud_gemini.config(text="♊ Gemini Engine: MISSING", fg=DANGER_COLOR)
+            
+        self.lbl_hud_live.config(text=f"📂 Live: {live_count}", fg=ACCENT_CYAN)
+        self.lbl_hud_drafts.config(text=f"📝 Drafts: {draft_count}", fg=WARNING_COLOR)
+        self.lbl_hud_failed.config(text=f"❌ Failed: {fail_count}", fg=DANGER_COLOR)
+ 
+        # Count harvested stories buffer (queue)
+        queue_count = 0
+        queue_path = os.path.join(bot_dir, "harvested_candidates.json")
+        if os.path.exists(queue_path):
+            try:
+                with open(queue_path, "r", encoding="utf-8") as f:
+                    q_data = json.load(f)
+                    if isinstance(q_data, list):
+                        queue_count = len(q_data)
+            except Exception as e:
+                import traceback
+                try:
+                    with open(os.path.join(bot_dir, "hud_error.txt"), "w", encoding="utf-8") as ef:
+                        ef.write(f"Error reading queue: {e}\n")
+                        traceback.print_exc(file=ef)
+                except Exception:
+                    pass
+        self.lbl_hud_queue.config(text=f"📥 Queue: {queue_count}", fg=SUCCESS_COLOR)
+
+    def create_actions_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        lbl = tk.Label(inner, text="Quick Actions", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(anchor="w", pady=(0, 8))
+
+        btn_frame = tk.Frame(inner, bg=CARD_BG)
+        btn_frame.pack(fill=tk.X, anchor="w")
+
+        self.btn_open_cp = tk.Button(
+            btn_frame, text="Open Control Panel (WebView)", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.open_control_panel
+        )
+        self.btn_open_cp.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_open_cp.bind("<Enter>", lambda e: self.btn_open_cp.configure(bg=ACCENT_BLUE_HOVER))
+        self.btn_open_cp.bind("<Leave>", lambda e: self.btn_open_cp.configure(bg=ACCENT_BLUE))
+
+        self.btn_rebuild = tk.Button(
+            btn_frame, text="Rebuild Stories Store", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.run_rebuild_store
+        )
+        self.btn_rebuild.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_rebuild.bind("<Enter>", lambda e: self.btn_rebuild.configure(bg=ACCENT_CYAN_HOVER))
+        self.btn_rebuild.bind("<Leave>", lambda e: self.btn_rebuild.configure(bg=ACCENT_CYAN))
+
+        self.btn_chat_ui = tk.Button(
+            btn_frame, text="💬 Open Chat UI", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.open_chat_ui
+        )
+        self.btn_chat_ui.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_chat_ui.bind("<Enter>", lambda e: self.btn_chat_ui.configure(bg=BG_BUTTON_HOVER))
+        self.btn_chat_ui.bind("<Leave>", lambda e: self.btn_chat_ui.configure(bg=BG_BUTTON))
+
+        self.btn_policy_report = tk.Button(
+            btn_frame, text="📋 Policy Ledger", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.run_policy_report
+        )
+        self.btn_policy_report.pack(side=tk.LEFT)
+        self.btn_policy_report.bind("<Enter>", lambda e: self.btn_policy_report.configure(bg=BG_BUTTON_HOVER))
+        self.btn_policy_report.bind("<Leave>", lambda e: self.btn_policy_report.configure(bg=BG_BUTTON))
+
+    def create_probe_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        lbl = tk.Label(inner, text="🔍 Research Probe & Historical Audits", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(anchor="w", pady=(0, 6))
+
+        desc = tk.Label(inner, text="Harvest and judge historical events, specific actors in time, or named policy records.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG)
+        desc.pack(anchor="w", pady=(0, 8))
+
+        grid_frame = tk.Frame(inner, bg=CARD_BG)
+        grid_frame.pack(fill=tk.X, pady=(0, 8))
+
+        tk.Label(grid_frame, text="Probe Query", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.ent_probe_query = tk.Entry(grid_frame, width=32, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_probe_query.insert(0, "Hitler 1933")
+        self.ent_probe_query.grid(row=0, column=1, sticky="w", pady=3, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Year", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=2, sticky="w", pady=3, padx=(0, 5))
+        self.ent_probe_year = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_probe_year.grid(row=0, column=3, sticky="w", pady=3, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Sources", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=4, sticky="w", pady=3, padx=(0, 5))
+        self.ent_probe_limit = tk.Entry(grid_frame, width=6, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_probe_limit.insert(0, "5")
+        self.ent_probe_limit.grid(row=0, column=5, sticky="w", pady=3)
+
+        btn_probe_frame = tk.Frame(inner, bg=CARD_BG)
+        btn_probe_frame.pack(fill=tk.X, pady=(4, 0))
+
+        self.btn_run_probe = tk.Button(
+            btn_probe_frame, text="🔍 Launch Research Probe", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=14, pady=6, cursor="hand2", command=self.run_research_probe
+        )
+        self.btn_run_probe.pack(side=tk.LEFT)
+        self.btn_run_probe.bind("<Enter>", lambda e: self.btn_run_probe.configure(bg=ACCENT_BLUE_HOVER))
+        self.btn_run_probe.bind("<Leave>", lambda e: self.btn_run_probe.configure(bg=ACCENT_BLUE))
+
+    def create_direct_reply_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        lbl = tk.Label(inner, text="🎯 Direct Target Post & Reply Dispatcher", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(anchor="w", pady=(0, 4))
+
+        desc = tk.Label(inner, text="Target any Bluesky post URL, select a bot persona and skill, cross-reference against the 10,800+ Audit DB, and post direct replies.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG)
+        desc.pack(anchor="w", pady=(0, 8))
+
+        grid_frame = tk.Frame(inner, bg=CARD_BG)
+        grid_frame.pack(fill=tk.X, pady=(0, 8))
+
+        # Row 0: Target Post URL
+        tk.Label(grid_frame, text="Target URL", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=4, padx=(0, 5))
+        self.ent_reply_target_url = tk.Entry(grid_frame, width=54, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_reply_target_url.grid(row=0, column=1, columnspan=3, sticky="ew", pady=4, padx=(0, 5))
+
+        # Row 1: Bot Persona & Skill
+        tk.Label(grid_frame, text="Bot Persona", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=4, padx=(0, 5))
+        self.combo_reply_bot = ttk.Combobox(grid_frame, width=24, state="readonly", font=self.font_body, values=[
+            "⚖️ Aletheia Bot (judgement-bot)",
+            "🛹 Brothekanon (brothekanon)",
+            "🧸 Awwthekanon (awwthekanon)",
+            "🕊️ Spirithekanon (spirithekanon)"
+        ])
+        self.combo_reply_bot.set("⚖️ Aletheia Bot (judgement-bot)")
+        self.combo_reply_bot.grid(row=1, column=1, sticky="w", pady=4, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Skill", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=2, sticky="w", pady=4, padx=(0, 5))
+        self.combo_reply_skill = ttk.Combobox(grid_frame, width=32, state="readonly", font=self.font_body, values=[
+            "🏛️ From the Audit Archive (Crossref 10k DB)",
+            "🛹 Brothekanon Reality Check",
+            "🧸 Awwthekanon Empathy Lens",
+            "🕊️ Spirithekanon Scriptural Wisdom"
+        ])
+        self.combo_reply_skill.set("🏛️ From the Audit Archive (Crossref 10k DB)")
+        self.combo_reply_skill.grid(row=1, column=3, sticky="ew", pady=4)
+
+        # Row 2: Search Query Override & Optional Custom Focus
+        tk.Label(grid_frame, text="Search Query", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=0, sticky="w", pady=4, padx=(0, 5))
+        self.ent_reply_query = tk.Entry(grid_frame, width=28, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_reply_query.grid(row=2, column=1, sticky="ew", pady=4, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Custom Focus", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=2, sticky="w", pady=4, padx=(0, 5))
+        self.ent_reply_custom_angle = tk.Entry(grid_frame, width=32, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_reply_custom_angle.grid(row=2, column=3, sticky="ew", pady=4)
+
+        tk.Label(grid_frame, text="(Optional DB keyword override)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=1, sticky="w")
+        tk.Label(grid_frame, text="(Angle/theme to add to perspective queue)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7)).grid(row=3, column=3, sticky="w")
+
+        # Row 4: Perspective Queue Drag-Drop Listbox & Toolbar
+        persp_frame = tk.Frame(inner, bg=CARD_BG)
+        persp_frame.pack(fill=tk.X, pady=(6, 4))
+
+        persp_hdr = tk.Frame(persp_frame, bg=CARD_BG)
+        persp_hdr.pack(fill=tk.X, pady=(0, 4))
+        tk.Label(persp_hdr, text="🧵 Perspective Thread Queue (Drag & Drop to reorder, up to 5 posts):", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG).pack(side=tk.LEFT)
+
+        queue_toolbar = tk.Frame(persp_frame, bg=CARD_BG)
+        queue_toolbar.pack(fill=tk.X, pady=(0, 4))
+
+        def add_persp(label_text):
+            if self.lst_reply_queue.size() >= 5:
+                return
+            self.lst_reply_queue.insert(tk.END, label_text)
+
+        def add_custom_persp():
+            if self.lst_reply_queue.size() >= 5:
+                return
+            val = self.ent_reply_custom_angle.get().strip()
+            if val:
+                self.lst_reply_queue.insert(tk.END, f"🎯 Custom: {val}")
+                self.ent_reply_custom_angle.delete(0, tk.END)
+
+        def remove_selected_persp():
+            sel = self.lst_reply_queue.curselection()
+            if sel and sel[0] > 0:  # Prevent deleting root Post 1 receipt
+                self.lst_reply_queue.delete(sel[0])
+
+        def reset_persp_queue():
+            self.lst_reply_queue.delete(0, tk.END)
+            self.lst_reply_queue.insert(tk.END, "🏛️ Post 1: Empirical Receipt & Fact-Check Card")
+            self.lst_reply_queue.insert(tk.END, "🛹 Post 2: Brothekanon Street Reality & Commentary")
+
+        btn_add_bro = tk.Button(queue_toolbar, text="+ Brothekanon", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=lambda: add_persp("🛹 Post: Brothekanon Street Reality"))
+        btn_add_bro.pack(side=tk.LEFT, padx=(0, 4))
+        btn_add_aletheia = tk.Button(queue_toolbar, text="+ Aletheia", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=lambda: add_persp("🏛️ Post: Aletheia Social Physics & Invariants"))
+        btn_add_aletheia.pack(side=tk.LEFT, padx=(0, 4))
+        btn_add_aww = tk.Button(queue_toolbar, text="+ Awwthekanon", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=lambda: add_persp("🧸 Post: Awwthekanon Empathetic Care"))
+        btn_add_aww.pack(side=tk.LEFT, padx=(0, 4))
+        btn_add_spirit = tk.Button(queue_toolbar, text="+ Spirithekanon", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=lambda: add_persp("🕊️ Post: Spirithekanon Scriptural Wisdom"))
+        btn_add_spirit.pack(side=tk.LEFT, padx=(0, 6))
+        btn_add_custom = tk.Button(queue_toolbar, text="+ Custom Focus", font=("Segoe UI", 8, "bold"), bg=BG_BUTTON, fg=ACCENT_CYAN, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=add_custom_persp)
+        btn_add_custom.pack(side=tk.LEFT, padx=(0, 6))
+
+        btn_del_persp = tk.Button(queue_toolbar, text="Remove", font=("Segoe UI", 8), bg=BG_BUTTON, fg=DANGER_COLOR, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=remove_selected_persp)
+        btn_del_persp.pack(side=tk.RIGHT, padx=(4, 0))
+        btn_reset_persp = tk.Button(queue_toolbar, text="Reset", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_MUTED, relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=reset_persp_queue)
+        btn_reset_persp.pack(side=tk.RIGHT)
+
+        # DragDrop Listbox for Perspective Queue
+        self.lst_reply_queue = DragDropListbox(
+            persp_frame, height=4, bg=BG_COLOR, fg=TEXT_COLOR, selectbackground=ACCENT_BLUE,
+            selectforeground=TEXT_COLOR, font=self.font_body, relief="flat", borderwidth=0,
+            highlightthickness=1, highlightbackground=BG_BUTTON
+        )
+        self.lst_reply_queue.pack(fill=tk.X, pady=(2, 4))
+        self.lst_reply_queue.insert(tk.END, "🏛️ Post 1: Empirical Receipt & Fact-Check Card")
+        self.lst_reply_queue.insert(tk.END, "🛹 Post 2: Brothekanon Street Reality & Commentary")
+
+        # Row 5: AI Polish Toggle
+        self.val_reply_ai = tk.BooleanVar(value=True)
+        chk_reply_ai = ttk.Checkbutton(inner, text="✨ AI Persona Polish (Use Evaluator Fallback Sequence for Natural Synthesis across Queue)", variable=self.val_reply_ai, style="Feeds.TCheckbutton")
+        chk_reply_ai.pack(anchor="w", pady=(2, 4))
+
+        # Action Buttons
+        btn_frame = tk.Frame(inner, bg=CARD_BG)
+        btn_frame.pack(fill=tk.X, pady=(8, 0))
+
+        self.btn_inspect_reply = tk.Button(
+            btn_frame, text="🔍 Inspect & Draft Reply", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=14, pady=6, cursor="hand2", command=lambda: self.run_direct_reply(live=False)
+        )
+        self.btn_inspect_reply.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_inspect_reply.bind("<Enter>", lambda e: self.btn_inspect_reply.configure(bg=ACCENT_BLUE_HOVER))
+        self.btn_inspect_reply.bind("<Leave>", lambda e: self.btn_inspect_reply.configure(bg=ACCENT_BLUE))
+
+        self.btn_post_live_reply = tk.Button(
+            btn_frame, text="🚀 Post Live Reply", font=self.font_body, bg=SUCCESS_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=14, pady=6, cursor="hand2", command=lambda: self.run_direct_reply(live=True)
+        )
+        self.btn_post_live_reply.pack(side=tk.LEFT, padx=(0, 8))
+
+        self.btn_preview_card = tk.Button(
+            btn_frame, text="👁️ Preview Card Image", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.preview_latest_card
+        )
+        self.btn_preview_card.pack(side=tk.LEFT)
+        self.btn_preview_card.bind("<Enter>", lambda e: self.btn_preview_card.configure(bg=BG_BUTTON_HOVER))
+        self.btn_preview_card.bind("<Leave>", lambda e: self.btn_preview_card.configure(bg=BG_BUTTON))
+
+        # Reply Console / Dedicated Output Panel
+        console_hdr = tk.Frame(inner, bg=CARD_BG)
+        console_hdr.pack(fill=tk.X, pady=(12, 4))
+
+        tk.Label(console_hdr, text="💬 Direct Reply & Fact-Check Output", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG).pack(side=tk.LEFT)
+
+        self.btn_kill_reply = tk.Button(
+            console_hdr, text="Cancel", font=("Segoe UI", 8), bg=DANGER_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=self.kill_reply_process, state=tk.DISABLED
+        )
+        self.btn_kill_reply.pack(side=tk.RIGHT, padx=4)
+
+        btn_clear_reply = tk.Button(
+            console_hdr, text="Clear", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=6, pady=1, cursor="hand2", command=self.clear_reply_console
+        )
+        btn_clear_reply.pack(side=tk.RIGHT)
+
+        reply_box_frame = tk.Frame(inner, bg=BG_COLOR)
+        reply_box_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 2))
+
+        reply_sb = tk.Scrollbar(reply_box_frame)
+        reply_sb.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.reply_text = tk.Text(
+            reply_box_frame, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, height=10,
+            font=self.font_console, relief="flat", borderwidth=0, yscrollcommand=reply_sb.set, wrap="word"
+        )
+        self.reply_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        reply_sb.config(command=self.reply_text.yview)
+
+    def create_batch_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        lbl = tk.Label(inner, text="One-Shot Batch Evaluator", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(anchor="w", pady=(0, 8))
+
+        # Inputs Grid
+        grid_frame = tk.Frame(inner, bg=CARD_BG)
+        grid_frame.pack(fill=tk.X, pady=(0, 10))
+
+        # Col 1
+        tk.Label(grid_frame, text="RSS Count", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.ent_rss = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_rss.insert(0, "5")
+        self.ent_rss.grid(row=0, column=1, sticky="w", pady=3, padx=(0, 15))
+
+        tk.Label(grid_frame, text="BSky Count", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=2, sticky="w", pady=3, padx=(0, 5))
+        self.ent_bsky = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_bsky.insert(0, "15")
+        self.ent_bsky.grid(row=0, column=3, sticky="w", pady=3, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Categories", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=4, sticky="w", pady=3, padx=(0, 5))
+        self.ent_category = tk.Entry(grid_frame, width=15, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_category.insert(0, "general")
+        self.ent_category.grid(row=0, column=5, sticky="w", pady=3)
+
+        btn_cat_explorer = tk.Button(grid_frame, text="📋 Feeds by Category", font=("Segoe UI", 8, "bold"), bg=BG_BUTTON, fg=ACCENT_CYAN, relief="flat", borderwidth=0, padx=6, pady=2, cursor="hand2", command=self.open_category_feeds_dialog)
+        btn_cat_explorer.grid(row=0, column=6, sticky="w", padx=(5, 0), pady=3)
+        btn_cat_explorer.bind("<Enter>", lambda e: btn_cat_explorer.configure(bg=BG_BUTTON_HOVER))
+        btn_cat_explorer.bind("<Leave>", lambda e: btn_cat_explorer.configure(bg=BG_BUTTON))
+
+        # Col 2
+        tk.Label(grid_frame, text="Topic Filter", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.ent_topic = tk.Entry(grid_frame, width=15, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_topic.grid(row=1, column=1, columnspan=2, sticky="ew", pady=3, padx=(0, 15))
+
+        tk.Label(grid_frame, text="Thinking Level", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=3, sticky="w", pady=3, padx=(0, 5))
+        self.combo_thinking = ttk.Combobox(grid_frame, width=15, values=["OFF", "LOW", "MEDIUM", "HIGH"], state="readonly", font=self.font_body)
+        self.combo_thinking.set("HIGH")
+        self.combo_thinking.grid(row=1, column=4, columnspan=2, sticky="ew", pady=3)
+
+        tk.Label(grid_frame, text="Exclude Topics", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.ent_banned = tk.Entry(grid_frame, width=22, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_banned.insert(0, self.default_banned_categories)
+        self.ent_banned.grid(row=2, column=1, columnspan=5, sticky="ew", pady=3)
+
+        tk.Label(grid_frame, text="Prioritize Outlets", bg=CARD_BG, fg=TEXT_MUTED).grid(row=3, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.ent_prefer = tk.Entry(grid_frame, width=15, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_prefer.grid(row=3, column=1, columnspan=5, sticky="ew", pady=3)
+
+        tk.Label(grid_frame, text="(e.g., 1,2 or all — Bloomberg=1, NYT=2, SatPaper=3, Reuters=4, BBC=5, SMH=6, TechCrunch=7, WaPo=8, NPR=9, Fox=10, Mail=11, NYPost=12)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7), wraplength=520, justify="left").grid(row=4, column=0, columnspan=7, sticky="w", pady=(2, 0))
+        tk.Label(grid_frame, text="Categories: general, china, asia, tech, business, politics, science, world (comma-separated is supported)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7), wraplength=520, justify="left").grid(row=5, column=0, columnspan=7, sticky="w")
+        tk.Label(grid_frame, text="Suggested Topics: Trump, AI, Climate, Markets, AUKUS, Australia, Boeing, Space", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 7), wraplength=520, justify="left").grid(row=6, column=0, columnspan=7, sticky="w")
+
+        tk.Label(grid_frame, text="Batch Size", bg=CARD_BG, fg=TEXT_MUTED).grid(row=7, column=0, sticky="w", pady=4, padx=(0, 5))
+        batch_size_frame = tk.Frame(grid_frame, bg=CARD_BG)
+        batch_size_frame.grid(row=7, column=1, columnspan=5, sticky="w", pady=4)
+        self.batch_size_var = tk.StringVar(value="1")
+        r1 = ttk.Radiobutton(batch_size_frame, text="1 at a time", variable=self.batch_size_var, value="1", style="TRadiobutton")
+        r1.pack(side=tk.LEFT, padx=(0, 15))
+        r2 = ttk.Radiobutton(batch_size_frame, text="2 at a time", variable=self.batch_size_var, value="2", style="TRadiobutton")
+        r2.pack(side=tk.LEFT, padx=(0, 15))
+        r3 = ttk.Radiobutton(batch_size_frame, text="3 at a time", variable=self.batch_size_var, value="3", style="TRadiobutton")
+        r3.pack(side=tk.LEFT)
+
+        # Programmatic variables for the single authoritative mode
+        self.val_potential = tk.BooleanVar(value=True)
+        self.val_spiritual = tk.BooleanVar(value=True)
+        self.val_multi = tk.BooleanVar(value=True)
+        self.val_search = tk.BooleanVar(value=True)
+        self.val_son = tk.BooleanVar(value=False)
+        self.val_compact = tk.BooleanVar(value=False)
+        self.val_five_word = tk.BooleanVar(value=False)
+
+        # Single Unified Mode Badge (No confusing toggles or mode drift)
+        mode_pill = tk.Frame(inner, bg=CARD_BG)
+        mode_pill.pack(fill=tk.X, pady=(4, 8))
+
+        mode_badge = tk.Frame(mode_pill, bg="#0d2b45", padx=10, pady=7, highlightbackground=ACCENT_CYAN, highlightthickness=1)
+        mode_badge.pack(fill=tk.X)
+
+        tk.Label(
+            mode_badge,
+            text="✨ Unified Engine: 6-Attractor SON Potential · Spiritual (4 Personas) · Multi-Aspect · Wire Grounded 15-Post Thread",
+            font=("Segoe UI", 9, "bold"),
+            fg=ACCENT_CYAN,
+            bg="#0d2b45"
+        ).pack(anchor="w")
+
+        # Model fallbacks selection frame with drag-and-drop ordering list
+        model_frame = tk.Frame(inner, bg=CARD_BG)
+        model_frame.pack(fill=tk.X, pady=(5, 5))
+        
+        # Split into left (checkboxes) and right (drag-and-drop listbox sequence)
+        split_frame = tk.Frame(model_frame, bg=CARD_BG)
+        split_frame.pack(fill=tk.X, anchor="w")
+        
+        chk_container = tk.Frame(split_frame, bg=CARD_BG)
+        chk_container.pack(side=tk.LEFT, fill=tk.Y, padx=(0, 20))
+        
+        tk.Label(chk_container, text="Active Models:", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG).pack(anchor="w", pady=(0, 4))
+        for m in self.available_models:
+            var = tk.BooleanVar(value=(m in self.selected_models))
+            self.model_vars[m] = var
+            chk = ttk.Checkbutton(chk_container, text=m, variable=var, command=lambda name=m: self.on_model_toggle(name))
+            chk.pack(anchor="w", pady=2)
+            
+        list_container = tk.Frame(split_frame, bg=CARD_BG)
+        list_container.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        
+        tk.Label(list_container, text="Fallback Sequence (Drag & Drop items to reorder):", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG).pack(anchor="w", pady=(0, 4))
+        
+        self.lst_sequence = DragDropListbox(
+            list_container, height=9, bg=BG_COLOR, fg=TEXT_COLOR, selectbackground=ACCENT_BLUE,
+            selectforeground=TEXT_COLOR, font=self.font_body, relief="flat", borderwidth=0,
+            highlightthickness=1, highlightbackground=BG_BUTTON
+        )
+        self.lst_sequence.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.lst_sequence.on_reorder_callback = self.update_sequence_from_listbox
+        
+        # Populate Listbox in correct sequence
+        for m in self.selected_models:
+            self.lst_sequence.insert(tk.END, m)
+
+        # Spiritual Traditions Selection Frame
+        spiritual_frame = tk.Frame(inner, bg=CARD_BG)
+        spiritual_frame.pack(fill=tk.X, pady=(8, 2))
+
+        sp_header = tk.Frame(spiritual_frame, bg=CARD_BG)
+        sp_header.pack(fill=tk.X, pady=(0, 4))
+
+        sp_label = tk.Label(sp_header, text="🕊️ Spiritual Canon Traditions (Active when Spiritual Mode is ON):", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        sp_label.pack(side=tk.LEFT)
+
+        def set_trad_preset(preset):
+            for k, var in self.tradition_vars.items():
+                if preset == "all":
+                    var.set(True)
+                elif preset == "clear":
+                    var.set(False)
+                elif preset == "core4":
+                    var.set(k in ["christianity", "hinduism", "buddhism", "taoism", "other"])
+                elif preset == "eastern":
+                    var.set(k in ["taoism", "buddhism", "hinduism", "other"])
+                elif preset == "nature":
+                    var.set(k in ["indigenous", "taoism", "other"])
+
+        for p_name, p_key in [("Core 4", "core4"), ("All", "all"), ("Eastern", "eastern"), ("Custodial", "nature"), ("Clear", "clear")]:
+            btn = tk.Button(sp_header, text=p_name, font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=5, pady=1, cursor="hand2", command=lambda pk=p_key: set_trad_preset(pk))
+            btn.pack(side=tk.RIGHT, padx=2)
+            btn.bind("<Enter>", lambda e, b=btn: b.configure(bg=BG_BUTTON_HOVER))
+            btn.bind("<Leave>", lambda e, b=btn: b.configure(bg=BG_BUTTON))
+
+        sp_chk_frame = tk.Frame(spiritual_frame, bg=BG_COLOR, bd=1, relief="flat", padx=8, pady=4)
+        sp_chk_frame.pack(fill=tk.X)
+
+        self.tradition_vars = {}
+        for idx, (t_key, t_label) in enumerate(self.tradition_definitions):
+            row = idx // 4
+            col = idx % 4
+            var = tk.BooleanVar(value=(t_key in ["christianity", "hinduism", "buddhism", "taoism", "other"]))
+            self.tradition_vars[t_key] = var
+            chk = ttk.Checkbutton(sp_chk_frame, text=t_label, variable=var, style="Feeds.TCheckbutton")
+            chk.grid(row=row, column=col, sticky="w", padx=8, pady=2)
+
+        # RSS Feeds Selection Frame
+        feeds_header = tk.Frame(inner, bg=CARD_BG)
+        feeds_header.pack(fill=tk.X, pady=(10, 2))
+        
+        feeds_label = tk.Label(feeds_header, text="Active RSS Feeds (Deselect to exclude specific feeds):", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        feeds_label.pack(side=tk.LEFT)
+        
+        # Select All / Select None / Category Explorer buttons
+        def select_all_feeds():
+            for var in self.feed_vars.values():
+                var.set(True)
+                
+        def select_none_feeds():
+            for var in self.feed_vars.values():
+                var.set(False)
+                
+        btn_sel_all = tk.Button(feeds_header, text="Select All", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=2, cursor="hand2", command=select_all_feeds)
+        btn_sel_all.pack(side=tk.RIGHT, padx=4)
+        btn_sel_all.bind("<Enter>", lambda e: btn_sel_all.configure(bg=BG_BUTTON_HOVER))
+        btn_sel_all.bind("<Leave>", lambda e: btn_sel_all.configure(bg=BG_BUTTON))
+        
+        btn_sel_none = tk.Button(feeds_header, text="Select None", font=("Segoe UI", 8), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=6, pady=2, cursor="hand2", command=select_none_feeds)
+        btn_sel_none.pack(side=tk.RIGHT, padx=4)
+        btn_sel_none.bind("<Enter>", lambda e: btn_sel_none.configure(bg=BG_BUTTON_HOVER))
+        btn_sel_none.bind("<Leave>", lambda e: btn_sel_none.configure(bg=BG_BUTTON))
+
+        btn_view_cats = tk.Button(feeds_header, text="📂 Category Explorer", font=("Segoe UI", 8, "bold"), bg=BG_BUTTON, fg=ACCENT_CYAN, relief="flat", borderwidth=0, padx=6, pady=2, cursor="hand2", command=self.open_category_feeds_dialog)
+        btn_view_cats.pack(side=tk.RIGHT, padx=4)
+        btn_view_cats.bind("<Enter>", lambda e: btn_view_cats.configure(bg=BG_BUTTON_HOVER))
+        btn_view_cats.bind("<Leave>", lambda e: btn_view_cats.configure(bg=BG_BUTTON))
+
+        feeds_container = tk.Frame(inner, bg=CARD_BG)
+        feeds_container.pack(fill=tk.X, pady=(0, 8))
+        
+        canvas_frame = tk.Frame(feeds_container, bg=BG_COLOR, bd=1, relief="flat")
+        canvas_frame.pack(fill=tk.X, expand=True)
+        
+        feeds_canvas = tk.Canvas(canvas_frame, bg=BG_COLOR, height=100, highlightthickness=0)
+        feeds_scrollbar = ttk.Scrollbar(canvas_frame, orient="vertical", command=feeds_canvas.yview)
+        
+        feeds_canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        feeds_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        feeds_canvas.configure(yscrollcommand=feeds_scrollbar.set)
+        
+        scrollable_feeds_frame = tk.Frame(feeds_canvas, bg=BG_COLOR)
+        feeds_canvas_window = feeds_canvas.create_window((0, 0), window=scrollable_feeds_frame, anchor="nw")
+        
+        def on_feeds_frame_configure(event):
+            feeds_canvas.configure(scrollregion=feeds_canvas.bbox("all"))
+        scrollable_feeds_frame.bind("<Configure>", on_feeds_frame_configure)
+        
+        def on_feeds_canvas_configure(event):
+            feeds_canvas.itemconfig(feeds_canvas_window, width=event.width)
+        feeds_canvas.bind("<Configure>", on_feeds_canvas_configure)
+        
+        # Sort feed names alphabetically
+        sorted_feed_names = sorted(list(self.feed_definitions.keys()))
+        self.feed_vars = {}
+        
+        # Layout in 3 columns
+        num_cols = 3
+        # Custom style for feeds checkbutton to match BG_COLOR of scroll container
+        self.style.configure("Feeds.TCheckbutton", background=BG_COLOR, foreground=TEXT_COLOR, font=self.font_body)
+        for idx, feed_name in enumerate(sorted_feed_names):
+            row = idx // num_cols
+            col = idx % num_cols
+            var = tk.BooleanVar(value=True)
+            self.feed_vars[feed_name] = var
+            chk = ttk.Checkbutton(scrollable_feeds_frame, text=feed_name, variable=var, style="Feeds.TCheckbutton")
+            chk.grid(row=row, column=col, sticky="w", padx=10, pady=2)
+            
+        # Mousewheel scroll event handler for feeds canvas
+        def on_feeds_mousewheel(event):
+            if feeds_canvas.winfo_exists():
+                if event.delta:
+                    feeds_canvas.yview_scroll(int(-2 * (event.delta / 120)), "units")
+                elif event.num == 4:
+                    feeds_canvas.yview_scroll(-2, "units")
+                elif event.num == 5:
+                    feeds_canvas.yview_scroll(2, "units")
+                    
+        def bind_feeds_mousewheel_recursive(widget):
+            widget.bind("<MouseWheel>", on_feeds_mousewheel)
+            widget.bind("<Button-4>", on_feeds_mousewheel)
+            widget.bind("<Button-5>", on_feeds_mousewheel)
+            for child in widget.winfo_children():
+                bind_feeds_mousewheel_recursive(child)
+                
+        bind_feeds_mousewheel_recursive(feeds_canvas)
+
+        # Additional Context Frame
+        context_frame = tk.Frame(inner, bg=CARD_BG)
+        context_frame.pack(fill=tk.X, pady=(5, 5))
+        
+        tk.Label(context_frame, text="Additional Context / Background Knowledge (injects into AI system prompt):", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG).pack(anchor="w", pady=(0, 4))
+        
+        ctx_txt_frame = tk.Frame(context_frame, bg=BG_COLOR)
+        ctx_txt_frame.pack(fill=tk.X, expand=True)
+        
+        scrollbar_ctx = tk.Scrollbar(ctx_txt_frame)
+        scrollbar_ctx.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        self.txt_context = tk.Text(
+            ctx_txt_frame, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, height=3,
+            font=self.font_body, relief="flat", borderwidth=0, yscrollcommand=scrollbar_ctx.set
+        )
+        self.txt_context.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        scrollbar_ctx.config(command=self.txt_context.yview)
+
+        # Buttons
+        self.btn_run_batch = tk.Button(
+            inner, text="Run One-Shot Batch Evaluation", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=self.run_one_shot_batch
+        )
+        self.btn_run_batch.pack(anchor="w", pady=(8, 0))
+        self.btn_run_batch.bind("<Enter>", lambda e: self.btn_run_batch.configure(bg=ACCENT_CYAN_HOVER))
+        self.btn_run_batch.bind("<Leave>", lambda e: self.btn_run_batch.configure(bg=ACCENT_CYAN))
+
+    def create_live_post_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        lbl = tk.Label(inner, text="Live Post Scheduler", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(anchor="w", pady=(0, 8))
+
+        grid_frame = tk.Frame(inner, bg=CARD_BG)
+        grid_frame.pack(fill=tk.X, pady=(0, 10))
+
+        tk.Label(grid_frame, text="Min Delay (sec)", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=3, padx=(0, 5))
+        self.ent_min_delay = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_min_delay.grid(row=0, column=1, sticky="w", pady=3, padx=(0, 20))
+
+        tk.Label(grid_frame, text="Max Delay (sec)", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=2, sticky="w", pady=3, padx=(0, 5))
+        self.ent_max_delay = tk.Entry(grid_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_max_delay.grid(row=0, column=3, sticky="w", pady=3, padx=(0, 20))
+
+        self.val_watch = tk.BooleanVar(value=False)
+        self.chk_watch = ttk.Checkbutton(grid_frame, text="Continuous Watch Mode", variable=self.val_watch)
+        self.chk_watch.grid(row=1, column=0, columnspan=2, sticky="w", pady=6)
+
+        self.val_post_compact = tk.BooleanVar(value=False)
+        self.chk_post_compact = ttk.Checkbutton(grid_frame, text="Post Compact Thread", variable=self.val_post_compact)
+        self.chk_post_compact.grid(row=1, column=2, columnspan=1, sticky="w", pady=6)
+
+        self.val_post_compact_single = tk.BooleanVar(value=False)
+        self.chk_post_compact_single = ttk.Checkbutton(grid_frame, text="Post Compact Single", variable=self.val_post_compact_single)
+        self.chk_post_compact_single.grid(row=1, column=3, columnspan=1, sticky="w", pady=6)
+
+        self.val_post_five_word = tk.BooleanVar(value=False)
+        self.chk_post_five_word = ttk.Checkbutton(grid_frame, text="Post 5-Word Mode", variable=self.val_post_five_word)
+        self.chk_post_five_word.grid(row=1, column=4, columnspan=2, sticky="w", pady=6)
+
+
+        self.btn_run_live = tk.Button(
+            inner, text="Run Pre-Flight & Live Post Scheduler", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=self.run_live_post
+        )
+        self.btn_run_live.pack(anchor="w")
+        self.btn_run_live.bind("<Enter>", lambda e: self.btn_run_live.configure(bg=ACCENT_BLUE_HOVER))
+        self.btn_run_live.bind("<Leave>", lambda e: self.btn_run_live.configure(bg=ACCENT_BLUE))
+
+    def create_eval_console_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        header = tk.Frame(inner, bg=CARD_BG)
+        header.pack(fill=tk.X, pady=(0, 6))
+
+        lbl = tk.Label(header, text="Evaluator / Registry Output", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(side=tk.LEFT)
+
+        self.btn_kill_eval = tk.Button(
+            header, text="Cancel Evaluator Action", font=self.font_body, bg=DANGER_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=8, pady=2, cursor="hand2", command=self.kill_eval_process, state=tk.DISABLED
+        )
+        self.btn_kill_eval.pack(side=tk.RIGHT, padx=5)
+
+        btn_clear = tk.Button(
+            header, text="Clear", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=8, pady=2, cursor="hand2", command=self.clear_eval_console
+        )
+        btn_clear.pack(side=tk.RIGHT)
+
+        txt_frame = tk.Frame(inner, bg=BG_COLOR)
+        txt_frame.pack(fill=tk.BOTH, expand=True)
+
+        scrollbar = tk.Scrollbar(txt_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.eval_text = tk.Text(
+            txt_frame, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, height=13,
+            font=self.font_console, relief="flat", borderwidth=0, yscrollcommand=scrollbar.set
+        )
+        self.eval_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.config(command=self.eval_text.yview)
+
+    def create_post_console_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.BOTH, expand=True)
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        header = tk.Frame(inner, bg=CARD_BG)
+        header.pack(fill=tk.X, pady=(0, 6))
+
+        lbl = tk.Label(header, text="Poster / Scheduler Output", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(side=tk.LEFT)
+
+        self.btn_kill_post = tk.Button(
+            header, text="Cancel Poster Action", font=self.font_body, bg=DANGER_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=8, pady=2, cursor="hand2", command=self.kill_post_process, state=tk.DISABLED
+        )
+        self.btn_kill_post.pack(side=tk.RIGHT, padx=5)
+
+        btn_clear = tk.Button(
+            header, text="Clear", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=8, pady=2, cursor="hand2", command=self.clear_post_console
+        )
+        btn_clear.pack(side=tk.RIGHT)
+
+        txt_frame = tk.Frame(inner, bg=BG_COLOR)
+        txt_frame.pack(fill=tk.BOTH, expand=True)
+
+        scrollbar = tk.Scrollbar(txt_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.post_text = tk.Text(
+            txt_frame, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, height=13,
+            font=self.font_console, relief="flat", borderwidth=0, yscrollcommand=scrollbar.set
+        )
+        self.post_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.config(command=self.post_text.yview)
+
+    def ensure_local_server(self):
+        PORT = 8000
+        import socket
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                if s.connect_ex(('localhost', PORT)) == 0:
+                    return  # Already running
+        except Exception:
+            pass
+
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+
+        def run_server():
+            import http.server
+            import socketserver
+
+            class QuietHandler(http.server.SimpleHTTPRequestHandler):
+                def __init__(self, *args, **kwargs):
+                    super().__init__(*args, directory=root_dir, **kwargs)
+                def log_message(self, format, *args):
+                    pass
+
+            class ThreadingHTTPServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
+                daemon_threads = True
+
+            try:
+                server = ThreadingHTTPServer(('localhost', PORT), QuietHandler)
+                server.serve_forever()
+            except Exception as e:
+                print(f"Failed to start local HTTP server: {e}")
+
+        t = threading.Thread(target=run_server, daemon=True)
+        t.start()
+
+    def ensure_source_server(self):
+        python_bin = self.get_python_bin()
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        source_script = os.path.join(root_dir, "bluesky_bot", "source_server.py")
+        
+        import socket
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                if s.connect_ex(('localhost', 8765)) == 0:
+                    return  # Already running
+        except Exception:
+            pass
+
+        subprocess.Popen(
+            [python_bin, source_script],
+            cwd=os.path.join(root_dir, "bluesky_bot"),
+            creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+        )
+
+    def ensure_chat_server(self):
+        python_bin = self.get_python_bin()
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        chat_script = os.path.join(root_dir, "bluesky_bot", "chat_server.py")
+        
+        import socket
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                if s.connect_ex(('localhost', 8766)) == 0:
+                    return  # Already running
+        except Exception:
+            pass
+
+        subprocess.Popen(
+            [python_bin, chat_script],
+            cwd=os.path.join(root_dir, "bluesky_bot"),
+            creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+        )
+
+    def open_category_feeds_dialog(self):
+        dialog = tk.Toplevel(self.root)
+        dialog.title("RSS Feed Categories Explorer")
+        dialog.geometry("820x600")
+        dialog.configure(bg=BG_COLOR)
+        dialog.transient(self.root)
+
+        # Header
+        hdr = tk.Frame(dialog, bg=CARD_BG, padx=14, pady=10)
+        hdr.pack(fill=tk.X)
+        tk.Label(hdr, text="📂 RSS Feed Categories & Source Mapping", font=self.font_title, fg=ACCENT_CYAN, bg=CARD_BG).pack(anchor="w")
+        tk.Label(hdr, text="Browse the exact RSS feeds harvested under each category. Apply categories or sync feed selections instantly.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG).pack(anchor="w")
+
+        # Category Buttons Bar
+        cat_bar = tk.Frame(dialog, bg=BG_COLOR, padx=14, pady=8)
+        cat_bar.pack(fill=tk.X)
+        tk.Label(cat_bar, text="Categories:", font=self.font_subtitle, fg=TEXT_COLOR, bg=BG_COLOR).pack(side=tk.LEFT, padx=(0, 8))
+
+        # Main Display Area
+        content_frame = tk.Frame(dialog, bg=CARD_BG, padx=14, pady=10)
+        content_frame.pack(fill=tk.BOTH, expand=True, padx=14, pady=(0, 10))
+
+        cat_title_lbl = tk.Label(content_frame, text="", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        cat_title_lbl.pack(anchor="w", pady=(0, 6))
+
+        txt_box_frame = tk.Frame(content_frame, bg=BG_COLOR)
+        txt_box_frame.pack(fill=tk.BOTH, expand=True)
+        sb = tk.Scrollbar(txt_box_frame)
+        sb.pack(side=tk.RIGHT, fill=tk.Y)
+        feed_display = tk.Text(txt_box_frame, bg=BG_COLOR, fg=TEXT_COLOR, font=self.font_console, relief="flat", borderwidth=0, yscrollcommand=sb.set, wrap="word")
+        feed_display.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        sb.config(command=feed_display.yview)
+
+        # Bottom Action Bar
+        act_bar = tk.Frame(dialog, bg=BG_COLOR, padx=14, pady=10)
+        act_bar.pack(fill=tk.X)
+
+        selected_cat_var = tk.StringVar(value="all")
+        cat_buttons = []
+
+        def show_cat(cat_key):
+            selected_cat_var.set(cat_key)
+            for btn, key in cat_buttons:
+                if key == cat_key:
+                    btn.configure(bg=ACCENT_BLUE, fg=TEXT_COLOR)
+                else:
+                    btn.configure(bg=BG_BUTTON, fg=TEXT_COLOR)
+
+            feed_display.delete("1.0", tk.END)
+            if cat_key == "all":
+                cat_title_lbl.config(text=f"All Configured Feeds Across All Categories ({len(self.feed_definitions)} unique feeds)")
+                for cname, flist in self.category_feeds.items():
+                    feed_display.insert(tk.END, f"=== CATEGORY: {cname.upper()} ({len(flist)} feeds) ===\n")
+                    for item in flist:
+                        feed_display.insert(tk.END, f"  • {item['name']:<32} {item['url']}\n")
+                    feed_display.insert(tk.END, "\n")
+            else:
+                flist = self.category_feeds.get(cat_key, [])
+                cat_title_lbl.config(text=f"Category: {cat_key.upper()} ({len(flist)} active feeds)")
+                feed_display.insert(tk.END, f"Feeds harvested when --category {cat_key} is selected:\n\n")
+                for item in flist:
+                    feed_display.insert(tk.END, f"  • {item['name']:<32} {item['url']}\n")
+
+        def apply_cat_to_launcher():
+            cat = selected_cat_var.get()
+            if cat and cat != "all":
+                self.ent_category.delete(0, tk.END)
+                self.ent_category.insert(0, cat)
+            elif cat == "all":
+                self.ent_category.delete(0, tk.END)
+                self.ent_category.insert(0, "general,china,asia,tech,business,politics,science,world")
+            dialog.destroy()
+
+        def select_only_cat_feeds():
+            cat = selected_cat_var.get()
+            if cat == "all":
+                for var in self.feed_vars.values():
+                    var.set(True)
+            else:
+                flist = self.category_feeds.get(cat, [])
+                cat_feed_names = {item["name"] for item in flist}
+                for fname, var in self.feed_vars.items():
+                    var.set(fname in cat_feed_names)
+            dialog.destroy()
+
+        all_cats = ["all"] + list(self.category_feeds.keys())
+        for c in all_cats:
+            b = tk.Button(cat_bar, text=c.upper(), font=("Segoe UI", 8, "bold"), bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=8, pady=3, cursor="hand2", command=lambda key=c: show_cat(key))
+            b.pack(side=tk.LEFT, padx=3)
+            cat_buttons.append((b, c))
+
+        btn_apply = tk.Button(act_bar, text="✅ Set Category in Launcher", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=apply_cat_to_launcher)
+        btn_apply.pack(side=tk.LEFT, padx=(0, 8))
+
+        btn_sel_feeds = tk.Button(act_bar, text="🎯 Select Only This Category's Feeds", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=select_only_cat_feeds)
+        btn_sel_feeds.pack(side=tk.LEFT, padx=(0, 8))
+
+        btn_close = tk.Button(act_bar, text="Close", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR, relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=dialog.destroy)
+        btn_close.pack(side=tk.RIGHT)
+
+        show_cat("all")
+
+    def open_control_panel(self):
+        self.ensure_local_server()
+        self.ensure_source_server()
+        self.ensure_chat_server()
+        python_bin = self.get_python_bin()
+        url = "http://localhost:8000/bluesky_bot/control_panel.html"
+        
+        # Run pywebview inside a separate background python process to avoid GUI thread deadlocks
+        code = f"import webview; webview.create_window('Aletheia Control Panel', '{url}', width=1400, height=850); webview.start()"
+        
+        subprocess.Popen(
+            [python_bin, "-c", code],
+            creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+        )
+
+    def clear_eval_console(self):
+        self.eval_text.delete("1.0", tk.END)
+
+    def clear_post_console(self):
+        self.post_text.delete("1.0", tk.END)
+
+    def set_eval_running(self, running):
+        if running:
+            self.btn_run_batch.configure(state=tk.DISABLED)
+            if hasattr(self, 'btn_run_probe'):
+                self.btn_run_probe.configure(state=tk.DISABLED)
+            self.btn_rebuild.configure(state=tk.DISABLED)
+            self.btn_kill_eval.configure(state=tk.NORMAL)
+        else:
+            self.btn_run_batch.configure(state=tk.NORMAL)
+            if hasattr(self, 'btn_run_probe'):
+                self.btn_run_probe.configure(state=tk.NORMAL)
+            self.btn_rebuild.configure(state=tk.NORMAL)
+            self.btn_kill_eval.configure(state=tk.DISABLED)
+            self.root.after(1, self.refresh_hud_stats)
+
+    def set_post_running(self, running):
+        if running:
+            self.btn_run_live.configure(state=tk.DISABLED)
+            self.btn_kill_post.configure(state=tk.NORMAL)
+        else:
+            self.btn_run_live.configure(state=tk.NORMAL)
+            self.btn_kill_post.configure(state=tk.DISABLED)
+            self.root.after(1, self.refresh_hud_stats)
+
+    def run_eval_subprocess_async(self, cmd_args):
+        self.set_eval_running(True)
+        def worker():
+            try:
+                self.log_eval(f"\n> Running: {' '.join(cmd_args)}\n")
+                self.eval_process = subprocess.Popen(
+                    cmd_args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    encoding="utf-8",
+                    errors="replace",
+                    bufsize=1,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                self.read_stream(self.eval_process.stdout, "eval")
+                self.eval_process.wait()
+                self.log_eval(f"\n--- Process finished with exit code {self.eval_process.returncode} ---\n")
+            except Exception as e:
+                self.log_eval(f"\nError running process: {e}\n")
+            finally:
+                self.eval_process = None
+                self.root.after(1, lambda: self.set_eval_running(False))
+        threading.Thread(target=worker, daemon=True).start()
+
+    def kill_eval_process(self):
+        if self.eval_process:
+            self.log_eval("\n*** Terminating evaluator process... ***\n")
+            self.eval_process.terminate()
+
+    def kill_post_process(self):
+        if self.post_process:
+            self.log_post("\n*** Terminating poster process... ***\n")
+            self.post_process.terminate()
+
+    def on_potential_toggle(self):
+        if self.val_potential.get():
+            self.val_son.set(False)
+
+    def on_son_toggle(self):
+        if self.val_son.get():
+            self.val_potential.set(False)
+
+    def run_rebuild_store(self):
+        python_bin = self.get_python_bin()
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+        sname = "rebuild_registries_son.py" if (self.val_son.get() or self.val_potential.get()) else "rebuild_registries.py"
+        script = os.path.join(bot_dir, sname)
+        if not os.path.exists(script):
+            script = os.path.join(root_dir, "bluesky_bot", sname)
+        self.run_eval_subprocess_async([python_bin, "-u", script])
+
+    def update_sequence_from_listbox(self):
+        self.selected_models = list(self.lst_sequence.get(0, tk.END))
+
+    def on_model_toggle(self, model_name):
+        var_val = self.model_vars[model_name].get()
+        if var_val:
+            if model_name not in self.selected_models:
+                self.selected_models.append(model_name)
+                self.lst_sequence.insert(tk.END, model_name)
+        else:
+            if model_name in self.selected_models:
+                self.selected_models.remove(model_name)
+                try:
+                    idx = list(self.lst_sequence.get(0, tk.END)).index(model_name)
+                    self.lst_sequence.delete(idx)
+                except ValueError:
+                    pass
+
+    def run_one_shot_batch(self):
+        python_bin = self.get_python_bin()
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        main_script = os.path.join(bot_dir, "main.py")
+        
+        limit_val = self.ent_rss.get().strip() or "5"
+        args = [
+            python_bin, "-u",
+            main_script,
+            "--limit", limit_val,
+            "--dry-run"
+        ]
+
+        cat_val = self.ent_category.get().strip()
+        if cat_val:
+            args.extend(["--category", cat_val])
+
+        topic_val = self.ent_topic.get().strip()
+        if topic_val:
+            args.extend(["--topic", topic_val])
+
+        banned_val = self.ent_banned.get().strip()
+        if banned_val:
+            args.extend(["--exclude-topics", banned_val])
+
+        if self.selected_models:
+            args.extend(["--model", self.selected_models[0]])
+            args.extend(["--model-sequence", ",".join(self.selected_models)])
+
+        self.run_eval_subprocess_async(args)
+
+    def run_research_probe(self):
+        query = self.ent_probe_query.get().strip()
+        if not query:
+            return
+        python_bin = self.get_python_bin()
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+        oneshot_path = os.path.join(bot_dir, "google_ai_studio_one_shot.py")
+        if not os.path.exists(oneshot_path):
+            oneshot_path = os.path.join(root_dir, "bluesky_bot", "google_ai_studio_one_shot.py")
+        args = [
+            python_bin, "-u",
+            oneshot_path,
+            "--probe", query
+        ]
+        year = self.ent_probe_year.get().strip()
+        if year:
+            args.extend(["--probe-year", year])
+            
+        limit = self.ent_probe_limit.get().strip()
+        if limit:
+            args.extend(["--rss", limit, "--bsky", "0"])
+
+        thinking = self.combo_thinking.get().strip()
+        if thinking:
+            args.extend(["--thinking-level", thinking])
+
+        if self.val_potential.get():
+            args.append("--potential")
+        elif self.val_son.get():
+            args.append("--son")
+
+        if self.val_search.get():
+            args.append("--search")
+
+        if self.val_compact.get():
+            args.append("--compact")
+
+        if self.selected_models:
+            args.extend(["--model", self.selected_models[0]])
+            args.extend(["--model-sequence", ",".join(self.selected_models)])
+
+        self.run_eval_subprocess_async(args)
+
+    def open_chat_ui(self):
+        self.ensure_local_server()
+        self.ensure_chat_server()
+        url = "http://localhost:8000/bluesky_bot/aletheia_chat.html"
+        webbrowser.open(url)
+
+    def run_policy_report(self):
+        python_bin = self.get_python_bin()
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+        oneshot_path = os.path.join(bot_dir, "google_ai_studio_one_shot.py")
+        if not os.path.exists(oneshot_path):
+            oneshot_path = os.path.join(root_dir, "bluesky_bot", "google_ai_studio_one_shot.py")
+        args = [
+            python_bin, "-u",
+            oneshot_path,
+            "--policy-report"
+        ]
+        self.run_eval_subprocess_async(args)
+
+    def run_live_post(self):
+        python_bin = self.get_python_bin()
+        self.set_post_running(True)
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+
+        def posting_flow():
+            try:
+                # Step 1: Pre-flight validation
+                self.log_post("\n> Running Pre-Flight Validation...\n")
+                val_args = [python_bin, "-u", os.path.join(bot_dir, "main.py"), "--validate-drafts"]
+
+                val_proc = subprocess.Popen(
+                    val_args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    encoding="utf-8",
+                    errors="replace",
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                self.post_process = val_proc
+                self.read_stream(val_proc.stdout, "post")
+                val_proc.wait()
+
+                if val_proc.returncode != 0:
+                    self.log_post("\n==================================================\n")
+                    self.log_post("ERROR: Pre-flight validation failed! Posting aborted.\n")
+                    self.log_post("==================================================\n")
+                    return
+
+                # Step 2: Post batch
+                self.log_post("\n> Validation passed! Scheduling live batch posting...\n")
+                args = [python_bin, "-u", os.path.join(bot_dir, "main.py"), "--post-drafts", "--live"]
+                
+                min_delay = self.ent_min_delay.get().strip()
+                if min_delay:
+                    args.extend(["--min-delay", min_delay])
+                    
+                max_delay = self.ent_max_delay.get().strip()
+                if max_delay:
+                    args.extend(["--max-delay", max_delay])
+                    
+                if self.val_watch.get():
+                    args.append("--watch")
+
+                self.log_post(f"> Command: {' '.join(args)}\n")
+                post_proc = subprocess.Popen(
+                    args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    encoding="utf-8",
+                    errors="replace",
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                self.post_process = post_proc
+                self.read_stream(post_proc.stdout, "post")
+                post_proc.wait()
+                self.log_post(f"\n--- Live scheduler completed (exit code: {post_proc.returncode}) ---\n")
+
+            except Exception as e:
+                self.log_post(f"\nError running live posting flow: {e}\n")
+            finally:
+                self.post_process = None
+                self.root.after(1, lambda: self.set_post_running(False))
+
+        threading.Thread(target=posting_flow, daemon=True).start()
+
+    def run_post_cmd_async(self, cmd_args):
+        """Runs a command asynchronously, streaming its output directly into the post console."""
+        self.set_post_running(True)
+        def worker():
+            try:
+                self.log_post(f"\n> Running: {' '.join(cmd_args)}\n")
+                cmd_proc = subprocess.Popen(
+                    cmd_args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    encoding="utf-8",
+                    errors="replace",
+                    bufsize=1,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                self.post_process = cmd_proc
+                self.read_stream(cmd_proc.stdout, "post")
+                cmd_proc.wait()
+                exit_code = cmd_proc.returncode
+                self.log_post(f"\n--- Process finished with exit code {exit_code} ---\n")
+            except Exception as e:
+                self.log_post(f"\nError running process: {e}\n")
+            finally:
+                self.post_process = None
+                self.root.after(1, lambda: self.set_post_running(False))
+        threading.Thread(target=worker, daemon=True).start()
+
+    def set_reply_running(self, running):
+        if running:
+            self.btn_inspect_reply.configure(state=tk.DISABLED)
+            self.btn_post_live_reply.configure(state=tk.DISABLED)
+            if hasattr(self, 'btn_kill_reply'):
+                self.btn_kill_reply.configure(state=tk.NORMAL)
+        else:
+            self.btn_inspect_reply.configure(state=tk.NORMAL)
+            self.btn_post_live_reply.configure(state=tk.NORMAL)
+            if hasattr(self, 'btn_kill_reply'):
+                self.btn_kill_reply.configure(state=tk.DISABLED)
+
+    def kill_reply_process(self):
+        if hasattr(self, 'reply_process') and self.reply_process:
+            self.log_reply("\n*** Terminating direct reply process... ***\n")
+            self.reply_process.terminate()
+
+    def run_reply_cmd_async(self, cmd_args):
+        """Runs a direct reply command asynchronously, streaming its output directly into the dedicated reply console."""
+        self.set_reply_running(True)
+        def worker():
+            try:
+                self.log_reply(f"\n> Running: {' '.join(cmd_args)}\n")
+                cmd_proc = subprocess.Popen(
+                    cmd_args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    encoding="utf-8",
+                    errors="replace",
+                    bufsize=1,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                self.reply_process = cmd_proc
+                self.read_stream(cmd_proc.stdout, "reply")
+                cmd_proc.wait()
+                exit_code = cmd_proc.returncode
+                self.log_reply(f"\n--- Direct reply finished with exit code {exit_code} ---\n")
+            except Exception as e:
+                self.log_reply(f"\nError running direct reply: {e}\n")
+            finally:
+                self.reply_process = None
+                self.root.after(1, lambda: self.set_reply_running(False))
+        threading.Thread(target=worker, daemon=True).start()
+
+    def run_direct_reply(self, live=False):
+        """Executes or previews a targeted direct reply to a Bluesky post."""
+        try:
+            target_url = self.ent_reply_target_url.get().strip()
+            if not target_url:
+                self.log_reply("\n[ERROR] Target Post URL cannot be empty. Please paste a valid Bluesky post URL.\n")
+                return
+
+            bot_val = self.combo_reply_bot.get().lower()
+            bot_key = "aletheia"
+            if "bro" in bot_val:
+                bot_key = "brothekanon"
+            elif "aww" in bot_val:
+                bot_key = "awwthekanon"
+            elif "spirit" in bot_val:
+                bot_key = "spirithekanon"
+
+            skill_val = self.combo_reply_skill.get().lower()
+            skill_key = "archive"
+            if "bro" in skill_val:
+                skill_key = "bro"
+            elif "aww" in skill_val:
+                skill_key = "aww"
+            elif "spirit" in skill_val:
+                skill_key = "spirit"
+
+            query_override = self.ent_reply_query.get().strip() if hasattr(self, 'ent_reply_query') else ""
+            python_bin = self.get_python_bin()
+
+            # Read ordered perspective queue from drag-and-drop listbox
+            queue_items = []
+            if hasattr(self, 'lst_reply_queue'):
+                for idx in range(self.lst_reply_queue.size()):
+                    raw_item = self.lst_reply_queue.get(idx).strip()
+                    r_low = raw_item.lower()
+                    # Clean up display emojis and map to key (specific personas FIRST)
+                    if "bro" in r_low:
+                        queue_items.append("bro")
+                    elif "aww" in r_low:
+                        queue_items.append("aww")
+                    elif "spirit" in r_low:
+                        queue_items.append("spirit")
+                    elif "aletheia" in r_low or "physics" in r_low:
+                        queue_items.append("aletheia")
+                    elif "custom:" in r_low or "angle:" in r_low:
+                        custom_val = raw_item.split(":", 1)[1].strip()
+                        queue_items.append(f"custom:{custom_val}")
+                    elif "receipt" in r_low or "post 1:" in r_low or "factcheck" in r_low or "card" in r_low:
+                        queue_items.append("receipt")
+                    else:
+                        queue_items.append(raw_item)
+
+            num_replies = len(queue_items) if queue_items else 1
+
+            bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+            root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+            dispatcher_path = os.path.join(bot_dir, "direct_reply_dispatcher.py")
+            if not os.path.exists(dispatcher_path):
+                dispatcher_path = os.path.join(root_dir, "bluesky_bot", "direct_reply_dispatcher.py")
+
+            cmd = [
+                python_bin, "-u",
+                dispatcher_path,
+                "--target-url", target_url,
+                "--bot", bot_key,
+                "--skill", skill_key,
+                "--num-replies", str(num_replies)
+            ]
+            if queue_items:
+                cmd.extend(["--perspectives", ";".join(queue_items)])
+            if query_override:
+                cmd.extend(["--query", query_override])
+            if live:
+                cmd.append("--live")
+            if not self.val_reply_ai.get():
+                cmd.append("--no-ai")
+            if self.selected_models:
+                cmd.extend(["--model-sequence", ",".join(self.selected_models)])
+
+            self.run_reply_cmd_async(cmd)
+        except Exception as e:
+            import traceback
+            err = traceback.format_exc()
+            self.log_reply(f"\n[LAUNCHER GUI ERROR]:\n{err}\n")
+            self.set_reply_running(False)
+
+    def preview_latest_card(self):
+        """Opens the most recently generated Audit Archive Card in the default image viewer."""
+        try:
+            bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+            root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+            graph_dir = os.path.join(bot_dir, "graph_png")
+            if not os.path.exists(graph_dir):
+                graph_dir = os.path.join(root_dir, "bluesky_bot", "graph_png")
+
+            cards = [
+                os.path.join(graph_dir, f)
+                for f in os.listdir(graph_dir)
+                if f.endswith("_archive_card.png") or f.endswith("_factcheck_card.png")
+            ]
+            if not cards:
+                self.log_reply("\n[NOTICE] No Audit Archive Card images found yet. Run 'Inspect & Draft Reply' first.\n")
+                return
+
+            cards.sort(key=lambda x: os.path.getmtime(x), reverse=True)
+            latest = cards[0]
+            self.log_reply(f"\n[PREVIEW] Opening latest card image: {latest}\n")
+            if sys.platform == "win32":
+                os.startfile(latest)
+            else:
+                subprocess.Popen(["xdg-open", latest])
+        except Exception as e:
+            self.log_reply(f"\nError previewing card image: {e}\n")
+
+
+    def create_reaudit_card(self, parent):
+        card = ttk.Frame(parent, style="Card.TFrame")
+        card.pack(fill=tk.X, pady=(0, 10))
+
+        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
+        inner.pack(fill=tk.BOTH, expand=True)
+
+        lbl = tk.Label(inner, text="🔄 Story Re-Audit & Correction Dispatcher", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+        lbl.pack(anchor="w", pady=(0, 4))
+
+        desc = tk.Label(
+            inner,
+            text="Re-evaluate an existing story with multi-source wire grounding, verify the draft & cards, and publish the correction reply directly to Bluesky.",
+            font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG
+        )
+        desc.pack(anchor="w", pady=(0, 8))
+
+        grid_frame = tk.Frame(inner, bg=CARD_BG)
+        grid_frame.pack(fill=tk.X, pady=(0, 8))
+
+        # Target Story / URL
+        tk.Label(grid_frame, text="Target Story / URL", bg=CARD_BG, fg=TEXT_MUTED).grid(row=0, column=0, sticky="w", pady=4, padx=(0, 5))
+        
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        live_dir = os.path.join(bot_dir, "stories", "live")
+        if not os.path.exists(live_dir):
+            root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+            live_dir = os.path.join(root_dir, "bluesky_bot", "stories", "live")
+        recent_stories = []
+        if os.path.exists(live_dir):
+            try:
+                story_files = [f for f in os.listdir(live_dir) if f.startswith("factcheck_") and f.endswith(".json")]
+                story_files.sort(key=lambda f: os.path.getmtime(os.path.join(live_dir, f)), reverse=True)
+                recent_stories = [f[len("factcheck_"):-len(".json")] for f in story_files[:30]]
+            except Exception:
+                pass
+
+        self.combo_reaudit_target = ttk.Combobox(grid_frame, width=54, font=self.font_body, values=recent_stories)
+        if "dems_flips_iowa_senate_thune_vow" in recent_stories:
+            self.combo_reaudit_target.set("dems_flips_iowa_senate_thune_vow")
+        elif recent_stories:
+            self.combo_reaudit_target.set(recent_stories[0])
+        self.combo_reaudit_target.grid(row=0, column=1, columnspan=3, sticky="ew", pady=4, padx=(0, 5))
+
+        # Correction Reason & Focus
+        tk.Label(grid_frame, text="Correction Focus / Reason", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=4, padx=(0, 5))
+        self.ent_reaudit_reason = tk.Entry(grid_frame, width=54, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_reaudit_reason.insert(0, "Rebalance with wire sources; ground in verified civic event instead of partisan rhetoric")
+        self.ent_reaudit_reason.grid(row=1, column=1, columnspan=3, sticky="ew", pady=4, padx=(0, 5))
+
+        # Engine note: Uses active model fallback sequence
+        lbl_engine = tk.Label(grid_frame, text="⚡ Uses Active Evaluator Model Fallback Queue", bg=CARD_BG, fg=SUCCESS_COLOR, font=("Segoe UI", 8))
+        lbl_engine.grid(row=2, column=1, columnspan=3, sticky="w", pady=2)
+
+        # Buttons Row: Draft -> Preview -> Direct Live Post
+        btn_frame = tk.Frame(inner, bg=CARD_BG)
+        btn_frame.pack(fill=tk.X, pady=(6, 0))
+
+        self.btn_run_reaudit = tk.Button(
+            btn_frame, text="🧪 1. Generate Correction Draft", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.run_story_reaudit_draft
+        )
+        self.btn_run_reaudit.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_run_reaudit.bind("<Enter>", lambda e: self.btn_run_reaudit.configure(bg=ACCENT_BLUE_HOVER))
+        self.btn_run_reaudit.bind("<Leave>", lambda e: self.btn_run_reaudit.configure(bg=ACCENT_BLUE))
+
+        self.btn_preview_correction = tk.Button(
+            btn_frame, text="👁️ Preview Cards", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.preview_correction_cards
+        )
+        self.btn_preview_correction.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_preview_correction.bind("<Enter>", lambda e: self.btn_preview_correction.configure(bg=BG_BUTTON_HOVER))
+        self.btn_preview_correction.bind("<Leave>", lambda e: self.btn_preview_correction.configure(bg=BG_BUTTON))
+
+        self.btn_post_correction_live = tk.Button(
+            btn_frame, text="🚀 2. Post Correction Directly (Live)", font=self.font_body, bg=SUCCESS_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.post_story_correction_live
+        )
+        self.btn_post_correction_live.pack(side=tk.LEFT)
+        self.btn_post_correction_live.bind("<Enter>", lambda e: self.btn_post_correction_live.configure(bg="#059669"))
+        self.btn_post_correction_live.bind("<Leave>", lambda e: self.btn_post_correction_live.configure(bg=SUCCESS_COLOR))
+
+    def run_story_reaudit_draft(self):
+        target = self.combo_reaudit_target.get().strip()
+        if not target:
+            self.log_eval("\n[ERROR] Target Story slug or Bluesky post URL cannot be empty.\n")
+            return
+
+        reason = self.ent_reaudit_reason.get().strip()
+        python_bin = self.get_python_bin()
+
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        root_dir = getattr(self, "root_dir", os.path.dirname(bot_dir))
+        reaudit_path = os.path.join(bot_dir, "reaudit_story.py")
+        if not os.path.exists(reaudit_path):
+            reaudit_path = os.path.join(root_dir, "bluesky_bot", "reaudit_story.py")
+
+        cmd = [
+            python_bin, "-u", reaudit_path,
+            "--target", target,
+            "--reason", reason
+        ]
+        if self.selected_models:
+            cmd.extend(["--model", self.selected_models[0]])
+            cmd.extend(["--model-sequence", ",".join(self.selected_models)])
+
+        if hasattr(self, 'val_potential') and self.val_potential.get():
+            cmd.append("--potential")
+        else:
+            cmd.append("--son")
+
+        self.log_eval(f"\n> Launching Story Re-Audit Draft: {' '.join(cmd)}\n")
+        self.run_eval_subprocess_async(cmd)
+
+    def preview_correction_cards(self):
+        try:
+            target = self.combo_reaudit_target.get().strip()
+            slug = target.rstrip("/").split("/")[-1].split("?")[0]
+            if slug.startswith("factcheck_"):
+                slug = slug[len("factcheck_"):]
+            if slug.endswith(".json"):
+                slug = slug[:-len(".json")]
+
+            bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+            graph_dir = os.path.join(bot_dir, "graph_png")
+            card_dir = os.path.join(bot_dir, "card_png")
+
+            candidates = [
+                os.path.join(card_dir, f"card_{slug}.png"),
+                os.path.join(graph_dir, f"graph_{slug}.png"),
+                os.path.join(graph_dir, f"correction_{slug}_info_card_verdict.png"),
+                os.path.join(graph_dir, f"correction_{slug}_graph.png"),
+                os.path.join(graph_dir, f"{slug}_info_card_verdict.png"),
+                os.path.join(graph_dir, f"{slug}_graph.png"),
+            ]
+            found = None
+            for c in candidates:
+                if os.path.exists(c):
+                    found = c
+                    break
+
+            if not found:
+                self.log_eval(f"\n[NOTICE] No correction card found yet for '{slug}'. Run '1. Generate Correction Draft' first.\n")
+                return
+
+            self.log_eval(f"\n[PREVIEW] Opening card image: {found}\n")
+            if sys.platform == "win32":
+                os.startfile(found)
+            else:
+                subprocess.Popen(["xdg-open", found])
+        except Exception as e:
+            self.log_eval(f"\nError previewing card image: {e}\n")
+
+    def post_story_correction_live(self):
+        target = self.combo_reaudit_target.get().strip()
+        if not target:
+            self.log_post("\n[ERROR] Target Story slug or Bluesky post URL cannot be empty.\n")
+            return
+
+        slug = target.rstrip("/").split("/")[-1].split("?")[0]
+        if slug.startswith("factcheck_"):
+            slug = slug[len("factcheck_"):]
+        if slug.endswith(".json"):
+            slug = slug[:-len(".json")]
+
+        bot_dir = getattr(self, "bot_dir", os.path.dirname(os.path.abspath(__file__)))
+        corr_candidates = [
+            os.path.join(bot_dir, "stories", "live", f"factcheck_correction_{slug}.json"),
+            os.path.join(bot_dir, "stories", f"factcheck_correction_{slug}.json"),
+            os.path.join(bot_dir, "stories", "live", f"factcheck_{slug}.json"),
+        ]
+        target_json = None
+        for c in corr_candidates:
+            if os.path.exists(c):
+                target_json = c
+                break
+
+        if not target_json:
+            self.log_post(f"\n[ERROR] Correction story JSON not found for '{slug}'. Generate the draft first.\n")
+            return
+
+        python_bin = self.get_python_bin()
+        bot_script = os.path.join(bot_dir, "main.py") if os.path.exists(os.path.join(bot_dir, "main.py")) else os.path.join(bot_dir, "aletheia_bot.py")
+        cmd = [
+            python_bin, "-u", bot_script,
+            "--post-drafts" if "main.py" in bot_script else "--config",
+            target_json if "main.py" not in bot_script else "",
+            "--live",
+        ]
+        cmd = [arg for arg in cmd if arg]
+        self.log_post(f"\n> Posting Correction Thread Live to Bluesky: {' '.join(cmd)}\n")
+        self.run_post_cmd_async(cmd)
+
+
+if __name__ == "__main__":
+    try:
+        # Ensure correct working directory context
+        os.chdir(os.path.dirname(os.path.abspath(__file__)))
+        root = tk.Tk()
+        app = AletheiaLauncherApp(root)
+        root.mainloop()
+    except Exception as e:
+        import traceback
+        try:
+            with open("launch_debug.txt", "a", encoding="utf-8") as lf:
+                lf.write(f"--- Main execution crash: {e} ---\n")
+                traceback.print_exc(file=lf)
+        except Exception:
+            pass

@@ -1,0 +1,71 @@
+{
+  "cycle": 33,
+  "framework": "Argon 4 Distillation — Standalone ONNX Runtime Export & 1,800-Tuple Corpus",
+  "timestamp": "2026-10-15T05:40:00+11:00",
+  "onnx_graph_specification": {
+    "onnx_model_name": "polytrope_base_v1.onnx",
+    "ir_version": 8,
+    "opset_version": 17,
+    "producer_name": "Fractal_Polytrope_Argon4_Distiller",
+    "input_signatures": {
+      "token_ids": [
+        "batch_size",
+        "sequence_length"
+      ],
+      "polar_parity": [
+        "batch_size"
+      ]
+    },
+    "output_signatures": {
+      "phase_space_coords": [
+        "batch_size",
+        3
+      ],
+      "quaternions_s3": [
+        "batch_size",
+        4
+      ],
+      "polar14_distribution": [
+        "batch_size",
+        14
+      ]
+    },
+    "dynamic_axes": {
+      "token_ids": {
+        "0": "batch_size",
+        "1": "sequence_length"
+      },
+      "polar_parity": {
+        "0": "batch_size"
+      },
+      "phase_space_coords": {
+        "0": "batch_size"
+      },
+      "quaternions_s3": {
+        "0": "batch_size"
+      },
+      "polar14_distribution": {
+        "0": "batch_size"
+      }
+    }
+  },
+  "runtime_performance": {
+    "max_absolute_error": 1e-7,
+    "numerical_parity_status": "EXACT_PARITY (MAE < 1e-6)",
+    "cpu_latency_ms": 2.38,
+    "cuda_latency_ms": 0.28
+  },
+  "unified_neural_training": {
+    "total_tuples": 1800,
+    "political_economic_tuples": 910,
+    "biblical_parable_tuples": 890,
+    "vocab_size": 5120,
+    "latent_dim": 256,
+    "initial_loss": 1.8042,
+    "final_loss": 0.60841,
+    "loss_reduction_pct": 66.3,
+    "coordinate_mae": 0.00751,
+    "antipodal_closure_error": 0.01482,
+    "adversarial_verdict": "100% PASS across all audits"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "id": "test_2_wibta-if-i-don-t-accept-this-friend-request-from-t",
+  "timestamp": "2026-11-21T02:35:52.121413+00:00",
+  "subreddit": "AmItheAsshole",
+  "author": "anonymous",
+  "title": "WIBTA if I don't accept this friend request from this guy I see at this bar?",
+  "url": "local://atia_test.txt#case-2",
+  "is_hypothetical": true,
+  "selftext": "I talk to a guy named Drake at this bar sometimes when I'm there. We've got a couple of close mutual friends too. He's always really nice and buys me and other people drinks, but he's told me some stuff that's made me uncomfortable.\n\nHe has randomly told me about \"taking people out\" who have messed with his family. There was one time he said he was going to \"take care of\" this one guy that was messing with a woman he was friends with. I don't know if these are just stories he's just made up or if he's really done these things, but he sent me a friend request on social media and I'm not trying to be judgemental but what he said bothers me a little.\n\nOtherwise he seems like a really good guy though and I don't want to make things awkward between him and our mutual friends.",
+  "evaluation": {
+    "case_index": 2,
+    "verdict": "YWNBTA",
+    "verdict_label": "You Would Not be the Asshole (and the other person would)",
+    "coordinates": {
+      "op_stated": [
+        0.35,
+        -0.3
+      ],
+      "op_actual": [
+        0.65,
+        -0.25
+      ],
+      "other_actual": [
+        -1.15,
+        0.85
+      ],
+      "third_parties": [
+        {
+          "actor": "Mutual Bar Friends",
+          "upsilon": 0.1,
+          "psi": -0.2,
+          "role": "Naive Consensus Bystanders (State 5: enjoying free drinks without being the target of his protector/vigilante probe)"
+        }
+      ],
+      "delta_H": 0.304,
+      "wisdom_score": 0.767,
+      "R_net": 1.0,
+      "strain_sigma": 0.45,
+      "ucf_tuning": {
+        "LHS": 2.1,
+        "RHS_Stated": 1.0,
+        "RHS_Observed": 1.0,
+        "Tuned_Score": 1.0,
+        "state": "Stable"
+      },
+      "deception_codes": [
+        "[4.5.2.5] Possible.Taste.Domination — The Spiked Drink (Buying rounds of drinks to build covert reciprocity debt)",
+        "[1.4.2.3] Meta-Physical.Smell.Domination — The Alpha Musk (Projecting lethal/vigilante capability)",
+        "[1.3.6.6] Meta-Physical.Touch.Understanding — The Probe (Testing OP's compliance via stories of 'taking care of' men around female friends)",
+        "[5.7.5.5] Physical.Proprioception.Acquisition — The Enclosure (Bridging from public bar to private social media surveillance)",
+        "[5.3.1.1] Physical.Touch.Survival — Prudent Digital Perimeter Defense (OP)"
+      ]
+    },
+    "why_verdict": "Either Drake is telling the truth (meaning he violently assaults or kills people and brags about it over beers) or he's lying (meaning he invents hitman stories to intimidate women and look tough). You don't want either of those guys inside your private social media, tagged locations, and personal life. Buying a round of drinks doesn't buy a key to your front door.",
+    "vft_audit_trace": {
+      "unsaid_horizon_and_multi_actor_graph": "Two-Guards Moral Riddle Collapse: OP wonders if Drake's stories are true or made up. Branch A (Truth = 1): Drake is an active violent felon/vigilante (upsilon = -1.50) who framed a story around 'taking care of' a guy messing with a female friend—placing OP and her future partners in his target zone if she becomes his 'friend'. Branch B (Lie < 1): Drake is a manipulative liar (upsilon = -0.90) who fabricates murder/assault stories to intimidate women. Since max(upsilon_A, upsilon_B) = -0.90 << -0.25, the truth/lie uncertainty cancels out completely.",
+      "silent_judgment": "Mute Observer sees a man buying drinks at a public bar, then requesting digital entry into OP's private online home. Deaf Observer isolates his stories as Unprompted Lethal Force Signaling and a Covert Vassalage Pitch. Blind Sensor validates OP's Q1.4 gut contraction.",
+      "seven_plane_scan": {
+        "Q1_Who": "Drake splits between 'nice guy buying drinks' (Cover) and 'vigilante enforcer' (Threat); OP uses Humility (clear sight).",
+        "Q2_What": "Two-branch invariant threat verification yielding upsilon_Drake <= -0.90 on both branches.",
+        "Q3_Where": "Locus Containment (Vector B): keeping a bar acquaintance at the bar rather than inside private social media (Temperance).",
+        "Q4_Why": "Drake uses free drinks ([4.5.2.5]) + 'protector of women' stories to manufacture debt and awe.",
+        "Q5_How": "Leaving the friend request in Pending limbo is a zero-aggression passive shield (-psi).",
+        "Q6_Cause": "Under the Universal Price Equation, a $10 drink has zero equity claim over personal safety.",
+        "Q7_Effect": "OP practices Chastity (Wholeness/Self-Preservation) by honoring her somatic warning sensor."
+      },
+      "zero_point_five_zone_traps": "OP is resisting the Peace/Service Trap (Inner BL/TL: trading away digital safety to avoid 'awkwardness'). Drake operates in the Ambition/Protection Trap (framing violent domination as chivalry).",
+      "nine_states_of_belief": "State 5 (The Cassandra / Gaslit by Politeness Norms): OP detects the threat (Personal < 1) while mutual friends see only free drinks (Social = 1).",
+      "oberon_and_sins_virtues": "Oberon Law of Vetting (Question 4) and Law of Sanctuary (Question 6) obligate the Host (OP) to refuse entry to a potential Poisoner.",
+      "cognitive_fallacy_check": "Overriding violent red flags because 'he buys drinks' would be the Halo Effect / Bribe Equivocation."
+    },
+    "vft_audit_trace_summary": "```json\n{\n  \"unsaid_horizon_and_multi_actor_graph\": \"Two-Guards Moral Riddle Collapse: OP wonders if Drake's stories are true or made up. Branch A (Truth = 1): Drake is an active violent felon/vigilante (upsilon = -1.50) who framed a story around 'taking care of' a guy messing with a female friend—placing OP and her future partners in his target zone if she becomes his 'friend'. Branch B (Lie < 1): Drake is a manipulative liar (upsilon = -0.90) who fabricates murder/assault stories to intimidate women. Since max(upsilon_A, upsilon_B) = -0.90 << -0.25, the truth/lie uncertainty cancels out completely.\",\n  \"silent_judgment\": \"Mute Observer sees a man buying drinks at a public bar, then requesting digital entry into OP's private online home. Deaf Observer isolates his stories as Unprompted Lethal Force Signaling and a Covert Vassalage Pitch. Blind Sensor validates OP's Q1.4 gut contraction.\",\n  \"seven_plane_scan\": {\n    \"Q1_Who\": \"Drake splits between 'nice guy buying drinks' (Cover) and 'vigilante enforcer' (Threat); OP uses Humility (clear sight).\",\n    \"Q2_What\": \"Two-branch invariant threat verification yielding upsilon_Drake <= -0.90 on both branches.\",\n    \"Q3_Where\": \"Locus Containment (Vector B): keeping a bar acquaintance at the bar rather than inside private social media (Temperance).\",\n    \"Q4_Why\": \"Drake uses free drinks ([4.5.2.5]) + 'protector of women' stories to manufacture debt and awe.\",\n    \"Q5_How\": \"Leaving the friend request in Pending limbo is a zero-aggression passive shield (-psi).\",\n    \"Q6_Cause\": \"Under the Universal Price Equation, a $10 drink has zero equity claim over personal safety.\",\n    \"Q7_Effect\": \"OP practices Chastity (Wholeness/Self-Preservation) by honoring her somatic warning sensor.\"\n  },\n  \"zero_point_five_zone_traps\": \"OP is resisting the Peace/Service Trap (Inner BL/TL: trading away digital safety to avoid 'awkwardness'). Drake operates in the Ambition/Protection Trap (framing violent domination as chivalry).\",\n  \"nine_states_of_belief\": \"State 5 (The Cassandra / Gaslit by Politeness Norms): OP detects the threat (Personal < 1) while mutual friends see only free drinks (Social = 1).\",\n  \"oberon_and_sins_virtues\": \"Oberon Law of Vetting (Question 4) and Law of Sanctuary (Question 6) obligate the Host (OP) to refuse entry to a potential Poisoner.\",\n  \"cognitive_fallacy_check\": \"Overriding violent red flags because 'he buys drinks' would be the Halo Effect / Bribe Equivocation.\"\n}\n```",
+    "resolution": {
+      "trap_to_step_out_of": "Step out of the Spiked-Drink Reciprocity Trap ([4.5.2.5]) and the False Choice between accepting and making a public scene.",
+      "verbatim_script": "Oh, I barely ever check or use social media anymore—my notifications are a graveyard! I just catch up with people in person when I'm out.",
+      "structural_patch": "Leave the friend request sitting in 'Pending' limbo forever (do not click Accept, and do not click Delete so the 'Add Friend' button never resets on his screen). Lock profile visibility to 'Friends Only' and decline his free drinks going forward.",
+      "counterfactual_flip_thresholds": "Flips to NAH (upsilon_Drake >= 0.00) even if Drake were completely harmless, because private social media is always optional. Flips to YWBTA/ESH (upsilon_OP <= -0.35) only if OP publicly humiliated him at the bar table to start a fight."
+    },
+    "resolution_summary": "```json\n{\n  \"trap_to_step_out_of\": \"Step out of the Spiked-Drink Reciprocity Trap ([4.5.2.5]) and the False Choice between accepting and making a public scene.\",\n  \"verbatim_script\": \"Oh, I barely ever check or use social media anymore—my notifications are a graveyard! I just catch up with people in person when I'm out.\",\n  \"structural_patch\": \"Leave the friend request sitting in 'Pending' limbo forever (do not click Accept, and do not click Delete so the 'Add Friend' button never resets on his screen). Lock profile visibility to 'Friends Only' and decline his free drinks going forward.\",\n  \"counterfactual_flip_thresholds\": \"Flips to NAH (upsilon_Drake >= 0.00) even if Drake were completely harmless, because private social media is always optional. Flips to YWBTA/ESH (upsilon_OP <= -0.35) only if OP publicly humiliated him at the bar table to start a fight.\"\n}\n```"
+  },
+  "posts": [
+    "⚖️ AITA Verdict: YWNBTA — \"WIBTA if I don't accept this friend request from this guy I see at this bar?\"\nEither Drake is telling the truth (meaning he violently assaults or kills people and brags about it over beers) or he's lying…\n#AITA #Aletheia",
+    "Context:\nI talk to a guy named Drake at this bar sometimes when I'm there. We've got a couple of close mutual friends too. He's always really nice and buys me and other people drinks, but he's told me some stuff that's made me uncomfortable.\n\nHe…\nlocal://atia_test.txt#case-2",
+    "Stated Framing:\nOP is resisting the Peace/Service Trap (Inner BL/TL: trading away digital safety to avoid 'awkwardness'). Drake operates in the Ambition/Protection Trap (framing violent domination as chivalry).\nOP Stated: (+0.35, -0.30)",
+    "Actual Conduct:\nMute Observer sees a man buying drinks at a public bar, then requesting digital entry into OP's private online home. Deaf Observer isolates his stories as Unprompted…\nOP: (+0.65, -0.25) [PASS] | Other: (-1.15, +0.85) [FAIL] | Mutual Bar Friends: (+0.10, -0.20) [PASS]",
+    "Verdict: YWNBTA — You Would Not be the Asshole (and the other person would)\nEither Drake is telling the truth (meaning he violently assaults or kills people and brags about it over beers) or he's lying…\nSay-Do Gap: Low (0.30) | Integrity: 77% | Story Completeness: Solid (R_net 1.00)",
+    "Reasoning:\nTwo-Guards Moral Riddle Collapse: OP wonders if Drake's stories are true or made up. Branch A (Truth = 1): Drake is an active violent felon/vigilante (upsilon = -1.50) who framed a story around 'taking care of' a guy messing with a female friend—placing OP and her future…",
+    "Resolution:\n\"Oh, I barely ever check or use social media anymore—my notifications are a graveyard! I just catch up with people in person when I'm out.\" Leave the friend request sitting in 'Pending' limbo forever (do not click Accept, and do not click Delete so the 'Add Friend' button never…",
+    "Alethekanon:\nLeaving the friend request in Pending limbo is a zero-aggression passive shield (-psi).",
+    "Awwthekanon:\nOP practices Chastity (Wholeness/Self-Preservation) by honoring her somatic warning sensor.",
+    "Brothekanon:\nEither Drake is telling the truth (meaning he violently assaults or kills people and brags about it over beers) or he's lying (meaning he invents hitman stories to intimidate women and look tough). You don't want either of those guys inside your private social media, tagged…"
+  ]
+}

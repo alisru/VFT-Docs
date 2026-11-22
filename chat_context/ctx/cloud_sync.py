@@ -44,15 +44,14 @@ def prepare_gdocs_staging():
         raw_text = md_file.read_text(encoding="utf-8", errors="replace")
         clean_text = re.sub(r"^---\s*\n.*?\n---\s*\n+", "", raw_text, flags=re.S) if raw_text.startswith("---") else raw_text
         try:
-            p = subprocess.Popen(
+            subprocess.run(
                 ["pandoc", "-f", "markdown", "-t", "docx", "-o", str(docx_file)],
-                stdin=subprocess.PIPE,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                input=clean_text,
+                capture_output=True,
                 text=True,
                 encoding="utf-8",
+                timeout=20,
             )
-            p.communicate(input=clean_text, timeout=20)
         except FileNotFoundError:
             print("[canvas-sync] Note: 'pandoc' not found on system PATH. Install pandoc for native Google Docs conversion.", flush=True)
             break
@@ -246,15 +245,14 @@ class CanvasCloudSync:
                                 real_title = rel.stem
 
                             try:
-                                p = subprocess.Popen(
+                                subprocess.run(
                                     ["pandoc", "-f", "markdown", "-t", "docx", "-o", str(docx_file)],
-                                    stdin=subprocess.PIPE,
-                                    stdout=subprocess.PIPE,
-                                    stderr=subprocess.PIPE,
+                                    input=clean_text,
+                                    capture_output=True,
                                     text=True,
                                     encoding="utf-8",
+                                    timeout=20,
                                 )
-                                p.communicate(input=clean_text, timeout=20)
                                 files_to_sync.append((docx_file, real_title))
                             except Exception as err:
                                 print(f"[canvas-sync] Pandoc conversion error for {md_file.name}: {err}", flush=True)

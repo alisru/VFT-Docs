@@ -1,0 +1,136 @@
+Command exited with code 0.
+
+Command output:
+
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1805:        
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1806:    url_lower = grounding_url.lower()
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1807:    matches = [token for token in 
+subj_tokens if token in url_lower]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1808:    return len(matches) > 0
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1809:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1810:def 
+harvest_search_grounding(genai_client, candidates):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1811:    """
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1812:    Stage 1 Grounding Harvester:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1813:    1. Primary: Direct Tavily Search 
+API (ultra-fast ~1s, direct publisher URLs, zero AI Studio tokens).
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1814:    2. 2nd Fallback: Direct Exa Search 
+API (neural search, clean canonical URLs, zero AI Studio tokens).
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1815:    3. 3rd Fallback: Gemini Search 
+Grounding (gemini-2.5-flash-lite / gemini-2.5-flash) with Google Search.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1844:    if len(candidates) > 5:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1845:        all_dossiers = []
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1846:        all_urls = {}
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1847:        for i in range(0, 
+len(candidates), 5):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1848:            sub_batch = 
+candidates[i:i+5]
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1849:            sub_dossier, sub_urls = 
+harvest_search_grounding(genai_client, sub_batch)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1850:            if sub_dossier:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1851:                
+all_dossiers.append(sub_dossier)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1852:            if isinstance(sub_urls, 
+dict):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1853:                
+all_urls.update(sub_urls)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1854:            elif isinstance(sub_urls, 
+list):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1941:    
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1942:    # Stage 1: Attach pre-grounded 
+dossier or run fallback grounding on 2.5/2.5-lite
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1943:    if pre_grounded_dossier:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1944:        extra_context = (extra_context 
++ "\n\n" if extra_context else "") + f"=== VERIFIED REAL-TIME SEARCH GROUNDING DOSSIER ===\n{pre_grounded_dossier}"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1945:    elif use_search and genai_client:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1946:        grounded_dossier, 
+pre_harvested_urls = harvest_search_grounding(genai_client, candidates)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1947:        if grounded_dossier:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1948:            extra_context = 
+(extra_context + "\n\n" if extra_context else "") + f"=== VERIFIED REAL-TIME SEARCH GROUNDING DOSSIER 
+===\n{grounded_dossier}"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1949:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1950:    convergence_rules, 
+formatting_rules = build_formatting_rules(use_son=use_son, use_potential=use_potential, compact=compact, 
+five_word=five_word, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, 
+spiritual_traditions=spiritual_traditions)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1951:    system_instruction = 
+build_system_instruction(use_son=use_son, use_potential=use_potential, compact=compact, five_word=five_word, 
+use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions, 
+extra_context=extra_context)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2968:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2969:    # Sequential first grounding batch 
+to guarantee grounded facts before initial audit begins
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2970:    if args.search and genai_client 
+and total_g_batches > 0:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2971:        first_count = 
+len(grounding_batches[0])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2972:        print(f"\n[Pipeline Init] 
+Grounding Batch 1/{total_g_batches} (stories 1-{first_count}) sequentially before initial audit launch...")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2973:        dossier_0, urls_0 = 
+harvest_search_grounding(genai_client, grounding_batches[0])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2974:        pre_grounded_batches[0] = 
+(dossier_0, urls_0)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2975:        
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2976:        # Start pre-fetching Grounding 
+Batch 2 in background while Chunk 1 audits
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2977:        if total_g_batches > 1:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2978:            second_count = 
+len(grounding_batches[1])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2979:            print(f"[Pipeline 
+Prefetch] Launching background grounding for Batch 2/{total_g_batches} (stories 
+{first_count+1}-{first_count+second_count})...")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2980:            pre_grounding_futures[1] = 
+grounding_executor.submit(harvest_search_grounding, genai_client, grounding_batches[1])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2981:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2982:    for chunk_idx, chunk in 
+enumerate(chunks):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2983:        chunk_num = chunk_idx + 1
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2984:        print(f"\nEvaluating chunk 
+{chunk_num}/{total_chunks} ({len(chunk)} candidates)...")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2985:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3000:                    try:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3001:                        g_dossier, 
+g_urls = pre_grounding_futures[g_idx].result()
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3002:                        
+pre_grounded_batches[g_idx] = (g_dossier, g_urls)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3003:                    except Exception 
+as ex:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3004:                        print(f"  
+Warning: Prefetched grounding batch {g_idx+1} failed ({ex}). Retrying synchronously...")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3005:                        g_dossier, 
+g_urls = harvest_search_grounding(genai_client, grounding_batches[g_idx])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3006:                        
+pre_grounded_batches[g_idx] = (g_dossier, g_urls)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3007:                else:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3008:                    g_dossier, g_urls 
+= harvest_search_grounding(genai_client, grounding_batches[g_idx])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3009:                    
+pre_grounded_batches[g_idx] = (g_dossier, g_urls)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3010:                    
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3011:                if g_dossier:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3012:                    
+cur_dossier_parts.append(g_dossier)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3013:                if isinstance(g_urls, 
+dict):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3018:                        
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3019:            # Prefetch next grounding 
+batch ahead of time if not already started
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3020:            next_g_batch = end_g_batch 
++ 1
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3021:            if next_g_batch < 
+total_g_batches and next_g_batch not in pre_grounding_futures and next_g_batch not in pre_grounded_batches:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3022:                print(f"[Pipeline 
+Prefetch] Launching background grounding for Batch {next_g_batch + 1}/{total_g_batches}...")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3023:                
+pre_grounding_futures[next_g_batch] = grounding_executor.submit(harvest_search_grounding, genai_client, 
+grounding_batches[next_g_batch])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3024:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3025:        cur_dossier = 
+"\n\n".join(cur_dossier_parts)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3026:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3027:        remaining = list(chunk)  # 
+candidates not yet evaluated
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3028:        chunk_evals = []
+
+

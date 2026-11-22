@@ -1,0 +1,179 @@
+[
+  {
+    "thinking": "Detailed Phase 1-5 structural scan: Evaluated Chili's commercial sales report for 2025 margaritas. Stated claim frames corporate dining milestones as accessible consumer fun (u: 0.5, psi: 0.5). Ground reality shows standard transparent commercial marketing and consumer sales (u: 0.0, psi: -0.1). Hypocrisy delta is minimal (R_net: 1.2), validating transparent commerce.",
+    "id": "chilis_margaritas_sales_2025",
+    "subject": "Chili's sold nearly 30 million margaritas last year — and a $6 favorite stands out",
+    "link": "https://www.foxnews.com/food-drink/chilis-sold-nearly-30-million-margaritas-last-year-6-favorite-stands-out",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.5,
+    "real_u": 0.0,
+    "real_psi": -0.1,
+    "mode": "root",
+    "posts": [
+      "A casual dining chain boasts massive cocktail sales and quirky loyalty clubs.\nEvidence: sales reports, marketing press release, menu data\n#Business #Food 🌐",
+      "The coverage frames commercial success as fun, accessible culinary community.\nStated Judgement: (+0.50, +0.50) — Greater Good",
+      "A corporate marketing push drives high-volume alcohol sales disguised as fan culture.\nResulting Judgement: (+0.00, -0.10) — Greater Evil",
+      "Verdict: CONDITIONAL — Fall into Destruction.\nRoutine commercial marketing and corporate reporting operate as standard consumer commerce.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, z: 1)",
+      "- Fox News: PASS (0.0, 0.0) — Reports commercial dining trends straightforwardly.\n- Chili's Grill & Bar: PASS (0.2, 0.5) — Successful consumer marketing strategy.",
+      "Chili's reported selling nearly 30 million margaritas in 2025, buoyed by a popular $6 Margarita of the Month program and digital collector clubs.",
+      "The Bright Side:\nSuccessful product innovation and affordable dining options that resonate with everyday consumers.",
+      "The Breakdown & Plane Error:\nTreating commercial marketing metrics (WHAT) as profound cultural milestones (WHY).",
+      "Social Physics Analysis:\nCorporations use smart altruistic marketing—aligning consumer fun with affordable pricing—to drive business growth without systemic harm.",
+      "The Trajectory: The Path of Fall into Destruction.\nWhen commercial success aligns with consumer enjoyment, it operates as standard transparent market activity. (0.5, 0.5) -> (0.0, -0.1).",
+      "The Unavoidable Truth: Affordable dining promotions drive strong consumer engagement.\n\nThe Unavoidable Lie: Corporate marketing campaigns are grassroots cultural movements.",
+      "Alethekanon:\nFraming corporate sales milestones as viral fandom conflates commercial transactions with shared community.",
+      "Awwthekanon:\nThere is nothing wrong with enjoying an affordable drink with friends after a long week of work.",
+      "Brothekanon:\nSix-dollar margaritas explain half of those thirty million sales right there.",
+      "Spirithekanon:\n\"Eat your bread with joy, and drink your wine with a merry heart.\" Ecclesiastes 9:7 PASS\nSimple pleasures and shared meals are a natural part of the human experience."
+    ],
+    "actors": [
+      "Chili's Grill & Bar",
+      "Fox News"
+    ],
+    "actor_roles": [
+      {
+        "name": "Chili's Grill & Bar",
+        "role": "instigator"
+      },
+      {
+        "name": "Fox News",
+        "role": "author"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.2,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Fox News Food Coverage",
+        "claim_u": 0.5,
+        "claim_psi": 0.5,
+        "real_u": 0.0,
+        "real_psi": -0.1,
+        "verdict": "PASS",
+        "reason": "Straightforward reporting of commercial restaurant sales."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "can be",
+    "modal_real": "is",
+    "modal_vector": "Top-Right to Center",
+    "geodesic": "Productive Geodesic",
+    "central_is_barrier_crossed": false,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nChili's sold nearly 30 million margaritas last year — and a $6 favorite stands out\n\nChili&apos;s sold nearly 30 million margaritas in 2025 and is expanding its drink lineup with premium pours and a Margarita of the Month Club.\n\nActual Article Body:\nJennifer Yim, master mixologist at the Bellagio in Las Vegas, breaks down five bartending errors and shares professional advice for creating flavorful, well-balanced drinks at home.\n\nChili's dominated restaurant chains in margarita sales in 2025 and is set to sell even more this year as the company finds new ways to keep its signature drink program fresh, according to a new report.\n\nThe chain sold nearly 30 million margaritas in 2025 and says that many customers come in specifically for the drinks, Nation's Restaurant News recently reported.\n\n\"Guests are coming to Chili’s for 'margs,'\" Mary Ellen Scott, Chili's senior marketing director, told NRN. \"It’s part of who we are and part of the experience.\"\n\nCHILI'S GOES VIRAL AFTER ROASTING FAST-FOOD PRICES: 'WHY LET THEM PLAY YOU LIKE THIS?'\n\nFrozen margaritas have been a Chili's menu staple since 1975, back when they cost just $1.50, and the chain has revamped the offering in recent years. Frozen drinks now account for 25% of its margarita sales.\n\nChili’s reportedly sold nearly 30 million margaritas in 2025, more than any other restaurant chain. (Callaghan O'Hare/Bloomberg via Getty Images)\n\nLast year, Chili's launched a line of premium-liquor frozen margaritas and in February, it introduced a Margarita of the Month Club that allows customers to track how many of the drinks they bought and buy related merch, which is available for anyone to buy.\n\nCHILI'S REVIVES ICONIC RED BOOTHS AND CLASSIC DESIGN IN NATIONWIDE RESTAURANT OVERHAUL\n\nCustomers can collect a digital badge for each month’s margarita and Scott says the \"diehard\" fans are eager to collect them all.\n\nThe club builds on the rotating Margarita of the Month program Chili's introduced in 2018, which draws customers in part for its low price of $6.\n\nBABY BOOMERS CROWN THEIR FAVORITE CASUAL DINING CHAIN AS GEN Z CHOOSES A DIFFERENT WINNER\n\nChili's retro \"Margarita Bar\" celebrates one of the chain's signature drinks. (Chili's)\n\n\"It’s value, newness and fun,\" Scott told NRN. \"It's always $6, the drink is changing every month, and we're always looking for ways to make the experience more fun, whether it's a candy or a swizzle.\"\n\nExamples include October’s Witches Brew, a green drink made with Lunazul Blanco Tequila, blue Curaçao, and Monin Granny Smith Apple Syrup served with a broomstick \"swizzle,\" or decorative stirrer.\n\nCLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER\n\nNovember’s StrawEddy Marg combines the tequila with Deep Eddy Lemon Vodka,...",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.foxnews.com/food-drink/chilis-sold-nearly-30-million-margaritas-last-year-6-favorite-stands-out",
+        "snippet": "Stated Claim / Post Context:\nChili's sold nearly 30 million margaritas last year — and a $6 favorite stands out\n\nChili&apos;s sold nearly 30 million margaritas in 2025 and is expanding its drink lineup with premium pours and a Margarita of the Month Club.\n\nActual Article Body:\nJennifer Yim, master m"
+      }
+    ],
+    "grounding_url": "https://www.foxnews.com/entertainment/bridget-fonda-spotted-rare-la-outing-24-years-after-final-screen-appearance",
+    "category": "all",
+    "topic": "Business",
+    "event": "",
+    "path_name": "Fall into Destruction",
+    "policies": []
+  }
+]

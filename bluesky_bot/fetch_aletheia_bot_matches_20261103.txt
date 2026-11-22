@@ -1,0 +1,151 @@
+Command exited with code 0.
+
+Command output:
+
+  bluesky_bot\aletheia_bot.py:187:                except Exception:
+  bluesky_bot\aletheia_bot.py:188:                    continue
+> bluesky_bot\aletheia_bot.py:189:        print(f"Loaded {len(_REPLIED_TARGETS)} existing reply target rkeys for 
+duplicate check.")
+  bluesky_bot\aletheia_bot.py:190:    
+  bluesky_bot\aletheia_bot.py:191:    target_rkey = 
+target_url.strip().lower().strip("/").split("/")[-1].split("?")[0].split("#")[0].strip()
+  bluesky_bot\aletheia_bot.py:192:    return target_rkey in _REPLIED_TARGETS
+  bluesky_bot\aletheia_bot.py:193:
+  bluesky_bot\aletheia_bot.py:194:def save_and_sync_story(thread_config, write_json=True):
+> bluesky_bot\aletheia_bot.py:195:    """Saves the thread config as an individual JSON and updates the registry in the 
+bluesky_bot/ folder."""
+  bluesky_bot\aletheia_bot.py:196:    subject = thread_config.get("subject", "assessment")
+  bluesky_bot\aletheia_bot.py:197:    story_id = thread_config.get("id") or subject.lower().replace(" ", 
+"_").replace("/", "_")
+  bluesky_bot\aletheia_bot.py:198:    # Sanitize story_id to remove forbidden characters for Windows paths
+  bluesky_bot\aletheia_bot.py:199:    for char in ['<', '>', ':', '"', '/', '\\', '|', '?', '*']:
+  bluesky_bot\aletheia_bot.py:200:        story_id = story_id.replace(char, '')
+  bluesky_bot\aletheia_bot.py:210:    is_live = "LIVE" in status or len(thread_config.get("rkeys", [])) > 0 or 
+len(thread_config.get("post_urls", [])) > 0
+  bluesky_bot\aletheia_bot.py:211:
+> bluesky_bot\aletheia_bot.py:212:    # Keep the duplicate-reply cache current within this process.
+  bluesky_bot\aletheia_bot.py:213:    _t = (thread_config.get("target_url") or "").strip().lower()
+  bluesky_bot\aletheia_bot.py:214:    if _t and _REPLIED_TARGETS is not None:
+  bluesky_bot\aletheia_bot.py:215:        _REPLIED_TARGETS.add(_t)
+  bluesky_bot\aletheia_bot.py:216:
+  bluesky_bot\aletheia_bot.py:217:    # Save individual JSON files to bot directory
+  bluesky_bot\aletheia_bot.py:256:                    print(f"Removed {filename} from draft index.json at 
+{draft_index_path}")
+  bluesky_bot\aletheia_bot.py:257:            except Exception as e:
+> bluesky_bot\aletheia_bot.py:258:                print(f"Warning: Failed to update draft index.json: {e}")
+  bluesky_bot\aletheia_bot.py:259:        
+> bluesky_bot\aletheia_bot.py:260:    # Update index.json
+  bluesky_bot\aletheia_bot.py:261:    index_path = os.path.join(target_dir, "index.json")
+  bluesky_bot\aletheia_bot.py:262:    try:
+  bluesky_bot\aletheia_bot.py:263:        if os.path.exists(index_path):
+  bluesky_bot\aletheia_bot.py:264:            with open(index_path, "r", encoding="utf-8") as f:
+  bluesky_bot\aletheia_bot.py:265:                index_data = json.load(f)
+  bluesky_bot\aletheia_bot.py:272:            with open(index_path, "w", encoding="utf-8") as f:
+  bluesky_bot\aletheia_bot.py:273:                json.dump(index_data, f, indent=2, ensure_ascii=False)
+> bluesky_bot\aletheia_bot.py:274:            print(f"Updated index.json at {index_path}")
+  bluesky_bot\aletheia_bot.py:275:    except Exception as e:
+> bluesky_bot\aletheia_bot.py:276:        print(f"Warning: Failed to update index.json at {index_path}: {e}")
+  bluesky_bot\aletheia_bot.py:277:
+  bluesky_bot\aletheia_bot.py:278:    # Rebuild registries using the single source of truth compiler
+  bluesky_bot\aletheia_bot.py:279:    try:
+  bluesky_bot\aletheia_bot.py:280:        from rebuild_registries import rebuild_registries
+  bluesky_bot\aletheia_bot.py:281:        rebuild_registries()
+  bluesky_bot\aletheia_bot.py:647:
+  bluesky_bot\aletheia_bot.py:648:            # 5. Determine Posting References based on Mode
+> bluesky_bot\aletheia_bot.py:649:            is_reply = False
+> bluesky_bot\aletheia_bot.py:650:            if mode == "reply" and target_url:
+> bluesky_bot\aletheia_bot.py:651:                print(f"Resolving target post for direct reply: {target_url}...")
+  bluesky_bot\aletheia_bot.py:652:                try:
+  bluesky_bot\aletheia_bot.py:653:                    target_handle, rkey = parse_bsky_url(target_url)
+  bluesky_bot\aletheia_bot.py:654:                    from atproto import IdResolver
+  bluesky_bot\aletheia_bot.py:655:                    resolver = IdResolver()
+  bluesky_bot\aletheia_bot.py:656:                    target_did = resolver.handle.resolve(target_handle)
+  bluesky_bot\aletheia_bot.py:667:                    target_record = response.value
+  bluesky_bot\aletheia_bot.py:668:
+> bluesky_bot\aletheia_bot.py:669:                    if hasattr(target_record, 'reply') and target_record.reply:
+> bluesky_bot\aletheia_bot.py:670:                        root_ref = target_record.reply.root
+  bluesky_bot\aletheia_bot.py:671:                    else:
+  bluesky_bot\aletheia_bot.py:672:                        root_ref = 
+models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
+  bluesky_bot\aletheia_bot.py:673:
+  bluesky_bot\aletheia_bot.py:674:                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, 
+uri=target_uri)
+  bluesky_bot\aletheia_bot.py:675:
+  bluesky_bot\aletheia_bot.py:676:                    print(f"Resolved target reference: {target_uri}")
+> bluesky_bot\aletheia_bot.py:677:                    is_reply = True
+  bluesky_bot\aletheia_bot.py:678:                except Exception as e:
+> bluesky_bot\aletheia_bot.py:679:                    print(f"Warning: Failed to resolve reply target ({e}). Falling 
+back to root thread mode on our timeline...")
+> bluesky_bot\aletheia_bot.py:680:                    is_reply = False
+  bluesky_bot\aletheia_bot.py:681:
+> bluesky_bot\aletheia_bot.py:682:            if is_reply:
+> bluesky_bot\aletheia_bot.py:683:                # Post targeted direct reply to the target post
+> bluesky_bot\aletheia_bot.py:684:                print("Posting Part 1 (Targeted Reply to User with Graph Embed)...")
+  bluesky_bot\aletheia_bot.py:685:                try:
+> bluesky_bot\aletheia_bot.py:686:                    reply = client.com.atproto.repo.create_record(
+  bluesky_bot\aletheia_bot.py:687:                        models.ComAtprotoRepoCreateRecord.Data(
+  bluesky_bot\aletheia_bot.py:688:                            repo=client.me.did,
+  bluesky_bot\aletheia_bot.py:689:                            collection=models.ids.AppBskyFeedPost,
+  bluesky_bot\aletheia_bot.py:690:                            record=models.AppBskyFeedPost.Record(
+  bluesky_bot\aletheia_bot.py:691:                                created_at=client.get_current_time_iso(),
+  bluesky_bot\aletheia_bot.py:692:                                text=final_posts[0],
+> bluesky_bot\aletheia_bot.py:693:                                
+reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
+  bluesky_bot\aletheia_bot.py:694:                                embed=first_post_embed,
+  bluesky_bot\aletheia_bot.py:695:                                facets=facets,
+  bluesky_bot\aletheia_bot.py:696:                                tags=tags_list,
+  bluesky_bot\aletheia_bot.py:697:                                langs=["en"]
+  bluesky_bot\aletheia_bot.py:698:                            )
+  bluesky_bot\aletheia_bot.py:699:                        )
+  bluesky_bot\aletheia_bot.py:700:                    )
+> bluesky_bot\aletheia_bot.py:701:                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, 
+uri=reply.uri)
+> bluesky_bot\aletheia_bot.py:702:                    post_uris.append(reply.uri)
+> bluesky_bot\aletheia_bot.py:703:                    post_rkeys.append(reply.uri.split('/')[-1])
+  bluesky_bot\aletheia_bot.py:704:                except Exception as e:
+> bluesky_bot\aletheia_bot.py:705:                    raise RuntimeError(f"Failed to post targeted root reply: {e}") 
+from e
+  bluesky_bot\aletheia_bot.py:706:            else:
+  bluesky_bot\aletheia_bot.py:707:                # Root Mode: Post standard new stand-alone post on profile timeline
+  bluesky_bot\aletheia_bot.py:708:                print("Posting Part 1 (New Root Thread with Link Preview or Graph 
+Embed)...")
+  bluesky_bot\aletheia_bot.py:709:                try:
+  bluesky_bot\aletheia_bot.py:710:                    root_post = client.com.atproto.repo.create_record(
+  bluesky_bot\aletheia_bot.py:750:                sub_facets, sub_tags = resolve_facets_and_tags(text)
+  bluesky_bot\aletheia_bot.py:751:                try:
+> bluesky_bot\aletheia_bot.py:752:                    reply = client.com.atproto.repo.create_record(
+  bluesky_bot\aletheia_bot.py:753:                        models.ComAtprotoRepoCreateRecord.Data(
+  bluesky_bot\aletheia_bot.py:754:                            repo=client.me.did,
+  bluesky_bot\aletheia_bot.py:755:                            collection=models.ids.AppBskyFeedPost,
+  bluesky_bot\aletheia_bot.py:756:                            record=models.AppBskyFeedPost.Record(
+  bluesky_bot\aletheia_bot.py:757:                                created_at=client.get_current_time_iso(),
+  bluesky_bot\aletheia_bot.py:758:                                text=text,
+> bluesky_bot\aletheia_bot.py:759:                                
+reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
+  bluesky_bot\aletheia_bot.py:760:                                embed=current_embed,
+  bluesky_bot\aletheia_bot.py:761:                                facets=sub_facets,
+  bluesky_bot\aletheia_bot.py:762:                                tags=sub_tags,
+  bluesky_bot\aletheia_bot.py:763:                                langs=["en"]
+  bluesky_bot\aletheia_bot.py:764:                            )
+  bluesky_bot\aletheia_bot.py:765:                        )
+  bluesky_bot\aletheia_bot.py:766:                    )
+> bluesky_bot\aletheia_bot.py:767:                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, 
+uri=reply.uri)
+> bluesky_bot\aletheia_bot.py:768:                    post_uris.append(reply.uri)
+> bluesky_bot\aletheia_bot.py:769:                    post_rkeys.append(reply.uri.split('/')[-1])
+  bluesky_bot\aletheia_bot.py:770:                    time.sleep(1) # Slight pause to ensure strict chronologic 
+ordering in API database
+  bluesky_bot\aletheia_bot.py:771:                except Exception as e:
+  bluesky_bot\aletheia_bot.py:772:                    raise RuntimeError(f"Failed to post part {i}: {e}") from e
+  bluesky_bot\aletheia_bot.py:773:
+  bluesky_bot\aletheia_bot.py:774:            handle = client.me.handle
+  bluesky_bot\aletheia_bot.py:871:
+  bluesky_bot\aletheia_bot.py:872:    try:
+> bluesky_bot\aletheia_bot.py:873:        print("\nRebuilding registries to update live and drafts counts...")
+  bluesky_bot\aletheia_bot.py:874:        from rebuild_registries import rebuild_registries
+  bluesky_bot\aletheia_bot.py:875:        rebuild_registries()
+  bluesky_bot\aletheia_bot.py:876:    except Exception as e:
+  bluesky_bot\aletheia_bot.py:877:        print(f"Warning: Failed to rebuild registries: {e}")
+  bluesky_bot\aletheia_bot.py:878:
+
+

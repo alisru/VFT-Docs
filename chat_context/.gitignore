@@ -1,0 +1,40 @@
+# ============================================================
+# Chat Context — .gitignore
+# Safe for sharing and public repositories
+# ============================================================
+
+# --- Personal Database & Storage ---
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+data/*.db
+chats.db
+
+# --- Active User Configuration ---
+# Keep config.example.json tracked in git; ignore local config
+config.json
+
+# --- Personal Canvases & Drafts ---
+canvases/*.md
+canvases/*/*.md
+drafts/
+
+# --- Exports & Temp Directories ---
+exports/
+drawing_board/
+*.zip
+
+# --- Python Environment & Bytecode ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Operating System & Editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.bak

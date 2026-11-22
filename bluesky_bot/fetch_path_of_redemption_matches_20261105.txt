@@ -1,0 +1,440 @@
+Command exited with code 0.
+
+Command output:
+
+  bluesky_bot\aletheia_mcp_server.py:83:
+> bluesky_bot\aletheia_mcp_server.py:84:def _get_path_name(claim_u, claim_psi, real_u, real_psi):
+  bluesky_bot\aletheia_mcp_server.py:85:    if any(v is None for v in [claim_u, claim_psi, real_u, real_psi]):
+  bluesky_bot\aletheia_mcp_server.py:86:        return "Unmapped"
+  bluesky_bot\aletheia_mcp_server.py:87:    c_pos = (claim_u >= 0 and claim_psi >= 0)
+  bluesky_bot\aletheia_mcp_server.py:88:    r_pos = (real_u >= 0 and real_psi >= 0)
+  bluesky_bot\aletheia_mcp_server.py:89:    if c_pos and r_pos:
+> bluesky_bot\aletheia_mcp_server.py:90:        return "Path of Grace"
+  bluesky_bot\aletheia_mcp_server.py:91:    elif c_pos and not r_pos:
+> bluesky_bot\aletheia_mcp_server.py:92:        return "Path of Deception"
+  bluesky_bot\aletheia_mcp_server.py:93:    elif not c_pos and r_pos:
+> bluesky_bot\aletheia_mcp_server.py:94:        return "Path of Redemption"
+  bluesky_bot\aletheia_mcp_server.py:95:    elif not c_pos and not r_pos:
+> bluesky_bot\aletheia_mcp_server.py:96:        return "Path of Fall"
+> bluesky_bot\aletheia_mcp_server.py:97:    return "Path of Compromise"
+  bluesky_bot\aletheia_mcp_server.py:98:
+  bluesky_bot\aletheia_mcp_server.py:99:
+  bluesky_bot\aletheia_mcp_server.py:100:if mcp:
+  bluesky_bot\aletheia_mcp_server.py:101:    # --- STORY & AUDIT TOOLS ---
+  bluesky_bot\aletheia_mcp_server.py:102:    @mcp.tool()
+  bluesky_bot\aletheia_mcp_server.py:166:                    fail_c += 1
+> bluesky_bot\aletheia_mcp_server.py:167:                pname = _get_path_name(cu, cpsi, u, psi)
+  bluesky_bot\aletheia_mcp_server.py:168:                paths[pname] = paths.get(pname, 0) + 1
+  bluesky_bot\aletheia_mcp_server.py:169:
+  bluesky_bot\aletheia_mcp_server.py:170:        total = len(u_vals)
+  bluesky_bot\aletheia_mcp_server.py:171:        res = {
+  bluesky_bot\aletheia_mcp_server.py:172:            "total_records": len(stories),
+  bluesky_bot\apply_seyfried_fix.py:13:  {
+> bluesky_bot\apply_seyfried_fix.py:14:    "thinking": "Phase 1-5 Potential Mode Audit: Fox News manufactures an 
+outrage cycle around Amanda Seyfried appearing in Nathan Fielder documentary 'You Can See Everything' by scraping 3 
+anonymous tweets from X trolls. Stated claim claims to provide legitimate cultural accountability and expose celebrity 
+defensiveness (+0.50, +0.20). Ground reality is extractive tabloid churn, using anonymous tweets to smear an actress 
+for clicks while completely ignoring the actual $100M+ Theranos wire fraud (-0.75, +0.65). Result: FAIL (The Path of 
+Deception) against Fox News reporting.",
+  bluesky_bot\apply_seyfried_fix.py:15:    "id": "amanda-seyfried-elizabeth-holmes-doc",
+  bluesky_bot\apply_seyfried_fix.py:16:    "subject": "Fox News manufactures Amanda Seyfried backlash over Elizabeth 
+Holmes documentary using anonymous tweets",
+  bluesky_bot\apply_seyfried_fix.py:17:    "link": "https://www.foxnews.com/entertainment/amanda-seyfried-faces-harsh-c
+riticism-viewers-rip-behavior-elizabeth-holmes-documentary",
+  bluesky_bot\apply_seyfried_fix.py:18:    "target_url": "",
+  bluesky_bot\apply_seyfried_fix.py:19:    "claim_u": 0.50,
+  bluesky_bot\apply_seyfried_fix.py:43:      "In reality, the outlet launders 3 anonymous Twitter trolls into news, 
+manufacturing a celebrity smear to farm clicks while trivializing actual Theranos fraud.\nResulting Judgement: (-0.75, 
++0.65) - Greatest Lie",
+> bluesky_bot\apply_seyfried_fix.py:44:      "Verdict: FAIL - The Path of Deception.\nLaundering unverified internet 
+comments into news weaponizes mob sentiment for ad revenue while erasing material institutional 
+accountability.\n\nIntegrity: Severe Deception (Hypocrisy: 6.80, z: 2)",
+  bluesky_bot\apply_seyfried_fix.py:45:      "Sub-Audits Breakdown:\n- Fox News Smear: FAIL (-0.75, +0.65) - 
+Manufactures scandal from 3 tweets.\n- Amanda Seyfried: PASS (+0.30, -0.20) - Reckons honestly with playing a 
+fraudster.\n- Nathan Fielder Doc: PASS (+0.35, +0.40) - Deconstructs persona.",
+  bluesky_bot\apply_seyfried_fix.py:46:      "In Nathan Fielder's documentary 'You Can See Everything,' Seyfried 
+revisits portraying Elizabeth Holmes. Fox News bypassed the film's psychological substance to build a hit piece on 
+cherry-picked tweets.",
+  bluesky_bot\apply_seyfried_fix.py:47:      "The Poison:\nElevating anonymous social media vitriol into mainstream 
+news normalizes targeted harassment and rewards low-effort parasitic churn over real investigative journalism.",
+  bluesky_bot\apply_seyfried_fix.py:48:      "The Breakdown & Plane Error:\nFox News confuses the WHO (an actress 
+exploring artistic ambiguity) with the WHAT (Holmes' massive federal wire fraud), substituting emotional gossip for 
+material facts.",
+  bluesky_bot\apply_seyfried_fix.py:49:      "Social Physics Analysis:\nFox News executes a smart selfish maneuver: 
+wrapping tabloid rage-farming in the pretext of accountability, using an actress as clickbait without doing any actual 
+journalism.",
+> bluesky_bot\apply_seyfried_fix.py:50:      "The Trajectory: The Path of Deception.\nModal Dynamics: will be -> is 
+not via Red Top (The Imperial Trap).\nThe coverage promises moral exposure but delivers systemic erasure of nuanced 
+artistic self-reflection.",
+  bluesky_bot\apply_seyfried_fix.py:51:      "The Unavoidable Truth: Curating three hostile tweets does not constitute 
+reporting.\n\nThe Unavoidable Lie: Attacking an actress's interview demeanor holds anyone accountable for Theranos.",
+  bluesky_bot\apply_seyfried_fix.py:52:      "Alethekanon:\nConflating an actress's honest grappling with a character 
+with the character's criminal fraud is an intellectual abdication designed purely for rage clicks.",
+  bluesky_bot\apply_seyfried_fix.py:53:      "Awwthekanon:\nIt is exhausting to see an artist's genuine, vulnerable 
+ambivalence weaponized by tabloids just to feed internet cruelty and division.",
+  bluesky_bot\apply_seyfried_fix.py:54:      "Brothekanon:\nElizabeth Holmes stole hundreds of millions, and Fox News 
+wrote an entire hit piece because three randoms on Twitter got mad at Amanda Seyfried.",
+  bluesky_bot\apply_seyfried_fix.py:55:      "Spirithekanon:\n\"Do not speak evil against one another, brothers.\" 
+James 4:11 PASS\nTrue discernment distinguishes between human vulnerability and deliberate deceit, refusing to join 
+the mob."
+  bluesky_bot\audit_crossref.py:954:                f"??? The Higher Way (4/{N}):\n"
+> bluesky_bot\audit_crossref.py:955:                f"Blessed are the peacemakers. The path of life transcends tribal 
+division by establishing equity for all beings.\n\n"
+  bluesky_bot\audit_crossref.py:956:                f"Turn away from wrath and uphold the invariant truth."
+  bluesky_bot\audit_crossref.py:957:            )
+  bluesky_bot\audit_crossref.py:958:        else:
+  bluesky_bot\audit_crossref.py:959:            p4 = (
+  bluesky_bot\audit_crossref.py:960:                f"??? Custodial Invariant (4/{N}):\n"
+  bluesky_bot\bof_exact.py:7:        '"Reality text.\\nResulting Judgement: (-1.0, -1.0) - Greater Evil"',
+> bluesky_bot\bof_exact.py:8:        '"Verdict: FAIL - The Path of Deception.\\nExplanation.\\n\\nIntegrity: Severe 
+Deception (Hypocrisy: 12.5, z: 4)"',
+  bluesky_bot\bof_exact.py:9:        '"Context paragraph."',
+  bluesky_bot\bof_exact.py:10:        '"The Bright Side:\\nNuance."',
+  bluesky_bot\bof_exact.py:11:        '"The Breakdown & Plane Error:\\nExplanation."',
+  bluesky_bot\bof_exact.py:12:        '"**Social Physics Analysis:**\\nDirect, conversational analysis in plain 
+English detailing selfishness, pretexts, and projection."',
+> bluesky_bot\bof_exact.py:13:        '"The Trajectory: The Path of Deception.\\nWhen you map the gap between stated 
+intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical 
+sentence."',
+  bluesky_bot\bof_exact.py:14:        '"The Unavoidable Truth: truth in 1 sentence.\\n\\nThe Unavoidable Lie: lie in 1 
+sentence."',
+  bluesky_bot\bof_exact.py:15:        '"Alethekanon:\\nStructural analysis in 1-2 concise sentences."',
+  bluesky_bot\bof_exact.py:16:        '"Awwthekanon:\\nEmpathy."',
+  bluesky_bot\bof_exact.py:17:        '"Brothekanon:\\nCasual take."'
+  bluesky_bot\bof_exact.py:18:    ]
+  bluesky_bot\chat_server.py:635:   - Element 8 (Social Physics Analysis): Social Physics Analysis:\n[Plain-English 
+dynamics without jargon loops]
+> bluesky_bot\chat_server.py:636:   - Element 9 (The Trajectory & Destination): The Trajectory: The Path of [Path 
+Name].\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward 
+[Outcome/Terminal Zone]. [Mathematical explanation]
+  bluesky_bot\chat_server.py:637:   - Element 10 (The Unavoidables): The Unavoidable Truth: [1 concise 
+sentence]\n\nThe Unavoidable Lie: [1 concise sentence]
+  bluesky_bot\chat_server.py:638:   - Element 11 (Alethekanon): Alethekanon:\n[Analytical Persona reaction]
+  bluesky_bot\chat_server.py:639:   - Element 12 (Awwthekanon): Awwthekanon:\n[Empathetic Persona reaction]
+  bluesky_bot\chat_server.py:640:   - Element 13 (Brothekanon): Brothekanon:\n[Casual, sharp observer persona reaction]
+  bluesky_bot\chat_server.py:641:4. Output the complete revised story JSON in a ```json:story_update``` code block 
+matching:
+  bluesky_bot\chat_server.py:686:  - **Nearest Zone Anchor:** [Anchor Name]
+> bluesky_bot\chat_server.py:687:  - **Trajectory Geodesic:** [Path of Grace / Path of Fall / Path of Redemption / 
+Path of Deception / Path of Compromise]
+  bluesky_bot\chat_server.py:688:  - **Hypocrisy Gap (�H):** [Value + Verdict]
+  bluesky_bot\chat_server.py:689:  - **Plain Language Verdict:** [Direct structural summary]
+  bluesky_bot\chat_server.py:690:  - **Nuance (Bright Side / Poison):** [Counter-perspective]
+  bluesky_bot\chat_server.py:691:"""
+  bluesky_bot\chat_server.py:692:
+  bluesky_bot\chat_server.py:1417:Element 8 (Social Physics Analysis): Social Physics Analysis:\n[Plain-English 
+dynamics without jargon loops]
+> bluesky_bot\chat_server.py:1418:Element 9 (The Trajectory & Destination): The Trajectory: The Path of [Path 
+Name].\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward 
+[Outcome/Terminal Zone].
+  bluesky_bot\chat_server.py:1419:Element 10 (The Unavoidables): The Unavoidable Truth: [1 concise sentence]\n\nThe 
+Unavoidable Lie: [1 concise sentence]
+  bluesky_bot\chat_server.py:1420:Element 11 (Alethekanon): Alethekanon:\n[Analytical Persona reaction]
+  bluesky_bot\chat_server.py:1421:Element 12 (Awwthekanon): Awwthekanon:\n[Empathetic Persona reaction]
+  bluesky_bot\chat_server.py:1422:Element 13 (Brothekanon): Brothekanon:\n[Casual, sharp observer persona reaction]
+  bluesky_bot\chat_server.py:1423:
+  bluesky_bot\chat_server.py:1435:  "verdict": "FAIL",
+> bluesky_bot\chat_server.py:1436:  "path": "Path of Deception",
+  bluesky_bot\chat_server.py:1437:  "actors": ["Actor 1", "Actor 2"],
+  bluesky_bot\chat_server.py:1438:  "posts": [
+  bluesky_bot\chat_server.py:1439:    "Punchy editorial hook.\\n\\nHeadline Subject\\nEvidence: stated ideal, actual 
+effect, actual ideal #Aletheia",
+  bluesky_bot\chat_server.py:1440:    "Stated claim details explaining intent organically.\\nStated Judgement: (+1.0, 
++1.0) - Greater Good",
+  bluesky_bot\chat_server.py:1441:    "Actual reality details revealing structural actions.\\nResulting Judgement: 
+(-0.6, -0.4) - Greater Evil",
+> bluesky_bot\chat_server.py:1442:    "Verdict: FAIL - The Path of Deception.\\nStructural cause 
+summary.\\n\\nIntegrity: Severe Deception (Hypocrisy: 8.5, Uncertainty z: 3)",
+  bluesky_bot\chat_server.py:1443:    "Sub-Audits Breakdown:\\n- Aspect 1: FAIL (-0.8, -0.5) - Extractive focus.\\n- 
+Aspect 2: COND (+0.2, -0.1) - Partial oversight.",
+  bluesky_bot\chat_server.py:1444:    "Comprehensive context paragraph detailing the real-world event and policy 
+background.",
+  bluesky_bot\chat_server.py:1445:    "The Bright Side:\\nNuance or constructive takeaway.",
+  bluesky_bot\chat_server.py:1446:    "The Breakdown & Plane Error:\\nExplanation of the plane error (WHAT vs WHO) and 
+bait-and-switch.",
+  bluesky_bot\chat_server.py:1447:    "Social Physics Analysis:\\nNatural human dynamics explaining institutional 
+friction and incentives.",
+> bluesky_bot\chat_server.py:1448:    "The Trajectory: The Path of Deception.\\nWhen you map the gap between stated 
+intentions and ground-level results, it plots a direct trajectory toward Greater Evil.",
+  bluesky_bot\chat_server.py:1449:    "The Unavoidable Truth: Core truth.\\n\\nThe Unavoidable Lie: Core lie.",
+  bluesky_bot\chat_server.py:1450:    "Alethekanon:\\nAnalytical reaction.",
+  bluesky_bot\chat_server.py:1451:    "Awwthekanon:\\nEmpathetic reaction.",
+  bluesky_bot\chat_server.py:1452:    "Brothekanon:\\nCasual reaction."
+  bluesky_bot\chat_server.py:1453:  ]
+  bluesky_bot\fix_all_paper_maps.py:39:                               �
+> bluesky_bot\fix_all_paper_maps.py:40:            [PATH OF GRACE]    �    [PATH OF DECEPTION]
+  bluesky_bot\fix_all_paper_maps.py:41:        Concordant Alignment   �    Stated Good -> Hidden Extraction
+  bluesky_bot\fix_all_paper_maps.py:42:        Vs(+1,+1) � Vr(+1,+1)�    Vs(+1,+1) � Vr(-1,+1) or (-1,-1)
+  bluesky_bot\fix_all_paper_maps.py:43:                               �
+  bluesky_bot\fix_all_paper_maps.py:44:   +1.0 � -1.0
+  bluesky_bot\fix_all_paper_maps.py:45:   INCLUSIVE                   �                   EXCLUSIVE
+  bluesky_bot\fix_all_paper_maps.py:46:                               �
+> bluesky_bot\fix_all_paper_maps.py:47:         [PATH OF REDEMPTION]  �    [PATH OF FALL]
+  bluesky_bot\fix_all_paper_maps.py:48:         Friction Overcome     �    Descent into Extraction / Chaos
+  bluesky_bot\fix_all_paper_maps.py:49:         Vs(+1,0) � Vr(+1,-1)�    Vs(-1,+1) � Vr(-1,-1)
+  bluesky_bot\fix_all_paper_maps.py:50:                               �
+  bluesky_bot\fix_all_paper_maps.py:51:                                -2.0 (Counteractive / Do Not)
+  bluesky_bot\fix_all_paper_maps.py:52:                       AXIS ? (Moral Intent)
+  bluesky_bot\fix_all_paper_maps.py:91:# Replace section 1.3 trajectory diagram
+> bluesky_bot\fix_all_paper_maps.py:92:c1 = re.sub(r"```[\s\S]*?Path of\s+Deception[\s\S]*?```", 
+CANONICAL_GEODESIC_TRAJECTORIES, c1)
+  bluesky_bot\fix_all_paper_maps.py:93:
+  bluesky_bot\fix_all_paper_maps.py:94:# Fix axis definitions
+  bluesky_bot\fix_all_paper_maps.py:95:c1 = c1.replace("#### Axis $\\upsilon$ (Morality) - *Who Does This Benefit?*", 
+"#### Axis $\\upsilon$ (Morality) - *Who Does This Benefit? (Inclusive vs. Exclusive)*")
+  bluesky_bot\fix_all_paper_maps.py:96:c1 = c1.replace("#### Axis $\\psi$ (Will / Kinetic Energy) - *What is the 
+Energy Doing?*", "#### Axis $\\psi$ (Will / Kinetic Action) - *What is the Energy Doing? (Active vs. Counteractive)*")
+  bluesky_bot\fix_all_paper_maps.py:97:c1 = c1.replace("* **$+2.0$ (Productive Justice)**:", "* **$+2.0$ (Active / Do 
+/ Systemic Creation)**:")
+  bluesky_bot\generate_graph.py:13:
+> bluesky_bot\generate_graph.py:14:def get_path_name(claim_u, claim_psi, real_u, real_psi):
+  bluesky_bot\generate_graph.py:15:    # Determine exit name and origin zone
+  bluesky_bot\generate_graph.py:16:    if claim_u > 0 and claim_psi > 0:
+  bluesky_bot\generate_graph.py:17:        exit_name = "Fall"
+  bluesky_bot\generate_graph.py:18:        origin_zone = "Greater Good"
+  bluesky_bot\generate_graph.py:19:    elif claim_u <= 0 and claim_psi > 0:
+  bluesky_bot\generate_graph.py:254:    # Draw Path
+> bluesky_bot\generate_graph.py:255:    path_name = get_path_name(claim_u, claim_psi, real_u, real_psi)
+  bluesky_bot\generate_graph.py:256:
+  bluesky_bot\generate_graph.py:257:    ax.annotate("",
+  bluesky_bot\generate_graph.py:258:                xy=(real_u, real_psi), xycoords='data',
+  bluesky_bot\generate_graph.py:259:                xytext=(claim_u, claim_psi), textcoords='data',
+  bluesky_bot\generate_graph.py:260:                arrowprops=dict(arrowstyle="->", color="white", 
+linestyle="dashed", linewidth=1.5, connectionstyle="arc3,rad=-0.2"),
+  bluesky_bot\generate_graph.py:300:if __name__ == "__main__":
+> bluesky_bot\generate_graph.py:301:    # Test a Path of Deception
+  bluesky_bot\generate_graph.py:302:    draw_graph(-1.0, 1.0, -1.0, -1.0, "Embargo Assessment", "embargo_graph.png")
+  bluesky_bot\google_ai_studio_one_shot.py:1276:        '"Reality text.\\nResulting Judgement: (-1.0, -1.0) - Greater 
+Evil"',
+> bluesky_bot\google_ai_studio_one_shot.py:1277:        '"Verdict: FAIL - The Path of 
+Deception.\\nExplanation.\\n\\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)"',
+  bluesky_bot\google_ai_studio_one_shot.py:1278:        '"Context paragraph."',
+  bluesky_bot\google_ai_studio_one_shot.py:1279:        '"The Bright Side:\\nNuance."',
+  bluesky_bot\google_ai_studio_one_shot.py:1280:        '"The Breakdown & Plane Error:\\nExplanation."',
+  bluesky_bot\google_ai_studio_one_shot.py:1281:        '"**Social Physics Analysis:**\\nDirect, conversational 
+analysis in plain English detailing selfishness, pretexts, and projection."',
+> bluesky_bot\google_ai_studio_one_shot.py:1282:        '"The Trajectory: The Path of Deception.\\nWhen you map the 
+gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory 
+mathematical sentence."',
+  bluesky_bot\google_ai_studio_one_shot.py:1283:        '"The Unavoidable Truth: truth in 1 sentence.\\n\\nThe 
+Unavoidable Lie: lie in 1 sentence."',
+  bluesky_bot\google_ai_studio_one_shot.py:1284:        '"Alethekanon:\\nStructural analysis in 1-2 concise 
+sentences."',
+  bluesky_bot\google_ai_studio_one_shot.py:1285:        '"Awwthekanon:\\nEmpathy."',
+  bluesky_bot\google_ai_studio_one_shot.py:1286:        '"Brothekanon:\\nCasual take."'
+  bluesky_bot\google_ai_studio_one_shot.py:1287:    ]
+  bluesky_bot\patch_pipeline.py:83:                    if "Revelation" in p3 or "COND" in p3:
+> bluesky_bot\patch_pipeline.py:84:                        p3 = re.sub(r'Verdict:\\s*COND\\s*-\\s*The Path of 
+Revelation\\.?', 'Verdict: FAIL - The Path of Deception.', p3)
+> bluesky_bot\patch_pipeline.py:85:                        p3 = re.sub(r'The Path of Revelation', 'The Path of 
+Deception', p3)
+  bluesky_bot\patch_pipeline.py:86:                        p3 = re.sub(r'\\bCOND\\b', 'FAIL', p3)
+  bluesky_bot\patch_pipeline.py:87:                        posts[3] = p3"""
+  bluesky_bot\patch_pipeline.py:88:
+  bluesky_bot\patch_pipeline.py:89:text_norm = text.replace('\r\n', '\n')
+  bluesky_bot\patch_pipeline.py:90:old_p5_norm = old_p5.replace('\r\n', '\n')
+  bluesky_bot\rebuild_registries.py:24:    if not verdict:
+> bluesky_bot\rebuild_registries.py:25:        verdict = "FAIL - The Path of Deception"
+  bluesky_bot\rebuild_registries.py:26:
+  bluesky_bot\rebuild_registries.py:27:    status = cfg.get("status", "")
+  bluesky_bot\rebuild_registries.py:28:    try:
+  bluesky_bot\rebuild_registries.py:29:        mtime = os.path.getmtime(authoritative_file)
+  bluesky_bot\rebuild_registries.py:30:    except OSError:
+  bluesky_bot\rebuild_registries.py:422:        if not verdict:
+> bluesky_bot\rebuild_registries.py:423:            verdict = "FAIL - The Path of Deception"
+  bluesky_bot\rebuild_registries.py:424:
+  bluesky_bot\rebuild_registries.py:425:        status = cfg.get("status", "")
+  bluesky_bot\rebuild_registries.py:426:
+  bluesky_bot\rebuild_registries.py:427:        mtime = safe_getmtime(authoritative_file)
+  bluesky_bot\rebuild_registries.py:428:        created_at = datetime.datetime.fromtimestamp(mtime).strftime("%Y-%m-%d 
+%H:%M:%S")
+  bluesky_bot\rebuild_registries_son.py:482:        if not verdict:
+> bluesky_bot\rebuild_registries_son.py:483:            verdict = "FAIL - The Path of Deception"
+  bluesky_bot\rebuild_registries_son.py:484:
+  bluesky_bot\rebuild_registries_son.py:485:        status = cfg.get("status", "")
+  bluesky_bot\rebuild_registries_son.py:486:
+  bluesky_bot\rebuild_registries_son.py:487:        mtime = safe_getmtime(authoritative_file)
+  bluesky_bot\rebuild_registries_son.py:488:        created_at = 
+datetime.datetime.fromtimestamp(mtime).strftime("%Y-%m-%d %H:%M:%S")
+  bluesky_bot\remediate_tabloid_corrections.py:37:            "In reality, Bonta cited verified electoral statistics 
+(28 cases out of 23 million voters). The outlet weaponized a tiny anomaly into a national panic to farm ad 
+revenue.\nResulting Judgement: (-0.80, +0.65) - Greatest Lie",
+> bluesky_bot\remediate_tabloid_corrections.py:38:            "Verdict: FAIL - The Path of Deception.\nAmplifying 
+statistical fringe cases into systemic fraud narratives misleads voters while monetizing partisan 
+anxiety.\n\nIntegrity: Severe Deception (Hypocrisy: 6.80, z: 2)",
+  bluesky_bot\remediate_tabloid_corrections.py:39:            "Sub-Audits Breakdown:\n- NY Post Smear: FAIL (-0.80, 
++0.65) - Distorts statistical reality for clicks.\n- Rob Bonta Math: PASS (+0.40, 0.0) - Accurately contextualized 
+numbers.\n- DOJ Prosecution: PASS (+0.50, +0.60) - Standard statutory enforcement.",
+  bluesky_bot\remediate_tabloid_corrections.py:40:            "In a Capitol hallway, NY Post grilled AG Rob Bonta over 
+federal noncitizen voter charges. Bonta noted 28 fraudulent registrants out of 23 million is statistically 
+insignificant.",
+  bluesky_bot\remediate_tabloid_corrections.py:41:            "The Poison:\nBlowing microscopic anomalies out of 
+proportion erodes public trust in democratic elections and feeds baseless stolen-election conspiracy theories.",
+  bluesky_bot\remediate_tabloid_corrections.py:42:            "The Breakdown & Plane Error:\nThe NY Post confuses the 
+HOW (statistical proportionality, Q5) with an EMOTIVE panic (Q7), substituting sensationalism for mathematical 
+reality.",
+  bluesky_bot\remediate_tabloid_corrections.py:43:            "Social Physics Analysis:\nNY Post executes a smart 
+selfish maneuver: manufacturing an election crisis out of 28 individuals to extract partisan attention and justify 
+restrictive voting barriers.",
+> bluesky_bot\remediate_tabloid_corrections.py:44:            "The Trajectory: The Path of Deception.\nModal Dynamics: 
+will be -> is not via Red Top (The Imperial Trap).\nPromising public transparency while actively distorting empirical 
+electoral data.",
+  bluesky_bot\remediate_tabloid_corrections.py:45:            "The Unavoidable Truth: 28 fraudulent registrations in a 
+state of 23 million voters proves fraud is rare, not rampant.\n\nThe Unavoidable Lie: Ambushing an official in a 
+hallway unmasks an election conspiracy.",
+  bluesky_bot\remediate_tabloid_corrections.py:46:            "Alethekanon:\nJournalism that weaponizes decimal-point 
+statistical anomalies into existential threats is running an extractive confidence trick.",
+  bluesky_bot\remediate_tabloid_corrections.py:47:            "Awwthekanon:\nIt is painful to watch ordinary citizens 
+lose faith in their democracy because sensationalist headlines deliberately misrepresent the scale of errors.",
+  bluesky_bot\remediate_tabloid_corrections.py:48:            "Brothekanon:\nBro, 28 people out of 23 million is 
+literally 0.0001%. You have a higher chance of being struck by lightning than seeing voter fraud sway California.",
+  bluesky_bot\remediate_tabloid_corrections.py:49:            "Spirithekanon:\n\"Differing weights and differing 
+measures-the Lord detests them both.\" Proverbs 20:10 PASS\nHonesty requires accurate scales and faithful proportions, 
+not exaggerated panic."
+  bluesky_bot\remediate_tabloid_corrections.py:73:            "In reality, the outlet recycles casual daytime talk 
+show banter into a breathless national controversy, trading journalistic substance for partisan ad clicks.\nResulting 
+Judgement: (-0.75, +0.60) - Greatest Lie",
+> bluesky_bot\remediate_tabloid_corrections.py:74:            "Verdict: FAIL - The Path of Deception.\nTransforming 
+morning TV soundbites into national security crises weaponizes trivial entertainment chatter while evading real policy 
+analysis.\n\nIntegrity: Severe Deception (Hypocrisy: 6.20, z: 2)",
+  bluesky_bot\remediate_tabloid_corrections.py:75:            "Sub-Audits Breakdown:\n- Fox News Coverage: FAIL 
+(-0.75, +0.60) - Monetizes talk-show chatter.\n- 'The View' Panel: COND (0.0, -0.40) - Superficial daytime 
+opinions.\n- Policy Reality: COND (+0.20, 0.0) - Standard state political race.",
+  bluesky_bot\remediate_tabloid_corrections.py:76:            "Fox News ran an entire segment dissecting co-hosts on 
+'The View' defending Abdul El-Sayed's comparison of religious scrutiny to John F. Kennedy's 1960 campaign.",
+  bluesky_bot\remediate_tabloid_corrections.py:77:            "The Poison:\nTreating morning talk show panelists as 
+official policy spokespeople dumbs down national discourse and traps viewers in endless, low-stakes grievance loops.",
+  bluesky_bot\remediate_tabloid_corrections.py:78:            "The Breakdown & Plane Error:\nFox News confuses the WHO 
+(celebrity TV hosts chatting on an unscripted show) with the WHAT (substantive foreign policy and national security 
+oversight).",
+  bluesky_bot\remediate_tabloid_corrections.py:79:            "Social Physics Analysis:\nCable news networks run a 
+smart selfish loop: harvesting daily outrage from talk shows because producing cheap conflict is far more profitable 
+than investigating real governance.",
+> bluesky_bot\remediate_tabloid_corrections.py:80:            "The Trajectory: The Path of Deception.\nModal Dynamics: 
+will be -> is not via Red Top (The Imperial Trap).\nThe broadcast promises serious political accountability but 
+delivers pure daytime television gossip.",
+  bluesky_bot\remediate_tabloid_corrections.py:81:            "The Unavoidable Truth: What happens on 'The View' has 
+zero impact on federal policy or foreign relations.\n\nThe Unavoidable Lie: Morning show panelists represent the 
+strategic doctrine of a major political party.",
+  bluesky_bot\remediate_tabloid_corrections.py:82:            "Alethekanon:\nConverting morning television banter into 
+national security alarmism is an intellectual abdication designed solely for ad revenue.",
+  bluesky_bot\remediate_tabloid_corrections.py:83:            "Awwthekanon:\nIt is exhausting to see so much energy 
+wasted on daytime TV arguments while actual communities struggle with real economic and social burdens.",
+  bluesky_bot\remediate_tabloid_corrections.py:84:            "Brothekanon:\nImagine running an entire news network 
+and your breaking story is what Whoopi Goldberg said at 10 AM on a Tuesday. Turn off the TV, bro.",
+  bluesky_bot\remediate_tabloid_corrections.py:85:            "Spirithekanon:\n\"Avoid foolish controversies and 
+genealogies and arguments and quarrels about the law, because these are unprofitable and useless.\" Titus 3:9 
+PASS\nTrue wisdom ignores profitable squabbles to pursue fruitful work."
+  bluesky_bot\remediate_tabloid_corrections.py:109:            "In reality, the outlet uncritically prints candidate 
+talking points without fact-checking or offering right of reply, masquerading campaign oppo as journalism.\nResulting 
+Judgement: (-0.75, +0.60) - Greatest Lie",
+> bluesky_bot\remediate_tabloid_corrections.py:110:            "Verdict: FAIL - The Path of Deception.\nPublishing 
+unverified campaign trail rhetoric as objective investigative news degrades election transparency.\n\nIntegrity: 
+Severe Deception (Hypocrisy: 6.40, z: 2)",
+  bluesky_bot\remediate_tabloid_corrections.py:111:            "Sub-Audits Breakdown:\n- Breitbart Coverage: FAIL 
+(-0.75, +0.60) - Prints campaign oppo as news.\n- Aaron Flint Campaign: COND (0.0, +0.40) - Standard political 
+posturing.\n- Sam Forstag Campaign: COND (0.0, +0.20) - Standard campaign platform.",
+  bluesky_bot\remediate_tabloid_corrections.py:112:            "GOP candidate Aaron Flint claimed his opponent Sam 
+Forstag is an 'absolute phony' hiding radical environmental policies behind a rural Montana working-class facade.",
+  bluesky_bot\remediate_tabloid_corrections.py:113:            "The Poison:\nLaundering raw campaign opposition 
+research into news articles without verification deprives voters of factual policy comparisons.",
+  bluesky_bot\remediate_tabloid_corrections.py:114:            "The Breakdown & Plane Error:\nBreitbart confuses the 
+WHO (a political candidate running for office) with the WHAT (independent empirical reporting on candidate records).",
+  bluesky_bot\remediate_tabloid_corrections.py:115:            "Social Physics Analysis:\nPartisan news sites execute 
+a smart selfish maneuver: trading journalistic independence for partisan access, publishing unchallenged attacks to 
+rally donors and partisans.",
+> bluesky_bot\remediate_tabloid_corrections.py:116:            "The Trajectory: The Path of Deception.\nModal 
+Dynamics: will be -> is not via Red Top (The Imperial Trap).\nThe publication promises investigative vetting but 
+delivers partisan megaphone services.",
+  bluesky_bot\remediate_tabloid_corrections.py:117:            "The Unavoidable Truth: A candidate calling their 
+opponent a 'phony' is standard stump speech rhetoric, not breaking investigative news.\n\nThe Unavoidable Lie: 
+Campaign press releases constitute independent journalistic vetting.",
+  bluesky_bot\remediate_tabloid_corrections.py:118:            "Alethekanon:\nPublishing unverified opponent smears 
+under an 'Exclusive' banner is public relations masquerading as reporting.",
+  bluesky_bot\remediate_tabloid_corrections.py:119:            "Awwthekanon:\nVoters deserve clear, honest policy 
+debates about their jobs and families, not endless echo-chamber attacks that treat politics like schoolyard taunts.",
+  bluesky_bot\remediate_tabloid_corrections.py:120:            "Brothekanon:\nA politician said his opponent is fake? 
+Wow, groundbreaking journalism Breitbart. What next, water is wet?",
+  bluesky_bot\remediate_tabloid_corrections.py:121:            "Spirithekanon:\n\"The first to present his case seems 
+right, till another comes forward and questions him.\" Proverbs 18:17 PASS\nTrue discernment listens to both sides and 
+verifies facts before declaring guilt."
+  bluesky_bot\remediate_tabloid_corrections.py:145:            "In reality, Kirby was answering a NYT interview 
+question on macroeconomic inequality. The outlet sensationalized his personal views into a faux hypocrisy 
+scandal.\nResulting Judgement: (-0.70, +0.55) - Greatest Lie",
+> bluesky_bot\remediate_tabloid_corrections.py:146:            "Verdict: FAIL - The Path of Deception.\nWeaponizing an 
+executive's philosophical interview comments to manufacture populist outrage distracts from substantive tax and 
+airline policy debates.\n\nIntegrity: Severe Deception (Hypocrisy: 6.10, z: 2)",
+  bluesky_bot\remediate_tabloid_corrections.py:147:            "Sub-Audits Breakdown:\n- NY Post Framing: FAIL (-0.70, 
++0.55) - Manufactures hypocrisy out of opinion.\n- Scott Kirby Remarks: COND (+0.30, 0.0) - Candid philosophical 
+reflection.\n- United Airlines Pricing: COND (0.0, -0.40) - Standard commercial fee models.",
+  bluesky_bot\remediate_tabloid_corrections.py:148:            "In an interview, United CEO Scott Kirby warned that 
+growing wealth concentration poses systemic risks to democracy, expressing support for inheritance tax reform.",
+  bluesky_bot\remediate_tabloid_corrections.py:149:            "The Poison:\nAttacking business leaders whenever they 
+speak honestly about economic inequality ensures corporate executives stay completely silent on systemic reform.",
+  bluesky_bot\remediate_tabloid_corrections.py:150:            "The Breakdown & Plane Error:\nNY Post confuses the WHO 
+(a corporate executive expressing a macroeconomic perspective) with the WHAT (airline operational baggage fees).",
+  bluesky_bot\remediate_tabloid_corrections.py:151:            "Social Physics Analysis:\nTabloids run a smart selfish 
+cycle: punishing any wealthy figure who acknowledges inequality, reinforcing the cynical belief that all public reform 
+talk is hypocritical.",
+> bluesky_bot\remediate_tabloid_corrections.py:152:            "The Trajectory: The Path of Deception.\nModal 
+Dynamics: will be -> is not via Red Top (The Imperial Trap).\nThe coverage promises economic accountability but 
+delivers cynical character assassination.",
+  bluesky_bot\remediate_tabloid_corrections.py:153:            "The Unavoidable Truth: A CEO paying high personal 
+taxes does not change commercial airline ticket pricing economics.\n\nThe Unavoidable Lie: Anyone who runs a 
+profitable company is barred from discussing national tax policy.",
+  bluesky_bot\remediate_tabloid_corrections.py:154:            "Alethekanon:\nDismissing systemic tax reform 
+discussions by weaponizing an executive's compensation package is an intellectual evasion that protects wealth 
+concentration.",
+  bluesky_bot\remediate_tabloid_corrections.py:155:            "Awwthekanon:\nWhen people with power actually 
+acknowledge systemic unfairness, shouting them down only ensures the status quo never changes.",
+  bluesky_bot\remediate_tabloid_corrections.py:156:            "Brothekanon:\nCEO says 'maybe the rich should pay more 
+taxes' and the tabloid screams 'how dare you fly planes.' Make it make sense, guys.",
+  bluesky_bot\remediate_tabloid_corrections.py:157:            "Spirithekanon:\n\"Let each of you look not only to his 
+own interests, but also to the interests of others.\" Philippians 2:4 PASS\nTrue integrity encourages dialogue on the 
+common good, rather than weaponizing cynicism."
+  bluesky_bot\update_girlboss.py:12:# 1. Update Core Vectors & Thinking
+> bluesky_bot\update_girlboss.py:13:story['thinking'] = "Phase 1-5 structural scan: Evaluating Jack Danielson op-ed in 
+The Federalist. Stated thesis frames all-male veteran leadership as naturally resilient, chivalrous, and superior to 
+female supervision (-0.4, +0.3). Ground reality reveals an anecdotal culture-war polemic weaponizing personal 
+workplace nostalgia without comparative empirical organizational data (-0.75, -0.5). Direction: (-0.4, +0.3) -> 
+(-0.75, -0.5) = The Path of Deception (FAIL)."
+  bluesky_bot\update_girlboss.py:14:story['claim_u'] = -0.4
+  bluesky_bot\update_girlboss.py:15:story['claim_psi'] = 0.3
+  bluesky_bot\update_girlboss.py:16:story['real_u'] = -0.75
+  bluesky_bot\update_girlboss.py:17:story['real_psi'] = -0.5
+  bluesky_bot\update_girlboss.py:18:story['claim_integrity'] = 'Partisan Defense'
+  bluesky_bot\update_girlboss.py:27:    "Ground Reality: Anecdotal culture-war polemics weaponize personal workplace 
+nostalgia to justify gender-exclusive hierarchies without empirical supervisory or operational data.\nResulting 
+Judgement: (-0.75, -0.5) - Lesser Evil",
+> bluesky_bot\update_girlboss.py:28:    "Verdict: FAIL - The Path of Deception.\nPartisan op-ed weaponizes subjective 
+anecdotes to rationalize gender-exclusive management, lacking empirical data.\n\nIntegrity: Misleading (Hypocrisy: 
+2.1, z: 2)",
+  bluesky_bot\update_girlboss.py:29:    "- Jack Danielson: FAIL (-0.75, -0.5) - Unsubstantiated personal anecdotes.\n- 
+The Federalist: FAIL (-0.6, -0.3) - Published polemic as sociological fact.",
+  bluesky_bot\update_girlboss.py:30:    "Writing in The Federalist, Jack Danielson cites his own experience leading an 
+all-male veteran team to argue against women in corporate leadership, despite lacking comparative organizational 
+data.",
+  bluesky_bot\update_girlboss.py:31:    "The Bright Side:\nValidates the universal employee need for clear boundaries, 
+reasonable accommodation for parents, and direct, low-friction communication.",
+  bluesky_bot\update_girlboss.py:32:    "The Breakdown & Plane Error:\nConfusing personal workplace comfort in an 
+all-male cohort (HOW) with an objective rule of organizational management (WHAT).",
+  bluesky_bot\update_girlboss.py:33:    "Social Physics Analysis:\nThe piece executes an ingroup rationalization 
+maneuver, attributing ordinary organizational friction to female leadership while framing male veterans as uniquely 
+noble guardians.",
+> bluesky_bot\update_girlboss.py:34:    "The Trajectory: The Path of Deception.\nMoving from partisan 
+self-justification (-0.4, +0.3) into regressive extraction (-0.75, -0.5), attempting to package personal nostalgia as 
+structural truth.",
+  bluesky_bot\update_girlboss.py:35:    "The Unavoidable Truth: Every workplace struggles with management friction, 
+regardless of gender.\n\nThe Unavoidable Lie: That gender exclusivity inherently produces noble, conflict-free 
+leadership.",
+  bluesky_bot\update_girlboss.py:36:    "Alethekanon:\nAnecdote is not data. Projecting personal nostalgia onto an 
+entire gender is ideological rationalization.",
+  bluesky_bot\update_girlboss.py:37:    "Awwthekanon:\nMothers and fathers alike need workplaces that respect family 
+life, caregiving, and human dignity without culture-war litmus tests.",
+  bluesky_bot\update_girlboss.py:38:    "Brothekanon:\nJust because your military buddies ran a tight ship doesn't 
+mean half the population can't manage an office.",
+  bluesky_bot\update_girlboss.py:39:    "Spirithekanon:\n\"Judge not according to the appearance, but judge righteous 
+judgment.\" John 7:24 FAIL\nRighteous discernment demands empirical fairness, not superficial prejudice born of 
+personal bias."
+
+

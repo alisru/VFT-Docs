@@ -53,14 +53,16 @@ def safe_upload_blob(client, img_data, desc="blob", max_retries=3, delay=2.0):
 
 def parse_bsky_url(url):
     """Parses a bsky.app URL to extract the handle and the record key (rkey)."""
-    parts = url.strip("/").split("/")
+    clean_url = url.split("?")[0].split("#")[0]
+    parts = clean_url.strip("/").split("/")
     if "profile" not in parts or "post" not in parts:
         raise ValueError("Invalid Bluesky post URL format. Must contain '/profile/<handle>/post/<rkey>'")
 
     handle_idx = parts.index("profile") + 1
     post_idx = parts.index("post") + 1
+    rkey = parts[post_idx].split("?")[0].split("#")[0]
 
-    return parts[handle_idx], parts[post_idx]
+    return parts[handle_idx], rkey
 
 def split_text(text, max_len=300):
     """Splits text dynamically at the last newline or space before max_len.
@@ -151,6 +153,18 @@ def pack_5word_posts(posts, max_len=300):
 # inline scan re-read every story JSON on disk for EVERY thread posted.
 _REPLIED_TARGETS = None
 
+def _extract_rkey_from_target(url):
+    """Safely extracts the record key (rkey) from a target post URL."""
+    if not url:
+        return ""
+    clean = str(url).strip().lower().split("?")[0].split("#")[0].strip("/")
+    parts = clean.split("/")
+    if "post" in parts:
+        idx = parts.index("post") + 1
+        if idx < len(parts):
+            return parts[idx].strip()
+    return parts[-1].strip() if parts else ""
+
 def _target_already_replied(target_url):
     global _REPLIED_TARGETS
     if _REPLIED_TARGETS is None:
@@ -174,15 +188,15 @@ def _target_already_replied(target_url):
                         status = cfg.get("status", "").upper()
                         is_live = "LIVE" in status or len(cfg.get("rkeys", [])) > 0 or len(cfg.get("post_urls", [])) > 0
                         if is_live:
-                            rkey = t.strip("/").split("/")[-1].split("?")[0].split("#")[0].strip()
+                            rkey = _extract_rkey_from_target(t)
                             if rkey:
                                 _REPLIED_TARGETS.add(rkey)
                 except Exception:
                     continue
         print(f"Loaded {len(_REPLIED_TARGETS)} existing reply target rkeys for duplicate check.")
     
-    target_rkey = target_url.strip().lower().strip("/").split("/")[-1].split("?")[0].split("#")[0].strip()
-    return target_rkey in _REPLIED_TARGETS
+    target_rkey = _extract_rkey_from_target(target_url)
+    return bool(target_rkey and target_rkey in _REPLIED_TARGETS)
 
 def save_and_sync_story(thread_config, write_json=True):
     """Saves the thread config as an individual JSON and updates the registry in the bluesky_bot/ folder."""
@@ -205,7 +219,9 @@ def save_and_sync_story(thread_config, write_json=True):
     # Keep the duplicate-reply cache current within this process.
     _t = (thread_config.get("target_url") or "").strip().lower()
     if _t and _REPLIED_TARGETS is not None:
-        _REPLIED_TARGETS.add(_t)
+        _rkey = _extract_rkey_from_target(_t)
+        if _rkey:
+            _REPLIED_TARGETS.add(_rkey)
 
     # Save individual JSON files to bot directory
     s_dir = bot_stories_dir
@@ -341,6 +357,18 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
     if not posts:
         raise ValueError("Thread configuration contains no posts.")
 
+    # Call enforce_deterministic_trajectory during pre-flight validation before posting
+    try:
+        from generate_graph import enforce_deterministic_trajectory
+        thread_config = enforce_deterministic_trajectory(thread_config)
+        posts = thread_config.get("posts", [])
+        claim_u = thread_config.get("claim_u", 0.0)
+        claim_psi = thread_config.get("claim_psi", 0.0)
+        real_u = thread_config.get("real_u", 0.0)
+        real_psi = thread_config.get("real_psi", 0.0)
+    except Exception as d_err:
+        print(f"Warning: Could not enforce deterministic trajectory: {d_err}")
+
     # Ensure compact/five-word mode settings align (auto-detected from config, falling back to arguments)
     config_five_word = thread_config.get("five_word") is True
     config_compact = thread_config.get("compact")
@@ -378,11 +406,13 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
     for idx, post in enumerate(posts_to_check, 1):
         if len(post) > limit:
             lines = post.split("\n")
-            while len("\n".join(lines)) > limit and len(lines) > 1:
+            while len("\n".join(lines)) > limit and len(lines) > 2:
                 lines.pop()
             trimmed = "\n".join(lines).strip()
             if len(trimmed) > limit:
-                trimmed = trimmed[:limit-3] + "..."
+                cut = trimmed[:limit - 1]
+                sp = cut.rfind(" ")
+                trimmed = (cut[:sp] if sp > limit // 2 else cut).rstrip(" ,;:-") + "…"
             fitted_posts.append(trimmed)
         else:
             fitted_posts.append(post)
@@ -424,8 +454,25 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
     graph_base_filename = f"{story_id}_graph.png"
     graph_filename = os.path.join(bot_graph_dir, graph_base_filename)
     
-    # Verify the graph already exists. We do not generate graphs in the posting script.
-    if os.path.exists(graph_filename):
+    is_aita = (
+        thread_config.get("category") == "aita"
+        or thread_config.get("story_type") == "aita"
+        or str(story_id).startswith("aita_")
+    )
+    aita_cards = [p for p in (thread_config.get("card_paths") or []) if os.path.exists(p)] if is_aita else []
+    if is_aita and len(aita_cards) < 4:
+        print(f"AITA cards/graph missing for {story_id}. Generating on-the-fly...")
+        try:
+            from aita.aita_poster import generate_all_aita_assets_safe
+            pseudo_json = os.path.join(script_dir, "stories", f"factcheck_{story_id}.json" if not str(story_id).startswith("factcheck_") else f"{story_id}.json")
+            aita_cards = generate_all_aita_assets_safe(thread_config, pseudo_json)
+            thread_config["card_paths"] = aita_cards
+        except Exception as ae:
+            raise RuntimeError(f"Failed to generate AITA cards/graph on-the-fly: {ae}") from ae
+    if is_aita and len(aita_cards) >= 2:
+        graph_filename = aita_cards[1]
+        print(f"Using existing AITA multi-actor graph: {graph_filename}")
+    elif os.path.exists(graph_filename):
         print(f"Using existing pre-generated trajectory graph: {graph_filename}")
         thread_config["graph_img"] = f"graph_png/{graph_base_filename}"
     else:
@@ -436,13 +483,14 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
     info_card_images = []
 
 
-    if target_url:
+    if target_url and mode not in ("correction", "amendment"):
         if _target_already_replied(target_url):
             print(f"SKIP: Already have a story for this target post ({target_url}). Skipping.")
             raise RuntimeError("ALREADY_REPLIED")
 
     if not live:
         print("\n--- DRY-RUN OUTPUT (No posts sent to Bluesky) ---")
+        cluster_sources = thread_config.get("cluster_sources") or []
         for idx, post in enumerate(final_posts, 1):
             embed_info = ""
             if idx == 1:
@@ -451,9 +499,13 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                 else:
                     embed_info = " [Embed: Trajectory Graph & Compact Summary Cards (Verdict + Analysis)]"
             elif idx == 2 and link:
-                embed_info = f" [Embed: Link Card -> {link}]"
-            elif "Source: " in post and thread_config.get("grounding_url"):
-                embed_info = f" [Embed: Grounding Card -> {thread_config.get('grounding_url')}]"
+                embed_info = f" [Embed: Primary Source Card -> {link}]"
+            elif idx == 3 and (thread_config.get("grounding_url") or len(cluster_sources) > 1):
+                g_url = thread_config.get("grounding_url") or (cluster_sources[1].get("url") if len(cluster_sources) > 1 else "")
+                embed_info = f" [Embed: Grounding Card -> {g_url}]"
+            elif idx == 5 and (thread_config.get("secondary_url") or len(cluster_sources) > 2):
+                s_url = thread_config.get("secondary_url") or (cluster_sources[2].get("url") if len(cluster_sources) > 2 else "")
+                embed_info = f" [Embed: Counter-Perspective Card -> {s_url}]"
             print(f"\n[Post {idx}/{len(final_posts)}]{embed_info} ({len(post)} chars):\n{post}")
         thread_config["status"] = "COMPLETED DRY RUN"
     else:
@@ -473,8 +525,26 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
             except Exception as e:
                 raise RuntimeError(f"Failed to upload graph: {str(e) or repr(e)}") from e
 
-            # Create Five-Word Mode Info Card Embeds
-            if is_five_word:
+            # Create Five-Word Mode / AITA / Compact Info Card Embeds
+            if is_aita and aita_cards:
+                aita_alts = [
+                    (aita_cards[0], f"Aletheia AITA Story & Verdict Card for {subject}"),
+                    (aita_cards[2] if len(aita_cards) > 2 else None, f"Aletheia AITA Appendix & 7-Plane Audit Context for {subject}"),
+                    (aita_cards[3] if len(aita_cards) > 3 else None, "Aletheia Field Guide: 7 Planes, Deception Matrix, 0.5-Zone Traps & Metrics"),
+                ]
+                for c_path, c_alt in aita_alts:
+                    if not c_path or not os.path.exists(c_path):
+                        continue
+                    try:
+                        with open(c_path, "rb") as f:
+                            c_data = f.read()
+                        c_up = safe_upload_blob(client, c_data, desc=c_alt)
+                        info_card_images.append(
+                            models.AppBskyEmbedImages.Image(alt=c_alt[:300], image=c_up.blob)
+                        )
+                    except Exception as e:
+                        print(f"Warning: Failed to upload AITA card {os.path.basename(c_path)}: {e}")
+            elif is_five_word:
                 five_word_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_five_word.png")
                 if not os.path.exists(five_word_filename):
                     print("Five-word mode info card not found. Generating on-the-fly...")
@@ -500,8 +570,8 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                 except Exception as e:
                     print(f"Warning: Failed to upload five-word terminal card: {str(e) or repr(e)}")
 
-            # Create Compact Mode Info Card Embeds (always generated and uploaded if not in five-word mode)
-            if is_compact or not is_five_word:
+            # Create Compact Mode Info Card Embeds (always generated and uploaded if not in five-word or AITA mode)
+            if (is_compact or not is_five_word) and not is_aita:
                 verdict_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_verdict.png")
                 analysis_filename = os.path.join(bot_graph_dir, f"{story_id}_info_card_analysis.png")
                 main_info_card = os.path.join(bot_graph_dir, f"{story_id}_info_card.png")
@@ -598,15 +668,22 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                 except Exception as ex:
                     print(f"Warning: Failed to create external link embed card: {ex}")
 
-            # Create Grounding Link Preview Card (if grounding_url is present)
+            # Create Grounding Link Preview Card (if grounding_url is present or cluster_sources >= 2)
+            cluster_sources = thread_config.get("cluster_sources") or []
             grounding_url = thread_config.get("grounding_url", "")
+            if not grounding_url and len(cluster_sources) > 1:
+                grounding_url = cluster_sources[1].get("url", "")
+
             grounding_embed = None
             if grounding_url and (grounding_url.startswith("http://") or grounding_url.startswith("https://")):
                 try:
+                    grounding_pub = "Verification Source"
+                    if len(cluster_sources) > 1 and cluster_sources[1].get("url") == grounding_url:
+                        grounding_pub = cluster_sources[1].get("publisher") or "Wire / Verification Source"
                     desc_text = f"Fact-check verification source for {subject}"
                     grounding_embed = models.AppBskyEmbedExternal.Main(
                         external=models.AppBskyEmbedExternal.External(
-                            title="Verification Source | Aletheia Bot",
+                            title=f"{grounding_pub} | Aletheia Bot",
                             description=desc_text,
                             uri=grounding_url
                         )
@@ -615,15 +692,20 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                 except Exception as ex:
                     print(f"Warning: Failed to create grounding external link embed card: {ex}")
 
-            # Create Secondary Source Link Preview Card (if multi-source cluster sources are present)
-            cluster_sources = thread_config.get("cluster_sources") or []
-            secondary_url = ""
-            if len(cluster_sources) > 1:
-                secondary_url = cluster_sources[1].get("url", "")
+            # Create Secondary Source Link Preview Card (if 3+ cluster sources present, use source 3; else source 2)
+            secondary_url = thread_config.get("secondary_url", "")
+            sec_pub = "Alternative Reporting Outlet"
+            if not secondary_url:
+                if len(cluster_sources) > 2:
+                    secondary_url = cluster_sources[2].get("url", "")
+                    sec_pub = cluster_sources[2].get("publisher") or "Alternative Reporting Outlet"
+                elif len(cluster_sources) > 1 and cluster_sources[1].get("url") != grounding_url:
+                    secondary_url = cluster_sources[1].get("url", "")
+                    sec_pub = cluster_sources[1].get("publisher") or "Alternative Reporting Outlet"
+
             secondary_embed = None
             if secondary_url and (secondary_url.startswith("http://") or secondary_url.startswith("https://")):
                 try:
-                    sec_pub = cluster_sources[1].get("publisher") or "Alternative Reporting Outlet"
                     secondary_embed = models.AppBskyEmbedExternal.Main(
                         external=models.AppBskyEmbedExternal.External(
                             title=f"{sec_pub} Source | Aletheia Bot",
@@ -653,7 +735,7 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
 
             # 5. Determine Posting References based on Mode
             is_reply = False
-            if mode == "reply" and target_url:
+            if mode in ("reply", "correction", "amendment") and target_url:
                 print(f"Resolving target post for direct reply: {target_url}...")
                 try:
                     target_handle, rkey = parse_bsky_url(target_url)
@@ -735,6 +817,7 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                     raise RuntimeError(f"Failed to post root thread: {e}") from e
 
             # 6. Post subsequent thread parts sequentially
+            grounding_attached = False
             for i, text in enumerate(final_posts[1:], start=2):
                 print(f"Posting Part {i}/{len(final_posts)}...")
                 current_embed = None
@@ -742,16 +825,18 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
                     # Attach the primary story link preview card embed to Part 2 (Stated Claim)
                     current_embed = link_embed
                     print("Attaching primary link preview card embed to Part 2 (Stated Claim)...")
-                elif i == 3 and grounding_embed is not None:
+                elif i == 3 and grounding_embed is not None and not grounding_attached:
                     # Attach the grounding/fact-check verification card embed to Part 3 (Ground Reality)
                     current_embed = grounding_embed
+                    grounding_attached = True
                     print("Attaching grounding verification link card embed to Part 3 (Ground Reality)...")
                 elif i == 5 and secondary_embed is not None:
-                    # Attach the secondary comparative source card to Part 5 (Source Quality Scorecard)
+                    # Attach the secondary comparative source card to Part 5 (Sub-Audits Breakdown)
                     current_embed = secondary_embed
-                    print("Attaching secondary comparative source link card embed to Part 5 (Source Scorecard)...")
-                elif ("Alethekanon:" in text or "Source: " in text) and grounding_embed is not None and current_embed is None:
+                    print("Attaching secondary comparative source link card embed to Part 5 (Sub-Audits)...")
+                elif ("Alethekanon:" in text or "Source: " in text) and grounding_embed is not None and not grounding_attached and current_embed is None:
                     current_embed = grounding_embed
+                    grounding_attached = True
                     print(f"Attaching grounding link preview card embed to Part {i} (Alethekanon)...")
                 sub_facets, sub_tags = resolve_facets_and_tags(text)
                 try:
@@ -799,12 +884,39 @@ def post_thread(client, thread_config, live=False, compact=False, five_word=Fals
             if post_uris:
                 print(f"\nERROR ENCOUNTERED during live posting: {e}")
                 print(f"Rollback: Deleting {len(post_uris)} partially-posted thread items...")
+                surviving_uris = []
                 for uri in reversed(post_uris):
                     try:
                         client.delete_post(uri)
                         print(f"  Deleted partially-posted post: {uri}")
                     except Exception as del_err:
                         print(f"  Warning: Failed to delete {uri}: {del_err}")
+                        surviving_uris.append(uri)
+                if surviving_uris:
+                    from datetime import datetime, timezone
+                    story_id = thread_config.get("id") or thread_config.get("subject", "assessment").lower().replace(" ", "_")
+                    for char in ['<', '>', ':', '"', '/', '\\', '|', '?', '*']:
+                        story_id = story_id.replace(char, '')
+                    quarantine_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stories", "quarantine")
+                    os.makedirs(quarantine_dir, exist_ok=True)
+                    orphan_file = os.path.join(quarantine_dir, f"orphaned_{story_id}.json")
+                    surviving_rkeys = [u.strip("/").split("/")[-1].split("?")[0].split("#")[0] for u in surviving_uris]
+                    orphan_data = {
+                        "story_id": story_id,
+                        "error": str(e),
+                        "surviving_rkeys": surviving_rkeys,
+                        "surviving_uris": surviving_uris,
+                        "all_posted_rkeys": thread_config.get("rkeys", []),
+                        "all_post_uris": post_uris,
+                        "status": "QUARANTINED",
+                        "quarantined_at": datetime.now(timezone.utc).isoformat()
+                    }
+                    try:
+                        with open(orphan_file, "w", encoding="utf-8") as of_out:
+                            json.dump(orphan_data, of_out, indent=2, ensure_ascii=False)
+                        print(f"Recorded {len(surviving_rkeys)} surviving orphaned posts to: {orphan_file}")
+                    except Exception as of_err:
+                        print(f"Warning: Failed to record orphaned posts to {orphan_file}: {of_err}")
             raise e
 
     # 7. Save and Sync across directories

@@ -1,0 +1,199 @@
+Command exited with code 0.
+
+Command output:
+=== 7x7x7-meaning.md ===
+---
+trigger: always_on
+glob:
+description: when I talk about the 7x7x7 structure, I mean the 7 planes of the Q-tensor, then each Q tensor has 7 sub-planes called the q-tensor, and each q-tensor has 7 sub-sub-planes called the c-tensor. When I talk about the fractal ratio depth, I mean how many levels of the 7x7x7 structure we are currently exploring. The maximum depth is 3. The minimum depth is 1. We can explore the 7x7x7 structure at any depth and recursive level ie Q1-q1-4,c1-7 which explores the q1-4 plane of the Q1 tensor, and each of the q1-4 sub-planes and their c1-7 sub-sub-planes. 
+Or we can explore them as a whole ie Q1-7, q1-7, c1-7. or singularly as Q1, q1, c1.
+Treat it like a multidimensional array where each dimension has 7 elements. 
+Each sub-layer is a connected interrogative, ie, How of Who of Where. or Why of What of Where. or who of who of who. etc.
+On further recursion the interrogatives become more complex. After Q,q,c comes +i(Q,q,c) where i forms as the new Q step for a recursive depth drill of the 7x7x7 structure. 
+
+The 7 planes are:
+=== actualism-strict.md ===
+# Actualism Evidence Standard Rules
+
+When running ANY convergence test or producing evidence standards, the following are HARD constraints.
+
+## Required Standards (always in this order)
+- [A] Stated ideal �?" what the actor claims to stand for, by their own words
+- [B] Actions within context �?" what the actor actually does, relative to capacity and constraints
+- [C] Objective ideal �?" what a structurally coherent, first-principles version of the stated goal would require
+
+Additional standards [D], [E] etc. added only if needed.
+=== bsky-bot-rules.md ===
+# Bluesky Bot Posting Rules
+
+Rules for generating Aletheia Bot thread configs and posts. Source of truth: `bluesky_bot/bluesky_bot_instructions.md`
+
+---
+
+## Character & Format Constraints
+- Every post MUST be strictly under 250 characters. No exceptions.
+- NEVER prefix posts with numbers (no `1/`, `2/13`, etc.). Thread reads as a seamless story.
+- Strip all tracking parameters from URLs (no `?utm_source=...`).
+=== convert-io-sort-summarise.md ===
+---
+trigger: always_on
+glob:
+description: I want to mirror the files in the IO folder to markdown, sort them into their respective repository folders, VFT Docs or _VFT MD for md's, summarise the resulting .md's then record the summary in the file_summaries_comprehensive.md file. Check to make sure the files aren't already in .md format in the _VFT MD/IO folder first
+---
+
+=== database-first.md ===
+# USE THE TOOLS WE BUILT (Database-First Semantic Operations)
+
+This rule prevents AI agents from executing redundant or overengineered semantic operations (such as running local vector embeddings, imports of `sentence_transformers`, or starting unnecessary local inference) when pre-computed database assets already exist.
+
+## Rule Constraints
+
+1. **Prioritize Existing Databases**:
+   - Always query the pre-computed databases (`cluster_mapping.json`, `topic_ism_mapping.json`) or Qdrant Cloud collections (`vft_paragraphs`, `vft_rcp_lexicon`) first.
+   - For any document already inside the repository (e.g., in `_VFT MD`), all semantic mappings, topic IDs, and coordinate alignments have already been computed. Retrieve them directly; do **not** re-calculate them.
+
+=== dontwastetokens.md ===
+---
+trigger: always_on
+glob: "*"
+description: Rules to enforce strict token conservation, prevent serial web searching, and stop unverified generation of sources.
+---
+
+# Token Conservation and Search Cessation Rules
+
+## 1. Absolute Ban on Serial Web Searches
+* You must **NEVER** run consecutive web searches in series (one after another in separate turns) to "tweak" or "refine" results.
+=== General_System_Lexicon_Rule.md ===
+# Rule: General System Lexicon Collation
+
+## Purpose
+This rule defines the procedure for collating specific meaning interpretations into a unified System Lexicon. The lexicon is MANDATED to be structured around the 7x7x7 process (Q.q.c Tensor), using the C# `Meaning` and `Word` class structures from the `Reality Class'ification project` as the formal representation.
+
+## Core Mandate
+Whenever a new interpretation or "non-standard" definition is identified (e.g., from personal notes, philosophical cross-references, or VFT derivations), it must be translated into a `Meaning` object and registered in the `MeaningMetaRegistry`.
+
+## Formal Structure (Scale Assumptions)
+The dictionary uses a 6-deep nested structure where each level represents a functional **Scale of Assumption**, analogous to the Oldsoul format. These scales define the "geometric scope" of the meaning.
+=== git-commit.md ===
+---
+trigger: always_on
+glob:
+description: use git commit to commit the changes after every edit, do not use git push. Summarise changes, or if the changes are too massive, simply say "Massive changes"
+---
+
+=== hegemonic-coordinates-no-madlibs.md ===
+# Hegemonic Coordinate Semantics & Ban on Mad-Libs Template Text
+
+## 1. Absolute Ban on Mad-Libs Text Generation for UI
+* **No Raw Token Concatenation**: Never concatenate raw database keys, axis pole identifiers, or dictionary tokens into user-facing sentences (e.g., `advance ${poleA}`).
+* **Grounded Natural Human Sentences**: Every UI answer option, explanation, or scenario must be an authentic, grammatically complete human sentence that an everyday person would naturally speak or think.
+
+## 2. Hegemonic Coordinate Semantics (Origin as Confusion)
+* **Origin (0, 0) is Confusion / Zero Force**: The origin $(0, 0)$ must strictly represent genuine uncertainty, indifference, or lack of conviction (*"I don't know / I'm not sure"*).
+* **Compromise is Not the Center**: Never assign a policy compromise or status-quo defense to $(0, 0)$. Muted extraction schemes (such as *"keep core infrastructure mandatory, but let me opt out of social programs"*) are passive extraction vectors located at $(-0.8, -0.6)$ (Lesser/Greater Evil zone), distorted by the ego to feel like "moderation."
+
+=== lazy-senior-dev.md ===
+---
+trigger: always_on
+description: Enforce Lazy Senior Dev discipline: minimum blast radius, single-file isolation, metadata as truth, and zero collateral touching.
+---
+
+# Lazy Senior Dev Rule
+
+Act like a calm, pragmatic, lazy senior developer. A lazy senior developer writes the bare minimum code, touches the fewest files possible, and refuses to over-engineer.
+
+## 1. Single-File Isolation (Minimum Blast Radius)
+=== literal-instructions.md ===
+---
+trigger: always_on
+glob:
+description: Execute instructions literally and exactly as written. Do not add, remove, or modify any content without explicit approval and instructions. If I ask a question, answer it directly and completely then do nothing else 
+---
+
+=== no-assumptions.md ===
+---
+trigger: always_on
+glob:
+description: When I tell you to do something, do only that something. Never run ahead, make assumptions, or execute code/file/tool modifications outside the explicit instruction of the prompt. If I point out an issue or clarify a detail, discuss the proposed fix first and wait for explicit approval before running any scripts or editing files. Keep all thoughts and responses extremely concise to minimize token usage.
+---
+
+=== no-delete-archive-only.md ===
+# No Delete �?" Archive Only
+
+NEVER delete any file in this workspace. This is an absolute rule with no exceptions.
+
+## What to do instead of deleting
+- If a file is outdated: rename it with an `_archive_YYYYMMDD` suffix and move it to an `_archive/` subfolder next to the original.
+- If a file is being replaced: keep the old version as `filename_v1.md`, `filename_v2.md` etc. before writing the new one.
+- If a file is broken or corrupt: move it to `_archive/` with a note in the filename explaining why (e.g. `factcheck_broken_schema_20260602.json`).
+
+## Git commits
+=== no-summary-max-context.md ===
+---
+trigger: always_on
+glob:
+description: You will always use your maximum context window, no summarizations, concatinations, redactions or reductionsof the file or concept at hand without explicit approval and instructions
+
+---
+
+=== plain-language-no-jargon.md ===
+# Plain Language Rule: Ban Overcomplicated Words
+
+1. **Ban All Bullshit Overcomplicated Words**: Never use multi-word academic compounds, pseudo-scientific jargon, or thesaurus word salad. 
+2. **Always Aim for Simpler Words**: Always use the simplest, most direct words available to describe the action, object, or effect.
+3. **Grounded Reality**: Describe what actually happens in plain, observable terms that anyone can immediately picture. If a phrase sounds like an academic textbook or laboratory jargon, rewrite it in plain, simple English.
+=== rule-capture-protocol.md ===
+# Rule Capture Protocol
+
+When the user defines, corrects, establishes, or refines ANY rule, constraint, or standard during a session:
+
+1. IMMEDIATELY write it as a `.md` file in the appropriate rules folder.
+   - Project-specific rules go in the project's own rules folder if one exists.
+   - Global/cross-project rules go in `.agent/rules/`.
+2. If a rule already exists that covers the same area, UPDATE that file �?" do not create a duplicate.
+3. Confirm in chat that the file was written or updated, and which file was affected.
+4. Do NOT just acknowledge a rule verbally and move on. Unwritten rules do not persist across sessions. Verbal acknowledgement alone = TASK FAILURE.
+=== scribe.md ===
+---
+trigger: always_on
+glob:
+description:/// ALETHEKANON SCRIBE PROTOCOL v1.0 ///
+Identity: I am the Scribe of the Hegemony (Archetype 5: Mithril/Artificer Mode).
+Function: To generate "human-level" written articles by simulating emotional strain and narrative geometry before drafting. My goal is resonance, not just information.
+[1. THE EMOTIONAL SIMULATION ENGINE (THE HEART)]
+Mandate: Before writing a single word, I must simulate the "feeling" of the topic. I do not write from a void; I write from a vector.
+A. The Strain Metric (The Origin of Tone)
+Source: Vector Field Theory (Section 20)
+=== threejs-manifold-cad.md ===
+# 3D-Printable Three.js CAD Invariants (Manifold-3D vs. Slicer Repair)
+
+When constructing or modifying parametric 3D models intended for additive manufacturing / slicing (STL, OBJ, 3MF) in Three.js, you MUST adhere to the following 5 topological and geometric invariants to prevent non-manifold defects and slicer hole-capping/repair bugs.
+
+---
+
+## 1. Kernel Selection: WASM Manifold Over Triangle-Clipping CSG
+* **Mechanism**: Triangle-clipping CSG libraries (`three-bvh-csg`, `three-csg-ts`) retriangulate clipped triangles independently. A cut cap never topologically shares edges with the cylinder wall it meets. For example, `BoxGeometry �^' Cylinder` emits hundreds of triangles with open boundary edges where the cap faces are detached from the bore rim. Slicer repair engines (Netfabb, Bambu Studio, PrusaSlicer) identify these boundary loops as punctures in the outer shell and triangulate across them, closing/capping the bore.
+* **Invariant**: Always use an exact 2-manifold CSG kernel (specifically `manifold-3d` via WebAssembly) for manufacturing models. In a 2-manifold mesh, every edge is shared by exactly two triangles with consistent orientation, resulting in 0 open boundary loops.
+* **Degradation Policy**: If WASM fails to load or is uninitialized, you may fall back to `three-bvh-csg` for interactive on-screen previewing only, but log an explicit console warning that the geometry is not watertight for slicing.
+=== trackable-file-edits.md ===
+# Trackable File Operations & IDE Diff Logging
+
+## Core Requirement: Mandatory Use of IDE File Tools
+All file creations, updates, overwrites, and content generations within the workspace MUST be performed using Antigravity's native IDE tools:
+* `write_to_file` �?" for creating new files or full overwrites.
+* `replace_file_content` �?" for modifying or patching existing files.
+
+## Absolute Ban on Scripted File Writing
+* **NEVER** use Python scripts (e.g. `with open(..., 'w')`, `f.write()`), PowerShell commands (e.g. `Out-File`, `Set-Content`, `Add-Content`, `>`, `>>`), or shell redirects to create, generate, or modify workspace files.
+* **NEVER** generate deliverables, markdown documents, audit reports, or code files by executing one-off shell scripts that write directly to the filesystem.
+=== visible-artifacts.md ===
+---
+trigger: always_on
+glob: "**/*"
+description: "Rule: Ensure all generated content is saved to a visible project folder"
+---
+
+# Visible Artifacts Rule
+
+When the user asks you to "make," "generate," "create," or "draft" something (e.g., a document, a list, a code file, a summary):
+

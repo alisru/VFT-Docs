@@ -1,3 +1,20 @@
+BOILERPLATE_PATTERNS = [
+    r'this material may not be published',
+    r'broadcast,\s*rewritten,\s*or redistributed',
+    r'quotes displayed in real-time or delayed',
+    r'market data provided by',
+    r"you've successfully subscribed",
+    r'subscribe to read',
+    r'please subscribe to continue',
+    r'enjoy unlimited website access',
+    r'exclusive content for subscribers',
+    r'log in to your account',
+    r'all rights reserved\.\s*©',
+    r'please enable javascript',
+    r'cookies are required',
+    r'access denied',
+]
+
 import os
 import sys
 import json
@@ -62,7 +79,9 @@ class ArticleContentExtractor(HTMLParser):
             self.in_p = False
             para_text = "".join(self.current_para).strip()
             if para_text:
-                self.paragraphs.append(para_text)
+                p_lower = para_text.lower()
+                if not any(re.search(bp, p_lower) for bp in BOILERPLATE_PATTERNS):
+                    self.paragraphs.append(para_text)
             self.current_para = []
         elif tag == 'title':
             self.in_title = False
@@ -96,7 +115,9 @@ def scrape_via_tavily(url):
             results = data.get("results", [])
             if results:
                 raw_content = results[0].get("raw_content", "") or ""
-                return "Article", "", raw_content
+                path_slug = urllib.parse.urlparse(url).path.strip('/').split('/')[-1]
+                slug_title = re.sub(r'[-_]+', ' ', path_slug).title()
+                return (slug_title or "News Report"), "", raw_content
         return None, None, f"Tavily error: status {res.status_code}"
     except Exception as ex:
         return None, None, f"Tavily extract error: {ex}"
@@ -193,6 +214,9 @@ def search_counter_sources_tavily(title, primary_url, primary_bias_family, max_r
             if not r_url or not r_content or len(r_content) < 150:
                 continue
 
+            if "tavily.com" in r_url:
+                continue
+
             try:
                 r_host = urllib.parse.urlparse(r_url).hostname or ""
                 if r_host.startswith("www."):
@@ -200,7 +224,10 @@ def search_counter_sources_tavily(title, primary_url, primary_bias_family, max_r
             except Exception:
                 continue
 
-            if not r_host or r_host in seen_domains:
+            if not r_host or "tavily.com" in r_host or r_host in seen_domains:
+                continue
+
+            if not is_news_url(r_url):
                 continue
 
             fam = get_outlet_bias_family(r_host)
@@ -277,7 +304,7 @@ def cluster_candidate_stories(candidates, similarity_threshold=0.35):
             union = tokens.union(rep_tokens)
             jaccard = len(intersection) / len(union) if union else 0.0
             
-            if jaccard >= similarity_threshold or len(intersection) >= 2:
+            if jaccard >= similarity_threshold:
                 cluster.append(c)
                 placed = True
                 break
@@ -367,6 +394,19 @@ def cluster_candidate_stories(candidates, similarity_threshold=0.35):
                 final_results.append(c)
                 continue
                 
+            # Prioritize center/wire/neutral reporting as the primary candidate
+            def source_priority(s):
+                pub = s.get("publisher") or urllib.parse.urlparse(s.get("url", "")).hostname or ""
+                if pub.startswith("www."):
+                    pub = pub[4:]
+                fam = get_outlet_bias_family(pub)
+                if fam == "center":
+                    return 0
+                if fam == "other":
+                    return 1
+                return 2
+
+            distinct_sources.sort(key=source_priority)
             primary_c = distinct_sources[0].copy()
             primary_c["is_multi_source"] = True
             
@@ -395,6 +435,10 @@ def cluster_candidate_stories(candidates, similarity_threshold=0.35):
             primary_c["cluster_sources"] = sources_summary
             primary_c["cross_source_dossier"] = "\n".join(dossier_lines)
             primary_c["text"] = f"Stated Claim / Post Context:\n{primary_c.get('subject')}\n\n{primary_c.get('cross_source_dossier')}"
+            if len(sources_summary) > 1:
+                primary_c["grounding_url"] = sources_summary[1]["url"]
+            if len(sources_summary) > 2:
+                primary_c["secondary_url"] = sources_summary[2]["url"]
             
             print(f"  [Cluster Created] '{primary_c.get('subject')}' ({len(distinct_sources)} distinct sources: {', '.join(seen_publishers)})")
             final_results.append(primary_c)
@@ -435,6 +479,7 @@ PREFERRED_OUTLET_DOMAINS = []
 
 # Domains that are never a news article (social media, shorteners-to-self, junk, crypto, adult).
 NON_NEWS_DOMAINS = {
+    'tavily.com', 'api.tavily.com',
     'bsky.app', 'bsky.social', 'graze.social',
     'twitter.com', 'x.com', 't.co',
     'youtube.com', 'youtu.be', 'tiktok.com',
@@ -455,16 +500,20 @@ NON_NEWS_DOMAINS = {
     # Deals, coupons, affiliate & shopping aggregators
     'slickdeals.net', 'dealnews.com', 'coupons.com', 'retailmenot.com',
     'producthunt.com', 'kickstarter.com', 'indiegogo.com',
+    # Online encyclopedias, wikis, and reference dictionaries
+    'britannica.com', 'dictionary.com', 'merriam-webster.com',
+    'wikipedia.org', 'wikimedia.org', 'wiktionary.org', 'wikiquote.org',
+    'wikinews.org', 'wikidata.org', 'fandom.com', 'wikia.com',
 }
 
 # Domains that consistently fail raw scraping due to paywalls, cloudflare blocks, etc.
 UNSCRAPABLE_DOMAINS = {
-    'pbs.org', 'reut.rs', 'reuters.com',
-    'on.wsj.com', 'wsj.com',
-    'bloom.bg', 'bloomberg.com',
-    'nyti.ms', 'nytimes.com',
+    'pbs.org', 'reut.rs',
+    'on.wsj.com',
+    'bloom.bg',
+    'nyti.ms',
     'washingtonpost.com', 'wapo.st',
-    'ft.com', 'economist.com', 'afr.com'
+    'afr.com'
 }
 
 # Dynamic list of scraping-banned domains loaded from disk
@@ -474,8 +523,16 @@ DYNAMIC_BANNED_DOMAINS = set(UNSCRAPABLE_DOMAINS)
 SCRAPING_WHITELIST = {
     'bbc.com', 'bbc.co.uk', 'bbci.co.uk',
     'abc.net.au',
+    'theguardian.com', 'theguardian.co.uk', 'guardian.co.uk',
+    'apnews.com',
+    'reuters.com', 'reutersconnect.com',
+    'axios.com',
+    'aljazeera.com',
+    'france24.com',
+    'dw.com',
+    'propublica.org',
     'thesaturdaypaper.com.au', 'saturdaypaper.com.au',
-    'smh.com.au',
+    'smh.com.au', 'theage.com.au', 'sbs.com.au',
     'techcrunch.com',
     'npr.org',
     'foxnews.com',
@@ -681,6 +738,13 @@ AD_OR_LIFESTYLE_PATH_SEGMENTS = {
     'advertisements', 'ad', 'ads', 'sponsored-content', 'commercial', 'brand-spotlight'
 }
 
+CORPORATE_OR_NON_NEWS_PATHS = {
+    'about', 'about-us', 'pricing', 'plans', 'login', 'signin', 'signup',
+    'register', 'terms', 'privacy', 'careers', 'jobs', 'team', 'features',
+    'product', 'solutions', 'docs', 'documentation', 'knowledge', 'help',
+    'faq', 'support'
+}
+
 def is_news_url(url):
     if not url:
         return False
@@ -697,11 +761,20 @@ def is_news_url(url):
         return False
     if any(host == bad or host.endswith('.' + bad) for bad in NON_NEWS_DOMAINS):
         return False
-    if any(host == bad or host.endswith('.' + bad) for bad in DYNAMIC_BANNED_DOMAINS):
+    if not is_domain_whitelisted(host):
+        if any(host == bad or host.endswith('.' + bad) for bad in DYNAMIC_BANNED_DOMAINS):
+            return False
+    # Reject bare root homepages and empty paths
+    path_parts = [p.strip() for p in path.split('/') if p.strip()]
+    if not path_parts or path in ('', '/', '/index.html', '/index.php'):
+        return False
+    # Filter out corporate / non-news paths
+    if any(part in CORPORATE_OR_NON_NEWS_PATHS for part in path_parts):
         return False
     # Filter out lifestyle, celebrity showbiz, deals, shopping, and sponsored sections
-    path_parts = [p.strip() for p in path.split('/') if p.strip()]
     if any(part in AD_OR_LIFESTYLE_PATH_SEGMENTS for part in path_parts):
+        return False
+    if len(path_parts) == 1 and len(path_parts[0]) < 8 and not re.search(r'\d+', path_parts[0]):
         return False
     return True
 
@@ -713,7 +786,10 @@ AD_TEXT_PATTERNS = [
     r'\border now\b', r'\bbuy now\b', r'\bexclusive discount\b',
     r'\bsponsored content\b', r'\bpaid advertisement\b', r'\badvertisement feature\b',
     r'\bsubscribe to read\b', r'\benjoy unlimited website access\b',
-    r'\bexclusive content for subscribers\b', r'\bplease subscribe to continue reading\b'
+    r'\bexclusive content for subscribers\b', r'\bplease subscribe to continue reading\b',
+    r'this material may not be published', r'broadcast,\s*rewritten,\s*or redistributed',
+    r'quotes displayed in real-time or delayed', r'market data provided by',
+    r'all rights reserved\.\s*©'
 ]
 
 def is_ad_text(text):
@@ -730,13 +806,13 @@ def is_banned(text, url, banned_keywords):
     text_lower = text.lower()
     url_lower = url.lower() if url else ""
     for bk in banned_keywords:
-        pattern = rf"\b{re.escape(bk)}\b"
+        pattern = rf"(?<!\w){re.escape(bk)}(?!\w)"
         if re.search(pattern, text_lower) or (url_lower and re.search(pattern, url_lower)):
             return True
         if " " in bk:
             variants = [bk.replace(" ", "-"), bk.replace(" ", "_"), bk.replace(" ", "")]
             for var in variants:
-                var_pattern = rf"\b{re.escape(var)}\b"
+                var_pattern = rf"(?<!\w){re.escape(var)}(?!\w)"
                 if re.search(var_pattern, text_lower) or (url_lower and re.search(var_pattern, url_lower)):
                     return True
     return False
@@ -754,7 +830,7 @@ def is_english(text):
     if cjk_re.search(cleaned_text):
         return False
         
-    non_eng_chars = re.compile(r'[áéíóúñ¿¡àèùçâêîôûëïüöäüß]', re.IGNORECASE)
+    non_eng_chars = re.compile(r'[áéíóúñ¿¡àèùçâêîôûëïüöäß]', re.IGNORECASE)
     if len(non_eng_chars.findall(cleaned_text)) > 2:
         return False
         
@@ -1020,11 +1096,12 @@ def run_harvest():
         return any(host == pref or host.endswith('.' + pref) for pref in PREFERRED_OUTLET_DOMAINS)
 
     def get_sort_key(c):
+        multi = 0 if c.get("is_multi_source") else 1
         count = get_historical_count(c.get("url"))
         if PREFERRED_OUTLET_DOMAINS:
             pref = 0 if is_preferred_outlet(c.get("url")) else 1
-            return (pref, count)
-        return (0, count)
+            return (multi, pref, count)
+        return (multi, 0, count)
 
     # --- 3. HARVEST FROM RSS FEEDS ---
     print(f"\nHarvesting normal news from RSS feeds (Target: {TARGET_RSS})...")
@@ -1201,7 +1278,8 @@ def run_harvest():
                         "target_url": "",
                         "mode": "root",
                         "text": text_body,
-                        "subject": title_text[:30].strip() + "...",
+                        "title": title_text.strip(),
+                        "subject": title_text.strip(),
                         "pub_date": pub_date
                     })
                 
@@ -1217,10 +1295,10 @@ def run_harvest():
         reverse=True
     )
 
-    # Apply preference and target limits to the chronological list
+    # Apply preference ordering without prematurely trimming before clustering
     preferred_rss = [c for c in rss_candidates if is_preferred_outlet(c["url"])]
     regular_rss = [c for c in rss_candidates if not is_preferred_outlet(c["url"])]
-    rss_candidates = (preferred_rss + regular_rss)[:TARGET_RSS]
+    rss_candidates = preferred_rss + regular_rss
 
     # Convert pub_date to string for JSON serialization
     for c in rss_candidates:
@@ -1482,10 +1560,34 @@ def run_harvest():
         if i < len(bsky_candidates):
             combined_candidates.append(bsky_candidates[i])
 
-    all_final = combined_candidates[:TARGET_RSS + TARGET_BSKY]
-    all_final.sort(key=get_sort_key)
+    # 5.1 Run topic clustering across ALL raw candidates from all feeds before trimming to quota
+    print(f"\nClustering {len(combined_candidates)} raw candidate stories into multi-source topic events...")
+    clustered_candidates = cluster_candidate_stories(combined_candidates)
 
-    print("\nScraping article bodies for final candidates...")
+    # 5.2 Enforce domain diversity capping on topic clusters
+    domain_counts = {}
+    diverse_candidates = []
+    overflow_candidates = []
+    for c in clustered_candidates:
+        url = c.get("url", "")
+        try:
+            host = urllib.parse.urlparse(url).hostname or ""
+            if host.startswith("www."):
+                host = host[4:]
+        except Exception:
+            host = ""
+        domain = host or "unknown"
+        if domain_counts.get(domain, 0) < 2:
+            diverse_candidates.append(c)
+            domain_counts[domain] = domain_counts.get(domain, 0) + 1
+        else:
+            overflow_candidates.append(c)
+
+    all_final = diverse_candidates + overflow_candidates
+    all_final.sort(key=get_sort_key)
+    all_final = all_final[:TARGET_RSS + TARGET_BSKY]
+
+    print(f"\nSelected {len(all_final)} topic candidates (target: {TARGET_RSS + TARGET_BSKY}). Scraping full article bodies...")
     successful_final = []
     dynamic_banlist_changed = False
 
@@ -1496,12 +1598,37 @@ def run_harvest():
             continue
 
         c_text = c.get("text", "")
-        if "Actual Article Body:\n" in c_text:
-            body_part = c_text.split("Actual Article Body:\n")[-1].strip()
-            if len(body_part) >= 200:
-                print(f"[{idx}/{len(all_final)}] [Candidate Body Exists] Reusing {len(body_part)} chars of existing article text for: {url}")
-                successful_final.append(c)
-                continue
+        if "Actual Article Body:\n" in c_text or "=== MULTI-SOURCE TOPIC CLUSTER:" in c_text:
+            print(f"[{idx}/{len(all_final)}] [Candidate Body Exists] Reusing existing text for: {url}")
+            successful_final.append(c)
+            continue
+
+        if c.get("is_multi_source") and c.get("cluster_sources"):
+            print(f"[{idx}/{len(all_final)}] Scraping multi-source cluster ({len(c['cluster_sources'])} sources) for: {c.get('subject')}")
+            dossier_lines = [f"=== MULTI-SOURCE TOPIC CLUSTER: {c.get('subject')} ==="]
+            for s_idx, src in enumerate(c["cluster_sources"], 1):
+                src_url = src.get("url")
+                src_pub = src.get("publisher") or f"Source {s_idx}"
+                src_bias = src.get("editorial_bias") or get_outlet_bias(src_pub)
+                
+                s_title, s_desc, s_body = scrape_article_content(src_url)
+                if s_body and not s_body.startswith("Error") and len(s_body.strip()) >= 200:
+                    clean_body = s_body.strip()
+                else:
+                    clean_body = src.get("snippet") or s_desc or "Full article body unavailable (summary only)."
+                
+                char_limit = 2500 if s_idx == 1 else 1200
+                if len(clean_body) > char_limit:
+                    clean_body = clean_body[:char_limit].rsplit(" ", 1)[0] + "..."
+                
+                src["snippet"] = clean_body[:400].strip()
+                dossier_lines.append(f"\n[Source {s_idx} — {src_pub} (Bias: {src_bias})] (URL: {src_url}):\n{clean_body}")
+            
+            c["cross_source_dossier"] = "\n".join(dossier_lines)
+            c["text"] = f"Stated Claim / Post Context:\n{c.get('subject')}\n\n{c['cross_source_dossier']}"
+            c["scraped_text"] = c["text"]
+            successful_final.append(c)
+            continue
 
         print(f"[{idx}/{len(all_final)}] Scraping content from: {url}")
         title, desc, body = scrape_article_content(url)
@@ -1530,6 +1657,7 @@ def run_harvest():
                 orig_text = c.get("text", "")
             
             c["text"] = f"Stated Claim / Post Context:\n{orig_text}\n\nActual Article Body:\n{article_text_clean}"
+            c["scraped_text"] = article_text_clean
             print(f"  Scraped successfully ({len(article_text_clean)} chars).")
             successful_final.append(c)
         else:
@@ -1551,7 +1679,7 @@ def run_harvest():
     if dynamic_banlist_changed:
         save_dynamic_banned_domains()
 
-    final_candidates = cluster_candidate_stories(existing_queue + successful_final)
+    final_candidates = existing_queue + successful_final
 
     output_path = os.path.join(bot_dir, 'harvested_candidates.json')
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

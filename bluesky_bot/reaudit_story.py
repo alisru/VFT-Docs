@@ -68,22 +68,23 @@ def find_local_story(target):
         if os.path.exists(c):
             return c
 
-    # Search by target_url matching in stories/live/
-    live_dir = os.path.join(script_dir, "stories", "live")
-    if os.path.exists(live_dir) and "bsky.app" in target_clean:
-        for fname in os.listdir(live_dir):
-            if fname.endswith(".json"):
-                fpath = os.path.join(live_dir, fname)
-                try:
-                    with open(fpath, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                    item = data[0] if isinstance(data, list) else data
-                    t_url = item.get("target_url") or ""
-                    link = item.get("link") or ""
-                    if slug in t_url or slug in link:
-                        return fpath
-                except Exception:
-                    pass
+    # Search all local story files for slug or rkey anywhere in content
+    search_dirs = [
+        os.path.join(script_dir, "stories", "live"),
+        os.path.join(script_dir, "stories")
+    ]
+    for sdir in search_dirs:
+        if os.path.exists(sdir):
+            for fname in os.listdir(sdir):
+                if fname.startswith("factcheck_") and fname.endswith(".json"):
+                    fpath = os.path.join(sdir, fname)
+                    try:
+                        with open(fpath, "r", encoding="utf-8") as f:
+                            raw_txt = f.read()
+                        if slug in raw_txt:
+                            return fpath
+                    except Exception:
+                        pass
 
     return None
 
@@ -96,8 +97,11 @@ def resolve_bsky_post(post_url):
     author_handle = parts[parts.index("profile") + 1]
     rkey = parts[parts.index("post") + 1].split("?")[0]
 
-    resolver = IdResolver()
-    did = resolver.handle.resolve(author_handle)
+    if author_handle.startswith("did:"):
+        did = author_handle
+    else:
+        resolver = IdResolver()
+        did = resolver.handle.resolve(author_handle)
 
     client = Client()
     if password:
@@ -121,7 +125,7 @@ def resolve_bsky_post(post_url):
         "created_at": getattr(res.value, "created_at", None)
     }
 
-def run_reaudit(target, reason="", model="gemini-3.8-flash", use_son=True, use_potential=False, live=False):
+def run_reaudit(target, reason="", model=None, model_sequence=None, use_son=True, use_potential=False, live=False):
     print(f"\n=======================================================")
     print(f"🔄 ALETHEIA RE-AUDIT & CORRECTION DISPATCHER")
     print(f"=======================================================")
@@ -244,9 +248,14 @@ def run_reaudit(target, reason="", model="gemini-3.8-flash", use_son=True, use_p
         sys.executable, "-u",
         os.path.join(script_dir, "google_ai_studio_one_shot.py"),
         "--candidates", temp_cand_path,
-        "--model", model,
         "--compact"
     ]
+    if model_sequence:
+        cmd.extend(["--model-sequence", model_sequence])
+    elif model:
+        cmd.extend(["--model", model])
+    else:
+        cmd.extend(["--model", "gemini-3.8-flash"])
     if use_potential:
         cmd.append("--potential")
     elif use_son:
@@ -292,17 +301,37 @@ def run_reaudit(target, reason="", model="gemini-3.8-flash", use_son=True, use_p
             posts[0] = errata_prefix + posts[0]
             if len(posts[0]) > 300:
                 posts[0] = posts[0][:297] + "..."
+    correction_slug = f"correction_{slug}" if not slug.startswith("correction_") else slug
+    re_story["id"] = correction_slug
     re_story["posts"] = posts
-    re_story["status"] = "AMENDED (Re-Audited)"
+    re_story["status"] = "CORRECTION (Re-Audited)"
+    re_story["target_url"] = target_post_url
     re_story["retraction"] = {
         "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        "type": "AMENDED",
+        "type": "CORRECTION",
+        "original_story_id": slug,
         "reason": reason,
         "new_coords": [re_story.get("real_u"), re_story.get("real_psi")]
     }
 
-    # Save to live destination
-    dest_path = local_path if local_path else os.path.join(script_dir, "stories", "live", f"factcheck_{slug}.json")
+    # 1. Update original story status to RETRACTED if local file exists
+    if local_path and os.path.exists(local_path):
+        try:
+            with open(local_path, "r", encoding="utf-8") as orig_f:
+                orig_data = json.load(orig_f)
+            orig_item = orig_data[0] if isinstance(orig_data, list) else orig_data
+            orig_item["status"] = f"RETRACTED (Superceded by {correction_slug})"
+            orig_item["superceded_by"] = correction_slug
+            with open(local_path, "w", encoding="utf-8") as orig_f:
+                json.dump([orig_item], orig_f, indent=2, ensure_ascii=False)
+            print(f"Original story '{slug}' marked as RETRACTED in: {local_path}")
+        except Exception as o_err:
+            print(f"Warning: Could not update original story status: {o_err}")
+
+    # 2. Save the distinct correction story JSON
+    dest_path = os.path.join(script_dir, "stories", "live", f"factcheck_{correction_slug}.json")
+    with open(dest_path, "w", encoding="utf-8") as f:
+        json.dump([re_story], f, indent=2, ensure_ascii=False)
     with open(dest_path, "w", encoding="utf-8") as f:
         json.dump([re_story], f, indent=2, ensure_ascii=False)
     print(f"\n[4/5] Re-audited story saved to: {dest_path}")
@@ -347,7 +376,11 @@ def run_reaudit(target, reason="", model="gemini-3.8-flash", use_son=True, use_p
             parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=target_cid, uri=target_uri)
 
             # Upload verdict card image
-            img_path = os.path.join(script_dir, "graph_png", f"{slug}_info_card_verdict.png")
+            img_path = os.path.join(script_dir, "graph_png", f"{correction_slug}_info_card_verdict.png")
+            if not os.path.exists(img_path):
+                img_path = os.path.join(script_dir, "graph_png", f"{correction_slug}_graph.png")
+            if not os.path.exists(img_path):
+                img_path = os.path.join(script_dir, "graph_png", f"{slug}_info_card_verdict.png")
             if not os.path.exists(img_path):
                 img_path = os.path.join(script_dir, "graph_png", f"{slug}_graph.png")
 
@@ -397,7 +430,9 @@ def main():
     parser = argparse.ArgumentParser(description="Aletheia Story Re-Audit & Correction Dispatcher")
     parser.add_argument("--target", required=True, help="Story slug ID (e.g. dems_flips_iowa_senate_thune_vow) or Bluesky post URL")
     parser.add_argument("--reason", default="", help="Editorial correction focus and reason for re-audit")
-    parser.add_argument("--model", default="gemini-3.8-flash", help="Generative model for re-audit (default: gemini-3.8-flash)")
+    parser.add_argument("--model", default=None, help="Generative model for re-audit")
+
+    parser.add_argument("--model-sequence", default=None, help="Comma-separated model fallback sequence")
     parser.add_argument("--son", action="store_true", default=True, help="Use 6-Attractor SON convergence model (default: True)")
     parser.add_argument("--potential", action="store_true", help="Use 9-Node Modal Potential convergence model")
     parser.add_argument("--live", action="store_true", help="Post live Errata reply directly to Bluesky")
@@ -407,6 +442,7 @@ def main():
         target=args.target,
         reason=args.reason,
         model=args.model,
+        model_sequence=args.model_sequence,
         use_son=not args.potential,
         use_potential=args.potential,
         live=args.live

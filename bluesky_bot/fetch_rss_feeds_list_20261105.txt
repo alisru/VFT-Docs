@@ -1,0 +1,294 @@
+Command exited with code 0.
+
+Command output:
+
+  bluesky_bot\harvest_candidates.py:120:            parser = ArticleContentExtractor()
+> bluesky_bot\harvest_candidates.py:121:            parser.feed(response.text)
+  bluesky_bot\harvest_candidates.py:122:            title, desc, body = parser.get_results()
+  bluesky_bot\harvest_candidates.py:123:            if body and len(body.strip()) > 150:
+  bluesky_bot\harvest_candidates.py:124:                save_cached_article(url, title, desc, body)
+  bluesky_bot\harvest_candidates.py:125:                return title, desc, body
+  bluesky_bot\harvest_candidates.py:126:        # Fallback to Tavily if status != 200 or body was empty/blocked
+  bluesky_bot\harvest_candidates.py:651:
+> bluesky_bot\harvest_candidates.py:652:def matches_category(text, url, feed_categories, requested_categories):
+  bluesky_bot\harvest_candidates.py:653:    if "all" in requested_categories or "general" in requested_categories:
+  bluesky_bot\harvest_candidates.py:654:        return True
+  bluesky_bot\harvest_candidates.py:655:    for cat in requested_categories:
+> bluesky_bot\harvest_candidates.py:656:        if cat in feed_categories:
+  bluesky_bot\harvest_candidates.py:657:            return True
+  bluesky_bot\harvest_candidates.py:658:    text_lower = text.lower()
+  bluesky_bot\harvest_candidates.py:659:    for cat in requested_categories:
+  bluesky_bot\harvest_candidates.py:660:        if cat in CATEGORY_KEYWORDS:
+  bluesky_bot\harvest_candidates.py:661:            for kw in CATEGORY_KEYWORDS[cat]:
+  bluesky_bot\harvest_candidates.py:691:    parser.add_argument('--banned-topic', type=str, default=None)
+> bluesky_bot\harvest_candidates.py:692:    parser.add_argument('--enabled-feeds', type=str, default=None)
+  bluesky_bot\harvest_candidates.py:693:    args = parser.parse_args()
+  bluesky_bot\harvest_candidates.py:694:    TARGET_RSS = args.rss_target
+  bluesky_bot\harvest_candidates.py:695:    TARGET_BSKY = args.bsky_target
+  bluesky_bot\harvest_candidates.py:696:    if args.prefer:
+  bluesky_bot\harvest_candidates.py:697:        if args.prefer.strip().lower() in ('default', 'all'):
+  bluesky_bot\harvest_candidates.py:906:
+> bluesky_bot\harvest_candidates.py:907:    # --- 3. HARVEST FROM RSS FEEDS ---
+> bluesky_bot\harvest_candidates.py:908:    print(f"\nHarvesting normal news from RSS feeds (Target: {TARGET_RSS})...")
+> bluesky_bot\harvest_candidates.py:909:    rss_feeds = [
+  bluesky_bot\harvest_candidates.py:910:        # General & World News
+> bluesky_bot\harvest_candidates.py:911:        {"name": "ABC News Australia", "url": 
+"https://www.abc.net.au/news/feed/2942460/rss.xml", "categories": ["general", "world"]},
+  bluesky_bot\harvest_candidates.py:912:        {"name": "9News Australia", "url": "https://www.9news.com.au/rss", 
+"categories": ["general"]},
+> bluesky_bot\harvest_candidates.py:913:        {"name": "SBS News", "url": "https://www.sbs.com.au/news/feed", 
+"categories": ["general", "world"]},
+> bluesky_bot\harvest_candidates.py:914:        {"name": "Sydney Morning Herald", "url": 
+"https://www.smh.com.au/rss/feed.xml", "categories": ["general"]},
+> bluesky_bot\harvest_candidates.py:915:        {"name": "Perth Now", "url": "https://www.perthnow.com.au/feed", 
+"categories": ["general"]},
+  bluesky_bot\harvest_candidates.py:916:        {"name": "Daily Mail Australia", "url": 
+"https://www.dailymail.co.uk/auhome/index.rss", "categories": ["general"]},
+> bluesky_bot\harvest_candidates.py:917:        {"name": "The Age", "url": "https://www.theage.com.au/rss/feed.xml", 
+"categories": ["general"]},
+> bluesky_bot\harvest_candidates.py:918:        {"name": "Brisbane Times", "url": 
+"https://www.brisbanetimes.com.au/rss/feed.xml", "categories": ["general"]},
+> bluesky_bot\harvest_candidates.py:919:        {"name": "WA Today", "url": "https://www.watoday.com.au/rss/feed.xml", 
+"categories": ["general"]},
+> bluesky_bot\harvest_candidates.py:920:        {"name": "Canberra Times", "url": 
+"https://www.canberratimes.com.au/rss.xml", "categories": ["general"]},
+> bluesky_bot\harvest_candidates.py:921:        {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml", 
+"categories": ["general", "world"]},
+  bluesky_bot\harvest_candidates.py:922:        {"name": "NYT Home", "url": 
+"https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml", "categories": ["general", "world"]},
+> bluesky_bot\harvest_candidates.py:923:        {"name": "Fox News Latest", "url": 
+"http://feeds.foxnews.com/foxnews/latest", "categories": ["general", "world"]},
+> bluesky_bot\harvest_candidates.py:924:        {"name": "New York Post", "url": "https://nypost.com/news/feed/", 
+"categories": ["general", "politics", "world"]},
+  bluesky_bot\harvest_candidates.py:925:        {"name": "The Guardian World", "url": 
+"https://www.theguardian.com/world/rss", "categories": ["world", "general"]},
+  bluesky_bot\harvest_candidates.py:926:        {"name": "The Guardian UK", "url": 
+"https://www.theguardian.com/uk/rss", "categories": ["general"]},
+> bluesky_bot\harvest_candidates.py:927:        {"name": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml", 
+"categories": ["general", "world"]},
+  bluesky_bot\harvest_candidates.py:928:        {"name": "Al Jazeera", "url": 
+"https://www.aljazeera.com/xml/rss/all.xml", "categories": ["world", "general"]},
+  bluesky_bot\harvest_candidates.py:929:        {"name": "DW News World", "url": "https://rss.dw.com/xml/rss-en-all", 
+"categories": ["world", "general"]},
+  bluesky_bot\harvest_candidates.py:930:        {"name": "France 24", "url": "https://www.france24.com/en/rss", 
+"categories": ["world", "general"]},
+  bluesky_bot\harvest_candidates.py:931:        {"name": "CBC News", "url": 
+"https://rss.cbc.ca/lineup/topstories.xml", "categories": ["world", "general"]},
+  bluesky_bot\harvest_candidates.py:932:        {"name": "UPI News", "url": "https://rss.upi.com/news/news.rss", 
+"categories": ["world", "general"]},
+  bluesky_bot\harvest_candidates.py:936:        # Tech
+> bluesky_bot\harvest_candidates.py:937:        {"name": "BBC Tech", "url": 
+"http://feeds.bbci.co.uk/news/technology/rss.xml", "categories": ["tech"]},
+  bluesky_bot\harvest_candidates.py:938:        {"name": "NYT Tech", "url": 
+"https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", "categories": ["tech"]},
+> bluesky_bot\harvest_candidates.py:939:        {"name": "TechCrunch", "url": "https://techcrunch.com/feed/", 
+"categories": ["tech"]},
+  bluesky_bot\harvest_candidates.py:940:        {"name": "The Guardian Tech", "url": 
+"https://www.theguardian.com/technology/rss", "categories": ["tech"]},
+  bluesky_bot\harvest_candidates.py:941:
+  bluesky_bot\harvest_candidates.py:942:        # Business
+> bluesky_bot\harvest_candidates.py:943:        {"name": "BBC Business", "url": 
+"http://feeds.bbci.co.uk/news/business/rss.xml", "categories": ["business"]},
+  bluesky_bot\harvest_candidates.py:944:        {"name": "NYT Business", "url": 
+"https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", "categories": ["business"]},
+  bluesky_bot\harvest_candidates.py:945:        {"name": "CNBC Business", "url": 
+"https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147", "categories": ["business"]},
+  bluesky_bot\harvest_candidates.py:946:        {"name": "The Guardian Business", "url": 
+"https://www.theguardian.com/business/rss", "categories": ["business"]},
+  bluesky_bot\harvest_candidates.py:947:        {"name": "DW Business", "url": "https://rss.dw.com/xml/rss-en-bus", 
+"categories": ["business"]},
+  bluesky_bot\harvest_candidates.py:948:
+  bluesky_bot\harvest_candidates.py:949:        # Politics
+> bluesky_bot\harvest_candidates.py:950:        {"name": "BBC Politics", "url": 
+"http://feeds.bbci.co.uk/news/politics/rss.xml", "categories": ["politics"]},
+  bluesky_bot\harvest_candidates.py:951:        {"name": "NYT Politics", "url": 
+"https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml", "categories": ["politics"]},
+> bluesky_bot\harvest_candidates.py:952:        {"name": "Fox News Politics", "url": 
+"http://feeds.foxnews.com/foxnews/politics", "categories": ["politics", "world", "general"]},
+> bluesky_bot\harvest_candidates.py:953:        {"name": "Washington Examiner", "url": 
+"https://www.washingtonexaminer.com/feed/", "categories": ["politics", "general"]},
+> bluesky_bot\harvest_candidates.py:954:        {"name": "The Federalist", "url": "https://thefederalist.com/feed/", 
+"categories": ["politics", "general"]},
+  bluesky_bot\harvest_candidates.py:955:        {"name": "Washington Times", "url": 
+"https://www.washingtontimes.com/rss/headlines/news/politics/", "categories": ["politics", "general"]},
+> bluesky_bot\harvest_candidates.py:956:        {"name": "Daily Caller", "url": "https://dailycaller.com/feed/", 
+"categories": ["politics", "general"]},
+> bluesky_bot\harvest_candidates.py:957:        {"name": "Breitbart", "url": "https://feeds.feedburner.com/breitbart", 
+"categories": ["politics", "general"]},
+> bluesky_bot\harvest_candidates.py:958:        {"name": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml", 
+"categories": ["politics"]},
+  bluesky_bot\harvest_candidates.py:959:        {"name": "The Guardian Politics", "url": 
+"https://www.theguardian.com/politics/rss", "categories": ["politics"]},
+  bluesky_bot\harvest_candidates.py:960:
+  bluesky_bot\harvest_candidates.py:961:        # Science
+> bluesky_bot\harvest_candidates.py:962:        {"name": "BBC Science", "url": 
+"http://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "categories": ["science"]},
+  bluesky_bot\harvest_candidates.py:963:        {"name": "NYT Science", "url": 
+"https://rss.nytimes.com/services/xml/rss/nyt/Science.xml", "categories": ["science"]},
+  bluesky_bot\harvest_candidates.py:964:        {"name": "The Guardian Science", "url": 
+"https://www.theguardian.com/science/rss", "categories": ["science"]},
+  bluesky_bot\harvest_candidates.py:965:        {"name": "DW Science", "url": "https://rss.dw.com/xml/rss-en-science", 
+"categories": ["science"]},
+  bluesky_bot\harvest_candidates.py:966:
+  bluesky_bot\harvest_candidates.py:967:        # Uplifting / Good News
+> bluesky_bot\harvest_candidates.py:968:        {"name": "Good News Network", "url": 
+"https://www.goodnewsnetwork.org/feed/", "categories": ["uplifting", "general"]},
+> bluesky_bot\harvest_candidates.py:969:        {"name": "Positive News", "url": "https://www.positive.news/feed/", 
+"categories": ["uplifting"]},
+> bluesky_bot\harvest_candidates.py:970:        {"name": "Optimist Daily", "url": 
+"https://www.optimistdaily.com/feed/", "categories": ["uplifting"]},
+> bluesky_bot\harvest_candidates.py:971:        {"name": "Squirrel News", "url": "https://squirrel-news.net/feed/", 
+"categories": ["uplifting"]},
+> bluesky_bot\harvest_candidates.py:972:        {"name": "ABC News Australia Good News", "url": 
+"https://www.abc.net.au/news/feed/101830674/rss.xml", "categories": ["uplifting", "general"]},
+> bluesky_bot\harvest_candidates.py:973:        {"name": "HuffPost Good News", "url": 
+"https://www.huffpost.com/section/good-news/feed", "categories": ["uplifting", "general"]}
+  bluesky_bot\harvest_candidates.py:974:    ]
+  bluesky_bot\harvest_candidates.py:975:
+> bluesky_bot\harvest_candidates.py:976:    if getattr(args, 'enabled_feeds', None):
+> bluesky_bot\harvest_candidates.py:977:        enabled_names = [f.strip().lower() for f in 
+args.enabled_feeds.split(",") if f.strip()]
+> bluesky_bot\harvest_candidates.py:978:        filtered_feeds = []
+> bluesky_bot\harvest_candidates.py:979:        for feed in rss_feeds:
+> bluesky_bot\harvest_candidates.py:980:            if feed["name"].lower() in enabled_names or feed["url"].lower() in 
+enabled_names:
+> bluesky_bot\harvest_candidates.py:981:                filtered_feeds.append(feed)
+> bluesky_bot\harvest_candidates.py:982:        rss_feeds = filtered_feeds
+  bluesky_bot\harvest_candidates.py:983:
+  bluesky_bot\harvest_candidates.py:984:    rss_candidates = []
+  bluesky_bot\harvest_candidates.py:985:
+  bluesky_bot\harvest_candidates.py:986:    requested_categories = [c.strip().lower() for c in (args.category or 
+"all").split(",") if c.strip()]
+  bluesky_bot\harvest_candidates.py:987:    keywords = [k.strip().lower() for k in args.topic.split(",") if k.strip()] 
+if args.topic else []
+  bluesky_bot\harvest_candidates.py:1005:    if TARGET_RSS > 0:
+> bluesky_bot\harvest_candidates.py:1006:        for feed in rss_feeds:
+> bluesky_bot\harvest_candidates.py:1007:            print(f"Fetching from {feed['name']} RSS feed: {feed['url']}...")
+> bluesky_bot\harvest_candidates.py:1008:            req = urllib.request.Request(feed['url'], headers={'User-Agent': 
+'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'})
+  bluesky_bot\harvest_candidates.py:1009:            try:
+  bluesky_bot\harvest_candidates.py:1010:                with urllib.request.urlopen(req, timeout=10) as response:
+  bluesky_bot\harvest_candidates.py:1011:                    content = response.read()
+  bluesky_bot\harvest_candidates.py:1012:                root = ET.fromstring(content)
+  bluesky_bot\harvest_candidates.py:1013:                items = root.findall('.//item')
+> bluesky_bot\harvest_candidates.py:1014:                print(f"Found {len(items)} raw items in {feed['name']}.")
+  bluesky_bot\harvest_candidates.py:1015:            
+  bluesky_bot\harvest_candidates.py:1016:                for item in items:
+  bluesky_bot\harvest_candidates.py:1017:                    title = item.find('title')
+  bluesky_bot\harvest_candidates.py:1018:                    desc = item.find('description')
+  bluesky_bot\harvest_candidates.py:1019:                    link = item.find('link')
+  bluesky_bot\harvest_candidates.py:1041:                    # Filter by Category
+> bluesky_bot\harvest_candidates.py:1042:                    if not matches_category(text_body, link_text, 
+feed.get("categories", []), requested_categories):
+  bluesky_bot\harvest_candidates.py:1043:                        continue
+  bluesky_bot\harvest_candidates.py:1044:                
+  bluesky_bot\harvest_candidates.py:1045:                    # Filter by Topic
+  bluesky_bot\harvest_candidates.py:1046:                    if keywords:
+  bluesky_bot\harvest_candidates.py:1047:                        if not any(k in title_text.lower() or k in 
+desc_cleaned.lower() for k in keywords):
+  bluesky_bot\harvest_candidates.py:1084:            except Exception as e:
+> bluesky_bot\harvest_candidates.py:1085:                print(f"Warning: Failed to fetch {feed['name']} RSS: {e}")
+  bluesky_bot\harvest_candidates.py:1086:    else:
+  bluesky_bot\harvest_candidates.py:1087:        print("RSS target already satisfied. Skipping RSS harvesting.")
+  bluesky_bot\harvest_candidates.py:1088:
+  bluesky_bot\harvest_candidates.py:1089:    # Sort all RSS candidates by pub_date descending (newest first)
+  bluesky_bot\harvest_candidates.py:1090:    rss_candidates = sorted(
+  bluesky_bot\harvest_candidates.py:1107:
+> bluesky_bot\harvest_candidates.py:1108:    # --- 4. HARVEST FROM BLUESKY FEEDS ---
+  bluesky_bot\harvest_candidates.py:1109:    bsky_candidates = []
+  bluesky_bot\harvest_candidates.py:1110:    seen_bsky_authors = set()
+  bluesky_bot\harvest_candidates.py:1111:
+  bluesky_bot\harvest_candidates.py:1112:    def harvest_bsky_search(client, topic, target, seen_urls, seen_ids, 
+seen_targets, banned_keywords, requested_categories):
+  bluesky_bot\harvest_candidates.py:1113:        cands = []
+  bluesky_bot\harvest_candidates.py:1123:            try:
+> bluesky_bot\harvest_candidates.py:1124:                results = client.app.bsky.feed.search_posts(
+  bluesky_bot\harvest_candidates.py:1125:                    {"q": kw, "limit": 100, "sort": "latest", "lang": "en"}
+  bluesky_bot\harvest_candidates.py:1126:                )
+  bluesky_bot\harvest_candidates.py:1127:                posts = results.posts
+  bluesky_bot\harvest_candidates.py:1128:            except Exception as e:
+  bluesky_bot\harvest_candidates.py:1129:                print(f"Warning: searchPosts failed for '{kw}': {e}")
+  bluesky_bot\harvest_candidates.py:1182:    if TARGET_BSKY > 0:
+> bluesky_bot\harvest_candidates.py:1183:        print(f"\nHarvesting news from Bluesky feeds (Target: 
+{TARGET_BSKY})...")
+  bluesky_bot\harvest_candidates.py:1184:        handle = os.environ.get('BSKY_HANDLE', 'judgement-bot.bsky.social')
+  bluesky_bot\harvest_candidates.py:1185:        password = os.environ.get('BSKY_PASSWORD')
+  bluesky_bot\harvest_candidates.py:1186:    
+  bluesky_bot\harvest_candidates.py:1187:        if password:
+  bluesky_bot\harvest_candidates.py:1188:            client = Client()
+  bluesky_bot\harvest_candidates.py:1198:            
+> bluesky_bot\harvest_candidates.py:1199:                bsky_feeds = [
+> bluesky_bot\harvest_candidates.py:1200:                    
+"https://bsky.app/profile/nickevershed.bsky.social/feed/aaaluca6lksmc",
+> bluesky_bot\harvest_candidates.py:1201:                    "https://bsky.app/profile/aendra.com/feed/verified-news",
+> bluesky_bot\harvest_candidates.py:1202:                    "https://bsky.app/profile/aendra.com/feed/news-2-0"
+  bluesky_bot\harvest_candidates.py:1203:                ]
+  bluesky_bot\harvest_candidates.py:1204:            
+> bluesky_bot\harvest_candidates.py:1205:                # Fetch from feeds to top up target
+> bluesky_bot\harvest_candidates.py:1206:                for feed_url in bsky_feeds:
+  bluesky_bot\harvest_candidates.py:1207:                    if len(bsky_candidates) >= TARGET_BSKY:
+  bluesky_bot\harvest_candidates.py:1208:                        break
+> bluesky_bot\harvest_candidates.py:1209:                    print(f"Fetching from feed: {feed_url}...")
+  bluesky_bot\harvest_candidates.py:1210:                    try:
+> bluesky_bot\harvest_candidates.py:1211:                        parts = feed_url.strip("/").split("/")
+> bluesky_bot\harvest_candidates.py:1212:                        feed_handle, feed_rkey = 
+parts[parts.index("profile")+1], parts[parts.index("feed")+1]
+> bluesky_bot\harvest_candidates.py:1213:                        feed_did = resolver.handle.resolve(feed_handle)
+> bluesky_bot\harvest_candidates.py:1214:                        feed_uri = 
+f"at://{feed_did}/app.bsky.feed.generator/{feed_rkey}"
+  bluesky_bot\harvest_candidates.py:1215:                    
+> bluesky_bot\harvest_candidates.py:1216:                        feed_data = 
+client.app.bsky.feed.get_feed(params={'feed': feed_uri, 'limit': 60})
+> bluesky_bot\harvest_candidates.py:1217:                        for item in feed_data.feed:
+  bluesky_bot\harvest_candidates.py:1218:                            if len(bsky_candidates) >= TARGET_BSKY:
+  bluesky_bot\harvest_candidates.py:1219:                                break
+  bluesky_bot\harvest_candidates.py:1220:                            record = getattr(item.post, 'record', None)
+  bluesky_bot\harvest_candidates.py:1221:                            if record and getattr(record, 'reply', None) is 
+not None:
+  bluesky_bot\harvest_candidates.py:1222:                                continue
+  bluesky_bot\harvest_candidates.py:1232:                                continue
+> bluesky_bot\harvest_candidates.py:1233:                            if "PINNED POST" in text or "News feeds" in text 
+or "Every feed I run" in text:
+  bluesky_bot\harvest_candidates.py:1234:                                continue
+  bluesky_bot\harvest_candidates.py:1235:                            if any(domain in post_url for domain in 
+['zeit.de', 'tijd.be', 'sapo.pt', 'demorgen.be', 'folha.com', 'nu.nl', 'gazeteoksijen.com', 'graze.social']) or 
+"graze.social" in text.lower():
+  bluesky_bot\harvest_candidates.py:1236:                                continue
+  bluesky_bot\harvest_candidates.py:1237:                            if not is_english(text):
+  bluesky_bot\harvest_candidates.py:1238:                                continue
+  bluesky_bot\harvest_candidates.py:1267:                    except Exception as ex:
+> bluesky_bot\harvest_candidates.py:1268:                        print(f"Warning: Failed to fetch feed '{feed_url}': 
+{ex}")
+  bluesky_bot\harvest_candidates.py:1269:                    
+  bluesky_bot\harvest_candidates.py:1270:                # Relaxation pass if slots still needed
+  bluesky_bot\harvest_candidates.py:1271:                if len(bsky_candidates) < TARGET_BSKY:
+> bluesky_bot\harvest_candidates.py:1272:                    print(f"Retrying Bluesky feeds with relaxed author 
+constraints to fill slots (Currently have {len(bsky_candidates)})...")
+> bluesky_bot\harvest_candidates.py:1273:                    for feed_url in bsky_feeds:
+  bluesky_bot\harvest_candidates.py:1274:                        if len(bsky_candidates) >= TARGET_BSKY:
+  bluesky_bot\harvest_candidates.py:1275:                            break
+  bluesky_bot\harvest_candidates.py:1276:                        try:
+> bluesky_bot\harvest_candidates.py:1277:                            parts = feed_url.strip("/").split("/")
+> bluesky_bot\harvest_candidates.py:1278:                            feed_handle, feed_rkey = 
+parts[parts.index("profile")+1], parts[parts.index("feed")+1]
+> bluesky_bot\harvest_candidates.py:1279:                            feed_did = resolver.handle.resolve(feed_handle)
+> bluesky_bot\harvest_candidates.py:1280:                            feed_uri = 
+f"at://{feed_did}/app.bsky.feed.generator/{feed_rkey}"
+> bluesky_bot\harvest_candidates.py:1281:                            feed_data = 
+client.app.bsky.feed.get_feed(params={'feed': feed_uri, 'limit': 50})
+> bluesky_bot\harvest_candidates.py:1282:                            for item in feed_data.feed:
+  bluesky_bot\harvest_candidates.py:1283:                                if len(bsky_candidates) >= TARGET_BSKY:
+  bluesky_bot\harvest_candidates.py:1284:                                    break
+  bluesky_bot\harvest_candidates.py:1285:                                record = getattr(item.post, 'record', None)
+  bluesky_bot\harvest_candidates.py:1286:                                if record and getattr(record, 'reply', None) 
+is not None:
+  bluesky_bot\harvest_candidates.py:1287:                                    continue
+  bluesky_bot\harvest_candidates.py:1318:                        except Exception as ex:
+> bluesky_bot\harvest_candidates.py:1319:                            print(f"Warning: Relaxed feed fetch failed: {ex}")
+  bluesky_bot\harvest_candidates.py:1320:            
+  bluesky_bot\harvest_candidates.py:1321:                # Sort Bluesky candidates
+  bluesky_bot\harvest_candidates.py:1322:                bsky_candidates.sort(key=get_sort_key)
+  bluesky_bot\harvest_candidates.py:1323:            
+  bluesky_bot\harvest_candidates.py:1324:                if bsky_candidates:
+
+

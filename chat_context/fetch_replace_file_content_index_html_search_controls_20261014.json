@@ -1,0 +1,278 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\VFT Docs\chat_context\ui\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -392,7 +392,14 @@
+   });
+ }
+ 
+-let searchSort = localStorage.getItem('chat_ctx_search_sort') || 'recent';
++let searchSort = localStorage.getItem('chat_ctx_search_sort') || 'relevance';
++let searchMode = localStorage.getItem('chat_ctx_search_mode') || 'hybrid';
++let searchGroup = localStorage.getItem('chat_ctx_search_group') || 'chat';
++let searchMustContain = '';
++let searchMinScore = 0;
++let searchTopicId = null;
++let searchTopicName = '';
++let searchSource = '';
+ let lastSearchQuery = '';
+ let lastSearchHits = [];
+ 
+@@ -400,35 +400,164 @@
+   if (!lastSearchQuery) return;
+ 
+   const header = el('div');
+-  header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px;flex-wrap:wrap;gap:8px;';
++  header.style.cssText = 'margin-bottom:16px;border-bottom:1px solid var(--line);padding-bottom:12px;display:flex;flex-direction:column;gap:10px;';
++  
++  // Row 1: Title and Core Toggles (Mode, View, Sort)
++  const row1 = el('div');
++  row1.style.cssText = 'display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;';
+   
+   const title = el('h3', null, `Results for "${lastSearchQuery}" (${lastSearchHits.length} matches)`);
+   title.style.margin = '0';
+-  
++
++  const toggles = el('div');
++  toggles.style.cssText = 'display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12px;';
++
++  // Mode buttons
++  const modeWrap = el('div');
++  modeWrap.style.cssText = 'display:flex;align-items:center;gap:4px;';
++  modeWrap.append(el('span', 'dim', 'Mode:'));
++  ['hybrid:⚡ Hybrid', 'semantic:🎯 Semantic', 'exact:🔍 Exact'].forEach(item => {
++    const [val, label] = item.split(':');
++    const btn = el('button', 'sort-btn' + (searchMode === val ? ' on' : ''), label);
++    btn.onclick = () => {
++      searchMode = val;
++      localStorage.setItem('chat_ctx_search_mode', searchMode);
++      doSearch(lastSearchQuery);
++    };
++    modeWrap.append(btn);
++  });
++
++  // Group buttons
++  const groupWrap = el('div');
++  groupWrap.style.cssText = 'display:flex;align-items:center;gap:4px;';
++  groupWrap.append(el('span', 'dim', 'View:'));
++  ['chat:💬 Chat', 'chunk:📄 Chunks'].forEach(item => {
++    const [val, label] = item.split(':');
++    const btn = el('button', 'sort-btn' + (searchGroup === val ? ' on' : ''), label);
++    btn.onclick = () => {
++      searchGroup = val;
++      localStorage.setItem('chat_ctx_search_group', searchGroup);
++      doSearch(lastSearchQuery);
++    };
++    groupWrap.append(btn);
++  });
++
++  // Sort buttons
+   const sortWrap = el('div');
+-  sortWrap.style.cssText = 'display:flex;align-items:center;gap:6px;font-size:12px;';
++  sortWrap.style.cssText = 'display:flex;align-items:center;gap:4px;';
+   sortWrap.append(el('span', 'dim', 'Sort:'));
+-
+-  const btnRecent = el('button', 'sort-btn' + (searchSort === 'recent' ? ' on' : ''), '🕒 Recent (Newest caught)');
+-  const btnRel = el('button', 'sort-btn' + (searchSort === 'relevance' ? ' on' : ''), '🎯 Relevance (Match %)');
+-
+-  btnRecent.onclick = () => {
+-    searchSort = 'recent';
+-    localStorage.setItem('chat_ctx_search_sort', searchSort);
+-    doSearch(lastSearchQuery);
+-  };
+-  btnRel.onclick = () => {
+-    searchSort = 'relevance';
+-    localStorage.setItem('chat_ctx_search_sort', searchSort);
+-    doSearch(lastSearchQuery);
+-  };
+-
+-  sortWrap.append(btnRecent, btnRel);
+-  header.append(title, sortWrap);
++  ['relevance:🎯 Relevance', 'recent:🕒 Recent'].forEach(item => {
++    const [val, label] = item.split(':');
++    const btn = el('button', 'sort-btn' + (searchSort === val ? ' on' : ''), label);
++    btn.onclick = () => {
++      searchSort = val;
++      localStorage.setItem('chat_ctx_search_sort', searchSort);
++      doSearch(lastSearchQuery);
++    };
++    sortWrap.append(btn);
++  });
++
++  toggles.append(modeWrap, groupWrap, sortWrap);
++  row1.append(title, toggles);
++
++  // Row 2: Secondary Filters (Must Include, Topic, Source, Strictness Slider)
++  const row2 = el('div');
++  row2.style.cssText = 'display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#131720;padding:8px 12px;border-radius:6px;border:1px solid var(--line);font-size:12px;';
++
++  // Must contain input
++  const mustInput = el('input');
++  mustInput.placeholder = 'Must contain words…';
++  mustInput.value = searchMustContain;
++  mustInput.style.cssText = 'background:#1a202c;border:1px solid #2d3748;color:#fff;padding:4px 8px;border-radius:4px;font-size:11px;width:150px;';
++  mustInput.onkeydown = (e) => {
++    if (e.key === 'Enter') {
++      searchMustContain = mustInput.value.trim();
++      doSearch(lastSearchQuery);
++    }
++  };
++  mustInput.onblur = () => {
++    if (searchMustContain !== mustInput.value.trim()) {
++      searchMustContain = mustInput.value.trim();
++      doSearch(lastSearchQuery);
++    }
++  };
++
++  // Topic filter select
++  const topicSelect = el('select');
++  topicSelect.style.cssText = 'background:#1a202c;border:1px solid #2d3748;color:#cbd5e1;padding:4px 8px;border-radius:4px;font-size:11px;max-width:180px;';
++  const optAllTopics = el('option', null, 'All Topics');
++  optAllTopics.value = '';
++  topicSelect.append(optAllTopics);
++  if (data && data.topics) {
++    data.topics.forEach(t => {
++      const opt = el('option', null, `${t.name.slice(0, 25)} (${t.count})`);
++      opt.value = t.id;
++      if (searchTopicId && searchTopicId === t.id) opt.selected = true;
++      topicSelect.append(opt);
++    });
++  }
++  topicSelect.onchange = () => {
++    searchTopicId = topicSelect.value ? parseInt(topicSelect.value) : null;
++    doSearch(lastSearchQuery);
++  };
++
++  // Source filter select
++  const sourceSelect = el('select');
++  sourceSelect.style.cssText = 'background:#1a202c;border:1px solid #2d3748;color:#cbd5e1;padding:4px 8px;border-radius:4px;font-size:11px;';
++  const optAllSources = el('option', null, 'All Sources');
++  optAllSources.value = '';
++  sourceSelect.append(optAllSources);
++  ['gemini', 'antigravity', 'claude', 'chatgpt', 'file'].forEach(src => {
++    const opt = el('option', null, src.toUpperCase());
++    opt.value = src;
++    if (searchSource === src) opt.selected = true;
++    sourceSelect.append(opt);
++  });
++  sourceSelect.onchange = () => {
++    searchSource = sourceSelect.value;
++    doSearch(lastSearchQuery);
++  };
++
++  // Strictness slider
++  const sliderWrap = el('div');
++  sliderWrap.style.cssText = 'display:flex;align-items:center;gap:6px;margin-left:auto;';
++  const sliderLabel = el('span', 'dim', `Min match: ${searchMinScore}%`);
++  const slider = el('input');
++  slider.type = 'range';
++  slider.min = '0';
++  slider.max = '80';
++  slider.step = '5';
++  slider.value = searchMinScore;
++  slider.style.cssText = 'width:90px;cursor:pointer;';
++  slider.oninput = () => {
++    sliderLabel.textContent = `Min match: ${slider.value}%`;
++  };
++  slider.onchange = () => {
++    searchMinScore = parseInt(slider.value);
++    doSearch(lastSearchQuery);
++  };
++  sliderWrap.append(sliderLabel, slider);
++
++  // Clear filters button if any active
++  if (searchMustContain || searchTopicId || searchSource || searchMinScore > 0) {
++    const clearBtn = el('button', 'sort-btn', '✕ Reset Filters');
++    clearBtn.style.cssText = 'color:#f87171;padding:2px 6px;';
++    clearBtn.onclick = () => {
++      searchMustContain = '';
++      searchTopicId = null;
++      searchSource = '';
++      searchMinScore = 0;
++      doSearch(lastSearchQuery);
++    };
++    row2.append(clearBtn);
++  }
++
++  row2.append(mustInput, topicSelect, sourceSelect, sliderWrap);
++  header.append(row1, row2);
+   m.append(header);
+ 
+   if (!lastSearchHits.length) {
+-    m.append(el('p', 'dim', 'No semantic matches found for this query.'));
++    m.append(el('p', 'dim', 'No matching results found for this query and filter combination.'));
+     return;
+   }
+ 
+@@ -441,11 +441,35 @@
+     t.onclick = () => openChat(h.chat_id);
+ 
+     const meta = el('div');
+-    meta.style.cssText = 'display:flex;align-items:center;gap:6px;flex-shrink:0;';
+-
+-    const scoreBadge = el('span', 'badge', `${Math.round(h.score * 100)}% match`);
+-    scoreBadge.style.cssText = 'background:#064e3b;color:#6ee7b7;border:1px solid #059669;font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600;';
+-
++    meta.style.cssText = 'display:flex;align-items:center;gap:6px;flex-shrink:0;flex-wrap:wrap;';
++
++    // Topic badge
++    if (h.topic_name) {
++      const topicBadge = el('span', 'badge', `🏷️ ${h.topic_name.slice(0, 25)}`);
++      topicBadge.style.cssText = 'background:#1e1b4b;color:#a5b4fc;border:1px solid #3730a3;cursor:pointer;';
++      topicBadge.title = `Click to filter by topic: ${h.topic_name}`;
++      topicBadge.onclick = (e) => {
++        e.stopPropagation();
++        searchTopicId = h.topic_id;
++        doSearch(lastSearchQuery);
++      };
++      meta.append(topicBadge);
++    }
++
++    // Matching chunks badge
++    if (h.matching_chunks && h.matching_chunks > 1) {
++      const chunksBadge = el('span', 'badge', `📄 ${h.matching_chunks} passages`);
++      chunksBadge.style.cssText = 'background:#142938;color:#7dd3fc;border:1px solid #0284c7;';
++      meta.append(chunksBadge);
++    }
++
++    // Source badge
++    if (h.source) {
++      const srcBadge = el('span', 'badge ' + h.source, h.source);
++      meta.append(srcBadge);
++    }
++
++    // Date badge
+     if (h.updated) {
+       const dateBadge = el('small', 'topic-date-badge', h.updated.slice(0, 16).replace('T', ' '));
+       dateBadge.title = `Caught: ${h.updated}`;
+@@ -452,5 +452,10 @@
+     }
++
++    // Score badge
++    const scoreBadge = el('span', 'badge', `${Math.round(h.score * 100)}% match`);
++    scoreBadge.style.cssText = 'background:#064e3b;color:#6ee7b7;border:1px solid #059669;font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600;';
+     meta.append(scoreBadge);
++
+     topRow.append(t, meta);
+ 
+     const bodyText = el('div');
+@@ -462,11 +462,16 @@
+ }
+ 
+ async function doSearch(query) {
+-  const q = (query || $('#q').value || '').trim();
++  const q = (query !== undefined ? query : ($('#q').value || '')).trim();
+   if (!q) return;
+   lastSearchQuery = q;
+   $('#status').textContent = 'searching…';
+-  const hits = await (await api(`/api/search?q=${encodeURIComponent(q)}&sort=${searchSort}&k=30`)).json();
++  const topicParam = searchTopicId ? `&topic_id=${searchTopicId}` : '';
++  const sourceParam = searchSource ? `&source=${encodeURIComponent(searchSource)}` : '';
++  const mustParam = searchMustContain ? `&must_contain=${encodeURIComponent(searchMustContain)}` : '';
++  const minScoreParam = searchMinScore > 0 ? `&min_score=${searchMinScore / 100}` : '';
++  const url = `/api/search?q=${encodeURIComponent(q)}&sort=${searchSort}&mode=${searchMode}&group_by=${searchGroup}&k=40${topicParam}${sourceParam}${mustParam}${minScoreParam}`;
++  const hits = await (await api(url)).json();
+   lastSearchHits = hits;
+   renderSearchResults();
+   $('#status').textContent = '';
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

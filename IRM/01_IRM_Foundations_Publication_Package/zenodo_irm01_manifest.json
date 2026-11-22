@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Replication Package: The Living Number Atom, [base_n.d.e.f...] Recursive Fractal Grammar, and Infinity Maths",
+  "version": "1.0.0",
+  "deliverable_id": "IRM-PUB-01",
+  "doi_target": "10.5281/zenodo.irm.foundations",
+  "creators": [
+    {
+      "name": "Hamilton, Jarrod Lyndsay",
+      "affiliation": "Alethekanon Research Institute, Division 1: Pure Mathematics",
+      "location": "Coonabarabran, NSW 2357, Australia"
+    }
+  ],
+  "description": "Complete computational replication archive, formal Lean 4 blueprints, and 20,000-trial test harness for Infinitesimal Reality Math (IRM). Formalizes the Living Number Atom, the [base_n.d.e.f...] recursive fractal grammar, exact multi-tier carrying, cross-tier multiplication convolution, and the non-zero Cost of Being (1inf = -inf + 1).",
+  "license": {
+    "manuscript_and_data": "CC-BY-4.0",
+    "software_and_code": "MIT"
+  },
+  "repository_files": [
+    {
+      "filename": "living_number_algebra.py",
+      "description": "Core Python engine implementing LivingNumberAtom, RecursiveGrammarNumber, InfinityEngine, and BoundedContinuum02."
+    },
+    {
+      "filename": "test_living_number_algebra.py",
+      "description": "20,000-trial adversarial stress-test suite across 7 benchmark suites (100% pass rate)."
+    },
+    {
+      "filename": "living_number_algebra.lean",
+      "description": "Mathlib4 formal verification blueprint with 6 proven theorems and 0 sorry stubs."
+    },
+    {
+      "filename": "Formal_Paper_01_Axiomatic_Foundations.pdf",
+      "description": "Camera-ready PDF manuscript proof."
+    }
+  ]
+}

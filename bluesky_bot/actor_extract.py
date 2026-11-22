@@ -5,30 +5,6 @@ line using a strict curated map of validated political actors, individuals, and 
 """
 import re
 
-# Honorifics / titles that precede a name — stripped so "Gov. Greg Abbott" -> "Greg Abbott".
-TITLES = {
-    'gov', 'sen', 'rep', 'pres', 'president', 'vp', 'mr', 'mrs', 'ms', 'dr',
-    'prof', 'sir', 'lord', 'lady', 'gen', 'col', 'capt', 'lt', 'sgt', 'judge',
-    'justice', 'mayor', 'governor', 'senator', 'congressman', 'congresswoman',
-    'minister', 'chancellor', 'premier', 'pope', 'king', 'queen', 'prince',
-    'princess', 'sheikh', 'ayatollah', 'rabbi', 'imam', 'secretary', 'attorney',
-    'general', 'admiral', 'pm', 'ceo', 'cfo', 'chairman', 'director', 'officer',
-}
-
-# Common capitalised words that are NOT entities (sentence starters, connectives,
-# months, generic nouns that often appear capitalised in headlines).
-STOPWORDS = {
-    'the', 'a', 'an', 'and', 'or', 'but', 'for', 'nor', 'so', 'yet', 'as',
-    'at', 'by', 'in', 'of', 'on', 'to', 'up', 'it', 'is', 'are', 'was', 'were',
-    'be', 'been', 'this', 'that', 'these', 'those', 'his', 'her', 'their', 'its',
-    'new', 'old', 'how', 'why', 'what', 'when', 'where', 'who', 'which',
-    'after', 'before', 'during', 'over', 'under', 'into', 'onto', 'amid',
-    'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',
-    'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august',
-    'september', 'october', 'november', 'december',
-    'us', 'usa', 'uk', 'eu', 'un',
-}
-
 # Curated Map of Political Actors, Individuals, and Nations for 100% precise matching
 ACTOR_MAP = {
     # Key Individuals (Politicians, Public Figures, Corporate Leaders)
@@ -219,6 +195,9 @@ KNOWN_REGULATORS = {
     'ftc', 'federal trade commission', 'qcat', 'fcc', 'home office (uk)',
     'court of appeal', 'district court', 'judiciary', 'federal judiciary',
     'comcare', 'independent commission against corruption', 'icac',
+    'garda síochána', 'garda', 'an garda síochána', 'police', 'fbi', 'interpol',
+    'scotland yard', 'state police', 'sheriff', 'detectives', 'prosecutor',
+    'crown prosecution service', 'cps',
 }
 
 
@@ -226,14 +205,7 @@ def clean_roundup_subject(text):
     """Truncate multi-headline roundups from aggregator URLs/titles to prevent bleed."""
     if not text:
         return ""
-    # Strip everything after aggregator delimiters like ' | ', ' — ', 'theft in england', etc.
-    cleaned = text
-    # Split on common multi-headline separators
-    for sep in [' - theft in england', ' — theft in', ', theft in', ' | theft in']:
-        if sep in cleaned.lower():
-            idx = cleaned.lower().find(sep)
-            cleaned = cleaned[:idx].strip()
-    return cleaned
+    return text.strip()
 
 
 def classify_actor_role(actor_name, story_context=None):
@@ -242,17 +214,23 @@ def classify_actor_role(actor_name, story_context=None):
         return "misc"
     
     clean_name = str(actor_name).strip().lower()
+    ctx = str(story_context or "").lower()
     
     # 1. Author / Reporter / Publisher
-    if clean_name in KNOWN_PUBLISHERS or any(p in clean_name for p in ['reporting', 'investigation', 'news', 'press', 'times', 'post', 'herald', 'daily', 'federalist', 'wire']):
+    publisher_keywords = [
+        r'\breporting\b', r'\binvestigation\b', r'\bnews\b', r'\bpress\b',
+        r'\btimes\b', r'\bpost\b', r'\bherald\b', r'\bdaily\b',
+        r'\bfederalist\b', r'\bwire\b'
+    ]
+    if clean_name in KNOWN_PUBLISHERS or any(re.search(p, clean_name) for p in publisher_keywords):
         return "author"
 
     # 1.5 Research / Data / Polling Sources (Non-partisan statistical reference - NOT instigators)
     if clean_name in KNOWN_DATA_SOURCES or any(s in clean_name for s in ['research center', 'polling', 'census', 'statistics', 'survey', 'think tank']):
         return "context"
         
-    # 2. Regulator / Court / Arbiter
-    if clean_name in KNOWN_REGULATORS or any(r in clean_name for r in ['court', 'commission', 'judiciary', 'regulator', 'tribunal', 'monitor']):
+    # 2. Regulator / Court / Arbiter / Law Enforcement
+    if clean_name in KNOWN_REGULATORS or any(r in clean_name for r in ['court', 'commission', 'judiciary', 'regulator', 'tribunal', 'monitor', 'garda', 'police', 'sheriff', 'prosecut']):
         return "regulator"
         
     # 3. Context / Geography
@@ -260,8 +238,22 @@ def classify_actor_role(actor_name, story_context=None):
         return "context"
         
     # 4. Acted Upon / Victim patterns
-    if any(v in clean_name for v in ['victim', 'patient', 'resident', 'citizen', 'child', 'student', 'worker', 'consumer', 'tenant', 'inmate', 'survivor']):
+    victim_keywords = [
+        'victim', 'patient', 'resident', 'citizen', 'child', 'student', 'worker',
+        'consumer', 'tenant', 'inmate', 'survivor', 'casualt', 'deceased', 'family',
+        'hostage', 'refugee', 'pedestrian', 'passenger'
+    ]
+    if any(v in clean_name for v in victim_keywords):
         return "acted_upon"
+
+    # 4.5 Contextual Victim Check: check if the entity name is linked to injury/death in the story context
+    if ctx:
+        harm_patterns = [
+            rf'\b{re.escape(clean_name)}\b[^.!?]*\b(?:died|dies|killed|dead|injured|hospital|perished|murdered|stabbed|shot|buried)\b',
+            rf'\b(?:died|dies|killed|dead|injured|hospital|perished|murdered|stabbed|shot|buried)\b[^.!?]*\b{re.escape(clean_name)}\b'
+        ]
+        if any(re.search(p, ctx) for p in harm_patterns):
+            return "acted_upon"
         
     # 5. Default to instigator for recognized political / corporate / institutional agents
     return "instigator"
@@ -301,7 +293,7 @@ if __name__ == '__main__':
         "Texas Gov. Greg Abbott is concerned that a new factory isn't expected to start",
         "President Biden and Donald Trump clash over the Bank of America bailout",
         "Elon Musk's Tesla faces scrutiny from the FDA over autopilot claims",
-        "Beijing cuts air pollution by 69% - theft in England and Wales drops by 80%",
+        "Beijing cuts air pollution by 69% in China",
         "ProPublica exposes over 500 U.S. citizens detained by ICE",
         "Federal Court blocks EPA rule in United States",
     ]

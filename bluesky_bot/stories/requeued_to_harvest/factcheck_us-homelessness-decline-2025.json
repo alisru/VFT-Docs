@@ -1,0 +1,184 @@
+[
+  {
+    "thinking": "Phase 1-6 audit scan of U.S. homelessness statistics reporting: Stated reports note a 6% decline in homelessness in 2025 (~49,000 fewer unhoused individuals), with competing institutional attributions from the Trump administration (border security/immigration policy) and independent advocacy groups (federal funding/housing programs). Actual reality reflects documented demographic data showing a measured drop while nearly 700,000 individuals remain unhoused. Coordinate scale calibration: inclusive civic policy analysis (+0.5, +0.5). Integrity R_net = 1.2 (Trustworthy).",
+    "id": "us-homelessness-decline-2025",
+    "subject": "Homelessness in the U.S. saw its largest drop in more than a decade last year",
+    "link": "https://www.npr.org/2026/11/07/nx-s1-6033491/homelessness-in-the-u-s-saw-its-largest-drop-in-more-than-a-decade-last-year",
+    "target_url": "",
+    "claim_u": 0.8,
+    "claim_psi": 0.8,
+    "real_u": 0.6,
+    "real_psi": 0.5,
+    "mode": "root",
+    "posts": [
+      "U.S. homelessness drops over 6% in 2025, sparking debate over policy attribution.\nEvidence: HUD reports, advocacy analyses, 700k remaining unhoused\n#Aletheia #Housing #USPol 🌐",
+      "Reports highlight a historic drop in homelessness while administrators and advocates debate causal factors.\nStated Judgement: (+0.80, +0.80) — Greater Good",
+      "Official counts show a measurable drop of roughly 49,000 unhoused individuals, though 700,000 remain on streets and in shelters.\nResulting Judgement: (+0.60, +0.50) — Greater Good",
+      "Verdict: PASS — Small Fall from Grace.\nMeasured declines in homelessness reflect real institutional progress, even as political actors compete for credit.\n\nIntegrity: Trustworthy (Hypocrisy: 1.2, Uncertainty z: 1)",
+      "Federal housing data and independent advocacy groups track annual unhoused population metrics across major U.S. cities.",
+      "Housing policy debates continue to balance enforcement mechanisms with emergency shelter and recovery resources.",
+      "The Bright Side:\nNearly 50,000 individuals transitioned out of homelessness in a coordinated nationwide drop.",
+      "The Breakdown & Plane Error:\nEvaluating Q3 empirical headcounts rather than partisan messaging claims.",
+      "Social Physics Analysis:\nBoth political actors and housing advocates pursue strategic narratives, but the underlying data registers a genuine reduction in unhoused populations, moving past mere pretexts toward tangible shelter expansion.",
+      "The Trajectory: The Path of Small Fall from Grace.\nWhen policy metrics demonstrate measurable reductions in systemic strain, it charts an upward trajectory toward institutional renewal.",
+      "The Unavoidable Truth: Documented housing data shows a measurable drop in nationwide homelessness.\n\nThe Unavoidable Lie: No single political faction holds exclusive ownership over complex socioeconomic recovery drivers.",
+      "Alethekanon:\nEmpirical housing trends reveal genuine progress despite competing partisan explanations.",
+      "Awwthekanon:\nEvery person finding a safe and stable home brings healing to our communities.",
+      "Brothekanon:\nNumbers are heading in the right direction, but there is still a long way to go for the remaining 700k.",
+      "Spirithekanon:\n\"If anyone has material possessions and sees a brother or sister in need but has no pity on them, how can the love of God be in that person?\" 1 John 3:17 PASS\nTrue progress is measured by how we shelter the vulnerable."
+    ],
+    "actors": [
+      "U.S. Department of Housing and Urban Development",
+      "National Alliance to End Homelessness",
+      "Trump Administration"
+    ],
+    "actor_roles": [
+      {
+        "name": "U.S. Department of Housing and Urban Development",
+        "role": "instigator"
+      },
+      {
+        "name": "National Alliance to End Homelessness",
+        "role": "instigator"
+      },
+      {
+        "name": "Trump Administration",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.2,
+    "real_rnet": 1.2,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "Housing Data Reporting",
+        "claim_u": 0.8,
+        "claim_psi": 0.8,
+        "real_u": 0.6,
+        "real_psi": 0.5,
+        "verdict": "PASS",
+        "reason": "Accurate tracking of measurable housing declines."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "can be",
+    "modal_real": "can be",
+    "modal_vector": "Productive Geodesic",
+    "geodesic": "Productive Geodesic",
+    "central_is_barrier_crossed": false,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nHomelessness in the U.S. saw its largest drop in more than a decade last year\n\nHomelessness declined after years of record-high levels but it still remains at nearly 700,000. The Trump administration and homeless advocacy groups cite different reasons for the drop.\n\nActual Article Body:\nJennifer Ludden\n\nPeople line up along temporary tents to partake in a free Thanksgiving meal provided by the Union Rescue Mission as the Los Angeles Skid Row district annual feast hosts thousands of homeless and others in need, in downtown Los Angeles on Nov. 24, 2022.\n                \n                    \n                    Damian Dovarganes/AP\n                    \n                \n                hide caption\n\nAfter years of increasing to record-high levels, the homeless population in the U.S. dropped more than 6% in 2025. That amounts to roughly 49,000 fewer people without housing. It's the second year in a row that homelessness has declined, with a smaller drop in 2024.\n\n\"President Trump's actions to secure the border, get criminal illegals off our streets, and restore safety to our communities drove a historic decrease in homelessness,\" Housing and Urban Development Secretary Scott Turner said in a press release announcing the results of an annual count in communities around the country. The agency had not yet posted a detailed report.\n\nA second independent analysis based on the same count, but commissioned by the advocacy group National Alliance to End Homelessness, found a similar decline but credited different reasons for it.\n\n\"It's good news that more people are getting housed, and that the programs that are funded by Congress are working,\" said CEO Ann Oliva.\n\nBoth analyses find there's still nearly 700,000 people in the U.S. living in shelters or on the streets, significantly more than before the COVID-19 pandemic.\n\nThe Trump administration cited its changes in immigration policy as a key factor in the decline. During the Biden administration, New York, Chicago, Boston and Denver all saw a surge in asylum seekers who turned up at homeless shelters. \"That's also the four cities that have driven half of the drop most recently,\" said Devon Kurtz, Public Safety Policy Director at the Cicero Institute, an administration ally on homelessness policy.\n\nKurtz also pointed to declines in cities like San Francisco, which is moving to support more sober-living options, housing that bans drugs and alcohol. But critics say that can send more people back to the street if they relapse, which is common.\n\nThe Trump administration argues that the requirement to be drug-free would help more people achieve recovery, and wants to expand such programs. In fact, the administration wants to overhaul several billion dollars in homelessness spending and shift it toward...",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://www.npr.org/2026/11/07/nx-s1-6033491/homelessness-in-the-u-s-saw-its-largest-drop-in-more-than-a-decade-last-year",
+        "snippet": "Stated Claim / Post Context:\nHomelessness in the U.S. saw its largest drop in more than a decade last year\n\nHomelessness declined after years of record-high levels but it still remains at nearly 700,000. The Trump administration and homeless advocacy groups cite different reasons for the drop.\n\nActu"
+      }
+    ],
+    "grounding_url": "https://www.foxnews.com/entertainment/bridget-fonda-spotted-rare-la-outing-24-years-after-final-screen-appearance",
+    "category": "all",
+    "topic": "Housing",
+    "event": "",
+    "path_name": "Small Fall from Grace",
+    "policies": []
+  }
+]

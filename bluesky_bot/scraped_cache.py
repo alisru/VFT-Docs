@@ -29,7 +29,7 @@ def normalize_url(url):
         url = url.split("?")[0]
     if "#" in url:
         url = url.split("#")[0]
-    return url.lower().rstrip("/").strip()
+    return url.lower().strip()
 
 def get_db_connection():
     conn = sqlite3.connect(DB_PATH, timeout=15)

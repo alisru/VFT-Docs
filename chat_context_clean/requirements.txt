@@ -1,0 +1,13 @@
+# Chat Context Dependencies
+# Install with: pip install -r requirements.txt
+
+# Web Server & REST API
+fastapi>=0.110.0
+uvicorn>=0.28.0
+
+# Local AI Vector Embeddings (Fast, offline ONNX runtime)
+fastembed>=0.2.0
+numpy>=1.24.0
+
+# Document & Web Page Parsing (Offline HTML chat dumps)
+beautifulsoup4>=4.12.0

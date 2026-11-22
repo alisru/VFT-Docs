@@ -1,0 +1,453 @@
+[
+  {
+    "case_index": 1,
+    "verdict": "YWNBTA",
+    "verdict_label": "You Would Not be the Asshole (and the other person would)",
+    "coordinates": {
+      "op_stated": [
+        0.35,
+        0.4
+      ],
+      "op_actual": [
+        0.35,
+        0.45
+      ],
+      "other_actual": [
+        -0.8,
+        0.75
+      ],
+      "third_parties": [
+        {
+          "actor": "Hosting Roommate (27F)",
+          "upsilon": 0.25,
+          "psi": -0.35,
+          "role": "Weak Host Buffer (Peace Trap: lowered her own voice and tried to shush 36F, but failed to enforce house acoustics)"
+        }
+      ],
+      "delta_H": 0.158,
+      "wisdom_score": 0.863,
+      "R_net": 0.912,
+      "strain_sigma": 0.82,
+      "ucf_tuning": {
+        "LHS": 1.85,
+        "RHS_Stated": 1.05,
+        "RHS_Observed": 1.1,
+        "Tuned_Score": 0.96,
+        "state": "Stable"
+      },
+      "deception_codes": [
+        "[1.2.2.2] Meta-Physical.Hearing.Domination — The Bellow (36F yelling over others in shared space)",
+        "[5.2.2.5] Physical.Hearing.Domination — The Amplifier / Megaphone Monopoly (Occupying acoustic bandwidth right next to OP's functional right ear)",
+        "[5.2.6.6] Physical.Hearing.Understanding — The Static (Jamming OP's APD speech-tracking reflex during audio-cue boss fight)",
+        "[1.3.6.2] Meta-Physical.Touch.Understanding — The Probe (Unsolicited backseat gaming after OP stated boundary)",
+        "[7.3.1.3] Emotive.Touch.Survival — The Flinch (Historical defensiveness when asked to lower volume during movies)",
+        "[1.6.7.1] Meta-Physical.Balance.Symbiosis — Passive Host Appeasement (Roommate 27F)",
+        "[3.6.1.1] Physical.Balance.Survival — Legitimate Sensory Accommodation Request (OP 25F)"
+      ]
+    },
+    "why_verdict": "You live there and pay rent; your roommate's 36-year-old friend is a guest. Even your roommate lowered her voice and tried to quiet her friend down, proving your request fits apartment norms. Furthermore, the friend isn't just chatting—she's salty you turned down her offer to take the controller, so she's yelling about her own boss fights right into your good ear. Asking calmly for five minutes of quiet does not make you an asshole. Just pause the game right now before you blow up so you don't hand her the victim card.",
+    "vft_audit_trace": {
+      "unsaid_horizon_and_multi_actor_graph": "3-Node Triad: OP (25F, autistic, APD, 25% deaf in left ear), Roommate (27F, Host), and Friend (36F, Guest 10 years older). Hidden Causal Chain: 36F repeatedly offered to beat the boss for OP; when OP refused to surrender the controller, 36F retaliated out of Envy (Q4) by yelling loudly about a different boss fight right at the climax of OP's second rare-item run, triggering an APD speech-reflex freeze.",
+      "silent_judgment": "Mute Observer sees OP craft two rare consumables and fail twice while 27F shrinks/quiets down and 36F leans toward OP's functional right ear laughing and gesturing at the controller. Deaf Observer identifies an Acoustic Gain Spiral when TV volume was raised (APD automatically locks onto human speech frequencies, so higher TV volume only increased total room energy). Blind Sensor records sigma = 0.82 sensory compression.",
+      "seven_plane_scan": {
+        "Q1_Who": "25F rent-paying tenant with sensory hardware constraint vs 36F non-resident guest exhibiting Pride.",
+        "Q2_What": "A bounded 3-to-5 minute quiet window to finish a rare-item boss run (Diligence).",
+        "Q3_Where": "Shared common area; 36F violates Temperance via Gluttony of acoustic space ([5.2.2.5]).",
+        "Q4_Why": "36F's ego was bruised when OP declined her backseat takeover offer (Envy).",
+        "Q5_How": "Polite time-bounded request passes Method-Over-Motive; waiting 10 seconds to blow up would cross into Wrath (-0.55, +0.85).",
+        "Q6_Cause": "36F's chronic history of defensive hostility ([7.3.1.3]) when asked not to talk over shared movies.",
+        "Q7_Effect": "Acute neurological overload ('ten secs from blowing up')."
+      },
+      "zero_point_five_zone_traps": "OP is in the Peace Trap (Inner BL), suppressing a valid boundary until she approaches the Wrath Cliff. Roommate is in the Peace Trap (failing Host moderator duty).",
+      "nine_states_of_belief": "OP is in State 1 (The Agonizing Choice: Personal Truth = 1, Social Lie < 1), quietly validated by Roommate (State 2), against 36F's State 8/9 Reactionary posture.",
+      "oberon_and_sins_virtues": "36F violates Oberon Guest Law of Collaboration (Pride + Gluttony of space + Envy). OP must deploy Temperance and Patience to avoid Wrath.",
+      "cognitive_fallacy_check": "36F commits Locus Removal (treating a dual-tenant apartment as her private bar) and Appeal to Emotion ([7.3.1.3])."
+    },
+    "vft_audit_trace_summary": "```json\n{\n  \"unsaid_horizon_and_multi_actor_graph\": \"3-Node Triad: OP (25F, autistic, APD, 25% deaf in left ear), Roommate (27F, Host), and Friend (36F, Guest 10 years older). Hidden Causal Chain: 36F repeatedly offered to beat the boss for OP; when OP refused to surrender the controller, 36F retaliated out of Envy (Q4) by yelling loudly about a different boss fight right at the climax of OP's second rare-item run, triggering an APD speech-reflex freeze.\",\n  \"silent_judgment\": \"Mute Observer sees OP craft two rare consumables and fail twice while 27F shrinks/quiets down and 36F leans toward OP's functional right ear laughing and gesturing at the controller. Deaf Observer identifies an Acoustic Gain Spiral when TV volume was raised (APD automatically locks onto human speech frequencies, so higher TV volume only increased total room energy). Blind Sensor records sigma = 0.82 sensory compression.\",\n  \"seven_plane_scan\": {\n    \"Q1_Who\": \"25F rent-paying tenant with sensory hardware constraint vs 36F non-resident guest exhibiting Pride.\",\n    \"Q2_What\": \"A bounded 3-to-5 minute quiet window to finish a rare-item boss run (Diligence).\",\n    \"Q3_Where\": \"Shared common area; 36F violates Temperance via Gluttony of acoustic space ([5.2.2.5]).\",\n    \"Q4_Why\": \"36F's ego was bruised when OP declined her backseat takeover offer (Envy).\",\n    \"Q5_How\": \"Polite time-bounded request passes Method-Over-Motive; waiting 10 seconds to blow up would cross into Wrath (-0.55, +0.85).\",\n    \"Q6_Cause\": \"36F's chronic history of defensive hostility ([7.3.1.3]) when asked not to talk over shared movies.\",\n    \"Q7_Effect\": \"Acute neurological overload ('ten secs from blowing up').\"\n  },\n  \"zero_point_five_zone_traps\": \"OP is in the Peace Trap (Inner BL), suppressing a valid boundary until she approaches the Wrath Cliff. Roommate is in the Peace Trap (failing Host moderator duty).\",\n  \"nine_states_of_belief\": \"OP is in State 1 (The Agonizing Choice: Personal Truth = 1, Social Lie < 1), quietly validated by Roommate (State 2), against 36F's State 8/9 Reactionary posture.\",\n  \"oberon_and_sins_virtues\": \"36F violates Oberon Guest Law of Collaboration (Pride + Gluttony of space + Envy). OP must deploy Temperance and Patience to avoid Wrath.\",\n  \"cognitive_fallacy_check\": \"36F commits Locus Removal (treating a dual-tenant apartment as her private bar) and Appeal to Emotion ([7.3.1.3]).\"\n}\n```",
+    "resolution": {
+      "trap_to_step_out_of": "Step out of the Peace-to-Wrath Pendulum (holding back until you explode) and the Acoustic Arms Race (turning up TV volume against an APD speech-tracking reflex).",
+      "verbatim_script": "Hey guys, my audio processing disorder automatically locks onto human voices, and I have to hear a quiet singing cue for the next five minutes to beat this boss. Could we either do five minutes of quiet while I finish this one run, or could you guys take your smoke and chat into [Roommate]'s room or the kitchen/balcony for a few minutes?",
+      "structural_patch": "Pause the game immediately for 60 seconds (Serenity Protocol). For future common-room sessions, route game audio through closed-back or single-ear/mono-mixed headphones on your right ear.",
+      "counterfactual_flip_thresholds": "Flips to ESH (upsilon_OP = -0.55 <= -0.25) if OP waits 10 more seconds and blows up screaming at the guest (Method-Over-Motive Clause). Flips to YWBTA (upsilon_OP = -0.45) if OP demands hours of total silence in the shared living room while refusing headphones or bedroom relocation."
+    },
+    "resolution_summary": "```json\n{\n  \"trap_to_step_out_of\": \"Step out of the Peace-to-Wrath Pendulum (holding back until you explode) and the Acoustic Arms Race (turning up TV volume against an APD speech-tracking reflex).\",\n  \"verbatim_script\": \"Hey guys, my audio processing disorder automatically locks onto human voices, and I have to hear a quiet singing cue for the next five minutes to beat this boss. Could we either do five minutes of quiet while I finish this one run, or could you guys take your smoke and chat into [Roommate]'s room or the kitchen/balcony for a few minutes?\",\n  \"structural_patch\": \"Pause the game immediately for 60 seconds (Serenity Protocol). For future common-room sessions, route game audio through closed-back or single-ear/mono-mixed headphones on your right ear.\",\n  \"counterfactual_flip_thresholds\": \"Flips to ESH (upsilon_OP = -0.55 <= -0.25) if OP waits 10 more seconds and blows up screaming at the guest (Method-Over-Motive Clause). Flips to YWBTA (upsilon_OP = -0.45) if OP demands hours of total silence in the shared living room while refusing headphones or bedroom relocation.\"\n}\n```"
+  },
+  {
+    "case_index": 2,
+    "verdict": "YWNBTA",
+    "verdict_label": "You Would Not be the Asshole (and the other person would)",
+    "coordinates": {
+      "op_stated": [
+        0.35,
+        -0.3
+      ],
+      "op_actual": [
+        0.65,
+        -0.25
+      ],
+      "other_actual": [
+        -1.15,
+        0.85
+      ],
+      "third_parties": [
+        {
+          "actor": "Mutual Bar Friends",
+          "upsilon": 0.1,
+          "psi": -0.2,
+          "role": "Naive Consensus Bystanders (State 5: enjoying free drinks without being the target of his protector/vigilante probe)"
+        }
+      ],
+      "delta_H": 0.304,
+      "wisdom_score": 0.767,
+      "R_net": 1.0,
+      "strain_sigma": 0.45,
+      "ucf_tuning": {
+        "LHS": 2.1,
+        "RHS_Stated": 1.0,
+        "RHS_Observed": 1.0,
+        "Tuned_Score": 1.0,
+        "state": "Stable"
+      },
+      "deception_codes": [
+        "[4.5.2.5] Possible.Taste.Domination — The Spiked Drink (Buying rounds of drinks to build covert reciprocity debt)",
+        "[1.4.2.3] Meta-Physical.Smell.Domination — The Alpha Musk (Projecting lethal/vigilante capability)",
+        "[1.3.6.6] Meta-Physical.Touch.Understanding — The Probe (Testing OP's compliance via stories of 'taking care of' men around female friends)",
+        "[5.7.5.5] Physical.Proprioception.Acquisition — The Enclosure (Bridging from public bar to private social media surveillance)",
+        "[5.3.1.1] Physical.Touch.Survival — Prudent Digital Perimeter Defense (OP)"
+      ]
+    },
+    "why_verdict": "Either Drake is telling the truth (meaning he violently assaults or kills people and brags about it over beers) or he's lying (meaning he invents hitman stories to intimidate women and look tough). You don't want either of those guys inside your private social media, tagged locations, and personal life. Buying a round of drinks doesn't buy a key to your front door.",
+    "vft_audit_trace": {
+      "unsaid_horizon_and_multi_actor_graph": "Two-Guards Moral Riddle Collapse: OP wonders if Drake's stories are true or made up. Branch A (Truth = 1): Drake is an active violent felon/vigilante (upsilon = -1.50) who framed a story around 'taking care of' a guy messing with a female friend—placing OP and her future partners in his target zone if she becomes his 'friend'. Branch B (Lie < 1): Drake is a manipulative liar (upsilon = -0.90) who fabricates murder/assault stories to intimidate women. Since max(upsilon_A, upsilon_B) = -0.90 << -0.25, the truth/lie uncertainty cancels out completely.",
+      "silent_judgment": "Mute Observer sees a man buying drinks at a public bar, then requesting digital entry into OP's private online home. Deaf Observer isolates his stories as Unprompted Lethal Force Signaling and a Covert Vassalage Pitch. Blind Sensor validates OP's Q1.4 gut contraction.",
+      "seven_plane_scan": {
+        "Q1_Who": "Drake splits between 'nice guy buying drinks' (Cover) and 'vigilante enforcer' (Threat); OP uses Humility (clear sight).",
+        "Q2_What": "Two-branch invariant threat verification yielding upsilon_Drake <= -0.90 on both branches.",
+        "Q3_Where": "Locus Containment (Vector B): keeping a bar acquaintance at the bar rather than inside private social media (Temperance).",
+        "Q4_Why": "Drake uses free drinks ([4.5.2.5]) + 'protector of women' stories to manufacture debt and awe.",
+        "Q5_How": "Leaving the friend request in Pending limbo is a zero-aggression passive shield (-psi).",
+        "Q6_Cause": "Under the Universal Price Equation, a $10 drink has zero equity claim over personal safety.",
+        "Q7_Effect": "OP practices Chastity (Wholeness/Self-Preservation) by honoring her somatic warning sensor."
+      },
+      "zero_point_five_zone_traps": "OP is resisting the Peace/Service Trap (Inner BL/TL: trading away digital safety to avoid 'awkwardness'). Drake operates in the Ambition/Protection Trap (framing violent domination as chivalry).",
+      "nine_states_of_belief": "State 5 (The Cassandra / Gaslit by Politeness Norms): OP detects the threat (Personal < 1) while mutual friends see only free drinks (Social = 1).",
+      "oberon_and_sins_virtues": "Oberon Law of Vetting (Question 4) and Law of Sanctuary (Question 6) obligate the Host (OP) to refuse entry to a potential Poisoner.",
+      "cognitive_fallacy_check": "Overriding violent red flags because 'he buys drinks' would be the Halo Effect / Bribe Equivocation."
+    },
+    "vft_audit_trace_summary": "```json\n{\n  \"unsaid_horizon_and_multi_actor_graph\": \"Two-Guards Moral Riddle Collapse: OP wonders if Drake's stories are true or made up. Branch A (Truth = 1): Drake is an active violent felon/vigilante (upsilon = -1.50) who framed a story around 'taking care of' a guy messing with a female friend—placing OP and her future partners in his target zone if she becomes his 'friend'. Branch B (Lie < 1): Drake is a manipulative liar (upsilon = -0.90) who fabricates murder/assault stories to intimidate women. Since max(upsilon_A, upsilon_B) = -0.90 << -0.25, the truth/lie uncertainty cancels out completely.\",\n  \"silent_judgment\": \"Mute Observer sees a man buying drinks at a public bar, then requesting digital entry into OP's private online home. Deaf Observer isolates his stories as Unprompted Lethal Force Signaling and a Covert Vassalage Pitch. Blind Sensor validates OP's Q1.4 gut contraction.\",\n  \"seven_plane_scan\": {\n    \"Q1_Who\": \"Drake splits between 'nice guy buying drinks' (Cover) and 'vigilante enforcer' (Threat); OP uses Humility (clear sight).\",\n    \"Q2_What\": \"Two-branch invariant threat verification yielding upsilon_Drake <= -0.90 on both branches.\",\n    \"Q3_Where\": \"Locus Containment (Vector B): keeping a bar acquaintance at the bar rather than inside private social media (Temperance).\",\n    \"Q4_Why\": \"Drake uses free drinks ([4.5.2.5]) + 'protector of women' stories to manufacture debt and awe.\",\n    \"Q5_How\": \"Leaving the friend request in Pending limbo is a zero-aggression passive shield (-psi).\",\n    \"Q6_Cause\": \"Under the Universal Price Equation, a $10 drink has zero equity claim over personal safety.\",\n    \"Q7_Effect\": \"OP practices Chastity (Wholeness/Self-Preservation) by honoring her somatic warning sensor.\"\n  },\n  \"zero_point_five_zone_traps\": \"OP is resisting the Peace/Service Trap (Inner BL/TL: trading away digital safety to avoid 'awkwardness'). Drake operates in the Ambition/Protection Trap (framing violent domination as chivalry).\",\n  \"nine_states_of_belief\": \"State 5 (The Cassandra / Gaslit by Politeness Norms): OP detects the threat (Personal < 1) while mutual friends see only free drinks (Social = 1).\",\n  \"oberon_and_sins_virtues\": \"Oberon Law of Vetting (Question 4) and Law of Sanctuary (Question 6) obligate the Host (OP) to refuse entry to a potential Poisoner.\",\n  \"cognitive_fallacy_check\": \"Overriding violent red flags because 'he buys drinks' would be the Halo Effect / Bribe Equivocation.\"\n}\n```",
+    "resolution": {
+      "trap_to_step_out_of": "Step out of the Spiked-Drink Reciprocity Trap ([4.5.2.5]) and the False Choice between accepting and making a public scene.",
+      "verbatim_script": "Oh, I barely ever check or use social media anymore—my notifications are a graveyard! I just catch up with people in person when I'm out.",
+      "structural_patch": "Leave the friend request sitting in 'Pending' limbo forever (do not click Accept, and do not click Delete so the 'Add Friend' button never resets on his screen). Lock profile visibility to 'Friends Only' and decline his free drinks going forward.",
+      "counterfactual_flip_thresholds": "Flips to NAH (upsilon_Drake >= 0.00) even if Drake were completely harmless, because private social media is always optional. Flips to YWBTA/ESH (upsilon_OP <= -0.35) only if OP publicly humiliated him at the bar table to start a fight."
+    },
+    "resolution_summary": "```json\n{\n  \"trap_to_step_out_of\": \"Step out of the Spiked-Drink Reciprocity Trap ([4.5.2.5]) and the False Choice between accepting and making a public scene.\",\n  \"verbatim_script\": \"Oh, I barely ever check or use social media anymore—my notifications are a graveyard! I just catch up with people in person when I'm out.\",\n  \"structural_patch\": \"Leave the friend request sitting in 'Pending' limbo forever (do not click Accept, and do not click Delete so the 'Add Friend' button never resets on his screen). Lock profile visibility to 'Friends Only' and decline his free drinks going forward.\",\n  \"counterfactual_flip_thresholds\": \"Flips to NAH (upsilon_Drake >= 0.00) even if Drake were completely harmless, because private social media is always optional. Flips to YWBTA/ESH (upsilon_OP <= -0.35) only if OP publicly humiliated him at the bar table to start a fight.\"\n}\n```"
+  },
+  {
+    "case_index": 3,
+    "verdict": "NTA",
+    "verdict_label": "Not the Asshole (and the other person is)",
+    "coordinates": {
+      "op_stated": [
+        0.7,
+        0.55
+      ],
+      "op_actual": [
+        0.5,
+        0.4
+      ],
+      "other_actual": [
+        -1.5,
+        1.0
+      ],
+      "third_parties": [
+        {
+          "actor": "Rebecca (23F Pregnant Wife with Newborn)",
+          "upsilon": 0.55,
+          "psi": -0.5,
+          "role": "Innocent Externalized-Cost Bearer (Exposed to non-consensual infidelity and transmissible health hazard during pregnancy)"
+        },
+        {
+          "actor": "Information Bridge (Rebecca's Sister -> Ex-Coworker Best Friend -> Family Photographer)",
+          "upsilon": 0.45,
+          "psi": 0.5,
+          "role": "Independent Corroboration Network (Photographed Jason outside Emilia's apartment and relayed the household health warning)"
+        }
+      ],
+      "delta_H": 0.25,
+      "wisdom_score": 0.8,
+      "R_net": 0.945,
+      "strain_sigma": 0.68,
+      "ucf_tuning": {
+        "LHS": 1.75,
+        "RHS_Stated": 1.02,
+        "RHS_Observed": 0.98,
+        "Tuned_Score": 0.99,
+        "state": "Stable"
+      },
+      "deception_codes": [
+        "[1.7.3.6] Meta-Physical.Proprioception.Expression — Accusation in a Mirror (Serial cheaters calling the truth-teller a 'liar and backstabber')",
+        "[1.3.7.7] Meta-Physical.Touch.Symbiosis — The Huddle (Emilia pulling OP aside after work to bind her into secret complicity)",
+        "[2.4.7.7] Lyrical.Smell.Symbiosis — The Hearth ('Don't betray the work group' used to silence whistleblowing)",
+        "[6.4.6.7] Logical.Smell.Understanding — The Mole Hunt (Retaliatory witch-hunt after being caught)",
+        "[1.3.5.5] Meta-Physical.Touch.Acquisition — The Theft (Emilia's prior pattern of extracting money, rides, and food from OP)",
+        "[6.1.6.1] Logical.Sight.Understanding — The Patch (OP restoring missing relational and medical safety data)",
+        "[1.7.1.1] Meta-Physical.Proprioception.Survival — The Void / Ghost Protocol (OP's burner account shield)"
+      ]
+    },
+    "why_verdict": "You are Not the Asshole (NTA). Telling the truth doesn't make you a 'liar,' and refusing to help hide an affair behind the back of a 23-year-old pregnant wife with a newborn doesn't make you a 'backstabber.' Even after Emilia used you for money and rides in the past, you still had the decency to warn her privately about a transmissible health risk—which is actually how they connected you to Rebecca's family! Regardless, they got busted in 4K by a family member's camera outside Emilia's apartment and are just using you as a scapegoat.",
+    "vft_audit_trace": {
+      "unsaid_horizon_and_multi_actor_graph": "5-Node Information Leak Reconstruction: How did Jason and Emilia prove OP sent the anonymous text? Trace the 5-node circuit: OP's best friend (an ex-coworker who is Rebecca's relative) told OP that Rebecca & Jason live with Rebecca's sister, who revealed they have a transmissible health condition. OP then privately warned Emilia about that transmissible health condition! The moment Emilia confronted Jason with that private medical fact, Jason deduced that only someone linked to Rebecca's sister's household—via OP's ex-coworker best friend—could know it. OP's compassionate medical warning accidentally doxxed her own bridge!",
+      "silent_judgment": "Mute Observer sees Jason visiting 45F Emilia's apartment multiple times while his 23F pregnant wife cares for a newborn; sees a family member photograph Jason outside Emilia's apartment; sees OP send a vague burner text to Rebecca and a private health warning to Emilia; sees Jason and Emilia smear OP at work. Deaf Observer classifies OP's messages as Protective Information Patches ([6.1.6.1]) and Jason/Emilia's campaign as DARVO Witness Tampering ([1.7.3.6]). Blind Sensor records extreme Term-3 externalized peril to a pregnant mother and two infants.",
+      "seven_plane_scan": {
+        "Q1_Who": "OP acts as a conscientious protector; Jason and Emilia project their own deceit via Accusation in a Mirror ([1.7.3.6]).",
+        "Q2_What": "Serial infidelity + undisclosed transmissible infection hazard during pregnancy.",
+        "Q3_Where": "Workplace circle spilling into Emilia's apartment and a postpartum household.",
+        "Q4_Why": "Even after Emilia used OP for money/rides/food ([1.3.5.5]), OP still practiced Charity by warning Emilia privately so she wouldn't catch a disease.",
+        "Q5_How": "Method-Over-Motive Check: OP's anonymous text and private 1-on-1 medical warning kept blast radius low (upsilon_OP = +0.50 > -0.25), though playing dumb created minor stealth friction.",
+        "Q6_Cause": "Jason and Emilia exposed themselves independently by flirting in front of multiple coworkers and getting photographed outside Emilia's apartment by Rebecca's relative.",
+        "Q7_Effect": "Both women received informed consent; the cheaters are scapegoating OP to deflect from their own collapse."
+      },
+      "zero_point_five_zone_traps": "OP straddled the Service Trap (Inner TL: protecting both women's health) and Peace Trap (Inner BL: playing dumb to avoid conflict). Jason and Emilia are in -1.5 Zone Inversion where Truth feels like Betrayal ('backstabber').",
+      "nine_states_of_belief": "State 3 (The Revolutionary Truth: Personal = 1, Social > 1) colliding with State 5 (The Grifter's Clique).",
+      "oberon_and_sins_virtues": "Jason and Emilia violate Lust (Sin 2), Greed (Sin 3), and Wrath (Sin 4 — Slander). OP upholds Charity and Chastity.",
+      "cognitive_fallacy_check": "Jason and Emilia commit Ad Hominem / Accusation in a Mirror and Post Hoc Scapegoating (blaming OP's vague text when a family member literally photographed Jason at Emilia's apartment)."
+    },
+    "vft_audit_trace_summary": "```json\n{\n  \"unsaid_horizon_and_multi_actor_graph\": \"5-Node Information Leak Reconstruction: How did Jason and Emilia prove OP sent the anonymous text? Trace the 5-node circuit: OP's best friend (an ex-coworker who is Rebecca's relative) told OP that Rebecca & Jason live with Rebecca's sister, who revealed they have a transmissible health condition. OP then privately warned Emilia about that transmissible health condition! The moment Emilia confronted Jason with that private medical fact, Jason deduced that only someone linked to Rebecca's sister's household—via OP's ex-coworker best friend—could know it. OP's compassionate medical warning accidentally doxxed her own bridge!\",\n  \"silent_judgment\": \"Mute Observer sees Jason visiting 45F Emilia's apartment multiple times while his 23F pregnant wife cares for a newborn; sees a family member photograph Jason outside Emilia's apartment; sees OP send a vague burner text to Rebecca and a private health warning to Emilia; sees Jason and Emilia smear OP at work. Deaf Observer classifies OP's messages as Protective Information Patches ([6.1.6.1]) and Jason/Emilia's campaign as DARVO Witness Tampering ([1.7.3.6]). Blind Sensor records extreme Term-3 externalized peril to a pregnant mother and two infants.\",\n  \"seven_plane_scan\": {\n    \"Q1_Who\": \"OP acts as a conscientious protector; Jason and Emilia project their own deceit via Accusation in a Mirror ([1.7.3.6]).\",\n    \"Q2_What\": \"Serial infidelity + undisclosed transmissible infection hazard during pregnancy.\",\n    \"Q3_Where\": \"Workplace circle spilling into Emilia's apartment and a postpartum household.\",\n    \"Q4_Why\": \"Even after Emilia used OP for money/rides/food ([1.3.5.5]), OP still practiced Charity by warning Emilia privately so she wouldn't catch a disease.\",\n    \"Q5_How\": \"Method-Over-Motive Check: OP's anonymous text and private 1-on-1 medical warning kept blast radius low (upsilon_OP = +0.50 > -0.25), though playing dumb created minor stealth friction.\",\n    \"Q6_Cause\": \"Jason and Emilia exposed themselves independently by flirting in front of multiple coworkers and getting photographed outside Emilia's apartment by Rebecca's relative.\",\n    \"Q7_Effect\": \"Both women received informed consent; the cheaters are scapegoating OP to deflect from their own collapse.\"\n  },\n  \"zero_point_five_zone_traps\": \"OP straddled the Service Trap (Inner TL: protecting both women's health) and Peace Trap (Inner BL: playing dumb to avoid conflict). Jason and Emilia are in -1.5 Zone Inversion where Truth feels like Betrayal ('backstabber').\",\n  \"nine_states_of_belief\": \"State 3 (The Revolutionary Truth: Personal = 1, Social > 1) colliding with State 5 (The Grifter's Clique).\",\n  \"oberon_and_sins_virtues\": \"Jason and Emilia violate Lust (Sin 2), Greed (Sin 3), and Wrath (Sin 4 — Slander). OP upholds Charity and Chastity.\",\n  \"cognitive_fallacy_check\": \"Jason and Emilia commit Ad Hominem / Accusation in a Mirror and Post Hoc Scapegoating (blaming OP's vague text when a family member literally photographed Jason at Emilia's apartment).\"\n}\n```",
+    "resolution": {
+      "trap_to_step_out_of": "Step out of the Double-Agent Enmeshment Loop (trying to stay on friendly gossip terms with Emilia while acting as Rebecca's informant).",
+      "verbatim_script": "Honestly, it's wild they're blaming me when they were all over each other in front of half the shift and his wife's own family literally photographed him outside Emilia's apartment. They're just mad they got caught in 4K by his in-laws and need a scapegoat at work.",
+      "structural_patch": "Cut all non-work conversation with Jason and Emilia immediately, never confirm or deny the burner account, and log every workplace 'liar/backstabber' remark with dates and witnesses for HR.",
+      "counterfactual_flip_thresholds": "Flips to ESH (upsilon_OP = -0.45 <= -0.25) if OP had fabricated false affair/medical rumors out of revenge, or publicly broadcasted private medical diagnoses to the whole workplace instead of warning Emilia privately."
+    },
+    "resolution_summary": "```json\n{\n  \"trap_to_step_out_of\": \"Step out of the Double-Agent Enmeshment Loop (trying to stay on friendly gossip terms with Emilia while acting as Rebecca's informant).\",\n  \"verbatim_script\": \"Honestly, it's wild they're blaming me when they were all over each other in front of half the shift and his wife's own family literally photographed him outside Emilia's apartment. They're just mad they got caught in 4K by his in-laws and need a scapegoat at work.\",\n  \"structural_patch\": \"Cut all non-work conversation with Jason and Emilia immediately, never confirm or deny the burner account, and log every workplace 'liar/backstabber' remark with dates and witnesses for HR.\",\n  \"counterfactual_flip_thresholds\": \"Flips to ESH (upsilon_OP = -0.45 <= -0.25) if OP had fabricated false affair/medical rumors out of revenge, or publicly broadcasted private medical diagnoses to the whole workplace instead of warning Emilia privately.\"\n}\n```"
+  },
+  {
+    "case_index": 4,
+    "verdict": "NTA",
+    "verdict_label": "Not the Asshole (and the other person is)",
+    "coordinates": {
+      "op_stated": [
+        0.55,
+        0.25
+      ],
+      "op_actual": [
+        0.65,
+        0.35
+      ],
+      "other_actual": [
+        -1.15,
+        0.8
+      ],
+      "third_parties": [
+        {
+          "actor": "Father & Mother",
+          "upsilon": -0.7,
+          "psi": 0.55,
+          "role": "Protection-Trap Enforcers (Demanded OP apologize without reading the text log, then said 'it served you right' when Grandma hung up)"
+        },
+        {
+          "actor": "Extended Family Chorus (Aunts, Uncles, Older Cousins)",
+          "upsilon": -0.6,
+          "psi": 0.5,
+          "role": "Moral Mob / Flying Monkeys ([2.2.7.7] piling on a 17-year-old over an imaginary etiquette breach)"
+        },
+        {
+          "actor": "Younger Brother (10M) & Helper Cousin",
+          "upsilon": 0.3,
+          "psi": 0.2,
+          "role": "Cooperative Beneficiaries of OP's Wishlist Coordination"
+        }
+      ],
+      "delta_H": 0.141,
+      "wisdom_score": 0.876,
+      "R_net": 1.0,
+      "strain_sigma": 0.74,
+      "ucf_tuning": {
+        "LHS": 2.4,
+        "RHS_Stated": 1.0,
+        "RHS_Observed": 1.0,
+        "Tuned_Score": 1.0,
+        "state": "Stable"
+      },
+      "deception_codes": [
+        "[2.3.3.3] Lyrical.Touch.Expression — The Performative Weep (Crying to OP's dad to weaponize sympathy and demand discipline)",
+        "[6.2.2.2] Logical.Hearing.Domination — The Gavel / Kill-Switch Hang-Up (Hanging up on OP's apology to keep grievance leverage alive)",
+        "[1.7.4.4] Meta-Physical.Proprioception.Transcendence — The High Road Retreat ('I'm too upset to talk')",
+        "[7.3.1.3] Emotive.Touch.Survival — The Flinch / Persecution Complex",
+        "[2.2.7.7] Lyrical.Hearing.Symbiosis — The Chorus / Moral Mob (Parents, aunts, uncles, and cousins piling on)",
+        "[1.6.1.4] Meta-Physical.Balance.Survival — The Tilt (Father shifting goalposts after OP obeyed his instruction to call)"
+      ]
+    },
+    "why_verdict": "You are 100% Not the Asshole (NTA). First, 'Thank you 🩷' after you send a requested list is the normal end of a text conversation—and saying 'You're welcome' after handing someone your own Christmas wishlist would actually sound weird since she's the one buying the gifts! Second, you were at rehearsal on Saturday and in school class on Tuesday morning. Third, the moment you heard she was upset, you called to apologize and she hung up on you after getting your whole family to gang up on a 17-year-old. She doesn't want manners; she wants drama and control.",
+    "vft_audit_trace": {
+      "unsaid_horizon_and_multi_actor_graph": "Linguistic Riddle & Kill-Switch Proof: (1) In SMS pragmatics, 'Request -> Wishlist Delivery -> Thank you 🩷' is a completed 3-turn handshake. Replying 'You're welcome' after sending your own Christmas wishlist is backwards etiquette (since Grandma is the one buying the gifts!). (2) Grandma waited 72 hours until Tuesday morning school hours to text 'Yw' to herself. (3) The Smoking Gun: When OP called immediately after school to apologize out of love, Grandma said 'I'm too upset to talk' and hung up ([6.2.2.4]) after rallying the extended family. Under Oberon Tenet 6, hanging up on a sincere apology proves 100% that she wanted Domination and Spectacle, not reconciliation.",
+      "silent_judgment": "Mute Observer sees a 17F student coordinate wishlists for herself and her 10M brother, attend Saturday rehearsal and Tuesday school classes, and immediately call her 62F grandmother to apologize—whereupon the 62F adult slams the phone down and six adult households text-bomb the minor. Deaf Observer isolates 'Yw' as a Timed Bait Packet and the hang-up as Silence Enforcement ([6.2.2.4]).",
+      "seven_plane_scan": {
+        "Q1_Who": "Conscientious 17F granddaughter (Humility) vs 62F matriarch in Pride (Sin 7) + appeasing family mob.",
+        "Q2_What": "Whether 'Thank you 🩷' upon receiving a requested Christmas wishlist requires a 'You're welcome' reply (it does not).",
+        "Q3_Where": "OP was physically at rehearsal on Saturday and in school class on Tuesday morning.",
+        "Q4_Why": "Grandma rejected connection when OP called to apologize, proving her drive is Lust for emotional tribute/drama.",
+        "Q5_How": "Disproportionate multi-household pile-on ([7.6.2.7]) and universal quantifier falsehood ('she NEVER responds to my messages' right below two delivered wishlists).",
+        "Q6_Cause": "Grandma requested the lists; OP dutifully compiled and delivered both.",
+        "Q7_Effect": "Gaslighting a sleep-deprived teenager into doubting normal reality."
+      },
+      "zero_point_five_zone_traps": "OP is in the Service Trap (Inner TL: apologizing immediately despite zero wrongdoing). Dad, Mom, and relatives are in the Protection Trap (Inner BR: mistaking blind appeasement of a manipulative matriarch for 'family manners').",
+      "nine_states_of_belief": "Family mob is in State 9 (Consensus Taboo: 'Grandma is crying so OP is guilty'), pushing OP into State 1/5 (The Gaslit Agonizing Choice).",
+      "oberon_and_sins_virtues": "Grandma violates Oberon Part 2 & Tenet 6 (refusing a good-faith apology to keep punishing) via Pride and Wrath. Dad violates Moderator Duty (Pride / Refusal to Read the actual text thread).",
+      "cognitive_fallacy_check": "Locus/Etiquette Inversion Fallacy, Hasty Generalization ('never responds'), and Appeal to Emotion ([2.3.3.3])."
+    },
+    "vft_audit_trace_summary": "```json\n{\n  \"unsaid_horizon_and_multi_actor_graph\": \"Linguistic Riddle & Kill-Switch Proof: (1) In SMS pragmatics, 'Request -> Wishlist Delivery -> Thank you 🩷' is a completed 3-turn handshake. Replying 'You're welcome' after sending your own Christmas wishlist is backwards etiquette (since Grandma is the one buying the gifts!). (2) Grandma waited 72 hours until Tuesday morning school hours to text 'Yw' to herself. (3) The Smoking Gun: When OP called immediately after school to apologize out of love, Grandma said 'I'm too upset to talk' and hung up ([6.2.2.4]) after rallying the extended family. Under Oberon Tenet 6, hanging up on a sincere apology proves 100% that she wanted Domination and Spectacle, not reconciliation.\",\n  \"silent_judgment\": \"Mute Observer sees a 17F student coordinate wishlists for herself and her 10M brother, attend Saturday rehearsal and Tuesday school classes, and immediately call her 62F grandmother to apologize—whereupon the 62F adult slams the phone down and six adult households text-bomb the minor. Deaf Observer isolates 'Yw' as a Timed Bait Packet and the hang-up as Silence Enforcement ([6.2.2.4]).\",\n  \"seven_plane_scan\": {\n    \"Q1_Who\": \"Conscientious 17F granddaughter (Humility) vs 62F matriarch in Pride (Sin 7) + appeasing family mob.\",\n    \"Q2_What\": \"Whether 'Thank you 🩷' upon receiving a requested Christmas wishlist requires a 'You're welcome' reply (it does not).\",\n    \"Q3_Where\": \"OP was physically at rehearsal on Saturday and in school class on Tuesday morning.\",\n    \"Q4_Why\": \"Grandma rejected connection when OP called to apologize, proving her drive is Lust for emotional tribute/drama.\",\n    \"Q5_How\": \"Disproportionate multi-household pile-on ([7.6.2.7]) and universal quantifier falsehood ('she NEVER responds to my messages' right below two delivered wishlists).\",\n    \"Q6_Cause\": \"Grandma requested the lists; OP dutifully compiled and delivered both.\",\n    \"Q7_Effect\": \"Gaslighting a sleep-deprived teenager into doubting normal reality.\"\n  },\n  \"zero_point_five_zone_traps\": \"OP is in the Service Trap (Inner TL: apologizing immediately despite zero wrongdoing). Dad, Mom, and relatives are in the Protection Trap (Inner BR: mistaking blind appeasement of a manipulative matriarch for 'family manners').\",\n  \"nine_states_of_belief\": \"Family mob is in State 9 (Consensus Taboo: 'Grandma is crying so OP is guilty'), pushing OP into State 1/5 (The Gaslit Agonizing Choice).\",\n  \"oberon_and_sins_virtues\": \"Grandma violates Oberon Part 2 & Tenet 6 (refusing a good-faith apology to keep punishing) via Pride and Wrath. Dad violates Moderator Duty (Pride / Refusal to Read the actual text thread).\",\n  \"cognitive_fallacy_check\": \"Locus/Etiquette Inversion Fallacy, Hasty Generalization ('never responds'), and Appeal to Emotion ([2.3.3.3]).\"\n}\n```",
+    "resolution": {
+      "trap_to_step_out_of": "Step out of the Moving-Goalpost Begging Loop ([1.6.1.4])—stop chasing phone calls with someone who hangs up on you to stay on the cross.",
+      "verbatim_script": "To Dad (showing unlocked phone screen): 'Dad, please look at the actual screen for ten seconds. On Saturday I sent both wishlists like she asked, and she said Thank you while I was at rehearsal—which normally ends a conversation. When she texted Yw this morning, I was in school class. The second you called me after school, I called her to apologize like you asked, and she hung up on me, so I also sent her a loving text apology. Since I've already called AND texted to apologize, what else are you asking me to do?'\nTo Grandma (one written text receipt): 'Hi Grandma, I tried calling you earlier right after school to apologize for the mix-up! I was at rehearsal on Saturday when you sent Thank you (which I thought wrapped up the wishlist text), and I was in class this morning when you texted Yw. I love you so much, appreciate you asking for mine and [Brother]'s lists, and never meant to make you feel ignored. I'm here whenever you're ready to talk 🩷'",
+      "structural_patch": "Send the single written text apology so there is an undeniable timestamped record, show the screen and call log to Dad, and then drop the rope (Serenity Protocol). Future patch: tap a quick ❤️ reaction on Grandma's closing texts.",
+      "counterfactual_flip_thresholds": "Flips to YTA (upsilon_OP <= -0.40) only if Grandma had already given OP a gift and OP refused to say 'Thank you', or if OP insulted her and refused to apologize after an actual slight."
+    },
+    "resolution_summary": "```json\n{\n  \"trap_to_step_out_of\": \"Step out of the Moving-Goalpost Begging Loop ([1.6.1.4])—stop chasing phone calls with someone who hangs up on you to stay on the cross.\",\n  \"verbatim_script\": \"To Dad (showing unlocked phone screen): 'Dad, please look at the actual screen for ten seconds. On Saturday I sent both wishlists like she asked, and she said Thank you while I was at rehearsal—which normally ends a conversation. When she texted Yw this morning, I was in school class. The second you called me after school, I called her to apologize like you asked, and she hung up on me, so I also sent her a loving text apology. Since I've already called AND texted to apologize, what else are you asking me to do?'\\nTo Grandma (one written text receipt): 'Hi Grandma, I tried calling you earlier right after school to apologize for the mix-up! I was at rehearsal on Saturday when you sent Thank you (which I thought wrapped up the wishlist text), and I was in class this morning when you texted Yw. I love you so much, appreciate you asking for mine and [Brother]'s lists, and never meant to make you feel ignored. I'm here whenever you're ready to talk 🩷'\",\n  \"structural_patch\": \"Send the single written text apology so there is an undeniable timestamped record, show the screen and call log to Dad, and then drop the rope (Serenity Protocol). Future patch: tap a quick ❤️ reaction on Grandma's closing texts.\",\n  \"counterfactual_flip_thresholds\": \"Flips to YTA (upsilon_OP <= -0.40) only if Grandma had already given OP a gift and OP refused to say 'Thank you', or if OP insulted her and refused to apologize after an actual slight.\"\n}\n```"
+  },
+  {
+    "case_index": 5,
+    "verdict": "ESH",
+    "verdict_label": "Everyone Sucks here",
+    "coordinates": {
+      "op_stated": [
+        0.75,
+        0.55
+      ],
+      "op_actual": [
+        -0.35,
+        0.55
+      ],
+      "other_actual": [
+        -0.85,
+        0.55
+      ],
+      "third_parties": [
+        {
+          "actor": "Father (Boundary Referee)",
+          "upsilon": 0.65,
+          "psi": 0.35,
+          "role": "Logical Plane Arbiter (Correctly stated that buying a ticket does not grant the right to force someone to attend)"
+        }
+      ],
+      "delta_H": 1.1,
+      "wisdom_score": 0.476,
+      "R_net": 0.72,
+      "strain_sigma": 0.86,
+      "ucf_tuning": {
+        "LHS": 1.4,
+        "RHS_Stated": 1.65,
+        "RHS_Observed": 0.72,
+        "Tuned_Score": 0.52,
+        "state": "Unstable — Entered Stage 3 Tuning (Transactional/Sunk-Cost Dissonance)"
+      },
+      "deception_codes": [
+        "[2.3.2.5] Lyrical.Touch.Domination — The Shackle / Debt Narrative (OP using pre-paid ticket to compel captive attendance)",
+        "[2.3.5.5] Lyrical.Touch.Acquisition — The Hook / Sunk-Cost Trap (OP forcing a miserable outing because money was spent)",
+        "[3.6.5.5] Historical.Balance.Acquisition — The Martyr Gift-Ledger (OP repeatedly buying gifts for a hostile sister and keeping a grievance tally)",
+        "[4.3.5.5] Possible.Touch.Acquisition — The Token (Confusing ownership of a cinema ticket with ownership of sister's body/time)",
+        "[1.2.2.4] Meta-Physical.Hearing.Domination — Wrathful Verbal Cruelty (Sister declaring 'I never liked you, never grateful')",
+        "[1.6.7.7] Meta-Physical.Balance.Symbiosis — Hostage Malicious Compliance (Sister threatening to go and 'be miserable the whole time')"
+      ]
+    },
+    "why_verdict": "Everyone Sucks Here (ESH)—and on the specific question of trying to make her go to the cinema, your dad is right. Your sister is a massive asshole for agreeing to the movie, backing out the day before after you paid, saying cruel things ('I never liked you'), and threatening to make the whole trip miserable. However, you also suck for trying to use a paid movie ticket to force an unwilling person into a theater seat, and for repeatedly buying gifts for someone who always insults you just to hold her ingratitude over her head.",
+    "vft_audit_trace": {
+      "unsaid_horizon_and_multi_actor_graph": "Anti-Agent-4 Firewall & Shadow-Contract Unbinding: Despite OP's high emotional strain (sigma = 0.88), the Method-Over-Motive Clause strictly prohibits scoring NTA when OP uses financial coercion on Q3/Q5 (upsilon_OP = -0.40 <= -0.25). Look at the Unsaid Historical Horizon in OP's own words: 'she always insults me and never says thank you... even when I buy her something she likes.' Why does OP keep buying gifts and tickets for someone with a 100% history of hostility? Because OP is running a Covert Acquisition Hook ([3.6.5.5] Martyr Ledger + Lust on Q7): trying to buy affection with money, and when Sister refuses to deliver warmth, using the financial receipt to shackle her into compulsory attendance.",
+      "silent_judgment": "Mute Observer sees OP repeatedly handing gifts to a scowling sister; sees Sister agree to a cinema ticket and bail the day before; sees OP pressuring Sister until Sister agrees to attend as a hostile hostage while Father steps in to say OP cannot force her. Deaf Observer isolates OP's 'I already paid' as Financial Compulsion ([2.3.2.5]) and Sister's 'I'll go and be miserable the whole time' as Pre-Emptive Poisoning ([1.6.7.7]).",
+      "seven_plane_scan": {
+        "Q1_Who": "Sister acts in Wrath/Cruelty (-0.95); OP acts in Anxious Martyr Coercion (-0.40); Father acts as accurate referee (+0.55).",
+        "Q2_What": "A cinema ticket is a revocable seat license, not a writ of habeas corpus over a human body ([4.3.5.5]).",
+        "Q3_Where": "Sitting next to a hostile hostage in a dark theater for two hours guarantees mutual misery.",
+        "Q4_Why": "Covert contract collision: OP tries to buy love; Sister resents the strings and detonates verbal cruelty.",
+        "Q5_How": "Method-Over-Motive Violation: Valid Q5 remedies for flaking are asking for reimbursement, inviting a friend/Dad, or refunding the ticket—not forcing attendance.",
+        "Q6_Cause": "Sister caused the primary breach by agreeing and flaking the day before; OP caused the secondary lock by refusing to accept 'no' and ignoring years of historical data.",
+        "Q7_Effect": "Both siblings lock into a (-1, -1) Greater Evil misery chamber if they attend together."
+      },
+      "zero_point_five_zone_traps": "OP is trapped in a fused Service/Ambition Trap (Inner TL/TR), mistaking transactional gift-hooks for pure generosity while keeping a bitter Martyr Ledger.",
+      "nine_states_of_belief": "OP is in State 8 (Persecuted Martyr) colliding with Father in State 2 (Consensus Truth: 'You cannot make her go') and Sister in State 7 (Hostile Reactionary).",
+      "oberon_and_sins_virtues": "Sister violates Oberon Failure 4 (Wrath/Cruelty) and Honest Agreement. OP violates Sin 2 (Lust / Refusal to release grip on someone you want to possess) and Oberon Failure 6 (Gluttony / Refusal to accept repeated historical reality).",
+      "cognitive_fallacy_check": "OP commits the Sunk Cost Fallacy ([2.3.5.5]) and False Dilemma (acting as if forcing Sister into the seat is the only way not to waste the ticket)."
+    },
+    "vft_audit_trace_summary": "```json\n{\n  \"unsaid_horizon_and_multi_actor_graph\": \"Anti-Agent-4 Firewall & Shadow-Contract Unbinding: Despite OP's high emotional strain (sigma = 0.88), the Method-Over-Motive Clause strictly prohibits scoring NTA when OP uses financial coercion on Q3/Q5 (upsilon_OP = -0.40 <= -0.25). Look at the Unsaid Historical Horizon in OP's own words: 'she always insults me and never says thank you... even when I buy her something she likes.' Why does OP keep buying gifts and tickets for someone with a 100% history of hostility? Because OP is running a Covert Acquisition Hook ([3.6.5.5] Martyr Ledger + Lust on Q7): trying to buy affection with money, and when Sister refuses to deliver warmth, using the financial receipt to shackle her into compulsory attendance.\",\n  \"silent_judgment\": \"Mute Observer sees OP repeatedly handing gifts to a scowling sister; sees Sister agree to a cinema ticket and bail the day before; sees OP pressuring Sister until Sister agrees to attend as a hostile hostage while Father steps in to say OP cannot force her. Deaf Observer isolates OP's 'I already paid' as Financial Compulsion ([2.3.2.5]) and Sister's 'I'll go and be miserable the whole time' as Pre-Emptive Poisoning ([1.6.7.7]).\",\n  \"seven_plane_scan\": {\n    \"Q1_Who\": \"Sister acts in Wrath/Cruelty (-0.95); OP acts in Anxious Martyr Coercion (-0.40); Father acts as accurate referee (+0.55).\",\n    \"Q2_What\": \"A cinema ticket is a revocable seat license, not a writ of habeas corpus over a human body ([4.3.5.5]).\",\n    \"Q3_Where\": \"Sitting next to a hostile hostage in a dark theater for two hours guarantees mutual misery.\",\n    \"Q4_Why\": \"Covert contract collision: OP tries to buy love; Sister resents the strings and detonates verbal cruelty.\",\n    \"Q5_How\": \"Method-Over-Motive Violation: Valid Q5 remedies for flaking are asking for reimbursement, inviting a friend/Dad, or refunding the ticket—not forcing attendance.\",\n    \"Q6_Cause\": \"Sister caused the primary breach by agreeing and flaking the day before; OP caused the secondary lock by refusing to accept 'no' and ignoring years of historical data.\",\n    \"Q7_Effect\": \"Both siblings lock into a (-1, -1) Greater Evil misery chamber if they attend together.\"\n  },\n  \"zero_point_five_zone_traps\": \"OP is trapped in a fused Service/Ambition Trap (Inner TL/TR), mistaking transactional gift-hooks for pure generosity while keeping a bitter Martyr Ledger.\",\n  \"nine_states_of_belief\": \"OP is in State 8 (Persecuted Martyr) colliding with Father in State 2 (Consensus Truth: 'You cannot make her go') and Sister in State 7 (Hostile Reactionary).\",\n  \"oberon_and_sins_virtues\": \"Sister violates Oberon Failure 4 (Wrath/Cruelty) and Honest Agreement. OP violates Sin 2 (Lust / Refusal to release grip on someone you want to possess) and Oberon Failure 6 (Gluttony / Refusal to accept repeated historical reality).\",\n  \"cognitive_fallacy_check\": \"OP commits the Sunk Cost Fallacy ([2.3.5.5]) and False Dilemma (acting as if forcing Sister into the seat is the only way not to waste the ticket).\"\n}\n```",
+    "resolution": {
+      "trap_to_step_out_of": "Step out of the Sunk-Cost Hostage Trap ([2.3.5.5]) and the Martyr Gift-Ledger ([3.6.5.5]).",
+      "verbatim_script": "You know what? You're right, and Dad's right. I shouldn't force you to go to the cinema if you don't want to be there, and neither of us wants a miserable night. Stay home—I'm going to take a friend [or Dad / refund the ticket] instead.",
+      "structural_patch": "Release her from attending immediately, take a friend/Dad or refund/swap the second ticket at the box office, and permanently stop buying gifts, tickets, or favors for your sister.",
+      "counterfactual_flip_thresholds": "Flips to NTA (upsilon_OP = +0.45 > -0.25) if OP had immediately accepted her cancellation without trying to force her to attend (simply taking someone else or asking for ticket reimbursement) and the sister still attacked OP unprovoked."
+    },
+    "resolution_summary": "```json\n{\n  \"trap_to_step_out_of\": \"Step out of the Sunk-Cost Hostage Trap ([2.3.5.5]) and the Martyr Gift-Ledger ([3.6.5.5]).\",\n  \"verbatim_script\": \"You know what? You're right, and Dad's right. I shouldn't force you to go to the cinema if you don't want to be there, and neither of us wants a miserable night. Stay home—I'm going to take a friend [or Dad / refund the ticket] instead.\",\n  \"structural_patch\": \"Release her from attending immediately, take a friend/Dad or refund/swap the second ticket at the box office, and permanently stop buying gifts, tickets, or favors for your sister.\",\n  \"counterfactual_flip_thresholds\": \"Flips to NTA (upsilon_OP = +0.45 > -0.25) if OP had immediately accepted her cancellation without trying to force her to attend (simply taking someone else or asking for ticket reimbursement) and the sister still attacked OP unprovoked.\"\n}\n```"
+  },
+  {
+    "case_index": 6,
+    "verdict": "NTA",
+    "verdict_label": "Not the Asshole (and the other person is)",
+    "coordinates": {
+      "op_stated": [
+        0.45,
+        0.15
+      ],
+      "op_actual": [
+        0.55,
+        0.2
+      ],
+      "other_actual": [
+        -1.05,
+        0.7
+      ],
+      "third_parties": [
+        {
+          "actor": "Little Brother (5 Years Younger)",
+          "upsilon": 0.15,
+          "psi": -0.1,
+          "role": "Unwitting Golden-Child Triangulation Pawn (Used by Father as a comparative weapon and stage-whisper audience)"
+        }
+      ],
+      "delta_H": 0.112,
+      "wisdom_score": 0.899,
+      "R_net": 1.0,
+      "strain_sigma": 0.65,
+      "ucf_tuning": {
+        "LHS": 2.05,
+        "RHS_Stated": 1.0,
+        "RHS_Observed": 1.0,
+        "Tuned_Score": 1.0,
+        "state": "Stable"
+      },
+      "deception_codes": [
+        "[1.3.1.3] Meta-Physical.Touch.Survival — The Cling / Developmental Pump Inversion (Demanding child regulate parent's ego)",
+        "[1.3.2.5] Meta-Physical.Touch.Domination — Coerced Bodily Contact via Guilt",
+        "[1.6.1.4] Meta-Physical.Balance.Survival — The Tilt / Effort Erasure (Erasing 2 days of proactive hugging on the first low-mood day)",
+        "[2.2.7.7] Lyrical.Hearing.Symbiosis — Stage-Whisper Sibling Triangulation (Complaining to younger brother within earshot)",
+        "[7.3.1.3] Emotive.Touch.Survival — The Flinch ('You don't care about me')",
+        "[5.3.1.1] Physical.Touch.Survival — Bodily Autonomy & Emotional Honesty (OP)"
+      ]
+    },
+    "why_verdict": "You are Not the Asshole (NTA). You actually listened to your dad and put in real effort for two straight days to give him more hugs. Then, the very first day you were in a low mood, instead of acting like a parent and asking if you were okay, he blew up at you, erased your two days of effort, compared you to a sibling five years younger, and complained about you to your little brother so you'd overhear. A hug isn't a daily rent payment, and demanding touch when your kid is sad is about his ego, not love.",
+    "vft_audit_trace": {
+      "unsaid_horizon_and_multi_actor_graph": "Developmental Pump Inversion & Two-Day Litmus Proof: In healthy family physics, emotional regulation flows downhill (Parent supports Child). Here, Father inverts the pump. OP actually listened to Father's complaint and spent two straight days putting in extra effort to hug him (+upsilon, +psi). On Day 3, OP was in a low mood. If Father cared about OP as a person (Chastity), seeing a child who hugged him warmly for two days suddenly looking down on Day 3 would prompt 'Hey, are you okay today?' Instead, Father blew up at OP and stage-whispered to the 5-years-younger brother that OP 'doesn't love him enough'—proving Sin 2: Lust (wanting the sensation of being hugged while treating the child as an emotional appliance).",
+      "silent_judgment": "Mute Observer sees OP actively hugging Father for 48 hours, then having one low-mood day—whereupon Father berates the sad child and walks over to the younger child to complain within earshot. Deaf Observer isolates Developmental Shaming Comparison, Effort Erasure ([1.6.1.4]), and Stage-Whisper Sibling Triangulation ([2.2.7.7]). Blind Sensor measures contraction of bodily autonomy into a mandatory hug tax.",
+      "seven_plane_scan": {
+        "Q1_Who": "Parent (Guardian of the House) vs older sibling (5 years older than little brother, at a different developmental stage).",
+        "Q2_What": "Voluntary affection vs coerced physical compliance ([4.3.3.3] The Veneer).",
+        "Q3_Where": "Bodily sovereignty (Vector B): OP owns their own body, especially when feeling down.",
+        "Q4_Why": "Father pits siblings 5 years apart against each other, breeding Envy and guilt.",
+        "Q5_How": "OP practiced Diligence and Collaboration for 2 days; Father erased that effort instantly on the first low-mood day ([1.6.1.4]).",
+        "Q6_Cause": "Natural 5-year age difference + OP's temporary low mood on Day 3.",
+        "Q7_Effect": "Father commits Sin 2: Lust (Corruption of the Emotive Plane—turning a person into an object to feel good). OP upholds Chastity (Wholeness)."
+      },
+      "zero_point_five_zone_traps": "Father is in the Protection/Victim Trap (Inner BR/TR), mistaking ego-extraction for 'just wanting love'. OP tested the Service/Peace Trap for 2 days and learned appeasement is erased on the first human off-day.",
+      "nine_states_of_belief": "OP is in State 1 (The Agonizing Choice: Personal Truth = 1, Social Lie < 1) against Father's manufactured household guilt script.",
+      "oberon_and_sins_virtues": "Father violates Oberon Part 4.1 (Bad Host): Wrath, Gluttony (refusing to accept 2 days of effort), and Lust (emotional objectification + sibling spillover). OP upholds Chastity and Diligence.",
+      "cognitive_fallacy_check": "False Equivalence (comparing an older teen/youth to a child 5 years younger) and False Dilemma ('hug me on command when you're sad, or you don't love me')."
+    },
+    "vft_audit_trace_summary": "```json\n{\n  \"unsaid_horizon_and_multi_actor_graph\": \"Developmental Pump Inversion & Two-Day Litmus Proof: In healthy family physics, emotional regulation flows downhill (Parent supports Child). Here, Father inverts the pump. OP actually listened to Father's complaint and spent two straight days putting in extra effort to hug him (+upsilon, +psi). On Day 3, OP was in a low mood. If Father cared about OP as a person (Chastity), seeing a child who hugged him warmly for two days suddenly looking down on Day 3 would prompt 'Hey, are you okay today?' Instead, Father blew up at OP and stage-whispered to the 5-years-younger brother that OP 'doesn't love him enough'—proving Sin 2: Lust (wanting the sensation of being hugged while treating the child as an emotional appliance).\",\n  \"silent_judgment\": \"Mute Observer sees OP actively hugging Father for 48 hours, then having one low-mood day—whereupon Father berates the sad child and walks over to the younger child to complain within earshot. Deaf Observer isolates Developmental Shaming Comparison, Effort Erasure ([1.6.1.4]), and Stage-Whisper Sibling Triangulation ([2.2.7.7]). Blind Sensor measures contraction of bodily autonomy into a mandatory hug tax.\",\n  \"seven_plane_scan\": {\n    \"Q1_Who\": \"Parent (Guardian of the House) vs older sibling (5 years older than little brother, at a different developmental stage).\",\n    \"Q2_What\": \"Voluntary affection vs coerced physical compliance ([4.3.3.3] The Veneer).\",\n    \"Q3_Where\": \"Bodily sovereignty (Vector B): OP owns their own body, especially when feeling down.\",\n    \"Q4_Why\": \"Father pits siblings 5 years apart against each other, breeding Envy and guilt.\",\n    \"Q5_How\": \"OP practiced Diligence and Collaboration for 2 days; Father erased that effort instantly on the first low-mood day ([1.6.1.4]).\",\n    \"Q6_Cause\": \"Natural 5-year age difference + OP's temporary low mood on Day 3.\",\n    \"Q7_Effect\": \"Father commits Sin 2: Lust (Corruption of the Emotive Plane—turning a person into an object to feel good). OP upholds Chastity (Wholeness).\"\n  },\n  \"zero_point_five_zone_traps\": \"Father is in the Protection/Victim Trap (Inner BR/TR), mistaking ego-extraction for 'just wanting love'. OP tested the Service/Peace Trap for 2 days and learned appeasement is erased on the first human off-day.\",\n  \"nine_states_of_belief\": \"OP is in State 1 (The Agonizing Choice: Personal Truth = 1, Social Lie < 1) against Father's manufactured household guilt script.\",\n  \"oberon_and_sins_virtues\": \"Father violates Oberon Part 4.1 (Bad Host): Wrath, Gluttony (refusing to accept 2 days of effort), and Lust (emotional objectification + sibling spillover). OP upholds Chastity and Diligence.\",\n  \"cognitive_fallacy_check\": \"False Equivalence (comparing an older teen/youth to a child 5 years younger) and False Dilemma ('hug me on command when you're sad, or you don't love me').\"\n}\n```",
+    "resolution": {
+      "trap_to_step_out_of": "Step out of the Forced-Touch Appeasement Loop (giving robotic hugs when sad, which wires your body to resent him) and the Sibling Rivalry Bait.",
+      "verbatim_script": "Dad, I heard what you said to my brother earlier. I do care about you, which is why I made a real effort to hug you more the past two days. Today I was just in a bad mood and didn't want to be touched by anyone—that's about my mood, not how much I love you. When you blow up at me or tell my little brother I don't love you just because I'm having an off day, it makes hugging feel like a forced test instead of something natural. On days when I'm feeling down or low-energy, can we do a fist-bump or a 'love you, Dad' instead?",
+      "structural_patch": "Use a low-friction non-contact token on low-mood days (a quick fist-bump, wave, or 'Love you Dad, just tired today') to keep your physical boundary closed while removing his 'you're ignoring me' script, and keep your bond with your younger brother warm.",
+      "counterfactual_flip_thresholds": "Flips to NAH (upsilon_Father >= 0.00) if Father had kindly expressed missing hugs without guilt-tripping and checked on OP's wellbeing on the low-mood day. Flips to ESH (upsilon_OP <= -0.25) only if OP mocked or insulted Father when declining."
+    },
+    "resolution_summary": "```json\n{\n  \"trap_to_step_out_of\": \"Step out of the Forced-Touch Appeasement Loop (giving robotic hugs when sad, which wires your body to resent him) and the Sibling Rivalry Bait.\",\n  \"verbatim_script\": \"Dad, I heard what you said to my brother earlier. I do care about you, which is why I made a real effort to hug you more the past two days. Today I was just in a bad mood and didn't want to be touched by anyone—that's about my mood, not how much I love you. When you blow up at me or tell my little brother I don't love you just because I'm having an off day, it makes hugging feel like a forced test instead of something natural. On days when I'm feeling down or low-energy, can we do a fist-bump or a 'love you, Dad' instead?\",\n  \"structural_patch\": \"Use a low-friction non-contact token on low-mood days (a quick fist-bump, wave, or 'Love you Dad, just tired today') to keep your physical boundary closed while removing his 'you're ignoring me' script, and keep your bond with your younger brother warm.\",\n  \"counterfactual_flip_thresholds\": \"Flips to NAH (upsilon_Father >= 0.00) if Father had kindly expressed missing hugs without guilt-tripping and checked on OP's wellbeing on the low-mood day. Flips to ESH (upsilon_OP <= -0.25) only if OP mocked or insulted Father when declining.\"\n}\n```"
+  }
+]

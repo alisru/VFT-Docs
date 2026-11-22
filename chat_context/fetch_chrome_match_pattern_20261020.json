@@ -1,0 +1,88 @@
+{
+  "search_id": "search_15034e87b1be4eae703bd6731eefe4f3",
+  "results": [
+    {
+      "url": "https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/extensions/mv3/match_patterns/index.md",
+      "title": "developer.chrome.com/site/en/docs/extensions/mv3/match_patterns/index.md at main · GoogleChrome/developer.chrome.com · GitHub",
+      "publish_date": null,
+      "excerpts": [
+        "layout: 'layouts/doc-post.njk' title: 'Match patterns' seoTitle: 'Chrome Extensions match patterns' date: 2012-09-18 updated: 2023-08-31 description: Understanding URL match patterns in Chrome extensions.\nExtensions use match patterns in a variety of use cases, including the following:\n* Injecting content script.\n* Declaring host permissions that some Chrome APIs require in addition to their own permissions.\n* Granting access to web-accessible resources.\n* Allowing message sending and receiving using \"externally_connectable.matches\".\n\"<all_urls>\" : Matches any URL that starts with a permitted scheme, including any pattern listed under valid patterns. Because it affects all hosts, Chrome web store reviews for extensions that use it may take longer.\n\"file:///\" : Allows your extension to run on local files. This pattern requires the user to manually grant access.\nNote that this case requires three slashes, not two.\nLocalhost URLs and IP addresses : To match any localhost port during development, use http://localhost/*. For IP addresses, specify the address plus a wildcard in the path, as in http://127.0.0.1/*. You can also use http://*:*/* to match localhost, IP addresses, and any port.\nTop Level domain match patterns : Chrome doesn't support match patterns for top Level domains (TLD). Specify your match patterns within individual TLDs, as in http://google.es/* and http://google.fr/*.\nExamples of matches include file:///foo/bar.html and file:///foo.\nhttp://127.0.0.1/* or http://127.0.0.1/ : Matches any URL that uses the http scheme and is on the host 127.0.0.1. Examples of matches include http://127.0.0.1/ and http://127.0.0.1/foo/bar.html.\nhttp://localhost/* : Matches any localhost port."
+      ]
+    },
+    {
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/match-patterns.md.txt",
+      "title": "Special cases",
+      "publish_date": null,
+      "excerpts": [
+        "A match pattern is a URL with the following structure, used to specify a group of URLs:\n<scheme>://<host>:<port>/<path>\nscheme : Must be one of the following, separated from the rest of the pattern using a colon followed by a double slash (://):\n* http\n* https\n* A wildcard *, which matches only http or https\n* file\nFor information on injecting content scripts into unsupported schemes, such as about: and data:, see Injecting in related frames.\nhost : A hostname (www.example.com). A * before the hostname to match subdomains (*.example.com), or just a wildcard *.\n* If you use a wildcard in the host pattern, it must be the first or only character, and it must be followed by a period (.) or forward slash (/).\nport (optional) : Port to match. By default, this is treated as a wildcard with the same behavior as :*.\npath : A URL path (/example). For host permissions, the path is required but ignored.\nThe wildcard (/*) should be used by convention.\nExtensions use match patterns in a variety of use cases, including the following:\n* Injecting content script.\n* Declaring host permissions that some Chrome APIs require in addition to their own permissions.\n* Granting access to web-accessible resources.\n* Allowing message sending and receiving using the \"externally_connectable.matches\" manifest key.\n\"<all_urls>\" :   Matches any URL that starts with a permitted scheme, including any pattern listed under valid patterns. Because it affects all hosts, Chrome web store reviews for extensions that use it may take longer.\n\"file:///\" :   Allows your extension to run on local files. This pattern requires the user to manually grant access.\nNote that this case requires three slashes, not two.\nLocalhost URLs and IP addresses :   Use http://localhost/*, or http://127.0.0.1/* (to match an IP address). Match patterns match all ports unless an explicit port is specified.\nTop Level domain match patterns :   Chrome doesn't support match patterns for top Level domains (TLD).\nSpecify your match patterns within individual TLDs, as in http://google.es/* and http://google.fr/*.\nExample patterns\nhttps://*/* or https://*/ :   Matches any URL using the https scheme.\nhttps://*/foo* :   Matches any URL using the https scheme, on any host, with a path that starts with foo. Examples of matches include https://example.com/foo/bar.html and https://www.google.com/foo.\nhttps://*.google.com/foo*bar :   Matches any URL using the https scheme, on a google.com host, with a path that starts with foo and ends with bar. Examples of matches include https://www.google.com/foo/baz/bar and https://docs.google.com/foobar.\nfile:///foo* :   Matches any local file whose path starts with foo.\nExamples of matches include file:///foo/bar.html and file:///foo.\nhttp://127.0.0.1/* or http://127.0.0.1/ :   Matches any URL that uses the http scheme and is on the host 127.0.0.1. Examples of matches include http://127.0.0.1/ and http://127.0.0.1/foo/bar.html.\nhttp://localhost/* :   Matches any localhost port."
+      ]
+    },
+    {
+      "url": "https://chromium.googlesource.com/chromium/chromium/+/refs/heads/main/chrome/common/extensions/docs/extensions/match_patterns.html",
+      "title": "chrome/common/extensions/docs/extensions/match_patterns.html - chromium/chromium - Git at Google",
+      "publish_date": null,
+      "excerpts": [
+        "Google Git Google Git\nSign in ◑ Theme\nchromium / chromium / chromium / refs/heads/main / . / chrome / common / extensions / docs / extensions / match_patterns.html\nblob: c366d5905cbc7c52ed3b8db5d3c55c55f8e2170c [ file ] [ edit ]\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n* Match Patterns - Google Chrome Extensions - Google Code\n* You are viewing extension docs in chrome via the 'file:' scheme: are you expecting to see local changes when you refresh? You'll need run chrome with --allow-file-access-from-files.\n* WARNING: This is the  BETA  documentation.\n* It may not work with the stable release of Chrome.\n* Formats\n* Manifest Files\n* Match Patterns\n* Permission Warnings\n* chrome.* APIs\n* Other APIs\n* Samples\n* More\n* Chrome Web Store\n* Hosted Apps\n* Themes\n* initToggles ();\n* Match Patterns\n* Match Patterns\n* Content scripts  operate on\n* a set of URLs defined by match patterns.\n* You can put one or more match patterns\n* in the  \"matches\"  part of\n* a content script's section of the manifest,\n* as well as in the  \"exclude_matches\"  section.\n* This page describes the match pattern syntax —\n* the rules you need to follow when you specify\n* which URLs your content script affects.\n* A match pattern is essentially a URL\n* that begins with a permitted scheme (  http  ,\n* https  ,  file  ,  ftp  , or\n* chrome-extension  ),\n* and that can contain '  *  ' characters.\n* The special pattern\n* <all_urls>  matches any URL\n* that starts with a permitted scheme.\n* Each match pattern has 3 parts:\n* scheme  —\n* for example,  http  or  file\n* or  *\n* Note:\n* Access to  file  URLs isn't automatic.\n* <url-pattern>  :=  <scheme>  ://  <host>  <path>\n* <scheme>  := '*' | 'http' | 'https' | 'file' | 'ftp' | 'chrome-extension'\n* <host>  := '*' | '*.'  <any char except '/' and '*'>  +\n* <path>  := '/'  <any chars>\n* The meaning of '  *  ' depends on whether\n* it's in the  scheme  ,  host  , or  path  part.\n* If the  scheme  is  *  ,\n* Matches any URL that starts with\n* http://mail.google.com  or\n* https://mail.google.com  .\n* http://mail.google.com/foo/baz/bar\n* https://mail.google.com/foobar\n* chrome-extension://*/*\n* Matches any URL pointing to an extension (the first  *\n* represents a filter for extension IDs, the second for paths).\n* chrome-extension://askla...asdf/options.html\n* <all_urls>\n* Matches any URL that uses a permitted scheme.\n* (See the beginning of this section for the list of permitted\n* schemes.)\n* http://example.org/foo/bar.html\n* file:///bar/baz.html\n* Here are some examples of  invalid  pattern matches:\n* Bad pattern\n* Why it's bad\n* http://www.google.com"
+      ]
+    },
+    {
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/match-patterns",
+      "title": "Match patterns - Chrome for Developers",
+      "publish_date": null,
+      "excerpts": [
+        "Match patterns - Chrome for Developers\nUse http://localhost/* , or http://127.0.0.1/* (to match an IP address). Match patterns match all ports unless an explicit port is specified. Top Level domain"
+      ]
+    },
+    {
+      "url": "https://chromium.googlesource.com/chromium/src/+/7324ec4b07a7c91aec1fb4e65d2c34964c4a8ab4/extensions/docs/permissions.md",
+      "title": "Extension Permissions - chromium.googlesource.com",
+      "publish_date": null,
+      "excerpts": [
+        "Match patterns provide access to a set of urls. Match patterns can encompass multiple hosts, so a single pattern may provide access to many different domains (or even, every domain). For more information, see the public match pattern documentation . In the codebase, match patterns are implemented as URLPattern .\nExplicit Hosts\nExplicit host permissions are match patterns specified in the permissions key of the extension’s manifest. These patterns control access to APIs that read or modify host data, such as cookies , webRequest , and tabs.executeScript .\nNote: Any path component is currently ignored for explicit hosts in permissions parsing.\nScriptable Hosts\nScriptable hosts are match patterns used in the content_scripts entry of the extension’s manifest. These only control which sites an extension can use content scripts on, and do not affect any other API."
+      ]
+    },
+    {
+      "url": "https://chromium.googlesource.com/chromium/src/+/main/extensions/docs/permissions.md",
+      "title": "Extension Permissions - Google Open Source",
+      "publish_date": null,
+      "excerpts": [
+        "Match patterns provide access to a set of urls. Match patterns can encompass multiple hosts, so a single pattern may provide access to many different domains (or even, every domain). For more information, see the public match pattern documentation . In the codebase, match patterns are implemented as URLPattern .\nExplicit Hosts\nExplicit host permissions are match patterns specified in the permissions key of the extension’s manifest. These patterns control access to APIs that read or modify host data, such as cookies , webRequest , and tabs.executeScript .\nNote: Any path component is currently ignored for explicit hosts in permissions parsing.\nScriptable Hosts\nScriptable hosts are match patterns used in the content_scripts entry of the extension’s manifest. These only control which sites an extension can use content scripts on, and do not affect any other API.\nA manifest permission is a specified manifest entry that provides an extension with some permission.\nWhen an extension first requests a permission (using chrome.permissions.request() ), the user is prompted to accept or refuse it. If the user accepts, the permission is added to both the active and granted permissions. The extension can then remove this permission using chrome.permissions.remove() .\nThis provides the extension with temporary access to a tab, so that it can use chrome.tabs.executeScript() , the webRequest API, see the tab's URL and favicon with the tabs API, and capture the screen with the chrome.tabs.captureTab() function. When the user closes or navigates the tab, the permission is revoked."
+      ]
+    },
+    {
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1468162",
+      "title": "1468162 - Ports in match patterns match no URLs",
+      "publish_date": null,
+      "excerpts": [
+        "Run something locally on port 3000 (any hello-world app would do). 6. Open in browser http://localhost:3000 Actual results: 1. On step 4, observe in the debug window, that the listener is called (which is expected). 2.\nThis appears to be a bug in the extension pattern matching code for URLs: https://searchfox.org/mozilla-central/rev/d0a41d2e7770fc00df7844d5f840067cc35ba26f/toolkit/components/extensions/MatchPattern.cpp#430 has no mention of looking at the port, so \"localhost:3000\" (the pattern) will not match \"localhost\" (what the matcher looks at).\n* | Kris Maglione [:kmag] |\n* Updated\n•\n8 years ago |\nSummary: webRequest listeners are not called if specifically target localhost → Ports in match patterns match no URLs\n* | Kris Maglione [:kmag] |\n* Updated\n•\n8 years ago |\nWhiteboard: [design-decision-denied]\n| |Dmitry Savenko\n* Reporter |\n* Updated\n•\n8 years ago |\nSee Also: → 1362809"
+      ]
+    },
+    {
+      "url": "https://stackoverflow.com/questions/11425591/match-port-in-chrome-extension-pattern",
+      "title": "Match port in Chrome extension pattern",
+      "publish_date": null,
+      "excerpts": [
+        "Match port in Chrome extension pattern\nYou get access to all ports. Chrome url match patterns. Port error: Could not establish connection. Chrome extension won't redirect to"
+      ]
+    },
+    {
+      "url": "https://developer.chrome.com/docs/extensions/mv2/match-patterns",
+      "title": "Match patterns  |  Manifest V2  |  Chrome for Developers",
+      "publish_date": null,
+      "excerpts": [
+        "* Home\n* Docs\n* Chrome Extensions\n* Manifest V2\nMatch patterns\nWarning: You're viewing the deprecated Manifest V2 version of this article. See Manifest V3 - Match patterns for the MV3 equivalent. The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the Manifest V3 Migration guide to convert your extension to Manifest V3.\n* scheme —for example, http or file or *\nNote: Access to file URLs isn't automatic. The user must visit the extensions management page and opt in to file access for each extension that requests it.\n* host —for example, www.google.com or *.google.com or * ; if the scheme is file , there is no host part\n* path —for example, /* , /foo* , or /foo/bar .\n* http://example.org/foo/bar.html | Matches the specified URL | http://example.org/foo/bar.html\n* file:///foo* | Matches any local file whose path starts with /foo | file:///foo/bar.html\n* file:///foo\n* http://127.0.0.1/* | Matches any URL that uses the http scheme and is on the host 127.0.0.1 | http://127.0.0.1/\n* http://127.0.0.1/foo/bar.html\n* *://mail.google.com/* | Matches any URL that starts with http://mail.google.com or https://mail.google.com . | http://mail.google.com/foo/baz/bar\n* https://mail.google.com/foobar\n* urn:* | Matches any URL that starts with urn: . | urn:uuid:54723bea-c94e-480e-80c8-a69846c3f582\n* urn:uuid:cfa40aff-07df-45b2-9f95-e023bcf4a6da\n* <all_urls> | Matches any URL that uses a permitted scheme. (See the beginning of this section for the list of permitted schemes.) | http://example.org/foo/bar.html\n* file:///bar/baz.html\nHere are some examples of invalid pattern matches:\n* Bad pattern | Why it's bad\n* http://www.google.com | No path"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns",
+      "title": "Match patterns - Mozilla | MDN",
+      "publish_date": null,
+      "excerpts": [
+        "Found. Redirecting to /en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
+      ]
+    }
+  ],
+  "warnings": null,
+  "metadata": null,
+  "session_id": "session_15034e87b1be4eae703bd6731eefe4f3"
+}

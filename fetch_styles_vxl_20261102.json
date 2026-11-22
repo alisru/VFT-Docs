@@ -1,0 +1,367 @@
+Command exited with code 0.
+
+Command output:
+
+> E:\Vector Field Theory\peek_explorer\styles.css:462:.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles { 
+display: flex; flex-wrap: wrap; align-content: flex-start; padding: 4px 8px; gap: 4px; }
+> E:\Vector Field Theory\peek_explorer\styles.css:463:.v-list .grp-body, .v-small .grp-body, .v-medium .grp-body, 
+.v-large .grp-body, .v-xl .grp-body, .v-tiles .grp-body { display: flex; flex-wrap: wrap; width: 100%; gap: 4px; }
+> E:\Vector Field Theory\peek_explorer\styles.css:464:.v-list .kids.open, .v-small .kids.open, .v-medium .kids.open, 
+.v-large .kids.open, .v-xl .kids.open, .v-tiles .kids.open {
+  E:\Vector Field Theory\peek_explorer\styles.css:465:  display: flex; flex-wrap: wrap; flex: 0 0 100%; gap: 4px; 
+border-left: 2px solid var(--tree-line); padding: 2px 0 4px 6px; box-sizing: border-box; }
+> E:\Vector Field Theory\peek_explorer\styles.css:466:.v-list .kids:not(.open), .v-small .kids:not(.open), .v-medium 
+.kids:not(.open), .v-large .kids:not(.open), .v-xl .kids:not(.open), .v-tiles .kids:not(.open) { display: none; }
+  E:\Vector Field Theory\peek_explorer\styles.css:467:.v-list .c-date, .v-list .c-type, .v-list .c-size, .v-small 
+.c-date, .v-small .c-type, .v-small .c-size,
+  E:\Vector Field Theory\peek_explorer\styles.css:468:.v-medium .c-date, .v-medium .c-type, .v-medium .c-size, 
+.v-large .c-date, .v-large .c-type, .v-large .c-size,
+> E:\Vector Field Theory\peek_explorer\styles.css:469:.v-xl .c-date, .v-xl .c-type, .v-xl .c-size, .v-tiles .c-date, 
+.v-tiles .c-type, .v-tiles .c-size { display: none; }
+  E:\Vector Field Theory\peek_explorer\styles.css:470:.v-list .row.item, .v-small .row.item { width: 220px; height: 
+24px; min-height: 24px; max-height: 24px; padding: 2px 6px; overflow: hidden; box-sizing: border-box; }
+  E:\Vector Field Theory\peek_explorer\styles.css:471:.v-medium .row.item {
+  E:\Vector Field Theory\peek_explorer\styles.css:472:  width: 104px; height: 104px; min-height: 104px; max-height: 
+104px;
+  E:\Vector Field Theory\peek_explorer\styles.css:473:  position: relative !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:474:  flex-direction: column; align-items: center; justify-content: 
+flex-start;
+  E:\Vector Field Theory\peek_explorer\styles.css:475:  padding: 6px 4px; border-radius: 4px; overflow: hidden; 
+box-sizing: border-box;
+  E:\Vector Field Theory\peek_explorer\styles.css:476:}
+  E:\Vector Field Theory\peek_explorer\styles.css:477:.v-large .row.item {
+  E:\Vector Field Theory\peek_explorer\styles.css:478:  width: 144px; height: 144px; min-height: 144px; max-height: 
+144px;
+  E:\Vector Field Theory\peek_explorer\styles.css:479:  position: relative !important;
+> E:\Vector Field Theory\peek_explorer\styles.css:483:.v-xl .row.item {
+  E:\Vector Field Theory\peek_explorer\styles.css:484:  width: 236px; height: 256px; min-height: 256px; max-height: 
+256px;
+  E:\Vector Field Theory\peek_explorer\styles.css:485:  position: relative !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:486:  flex-direction: column; align-items: center; justify-content: 
+flex-start;
+  E:\Vector Field Theory\peek_explorer\styles.css:487:  padding: 6px 4px; border-radius: 4px; overflow: hidden; 
+box-sizing: border-box;
+  E:\Vector Field Theory\peek_explorer\styles.css:488:}
+> E:\Vector Field Theory\peek_explorer\styles.css:489:.v-medium .c-name, .v-large .c-name, .v-xl .c-name {
+  E:\Vector Field Theory\peek_explorer\styles.css:490:  display: flex; flex-direction: column; align-items: center; 
+justify-content: flex-start; flex: 1;
+  E:\Vector Field Theory\peek_explorer\styles.css:491:  width: 100% !important; max-width: 100% !important; min-width: 
+0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:492:  padding: 4px 2px 2px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:493:  white-space: normal; text-align: center; overflow: hidden; 
+box-sizing: border-box;
+  E:\Vector Field Theory\peek_explorer\styles.css:494:}
+  E:\Vector Field Theory\peek_explorer\styles.css:495:.v-medium .ico { width: 48px; height: 48px; flex: 0 0 48px; 
+margin-bottom: 4px; }
+  E:\Vector Field Theory\peek_explorer\styles.css:496:.v-large .ico { width: 96px; height: 96px; flex: 0 0 96px; 
+margin-bottom: 4px; }
+> E:\Vector Field Theory\peek_explorer\styles.css:497:.v-xl .ico { width: 168px; height: 168px; flex: 0 0 168px; 
+margin-bottom: 8px; }
+> E:\Vector Field Theory\peek_explorer\styles.css:498:.v-medium .ico.photo, .v-large .ico.photo, .v-xl .ico.photo { 
+object-fit: cover; border-radius: 3px; }
+> E:\Vector Field Theory\peek_explorer\styles.css:499:.v-medium .nm, .v-large .nm, .v-xl .nm {
+  E:\Vector Field Theory\peek_explorer\styles.css:500:  width: 100%; max-width: 100%; overflow: hidden; text-overflow: 
+ellipsis;
+  E:\Vector Field Theory\peek_explorer\styles.css:501:  font-size: 11px;
+  E:\Vector Field Theory\peek_explorer\styles.css:502:  color: var(--fg);
+  E:\Vector Field Theory\peek_explorer\styles.css:503:  display: -webkit-box; -webkit-line-clamp: 2; 
+-webkit-box-orient: vertical;
+  E:\Vector Field Theory\peek_explorer\styles.css:504:  overflow-wrap: anywhere; word-break: break-all; line-height: 
+1.25; box-sizing: border-box;
+  E:\Vector Field Theory\peek_explorer\styles.css:505:}
+> E:\Vector Field Theory\peek_explorer\styles.css:506::is(.v-medium, .v-large, .v-xl) .arrow {
+  E:\Vector Field Theory\peek_explorer\styles.css:507:  position: absolute !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:508:  top: 4px;
+  E:\Vector Field Theory\peek_explorer\styles.css:509:  left: 4px;
+  E:\Vector Field Theory\peek_explorer\styles.css:510:  z-index: 6;
+  E:\Vector Field Theory\peek_explorer\styles.css:511:  width: 18px;
+  E:\Vector Field Theory\peek_explorer\styles.css:512:  height: 18px;
+  E:\Vector Field Theory\peek_explorer\styles.css:513:  line-height: 16px;
+  E:\Vector Field Theory\peek_explorer\styles.css:514:  text-align: center;
+  E:\Vector Field Theory\peek_explorer\styles.css:515:  border-radius: 3px;
+  E:\Vector Field Theory\peek_explorer\styles.css:516:  background: var(--input-bg);
+> E:\Vector Field Theory\peek_explorer\styles.css:526::is(.v-medium, .v-large, .v-xl) .arrow:hover {
+  E:\Vector Field Theory\peek_explorer\styles.css:527:  opacity: 1;
+  E:\Vector Field Theory\peek_explorer\styles.css:528:  background: var(--hover);
+  E:\Vector Field Theory\peek_explorer\styles.css:529:  border-color: #0078d4;
+  E:\Vector Field Theory\peek_explorer\styles.css:530:  color: var(--fg);
+  E:\Vector Field Theory\peek_explorer\styles.css:531:}
+> E:\Vector Field Theory\peek_explorer\styles.css:532::is(.v-medium, .v-large, .v-xl) .arrow.empty {
+  E:\Vector Field Theory\peek_explorer\styles.css:533:  display: none !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:534:}
+> E:\Vector Field Theory\peek_explorer\styles.css:535::is(.v-medium, .v-large, .v-xl) .chk {
+  E:\Vector Field Theory\peek_explorer\styles.css:536:  position: absolute !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:537:  top: 4px;
+  E:\Vector Field Theory\peek_explorer\styles.css:538:  right: 4px;
+  E:\Vector Field Theory\peek_explorer\styles.css:539:  z-index: 6;
+  E:\Vector Field Theory\peek_explorer\styles.css:540:}
+  E:\Vector Field Theory\peek_explorer\styles.css:541:.v-tiles .row.item { width: 270px; height: 56px; padding: 4px 
+6px; position: relative; border-radius: 4px; overflow: hidden; box-sizing: border-box; }
+  E:\Vector Field Theory\peek_explorer\styles.css:542:.v-tiles .ico { width: 40px; height: 40px; }
+  E:\Vector Field Theory\peek_explorer\styles.css:543:.v-tiles .ico.photo { object-fit: cover; border-radius: 3px; }
+  E:\Vector Field Theory\peek_explorer\styles.css:544:.v-tiles .c-name { flex: 1; min-width: 0 !important; overflow: 
+hidden; }
+  E:\Vector Field Theory\peek_explorer\styles.css:545:.v-tiles .sub { display: none; }
+> E:\Vector Field Theory\peek_explorer\styles.css:881:.map-room-body.v-xl { display: flex; flex-direction: row; 
+flex-wrap: wrap; gap: 10px; align-content: flex-start; }
+> E:\Vector Field Theory\peek_explorer\styles.css:882:.map-room-body.v-xl .room-item {
+  E:\Vector Field Theory\peek_explorer\styles.css:883:  width: 148px; min-height: 160px; height: auto; padding: 9px 
+6px 6px; flex-direction: column; justify-content: flex-start; text-align: center;
+  E:\Vector Field Theory\peek_explorer\styles.css:884:  border: 1px solid var(--input-bd); background: 
+var(--input-bg); border-radius: 8px; overflow: hidden; box-sizing: border-box;
+  E:\Vector Field Theory\peek_explorer\styles.css:885:}
+> E:\Vector Field Theory\peek_explorer\styles.css:886:.map-room-body.v-xl .chk { position: absolute; top: 5px; left: 
+5px; z-index: 4; }
+> E:\Vector Field Theory\peek_explorer\styles.css:887:.map-room-body.v-xl .ico { width: 96px; height: 96px; 
+margin-bottom: 6px; }
+> E:\Vector Field Theory\peek_explorer\styles.css:888:.map-room-body.v-xl .c-name {
+  E:\Vector Field Theory\peek_explorer\styles.css:889:  flex-direction: column; align-items: center; width: 100% 
+!important; max-width: 100% !important; min-width: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:890:  overflow: hidden; box-sizing: border-box;
+  E:\Vector Field Theory\peek_explorer\styles.css:891:}
+> E:\Vector Field Theory\peek_explorer\styles.css:892:.map-room-body.v-xl .nm {
+  E:\Vector Field Theory\peek_explorer\styles.css:893:  font-size: 11.5px; width: 100%; max-width: 100%; white-space: 
+normal;
+  E:\Vector Field Theory\peek_explorer\styles.css:894:  display: -webkit-box; -webkit-line-clamp: 2; 
+-webkit-box-orient: vertical;
+  E:\Vector Field Theory\peek_explorer\styles.css:895:  overflow-wrap: anywhere; word-break: break-all; line-height: 
+1.2; max-height: 34px;
+  E:\Vector Field Theory\peek_explorer\styles.css:896:  overflow: hidden; text-overflow: ellipsis; box-sizing: 
+border-box;
+  E:\Vector Field Theory\peek_explorer\styles.css:897:}
+> E:\Vector Field Theory\peek_explorer\styles.css:898:.map-room-body.v-xl .c-date, .map-room-body.v-xl .c-type, 
+.map-room-body.v-xl .c-size { display: none; }
+  E:\Vector Field Theory\peek_explorer\styles.css:899:
+  E:\Vector Field Theory\peek_explorer\styles.css:900:/* Full-Bleed Background Thumbnails for Image & Video Tiles 
+(.has-thumb) */
+  E:\Vector Field Theory\peek_explorer\styles.css:901:.map-room-body.v-medium .room-item.has-thumb,
+  E:\Vector Field Theory\peek_explorer\styles.css:902:.map-room-body.v-large .room-item.has-thumb,
+> E:\Vector Field Theory\peek_explorer\styles.css:903:.map-room-body.v-xl .room-item.has-thumb,
+  E:\Vector Field Theory\peek_explorer\styles.css:904:.v-medium .row.item.has-thumb,
+  E:\Vector Field Theory\peek_explorer\styles.css:905:.v-large .row.item.has-thumb,
+> E:\Vector Field Theory\peek_explorer\styles.css:906:.v-xl .row.item.has-thumb {
+  E:\Vector Field Theory\peek_explorer\styles.css:907:  position: relative;
+  E:\Vector Field Theory\peek_explorer\styles.css:908:  padding: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:909:  justify-content: flex-end !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:910:  overflow: hidden;
+  E:\Vector Field Theory\peek_explorer\styles.css:911:}
+  E:\Vector Field Theory\peek_explorer\styles.css:912:.map-room-body.v-medium .room-item.has-thumb { height: 92px; }
+  E:\Vector Field Theory\peek_explorer\styles.css:913:.map-room-body.v-large .room-item.has-thumb { height: 126px; }
+> E:\Vector Field Theory\peek_explorer\styles.css:914:.map-room-body.v-xl .room-item.has-thumb { height: 160px; }
+  E:\Vector Field Theory\peek_explorer\styles.css:915:.v-medium .row.item.has-thumb { height: 104px; min-height: 
+104px; max-height: 104px; }
+  E:\Vector Field Theory\peek_explorer\styles.css:916:.v-large .row.item.has-thumb { height: 144px; min-height: 144px; 
+max-height: 144px; }
+> E:\Vector Field Theory\peek_explorer\styles.css:917:.v-xl .row.item.has-thumb { height: 256px; min-height: 256px; 
+max-height: 256px; }
+  E:\Vector Field Theory\peek_explorer\styles.css:918:
+  E:\Vector Field Theory\peek_explorer\styles.css:919:.map-room-body.v-medium .room-item.has-thumb .ico,
+  E:\Vector Field Theory\peek_explorer\styles.css:920:.map-room-body.v-large .room-item.has-thumb .ico,
+> E:\Vector Field Theory\peek_explorer\styles.css:921:.map-room-body.v-xl .room-item.has-thumb .ico,
+  E:\Vector Field Theory\peek_explorer\styles.css:922:.map-room-body.v-tiles .room-item.has-thumb .ico,
+  E:\Vector Field Theory\peek_explorer\styles.css:923:.v-medium .row.item.has-thumb .ico,
+  E:\Vector Field Theory\peek_explorer\styles.css:924:.v-large .row.item.has-thumb .ico,
+> E:\Vector Field Theory\peek_explorer\styles.css:925:.v-xl .row.item.has-thumb .ico,
+  E:\Vector Field Theory\peek_explorer\styles.css:926:.v-tiles .row.item.has-thumb .ico {
+  E:\Vector Field Theory\peek_explorer\styles.css:927:  position: absolute !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:928:  inset: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:929:  width: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:930:  height: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:931:  margin: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:932:  object-fit: cover !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:933:  border-radius: inherit;
+  E:\Vector Field Theory\peek_explorer\styles.css:934:  z-index: 0;
+  E:\Vector Field Theory\peek_explorer\styles.css:935:}
+> E:\Vector Field Theory\peek_explorer\styles.css:938:.map-room-body.v-xl .room-item.has-thumb .c-name {
+  E:\Vector Field Theory\peek_explorer\styles.css:939:  position: absolute !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:940:  left: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:941:  right: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:942:  bottom: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:943:  height: auto !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:944:  flex: 0 0 auto !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:945:  z-index: 2;
+  E:\Vector Field Theory\peek_explorer\styles.css:946:  margin: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:947:  width: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:948:  padding: 3px 5px !important;
+> E:\Vector Field Theory\peek_explorer\styles.css:956:.v-xl .row.item.has-thumb .c-name {
+  E:\Vector Field Theory\peek_explorer\styles.css:957:  position: static !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:958:  width: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:959:  height: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:960:  justify-content: flex-end !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:961:  padding: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:962:}
+  E:\Vector Field Theory\peek_explorer\styles.css:963:.v-medium .row.item.has-thumb .chk,
+  E:\Vector Field Theory\peek_explorer\styles.css:964:.v-large .row.item.has-thumb .chk,
+> E:\Vector Field Theory\peek_explorer\styles.css:965:.v-xl .row.item.has-thumb .chk,
+  E:\Vector Field Theory\peek_explorer\styles.css:966:.v-tiles .row.item.has-thumb .chk {
+  E:\Vector Field Theory\peek_explorer\styles.css:967:  position: absolute;
+  E:\Vector Field Theory\peek_explorer\styles.css:968:  top: 5px;
+  E:\Vector Field Theory\peek_explorer\styles.css:969:  left: 5px;
+  E:\Vector Field Theory\peek_explorer\styles.css:970:  z-index: 3;
+  E:\Vector Field Theory\peek_explorer\styles.css:971:}
+  E:\Vector Field Theory\peek_explorer\styles.css:972:.v-medium .row.item.has-thumb .nm,
+  E:\Vector Field Theory\peek_explorer\styles.css:973:.v-large .row.item.has-thumb .nm,
+> E:\Vector Field Theory\peek_explorer\styles.css:974:.v-xl .row.item.has-thumb .nm {
+  E:\Vector Field Theory\peek_explorer\styles.css:975:  position: absolute !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:976:  left: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:977:  right: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:978:  bottom: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:979:  height: auto !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:980:  flex: 0 0 auto !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:981:  z-index: 2;
+  E:\Vector Field Theory\peek_explorer\styles.css:982:  margin: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:983:  width: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:984:  padding: 3px 5px !important;
+> E:\Vector Field Theory\peek_explorer\styles.css:992:.map-room-body.v-xl .room-item.has-thumb .c-tile-sub {
+  E:\Vector Field Theory\peek_explorer\styles.css:993:  color: rgba(226, 232, 240, 0.85) !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:994:  font-size: 9.5px;
+  E:\Vector Field Theory\peek_explorer\styles.css:995:}
+  E:\Vector Field Theory\peek_explorer\styles.css:996:.map-room-body.v-tiles .room-item.has-thumb,
+  E:\Vector Field Theory\peek_explorer\styles.css:997:.v-tiles .row.item.has-thumb {
+  E:\Vector Field Theory\peek_explorer\styles.css:998:  position: relative;
+  E:\Vector Field Theory\peek_explorer\styles.css:999:  padding: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:1000:  overflow: hidden;
+  E:\Vector Field Theory\peek_explorer\styles.css:1001:}
+  E:\Vector Field Theory\peek_explorer\styles.css:1002:.map-room-body.v-tiles .room-item.has-thumb .c-name {
+> E:\Vector Field Theory\peek_explorer\styles.css:1037:.v-xl .row.item.has-thumb .arrow,
+  E:\Vector Field Theory\peek_explorer\styles.css:1038:.v-tiles .row.item.has-thumb .arrow {
+  E:\Vector Field Theory\peek_explorer\styles.css:1039:  display: none;
+  E:\Vector Field Theory\peek_explorer\styles.css:1040:}
+  E:\Vector Field Theory\peek_explorer\styles.css:1041:
+  E:\Vector Field Theory\peek_explorer\styles.css:1042:/* 8. Content view in room */
+  E:\Vector Field Theory\peek_explorer\styles.css:1043:.map-room-body.v-content { display: flex; flex-direction: 
+column; gap: 3px; }
+  E:\Vector Field Theory\peek_explorer\styles.css:1044:.map-room-body.v-content .room-item { width: 100%; height: 
+42px; padding: 3px 8px; border: 1px solid var(--input-bd); background: var(--input-bg); }
+  E:\Vector Field Theory\peek_explorer\styles.css:1045:.map-room-body.v-content .ico { width: 32px; height: 32px; }
+  E:\Vector Field Theory\peek_explorer\styles.css:1046:.map-room-body.v-content .c-name { flex-direction: column; 
+align-items: flex-start; gap: 1px; flex: 1; }
+  E:\Vector Field Theory\peek_explorer\styles.css:1047:.map-room-body.v-content .nm { font-weight: 600; font-size: 
+11px; }
+> E:\Vector Field Theory\peek_explorer\styles.css:2794::is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, 
+.v-xl, .v-tiles) {
+  E:\Vector Field Theory\peek_explorer\styles.css:2795:  display: block !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2796:  overflow-y: auto !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2797:  padding: 4px 8px;
+  E:\Vector Field Theory\peek_explorer\styles.css:2798:  width: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2799:  max-width: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2800:  box-sizing: border-box !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2801:}
+> E:\Vector Field Theory\peek_explorer\styles.css:2802::is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, 
+.v-xl, .v-tiles)::after,
+  E:\Vector Field Theory\peek_explorer\styles.css:2803:.grp-body::after {
+  E:\Vector Field Theory\peek_explorer\styles.css:2804:  content: '';
+  E:\Vector Field Theory\peek_explorer\styles.css:2805:  display: block !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2806:  clear: both !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2807:}
+> E:\Vector Field Theory\peek_explorer\styles.css:2808::is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, 
+.v-xl, .v-tiles) > .row.item,
+> E:\Vector Field Theory\peek_explorer\styles.css:2809::is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, 
+.v-xl, .v-tiles) > .grp-fold,
+  E:\Vector Field Theory\peek_explorer\styles.css:2810:.grp-body > .row.item,
+  E:\Vector Field Theory\peek_explorer\styles.css:2811:.grp-body > .grp-fold {
+  E:\Vector Field Theory\peek_explorer\styles.css:2812:  float: left !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2813:  margin: 0 4px 4px 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2814:}
+  E:\Vector Field Theory\peek_explorer\styles.css:2815:
+  E:\Vector Field Theory\peek_explorer\styles.css:2816:/* Base folder group wrapper in grid views */
+  E:\Vector Field Theory\peek_explorer\styles.css:2817:.grp-fold {
+  E:\Vector Field Theory\peek_explorer\styles.css:2818:  float: left !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2819:  margin: 0 4px 4px 0 !important;
+> E:\Vector Field Theory\peek_explorer\styles.css:2858::is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) 
+.grp-fold:has(> .kids.open.kl-col) {
+  E:\Vector Field Theory\peek_explorer\styles.css:2859:  display: flex !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2860:  flex-direction: column !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2861:  align-items: flex-start !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2862:  float: left !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2863:  clear: none !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2864:  width: auto !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2865:  box-sizing: border-box !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2866:}
+  E:\Vector Field Theory\peek_explorer\styles.css:2867:
+  E:\Vector Field Theory\peek_explorer\styles.css:2868:/* Mode: Column under folder (dropdown column) */
+> E:\Vector Field Theory\peek_explorer\styles.css:2932::is(.v-medium, .v-large, .v-xl, .v-tiles) .row.item 
+.sub-opt-wrap {
+  E:\Vector Field Theory\peek_explorer\styles.css:2933:  position: absolute !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2934:  top: 4px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2935:  right: 4px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2936:  z-index: 6;
+  E:\Vector Field Theory\peek_explorer\styles.css:2937:  display: none;
+  E:\Vector Field Theory\peek_explorer\styles.css:2938:  align-items: center;
+  E:\Vector Field Theory\peek_explorer\styles.css:2939:  gap: 2px;
+  E:\Vector Field Theory\peek_explorer\styles.css:2940:}
+> E:\Vector Field Theory\peek_explorer\styles.css:2941::is(.v-medium, .v-large, .v-xl, .v-tiles) .row.item.expanded 
+.sub-opt-wrap,
+> E:\Vector Field Theory\peek_explorer\styles.css:2942::is(.v-medium, .v-large, .v-xl, .v-tiles) .row.item:hover 
+.sub-opt-wrap {
+  E:\Vector Field Theory\peek_explorer\styles.css:2943:  display: flex !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2944:}
+  E:\Vector Field Theory\peek_explorer\styles.css:2945:
+  E:\Vector Field Theory\peek_explorer\styles.css:2946:/* In Details & List views: sits inline beside .c-name */
+  E:\Vector Field Theory\peek_explorer\styles.css:2947::is(.v-details, .v-list, .v-small, .v-content) .row.item 
+.sub-opt-wrap {
+  E:\Vector Field Theory\peek_explorer\styles.css:2948:  position: static !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:2949:  display: none;
+  E:\Vector Field Theory\peek_explorer\styles.css:2950:  align-items: center;
+  E:\Vector Field Theory\peek_explorer\styles.css:2951:  gap: 3px;
+  E:\Vector Field Theory\peek_explorer\styles.css:2952:  margin-left: 6px;
+> E:\Vector Field Theory\peek_explorer\styles.css:3268:.kids.v-xl :is(> .row.item, > .grp-fold > .row.item, .grp-body 
+> .row.item, .grp-body > .grp-fold > .row.item) {
+  E:\Vector Field Theory\peek_explorer\styles.css:3269:  width: 236px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3270:  height: 256px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3271:  min-height: 256px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3272:  max-height: 256px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3273:  flex-direction: column !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3274:  align-items: center !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3275:  justify-content: flex-start !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3276:}
+> E:\Vector Field Theory\peek_explorer\styles.css:3277:.kids.v-xl :is(.row.item, .grp-fold > 
+.row.item):not(.has-thumb) .ico {
+  E:\Vector Field Theory\peek_explorer\styles.css:3278:  width: 168px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3279:  height: 168px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3280:  flex: 0 0 168px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3281:  margin-bottom: 8px !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3282:}
+  E:\Vector Field Theory\peek_explorer\styles.css:3283:
+  E:\Vector Field Theory\peek_explorer\styles.css:3284:/* Full bleed image/video thumbnails in child folders and 
+top-level cards */
+> E:\Vector Field Theory\peek_explorer\styles.css:3285::is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, 
+.v-large, .v-xl) :is(.row.item, .grp-fold > .row.item).has-thumb {
+  E:\Vector Field Theory\peek_explorer\styles.css:3286:  position: relative !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3287:  padding: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3288:  overflow: hidden !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3289:  justify-content: flex-end !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3290:}
+> E:\Vector Field Theory\peek_explorer\styles.css:3291::is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, 
+.v-large, .v-xl) :is(.row.item, .grp-fold > .row.item).has-thumb .ico {
+  E:\Vector Field Theory\peek_explorer\styles.css:3292:  position: absolute !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3293:  inset: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3294:  width: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3295:  height: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3296:  margin: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3297:  object-fit: cover !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3298:  border-radius: inherit;
+  E:\Vector Field Theory\peek_explorer\styles.css:3299:  z-index: 0;
+  E:\Vector Field Theory\peek_explorer\styles.css:3300:}
+> E:\Vector Field Theory\peek_explorer\styles.css:3301::is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, 
+.v-large, .v-xl) :is(.row.item, .grp-fold > .row.item).has-thumb .c-name {
+  E:\Vector Field Theory\peek_explorer\styles.css:3302:  position: static !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3303:  width: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3304:  height: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3305:  justify-content: flex-end !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3306:  padding: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3307:}
+> E:\Vector Field Theory\peek_explorer\styles.css:3308::is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, 
+.v-large, .v-xl) :is(.row.item, .grp-fold > .row.item).has-thumb .nm {
+  E:\Vector Field Theory\peek_explorer\styles.css:3309:  position: absolute !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3310:  left: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3311:  right: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3312:  bottom: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3313:  height: auto !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3314:  flex: 0 0 auto !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3315:  z-index: 2;
+  E:\Vector Field Theory\peek_explorer\styles.css:3316:  margin: 0 !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3317:  width: 100% !important;
+  E:\Vector Field Theory\peek_explorer\styles.css:3318:  padding: 3px 5px !important;
+
+

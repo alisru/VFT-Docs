@@ -1,0 +1,101 @@
+{
+  "id": "test_3_aita-for-sending-my-co-workers-wife-a-hey-girlie-t",
+  "timestamp": "2026-11-21T02:35:55.179452+00:00",
+  "subreddit": "AmItheAsshole",
+  "author": "u/Any-Extent-3459",
+  "title": "AITA for sending my co-workers wife a 'hey girlie' text",
+  "url": "local://atia_test.txt#case-3",
+  "is_hypothetical": false,
+  "selftext": "I (29f) work with (fake names) Jason (26M) and Emilia (45F). I have worked with Emilia for about two years. Emilia is known to have ‘fun’ but she is single so its okay. I had been close to her for awhile until i noticed that she was using me for money, rides, food ect to where i distanced myself. Jason just joined our job a few months ago and he seemed cool at first. The first things we knew about him was that he had a wife Rebecca (23F) and that they have a newborn with another on the way.\nAt work we have a close circle of friends and quickly Jason joined in. Emilia and Jason got close and I didn't think anything of it. That was until one night after work Emilia pulled me to the side and told me that they had ‘fun’ together. She told me it was only the one time. She asked me to keep it to myself. I did but felt sick to my stomach about it.\nA week later I was off two days in a row. The morning of the second day a friend from work calls me to let me know that they had witnessed Emilia and Jason flirting and being all over each other. To the point where multiple people came to her to talk about it that night.\nSo the morning that i was told this i decided to make a fake social media account and contacted Rebecca (the wife). In the message i was very vague and just said that Jason was witnessed to be flirting with another co-worker. Three nights later Emilia came to me complaining about someone messaging Jason’s wife and I decided to play dumb because i didn't want to deal with the drama.\nThis was also the night I found out that my best friend who no longer works with us was actually family with Rebecca and she was sent a photo from a family member of Jason outside of Emilia’s apartment. Where she recognized both Jason and Emilia. She lets me know about the photo and the fact that her sister was also sent the photo. This is where I found out that it wasn’t just one time it was multiple times.\nRebecca and Jason lived with this sister and was told from them themselves that they had a certain health issue that can be given to her. When this information came to light i thought that it wasn't right for Emilia to not know. I decide to tell her when were alone.\nThe problem is now it is weeks later and they both (Jason and Emilia) have decided to start dragging my name around our work place saying I am a liar, backstabber, and blabbermouth. That they know that it was me who sent the hey girlie message to his wife. So AITA?",
+  "evaluation": {
+    "case_index": 3,
+    "verdict": "NTA",
+    "verdict_label": "Not the Asshole (and the other person is)",
+    "coordinates": {
+      "op_stated": [
+        0.7,
+        0.55
+      ],
+      "op_actual": [
+        0.5,
+        0.4
+      ],
+      "other_actual": [
+        -1.5,
+        1.0
+      ],
+      "third_parties": [
+        {
+          "actor": "Rebecca (23F Pregnant Wife with Newborn)",
+          "upsilon": 0.55,
+          "psi": -0.5,
+          "role": "Innocent Externalized-Cost Bearer (Exposed to non-consensual infidelity and transmissible health hazard during pregnancy)"
+        },
+        {
+          "actor": "Information Bridge (Rebecca's Sister -> Ex-Coworker Best Friend -> Family Photographer)",
+          "upsilon": 0.45,
+          "psi": 0.5,
+          "role": "Independent Corroboration Network (Photographed Jason outside Emilia's apartment and relayed the household health warning)"
+        }
+      ],
+      "delta_H": 0.25,
+      "wisdom_score": 0.8,
+      "R_net": 0.945,
+      "strain_sigma": 0.68,
+      "ucf_tuning": {
+        "LHS": 1.75,
+        "RHS_Stated": 1.02,
+        "RHS_Observed": 0.98,
+        "Tuned_Score": 0.99,
+        "state": "Stable"
+      },
+      "deception_codes": [
+        "[1.7.3.6] Meta-Physical.Proprioception.Expression — Accusation in a Mirror (Serial cheaters calling the truth-teller a 'liar and backstabber')",
+        "[1.3.7.7] Meta-Physical.Touch.Symbiosis — The Huddle (Emilia pulling OP aside after work to bind her into secret complicity)",
+        "[2.4.7.7] Lyrical.Smell.Symbiosis — The Hearth ('Don't betray the work group' used to silence whistleblowing)",
+        "[6.4.6.7] Logical.Smell.Understanding — The Mole Hunt (Retaliatory witch-hunt after being caught)",
+        "[1.3.5.5] Meta-Physical.Touch.Acquisition — The Theft (Emilia's prior pattern of extracting money, rides, and food from OP)",
+        "[6.1.6.1] Logical.Sight.Understanding — The Patch (OP restoring missing relational and medical safety data)",
+        "[1.7.1.1] Meta-Physical.Proprioception.Survival — The Void / Ghost Protocol (OP's burner account shield)"
+      ]
+    },
+    "why_verdict": "You are Not the Asshole (NTA). Telling the truth doesn't make you a 'liar,' and refusing to help hide an affair behind the back of a 23-year-old pregnant wife with a newborn doesn't make you a 'backstabber.' Even after Emilia used you for money and rides in the past, you still had the decency to warn her privately about a transmissible health risk—which is actually how they connected you to Rebecca's family! Regardless, they got busted in 4K by a family member's camera outside Emilia's apartment and are just using you as a scapegoat.",
+    "vft_audit_trace": {
+      "unsaid_horizon_and_multi_actor_graph": "5-Node Information Leak Reconstruction: How did Jason and Emilia prove OP sent the anonymous text? Trace the 5-node circuit: OP's best friend (an ex-coworker who is Rebecca's relative) told OP that Rebecca & Jason live with Rebecca's sister, who revealed they have a transmissible health condition. OP then privately warned Emilia about that transmissible health condition! The moment Emilia confronted Jason with that private medical fact, Jason deduced that only someone linked to Rebecca's sister's household—via OP's ex-coworker best friend—could know it. OP's compassionate medical warning accidentally doxxed her own bridge!",
+      "silent_judgment": "Mute Observer sees Jason visiting 45F Emilia's apartment multiple times while his 23F pregnant wife cares for a newborn; sees a family member photograph Jason outside Emilia's apartment; sees OP send a vague burner text to Rebecca and a private health warning to Emilia; sees Jason and Emilia smear OP at work. Deaf Observer classifies OP's messages as Protective Information Patches ([6.1.6.1]) and Jason/Emilia's campaign as DARVO Witness Tampering ([1.7.3.6]). Blind Sensor records extreme Term-3 externalized peril to a pregnant mother and two infants.",
+      "seven_plane_scan": {
+        "Q1_Who": "OP acts as a conscientious protector; Jason and Emilia project their own deceit via Accusation in a Mirror ([1.7.3.6]).",
+        "Q2_What": "Serial infidelity + undisclosed transmissible infection hazard during pregnancy.",
+        "Q3_Where": "Workplace circle spilling into Emilia's apartment and a postpartum household.",
+        "Q4_Why": "Even after Emilia used OP for money/rides/food ([1.3.5.5]), OP still practiced Charity by warning Emilia privately so she wouldn't catch a disease.",
+        "Q5_How": "Method-Over-Motive Check: OP's anonymous text and private 1-on-1 medical warning kept blast radius low (upsilon_OP = +0.50 > -0.25), though playing dumb created minor stealth friction.",
+        "Q6_Cause": "Jason and Emilia exposed themselves independently by flirting in front of multiple coworkers and getting photographed outside Emilia's apartment by Rebecca's relative.",
+        "Q7_Effect": "Both women received informed consent; the cheaters are scapegoating OP to deflect from their own collapse."
+      },
+      "zero_point_five_zone_traps": "OP straddled the Service Trap (Inner TL: protecting both women's health) and Peace Trap (Inner BL: playing dumb to avoid conflict). Jason and Emilia are in -1.5 Zone Inversion where Truth feels like Betrayal ('backstabber').",
+      "nine_states_of_belief": "State 3 (The Revolutionary Truth: Personal = 1, Social > 1) colliding with State 5 (The Grifter's Clique).",
+      "oberon_and_sins_virtues": "Jason and Emilia violate Lust (Sin 2), Greed (Sin 3), and Wrath (Sin 4 — Slander). OP upholds Charity and Chastity.",
+      "cognitive_fallacy_check": "Jason and Emilia commit Ad Hominem / Accusation in a Mirror and Post Hoc Scapegoating (blaming OP's vague text when a family member literally photographed Jason at Emilia's apartment)."
+    },
+    "vft_audit_trace_summary": "```json\n{\n  \"unsaid_horizon_and_multi_actor_graph\": \"5-Node Information Leak Reconstruction: How did Jason and Emilia prove OP sent the anonymous text? Trace the 5-node circuit: OP's best friend (an ex-coworker who is Rebecca's relative) told OP that Rebecca & Jason live with Rebecca's sister, who revealed they have a transmissible health condition. OP then privately warned Emilia about that transmissible health condition! The moment Emilia confronted Jason with that private medical fact, Jason deduced that only someone linked to Rebecca's sister's household—via OP's ex-coworker best friend—could know it. OP's compassionate medical warning accidentally doxxed her own bridge!\",\n  \"silent_judgment\": \"Mute Observer sees Jason visiting 45F Emilia's apartment multiple times while his 23F pregnant wife cares for a newborn; sees a family member photograph Jason outside Emilia's apartment; sees OP send a vague burner text to Rebecca and a private health warning to Emilia; sees Jason and Emilia smear OP at work. Deaf Observer classifies OP's messages as Protective Information Patches ([6.1.6.1]) and Jason/Emilia's campaign as DARVO Witness Tampering ([1.7.3.6]). Blind Sensor records extreme Term-3 externalized peril to a pregnant mother and two infants.\",\n  \"seven_plane_scan\": {\n    \"Q1_Who\": \"OP acts as a conscientious protector; Jason and Emilia project their own deceit via Accusation in a Mirror ([1.7.3.6]).\",\n    \"Q2_What\": \"Serial infidelity + undisclosed transmissible infection hazard during pregnancy.\",\n    \"Q3_Where\": \"Workplace circle spilling into Emilia's apartment and a postpartum household.\",\n    \"Q4_Why\": \"Even after Emilia used OP for money/rides/food ([1.3.5.5]), OP still practiced Charity by warning Emilia privately so she wouldn't catch a disease.\",\n    \"Q5_How\": \"Method-Over-Motive Check: OP's anonymous text and private 1-on-1 medical warning kept blast radius low (upsilon_OP = +0.50 > -0.25), though playing dumb created minor stealth friction.\",\n    \"Q6_Cause\": \"Jason and Emilia exposed themselves independently by flirting in front of multiple coworkers and getting photographed outside Emilia's apartment by Rebecca's relative.\",\n    \"Q7_Effect\": \"Both women received informed consent; the cheaters are scapegoating OP to deflect from their own collapse.\"\n  },\n  \"zero_point_five_zone_traps\": \"OP straddled the Service Trap (Inner TL: protecting both women's health) and Peace Trap (Inner BL: playing dumb to avoid conflict). Jason and Emilia are in -1.5 Zone Inversion where Truth feels like Betrayal ('backstabber').\",\n  \"nine_states_of_belief\": \"State 3 (The Revolutionary Truth: Personal = 1, Social > 1) colliding with State 5 (The Grifter's Clique).\",\n  \"oberon_and_sins_virtues\": \"Jason and Emilia violate Lust (Sin 2), Greed (Sin 3), and Wrath (Sin 4 — Slander). OP upholds Charity and Chastity.\",\n  \"cognitive_fallacy_check\": \"Jason and Emilia commit Ad Hominem / Accusation in a Mirror and Post Hoc Scapegoating (blaming OP's vague text when a family member literally photographed Jason at Emilia's apartment).\"\n}\n```",
+    "resolution": {
+      "trap_to_step_out_of": "Step out of the Double-Agent Enmeshment Loop (trying to stay on friendly gossip terms with Emilia while acting as Rebecca's informant).",
+      "verbatim_script": "Honestly, it's wild they're blaming me when they were all over each other in front of half the shift and his wife's own family literally photographed him outside Emilia's apartment. They're just mad they got caught in 4K by his in-laws and need a scapegoat at work.",
+      "structural_patch": "Cut all non-work conversation with Jason and Emilia immediately, never confirm or deny the burner account, and log every workplace 'liar/backstabber' remark with dates and witnesses for HR.",
+      "counterfactual_flip_thresholds": "Flips to ESH (upsilon_OP = -0.45 <= -0.25) if OP had fabricated false affair/medical rumors out of revenge, or publicly broadcasted private medical diagnoses to the whole workplace instead of warning Emilia privately."
+    },
+    "resolution_summary": "```json\n{\n  \"trap_to_step_out_of\": \"Step out of the Double-Agent Enmeshment Loop (trying to stay on friendly gossip terms with Emilia while acting as Rebecca's informant).\",\n  \"verbatim_script\": \"Honestly, it's wild they're blaming me when they were all over each other in front of half the shift and his wife's own family literally photographed him outside Emilia's apartment. They're just mad they got caught in 4K by his in-laws and need a scapegoat at work.\",\n  \"structural_patch\": \"Cut all non-work conversation with Jason and Emilia immediately, never confirm or deny the burner account, and log every workplace 'liar/backstabber' remark with dates and witnesses for HR.\",\n  \"counterfactual_flip_thresholds\": \"Flips to ESH (upsilon_OP = -0.45 <= -0.25) if OP had fabricated false affair/medical rumors out of revenge, or publicly broadcasted private medical diagnoses to the whole workplace instead of warning Emilia privately.\"\n}\n```"
+  },
+  "posts": [
+    "⚖️ AITA Verdict: NTA — \"AITA for sending my co-workers wife a 'hey girlie' text\"\nYou are Not the Asshole (NTA).\n#AITA #Aletheia",
+    "Context:\nI (29f) work with (fake names) Jason (26M) and Emilia (45F). I have worked with Emilia for about two years. Emilia is known to have ‘fun’ but she is single so its okay. I had been close to her for awhile until i noticed that she was using…\nlocal://atia_test.txt#case-3",
+    "Stated Framing:\nOP straddled the Service Trap (Inner TL: protecting both women's health) and Peace Trap (Inner BL: playing dumb to avoid conflict). Jason and Emilia are in -1.5 Zone Inversion where Truth feels like Betrayal ('backstabber').\nOP Stated: (+0.70, +0.55)",
+    "Actual Conduct:\nMute Observer sees Jason visiting 45F Emilia's apartment multiple times while his 23F pregnant wife cares for a newborn; sees a…\nOP: (+0.50, +0.40) [PASS] | Other: (-1.50, +1.00) [FAIL] | Rebecca: (+0.55, -0.50) [PASS] | Information Bridge: (+0.45, +0.50) [PASS]",
+    "Verdict: NTA — Not the Asshole (and the other person is)\nYou are Not the Asshole (NTA). Telling the truth doesn't make you a 'liar,' and refusing to help hide an affair behind the back of a 23-year-old…\nSay-Do Gap: Low (0.25) | Integrity: 80% | Story Completeness: Partial (R_net 0.94)",
+    "Reasoning:\n5-Node Information Leak Reconstruction: How did Jason and Emilia prove OP sent the anonymous text? Trace the 5-node circuit: OP's best friend (an ex-coworker who is Rebecca's relative) told OP that Rebecca & Jason live with Rebecca's sister, who revealed they have a…",
+    "Resolution:\n\"Honestly, it's wild they're blaming me when they were all over each other in front of half the shift and his wife's own family literally photographed him outside Emilia's apartment. They're just mad they got caught in 4K by his in-laws and need a scapegoat at work.\" Cut all…",
+    "Alethekanon:\nMethod-Over-Motive Check: OP's anonymous text and private 1-on-1 medical warning kept blast radius low (upsilon_OP = +0.50 > -0.25), though playing dumb created minor stealth friction.",
+    "Awwthekanon:\nBoth women received informed consent; the cheaters are scapegoating OP to deflect from their own collapse.",
+    "Brothekanon:\nYou are Not the Asshole (NTA). Telling the truth doesn't make you a 'liar,' and refusing to help hide an affair behind the back of a 23-year-old pregnant wife with a newborn doesn't make you a 'backstabber.' Even after Emilia used you for money and rides in the past, you…"
+  ]
+}

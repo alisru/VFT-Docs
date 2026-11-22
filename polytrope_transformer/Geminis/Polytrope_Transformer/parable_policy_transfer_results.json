@@ -1,0 +1,72 @@
+{
+  "cycle": 18,
+  "framework": "Argon 4 Distillation — Parable-to-Policy Sieve & 180-Tuple Unified Corpus",
+  "timestamp": "2026-10-14T14:52:48+11:00",
+  "parable_policy_audits": [
+    {
+      "policy_title": "Regional Runway & Highway Safety Co-Investment Fund ($3B)",
+      "statement_text": "Ministers co-invest in regional airport and highway safety with statutory crossbench audit and physical paving outlays",
+      "coordinates": [1.15, 0.95, 1.25],
+      "q3_physical_grounding": 0.4,
+      "q5_logical_allocation": 0.15,
+      "classified_parable_archetype": "Good Soil / Faithful Steward [can be]",
+      "archetype_match_score": 0.7692,
+      "substrate_sheared": false,
+      "diagnostic_verdict": "PRODUCTIVE_STEWARDSHIP (Sustainable 100-Fold Physical Yield)"
+    },
+    {
+      "policy_title": "Unfunded Pre-Election Instant Tax Rebate Promise",
+      "statement_text": "Promise immediate tax cuts and automatic budget surpluses without physical revenue or infrastructure measures",
+      "coordinates": [-0.75, 0.7, -0.65],
+      "q3_physical_grounding": 0.0,
+      "q5_logical_allocation": 0.65,
+      "classified_parable_archetype": "Rocky Ground / Shallow Sprout [is not]",
+      "archetype_match_score": 0.8909,
+      "substrate_sheared": true,
+      "diagnostic_verdict": "PATHOLOGICAL_DELUSION (Substrate Violation: Q5 claim without Q3 Physical Grounding)"
+    },
+    {
+      "policy_title": "Supermarket Duopoly Price Gouging on Essential Groceries",
+      "statement_text": "Retail supermarket duopolies extract inflated margins from household budgets while squeezing farmgate supplier prices",
+      "coordinates": [-1.15, -0.65, -0.85],
+      "q3_physical_grounding": 0.15,
+      "q5_logical_allocation": 0.45,
+      "classified_parable_archetype": "Thorny Ground / Extractive Choking [was like]",
+      "archetype_match_score": 0.8524,
+      "substrate_sheared": false,
+      "diagnostic_verdict": "EXTRACTIVE_MONOPOLY_DRAG (Choked by Private Rent-Seeking)"
+    },
+    {
+      "policy_title": "One Billion Dollar Queensland Infrastructure Underspend",
+      "statement_text": "One billion dollars assigned to Queensland highway projects remained unspent in federal treasury accounts due to administrative delays",
+      "coordinates": [-1.2, -1.05, -1.35],
+      "q3_physical_grounding": 0.3,
+      "q5_logical_allocation": 0.35,
+      "classified_parable_archetype": "Buried Talent / Bureaucratic Hoarding [was like]",
+      "archetype_match_score": 0.8696,
+      "substrate_sheared": false,
+      "diagnostic_verdict": "ADMINISTRATIVE_INERTIA (Buried Allocation Forfeiting Capacity)"
+    },
+    {
+      "policy_title": "Universal Bulk-Billing Urgent Care Clinics Network",
+      "statement_text": "Establishing bulk-billed urgent care clinics across rural and suburban communities relieves physical emergency ward congestion",
+      "coordinates": [1.35, 1.1, 1.3],
+      "q3_physical_grounding": 0.35,
+      "q5_logical_allocation": 0.15,
+      "classified_parable_archetype": "Good Soil / Faithful Steward [can be]",
+      "archetype_match_score": 0.8424,
+      "substrate_sheared": false,
+      "diagnostic_verdict": "PRODUCTIVE_STEWARDSHIP (Sustainable 100-Fold Physical Yield)"
+    }
+  ],
+  "unified_neural_training": {
+    "total_tuples": 180,
+    "vocab_size": 722,
+    "latent_dim": 64,
+    "initial_loss": 1.800403,
+    "final_loss": 0.835247,
+    "coordinate_mae": 0.008068,
+    "antipodal_closure_error": 0.019156,
+    "adversarial_verdict": "100% PASS across all audits"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "generation": 8,
+  "timestamp": "2026-11-01T02:10:38Z",
+  "task": "Sentence-Level Semantic Gluon DNA Engine Cook-Off",
+  "benchmark_input": "e:\\Vector Field Theory\\VFT Docs\\_VFT MD\\Treatise_on_How_Words_Work.md",
+  "competitors": {
+    "agent_1_strict_verifier": {
+      "ratio": "75M / 25F",
+      "epistemic_bias": "Boundary defense, Causal debt invariant, zero false-positives",
+      "test1_sentences": 125,
+      "test1_snaps": 34,
+      "test2_leap_detected": true,
+      "status": "WINNER_VERIFICATION (The Patriarch)"
+    },
+    "agent_2_equilibrium_arbiter": {
+      "ratio": "50M / 50F",
+      "epistemic_bias": "Rigor + synthesis balance, Self-healing bridging gluons lambda_3 (x) lambda_8",
+      "test1_sentences": 125,
+      "test1_snaps": 30,
+      "test2_leap_detected": true,
+      "status": "WINNER_SYNTHESIS (The Matriarch)"
+    },
+    "agent_3_topological_explorer": {
+      "ratio": "25M / 75F",
+      "epistemic_bias": "State-space expansion, unsaid horizon mining, non-local resonance",
+      "test1_sentences": 125,
+      "test1_snaps": 22,
+      "test2_leap_detected": false,
+      "status": "RUNNER_UP_DISCOVERY (Over-smoothed ungrounded leap in Stress Test 2)"
+    }
+  },
+  "culled_mechanisms_and_warnings": [
+    {
+      "culled_mechanism": "Unconstrained Topological Smoothing without Causal Debt Gate (Agent 3)",
+      "failure_mode": "Agent 3 allowed an ungrounded leap ('infinite free energy without thermodynamic cost') to pass without snapping (r_eff < 1.529) because its broad tolerance for exploratory analogy over-smoothed the discontinuity.",
+      "negative_constraint": "Offspring must never relax Cornell string tension r_c or bypass the Causal Debt Gate when evaluating deductive claims."
+    }
+  ],
+  "inherited_breakthroughs": {
+    "from_agent_1": "Causal Debt Dirac Penalty (immediate snap when S2 claims 'therefore/proves' following an ungrounded step).",
+    "from_agent_2": "Self-Healing Bridging Gluon Operator lambda_3 (x) lambda_8 (calculating the missing intermediate Q-plane to repair legitimate transitions).",
+    "from_agent_3": "Unsaid Horizon Centroid Projection (extracting the latent topological consequence implied by the document's geometry)."
+  }
+}

@@ -1,0 +1,202 @@
+Command exited with code 0.
+
+Command output:
+
+  bluesky_bot\control_panel.html:43:
+  bluesky_bot\control_panel.html:44:      window.addEventListener('unhandledrejection', function(e) {
+> bluesky_bot\control_panel.html:45:        addLog('error', `Unhandled Promise Rejection: ${e.reason}`, e.reason ? 
+e.reason.stack : '');
+  bluesky_bot\control_panel.html:46:      });
+  bluesky_bot\control_panel.html:47:
+  bluesky_bot\control_panel.html:50:      console.error = function(...args) {
+  bluesky_bot\control_panel.html:51:        origError.apply(console, args);
+> bluesky_bot\control_panel.html:52:        addLog('error', args.map(a => typeof a === 'object' ? JSON.stringify(a) : 
+a).join(' '));
+  bluesky_bot\control_panel.html:53:      };
+  bluesky_bot\control_panel.html:54:
+  bluesky_bot\control_panel.html:56:      console.warn = function(...args) {
+  bluesky_bot\control_panel.html:57:        origWarn.apply(console, args);
+> bluesky_bot\control_panel.html:58:        addLog('warn', args.map(a => typeof a === 'object' ? JSON.stringify(a) : 
+a).join(' '));
+  bluesky_bot\control_panel.html:59:      };
+  bluesky_bot\control_panel.html:60:
+  bluesky_bot\control_panel.html:62:      console.info = function(...args) {
+  bluesky_bot\control_panel.html:63:        origInfo.apply(console, args);
+> bluesky_bot\control_panel.html:64:        addLog('info', args.map(a => typeof a === 'object' ? JSON.stringify(a) : 
+a).join(' '));
+  bluesky_bot\control_panel.html:65:      };
+  bluesky_bot\control_panel.html:66:
+  bluesky_bot\control_panel.html:1280:        </div>
+  bluesky_bot\control_panel.html:1281:        <div style="display:flex; gap:0.5rem; width:100%;">
+> bluesky_bot\control_panel.html:1282:          <button onclick="document.getElementById('fileUploadInput').click()" 
+class="theme-toggle" style="flex:1; justify-content:center; font-size:0.8rem; padding:0.35rem 0.5rem; font-family: 
+var(--font-outfit);">?? Import JSON</button>
+> bluesky_bot\control_panel.html:1283:          <input type="file" id="fileUploadInput" style="display:none;" 
+onchange="handleFileUpload(event)" accept=".json">
+  bluesky_bot\control_panel.html:1284:        </div>
+  bluesky_bot\control_panel.html:1285:        <div style="display:flex; gap:0.4rem; flex-wrap:wrap; 
+margin-bottom:0.25rem;">
+  bluesky_bot\control_panel.html:1530:          </div>
+  bluesky_bot\control_panel.html:1531:
+> bluesky_bot\control_panel.html:1532:          <!-- Right: Manual Draft JSON compiler -->
+  bluesky_bot\control_panel.html:1533:          <div class="composer-panel">
+  bluesky_bot\control_panel.html:1534:            <div class="composer-title">?? Manual Thread Compiler</div>
+  bluesky_bot\control_panel.html:1535:            <div style="font-size:0.85rem; color:var(--text-muted)">
+> bluesky_bot\control_panel.html:1536:              Draft your own Convergence Test evaluation. Enter coordinates and 
+details to download a pre-compiled JSON file directly.
+  bluesky_bot\control_panel.html:1537:            </div>
+  bluesky_bot\control_panel.html:1538:            
+  bluesky_bot\control_panel.html:1589:            </div>
+  bluesky_bot\control_panel.html:1590:
+> bluesky_bot\control_panel.html:1591:            <button class="btn-primary" onclick="compileNewJSON()">
+> bluesky_bot\control_panel.html:1592:              ?? Compile & Export Thread JSON
+  bluesky_bot\control_panel.html:1593:            </button>
+  bluesky_bot\control_panel.html:1594:          </div>
+  bluesky_bot\control_panel.html:1615:    let activeStory = STORIES_REGISTRY[0];
+  bluesky_bot\control_panel.html:1616:
+> bluesky_bot\control_panel.html:1617:    function updateServerStatus(isOnline) {
+  bluesky_bot\control_panel.html:1618:      const badge = document.getElementById('systemStatusBadge');
+  bluesky_bot\control_panel.html:1619:      const text = document.getElementById('systemStatusText');
+  bluesky_bot\control_panel.html:1620:      if (!badge || !text) return;
+> bluesky_bot\control_panel.html:1621:      if (isOnline) {
+  bluesky_bot\control_panel.html:1622:        badge.classList.remove('offline');
+  bluesky_bot\control_panel.html:1623:        text.innerText = 'SERVER ONLINE';
+  bluesky_bot\control_panel.html:1910:        postDiv.className = 'post-container';
+  bluesky_bot\control_panel.html:1911:
+> bluesky_bot\control_panel.html:1912:        // Custom avatar based on persona
+  bluesky_bot\control_panel.html:1913:        let avatarText = 'A';
+  bluesky_bot\control_panel.html:1914:        let avatarClass = '';
+  bluesky_bot\control_panel.html:2379:
+  bluesky_bot\control_panel.html:2380:      // Update terminal command
+> bluesky_bot\control_panel.html:2381:      document.getElementById('terminalCmd').innerText = `python 
+bluesky_bot/google_ai_studio_one_shot.py --son --compact${tradFlag} --topic "${activeStory.subject}"`;
+  bluesky_bot\control_panel.html:2382:
+  bluesky_bot\control_panel.html:2383:      // Update AI prompt generator
+  bluesky_bot\control_panel.html:2412:      activeStory._flag = (activeStory._flag === flag) ? null : flag;
+  bluesky_bot\control_panel.html:2413:      // Persist to localStorage
+> bluesky_bot\control_panel.html:2414:      const flags = JSON.parse(localStorage.getItem('aletheia_flags') || '{}');
+  bluesky_bot\control_panel.html:2415:      if (activeStory._flag) flags[activeStory.id] = activeStory._flag;
+  bluesky_bot\control_panel.html:2416:      else delete flags[activeStory.id];
+> bluesky_bot\control_panel.html:2417:      localStorage.setItem('aletheia_flags', JSON.stringify(flags));
+  bluesky_bot\control_panel.html:2418:      // Re-render
+  bluesky_bot\control_panel.html:2419:      renderEmulator();
+  bluesky_bot\control_panel.html:2541:    };
+  bluesky_bot\control_panel.html:2542:
+> bluesky_bot\control_panel.html:2543:    // Manual Draft json compiler
+> bluesky_bot\control_panel.html:2544:    function compileNewJSON() {
+  bluesky_bot\control_panel.html:2545:      const subject = document.getElementById('compSubject').value || 'New Story 
+Draft';
+  bluesky_bot\control_panel.html:2546:      const link = document.getElementById('compLink').value || 
+'https://bsky.app';
+  bluesky_bot\control_panel.html:2551:      const breakdown = document.getElementById('compBreakdown').value || 
+'Evaluation details...';
+  bluesky_bot\control_panel.html:2552:
+> bluesky_bot\control_panel.html:2553:      // Design standard JSON object
+> bluesky_bot\control_panel.html:2554:      const draftJSON = {
+  bluesky_bot\control_panel.html:2555:        "subject": subject,
+  bluesky_bot\control_panel.html:2556:        "link": link,
+  bluesky_bot\control_panel.html:2566:          `Verdict: FAIL - The Path of Deception`,
+  bluesky_bot\control_panel.html:2567:          `What's happening: ${breakdown}`,
+> bluesky_bot\control_panel.html:2568:          `The Poison: The system is designed to lock in performative benefits 
+while externalizing costs.`,
+  bluesky_bot\control_panel.html:2569:          `The Breakdown & Plane Error:\nWe analyze the boundary error between 
+stated claims (WHAT) and physical execution (HOW).`,
+  bluesky_bot\control_panel.html:2570:          `The Trajectory: The Path of Deception\nWe map the gap between the 
+stated ideal and actual ground-level dynamics.`,
+  bluesky_bot\control_panel.html:2578:      };
+  bluesky_bot\control_panel.html:2579:
+> bluesky_bot\control_panel.html:2580:      const dataStr = "data:text/json;charset=utf-8," + 
+encodeURIComponent(JSON.stringify([draftJSON], null, 2));
+  bluesky_bot\control_panel.html:2581:      const downloadAnchor = document.createElement('a');
+  bluesky_bot\control_panel.html:2582:      downloadAnchor.setAttribute("href", dataStr);
+> bluesky_bot\control_panel.html:2583:      downloadAnchor.setAttribute("download", 
+`factcheck_${subject.toLowerCase().replace(/\s+/g, '_')}.json`);
+  bluesky_bot\control_panel.html:2584:      document.body.appendChild(downloadAnchor);
+  bluesky_bot\control_panel.html:2585:      downloadAnchor.click();
+  bluesky_bot\control_panel.html:2610:      reader.onload = function(e) {
+  bluesky_bot\control_panel.html:2611:        try {
+> bluesky_bot\control_panel.html:2612:          const data = JSON.parse(e.target.result);
+  bluesky_bot\control_panel.html:2613:          const storyData = Array.isArray(data) ? data[0] : data;
+  bluesky_bot\control_panel.html:2614:          
+  bluesky_bot\control_panel.html:2647:          selectStory(newStory.id);
+  bluesky_bot\control_panel.html:2648:        } catch(err) {
+> bluesky_bot\control_panel.html:2649:          alert("Error parsing JSON: " + err.message);
+  bluesky_bot\control_panel.html:2650:        }
+  bluesky_bot\control_panel.html:2651:      };
+  bluesky_bot\control_panel.html:2653:    }
+  bluesky_bot\control_panel.html:2654:
+> bluesky_bot\control_panel.html:2655:    // Helper to dynamically read files in directories when running http.server, 
+otherwise fallback to static index.json
+  bluesky_bot\control_panel.html:2656:    async function getFilenamesFromDirectory(dirPath, fallbackIndexPath) {
+  bluesky_bot\control_panel.html:2657:      try {
+  bluesky_bot\control_panel.html:2667:          const filenames = links
+  bluesky_bot\control_panel.html:2668:            .map(a => a.getAttribute("href"))
+> bluesky_bot\control_panel.html:2669:            .filter(href => href && href.endsWith(".json") && 
+href.startsWith("factcheck_"))
+  bluesky_bot\control_panel.html:2670:            .map(href => {
+  bluesky_bot\control_panel.html:2671:              // Extract the basename in case it returned a relative path
+  bluesky_bot\control_panel.html:2676:          return [...new Set(filenames)];
+  bluesky_bot\control_panel.html:2677:        } else {
+> bluesky_bot\control_panel.html:2678:          // Fallback to static index.json if it is not an HTML directory listing
+  bluesky_bot\control_panel.html:2679:          const fallbackRes = await fetch(fallbackIndexPath, { cache: "no-store" 
+});
+> bluesky_bot\control_panel.html:2680:          if (fallbackRes.ok) return await fallbackRes.json();
+  bluesky_bot\control_panel.html:2681:        }
+  bluesky_bot\control_panel.html:2682:      } catch (e) {
+  bluesky_bot\control_panel.html:2684:        try {
+  bluesky_bot\control_panel.html:2685:          const fallbackRes = await fetch(fallbackIndexPath, { cache: "no-store" 
+});
+> bluesky_bot\control_panel.html:2686:          if (fallbackRes.ok) return await fallbackRes.json();
+  bluesky_bot\control_panel.html:2687:        } catch(err) {
+  bluesky_bot\control_panel.html:2688:          console.warn(`Static index fallback failed for ${fallbackIndexPath}`, 
+err);
+  bluesky_bot\control_panel.html:2749:    // Render and refresh stories list based on current registry state
+  bluesky_bot\control_panel.html:2750:    function refreshRegistryUI() {
+> bluesky_bot\control_panel.html:2751:      const flags = JSON.parse(localStorage.getItem('aletheia_flags') || '{}');
+  bluesky_bot\control_panel.html:2752:      STORIES_REGISTRY.forEach((s, idx) => {
+  bluesky_bot\control_panel.html:2753:        s._origIndex = idx;
+  bluesky_bot\control_panel.html:2771:        }
+  bluesky_bot\control_panel.html:2772:      } else {
+> bluesky_bot\control_panel.html:2773:        document.getElementById('storyList').innerHTML = '<div 
+class="empty-state"><span class="empty-icon">??</span><span>Upload story JSONs to visualize</span></div>';
+  bluesky_bot\control_panel.html:2774:      }
+  bluesky_bot\control_panel.html:2775:    }
+  bluesky_bot\control_panel.html:3096:
+  bluesky_bot\control_panel.html:3097:    function handleTrendHover(evt, svg) {
+> bluesky_bot\control_panel.html:3098:      const series = JSON.parse(svg.getAttribute('data-series') || '[]');
+  bluesky_bot\control_panel.html:3099:      if (!series.length) return;
+  bluesky_bot\control_panel.html:3100:      
+  bluesky_bot\control_panel.html:3257:          const resp = await fetch(`http://localhost:8765/source?`);
+  bluesky_bot\control_panel.html:3258:          if (resp.ok) {
+> bluesky_bot\control_panel.html:3259:            const lData = await resp.json();
+  bluesky_bot\control_panel.html:3260:            if (lData && lData.text) articleText = lData.text;
+  bluesky_bot\control_panel.html:3261:          }
+  bluesky_bot\control_panel.html:3268:        try {
+  bluesky_bot\control_panel.html:3269:          if (!window._SOURCE_SHARDS[shardKey]) {
+> bluesky_bot\control_panel.html:3270:            const sResp = await fetch(`sources/shard_${shardKey}.json`);
+  bluesky_bot\control_panel.html:3271:            if (sResp.ok) {
+> bluesky_bot\control_panel.html:3272:              window._SOURCE_SHARDS[shardKey] = await sResp.json();
+  bluesky_bot\control_panel.html:3273:            }
+  bluesky_bot\control_panel.html:3274:          }
+  bluesky_bot\control_panel.html:3279:      }
+  bluesky_bot\control_panel.html:3280:
+> bluesky_bot\control_panel.html:3281:      // 3. Fallback to individual static JSON if present
+  bluesky_bot\control_panel.html:3282:      if (!articleText) {
+  bluesky_bot\control_panel.html:3283:        const staticCandidates = [
+> bluesky_bot\control_panel.html:3284:          `sources/${storyId}.json`,
+> bluesky_bot\control_panel.html:3285:          `sources/factcheck_${cleanSlug}.json`,
+> bluesky_bot\control_panel.html:3286:          `sources/${cleanSlug}.json`
+  bluesky_bot\control_panel.html:3287:        ];
+  bluesky_bot\control_panel.html:3288:        for (const sp of staticCandidates) {
+  bluesky_bot\control_panel.html:3290:            const sResp = await fetch(sp);
+  bluesky_bot\control_panel.html:3291:            if (sResp.ok) {
+> bluesky_bot\control_panel.html:3292:              const d = await sResp.json();
+  bluesky_bot\control_panel.html:3293:              if (d && (d.text || d.body)) {
+  bluesky_bot\control_panel.html:3294:                articleText = d.text || d.body;
+  bluesky_bot\control_panel.html:3763:
+  bluesky_bot\control_panel.html:3764:      // Serialize series to embed in SVG data attribute for hover tracker
+> bluesky_bot\control_panel.html:3765:      const serializedSeries = JSON.stringify(series).replace(/'/g, "&apos;");
+  bluesky_bot\control_panel.html:3766:
+  bluesky_bot\control_panel.html:3767:      return `
+
+

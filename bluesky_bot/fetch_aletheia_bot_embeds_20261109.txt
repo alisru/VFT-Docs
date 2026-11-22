@@ -1,0 +1,311 @@
+Command exited with code 0.
+
+Command output:
+
+  bluesky_bot\aletheia_bot.py:473:        print("\n--- DRY-RUN OUTPUT (No posts sent to Bluesky) ---")
+  bluesky_bot\aletheia_bot.py:474:        for idx, post in enumerate(final_posts, 1):
+> bluesky_bot\aletheia_bot.py:475:            embed_info = ""
+  bluesky_bot\aletheia_bot.py:476:            if idx == 1:
+  bluesky_bot\aletheia_bot.py:477:                if is_five_word:
+> bluesky_bot\aletheia_bot.py:478:                    embed_info = " [Embed: Trajectory Graph & Five-Word Info Card]"
+  bluesky_bot\aletheia_bot.py:479:                else:
+> bluesky_bot\aletheia_bot.py:480:                    embed_info = " [Embed: Trajectory Graph & Compact Summary Cards 
+(Verdict + Analysis)]"
+  bluesky_bot\aletheia_bot.py:481:            elif idx == 2 and link:
+> bluesky_bot\aletheia_bot.py:482:                embed_info = f" [Embed: Link Card -> {link}]"
+  bluesky_bot\aletheia_bot.py:483:            elif "Source: " in post and thread_config.get("grounding_url"):
+> bluesky_bot\aletheia_bot.py:484:                embed_info = f" [Embed: Grounding Card -> 
+{thread_config.get('grounding_url')}]"
+> bluesky_bot\aletheia_bot.py:485:            print(f"\n[Post {idx}/{len(final_posts)}]{embed_info} ({len(post)} 
+chars):\n{post}")
+  bluesky_bot\aletheia_bot.py:486:        thread_config["status"] = "COMPLETED DRY RUN"
+  bluesky_bot\aletheia_bot.py:487:    else:
+  bluesky_bot\aletheia_bot.py:488:        # --- LIVE POSTING CORE ---
+  bluesky_bot\aletheia_bot.py:489:        try:
+  bluesky_bot\aletheia_bot.py:490:            ensure_client_timeout(client)
+  bluesky_bot\aletheia_bot.py:491:
+  bluesky_bot\aletheia_bot.py:492:            # 3. Upload Graph Image
+  bluesky_bot\aletheia_bot.py:493:            print("Uploading trajectory graph to Bluesky...")
+  bluesky_bot\aletheia_bot.py:494:            try:
+  bluesky_bot\aletheia_bot.py:495:                with open(graph_filename, "rb") as f:
+  bluesky_bot\aletheia_bot.py:496:                    img_data = f.read()
+  bluesky_bot\aletheia_bot.py:497:                upload = safe_upload_blob(client, img_data, desc=f"trajectory graph 
+for {subject}")
+> bluesky_bot\aletheia_bot.py:498:                images = [models.AppBskyEmbedImages.Image(alt=f"Alethekanon Psochic 
+Hegemony Assessment Graph for {subject}", image=upload.blob)]
+> bluesky_bot\aletheia_bot.py:499:                graph_embed = models.AppBskyEmbedImages.Main(images=images)
+  bluesky_bot\aletheia_bot.py:500:                print("Graph uploaded successfully.")
+  bluesky_bot\aletheia_bot.py:501:            except Exception as e:
+  bluesky_bot\aletheia_bot.py:502:                raise RuntimeError(f"Failed to upload graph: {str(e) or repr(e)}") 
+from e
+  bluesky_bot\aletheia_bot.py:503:
+> bluesky_bot\aletheia_bot.py:504:            # Create Five-Word Mode Info Card Embeds
+  bluesky_bot\aletheia_bot.py:505:            if is_five_word:
+  bluesky_bot\aletheia_bot.py:506:                five_word_filename = os.path.join(bot_graph_dir, 
+f"{story_id}_info_card_five_word.png")
+  bluesky_bot\aletheia_bot.py:507:                if not os.path.exists(five_word_filename):
+  bluesky_bot\aletheia_bot.py:508:                    print("Five-word mode info card not found. Generating 
+on-the-fly...")
+  bluesky_bot\aletheia_bot.py:509:                    try:
+  bluesky_bot\aletheia_bot.py:510:                        from image_card_generator import generate_compact_info_card
+  bluesky_bot\aletheia_bot.py:511:                        main_info_card = os.path.join(bot_graph_dir, 
+f"{story_id}_info_card.png")
+  bluesky_bot\aletheia_bot.py:512:                        generate_compact_info_card(thread_config, main_info_card)
+  bluesky_bot\aletheia_bot.py:513:                    except Exception as e:
+  bluesky_bot\aletheia_bot.py:514:                        raise RuntimeError(f"Failed to generate five-word info card 
+on-the-fly: {e}") from e
+  bluesky_bot\aletheia_bot.py:520:                    fw_upload = safe_upload_blob(client, fw_img_data, 
+desc=f"five-word terminal card for {subject}")
+  bluesky_bot\aletheia_bot.py:521:                    info_card_images.append(
+> bluesky_bot\aletheia_bot.py:522:                        models.AppBskyEmbedImages.Image(
+  bluesky_bot\aletheia_bot.py:523:                            alt=f"Terminal-style 5-word audit results card for 
+{subject}.",
+  bluesky_bot\aletheia_bot.py:524:                            image=fw_upload.blob
+  bluesky_bot\aletheia_bot.py:525:                        )
+  bluesky_bot\aletheia_bot.py:526:                    )
+  bluesky_bot\aletheia_bot.py:527:                    print("Five-word terminal card uploaded successfully.")
+  bluesky_bot\aletheia_bot.py:528:                except Exception as e:
+  bluesky_bot\aletheia_bot.py:529:                    print(f"Warning: Failed to upload five-word terminal card: 
+{str(e) or repr(e)}")
+  bluesky_bot\aletheia_bot.py:530:
+> bluesky_bot\aletheia_bot.py:531:            # Create Compact Mode Info Card Embeds (always generated and uploaded if 
+not in five-word mode)
+  bluesky_bot\aletheia_bot.py:532:            if is_compact or not is_five_word:
+  bluesky_bot\aletheia_bot.py:533:                verdict_filename = os.path.join(bot_graph_dir, 
+f"{story_id}_info_card_verdict.png")
+  bluesky_bot\aletheia_bot.py:534:                analysis_filename = os.path.join(bot_graph_dir, 
+f"{story_id}_info_card_analysis.png")
+  bluesky_bot\aletheia_bot.py:535:                main_info_card = os.path.join(bot_graph_dir, 
+f"{story_id}_info_card.png")
+  bluesky_bot\aletheia_bot.py:536:                
+  bluesky_bot\aletheia_bot.py:537:                if not os.path.exists(verdict_filename) or not 
+os.path.exists(analysis_filename):
+  bluesky_bot\aletheia_bot.py:538:                    print("Compact mode split info cards not found. Generating 
+on-the-fly...")
+  bluesky_bot\aletheia_bot.py:539:                    try:
+  bluesky_bot\aletheia_bot.py:540:                        from image_card_generator import generate_compact_info_card
+  bluesky_bot\aletheia_bot.py:541:                        generate_compact_info_card(thread_config, main_info_card)
+  bluesky_bot\aletheia_bot.py:550:                    v_upload = safe_upload_blob(client, v_img_data, desc=f"verdict 
+split card for {subject}")
+  bluesky_bot\aletheia_bot.py:551:                    info_card_images.append(
+> bluesky_bot\aletheia_bot.py:552:                        models.AppBskyEmbedImages.Image(
+  bluesky_bot\aletheia_bot.py:553:                            alt=f"Core Verdict Card for {subject}: Claim, Reality, 
+and Verdict coordinates.",
+  bluesky_bot\aletheia_bot.py:554:                            image=v_upload.blob
+  bluesky_bot\aletheia_bot.py:555:                        )
+  bluesky_bot\aletheia_bot.py:556:                    )
+  bluesky_bot\aletheia_bot.py:557:                    print("Verdict split card uploaded successfully.")
+  bluesky_bot\aletheia_bot.py:558:                except Exception as e:
+  bluesky_bot\aletheia_bot.py:559:                    print(f"Warning: Failed to upload verdict split card: {str(e) or 
+repr(e)}")
+  bluesky_bot\aletheia_bot.py:560:                
+  bluesky_bot\aletheia_bot.py:561:                # Upload Analysis Card (4-13)
+  bluesky_bot\aletheia_bot.py:562:                try:
+  bluesky_bot\aletheia_bot.py:595:                        
+  bluesky_bot\aletheia_bot.py:596:                    info_card_images.append(
+> bluesky_bot\aletheia_bot.py:597:                        models.AppBskyEmbedImages.Image(
+  bluesky_bot\aletheia_bot.py:598:                            alt=card_alt,
+  bluesky_bot\aletheia_bot.py:599:                            image=a_upload.blob
+  bluesky_bot\aletheia_bot.py:600:                        )
+  bluesky_bot\aletheia_bot.py:601:                    )
+  bluesky_bot\aletheia_bot.py:602:                    print("Analysis split card uploaded successfully.")
+  bluesky_bot\aletheia_bot.py:603:                except Exception as e:
+  bluesky_bot\aletheia_bot.py:604:                    print(f"Warning: Failed to upload analysis split card: {str(e) 
+or repr(e)}")
+  bluesky_bot\aletheia_bot.py:605:
+  bluesky_bot\aletheia_bot.py:606:
+> bluesky_bot\aletheia_bot.py:607:            # Create External Link Preview Card
+> bluesky_bot\aletheia_bot.py:608:            link_embed = None
+  bluesky_bot\aletheia_bot.py:609:            if link and (link.startswith("http://") or link.startswith("https://")):
+  bluesky_bot\aletheia_bot.py:610:                try:
+  bluesky_bot\aletheia_bot.py:611:                    desc_text = ""
+  bluesky_bot\aletheia_bot.py:612:                    if len(final_posts) > 4:
+  bluesky_bot\aletheia_bot.py:613:                        desc_text = final_posts[4].replace("What's happening:\n", 
+"").strip()
+  bluesky_bot\aletheia_bot.py:614:                    else:
+  bluesky_bot\aletheia_bot.py:615:                        desc_text = f"Alethekanon Psochic Hegemony Assessment for 
+{subject}"
+  bluesky_bot\aletheia_bot.py:616:                    if len(desc_text) > 200:
+  bluesky_bot\aletheia_bot.py:617:                        desc_text = desc_text[:197] + "..."
+> bluesky_bot\aletheia_bot.py:618:                    link_embed = models.AppBskyEmbedExternal.Main(
+> bluesky_bot\aletheia_bot.py:619:                        external=models.AppBskyEmbedExternal.External(
+  bluesky_bot\aletheia_bot.py:620:                            title=subject,
+  bluesky_bot\aletheia_bot.py:621:                            description=desc_text,
+  bluesky_bot\aletheia_bot.py:622:                            uri=link
+  bluesky_bot\aletheia_bot.py:623:                        )
+  bluesky_bot\aletheia_bot.py:624:                    )
+> bluesky_bot\aletheia_bot.py:625:                    print(f"Created link preview card embed for: {link}")
+  bluesky_bot\aletheia_bot.py:626:                except Exception as ex:
+> bluesky_bot\aletheia_bot.py:627:                    print(f"Warning: Failed to create external link embed card: 
+{ex}")
+  bluesky_bot\aletheia_bot.py:628:
+  bluesky_bot\aletheia_bot.py:629:            # Create Grounding Link Preview Card (if grounding_url is present)
+  bluesky_bot\aletheia_bot.py:630:            grounding_url = thread_config.get("grounding_url", "")
+> bluesky_bot\aletheia_bot.py:631:            grounding_embed = None
+  bluesky_bot\aletheia_bot.py:632:            if grounding_url and (grounding_url.startswith("http://") or 
+grounding_url.startswith("https://")):
+  bluesky_bot\aletheia_bot.py:633:                try:
+  bluesky_bot\aletheia_bot.py:634:                    desc_text = f"Fact-check verification source for {subject}"
+> bluesky_bot\aletheia_bot.py:635:                    grounding_embed = models.AppBskyEmbedExternal.Main(
+> bluesky_bot\aletheia_bot.py:636:                        external=models.AppBskyEmbedExternal.External(
+  bluesky_bot\aletheia_bot.py:637:                            title="Verification Source | Aletheia Bot",
+  bluesky_bot\aletheia_bot.py:638:                            description=desc_text,
+  bluesky_bot\aletheia_bot.py:639:                            uri=grounding_url
+  bluesky_bot\aletheia_bot.py:640:                        )
+  bluesky_bot\aletheia_bot.py:641:                    )
+> bluesky_bot\aletheia_bot.py:642:                    print(f"Created grounding link preview card embed for: 
+{grounding_url}")
+  bluesky_bot\aletheia_bot.py:643:                except Exception as ex:
+> bluesky_bot\aletheia_bot.py:644:                    print(f"Warning: Failed to create grounding external link embed 
+card: {ex}")
+  bluesky_bot\aletheia_bot.py:645:
+  bluesky_bot\aletheia_bot.py:646:            # Create Secondary Source Link Preview Card (if multi-source cluster 
+sources are present)
+  bluesky_bot\aletheia_bot.py:647:            cluster_sources = thread_config.get("cluster_sources") or []
+  bluesky_bot\aletheia_bot.py:648:            secondary_url = ""
+  bluesky_bot\aletheia_bot.py:649:            if len(cluster_sources) > 1:
+  bluesky_bot\aletheia_bot.py:650:                secondary_url = cluster_sources[1].get("url", "")
+> bluesky_bot\aletheia_bot.py:651:            secondary_embed = None
+  bluesky_bot\aletheia_bot.py:652:            if secondary_url and (secondary_url.startswith("http://") or 
+secondary_url.startswith("https://")):
+  bluesky_bot\aletheia_bot.py:653:                try:
+  bluesky_bot\aletheia_bot.py:654:                    sec_pub = cluster_sources[1].get("publisher") or "Alternative 
+Reporting Outlet"
+> bluesky_bot\aletheia_bot.py:655:                    secondary_embed = models.AppBskyEmbedExternal.Main(
+> bluesky_bot\aletheia_bot.py:656:                        external=models.AppBskyEmbedExternal.External(
+  bluesky_bot\aletheia_bot.py:657:                            title=f"{sec_pub} Source | Aletheia Bot",
+  bluesky_bot\aletheia_bot.py:658:                            description=f"Comparative reporting source from 
+{sec_pub}",
+  bluesky_bot\aletheia_bot.py:659:                            uri=secondary_url
+  bluesky_bot\aletheia_bot.py:660:                        )
+  bluesky_bot\aletheia_bot.py:661:                    )
+> bluesky_bot\aletheia_bot.py:662:                    print(f"Created secondary source link preview card embed for: 
+{secondary_url}")
+  bluesky_bot\aletheia_bot.py:663:                except Exception as ex:
+> bluesky_bot\aletheia_bot.py:664:                    print(f"Warning: Failed to create secondary external link embed 
+card: {ex}")
+  bluesky_bot\aletheia_bot.py:665:
+> bluesky_bot\aletheia_bot.py:666:            # first_post_embed gets the trajectory graph, and also gets the summary 
+cards if present
+> bluesky_bot\aletheia_bot.py:667:            first_post_embed = graph_embed
+  bluesky_bot\aletheia_bot.py:668:            if len(info_card_images) > 0:
+  bluesky_bot\aletheia_bot.py:669:                joint_images = []
+> bluesky_bot\aletheia_bot.py:670:                if graph_embed is not None and hasattr(graph_embed, "images"):
+> bluesky_bot\aletheia_bot.py:671:                    joint_images.extend(graph_embed.images)
+  bluesky_bot\aletheia_bot.py:672:                
+  bluesky_bot\aletheia_bot.py:673:                # Attach all images (Graph + Summary Cards) to the first post
+  bluesky_bot\aletheia_bot.py:674:                joint_images.extend(info_card_images)
+  bluesky_bot\aletheia_bot.py:675:                        
+> bluesky_bot\aletheia_bot.py:676:                first_post_embed = 
+models.AppBskyEmbedImages.Main(images=joint_images)
+  bluesky_bot\aletheia_bot.py:677:
+  bluesky_bot\aletheia_bot.py:678:
+  bluesky_bot\aletheia_bot.py:679:            # 4. Resolve Links and Hashtags for facets (only on the first/root post)
+  bluesky_bot\aletheia_bot.py:680:            facets, tags_list = resolve_facets_and_tags(final_posts[0], link=link)
+  bluesky_bot\aletheia_bot.py:681:
+  bluesky_bot\aletheia_bot.py:682:            # 5. Determine Posting References based on Mode
+  bluesky_bot\aletheia_bot.py:683:            is_reply = False
+  bluesky_bot\aletheia_bot.py:684:            if mode in ("reply", "correction", "amendment") and target_url:
+  bluesky_bot\aletheia_bot.py:685:                print(f"Resolving target post for direct reply: {target_url}...")
+  bluesky_bot\aletheia_bot.py:686:                try:
+  bluesky_bot\aletheia_bot.py:716:            if is_reply:
+  bluesky_bot\aletheia_bot.py:717:                # Post targeted direct reply to the target post
+> bluesky_bot\aletheia_bot.py:718:                print("Posting Part 1 (Targeted Reply to User with Graph Embed)...")
+  bluesky_bot\aletheia_bot.py:719:                try:
+  bluesky_bot\aletheia_bot.py:720:                    reply = client.com.atproto.repo.create_record(
+  bluesky_bot\aletheia_bot.py:721:                        models.ComAtprotoRepoCreateRecord.Data(
+  bluesky_bot\aletheia_bot.py:722:                            repo=client.me.did,
+  bluesky_bot\aletheia_bot.py:723:                            collection=models.ids.AppBskyFeedPost,
+  bluesky_bot\aletheia_bot.py:724:                            record=models.AppBskyFeedPost.Record(
+  bluesky_bot\aletheia_bot.py:725:                                created_at=client.get_current_time_iso(),
+  bluesky_bot\aletheia_bot.py:726:                                text=final_posts[0],
+  bluesky_bot\aletheia_bot.py:727:                                
+reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
+> bluesky_bot\aletheia_bot.py:728:                                embed=first_post_embed,
+  bluesky_bot\aletheia_bot.py:729:                                facets=facets,
+  bluesky_bot\aletheia_bot.py:730:                                tags=tags_list,
+  bluesky_bot\aletheia_bot.py:731:                                langs=["en"]
+  bluesky_bot\aletheia_bot.py:732:                            )
+  bluesky_bot\aletheia_bot.py:733:                        )
+  bluesky_bot\aletheia_bot.py:734:                    )
+  bluesky_bot\aletheia_bot.py:735:                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, 
+uri=reply.uri)
+  bluesky_bot\aletheia_bot.py:736:                    post_uris.append(reply.uri)
+  bluesky_bot\aletheia_bot.py:737:                    post_rkeys.append(reply.uri.split('/')[-1])
+  bluesky_bot\aletheia_bot.py:738:                except Exception as e:
+  bluesky_bot\aletheia_bot.py:740:            else:
+  bluesky_bot\aletheia_bot.py:741:                # Root Mode: Post standard new stand-alone post on profile timeline
+> bluesky_bot\aletheia_bot.py:742:                print("Posting Part 1 (New Root Thread with Link Preview or Graph 
+Embed)...")
+  bluesky_bot\aletheia_bot.py:743:                try:
+  bluesky_bot\aletheia_bot.py:744:                    root_post = client.com.atproto.repo.create_record(
+  bluesky_bot\aletheia_bot.py:745:                        models.ComAtprotoRepoCreateRecord.Data(
+  bluesky_bot\aletheia_bot.py:746:                            repo=client.me.did,
+  bluesky_bot\aletheia_bot.py:747:                            collection=models.ids.AppBskyFeedPost,
+  bluesky_bot\aletheia_bot.py:748:                            record=models.AppBskyFeedPost.Record(
+  bluesky_bot\aletheia_bot.py:749:                                created_at=client.get_current_time_iso(),
+  bluesky_bot\aletheia_bot.py:750:                                text=final_posts[0],
+> bluesky_bot\aletheia_bot.py:751:                                embed=first_post_embed,
+  bluesky_bot\aletheia_bot.py:752:                                facets=facets,
+  bluesky_bot\aletheia_bot.py:753:                                tags=tags_list,
+  bluesky_bot\aletheia_bot.py:754:                                langs=["en"]
+  bluesky_bot\aletheia_bot.py:755:                            )
+  bluesky_bot\aletheia_bot.py:756:                        )
+  bluesky_bot\aletheia_bot.py:757:                    )
+  bluesky_bot\aletheia_bot.py:758:                    root_ref = 
+models.ComAtprotoRepoStrongRef.Main(cid=root_post.cid, uri=root_post.uri)
+  bluesky_bot\aletheia_bot.py:759:                    parent_ref = root_ref
+  bluesky_bot\aletheia_bot.py:760:                    post_uris.append(root_post.uri)
+  bluesky_bot\aletheia_bot.py:761:                    post_rkeys.append(root_post.uri.split('/')[-1])
+  bluesky_bot\aletheia_bot.py:766:            for i, text in enumerate(final_posts[1:], start=2):
+  bluesky_bot\aletheia_bot.py:767:                print(f"Posting Part {i}/{len(final_posts)}...")
+> bluesky_bot\aletheia_bot.py:768:                current_embed = None
+> bluesky_bot\aletheia_bot.py:769:                if i == 2 and link_embed is not None:
+> bluesky_bot\aletheia_bot.py:770:                    # Attach the primary story link preview card embed to Part 2 
+(Stated Claim)
+> bluesky_bot\aletheia_bot.py:771:                    current_embed = link_embed
+> bluesky_bot\aletheia_bot.py:772:                    print("Attaching primary link preview card embed to Part 2 
+(Stated Claim)...")
+> bluesky_bot\aletheia_bot.py:773:                elif i == 3 and grounding_embed is not None:
+> bluesky_bot\aletheia_bot.py:774:                    # Attach the grounding/fact-check verification card embed to 
+Part 3 (Ground Reality)
+> bluesky_bot\aletheia_bot.py:775:                    current_embed = grounding_embed
+> bluesky_bot\aletheia_bot.py:776:                    print("Attaching grounding verification link card embed to Part 
+3 (Ground Reality)...")
+> bluesky_bot\aletheia_bot.py:777:                elif i == 5 and secondary_embed is not None:
+  bluesky_bot\aletheia_bot.py:778:                    # Attach the secondary comparative source card to Part 5 (Source 
+Quality Scorecard)
+> bluesky_bot\aletheia_bot.py:779:                    current_embed = secondary_embed
+> bluesky_bot\aletheia_bot.py:780:                    print("Attaching secondary comparative source link card embed to 
+Part 5 (Source Scorecard)...")
+> bluesky_bot\aletheia_bot.py:781:                elif ("Alethekanon:" in text or "Source: " in text) and 
+grounding_embed is not None and current_embed is None:
+> bluesky_bot\aletheia_bot.py:782:                    current_embed = grounding_embed
+> bluesky_bot\aletheia_bot.py:783:                    print(f"Attaching grounding link preview card embed to Part {i} 
+(Alethekanon)...")
+  bluesky_bot\aletheia_bot.py:784:                sub_facets, sub_tags = resolve_facets_and_tags(text)
+  bluesky_bot\aletheia_bot.py:785:                try:
+  bluesky_bot\aletheia_bot.py:786:                    reply = client.com.atproto.repo.create_record(
+  bluesky_bot\aletheia_bot.py:787:                        models.ComAtprotoRepoCreateRecord.Data(
+  bluesky_bot\aletheia_bot.py:788:                            repo=client.me.did,
+  bluesky_bot\aletheia_bot.py:789:                            collection=models.ids.AppBskyFeedPost,
+  bluesky_bot\aletheia_bot.py:790:                            record=models.AppBskyFeedPost.Record(
+  bluesky_bot\aletheia_bot.py:791:                                created_at=client.get_current_time_iso(),
+  bluesky_bot\aletheia_bot.py:792:                                text=text,
+  bluesky_bot\aletheia_bot.py:793:                                
+reply=models.AppBskyFeedPost.ReplyRef(parent=parent_ref, root=root_ref),
+> bluesky_bot\aletheia_bot.py:794:                                embed=current_embed,
+  bluesky_bot\aletheia_bot.py:795:                                facets=sub_facets,
+  bluesky_bot\aletheia_bot.py:796:                                tags=sub_tags,
+  bluesky_bot\aletheia_bot.py:797:                                langs=["en"]
+  bluesky_bot\aletheia_bot.py:798:                            )
+  bluesky_bot\aletheia_bot.py:799:                        )
+  bluesky_bot\aletheia_bot.py:800:                    )
+  bluesky_bot\aletheia_bot.py:801:                    parent_ref = models.ComAtprotoRepoStrongRef.Main(cid=reply.cid, 
+uri=reply.uri)
+  bluesky_bot\aletheia_bot.py:802:                    post_uris.append(reply.uri)
+  bluesky_bot\aletheia_bot.py:803:                    post_rkeys.append(reply.uri.split('/')[-1])
+  bluesky_bot\aletheia_bot.py:804:                    time.sleep(1) # Slight pause to ensure strict chronologic 
+ordering in API database
+
+

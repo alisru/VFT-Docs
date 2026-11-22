@@ -1,0 +1,25 @@
+# Task: Expand Master Index & Topic/Category Landscape Mode
+
+- [x] Analyze existing Master Index (`Master_Index.html`, `generate_vft_index.py`, `index_data.json`)
+- [x] Analyze Peek Explorer Landscape Mode architecture (`PEEK_EXPLORER.md`, `renderer.js`, `styles.css`)
+- [x] Create project plan directory and implementation plan (`implementation_plan_01_expand_master_index_and_landscape_mode.md`)
+- [x] Set up directory junctions in `_projects` for sibling projects (`value-physics`, `peek_explorer`, `12axes`)
+- [x] Build expanded indexing engine `generate_master_index.py` with multi-project & category support
+- [x] Run `generate_master_index.py` to create comprehensive `index_data.json` (5,048 files across 9 sovereign categories)
+- [x] Enhance `Master_Index.html` with Landscape Map Mode (Rooms, Bridges, Edge Lens, HUD, Search, Tree View)
+- [x] Fix CORS on `file:///` protocol by generating synchronous `index_data.js` script bundle
+- [x] Suppress Tailwind CDN production console warning
+- [x] Add dynamic path resolver for `_VFT MD/System` vs root directory
+- [x] Create `Launch_Master_Index.bat` and update `start_vft_index.bat`
+- [x] Implement Subcategory Child Room Spawner ("Web of Things" branch windows)
+- [x] Implement In-HTML File Reader / Viewer Windows (renders Markdown, live HTML iframes, Code on canvas)
+- [x] Fix scroll vs zoom collision error (natural scroll inside tiles, Shift+Wheel for canvas zoom)
+- [x] Document Semantic Gluon & Dynamic Trajectory Theory (`Semantic_Gluon_and_Dynamic_Trajectory_Theory.md` updated with full 3-tier geometry, 8 modal states, 4 colored forces, 4 verbatim operational laws, Inclusive/Exclusive polarity & ledgers, and Semantic DNA Reading Head model)
+- [x] Run 5-Agent Evolutionary Bake-Off (`agent_1` through `agent_5` in `_VFT MD/Physics/semantic_gluon_dna/`) on `chatgpt infinity maths.md`, `Comprehensive Report - IRM.md`, and 3 arXiv benchmarks
+- [x] Synthesize best lessons from all 5 agents into `unified_gluon_dna_engine.py` and generate `UNIFIED_BAKEOFF_AND_SYNTHESIS_REPORT.md` + `unified_results.json`
+- [x] Run Round 2 5-Agent Bake-Off across the full `IRM` Formal Papers folder (14 papers including `Formal Paper 17 Navier-Stokes`, `Formal Paper 12 Levi-Civita`, `ORTHODOX_BRIDGE_ZFC.md`) and 8 full-text `arXiv` benchmark papers
+- [x] Upgrade `unified_gluon_dna_engine.py` to v2.0 (4-Base Proof-State Codons, 16-Channel Physics Spectrum, Algebraic Variable Carryover, Causal Red-to-Blue Proof Resolution) and generate `unified_results_v2.json`
+- [x] Document Semantic Luminescence, Causal Valence Networks & Unsaid Horizon Mining (`Semantic_Luminescence_and_Causal_Valence_Networks.md`) and update changelog to v2.1
+- [ ] Implement Tile drag-resizer (`.room-resizer`) & auto-fit content solver
+- [ ] Implement Reload Protection (localStorage state auto-save and restoration)
+- [ ] Implement Inline File Summaries view option toggle

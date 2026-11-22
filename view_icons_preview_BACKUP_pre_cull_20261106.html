@@ -1,0 +1,2543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peek Explorer - Complete Custom Icon Design Studio & Testbed (V3)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --fg: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #0078d4;
+      --accent-glow: rgba(0, 120, 212, 0.25);
+    }
+    body.light-theme {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --fg: #0f172a;
+      --muted: #64748b;
+      --accent: #0078d4;
+      --accent-glow: rgba(0, 120, 212, 0.15);
+    }
+    body.classic-blue {
+      --bg: #0284c7;
+      --card-bg: #0369a1;
+      --border: #38bdf8;
+      --fg: #ffffff;
+      --muted: #e0f2fe;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.3);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 28px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      transition: background 0.2s, color 0.2s;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    h1 { margin: 0; font-size: 22px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+    .header-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .controls { display: flex; align-items: center; gap: 14px; }
+    select {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--fg);
+      padding: 7px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .section {
+      margin-bottom: 36px;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-desc {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .icon-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+      position: relative;
+    }
+    .icon-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
+    .icon-card.locked {
+      border-color: #10b981;
+      box-shadow: 0 0 0 1px #10b981;
+    }
+    .icon-card.candidate {
+      border-color: #f59e0b;
+      box-shadow: 0 0 0 1px #f59e0b;
+    }
+    .icon-preview-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      background: rgba(0,0,0,0.12);
+      border-radius: 6px;
+    }
+    body.light-theme .icon-preview-row {
+      background: #f1f5f9;
+    }
+    .icon-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.03);
+      border: 1px dashed var(--border);
+      border-radius: 6px;
+    }
+    .icon-stage svg {
+      width: var(--icon-size, 20px);
+      height: var(--icon-size, 20px);
+      stroke: currentColor;
+    }
+    .icon-meta { display: flex; flex-direction: column; gap: 3px; max-width: calc(100% - 60px); }
+    .icon-name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .icon-desc { font-size: 11px; color: var(--muted); line-height: 1.3; }
+    .badge {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(0, 120, 212, 0.2);
+      color: var(--accent);
+      font-weight: 600;
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge.green { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+    .badge.orange { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+    .badge.purple { background: rgba(168, 85, 247, 0.2); color: #c084fc; }
+    .critique-box {
+      font-size: 11.5px;
+      line-height: 1.45;
+      color: var(--muted);
+      background: rgba(0,0,0,0.06);
+      padding: 8px 10px;
+      border-radius: 5px;
+      border-left: 3px solid var(--accent);
+    }
+    body.light-theme .critique-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid var(--accent);
+    }
+    .critique-box strong { color: var(--fg); }
+    .group-divider {
+      margin: 20px 0 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>⚡ Peek Explorer - Complete Custom Icon Design Studio (V3)</h1>
+      <div class="header-sub">Brainstorming & testbed for every missing icon: Layout modes, Tiles critique, Small icons, Size procession & Toolbar actions</div>
+    </div>
+    <div class="controls">
+      <label style="font-size:12px;font-weight:600">Icon Zoom:
+        <select id="sizeSelect">
+          <option value="16px">16px (Native UI Target)</option>
+          <option value="20px" selected>20px (Comfortable Inspection)</option>
+          <option value="28px">28px (Medium Preview)</option>
+          <option value="42px">42px (Macro Geometry)</option>
+        </select>
+      </label>
+      <label style="font-size:12px;font-weight:600">Theme:
+        <select id="themeSelect">
+          <option value="dark">Dark Slate</option>
+          <option value="light">Light White</option>
+          <option value="classic">Classic Blue</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- SECTION 1: TILES CRITIQUE & 5 DESIGN OPTIONS -->
+  <!-- ========================================== -->
+  <div class="section">
+    <div class="section-title">
+      <span>🔲 1. Tiles View Mode: In-Depth Critique & 5 Candidate Designs</span>
+      <span class="badge orange">Needs Selection</span>
+    </div>
+    <div class="section-desc">
+      <strong>Deep Critique:</strong> Tiles mode in Windows File Explorer arranges items in multiple horizontal columns. Each tile contains an icon box on the left and TWO text rows on the right (Name above, Type/Size below).<br>
+      • <em>Why 3.1 failed:</em> Heavy outer card borders at 16×16 eat 4px of horizontal space, turning the inner lines into an illegible solid blob.<br>
+      • <em>Why 3.2 failed:</em> 4 tiles (2×2) squeezes each tile into 6px width. An icon + text cannot fit inside 6px without becoming pixel noise.<br>
+      • <em>The Solution:</em> Strip outer container strokes. Ground the icon square on the left, and use distinct line weights/lengths for Title vs Subtitle.
+    </div>
+
+    <div class="grid">
+      <!-- T1 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">T1: Authentic Minimal Tile Pair</span>
+            <span class="icon-desc">Two stacked rows: icon square + title/subtitle</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Tile 1 -->
+              <rect x="2" y="2.5" width="4" height="4" rx="0.9" stroke-width="1.2" />
+              <line x1="8" y1="3.5" x2="14" y2="3.5" stroke-width="1.3" />
+              <line x1="8" y1="5.5" x2="11.5" y2="5.5" stroke-width="1" opacity="0.6" />
+              <!-- Tile 2 -->
+              <rect x="2" y="9.5" width="4" height="4" rx="0.9" stroke-width="1.2" />
+              <line x1="8" y1="10.5" x2="14" y2="10.5" stroke-width="1.3" />
+              <line x1="8" y1="12.5" x2="11.5" y2="12.5" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Cleanest At 16px</span>
+        <div class="critique-box">
+          <strong>Pros:</strong> Zero clutter, 100% readable at 16px. The bolder top line immediately registers as "File Name" and the shorter muted bottom line as "Details".
+        </div>
+      </div>
+
+      <!-- T2 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">T2: Accent-Filled Icon Box</span>
+            <span class="icon-desc">Subtle tinted icon square + double text</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Tile 1 -->
+              <rect x="2" y="2.5" width="4" height="4" rx="0.9" stroke-width="1.1" fill="currentColor" fill-opacity="0.25" />
+              <line x1="8" y1="3.5" x2="14" y2="3.5" stroke-width="1.3" />
+              <line x1="8" y1="5.5" x2="12" y2="5.5" stroke-width="1" opacity="0.55" />
+              <!-- Tile 2 -->
+              <rect x="2" y="9.5" width="4" height="4" rx="0.9" stroke-width="1.1" fill="currentColor" fill-opacity="0.25" />
+              <line x1="8" y1="10.5" x2="14" y2="10.5" stroke-width="1.3" />
+              <line x1="8" y1="12.5" x2="12" y2="12.5" stroke-width="1" opacity="0.55" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">High Contrast</span>
+        <div class="critique-box">
+          <strong>Pros:</strong> The tint on the left square ensures the eye immediately distinguishes the icon from the text, separating it from List view.
+        </div>
+      </div>
+
+      <!-- T3 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">T3: Dual Pill Cards (Soft Enclosure)</span>
+            <span class="icon-desc">Very delicate outer card outline</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Pill 1 -->
+              <rect x="1.5" y="2" width="13" height="5" rx="1.5" stroke-width="1" opacity="0.5" />
+              <rect x="2.75" y="3.25" width="2.5" height="2.5" rx="0.4" stroke-width="0.8" fill="currentColor" fill-opacity="0.3" />
+              <line x1="6.75" y1="4.5" x2="12.5" y2="4.5" stroke-width="1.1" />
+              <!-- Pill 2 -->
+              <rect x="1.5" y="9" width="13" height="5" rx="1.5" stroke-width="1" opacity="0.5" />
+              <rect x="2.75" y="10.25" width="2.5" height="2.5" rx="0.4" stroke-width="0.8" fill="currentColor" fill-opacity="0.3" />
+              <line x1="6.75" y1="11.5" x2="12.5" y2="11.5" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Card Aesthetic</span>
+        <div class="critique-box">
+          <strong>Pros:</strong> Retains the card boundary without crushing the inside by using 50% opacity on the border and a simplified single title bar.
+        </div>
+      </div>
+
+      <!-- T4 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">T4: Two-Column Offset Tiles</span>
+            <span class="icon-desc">Shows multi-column wrapping of tiles</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Tile Col 1 -->
+              <rect x="1.5" y="2.5" width="4" height="4" rx="0.8" stroke-width="1.1" />
+              <line x1="6.75" y1="3.5" x2="9" y2="3.5" stroke-width="1.1" />
+              <line x1="6.75" y1="5.25" x2="8.5" y2="5.25" stroke-width="0.8" opacity="0.6" />
+              <!-- Tile Col 2 (Staggered bottom right) -->
+              <rect x="6.5" y="9.5" width="4" height="4" rx="0.8" stroke-width="1.1" />
+              <line x1="11.75" y1="10.5" x2="14.5" y2="10.5" stroke-width="1.1" />
+              <line x1="11.75" y1="12.25" x2="13.5" y2="12.25" stroke-width="0.8" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Flow Metaphor</span>
+        <div class="critique-box">
+          <strong>Pros:</strong> Conveys that Tiles flow sideways into columns. Noticeably distinct from single-column List and Details.
+        </div>
+      </div>
+
+      <!-- T5 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">T5: Hero Tile Detail</span>
+            <span class="icon-desc">One large tile card showing the full structure</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="3" width="13" height="10" rx="1.8" stroke-width="1.3" />
+              <rect x="3.25" y="5" width="4" height="6" rx="0.6" stroke-width="1.1" fill="currentColor" fill-opacity="0.2" />
+              <line x1="9" y1="6" x2="12.5" y2="6" stroke-width="1.3" />
+              <line x1="9" y1="8.5" x2="12.5" y2="8.5" stroke-width="1" opacity="0.7" />
+              <line x1="9" y1="10.5" x2="11.5" y2="10.5" stroke-width="0.9" opacity="0.5" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Single Hero</span>
+        <div class="critique-box">
+          <strong>Pros:</strong> Focuses on a single magnified tile card. Impossible to blur or clutter at 16px.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: SMALL ICONS (5 OPTIONS) -->
+  <!-- ========================================== -->
+  <div class="section">
+    <div class="section-title">
+      <span>▫️ 2. Small Icons Mode: 5 Candidate Designs</span>
+      <span class="badge orange">Needs Selection</span>
+    </div>
+    <div class="section-desc">
+      <strong>Design Goal:</strong> As noted: <em>"5.2 is too small, should be smaller squares or something that looks like the small icons in folder"</em>.<br>
+      Must look like genuine small files/folders sitting in a directory grid or compact list, not microscopic braille dots.
+    </div>
+
+    <div class="grid">
+      <!-- S1 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">S1: 4 Mini File Cards (2×2 Balanced)</span>
+            <span class="icon-desc">Substantial 4.5×4.5 squares with rounded corners</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="4.5" height="4.5" rx="0.9" stroke-width="1.2" />
+              <rect x="9.5" y="2" width="4.5" height="4.5" rx="0.9" stroke-width="1.2" />
+              <rect x="2" y="9.5" width="4.5" height="4.5" rx="0.9" stroke-width="1.2" />
+              <rect x="9.5" y="9.5" width="4.5" height="4.5" rx="0.9" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Solid 2x2</span>
+        <div class="critique-box">
+          <strong>Critique:</strong> Strong visual mass. Each small card is 4.5px with 1.2px stroke, ensuring it is crisp and immediately visible at 16px.
+        </div>
+      </div>
+
+      <!-- S2 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">S2: Mini Folder Silhouette (2×2 with Tabs)</span>
+            <span class="icon-desc">Mini folders with top-left folder tab profile</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Top Left Folder -->
+              <path d="M2 3.5h2l1 1h2.5a.5.5 0 0 1 .5.5v2.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-3.5a.5.5 0 0 1 .5-.5z" stroke-width="1" />
+              <!-- Top Right Folder -->
+              <path d="M9 3.5h2l1 1h2.5a.5.5 0 0 1 .5.5v2.5a.5.5 0 0 1-.5.5H9a.5.5 0 0 1-.5-.5v-3.5a.5.5 0 0 1 .5-.5z" stroke-width="1" />
+              <!-- Bottom Left Folder -->
+              <path d="M2 10.5h2l1 1h2.5a.5.5 0 0 1 .5.5v2.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-3.5a.5.5 0 0 1 .5-.5z" stroke-width="1" />
+              <!-- Bottom Right Folder -->
+              <path d="M9 10.5h2l1 1h2.5a.5.5 0 0 1 .5.5v2.5a.5.5 0 0 1-.5.5H9a.5.5 0 0 1-.5-.5v-3.5a.5.5 0 0 1 .5-.5z" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Folder Metaphor</span>
+        <div class="critique-box">
+          <strong>Critique:</strong> Looks exactly like 4 small folders sitting in a folder view. Clear semantic connection.
+        </div>
+      </div>
+
+      <!-- S3 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">S3: Folder Stream (Mini Icon + Label Rows)</span>
+            <span class="icon-desc">3 compact rows showing small icon + text layout</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Row 1 -->
+              <rect x="2" y="2.5" width="3" height="3" rx="0.5" stroke-width="1.1" />
+              <line x1="6.5" y1="4" x2="13.5" y2="4" stroke-width="1.2" />
+              <!-- Row 2 -->
+              <rect x="2" y="6.75" width="3" height="3" rx="0.5" stroke-width="1.1" />
+              <line x1="6.5" y1="8.25" x2="12" y2="8.25" stroke-width="1.2" />
+              <!-- Row 3 -->
+              <rect x="2" y="11" width="3" height="3" rx="0.5" stroke-width="1.1" />
+              <line x1="6.5" y1="12.5" x2="13.5" y2="12.5" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Realistic Folder Row</span>
+        <div class="critique-box">
+          <strong>Critique:</strong> Represents how small icons are actually rendered in File Explorer (small square icon on left, file name on right).
+        </div>
+      </div>
+
+      <!-- S4 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">S4: 6-Pack Density Grid (3×2)</span>
+            <span class="icon-desc">Six 3.5×3.5 uniform cards in high density</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.75" y="2.75" width="3.5" height="4.5" rx="0.6" stroke-width="1" />
+              <rect x="6.25" y="2.75" width="3.5" height="4.5" rx="0.6" stroke-width="1" />
+              <rect x="10.75" y="2.75" width="3.5" height="4.5" rx="0.6" stroke-width="1" />
+              <rect x="1.75" y="8.75" width="3.5" height="4.5" rx="0.6" stroke-width="1" />
+              <rect x="6.25" y="8.75" width="3.5" height="4.5" rx="0.6" stroke-width="1" />
+              <rect x="10.75" y="8.75" width="3.5" height="4.5" rx="0.6" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">High Density</span>
+        <div class="critique-box">
+          <strong>Critique:</strong> Shows a dense cluster of file documents (portrait aspect ratio). Instantly communicates "lots of small files".
+        </div>
+      </div>
+
+      <!-- S5 -->
+      <div class="icon-card candidate">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">S5: 2×2 Dual-State Tinted Cards</span>
+            <span class="icon-desc">Four 4×4 cards with 2 filled and 2 outlined</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="4.5" height="4.5" rx="0.8" stroke-width="1.1" fill="currentColor" fill-opacity="0.25" />
+              <rect x="9.5" y="2" width="4.5" height="4.5" rx="0.8" stroke-width="1.1" />
+              <rect x="2" y="9.5" width="4.5" height="4.5" rx="0.8" stroke-width="1.1" />
+              <rect x="9.5" y="9.5" width="4.5" height="4.5" rx="0.8" stroke-width="1.1" fill="currentColor" fill-opacity="0.25" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Dynamic Texture</span>
+        <div class="critique-box">
+          <strong>Critique:</strong> The alternation of filled and outlined small cards gives depth and makes it visually distinctive from plain grid icons.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- SECTION 3: PHYSICAL SIZE PROCESSION (MED, LARGE, XL) -->
+  <!-- ========================================== -->
+  <div class="section">
+    <div class="section-title">
+      <span>📐 3. Size Procession: Physical Pedestal Metaphors</span>
+      <span class="badge green">Updated to Spec</span>
+    </div>
+    <div class="section-desc">
+      <strong>User Rules Incorporated:</strong><br>
+      • <em>Medium:</em> Box on a center stand (draw a peg <code>|</code> from the box with a base <code>_</code>).<br>
+      • <em>Large:</em> Box with 2 smaller corner riser feet.<br>
+      • <em>Extra Large:</em> Poster frame spanning the boundary with bottom metadata bar.
+    </div>
+
+    <div class="grid">
+      <!-- Medium -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">Medium Icons</span>
+            <span class="icon-desc">Centered box on a peg stand with base</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Medium box (7.5x7.5) -->
+              <rect x="4.25" y="2" width="7.5" height="7.5" rx="1.2" stroke-width="1.2" />
+              <!-- Center peg | -->
+              <line x1="8" y1="9.5" x2="8" y2="13" stroke-width="1.2" />
+              <!-- Horizontal foot _ -->
+              <line x1="5" y1="13" x2="11" y2="13" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Pedestal Peg</span>
+        <div class="critique-box">
+          <strong>Result:</strong> Perfectly executes the center stand <code>|</code> + base <code>_</code>. Looks like an elegant display card on a desk stand.
+        </div>
+      </div>
+
+      <!-- Large -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">Large Icons</span>
+            <span class="icon-desc">Expanded box on 2 corner riser feet</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Large box (10.5x9.5) -->
+              <rect x="2.75" y="1.75" width="10.5" height="9.5" rx="1.3" stroke-width="1.2" />
+              <!-- Left foot -->
+              <line x1="4.5" y1="11.25" x2="4.5" y2="13.75" stroke-width="1.3" />
+              <line x1="3.5" y1="13.75" x2="5.5" y2="13.75" stroke-width="1.3" />
+              <!-- Right foot -->
+              <line x1="11.5" y1="11.25" x2="11.5" y2="13.75" stroke-width="1.3" />
+              <line x1="10.5" y1="13.75" x2="12.5" y2="13.75" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Dual Corner Feet</span>
+        <div class="critique-box">
+          <strong>Result:</strong> Shows increased scale and weight with two architectural riser feet supporting the larger card body.
+        </div>
+      </div>
+
+      <!-- Extra Large -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">Extra Large Icons</span>
+            <span class="icon-desc">Full-frame poster canvas + bottom banner</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Full poster frame -->
+              <rect x="1.5" y="1.5" width="13" height="13" rx="1.5" stroke-width="1.3" />
+              <!-- Picture preview separator line -->
+              <line x1="1.5" y1="9.75" x2="14.5" y2="9.75" stroke-width="1.2" />
+              <!-- Caption bar -->
+              <line x1="4" y1="12.5" x2="12" y2="12.5" stroke-width="1" opacity="0.8" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Poster Frame</span>
+        <div class="critique-box">
+          <strong>Result:</strong> Edge-to-edge frame that represents the maximum visual canvas with an integrated caption panel.
+        </div>
+      </div>
+
+      <!-- Core: Details -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">Details (1.1 Locked)</span>
+            <span class="icon-desc">Thick header row + 3 data lines</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="2" y1="2.75" x2="14" y2="2.75" stroke-width="1.8" />
+              <line x1="2" y1="6.5" x2="14" y2="6.5" stroke-width="1.1" />
+              <line x1="2" y1="10" x2="14" y2="10" stroke-width="1.1" />
+              <line x1="2" y1="13.5" x2="14" y2="13.5" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Locked</span>
+      </div>
+
+      <!-- Core: List -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">List (2.2 Locked)</span>
+            <span class="icon-desc">4 bullet dots + 4 clean rows</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="3" cy="3.5" r="1" fill="currentColor" stroke="none" />
+              <line x1="6.5" y1="3.5" x2="13.5" y2="3.5" stroke-width="1.2" />
+              <circle cx="3" cy="7" r="1" fill="currentColor" stroke="none" />
+              <line x1="6.5" y1="7" x2="12.5" y2="7" stroke-width="1.2" />
+              <circle cx="3" cy="10.5" r="1" fill="currentColor" stroke="none" />
+              <line x1="6.5" y1="10.5" x2="13.5" y2="10.5" stroke-width="1.2" />
+              <circle cx="3" cy="14" r="1" fill="currentColor" stroke="none" />
+              <line x1="6.5" y1="14" x2="11" y2="14" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Locked</span>
+      </div>
+
+      <!-- Core: Content -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta">
+            <span class="icon-name">Content (4.1 Locked)</span>
+            <span class="icon-desc">Prominent left thumbnail + 3 lines</span>
+          </div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.75" y="2.5" width="4.75" height="11" rx="1" stroke-width="1.2" fill="currentColor" fill-opacity="0.2" />
+              <line x1="8.5" y1="4.5" x2="14" y2="4.5" stroke-width="1.3" />
+              <line x1="8.5" y1="8" x2="13" y2="8" stroke-width="1" opacity="0.8" />
+              <line x1="8.5" y1="11.5" x2="11.5" y2="11.5" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Locked</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- SECTION 4: BRAINSTORMING CUSTOM LAYOUT ICONS (5 OPTIONS EACH) -->
+  <!-- ========================================== -->
+  <div class="section">
+    <div class="section-title">
+      <span>📐 4. Layout Mode Icons: 5 Brainstormed Options for Each Mode</span>
+      <span class="badge purple">5 Options Each</span>
+    </div>
+    <div class="section-desc">
+      Replacing the static <code>田</code> on folder headers with dynamic icons. Here are 5 distinct geometric designs for each of the 4 layout modes:
+    </div>
+
+    <!-- COLUMN OPTIONS -->
+    <div class="group-divider">A. Column under folder (scrolls down)</div>
+    <div class="grid">
+      <!-- C1 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C1: Hollow Pillar</span><span class="icon-desc">Clean rounded vertical pillar</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="1.5" width="6" height="13" rx="1.5" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option C1</span>
+      </div>
+      <!-- C2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C2: Stacked Slices</span><span class="icon-desc">3 horizontal items dropping down</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="2" width="10" height="3" rx="0.8" stroke-width="1.2" />
+              <rect x="3" y="6.5" width="10" height="3" rx="0.8" stroke-width="1.2" />
+              <rect x="3" y="11" width="10" height="3" rx="0.8" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option C2</span>
+      </div>
+      <!-- C3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C3: Downward Flow Track</span><span class="icon-desc">Vertical rail with downward arrow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3.5" y="2" width="9" height="12" rx="1.5" stroke-width="1.2" />
+              <path d="M8 4.5v7m-2.5-2.5L8 11.5l2.5-2.5" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option C3</span>
+      </div>
+      <!-- C4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C4: Folder Roof + Column</span><span class="icon-desc">Top folder tab with vertical drop</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 2.5h3l1 1h6v3H3z" stroke-width="1.1" />
+              <rect x="4.5" y="7.5" width="7" height="6.5" rx="1" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option C4</span>
+      </div>
+      <!-- C5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C5: Vertical Scroll Thumb</span><span class="icon-desc">Column with side scroll indicator</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2.5" y="1.5" width="8" height="13" rx="1.2" stroke-width="1.2" />
+              <line x1="13" y1="2" x2="13" y2="14" stroke-width="1" opacity="0.4" />
+              <line x1="13" y1="5" x2="13" y2="9" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option C5</span>
+      </div>
+    </div>
+
+    <!-- ROW OPTIONS -->
+    <div class="group-divider">B. Single row (scrolls sideways)</div>
+    <div class="grid">
+      <!-- R1 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R1: Hollow Strip</span><span class="icon-desc">Clean rounded horizontal capsule</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="5" width="13" height="6" rx="1.5" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option R1</span>
+      </div>
+      <!-- R2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R2: Filmstrip / Carousel</span><span class="icon-desc">3 side-by-side vertical cards</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="3" height="10" rx="0.8" stroke-width="1.2" />
+              <rect x="6.5" y="3" width="3" height="10" rx="0.8" stroke-width="1.2" />
+              <rect x="11" y="3" width="3" height="10" rx="0.8" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option R2</span>
+      </div>
+      <!-- R3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R3: Sideways Flow Arrow</span><span class="icon-desc">Horizontal strip with forward arrow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="4" width="13" height="8" rx="1.5" stroke-width="1.2" />
+              <path d="M4.5 8h7m-2.5-2.5L11.5 8l-2.5 2.5" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option R3</span>
+      </div>
+      <!-- R4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R4: Horizontal Scroll Thumb</span><span class="icon-desc">Row with bottom scrollbar track</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2.5" width="13" height="8" rx="1.2" stroke-width="1.2" />
+              <line x1="2" y1="13" x2="14" y2="13" stroke-width="1" opacity="0.4" />
+              <line x1="5" y1="13" x2="9" y2="13" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option R4</span>
+      </div>
+      <!-- R5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R5: Overflow Conveyor</span><span class="icon-desc">Row overflowing left & right edges</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M0 5h16M0 11h16" stroke-width="1.2" />
+              <rect x="4.5" y="5" width="7" height="6" rx="0.8" stroke-width="1.2" fill="currentColor" fill-opacity="0.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option R5</span>
+      </div>
+    </div>
+
+    <!-- WRAP OPTIONS -->
+    <div class="group-divider">C. Wrap grid</div>
+    <div class="grid">
+      <!-- W1 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W1: 4-Quadrant Cross Box</span><span class="icon-desc">Rounded box divided into 4</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.3" />
+              <line x1="8" y1="2" x2="8" y2="14" stroke-width="1.2" />
+              <line x1="2" y1="8" x2="14" y2="8" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option W1</span>
+      </div>
+      <!-- W2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W2: 6-Cell Responsive Flow</span><span class="icon-desc">2 rows of 3 cells wrapping</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2.5" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="6.25" y="2.5" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="11" y="2.5" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="1.5" y="9" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="6.25" y="9" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="11" y="9" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option W2</span>
+      </div>
+      <!-- W3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W3: 4 Disjoint Floating Tiles</span><span class="icon-desc">Four separated rounded cards</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="5" height="5" rx="1" stroke-width="1.2" />
+              <rect x="9" y="2" width="5" height="5" rx="1" stroke-width="1.2" />
+              <rect x="2" y="9" width="5" height="5" rx="1" stroke-width="1.2" />
+              <rect x="9" y="9" width="5" height="5" rx="1" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option W3</span>
+      </div>
+      <!-- W4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W4: Wrap Flow Loop Arrow</span><span class="icon-desc">Grid with return/wrap indicator</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="4.5" height="4.5" rx="0.8" stroke-width="1.1" />
+              <rect x="8.5" y="2" width="4.5" height="4.5" rx="0.8" stroke-width="1.1" />
+              <path d="M13 8.5v2a1.5 1.5 0 0 1-1.5 1.5H3.5m2-2L3.5 12l2 2" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option W4</span>
+      </div>
+      <!-- W5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W5: Masonry Stagger</span><span class="icon-desc">Offset dynamic masonry tiles</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2" width="5.5" height="5" rx="0.8" stroke-width="1.1" />
+              <rect x="8.5" y="2" width="6" height="5" rx="0.8" stroke-width="1.1" />
+              <rect x="1.5" y="9" width="7.5" height="5" rx="0.8" stroke-width="1.1" />
+              <rect x="10.5" y="9" width="4" height="5" rx="0.8" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option W5</span>
+      </div>
+    </div>
+
+    <!-- SUB-ROOM OPTIONS -->
+    <div class="group-divider">D. Sub-room (resizable box)</div>
+    <div class="grid">
+      <!-- B1 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B1: Bordered Chamber (Box in Box)</span><span class="icon-desc">Outer room with inner sanctum</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.3" />
+              <rect x="5" y="5" width="6" height="6" rx="0.75" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option B1</span>
+      </div>
+      <!-- B2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B2: Resizable Box with Grip</span><span class="icon-desc">Window frame with corner resize grip</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.3" />
+              <!-- Diagonal resize handle lines in bottom-right -->
+              <line x1="12" y1="8" x2="8" y2="12" stroke-width="1.2" />
+              <line x1="12" y1="10.5" x2="10.5" y2="12" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option B2</span>
+      </div>
+      <!-- B3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B3: Mini App Window</span><span class="icon-desc">Titlebar strip + viewport box</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.3" />
+              <line x1="2" y1="5.5" x2="14" y2="5.5" stroke-width="1.1" />
+              <circle cx="4.5" cy="3.75" r="0.6" fill="currentColor" />
+              <circle cx="6.5" cy="3.75" r="0.6" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option B3</span>
+      </div>
+      <!-- B4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B4: Floating Island</span><span class="icon-desc">Layered framed room with shadow offset</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 1.5h9a1.5 1.5 0 0 1 1.5 1.5v9" stroke-width="1.2" opacity="0.4" />
+              <rect x="1.5" y="4" width="10.5" height="10.5" rx="1.5" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option B4</span>
+      </div>
+      <!-- B5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B5: Expandable Room</span><span class="icon-desc">Chamber with outward corner expanders</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="8" height="8" rx="1" stroke-width="1.2" />
+              <path d="M1 5V1h4m6 0h4v4m0 6v4h-4M5 15H1v-4" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Option B5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- SECTION 5: COMPLETE INVENTORY OF OTHER MISSING ICONS -->
+  <!-- ========================================== -->
+  <div class="section">
+    <div class="section-title">
+      <span>🛠️ 5. Complete Inventory: Replacing Emojis with Custom Vector SVGs</span>
+      <span class="badge">Professional Polish Suite</span>
+    </div>
+    <div class="section-desc">
+      Every action in Peek Explorer should look uniquely designed, cohesive, and professional rather than relying on cartoon emojis or text characters.
+    </div>
+
+    <!-- FOLDER HEADERS -->
+    <div class="group-divider">Folder Header Actions (Currently 📑, 📋, ✕, ▾)</div>
+    <div class="grid">
+      <!-- Grouping -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Grouping (Replaces 📑)</span><span class="icon-desc">Layered category brackets / groups</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Top group -->
+              <rect x="2" y="2.5" width="4.5" height="2.5" rx="0.5" stroke-width="1.1" fill="currentColor" fill-opacity="0.2" />
+              <line x1="8" y1="3.75" x2="14" y2="3.75" stroke-width="1.2" />
+              <!-- Bottom group -->
+              <rect x="2" y="8.5" width="4.5" height="2.5" rx="0.5" stroke-width="1.1" fill="currentColor" fill-opacity="0.2" />
+              <line x1="8" y1="9.75" x2="14" y2="9.75" stroke-width="1.2" />
+              <line x1="8" y1="12.5" x2="12" y2="12.5" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Grouping</span>
+      </div>
+
+      <!-- Copy Filepath -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Copy Path (Replaces 📋)</span><span class="icon-desc">Clipboard with folder path slash</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h4m-5 0a1 1 0 0 0-1 1v9a1.5 1.5 0 0 0 1.5 1.5h5a1.5 1.5 0 0 0 1.5-1.5V4a1 1 0 0 0-1-1" stroke-width="1.2" />
+              <path d="M6 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1H6V2z" stroke-width="1.1" fill="currentColor" fill-opacity="0.15" />
+              <path d="M6.5 9.5l3-3m-3 0h3v3" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Copy Path</span>
+      </div>
+
+      <!-- Eject Sub-room -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Eject Room (Replaces ✕ / ⏏)</span><span class="icon-desc">Box with outward extraction arrow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 2.5H4a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 4 13.5h8a1.5 1.5 0 0 0 1.5-1.5V7" stroke-width="1.2" />
+              <path d="M8.5 7.5L14 2m0 0v4m0-4h-4" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Eject Room</span>
+      </div>
+
+      <!-- Folder Expand / Collapse -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Expand Chevron (Replaces ▶ / ▼)</span><span class="icon-desc">Crisp 90-degree fluent chevron</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5.5 3.5L10 8l-4.5 4.5" stroke-width="1.4" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Chevron</span>
+      </div>
+    </div>
+
+    <!-- TOOLBAR FILE MANAGEMENT ACTIONS -->
+    <div class="group-divider">Toolbar File Management Actions (Currently ➕, ✂️, 📋, 🏷️, 🗑️)</div>
+    <div class="grid">
+      <!-- New Item -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">New (Replaces ➕)</span><span class="icon-desc">Clean Plus in circular / folder badge</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 3.5h3.5l1.5 1.5h6a1 1 0 0 1 1 1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2.5 12.5v-9z" stroke-width="1.2" />
+              <path d="M8 7v4m-2-2h4" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">New Folder/File</span>
+      </div>
+
+      <!-- Cut -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Cut (Replaces ✂️)</span><span class="icon-desc">Clean vector scissors</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="4.5" cy="11.5" r="2" stroke-width="1.2" />
+              <circle cx="11.5" cy="11.5" r="2" stroke-width="1.2" />
+              <line x1="6" y1="10" x2="13.5" y2="2.5" stroke-width="1.2" />
+              <line x1="10" y1="10" x2="2.5" y2="2.5" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Cut</span>
+      </div>
+
+      <!-- Copy -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Copy (Replaces 📋)</span><span class="icon-desc">Dual overlapping clean file pages</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5.5" y="4.5" width="8" height="9.5" rx="1.2" stroke-width="1.2" />
+              <path d="M3.5 11.5H3a1.5 1.5 0 0 1-1.5-1.5V3.5A1.5 1.5 0 0 1 3 2h6a1.5 1.5 0 0 1 1.5 1.5V4" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Copy</span>
+      </div>
+
+      <!-- Paste -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Paste (Replaces 📋↓)</span><span class="icon-desc">Clipboard with downward placement arrow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="10" height="11" rx="1.5" stroke-width="1.2" />
+              <rect x="6" y="1.5" width="4" height="2" rx="0.5" stroke-width="1.1" fill="currentColor" fill-opacity="0.2" />
+              <path d="M8 6v5m-2-2l2 2 2-2" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Paste</span>
+      </div>
+
+      <!-- Rename -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Rename (Replaces 🏷️)</span><span class="icon-desc">Pencil on text label box</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 13.5h11M3.5 9.5l6-6 2.5 2.5-6 6H3.5v-2.5z" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Rename</span>
+      </div>
+
+      <!-- Delete -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Delete (Replaces 🗑️)</span><span class="icon-desc">Sleek wastebasket with lid</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 4h11m-9.5 0V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1m-7 0l.8 9.2a1.5 1.5 0 0 0 1.5 1.3h5.4a1.5 1.5 0 0 0 1.5-1.3L12.5 4" stroke-width="1.2" />
+              <line x1="6.5" y1="7" x2="6.5" y2="11.5" stroke-width="1" />
+              <line x1="9.5" y1="7" x2="9.5" y2="11.5" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Delete</span>
+      </div>
+    </div>
+
+    <!-- TOOLBAR CONTROLS & TOGGLES -->
+    <div class="group-divider">Toolbar Controls & Toggles (Currently ⇅, ▤, ◫, ⚡, 📟, 🌙)</div>
+    <div class="grid">
+      <!-- Sort -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Sort (Replaces ⇅)</span><span class="icon-desc">Opposite directional sorting arrows</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 13V3m-2 2l2-2 2 2M11.5 3v10m-2-2l2 2 2-2" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Sort</span>
+      </div>
+
+      <!-- Preview Pane -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Preview Pane (Replaces ▤)</span><span class="icon-desc">Side panel inspection split</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.2" />
+              <line x1="10" y1="2" x2="10" y2="14" stroke-width="1.2" />
+              <line x1="11.5" y1="4.5" x2="13" y2="4.5" stroke-width="1" opacity="0.8" />
+              <line x1="11.5" y1="7" x2="13" y2="7" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Preview</span>
+      </div>
+
+      <!-- Split Tab -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Split Tab (Replaces ◫)</span><span class="icon-desc">Dual pane split viewport</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.2" />
+              <line x1="8" y1="2" x2="8" y2="14" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Split Tab</span>
+      </div>
+
+      <!-- Terminal -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Terminal (Replaces 📟)</span><span class="icon-desc">Command prompt & cursor &gt;_</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2.5" width="13" height="11" rx="1.5" stroke-width="1.2" />
+              <path d="M4 6l2.5 2L4 10" stroke-width="1.3" />
+              <line x1="8" y1="10" x2="11.5" y2="10" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Terminal</span>
+      </div>
+
+      <!-- Scripts -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Scripts (Replaces ⚡)</span><span class="icon-desc">Clean lightning / runner bolt</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 1.5L3.5 9h4.5L7 14.5l6-7.5H8.5L10 1.5z" stroke-width="1.2" fill="currentColor" fill-opacity="0.15" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Scripts</span>
+      </div>
+
+      <!-- Dark / Light Theme -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Theme (Replaces 🌙)</span><span class="icon-desc">Dual Sun / Moon eclipse</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 1.5a6.5 6.5 0 1 0 6.5 6.5A6.5 6.5 0 0 1 8 1.5z" stroke-width="1.2" fill="currentColor" fill-opacity="0.25" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Theme</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- NEW ITERATIONS & USER SKETCH CANDIDATES -->
+  <!-- ========================================== -->
+<nav class="nav-pills">
+    <a href="#sec-small" class="nav-pill">▫️ Small Icons (5)</a>
+    <a href="#sec-content" class="nav-pill">📑 Content View (5)</a>
+    <a href="#sec-tiles" class="nav-pill">🔲 Tiles View (5)</a>
+    <a href="#sec-layout-col" class="nav-pill">⬇️ Layout: Column (5)</a>
+    <a href="#sec-layout-row" class="nav-pill">➡️ Layout: Row (5)</a>
+    <a href="#sec-layout-wrap" class="nav-pill">🔀 Layout: Wrap (5)</a>
+    <a href="#sec-layout-room" class="nav-pill">📦 Layout: Sub-Room (5)</a>
+    <a href="#sec-pedestal" class="nav-pill">📐 Size Procession</a>
+    <a href="#sec-headers" class="nav-pill">📁 Folder Headers (5 Each)</a>
+    <a href="#sec-toolbar" class="nav-pill">🛠️ Toolbar Actions (5 Each)</a>
+  </nav>
+
+  <!-- ========================================== -->
+  <!-- 1. SMALL ICONS: 5 GROUNDED OPTIONS -->
+  <!-- ========================================== -->
+  <div id="sec-small" class="section">
+    <div class="section-title">
+      <span>▫️ 1. Small Icons Mode: 5 Candidate Designs</span>
+      <span class="badge orange">User Sketch Grounded</span>
+    </div>
+    <div class="section-desc">
+      <strong>Core Insight:</strong> Small Icons is a <strong>multi-column stream of horizontal badges</strong>: small icon square on the left + file name tag extending to the right. Not naked dots!
+    </div>
+    <div class="grid">
+      <!-- S1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">S1: User Sketch (2×2 Tag)</span><span class="icon-desc">Dual columns of square + name tag line</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Col 1 -->
+              <rect x="1.5" y="2.5" width="3.5" height="3.5" rx="0.75" stroke-width="1.2" />
+              <line x1="6" y1="4.25" x2="7.5" y2="4.25" stroke-width="1.2" />
+              <rect x="1.5" y="9.5" width="3.5" height="3.5" rx="0.75" stroke-width="1.2" />
+              <line x1="6" y1="11.25" x2="7.5" y2="11.25" stroke-width="1.2" />
+              <!-- Col 2 -->
+              <rect x="9" y="2.5" width="3.5" height="3.5" rx="0.75" stroke-width="1.2" />
+              <line x1="13.5" y1="4.25" x2="15" y2="4.25" stroke-width="1.2" />
+              <rect x="9" y="9.5" width="3.5" height="3.5" rx="0.75" stroke-width="1.2" />
+              <line x1="13.5" y1="11.25" x2="15" y2="11.25" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Exact Sketch Match</span>
+        <div class="critique-box"><strong>Design:</strong> Directly reproduces your drawing. 2 columns, each with a mini card and a clean horizontal label bar.</div>
+      </div>
+
+      <!-- S2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">S2: 2×2 Tinted Icon Boxes</span><span class="icon-desc">25% tinted squares for thumbnail pop</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2.5" width="3.5" height="3.5" rx="0.75" stroke-width="1" fill="currentColor" fill-opacity="0.25" />
+              <line x1="6" y1="4.25" x2="7.75" y2="4.25" stroke-width="1.3" />
+              <rect x="1.5" y="9.5" width="3.5" height="3.5" rx="0.75" stroke-width="1" fill="currentColor" fill-opacity="0.25" />
+              <line x1="6" y1="11.25" x2="7.75" y2="11.25" stroke-width="1.3" />
+              <rect x="9.25" y="2.5" width="3.5" height="3.5" rx="0.75" stroke-width="1" fill="currentColor" fill-opacity="0.25" />
+              <line x1="13.75" y1="4.25" x2="15.25" y2="4.25" stroke-width="1.3" />
+              <rect x="9.25" y="9.5" width="3.5" height="3.5" rx="0.75" stroke-width="1" fill="currentColor" fill-opacity="0.25" />
+              <line x1="13.75" y1="11.25" x2="15.25" y2="11.25" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">High Pop</span>
+        <div class="critique-box"><strong>Design:</strong> Tinted squares make the icon immediately read as an image/file thumbnail rather than a bullet point.</div>
+      </div>
+
+      <!-- S3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">S3: Dual-Column 3-Row Density</span><span class="icon-desc">6 compact badges (2 cols × 3 rows)</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Col 1 -->
+              <rect x="1.5" y="2" width="2.5" height="2.5" rx="0.5" stroke-width="1" />
+              <line x1="5" y1="3.25" x2="7.5" y2="3.25" stroke-width="1.1" />
+              <rect x="1.5" y="6.75" width="2.5" height="2.5" rx="0.5" stroke-width="1" />
+              <line x1="5" y1="8" x2="7.5" y2="8" stroke-width="1.1" />
+              <rect x="1.5" y="11.5" width="2.5" height="2.5" rx="0.5" stroke-width="1" />
+              <line x1="5" y1="12.75" x2="7.5" y2="12.75" stroke-width="1.1" />
+              <!-- Col 2 -->
+              <rect x="9" y="2" width="2.5" height="2.5" rx="0.5" stroke-width="1" />
+              <line x1="12.5" y1="3.25" x2="15" y2="3.25" stroke-width="1.1" />
+              <rect x="9" y="6.75" width="2.5" height="2.5" rx="0.5" stroke-width="1" />
+              <line x1="12.5" y1="8" x2="15" y2="8" stroke-width="1.1" />
+              <rect x="9" y="11.5" width="2.5" height="2.5" rx="0.5" stroke-width="1" />
+              <line x1="12.5" y1="12.75" x2="15" y2="12.75" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Dense Stream</span>
+        <div class="critique-box"><strong>Design:</strong> Shows 6 items total. Maximizes the sense of high-density file listings.</div>
+      </div>
+
+      <!-- S4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">S4: Folder Silhouette + Tag</span><span class="icon-desc">Mini folder tab silhouette + label</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Folder 1 -->
+              <path d="M1.5 3h1.5l.8.8h1.7v2.7H1.5z" stroke-width="1" />
+              <line x1="6.5" y1="4.75" x2="7.75" y2="4.75" stroke-width="1.2" />
+              <!-- Folder 2 -->
+              <path d="M1.5 10h1.5l.8.8h1.7v2.7H1.5z" stroke-width="1" />
+              <line x1="6.5" y1="11.75" x2="7.75" y2="11.75" stroke-width="1.2" />
+              <!-- Folder 3 -->
+              <path d="M9 3h1.5l.8.8h1.7v2.7H9z" stroke-width="1" />
+              <line x1="14" y1="4.75" x2="15.25" y2="4.75" stroke-width="1.2" />
+              <!-- Folder 4 -->
+              <path d="M9 10h1.5l.8.8h1.7v2.7H9z" stroke-width="1" />
+              <line x1="14" y1="11.75" x2="15.25" y2="11.75" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Folder Anatomy</span>
+        <div class="critique-box"><strong>Design:</strong> Replaces abstract squares with real mini folder silhouettes. Unmistakable semantic link.</div>
+      </div>
+
+      <!-- S5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">S5: Asymmetric Stagger Stream</span><span class="icon-desc">Offset vertical heights for flowing feel</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Left col (lower start) -->
+              <rect x="1.5" y="3.5" width="3.5" height="3.5" rx="0.75" stroke-width="1.2" />
+              <line x1="6" y1="5.25" x2="7.5" y2="5.25" stroke-width="1.2" />
+              <rect x="1.5" y="9.5" width="3.5" height="3.5" rx="0.75" stroke-width="1.2" />
+              <line x1="6" y1="11.25" x2="7.5" y2="11.25" stroke-width="1.2" />
+              <!-- Right col (higher start) -->
+              <rect x="9" y="1.5" width="3.5" height="3.5" rx="0.75" stroke-width="1.2" />
+              <line x1="13.5" y1="3.25" x2="15" y2="3.25" stroke-width="1.2" />
+              <rect x="9" y="7.5" width="3.5" height="3.5" rx="0.75" stroke-width="1.2" />
+              <line x1="13.5" y1="9.25" x2="15" y2="9.25" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Fluid Flow</span>
+        <div class="critique-box"><strong>Design:</strong> Staggered column entries show that columns flow asynchronously.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 2. CONTENT VIEW: 5 SEGMENTED OPTIONS -->
+  <!-- ========================================== -->
+  <div id="sec-content" class="section">
+    <div class="section-title">
+      <span>📑 2. Content View Mode: 5 Segmented Thumbnail Designs</span>
+      <span class="badge orange">User Sketch Grounded</span>
+    </div>
+    <div class="section-desc">
+      <strong>Core Insight:</strong> The left preview container should not be a hollow blank pill. Segmenting it horizontally (like your red markings) represents multi-frame content (document pages, waveforms, video frames).
+    </div>
+    <div class="grid">
+      <!-- Co1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Co1: 3-Rung Segmented Capsule</span><span class="icon-desc">Left container split into 3 content rungs</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Left segmented capsule -->
+              <rect x="1.5" y="2" width="5" height="12" rx="1.2" stroke-width="1.2" />
+              <line x1="1.5" y1="6" x2="6.5" y2="6" stroke-width="1" />
+              <line x1="1.5" y1="10" x2="6.5" y2="10" stroke-width="1" />
+              <!-- Right metadata rows -->
+              <line x1="8.5" y1="4" x2="14.5" y2="4" stroke-width="1.3" />
+              <line x1="8.5" y1="8" x2="13.5" y2="8" stroke-width="1" opacity="0.8" />
+              <line x1="8.5" y1="12" x2="11.5" y2="12" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Exact Red Sketch</span>
+        <div class="critique-box"><strong>Design:</strong> Direct translation of your sketch. The 3 horizontal rungs break the blank cylinder into structured data rungs.</div>
+      </div>
+
+      <!-- Co2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Co2: Tinted Segment Bands</span><span class="icon-desc">Alternating filled/clear rungs</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2" width="5" height="12" rx="1.2" stroke-width="1.2" />
+              <!-- Top band filled -->
+              <rect x="1.5" y="2" width="5" height="4" rx="1" stroke="none" fill="currentColor" fill-opacity="0.3" />
+              <line x1="1.5" y1="6" x2="6.5" y2="6" stroke-width="1" />
+              <!-- Bottom band filled -->
+              <rect x="1.5" y="10" width="5" height="4" rx="1" stroke="none" fill="currentColor" fill-opacity="0.3" />
+              <line x1="1.5" y1="10" x2="6.5" y2="10" stroke-width="1" />
+              <!-- Right lines -->
+              <line x1="8.5" y1="4" x2="14.5" y2="4" stroke-width="1.3" />
+              <line x1="8.5" y1="8" x2="13.5" y2="8" stroke-width="1" opacity="0.8" />
+              <line x1="8.5" y1="12" x2="11.5" y2="12" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Multi-Tone</span>
+        <div class="critique-box"><strong>Design:</strong> Alternating fills make the rungs tactile and visibly segmented at 16px.</div>
+      </div>
+
+      <!-- Co3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Co3: Document Sheet Preview</span><span class="icon-desc">Mini document page with 3 internal lines</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1.5 2.5h3.5l1.5 1.5V13a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1z" stroke-width="1.1" />
+              <line x1="2.75" y1="6.5" x2="5.25" y2="6.5" stroke-width="0.9" />
+              <line x1="2.75" y1="9" x2="5.25" y2="9" stroke-width="0.9" />
+              <line x1="2.75" y1="11.5" x2="4.5" y2="11.5" stroke-width="0.9" />
+              <!-- Right metadata -->
+              <line x1="8.5" y1="4" x2="14.5" y2="4" stroke-width="1.3" />
+              <line x1="8.5" y1="8" x2="13.5" y2="8" stroke-width="1" opacity="0.8" />
+              <line x1="8.5" y1="12" x2="11.5" y2="12" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Doc Anatomy</span>
+        <div class="critique-box"><strong>Design:</strong> The left container is explicitly a document sheet with internal lines, next to file metadata.</div>
+      </div>
+
+      <!-- Co4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Co4: 4-Frame Filmstrip</span><span class="icon-desc">Four stacked film cells on left</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="1.5" width="5" height="13" rx="1" stroke-width="1.1" />
+              <line x1="1.5" y1="4.75" x2="6.5" y2="4.75" stroke-width="0.9" />
+              <line x1="1.5" y1="8" x2="6.5" y2="8" stroke-width="0.9" />
+              <line x1="1.5" y1="11.25" x2="6.5" y2="11.25" stroke-width="0.9" />
+              <!-- Right metadata -->
+              <line x1="8.5" y1="4" x2="14.5" y2="4" stroke-width="1.3" />
+              <line x1="8.5" y1="8" x2="13.5" y2="8" stroke-width="1" opacity="0.8" />
+              <line x1="8.5" y1="12" x2="11.5" y2="12" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">4-Frame</span>
+        <div class="critique-box"><strong>Design:</strong> 4 tighter segment frames. Reads as audio or video track frames.</div>
+      </div>
+
+      <!-- Co5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Co5: Media Player Split</span><span class="icon-desc">Top picture box + bottom audio rung</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2" width="5" height="12" rx="1.2" stroke-width="1.2" />
+              <!-- Picture in top half -->
+              <rect x="2.5" y="3.25" width="3" height="3.5" rx="0.5" stroke-width="0.9" fill="currentColor" fill-opacity="0.25" />
+              <line x1="1.5" y1="8.5" x2="6.5" y2="8.5" stroke-width="1" />
+              <line x1="2.75" y1="11" x2="5.25" y2="11" stroke-width="0.9" />
+              <!-- Right lines -->
+              <line x1="8.5" y1="4" x2="14.5" y2="4" stroke-width="1.3" />
+              <line x1="8.5" y1="8" x2="13.5" y2="8" stroke-width="1" opacity="0.8" />
+              <line x1="8.5" y1="12" x2="11.5" y2="12" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Media Rich</span>
+        <div class="critique-box"><strong>Design:</strong> Top preview square + bottom detail bar inside the left container.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 3. TILES VIEW: 5 DESIGNS (T1 LOCKED) -->
+  <!-- ========================================== -->
+  <div id="sec-tiles" class="section">
+    <div class="section-title">
+      <span>🔲 3. Tiles View Mode: 5 Candidate Designs</span>
+      <span class="badge green">T1 Selected</span>
+    </div>
+    <div class="section-desc">
+      <strong>Critique:</strong> T1 strips outer card strokes to prevent 16px blur, showing a chunky square on the left + bold name line + muted detail line.
+    </div>
+    <div class="grid">
+      <!-- T1 -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">T1: Authentic Minimal Tile Pair</span><span class="icon-desc">Icon box + bold name + muted detail</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2.5" width="4" height="4" rx="0.9" stroke-width="1.2" />
+              <line x1="8" y1="3.5" x2="14" y2="3.5" stroke-width="1.3" />
+              <line x1="8" y1="5.5" x2="11.5" y2="5.5" stroke-width="1" opacity="0.6" />
+              <rect x="2" y="9.5" width="4" height="4" rx="0.9" stroke-width="1.2" />
+              <line x1="8" y1="10.5" x2="14" y2="10.5" stroke-width="1.3" />
+              <line x1="8" y1="12.5" x2="11.5" y2="12.5" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Selected (T1)</span>
+        <div class="critique-box"><strong>Status:</strong> Approved in chat. Cleanest line hierarchy, zero box clutter at 16px.</div>
+      </div>
+
+      <!-- T2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">T2: Accent-Filled Icon Box</span><span class="icon-desc">25% tinted icon square for pop</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2.5" width="4" height="4" rx="0.9" stroke-width="1.1" fill="currentColor" fill-opacity="0.25" />
+              <line x1="8" y1="3.5" x2="14" y2="3.5" stroke-width="1.3" />
+              <line x1="8" y1="5.5" x2="12" y2="5.5" stroke-width="1" opacity="0.55" />
+              <rect x="2" y="9.5" width="4" height="4" rx="0.9" stroke-width="1.1" fill="currentColor" fill-opacity="0.25" />
+              <line x1="8" y1="10.5" x2="14" y2="10.5" stroke-width="1.3" />
+              <line x1="8" y1="12.5" x2="12" y2="12.5" stroke-width="1" opacity="0.55" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Tint Variant</span>
+      </div>
+
+      <!-- T3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">T3: Dual Pill Cards</span><span class="icon-desc">Soft 50% opacity outer card boundary</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2" width="13" height="5" rx="1.5" stroke-width="1" opacity="0.5" />
+              <rect x="2.75" y="3.25" width="2.5" height="2.5" rx="0.4" stroke-width="0.8" fill="currentColor" fill-opacity="0.3" />
+              <line x1="6.75" y1="4.5" x2="12.5" y2="4.5" stroke-width="1.1" />
+              <rect x="1.5" y="9" width="13" height="5" rx="1.5" stroke-width="1" opacity="0.5" />
+              <rect x="2.75" y="10.25" width="2.5" height="2.5" rx="0.4" stroke-width="0.8" fill="currentColor" fill-opacity="0.3" />
+              <line x1="6.75" y1="11.5" x2="12.5" y2="11.5" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Card Variant</span>
+      </div>
+
+      <!-- T4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">T4: Two-Column Offset Tiles</span><span class="icon-desc">Shows multi-column sideways flow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2.5" width="4" height="4" rx="0.8" stroke-width="1.1" />
+              <line x1="6.75" y1="3.5" x2="9" y2="3.5" stroke-width="1.1" />
+              <line x1="6.75" y1="5.25" x2="8.5" y2="5.25" stroke-width="0.8" opacity="0.6" />
+              <rect x="6.5" y="9.5" width="4" height="4" rx="0.8" stroke-width="1.1" />
+              <line x1="11.75" y1="10.5" x2="14.5" y2="10.5" stroke-width="1.1" />
+              <line x1="11.75" y1="12.25" x2="13.5" y2="12.25" stroke-width="0.8" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Flow Variant</span>
+      </div>
+
+      <!-- T5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">T5: Hero Tile Detail</span><span class="icon-desc">Single magnified tile showing anatomy</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="3" width="13" height="10" rx="1.8" stroke-width="1.3" />
+              <rect x="3.25" y="5" width="4" height="6" rx="0.6" stroke-width="1.1" fill="currentColor" fill-opacity="0.2" />
+              <line x1="9" y1="6" x2="12.5" y2="6" stroke-width="1.3" />
+              <line x1="9" y1="8.5" x2="12.5" y2="8.5" stroke-width="1" opacity="0.7" />
+              <line x1="9" y1="10.5" x2="11.5" y2="10.5" stroke-width="0.9" opacity="0.5" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Hero Variant</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 4. LAYOUT MODE: COLUMN (5 GROUNDED OPTIONS) -->
+  <!-- ========================================== -->
+  <div id="sec-layout-col" class="section">
+    <div class="section-title">
+      <span>⬇️ 4. Layout Mode: Column Under Folder (5 Options)</span>
+      <span class="badge purple">5 Grounded Options</span>
+    </div>
+    <div class="section-desc">
+      <strong>Mental Model:</strong> A folder header at the top with a single column of files cascading straight down beneath it, scrolling downward.
+    </div>
+    <div class="grid">
+      <!-- C-G1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C-G1: Header + Drop Column</span><span class="icon-desc">Top folder bar with vertical chute below</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Top folder header bar -->
+              <rect x="2" y="2" width="12" height="3" rx="0.8" stroke-width="1.2" fill="currentColor" fill-opacity="0.25" />
+              <!-- Hanging vertical column with divider ticks -->
+              <rect x="4" y="6" width="8" height="8" rx="0.8" stroke-width="1.2" />
+              <line x1="4" y1="9" x2="12" y2="9" stroke-width="1" />
+              <line x1="4" y1="11.5" x2="12" y2="11.5" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Accordion Drop</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Immediately tells the eye: "Top is the folder, bottom is the vertical list of files dropping down."</div>
+      </div>
+
+      <!-- C-G2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C-G2: Stacked File Plates</span><span class="icon-desc">3 horizontal cards stacked vertically</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2.5" y="2" width="11" height="3.25" rx="0.8" stroke-width="1.2" />
+              <rect x="2.5" y="6.35" width="11" height="3.25" rx="0.8" stroke-width="1.2" />
+              <rect x="2.5" y="10.75" width="11" height="3.25" rx="0.8" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Stacked Plates</span>
+        <div class="critique-box"><strong>Metaphor:</strong> 3 distinct horizontal file cards stacked in a single column. No pill ambiguity.</div>
+      </div>
+
+      <!-- C-G3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C-G3: Folder Tree Stem Drop</span><span class="icon-desc">Folder on top-left branching down into list</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Mini folder top-left -->
+              <path d="M2 2h3l1 1h3v3H2z" stroke-width="1.1" />
+              <!-- Downward tree branch line -->
+              <path d="M4 6v8h2m-2-4h2" stroke-width="1.2" />
+              <!-- Child file items -->
+              <line x1="8" y1="10" x2="14" y2="10" stroke-width="1.3" />
+              <line x1="8" y1="14" x2="13" y2="14" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Directory Tree</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Classic directory branch: parent folder above, vertical line dropping into child files below.</div>
+      </div>
+
+      <!-- C-G4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C-G4: Vertical Chute + Down Arrow</span><span class="icon-desc">Single vertical column with downward arrow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3.5" y="1.5" width="9" height="13" rx="1.2" stroke-width="1.2" />
+              <line x1="8" y1="4" x2="8" y2="10.5" stroke-width="1.3" />
+              <path d="M5.5 8.5L8 11l2.5-2.5" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Downward Chute</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Column frame with explicit downward direction vector.</div>
+      </div>
+
+      <!-- C-G5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">C-G5: Vertical Ladder Slices</span><span class="icon-desc">Column with 4 horizontal ladder rungs</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="1.5" width="8" height="13" rx="1.2" stroke-width="1.2" />
+              <line x1="4" y1="4.75" x2="12" y2="4.75" stroke-width="1" />
+              <line x1="4" y1="8" x2="12" y2="8" stroke-width="1" />
+              <line x1="4" y1="11.25" x2="12" y2="11.25" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Ladder Column</span>
+        <div class="critique-box"><strong>Metaphor:</strong> A single tall column clearly partitioned into horizontal item steps.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 5. LAYOUT MODE: ROW (5 GROUNDED OPTIONS) -->
+  <!-- ========================================== -->
+  <div id="sec-layout-row" class="section">
+    <div class="section-title">
+      <span>➡️ 5. Layout Mode: Single Row Scrolls Sideways (5 Options)</span>
+      <span class="badge purple">5 Grounded Options</span>
+    </div>
+    <div class="section-desc">
+      <strong>Mental Model:</strong> A single continuous horizontal shelf or belt where children stretch sideways to the right. Never wraps; scrolls laterally.
+    </div>
+    <div class="grid">
+      <!-- R-G1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R-G1: Segmented Conveyor</span><span class="icon-desc">Single horizontal belt with vertical dividers</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Single horizontal belt -->
+              <rect x="1.5" y="4.5" width="13" height="7" rx="1.2" stroke-width="1.2" />
+              <!-- Vertical item dividers inside the row -->
+              <line x1="5.5" y1="4.5" x2="5.5" y2="11.5" stroke-width="1.1" />
+              <line x1="9.5" y1="4.5" x2="9.5" y2="11.5" stroke-width="1.1" />
+              <line x1="13.5" y1="4.5" x2="13.5" y2="11.5" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Segmented Belt</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Explicitly ONE single row composed of horizontal cells. Completely fixes the `000` confusion.</div>
+      </div>
+
+      <!-- R-G2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R-G2: Folder + Right Ribbon</span><span class="icon-desc">Folder tab on left, files streaming right</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Left folder tab -->
+              <path d="M1.5 4h2l.8.8h1.7v6.4H1.5z" stroke-width="1.1" fill="currentColor" fill-opacity="0.25" />
+              <!-- Horizontal ribbon extending right -->
+              <rect x="7" y="5" width="7.5" height="6" rx="0.8" stroke-width="1.2" />
+              <line x1="10.5" y1="5" x2="10.5" y2="11" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Lateral Ribbon</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Folder on left, horizontal shelf of files extending out to the right. Exactly how Peek renders row mode.</div>
+      </div>
+
+      <!-- R-G3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R-G3: Shelf with Right Overflow Arrow</span><span class="icon-desc">Horizontal shelf with forward scroll indicator</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Top and bottom shelf rail -->
+              <line x1="1" y1="4.5" x2="15" y2="4.5" stroke-width="1.2" />
+              <line x1="1" y1="11.5" x2="15" y2="11.5" stroke-width="1.2" />
+              <!-- Items on shelf -->
+              <rect x="2.5" y="5.75" width="4" height="4.5" rx="0.6" stroke-width="1" />
+              <rect x="8" y="5.75" width="4" height="4.5" rx="0.6" stroke-width="1" />
+              <!-- Overflow tip -->
+              <path d="M13.5 6.5l1.5 1.5-1.5 1.5" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Infinite Shelf</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Open-ended horizontal shelf with items moving sideways into the overflow.</div>
+      </div>
+
+      <!-- R-G4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R-G4: Track with Lateral Arrow</span><span class="icon-desc">Single horizontal bar with rightward vector</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="4.5" width="13" height="7" rx="1.2" stroke-width="1.2" />
+              <line x1="4" y1="8" x2="10.5" y2="8" stroke-width="1.3" />
+              <path d="M8.5 5.5L11 8l-2.5 2.5" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Sideways Vector</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Clean capsule with explicit rightward scroll vector.</div>
+      </div>
+
+      <!-- R-G5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">R-G5: Horizontal Filmstrip</span><span class="icon-desc">Single row of square film frames in series</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="1" y1="3.5" x2="15" y2="3.5" stroke-width="1" />
+              <line x1="1" y1="12.5" x2="15" y2="12.5" stroke-width="1" />
+              <rect x="2" y="5" width="3" height="6" rx="0.5" stroke-width="1" fill="currentColor" fill-opacity="0.2" />
+              <rect x="6.5" y="5" width="3" height="6" rx="0.5" stroke-width="1" fill="currentColor" fill-opacity="0.2" />
+              <rect x="11" y="5" width="3" height="6" rx="0.5" stroke-width="1" fill="currentColor" fill-opacity="0.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Horizontal Frames</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Shows a sequence of file frames moving along a single horizontal track.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 6. LAYOUT MODE: WRAP GRID (5 GROUNDED OPTIONS) -->
+  <!-- ========================================== -->
+  <div id="sec-layout-wrap" class="section">
+    <div class="section-title">
+      <span>🔀 6. Layout Mode: Wrap Grid (5 Options)</span>
+      <span class="badge purple">5 Grounded Options</span>
+    </div>
+    <div class="section-desc">
+      <strong>Mental Model:</strong> Items fill width left-to-right, then wrap down to the next row (responsive multi-column masonry/wrap).
+    </div>
+    <div class="grid">
+      <!-- W-G1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W-G1: Word-Wrap Flow Wave</span><span class="icon-desc">3 boxes on top row, 2 wrapping below</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Top row: 3 boxes -->
+              <rect x="1.5" y="2.5" width="3.5" height="4" rx="0.75" stroke-width="1.1" />
+              <rect x="6.25" y="2.5" width="3.5" height="4" rx="0.75" stroke-width="1.1" />
+              <rect x="11" y="2.5" width="3.5" height="4" rx="0.75" stroke-width="1.1" />
+              <!-- Bottom row: 2 boxes + empty slot showing wrap -->
+              <rect x="1.5" y="9.5" width="3.5" height="4" rx="0.75" stroke-width="1.1" />
+              <rect x="6.25" y="9.5" width="3.5" height="4" rx="0.75" stroke-width="1.1" />
+              <!-- Dotted placeholder for third slot -->
+              <rect x="11" y="9.5" width="3.5" height="4" rx="0.75" stroke-width="0.9" stroke-dasharray="1.5 1.5" opacity="0.4" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">True Wrap Flow</span>
+        <div class="critique-box"><strong>Metaphor:</strong> The incomplete second row is the universal symbol of word-wrap and responsive flex flow.</div>
+      </div>
+
+      <!-- W-G2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W-G2: Floating 4-Tile Matrix</span><span class="icon-desc">4 independent tiles separated by clean air</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="5" height="5" rx="1.1" stroke-width="1.2" />
+              <rect x="9" y="2" width="5" height="5" rx="1.1" stroke-width="1.2" />
+              <rect x="2" y="9" width="5" height="5" rx="1.1" stroke-width="1.2" />
+              <rect x="9" y="9" width="5" height="5" rx="1.1" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Independent Tiles</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Unlike static 4-box `田`, these are 4 separate floating cards with real gutters.</div>
+      </div>
+
+      <!-- W-G3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W-G3: 6-Cell Responsive Matrix</span><span class="icon-desc">2 rows of 3 compact cards filling container</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2.5" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="6.25" y="2.5" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="11" y="2.5" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="1.5" y="9" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="6.25" y="9" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+              <rect x="11" y="9" width="3.5" height="4.5" rx="0.6" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">High-Density Matrix</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Shows items packing both horizontally and vertically across the container.</div>
+      </div>
+
+      <!-- W-G4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W-G4: Masonry Offset Wrap</span><span class="icon-desc">Staggered brick wrapping layout</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="2" width="5.5" height="5" rx="0.8" stroke-width="1.1" />
+              <rect x="8.5" y="2" width="6" height="5" rx="0.8" stroke-width="1.1" />
+              <rect x="1.5" y="9" width="7.5" height="5" rx="0.8" stroke-width="1.1" />
+              <rect x="10.5" y="9" width="4" height="5" rx="0.8" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Masonry Wrap</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Staggered masonry bricks clearly convey dynamic line-wrapping.</div>
+      </div>
+
+      <!-- W-G5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">W-G5: Flow-Return Arrow</span><span class="icon-desc">Cards on top with wrap return arrow below</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2.5" width="4.5" height="4" rx="0.75" stroke-width="1.1" />
+              <rect x="8.5" y="2.5" width="4.5" height="4" rx="0.75" stroke-width="1.1" />
+              <!-- Return wrap arrow -->
+              <path d="M14 4.5h.5a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5H3m2-2L3 10.5l2 2" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Carriage Return</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Demonstrates items wrapping around to the next row like a carriage return.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 7. LAYOUT MODE: SUB-ROOM (5 GROUNDED OPTIONS) -->
+  <!-- ========================================== -->
+  <div id="sec-layout-room" class="section">
+    <div class="section-title">
+      <span>📦 7. Layout Mode: Sub-Room (Resizable Box) (5 Options)</span>
+      <span class="badge purple">5 Grounded Options</span>
+    </div>
+    <div class="section-desc">
+      <strong>Mental Model:</strong> A self-contained virtual window inside the canvas: has its own bounded border, internal scrollbars, and a corner resize handle.
+    </div>
+    <div class="grid">
+      <!-- B-G1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B-G1: Window + Corner Resize Grip</span><span class="icon-desc">Window frame with header & bottom-right grip //</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Window frame -->
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.3" />
+              <!-- Header titlebar rule -->
+              <line x1="2" y1="5.5" x2="14" y2="5.5" stroke-width="1.1" />
+              <!-- Diagonal tactile resize gripper marks in bottom-right corner -->
+              <line x1="12" y1="8.5" x2="8.5" y2="12" stroke-width="1.2" />
+              <line x1="12" y1="11" x2="11" y2="12" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Tactile Resizer</span>
+        <div class="critique-box"><strong>Metaphor:</strong> The diagonal lines `//` in the bottom-right corner are the universal symbol for a resizable container.</div>
+      </div>
+
+      <!-- B-G2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B-G2: Scrollable Chamber Frame</span><span class="icon-desc">Box with right scroll track & corner notch</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.2" />
+              <!-- Right scroll track & thumb -->
+              <line x1="11.5" y1="2" x2="11.5" y2="14" stroke-width="1" opacity="0.4" />
+              <line x1="11.5" y1="5" x2="11.5" y2="9" stroke-width="2" />
+              <!-- Corner resize triangle -->
+              <path d="M14 10l-4 4" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Scroll & Resize</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Shows both internal scrolling and the corner resize handle.</div>
+      </div>
+
+      <!-- B-G3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B-G3: App Window Titlebar Dots</span><span class="icon-desc">Window frame with top controls & viewport</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.3" />
+              <line x1="2" y1="5.5" x2="14" y2="5.5" stroke-width="1" />
+              <circle cx="4.5" cy="3.75" r="0.6" fill="currentColor" stroke="none" />
+              <circle cx="6.5" cy="3.75" r="0.6" fill="currentColor" stroke="none" />
+              <rect x="4.5" y="7.5" width="7" height="4.5" rx="0.5" stroke-width="1" fill="currentColor" fill-opacity="0.15" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">App Window</span>
+        <div class="critique-box"><strong>Metaphor:</strong> Reads as a floating mini-application window on the canvas.</div>
+      </div>
+
+      <!-- B-G4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B-G4: Layered Chamber Backdrop</span><span class="icon-desc">Chamber box with offset drop frame</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 2h8a1.5 1.5 0 0 1 1.5 1.5v8" stroke-width="1.2" opacity="0.4" />
+              <rect x="2" y="4.5" width="9.5" height="9.5" rx="1.2" stroke-width="1.3" />
+              <path d="M11.5 11.5l-3 3" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Layered Chamber</span>
+        <div class="critique-box"><strong>Metaphor:</strong> The layered offset frame conveys an elevated, independent sub-room.</div>
+      </div>
+
+      <!-- B-G5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">B-G5: Expandable Room Brackets</span><span class="icon-desc">Box with outward diagonal expander arrows</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4.5" y="4.5" width="7" height="7" rx="1" stroke-width="1.2" />
+              <path d="M1.5 4.5V1.5h3m5 0h3v3m0 5v3h-3m-5 0h-3v-3" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Expander Chamber</span>
+        <div class="critique-box"><strong>Metaphor:</strong> 4 corner expander brackets showing the box can be freely scaled in all directions.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 8. PHYSICAL PEDESTAL SIZE PROCESSION -->
+  <!-- ========================================== -->
+  <div id="sec-pedestal" class="section">
+    <div class="section-title">
+      <span>📐 8. Icon Size Hierarchy: Physical Pedestal Metaphor</span>
+      <span class="badge green">User Rules Implemented</span>
+    </div>
+    <div class="section-desc">
+      <strong>Rule Invariant:</strong> Medium sits on a center stand (peg <code>|</code> with base <code>_</code>). Large sits on 2 architectural corner feet. Extra large is a full poster canvas with bottom caption banner.
+    </div>
+    <div class="grid">
+      <!-- Medium -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Medium Icons</span><span class="icon-desc">Box on center peg | with base _</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4.25" y="2" width="7.5" height="7.5" rx="1.2" stroke-width="1.2" />
+              <line x1="8" y1="9.5" x2="8" y2="13" stroke-width="1.2" />
+              <line x1="5" y1="13" x2="11" y2="13" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Pedestal Peg</span>
+        <div class="critique-box"><strong>Pedestal:</strong> Center peg <code>|</code> + base <code>_</code> desk stand.</div>
+      </div>
+
+      <!-- Large -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Large Icons</span><span class="icon-desc">Expanded box on 2 corner riser feet</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2.75" y="1.75" width="10.5" height="9.5" rx="1.3" stroke-width="1.2" />
+              <line x1="4.5" y1="11.25" x2="4.5" y2="13.75" stroke-width="1.3" />
+              <line x1="3.5" y1="13.75" x2="5.5" y2="13.75" stroke-width="1.3" />
+              <line x1="11.5" y1="11.25" x2="11.5" y2="13.75" stroke-width="1.3" />
+              <line x1="10.5" y1="13.75" x2="12.5" y2="13.75" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Corner Feet</span>
+        <div class="critique-box"><strong>Risers:</strong> Two corner feet providing architectural stability for the larger box.</div>
+      </div>
+
+      <!-- Extra Large -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Extra Large Icons</span><span class="icon-desc">Full-frame poster + bottom caption banner</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="1.5" width="13" height="13" rx="1.5" stroke-width="1.3" />
+              <line x1="1.5" y1="9.75" x2="14.5" y2="9.75" stroke-width="1.2" />
+              <line x1="4" y1="12.5" x2="12" y2="12.5" stroke-width="1" opacity="0.8" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Poster Canvas</span>
+        <div class="critique-box"><strong>Canvas:</strong> Maximum border-spanning frame with integrated metadata banner.</div>
+      </div>
+
+      <!-- Details (1.1 Locked) -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">Details (1.1)</span><span class="icon-desc">Bolder header line + 3 rows</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="2" y1="2.75" x2="14" y2="2.75" stroke-width="1.8" />
+              <line x1="2" y1="6.5" x2="14" y2="6.5" stroke-width="1.1" />
+              <line x1="2" y1="10" x2="14" y2="10" stroke-width="1.1" />
+              <line x1="2" y1="13.5" x2="14" y2="13.5" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Locked (1.1)</span>
+      </div>
+
+      <!-- List (2.2 Locked) -->
+      <div class="icon-card locked">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">List (2.2)</span><span class="icon-desc">4 bullet dots + 4 clean rows</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="3" cy="3.5" r="1" fill="currentColor" stroke="none" />
+              <line x1="6.5" y1="3.5" x2="13.5" y2="3.5" stroke-width="1.2" />
+              <circle cx="3" cy="7" r="1" fill="currentColor" stroke="none" />
+              <line x1="6.5" y1="7" x2="12.5" y2="7" stroke-width="1.2" />
+              <circle cx="3" cy="10.5" r="1" fill="currentColor" stroke="none" />
+              <line x1="6.5" y1="10.5" x2="13.5" y2="10.5" stroke-width="1.2" />
+              <circle cx="3" cy="14" r="1" fill="currentColor" stroke="none" />
+              <line x1="6.5" y1="14" x2="11" y2="14" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge green">Locked (2.2)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 9. FOLDER HEADER CONTROLS (5 OPTIONS EACH) -->
+  <!-- ========================================== -->
+  <div id="sec-headers" class="section">
+    <div class="section-title">
+      <span>📁 9. Folder Header Action Icons (5 Options Each)</span>
+      <span class="badge purple">Replacing Emojis</span>
+    </div>
+    <div class="section-desc">
+      Replacing the emojis on folder headers (<code>📑</code> Grouping, <code>📋</code> Copy Path, <code>✕</code> Eject Room) with professional vector actions.
+    </div>
+
+    <!-- GROUPING: 5 OPTIONS -->
+    <div class="group-divider">A. Grouping (Replaces 📑 Emoji) — 5 Options</div>
+    <div class="grid">
+      <!-- G1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">G1: Section Headers + Indented Items</span><span class="icon-desc">Two distinct category blocks</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Section 1 -->
+              <rect x="2" y="2" width="4" height="2" rx="0.5" stroke-width="1" fill="currentColor" fill-opacity="0.3" />
+              <line x1="7" y1="3" x2="14" y2="3" stroke-width="1.2" />
+              <line x1="4.5" y1="5.75" x2="11.5" y2="5.75" stroke-width="1" opacity="0.6" />
+              <!-- Section 2 -->
+              <rect x="2" y="8.5" width="4" height="2" rx="0.5" stroke-width="1" fill="currentColor" fill-opacity="0.3" />
+              <line x1="7" y1="9.5" x2="14" y2="9.5" stroke-width="1.2" />
+              <line x1="4.5" y1="12.25" x2="12.5" y2="12.25" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Category Sections</span>
+      </div>
+
+      <!-- G2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">G2: Layered Index Tabs</span><span class="icon-desc">Cascading index cards with tabs</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 4h3l1 1.5h7a1 1 0 0 1 1 1v6.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1z" stroke-width="1.2" />
+              <path d="M5.5 2h3l1 1.5h4" stroke-width="1.1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Index Tabs</span>
+      </div>
+
+      <!-- G3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">G3: 3-Tier Cluster Brackets</span><span class="icon-desc">Tree cluster grouping lines</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 2v12m0-10h3m-3 5h3m-3 5h3" stroke-width="1.2" />
+              <rect x="7.5" y="3" width="6" height="2" rx="0.5" stroke-width="1" />
+              <rect x="7.5" y="8" width="6" height="2" rx="0.5" stroke-width="1" />
+              <rect x="7.5" y="13" width="6" height="2" rx="0.5" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Tree Cluster</span>
+      </div>
+
+      <!-- G4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">G4: Partitioned Set Shelves</span><span class="icon-desc">Two separated container bins</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2.5" width="12" height="4.5" rx="1" stroke-width="1.2" />
+              <rect x="2" y="9" width="12" height="4.5" rx="1" stroke-width="1.2" />
+              <circle cx="4.5" cy="4.75" r="0.75" fill="currentColor" />
+              <circle cx="4.5" cy="11.25" r="0.75" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Partition Bins</span>
+      </div>
+
+      <!-- G5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">G5: Horizontal Group Dividers</span><span class="icon-desc">Header line + 3 grouped dot-rows</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="2" y1="2" x2="14" y2="2" stroke-width="1.6" />
+              <line x1="4.5" y1="5" x2="12" y2="5" stroke-width="1" />
+              <line x1="2" y1="8.5" x2="14" y2="8.5" stroke-width="1.6" />
+              <line x1="4.5" y1="11.5" x2="12" y2="11.5" stroke-width="1" />
+              <line x1="4.5" y1="14" x2="10" y2="14" stroke-width="1" opacity="0.6" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Dividers</span>
+      </div>
+    </div>
+
+    <!-- COPY PATH: 5 OPTIONS -->
+    <div class="group-divider">B. Copy Filepath (Replaces 📋 Emoji) — 5 Options</div>
+    <div class="grid">
+      <!-- CP1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">CP1: Clipboard with Directory Slash</span><span class="icon-desc">Clipboard with folder slash / inside</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5.5 3h5m-5.5 0a1 1 0 0 0-1 1v9a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V4a1 1 0 0 0-1-1" stroke-width="1.2" />
+              <rect x="6" y="1.5" width="4" height="2" rx="0.5" stroke-width="1" fill="currentColor" fill-opacity="0.2" />
+              <!-- Directory path slash / -->
+              <line x1="9.5" y1="6" x2="6.5" y2="11" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Path Slash Clipboard</span>
+      </div>
+
+      <!-- CP2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">CP2: Folder with Link Chain 🔗</span><span class="icon-desc">Folder outline linked to path chain</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3.5h3l1 1h7a1 1 0 0 1 1 1v6.5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1z" stroke-width="1.1" />
+              <path d="M6 8.5h4m-3-1.5l-2 1.5 2 1.5m2-3l2 1.5-2 1.5" stroke-width="1.1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Folder Link</span>
+      </div>
+
+      <!-- CP3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">CP3: Overlapping Path Sheets [..]</span><span class="icon-desc">Dual sheets with path bracket etched</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5.5" y="4.5" width="8" height="9.5" rx="1.2" stroke-width="1.2" />
+              <path d="M3.5 11.5H3a1.5 1.5 0 0 1-1.5-1.5V3.5A1.5 1.5 0 0 1 3 2h6a1.5 1.5 0 0 1 1.5 1.5V4" stroke-width="1.1" />
+              <path d="M8 8h3m-2-1.5l1.5 1.5-1.5 1.5" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Dual Sheets</span>
+      </div>
+
+      <!-- CP4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">CP4: Address Bar Pin + Copy</span><span class="icon-desc">Path breadcrumb pin with copy page</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 2.5h6a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5H7" stroke-width="1.2" />
+              <path d="M3.5 2a2 2 0 0 0-2 2c0 1.5 2 4 2 4s2-2.5 2-4a2 2 0 0 0-2-2z" stroke-width="1.1" fill="currentColor" fill-opacity="0.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Location Pin</span>
+      </div>
+
+      <!-- CP5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">CP5: Terminal Path &gt;/ Prompt</span><span class="icon-desc">Terminal prompt slash with copy notch</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2.5" width="12" height="11" rx="1.5" stroke-width="1.2" />
+              <path d="M4.5 6l2 2-2 2m4 0h3" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Prompt Path</span>
+      </div>
+    </div>
+
+    <!-- EJECT SUB-ROOM: 5 OPTIONS -->
+    <div class="group-divider">C. Eject Sub-Room (Replaces ✕ / ⏏) — 5 Options</div>
+    <div class="grid">
+      <!-- EJ1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">EJ1: Container Outward Pop-out ↗</span><span class="icon-desc">Chamber box with diagonal breakout arrow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 2.5H4a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 4 13.5h8a1.5 1.5 0 0 0 1.5-1.5V7" stroke-width="1.2" />
+              <path d="M8.5 7.5L14 2m0 0v4m0-4h-4" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Outward Eject</span>
+      </div>
+
+      <!-- EJ2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">EJ2: Modern Vector Eject Tray ⏏</span><span class="icon-desc">Upward triangle over horizontal eject bar</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2.5l5.5 6.5h-11z" stroke-width="1.2" fill="currentColor" fill-opacity="0.15" />
+              <line x1="2.5" y1="12.5" x2="13.5" y2="12.5" stroke-width="1.4" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Modern ⏏</span>
+      </div>
+
+      <!-- EJ3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">EJ3: Detach from Board Arrow</span><span class="icon-desc">Window detaching with upward curl</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="9" height="9" rx="1.2" stroke-width="1.2" />
+              <path d="M7 8l6-6m0 0v4m0-4h-4" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Detach</span>
+      </div>
+
+      <!-- EJ4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">EJ4: Clean Vector Dismiss ✕</span><span class="icon-desc">Rounded thin stroke close cross</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3.5" y1="3.5" x2="12.5" y2="12.5" stroke-width="1.4" />
+              <line x1="12.5" y1="3.5" x2="3.5" y2="12.5" stroke-width="1.4" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Vector ✕</span>
+      </div>
+
+      <!-- EJ5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">EJ5: Pop-out Window Frame</span><span class="icon-desc">Window popping out of canvas slot</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 10.5V13a1.5 1.5 0 0 0 1.5 1.5h9a1.5 1.5 0 0 0 1.5-1.5v-2.5" stroke-width="1.2" />
+              <path d="M8 10V2m0 0l-3 3m3-3l3 3" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Pop-out Slot</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 10. TOOLBAR ACTIONS & CONTROLS (5 OPTIONS EACH) -->
+  <!-- ========================================== -->
+  <div id="sec-toolbar" class="section">
+    <div class="section-title">
+      <span>🛠️ 10. Toolbar Controls (5 Options Each)</span>
+      <span class="badge purple">Replacing Emojis</span>
+    </div>
+    <div class="section-desc">
+      Replacing raw text symbols (<code>⇅</code> Sort, <code>⊞</code> View, <code>▤</code> Preview) with cohesive Fluent-style vector actions.
+    </div>
+
+    <!-- SORT: 5 OPTIONS -->
+    <div class="group-divider">A. Sort (Replaces ⇅ Text) — 5 Options</div>
+    <div class="grid">
+      <!-- SO1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">SO1: Staircase Bars + Arrow</span><span class="icon-desc">Tapered bars with directional sort arrow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Directional arrow on left -->
+              <line x1="3.5" y1="2.5" x2="3.5" y2="13.5" stroke-width="1.3" />
+              <path d="M1.5 11.5L3.5 13.5l2-2" stroke-width="1.3" />
+              <!-- Tapered bars on right -->
+              <line x1="7.5" y1="3.5" x2="14.5" y2="3.5" stroke-width="1.4" />
+              <line x1="7.5" y1="7.5" x2="12.5" y2="7.5" stroke-width="1.4" />
+              <line x1="7.5" y1="11.5" x2="10" y2="11.5" stroke-width="1.4" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Ascending Staircase</span>
+      </div>
+
+      <!-- SO2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">SO2: Opposite Flow Arrows ↑↓</span><span class="icon-desc">Dual opposing directional arrows</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 13.5V2.5m-2 2l2-2 2 2M11.5 2.5v11m-2-2l2 2 2-2" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Dual Arrows</span>
+      </div>
+
+      <!-- SO3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">SO3: A-Z Alphabetic Sorter</span><span class="icon-desc">Letter A and Z with side arrow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 7L4.5 2l2 5M3 5.5h3" stroke-width="1.2" />
+              <path d="M2.5 10h4l-4 4h4" stroke-width="1.2" />
+              <line x1="11" y1="2.5" x2="11" y2="13.5" stroke-width="1.3" />
+              <path d="M9 11.5l2 2 2-2" stroke-width="1.3" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">A-Z Sorter</span>
+      </div>
+
+      <!-- SO4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">SO4: 3-Tier Ranked Bar Chart</span><span class="icon-desc">Vertical bars ascending by height</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2.5" y="9.5" width="3" height="4.5" rx="0.6" stroke-width="1.2" />
+              <rect x="6.5" y="6" width="3" height="8" rx="0.6" stroke-width="1.2" />
+              <rect x="10.5" y="2.5" width="3" height="11.5" rx="0.6" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Ranked Bars</span>
+      </div>
+
+      <!-- SO5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">SO5: Filter Funnel + Arrow</span><span class="icon-desc">Filter funnel with downward sort arrow</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h8l-3 4v5l-2-1V7z" stroke-width="1.2" />
+              <line x1="13" y1="3" x2="13" y2="13" stroke-width="1.2" />
+              <path d="M11.5 11.5l1.5 1.5 1.5-1.5" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Filter & Sort</span>
+      </div>
+    </div>
+
+    <!-- PREVIEW PANE: 5 OPTIONS -->
+    <div class="group-divider">B. Preview Pane (Replaces ▤ Text) — 5 Options</div>
+    <div class="grid">
+      <!-- PR1 -->
+      <div class="icon-card highlight">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">PR1: 70/30 Split Inspection Window</span><span class="icon-desc">File area left + inspector panel right</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.2" />
+              <!-- Split seam -->
+              <line x1="9.5" y1="2" x2="9.5" y2="14" stroke-width="1.2" />
+              <!-- Preview lines on right panel -->
+              <line x1="11" y1="4.5" x2="12.5" y2="4.5" stroke-width="1" />
+              <line x1="11" y1="7" x2="12.5" y2="7" stroke-width="1" opacity="0.6" />
+              <line x1="11" y1="9.5" x2="12.5" y2="9.5" stroke-width="1" opacity="0.4" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge orange">Classic Inspector</span>
+      </div>
+
+      <!-- PR2 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">PR2: Tinted Right Preview Bay</span><span class="icon-desc">Right pane filled with 25% preview tint</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.2" />
+              <rect x="9.5" y="2" width="4.5" height="12" rx="1.5" stroke="none" fill="currentColor" fill-opacity="0.25" />
+              <line x1="9.5" y1="2" x2="9.5" y2="14" stroke-width="1.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Tinted Bay</span>
+      </div>
+
+      <!-- PR3 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">PR3: Loupe Over Document</span><span class="icon-desc">Inspection magnifying glass over card</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2.5" width="8" height="11" rx="1.2" stroke-width="1.2" />
+              <circle cx="9.5" cy="9.5" r="3.25" stroke-width="1.2" fill="var(--card-bg)" />
+              <line x1="12" y1="12" x2="14.5" y2="14.5" stroke-width="1.4" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Loupe Card</span>
+      </div>
+
+      <!-- PR4 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">PR4: Eye Lens in Sidebar</span><span class="icon-desc">Split window with eye preview glyph</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="12" height="12" rx="1.5" stroke-width="1.2" />
+              <line x1="9.5" y1="2" x2="9.5" y2="14" stroke-width="1.2" />
+              <circle cx="11.75" cy="7.5" r="1.2" fill="currentColor" stroke="none" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Sidebar Eye</span>
+      </div>
+
+      <!-- PR5 -->
+      <div class="icon-card">
+        <div class="icon-preview-row">
+          <div class="icon-meta"><span class="icon-name">PR5: Document Slide-out Drawer</span><span class="icon-desc">Preview drawer expanding from right</span></div>
+          <div class="icon-stage">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1.5" y="3" width="9" height="10" rx="1" stroke-width="1.1" />
+              <rect x="7" y="1.5" width="7.5" height="13" rx="1.2" stroke-width="1.2" fill="currentColor" fill-opacity="0.2" />
+            </svg>
+          </div>
+        </div>
+        <span class="badge">Slide-out Drawer</span>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const sizeSelect = document.getElementById('sizeSelect');
+    const themeSelect = document.getElementById('themeSelect');
+    sizeSelect.onchange = e => {
+      document.documentElement.style.setProperty('--icon-size', e.target.value);
+    };
+    themeSelect.onchange = e => {
+      document.body.className = '';
+      if (e.target.value === 'light') document.body.className = 'light-theme';
+      if (e.target.value === 'classic') document.body.className = 'classic-blue';
+    };
+  </script>
+</body>
+</html>

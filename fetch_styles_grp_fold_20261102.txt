@@ -1,0 +1,419 @@
+Command exited with code 0.
+
+Command output:
+
+  styles.css:450:
+  styles.css:451:/* Details (default) - Scoped to avoid bleeding into sub-room / child views */
+> styles.css:452::is(#list.v-details > .row.item, #list.v-details > .grp-fold > .row.item, #list.v-details > .grp-body 
+> .row.item, #list.v-details > .grp-body > .grp-fold > .row.item, .kids.v-details > .row.item, .kids.v-details > 
+.grp-fold > .row.item, .kids.v-details > .grp-body > .row.item, .kids.v-details > .grp-body > .grp-fold > .row.item) {
+  styles.css:453:  padding: 2px 8px;
+  styles.css:454:  height: 24px;
+  styles.css:455:}
+> styles.css:456::is(#list.v-details > .row.item, #list.v-details > .grp-fold > .row.item, .kids.v-details > 
+.row.item, .kids.v-details > .grp-fold > .row.item) :is(.c-date, .c-type, .c-size) {
+  styles.css:457:  display: block;
+  styles.css:458:}
+> styles.css:459::is(#list.v-details > .row.item, #list.v-details > .grp-fold > .row.item, .kids.v-details > 
+.row.item, .kids.v-details > .grp-fold > .row.item) .sub {
+  styles.css:460:  display: none !important;
+  styles.css:461:}
+  styles.css:462:.v-details .kids { display: block; }
+  styles.css:463:
+  styles.css:464:/* Content view - Scoped strictly to content containers, never bleeds into sub-rooms */
+> styles.css:465::is(#list.v-content > .row.item, #list.v-content > .grp-fold > .row.item, #list.v-content > .grp-body 
+> .row.item, #list.v-content > .grp-body > .grp-fold > .row.item, .kids.v-content > .row.item, .kids.v-content > 
+.grp-fold > .row.item, .kids.v-content > .grp-body > .row.item, .kids.v-content > .grp-body > .grp-fold > .row.item) {
+  styles.css:466:  height: 44px !important;
+  styles.css:467:  min-height: 44px !important;
+  styles.css:468:  max-height: 44px !important;
+  styles.css:469:}
+> styles.css:470::is(#list.v-content > .row.item, #list.v-content > .grp-fold > .row.item, .kids.v-content > 
+.row.item, .kids.v-content > .grp-fold > .row.item) .ico {
+  styles.css:471:  width: 32px !important;
+  styles.css:472:  height: 32px !important;
+  styles.css:473:}
+> styles.css:474::is(#list.v-content > .row.item, #list.v-content > .grp-fold > .row.item, .kids.v-content > 
+.row.item, .kids.v-content > .grp-fold > .row.item) .ico.photo {
+  styles.css:475:  object-fit: var(--thumb-fit, cover);
+  styles.css:476:  border-radius: 3px;
+  styles.css:477:}
+> styles.css:478::is(#list.v-content > .row.item, #list.v-content > .grp-fold > .row.item, .kids.v-content > 
+.row.item, .kids.v-content > .grp-fold > .row.item) :is(.c-date, .c-type, .c-size) {
+  styles.css:479:  display: none !important;
+  styles.css:480:}
+> styles.css:481::is(#list.v-content > .row.item, #list.v-content > .grp-fold > .row.item, .kids.v-content > 
+.row.item, .kids.v-content > .grp-fold > .row.item) .sub {
+  styles.css:482:  display: block !important;
+  styles.css:483:  font-size: 11px;
+  styles.css:484:  color: var(--muted);
+  styles.css:485:  width: 220px;
+  styles.css:486:  line-height: 1.3;
+  styles.css:496:.v-medium .c-date, .v-medium .c-type, .v-medium .c-size, .v-large .c-date, .v-large .c-type, .v-large 
+.c-size,
+  styles.css:497:.v-xl .c-date, .v-xl .c-type, .v-xl .c-size, .v-tiles .c-date, .v-tiles .c-type, .v-tiles .c-size { 
+display: none; }
+> styles.css:498:.kids.v-details :is(.row.item, .grp-fold > .row.item) :is(.c-date, .c-type, .c-size) { display: block 
+!important; }
+> styles.css:499:.kids.v-details :is(.row.item, .grp-fold > .row.item) .sub { display: none !important; }
+  styles.css:500:.v-list .row.item, .v-small .row.item { width: 220px; height: 24px; min-height: 24px; max-height: 
+24px; padding: 2px 6px; overflow: hidden; box-sizing: border-box; }
+  styles.css:501:.v-medium .row.item {
+  styles.css:502:  width: 104px; height: 104px; min-height: 104px; max-height: 104px;
+  styles.css:503:  position: relative !important;
+  styles.css:504:  flex-direction: column; align-items: center; justify-content: flex-start;
+  styles.css:2872:}
+  styles.css:2873::is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) > .row.item,
+> styles.css:2874::is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) > .grp-fold,
+  styles.css:2875:.grp-body > .row.item,
+> styles.css:2876:.grp-body > .grp-fold {
+  styles.css:2877:  float: left !important;
+  styles.css:2878:  margin: 0 4px 4px 0 !important;
+  styles.css:2879:}
+  styles.css:2880:
+  styles.css:2881:/* Base folder group wrapper in grid views */
+> styles.css:2882:.grp-fold {
+  styles.css:2883:  float: left !important;
+  styles.css:2884:  margin: 0 4px 4px 0 !important;
+  styles.css:2885:  display: block;
+  styles.css:2886:  width: auto;
+  styles.css:2887:  box-sizing: border-box;
+  styles.css:2888:}
+> styles.css:2889:.grp-fold > .row.item {
+  styles.css:2890:  float: left !important;
+  styles.css:2891:  margin: 0 !important;
+  styles.css:2892:}
+  styles.css:2893:
+  styles.css:2894:/* In Details & Content views: full width row */
+> styles.css:2895::is(.v-details, .v-content) .grp-fold,
+> styles.css:2896::is(.v-details, .v-content) .grp-fold:has(> .kids.open.kl-col) {
+  styles.css:2897:  display: flex !important;
+  styles.css:2898:  flex-direction: column !important;
+  styles.css:2899:  align-items: flex-start !important;
+  styles.css:2900:  float: none !important;
+  styles.css:2901:  clear: both !important;
+  styles.css:2904:  box-sizing: border-box !important;
+  styles.css:2905:}
+> styles.css:2906::is(.v-details, .v-content) .grp-fold > .row.item,
+> styles.css:2907::is(.v-details, .v-content) .grp-fold:has(> .kids.open.kl-col) > .row.item {
+  styles.css:2908:  float: none !important;
+  styles.css:2909:  width: 100% !important;
+  styles.css:2910:  max-width: 100% !important;
+  styles.css:2911:  box-sizing: border-box !important;
+  styles.css:2912:}
+> styles.css:2913::is(.v-details, .v-content) .grp-fold:not(.room) > .kids.open,
+> styles.css:2914::is(.v-details, .v-content) .grp-fold:not(.room) > .kids.open.kl-col {
+  styles.css:2915:  float: none !important;
+  styles.css:2916:  width: calc(100% - 24px) !important;
+  styles.css:2917:  max-width: 100% !important;
+  styles.css:2918:  margin-left: 18px !important;
+  styles.css:2919:  margin-top: 3px !important;
+  styles.css:2921:
+  styles.css:2922:/* In Grid views: folder stays in its grid position, children drop down directly in column */
+> styles.css:2923::is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .grp-fold:has(> .kids.open.kl-col) {
+  styles.css:2924:  display: flex !important;
+  styles.css:2925:  flex-direction: column !important;
+  styles.css:2926:  align-items: flex-start !important;
+  styles.css:2927:  float: left !important;
+  styles.css:2928:  clear: none !important;
+  styles.css:2932:
+  styles.css:2933:/* Mode: Column under folder (dropdown column) */
+> styles.css:2934:.grp-fold:not(.room) > .kids.open.kl-col {
+  styles.css:2935:  display: flex !important;
+  styles.css:2936:  flex-direction: column !important;
+  styles.css:2937:  flex-wrap: nowrap !important;
+  styles.css:2938:  max-height: 380px;
+  styles.css:2939:  overflow-y: auto;
+  styles.css:2943:  box-sizing: border-box;
+  styles.css:2944:}
+> styles.css:2945:.grp-fold:not(.room) > .kids.open.kl-col > * {
+  styles.css:2946:  flex: none;
+  styles.css:2947:}
+  styles.css:2948:/* Only constrain to 24px rows when child folder is set to a list-like view */
+> styles.css:2949:.grp-fold:not(.room) > .kids.open.kl-col:is(.v-list, .v-small, .v-details) > .row.item {
+  styles.css:2950:  width: 100% !important;
+  styles.css:2951:  min-width: 190px !important;
+  styles.css:2952:  max-width: 280px !important;
+  styles.css:2953:  height: 24px !important;
+  styles.css:2954:  min-height: 24px !important;
+  styles.css:2958:  padding: 1px 6px !important;
+  styles.css:2959:}
+> styles.css:2960:.grp-fold:not(.room) > .kids.open.kl-col:is(.v-list, .v-small, .v-details) > .row.item .ico {
+  styles.css:2961:  position: static !important;
+  styles.css:2962:  width: 16px !important;
+  styles.css:2963:  height: 16px !important;
+  styles.css:2964:  margin-right: 6px !important;
+  styles.css:2965:  flex: none !important;
+  styles.css:2966:}
+> styles.css:2967:.grp-fold:not(.room) > .kids.open.kl-col:is(.v-list, .v-small, .v-details) > .row.item .c-name {
+  styles.css:2968:  flex-direction: row !important;
+  styles.css:2969:  align-items: center !important;
+  styles.css:2970:  width: auto !important;
+  styles.css:2971:  max-width: 100% !important;
+  styles.css:2972:  text-align: left !important;
+  styles.css:2976:  padding: 0 !important;
+  styles.css:2977:}
+> styles.css:2978:.grp-fold:not(.room) > .kids.open.kl-col:is(.v-list, .v-small, .v-details) > .row.item .nm {
+  styles.css:2979:  position: static !important;
+  styles.css:2980:  display: inline !important;
+  styles.css:2981:  width: auto !important;
+  styles.css:2982:  height: auto !important;
+  styles.css:2983:  padding: 0 !important;
+  styles.css:3047:
+  styles.css:3048:/* Mode: Single row (scrolls sideways) */
+> styles.css:3049:.grp-fold:not(.room) > .kids.open.kl-row {
+  styles.css:3050:  display: flex !important;
+  styles.css:3051:  flex-direction: row !important;
+  styles.css:3052:  flex-wrap: nowrap !important;
+  styles.css:3053:  max-width: 65vw;
+  styles.css:3054:  overflow-x: auto;
+  styles.css:3059:  box-sizing: border-box;
+  styles.css:3060:}
+> styles.css:3061:.grp-fold:not(.room) > .kids.open.kl-row > * {
+  styles.css:3062:  flex: none;
+  styles.css:3063:}
+  styles.css:3064:
+  styles.css:3065:/* Mode: Wrap grid - stretches full width so wrapped children flow across the whole container */
+> styles.css:3066:.grp-fold:has(> .kids.open.kl-wrap) {
+  styles.css:3067:  clear: both !important;
+  styles.css:3068:  width: 100% !important;
+  styles.css:3069:  max-width: 100% !important;
+  styles.css:3070:  float: left !important;
+  styles.css:3071:}
+> styles.css:3072:.grp-fold:not(.room) > .kids.open.kl-wrap {
+  styles.css:3073:  display: flex !important;
+  styles.css:3074:  flex-direction: row !important;
+  styles.css:3075:  flex-wrap: wrap !important;
+  styles.css:3076:  clear: both !important;
+  styles.css:3077:  width: 100% !important;
+  styles.css:3084:  gap: 4px;
+  styles.css:3085:}
+> styles.css:3086:.grp-fold:not(.room) > .kids.open.kl-wrap > * {
+  styles.css:3087:  flex: none;
+  styles.css:3088:}
+  styles.css:3089:
+  styles.css:3090:/* Mode: Inline Sub-room Card (associated, non-disruptive, resizable box) */
+> styles.css:3091:.grp-fold.room {
+  styles.css:3092:  float: left !important;
+  styles.css:3093:  margin: 0 6px 6px 0 !important;
+  styles.css:3094:  display: flex !important;
+  styles.css:3095:  flex-direction: column !important;
+  styles.css:3096:  align-items: stretch !important;
+  styles.css:3118:  gap: 4px !important;
+  styles.css:3119:}
+> styles.css:3120:#list.dense-grid > .grp-fold.room {
+  styles.css:3121:  grid-column: span var(--sc, 4);
+  styles.css:3122:  grid-row: span var(--sr, 2);
+  styles.css:3123:}
+> styles.css:3124:body.dark .grp-fold.room {
+  styles.css:3125:  background: #161b22;
+  styles.css:3126:  border-color: #384252;
+  styles.css:3127:  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  styles.css:3128:}
+  styles.css:3129:/* Room Header: folder tile transforms into a clean horizontal header bar */
+> styles.css:3130:.grp-fold.room > .row.item {
+  styles.css:3131:  width: 100% !important;
+  styles.css:3132:  height: 28px !important;
+  styles.css:3133:  min-height: 28px !important;
+  styles.css:3134:  max-height: 28px !important;
+  styles.css:3135:  flex: 0 0 28px !important;
+  styles.css:3147:  user-select: none;
+  styles.css:3148:}
+> styles.css:3149:.grp-fold.room > .row.item .c-name {
+  styles.css:3150:  display: flex !important;
+  styles.css:3151:  flex-direction: row !important;
+  styles.css:3152:  align-items: center !important;
+  styles.css:3153:  flex: 1 1 auto !important;
+  styles.css:3154:  width: auto !important;
+  styles.css:3160:  gap: 4px;
+  styles.css:3161:}
+> styles.css:3162:.grp-fold.room > .row.item .ico {
+  styles.css:3163:  width: 16px !important;
+  styles.css:3164:  height: 16px !important;
+  styles.css:3165:  margin: 0 4px 0 0 !important;
+  styles.css:3166:  flex: none !important;
+  styles.css:3167:}
+> styles.css:3168:.grp-fold.room > .row.item .nm {
+  styles.css:3169:  display: inline !important;
+  styles.css:3170:  white-space: nowrap !important;
+  styles.css:3171:  font-weight: 700 !important;
+  styles.css:3172:  font-size: 11.5px !important;
+  styles.css:3173:  color: var(--fg);
+  styles.css:3175:  text-overflow: ellipsis;
+  styles.css:3176:}
+> styles.css:3177:.grp-fold.room > .row.item .arrow {
+  styles.css:3178:  align-self: center !important;
+  styles.css:3179:  margin-right: 2px !important;
+  styles.css:3180:  font-size: 11px;
+  styles.css:3181:}
+> styles.css:3182:.grp-fold.room > .row.item .sub-opt-wrap {
+  styles.css:3183:  position: static !important;
+  styles.css:3184:  margin-left: auto !important;
+  styles.css:3185:  display: flex !important;
+  styles.css:3186:  align-items: center !important;
+  styles.css:3187:  gap: 4px !important;
+  styles.css:3188:}
+> styles.css:3189:.grp-fold.room > .row.item .c-date,
+> styles.css:3190:.grp-fold.room > .row.item .c-type,
+> styles.css:3191:.grp-fold.room > .row.item .c-size,
+> styles.css:3192:.grp-fold.room > .row.item .sub {
+  styles.css:3193:  display: none !important;
+  styles.css:3194:}
+  styles.css:3195:/* Room Body: children wrap inside */
+> styles.css:3196:.grp-fold.room > .kids.open {
+  styles.css:3197:  flex: 1 1 0 !important;
+  styles.css:3198:  width: 100% !important;
+  styles.css:3199:  height: auto !important;
+  styles.css:3200:  max-height: none !important;
+  styles.css:3201:  display: flex !important;
+  styles.css:3213:  box-sizing: border-box !important;
+  styles.css:3214:}
+> styles.css:3215:.grp-fold.room > .kids.open > * {
+  styles.css:3216:  flex: none;
+  styles.css:3217:}
+  styles.css:3218:
+  styles.css:3219:/* ---- Scoped View Mode Overrides for Child Expanded Folders & Sub-Rooms ---- */
+  styles.css:3220:.kids.v-details > .row.item,
+> styles.css:3221:.kids.v-details > .grp-fold > .row.item {
+  styles.css:3222:  width: 100% !important;
+  styles.css:3223:  min-width: 0 !important;
+  styles.css:3224:  max-width: 100% !important;
+  styles.css:3225:  height: 24px !important;
+  styles.css:3226:  min-height: 24px !important;
+  styles.css:3251:
+  styles.css:3252:.kids.v-content > .row.item,
+> styles.css:3253:.kids.v-content > .grp-fold > .row.item {
+  styles.css:3254:  width: 100% !important;
+  styles.css:3255:  height: 44px !important;
+  styles.css:3256:  min-height: 44px !important;
+  styles.css:3257:  max-height: 44px !important;
+  styles.css:3258:  flex-direction: row !important;
+  styles.css:3268:}
+  styles.css:3269:
+> styles.css:3270:.kids.v-list :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold 
+> .row.item),
+> styles.css:3271:.kids.v-small :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold 
+> .row.item) {
+  styles.css:3272:  width: 220px !important;
+  styles.css:3273:  height: 24px !important;
+  styles.css:3274:  min-height: 24px !important;
+  styles.css:3275:  max-height: 24px !important;
+  styles.css:3276:  flex-direction: row !important;
+  styles.css:3279:  padding: 2px 6px !important;
+  styles.css:3280:}
+> styles.css:3281:.kids.v-list :is(.row.item, .grp-fold > .row.item) .ico,
+> styles.css:3282:.kids.v-small :is(.row.item, .grp-fold > .row.item) .ico {
+  styles.css:3283:  width: 16px !important;
+  styles.css:3284:  height: 16px !important;
+  styles.css:3285:}
+> styles.css:3286:.kids.v-list :is(.row.item, .grp-fold > .row.item) :is(.c-date, .c-type, .c-size),
+> styles.css:3287:.kids.v-small :is(.row.item, .grp-fold > .row.item) :is(.c-date, .c-type, .c-size) {
+  styles.css:3288:  display: none !important;
+  styles.css:3289:}
+  styles.css:3290:
+> styles.css:3291:.kids.v-tiles :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold 
+> .row.item) {
+  styles.css:3292:  width: 240px !important;
+  styles.css:3293:  height: 48px !important;
+  styles.css:3294:  min-height: 48px !important;
+  styles.css:3295:  max-height: 48px !important;
+  styles.css:3296:  flex-direction: row !important;
+  styles.css:3298:  justify-content: flex-start !important;
+  styles.css:3299:}
+> styles.css:3300:.kids.v-tiles :is(.row.item, .grp-fold > .row.item) .ico {
+  styles.css:3301:  width: 32px !important;
+  styles.css:3302:  height: 32px !important;
+  styles.css:3303:}
+  styles.css:3304:
+> styles.css:3305:.kids.v-medium :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > 
+.grp-fold > .row.item) {
+  styles.css:3306:  width: 104px !important;
+  styles.css:3307:  height: 104px !important;
+  styles.css:3308:  min-height: 104px !important;
+  styles.css:3309:  max-height: 104px !important;
+  styles.css:3310:  flex-direction: column !important;
+  styles.css:3312:  justify-content: flex-start !important;
+  styles.css:3313:}
+> styles.css:3314:.kids.v-medium :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .ico {
+  styles.css:3315:  width: 48px !important;
+  styles.css:3316:  height: 48px !important;
+  styles.css:3317:}
+  styles.css:3318:
+> styles.css:3319:.kids.v-large :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold 
+> .row.item) {
+  styles.css:3320:  width: 144px !important;
+  styles.css:3321:  height: 144px !important;
+  styles.css:3322:  min-height: 144px !important;
+  styles.css:3323:  max-height: 144px !important;
+  styles.css:3324:  flex-direction: column !important;
+  styles.css:3326:  justify-content: flex-start !important;
+  styles.css:3327:}
+> styles.css:3328:.kids.v-large :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .ico {
+  styles.css:3329:  width: 96px !important;
+  styles.css:3330:  height: 96px !important;
+  styles.css:3331:}
+  styles.css:3332:
+> styles.css:3333:.kids.v-xl :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold > 
+.row.item) {
+  styles.css:3334:  width: 236px !important;
+  styles.css:3335:  height: 256px !important;
+  styles.css:3336:  min-height: 256px !important;
+  styles.css:3337:  max-height: 256px !important;
+  styles.css:3338:  flex-direction: column !important;
+  styles.css:3340:  justify-content: flex-start !important;
+  styles.css:3341:}
+> styles.css:3342:.kids.v-xl :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .ico {
+  styles.css:3343:  width: 168px !important;
+  styles.css:3344:  height: 168px !important;
+  styles.css:3345:  flex: 0 0 168px !important;
+  styles.css:3346:  margin-bottom: 6px !important;
+  styles.css:3347:}
+> styles.css:3348::is(.kids.v-xl, .v-xl) :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .c-name {
+  styles.css:3349:  display: flex !important;
+  styles.css:3350:  flex-direction: column !important;
+  styles.css:3351:  align-items: center !important;
+  styles.css:3352:  justify-content: flex-start !important;
+  styles.css:3353:  width: 100% !important;
+  styles.css:3358:  overflow: visible !important;
+  styles.css:3359:}
+> styles.css:3360::is(.kids.v-xl, .v-xl) :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .nm {
+  styles.css:3361:  width: 100% !important;
+  styles.css:3362:  max-width: 100% !important;
+  styles.css:3363:  text-align: center !important;
+  styles.css:3364:  font-size: 11.5px !important;
+  styles.css:3365:  line-height: 1.35 !important;
+  styles.css:3375:
+  styles.css:3376:/* Full bleed image/video thumbnails in child folders and top-level cards */
+> styles.css:3377::is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, .v-large, .v-xl) :is(.row.item, .grp-fold 
+> .row.item).has-thumb {
+  styles.css:3378:  position: relative !important;
+  styles.css:3379:  padding: 0 !important;
+  styles.css:3380:  overflow: hidden !important;
+  styles.css:3381:  justify-content: flex-end !important;
+  styles.css:3382:}
+> styles.css:3383::is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, .v-large, .v-xl) :is(.row.item, .grp-fold 
+> .row.item).has-thumb .ico {
+  styles.css:3384:  position: absolute !important;
+  styles.css:3385:  inset: 0 !important;
+  styles.css:3386:  width: 100% !important;
+  styles.css:3387:  height: 100% !important;
+  styles.css:3388:  margin: 0 !important;
+  styles.css:3392:  z-index: 0;
+  styles.css:3393:}
+> styles.css:3394::is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, .v-large, .v-xl) :is(.row.item, .grp-fold 
+> .row.item).has-thumb .c-name {
+  styles.css:3395:  position: static !important;
+  styles.css:3396:  width: 100% !important;
+  styles.css:3397:  height: 100% !important;
+  styles.css:3398:  justify-content: flex-end !important;
+  styles.css:3399:  padding: 0 !important;
+  styles.css:3400:}
+> styles.css:3401::is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, .v-large, .v-xl) :is(.row.item, .grp-fold 
+> .row.item).has-thumb .nm {
+  styles.css:3402:  position: absolute !important;
+  styles.css:3403:  left: 0 !important;
+  styles.css:3404:  right: 0 !important;
+  styles.css:3405:  bottom: 0 !important;
+  styles.css:3406:  height: auto !important;
+
+

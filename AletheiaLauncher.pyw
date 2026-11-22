@@ -162,6 +162,7 @@ class AletheiaLauncherApp:
                 "vertex:gemini-3.7-flash",
                 "vertex:gemini-3.1-flash-lite",
                 "gemini-3-flash-preview",
+                "gemini-4-hydrogen",
                 "gemma-4-31b-it",
                 "gemma-4-26b-a4b-it",
             ]
@@ -172,8 +173,21 @@ class AletheiaLauncherApp:
         if "agnes-2.0-flash" not in self.available_models:
             self.available_models.append("agnes-2.0-flash")
 
-        # Set default selection list (excluding agnes-2.0-flash unless added manually by checkbox)
-        self.selected_models = [m for m in default_list if m != "agnes-2.0-flash"]
+        # Set default selection list & order
+        default_active = [
+            "gemini-4-hydrogen",
+            "gemini-3.8-flash",
+            "gemini-3.7-flash",
+            "gemini-3.5-flash",
+            "gemini-3.5-flash-lite",
+            "gemini-3.6-flash",
+            "gemini-3.1-flash-lite",
+            "gemini-3-flash-preview",
+            "vertex:gemini-3.1-flash-lite",
+            "gemma-4-31b-it",
+            "gemma-4-26b-a4b-it",
+        ]
+        self.selected_models = [m for m in default_active if m in self.available_models]
         self.model_vars = {}
 
         # Load RSS feeds and Category mapping statically/dynamically from harvester script
@@ -208,6 +222,31 @@ class AletheiaLauncherApp:
         self.style.configure("Card.TFrame", background=CARD_BG, relief="flat", borderwidth=0)
         self.style.configure("TCheckbutton", background=CARD_BG, foreground=TEXT_COLOR, font=self.font_body)
         self.style.configure("TRadiobutton", background=CARD_BG, foreground=TEXT_COLOR, font=self.font_body)
+        # Style TTK Combobox (Dark mode palette fix for white-on-white text)
+        self.style.configure(
+            "TCombobox",
+            fieldbackground=BG_COLOR,
+            background=CARD_BG,
+            foreground=TEXT_COLOR,
+            arrowcolor=TEXT_COLOR,
+            darkcolor=CARD_BG,
+            lightcolor=CARD_BG,
+            bordercolor=CARD_BG,
+            insertcolor=TEXT_COLOR
+        )
+        self.style.map(
+            "TCombobox",
+            fieldbackground=[("readonly", BG_COLOR), ("!readonly", BG_COLOR)],
+            foreground=[("readonly", TEXT_COLOR), ("!readonly", TEXT_COLOR)],
+            background=[("readonly", CARD_BG), ("!readonly", CARD_BG)],
+            selectbackground=[("readonly", ACCENT_BLUE), ("!readonly", ACCENT_BLUE)],
+            selectforeground=[("readonly", TEXT_COLOR), ("!readonly", TEXT_COLOR)],
+            arrowcolor=[("disabled", TEXT_MUTED), ("!disabled", TEXT_COLOR)]
+        )
+        self.root.option_add("*TCombobox*Listbox.background", BG_COLOR)
+        self.root.option_add("*TCombobox*Listbox.foreground", TEXT_COLOR)
+        self.root.option_add("*TCombobox*Listbox.selectBackground", ACCENT_BLUE)
+        self.root.option_add("*TCombobox*Listbox.selectForeground", TEXT_COLOR)
 
         # Main Layout
         self.build_ui()
@@ -287,14 +326,18 @@ class AletheiaLauncherApp:
             print(f"Warning: Could not restore sash position: {e}")
 
     def get_python_bin(self):
-        if os.path.exists(".venv/Scripts/python.exe"):
-            return os.path.abspath(".venv/Scripts/python.exe")
-        elif os.path.exists("bluesky_bot/.venv/Scripts/python.exe"):
-            return os.path.abspath("bluesky_bot/.venv/Scripts/python.exe")
-        return "python"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        venv_main = os.path.join(script_dir, ".venv", "Scripts", "python.exe")
+        venv_bot = os.path.join(script_dir, "bluesky_bot", ".venv", "Scripts", "python.exe")
+        if os.path.exists(venv_main):
+            return os.path.abspath(venv_main)
+        elif os.path.exists(venv_bot):
+            return os.path.abspath(venv_bot)
+        return sys.executable or "python"
 
     def set_window_icon(self):
-        icon_path = "bluesky_bot/alethekanon.png"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        icon_path = os.path.join(script_dir, "bluesky_bot", "alethekanon.png")
         if os.path.exists(icon_path):
             try:
                 self.icon_image = Image.open(icon_path)
@@ -470,26 +513,22 @@ class AletheiaLauncherApp:
         self.root.after(3000, self.periodic_hud_refresh)
 
     def read_stream(self, stream, target):
-        buffer = []
-        while True:
-            char = stream.read(1)
-            if not char:
-                if buffer:
-                    self.log_queue.put((target, "".join(buffer)))
-                break
-            if char == '\r':
-                if buffer:
-                    self.log_queue.put((target, "".join(buffer)))
-                    buffer = []
-                self.log_queue.put((target, '\r'))
-            elif char == '\n':
-                if buffer:
-                    self.log_queue.put((target, "".join(buffer) + '\n'))
-                    buffer = []
+        try:
+            while True:
+                line = stream.readline()
+                if not line:
+                    break
+                if '\r' in line:
+                    parts = line.split('\r')
+                    for i, part in enumerate(parts):
+                        if part:
+                            self.log_queue.put((target, part))
+                        if i < len(parts) - 1:
+                            self.log_queue.put((target, '\r'))
                 else:
-                    self.log_queue.put((target, '\n'))
-            else:
-                buffer.append(char)
+                    self.log_queue.put((target, line))
+        except Exception:
+            pass
 
     def build_ui(self):
         # Master padding container
@@ -575,6 +614,9 @@ class AletheiaLauncherApp:
         # Row 5: Live Posting Card
         self.create_live_post_card(left_panel)
 
+        # Row 6: Draft Stories & AITA Viewer / Poster Card
+        self.create_drafts_viewer_card(left_panel)
+
         # Apply mousewheel binding recursively
         bind_mousewheel_recursive(left_canvas)
         bind_mousewheel_recursive(left_panel)
@@ -593,7 +635,8 @@ class AletheiaLauncherApp:
         frame.pack(fill=tk.X, pady=(0, 12))
 
         # Show thumbnail next to the title if icon exists
-        icon_path = "bluesky_bot/alethekanon.png"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        icon_path = os.path.join(script_dir, "bluesky_bot", "alethekanon.png")
         if os.path.exists(icon_path):
             try:
                 self.icon_img_small = Image.open(icon_path).resize((48, 48), Image.Resampling.LANCZOS)
@@ -722,15 +765,39 @@ class AletheiaLauncherApp:
                     pass
         self.lbl_hud_queue.config(text=f"📥 Queue: {queue_count}", fg=SUCCESS_COLOR)
 
-    def create_actions_card(self, parent):
+    def make_collapsible_card(self, parent, title, default_open=False):
         card = ttk.Frame(parent, style="Card.TFrame")
         card.pack(fill=tk.X, pady=(0, 10))
 
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
-        inner.pack(fill=tk.BOTH, expand=True)
+        outer = tk.Frame(card, bg=CARD_BG, padx=12, pady=10)
+        outer.pack(fill=tk.BOTH, expand=True)
 
-        lbl = tk.Label(inner, text="Quick Actions", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 8))
+        state = {"open": default_open}
+        arrow = "▼" if default_open else "▶"
+        hdr = tk.Label(
+            outer, text=f"{arrow}  {title}", font=self.font_subtitle,
+            fg=ACCENT_CYAN, bg=CARD_BG, cursor="hand2"
+        )
+        hdr.pack(anchor="w")
+
+        body = tk.Frame(outer, bg=CARD_BG)
+        if default_open:
+            body.pack(fill=tk.BOTH, expand=True, pady=(8, 0))
+
+        def toggle(_event=None):
+            state["open"] = not state["open"]
+            if state["open"]:
+                hdr.config(text=f"▼  {title}")
+                body.pack(fill=tk.BOTH, expand=True, pady=(8, 0))
+            else:
+                hdr.config(text=f"▶  {title}")
+                body.pack_forget()
+
+        hdr.bind("<Button-1>", toggle)
+        return body
+
+    def create_actions_card(self, parent):
+        inner = self.make_collapsible_card(parent, "Quick Actions", default_open=False)
 
         btn_frame = tk.Frame(inner, bg=CARD_BG)
         btn_frame.pack(fill=tk.X, anchor="w")
@@ -768,14 +835,7 @@ class AletheiaLauncherApp:
         self.btn_policy_report.bind("<Leave>", lambda e: self.btn_policy_report.configure(bg=BG_BUTTON))
 
     def create_probe_card(self, parent):
-        card = ttk.Frame(parent, style="Card.TFrame")
-        card.pack(fill=tk.X, pady=(0, 10))
-
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
-        inner.pack(fill=tk.BOTH, expand=True)
-
-        lbl = tk.Label(inner, text="🔍 Research Probe & Historical Audits", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 6))
+        inner = self.make_collapsible_card(parent, "🔍 Research Probe & Historical Audits", default_open=False)
 
         desc = tk.Label(inner, text="Harvest and judge historical events, specific actors in time, or named policy records.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG)
         desc.pack(anchor="w", pady=(0, 8))
@@ -809,14 +869,7 @@ class AletheiaLauncherApp:
         self.btn_run_probe.bind("<Leave>", lambda e: self.btn_run_probe.configure(bg=ACCENT_BLUE))
 
     def create_direct_reply_card(self, parent):
-        card = ttk.Frame(parent, style="Card.TFrame")
-        card.pack(fill=tk.X, pady=(0, 10))
-
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
-        inner.pack(fill=tk.BOTH, expand=True)
-
-        lbl = tk.Label(inner, text="🎯 Direct Target Post & Reply Dispatcher", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 4))
+        inner = self.make_collapsible_card(parent, "🎯 Direct Target Post & Reply Dispatcher", default_open=False)
 
         desc = tk.Label(inner, text="Target any Bluesky post URL, select a bot persona and skill, cross-reference against the 10,800+ Audit DB, and post direct replies.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG)
         desc.pack(anchor="w", pady=(0, 8))
@@ -985,14 +1038,7 @@ class AletheiaLauncherApp:
         reply_sb.config(command=self.reply_text.yview)
 
     def create_batch_card(self, parent):
-        card = ttk.Frame(parent, style="Card.TFrame")
-        card.pack(fill=tk.X, pady=(0, 10))
-
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
-        inner.pack(fill=tk.BOTH, expand=True)
-
-        lbl = tk.Label(inner, text="One-Shot Batch Evaluator", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 8))
+        inner = self.make_collapsible_card(parent, "One-Shot Batch Evaluator", default_open=True)
 
         # Inputs Grid
         grid_frame = tk.Frame(inner, bg=CARD_BG)
@@ -1079,6 +1125,29 @@ class AletheiaLauncherApp:
         r2.pack(side=tk.LEFT, padx=(0, 15))
         r3 = ttk.Radiobutton(batch_size_frame, text="3 at a time", variable=self.batch_size_var, value="3", style="TRadiobutton")
         r3.pack(side=tk.LEFT)
+
+        tk.Label(grid_frame, text="Timeout (s)", bg=CARD_BG, fg=TEXT_MUTED).grid(row=10, column=0, sticky="w", pady=3, padx=(0, 5))
+        timeout_frame = tk.Frame(grid_frame, bg=CARD_BG)
+        timeout_frame.grid(row=10, column=1, columnspan=5, sticky="w", pady=3)
+        self.ent_timeout = tk.Entry(timeout_frame, width=8, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_timeout.pack(side=tk.LEFT)
+        tk.Label(timeout_frame, text="(blank = smart adaptive default; e.g. 60, 90, 120)", bg=CARD_BG, fg=TEXT_MUTED, font=("Segoe UI", 8)).pack(side=tk.LEFT, padx=(8, 0))
+
+        tk.Label(grid_frame, text="⚖️ AITA Mode", bg=CARD_BG, fg=ACCENT_CYAN).grid(row=11, column=0, sticky="w", pady=4, padx=(0, 5))
+        aita_frame = tk.Frame(grid_frame, bg=CARD_BG)
+        aita_frame.grid(row=11, column=1, columnspan=5, sticky="w", pady=4)
+        self.combo_aita_sub = ttk.Combobox(aita_frame, width=18, values=["AmItheAsshole", "AITAH", "both", "atia test.txt (Local)"], state="readonly", font=self.font_body)
+        self.combo_aita_sub.set("AmItheAsshole")
+        self.combo_aita_sub.pack(side=tk.LEFT, padx=(0, 8))
+        self.combo_aita_sort = ttk.Combobox(aita_frame, width=7, values=["hot", "new", "top"], state="readonly", font=self.font_body)
+        self.combo_aita_sort.set("hot")
+        self.combo_aita_sort.pack(side=tk.LEFT, padx=(0, 8))
+        tk.Label(aita_frame, text="Limit:", bg=CARD_BG, fg=TEXT_MUTED).pack(side=tk.LEFT, padx=(0, 4))
+        self.ent_aita_limit = tk.Entry(aita_frame, width=5, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
+        self.ent_aita_limit.insert(0, "3")
+        self.ent_aita_limit.pack(side=tk.LEFT, padx=(0, 10))
+        btn_aita = tk.Button(aita_frame, text="⚖️ Judge Reddit AITA", bg=ACCENT_BLUE, fg="white", font=self.font_body, relief="flat", padx=10, pady=2, command=self.run_aita_judge)
+        btn_aita.pack(side=tk.LEFT)
 
         # Model fallbacks selection frame with drag-and-drop ordering list
         model_frame = tk.Frame(inner, bg=CARD_BG)
@@ -1276,14 +1345,7 @@ class AletheiaLauncherApp:
         self.btn_run_batch.bind("<Leave>", lambda e: self.btn_run_batch.configure(bg=ACCENT_CYAN))
 
     def create_live_post_card(self, parent):
-        card = ttk.Frame(parent, style="Card.TFrame")
-        card.pack(fill=tk.X, pady=(0, 10))
-
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
-        inner.pack(fill=tk.BOTH, expand=True)
-
-        lbl = tk.Label(inner, text="Live Post Scheduler", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 8))
+        inner = self.make_collapsible_card(parent, "Live Post Scheduler", default_open=True)
 
         grid_frame = tk.Frame(inner, bg=CARD_BG)
         grid_frame.pack(fill=tk.X, pady=(0, 10))
@@ -1320,6 +1382,209 @@ class AletheiaLauncherApp:
         self.btn_run_live.pack(anchor="w")
         self.btn_run_live.bind("<Enter>", lambda e: self.btn_run_live.configure(bg=ACCENT_BLUE_HOVER))
         self.btn_run_live.bind("<Leave>", lambda e: self.btn_run_live.configure(bg=ACCENT_BLUE))
+
+    def create_drafts_viewer_card(self, parent):
+        inner = self.make_collapsible_card(parent, "📝 Draft Stories & AITA Viewer / Poster", default_open=True)
+
+        toolbar = tk.Frame(inner, bg=CARD_BG)
+        toolbar.pack(fill=tk.X, pady=(0, 6))
+
+        tk.Label(toolbar, text="Filter:", bg=CARD_BG, fg=TEXT_MUTED, font=self.font_body).pack(side=tk.LEFT, padx=(0, 6))
+        self.combo_draft_filter = ttk.Combobox(toolbar, width=14, state="readonly", values=["All", "AITA Only", "News Drafts"], font=self.font_body)
+        self.combo_draft_filter.set("All")
+        self.combo_draft_filter.pack(side=tk.LEFT, padx=(0, 8))
+        self.combo_draft_filter.bind("<<ComboboxSelected>>", lambda _e: self.refresh_drafts_list())
+
+        btn_ref = tk.Button(
+            toolbar, text="🔄 Refresh", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=10, pady=3, cursor="hand2", command=self.refresh_drafts_list
+        )
+        btn_ref.pack(side=tk.LEFT, padx=(0, 8))
+
+        self.lbl_drafts_count = tk.Label(toolbar, text="0 items", bg=CARD_BG, fg=TEXT_MUTED, font=self.font_body)
+        self.lbl_drafts_count.pack(side=tk.LEFT)
+
+        list_frame = tk.Frame(inner, bg=CARD_BG)
+        list_frame.pack(fill=tk.X, pady=(0, 8))
+
+        self.drafts_listbox = tk.Listbox(
+            list_frame, height=7, bg=BG_COLOR, fg=TEXT_COLOR,
+            selectbackground=ACCENT_BLUE, selectforeground="#FFFFFF",
+            relief="flat", highlightthickness=1, highlightbackground="#25354F",
+            font=("Consolas", 9), exportselection=False
+        )
+        lb_sb = tk.Scrollbar(list_frame, orient="vertical", command=self.drafts_listbox.yview)
+        self.drafts_listbox.config(yscrollcommand=lb_sb.set)
+        self.drafts_listbox.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        lb_sb.pack(side=tk.RIGHT, fill=tk.Y)
+        self.drafts_listbox.bind("<<ListboxSelect>>", self.on_draft_select)
+
+        viewer_frame = tk.Frame(inner, bg=CARD_BG)
+        viewer_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 8))
+
+        self.draft_viewer_text = tk.Text(
+            viewer_frame, height=11, bg=BG_COLOR, fg=TEXT_COLOR,
+            relief="flat", highlightthickness=1, highlightbackground="#25354F",
+            font=("Consolas", 9), wrap=tk.WORD
+        )
+        vt_sb = tk.Scrollbar(viewer_frame, orient="vertical", command=self.draft_viewer_text.yview)
+        self.draft_viewer_text.config(yscrollcommand=vt_sb.set)
+        self.draft_viewer_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        vt_sb.pack(side=tk.RIGHT, fill=tk.Y)
+
+        btn_row = tk.Frame(inner, bg=CARD_BG)
+        btn_row.pack(fill=tk.X)
+
+        self.btn_build_aita = tk.Button(
+            btn_row, text="🎨 Build AITA Cards & Thread", font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=10, pady=5, cursor="hand2", command=self.build_selected_aita
+        )
+        self.btn_build_aita.pack(side=tk.LEFT, padx=(0, 8))
+
+        self.btn_open_cards = tk.Button(
+            btn_row, text="🖼️ Open Cards Folder", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=10, pady=5, cursor="hand2", command=self.open_selected_cards_dir
+        )
+        self.btn_open_cards.pack(side=tk.LEFT, padx=(0, 8))
+
+        self.btn_post_aita = tk.Button(
+            btn_row, text="🚀 Post AITA to Bluesky", font=self.font_body, bg=SUCCESS_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=5, cursor="hand2", command=self.post_selected_aita
+        )
+        self.btn_post_aita.pack(side=tk.LEFT)
+
+        self._draft_items = []
+        self.refresh_drafts_list()
+
+    def refresh_drafts_list(self):
+        import json as _json
+        self._draft_items = []
+        self.drafts_listbox.delete(0, tk.END)
+        filt = self.combo_draft_filter.get() if hasattr(self, "combo_draft_filter") else "All"
+        bot_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bluesky_bot")
+        stories_dir = os.path.join(bot_dir, "stories")
+
+        if os.path.exists(stories_dir):
+            draft_files = sorted(
+                [
+                    f for f in os.listdir(stories_dir)
+                    if (f.startswith("factcheck_") or f.startswith("roundup_") or f.startswith("aita_")) and f.endswith(".json")
+                ],
+                key=lambda f: os.path.getmtime(os.path.join(stories_dir, f)),
+                reverse=True,
+            )
+            for fn in draft_files:
+                fp = os.path.join(stories_dir, fn)
+                try:
+                    with open(fp, "r", encoding="utf-8") as f:
+                        raw = _json.load(f)
+                    d = raw[0] if isinstance(raw, list) and raw else raw
+                    is_aita = (
+                        d.get("category") == "aita"
+                        or d.get("story_type") == "aita"
+                        or fn.startswith("factcheck_aita_")
+                        or fn.startswith("aita_")
+                    )
+                    if filt == "AITA Only" and not is_aita:
+                        continue
+                    if filt == "News Drafts" and is_aita:
+                        continue
+                    status = d.get("status", "DRAFT")
+                    if is_aita:
+                        verdict = d.get("evaluation", {}).get("verdict", "?")
+                        title = (d.get("title") or d.get("subject") or fn)[:70]
+                        label = f"[AITA | {verdict} | {status}] {title}"
+                        self._draft_items.append({"kind": "aita", "path": fp, "data": d})
+                    else:
+                        subj = d.get("subject", fn)[:75]
+                        label = f"[NEWS | {status}] {subj}"
+                        self._draft_items.append({"kind": "news", "path": fp, "data": d})
+                    self.drafts_listbox.insert(tk.END, label)
+                except Exception:
+                    pass
+
+        self.lbl_drafts_count.config(text=f"{len(self._draft_items)} items")
+
+    def _get_selected_draft(self):
+        sel = self.drafts_listbox.curselection()
+        if not sel:
+            return None
+        idx = sel[0]
+        if 0 <= idx < len(self._draft_items):
+            return self._draft_items[idx]
+        return None
+
+    def on_draft_select(self, _event=None):
+        item = self._get_selected_draft()
+        if not item:
+            return
+        d = item["data"]
+        self.draft_viewer_text.delete("1.0", tk.END)
+        lines = []
+        if item["kind"] == "aita":
+            ev = d.get("evaluation", {})
+            coords = ev.get("coordinates", {})
+            lines.append(f"TYPE: AITA ({ev.get('verdict', '?')} — {ev.get('verdict_label', '')})")
+            lines.append(f"TITLE: {d.get('title', '')}")
+            lines.append(f"URL: {d.get('url', '')}")
+            lines.append(f"STATUS: {d.get('status', 'DRAFT')}  |  FILE: {os.path.basename(item['path'])}")
+            lines.append(f"OP Stated: {coords.get('op_stated')}  |  OP Actual: {coords.get('op_actual')}  |  Other: {coords.get('other_actual')}")
+            lines.append("-" * 60)
+            posts = d.get("posts", [])
+            if posts:
+                for i, p in enumerate(posts, 1):
+                    lines.append(f"[{i}/{len(posts)}] ({len(p)} chars)\n{p}\n")
+            else:
+                lines.append("No 10-post Bluesky thread built yet. Click 'Build AITA Cards & Thread' below.\n")
+                lines.append(f"WHY VERDICT:\n{ev.get('why_verdict', '')}\n")
+        else:
+            lines.append(f"TYPE: NEWS DRAFT  |  STATUS: {d.get('status', 'DRAFT')}")
+            lines.append(f"SUBJECT: {d.get('subject', '')}")
+            lines.append(f"LINK: {d.get('link', '')}")
+            lines.append(f"COORDS: Claim ({d.get('claim_u')}, {d.get('claim_psi')}) -> Real ({d.get('real_u')}, {d.get('real_psi')})")
+            lines.append("-" * 60)
+            for i, p in enumerate(d.get("posts", []), 1):
+                lines.append(f"[{i}] ({len(p)} chars)\n{p}\n")
+
+        self.draft_viewer_text.insert("1.0", "\n".join(lines))
+
+    def build_selected_aita(self):
+        item = self._get_selected_draft()
+        if not item or item["kind"] != "aita":
+            self.log_post("\n[AITA] Select an [AITA] item from the Drafts list first.\n")
+            return
+        python_bin = self.get_python_bin()
+        script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bluesky_bot", "aita", "aita_poster.py")
+        self.log_post(f"\n[AITA] Building 10-post thread & 4 cards for {os.path.basename(item['path'])}...\n")
+        self.run_subprocess(
+            [python_bin, "-u", script, item["path"], "--dry-run"],
+            "post", self.btn_build_aita,
+            on_complete=lambda: self.after(200, self.refresh_drafts_list)
+        )
+
+    def open_selected_cards_dir(self):
+        bot_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bluesky_bot")
+        item = self._get_selected_draft()
+        target = os.path.join(bot_dir, "aita", "cards") if (not item or item["kind"] == "aita") else os.path.join(bot_dir, "graph_png")
+        os.makedirs(target, exist_ok=True)
+        if sys.platform == "win32":
+            os.startfile(target)
+        else:
+            subprocess.Popen(["xdg-open", target])
+
+    def post_selected_aita(self):
+        item = self._get_selected_draft()
+        if not item or item["kind"] != "aita":
+            self.log_post("\n[AITA] Select an [AITA] item from the Drafts list first.\n")
+            return
+        python_bin = self.get_python_bin()
+        script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bluesky_bot", "aita", "aita_poster.py")
+        self.log_post(f"\n[AITA LIVE POST] Posting 10-post thread + 4 cards for {os.path.basename(item['path'])}...\n")
+        self.run_subprocess(
+            [python_bin, "-u", script, item["path"]],
+            "post", self.btn_post_aita,
+            on_complete=lambda: self.after(200, self.refresh_drafts_list)
+        )
 
     def create_eval_console_card(self, parent):
         card = ttk.Frame(parent, style="Card.TFrame")
@@ -1407,11 +1672,15 @@ class AletheiaLauncherApp:
         except Exception:
             pass
 
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+
         def run_server():
             import http.server
             import socketserver
 
             class QuietHandler(http.server.SimpleHTTPRequestHandler):
+                def __init__(self, *args, **kwargs):
+                    super().__init__(*args, directory=root_dir, **kwargs)
                 def log_message(self, format, *args):
                     pass
 
@@ -1614,6 +1883,12 @@ class AletheiaLauncherApp:
 
     def run_eval_subprocess_async(self, cmd_args):
         self.set_eval_running(True)
+        proc_env = os.environ.copy()
+        timeout_val = self.ent_timeout.get().strip() if hasattr(self, "ent_timeout") else ""
+        if timeout_val.isdigit() and int(timeout_val) > 0:
+            proc_env["GEMINI_TIMEOUT_SECS"] = timeout_val
+        else:
+            proc_env.pop("GEMINI_TIMEOUT_SECS", None)
         def worker():
             try:
                 self.log_eval(f"\n> Running: {' '.join(cmd_args)}\n")
@@ -1622,7 +1897,9 @@ class AletheiaLauncherApp:
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
                     encoding="utf-8",
+                    errors="replace",
                     bufsize=1,
+                    env=proc_env,
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
                 self.read_stream(self.eval_process.stdout, "eval")
@@ -1784,6 +2061,33 @@ class AletheiaLauncherApp:
 
         self.run_eval_subprocess_async(args)
 
+    def run_aita_judge(self):
+        python_bin = self.get_python_bin()
+        sub_choice = self.combo_aita_sub.get().strip() if hasattr(self, "combo_aita_sub") else "AmItheAsshole"
+        sort_choice = self.combo_aita_sort.get().strip() if hasattr(self, "combo_aita_sort") else "hot"
+        limit_val = self.ent_aita_limit.get().strip() if hasattr(self, "ent_aita_limit") else "3"
+        if not limit_val.isdigit() or int(limit_val) <= 0:
+            limit_val = "3"
+
+        args = [python_bin, "-u", "bluesky_bot/aita_evaluator.py"]
+        if "atia test.txt" in sub_choice:
+            args.extend(["--test-file", "bluesky_bot/atia test.txt", "--offline-benchmark"])
+        else:
+            args.extend(["--subreddit", sub_choice, "--sort", sort_choice, "--limit", limit_val])
+            thinking = self.combo_thinking.get().strip()
+            if thinking:
+                args.extend(["--thinking-level", thinking])
+            if hasattr(self, "batch_size_var") and self.batch_size_var.get():
+                args.extend(["--chunk-size", self.batch_size_var.get()])
+            context_val = self.txt_context.get("1.0", "end-1c").strip() if hasattr(self, "txt_context") else ""
+            if context_val:
+                args.extend(["--context", context_val])
+            if self.selected_models:
+                args.extend(["--model", self.selected_models[0]])
+                args.extend(["--model-sequence", ",".join(self.selected_models)])
+
+        self.run_eval_subprocess_async(args)
+
     def open_chat_ui(self):
         self.ensure_local_server()
         self.ensure_chat_server()
@@ -1820,6 +2124,7 @@ class AletheiaLauncherApp:
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
                     encoding="utf-8",
+                    errors="replace",
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
                 self.post_process = val_proc
@@ -1861,6 +2166,7 @@ class AletheiaLauncherApp:
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
                     encoding="utf-8",
+                    errors="replace",
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
                 self.post_process = post_proc
@@ -1887,6 +2193,7 @@ class AletheiaLauncherApp:
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
                     encoding="utf-8",
+                    errors="replace",
                     bufsize=1,
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
@@ -1930,6 +2237,7 @@ class AletheiaLauncherApp:
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
                     encoding="utf-8",
+                    errors="replace",
                     bufsize=1,
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
                 )
@@ -2054,18 +2362,11 @@ class AletheiaLauncherApp:
 
 
     def create_reaudit_card(self, parent):
-        card = ttk.Frame(parent, style="Card.TFrame")
-        card.pack(fill=tk.X, pady=(0, 10))
-
-        inner = tk.Frame(card, bg=CARD_BG, padx=12, pady=12)
-        inner.pack(fill=tk.BOTH, expand=True)
-
-        lbl = tk.Label(inner, text="🔄 Story Re-Audit & Correction Dispatcher", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
-        lbl.pack(anchor="w", pady=(0, 4))
+        inner = self.make_collapsible_card(parent, "🔄 Story Re-Audit & Correction Dispatcher", default_open=False)
 
         desc = tk.Label(
             inner,
-            text="Re-evaluate an existing story or post with fresh multi-source search grounding, correct trajectories, and post a linked Errata reply to Bluesky.",
+            text="Re-evaluate an existing story with multi-source wire grounding, verify the draft & cards, and publish the correction reply directly to Bluesky.",
             font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG
         )
         desc.pack(anchor="w", pady=(0, 8))
@@ -2095,63 +2396,143 @@ class AletheiaLauncherApp:
         self.combo_reaudit_target.grid(row=0, column=1, columnspan=3, sticky="ew", pady=4, padx=(0, 5))
 
         # Correction Reason & Focus
-        tk.Label(grid_frame, text="Editorial Focus / Reason", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=4, padx=(0, 5))
+        tk.Label(grid_frame, text="Correction Focus / Reason", bg=CARD_BG, fg=TEXT_MUTED).grid(row=1, column=0, sticky="w", pady=4, padx=(0, 5))
         self.ent_reaudit_reason = tk.Entry(grid_frame, width=54, bg=BG_COLOR, fg=TEXT_COLOR, insertbackground=TEXT_COLOR, relief="flat", font=self.font_body)
         self.ent_reaudit_reason.insert(0, "Rebalance with wire sources; ground in verified civic event instead of partisan rhetoric")
         self.ent_reaudit_reason.grid(row=1, column=1, columnspan=3, sticky="ew", pady=4, padx=(0, 5))
 
-        # Model and options
-        tk.Label(grid_frame, text="Model", bg=CARD_BG, fg=TEXT_MUTED).grid(row=2, column=0, sticky="w", pady=4, padx=(0, 5))
-        self.combo_reaudit_model = ttk.Combobox(grid_frame, width=20, state="readonly", font=self.font_body, values=[
-            "gemini-3.8-flash",
-            "gemini-2.5-flash",
-            "gemini-2.5-pro"
-        ])
-        self.combo_reaudit_model.set("gemini-3.8-flash")
-        self.combo_reaudit_model.grid(row=2, column=1, sticky="w", pady=4, padx=(0, 15))
+        # Engine note: Uses active model fallback sequence
+        lbl_engine = tk.Label(grid_frame, text="⚡ Uses Active Evaluator Model Fallback Queue", bg=CARD_BG, fg=SUCCESS_COLOR, font=("Segoe UI", 8))
+        lbl_engine.grid(row=2, column=1, columnspan=3, sticky="w", pady=2)
 
-        self.val_reaudit_live = tk.BooleanVar(value=False)
-        self.chk_reaudit_live = ttk.Checkbutton(grid_frame, text="Post Errata Reply Directly to Bluesky", variable=self.val_reaudit_live)
-        self.chk_reaudit_live.grid(row=2, column=2, columnspan=2, sticky="w", pady=4)
-
-        # Buttons
+        # Buttons Row: Draft -> Preview -> Direct Live Post
         btn_frame = tk.Frame(inner, bg=CARD_BG)
         btn_frame.pack(fill=tk.X, pady=(6, 0))
 
         self.btn_run_reaudit = tk.Button(
-            btn_frame, text="🔄 Launch Story Re-Audit", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
-            relief="flat", borderwidth=0, padx=14, pady=6, cursor="hand2", command=self.run_story_reaudit
+            btn_frame, text="🧪 1. Generate Correction Draft", font=self.font_body, bg=ACCENT_BLUE, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.run_story_reaudit_draft
         )
         self.btn_run_reaudit.pack(side=tk.LEFT, padx=(0, 8))
         self.btn_run_reaudit.bind("<Enter>", lambda e: self.btn_run_reaudit.configure(bg=ACCENT_BLUE_HOVER))
         self.btn_run_reaudit.bind("<Leave>", lambda e: self.btn_run_reaudit.configure(bg=ACCENT_BLUE))
 
-    def run_story_reaudit(self):
+        self.btn_preview_correction = tk.Button(
+            btn_frame, text="👁️ Preview Cards", font=self.font_body, bg=BG_BUTTON, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.preview_correction_cards
+        )
+        self.btn_preview_correction.pack(side=tk.LEFT, padx=(0, 8))
+        self.btn_preview_correction.bind("<Enter>", lambda e: self.btn_preview_correction.configure(bg=BG_BUTTON_HOVER))
+        self.btn_preview_correction.bind("<Leave>", lambda e: self.btn_preview_correction.configure(bg=BG_BUTTON))
+
+        self.btn_post_correction_live = tk.Button(
+            btn_frame, text="🚀 2. Post Correction Directly (Live)", font=self.font_body, bg=SUCCESS_COLOR, fg=TEXT_COLOR,
+            relief="flat", borderwidth=0, padx=12, pady=6, cursor="hand2", command=self.post_story_correction_live
+        )
+        self.btn_post_correction_live.pack(side=tk.LEFT)
+        self.btn_post_correction_live.bind("<Enter>", lambda e: self.btn_post_correction_live.configure(bg="#059669"))
+        self.btn_post_correction_live.bind("<Leave>", lambda e: self.btn_post_correction_live.configure(bg=SUCCESS_COLOR))
+
+    def run_story_reaudit_draft(self):
         target = self.combo_reaudit_target.get().strip()
         if not target:
             self.log_eval("\n[ERROR] Target Story slug or Bluesky post URL cannot be empty.\n")
             return
 
         reason = self.ent_reaudit_reason.get().strip()
-        model = self.combo_reaudit_model.get().strip() or "gemini-3.8-flash"
         python_bin = self.get_python_bin()
 
         cmd = [
             python_bin, "-u", "bluesky_bot/reaudit_story.py",
             "--target", target,
-            "--reason", reason,
-            "--model", model
+            "--reason", reason
         ]
+        if self.selected_models:
+            cmd.extend(["--model", self.selected_models[0]])
+            cmd.extend(["--model-sequence", ",".join(self.selected_models)])
+
         if hasattr(self, 'val_potential') and self.val_potential.get():
             cmd.append("--potential")
         else:
             cmd.append("--son")
 
-        if self.val_reaudit_live.get():
-            cmd.append("--live")
-
-        self.log_eval(f"\n> Launching Story Re-Audit: {' '.join(cmd)}\n")
+        self.log_eval(f"\n> Launching Story Re-Audit Draft: {' '.join(cmd)}\n")
         self.run_eval_subprocess_async(cmd)
+
+    def preview_correction_cards(self):
+        try:
+            target = self.combo_reaudit_target.get().strip()
+            slug = target.rstrip("/").split("/")[-1].split("?")[0]
+            if slug.startswith("factcheck_"):
+                slug = slug[len("factcheck_"):]
+            if slug.endswith(".json"):
+                slug = slug[:-len(".json")]
+
+            bot_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bluesky_bot")
+            graph_dir = os.path.join(bot_dir, "graph_png")
+
+            candidates = [
+                os.path.join(graph_dir, f"correction_{slug}_info_card_verdict.png"),
+                os.path.join(graph_dir, f"correction_{slug}_graph.png"),
+                os.path.join(graph_dir, f"{slug}_info_card_verdict.png"),
+                os.path.join(graph_dir, f"{slug}_graph.png"),
+            ]
+            found = None
+            for c in candidates:
+                if os.path.exists(c):
+                    found = c
+                    break
+
+            if not found:
+                self.log_eval(f"\n[NOTICE] No correction card found yet for '{slug}'. Run '1. Generate Correction Draft' first.\n")
+                return
+
+            self.log_eval(f"\n[PREVIEW] Opening card image: {found}\n")
+            if sys.platform == "win32":
+                os.startfile(found)
+            else:
+                subprocess.Popen(["xdg-open", found])
+        except Exception as e:
+            self.log_eval(f"\nError previewing card image: {e}\n")
+
+    def post_story_correction_live(self):
+        target = self.combo_reaudit_target.get().strip()
+        if not target:
+            self.log_post("\n[ERROR] Target Story slug or Bluesky post URL cannot be empty.\n")
+            return
+
+        slug = target.rstrip("/").split("/")[-1].split("?")[0]
+        if slug.startswith("factcheck_"):
+            slug = slug[len("factcheck_"):]
+        if slug.endswith(".json"):
+            slug = slug[:-len(".json")]
+
+        bot_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bluesky_bot")
+        corr_candidates = [
+            os.path.join(bot_dir, "stories", "live", f"factcheck_correction_{slug}.json"),
+            os.path.join(bot_dir, "stories", f"factcheck_correction_{slug}.json"),
+            os.path.join(bot_dir, "stories", "live", f"factcheck_{slug}.json"),
+        ]
+        target_json = None
+        for c in corr_candidates:
+            if os.path.exists(c):
+                target_json = c
+                break
+
+        if not target_json:
+            self.log_post(f"\n[ERROR] Correction story JSON not found for '{slug}'. Generate the draft first.\n")
+            return
+
+        python_bin = self.get_python_bin()
+        cmd = [
+            python_bin, "-u", "bluesky_bot/aletheia_bot.py",
+            "--config", target_json,
+            "--live",
+            "--compact"
+        ]
+        self.log_post(f"\n> Posting Correction Thread Live to Bluesky: {' '.join(cmd)}\n")
+        self.run_post_cmd_async(cmd)
+
 
 if __name__ == "__main__":
     try:

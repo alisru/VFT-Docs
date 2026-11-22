@@ -1,0 +1,287 @@
+Command exited with code 0.
+
+Command output:
+
+  bluesky_bot\google_ai_studio_one_shot.py:97:
+  bluesky_bot\google_ai_studio_one_shot.py:98:# Deterministic actor extraction & role classification for the live 
+pipeline
+> bluesky_bot\google_ai_studio_one_shot.py:99:from actor_extract import extract_actors, extract_actor_roles, 
+classify_actor_role
+  bluesky_bot\google_ai_studio_one_shot.py:100:
+  bluesky_bot\google_ai_studio_one_shot.py:101:# Load environment variables
+  bluesky_bot\google_ai_studio_one_shot.py:102:bot_env_path = os.path.join(script_dir, ".env")
+  bluesky_bot\google_ai_studio_one_shot.py:174:    return '\n'.join(clean_lines).strip()
+  bluesky_bot\google_ai_studio_one_shot.py:175:
+> bluesky_bot\google_ai_studio_one_shot.py:176:def call_agnes_api(api_key, system_prompt, user_content, 
+model="agnes-2.0-flash"):
+  bluesky_bot\google_ai_studio_one_shot.py:177:    url = "https://apihub.agnes-ai.com/v1/chat/completions"
+  bluesky_bot\google_ai_studio_one_shot.py:178:    headers = {
+  bluesky_bot\google_ai_studio_one_shot.py:179:        "Authorization": f"Bearer {api_key}",
+  bluesky_bot\google_ai_studio_one_shot.py:183:        "model": model,
+  bluesky_bot\google_ai_studio_one_shot.py:184:        "messages": [
+> bluesky_bot\google_ai_studio_one_shot.py:185:            {"role": "system", "content": system_prompt},
+  bluesky_bot\google_ai_studio_one_shot.py:186:            {"role": "user", "content": user_content}
+  bluesky_bot\google_ai_studio_one_shot.py:187:        ],
+  bluesky_bot\google_ai_studio_one_shot.py:188:        "temperature": 0.15
+  bluesky_bot\google_ai_studio_one_shot.py:1138:        "  Spirithekanon:\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1139:        "  \"[Canonical Quote or De-archaiced Passage]\" [Source Text 
+Chapter:Verse or Section] [PASS/FAIL/HIT]\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1140:        "  [1 concise sentence of deep ethical/philosophical 
+reflection on the actors' actions relative to this quote].\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1141:        "  *Note: The entire Spirithekanon post must be kept under 280 
+characters total.\n\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1142:    )
+  bluesky_bot\google_ai_studio_one_shot.py:1143:
+  bluesky_bot\google_ai_studio_one_shot.py:1168:        multi_aspect_text = (
+  bluesky_bot\google_ai_studio_one_shot.py:1169:            "=== MULTI-ASPECT & MULTI-SOURCE DIRECTIVE ===\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1170:            "- Post 4 (index 3 in the posts array: The Verdict) is the 
+OVERALL verdict only. It evaluates the REAL-WORLD EVENT and ACTORS themselves. Format it as:\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1171:            "  Verdict: [PASS/FAIL] - [Path Name]. [1-2 sentence 
+explanation of the trajectory's cause].\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1172:            "  Integrity: [real_integrity] (Hypocrisy: [real_rnet], z: 
+[real_z])\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1173:            "  DO NOT include any sub-audit or Subs: summary in this 
+post.\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1174:            "  *Note: Post 4 MUST be kept strictly under 260 
+characters total.\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1175:            "- Post 5 (index 4 in the posts array: Source Quality 
+Scorecard / Sub-Audits Breakdown) is the dedicated aspect & source breakdown. Format DIRECTLY as concise bullet points 
+(NO header prefix). Each bullet must be 1 short line under 60 chars:\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1176:            "  - [Outlet / Aspect A]: [PASS/FAIL/COND] ([real_u], 
+[real_psi]) - [Brief 1-line framing/omission reason under 60 chars].\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1177:            "  - [Outlet / Aspect B]: [PASS/FAIL/COND] ([real_u], 
+[real_psi]) - [Brief 1-line framing/omission reason under 60 chars].\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1178:            "  *Note: If the story contains multiple reporting sources 
+in the dossier, evaluate each news outlet's editorial integrity and framing bias as individual aspects. Keep the 
+ENTIRE combined Post 5 strictly under 260 characters total.\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1179:            "- Post 6 (index 5) is the Context post. Keep it to 1-2 
+concise sentences under 260 characters.\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1180:            "- The Unavoidables post MUST have exactly 1 concise 
+sentence for The Unavoidable Truth and 1 concise sentence for The Unavoidable Lie (under 260 chars total).\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1181:            "- The Alethekanon post MUST be at most 2 concise 
+sentences (under 260 chars total).\n\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1192:    "=== SOCIAL PHYSICS ENGINE ('THE 42') ===\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1193:    "AUDIT DIRECTIVE FOR 'Social Physics Analysis:' POST:\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1194:    "Analyze the real-world actors and events using the 4 axes (Power 
+vs. Empowerment, Justification vs. Transparency, Projection vs. Empathy, Manufactured Problems vs. Solutions) and 
+actor loops (Smart Selfish vs. Smart Altruistic) defined in the convergence rules.\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1195:    "Cut through stated pretexts to reveal whether actors are running 
+a Smart Selfish Maneuver (hidden extraction behind manufactured crises and projected blame) or acting towards genuine 
+systemic empowerment."
+  bluesky_bot\google_ai_studio_one_shot.py:1196:)
+  bluesky_bot\google_ai_studio_one_shot.py:1197:
+  bluesky_bot\google_ai_studio_one_shot.py:1198:def build_system_instruction(use_son=False, compact=False, 
+five_word=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", extra_context=None):
+  bluesky_bot\google_ai_studio_one_shot.py:1203:        f"Today's reference date is {today_str}.\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1204:        "GROUND TRUTH & INSTITUTIONAL ANCHORING DIRECTIVE:\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1205:        "You must always anchor your audit in the real-world event and 
+its primary actors, NOT in media punditry or talking heads. Evaluate three core pillars:\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1206:        "1. Institutional Actions: What did the institutions involved 
+(universities, courts, police, government bodies, corporations) actually do, fail to do, or try to hide?\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1207:        "2. Empirical Evidence: What do the documented records, 
+official filings, timelines, and physical facts prove actually happened?\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1208:        "3. Human Impacts: Who suffered real harm, trauma, financial 
+loss, or danger, and who protected or failed them?\n\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1212:        "- Your audit must cut straight to the underlying crime, 
+event, or institutional failure. Do NOT make a partisan calendar gotcha the central 'Reality' of the story. Expose the 
+real institutional failure, and expose the punditry as a parasitic distraction from the victims and 
+accountability.\n\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1213:        "ACTOR ENTITIES & 7-ROLE CLASSIFICATION DIRECTIVE:\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1214:        "In item[11] (the actors array), identify the key entities 
+involved in the event. You may provide them as objects with explicit roles: [{\"name\": \"...\", \"role\": \"...\"}], 
+or as strings (which will be classified by rule). The 7 canonical roles are:\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1215:        "- 'instigator': The active person or institution executing 
+the action, policy, or claim (e.g. 'Donald Trump', 'ICE', 'Elon Musk').\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1216:        "- 'acted_upon': The impacted population, victim, or target 
+(e.g. '500 U.S. Citizens', 'Patients', 'Schoolchildren'). NEVER tag victims as instigators.\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1217:        "- 'beneficiary': Third party gaining financial advantage or 
+unearned extraction from the policy without executing it (e.g. 'Private Voucher Schools', 'Contractors').\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1218:        "- 'author': The news outlet, journalist, or whistleblower 
+exposing the story (e.g. 'ProPublica', 'BBC'). NEVER tag reporting outlets as instigators.\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1219:        "- 'regulator': Courts, judges, monitors, or legal oversight 
+bodies reviewing the action (e.g. 'Federal Judiciary', 'Supreme Court', 'QCAT').\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1220:        "- 'context': Geographic venue, country, or physical setting 
+(e.g. 'United States', 'England', 'Beijing', 'Texas').\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1290:        "[\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1291:        "  [\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1292:        '    "thinking",                                // item[0]: 
+detailed thinking block. You MUST write down the full 6-Phase Convergence scan here, including scoring the 18 
+variables of the 6 attractors with high-resolution decimals, and detailing your coordinate equations (u, psi), 
+hypocrisy delta, and trajectory calculations step-by-step before outputting the rest of the array.\n'
+  bluesky_bot\google_ai_studio_one_shot.py:1293:        '    "id",                                      // item[1]: 
+clean story id slug\n'
+  bluesky_bot\google_ai_studio_one_shot.py:1294:        '    "subject",                                 // item[2]: 
+story subject\n'
+  bluesky_bot\google_ai_studio_one_shot.py:1295:        '    "link",                                    // item[3]: 
+story link (or "")\n'
+  bluesky_bot\google_ai_studio_one_shot.py:1303:        f"      {example_posts_str}\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1304:        f"    ],                                         // item[10]: 
+posts array (logical thread sequence: Hook, Claim, Reality, Verdict, Context, Nuance, Breakdown, Social Physics, 
+Trajectory, Unavoidables, Personas...)\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1305:        '    ["Actor / Org / Geopolitical tag", ...],  // item[11]: 
+actors array\n'
+  bluesky_bot\google_ai_studio_one_shot.py:1306:        '    "macro_event",                             // item[12]: 
+overarching context name or "" if none\n'
+  bluesky_bot\google_ai_studio_one_shot.py:1307:        "    null,                                      // item[13]: 
+macro stated morality, null if none\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1308:        "    null,                                      // item[14]: 
+macro stated will, null if none\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1346:        "CRITICAL FOR MACRO CONTEXT:\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1347:        "Identify if the candidate news story exists within a distinct 
+overarching macro-event context (e.g. an announcement happening at a political photo-op/rally, or a sports title win 
+happening at a White House PR event). If so, provide the macro-event name in item[12] and evaluate its stated and 
+actual u/psi coordinates in items[13] to [16]. If no distinct macro-context exists, use empty string for item[12] and 
+null for items[13] to [16].\n\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1348:        "item[11] = actors array: principal named individuals, orgs, 
+nation-states, or blocs (CRINK/BRICS/NATO/AUKUS/G7/SCO/Five Eyes) the story is ABOUT. Canonical full names. Max 6. [] 
+if none.\n\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1349:    )
+  bluesky_bot\google_ai_studio_one_shot.py:1350:    if use_son:
+  bluesky_bot\google_ai_studio_one_shot.py:1351:        output_format += (
+  bluesky_bot\google_ai_studio_one_shot.py:1352:            "FORCE SCORING GRANULARITY CRITICAL RULES:\n"
+> bluesky_bot\google_ai_studio_one_shot.py:1353:            "- You MUST score the [S, O, N] force magnitudes for the 6 
+attractors as granular decimals (e.g. 0.2, 0.5, 0.8, 1.2, 1.5, 1.8) based on specific evidence in the text. Do NOT 
+default to binary 0.0 or 1.0 values, as this causes coordinate collapse and loses analytical resolution.\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1354:            "- Ensure that the forces you output in items[25] and [26] 
+are highly granular and match the math you write down in your thinking block (item[0]).\n\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1355:            "INTEGRITY TIER MAPPING FOR ITEMS [23] AND [24]:\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1356:            "Map claim_rnet to item[23] (claim_integrity) and 
+real_rnet to item[24] (real_integrity) using these strict boundaries:\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1544:                "query": clean_title[:120],
+  bluesky_bot\google_ai_studio_one_shot.py:1545:                "numResults": 3,
+> bluesky_bot\google_ai_studio_one_shot.py:1546:                "useAutoprompt": True,
+  bluesky_bot\google_ai_studio_one_shot.py:1547:                "contents": {"text": {"maxCharacters": 350}}
+  bluesky_bot\google_ai_studio_one_shot.py:1548:            }
+  bluesky_bot\google_ai_studio_one_shot.py:1549:            res = requests.post("https://api.exa.ai/search", 
+headers=headers, json=payload, timeout=8)
+  bluesky_bot\google_ai_studio_one_shot.py:1658:        queries.append(" | ".join(parts))
+  bluesky_bot\google_ai_studio_one_shot.py:1659:    
+> bluesky_bot\google_ai_studio_one_shot.py:1660:    prompt = (
+  bluesky_bot\google_ai_studio_one_shot.py:1661:        f"You are a Real-Time Fact-Checking Grounding Engine. Today's 
+reference date is {today_str}.\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1662:        f"Search Google for current external news, official reports, 
+data figures, and verified developments for each of the {len(candidates)} stories below:\n\n"
+  bluesky_bot\google_ai_studio_one_shot.py:1663:        + "\n\n".join(queries) +
+  bluesky_bot\google_ai_studio_one_shot.py:1676:            resp = genai_client.models.generate_content(
+  bluesky_bot\google_ai_studio_one_shot.py:1677:                model=g_model,
+> bluesky_bot\google_ai_studio_one_shot.py:1678:                contents=prompt,
+  bluesky_bot\google_ai_studio_one_shot.py:1679:                config=types.GenerateContentConfig(
+  bluesky_bot\google_ai_studio_one_shot.py:1680:                    temperature=0.2,
+  bluesky_bot\google_ai_studio_one_shot.py:1681:                    max_output_tokens=16384,
+  bluesky_bot\google_ai_studio_one_shot.py:1938:                    result_text = response.text.strip()
+  bluesky_bot\google_ai_studio_one_shot.py:1939:
+> bluesky_bot\google_ai_studio_one_shot.py:1940:            # Diagnostic check: catch explicit prompt-level safety 
+blocks
+> bluesky_bot\google_ai_studio_one_shot.py:1941:            if not result_text and hasattr(response, 
+'prompt_feedback') and response.prompt_feedback:
+> bluesky_bot\google_ai_studio_one_shot.py:1942:                pb = response.prompt_feedback
+  bluesky_bot\google_ai_studio_one_shot.py:1943:                if getattr(pb, 'block_reason', None):
+> bluesky_bot\google_ai_studio_one_shot.py:1944:                    raise ValueError(f"Prompt blocked by API policy: 
+{pb.block_reason}")
+  bluesky_bot\google_ai_studio_one_shot.py:1945:
+  bluesky_bot\google_ai_studio_one_shot.py:1946:            # Pre-flight JSON validation to trigger fallback on 
+truncation/corruption
+  bluesky_bot\google_ai_studio_one_shot.py:1947:            content = result_text
+  bluesky_bot\google_ai_studio_one_shot.py:1966:            try:
+  bluesky_bot\google_ai_studio_one_shot.py:1967:                usage = response.usage_metadata
+> bluesky_bot\google_ai_studio_one_shot.py:1968:                tokens_str = f"(Prompt tokens: 
+{usage.prompt_token_count}, Candidate tokens: {usage.candidates_token_count}, Total: {usage.total_token_count})"
+  bluesky_bot\google_ai_studio_one_shot.py:1969:            except Exception:
+  bluesky_bot\google_ai_studio_one_shot.py:1970:                tokens_str = ""
+  bluesky_bot\google_ai_studio_one_shot.py:1971:            print(f"API call successful with model: {model} 
+{tokens_str}")
+  bluesky_bot\google_ai_studio_one_shot.py:2150:                    "mode": str(item.get("mode", "root")).strip(),
+  bluesky_bot\google_ai_studio_one_shot.py:2151:                    "posts": clean_posts,
+> bluesky_bot\google_ai_studio_one_shot.py:2152:                    "actors": item.get("actors", []),
+  bluesky_bot\google_ai_studio_one_shot.py:2153:                    "macro_event": str(item.get("macro_event", 
+"")).strip(),
+  bluesky_bot\google_ai_studio_one_shot.py:2154:                    "macro_claim_u": item.get("macro_claim_u"),
+  bluesky_bot\google_ai_studio_one_shot.py:2155:                    "macro_claim_psi": item.get("macro_claim_psi"),
+  bluesky_bot\google_ai_studio_one_shot.py:2198:            
+  bluesky_bot\google_ai_studio_one_shot.py:2199:        try:
+> bluesky_bot\google_ai_studio_one_shot.py:2200:            # Parse actors & actor_roles from item[11] if present 
+(AI-provided), else fallback handled later
+> bluesky_bot\google_ai_studio_one_shot.py:2201:            ai_actors = []
+  bluesky_bot\google_ai_studio_one_shot.py:2202:            ai_actor_roles = []
+  bluesky_bot\google_ai_studio_one_shot.py:2203:            if len(item) >= 12 and isinstance(item[11], list):
+  bluesky_bot\google_ai_studio_one_shot.py:2204:                for entry in item[11]:
+  bluesky_bot\google_ai_studio_one_shot.py:2207:                        role = str(entry.get("role") or 
+classify_actor_role(name)).strip().lower()
+  bluesky_bot\google_ai_studio_one_shot.py:2208:                        if name:
+> bluesky_bot\google_ai_studio_one_shot.py:2209:                            ai_actors.append(name)
+  bluesky_bot\google_ai_studio_one_shot.py:2210:                            ai_actor_roles.append({"name": name, 
+"role": role})
+  bluesky_bot\google_ai_studio_one_shot.py:2211:                    elif isinstance(entry, str) and entry.strip():
+  bluesky_bot\google_ai_studio_one_shot.py:2212:                        name = entry.strip()
+  bluesky_bot\google_ai_studio_one_shot.py:2213:                        role = classify_actor_role(name)
+> bluesky_bot\google_ai_studio_one_shot.py:2214:                        ai_actors.append(name)
+  bluesky_bot\google_ai_studio_one_shot.py:2215:                        ai_actor_roles.append({"name": name, "role": 
+role})
+  bluesky_bot\google_ai_studio_one_shot.py:2216:
+  bluesky_bot\google_ai_studio_one_shot.py:2217:            # Parse optional macro-context fields with fallback to 
+None/empty
+  bluesky_bot\google_ai_studio_one_shot.py:2236:                "mode": str(item[9]).strip(),
+  bluesky_bot\google_ai_studio_one_shot.py:2237:                "posts": clean_posts,
+> bluesky_bot\google_ai_studio_one_shot.py:2238:                "actors": ai_actors,
+  bluesky_bot\google_ai_studio_one_shot.py:2239:                "actor_roles": ai_actor_roles,
+  bluesky_bot\google_ai_studio_one_shot.py:2240:                "macro_event": macro_event,
+  bluesky_bot\google_ai_studio_one_shot.py:2241:                "macro_claim_u": macro_claim_u,
+  bluesky_bot\google_ai_studio_one_shot.py:2313:                story["compact"] = "single" if compact == "single" 
+else True
+  bluesky_bot\google_ai_studio_one_shot.py:2314:
+> bluesky_bot\google_ai_studio_one_shot.py:2315:            # Actors & Roles: AI-provided takes priority; fall back to 
+deterministic extraction if empty
+  bluesky_bot\google_ai_studio_one_shot.py:2316:            if not story.get("actor_roles"):
+> bluesky_bot\google_ai_studio_one_shot.py:2317:                if story.get("actors"):
+  bluesky_bot\google_ai_studio_one_shot.py:2318:                    story["actor_roles"] = [
+  bluesky_bot\google_ai_studio_one_shot.py:2319:                        {"name": a, "role": classify_actor_role(a, 
+story.get("subject", ""))}
+> bluesky_bot\google_ai_studio_one_shot.py:2320:                        for a in story["actors"]
+  bluesky_bot\google_ai_studio_one_shot.py:2321:                    ]
+  bluesky_bot\google_ai_studio_one_shot.py:2322:                else:
+  bluesky_bot\google_ai_studio_one_shot.py:2323:                    story["actor_roles"] = 
+extract_actor_roles(story.get("subject", ""))
+> bluesky_bot\google_ai_studio_one_shot.py:2324:                    story["actors"] = [r["name"] for r in 
+story["actor_roles"]]
+  bluesky_bot\google_ai_studio_one_shot.py:2325:
+> bluesky_bot\google_ai_studio_one_shot.py:2326:            if not story.get("actors") and story.get("actor_roles"):
+> bluesky_bot\google_ai_studio_one_shot.py:2327:                story["actors"] = [r["name"] for r in 
+story["actor_roles"]]
+  bluesky_bot\google_ai_studio_one_shot.py:2328:
+> bluesky_bot\google_ai_studio_one_shot.py:2329:            if story.get("actors"):
+> bluesky_bot\google_ai_studio_one_shot.py:2330:                print(f"  actors ({len(story['actors'])}): 
+{story['actors']}")
+  bluesky_bot\google_ai_studio_one_shot.py:2331:                print(f"  roles: {story.get('actor_roles', [])}")
+  bluesky_bot\google_ai_studio_one_shot.py:2332:            # Normalise category: store as a comma-joined string so 
+it's JSON-friendly
+  bluesky_bot\google_ai_studio_one_shot.py:2333:            cats = [c.strip().lower() for c in (category or 
+"general").split(",") if c.strip()] if isinstance(category, str) else (category or ["general"])
+  bluesky_bot\google_ai_studio_one_shot.py:2496:        if args.probe_year:
+  bluesky_bot\google_ai_studio_one_shot.py:2497:            cmd.extend(["--year", str(args.probe_year)])
+> bluesky_bot\google_ai_studio_one_shot.py:2498:        # Provide contextual prompt note
+  bluesky_bot\google_ai_studio_one_shot.py:2499:        probe_note = f"This is a historical/thematic research probe 
+on: '{args.probe}'. Evaluate the actor's stated vs actual alignment in historical/policy context."
+  bluesky_bot\google_ai_studio_one_shot.py:2500:        if args.context:
+  bluesky_bot\google_ai_studio_one_shot.py:2501:            args.context = f"{args.context}\n{probe_note}"
+  bluesky_bot\google_ai_studio_one_shot.py:2575:    percent_saved = (1.0 - (min_total_chars / raw_total_chars)) * 100
+  bluesky_bot\google_ai_studio_one_shot.py:2576:    
+> bluesky_bot\google_ai_studio_one_shot.py:2577:    print(f"\n--- PROMPT TOKENS MINIFICATION ---")
+  bluesky_bot\google_ai_studio_one_shot.py:2578:    print(f"Raw instructions size:      {raw_total_chars} characters 
+(~{int(raw_total_chars/4)} tokens)")
+  bluesky_bot\google_ai_studio_one_shot.py:2579:    print(f"Minified instructions size: {min_total_chars} characters 
+(~{int(min_total_chars/4)} tokens)")
+  bluesky_bot\google_ai_studio_one_shot.py:2580:    print(f"Total instructions token budget saved: 
+{percent_saved:.1f}%")
+  bluesky_bot\google_ai_studio_one_shot.py:2832:                                    f"\n\n[HYPOCRISY ALERT - 
+REFLECTION REQUIRED]\n"
+  bluesky_bot\google_ai_studio_one_shot.py:2833:                                    f"Your initial analysis detected 
+high hypocrisy/distortion ({desc}).\n"
+> bluesky_bot\google_ai_studio_one_shot.py:2834:                                    f"You MUST use Google Search 
+Grounding to perform a deep fact-checking reflection. Search for concrete evidence about the actors' claims vs. actual 
+outcomes. "
+  bluesky_bot\google_ai_studio_one_shot.py:2835:                                    f"Ensure that all 13 posts are 
+thoroughly grounded in these verified facts, exposing any deceit or empty rhetoric."
+  bluesky_bot\google_ai_studio_one_shot.py:2836:                                )
+  bluesky_bot\google_ai_studio_one_shot.py:2837:                                try:
+
+

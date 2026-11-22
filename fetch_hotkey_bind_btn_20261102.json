@@ -1,0 +1,144 @@
+Command exited with code 0.
+
+Command output:
+
+> E:\Vector Field Theory\peek_explorer\renderer.js:7266:  if (document.querySelector('.hotkey-bind-btn.recording')) 
+return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7267:  if (matchesHotkey(e, 'reopenTab')) { e.preventDefault(); 
+reopenClosedTab(); return; }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7268:  if (matchesHotkey(e, 'newTab')) { e.preventDefault(); 
+newTab(); return; }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7269:  if (matchesHotkey(e, 'closeTab')) { e.preventDefault(); 
+closeTab(active); return; }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7270:  if (matchesHotkey(e, 'newFolder')) { e.preventDefault(); 
+const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFolder(dest)); return; }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7271:  if (matchesHotkey(e, 'newWindow')) { e.preventDefault(); 
+window.api.newWindow(cur); return; }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7272:  if (matchesHotkey(e, 'toggleTerminal')) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7273:    e.preventDefault();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7274:    const d = $('termDrawer');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7275:    if (d) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7276:      const show = d.style.display === 'none';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7277:      d.style.display = show ? 'flex' : 'none';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7278:      $('termBtn')?.classList.toggle('active', show);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7279:      if (show) $('termDrawerInput')?.focus();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7280:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7281:    return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7282:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7283:  if (e.altKey && e.key === 'Enter') {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7284:    e.preventDefault();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7285:    const target = selected.size ? [...selected.keys()][0] : 
+cur;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7286:    if (target && target !== HOME_URI) 
+window.api.props(target);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7287:    return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7288:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7289:  if (e.ctrlKey && e.key === 'Tab') { e.preventDefault(); 
+switchTab((active + (e.shiftKey ? -1 : 1) + tabs.length) % tabs.length); return; }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7290:  if (/^F[1-5]$/.test(e.key) && (mode === 'landscape' || mode 
+=== 'lens')) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7291:    e.preventDefault();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7292:    const slot = e.key.slice(1);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7293:    if (e.ctrlKey || e.shiftKey) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7294:      window._landscapeState?.saveCameraZone?.(slot);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7295:    } else {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7296:      window._landscapeState?.recallCameraZone?.(slot);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7297:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7298:    return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7299:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7300:  if (e.ctrlKey && /^[1-9]$/.test(e.key)) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7301:    if ((mode === 'landscape' || mode === 'lens') && +e.key <= 
+5 && window._landscapeState?.saveCameraZone) {
+> E:\Vector Field Theory\peek_explorer\renderer.js:7480:      
+settingsBackdrop.querySelectorAll('.hotkey-bind-btn').forEach(btn => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7481:        const hk = btn.dataset.hk;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7482:        btn.classList.remove('recording');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7483:        btn.textContent = hotkeys[hk] || DEFAULT_HOTKEYS[hk] 
+|| 'Unbound';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7484:      });
+  E:\Vector Field Theory\peek_explorer\renderer.js:7485:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7486:
+  E:\Vector Field Theory\peek_explorer\renderer.js:7487:    function populateSubPaletteDropdown(m) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7488:      const sel = $('setModeSubPalette');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7489:      if (!sel) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7490:      const modePals = MODE_PALETTES[m];
+  E:\Vector Field Theory\peek_explorer\renderer.js:7491:      if (!modePals) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7492:        if ($('setModeSubPaletteRow')) 
+$('setModeSubPaletteRow').style.display = 'none';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7493:        if ($('setCustomPaletteSwatchesRow')) 
+$('setCustomPaletteSwatchesRow').style.display = 'none';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7494:        return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7495:      }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7496:      if ($('setModeSubPaletteRow')) 
+$('setModeSubPaletteRow').style.display = 'flex';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7497:      sel.innerHTML = '';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7498:      modePals.forEach((p, idx) => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7499:        const opt = document.createElement('option');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7500:        opt.value = String(idx);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7501:        opt.textContent = p.name;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7502:        sel.appendChild(opt);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7503:      });
+  E:\Vector Field Theory\peek_explorer\renderer.js:7504:      const custOpt = document.createElement('option');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7505:      custOpt.value = '5';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7506:      custOpt.textContent = '6. Custom Palette (7 Swatches)';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7507:      sel.appendChild(custOpt);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7508:      const curIdx = getModePaletteIdx(m);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7509:      sel.value = String(curIdx);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7510:      syncCustomSwatchInputs(m, curIdx);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7511:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7512:
+  E:\Vector Field Theory\peek_explorer\renderer.js:7513:    function syncCustomSwatchInputs(m, palIdx) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7514:      const row = $('setCustomPaletteSwatchesRow');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7515:      if (!row) return;
+> E:\Vector Field Theory\peek_explorer\renderer.js:7654:    
+settingsBackdrop.querySelectorAll('.hotkey-bind-btn').forEach(btn => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7655:      btn.onclick = e => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7656:        e.stopPropagation();
+> E:\Vector Field Theory\peek_explorer\renderer.js:7657:        
+settingsBackdrop.querySelectorAll('.hotkey-bind-btn.recording').forEach(b => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7658:          if (b !== btn) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7659:            b.classList.remove('recording');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7660:            b.textContent = hotkeys[b.dataset.hk] || 
+DEFAULT_HOTKEYS[b.dataset.hk] || 'Unbound';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7661:          }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7662:        });
+  E:\Vector Field Theory\peek_explorer\renderer.js:7663:        const hk = btn.dataset.hk;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7664:        const modOnly = btn.dataset.modOnly === 'true';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7665:        btn.classList.add('recording');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7666:        btn.textContent = modOnly ? 'Hold Modifiers. (Esc 
+cancel)' : 'Press Shortcut. (Esc cancel)';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7667:
+  E:\Vector Field Theory\peek_explorer\renderer.js:7668:        let lastModCombo = '';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7669:        const cleanup = () => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7670:          window.removeEventListener('keydown', onRecDown, 
+true);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7671:          window.removeEventListener('keyup', onRecUp, true);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7672:          btn.classList.remove('recording');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7673:        };
+  E:\Vector Field Theory\peek_explorer\renderer.js:7674:        const onRecDown = ev => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7675:          ev.preventDefault();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7676:          ev.stopPropagation();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7677:          if (ev.key === 'Escape') {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7678:            cleanup();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7679:            btn.textContent = hotkeys[hk] || 
+DEFAULT_HOTKEYS[hk];
+  E:\Vector Field Theory\peek_explorer\renderer.js:7680:            return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7681:          }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7682:          if (modOnly) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7683:            const mods = [];
+  E:\Vector Field Theory\peek_explorer\renderer.js:7684:            if (ev.ctrlKey || ev.key === 'Control') 
+mods.push('Ctrl');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7685:            if (ev.altKey || ev.key === 'Alt') 
+mods.push('Alt');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7686:            if (ev.shiftKey || ev.key === 'Shift') 
+mods.push('Shift');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7687:            if (mods.length) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7688:              lastModCombo = mods.join('+');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7689:              btn.textContent = lastModCombo + ' (release to 
+set)';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7690:            }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7691:          } else {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7692:            if (['Control', 'Alt', 'Shift', 
+'Meta'].includes(ev.key)) return;
+
+

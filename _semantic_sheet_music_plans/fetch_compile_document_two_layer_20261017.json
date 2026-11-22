@@ -1,0 +1,495 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\VFT Docs\semantic_sheet_music_studio.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -998,28 +998,22 @@
+             const contourMode = document.getElementById('contour-mode-select')?.value || 'flow-gravity';
+             const syllableCarry = document.getElementById('syllable-carry-toggle')?.checked ?? true;
+             const lineBreakRest = document.getElementById('linebreak-rest-toggle')?.checked ?? true;
++            const beatsPerBar = meter === '3/4' ? 6 : (meter === '6/8' ? 6 : (meter === '5/4' ? 10 : 8));
++            const multiStaffOn = document.getElementById('multistaff-score-toggle')?.checked ?? true;
++            const strumStyle = document.getElementById('strum-mode-select')?.value || 'guitar-strum';
++            const keepBeatOnBreaks = document.getElementById('keep-groove-on-rest-toggle')?.checked ?? true;
+ 
+             const rawLines = rawText.split(/\r?\n/);
+-            const wordObjects = [];
+             const planeCounts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Q5: 0, Q6: 0, Q7: 0 };
+ 
+-            rawLines.forEach((line, lIdx) => {
++            // First pass: scan planes across text to establish the song's global home key
++            rawLines.forEach(line => {
+                 const trimmed = line.trim();
+-                if (!trimmed) {
+-                    if (lineBreakRest && wordObjects.length > 0) {
+-                        wordObjects.push({ isRest: true, eighths: 4, abcDurStr: '4', label: '𝄻 Stanza Break' });
+-                    }
+-                    return;
+-                }
+-                const words = trimmed.split(/\s+/);
+-                words.forEach(w => {
++                if (!trimmed) return;
++                trimmed.split(/\s+/).forEach(w => {
+                     const info = classifyWordToken(w);
+                     if (info.matchedPlane) planeCounts[info.matchedPlane]++;
+-                    wordObjects.push(info);
+-                });
+-                if (lineBreakRest && lIdx < rawLines.length - 1) {
+-                    wordObjects.push({ isRest: true, eighths: 2, abcDurStr: '2', label: '𝄽 Line Break' });
+-                }
++                });
+             });
+ 
+             let domPlaneKey = 'Q1';
+@@ -1030,16 +1030,10 @@
+                 }
+             }
+             const domPlane = REALITY_PLANES[domPlaneKey];
+-
+-            let activePlaneKey = domPlaneKey;
+-            wordObjects.forEach(w => {
+-                if (!w.isRest) {
+-                    if (w.matchedPlane) activePlaneKey = w.matchedPlane;
+-                    w.plane = activePlaneKey;
+-                    planeCounts[activePlaneKey] = (planeCounts[activePlaneKey] || 0) + 1;
+-                }
+-            });
+-
++            const isMinorKey = domPlane.modeName.includes('Minor') || ['Q3', 'Q5', 'Q6', 'Q7'].includes(domPlane.id);
++            const diatonicChords = getDiatonicChords(domPlane.rootMidi, isMinorKey);
++
++            // Scale pool: 3 octaves around Middle C for vocal lead
+             const scalePool = [];
+             for (let oct = -1; oct <= 1; oct++) {
+                 domPlane.intervals.forEach(semi => {
+@@ -1050,42 +1050,138 @@
+             let currentScaleIdx = 7;
+             let runningAvgIdx = 7;
+             let pitchedCount = 0;
+-            let lastChordTriadMidis = [domPlane.rootMidi, domPlane.rootMidi + (domPlane.intervals[2] || 4), domPlane.rootMidi + (domPlane.intervals[4] || 7), domPlane.rootMidi + 12];
++            let lastChordTriadMidis = [domPlane.rootMidi, domPlane.rootMidi + (domPlane.intervals[2] || 4), domPlane.rootMidi + (domPlane.intervals[4] || 7)];
+             let lastBassMidi = Math.max(36, domPlane.rootMidi - 12);
+ 
+-            wordObjects.forEach(wObj => {
+-                if (wObj.isRest) {
+-                    compiledTokens.push({
+-                        index: compiledTokens.length,
+-                        isRest: true,
+-                        lyricToken: wObj.label,
+-                        eighths: wObj.eighths,
+-                        abcDurStr: wObj.abcDurStr,
+-                        plane: domPlaneKey,
+-                        aecRole: 'REST',
+-                        topoLevel: 0,
+-                        midi: domPlane.rootMidi,
+-                        noteName: 'REST',
+-                        strumDir: '↓ Groove',
+-                        dynamicMark: 'mp',
+-                        velocity: 0.72,
+-                        chordTriadMidis: lastChordTriadMidis,
+-                        bassMidi: lastBassMidi,
+-                        scalePoolRef: scalePool,
+-                        scaleIdxRef: currentScaleIdx
+-                    });
+-                    return;
+-                }
+-
+-                const syllables = granularity === 'syllable' ? splitWordIntoSyllables(wObj.rawWord.replace(/[.,!?;:]+$/, '')) : [wObj.rawWord.replace(/[.,!?;:]+$/, '')];
+-                const sylCount = syllables.length;
+-
+-                syllables.forEach((sylText, sIdx) => {
+-                    const isFirstSyl = sIdx === 0;
+-                    const isLastSyl = sIdx === sylCount - 1;
+-                    const prevMidiPitch = scalePool[currentScaleIdx];
+-
+-                    const stepRes = computeFlowingStep(wObj, sIdx, sylCount, currentScaleIdx, runningAvgIdx, scalePool.length, contourMode);
++            let stanzaLineIdx = 0;
++            const nonEmptyLines = rawLines.filter(l => l.trim().length > 0);
++            const lastNonEmptyLine = nonEmptyLines[nonEmptyLines.length - 1];
++
++            rawLines.forEach((rawLine, lIdx) => {
++                const trimmed = rawLine.trim();
++                if (!trimmed) {
++                    // Stanza break: 4 eighths rest and reset stanza line counter
++                    if (compiledTokens.length > 0 && lineBreakRest) {
++                        compiledTokens.push({
++                            index: compiledTokens.length,
++                            isRest: true,
++                            lyricToken: '𝄻 Stanza Break',
++                            eighths: 4,
++                            abcDurStr: '4',
++                            plane: domPlaneKey,
++                            aecRole: 'REST',
++                            topoLevel: 0,
++                            midi: domPlane.rootMidi,
++                            noteName: 'REST',
++                            strumDir: '↓ Groove',
++                            dynamicMark: 'mp',
++                            velocity: 0.72,
++                            chordName: `${domPlane.chordRoot} [${domPlaneKey}]`,
++                            chordTriadMidis: lastChordTriadMidis,
++                            bassMidi: lastBassMidi,
++                            scalePoolRef: scalePool,
++                            scaleIdxRef: currentScaleIdx,
++                            barStartEighth: 0
++                        });
++                    }
++                    stanzaLineIdx = 0;
++                    return;
++                }
++
++                const words = trimmed.split(/\s+/).map(w => classifyWordToken(w));
++                const isCall = (stanzaLineIdx % 2 === 0);
++                const isFinalLine = (rawLine === lastNonEmptyLine);
++                stanzaLineIdx++;
++
++                // Build line's syllable tokens
++                const lineTokens = [];
++                words.forEach(wObj => {
++                    const syls = (granularity === 'syllable') ? splitWordIntoSyllables(wObj.rawWord.replace(/[.,!?;:]+$/, '')) : [wObj.rawWord.replace(/[.,!?;:]+$/, '')];
++                    syls.forEach((sylText, sIdx) => {
++                        lineTokens.push({
++                            wObj,
++                            sylText,
++                            sIdx,
++                            sylCount: syls.length,
++                            isFirstSyl: sIdx === 0,
++                            isLastSyl: sIdx === syls.length - 1
++                        });
++                    });
++                });
++
++                if (lineTokens.length === 0) return;
++
++                // Determine phrase bars: 2 bars (16 eighths) or 4 bars (32 eighths)
++                const targetBars = lineTokens.length <= 8 ? 2 : (lineTokens.length <= 16 ? 4 : Math.ceil(lineTokens.length / 4));
++                const phraseTotalEighths = targetBars * beatsPerBar;
++
++                // Harmonic progression for this phrase (Layer 1: The Band)
++                let phraseProgressionDegs = [];
++                if (targetBars === 2) {
++                    phraseProgressionDegs = isCall ? [1, 5] : (isFinalLine ? [4, 1] : [5, 1]);
++                } else if (targetBars === 4) {
++                    phraseProgressionDegs = isCall ? [1, 4, 6, 5] : (isFinalLine ? [4, 5, 1, 1] : [4, 5, 5, 1]);
++                } else {
++                    phraseProgressionDegs = [1, 4, 5, 1];
++                    while (phraseProgressionDegs.length < targetBars) phraseProgressionDegs.push(1);
++                }
++
++                // Compute smooth voicings for each measure of the phrase
++                const barChords = [];
++                phraseProgressionDegs.forEach(deg => {
++                    const chInfo = diatonicChords.find(c => c.deg === deg) || diatonicChords[0];
++                    const voicing = getSmoothVoicing(lastChordTriadMidis, chInfo.rootSemi, chInfo.type, 60);
++                    lastChordTriadMidis = voicing;
++                    const bassMidi = Math.max(36, 60 + chInfo.rootSemi - 12);
++                    lastBassMidi = bassMidi;
++                    barChords.push({
++                        deg: deg,
++                        name: chInfo.name,
++                        roman: chInfo.roman,
++                        triadDegs: chInfo.triadDegs,
++                        triadMidis: voicing,
++                        bassMidi: bassMidi
++                    });
++                });
++
++                // Assign rhythmic eighths and place tokens onto the bar grid (Layer 2: The Vocal)
++                let lineEighthsUsed = 0;
++                lineTokens.forEach((lt, tIdx) => {
++                    const isVeryLastSyl = (tIdx === lineTokens.length - 1);
++                    const isWordStart = lt.isFirstSyl;
++                    const wObj = lt.wObj;
++
++                    // Prosodic rhythmic duration
++                    let eighths = 1;
++                    let abcDurStr = '1';
++                    if (isVeryLastSyl) {
++                        eighths = 2; // Cadence note holds
++                        abcDurStr = '2';
++                    } else if (isWordStart && (wObj.aecRole === 'ACTION' || wObj.aecRole === 'STRAIN')) {
++                        eighths = (lineEighthsUsed % 4 === 0) ? 2 : 1; // Quarter note on strong beats
++                        abcDurStr = eighths === 2 ? '2' : '1';
++                    } else if (wObj.aecRole === 'GLUE') {
++                        eighths = 1;
++                        abcDurStr = '1';
++                    } else if (!isWordStart) {
++                        eighths = lt.sylCount > 2 ? 0.5 : 1;
++                        abcDurStr = eighths === 0.5 ? '/2' : '1';
++                    }
++
++                    // Keep within phrase total
++                    if (lineEighthsUsed + eighths > phraseTotalEighths - 2 && !isVeryLastSyl) {
++                        eighths = 1;
++                        abcDurStr = '1';
++                    }
++
++                    const barIdx = Math.min(barChords.length - 1, Math.floor(lineEighthsUsed / beatsPerBar));
++                    const activeChord = barChords[barIdx];
++
++                    // Voice-leading calculation
++                    const stepRes = computeFlowingStep(
++                        wObj, lt.sIdx, lt.sylCount, currentScaleIdx, runningAvgIdx, scalePool.length, contourMode,
++                        activeChord.triadDegs, isVeryLastSyl, isCall
++                    );
+                     currentScaleIdx = stepRes.targetIdx;
+                     const deltaStep = stepRes.delta;
+ 
+@@ -1095,43 +1095,9 @@
+                     const midiPitch = scalePool[currentScaleIdx];
+                     const runningAvgMidi = scalePool[Math.max(0, Math.min(scalePool.length - 1, Math.round(runningAvgIdx)))];
+ 
+-                    const phrasingMode = document.getElementById('phrasing-mode-select')?.value || 'prosodic-stress';
+-                    let eighths = 1;
+-                    let abcDurStr = '1';
+-
+-                    if (phrasingMode === 'prosodic-stress') {
+-                        if (sylCount === 1) {
+-                            eighths = wObj.aecRole === 'GLUE' ? 1 : 2;
+-                            abcDurStr = eighths === 1 ? '1' : '2';
+-                        } else if (sylCount === 2) {
+-                            eighths = 1;
+-                            abcDurStr = '1';
+-                        } else if (sylCount === 3) {
+-                            eighths = isFirstSyl ? 1 : 0.5;
+-                            abcDurStr = isFirstSyl ? '1' : '/2';
+-                        } else {
+-                            eighths = 0.5;
+-                            abcDurStr = '/2';
+-                        }
+-                    } else if (phrasingMode === 'melisma-anchor') {
+-                        eighths = isFirstSyl ? 2 : 0.5;
+-                        abcDurStr = isFirstSyl ? '2' : '/2';
+-                    } else {
+-                        if (sylCount === 1) {
+-                            eighths = wObj.aecRole === 'GLUE' ? 1 : 2;
+-                            abcDurStr = eighths === 1 ? '1' : '2';
+-                        } else if (sylCount === 2) {
+-                            eighths = 1;
+-                            abcDurStr = '1';
+-                        } else {
+-                            eighths = isLastSyl ? 1 : 0.5;
+-                            abcDurStr = isLastSyl ? '1' : '/2';
+-                        }
+-                    }
+-
+-                    const lyricToken = (granularity === 'syllable' && !isLastSyl)
+-                        ? sylText.replace(/[^a-zA-Z0-9'-]/g, '') + '-'
+-                        : sylText;
++                    const lyricToken = (granularity === 'syllable' && !lt.isLastSyl)
++                        ? lt.sylText.replace(/[^a-zA-Z0-9'-]/g, '') + '-'
++                        : lt.sylText;
+ 
+                     const isAllCaps = wObj.rawWord.length > 1 && wObj.rawWord === wObj.rawWord.toUpperCase() && /[A-Z]/.test(wObj.rawWord);
+                     let dynamicMark = 'mf';
+@@ -1138,7 +1138,7 @@
+                     if (isAllCaps || wObj.punct.includes('!') || wObj.plane === 'Q7') {
+                         dynamicMark = 'ff';
+                         velocity = 1.0;
+-                    } else if (wObj.aecRole === 'ACTION' || (wObj.aecRole === 'STRAIN' && isFirstSyl)) {
++                    } else if (wObj.aecRole === 'ACTION' || (wObj.aecRole === 'STRAIN' && isWordStart)) {
+                         dynamicMark = 'f';
+                         velocity = 0.88;
+                     } else if (wObj.topoLevel === 4 || wObj.rawWord.startsWith('(')) {
+@@ -1145,5 +1145,5 @@
+                         velocity = 0.48;
+-                    } else if (wObj.aecRole === 'GLUE' || !isFirstSyl) {
++                    } else if (wObj.aecRole === 'GLUE' || !isWordStart) {
+                         dynamicMark = 'mp';
+                         velocity = 0.62;
+                     }
+@@ -1150,43 +1150,22 @@
+-                    const hasHardPlosive = /^[ptkbdgPTKBDG]/.test(sylText);
++                    const hasHardPlosive = /^[ptkbdgPTKBDG]/.test(lt.sylText);
+                     let strumDir = '↑ Up';
+                     if (hasHardPlosive && wObj.aecRole === 'STRAIN') {
+                         strumDir = '✕ Chuck';
+-                    } else if (isFirstSyl && wObj.aecRole !== 'GLUE') {
++                    } else if (isWordStart && wObj.aecRole !== 'GLUE') {
+                         strumDir = '↓ Down';
+                     }
+ 
+-                    const pInfo = REALITY_PLANES[wObj.plane] || domPlane;
+-                    const noteDegInScale = ((currentScaleIdx % 7) + 7) % 7;
+-                    let chordBaseDegree = 0;
+-                    if (wObj.aecRole === 'STRAIN' || noteDegInScale === 1 || noteDegInScale === 4 || noteDegInScale === 6) {
+-                        chordBaseDegree = (noteDegInScale === 3 || noteDegInScale === 5) ? 3 : 4;
+-                    } else if (noteDegInScale === 3 || noteDegInScale === 5) {
+-                        chordBaseDegree = 3;
+-                    }
+-                    const degToSemi = (deg) => {
+-                        const oct = Math.floor(deg / 7);
+-                        const rem = ((deg % 7) + 7) % 7;
+-                        return oct * 12 + (pInfo.intervals[rem] || 0);
+-                    };
+-                    const chordRootMidi = pInfo.rootMidi + degToSemi(chordBaseDegree);
+-                    const chordThirdMidi = pInfo.rootMidi + degToSemi(chordBaseDegree + 2);
+-                    const chordFifthMidi = pInfo.rootMidi + degToSemi(chordBaseDegree + 4);
+-                    const chordTriadMidis = [chordRootMidi, chordThirdMidi, chordFifthMidi, chordRootMidi + 12];
+-                    const bassMidi = Math.max(36, chordRootMidi - 12);
+-                    lastChordTriadMidis = chordTriadMidis;
+-                    lastBassMidi = bassMidi;
+-
+                     compiledTokens.push({
+                         index: compiledTokens.length,
+                         isRest: false,
+-                        syllableText: sylText,
++                        syllableText: lt.sylText,
+                         lyricToken: lyricToken,
+                         parentWord: wObj.rawWord,
+-                        plane: wObj.plane,
++                        plane: wObj.plane || domPlaneKey,
+                         aecRole: wObj.aecRole,
+                         topoLevel: wObj.topoLevel,
+                         midi: midiPitch,
+-                        prevMidi: prevMidiPitch,
++                        prevMidi: scalePool[currentScaleIdx - deltaStep] || midiPitch,
+                         runningAvgMidi: runningAvgMidi,
+                         noteName: midiToNoteName(midiPitch),
+                         abcNote: midiToAbcPitch(midiPitch),
+@@ -1193,11 +1193,11 @@
+                         deltaStep: deltaStep,
+                         avgDiff: (currentScaleIdx - newRunningAvgIdx).toFixed(1),
+                         eighths: eighths,
+-                        isWordStart: isFirstSyl,
+-                        isWordEnd: isLastSyl,
+-                        multiSyllableWord: sylCount > 1,
+-                        slurCarry: syllableCarry && sylCount > 1 && !isFirstSyl,
+-                        punct: isLastSyl ? wObj.punct : '',
++                        isWordStart: isWordStart,
++                        isWordEnd: lt.isLastSyl,
++                        multiSyllableWord: lt.sylCount > 1,
++                        slurCarry: syllableCarry && lt.sylCount > 1 && !isWordStart,
++                        punct: lt.isLastSyl ? wObj.punct : '',
+                         dynamicMark: dynamicMark,
+                         velocity: velocity,
+                         strumDir: strumDir,
+@@ -1204,18 +1204,45 @@
+-                        chordTriadMidis: chordTriadMidis,
+-                        bassMidi: bassMidi,
+-                        scalePoolRef: scalePool,
+-                        scaleIdxRef: currentScaleIdx
+-                    });
+-                });
+-            });
+-
+-            const beatsPerBar = meter === '3/4' ? 6 : (meter === '6/8' ? 6 : (meter === '5/4' ? 10 : 8));
+-            const multiStaffOn = document.getElementById('multistaff-score-toggle')?.checked ?? true;
+-            const strumStyle = document.getElementById('strum-mode-select')?.value || 'guitar-strum';
++                        chordName: `${activeChord.name} (${activeChord.roman})`,
++                        chordTriadMidis: activeChord.triadMidis,
++                        bassMidi: activeChord.bassMidi,
++                        scalePoolRef: scalePool,
++                        scaleIdxRef: currentScaleIdx,
++                        barStartEighth: lineEighthsUsed % beatsPerBar
++                    });
++
++                    lineEighthsUsed += eighths;
++                });
++
++                // Complete the phrase to exact bar boundary with a Breath Rest
++                const remainingEighths = phraseTotalEighths - lineEighthsUsed;
++                if (remainingEighths > 0 && lineBreakRest) {
++                    const lastBarChord = barChords[barChords.length - 1];
++                    const rDurStr = remainingEighths === 4 ? '4' : (remainingEighths === 2 ? '2' : (remainingEighths === 1 ? '1' : String(remainingEighths)));
++                    compiledTokens.push({
++                        index: compiledTokens.length,
++                        isRest: true,
++                        lyricToken: '𝄽 Breath Rest',
++                        eighths: remainingEighths,
++                        abcDurStr: rDurStr,
++                        plane: domPlaneKey,
++                        aecRole: 'REST',
++                        topoLevel: 0,
++                        midi: domPlane.rootMidi,
++                        noteName: 'REST',
++                        strumDir: '↓ Groove',
++                        dynamicMark: 'mp',
++                        velocity: 0.72,
++                        chordName: `${lastBarChord.name} (${lastBarChord.roman})`,
++                        chordTriadMidis: lastBarChord.triadMidis,
++                        bassMidi: lastBarChord.bassMidi,
++                        scalePoolRef: scalePool,
++                        scaleIdxRef: currentScaleIdx,
++                        barStartEighth: lineEighthsUsed % beatsPerBar
++                    });
++                }
++            });
+ 
+             let currentBarEighths = 0;
+             let barCount = 1;
+-            const keepBeatOnBreaks = document.getElementById('keep-groove-on-rest-toggle')?.checked ?? true;
+ 
+             const systems = [];
+             let currentNotes = '';
+@@ -1234,18 +1234,9 @@
+                     currentLyrics = '';
+                     currentStrum = '';
+                     currentBass = '';
+-                }
+-            };
+-
+-            let measureEighthCounter = 0;
+-            compiledTokens.forEach((tok) => {
+-                tok.barStartEighth = measureEighthCounter % beatsPerBar;
+-                if (tok.isRest) {
+-                    measureEighthCounter = 0;
+-                } else {
+-                    measureEighthCounter += tok.eighths;
+-                }
+-            });
++                    currentBarEighths = 0;
++                }
++            };
+ 
+             compiledTokens.forEach((tok) => {
+                 if (tok.isRest) {
+@@ -1267,7 +1267,6 @@
+                         currentStrum += `z${tok.abcDurStr} ${barDivider} `;
+                         currentBass += `z${tok.abcDurStr} ${barDivider} `;
+                     }
+-                    currentBarEighths = 0;
+                     barCount++;
+                     flushSystem();
+                     return;
+@@ -1274,9 +1274,7 @@
+ 
+-                if (currentBarEighths === 0 || (tok.isWordStart && tok.aecRole !== 'GLUE' && Math.abs(currentBarEighths - 4) < 0.01)) {
+-                    const pInfo = REALITY_PLANES[tok.plane];
+-                    const chordName = tok.aecRole === 'STRAIN' ? pInfo.chordTension : pInfo.chordRoot;
+-                    const dynPrefix = tok.isWordStart && (tok.dynamicMark === 'ff' || tok.dynamicMark === 'pp') ? `!${tok.dynamicMark}!` : '';
+-                    currentNotes += `${dynPrefix}"${chordName} [${tok.plane}:${tok.aecRole.slice(0,3)}]" `;
++                if (currentBarEighths === 0) {
++                    const chordLabel = tok.chordName ? `"${tok.chordName}"` : '';
++                    currentNotes += `${chordLabel} `;
+                 }
+ 
+                 const openSlur = (syllableCarry && tok.multiSyllableWord && tok.isWordStart) ? '(' : '';
+@@ -1304,8 +1304,7 @@
+ 
+                 currentBarEighths += tok.eighths;
+ 
+-                const canBreakBar = !tok.multiSyllableWord || tok.isWordEnd;
+-                if ((currentBarEighths >= beatsPerBar && canBreakBar) || tok.punct.includes('.') || tok.punct.includes('!') || tok.punct.includes('?')) {
++                if (currentBarEighths >= beatsPerBar) {
+                     currentNotes += '| ';
+                     currentStrum += '| ';
+                     currentBass += '| ';
+@@ -1318,7 +1318,7 @@
+                 systems.push({ notes: 'z4 |', lyrics: '', strum: 'z4 |', bass: 'z4 |' });
+             }
+ 
+-            const totalRealWords = wordObjects.filter(w => !w.isRest).length;
++            const totalRealWords = compiledTokens.filter(t => !t.isRest && t.isWordStart).length;
+             if (multiStaffOn) {
+                 const sysLines = [];
+                 systems.forEach((sys, sIdx) => {
+@@ -1368,7 +1368,7 @@
+             const statKey = document.getElementById('stat-key');
+             if (statKey) statKey.textContent = `${domPlane.id} • ${domPlane.modeName}`;
+             const statWords = document.getElementById('stat-words');
+-            if (statWords) statWords.textContent = `${totalRealWords} / ${compiledTokens.filter(t => !t.isRest).length}`;
++            if (statWords) statWords.textContent = `${totalRealWords} Words / ${compiledTokens.filter(t => !t.isRest).length} Notes`;
+             const statBars = document.getElementById('stat-bars');
+             if (statBars) statBars.textContent = `${barCount} Bars`;
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

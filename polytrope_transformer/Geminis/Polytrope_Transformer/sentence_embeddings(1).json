@@ -1,0 +1,67 @@
+[
+  {
+    "id": "NEG-1",
+    "category": "Negation",
+    "statement": "The government did not increase taxes on working families",
+    "audited_coords": [
+      -0.85,
+      0.65,
+      0.0
+    ],
+    "modal_state": "REDUCTIVE [is not]",
+    "dominant_plane": "Q1:Metaphysical (Who)",
+    "audit_violations": [
+      "NEGATION_COLLAPSE: Direct negation statement erroneously assigned inclusive/neutral boundary"
+    ],
+    "passed": true
+  },
+  {
+    "id": "PROM-1",
+    "category": "Promissory",
+    "statement": "The national government will deliver economic growth and support working families",
+    "audited_coords": [
+      0.45,
+      0.55,
+      0.25
+    ],
+    "modal_state": "PRODUCTIVE [can be]",
+    "dominant_plane": "Q1:Metaphysical (Who)",
+    "audit_violations": [
+      "MODAL_COLLAPSE: Promissory future assertion erroneously mapped to Regressive [was like]",
+      "CAUSAL_INVERSION: Future delivery promise mapped to upstream cause (-z)"
+    ],
+    "passed": true
+  },
+  {
+    "id": "SED-1",
+    "category": "Historical Sediment",
+    "statement": "The past decade of policy failure has created structural debt",
+    "audited_coords": [
+      -0.65,
+      -0.65,
+      -0.45
+    ],
+    "modal_state": "REGRESSIVE [was like]",
+    "dominant_plane": "Q6:Historical (Cause)",
+    "audit_violations": [
+      "TEMPORAL_SEDIMENT: Historical policy failure mapped to Regressive [was like]"
+    ],
+    "passed": true
+  },
+  {
+    "id": "SUB-1",
+    "category": "Substrate Shearing",
+    "statement": "The legislative reform generates unlimited clean electricity without infrastructure",
+    "audited_coords": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "modal_state": "PRODUCTIVE [can be]",
+    "dominant_plane": "Q1:Metaphysical (Who)",
+    "audit_violations": [
+      "SUBSTRATE_SHEARING: Physical energetic output claimed without physical substrate backing (Q3 Violation)"
+    ],
+    "passed": true
+  }
+]

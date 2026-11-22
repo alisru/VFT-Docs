@@ -1,0 +1,16 @@
+Command exited with code 0.
+
+Command output:
+
+E:\Vector Field Theory\peek_explorer\renderer.js:1415:    await refreshKeep(affected);
+E:\Vector Field Theory\peek_explorer\renderer.js:2262:        { label: '?  Refresh (F5)', run: () => refreshKeep() }
+E:\Vector Field Theory\peek_explorer\renderer.js:5821:        await refreshKeep([p, ...srcs.map(s => parent(s))]);
+E:\Vector Field Theory\peek_explorer\renderer.js:6815:const refreshKeep = async (affectedDirs = null) => {
+E:\Vector Field Theory\peek_explorer\renderer.js:6878:  await refreshKeep([dest, ...srcParents]);
+E:\Vector Field Theory\peek_explorer\renderer.js:6974:    await refreshKeep(affected);
+E:\Vector Field Theory\peek_explorer\renderer.js:6977:  await refreshKeep();
+E:\Vector Field Theory\peek_explorer\renderer.js:7199:  await refreshKeep();
+E:\Vector Field Theory\peek_explorer\renderer.js:7235:    { label: 'Refresh (F5)', run: refreshKeep },
+E:\Vector Field Theory\peek_explorer\renderer.js:7355:  else if (matchesHotkey(e, 'refresh')) refreshKeep();
+
+

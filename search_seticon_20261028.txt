@@ -1,0 +1,144 @@
+Command exited with code 0.
+
+Command output:
+
+  E:\Vector Field Theory\peek_explorer\renderer.js:553:    mediaBox.appendChild(a);
+  E:\Vector Field Theory\peek_explorer\renderer.js:554:  } else {
+  E:\Vector Field Theory\peek_explorer\renderer.js:555:    const img = document.createElement('img'); img.className = 
+'pv-img';
+> E:\Vector Field Theory\peek_explorer\renderer.js:556:    setIcon(img, it, 96, false);
+  E:\Vector Field Theory\peek_explorer\renderer.js:557:    mediaBox.appendChild(img);
+  E:\Vector Field Theory\peek_explorer\renderer.js:558:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:559:
+  E:\Vector Field Theory\peek_explorer\renderer.js:560:  const meta = box.querySelector('.pv-meta');
+  E:\Vector Field Theory\peek_explorer\renderer.js:561:  const dirSz = it.isDir && folderSizeCache.has(it.path) ? 
+`Folder size: ${fmtSize(folderSizeCache.get(it.path))}<br>` : '';
+  E:\Vector Field Theory\peek_explorer\renderer.js:562:  meta.innerHTML = `Type: ${typeOf(it)}<br>` +
+  E:\Vector Field Theory\peek_explorer\renderer.js:685:const PX = { details: 16, list: 16, small: 16, content: 32, 
+tiles: 40, medium: 48, large: 96, xl: 190, lens: 64, landscape: 64 };
+  E:\Vector Field Theory\peek_explorer\renderer.js:686:const iconCache = new Map();
+  E:\Vector Field Theory\peek_explorer\renderer.js:687:const MAX_RENDERER_ICON_CACHE = 350;
+> E:\Vector Field Theory\peek_explorer\renderer.js:688:async function setIcon(img, it, px = PX[mode], unique = false) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:689:  const key = px + '|' + (unique || px > 24 || it.isDir ? 
+it.path : (it.name.includes('.') ? it.name.split('.').pop().toLowerCase() : it.path));
+  E:\Vector Field Theory\peek_explorer\renderer.js:690:  if (!iconCache.has(key)) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:691:    if (iconCache.size >= MAX_RENDERER_ICON_CACHE) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:692:      const oldest = iconCache.keys().next().value;
+  E:\Vector Field Theory\peek_explorer\renderer.js:693:      iconCache.delete(oldest);
+  E:\Vector Field Theory\peek_explorer\renderer.js:694:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:926:  cell.title = it.name;
+  E:\Vector Field Theory\peek_explorer\renderer.js:927:  const ico = cell.querySelector('.ico');
+  E:\Vector Field Theory\peek_explorer\renderer.js:928:  if (PX[mode] > 24) ico.classList.add('photo');
+> E:\Vector Field Theory\peek_explorer\renderer.js:929:  setIcon(ico, it);
+  E:\Vector Field Theory\peek_explorer\renderer.js:930:
+  E:\Vector Field Theory\peek_explorer\renderer.js:931:  const chk = cell.querySelector('.chk');
+  E:\Vector Field Theory\peek_explorer\renderer.js:932:  chk.addEventListener('click', e => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:933:    e.stopPropagation();
+  E:\Vector Field Theory\peek_explorer\renderer.js:934:    setRowSelected(it, cell, chk.checked);
+  E:\Vector Field Theory\peek_explorer\renderer.js:935:    anchorPath = it.path; focusedPath = it.path;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1038:    const card = document.createElement('div'); card.className 
+= 'dash-card';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1039:    card._item = { path: d.path, name: `Local Disk 
+(${d.name.replace('\\', '')})`, isDir: true, size: d.total };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1040:    card.innerHTML = `<img class="ico"><div 
+class="dc-info"><div class="dc-title">Local Disk (${d.name.replace('\\', '')})</div><div class="dc-sub">${d.total ? 
+`${fmtSize(d.free)} free of ${fmtSize(d.total)}` : d.path}</div>${d.total ? `<div class="drive-bar"><i 
+style="width:${pct}%"></i></div>` : ''}</div>`;
+> E:\Vector Field Theory\peek_explorer\renderer.js:1041:    setIcon(card.querySelector('img'), { path: d.path, name: 
+d.name, isDir: true }, 32, true);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1042:    if (selected.has(d.path)) card.classList.add('sel');
+  E:\Vector Field Theory\peek_explorer\renderer.js:1043:    card.onclick = e => { e.stopPropagation(); 
+selectClick(card._item, card, e); };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1044:    card.ondblclick = e => { e.stopPropagation(); go(d.path); 
+};
+  E:\Vector Field Theory\peek_explorer\renderer.js:1045:    card.oncontextmenu = e => { e.preventDefault(); 
+e.stopPropagation(); selectClick(card._item, card, null); showMenu(e.clientX, e.clientY, card._item); };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1046:    card.addEventListener('auxclick', e => { if (e.button === 
+1) newTab(d.path, [], e.shiftKey); });
+  E:\Vector Field Theory\peek_explorer\renderer.js:1047:    wireDropTarget(card, () => d.path);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1061:    card.querySelector('.dc-title').textContent = p.name;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1062:    card.querySelector('.dc-sub').textContent = p.path;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1063:    card.title = p.path + ' (Click to select � Double-click to 
+open � Middle-click for new tab)';
+> E:\Vector Field Theory\peek_explorer\renderer.js:1064:    setIcon(card.querySelector('img'), { path: p.path, name: 
+p.name, isDir: true }, 32, true);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1065:    if (selected.has(p.path)) card.classList.add('sel');
+  E:\Vector Field Theory\peek_explorer\renderer.js:1066:    card.onclick = e => { e.stopPropagation(); 
+selectClick(card._item, card, e); };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1067:    card.ondblclick = e => { e.stopPropagation(); go(p.path); 
+};
+  E:\Vector Field Theory\peek_explorer\renderer.js:1068:    card.oncontextmenu = e => { e.preventDefault(); 
+e.stopPropagation(); selectClick(card._item, card, null); showMenu(e.clientX, e.clientY, card._item); };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1069:    card.addEventListener('auxclick', e => { if (e.button === 
+1) newTab(p.path, [], e.shiftKey); });
+  E:\Vector Field Theory\peek_explorer\renderer.js:1070:    wireDropTarget(card, () => p.path);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1112:      card.querySelector('.dc-title').textContent = 
+baseName(rp);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1113:      card.querySelector('.dc-sub').textContent = rp;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1114:      card.title = rp + ' (Click to select � Double-click to 
+open � Middle-click for new tab)';
+> E:\Vector Field Theory\peek_explorer\renderer.js:1115:      setIcon(card.querySelector('img'), { path: rp, name: 
+baseName(rp), isDir: true }, 32, false);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1116:      if (selected.has(rp)) card.classList.add('sel');
+  E:\Vector Field Theory\peek_explorer\renderer.js:1117:      card.onclick = e => { e.stopPropagation(); 
+selectClick(card._item, card, e); };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1118:      card.ondblclick = e => { e.stopPropagation(); go(rp); };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1119:      card.oncontextmenu = e => { e.preventDefault(); 
+e.stopPropagation(); selectClick(card._item, card, null); showMenu(e.clientX, e.clientY, card._item); };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1120:      card.addEventListener('auxclick', e => { if (e.button 
+=== 1) newTab(rp, [], e.shiftKey); });
+  E:\Vector Field Theory\peek_explorer\renderer.js:1121:      recGrid.appendChild(card);
+  E:\Vector Field Theory\peek_explorer\renderer.js:2373:          `;
+  E:\Vector Field Theory\peek_explorer\renderer.js:2374:          row.querySelector('.nm').textContent = 
+displayName(it);
+  E:\Vector Field Theory\peek_explorer\renderer.js:2375:          row.title = `${it.name}${it.isDir ? ' (Folder)' : ' 
+(' + fmtSize(it.size) + ')'}\n Single-click: ${it.isDir ? 'Open Room Island' : 'Open file'}\n Hold-click / F2: 
+Rename`;
+> E:\Vector Field Theory\peek_explorer\renderer.js:2376:          setIcon(row.querySelector('img'), it, 32);
+  E:\Vector Field Theory\peek_explorer\renderer.js:2377:
+  E:\Vector Field Theory\peek_explorer\renderer.js:2378:          const chk = row.querySelector('.chk');
+  E:\Vector Field Theory\peek_explorer\renderer.js:2379:          chk.onclick = ev => { ev.stopPropagation(); 
+setRowSelected(it, row, chk.checked); updateStatus(); };
+  E:\Vector Field Theory\peek_explorer\renderer.js:2380:          if (selected.has(it.path)) { 
+row.classList.add('sel'); chk.checked = true; selected.set(it.path, { item: it, cell: row }); }
+  E:\Vector Field Theory\peek_explorer\renderer.js:2381:
+  E:\Vector Field Theory\peek_explorer\renderer.js:2382:          if (it.isDir) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4479:    const n = document.createElement('div'); n.className = 'n';
+  E:\Vector Field Theory\peek_explorer\renderer.js:4480:    const i = document.createElement('img'); i.className = 
+'ico';
+  E:\Vector Field Theory\peek_explorer\renderer.js:4481:    n.append(i, document.createTextNode(b.name));
+> E:\Vector Field Theory\peek_explorer\renderer.js:4482:    setIcon(i, { path: b.path, name: b.name, isDir: true }, 
+16, true);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4483:    n.onclick = () => go(b.path);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4484:    n.addEventListener('auxclick', e => { if (e.button === 1) 
+newTab(b.path, [], e.shiftKey); });
+  E:\Vector Field Theory\peek_explorer\renderer.js:4485:    n.addEventListener('contextmenu', e => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4486:      e.preventDefault(); e.stopPropagation();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4487:      fillMenu([
+  E:\Vector Field Theory\peek_explorer\renderer.js:4488:        { label: 'Open', run: () => go(b.path) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:4584:      const i = document.createElement('img'); i.className = 
+'ico';
+  E:\Vector Field Theory\peek_explorer\renderer.js:4585:      n.append(i, document.createTextNode(p.name));
+  E:\Vector Field Theory\peek_explorer\renderer.js:4586:      n.title = p.path + ' (Middle-click for new tab)';
+> E:\Vector Field Theory\peek_explorer\renderer.js:4587:      setIcon(i, { path: p.path, name: p.name, isDir: true }, 
+16, true);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4588:      n.onclick = () => go(p.path);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4589:      n.addEventListener('auxclick', e => { if (e.button === 
+1) newTab(p.path, [], e.shiftKey); });
+  E:\Vector Field Theory\peek_explorer\renderer.js:4590:      wireDropTarget(n, () => p.path);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4591:      host.appendChild(n);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4592:    });
+  E:\Vector Field Theory\peek_explorer\renderer.js:4593:  };
+  E:\Vector Field Theory\peek_explorer\renderer.js:4722:    const sub = cell.querySelector('.sub');
+  E:\Vector Field Theory\peek_explorer\renderer.js:4723:    if (sub) sub.innerHTML = `${typeOf(it)}${szText ? ' � ' + 
+szText : ''}<br>${fmtDate(it.mtime)}`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:4724:    const ico = cell.querySelector('.ico');
+> E:\Vector Field Theory\peek_explorer\renderer.js:4725:    if (ico) setIcon(ico, it);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4726:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:4727:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:4728:
+  E:\Vector Field Theory\peek_explorer\renderer.js:4729:async function doUndo() {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4730:  const last = undoStack.pop();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4731:  if (!last) return;
+
+

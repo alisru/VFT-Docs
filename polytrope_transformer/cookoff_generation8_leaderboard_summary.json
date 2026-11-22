@@ -1,0 +1,74 @@
+{
+  "generation": 8,
+  "timestamp": "2026-11-01T02:10:38Z",
+  "benchmark_document": "e:\\Vector Field Theory\\VFT Docs\\_VFT MD\\Treatise_on_How_Words_Work.md",
+  "results": {
+    "Agent 1 (75M/25F)": {
+      "total_sentences": 125,
+      "retained_exons": 121,
+      "culled_introns": 4,
+      "culling_rate_pct": 3.2,
+      "string_snapping_events": 34,
+      "causal_debt_violations": 1,
+      "hadron_singlet_count": 1,
+      "runtime_ms": 3422.94
+    },
+    "Agent 2 (50M/50F)": {
+      "total_sentences": 125,
+      "retained_exons": 123,
+      "culled_introns": 2,
+      "culling_rate_pct": 1.6,
+      "string_snapping_events": 30,
+      "healed_bridging_gluons": 30,
+      "hadron_singlet_count": 1,
+      "runtime_ms": 3628.77
+    },
+    "Agent 3 (25M/75F)": {
+      "total_sentences": 125,
+      "retained_exons": 123,
+      "culled_introns": 2,
+      "culling_rate_pct": 1.6,
+      "string_snapping_events": 22,
+      "nonlocal_resonances_found": 0,
+      "hadron_singlet_count": 1,
+      "runtime_ms": 3640.75
+    }
+  },
+  "agent2_bridges_sample": [
+    {
+      "rupture_index": 1,
+      "from_sentence": "Under this view, language is merely a code used by humans to...",
+      "to_sentence": "This foundation is broken....",
+      "bridge": {
+        "bridge_plane": "Q4_Lyrical",
+        "bridge_confidence": 0.2082,
+        "repair_operator": "lambda_3 (x) lambda_8 :: Traverse Q4_Lyrical to close gap from Q1_Metaphysical to Q4_Lyrical"
+      }
+    },
+    {
+      "rupture_index": 3,
+      "from_sentence": "It fails to explain why language works across radically diff...",
+      "to_sentence": "Vector Field Theory (VFT) and Actualism establish a differen...",
+      "bridge": {
+        "bridge_plane": "Q4_Lyrical",
+        "bridge_confidence": 0.2644,
+        "repair_operator": "lambda_3 (x) lambda_8 :: Traverse Q4_Lyrical to close gap from Q4_Lyrical to Q3_Physical"
+      }
+    },
+    {
+      "rupture_index": 5,
+      "from_sentence": "A word does not exist in a vacuum....",
+      "to_sentence": "It is an operational formula that records how an applied for...",
+      "bridge": {
+        "bridge_plane": "Q3_Physical",
+        "bridge_confidence": 0.2859,
+        "repair_operator": "lambda_3 (x) lambda_8 :: Traverse Q3_Physical to close gap from Q1_Metaphysical to Q5_Logical"
+      }
+    }
+  ],
+  "agent3_resonances_sample": [],
+  "agent3_unsaid_horizon": {
+    "highest_latent_potential_plane": "Q4_Lyrical",
+    "unsaid_horizon_insight": "The document's underlying event physics concentrates most strongly on Q1_Metaphysical, yet establishes an unsaid bridge directly into Q4_Lyrical. The implicit topological conclusion is that Metaphysical operations inevitably constrain the Lyrical state space."
+  }
+}

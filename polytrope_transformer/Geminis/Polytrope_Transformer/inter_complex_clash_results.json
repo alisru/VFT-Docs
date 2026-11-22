@@ -1,0 +1,118 @@
+{
+  "cycle": 8,
+  "experiment": "Inter-Complex Parliamentary Clash & 3D WebGL Trajectory Generation",
+  "clash_metrics": {
+    "complex_A": "Opposition Parliamentary Challenge (1999 Hansard)",
+    "complex_B": "Government National Policy Delivery (1999 Hansard)",
+    "classification": "CONTRADICTORY_EXCLUSIVE ([is not])",
+    "polyhedral_overlap": 0.0023,
+    "morphic_isomorphism": 0.0,
+    "substrate_alignment_q": 0.8315,
+    "delta_vector": {
+      "delta_upsilon": 2.3,
+      "delta_psi": 0.8333,
+      "delta_z": 0.8667
+    }
+  },
+  "trajectory_sample": [
+    {
+      "step": 1,
+      "token": "The",
+      "coords": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "step": 2,
+      "token": "national",
+      "coords": [
+        0.15,
+        0.1,
+        0.05
+      ]
+    },
+    {
+      "step": 3,
+      "token": "government",
+      "coords": [
+        0.25,
+        0.2,
+        0.08
+      ]
+    },
+    {
+      "step": 4,
+      "token": "will",
+      "coords": [
+        0.45,
+        0.55,
+        0.25
+      ]
+    },
+    {
+      "step": 5,
+      "token": "deliver",
+      "coords": [
+        0.55,
+        0.65,
+        0.35
+      ]
+    },
+    {
+      "step": 6,
+      "token": "economic",
+      "coords": [
+        0.65,
+        0.7,
+        0.45
+      ]
+    },
+    {
+      "step": 7,
+      "token": "growth",
+      "coords": [
+        0.75,
+        0.75,
+        0.55
+      ]
+    },
+    {
+      "step": 8,
+      "token": "and",
+      "coords": [
+        0.8,
+        0.7,
+        0.6
+      ]
+    },
+    {
+      "step": 9,
+      "token": "support",
+      "coords": [
+        0.95,
+        0.75,
+        0.7
+      ]
+    },
+    {
+      "step": 10,
+      "token": "working",
+      "coords": [
+        1.1,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "step": 11,
+      "token": "families",
+      "coords": [
+        1.25,
+        0.85,
+        0.9
+      ]
+    }
+  ]
+}

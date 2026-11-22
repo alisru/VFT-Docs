@@ -1,0 +1,203 @@
+Command exited with code 0.
+
+Command output:
+rss_feeds = [
+        # General & World News
+        {"name": "ABC News Australia", "url": "https://www.abc.net.au/news/feed/2942460/rss.xml", "categories": ["general", "world"]},
+        {"name": "9News Australia", "url": "https://www.9news.com.au/rss", "categories": ["general"]},
+        {"name": "SBS News", "url": "https://www.sbs.com.au/news/feed", "categories": ["general", "world"]},
+        {"name": "Sydney Morning Herald", "url": "https://www.smh.com.au/rss/feed.xml", "categories": ["general"]},
+        {"name": "Perth Now", "url": "https://www.perthnow.com.au/feed", "categories": ["general"]},
+        {"name": "Daily Mail Australia", "url": "https://www.dailymail.co.uk/auhome/index.rss", "categories": ["general"]},
+        {"name": "The Age", "url": "https://www.theage.com.au/rss/feed.xml", "categories": ["general"]},
+        {"name": "Brisbane Times", "url": "https://www.brisbanetimes.com.au/rss/feed.xml", "categories": ["general"]},
+        {"name": "WA Today", "url": "https://www.watoday.com.au/rss/feed.xml", "categories": ["general"]},
+        {"name": "Canberra Times", "url": "https://www.canberratimes.com.au/rss.xml", "categories": ["general"]},
+        {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml", "categories": ["general", "world"]},
+        {"name": "NYT Home", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml", "categories": ["general", "world"]},
+        {"name": "Fox News Latest", "url": "http://feeds.foxnews.com/foxnews/latest", "categories": ["general", "world"]},
+        {"name": "New York Post", "url": "https://nypost.com/news/feed/", "categories": ["general", "politics", "world"]},
+        {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss", "categories": ["world", "general"]},
+        {"name": "The Guardian UK", "url": "https://www.theguardian.com/uk/rss", "categories": ["general"]},
+        {"name": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml", "categories": ["general", "world"]},
+        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "categories": ["world", "general"]},
+        {"name": "DW News World", "url": "https://rss.dw.com/xml/rss-en-all", "categories": ["world", "general"]},
+        {"name": "France 24", "url": "https://www.france24.com/en/rss", "categories": ["world", "general"]},
+        {"name": "CBC News", "url": "https://rss.cbc.ca/lineup/topstories.xml", "categories": ["world", "general"]},
+        {"name": "UPI News", "url": "https://rss.upi.com/news/news.rss", "categories": ["world", "general"]},
+        {"name": "Google News World", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en", "categories": ["world", "general"]},
+        {"name": "Google News Australia", "url": "https://news.google.com/rss?hl=en-AU&gl=AU&ceid=AU:en", "categories": ["general"]},
+
+        # Tech
+        {"name": "BBC Tech", "url": "http://feeds.bbci.co.uk/news/technology/rss.xml", "categories": ["tech"]},
+        {"name": "NYT Tech", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", "categories": ["tech"]},
+        {"name": "TechCrunch", "url": "https://techcrunch.com/feed/", "categories": ["tech"]},
+        {"name": "The Guardian Tech", "url": "https://www.theguardian.com/technology/rss", "categories": ["tech"]},
+
+        # Business
+        {"name": "BBC Business", "url": "http://feeds.bbci.co.uk/news/business/rss.xml", "categories": ["business"]},
+        {"name": "NYT Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", "categories": ["business"]},
+        {"name": "CNBC Business", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147", "categories": ["business"]},
+        {"name": "The Guardian Business", "url": "https://www.theguardian.com/business/rss", "categories": ["business"]},
+        {"name": "DW Business", "url": "https://rss.dw.com/xml/rss-en-bus", "categories": ["business"]},
+
+        # Politics
+        {"name": "BBC Politics", "url": "http://feeds.bbci.co.uk/news/politics/rss.xml", "categories": ["politics"]},
+        {"name": "NYT Politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml", "categories": ["politics"]},
+        {"name": "Fox News Politics", "url": "http://feeds.foxnews.com/foxnews/politics", "categories": ["politics", "world", "general"]},
+        {"name": "Washington Examiner", "url": "https://www.washingtonexaminer.com/feed/", "categories": ["politics", "general"]},
+        {"name": "The Federalist", "url": "https://thefederalist.com/feed/", "categories": ["politics", "general"]},
+        {"name": "Washington Times", "url": "https://www.washingtontimes.com/rss/headlines/news/politics/", "categories": ["politics", "general"]},
+        {"name": "Daily Caller", "url": "https://dailycaller.com/feed/", "categories": ["politics", "general"]},
+        {"name": "Breitbart", "url": "https://feeds.feedburner.com/breitbart", "categories": ["politics", "general"]},
+        {"name": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml", "categories": ["politics"]},
+        {"name": "The Guardian Politics", "url": "https://www.theguardian.com/politics/rss", "categories": ["politics"]},
+
+        # Science
+        {"name": "BBC Science", "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "categories": ["science"]},
+        {"name": "NYT Science", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml", "categories": ["science"]},
+        {"name": "The Guardian Science", "url": "https://www.theguardian.com/science/rss", "categories": ["science"]},
+        {"name": "DW Science", "url": "https://rss.dw.com/xml/rss-en-science", "categories": ["science"]},
+
+        # Uplifting / Good News
+        {"name": "Good News Network", "url": "https://www.goodnewsnetwork.org/feed/", "categories": ["uplifting", "general"]},
+        {"name": "Positive News", "url": "https://www.positive.news/feed/", "categories": ["uplifting"]},
+        {"name": "Optimist Daily", "url": "https://www.optimistdaily.com/feed/", "categories": ["uplifting"]},
+        {"name": "Squirrel News", "url": "https://squirrel-news.net/feed/", "categories": ["uplifting"]},
+        {"name": "ABC News Australia Good News", "url": "https://www.abc.net.au/news/feed/101830674/rss.xml", "categories": ["uplifting", "general"]},
+        {"name": "HuffPost Good News", "url": "https://www.huffpost.com/section/good-news/feed", "categories": ["uplifting", "general"]}
+    ]
+
+    if getattr(args, 'enabled_feeds', None):
+        enabled_names = [f.strip().lower() for f in args.enabled_feeds.split(",") if f.strip()]
+        filtered_feeds = []
+        for feed in rss_feeds:
+            if feed["name"].lower() in enabled_names or feed["url"].lower() in enabled_names:
+                filtered_feeds.append(feed)
+        rss_feeds = filtered_feeds
+
+    rss_candidates = []
+
+    requested_categories = [c.strip().lower() for c in (args.category or "all").split(",") if c.strip()]
+    keywords = [k.strip().lower() for k in args.topic.split(",") if k.strip()] if args.topic else []
+
+    banned_map = load_banned_topics()
+    banned_keywords = []
+
+    if args.banned_topic:
+        user_banned = [k.strip().lower() for k in args.banned_topic.split(",") if k.strip()]
+        for item in user_banned:
+            if item in banned_map:
+                banned_keywords.extend(banned_map[item])
+            else:
+                banned_keywords.append(item)
+    else:
+        for cat, kws in banned_map.items():
+            banned_keywords.extend(kws)
+
+    banned_keywords = list(dict.fromkeys([kw.lower() for kw in banned_keywords]))
+
+    if TARGET_RSS > 0:
+        for feed in rss_feeds:
+            print(f"Fetching from {feed['name']} RSS feed: {feed['url']}...")
+            req = urllib.request.Request(feed['url'], headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'})
+            try:
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    content = response.read()
+                root = ET.fromstring(content)
+                items = root.findall('.//item')
+                print(f"Found {len(items)} raw items in {feed['name']}.")
+            
+                for item in items:
+                    title = item.find('title')
+                    desc = item.find('description')
+                    link = item.find('link')
+                
+                    title_text = title.text.strip() if title is not None and title.text else ""
+                    desc_text = desc.text.strip() if desc is not None and desc.text else ""
+                    link_text = link.text.strip() if link is not None and link.text else ""
+                
+                    if not title_text or not link_text:
+                        continue
+                    
+                    if not is_news_url(link_text):
+                        continue
+                    
+                    desc_cleaned = re.sub(r'<[^>]*>', '', desc_text)
+                    text_body = f"{title_text}\n\n{desc_cleaned}"
+                
+                    if len(text_body) < 45:
+                        continue
+                    if not is_english(text_body):
+                        continue
+                    if normalize_url(link_text) in seen_historical_urls:
+                        continue
+                
+                    # Filter by Category
+                    if not matches_category(text_body, link_text, feed.get("categories", []), requested_categories):
+                        continue
+                
+                    # Filter by Topic
+                    if keywords:
+                        if not any(k in title_text.lower() or k in desc_cleaned.lower() for k in keywords):
+                            continue
+                        
+                    # Banned topic filtering
+                    if is_banned(title_text + "\n" + desc_cleaned, link_text, banned_keywords):
+                        continue
+                
+                    if is_duplicate_story(text_body, link_text):
+                        continue
+                    
+                    # Parse publication date
+                    pub_date = datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)
+                    for child in item:
+                        tag_lower = child.tag.lower()
+                        if tag_lower.endswith('pubdate') or tag_lower.endswith('date'):
+                            if child.text:
+                                try:
+                                    val = child.text.strip()
+                                    if 'T' in val:
+                                        pub_date = datetime.datetime.fromisoformat(val.replace('Z', '+00:00'))
+                                    else:
+                                        pub_date = email.utils.parsedate_to_datetime(val)
+                                    if pub_date.tzinfo is None:
+                                        pub_date = pub_date.replace(tzinfo=datetime.timezone.utc)
+                                    break
+                                except Exception:
+                                    pass
+    
+                    rss_candidates.append({
+                        "url": link_text,
+                        "target_url": "",
+                        "mode": "root",
+                        "text": text_body,
+                        "subject": title_text[:30].strip() + "...",
+                        "pub_date": pub_date
+                    })
+                
+            except Exception as e:
+                print(f"Warning: Failed to fetch {feed['name']} RSS: {e}")
+    else:
+        print("RSS target already satisfied. Skipping RSS harvesting.")
+
+    # Sort all RSS candidates by pub_date descending (newest first)
+    rss_candidates = sorted(
+        rss_candidates,
+        key=lambda c: c.get("pub_date", datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)),
+        reverse=True
+    )
+
+    # Apply preference and target limits to the chronological list
+    preferred_rss = [c for c in rss_candidates if is_preferred_outlet(c["url"])]
+    regular_rss = [c for c in rss_candidates if not is_preferred_outlet(c["url"])]
+    rss_candidates = (preferred_rss + regular_rss)[:TARGET_RSS]
+
+    # Convert pub_date to string for JSON serialization
+    for c in rss_candidates:
+        if "pub_date" in c and isinstance(c["pub_date"], datetime.datetime):
+            c["pub_date"] = c["pub_date"].isoformat()
+
+    print(f"Harvested exactly {len(rss_candidates)} RSS candidates.")
+
+    

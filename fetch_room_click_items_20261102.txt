@@ -1,0 +1,232 @@
+Command exited with code 0.
+
+Command output:
+
+  renderer.js:585:  if (bodyEl) {
+> renderer.js:586:    const rows = bodyEl.querySelectorAll('.room-item');
+  renderer.js:587:    rows.forEach(row => {
+  renderer.js:588:      const it = row._item;
+  renderer.js:589:      if (!it) return;
+  renderer.js:590:      if (it.isDir) {
+  renderer.js:591:        const isBridged = row.classList.contains('bridged');
+  renderer.js:592:        const dIdx = parseInt(row.dataset.dirIndex || '0', 10);
+  renderer.js:593:        const childEntry = typeof roomMap !== 'undefined' ? roomMap.get(it.path) : null;
+  renderer.js:594:        const targetChildColor = (childEntry && childEntry.roomColor)
+  renderer.js:595:          ? childEntry.roomColor
+  renderer.js:596:          : (typeof computeRoomAndChildColor === 'function' && typeof layout !== 'undefined'
+  renderer.js:934:
+> renderer.js:935:const visibleRows = () => [...$('list').querySelectorAll('.row.item, .room-item, .room-file, 
+.room-door, .dash-card')].filter(r => r._item && r.style.display !== 'none' && !r.closest('.collapsed'));
+  renderer.js:936:function updateToolbarContextButtons() {
+  renderer.js:937:  const selCount = selected.size;
+  renderer.js:938:  $('cutBtn')?.classList.toggle('disabled', selCount === 0);
+  renderer.js:939:  $('copyBtn')?.classList.toggle('disabled', selCount === 0);
+  renderer.js:940:  $('pasteBtn')?.classList.toggle('disabled', !clip || !clip.paths || !clip.paths.length);
+  renderer.js:941:  $('renameBtn')?.classList.toggle('disabled', selCount !== 1);
+  renderer.js:942:  $('deleteBtn')?.classList.toggle('disabled', selCount === 0);
+  renderer.js:943:}
+  renderer.js:944:
+  renderer.js:945:function updateStatus() {
+  renderer.js:1267:  if (mode === 'landscape' || mode === 'lens') {
+> renderer.js:1268:    for (const r of $('list').querySelectorAll('.room-item, .room-file, .room-door')) {
+  renderer.js:1269:      if (!r._item) continue;
+  renderer.js:1270:      const hiddenBlocked = !showHidden && r._item.name.startsWith('.');
+  renderer.js:1271:      r.style.display = hiddenBlocked ? 'none' : '';
+  renderer.js:1272:    }
+  renderer.js:1273:    if (q && typeof window._openLandscapeJumpModal === 'function') {
+  renderer.js:1274:      window._openLandscapeJumpModal(filterText, false);
+  renderer.js:1275:    }
+  renderer.js:1276:    return;
+  renderer.js:1277:  }
+> renderer.js:1278:  for (const r of $('list').querySelectorAll('.row.item, .room-item, .room-file, .room-door')) {
+  renderer.js:1279:    if (!r._item) continue;
+  renderer.js:1280:    const hiddenBlocked = !showHidden && r._item.name.startsWith('.');
+  renderer.js:1281:    const matchFilter = !q || r._item.name.toLowerCase().includes(q) || (r._item.isDir && 
+expanded.has(r._item.path));
+  renderer.js:1282:    r.style.display = (!hiddenBlocked && matchFilter) ? '' : 'none';
+  renderer.js:1283:  }
+  renderer.js:1284:}
+  renderer.js:1285:
+  renderer.js:1286:// ---- Drag & drop helper ----
+  renderer.js:1287:const MIME_PATHS = 'application/x-peek-paths';
+  renderer.js:1288:const MIME_TAB = 'application/x-peek-tab';
+  renderer.js:2103:  listEl.addEventListener('mousedown', e => {
+> renderer.js:2104:    if (mode === 'landscape' || mode === 'lens' || cur === HOME_URI || e.button !== 0 || 
+e.target.closest('.row.item') || e.target.closest('.room-item') || e.target.closest('.arrow') || 
+e.target.closest('.grp-head') || e.target.closest('.dash') || e.target.closest('.grp-fold') || 
+e.target.closest('.kids')) return;
+  renderer.js:2105:    hideMenu();
+  renderer.js:2106:    const cr = contentEl.getBoundingClientRect();
+  renderer.js:2107:    startX = e.clientX - cr.left; startY = e.clientY - cr.top;
+  renderer.js:2108:    dragging = false;
+  renderer.js:2109:    basePaths = e.ctrlKey ? new Set(selected.keys()) : new Set();
+  renderer.js:2110:    if (!e.ctrlKey && !e.shiftKey) clearSelection();
+  renderer.js:2111:
+  renderer.js:2112:    const onMove = ev => {
+  renderer.js:2113:      const curX = ev.clientX - cr.left, curY = ev.clientY - cr.top;
+  renderer.js:2114:      if (!dragging && Math.hypot(curX - startX, curY - startY) < 4) return;
+  renderer.js:3268:    rm.addEventListener('contextmenu', async e => {
+> renderer.js:3269:      if (e.target.closest('.room-item') || e.target.closest('.room-file') || 
+e.target.closest('.room-door')) return;
+  renderer.js:3270:      e.preventDefault(); e.stopPropagation();
+  renderer.js:3271:      selectActiveRoom(roomPath);
+  renderer.js:3272:      await syncClip();
+  renderer.js:3273:      fillMenu([
+  renderer.js:3274:        { label: `?? Room: ${entry.name}`, disabled: true },
+  renderer.js:3275:        { label: '?? Zoom into this Room', run: () => panToRoom(true) },
+  renderer.js:3276:        { label: '? Auto-fit Room box to contents', run: () => 
+rm.querySelector('[data-rm="fit"]').click() },
+  renderer.js:3277:        '-',
+  renderer.js:3278:        { label: '?? View: Details', run: () => setRoomView(roomPath, 'details') },
+  renderer.js:3279:        { label: '?? View: Tiles', run: () => setRoomView(roomPath, 'tiles') },
+  renderer.js:3361:          const hasThumb = isThumbFile(it);
+> renderer.js:3362:          row.className = 'room-item ' + (it.isDir ? 'is-dir' : 'is-file' + (hasThumb ? ' 
+has-thumb' : '')) + (isBridged ? ' bridged' : '');
+  renderer.js:3363:          row._item = it;
+  renderer.js:3364:          row.draggable = true;
+  renderer.js:3365:          if (it.isDir) {
+  renderer.js:3366:            const dIdx = dirCounter++;
+  renderer.js:3367:            row.dataset.subpath = it.path;
+  renderer.js:3368:            row.dataset.dirIndex = String(dIdx);
+  renderer.js:3369:            entry.dirRows.push(row);
+  renderer.js:3370:            entry.subRowMap.set(it.path, row);
+  renderer.js:3371:            const childEntry = roomMap.get(it.path);
+  renderer.js:3372:            const targetChildColor = (childEntry && childEntry.roomColor)
+  renderer.js:3433:
+> renderer.js:3434:          const focusOrOpenChildRoom = async () => {
+  renderer.js:3435:            let targetRm = roomMap.get(it.path);
+  renderer.js:3436:            if (!targetRm) {
+  renderer.js:3437:              const sIdx = entry.subDirs.findIndex(d => d.path === it.path);
+  renderer.js:3438:              const pref = preferredRingPos(Math.max(0, sIdx), entry.subDirs.length, depth + 1, 
+entry.x, entry.y, entry.ang, entry, it.path);
+  renderer.js:3439:              targetRm = await spawnRoom(it.path, it.name, roomPath, depth + 1, pref);
+  renderer.js:3440:              resolveRoomCollisions();
+  renderer.js:3441:              syncDoorwayBadges();
+  renderer.js:3442:              drawBridges();
+  renderer.js:3443:              recordResourceAction(`Opened room (${it.name})`);
+  renderer.js:3444:            }
+  renderer.js:3458:                ev.stopPropagation();
+> renderer.js:3459:                await focusOrOpenChildRoom();
+  renderer.js:3460:              };
+  renderer.js:3461:            }
+  renderer.js:3462:            const bridgeInd = row.querySelector('.rm-bridge-indicator');
+  renderer.js:3463:            if (bridgeInd) {
+  renderer.js:3464:              bridgeInd.onclick = async ev => {
+  renderer.js:3465:                ev.stopPropagation();
+  renderer.js:3466:                if (ev.shiftKey) {
+> renderer.js:3467:                  await focusOrOpenChildRoom();
+  renderer.js:3468:                  return;
+  renderer.js:3469:                }
+  renderer.js:3470:                if (roomMap.has(it.path)) {
+  renderer.js:3471:                  closeRoomRecursive(it.path);
+  renderer.js:3472:                  recordResourceAction(`Closed room (${it.name})`);
+  renderer.js:3473:                } else {
+  renderer.js:3474:                  const sIdx = entry.subDirs.findIndex(d => d.path === it.path);
+  renderer.js:3475:                  const pref = preferredRingPos(Math.max(0, sIdx), entry.subDirs.length, depth + 1, 
+entry.x, entry.y, entry.ang, entry, it.path);
+  renderer.js:3476:                  await spawnRoom(it.path, it.name, roomPath, depth + 1, pref);
+  renderer.js:3477:                  resolveRoomCollisions();
+  renderer.js:3525:              updateStatus();
+> renderer.js:3526:              await focusOrOpenChildRoom();
+  renderer.js:3527:              return;
+  renderer.js:3528:            }
+  renderer.js:3529:
+  renderer.js:3530:            selectClick(it, row, e);
+  renderer.js:3531:
+  renderer.js:3532:            if (it.isDir) {
+  renderer.js:3533:              if (roomMap.has(it.path)) {
+  renderer.js:3534:                // 1-Click CLOSE: Room is already open, click immediately closes it!
+  renderer.js:3535:                closeRoomRecursive(it.path);
+  renderer.js:3536:                syncDoorwayBadges();
+  renderer.js:3574:            if (it.isDir) {
+> renderer.js:3575:              await focusOrOpenChildRoom();
+  renderer.js:3576:            } else {
+  renderer.js:3577:              if (e.shiftKey) {
+  renderer.js:3578:                // Shift + Double Click opens native Windows application
+  renderer.js:3579:                window.api.open(it.path);
+  renderer.js:3580:              } else {
+  renderer.js:3581:                // Standard Double Click in Landscape: opens within landscape canvas!
+  renderer.js:3582:                await spawnFileViewerIsland(it.path, it.name, roomPath);
+  renderer.js:3583:              }
+  renderer.js:3584:            }
+  renderer.js:3585:          };
+  renderer.js:3591:              if (it.isDir) {
+> renderer.js:3592:                await focusOrOpenChildRoom();
+  renderer.js:3593:              } else if (/\.html?$/i.test(it.name)) {
+  renderer.js:3594:                await spawnHtmlIsland(it.path, it.name, roomPath);
+  renderer.js:3595:              } else {
+  renderer.js:3596:                await spawnFileViewerIsland(it.path, it.name, roomPath);
+  renderer.js:3597:              }
+  renderer.js:3598:            }
+  renderer.js:3599:          });
+  renderer.js:3600:
+  renderer.js:3601:          row.addEventListener('contextmenu', e => {
+  renderer.js:3602:            e.preventDefault(); e.stopPropagation();
+  renderer.js:3625:    for (const r of roomMap.values()) {
+> renderer.js:3626:      const dirs = r.dirRows || r.el.querySelectorAll('.room-item.is-dir');
+  renderer.js:3627:      for (const d of dirs) {
+  renderer.js:3628:        const subPath = d.dataset.subpath;
+  renderer.js:3629:        const dIdx = parseInt(d.dataset.dirIndex || '0', 10);
+  renderer.js:3630:        const isBridged = roomMap.has(subPath);
+  renderer.js:3631:        const childEntry = roomMap.get(subPath);
+  renderer.js:3632:        const targetChildColor = (childEntry && childEntry.roomColor)
+  renderer.js:3633:          ? childEntry.roomColor
+  renderer.js:3634:          : computeRoomAndChildColor(subPath, r, dIdx, r.depth + 1, layout.rooms?.[subPath]);
+  renderer.js:3635:        const unopenedBase = useCustomUnselectedFolder
+  renderer.js:3636:          ? unselectedFolderColor
+  renderer.js:5314:      updateCameraAndLens();
+> renderer.js:5315:      const rows = r.el.querySelectorAll('.room-item');
+  renderer.js:5316:      for (const row of rows) {
+  renderer.js:5317:        if (row._item && row._item.path === m.path) {
+  renderer.js:5318:          clearSelection();
+  renderer.js:5319:          setRowSelected(row._item, row, true);
+  renderer.js:5320:          row.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  renderer.js:5321:          row.classList.remove('jump-flash-highlight');
+  renderer.js:5322:          void row.offsetWidth;
+  renderer.js:5323:          row.classList.add('jump-flash-highlight');
+  renderer.js:5324:          updateStatus();
+  renderer.js:5325:          break;
+  renderer.js:6991:    for (const p of paths) {
+> renderer.js:6992:      document.querySelectorAll('.row.item, .room-item, .room-file, .room-door, 
+.grp-fold').forEach(el => {
+  renderer.js:6993:        if ((el._item && el._item.path === p) || (el._folderPath === p)) el.remove();
+  renderer.js:6994:      });
+  renderer.js:6995:    }
+  renderer.js:6996:    totalCount = Math.max(0, totalCount - paths.length);
+  renderer.js:6997:    updateStatus();
+  renderer.js:6998:    if (nextItemPath) {
+  renderer.js:6999:      const refreshedRows = visibleRows();
+  renderer.js:7000:      const newRow = refreshedRows.find(r => r._item && r._item.path === nextItemPath) || 
+refreshedRows[Math.min(idx, refreshedRows.length - 1)];
+  renderer.js:7001:      if (newRow && newRow._item) focusRow(newRow, false);
+  renderer.js:7002:    }
+  renderer.js:7018:    for (const p of paths) {
+> renderer.js:7019:      document.querySelectorAll('.row.item, .room-item, .room-file, .room-door, 
+.grp-fold').forEach(el => {
+  renderer.js:7020:        if ((el._item && el._item.path === p) || (el._folderPath === p)) el.remove();
+  renderer.js:7021:      });
+  renderer.js:7022:    }
+  renderer.js:7023:    totalCount = Math.max(0, totalCount - paths.length);
+  renderer.js:7024:    updateStatus();
+  renderer.js:7025:    if (nextItemPath) {
+  renderer.js:7026:      const refreshedRows = visibleRows();
+  renderer.js:7027:      const newRow = refreshedRows.find(r => r._item && r._item.path === nextItemPath) || 
+refreshedRows[Math.min(idx, refreshedRows.length - 1)];
+  renderer.js:7028:      if (newRow && newRow._item) focusRow(newRow, false);
+  renderer.js:7029:    }
+  renderer.js:7075:
+> renderer.js:7076:  const subDirsInCur = [...$('list').querySelectorAll('.row.item[data-is-dir="1"], 
+.room-item.is-dir')]
+  renderer.js:7077:    .map(el => el._item)
+  renderer.js:7078:    .filter(d => d && d.isDir && !paths.includes(d.path));
+  renderer.js:7079:
+  renderer.js:7080:  fillMenu([
+  renderer.js:7081:    ...(!multi ? [
+  renderer.js:7082:      { label: 'Open', run: () => it.isDir ? go(it.path) : (/\.html?$/i.test(it.name) ? 
+newTab(it.path, [], true) : window.api.open(it.path)) },
+  renderer.js:7083:      ...(it.isDir ? [
+  renderer.js:7084:        { label: 'Open in new tab (Middle-click)', run: () => newTab(it.path, [], true) },
+  renderer.js:7085:        { label: 'Open in background tab', run: () => newTab(it.path, [], false) },
+  renderer.js:7086:        { label: 'Open in new window', run: () => window.api.newWindow(it.path) },
+
+

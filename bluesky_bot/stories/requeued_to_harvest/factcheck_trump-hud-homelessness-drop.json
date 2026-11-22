@@ -1,0 +1,198 @@
+[
+  {
+    "thinking": "Detailed Phase 1-5 structural scan: Evaluating Trump administration HUD policy changes and homelessness drop claims against California's actual numbers (LA homelessness increase). Stated claim projects nationwide success (+0.5, 0.0), while reality reflects political scapegoating of immigration and housing policies (-0.8, -0.9). Hypocrisy R_net = 12.5. Attractor forces distributed granularly.",
+    "id": "trump-hud-homelessness-drop",
+    "subject": "Trump administration touts historic drop in homelessness as HUD scraps Biden-era policies",
+    "link": "https://nypost.com/2026/11/06/us-news/trump-administration-touts-historic-drop-in-homelessness-as-hud-scraps-biden-era-policies/",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.0,
+    "real_u": -0.75,
+    "real_psi": -0.85,
+    "mode": "root",
+    "posts": [
+      "Washington celebrates national metrics while local crises deepen on the ground.\nEvidence: HUD report, PIT count, LA count\n#Aletheia #Housing #USPol 🌐",
+      "The administration credits border enforcement and treatment-first policies for a nationwide drop in homelessness.\nStated Judgement: (+0.50, +0.00) — Lesser Good",
+      "While federal figures drop nationally, major urban centers like Los Angeles see rising homelessness amid policy clashes.\nResulting Judgement: (-0.75, -0.85) — Greater Evil",
+      "Verdict: FAIL — Awakening into Destruction.\n\nIntegrity: Severe Deception (Hypocrisy: 12.5, z: 4)",
+      "- HUD Policy Shift: COND (0.2, -0.4) — Treatment-first mandates risk excluding unhoused individuals lacking immediate care.\n- California Housing: FAIL (-0.7, -0.8) — Urban centers buck national trends as costs and shortages persist.",
+      "The HUD shift replaces Housing First with Treatment First, sparking fierce debates over sanctuary policies and urban encampments.",
+      "The Poison:\nWeaponizing national statistics to score political points while local communities struggle with housing shortages.",
+      "The Breakdown & Plane Error:\nConfusing macro-level statistical aggregation with ground-level municipal reality, masking urban suffering.",
+      "Social Physics Analysis:\nUsing federal data to deflect systemic housing failures onto local sanctuary policies while avoiding long-term structural investments.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen policy claims positive national outcomes while ignoring regional divergence, it maps a trajectory toward deception. (u: -0.8, psi: -0.9)",
+      "The Unavoidable Truth: Federal statistical drops do not eliminate acute urban homelessness crises.\n\nThe Unavoidable Lie: Blaming sanctuary policies solves the underlying housing shortage.",
+      "Alethekanon:\nNational metrics are weaponized to obscure local realities, substituting political narrative for actual structural solutions.",
+      "Awwthekanon:\nBehind every statistical debate are human beings struggling for shelter and dignity. Let's focus on compassionate care.",
+      "Brothekanon:\nSpinning numbers from Washington doesn't fix the tents on the streets in L.A.",
+      "Spirithekanon:\n\"Do not withhold good from those to whom it is due, when it is in your power to act.\" Proverbs 3:27 PASS\nTrue stewardship requires addressing human need rather than trading political blame."
+    ],
+    "actors": [
+      "Donald Trump",
+      "Scott Turner",
+      "Department of Housing and Urban Development",
+      "Los Angeles Homeless Services Authority"
+    ],
+    "actor_roles": [
+      {
+        "name": "Donald Trump",
+        "role": "instigator"
+      },
+      {
+        "name": "Scott Turner",
+        "role": "instigator"
+      },
+      {
+        "name": "Department of Housing and Urban Development",
+        "role": "instigator"
+      },
+      {
+        "name": "Los Angeles Homeless Services Authority",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "COMPLETED DRY RUN",
+    "claim_rnet": 1.0,
+    "real_rnet": 12.5,
+    "claim_z": 0,
+    "real_z": 4,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Severe Deception",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "HUD Policy Shift",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": -0.8,
+        "real_psi": -0.9,
+        "verdict": "FAIL",
+        "reason": "Treatment first mandates risk excluding vulnerable unhoused populations."
+      },
+      {
+        "aspect": "California Housing Crisis",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": -0.7,
+        "real_psi": -0.8,
+        "verdict": "FAIL",
+        "reason": "Urban centers buck national trends as housing shortages persist."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "will be",
+    "modal_real": "is not",
+    "modal_vector": "Top-Right to Bottom-Left Inversion",
+    "geodesic": "Red Top (The Imperial Trap)",
+    "central_is_barrier_crossed": true,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nTrump administration touts historic drop in homelessness as HUD scraps Biden-era policies\n\nBut California's homelessness crisis is moving in the opposite direction.\n\nActual Article Body:\nSwitch between CA and NY editions here.\n\nSee more of our coverage in your search results.\n\nThe Trump administration is touting a historic drop in homelessness nationwide — but California’s biggest city is bucking the trend.\n\nThe Department of Housing and Urban Development announced Friday that homelessness had recorded its largest-ever decline, crediting President Trump’s border crackdown and push to replace the Biden-era approach to housing with policies focused on addiction treatment.\n\n“According to data from the 2026 nationwide Point-in-Time (PIT) count, 698,425 individuals were homeless on a single night in January, a 6.3% decrease since President Trump took office in 2025. This follows historic border control and a Supreme Court victory reaffirming the right of local governments to limit dangerous encampments,” HUD said.\n\nThe biggest news, opinion and culture shaping California right now.\n\nPlease provide a valid email.\n\nBy clicking above you agree to the Terms of Use and Privacy Policy.\n\nNever miss a story\n\nBut California’s homelessness crisis is moving in the opposite direction.\n\nLos Angeles County recorded an estimated 73,040 homeless residents in 2026, a 1.2% increase, while the city of Los Angeles saw its homeless population jump 3.4% to 45,194, according to the Los Angeles Homeless Services Authority.\n\n“Under the Biden Administration’s Housing First mandate, homelessness increased 28% from 2022 to 2025. This is why HUD is dispensing with this harmful approach and implementing Treatment First policies to help Americans tackle addiction,” the agency added.\n\nHUD Secretary Scott Turner also took aim at the Biden administration’s immigration policies, accusing illegal immigrants of contributing to homelessness and criticizing sanctuary policies in states including California, New York, Illinois and Massachusetts.\n\nThe Trump administration is moving away from the longstanding federal “Housing First” model, which prioritizes providing shelter without requiring people to first undergo addiction treatment, in favor of its “Treatment First” framework, which emphasizes addressing substance abuse and connecting people with care.\n\nTrump signed an executive order in July 2025 directing federal agencies to pursue the new approach and crack down on homelessness, crime and disorder in public spaces.\n\nCalifornia Post News: Facebook, Instagram, TikTok, X, YouTube, WhatsApp, LinkedInCalifornia Post Sports Facebook, Instagram, TikTok, YouTube, XCalifornia Post ...",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://nypost.com/2026/11/06/us-news/trump-administration-touts-historic-drop-in-homelessness-as-hud-scraps-biden-era-policies/",
+        "snippet": "Stated Claim / Post Context:\nTrump administration touts historic drop in homelessness as HUD scraps Biden-era policies\n\nBut California's homelessness crisis is moving in the opposite direction.\n\nActual Article Body:\nSwitch between CA and NY editions here.\n\nSee more of our coverage in your search res"
+      }
+    ],
+    "grounding_url": "https://www.foxnews.com/politics/trump-highlights-nasa-nuclear-powered-mars-spacecraft-mission-planned-2028",
+    "category": "all",
+    "topic": "Housing",
+    "event": "",
+    "path_name": "Awakening into Destruction",
+    "policies": []
+  }
+]

@@ -93,3 +93,32 @@ Subagents suffer from context amnesia and routinely fail to uphold rigid formatt
 ### 3. Dynamic Card & Persona Resiliency
 - Image card renderers must never assume fixed post array lengths (e.g. `posts[13]`). Persona cards must be extracted dynamically by prefix matching (`Alethekanon:`, `Awwthekanon:`, `Brothekanon:`, `Spirithekanon:`) with dynamic multi-column layouts adapting to 1, 2, 3, or 4 personas.
 
+## Anti-Carelessness & Pipeline Data Integrity Rules
+
+### 1. Mandatory Data Payload Inspection Before Migration / Serialization
+- **Never Assume Schema from Variable Names**: You are strictly forbidden from writing conversion, requeue, migration, or export scripts based on assumed key names (e.g., assuming `text` contains the scraped article body without inspecting real files on disk).
+- **Inspect Ground-Truth Records First**: Before writing any code that transfers data between pipeline stages (e.g., `harvested_candidates.json` <-> `darkroom` <-> `stories/` <-> `stories/live/`), you MUST read and print the full JSON keys and sample values of an actual existing file on disk.
+- **Preserve Heavy Payloads**: High-entropy fields (`scraped_text`, `cross_source_dossier`, `aspects`, `stated_forces`, `actual_forces`, `modal_vector`) are core computational assets. You must NEVER map them to short fallbacks (e.g., using `subject` or truncated previews as a fallback for missing body text).
+- **Enforce Payload Assertions**: Any script populating `harvested_candidates.json` MUST assert that `len(candidate['text']) >= 200` for every scraped candidate. If an item fails this assertion, log an error immediately rather than writing a hollow record.
+
+### 2. Canonical Directory Structure Adherence
+- **Zero Ad-Hoc Directory Creation**: You must never invent new directory names (e.g., `stories/drafts/`, `backup_drafts/`, `requeued_to_harvest/`) based on conversational shorthand.
+- **Established Story Hierarchy**:
+  - `stories/`: The ONLY active drafts directory (e.g. `stories/factcheck_*.json`).
+  - `stories/live/`: Published / live stories.
+  - `stories/darkroom/`: Intermediate evaluation staging before promotion.
+  - `stories/quarantine/`: Failed, rejected, or non-news stories.
+- If data must be temporarily held or staged, use the established staging directories or ask the user before creating new folder trees.
+
+### 3. Byte & Count Verification Gate
+- After writing or moving pipeline datasets, you must immediately verify and print both:
+  1. The record count before and after.
+  2. The total file size / byte length to guarantee that data was not silently stripped, truncated, or hollowed out.
+
+### 4. Mandatory Context Familiarization & Ban on Guesses
+- **Read First, Act Second**: Before writing code or transforming data, thoroughly read the project's documentation, schemas, and instructions. Never operate on superficial guesses or variable names.
+- **Stop and Ask**: If anything about a file format, data requirement, or system architecture is unclear or unknown, STOP and ask the user directly instead of making random wild assumptions.
+- **Zero Litter**: Never create ad-hoc scratch folders, temporary directories, or orphan helper scripts in the workspace. Clean up all temporary scripts immediately upon completion.
+
+
+

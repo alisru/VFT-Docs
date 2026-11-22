@@ -1,0 +1,191 @@
+[
+  {
+    "thinking": "Phase 1-5 Audit Scan for Candidate 1: Man found dead in trash bag in NYC (Joseph Owusu). Stated claim frames the tragic discovery of 24-year-old devout churchgoer Joseph Owusu dumped in Canarsie, Brooklyn. Actual ground truth: A brutal murder and clandestine body disposal captured on surveillance, reflecting localized violent crime and human tragedy (-0.9, -0.9). Evaluated via 6 Attractor Forces with granular decimals. Stated claims project community shock and sorrow (+0.5, +0.0). Actual forces reflect violent crime impact and criminal disregard (GE S:1.5, LE S:1.2). Integrity R_net = 1.0 (reporting is factual and investigative). Modal claim: can be -> is not. Trajectory: Fall into Destruction.",
+    "id": "man-found-dead-in-trash-bag-in-nyc",
+    "subject": "Man found dead in trash bag in NYC was 'devout' churchgoer, pianist from Ghana",
+    "link": "https://nypost.com/2026/11/06/us-news/man-found-dead-in-trash-bag-in-nyc-was-devout-churchgoer-pianist-from-ghana/",
+    "target_url": "",
+    "claim_u": 0.5,
+    "claim_psi": 0.0,
+    "real_u": -0.9,
+    "real_psi": -0.8,
+    "mode": "root",
+    "posts": [
+      "A devout young musician\u2019s life ends in unimaginable tragedy on a Brooklyn sidewalk.\nEvidence: Joseph Owusu death, Canarsie body dump, NYPD homicide probe\n#NewYork #Crime \ud83c\udf10",
+      "Local reporting highlights the life and tragic murder of 24-year-old Joseph Owusu, found dead in a garbage bag in Canarsie.\nStated Judgement: (+0.50, +0.00) \u2014 Lesser Good",
+      "Surveillance footage reveals perpetrators cowardly discarding a young man's body in a trash bag, exposing brutal violence and loss of life.\nResulting Judgement: (-0.90, -0.80) \u2014 Greater Evil",
+      "Verdict: FAIL \u2014 Awakening into Destruction.\nA brutal homicide cuts short a young innocent life, turning a community's mourning into a grim quest for justice.\n\nIntegrity: Absolute Truth (Hypocrisy: 1.0, Uncertainty z: 0)",
+      "- NYPD Investigation: PASS (-0.9, -0.8) \u2014 Actively pursuing perpetrators caught on camera.\n- Community Impact: FAIL (-0.9, -0.9) \u2014 Tragic loss of an innocent life.",
+      "The discovery of Joseph Owusu's body in Canarsie has devastated his family and Bronx community, leaving police searching for answers.",
+      "The Bright Side:\nNeighbors remember Owusu as a radiant, hardworking young man who brought joy through his music.",
+      "The Breakdown & Plane Error:\nThe report focuses on the victim's virtuous character (Q1) while the physical reality involves a brutal murder and body disposal (Q3).",
+      "Social Physics Analysis:\nCriminal perpetrators executed a cowardly act of destruction, concealing a violent crime while leaving a grieving family to seek justice amidst senseless tragedy.",
+      "The Trajectory: The Path of Awakening into Destruction.\nWhen brutal violence destroys innocent life, it creates an immediate descent into Greater Evil. Mathematical vector: u=-0.9, psi=-0.9.",
+      "The Unavoidable Truth: An innocent young man's life was brutally ended and discarded like trash.\n\nThe Unavoidable Lie: Senseless violence can ever be justified by perpetrators.",
+      "Alethekanon:\nSenseless violence destroys an innocent life, reducing a vibrant young musician to a grim police statistic.",
+      "Awwthekanon:\nJoseph Owusu filled his halls with piano melodies and kindness. May his family find comfort in the profound love and light he shared during his short time.",
+      "Brothekanon:\nHeartbreaking news out of Brooklyn. A hardworking kid just trying to live an honest life taken away like that. Hope they catch whoever did this.",
+      "Spirithekanon:\n\"The righteous perish, and no man layeth it to heart.\" Isaiah 57:1 PASS (Spiritual Vector)\nSenseless violence robs the world of gentle souls, leaving a silence that only justice and remembrance can attempt to fill."
+    ],
+    "actors": [
+      "Joseph Owusu",
+      "New York Police Department",
+      "Embassy of Ghana"
+    ],
+    "actor_roles": [
+      {
+        "name": "Joseph Owusu",
+        "role": "instigator"
+      },
+      {
+        "name": "New York Police Department",
+        "role": "instigator"
+      },
+      {
+        "name": "Embassy of Ghana",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "DRAFT",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.0,
+    "claim_z": 0,
+    "real_z": 0,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Absolute Truth",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "NYPD Homicide Investigation",
+        "claim_u": 0.5,
+        "claim_psi": 0.0,
+        "real_u": -0.9,
+        "real_psi": -0.8,
+        "verdict": "PASS",
+        "reason": "Accurate reporting on a tragic Brooklyn homicide case."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "can be",
+    "modal_real": "is not",
+    "modal_vector": "Top-Right to Bottom-Left Inversion",
+    "geodesic": "Red Top (The Imperial Trap)",
+    "central_is_barrier_crossed": true,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nMan found dead in trash bag in NYC was \u2018devout\u2019 churchgoer, pianist from Ghana\n\nJoseph Owusu, 24, was found lifeless in a garbage bag around 9:20 a.m. Oct. 30 outside a church at East 93rd Street and Avenue L in Canarsie, according to the Embassy of Ghana.\n\nActual Article Body:\nSwitch between CA and NY editions here.\n\nSee more of our coverage in your search results.\n\nThe man who was found dead in a trash bag in Brooklyn last week was a \u201cdevout\u201d churchgoer from Ghana who played gospel music on the piano, according to his neighbors.\n\nJoseph Owusu, 24, was found lifeless in a garbage bag around 9:20 a.m. Oct. 30 outside a church at East 93rd Street and Avenue L in Canarsie, according to the Embassy of Ghana.\n\nFootage obtained by News 12 shows one person unloading the large black bag holding Owusu\u2019s body from the truck of a white sedan \u2013 as another occupant of the car stood by \u2013 before abandoning it on the sidewalk.\n\nOwusu lived in the Olinville section of the Bronx, where neighbors described him as a charming and delightful person who regularly attended church in that borough.\n\n\u201cHe could walk into a room and light up a room,\u201d said neighbor Derrick Jackson, 55.\n\n\u201cI saw him the day before, just here in the hallway,\u201d added Jackson, a former paramedic. \u201cIt was just regular, \u2018Hey what\u2019s going on, all right, have a blessed day.\u2019 That\u2019s it.\u201d\n\nOwusu worked as a caregiver for people with disabilities, and was a chorister at his local Methodist church, according to the embassy.\n\n\u201cHe is remembered by the family as a beloved son and brother, and his tragic loss has left his family and community devastated,\u201d the diplomatic mission posted on Facebook.\n\nJackson recalled that Owusu could often be seen playing gospel tunes on his keyboard in the hallway.\n\n\u201cHe was always working, doing something productive,\u201d the neighbor added. \u201cHe wasn\u2019t hanging out on the streets. I just hope he gets justice.\u201d\n\nHe fell short for words when asked what he thought may have led to Owusu\u2019s death.\n\n\u201cThat was pure evil,\u201d\u00a0 Jackson said. \u201cSomething needs to be done. It could be my own child.\u201d\n\nTatiana Fields, who has lived in the apartment building for 10 years and grew up alongside the Owusu family, described him as extremely well-mannered.\n\n\u201cHis whole family, they were into church so they went to church every Sunday,\u201d Fields said. \u201cThey would dress up real nice in their suits and their dresses. He was a very quiet kid, a good kid, well not a kid \u2013 he\u2019s an adult. But you know, for the most part, a good person.\u201d\n\n\u201cMom worked, brother, all of them pretty much work,\u201d she added. \u201cThey\u2019re not like a troublesome family.\u201d\n\nOwusu\u2019s body was discovered when a homeless man scavenging for scrap metal found the black bag and dragged it down the block before opening it, making the...",
+    "cluster_sources": [
+      {
+        "publisher": "",
+        "url": "https://nypost.com/2026/11/06/us-news/man-found-dead-in-trash-bag-in-nyc-was-devout-churchgoer-pianist-from-ghana/",
+        "snippet": "Stated Claim / Post Context:\nMan found dead in trash bag in NYC was \u2018devout\u2019 churchgoer, pianist from Ghana\n\nJoseph Owusu, 24, was found lifeless in a garbage bag around 9:20 a.m. Oct. 30 outside a church at East 93rd Street and Avenue L in Canarsie, according to the Embassy of Ghana.\n\nActual Articl"
+      }
+    ],
+    "grounding_url": "https://www.abc.net.au/news/2026-11-07/gladstone-teen-charged-with-planning-to-cause-death/107359128",
+    "category": "all",
+    "topic": "NewYork",
+    "event": "",
+    "path_name": "Awakening into Destruction",
+    "policies": [],
+    "graph_img": "graph_png/man-found-dead-in-trash-bag-in-nyc_graph.png",
+    "rkeys": [],
+    "post_urls": [],
+    "tags": [
+      "NewYork",
+      "Crime"
+    ]
+  }
+]

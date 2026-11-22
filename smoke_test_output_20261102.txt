@@ -1,0 +1,329 @@
+Command exited with code 0.
+
+Command output:
+
+> peek-explorer@0.8.20 test
+> electron . --smoke-test
+
+
+[23456:1102/190943.794:ERROR:cache_util_win.cc(20)] Unable to move the cache: Access is denied. (0x5)
+[23456:1102/190943.794:ERROR:cache_util_win.cc(20)] Unable to move the cache: Access is denied. (0x5)
+[23456:1102/190943.795:ERROR:cache_util_win.cc(20)] Unable to move the cache: Access is denied. (0x5)
+[23456:1102/190943.804:ERROR:disk_cache.cc(208)] Unable to create cache
+[23456:1102/190943.804:ERROR:gpu_disk_cache.cc(713)] Gpu Cache Creation failed: -2
+[23456:1102/190943.804:ERROR:disk_cache.cc(208)] Unable to create cache
+[23456:1102/190943.804:ERROR:gpu_disk_cache.cc(713)] Gpu Cache Creation failed: -2
+[23456:1102/190943.804:ERROR:disk_cache.cc(208)] Unable to create cache
+[23456:1102/190943.804:ERROR:gpu_disk_cache.cc(713)] Gpu Cache Creation failed: -2
+[Renderer 1] %c[PEEK-BOOT:1] >>> renderer.js script execution started <<< background: #0284c7; color: #fff; font-size: 13px; font-weight: bold; padding: 2px 6px; border-radius: 3px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4)
+[Renderer 1] [PEEK-BOOT:1] document.readyState at script start: loading (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5)
+[Renderer 1] [PEEK-BOOT:1] window.api available?: true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6)
+[Renderer 1] [PEEK-BOOT:1] window.api keys: list,folderSize,search,cancelSearch,open,places,pins,icon,verbs,doVerb,props,copyPath,showInFolder,rename,batchRename,getSettings,saveSettings,newWindow,openDevTools,getClip,setClip,getOsClipFiles,readPreview,writeTextFile,getResourceMetrics,pickScript,pickFolder,pickHtmlFile,runScript,openTerminal,runTerminalCmd,zipItems,unzipItem,newFolder,newFile,trash,deletePermanent,paste,checkConflict,startDrag,onRtsHotkey,getPathForFile (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:8)
+[Renderer 1] [PEEK-BOOT:1] location: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:12)
+[Renderer 1] [PEEK-BOOT:2] Checking core DOM elements before event attachment: (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2110)
+[Renderer 1] [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2111)
+[Renderer 1] %c[PEEK-BOOT:3] === Starting Async Bootstrap Sequence === background: #6366f1; color: #fff; font-size: 13px; font-weight: bold; padding: 2px 6px; border-radius: 3px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6784)
+[Renderer 1] [PEEK-BOOT:3] DOM status: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6785)
+[Renderer 1] [PEEK-BOOT:3] Step 1: Checking window.api.getSettings availability... (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6796)
+[Renderer 1] [PEEK-BOOT:3] Step 1: Requesting settings with 1500ms timeout race... (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6798)
+[Renderer 2] %cElectron Security Warning (Disabled webSecurity) font-weight: bold; This renderer process has "webSecurity" disabled. This
+  exposes users of this app to severe security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged. (node:electron/js2c/sandbox_bundle:2)
+[Renderer 2] %cElectron Security Warning (allowRunningInsecureContent) font-weight: bold; This renderer process has "allowRunningInsecureContent"
+  enabled. This exposes users of this app to severe security risks.
+
+  
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged. (node:electron/js2c/sandbox_bundle:2)
+[Renderer 2] %cElectron Security Warning (Insecure Content-Security-Policy) font-weight: bold; This renderer process has either no Content Security
+  Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+  this app to unnecessary security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged. (node:electron/js2c/sandbox_bundle:2)
+[Renderer 1] [PEEK-BOOT:3] Step 1: Settings successfully retrieved: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6801)
+[Renderer 1] [PEEK-BOOT:3] Step 2: Unpacking settings into runtime configuration... (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6810)
+[Renderer 1] [PEEK-BOOT:3] Step 3: Initializing tabs. startPath from query: E:\Vector Field Theory\peek_explorer isPrimary: true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6897)
+[Renderer 1] [PEEK-BOOT:3] Initializing fresh single tab with path="E:\Vector Field Theory\peek_explorer"... (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6914)
+[Renderer 1] [PEEK-BOOT:3] Calling loadTab(0)... (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6916)
+[Renderer 1] %c[PEEK-TAB] loadTab(index=0) called color: #f59e0b; font-weight: bold [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5974)
+[Renderer 1] [PEEK-TAB] loadTab(0): cur resolved to "E:\Vector Field Theory\peek_explorer", effMode="medium". Calling show() & renderTabs()... (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5984)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="medium" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\peek_explorer", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] loadTab(0) complete (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5987)
+[Renderer 1] [PEEK-BOOT:3] Step 4: Populating sidebar skeleton in #nav... (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6930)
+[Renderer 1] [PEEK-BOOT:3] Step 5: Triggering places() and pins() shell requests... (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6970)
+[Renderer 1] %c[PEEK-BOOT:3] === Async Bootstrap Sequence Completed Successfully === background: #22c55e; color: #fff; font-size: 13px; font-weight: bold; padding: 2px 6px; border-radius: 3px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:6994)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\peek_explorer") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 42 items inside container for "E:\Vector Field Theory\peek_explorer" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="details" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\peek_explorer", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\peek_explorer") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 42 items inside container for "E:\Vector Field Theory\peek_explorer" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="tiles" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\peek_explorer", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\peek_explorer") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 42 items inside container for "E:\Vector Field Theory\peek_explorer" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="list" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\peek_explorer", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\peek_explorer") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 42 items inside container for "E:\Vector Field Theory\peek_explorer" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="small" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\peek_explorer", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\peek_explorer") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 42 items inside container for "E:\Vector Field Theory\peek_explorer" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="medium" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\peek_explorer", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\peek_explorer") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 42 items inside container for "E:\Vector Field Theory\peek_explorer" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="large" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\peek_explorer", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\peek_explorer") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 42 items inside container for "E:\Vector Field Theory\peek_explorer" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="xl" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\peek_explorer", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\peek_explorer") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 42 items inside container for "E:\Vector Field Theory\peek_explorer" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="content" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\peek_explorer", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\peek_explorer") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 42 items inside container for "E:\Vector Field Theory\peek_explorer" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\peek_explorer" | mode="landscape" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\peek_explorer". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\VFT Docs\_VFT MD" | mode="medium" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\VFT Docs\_VFT MD". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\VFT Docs\_VFT MD", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\VFT Docs\_VFT MD" | mode="landscape" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\VFT Docs\_VFT MD". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\VFT Docs\_VFT MD") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 48 items inside container for "E:\Vector Field Theory\VFT Docs\_VFT MD" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+(node:23456) electron: Failed to load URL: file:///E:/Vector%20Field%20Theory/peek_explorer/test.html with error: ERR_FILE_NOT_FOUND
+(Use `electron --trace-warnings ...` to show where the warning was created)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4404)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4410)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4411)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4412)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 0] Rendering was performed in a subtree hidden by content-visibility. (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:4413)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+(node:23456) electron: Failed to load URL: file:///E:/Vector%20Field%20Theory/peek_explorer/test.html with error: ERR_FILE_NOT_FOUND
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=1 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=2 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=2 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=3 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=3 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=3 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\VFT Docs\_VFT MD" | mode="details" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\VFT Docs\_VFT MD". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\VFT Docs\_VFT MD", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=3 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\VFT Docs\_VFT MD") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 48 items inside container for "E:\Vector Field Theory\VFT Docs\_VFT MD" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="E:\Vector Field Theory\VFT Docs\_VFT MD" | mode="medium" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="E:\Vector Field Theory\VFT Docs\_VFT MD". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] %c[PEEK-DIR] renderDir("E:\Vector Field Theory\VFT Docs\_VFT MD", depth=0) called color: #06b6d4; font-weight: bold (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1542)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=3 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+[Renderer 1] [PEEK-DIR] window.api.list("E:\Vector Field Theory\VFT Docs\_VFT MD") returned: [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1556)
+[Renderer 1] [PEEK-DIR] Rendering 48 items inside container for "E:\Vector Field Theory\VFT Docs\_VFT MD" (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1579)
+[Renderer 1] %c[PEEK-HOME] renderHomeDashboard() called color: #3b82f6; font-weight: bold [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1924)
+[Renderer 1] %c[PEEK-SHOW] show() called | cur="peek://home" | mode="medium" background: #10b981; color: #fff; font-weight: bold; padding: 2px 4px (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5635)
+[Renderer 1] [PEEK-CRUMBS] renderCrumbs() executing for cur="peek://home". bar element exists? true (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:2302)
+[Renderer 1] [PEEK-SHOW] Branch: HOME_URI -> hiding header and rendering Home Dashboard (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5647)
+[Renderer 1] %c[PEEK-HOME] renderHomeDashboard() called color: #3b82f6; font-weight: bold [object Object] (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:1924)
+[Renderer 1] [PEEK-SHOW] Finished Home Dashboard setup (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5655)
+[Renderer 1] [PEEK-TAB] renderTabs() executing. bar element exists? true, count=3 (file:///E:/Vector%20Field%20Theory/peek_explorer/renderer.js:5859)
+✓ PASS: List element rendered with items
+✓ PASS: Wheel scroll permitted on Initial view
+✓ PASS: Wheel scroll permitted on View: details
+✓ PASS: Wheel scroll permitted on View: tiles
+✓ PASS: Wheel scroll permitted on View: list
+✓ PASS: Wheel scroll permitted on View: small
+✓ PASS: Wheel scroll permitted on View: medium
+✓ PASS: Wheel scroll permitted on View: large
+✓ PASS: Wheel scroll permitted on View: xl
+✓ PASS: Wheel scroll permitted on View: content
+✓ PASS: Landscape viewport element exists
+✓ PASS: Landscape rooms rendered
+✓ PASS: Landscape loads user folder (E:\Vector Field Theory\VFT Docs\_VFT MD)
+✓ PASS: Landscape HUD buttons respond without error
+✓ PASS: Room local view selector works
+✓ PASS: Landscape room item bridge indicator is clean corner badge and not inside c-name
+✓ PASS: Single click on folder in Landscape mode toggles room state (open/close)
+✓ PASS: Clicking folder again in Landscape mode toggles back (1-click toggle)
+✓ PASS: Single click on file in Landscape mode selects item without opening
+✓ PASS: Spawn folder directly into Landscape mode creates island
+✓ PASS: Spawn HTML island into Landscape renders iframe viewer
+✓ PASS: Middle-click on Room Header opens new tab
+✓ PASS: Middle-click on Room Folder Item opens new tab
+✓ PASS: Landscape canvas wheel zoom intercepts event
+✓ PASS: Wheel scroll permitted on Landscape indoor room body
+✓ PASS: Landscape Tactical Radar HUD element exists
+✓ PASS: Wheel scroll permitted on View: details after exiting landscape
+✓ PASS: Wheel scroll permitted on View: medium after exiting landscape
+✓ PASS: Medium view filenames bounded without horizontal overlap
+✓ PASS: Wheel scroll permitted on Split pane list
+✓ PASS: Draggable split resizer element exists and is active
+✓ PASS: Address bar icon and history chevron buttons exist
+✓ PASS: Clicking location icon activates address input with full path
+✓ PASS: Toolbar separated into dedicated Navigation and Command rows - addrWrap not inside navRow
+✓ PASS: Single click selects Home Dashboard card without premature navigation
+✓ PASS: Integrated Terminal Drawer and Command Bar button exist
+✓ PASS: Skittles mode, Room Glow slider, and White Breathing target color settings exist - setBreathTargetColor missing
+✓ PASS: Authentic Windows 11 Fluent folder icon returned for directories without chassis fallback

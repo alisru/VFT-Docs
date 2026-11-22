@@ -1,0 +1,2206 @@
+Command exited with code 0.
+
+Command output:
+warning: in the working copy of 'renderer.js', LF will be replaced by CRLF the next time Git touches it
+diff --git a/renderer.js b/renderer.js
+index 5f664c0..e045941 100644
+--- a/renderer.js
++++ b/renderer.js
+@@ -52,9 +52,150 @@ window.addEventListener('unhandledrejection', e => reportError(e.reason));
+ 
+ let cur = HOME_URI, hist = [HOME_URI], hi = 0, totalCount = 0;
+ let mode = 'details', sortKey = 'name', sortAsc = true, groupKey = 'none';
+-let folderViews = {}, defaultView = 'details';
++let folderViews = {}, defaultView = 'details', forceGlobalView = false;
+ let kidsLayouts = {}, kidsRoomSize = {}; // per-folder layout of expanded contents + sub-room sizes
++let kidsGroups = {};                  // per-subroom grouping ('none', 'type', 'mtime', 'name', 'size', 'ext')
+ let kidsDense = {}, denseTop = false;     // dense packing (fill gaps around sub-rooms): per folder + top-level list
++let virtualRooms = {};                  // { [folderPath]: string[] } - folders injected virtually as rooms
++
++// ---- RTS Hotkey Favorite Rooms (Keys 1 to =) ----
++const HOTKEY_SLOTS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='];
++let hotkeyContainers = {}; // { [slot]: { name: string, items: Array<{ path: string, name: string, isDir: boolean }> } }
++let hotkeyRoomsEnabled = true;
++let hotkeyFadeDelay = 1800;
++let hotkeyKeepHovered = true;
++let hotkeyZIndex = 2000;
++const hotkeyFadeTimers = {};
++const hotkeyRoomElements = {};
++const hotkeyPositions = {};
++
++// ---- Image Thumb Fit Mode (cover, contain, fill, scale-down) ----
++let imageThumbFit = 'cover';
++function applyImageThumbFit(fit) {
++  imageThumbFit = ['cover', 'contain', 'fill', 'scale-down'].includes(fit) ? fit : 'cover';
++  document.documentElement.style.setProperty('--thumb-fit', imageThumbFit);
++  if ($('setImageThumbFit')) $('setImageThumbFit').value = imageThumbFit;
++}
++
++// ---- Deep Search Engine (Recursive file search with wildcards & content matching) ----
++let isSearching = false, currentSearchQuery = '', searchResults = [];
++const escapeHtml = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
++
++function renderSearchBanner(state, query, dir, count = 0, error = null, truncated = false) {
++  const sb = $('searchBanner');
++  if (!sb) return;
++  sb.classList.remove('hidden');
++  if (state === 'searching') {
++    sb.innerHTML = `<div class="sb-text"><span class="sb-spinner">⏳</span> Searching subfolders in <span class="sb-dir">${escapeHtml(dir)}</span> for <span class="sb-query">"${escapeHtml(query)}"</span>…</div>` +
++      `<button class="sb-cancel" id="sbCancelBtn">Cancel</button>`;
++  } else if (state === 'error') {
++    sb.innerHTML = `<div class="sb-text">❌ Search error: ${escapeHtml(error)}</div>` +
++      `<button class="sb-cancel" id="sbCancelBtn">✕ Exit Search</button>`;
++  } else {
++    const truncText = truncated ? ' (capped at limit)' : '';
++    sb.innerHTML = `<div class="sb-text">🔍 Results for <span class="sb-query">"${escapeHtml(query)}"</span> in <span class="sb-dir">${escapeHtml(dir)}</span> <span class="sb-count">${count} items${truncText}</span></div>` +
++      `<button class="sb-cancel" id="sbCancelBtn" title="Press Esc to exit search">✕ Exit Search (Esc)</button>`;
++  }
++  $('sbCancelBtn')?.addEventListener('click', () => clearDeepSearch());
++}
++
++function removeSearchBanner() {
++  const sb = $('searchBanner');
++  if (sb) {
++    sb.classList.add('hidden');
++    sb.innerHTML = '';
++  }
++}
++
++function clearDeepSearch(shouldShow = true) {
++  if (isSearching) {
++    if (window.api && typeof window.api.cancelSearch === 'function') {
++      window.api.cancelSearch();
++    }
++    isSearching = false;
++    currentSearchQuery = '';
++    searchResults = [];
++    removeSearchBanner();
++    if (shouldShow) show();
++  }
++  if ($('search')) $('search').value = '';
++  filterText = '';
++  $('searchClearBtn')?.classList.add('hidden');
++  applyFilter();
++}
++
++function reRenderSearchResults() {
++  const list = $('list');
++  list.className = 'v-' + mode;
++  if ($('header')) $('header').style.display = mode === 'details' ? 'flex' : 'none';
++  list.innerHTML = '';
++  searchResults = sortItems(searchResults);
++  for (const it of searchResults) {
++    list.append(...itemNodes(it, 0));
++  }
++  updateStatus();
++}
++
++async function runDeepSearch(query) {
++  if (!query) {
++    clearDeepSearch();
++    return;
++  }
++  isSearching = true;
++  currentSearchQuery = query;
++  const targetDir = cur;
++  if (!targetDir || targetDir === HOME_URI) return;
++
++  $('searchClearBtn')?.classList.remove('hidden');
++  renderSearchBanner('searching', query, targetDir, 0);
++
++  const list = $('list');
++  list.innerHTML = '';
++  const loadingMsg = document.createElement('div');
++  loadingMsg.className = 'msg';
++  loadingMsg.style.padding = '24px 16px';
++  loadingMsg.innerHTML = `<span class="sb-spinner">⏳</span> Searching subfolders in <strong>${escapeHtml(targetDir)}</strong> for "<em>${escapeHtml(query)}</em>"…`;
++  list.appendChild(loadingMsg);
++
++  try {
++    const res = await window.api.search({ dir: targetDir, query, recursive: true, maxResults: 1500 });
++    if (!isSearching || currentSearchQuery !== query) return;
++
++    list.innerHTML = '';
++    if (res.error) {
++      list.appendChild(msg('(' + res.error + ')', 0));
++      renderSearchBanner('error', query, targetDir, 0, res.error);
++      return;
++    }
++
++    searchResults = sortItems(res.items || []);
++    totalCount = searchResults.length;
++    renderSearchBanner('done', query, targetDir, searchResults.length, null, res.truncated);
++
++    if (!searchResults.length) {
++      const emptyMsg = document.createElement('div');
++      emptyMsg.className = 'msg';
++      emptyMsg.style.padding = '24px 16px';
++      emptyMsg.innerHTML = `No items matching "<strong>${escapeHtml(query)}</strong>" found in <em>${escapeHtml(targetDir)}</em> or its subfolders.`;
++      list.appendChild(emptyMsg);
++      updateStatus();
++      return;
++    }
++
++    list.className = 'v-' + mode;
++    if ($('header')) $('header').style.display = mode === 'details' ? 'flex' : 'none';
++
++    for (const it of searchResults) {
++      list.append(...itemNodes(it, 0));
++    }
++    updateStatus();
++  } catch (err) {
++    if (!isSearching || currentSearchQuery !== query) return;
++    list.innerHTML = '';
++    list.appendChild(msg('(' + (err.message || err) + ')', 0));
++    renderSearchBanner('error', query, targetDir, 0, err.message || err);
++  }
++}
+ 
+ // Dense packing: grid of fixed-size cells; expanded folders / sub-rooms span whole cells so other items fill the gaps
+ function applyDense(c) {
+@@ -284,7 +425,13 @@ const MODE_PALETTES = {
+ MODE_PALETTES['rainbow-sync'] = MODE_PALETTES.rainbow;
+ MODE_PALETTES['rainbow-async'] = MODE_PALETTES.rainbow;
+ MODE_PALETTES['rainbow-wave'] = MODE_PALETTES.rainbow;
+-MODE_PALETTES['rain-puddle'] = MODE_PALETTES.breathing;
++MODE_PALETTES['rain-puddle'] = [
++  { name: '1. Aquatic Cyan Ripple', colors: ['#38bdf8', '#0284c7', '#0ea5e9', '#06b6d4', '#14b8a6', '#0284c7', '#0369a1'], rim: '#38bdf8', bg: '#0c4a6e', glow: '#0284c7' },
++  { name: '2. Deep Lake', colors: ['#67e8f9', '#0891b2', '#0e7490', '#155e75', '#06b6d4', '#22d3ee', '#0891b2'], rim: '#67e8f9', bg: '#164e63', glow: '#0891b2' },
++  { name: '3. Misty Pond', colors: ['#99f6e4', '#0d9488', '#14b8a6', '#2dd4bf', '#5eead4', '#0f766e', '#115e59'], rim: '#99f6e4', bg: '#134e4a', glow: '#0d9488' },
++  { name: '4. Midnight Rain', colors: ['#60a5fa', '#3b82f6', '#2563eb', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554'], rim: '#60a5fa', bg: '#1e3a8a', glow: '#2563eb' },
++  { name: '5. Steel Drizzle', colors: ['#94a3b8', '#64748b', '#475569', '#334155', '#cbd5e1', '#e2e8f0', '#0ea5e9'], rim: '#94a3b8', bg: '#334155', glow: '#64748b' }
++];
+ 
+ function getModePaletteIdx(modeKey = landscapePalette) {
+   if (typeof modePaletteIndex === 'object' && modePaletteIndex !== null) {
+@@ -380,6 +527,96 @@ function colorToRgba(color, alpha = 1.0) {
+   return color;
+ }
+ 
++// Contextual Contrast & Luminance Engine: guarantees readable text across any background
++function blendHexOnBase(baseHex, overlayHex, overlayAlpha) {
++  const b = hexToRgbObj(baseHex || '#1e293b');
++  const o = hexToRgbObj(overlayHex || '#ffffff');
++  const a = Math.max(0, Math.min(1, overlayAlpha));
++  const r = Math.round(o.r * a + b.r * (1 - a));
++  const g = Math.round(o.g * a + b.g * (1 - a));
++  const bl = Math.round(o.b * a + b.b * (1 - a));
++  return rgbToHex(r, g, bl);
++}
++
++function getLuminance(colorHexOrRgb) {
++  if (!colorHexOrRgb) return 255;
++  let r = 255, g = 255, b = 255;
++  if (typeof colorHexOrRgb === 'string') {
++    if (colorHexOrRgb.startsWith('#')) {
++      const o = hexToRgbObj(colorHexOrRgb);
++      r = o.r; g = o.g; b = o.b;
++    } else if (colorHexOrRgb.startsWith('rgb')) {
++      const m = colorHexOrRgb.match(/\d+/g);
++      if (m && m.length >= 3) {
++        r = +m[0]; g = +m[1]; b = +m[2];
++      }
++    }
++  }
++  return 0.299 * r + 0.587 * g + 0.114 * b;
++}
++
++function isColorDark(colorHexOrRgb) {
++  return getLuminance(colorHexOrRgb) < 140;
++}
++
++function getEffectiveRoomBgHex(entry) {
++  if (!entry) return '#1e293b';
++  const bg = entry.roomBgColor || defaultBgColor || '#1e293b';
++  const isAppDark = document.body.classList.contains('dark');
++  const canvasBase = (typeof landscapeBg !== 'undefined' && landscapeBg === 'space') || (typeof landscapePalette === 'string' && (landscapePalette.includes('disco') || landscapePalette.includes('dusco')))
++    ? '#030712'
++    : ((typeof landscapeBg !== 'undefined' && landscapeBg === 'plain') ? (isAppDark ? '#1e1e1e' : '#ffffff') : ((typeof landscapeBgColor !== 'undefined' && landscapeBgColor) ? landscapeBgColor : '#0f172a'));
++  const effOpacity = (typeof roomBgOpacity === 'number') ? Math.max(0.18, roomBgOpacity / 100) : 0.85;
++  return blendHexOnBase(canvasBase, bg, effOpacity);
++}
++
++function updateRoomContrast(entry) {
++  if (!entry || !entry.el) return;
++  const rm = entry.el;
++  const effRoomHex = getEffectiveRoomBgHex(entry);
++  const isDark = isColorDark(effRoomHex);
++
++  rm.classList.toggle('dark-room', isDark);
++  rm.classList.toggle('light-room', !isDark);
++  rm.style.setProperty('--room-is-dark', isDark ? '1' : '0');
++
++  // Update contrast across all indoor items (folders and files)
++  const bodyEl = rm.querySelector('.map-room-body');
++  if (bodyEl) {
++    const rows = bodyEl.querySelectorAll('.room-item');
++    rows.forEach(row => {
++      const it = row._item;
++      if (!it) return;
++      if (it.isDir) {
++        const isBridged = row.classList.contains('bridged');
++        const dIdx = parseInt(row.dataset.dirIndex || '0', 10);
++        const childEntry = typeof roomMap !== 'undefined' ? roomMap.get(it.path) : null;
++        const targetChildColor = (childEntry && childEntry.roomColor)
++          ? childEntry.roomColor
++          : (typeof computeRoomAndChildColor === 'function' && typeof layout !== 'undefined'
++            ? computeRoomAndChildColor(it.path, entry, dIdx, entry.depth + 1, layout.rooms?.[it.path])
++            : '#0078d4');
++
++        const unopenedBase = useCustomUnselectedFolder
++          ? unselectedFolderColor
++          : (landscapePalette === 'default'
++            ? (entry.roomColor || defaultFrameColor)
++            : targetChildColor);
++        const openedBase = useCustomSelectedFolder ? selectedFolderColor : targetChildColor;
++        const tileBaseCol = isBridged ? openedBase : unopenedBase;
++        const tileAlpha = isBridged ? 0.34 : (useCustomUnselectedFolder ? 0.28 : 0.08);
++        const effTileHex = blendHexOnBase(effRoomHex, tileBaseCol, tileAlpha);
++        const isTileDark = isDark || isColorDark(effTileHex);
++        row.classList.toggle('tile-dark', isTileDark);
++        row.classList.toggle('tile-light', !isTileDark);
++      } else {
++        row.classList.toggle('tile-dark', isDark);
++        row.classList.toggle('tile-light', !isDark);
++      }
++    });
++  }
++}
++
+ // Computes the exact perimeter intersection point of a rectangle centered at (cx, cy) of size (w, h)
+ // towards a target point (tx, ty), ensuring bridge lines never cut across room interiors!
+ function getRectBorderIntersection(cx, cy, w, h, tx, ty) {
+@@ -415,10 +652,12 @@ function promptRoomColor(entry, type = 'frame') {
+     if (type === 'bg') {
+       entry.roomBgColor = picker.value;
+       if (!lockBg && !entry.lockBg) entry.el.style.background = colorToRgba(entry.roomBgColor, roomBgOpacity / 100);
++      updateRoomContrast(entry);
+       if (landscapeLayout[cur]?.rooms) landscapeLayout[cur].rooms[entry.path] = { ...(landscapeLayout[cur].rooms[entry.path] || {}), roomBgColor: entry.roomBgColor };
+     } else {
+       entry.roomColor = picker.value;
+       if (!lockFrame && !entry.lockFrame) entry.el.style.borderColor = entry.roomColor;
++      updateRoomContrast(entry);
+       if (landscapeLayout[cur]?.rooms) landscapeLayout[cur].rooms[entry.path] = { ...(landscapeLayout[cur].rooms[entry.path] || {}), roomColor: entry.roomColor };
+     }
+     persist();
+@@ -433,6 +672,7 @@ function resetRoomColor(entry) {
+   entry.lockBg = false;
+   entry.el.style.borderColor = defaultFrameColor;
+   entry.el.style.background = colorToRgba(defaultBgColor, roomBgOpacity / 100);
++  updateRoomContrast(entry);
+   if (landscapeLayout[cur]?.rooms?.[entry.path]) {
+     delete landscapeLayout[cur].rooms[entry.path].roomColor;
+     delete landscapeLayout[cur].rooms[entry.path].roomBgColor;
+@@ -457,6 +697,7 @@ let closedTabs = [];        // stack of recently closed tabs for Ctrl+Shift+T
+ let cachedPlaces = { places: [], drives: [], home: '', cachedPins: [] };
+ let undoStack = [];         // [{ type: 'rename'|'move', ops: [{ from, to }] }]
+ let landscapeLayout = {};   // { [dirPath]: { nodes: { [name]: {x,y} }, zones: [{id, title, x, y, w, h}] } }
++let cameraZones = {};       // RTS camera location bookmarks: { [zoneNum]: { x, y, zoom } }
+ let splitState = { active: false, dir: 'right', cur: HOME_URI, hist: [HOME_URI], hi: 0, mode: 'details', expanded: new Set() };
+ 
+ async function syncClip() {
+@@ -483,6 +724,11 @@ function applyTheme() {
+   if ($('themeBtn')) $('themeBtn').textContent = darkMode ? '☀️' : '🌙';
+   document.documentElement.style.setProperty('--room-glow-intensity', roomGlowIntensity / 100);
+   document.documentElement.style.setProperty('--breath-target', breathTargetColor || '#ffffff');
++  if (window._landscapeState?.roomMap) {
++    for (const r of window._landscapeState.roomMap.values()) {
++      updateRoomContrast(r);
++    }
++  }
+ }
+ function applyToggles() {
+   $('hiddenBtn')?.classList.toggle('active', showHidden);
+@@ -687,7 +933,28 @@ function buildLightweightTextEditor(filePath, initialText, truncated = false, on
+ }
+ 
+ const visibleRows = () => [...$('list').querySelectorAll('.row.item, .room-item, .room-file, .room-door, .dash-card')].filter(r => r._item && r.style.display !== 'none' && !r.closest('.collapsed'));
++function updateToolbarContextButtons() {
++  const selCount = selected.size;
++  $('cutBtn')?.classList.toggle('disabled', selCount === 0);
++  $('copyBtn')?.classList.toggle('disabled', selCount === 0);
++  $('pasteBtn')?.classList.toggle('disabled', !clip || !clip.paths || !clip.paths.length);
++  $('renameBtn')?.classList.toggle('disabled', selCount !== 1);
++  $('deleteBtn')?.classList.toggle('disabled', selCount === 0);
++}
++
+ function updateStatus() {
++  updateToolbarContextButtons();
++  if (isSearching) {
++    const n = selected.size;
++    if (n > 0) {
++      $('status').textContent = `${totalCount} search results  |  ${n} item${n > 1 ? 's' : ''} selected  |  Search in ${cur}`;
++    } else {
++      $('status').textContent = `${totalCount} search results for "${currentSearchQuery}" in ${cur}`;
++    }
++    updateStatusBarTelemetry();
++    if (showPreview) updatePreviewPane();
++    return;
++  }
+   if (cur === HOME_URI) {
+     const n = selected.size;
+     if (n > 0) {
+@@ -894,26 +1161,32 @@ function sortItems(items) {
+   });
+ }
+ 
+-function groupLabelFor(it) {
+-  if (groupKey === 'type') return typeOf(it);
+-  if (groupKey === 'name') {
++function groupLabelFor(it, overrideKey = null) {
++  const k = overrideKey || groupKey;
++  if (k === 'type') return typeOf(it);
++  if (k === 'name') {
+     const ch = (it.name[0] || '#').toUpperCase();
+     return /[A-Z]/.test(ch) ? ch : '0–9 & Symbols';
+   }
+-  if (groupKey === 'size') {
++  if (k === 'size') {
+     if (it.isDir) return 'Folders';
+     if (it.size === 0) return 'Empty (0 B)';
+     if (it.size < 1024 * 100) return 'Tiny (< 100 KB)';
+     if (it.size < 1048576 * 5) return 'Medium (100 KB – 5 MB)';
+     return 'Large (> 5 MB)';
+   }
+-  if (groupKey === 'mtime') {
++  if (k === 'mtime') {
+     const days = (Date.now() - (it.mtime || 0)) / 86400000;
+     if (days < 1) return 'Today';
+     if (days < 7) return 'Earlier this week';
+     if (days < 30) return 'Earlier this month';
+     return 'Older';
+   }
++  if (k === 'ext') {
++    if (it.isDir) return 'Folders';
++    const dot = it.name.lastIndexOf('.');
++    return dot > 0 ? it.name.slice(dot).toUpperCase() : 'No Extension';
++  }
+   return '';
+ }
+ 
+@@ -924,7 +1197,7 @@ const PER_FILE_ICON_EXT = /\.(exe|lnk|ico|msi|scr|cur|ani)$/i;
+ const PLACEHOLDER_FILE_SVG = "data:image/svg+xml;utf8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#64748b" fill-opacity="0.35" d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/></svg>');
+ const PLACEHOLDER_DIR_SVG = "data:image/svg+xml;utf8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#eab308" fill-opacity="0.55" d="M2 6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"/></svg>');
+ const iconCache = new Map();
+-const MAX_RENDERER_ICON_CACHE = 600;
++const MAX_RENDERER_ICON_CACHE = 250;
+ 
+ function getIconCacheKey(it, reqPx, unique) {
+   if (it.isDir) return 'D|' + reqPx + '|' + it.path;
+@@ -939,7 +1212,7 @@ async function setIcon(img, it, px = PX[mode], unique = false) {
+     img.src = fileUrl(it.path);
+     return;
+   }
+-  const reqPx = (isThumbFile(it) && px >= 32) ? Math.max(px, 256) : px;
++  const reqPx = (isThumbFile(it) && px >= 32) ? Math.min(256, Math.max(px, 48)) : px;
+   const key = getIconCacheKey(it, reqPx, unique);
+   if (!iconCache.has(key)) {
+     if (iconCache.size >= MAX_RENDERER_ICON_CACHE) {
+@@ -1048,11 +1321,6 @@ function beginItemDrag(e, it, rowEl) {
+   e.dataTransfer.effectAllowed = 'copyMove';
+   setCustomDragGhost(e, paths, it.name);
+   rowEl.classList.add('dragging-item');
+-  // Note: Only invoke Electron's native OS shell startDrag when holding Alt (to drag out to Desktop / external apps),
+-  // because calling webContents.startDrag unconditionally on Windows aborts in-app HTML5 dragover/drop events!
+-  if (e.altKey && window.api && window.api.startDrag) {
+-    window.api.startDrag(paths);
+-  }
+ }
+ 
+ window.addEventListener('dragend', () => {
+@@ -1171,14 +1439,30 @@ async function renderDir(dir, depth, container, parentCell = null) {
+     container.appendChild(msg('(' + res.error + ')', depth));
+     return 0;
+   }
+-  const items = sortItems(res.items || []);
++  const rawItems = res.items || [];
++  if (virtualRooms[dir] && virtualRooms[dir].length) {
++    for (const vrPath of virtualRooms[dir]) {
++      if (!rawItems.some(it => it.path === vrPath)) {
++        rawItems.unshift({
++          path: vrPath,
++          name: baseName(vrPath),
++          isDir: true,
++          isVirtualRoom: true,
++          size: 0,
++          mtime: Date.now()
++        });
++      }
++    }
++  }
++  const items = sortItems(rawItems);
+   console.log(`[PEEK-DIR] Rendering ${items.length} items inside container for "${dir}"`);
+   if (!items.length) { container.appendChild(msg('(empty)', depth)); return 0; }
+ 
+-  if (depth === 0 && groupKey !== 'none') {
++  const effGrp = (kidsGroups && kidsGroups[dir]) || (depth === 0 ? groupKey : 'none');
++  if (effGrp !== 'none') {
+     const groups = new Map();
+     for (const it of items) {
+-      const g = groupLabelFor(it);
++      const g = groupLabelFor(it, effGrp);
+       if (!groups.has(g)) groups.set(g, []);
+       groups.get(g).push(it);
+     }
+@@ -1200,17 +1484,70 @@ async function renderDir(dir, depth, container, parentCell = null) {
+   return items.length;
+ }
+ 
+-// In grid views an expanded folder + its contents form ONE flowing block, so folders sit side by side with regular items (no white space)
++// In grid views or sub-room mode an expanded folder + its contents form ONE flowing block, so folders sit side by side with regular items (no white space)
+ function itemNodes(it, depth, parentCell = null) {
+   const [cell, kids] = makeItem(it, depth, parentCell);
+-  if (!isGrid() || !it.isDir) return [cell, kids];
++  const wantsRoom = (kidsLayouts[it.path] === 'room');
++  const isParentGrid = parentCell ? ['small', 'medium', 'large', 'xl', 'tiles', 'list', 'lens'].includes(parentCell._effMode || mode) : isGrid();
++  if ((!isParentGrid && !wantsRoom) || !it.isDir) return [cell, kids];
+   const g = document.createElement('div'); g.className = 'grp-fold';
++  cell._grpFold = g;
++  kids._grpFold = g;
++  g._folderPath = it.path;
++  g._cell = cell;
++  g._kids = kids;
+   g.append(cell, kids);
++
++  // Dedicated bottom-right resize corner grip for 100% reliable horizontal and vertical resizing
++  const rzCorner = document.createElement('div');
++  rzCorner.className = 'room-resize-corner';
++  rzCorner.title = 'Drag to resize sub-room width and height';
++  rzCorner.addEventListener('mousedown', e => {
++    e.preventDefault(); e.stopPropagation();
++    const startW = g.offsetWidth, startH = g.offsetHeight;
++    const startX = e.clientX, startY = e.clientY;
++    const onMove = ev => {
++      const nw = Math.max(220, startW + (ev.clientX - startX));
++      const nh = Math.max(120, startH + (ev.clientY - startY));
++      g.style.width = nw + 'px';
++      g.style.height = nh + 'px';
++    };
++    const onUp = () => {
++      window.removeEventListener('mousemove', onMove);
++      window.removeEventListener('mouseup', onUp);
++      kidsRoomSize[it.path] = { w: Math.round(g.offsetWidth), h: Math.round(g.offsetHeight) };
++      persist();
++    };
++    window.addEventListener('mousemove', onMove);
++    window.addEventListener('mouseup', onUp);
++  });
++  g.appendChild(rzCorner);
++
++  if (cell._applyKidsLayout) cell._applyKidsLayout();
++  // Dragging the resize corner must not start rubber-band or propagate
++  g.addEventListener('mousedown', e => {
++    if (!g.classList.contains('room')) return;
++    const r = g.getBoundingClientRect();
++    if (e.clientX > r.right - 24 && e.clientY > r.bottom - 24) e.stopPropagation();
++  });
++  g.addEventListener('mouseup', () => {
++    if (!g.classList.contains('room') || !g.offsetWidth || !g.offsetHeight) return;
++    const w = Math.round(g.offsetWidth), h = Math.round(g.offsetHeight);
++    const old = kidsRoomSize[it.path];
++    if (!old || old.w !== w || old.h !== h) {
++      kidsRoomSize[it.path] = { w, h };
++      persist();
++    }
++  });
+   return [g];
+ }
+ function makeItem(it, depth, parentCell = null) {
++  const parentEffMode = parentCell ? (parentCell._effMode || (folderViews[parentCell._item?.path] || mode)) : mode;
++  const effMode = parentCell ? (forceGlobalView ? mode : (folderViews[parentCell._item?.path] || parentEffMode)) : mode;
++  const effPx = PX[effMode] || PX[mode] || 32;
+   const hasThumb = isThumbFile(it);
+   const cell = document.createElement('div'); cell.className = 'row item' + (hasThumb ? ' has-thumb' : '');
++  cell._effMode = effMode;
+   cell.dataset.isDir = it.isDir ? '1' : '0';
+   cell.draggable = true;
+   cell._item = it;
+@@ -1220,16 +1557,20 @@ function makeItem(it, depth, parentCell = null) {
+   if (isGrid()) kids.style.marginLeft = '12px';
+   const pad = isGrid() ? '' : `style="padding-left:${depth * 18}px"`;
+   const szText = it.isDir ? (folderSizeCache.has(it.path) ? fmtSize(folderSizeCache.get(it.path)) : '') : fmtSize(it.size);
++  const relSpan = it.relPath ? `<span class="search-loc" title="${escapeHtml(it.path)}">📁 ${escapeHtml(it.relPath)}</span>` : '';
++  const subText = it.relPath
++    ? `<span class="search-loc" title="${escapeHtml(it.path)}">📁 ${escapeHtml(it.relPath)}</span><br>${fmtDate(it.mtime)}`
++    : `${typeOf(it)}${szText ? ' · ' + szText : ''}<br>${fmtDate(it.mtime)}`;
+ 
+-  cell.innerHTML = `<span class="c-name" ${pad}><input type="checkbox" class="chk"><span class="arrow ${it.isDir ? '' : 'empty'}">▸</span><img class="ico"><span class="nm"></span></span>` +
++  cell.innerHTML = `<span class="c-name" ${pad}><input type="checkbox" class="chk"><span class="arrow ${it.isDir ? '' : 'empty'}">▸</span><img class="ico"><span class="nm"></span>${relSpan}</span>` +
+     `<span class="c-date">${fmtDate(it.mtime)}</span><span class="c-type">${typeOf(it)}</span><span class="c-size">${szText}</span>` +
+-    `<span class="sub">${typeOf(it)}${szText ? ' · ' + szText : ''}<br>${fmtDate(it.mtime)}</span>`;
++    `<span class="sub">${subText}</span>`;
+   const nmEl = cell.querySelector('.nm');
+   nmEl.textContent = displayName(it);
+-  cell.title = it.name;
++  cell.title = it.relPath ? `${it.name} (${it.path})` : it.name;
+   const ico = cell.querySelector('.ico');
+-  if (PX[mode] > 24 || hasThumb) ico.classList.add('photo');
+-  setIcon(ico, it, hasThumb ? Math.max(PX[mode] || 32, 256) : PX[mode]);
++  if (effPx > 24 || hasThumb) ico.classList.add('photo');
++  setIcon(ico, it, hasThumb ? Math.max(effPx, 256) : effPx);
+ 
+   const chk = cell.querySelector('.chk');
+   chk.addEventListener('click', e => {
+@@ -1299,70 +1640,151 @@ function makeItem(it, depth, parentCell = null) {
+ 
+   if (it.isDir) {
+     const a = cell.querySelector('.arrow');
+-    // Per-folder layout for the expanded contents: wrap (default) | row | col | room
++    // Simple icon buttons for layout/view and grouping in sub-rooms & expanded folders
+     const klBtn = document.createElement('span');
+-    klBtn.className = 'kl-btn'; klBtn.textContent = '▦'; klBtn.title = 'Layout of this folder\'s contents';
+-    cell.querySelector('.c-name').appendChild(klBtn);
++    klBtn.className = 'kl-btn sub-icon-btn'; klBtn.textContent = '⊞'; klBtn.title = 'View & Layout of this folder';
++    const grpBtn = document.createElement('span');
++    grpBtn.className = 'grp-btn sub-icon-btn'; grpBtn.textContent = '📑'; grpBtn.title = 'Grouping for this folder';
++    const optWrap = document.createElement('span');
++    optWrap.className = 'sub-opt-wrap';
++    optWrap.appendChild(klBtn);
++    optWrap.appendChild(grpBtn);
++    if (it.isVirtualRoom) {
++      const ejectBtn = document.createElement('span');
++      ejectBtn.className = 'eject-btn sub-icon-btn';
++      ejectBtn.textContent = '✕';
++      ejectBtn.title = 'Eject virtual room from view';
++      ejectBtn.addEventListener('click', ev => {
++        ev.stopPropagation();
++        removeVirtualRoom(it.path, cur);
++      });
++      optWrap.appendChild(ejectBtn);
++    }
++    cell.appendChild(optWrap);
++    cell._optWrap = optWrap;
++
+     const applyKidsLayout = () => {
+       kids._path = it.path;
+       const l = kidsLayouts[it.path] || 'col';
+       kids.classList.remove('kl-row', 'kl-col', 'kl-wrap', 'kl-room');
+       kids.classList.add('kl-' + l);
+-      const g = kids.closest('.grp-fold');
++      const v = forceGlobalView ? mode : (folderViews[it.path] || mode);
++      kids.classList.remove('v-details', 'v-tiles', 'v-list', 'v-small', 'v-medium', 'v-large', 'v-xl', 'v-content');
++      kids.classList.add('v-' + v);
++
++      const g = cell._grpFold || kids.closest('.grp-fold');
++      const isExp = cell.classList.contains('expanded') || expanded.has(it.path);
+       if (g) {
+-        g.classList.toggle('room', l === 'room');
+-        g.style.width = ''; g.style.height = '';
+-        const sz = kidsRoomSize[it.path];
+-        if (l === 'room' && sz) { g.style.width = sz.w + 'px'; g.style.height = sz.h + 'px'; }
+-      }
+-      kids.style.width = ''; kids.style.height = '';
+-      if (l === 'room') {
+-        const sz = kidsRoomSize[it.path];
+-        if (sz) { kids.style.width = sz.w + 'px'; kids.style.height = sz.h + 'px'; }
++        g._folderPath = it.path;
++        const isRoom = (l === 'room' && isExp);
++        g.classList.toggle('room', isRoom);
++        if (isRoom) {
++          const sz = kidsRoomSize[it.path] || { w: 480, h: 260 };
++          g.style.width = sz.w + 'px';
++          g.style.height = sz.h + 'px';
++        } else {
++          g.style.width = '';
++          g.style.height = '';
++        }
+       }
+     };
+-    // Dragging the resize corner must not start the rubber-band select box on the list
+-    kids.addEventListener('mousedown', e => {
+-      if (e.target !== kids || !kids.classList.contains('kl-room')) return;
+-      const r = kids.getBoundingClientRect();
+-      if (e.clientX > r.right - 22 && e.clientY > r.bottom - 22) e.stopPropagation();
+-    });
+-    kids.addEventListener('mouseup', () => {
+-      if (kidsLayouts[it.path] !== 'room' || !kids.style.width && !kids.offsetWidth) return;
+-      const w = Math.round(kids.offsetWidth), h = Math.round(kids.offsetHeight);
+-      const old = kidsRoomSize[it.path];
+-      if (!old || old.w !== w || old.h !== h) { kidsRoomSize[it.path] = { w, h }; persist(); }
+-      refreshDense();
+-    });
++    cell._applyKidsLayout = applyKidsLayout;
+     kids.addEventListener('wheel', e => {
+       if (!kids.classList.contains('kl-row') || e.ctrlKey || !e.deltaY || kids.scrollWidth <= kids.clientWidth) return;
+       kids.scrollLeft += e.deltaY; e.preventDefault(); e.stopPropagation();
+     }, { passive: false });
++
+     klBtn.addEventListener('click', e => {
+       e.stopPropagation();
+       const r = klBtn.getBoundingClientRect();
+-      const set = l => () => { kidsLayouts[it.path] = l; applyKidsLayout(); refreshDense(); persist(); };
+-      const cur_ = kidsLayouts[it.path] || 'col';
+-      const mark = l => (cur_ === l ? '● ' : '    ');
++      const setL = l => () => { kidsLayouts[it.path] = l; applyKidsLayout(); refreshDense(); persist(); };
++      const curL = kidsLayouts[it.path] || 'col';
++      const markL = l => (curL === l ? '● ' : '    ');
++      const setV = v => async () => {
++        folderViews[it.path] = v;
++        applyKidsLayout();
++        if (cell.classList.contains('expanded') || expanded.has(it.path)) {
++          kids.innerHTML = '';
++          await renderDir(it.path, depth + 1, kids, cell);
++        }
++        persist();
++      };
++      const curV = folderViews[it.path] || mode;
++      const markV = v => (curV === v ? '● ' : '    ');
++
+       fillMenu([
+-        { label: mark('col') + 'Column under folder (scrolls down)', run: set('col') },
+-        { label: mark('row') + 'Single row (scrolls sideways)', run: set('row') },
+-        { label: mark('wrap') + 'Wrap grid', run: set('wrap') },
+-        { label: mark('room') + 'Sub-room (resizable box)', run: set('room') }
++        { label: 'LAYOUT:', disabled: true },
++        { label: markL('col') + 'Column under folder (scrolls down)', run: setL('col') },
++        { label: markL('row') + 'Single row (scrolls sideways)', run: setL('row') },
++        { label: markL('wrap') + 'Wrap grid', run: setL('wrap') },
++        { label: markL('room') + 'Sub-room (resizable box)', run: setL('room') },
++        '-',
++        { label: 'VIEW MODE:', disabled: true },
++        { label: markV('details') + 'Details', run: setV('details') },
++        { label: markV('tiles') + 'Tiles', run: setV('tiles') },
++        { label: markV('list') + 'List', run: setV('list') },
++        { label: markV('small') + 'Small Icons', run: setV('small') },
++        { label: markV('medium') + 'Medium Icons', run: setV('medium') },
++        { label: markV('large') + 'Large Icons', run: setV('large') },
++        { label: markV('xl') + 'Extra Large Icons', run: setV('xl') },
++        { label: markV('content') + 'Content', run: setV('content') }
+       ]);
+       placeMenu(r.left, r.bottom + 2);
+     });
+     klBtn.addEventListener('dblclick', e => e.stopPropagation());
+     klBtn.addEventListener('mousedown', e => e.stopPropagation());
++
++    grpBtn.addEventListener('click', e => {
++      e.stopPropagation();
++      const r = grpBtn.getBoundingClientRect();
++      const curG = kidsGroups[it.path] || 'none';
++      const markG = g => (curG === g ? '● ' : '    ');
++      const setG = g => async () => {
++        kidsGroups[it.path] = g;
++        if (cell.classList.contains('expanded') || expanded.has(it.path)) {
++          kids.innerHTML = '';
++          await renderDir(it.path, depth + 1, kids, cell);
++        }
++        persist();
++      };
++      fillMenu([
++        { label: 'GROUP BY:', disabled: true },
++        { label: markG('none') + 'None', run: setG('none') },
++        { label: markG('type') + 'Type', run: setG('type') },
++        { label: markG('mtime') + 'Date modified', run: setG('mtime') },
++        { label: markG('name') + 'Name', run: setG('name') },
++        { label: markG('size') + 'Size', run: setG('size') },
++        { label: markG('ext') + 'Extension', run: setG('ext') }
++      ]);
++      placeMenu(r.left, r.bottom + 2);
++    });
++    grpBtn.addEventListener('dblclick', e => e.stopPropagation());
++    grpBtn.addEventListener('mousedown', e => e.stopPropagation());
+     applyKidsLayout();
+-    const open = async () => { a.textContent = '▾'; cell.classList.add('expanded'); await renderDir(it.path, depth + 1, kids, cell); refreshDense(); };
++    const open = async () => {
++      a.textContent = '▾';
++      cell.classList.add('expanded');
++      applyKidsLayout();
++      await renderDir(it.path, depth + 1, kids, cell);
++      applyKidsLayout();
++      refreshDense();
++    };
+     cell._expand = async () => {
+       if (expanded.has(it.path)) return;
+-      expanded.add(it.path); kids.classList.add('open'); await open(); persist();
++      expanded.add(it.path);
++      kids.classList.add('open');
++      await open();
++      persist();
+     };
+     cell._collapse = () => {
+       if (!expanded.has(it.path)) return;
+-      expanded.delete(it.path); kids.innerHTML = ''; kids.classList.remove('open'); cell.classList.remove('expanded'); a.textContent = '▸'; persist();
++      expanded.delete(it.path);
++      kids.innerHTML = '';
++      kids.classList.remove('open');
++      cell.classList.remove('expanded');
++      a.textContent = '▸';
++      applyKidsLayout();
++      persist();
+     };
+     a.addEventListener('click', async e => {
+       e.stopPropagation();
+@@ -1679,7 +2101,7 @@ initTerminalDrawer();
+   let startX = 0, startY = 0, dragging = false, basePaths = new Set();
+   const listEl = $('list'), rub = $('rubber'), contentEl = $('content');
+   listEl.addEventListener('mousedown', e => {
+-    if (mode === 'landscape' || mode === 'lens' || cur === HOME_URI || e.button !== 0 || e.target.closest('.row.item') || e.target.closest('.room-item') || e.target.closest('.arrow') || e.target.closest('.grp-head') || e.target.closest('.dash')) return;
++    if (mode === 'landscape' || mode === 'lens' || cur === HOME_URI || e.button !== 0 || e.target.closest('.row.item') || e.target.closest('.room-item') || e.target.closest('.arrow') || e.target.closest('.grp-head') || e.target.closest('.dash') || e.target.closest('.grp-fold') || e.target.closest('.kids')) return;
+     hideMenu();
+     const cr = contentEl.getBoundingClientRect();
+     startX = e.clientX - cr.left; startY = e.clientY - cr.top;
+@@ -1714,6 +2136,19 @@ initTerminalDrawer();
+   });
+ })();
+ 
++// Save sub-room dimensions when user finishes resizing
++window.addEventListener('mouseup', () => {
++  document.querySelectorAll('.grp-fold.room').forEach(g => {
++    if (!g._folderPath || !g.offsetWidth || !g.offsetHeight) return;
++    const w = Math.round(g.offsetWidth), h = Math.round(g.offsetHeight);
++    const old = kidsRoomSize[g._folderPath];
++    if (!old || old.w !== w || old.h !== h) {
++      kidsRoomSize[g._folderPath] = { w, h };
++      persist();
++    }
++  });
++});
++
+ // ---- Breadcrumb address bar ----
+ let justStartedAddrEdit = false;
+ function updateAddrIcon() {
+@@ -1930,7 +2365,20 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+       </select>
+     </label>
+     <button data-act="lens" class="${edgeLensOn ? 'active' : ''}" title="Toggle Two-Rectangle Edge Lens for far-away Rooms">🖼️ Edge Lens: ON</button>
++    <button data-act="scale-to-view" title="Scale all rooms to match current camera view scale (1:1 readable size)">📐 Scale to View</button>
++    <label style="display:inline-flex;align-items:center;gap:3px;font-size:11px" title="Global Room Scale (grow/shrink all rooms)">
++      Room: <input type="range" data-hud="room-scale" min="40" max="250" value="100" style="width:55px;vertical-align:middle">
++      <span class="hud-room-scale-lbl" style="font-size:10px;min-width:28px">100%</span>
++    </label>
+     <button data-act="loupe" title="Toggle Magnifier Loupe (or Hold ${hotkeys.modLoupe || 'Ctrl+Shift'} · Scroll adjusts zoom)">🔎 Loupe</button>
++    <div class="hud-zones" title="RTS Camera Zones: Ctrl+1..5 to save, 1..5 to recall">
++      <span class="hud-zones-title">Zones</span>
++      <button class="zone-btn" data-zone="1" title="Zone 1 (Ctrl+1: Save · 1: Recall)">1</button>
++      <button class="zone-btn" data-zone="2" title="Zone 2 (Ctrl+2: Save · 2: Recall)">2</button>
++      <button class="zone-btn" data-zone="3" title="Zone 3 (Ctrl+3: Save · 3: Recall)">3</button>
++      <button class="zone-btn" data-zone="4" title="Zone 4 (Ctrl+4: Save · 4: Recall)">4</button>
++      <button class="zone-btn" data-zone="5" title="Zone 5 (Ctrl+5: Save · 5: Recall)">5</button>
++    </div>
+     <span class="hud-coords" style="color:var(--muted);margin-left:2px">Scale: ${Math.round(camZoom * 100)}%</span>
+   `;
+   // Apply customized canvas background & atmosphere + 5+1 Mode Sub-Palette CSS Variables
+@@ -1940,7 +2388,7 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+     else if (landscapePalette === 'dusco') viewport.classList.add('bg-dusco');
+     else if (landscapePalette === 'deep-dusco') viewport.classList.add('bg-deep-dusco');
+     else if (landscapePalette === 'rainbow-sync' || landscapePalette === 'rainbow-async' || landscapePalette === 'rainbow-wave') viewport.classList.add('bg-rainbow');
+-    else if (landscapePalette === 'breathing' || landscapePalette === 'rain-puddle') viewport.classList.add('bg-breathing');
++    else if (landscapePalette === 'breathing') viewport.classList.add('bg-breathing');
+   }
+ 
+   const activePalEntry = getActivePaletteEntry(landscapePalette);
+@@ -2497,6 +2945,7 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+ 
+     const entry = { path: roomPath, name, parentPath, x: freePos.x, y: freePos.y, w, h, ang: freePos.ang || 0, el: rm, depth, subDirs: [], files: [], items: [], roomColor, roomBgColor: roomBg, lockFrame: saved ? !!saved.lockFrame : false, lockBg: saved ? !!saved.lockBg : false };
+     roomMap.set(roomPath, entry);
++    updateRoomContrast(entry);
+     if (parentPath) {
+       if (!bridges.some(b => b.fromPath === parentPath && b.toPath === roomPath)) {
+         bridges.push({ fromPath: parentPath, toPath: roomPath });
+@@ -2579,6 +3028,7 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+           const c = sw.dataset.swatch;
+           entry.roomColor = c;
+           rm.style.borderColor = c;
++          updateRoomContrast(entry);
+           popup.querySelector('.rm-frame-picker').value = c;
+           layout.rooms[roomPath] = { ...(layout.rooms[roomPath] || {}), roomColor: c };
+           persist();
+@@ -2587,12 +3037,14 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+       popup.querySelector('.rm-frame-picker').oninput = ev => {
+         entry.roomColor = ev.target.value;
+         rm.style.borderColor = entry.roomColor;
++        updateRoomContrast(entry);
+         layout.rooms[roomPath] = { ...(layout.rooms[roomPath] || {}), roomColor: entry.roomColor };
+         persist();
+       };
+       popup.querySelector('.rm-bg-picker').oninput = ev => {
+         entry.roomBgColor = ev.target.value;
+         rm.style.background = colorToRgba(entry.roomBgColor, roomBgOpacity / 100);
++        updateRoomContrast(entry);
+         layout.rooms[roomPath] = { ...(layout.rooms[roomPath] || {}), roomBgColor: entry.roomBgColor };
+         persist();
+       };
+@@ -2614,6 +3066,7 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+         entry.lockBg = false;
+         rm.style.borderColor = defaultFrameColor;
+         rm.style.background = colorToRgba(defaultBgColor, roomBgOpacity / 100);
++        updateRoomContrast(entry);
+         if (layout.rooms[roomPath]) {
+           delete layout.rooms[roomPath].roomColor;
+           delete layout.rooms[roomPath].roomBgColor;
+@@ -2768,20 +3221,26 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+       window.addEventListener('mouseup', onUp);
+     });
+ 
+-    // Drag-resizing Room Width & Height (.rz-r, .rz-b, .rz-br)
++    // Drag-resizing Room Width & Height (.rz-r, .rz-b, .rz-br) anchored to Top-Left
+     const wireResize = (handleEl, doW, doH) => {
+       handleEl.addEventListener('mousedown', e => {
+         e.stopPropagation(); e.preventDefault();
+         selectActiveRoom(roomPath);
+         const sx = e.clientX, sy = e.clientY;
+         const startW = entry.w, startH = entry.h;
++        const fixedLeft = entry.x - startW / 2;
++        const fixedTop = entry.y - startH / 2;
+         let rzRaf = null;
+         const onMove = ev => {
+-          const nw = doW ? startW + (ev.clientX - sx) / camZoom : entry.w;
+-          const nh = doH ? startH + (ev.clientY - sy) / camZoom : entry.h;
++          const nw = doW ? Math.max(200, Math.min(2600, Math.round(startW + (ev.clientX - sx) / camZoom))) : entry.w;
++          const nh = doH ? Math.max(130, Math.min(1800, Math.round(startH + (ev.clientY - sy) / camZoom))) : entry.h;
+           if (!rzRaf) {
+             rzRaf = requestAnimationFrame(() => {
+               rzRaf = null;
++              entry.x = fixedLeft + nw / 2;
++              entry.y = fixedTop + nh / 2;
++              entry.el.style.left = Math.round(entry.x) + 'px';
++              entry.el.style.top = Math.round(entry.y) + 'px';
+               applyRoomSize(entry, nw, nh, false);
+               selectActiveRoom(roomPath);
+             });
+@@ -2893,6 +3352,9 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+ 
+         let dirCounter = 0;
+         const palArr = getActivePaletteColors(landscapePalette);
++        const effRoomHex = getEffectiveRoomBgHex(entry);
++        const isRoomDark = isColorDark(effRoomHex);
++
+         entry.items.forEach((it, itemIdx) => {
+           const row = document.createElement('div');
+           const isBridged = it.isDir && roomMap.has(it.path);
+@@ -2929,11 +3391,24 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+             row.style.setProperty('--child-folder-hover', colorToRgba(darkerOpened, 0.46));
+             row.style.setProperty('--child-folder-glow', colorToRgba(openedBase, 0.55));
+             row._badgeStateKey = `${isBridged}|${landscapePalette}|${useCustomUnselectedFolder}|${unopenedBase}|${useCustomSelectedFolder}|${openedBase}`;
+-          } else if (landscapePalette === 'rainbow') {
+-            // In Static Rainbow mode, file tiles also receive sequential rainbow colors in load order
+-            const seqCol = palArr[(entry.depth + itemIdx) % palArr.length];
+-            row.style.background = colorToRgba(seqCol, 0.08);
+-            row.style.borderColor = colorToRgba(seqCol, 0.25);
++
++            // Contextual Contrast calculation for individual folder tile
++            const tileBaseCol = isBridged ? openedBase : unopenedBase;
++            const tileAlpha = isBridged ? 0.34 : (useCustomUnselectedFolder ? 0.28 : 0.08);
++            const effTileHex = blendHexOnBase(effRoomHex, tileBaseCol, tileAlpha);
++            const isTileDark = isColorDark(effTileHex);
++            row.classList.toggle('tile-dark', isTileDark);
++            row.classList.toggle('tile-light', !isTileDark);
++          } else {
++            if (landscapePalette === 'rainbow') {
++              // In Static Rainbow mode, file tiles also receive sequential rainbow colors in load order
++              const seqCol = palArr[(entry.depth + itemIdx) % palArr.length];
++              row.style.background = colorToRgba(seqCol, 0.08);
++              row.style.borderColor = colorToRgba(seqCol, 0.25);
++            }
++            row.classList.toggle('tile-dark', isRoomDark);
++            row.classList.toggle('tile-light', !isRoomDark);
++            entry.subRowMap.set(it.path, row);
+           }
+ 
+           row.innerHTML = `
+@@ -3139,6 +3614,7 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+         bodyEl.appendChild(frag);
+         bodyEl.scrollTop = prevBodyScroll;
+       }
++      updateRoomContrast(entry);
+     };
+     await entry.populate();
+ 
+@@ -3185,6 +3661,15 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+         d.style.setProperty('--child-folder-bd', colorToRgba(openedBase, 0.82));
+         d.style.setProperty('--child-folder-hover', colorToRgba(darkerOpened, 0.46));
+         d.style.setProperty('--child-folder-glow', colorToRgba(openedBase, 0.55));
++
++        // Contextual Contrast recalculation on bridge/selection state change
++        const effRoomHex = getEffectiveRoomBgHex(r);
++        const tileBaseCol = isBridged ? openedBase : unopenedBase;
++        const tileAlpha = isBridged ? 0.34 : (useCustomUnselectedFolder ? 0.28 : 0.08);
++        const effTileHex = blendHexOnBase(effRoomHex, tileBaseCol, tileAlpha);
++        const isTileDark = isColorDark(effTileHex);
++        d.classList.toggle('tile-dark', isTileDark);
++        d.classList.toggle('tile-light', !isTileDark);
+       }
+     }
+   }
+@@ -3373,16 +3858,22 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+       persist();
+     };
+ 
+-    const wireResize = (handle, onDim) => {
++    const wireResize = (handle, doW, doH) => {
+       handle.addEventListener('mousedown', ev => {
+         ev.stopPropagation(); ev.preventDefault();
+         selectActiveRoom(filePath);
+         const smx = ev.clientX, smy = ev.clientY;
+         const sw = entry.w, sh = entry.h;
++        const fixedLeft = entry.x - sw / 2;
++        const fixedTop = entry.y - sh / 2;
+         const onMove = mv => {
+-          const dw = (mv.clientX - smx) / camZoom;
+-          const dh = (mv.clientY - smy) / camZoom;
+-          onDim(sw + dw, sh + dh);
++          const nw = doW ? Math.max(260, Math.min(1600, Math.round(sw + (mv.clientX - smx) / camZoom))) : entry.w;
++          const nh = doH ? Math.max(180, Math.min(1200, Math.round(sh + (mv.clientY - smy) / camZoom))) : entry.h;
++          entry.x = fixedLeft + nw / 2;
++          entry.y = fixedTop + nh / 2;
++          rm.style.left = Math.round(entry.x) + 'px';
++          rm.style.top = Math.round(entry.y) + 'px';
++          applyHtmlSize(nw, nh);
+         };
+         const onUp = () => {
+           window.removeEventListener('mousemove', onMove);
+@@ -3405,9 +3896,9 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+       updateCameraAndLens();
+     };
+ 
+-    wireResize(rm.querySelector('.rz-r'), (nw) => applyHtmlSize(nw, entry.h));
+-    wireResize(rm.querySelector('.rz-b'), (_nw, nh) => applyHtmlSize(entry.w, nh));
+-    wireResize(rm.querySelector('.rz-br'), (nw, nh) => applyHtmlSize(nw, nh));
++    wireResize(rm.querySelector('.rz-r'), true, false);
++    wireResize(rm.querySelector('.rz-b'), false, true);
++    wireResize(rm.querySelector('.rz-br'), true, true);
+ 
+     updateCameraAndLens();
+     persist();
+@@ -3559,17 +4050,27 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+         selectActiveRoom(filePath);
+         const sx = ev.clientX, sy = ev.clientY;
+         const startW = entry.w, startH = entry.h;
++        const fixedLeft = entry.x - startW / 2;
++        const fixedTop = entry.y - startH / 2;
+         const onMove = mv => {
+-          if (doW) entry.w = Math.max(220, Math.min(2600, Math.round(startW + (mv.clientX - sx) / camZoom)));
+-          if (doH) entry.h = Math.max(140, Math.min(1800, Math.round(startH + (mv.clientY - sy) / camZoom)));
++          const nw = doW ? Math.max(220, Math.min(2600, Math.round(startW + (mv.clientX - sx) / camZoom))) : entry.w;
++          const nh = doH ? Math.max(140, Math.min(1800, Math.round(startH + (mv.clientY - sy) / camZoom))) : entry.h;
++          entry.w = nw;
++          entry.h = nh;
++          entry.x = fixedLeft + nw / 2;
++          entry.y = fixedTop + nh / 2;
++          rm.style.left = Math.round(entry.x) + 'px';
++          rm.style.top = Math.round(entry.y) + 'px';
+           rm.style.setProperty('--room-w', entry.w + 'px');
+           rm.style.setProperty('--room-h', entry.h + 'px');
+           rm.querySelector('.rm-dims').textContent = `${entry.w}×${entry.h}`;
+           layout.fileRooms[filePath] = { ...(layout.fileRooms[filePath] || {}), x: entry.x, y: entry.y, w: entry.w, h: entry.h };
++          drawBridges();
+         };
+         const onUp = () => {
+           window.removeEventListener('mousemove', onMove);
+           window.removeEventListener('mouseup', onUp);
++          drawBridges();
+           updateCameraAndLens();
+           persist();
+         };
+@@ -3753,31 +4254,37 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+       const c = roomMap.get(b.toPath) || htmlMap.get(b.toPath) || fileViewerMap.get(b.toPath) || browserMap.get(b.toPath) || terminalMap.get(b.toPath);
+       if (!a || !c) continue;
+ 
+-      // Anchor bridge directly to the exact (X, Y) position of the folder tile in parent room a
++      // Anchor bridge directly to the exact (X, Y) position of the folder or file tile in parent room a
+       let p1 = null;
++      let isSubRowTile = false;
+       if (a.subRowMap) {
+-        const folderRow = a.subRowMap.get(b.toPath);
+-        if (folderRow) {
+-          if ((typeof folderRow._cachedMidX !== 'number' || typeof folderRow._cachedMidY !== 'number') && folderRow.offsetWidth > 0) {
+-            folderRow._cachedMidX = folderRow.offsetLeft + folderRow.offsetWidth / 2;
+-            folderRow._cachedMidY = folderRow.offsetTop + folderRow.offsetHeight / 2;
+-          }
+-          if (typeof folderRow._cachedMidX === 'number' && typeof folderRow._cachedMidY === 'number') {
+-            const bodyEl = a.el ? a.el.querySelector('.map-room-body') : null;
+-            const scrollTop = bodyEl ? bodyEl.scrollTop : 0;
+-            const scale = a.indoorScale || 1;
+-            const headH = 29;
+-            const tileX = Math.max(a.x - a.w / 2 + 14, Math.min(a.x + a.w / 2 - 14, (a.x - a.w / 2) + folderRow._cachedMidX * scale));
+-            const tileY = Math.max(a.y - a.h / 2 + headH, Math.min(a.y + a.h / 2 - 10, (a.y - a.h / 2) + headH + (folderRow._cachedMidY - scrollTop) * scale));
+-            const dx = c.x - tileX;
+-            const dy = c.y - tileY;
+-            if (Math.abs(dx) * a.h >= Math.abs(dy) * a.w) {
+-              p1 = { x: dx >= 0 ? a.x + a.w / 2 : a.x - a.w / 2, y: tileY };
+-            } else {
+-              p1 = { x: tileX, y: dy >= 0 ? a.y + a.h / 2 : a.y - a.h / 2 };
++        let folderRow = a.subRowMap.get(b.toPath);
++        if (!folderRow) {
++          const normTarget = b.toPath.toLowerCase().replace(/[\\/]+$/, '');
++          for (const [k, el] of a.subRowMap) {
++            if (k.toLowerCase().replace(/[\\/]+$/, '') === normTarget) {
++              folderRow = el;
++              break;
+             }
+           }
+         }
++        if (folderRow && (folderRow.offsetWidth > 0 || folderRow.clientWidth > 0)) {
++          const bodyEl = a.el ? a.el.querySelector('.map-room-body') : null;
++          const headH = (a.el && a.el.querySelector('.map-room-head')) ? a.el.querySelector('.map-room-head').offsetHeight : 29;
++          const scrollTop = bodyEl ? bodyEl.scrollTop : 0;
++          const scrollLeft = bodyEl ? bodyEl.scrollLeft : 0;
++          const scale = a.indoorScale || 1;
++          const rw = folderRow.offsetWidth || 100;
++          const rh = folderRow.offsetHeight || 30;
++          const midX = folderRow.offsetLeft + rw / 2;
++          const midY = folderRow.offsetTop + rh / 2;
++          const tileX = Math.round((a.x - a.w / 2) + (midX - scrollLeft) * scale);
++          const tileY = Math.round((a.y - a.h / 2) + headH + (midY - scrollTop) * scale);
++          const clampedX = Math.max(a.x - a.w / 2 + 10, Math.min(a.x + a.w / 2 - 10, tileX));
++          const clampedY = Math.max(a.y - a.h / 2 + headH + 4, Math.min(a.y + a.h / 2 - 8, tileY));
++          p1 = { x: clampedX, y: clampedY };
++          isSubRowTile = true;
++        }
+       }
+       if (!p1) {
+         p1 = getRectBorderIntersection(a.x, a.y, a.w, a.h, c.x, c.y);
+@@ -3802,6 +4309,17 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+         plank.style.stroke = '#10b981'; // Constructive depth descent
+       }
+       frag.append(casing, plank);
++      if (isSubRowTile) {
++        const anchorPeg = document.createElementNS(svgNS, 'circle');
++        anchorPeg.setAttribute('class', 'bridge-anchor-peg');
++        anchorPeg.setAttribute('cx', p1.x);
++        anchorPeg.setAttribute('cy', p1.y);
++        anchorPeg.setAttribute('r', '4');
++        anchorPeg.setAttribute('fill', c.roomColor || '#38bdf8');
++        anchorPeg.setAttribute('stroke', '#ffffff');
++        anchorPeg.setAttribute('stroke-width', '1.5');
++        frag.appendChild(anchorPeg);
++      }
+     }
+     bridgeSvg.innerHTML = '';
+     bridgeSvg.appendChild(frag);
+@@ -3918,39 +4436,53 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+ 
+     const renderEdgeQueue = (arr, side) => {
+       arr.sort((a, b) => a.distOut - b.distOut);
++      const isHoriz = (side === 'top' || side === 'bottom');
++      const bucketStep = isHoriz ? 150 : 38;
+       const buckets = new Map();
+       for (const it of arr) {
+         const trackCoord = (side === 'right' || side === 'left')
+-          ? Math.max(innerT + 22, Math.min(innerB - 22, it.sy))
+-          : Math.max(innerL + 28, Math.min(innerR - 28, it.sx));
+-        const bucketKey = Math.round(trackCoord / 42);
++          ? Math.max(innerT + 24, Math.min(innerB - 24, it.sy))
++          : Math.max(innerL + 60, Math.min(innerR - 60, it.sx));
++        const bucketKey = Math.round(trackCoord / bucketStep);
+         if (!buckets.has(bucketKey)) buckets.set(bucketKey, []);
+         buckets.get(bucketKey).push(it);
+       }
+ 
+       for (const [bKey, group] of buckets) {
+-        const trackPos = bKey * 42;
+-        let stepOffset = 6; // Distance outward from the inner frame line (strictly in the outer margin!)
+-        group.slice(0, 4).forEach((entry, rank) => {
+-          const w = Math.max(9, Math.round(26 - rank * 5));
+-          const h = Math.max(9, Math.round(22 - rank * 4));
++        const trackPos = Math.max(isHoriz ? 80 : 30, Math.min(isHoriz ? W - 80 : H - 30, bKey * bucketStep));
++        group.slice(0, 3).forEach((entry, rank) => {
++          const charLimit = rank === 0 ? 6 : (rank === 1 ? 4 : 2);
++          const shortName = entry.rm.name.slice(0, charLimit);
++          const w = isHoriz
++            ? (charLimit === 6 ? 68 : (charLimit === 4 ? 54 : 38))
++            : (charLimit === 6 ? 62 : (charLimit === 4 ? 48 : 34));
++          const h = 24;
+           const proxy = document.createElement('div');
+-          proxy.className = 'lens-proxy ' + (entry.rm.isHtml ? 'is-html' : 'is-room') + (w < 17 ? ' tiny' : '');
++          proxy.className = 'lens-proxy ' + (entry.rm.isHtml ? 'is-html' : (entry.rm.isFileViewer ? 'is-file' : 'is-room'));
+           proxy.style.setProperty('--px-w', w + 'px');
+           proxy.style.setProperty('--px-h', h + 'px');
+ 
+-          const centerDist = stepOffset + (side === 'right' || side === 'left' ? w / 2 : h / 2);
+           let px = trackPos, py = trackPos;
+-          if (side === 'right') { px = Math.min(W - w / 2 - 2, innerR + centerDist); py = trackPos; }
+-          else if (side === 'left') { px = Math.max(w / 2 + 2, innerL - centerDist); py = trackPos; }
+-          else if (side === 'top') { px = trackPos; py = Math.max(h / 2 + 2, innerT - centerDist); }
+-          else { px = trackPos; py = Math.min(H - h / 2 - 2, innerB + centerDist); }
+-          stepOffset += (side === 'right' || side === 'left' ? w : h) + 3;
+-
+-          proxy.style.left = Math.round(px) + 'px';
+-          proxy.style.top = Math.round(py) + 'px';
+-          proxy.innerHTML = `<span class="lp-lbl">${entry.rm.name}</span>`;
+-          proxy.title = `${entry.rm.isHtml ? '🌐 HTML' : '🏝️ Room'}: ${entry.rm.name} (${Math.round(entry.distOut)}px beyond Inner Frame)\n• Click: Move camera here\n• Double-click: Zoom inside`;
++          if (side === 'right') { px = Math.round(rank === 0 ? W - 44 : W - 20); py = trackPos; }
++          else if (side === 'left') { px = Math.round(rank === 0 ? 44 : 20); py = trackPos; }
++          else if (side === 'top') { px = trackPos; py = Math.round(rank === 0 ? 38 : 16); }
++          else { px = trackPos; py = Math.round(rank === 0 ? H - 38 : H - 16); }
++
++          proxy.style.left = px + 'px';
++          proxy.style.top = py + 'px';
++          const icon = entry.rm.isHtml ? '🌐' : (entry.rm.isFileViewer ? '📄' : '📁');
++          proxy.innerHTML = `<span class="lp-ico">${icon}</span><span class="lp-lbl">${escapeHtml(shortName)}</span>`;
++          proxy.title = `${entry.rm.name} (${Math.round(entry.distOut)}px beyond view)\n• Click: Move camera here\n• Double-click: Zoom inside`;
++          proxy.addEventListener('mouseenter', () => {
++            proxy.classList.add('hover-expanded');
++            const lbl = proxy.querySelector('.lp-lbl');
++            if (lbl) lbl.textContent = entry.rm.name;
++          });
++          proxy.addEventListener('mouseleave', () => {
++            proxy.classList.remove('hover-expanded');
++            const lbl = proxy.querySelector('.lp-lbl');
++            if (lbl) lbl.textContent = shortName;
++          });
+           proxy.onclick = e => {
+             e.stopPropagation();
+             selectActiveRoom(entry.rm.path);
+@@ -4454,6 +4986,33 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+       drawBridges();
+       updateCameraAndLens();
+       persist();
++    } else if (act === 'scale-to-view') {
++      const targetRatio = Math.max(0.35, Math.min(2.8, 1 / camZoom));
++      for (const r of [...roomMap.values(), ...htmlMap.values(), ...fileViewerMap.values()]) {
++        const startW = r.w, startH = r.h;
++        const fixedLeft = r.x - startW / 2;
++        const fixedTop = r.y - startH / 2;
++        const nw = Math.max(200, Math.min(2400, Math.round(startW * targetRatio)));
++        const nh = Math.max(130, Math.min(1600, Math.round(startH * targetRatio)));
++        r.w = nw;
++        r.h = nh;
++        r.x = fixedLeft + nw / 2;
++        r.y = fixedTop + nh / 2;
++        r.el.style.left = Math.round(r.x) + 'px';
++        r.el.style.top = Math.round(r.y) + 'px';
++        r.el.style.setProperty('--room-w', r.w + 'px');
++        r.el.style.setProperty('--room-h', r.h + 'px');
++        const dimEl = r.el.querySelector('.rm-dims');
++        if (dimEl) dimEl.textContent = `${r.w}×${r.h}`;
++        if (layout.rooms && layout.rooms[r.path]) {
++          layout.rooms[r.path] = { ...layout.rooms[r.path], x: r.x, y: r.y, w: r.w, h: r.h };
++        }
++      }
++      resolveRoomCollisions();
++      drawBridges();
++      updateCameraAndLens();
++      persist();
++      showZoneToast(`📐 Scaled all rooms to view (${Math.round(targetRatio * 100)}%)`);
+     } else if (act === 'lens') {
+       edgeLensOn = !edgeLensOn;
+       btn.classList.toggle('active', edgeLensOn);
+@@ -4465,6 +5024,141 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+     }
+   });
+ 
++  const roomScaleInput = hud.querySelector('[data-hud="room-scale"]');
++  const roomScaleLbl = hud.querySelector('.hud-room-scale-lbl');
++  if (roomScaleInput) {
++    let prevScaleVal = 100;
++    roomScaleInput.oninput = () => {
++      const curVal = parseInt(roomScaleInput.value, 10) || 100;
++      if (roomScaleLbl) roomScaleLbl.textContent = `${curVal}%`;
++      const ratio = curVal / prevScaleVal;
++      prevScaleVal = curVal;
++      for (const r of [...roomMap.values(), ...htmlMap.values(), ...fileViewerMap.values()]) {
++        const startW = r.w, startH = r.h;
++        const fixedLeft = r.x - startW / 2;
++        const fixedTop = r.y - startH / 2;
++        const nw = Math.max(180, Math.min(2600, Math.round(startW * ratio)));
++        const nh = Math.max(120, Math.min(1800, Math.round(startH * ratio)));
++        r.w = nw;
++        r.h = nh;
++        r.x = fixedLeft + nw / 2;
++        r.y = fixedTop + nh / 2;
++        r.el.style.left = Math.round(r.x) + 'px';
++        r.el.style.top = Math.round(r.y) + 'px';
++        r.el.style.setProperty('--room-w', r.w + 'px');
++        r.el.style.setProperty('--room-h', r.h + 'px');
++        const dimEl = r.el.querySelector('.rm-dims');
++        if (dimEl) dimEl.textContent = `${r.w}×${r.h}`;
++        if (layout.rooms && layout.rooms[r.path]) {
++          layout.rooms[r.path] = { ...layout.rooms[r.path], x: r.x, y: r.y, w: r.w, h: r.h };
++        }
++      }
++      drawBridges();
++      updateCameraAndLens();
++    };
++    roomScaleInput.onchange = () => {
++      resolveRoomCollisions();
++      drawBridges();
++      updateCameraAndLens();
++      persist();
++    };
++  }
++
++  // RTS Camera Zone Engine: Save, Recall, Smooth Flight, HUD Badges, and On-Screen Toast
++  function flyCameraTo(tx, ty, tZoom, callback) {
++    world.classList.add('camera-flying');
++    camX = tx;
++    camY = ty;
++    if (typeof tZoom === 'number') camZoom = tZoom;
++    updateCameraAndLens();
++    setTimeout(() => {
++      world.classList.remove('camera-flying');
++      if (callback) callback();
++    }, 460);
++  }
++
++  function showZoneToast(msg) {
++    let t = viewport.querySelector('.landscape-zone-toast');
++    if (!t) {
++      t = document.createElement('div');
++      t.className = 'landscape-zone-toast';
++      viewport.appendChild(t);
++    }
++    t.textContent = msg;
++    t.classList.add('visible');
++    clearTimeout(t._hideTimer);
++    t._hideTimer = setTimeout(() => {
++      t.classList.remove('visible');
++    }, 1800);
++  }
++
++  function updateZoneHudButtons() {
++    hud.querySelectorAll('.zone-btn').forEach(btn => {
++      const z = btn.getAttribute('data-zone');
++      const hasZone = !!(cameraZones && cameraZones[z]);
++      btn.classList.toggle('has-zone', hasZone);
++      if (hasZone) {
++        const cz = cameraZones[z];
++        btn.title = `Zone ${z} (Ctrl+${z}: Overwrite · ${z}: Recall · X:${Math.round(cz.x)} Y:${Math.round(cz.y)} ${Math.round(cz.zoom * 100)}%)`;
++      } else {
++        btn.title = `Zone ${z} (Unset - press Ctrl+${z} to bookmark current view)`;
++      }
++    });
++  }
++
++  function saveCameraZone(slot) {
++    const s = String(slot);
++    if (!cameraZones || typeof cameraZones !== 'object') cameraZones = {};
++    cameraZones[s] = { x: camX, y: camY, zoom: camZoom };
++    persist();
++    updateZoneHudButtons();
++    const btn = hud.querySelector(`.zone-btn[data-zone="${s}"]`);
++    if (btn) {
++      btn.classList.remove('active-ping');
++      void btn.offsetWidth;
++      btn.classList.add('active-ping');
++    }
++    showZoneToast(`📍 Zone ${s} Saved (${Math.round(camZoom * 100)}% scale)`);
++  }
++
++  function recallCameraZone(slot) {
++    const s = String(slot);
++    const z = cameraZones ? cameraZones[s] : null;
++    if (!z) {
++      showZoneToast(`⚠️ Zone ${s} not set (Ctrl+${s} to save)`);
++      return false;
++    }
++    flyCameraTo(z.x, z.y, z.zoom);
++    const btn = hud.querySelector(`.zone-btn[data-zone="${s}"]`);
++    if (btn) {
++      btn.classList.remove('active-ping');
++      void btn.offsetWidth;
++      btn.classList.add('active-ping');
++    }
++    showZoneToast(`🎯 Recalled Zone ${s}`);
++    return true;
++  }
++
++  hud.querySelectorAll('.zone-btn').forEach(btn => {
++    btn.onclick = e => {
++      e.stopPropagation();
++      const z = btn.getAttribute('data-zone');
++      if (e.ctrlKey || e.shiftKey) {
++        saveCameraZone(z);
++      } else {
++        if (!recallCameraZone(z)) {
++          saveCameraZone(z);
++        }
++      }
++    };
++    btn.oncontextmenu = e => {
++      e.preventDefault(); e.stopPropagation();
++      const z = btn.getAttribute('data-zone');
++      saveCameraZone(z);
++    };
++  });
++  updateZoneHudButtons();
++
+   const gViewSelect = hud.querySelector('select[data-hud="global-view"]');
+   if (gViewSelect) {
+     gViewSelect.onchange = e => {
+@@ -4733,7 +5427,10 @@ async function renderLandscape(dir, container, onNavigate = go, startZoomedIn =
+     getActiveRoomPath: () => activeRoomPath,
+     syncDoorwayBadges,
+     drawBridges,
+-    openJumpModal: window._openLandscapeJumpModal
++    openJumpModal: window._openLandscapeJumpModal,
++    saveCameraZone,
++    recallCameraZone,
++    flyCameraTo
+   };
+ 
+   // 3. Run iterative AABB separation solver so zero rooms overlap even if saved positions collided!
+@@ -4925,14 +5622,55 @@ async function renderSplitPane() {
+   if (res.error) { spList.appendChild(msg('(' + res.error + ')', 0)); return; }
+   const items = sortItems(res.items || []);
+   for (const it of items) {
+-    const [cell, kids] = makeItem(it, 0, null);
+-    cell.ondblclick = e => { e.stopPropagation(); it.isDir ? splitGo(it.path, true) : window.api.open(it.path); };
+-    spList.append(cell, kids);
++    const nodes = itemNodes(it, 0, null);
++    for (const node of nodes) {
++      const c = node.classList?.contains('item') ? node : node.querySelector?.('.row.item');
++      if (c) c.ondblclick = e => { e.stopPropagation(); it.isDir ? splitGo(it.path, true) : window.api.open(it.path); };
++    }
++    spList.append(...nodes);
+   }
+ }
++async function promptSplitIntoRoom() {
++  if (!window.api || typeof window.api.pickFolder !== 'function') return;
++  const target = await window.api.pickFolder();
++  if (!target) return;
++  injectVirtualRoom(target, cur);
++}
++function injectVirtualRoom(targetPath, intoPath = cur) {
++  if (!targetPath || targetPath === HOME_URI) return;
++  virtualRooms[intoPath] = virtualRooms[intoPath] || [];
++  if (!virtualRooms[intoPath].includes(targetPath)) {
++    virtualRooms[intoPath].push(targetPath);
++  }
++  kidsLayouts[targetPath] = 'room';
++  expanded.add(targetPath);
++  if (isSearching && searchResults.length) reRenderSearchResults();
++  else show();
++  persist();
++}
++function removeVirtualRoom(targetPath, fromPath = cur) {
++  if (virtualRooms[fromPath]) {
++    virtualRooms[fromPath] = virtualRooms[fromPath].filter(p => p !== targetPath);
++    if (!virtualRooms[fromPath].length) delete virtualRooms[fromPath];
++  }
++  expanded.delete(targetPath);
++  if (isSearching && searchResults.length) reRenderSearchResults();
++  else show();
++  persist();
++}
++function openSelectedAsRoom() {
++  const target = getActiveFolderTarget();
++  if (!target || target === HOME_URI) {
++    promptSplitIntoRoom();
++    return;
++  }
++  injectVirtualRoom(target, cur);
++}
+ function showSplitMenu(x, y, forPath = cur) {
+   const otherTabs = tabs.map((t, idx) => ({ t, idx })).filter(o => o.idx !== active);
+   fillMenu([
++    { label: '◫  Split into Room (Inject Folder as Room)…', run: () => promptSplitIntoRoom() },
++    '-',
+     { label: '◧  Split Left' + (splitState.active && splitState.dir === 'left' ? '  ✓' : ''), run: () => activateSplit('left', forPath) },
+     { label: '◨  Split Right' + (splitState.active && splitState.dir === 'right' ? '  ✓' : ''), run: () => activateSplit('right', forPath) },
+     { label: '⬒  Split Up' + (splitState.active && splitState.dir === 'up' ? '  ✓' : ''), run: () => activateSplit('up', forPath) },
+@@ -4954,6 +5692,7 @@ function showSplitMenu(x, y, forPath = cur) {
+ }
+ 
+ function go(p, push = true) {
++  if (isSearching) clearDeepSearch(false);
+   if (!p) p = HOME_URI;
+   cur = p;
+   if (folderViews[p]) {
+@@ -5138,13 +5877,356 @@ function reopenClosedTab() {
+   loadTab(tabs.length - 1);
+   persist();
+ }
++// ---- RTS Hotkey Favorite Rooms System (Keys 1 to =) ----
++function initHotkeyRooms() {
++  const dock = $('hotkeyDock');
++  if (!dock) return;
++  dock.innerHTML = '';
++  HOTKEY_SLOTS.forEach(slot => {
++    if (!hotkeyContainers[slot]) {
++      hotkeyContainers[slot] = { name: `Favorites ${slot}`, items: [] };
++    }
++    const btn = document.createElement('button');
++    btn.className = 'hk-slot-btn' + ((hotkeyContainers[slot].items && hotkeyContainers[slot].items.length) ? ' has-items' : '');
++    btn.dataset.slot = slot;
++    btn.textContent = slot;
++    btn.title = `Hotkey Room ${slot} (Hold ${slot} or click to open)`;
++
++    btn.addEventListener('mousedown', e => {
++      e.stopPropagation();
++      toggleHotkeyRoom(slot);
++    });
++
++    wireHotkeyDropTarget(btn, slot);
++    dock.appendChild(btn);
++  });
++}
++
++function getOrCreateHotkeyRoomEl(slot) {
++  if (hotkeyRoomElements[slot]) return hotkeyRoomElements[slot];
++  const container = hotkeyContainers[slot] || { name: `Favorites ${slot}`, items: [] };
++  const room = document.createElement('div');
++  room.className = 'hotkey-room';
++  room.dataset.slot = slot;
++  room.style.zIndex = ++hotkeyZIndex;
++
++  const header = document.createElement('div');
++  header.className = 'hk-header';
++
++  const titleWrap = document.createElement('div');
++  titleWrap.className = 'hk-title-wrap';
++
++  const badge = document.createElement('span');
++  badge.className = 'hk-badge';
++  badge.textContent = slot;
++
++  const title = document.createElement('span');
++  title.className = 'hk-title';
++  title.textContent = container.name || `Favorites ${slot}`;
++  title.contentEditable = 'true';
++  title.spellcheck = false;
++  title.title = 'Click to rename favorite container';
++  title.addEventListener('blur', () => {
++    container.name = title.textContent.trim() || `Favorites ${slot}`;
++    persist();
++  });
++  title.addEventListener('keydown', e => {
++    e.stopPropagation();
++    if (e.key === 'Enter') { e.preventDefault(); title.blur(); }
++  });
++
++  titleWrap.append(badge, title);
++
++  const controls = document.createElement('div');
++  controls.className = 'hk-controls';
++
++  const pinBtn = document.createElement('button');
++  pinBtn.className = 'hk-btn hk-pin-btn';
++  pinBtn.innerHTML = '📌';
++  pinBtn.title = 'Pin room open';
++  pinBtn.addEventListener('click', e => {
++    e.stopPropagation();
++    room._pinned = !room._pinned;
++    room.classList.toggle('pinned', room._pinned);
++    pinBtn.classList.toggle('pinned', room._pinned);
++    if (room._pinned) clearTimeout(hotkeyFadeTimers[slot]);
++  });
++
++  const moveBtn = document.createElement('button');
++  moveBtn.className = 'hk-btn hk-move-btn';
++  moveBtn.innerHTML = '✥';
++  moveBtn.title = 'Drag to move this room';
++
++  // Drag to reposition
++  let isMoving = false, startX = 0, startY = 0, origLeft = 0, origTop = 0;
++  const onMoveDown = e => {
++    e.preventDefault(); e.stopPropagation();
++    isMoving = true;
++    startX = e.clientX; startY = e.clientY;
++    const r = room.getBoundingClientRect();
++    origLeft = r.left; origTop = r.top;
++    room.style.bottom = 'auto';
++    room.style.right = 'auto';
++    room.style.left = origLeft + 'px';
++    room.style.top = origTop + 'px';
++    const onMouseMove = ev => {
++      if (!isMoving) return;
++      const dx = ev.clientX - startX, dy = ev.clientY - startY;
++      const newL = Math.max(10, Math.min(window.innerWidth - room.offsetWidth - 10, origLeft + dx));
++      const newT = Math.max(10, Math.min(window.innerHeight - room.offsetHeight - 10, origTop + dy));
++      room.style.left = newL + 'px';
++      room.style.top = newT + 'px';
++      hotkeyPositions[slot] = { x: newL, y: newT };
++    };
++    const onMouseUp = () => {
++      isMoving = false;
++      window.removeEventListener('mousemove', onMouseMove);
++      window.removeEventListener('mouseup', onMouseUp);
++    };
++    window.addEventListener('mousemove', onMouseMove);
++    window.addEventListener('mouseup', onMouseUp);
++  };
++  moveBtn.addEventListener('mousedown', onMoveDown);
++  header.addEventListener('mousedown', e => {
++    if (e.target === title || e.target.closest('.hk-btn')) return;
++    onMoveDown(e);
++  });
++
++  const closeBtn = document.createElement('button');
++  closeBtn.className = 'hk-btn';
++  closeBtn.innerHTML = '✕';
++  closeBtn.title = 'Close room';
++  closeBtn.addEventListener('click', e => {
++    e.stopPropagation();
++    hideHotkeyRoom(slot, true);
++  });
++
++  controls.append(pinBtn, moveBtn, closeBtn);
++  header.append(titleWrap, controls);
++
++  const body = document.createElement('div');
++  body.className = 'hk-body';
++  room.append(header, body);
++
++  // Wire hover cancel fade
++  room.addEventListener('mouseenter', () => {
++    if (hotkeyKeepHovered) clearTimeout(hotkeyFadeTimers[slot]);
++  });
++  room.addEventListener('mouseleave', () => {
++    if (!room._pinned && room.classList.contains('visible')) {
++      clearTimeout(hotkeyFadeTimers[slot]);
++      hotkeyFadeTimers[slot] = setTimeout(() => hideHotkeyRoom(slot), hotkeyFadeDelay);
++    }
++  });
++
++  // Dedicated bottom-right resize corner
++  const rz = document.createElement('div');
++  rz.className = 'room-resize-corner';
++  rz.title = 'Drag to resize room';
++  rz.addEventListener('mousedown', e => {
++    e.preventDefault(); e.stopPropagation();
++    const startW = room.offsetWidth, startH = room.offsetHeight;
++    const startX = e.clientX, startY = e.clientY;
++    const onMove = ev => {
++      room.style.width = Math.max(220, startW + (ev.clientX - startX)) + 'px';
++      room.style.height = Math.max(140, startH + (ev.clientY - startY)) + 'px';
++    };
++    const onUp = () => {
++      window.removeEventListener('mousemove', onMove);
++      window.removeEventListener('mouseup', onUp);
++    };
++    window.addEventListener('mousemove', onMove);
++    window.addEventListener('mouseup', onUp);
++  });
++  room.appendChild(rz);
++
++  wireHotkeyDropTarget(room, slot);
++  document.body.appendChild(room);
++  hotkeyRoomElements[slot] = room;
++  renderHotkeyRoomBody(slot);
++  return room;
++}
++
++function renderHotkeyRoomBody(slot) {
++  const room = hotkeyRoomElements[slot];
++  if (!room) return;
++  const body = room.querySelector('.hk-body');
++  if (!body) return;
++  body.innerHTML = '';
++  const container = hotkeyContainers[slot] || { name: `Favorites ${slot}`, items: [] };
++  const items = container.items || [];
++  if (!items.length) {
++    const hint = document.createElement('div');
++    hint.className = 'hk-empty-hint';
++    hint.innerHTML = `Drag & drop any files or folders here<br><span style="font-size:10.5px;color:var(--muted)">Saved to RTS Favorite Group [${slot}]</span>`;
++    body.appendChild(hint);
++    return;
++  }
++  for (let idx = 0; idx < items.length; idx++) {
++    const item = items[idx];
++    const card = document.createElement('div');
++    card.className = 'hk-item-card';
++    card.title = item.path;
++    card.draggable = true;
++
++    const img = document.createElement('img');
++    img.className = 'hk-card-ico';
++    img.src = item.isDir ? PLACEHOLDER_DIR_SVG : (isThumbFile(item) ? fileUrl(item.path) : PLACEHOLDER_FILE_SVG);
++    img.onerror = () => {
++      img.onerror = null;
++      img.src = item.isDir ? PLACEHOLDER_DIR_SVG : PLACEHOLDER_FILE_SVG;
++    };
++    setIcon(img, item, 32, true);
++
++    if (item.x !== undefined && item.y !== undefined) {
++      card.style.position = 'absolute';
++      card.style.left = item.x + 'px';
++      card.style.top = item.y + 'px';
++    }
++
++    const nm = document.createElement('span');
++    nm.className = 'hk-card-nm';
++    nm.textContent = item.name;
++
++    const del = document.createElement('span');
++    del.className = 'hk-card-del';
++    del.textContent = '×';
++    del.title = 'Remove from this room';
++    del.addEventListener('click', e => {
++      e.stopPropagation();
++      items.splice(idx, 1);
++      renderHotkeyRoomBody(slot);
++      updateHotkeyDockBadge(slot);
++      persist();
++    });
++
++    card.append(img, nm, del);
++    card.addEventListener('click', e => {
++      e.stopPropagation();
++      item.isDir ? go(item.path) : window.api.open(item.path);
++    });
++    card.addEventListener('dragstart', e => {
++      e.dataTransfer.setData('text/plain', item.path);
++      if (typeof itemDragPaths !== 'undefined') itemDragPaths = [item.path];
++    });
++    card.addEventListener('dragend', ev => {
++      const bRect = body.getBoundingClientRect();
++      const rawX = ev.clientX - bRect.left;
++      const rawY = ev.clientY - bRect.top;
++      if (rawX >= 0 && rawX <= bRect.width && rawY >= 0 && rawY <= bRect.height) {
++        item.x = Math.max(8, Math.round((rawX - 45) / 20) * 20);
++        item.y = Math.max(8, Math.round((rawY - 40) / 20) * 20);
++        renderHotkeyRoomBody(slot);
++        persist();
++      }
++    });
++
++    body.appendChild(card);
++  }
++}
++
++function updateHotkeyDockBadge(slot) {
++  const btn = $('hotkeyDock')?.querySelector(`[data-slot="${slot}"]`);
++  if (!btn) return;
++  const count = (hotkeyContainers[slot]?.items || []).length;
++  btn.classList.toggle('has-items', count > 0);
++}
++
++function showHotkeyRoom(slot) {
++  if (!hotkeyRoomsEnabled) return;
++  const room = getOrCreateHotkeyRoomEl(slot);
++  clearTimeout(hotkeyFadeTimers[slot]);
++  room.style.zIndex = ++hotkeyZIndex;
++
++  // Position above dock slot if not custom moved
++  const slotBtn = $('hotkeyDock')?.querySelector(`[data-slot="${slot}"]`);
++  if (!hotkeyPositions[slot] && slotBtn) {
++    const r = slotBtn.getBoundingClientRect();
++    const roomW = room.offsetWidth || 460;
++    const roomH = room.offsetHeight || 280;
++    // Align directly above the hotkey button as requested in user diagram
++    const l = Math.max(8, Math.min(window.innerWidth - roomW - 12, r.left));
++    const t = Math.max(10, r.top - roomH - 6);
++    room.style.left = l + 'px';
++    room.style.top = t + 'px';
++  } else if (hotkeyPositions[slot]) {
++    room.style.left = hotkeyPositions[slot].x + 'px';
++    room.style.top = hotkeyPositions[slot].y + 'px';
++  }
++
++  room.classList.add('visible');
++  slotBtn?.classList.add('active');
++}
++
++function hideHotkeyRoom(slot, immediate = false) {
++  const room = hotkeyRoomElements[slot];
++  if (!room) return;
++  if (!immediate && room._pinned) return;
++  clearTimeout(hotkeyFadeTimers[slot]);
++  room.classList.remove('visible');
++  $('hotkeyDock')?.querySelector(`[data-slot="${slot}"]`)?.classList.remove('active');
++}
++
++function toggleHotkeyRoom(slot) {
++  const room = hotkeyRoomElements[slot];
++  if (room && room.classList.contains('visible')) {
++    hideHotkeyRoom(slot, true);
++  } else {
++    showHotkeyRoom(slot);
++  }
++}
++
++function wireHotkeyDropTarget(targetEl, slot) {
++  targetEl.addEventListener('dragover', e => {
++    e.preventDefault(); e.stopPropagation();
++    targetEl.classList.add('drop-target');
++  });
++  targetEl.addEventListener('dragleave', e => {
++    e.stopPropagation();
++    targetEl.classList.remove('drop-target');
++  });
++  targetEl.addEventListener('drop', async e => {
++    e.preventDefault(); e.stopPropagation();
++    targetEl.classList.remove('drop-target');
++    const droppedPaths = [];
++    if (e.dataTransfer.files && e.dataTransfer.files.length) {
++      for (const f of e.dataTransfer.files) if (f.path) droppedPaths.push(f.path);
++    }
++    if (!droppedPaths.length && typeof itemDragPaths !== 'undefined' && itemDragPaths && itemDragPaths.length) {
++      droppedPaths.push(...itemDragPaths);
++    }
++    if (!droppedPaths.length && selected.size) {
++      droppedPaths.push(...selected.keys());
++    }
++    if (!droppedPaths.length) return;
++
++    if (!hotkeyContainers[slot]) hotkeyContainers[slot] = { name: `Favorites ${slot}`, items: [] };
++    const items = hotkeyContainers[slot].items;
++    const b = targetEl.querySelector('.hk-body') || targetEl;
++    const bRect = b.getBoundingClientRect();
++    const snapX = Math.max(8, Math.round((e.clientX - bRect.left - 45) / 20) * 20);
++    const snapY = Math.max(8, Math.round((e.clientY - bRect.top - 40) / 20) * 20);
++    for (const p of droppedPaths) {
++      if (!items.some(it => it.path === p)) {
++        const selectedItem = selected.get(p)?.item;
++        const isDir = selectedItem ? selectedItem.isDir : !(p.split(/[\\/]/).pop().includes('.'));
++        items.push({ path: p, name: baseName(p), isDir, x: snapX, y: snapY });
++      }
++    }
++    renderHotkeyRoomBody(slot);
++    updateHotkeyDockBadge(slot);
++    showHotkeyRoom(slot);
++    persist();
++  });
++}
++
+ let persistTimer = null;
+ function persist() {
+   renderTabs();
+   clearTimeout(persistTimer);
+   persistTimer = setTimeout(() => {
+     saveTab();
+-    const s = { view: mode, folderViews, landscapePalette, modePaletteIndex, customPaletteColors, inheritShiftMode, landscapeBg, landscapeBgColor, landscapeBgImage, canvasReactMode, accentColor, hotkeys, defaultFrameColor, defaultBgColor, roomBgOpacity, roomGlowIntensity, roomGlowRange, breathTargetColor, breathTargetBgColor, breathScaleSize, breathAffectTiles, puddleIntervalMin, puddleIntervalMax, puddleRippleDuration, puddleMaxConcurrent, activeRoomBorderColor, selectedFolderColor, useCustomSelectedFolder, unselectedFolderColor, useCustomUnselectedFolder, browserAutoSleep, autoSummarize, breathingDuration, lockFrame, lockBg, holdRenameEnabled, holdRenameDelay, sortKey, sortAsc, groupKey, colWidths, showPreview, darkMode, showHidden, showExt, showChecks, newTabTarget, scripts, bookmarks, recentFolders, landscapeLayout, splitRatio, kidsLayouts, kidsRoomSize, kidsDense, denseTop };
++    const s = { view: mode, folderViews, forceGlobalView, imageThumbFit, virtualRooms, hotkeyContainers, hotkeyFadeDelay, hotkeyRoomsEnabled, hotkeyKeepHovered, landscapePalette, modePaletteIndex, customPaletteColors, inheritShiftMode, landscapeBg, landscapeBgColor, landscapeBgImage, canvasReactMode, accentColor, hotkeys, defaultFrameColor, defaultBgColor, roomBgOpacity, roomGlowIntensity, roomGlowRange, breathTargetColor, breathTargetBgColor, breathScaleSize, breathAffectTiles, puddleIntervalMin, puddleIntervalMax, puddleRippleDuration, puddleMaxConcurrent, activeRoomBorderColor, selectedFolderColor, useCustomSelectedFolder, unselectedFolderColor, useCustomUnselectedFolder, browserAutoSleep, autoSummarize, breathingDuration, lockFrame, lockBg, holdRenameEnabled, holdRenameDelay, sortKey, sortAsc, groupKey, colWidths, showPreview, darkMode, showHidden, showExt, showChecks, newTabTarget, scripts, bookmarks, recentFolders, landscapeLayout, splitRatio, kidsLayouts, kidsGroups, kidsRoomSize, kidsDense, denseTop, cameraZones };
+     if (isPrimary) s.session = { tabs, active };
+     window.api.saveSettings(s);
+   }, 300);
+@@ -5207,16 +6289,149 @@ $('search')?.addEventListener('focus', () => {
+ });
+ $('search')?.addEventListener('input', e => {
+   filterText = e.target.value;
++  $('searchClearBtn')?.classList.toggle('hidden', !filterText);
+   if ((mode === 'landscape' || mode === 'lens') && typeof window._openLandscapeJumpModal === 'function') {
+     window._openLandscapeJumpModal(filterText, false);
+-  } else {
++  } else if (!isSearching) {
+     applyFilter();
+   }
+ });
+-$('search')?.addEventListener('keydown', e => { if (e.key === 'Escape') { $('search').value = ''; filterText = ''; applyFilter(); $('search').blur(); } });
+-if ($('view')) {
+-  $('view').onchange = e => { mode = e.target.value; folderViews[cur] = mode; if (tabs[active]) tabs[active].mode = mode; show(); persist(); recordResourceAction(`Switched view to ${mode}`); };
+-}
++$('search')?.addEventListener('keydown', e => {
++  if (e.key === 'Escape') {
++    clearDeepSearch();
++    $('search').blur();
++  } else if (e.key === 'Enter') {
++    e.preventDefault();
++    const q = $('search').value.trim();
++    if (q) runDeepSearch(q);
++    else clearDeepSearch();
++  }
++});
++$('searchBtn')?.addEventListener('click', () => {
++  const q = $('search')?.value.trim();
++  if (q) runDeepSearch(q);
++});
++$('searchClearBtn')?.addEventListener('click', () => {
++  clearDeepSearch();
++});
++// Windows 11 Native Toolbar: New Menu
++$('newBtn')?.addEventListener('click', e => {
++  e.stopPropagation();
++  const r = $('newBtn').getBoundingClientRect();
++  fillMenu([
++    { label: '📁  Folder (Ctrl+Shift+N)', run: () => { const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFolder(dest)); } },
++    '-',
++    { label: '📄  Text Document (.txt)', run: () => { const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFile(dest, '.txt')); } },
++    { label: '🌐  HTML Document (.html)', run: () => { const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFile(dest, '.html')); } },
++    { label: '🐍  Python Script (.py)', run: () => { const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFile(dest, '.py')); } },
++    { label: '📜  Markdown File (.md)', run: () => { const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFile(dest, '.md')); } }
++  ]);
++  placeMenu(r.left, r.bottom + 2);
++});
++
++// Windows 11 Native Toolbar: Contextual Action Buttons
++$('cutBtn')?.addEventListener('click', () => {
++  if (selected.size) storeClip({ mode: 'cut', paths: [...selected.keys()] });
++  updateToolbarContextButtons();
++});
++$('copyBtn')?.addEventListener('click', () => {
++  if (selected.size) storeClip({ mode: 'copy', paths: [...selected.keys()] });
++  updateToolbarContextButtons();
++});
++$('pasteBtn')?.addEventListener('click', () => {
++  const first = [...selected.values()][0];
++  doPaste(getActiveFolderTarget(first && first.item));
++  updateToolbarContextButtons();
++});
++$('renameBtn')?.addEventListener('click', () => {
++  const first = [...selected.values()][0];
++  if (first) startRename(first.item, first.cell);
++});
++$('deleteBtn')?.addEventListener('click', () => {
++  if (selected.size) doDelete([...selected.keys()]);
++});
++
++// Windows 11 Native Toolbar: View Dropdown Menu
++$('viewBtn')?.addEventListener('click', e => {
++  e.stopPropagation();
++  const r = $('viewBtn').getBoundingClientRect();
++  const setView = v => () => {
++    mode = v;
++    folderViews[cur] = mode;
++    if (tabs[active]) tabs[active].mode = mode;
++    if (isSearching && searchResults.length) reRenderSearchResults();
++    else show();
++    persist();
++    recordResourceAction(`Switched view to ${mode}`);
++  };
++  const mV = v => (mode === v ? '● ' : '    ');
++
++  fillMenu([
++    { label: mV('xl') + 'Extra large icons', run: setView('xl') },
++    { label: mV('large') + 'Large icons', run: setView('large') },
++    { label: mV('medium') + 'Medium icons', run: setView('medium') },
++    { label: mV('small') + 'Small icons', run: setView('small') },
++    { label: mV('list') + 'List', run: setView('list') },
++    { label: mV('details') + 'Details', run: setView('details') },
++    { label: mV('tiles') + 'Tiles', run: setView('tiles') },
++    { label: mV('content') + 'Content', run: setView('content') },
++    '-',
++    { label: mV('landscape') + '🗺️ Landscape (Map)', run: setView('landscape') },
++    '-',
++    {
++      label: (forceGlobalView ? '✓ ' : '    ') + 'Force Global View on all folders',
++      run: () => {
++        forceGlobalView = !forceGlobalView;
++        show();
++        persist();
++      }
++    }
++  ]);
++  placeMenu(r.left, r.bottom + 2);
++});
++
++// Windows 11 Native Toolbar: Sort & Group Dropdown Menu
++$('sortBtn')?.addEventListener('click', e => {
++  e.stopPropagation();
++  const r = $('sortBtn').getBoundingClientRect();
++  const setSort = k => () => {
++    sortKey = k;
++    if (isSearching && searchResults.length) reRenderSearchResults(); else show();
++    persist();
++  };
++  const setDir = asc => () => {
++    sortAsc = asc;
++    if (isSearching && searchResults.length) reRenderSearchResults(); else show();
++    persist();
++  };
++  const setGroup = g => () => {
++    groupKey = g;
++    if (isSearching && searchResults.length) reRenderSearchResults(); else show();
++    persist();
++  };
++  const mSort = k => (sortKey === k ? '● ' : '    ');
++  const mDir = asc => (sortAsc === asc ? '● ' : '    ');
++  const mGrp = g => (groupKey === g ? '● ' : '    ');
++
++  fillMenu([
++    { label: 'SORT BY:', disabled: true },
++    { label: mSort('name') + 'Name', run: setSort('name') },
++    { label: mSort('mtime') + 'Date modified', run: setSort('mtime') },
++    { label: mSort('type') + 'Type', run: setSort('type') },
++    { label: mSort('size') + 'Size', run: setSort('size') },
++    '-',
++    { label: mDir(true) + 'Ascending', run: setDir(true) },
++    { label: mDir(false) + 'Descending', run: setDir(false) },
++    '-',
++    { label: 'GROUP BY:', disabled: true },
++    { label: mGrp('none') + 'None', run: setGroup('none') },
++    { label: mGrp('name') + 'Name', run: setGroup('name') },
++    { label: mGrp('mtime') + 'Date modified', run: setGroup('mtime') },
++    { label: mGrp('type') + 'Type', run: setGroup('type') },
++    { label: mGrp('size') + 'Size', run: setGroup('size') }
++  ]);
++  placeMenu(r.left, r.bottom + 2);
++});
+ if ($('splitBtn')) {
+   $('splitBtn').onclick = e => {
+     e.stopPropagation();
+@@ -5273,9 +6488,7 @@ if (splitGrip) {
+     window.addEventListener('mouseup', onUp);
+   });
+ }
+-if ($('group')) $('group').onchange = e => { groupKey = e.target.value; show(); persist(); };
+-if ($('sort')) $('sort').onchange = e => { sortKey = e.target.value; show(); persist(); };
+-if ($('sortDir')) $('sortDir').onclick = () => { sortAsc = !sortAsc; $('sortDir').textContent = sortAsc ? '↑' : '↓'; show(); persist(); };
++
+ if ($('checkBtn')) $('checkBtn').onclick = () => { showChecks = !showChecks; applyToggles(); persist(); };
+ if ($('extBtn')) $('extBtn').onclick = () => { showExt = !showExt; applyToggles(); show(); persist(); };
+ if ($('hiddenBtn')) $('hiddenBtn').onclick = () => { showHidden = !showHidden; applyToggles(); applyFilter(); persist(); };
+@@ -5296,7 +6509,7 @@ if (devToolsBtn) devToolsBtn.onclick = () => window.api.openDevTools();
+       if (sortKey === k) sortAsc = !sortAsc; else { sortKey = k; sortAsc = true; }
+       if ($('sort')) $('sort').value = k;
+       if ($('sortDir')) $('sortDir').textContent = sortAsc ? '↑' : '↓';
+-      show(); persist();
++      if (isSearching && searchResults.length) reRenderSearchResults(); else show(); persist();
+     };
+   }
+ });
+@@ -5397,10 +6610,13 @@ function renderBookmarksNav() {
+       customPaletteColors = { ...customPaletteColors, ...settings.customPaletteColors };
+     }
+     if (settings.inheritShiftMode) inheritShiftMode = settings.inheritShiftMode;
++    if (settings.virtualRooms && typeof settings.virtualRooms === 'object') virtualRooms = { ...settings.virtualRooms };
+     if (settings.kidsLayouts && typeof settings.kidsLayouts === 'object') kidsLayouts = { ...settings.kidsLayouts };
++    if (settings.kidsGroups && typeof settings.kidsGroups === 'object') kidsGroups = { ...settings.kidsGroups };
+     if (settings.kidsRoomSize && typeof settings.kidsRoomSize === 'object') kidsRoomSize = { ...settings.kidsRoomSize };
+     if (settings.kidsDense && typeof settings.kidsDense === 'object') kidsDense = { ...settings.kidsDense };
+     if (typeof settings.denseTop === 'boolean') denseTop = settings.denseTop;
++    if (settings.cameraZones && typeof settings.cameraZones === 'object') cameraZones = { ...settings.cameraZones };
+     if (settings.landscapeBg) landscapeBg = settings.landscapeBg;
+     if (settings.landscapeBgColor) landscapeBgColor = settings.landscapeBgColor;
+     if (settings.landscapeBgImage) landscapeBgImage = settings.landscapeBgImage;
+@@ -5460,6 +6676,12 @@ function renderBookmarksNav() {
+     if (Array.isArray(settings.recentFolders)) recentFolders = settings.recentFolders;
+     if (settings.landscapeLayout && typeof settings.landscapeLayout === 'object') landscapeLayout = settings.landscapeLayout;
+     if (settings.splitRatio) { splitRatio = settings.splitRatio; applySplitRatio(); }
++    if (typeof settings.forceGlobalView === 'boolean') forceGlobalView = settings.forceGlobalView;
++    if (settings.imageThumbFit) applyImageThumbFit(settings.imageThumbFit); else applyImageThumbFit('cover');
++    if (settings.hotkeyContainers && typeof settings.hotkeyContainers === 'object') hotkeyContainers = { ...settings.hotkeyContainers };
++    if (typeof settings.hotkeyRoomsEnabled === 'boolean') hotkeyRoomsEnabled = settings.hotkeyRoomsEnabled;
++    if (typeof settings.hotkeyFadeDelay === 'number') hotkeyFadeDelay = settings.hotkeyFadeDelay;
++    if (typeof settings.hotkeyKeepHovered === 'boolean') hotkeyKeepHovered = settings.hotkeyKeepHovered;
+ 
+     // 2. Initialize tabs first
+     console.log('[PEEK-BOOT:3] Step 3: Initializing tabs. startPath from query:', params.get('path'), 'isPrimary:', isPrimary);
+@@ -5484,6 +6706,15 @@ function renderBookmarksNav() {
+       console.log('[PEEK-BOOT:3] Calling loadTab(0)...');
+       loadTab(0); 
+     }
++    initHotkeyRooms();
++    if (window.api && typeof window.api.onRtsHotkey === 'function') {
++      window.api.onRtsHotkey(slot => {
++        if (!hotkeyRoomsEnabled || mode === 'landscape' || mode === 'lens') return;
++        const ae = document.activeElement;
++        if (ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA' || ae.isContentEditable)) return;
++        toggleHotkeyRoom(slot);
++      });
++    }
+ 
+     // 3. Populate sidebar skeleton
+     console.log('[PEEK-BOOT:3] Step 4: Populating sidebar skeleton in #nav...');
+@@ -5610,7 +6841,26 @@ const refreshKeep = async (affectedDirs = null) => {
+   }
+   await show();
+ };
+-const pasteDir = it => (it && it.isDir && selected.size <= 1) ? it.path : cur;
++function getActiveFolderTarget(it = null) {
++  if (it && it.isDir) return it.path;
++  if (it && it.path) return parent(it.path);
++  const focusedEl = document.activeElement?.closest?.('.grp-fold, .row.item, .kids, .map-room');
++  if (focusedEl) {
++    if (focusedEl._folderPath) return focusedEl._folderPath;
++    if (focusedEl.dataset?.roomPath) return focusedEl.dataset.roomPath;
++    if (focusedEl._item) return focusedEl._item.isDir ? focusedEl._item.path : parent(focusedEl._item.path);
++  }
++  const first = selected.size ? [...selected.values()][0] : null;
++  if (first && first.item) {
++    return first.item.isDir ? first.item.path : parent(first.item.path);
++  }
++  if (lastClickPath) {
++    const r = visibleRows().find(el => el._item && el._item.path === lastClickPath);
++    if (r && r._item) return r._item.isDir ? r._item.path : parent(r._item.path);
++  }
++  return cur;
++}
++const pasteDir = it => getActiveFolderTarget(it);
+ async function doPaste(dest) {
+   if (!dest || dest === HOME_URI) return;
+   await syncClip();
+@@ -5738,7 +6988,13 @@ async function doDelete(paths) {
+   if (r.error) alert(r.error);
+   if (r.ok) {
+     clearSelection();
+-    await refreshKeep(paths.map(p => parent(p)));
++    for (const p of paths) {
++      document.querySelectorAll('.row.item, .room-item, .room-file, .room-door, .grp-fold').forEach(el => {
++        if ((el._item && el._item.path === p) || (el._folderPath === p)) el.remove();
++      });
++    }
++    totalCount = Math.max(0, totalCount - paths.length);
++    updateStatus();
+     if (nextItemPath) {
+       const refreshedRows = visibleRows();
+       const newRow = refreshedRows.find(r => r._item && r._item.path === nextItemPath) || refreshedRows[Math.min(idx, refreshedRows.length - 1)];
+@@ -5759,7 +7015,13 @@ async function doPermanentDelete(paths) {
+   if (r.error) alert(r.error);
+   if (r.ok) {
+     clearSelection();
+-    await refreshKeep(paths.map(p => parent(p)));
++    for (const p of paths) {
++      document.querySelectorAll('.row.item, .room-item, .room-file, .room-door, .grp-fold').forEach(el => {
++        if ((el._item && el._item.path === p) || (el._folderPath === p)) el.remove();
++      });
++    }
++    totalCount = Math.max(0, totalCount - paths.length);
++    updateStatus();
+     if (nextItemPath) {
+       const refreshedRows = visibleRows();
+       const newRow = refreshedRows.find(r => r._item && r._item.path === nextItemPath) || refreshedRows[Math.min(idx, refreshedRows.length - 1)];
+@@ -5822,6 +7084,7 @@ async function showMenu(x, y, it) {
+         { label: 'Open in new tab (Middle-click)', run: () => newTab(it.path, [], true) },
+         { label: 'Open in background tab', run: () => newTab(it.path, [], false) },
+         { label: 'Open in new window', run: () => window.api.newWindow(it.path) },
++        { label: '◫ Split into Room (Inline Sub-room Box)', run: () => injectVirtualRoom(it.path, cur) },
+         { label: '🗺️ Spawn Room in Landscape', run: () => openFolderInLandscape(it.path, it.name) },
+         { label: '⭐ Bookmark folder in sidebar', run: () => { if (!bookmarks.some(b => b.path === it.path)) { bookmarks.push({ name: it.name, path: it.path }); renderBookmarksNav(); persist(); } } },
+         { label: 'Calculate folder size', run: () => calcFolderSize(it, firstEntry && firstEntry.cell) },
+@@ -5839,6 +7102,7 @@ async function showMenu(x, y, it) {
+       ...(isZip ? [
+         { label: '📦 Extract zip to folder', run: async () => { $('status').textContent = 'Extracting…'; const r = await window.api.unzipItem(it.path); if (r.error) alert(r.error); show(); } }
+       ] : []),
++      ...(isSearching ? [{ label: '📁 Open containing folder', run: () => { const dir = it.parentDir || parent(it.path); clearDeepSearch(false); go(dir); } }] : []),
+       { label: 'Show in Windows Explorer', run: () => window.api.showInFolder(it.path) },
+       '-'
+     ] : []),
+@@ -5943,9 +7207,9 @@ $('content').addEventListener('contextmenu', async e => {
+   e.preventDefault();
+   await syncClip();
+   fillMenu([
+-    { label: 'New folder', run: () => createAndRename(() => window.api.newFolder(cur)) },
+-    { label: 'New text document (.txt)', run: () => createAndRename(() => window.api.newFile(cur, '.txt')) },
+-    { label: 'New markdown file (.md)', run: () => createAndRename(() => window.api.newFile(cur, '.md')) },
++    { label: 'New folder', run: () => { const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFolder(dest)); } },
++    { label: 'New text document (.txt)', run: () => { const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFile(dest, '.txt')); } },
++    { label: 'New markdown file (.md)', run: () => { const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFile(dest, '.md')); } },
+     '-',
+     { label: '⭐ Bookmark this folder', run: () => { if (!bookmarks.some(b => b.path === cur)) { bookmarks.push({ name: baseName(cur), path: cur }); renderBookmarksNav(); persist(); } } },
+     { label: '🖥️ Open PowerShell here (External)', run: () => window.api.openTerminal(cur, 'powershell') },
+@@ -5966,7 +7230,7 @@ $('content').addEventListener('contextmenu', async e => {
+     '-',
+     { label: 'Select all (Ctrl+A)', run: selectAll },
+     { label: 'Invert selection', run: invertSelection },
+-    { label: 'Paste (Ctrl+V)', disabled: !clip, run: () => doPaste(cur) },
++    { label: 'Paste (Ctrl+V)', disabled: !clip, run: () => doPaste(getActiveFolderTarget()) },
+     { label: 'Undo last rename/move (Ctrl+Z)', disabled: !undoStack.length, run: doUndo },
+     { label: 'Refresh (F5)', run: refreshKeep },
+     '-',
+@@ -6003,7 +7267,7 @@ document.addEventListener('keydown', async e => {
+   if (matchesHotkey(e, 'reopenTab')) { e.preventDefault(); reopenClosedTab(); return; }
+   if (matchesHotkey(e, 'newTab')) { e.preventDefault(); newTab(); return; }
+   if (matchesHotkey(e, 'closeTab')) { e.preventDefault(); closeTab(active); return; }
+-  if (matchesHotkey(e, 'newFolder')) { e.preventDefault(); createAndRename(() => window.api.newFolder(cur)); return; }
++  if (matchesHotkey(e, 'newFolder')) { e.preventDefault(); const dest = getActiveFolderTarget(); createAndRename(() => window.api.newFolder(dest)); return; }
+   if (matchesHotkey(e, 'newWindow')) { e.preventDefault(); window.api.newWindow(cur); return; }
+   if (matchesHotkey(e, 'toggleTerminal')) {
+     e.preventDefault();
+@@ -6023,7 +7287,24 @@ document.addEventListener('keydown', async e => {
+     return;
+   }
+   if (e.ctrlKey && e.key === 'Tab') { e.preventDefault(); switchTab((active + (e.shiftKey ? -1 : 1) + tabs.length) % tabs.length); return; }
+-  if (e.ctrlKey && /^[1-9]$/.test(e.key)) { e.preventDefault(); switchTab(Math.min(+e.key - 1, tabs.length - 1)); return; }
++  if (/^F[1-5]$/.test(e.key) && (mode === 'landscape' || mode === 'lens')) {
++    e.preventDefault();
++    const slot = e.key.slice(1);
++    if (e.ctrlKey || e.shiftKey) {
++      window._landscapeState?.saveCameraZone?.(slot);
++    } else {
++      window._landscapeState?.recallCameraZone?.(slot);
++    }
++    return;
++  }
++  if (e.ctrlKey && /^[1-9]$/.test(e.key)) {
++    if ((mode === 'landscape' || mode === 'lens') && +e.key <= 5 && window._landscapeState?.saveCameraZone) {
++      e.preventDefault();
++      window._landscapeState.saveCameraZone(e.key);
++      return;
++    }
++    e.preventDefault(); switchTab(Math.min(+e.key - 1, tabs.length - 1)); return;
++  }
+   if (matchesHotkey(e, 'focusAddress') || (e.altKey && e.key.toLowerCase() === 'd')) { e.preventDefault(); startAddressEdit(); return; }
+   if (matchesHotkey(e, 'focusSearch')) {
+     e.preventDefault();
+@@ -6040,6 +7321,27 @@ document.addEventListener('keydown', async e => {
+   if (matchesHotkey(e, 'goHome')) { e.preventDefault(); go(HOME_URI); return; }
+   if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+ 
++  // RTS Camera Zone Recall Hotkeys in Landscape / Lens mode: 1..5 or Alt+1..5
++  if ((mode === 'landscape' || mode === 'lens') && /^[1-5]$/.test(e.key) && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
++    e.preventDefault();
++    window._landscapeState?.recallCameraZone?.(e.key);
++    return;
++  }
++  if ((mode === 'landscape' || mode === 'lens') && /^[1-5]$/.test(e.key) && e.altKey && !e.ctrlKey && !e.metaKey) {
++    e.preventDefault();
++    window._landscapeState?.recallCameraZone?.(e.key);
++    return;
++  }
++
++  // RTS Hotkey Favorite Rooms in normal explorer views: 1 to =
++  if (e._handledHotkey) return;
++  if (hotkeyRoomsEnabled && (mode !== 'landscape' && mode !== 'lens') && HOTKEY_SLOTS.includes(e.key) && !e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey) {
++    if (!e.repeat) {
++      toggleHotkeyRoom(e.key);
++    }
++    return;
++  }
++
+   const rows = visibleRows();
+   const curIdx = rows.findIndex(r => r._item && r._item.path === (focusedPath || (selected.size ? [...selected.keys()][0] : null)));
+   const curRow = curIdx !== -1 ? rows[curIdx] : null;
+@@ -6124,6 +7426,29 @@ document.addEventListener('keydown', async e => {
+   }
+ });
+ 
++// Window capture-phase key listener so hotkey rooms toggle even while dragging files across the window
++window.addEventListener('keydown', e => {
++  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
++  if (!hotkeyRoomsEnabled || mode === 'landscape' || mode === 'lens') return;
++  if (HOTKEY_SLOTS.includes(e.key) && !e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey) {
++    if (!e.repeat) {
++      e._handledHotkey = true;
++      toggleHotkeyRoom(e.key);
++    }
++  }
++}, true);
++
++document.addEventListener('keyup', e => {
++  if (hotkeyRoomsEnabled && (mode !== 'landscape' && mode !== 'lens') && HOTKEY_SLOTS.includes(e.key) && !e.ctrlKey && !e.altKey && !e.metaKey) {
++    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA' && !e.target.isContentEditable) {
++      if (!hotkeyRoomElements[e.key]?._pinned) {
++        clearTimeout(hotkeyFadeTimers[e.key]);
++        hotkeyFadeTimers[e.key] = setTimeout(() => hideHotkeyRoom(e.key), hotkeyFadeDelay);
++      }
++    }
++  }
++});
++
+ 
+   // ---- Settings Modal Wiring ----
+   const settingsBackdrop = $('settingsBackdrop');
+@@ -6265,6 +7590,11 @@ document.addEventListener('keydown', async e => {
+       if ($('setHoldRenameEnabled')) $('setHoldRenameEnabled').checked = holdRenameEnabled;
+       if ($('setHoldRenameDelay')) $('setHoldRenameDelay').value = holdRenameDelay;
+       if ($('setHoldRenameDelayVal')) $('setHoldRenameDelayVal').textContent = holdRenameDelay + 'ms';
++      if ($('setImageThumbFit')) $('setImageThumbFit').value = imageThumbFit;
++      if ($('setHotkeyRoomsEnabled')) $('setHotkeyRoomsEnabled').checked = hotkeyRoomsEnabled;
++      if ($('setHotkeyFadeDelay')) $('setHotkeyFadeDelay').value = hotkeyFadeDelay;
++      if ($('setHotkeyFadeDelayVal')) $('setHotkeyFadeDelayVal').textContent = hotkeyFadeDelay + 'ms';
++      if ($('setHotkeyKeepHovered')) $('setHotkeyKeepHovered').checked = hotkeyKeepHovered;
+ 
+       syncHotkeyButtons();
+ 
+@@ -6679,6 +8009,19 @@ document.addEventListener('keydown', async e => {
+     $('setHoldRenameDelay')?.addEventListener('input', e => {
+       if ($('setHoldRenameDelayVal')) $('setHoldRenameDelayVal').textContent = e.target.value + 'ms';
+     });
++    $('setHotkeyFadeDelay')?.addEventListener('input', e => {
++      if ($('setHotkeyFadeDelayVal')) $('setHotkeyFadeDelayVal').textContent = e.target.value + 'ms';
++    });
++    $('setClearHotkeyRoomsBtn')?.addEventListener('click', () => {
++      if (confirm('Clear all items from all RTS Favorite Hotkey Rooms?')) {
++        HOTKEY_SLOTS.forEach(s => {
++          if (hotkeyContainers[s]) hotkeyContainers[s].items = [];
++          renderHotkeyRoomBody(s);
++          updateHotkeyDockBadge(s);
++        });
++        persist();
++      }
++    });
+ 
+     $('setThemeDark')?.addEventListener('click', () => { darkMode = true; applyTheme(); persist(); });
+     $('setThemeLight')?.addEventListener('click', () => { darkMode = false; applyTheme(); persist(); });
+@@ -6740,6 +8083,10 @@ document.addEventListener('keydown', async e => {
+         lockBg = !!$('setLockBg')?.checked;
+         holdRenameEnabled = !!$('setHoldRenameEnabled')?.checked;
+         holdRenameDelay = parseInt($('setHoldRenameDelay')?.value) || 550;
++        if ($('setImageThumbFit')) applyImageThumbFit($('setImageThumbFit').value);
++        hotkeyRoomsEnabled = !!$('setHotkeyRoomsEnabled')?.checked;
++        hotkeyFadeDelay = parseInt($('setHotkeyFadeDelay')?.value) || 1800;
++        hotkeyKeepHovered = !!$('setHotkeyKeepHovered')?.checked;
+ 
+         applyToggles();
+         persist();

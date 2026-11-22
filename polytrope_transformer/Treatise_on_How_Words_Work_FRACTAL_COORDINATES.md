@@ -1,0 +1,426 @@
+# Fractal Interrogative Coordinate Catalogue: Exact Invariant Seeds
+**Source Document**: `Treatise_on_How_Words_Work.md`
+**Architecture**: 7x7x7 Recursive Dependency Slot Parser (spaCy + Event Physics)
+**Total Atomic Coordinate Seeds**: 394
+
+---
+
+## The 7 Planes of Reality (42-Structure Invariant Coordinates)
+
+### Q1 — Who (Metaphysical Plane (Will and Direction))
+*Active Seed Coordinates: 113*
+
+- ● **`[Q1]`** *(L010|Introduction: The Failure of the Word as a Label)*: conventional linguistics
+- ● **`[Q1]`** *(L010|Introduction: The Failure of the Word as a Label)*: language
+- ● **`[Q1]`** *(L012|Introduction: The Failure of the Word as a Label)*: This foundation
+- ● **`[Q1]`** *(L012|Introduction: The Failure of the Word as a Label)*: words
+- ● **`[Q1]`** *(L014|Introduction: The Failure of the Word as a Label)*: Vector Field Theory VFT and Actualism
+-   └─► **`[Q1.q1]`** *(L014|Introduction: The Failure of the Word as a Label)*: Vector
+- ● **`[Q1]`** *(L016|Introduction: The Failure of the Word as a Label)*: Language
+- ● **`[Q1]`** *(L018|Introduction: The Failure of the Word as a Label)*: A word
+- ● **`[Q1]`** *(L018|Introduction: The Failure of the Word as a Label)*: It
+- ● **`[Q1]`** *(L024|1. The Four Language Axioms)*: language
+- ● **`[Q1]`** *(L026|1. The Four Language Axioms)*: Axiom I Event Primacy Words
+-   └─► **`[Q1.q1]`** *(L026|1. The Four Language Axioms)*: I
+-   └─► **`[Q1.q2]`** *(L026|1. The Four Language Axioms)*: Event Primacy Words
+- ● **`[Q1]`** *(L026|1. The Four Language Axioms)*: nouns
+- ● **`[Q1]`** *(L027|1. The Four Language Axioms)*: Language
+- ● **`[Q1]`** *(L027|1. The Four Language Axioms)*: it
+- ● **`[Q1]`** *(L028|1. The Four Language Axioms)*: physical reality
+- ● **`[Q1]`** *(L029|1. The Four Language Axioms)*: Axiom IV Competence as Literacy True literacy
+-   └─► **`[Q1.q1]`** *(L029|1. The Four Language Axioms)*: Axiom
+-   └─► **`[Q1.q6]`** *(L029|1. The Four Language Axioms)*: as Literacy True literacy
+- ● **`[Q1]`** *(L029|1. The Four Language Axioms)*: A person
+- ● **`[Q1]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: they
+- ● **`[Q1]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: the agent
+- ● **`[Q1]`** *(L037|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: A word
+- ● **`[Q1]`** *(L041|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: Every word
+- ● **`[Q1]`** *(L048|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: A word
+- ● **`[Q1]`** *(L048|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: It
+- ● **`[Q1]`** *(L050|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: the heavens and the earth
+- ● **`[Q1]`** *(L056|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: Words
+- ● **`[Q1]`** *(L056|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: They
+- ● **`[Q1]`** *(L063|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: Force
+- ● **`[Q1]`** *(L066|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: structure
+- ● **`[Q1]`** *(L070|Substrate Independence)*: A true root word
+- ● **`[Q1]`** *(L070|Substrate Independence)*: It
+- ● **`[Q1]`** *(L074|Substrate Independence)*: it
+- ● **`[Q1]`** *(L074|Substrate Independence)*: it
+- ● **`[Q1]`** *(L077|The 3-Step Pairwise Invariant)*: Every complete root action
+- ● **`[Q1]`** *(L080|The 3-Step Pairwise Invariant)*: Transit Gradient Flow
+- ● **`[Q1]`** *(L081|The 3-Step Pairwise Invariant)*: Arrival Resolved State
+- ● **`[Q1]`** *(L097|4. Topological Closure: The Periodic Table of Roots)*: Roots
+- ● **`[Q1]`** *(L105|4. Topological Closure: The Periodic Table of Roots)*: root actions
+- ● **`[Q1]`** *(L114|Conjugate Dual Invariants (Opposing Root Pairs))*: Roots opposing pairs e.g. ` live ` ` die ` ` build ` ` break ` ` give ` ` take ` ` open ` ` close `
+-   └─► **`[Q1.q1]`** *(L114|Conjugate Dual Invariants (Opposing Root Pairs))*: Roots opposing pairs
+-   └─► **`[Q1.q2]`** *(L114|Conjugate Dual Invariants (Opposing Root Pairs))*: live
+- ● **`[Q1]`** *(L115|Conjugate Dual Invariants (Opposing Root Pairs))*: The starting state of one root
+- ● **`[Q1]`** *(L116|Conjugate Dual Invariants (Opposing Root Pairs))*: The resistance Strain holding back one root
+- ● **`[Q1]`** *(L116|Conjugate Dual Invariants (Opposing Root Pairs))*: the strain resisting ` break
+-   └─► **`[Q1.q1]`** *(L116|Conjugate Dual Invariants (Opposing Root Pairs))*: the strain resisting
+-   └─► **`[Q1.q2]`** *(L116|Conjugate Dual Invariants (Opposing Root Pairs))*: break
+- ● **`[Q1]`** *(L122|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: A pure root word
+- ● **`[Q1]`** *(L122|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: It
+- ● **`[Q1]`** *(L122|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: It
+- ● **`[Q1]`** *(L124|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: it
+- ● **`[Q1]`** *(L150|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: it
+- ● **`[Q1]`** *(L151|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: it
+- ● **`[Q1]`** *(L152|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: it
+- ● **`[Q1]`** *(L154|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: This nested depth
+- ● **`[Q1]`** *(L154|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: its physical mechanics
+- ● **`[Q1]`** *(L165|Manifestation of the Invariant Root `store`:)*: The word
+- ● **`[Q1]`** *(L165|Manifestation of the Invariant Root `store`:)*: The underlying event physics
+- ● **`[Q1]`** *(L171|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: A word
+- ● **`[Q1]`** *(L171|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: it
+- ● **`[Q1]`** *(L171|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: The same functional mechanism
+- ● **`[Q1]`** *(L173|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: It
+- ● **`[Q1]`** *(L186|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: The word
+- ● **`[Q1]`** *(L186|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: Misunderstanding
+- ● **`[Q1]`** *(L190|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: The danger of collapsing vector duality into a single negative pole
+-   └─► **`[Q1.q6]`** *(L190|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: of collapsing vector duality into a single negative pole
+- ● **`[Q1]`** *(L192|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: they
+- ● **`[Q1]`** *(L194|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: Forward locomotion
+- ● **`[Q1]`** *(L194|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: The mechanical leverage to strike push or
+- ● **`[Q1]`** *(L197|Coercion vs. Voluntary Disarmament)*: The physical mechanism
+- ● **`[Q1]`** *(L198|Coercion vs. Voluntary Disarmament)*: An attacker
+- ● **`[Q1]`** *(L199|Coercion vs. Voluntary Disarmament)*: This
+- ● **`[Q1]`** *(L201|Coercion vs. Voluntary Disarmament)*: Christ
+- ● **`[Q1]`** *(L201|Coercion vs. Voluntary Disarmament)*: he
+- ● **`[Q1]`** *(L201|Coercion vs. Voluntary Disarmament)*: he
+- ● **`[Q1]`** *(L204|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: the systemic law
+- ● **`[Q1]`** *(L206|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: You
+- ● **`[Q1]`** *(L208|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: you
+- ● **`[Q1]`** *(L209|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: you
+- ● **`[Q1]`** *(L210|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: you
+- ● **`[Q1]`** *(L216|The Perceptual Inversion of the Ego)*: Cynical defensiveness
+- ● **`[Q1]`** *(L219|The Perceptual Inversion of the Ego)*: they
+- ● **`[Q1]`** *(L219|The Perceptual Inversion of the Ego)*: They
+- ● **`[Q1]`** *(L221|The Perceptual Inversion of the Ego)*: Choosing Good Truth $ + \upsilon$
+-   └─► **`[Q1.q2]`** *(L221|The Perceptual Inversion of the Ego)*: Choosing Good Truth
+- ● **`[Q1]`** *(L221|The Perceptual Inversion of the Ego)*: It
+- ● **`[Q1]`** *(L227|7. The Six Personal Belief States: Epistemic Stances)*: Language
+- ● **`[Q1]`** *(L227|7. The Six Personal Belief States: Epistemic Stances)*: It
+- ● **`[Q1]`** *(L234|7. The Six Personal Belief States: Epistemic Stances)*: | Words
+- ● **`[Q1]`** *(L235|7. The Six Personal Belief States: Epistemic Stances)*: | Words
+- ● **`[Q1]`** *(L236|7. The Six Personal Belief States: Epistemic Stances)*: | Words used as defensive shields to enforce taboos
+-   └─► **`[Q1.q1]`** *(L236|7. The Six Personal Belief States: Epistemic Stances)*: |
+- ● **`[Q1]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: it
+- ● **`[Q1]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: It
+- ● **`[Q1]`** *(L244|8. Additive Arithmetic: How Words Combine into Sentences)*: it
+- ● **`[Q1]`** *(L246|8. Additive Arithmetic: How Words Combine into Sentences)*: their underlying force vectors
+-   └─► **`[Q1.q1]`** *(L246|8. Additive Arithmetic: How Words Combine into Sentences)*: their
+- ● **`[Q1]`** *(L251|8. Additive Arithmetic: How Words Combine into Sentences)*: the context
+- ● **`[Q1]`** *(L252|8. Additive Arithmetic: How Words Combine into Sentences)*: They
+- ● **`[Q1]`** *(L263|9. The 5-Stage Sieve: How to Audit Any Word)*: What options degrees of freedom or stored tensions
+-   └─► **`[Q1.q1]`** *(L263|9. The 5-Stage Sieve: How to Audit Any Word)*: What options degrees of freedom or
+- ● **`[Q1]`** *(L265|9. The 5-Stage Sieve: How to Audit Any Word)*: What physical or informational boundary
+-   └─► **`[Q1.q1]`** *(L265|9. The 5-Stage Sieve: How to Audit Any Word)*: What
+- ● **`[Q1]`** *(L268|9. The 5-Stage Sieve: How to Audit Any Word)*: Stage 5
+- ● **`[Q1]`** *(L275|Conclusion: The Living Machine of Human Speech)*: Words
+- ● **`[Q1]`** *(L275|Conclusion: The Living Machine of Human Speech)*: They
+- ● **`[Q1]`** *(L277|Conclusion: The Living Machine of Human Speech)*: Every word ever spoken
+-   └─► **`[Q1.q1]`** *(L277|Conclusion: The Living Machine of Human Speech)*: Every word
+-   └─► **`[Q1.q2]`** *(L277|Conclusion: The Living Machine of Human Speech)*: spoken
+- ● **`[Q1]`** *(L279|Conclusion: The Living Machine of Human Speech)*: language
+- ● **`[Q1]`** *(L279|Conclusion: The Living Machine of Human Speech)*: It
+
+### Q2 — What (Possible Plane (Faith and Probability, +x))
+*Active Seed Coordinates: 160*
+
+- ● **`[Q2]`** *(L010|Introduction: The Failure of the Word as a Label)*: treated words
+- ● **`[Q2]`** *(L010|Introduction: The Failure of the Word as a Label)*: is a code used by humans to name things
+-   └─► **`[Q2.q2]`** *(L010|Introduction: The Failure of the Word as a Label)*: is
+- ● **`[Q2]`** *(L012|Introduction: The Failure of the Word as a Label)*: broken
+- ● **`[Q2]`** *(L012|Introduction: The Failure of the Word as a Label)*: retain force
+- ● **`[Q2]`** *(L014|Introduction: The Failure of the Word as a Label)*: establish a different foundation
+-   └─► **`[Q2.q2]`** *(L014|Introduction: The Failure of the Word as a Label)*: establish a different foundation
+- ● **`[Q2]`** *(L016|Introduction: The Failure of the Word as a Label)*: is event physics
+- ● **`[Q2]`** *(L018|Introduction: The Failure of the Word as a Label)*: exist
+- ● **`[Q2]`** *(L018|Introduction: The Failure of the Word as a Label)*: is an operational formula that records how an applied force overcomes resistance to produce a measurable change in the world
+-   └─► **`[Q2.q2]`** *(L018|Introduction: The Failure of the Word as a Label)*: is an operational formula that records how an applied force overcomes resistance to produce a measurable change in the world
+- ● **`[Q2]`** *(L024|1. The Four Language Axioms)*: grounded
+- ● **`[Q2]`** *(L026|1. The Four Language Axioms)*: describe actions and events not static objects
+-   └─► **`[Q2.q2]`** *(L026|1. The Four Language Axioms)*: describe actions and events
+- ● **`[Q2]`** *(L026|1. The Four Language Axioms)*: are frozen verbs descriptions of stabilized actions holding form against decay
+- ● **`[Q2]`** *(L027|1. The Four Language Axioms)*: operates
+- ● **`[Q2]`** *(L027|1. The Four Language Axioms)*: dictates the operational meaning of the word
+-   └─► **`[Q2.q2]`** *(L027|1. The Four Language Axioms)*: dictates the operational meaning of the word
+- ● **`[Q2]`** *(L028|1. The Four Language Axioms)*: can
+- ● **`[Q2]`** *(L029|1. The Four Language Axioms)*: is competence in the world not the mere decoding of written symbols
+-   └─► **`[Q2.q2]`** *(L029|1. The Four Language Axioms)*: is competence in the world not the mere decoding of written symbols
+- ● **`[Q2]`** *(L029|1. The Four Language Axioms)*: understands a word
+- ● **`[Q2]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: run
+- ● **`[Q2]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: apply effort to change that disordered state into an ordered state
+-   └─► **`[Q2.q2]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: apply effort to change that disordered state into an ordered state
+- ● **`[Q2]`** *(L037|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: is the crystallized operational formula invented to repeat coordinate and transmit that state transition
+-   └─► **`[Q2.q2]`** *(L037|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: is the crystallized operational formula invented to repeat coordinate
+- ● **`[Q2]`** *(L041|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: carries three interconnected terms
+-   └─► **`[Q2.q2]`** *(L041|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: carries three interconnected terms
+- ● **`[Q2]`** *(L048|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: is the residue of intent
+-   └─► **`[Q2.q2]`** *(L048|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: is
+- ● **`[Q2]`** *(L048|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: is an instruction manual for changing reality
+-   └─► **`[Q2.q2]`** *(L048|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: is an instruction manual for changing reality
+- ● **`[Q2]`** *(L050|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: was the Word
+- ● **`[Q2]`** *(L050|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: are the stabilized effects
+-   └─► **`[Q2.q2]`** *(L050|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: are
+- ● **`[Q2]`** *(L056|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: begin
+- ● **`[Q2]`** *(L056|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: begin
+- ● **`[Q2]`** *(L063|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: applied
+- ● **`[Q2]`** *(L066|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: formed
+- ● **`[Q2]`** *(L070|Substrate Independence)*: is completely independent of biology or technology
+-   └─► **`[Q2.q2]`** *(L070|Substrate Independence)*: is completely independent of biology or technology
+- ● **`[Q2]`** *(L070|Substrate Independence)*: depend
+- ● **`[Q2]`** *(L074|Substrate Independence)*: is a surface slang or a narrow local application
+-   └─► **`[Q2.q2]`** *(L074|Substrate Independence)*: is a surface slang or a narrow local application
+- ● **`[Q2]`** *(L074|Substrate Independence)*: is a Root Genotype
+-   └─► **`[Q2.q2]`** *(L074|Substrate Independence)*: is a Root Genotype
+- ● **`[Q2]`** *(L077|The 3-Step Pairwise Invariant)*: moves
+- ● **`[Q2]`** *(L080|The 3-Step Pairwise Invariant)*: Moving
+- ● **`[Q2]`** *(L081|The 3-Step Pairwise Invariant)*: Crossing the threshold
+- ● **`[Q2]`** *(L083|The 3-Step Pairwise Invariant)*: Take the invariant root
+-   └─► **`[Q2.q2]`** *(L083|The 3-Step Pairwise Invariant)*: Take the invariant root
+- ● **`[Q2]`** *(L086|The 3-Step Pairwise Invariant)*: \text{Step
+- ● **`[Q2]`** *(L088|The 3-Step Pairwise Invariant)*: \text{Step
+- ● **`[Q2]`** *(L097|4. Topological Closure: The Periodic Table of Roots)*: organize
+- ● **`[Q2]`** *(L097|4. Topological Closure: The Periodic Table of Roots)*: are three basic topological forms
+-   └─► **`[Q2.q2]`** *(L097|4. Topological Closure: The Periodic Table of Roots)*: are three basic topological forms
+- ● **`[Q2]`** *(L101|4. Topological Closure: The Periodic Table of Roots)*: separates two open areas
+-   └─► **`[Q2.q2]`** *(L101|4. Topological Closure: The Periodic Table of Roots)*: separates two open areas
+- ● **`[Q2]`** *(L105|4. Topological Closure: The Periodic Table of Roots)*: execute six fundamental operations
+-   └─► **`[Q2.q2]`** *(L105|4. Topological Closure: The Periodic Table of Roots)*: execute six fundamental operations
+- ● **`[Q2]`** *(L114|Conjugate Dual Invariants (Opposing Root Pairs))*: exist
+- ● **`[Q2]`** *(L115|Conjugate Dual Invariants (Opposing Root Pairs))*: is the resting state of its partner
+-   └─► **`[Q2.q2]`** *(L115|Conjugate Dual Invariants (Opposing Root Pairs))*: is
+- ● **`[Q2]`** *(L116|Conjugate Dual Invariants (Opposing Root Pairs))*: is the active push of the other
+-   └─► **`[Q2.q2]`** *(L116|Conjugate Dual Invariants (Opposing Root Pairs))*: is the active push of the other
+- ● **`[Q2]`** *(L116|Conjugate Dual Invariants (Opposing Root Pairs))*: is the structural integrity built into the object
+-   └─► **`[Q2.q2]`** *(L116|Conjugate Dual Invariants (Opposing Root Pairs))*: is
+- ● **`[Q2]`** *(L122|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: is plane agnostic
+- ● **`[Q2]`** *(L122|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: belong
+- ● **`[Q2]`** *(L122|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: is a universal vector
+-   └─► **`[Q2.q2]`** *(L122|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: is a universal vector
+- ● **`[Q2]`** *(L124|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: rotates
+- ● **`[Q2]`** *(L134|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: structured
+- ● **`[Q2]`** *(L150|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: is interrogative
+- ● **`[Q2]`** *(L151|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: is interrogative
+- ● **`[Q2]`** *(L152|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: is interrogative
+- ● **`[Q2]`** *(L154|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: explains
+- ● **`[Q2]`** *(L154|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: remain unchanged
+- ● **`[Q2]`** *(L157|Manifestation of the Invariant Root `store`:)*: Putting grain
+- ● **`[Q2]`** *(L159|Manifestation of the Invariant Root `store`:)*: Writing values
+- ● **`[Q2]`** *(L160|Manifestation of the Invariant Root `store`:)*: Building an archive museum or legal precedent
+-   └─► **`[Q2.q2]`** *(L160|Manifestation of the Invariant Root `store`:)*: Building an archive museum or legal precedent
+- ● **`[Q2]`** *(L161|Manifestation of the Invariant Root `store`:)*: Encoding cultural wisdom inside myth proverbs or poetry ` Action `
+-   └─► **`[Q2.q2]`** *(L161|Manifestation of the Invariant Root `store`:)*: Encoding cultural wisdom inside myth proverbs or poetry ` Action
+- ● **`[Q2]`** *(L165|Manifestation of the Invariant Root `store`:)*: change its meaning
+- ● **`[Q2]`** *(L165|Manifestation of the Invariant Root `store`:)*: remained identical
+- ● **`[Q2]`** *(L171|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: is a tool
+- ● **`[Q2]`** *(L171|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: has operational capacity
+- ● **`[Q2]`** *(L171|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: operates
+- ● **`[Q2]`** *(L173|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: builds
+- ● **`[Q2]`** *(L179|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: \text{cut
+- ● **`[Q2]`** *(L186|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: names the mechanism not the moral purity of the user
+-   └─► **`[Q2.q1]`** *(L186|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: names
+- ● **`[Q2]`** *(L186|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: arises
+- ● **`[Q2]`** *(L190|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: demonstrated kneeling
+- ● **`[Q2]`** *(L192|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: observe
+- ● **`[Q2]`** *(L194|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: stops
+- ● **`[Q2]`** *(L194|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: paused
+- ● **`[Q2]`** *(L197|Coercion vs. Voluntary Disarmament)*: is invariant
+- ● **`[Q2]`** *(L198|Coercion vs. Voluntary Disarmament)*: forces a captive
+- ● **`[Q2]`** *(L199|Coercion vs. Voluntary Disarmament)*: is
+- ● **`[Q2]`** *(L201|Coercion vs. Voluntary Disarmament)*: knelt
+- ● **`[Q2]`** *(L201|Coercion vs. Voluntary Disarmament)*: subjugated
+- ● **`[Q2]`** *(L201|Coercion vs. Voluntary Disarmament)*: defused mob bloodlust
+- ● **`[Q2]`** *(L204|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: declared
+- ● **`[Q2]`** *(L206|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: bound
+- ● **`[Q2]`** *(L208|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: bind your own perception to live exclusively inside that prison
+-   └─► **`[Q2.q2]`** *(L208|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: bind your own perception to live exclusively inside that prison
+- ● **`[Q2]`** *(L209|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: recognize a loving father a wise teacher or a just sovereign
+-   └─► **`[Q2.q2]`** *(L209|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: recognize a wise teacher or
+- ● **`[Q2]`** *(L210|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: render
+- ● **`[Q2]`** *(L211|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: enslaved
+- ● **`[Q2]`** *(L215|The Perceptual Inversion of the Ego)*: feels burden and weakness
+-   └─► **`[Q2.q2]`** *(L215|The Perceptual Inversion of the Ego)*: feels
+- ● **`[Q2]`** *(L216|The Perceptual Inversion of the Ego)*: feels
+- ● **`[Q2]`** *(L217|The Perceptual Inversion of the Ego)*: Listening
+- ● **`[Q2]`** *(L219|The Perceptual Inversion of the Ego)*: reporting the physics of the word
+-   └─► **`[Q2.q2]`** *(L219|The Perceptual Inversion of the Ego)*: reporting the physics of the word
+- ● **`[Q2]`** *(L219|The Perceptual Inversion of the Ego)*: projecting their own perceptual inversion
+-   └─► **`[Q2.q2]`** *(L219|The Perceptual Inversion of the Ego)*: projecting their own perceptual inversion
+- ● **`[Q2]`** *(L221|The Perceptual Inversion of the Ego)*: means
+- ● **`[Q2]`** *(L221|The Perceptual Inversion of the Ego)*: means defining tools
+- ● **`[Q2]`** *(L227|7. The Six Personal Belief States: Epistemic Stances)*: transfer raw data
+- ● **`[Q2]`** *(L227|7. The Six Personal Belief States: Epistemic Stances)*: broadcast
+- ● **`[Q2]`** *(L229|7. The Six Personal Belief States: Epistemic Stances)*: | Stance | State Name | Operational Definition in Communication
+- ● **`[Q2]`** *(L234|7. The Six Personal Belief States: Epistemic Stances)*: spoken
+- ● **`[Q2]`** *(L235|7. The Six Personal Belief States: Epistemic Stances)*: used
+- ● **`[Q2]`** *(L236|7. The Six Personal Belief States: Epistemic Stances)*: deny plain facts
+- ● **`[Q2]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: is
+- ● **`[Q2]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: breaks
+- ● **`[Q2]`** *(L244|8. Additive Arithmetic: How Words Combine into Sentences)*: is
+- ● **`[Q2]`** *(L246|8. Additive Arithmetic: How Words Combine into Sentences)*: add
+- ● **`[Q2]`** *(L251|8. Additive Arithmetic: How Words Combine into Sentences)*: dictates the plane of consequence
+-   └─► **`[Q2.q2]`** *(L251|8. Additive Arithmetic: How Words Combine into Sentences)*: dictates the plane of consequence
+- ● **`[Q2]`** *(L252|8. Additive Arithmetic: How Words Combine into Sentences)*: Translating
+- ● **`[Q2]`** *(L252|8. Additive Arithmetic: How Words Combine into Sentences)*: observing
+- ● **`[Q2]`** *(L258|9. The 5-Stage Sieve: How to Audit Any Word)*: find
+- ● **`[Q2]`** *(L261|9. The 5-Stage Sieve: How to Audit Any Word)*: Remove all technical buzzwords biological assumptions and local cultural references
+-   └─► **`[Q2.q2]`** *(L261|9. The 5-Stage Sieve: How to Audit Any Word)*: Remove all technical buzzwords biological assumptions and local cultural references
+- ● **`[Q2]`** *(L261|9. The 5-Stage Sieve: How to Audit Any Word)*: Ask
+- ● **`[Q2]`** *(L262|9. The 5-Stage Sieve: How to Audit Any Word)*: Map the Starting State $ Q_2 $
+-   └─► **`[Q2.q2]`** *(L262|9. The 5-Stage Sieve: How to Audit Any Word)*: Map the Starting State $ Q_2 $
+- ● **`[Q2]`** *(L263|9. The 5-Stage Sieve: How to Audit Any Word)*: exist
+- ● **`[Q2]`** *(L265|9. The 5-Stage Sieve: How to Audit Any Word)*: crossed
+- ● **`[Q2]`** *(L267|9. The 5-Stage Sieve: How to Audit Any Word)*: Write the Inception Transit and Arrival steps in plain everyday English
+-   └─► **`[Q2.q2]`** *(L267|9. The 5-Stage Sieve: How to Audit Any Word)*: Write the Inception Transit and Arrival steps
+-   └─► **`[Q2.q3]`** *(L267|9. The 5-Stage Sieve: How to Audit Any Word)*: in plain everyday
+- ● **`[Q2]`** *(L267|9. The 5-Stage Sieve: How to Audit Any Word)*: Identify the exact strain resisted at each step
+-   └─► **`[Q2.q2]`** *(L267|9. The 5-Stage Sieve: How to Audit Any Word)*: Identify the exact strain resisted at each step
+- ● **`[Q2]`** *(L268|9. The 5-Stage Sieve: How to Audit Any Word)*: Rotate
+- ● **`[Q2]`** *(L269|9. The 5-Stage Sieve: How to Audit Any Word)*: Check
+- ● **`[Q2]`** *(L275|Conclusion: The Living Machine of Human Speech)*: are arbitrary sounds floating through empty air
+-   └─► **`[Q2.q2]`** *(L275|Conclusion: The Living Machine of Human Speech)*: are arbitrary sounds floating through empty air
+- ● **`[Q2]`** *(L275|Conclusion: The Living Machine of Human Speech)*: are the living mechanics of human action and understanding
+-   └─► **`[Q2.q2]`** *(L275|Conclusion: The Living Machine of Human Speech)*: are
+- ● **`[Q2]`** *(L277|Conclusion: The Living Machine of Human Speech)*: is an engineered tool forged out of human necessity
+-   └─► **`[Q2.q2]`** *(L277|Conclusion: The Living Machine of Human Speech)*: is an engineered tool forged out of human necessity
+- ● **`[Q2]`** *(L279|Conclusion: The Living Machine of Human Speech)*: ceases
+- ● **`[Q2]`** *(L279|Conclusion: The Living Machine of Human Speech)*: becomes
+
+### Q3 — Where (Physical Plane (Matter and Distance, -x))
+*Active Seed Coordinates: 20*
+
+- ● **`[Q3]`** *(L010|Introduction: The Failure of the Word as a Label)*: Under this view
+- ● **`[Q3]`** *(L018|Introduction: The Failure of the Word as a Label)*: in a vacuum
+- ● **`[Q3]`** *(L024|1. The Four Language Axioms)*: in physical and informational reality
+- ● **`[Q3]`** *(L056|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: in the physical body or in the voice box
+- ● **`[Q3]`** *(L056|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: at the exact boundary where raw options collapse into a physical boundary
+- ● **`[Q3]`** *(L070|Substrate Independence)*: on having human vocal cords lungs hands or eyes
+- ● **`[Q3]`** *(L105|4. Topological Closure: The Periodic Table of Roots)*: Across these boundaries
+- ● **`[Q3]`** *(L106|4. Topological Closure: The Periodic Table of Roots)*: IN
+- ● **`[Q3]`** *(L114|Conjugate Dual Invariants (Opposing Root Pairs))*: in balanced
+- ● **`[Q3]`** *(L149|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: across three nested levels
+- ● **`[Q3]`** *(L150|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: On the $ Q$ layer
+- ● **`[Q3]`** *(L151|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: On the $ q$ layer
+- ● **`[Q3]`** *(L152|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: On the $ c$ layer
+- ● **`[Q3]`** *(L163|Manifestation of the Invariant Root `store`:)*: under trial
+- ● **`[Q3]`** *(L171|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: in two opposing directions based on the vector along which it is pointed
+- ● **`[Q3]`** *(L198|Coercion vs. Voluntary Disarmament)*: at weapon point
+- ● **`[Q3]`** *(L199|Coercion vs. Voluntary Disarmament)*: in the mud
+- ● **`[Q3]`** *(L201|Coercion vs. Voluntary Disarmament)*: in the dirt
+- ● **`[Q3]`** *(L204|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: In Matthew 16:19 and 18:18
+- ● **`[Q3]`** *(L268|9. The 5-Stage Sieve: How to Audit Any Word)*: Across the 7 Planes
+
+### Q4 — Why (Lyrical Plane (Meaning and Resonance, +y))
+*Active Seed Coordinates: 10*
+
+- ● **`[Q4]`** *(L024|1. The Four Language Axioms)*: To understand how words work
+-   └─► **`[Q4.q2]`** *(L024|1. The Four Language Axioms)*: understand
+- ● **`[Q4]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: To survive and build
+-   └─► **`[Q4.q2]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: survive
+- ● **`[Q4]`** *(L080|The 3-Step Pairwise Invariant)*: to alter the balance
+-   └─► **`[Q4.q2]`** *(L080|The 3-Step Pairwise Invariant)*: alter the balance
+- ● **`[Q4]`** *(L165|Manifestation of the Invariant Root `store`:)*: to shelter and organize an active resource so it can be brought forth when needed
+-   └─► **`[Q4.q2]`** *(L165|Manifestation of the Invariant Root `store`:)*: shelter
+- ● **`[Q4]`** *(L198|Coercion vs. Voluntary Disarmament)*: to break their mechanical defense and enforce compliance
+-   └─► **`[Q4.q2]`** *(L198|Coercion vs. Voluntary Disarmament)*: break their mechanical defense
+
+### Q5 — How (Logical Plane (Count and Consistency, -y))
+*Active Seed Coordinates: 27*
+
+- ● **`[Q5]`** *(L010|Introduction: The Failure of the Word as a Label)*: as arbitrary labels sounds and symbols agreed upon by social habit floating detached in an abstract realm of signs
+-   └─► **`[Q5.q2]`** *(L010|Introduction: The Failure of the Word as a Label)*: agreed
+-   └─► **`[Q5.q5]`** *(L010|Introduction: The Failure of the Word as a Label)*: as arbitrary labels sounds and symbols
+- ● **`[Q5]`** *(L010|Introduction: The Failure of the Word as a Label)*: merely
+- ● **`[Q5]`** *(L027|1. The Four Language Axioms)*: by tracking actions within a defined contextual frame
+- ● **`[Q5]`** *(L077|The 3-Step Pairwise Invariant)*: through three lockstep stages
+- ● **`[Q5]`** *(L080|The 3-Step Pairwise Invariant)*: through the resistance
+- ● **`[Q5]`** *(L097|4. Topological Closure: The Periodic Table of Roots)*: by the degree of boundary they establish in space and information
+-   └─► **`[Q5.q1]`** *(L097|4. Topological Closure: The Periodic Table of Roots)*: they
+-   └─► **`[Q5.q2]`** *(L097|4. Topological Closure: The Periodic Table of Roots)*: establish
+-   └─► **`[Q5.q3]`** *(L097|4. Topological Closure: The Periodic Table of Roots)*: in space and information
+-   └─► **`[Q5.q5]`** *(L097|4. Topological Closure: The Periodic Table of Roots)*: by the degree of boundary
+- ● **`[Q5]`** *(L122|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: exclusively
+- ● **`[Q5]`** *(L190|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: clearly
+- ● **`[Q5]`** *(L194|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: completely
+- ● **`[Q5]`** *(L201|Coercion vs. Voluntary Disarmament)*: By voluntarily removing his own height and arresting kinetic escalation
+- ● **`[Q5]`** *(L210|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: incapable of learning from anyone wiser than yourself and incapable of tending to those beneath you without feeling degraded
+- ● **`[Q5]`** *(L219|The Perceptual Inversion of the Ego)*: mistaking personal trauma or fear of vulnerability for universal reality
+-   └─► **`[Q5.q2]`** *(L219|The Perceptual Inversion of the Ego)*: mistaking personal trauma or fear of vulnerability for universal reality
+- ● **`[Q5]`** *(L221|The Perceptual Inversion of the Ego)*: by their highest most life giving capacity
+- ● **`[Q5]`** *(L227|7. The Six Personal Belief States: Epistemic Stances)*: through clean air
+- ● **`[Q5]`** *(L232|7. The Six Personal Belief States: Epistemic Stances)*: Will to Know
+- ● **`[Q5]`** *(L234|7. The Six Personal Belief States: Epistemic Stances)*: without caring whether they match reality
+- ● **`[Q5]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: rarely
+- ● **`[Q5]`** *(L263|9. The 5-Stage Sieve: How to Audit Any Word)*: before anything happens
+- ● **`[Q5]`** *(L277|Conclusion: The Living Machine of Human Speech)*: invented to overcome an obstacle name an effect navigate a relationship and build a world
+-   └─► **`[Q5.q2]`** *(L277|Conclusion: The Living Machine of Human Speech)*: invented
+
+### Q6 — Cause (Historical Plane (Sequence and Causality, +z))
+*Active Seed Coordinates: 64*
+
+- ● **`[Q6]`** *(L010|Introduction: The Failure of the Word as a Label)*: For centuries
+- ● **`[Q6]`** *(L012|Introduction: The Failure of the Word as a Label)*: across thousands of years
+- ● **`[Q6]`** *(L029|1. The Four Language Axioms)*: only when they understand the action it causes and the effect it yields
+-   └─► **`[Q6.q1]`** *(L029|1. The Four Language Axioms)*: they
+-   └─► **`[Q6.q2]`** *(L029|1. The Four Language Axioms)*: understand the action it causes
+- ● **`[Q6]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: When an agent moves through the world
+-   └─► **`[Q6.q1]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: an agent
+-   └─► **`[Q6.q2]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: moves
+-   └─► **`[Q6.q5]`** *(L035|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: through the world
+- ● **`[Q6]`** *(L050|2. The Core Formula: Words as Purpose-Built Tools ($AE\text{-}C$))*: In the beginning
+- ● **`[Q6]`** *(L063|3. The Genesis: Collapse from Potential to Bounded Space ($Q_2 \to Q_3$))*: across time
+- ● **`[Q6]`** *(L074|Substrate Independence)*: If it only applies to human bodies on Earth
+-   └─► **`[Q6.q1]`** *(L074|Substrate Independence)*: it
+-   └─► **`[Q6.q2]`** *(L074|Substrate Independence)*: applies
+-   └─► **`[Q6.q5]`** *(L074|Substrate Independence)*: only
+- ● **`[Q6]`** *(L074|Substrate Independence)*: If it holds true across all scales of nature
+-   └─► **`[Q6.q1]`** *(L074|Substrate Independence)*: it
+-   └─► **`[Q6.q2]`** *(L074|Substrate Independence)*: holds true
+-   └─► **`[Q6.q3]`** *(L074|Substrate Independence)*: across all scales of nature
+- ● **`[Q6]`** *(L124|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: When a word is uttered in human speech or written in text
+-   └─► **`[Q6.q1]`** *(L124|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: a word
+-   └─► **`[Q6.q2]`** *(L124|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: uttered
+-   └─► **`[Q6.q3]`** *(L124|5. The Dimensional Projection Engine: The 7 Planes of Reality)*: in human speech
+- ● **`[Q6]`** *(L154|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: When an invariant root rotates across the planes
+-   └─► **`[Q6.q1]`** *(L154|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: an invariant root
+-   └─► **`[Q6.q2]`** *(L154|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: rotates
+-   └─► **`[Q6.q3]`** *(L154|Multi-Dimensional Recursion: The $7 \times 7 \times 7$ Structure)*: across the planes
+- ● **`[Q6]`** *(L186|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: when people mistake an action tool for an automatic good or an automatic evil confusing the instrument with the hand directing it
+-   └─► **`[Q6.q1]`** *(L186|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: people
+-   └─► **`[Q6.q2]`** *(L186|6. Vector Duality: The Moral Axis ($\upsilon$) and Will ($\psi$))*: mistake an action tool for an automatic good or an automatic evil confusing the instrument with the hand directing it
+- ● **`[Q6]`** *(L192|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: When an observer looks at the physical act of kneeling
+-   └─► **`[Q6.q1]`** *(L192|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: an observer
+-   └─► **`[Q6.q2]`** *(L192|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: looks
+-   └─► **`[Q6.q3]`** *(L192|6.1 The Binding Principle and Perceptual Inversion: The Case of `kneel`)*: at the physical act of kneeling
+- ● **`[Q6]`** *(L201|Coercion vs. Voluntary Disarmament)*: when accusers surrounded an adulterous woman with stones in their hands
+-   └─► **`[Q6.q1]`** *(L201|Coercion vs. Voluntary Disarmament)*: accusers
+-   └─► **`[Q6.q2]`** *(L201|Coercion vs. Voluntary Disarmament)*: surrounded an adulterous woman with stones
+-   └─► **`[Q6.q3]`** *(L201|Coercion vs. Voluntary Disarmament)*: in their hands
+- ● **`[Q6]`** *(L208|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: If you bind the definition of an action strictly to its lowest most traumatized or coercive manifestation
+-   └─► **`[Q6.q1]`** *(L208|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: you
+-   └─► **`[Q6.q2]`** *(L208|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: bind the definition of an action strictly to its lowest most traumatized or coercive manifestation
+- ● **`[Q6]`** *(L209|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: If you define authority solely as an imperial boot
+-   └─► **`[Q6.q1]`** *(L209|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: you
+-   └─► **`[Q6.q2]`** *(L209|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: define authority
+- ● **`[Q6]`** *(L210|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: If you define all lowering of oneself as slavery and subjugation
+-   └─► **`[Q6.q1]`** *(L210|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: you
+-   └─► **`[Q6.q2]`** *(L210|The Binding Principle (Matthew 16:19 & Matthew 18:18))*: define all lowering of oneself as slavery and subjugation
+- ● **`[Q6]`** *(L219|The Perceptual Inversion of the Ego)*: When an actor insists that kneeling can not mean listening or respect that it must mean subjugation
+-   └─► **`[Q6.q1]`** *(L219|The Perceptual Inversion of the Ego)*: an actor
+-   └─► **`[Q6.q2]`** *(L219|The Perceptual Inversion of the Ego)*: insists
+- ● **`[Q6]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: because a dictionary definition was forgotten
+-   └─► **`[Q6.q1]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: a dictionary definition
+-   └─► **`[Q6.q2]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: forgotten
+- ● **`[Q6]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: because the communicators are operating in clashing belief states twisting the signal to attack deny or deceive
+-   └─► **`[Q6.q1]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: the communicators
+-   └─► **`[Q6.q2]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: operating
+-   └─► **`[Q6.q3]`** *(L238|7. The Six Personal Belief States: Epistemic Stances)*: in clashing belief states twisting the signal to attack deny or deceive
+- ● **`[Q6]`** *(L246|8. Additive Arithmetic: How Words Combine into Sentences)*: When words are combined
+-   └─► **`[Q6.q1]`** *(L246|8. Additive Arithmetic: How Words Combine into Sentences)*: words
+-   └─► **`[Q6.q2]`** *(L246|8. Additive Arithmetic: How Words Combine into Sentences)*: combined
+- ● **`[Q6]`** *(L252|8. Additive Arithmetic: How Words Combine into Sentences)*: Across Ancient Tongues
+- ● **`[Q6]`** *(L279|Conclusion: The Living Machine of Human Speech)*: When we understand words as event physics
+-   └─► **`[Q6.q1]`** *(L279|Conclusion: The Living Machine of Human Speech)*: we
+-   └─► **`[Q6.q2]`** *(L279|Conclusion: The Living Machine of Human Speech)*: understand words

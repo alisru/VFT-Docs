@@ -1,0 +1,64 @@
+{
+  "cycle": 16,
+  "framework": "Argon 4 Distillation, Multi-Turn Slerp Tracking & Rhetorical Pivot Detection",
+  "timestamp": "2026-10-14T13:25:28+11:00",
+  "parliamentary_trajectory_analysis": {
+    "dialogue_turns_evaluated": 5,
+    "total_geodesic_rad": 4.8795,
+    "total_geodesic_deg": 279.57,
+    "net_causal_gain_delta_z": 1.45,
+    "net_boundary_gain_delta_upsilon": 1.7,
+    "interpolated_slerp_waypoints": 40,
+    "step_analysis": [
+      {
+        "step": "Turn 1 -> Turn 2",
+        "speaker_pair": "Opposition Shadow Minister -> Minister for Transport (Initial Response)",
+        "geodesic_angular_distance_deg": 37.73,
+        "delta_upsilon": -0.25,
+        "delta_psi": 0.2,
+        "delta_z": 0.35,
+        "rhetorical_evasion_spin_index": 2.0,
+        "transition_type": "ADVERSARIAL_FRICTION_EXCHANGE"
+      },
+      {
+        "step": "Turn 2 -> Turn 3",
+        "speaker_pair": "Minister for Transport (Initial Response) -> Regional Independent Crossbench",
+        "geodesic_angular_distance_deg": 173.54,
+        "delta_upsilon": 1.55,
+        "delta_psi": -0.8,
+        "delta_z": 0.5,
+        "rhetorical_evasion_spin_index": 2.98,
+        "transition_type": "PRODUCTIVE_CAUSAL_PROGRESSION (+z Delivery)"
+      },
+      {
+        "step": "Turn 3 -> Turn 4",
+        "speaker_pair": "Regional Independent Crossbench -> Minister for Infrastructure (Substantive Announcement)",
+        "geodesic_angular_distance_deg": 59.63,
+        "delta_upsilon": 0.5,
+        "delta_psi": 0.8,
+        "delta_z": 0.45,
+        "rhetorical_evasion_spin_index": 2.14,
+        "transition_type": "PRODUCTIVE_CAUSAL_PROGRESSION (+z Delivery)"
+      },
+      {
+        "step": "Turn 4 -> Turn 5",
+        "speaker_pair": "Minister for Infrastructure (Substantive Announcement) -> Speaker / House Resolution",
+        "geodesic_angular_distance_deg": 8.68,
+        "delta_upsilon": -0.1,
+        "delta_psi": -0.15,
+        "delta_z": 0.15,
+        "rhetorical_evasion_spin_index": 1.0,
+        "transition_type": "ADVERSARIAL_FRICTION_EXCHANGE"
+      }
+    ]
+  },
+  "neural_training": {
+    "total_tuples": 100,
+    "vocab_size": 395,
+    "latent_dim": 64,
+    "coordinate_mae": 0.008443,
+    "antipodal_closure_error": 0.023794,
+    "final_loss": 0.817722,
+    "adversarial_verdict": "100% PASS across all S^3 tests"
+  }
+}

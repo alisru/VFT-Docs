@@ -1,0 +1,28 @@
+{
+  "git_sync": {
+    "enabled": false,
+    "remote": "origin",
+    "branch": "main",
+    "repo_url": "https://github.com/your-username/my-canvases.git"
+  },
+  "gdrive_sync": {
+    "enabled": false,
+    "rclone_remote": "gdrive",
+    "folder_name": "Canvases",
+    "root_folder_id": ""
+  },
+  "chat_git_sync": {
+    "enabled": false,
+    "remote": "origin",
+    "branch": "main",
+    "repo_url": "https://github.com/your-username/my-ai-chats.git",
+    "export_dir": "exports/chats"
+  },
+  "chat_gdrive_sync": {
+    "enabled": false,
+    "rclone_remote": "gdrive",
+    "folder_name": "AI_Chats",
+    "root_folder_id": "",
+    "export_dir": "exports/chats"
+  }
+}

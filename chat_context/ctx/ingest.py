@@ -110,19 +110,26 @@ def make_safe_canvas_filename(title: str, max_len: int = 120) -> str:
 
 def _read_transcript(path: Path):
     msgs = []
-    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
-        try:
-            o = json.loads(line)
-        except json.JSONDecodeError:
-            continue
-        t = o.get("type")
-        content = (o.get("content") or "").strip()
-        if not content:
-            continue
-        if t == "USER_INPUT":
-            msgs.append(("user", o.get("created_at"), _clean_user(content)))
-        elif t == "PLANNER_RESPONSE":
-            msgs.append(("assistant", o.get("created_at"), content))
+    try:
+        with open(path, "r", encoding="utf-8", errors="replace") as fp:
+            for line in fp:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    o = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                t = o.get("type")
+                content = (o.get("content") or "").strip()
+                if not content:
+                    continue
+                if t == "USER_INPUT":
+                    msgs.append(("user", o.get("created_at"), _clean_user(content)))
+                elif t == "PLANNER_RESPONSE":
+                    msgs.append(("assistant", o.get("created_at"), content))
+    except Exception as e:
+        print(f"[warn] error reading transcript {path.name}: {e}")
     return msgs
 
 
@@ -176,20 +183,33 @@ def ingest_antigravity(con, brain: Path = BRAIN):
 
 def ingest_file(con, file_path: Path):
     """Ingest a single chatlog file (Gemini, ChatGPT, Claude, JSON)."""
+    mtime = file_path.stat().st_mtime
+    file_name = file_path.name
+    file_id = "file-" + hashlib.sha1(file_name.encode()).hexdigest()[:16]
+
+    # Fast skip check BEFORE opening and parsing file
+    row = con.execute("SELECT src_mtime FROM chats WHERE id=? OR src_path=?", (file_id, file_name)).fetchone()
+    if row and row["src_mtime"] is not None and row["src_mtime"] >= mtime:
+        return None, "unchanged"
+
     parsed = parse_chat_file(file_path)
     if not parsed or not parsed["messages"]:
         return False, "unrecognized or empty"
 
-    mtime = file_path.stat().st_mtime
-    # Stable ID derived from file path or URL
+    # Stable ID derived from URL if available, otherwise file hash
     if parsed.get("url"):
         chat_id = "url-" + hashlib.sha1(parsed["url"].encode()).hexdigest()[:16]
     else:
-        chat_id = "file-" + hashlib.sha1(file_path.name.encode()).hexdigest()[:16]
+        chat_id = file_id
 
-    row = con.execute("SELECT src_mtime FROM chats WHERE id=?", (chat_id,)).fetchone()
-    if row and row["src_mtime"] >= mtime:
-        return None, "unchanged"
+    # Secondary check in case chat_id was url-based and already up-to-date
+    if chat_id != file_id:
+        row2 = con.execute("SELECT src_mtime FROM chats WHERE id=?", (chat_id,)).fetchone()
+        if row2 and row2["src_mtime"] is not None and row2["src_mtime"] >= mtime:
+            # Backfill src_path so next check skips instantly without parse
+            con.execute("UPDATE chats SET src_path=? WHERE id=?", (file_name, chat_id))
+            con.commit()
+            return None, "unchanged"
 
     msgs = parsed["messages"]
     source = parsed.get("source", "file")
@@ -207,12 +227,12 @@ def ingest_file(con, file_path: Path):
     updated = msgs[-1][1] if (msgs and msgs[-1][1] and str(msgs[-1][1]).startswith("20")) else file_iso
 
     con.execute(
-        """INSERT INTO chats(id, source, title, started, updated, n_msgs, src_mtime, url)
-           VALUES(?,?,?,?,?,?,?,?)
+        """INSERT INTO chats(id, source, title, started, updated, n_msgs, src_mtime, url, src_path)
+           VALUES(?,?,?,?,?,?,?,?,?)
            ON CONFLICT(id) DO UPDATE SET title=excluded.title, started=excluded.started,
            updated=excluded.updated, n_msgs=excluded.n_msgs, src_mtime=excluded.src_mtime,
-           url=excluded.url, emb=NULL""",
-        (chat_id, source, title, started, updated, len(msgs), mtime, url),
+           url=excluded.url, src_path=excluded.src_path, emb=NULL""",
+        (chat_id, source, title, started, updated, len(msgs), mtime, url, file_name),
     )
     con.execute("DELETE FROM messages WHERE chat_id=?", (chat_id,))
     con.execute("DELETE FROM chunks WHERE chat_id=?", (chat_id,))

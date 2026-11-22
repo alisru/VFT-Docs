@@ -1,3 +1,4 @@
+import shutil
 import json
 import glob
 import os
@@ -134,6 +135,7 @@ def calculate_aggregated_forces(aspects_list, force_key):
         net_forces[att]["S"] = round(net_forces[att]["S"] / n, 2)
         net_forces[att]["O"] = round(net_forces[att]["O"] / n, 2)
         net_forces[att]["N"] = round(net_forces[att]["N"] / n, 2)
+    return net_forces
 
 def classify_spiritual_tradition(quote_str):
     q = quote_str.lower()
@@ -152,85 +154,23 @@ def classify_spiritual_tradition(quote_str):
     if any(k in q for k in ["genesis", "exodus", "leviticus", "numbers", "deuteronomy", "psalm", "proverbs", "ecclesiastes", "isaiah", "jeremiah", "ezekiel", "daniel", "amos", "micah", "matthew", "mark", "luke", "john", "acts", "romans", "corinthians", "galatians", "ephesians", "philippians", "colossians", "thessalonians", "timothy", "hebrews", "revelation", "bible"]):
         return "Christianity"
     return "Universal"
-        
-    return net_forces
+
+def get_zone_label(u, psi):
+    """Dynamically derives the 4-quadrant zone label from coordinates with a neutral deadband."""
+    if abs(u) <= 0.15 and abs(psi) <= 0.15:
+        return "Neutral / Stasis"
+    if u > 0 and psi > 0:
+        return "Greater Good"
+    elif u <= 0 and psi > 0:
+        return "Greatest Lie"
+    elif u > 0 and psi <= 0:
+        return "Lesser Good"
+    else:
+        return "Greater Evil"
 
 def process_and_update_coordinates(cfg, file_path):
-    """
-    Checks if stated_forces or actual_forces exists, recalculates claim/real u/psi,
-    updates them in cfg, and returns True if any change occurred.
-    """
-    updated = False
-    
-    # If aspects list is present, recalculate coordinates for each aspect and aggregate them
-    if "aspects" in cfg and isinstance(cfg["aspects"], list) and len(cfg["aspects"]) > 0:
-        aspects_changed = False
-        for aspect in cfg["aspects"]:
-            if "stated_forces" in aspect:
-                u, psi = calculate_son_coordinates(aspect["stated_forces"])
-                if aspect.get("claim_u") != u or aspect.get("claim_psi") != psi:
-                    aspect["claim_u"] = u
-                    aspect["claim_psi"] = psi
-                    aspects_changed = True
-            if "actual_forces" in aspect:
-                u, psi = calculate_son_coordinates(aspect["actual_forces"])
-                if aspect.get("real_u") != u or aspect.get("real_psi") != psi:
-                    aspect["real_u"] = u
-                    aspect["real_psi"] = psi
-                    aspects_changed = True
-                
-        new_stated = calculate_aggregated_forces(cfg["aspects"], "stated_forces")
-        new_actual = calculate_aggregated_forces(cfg["aspects"], "actual_forces")
-        
-        if aspects_changed or cfg.get("stated_forces") != new_stated or cfg.get("actual_forces") != new_actual:
-            cfg["stated_forces"] = new_stated
-            cfg["actual_forces"] = new_actual
-            updated = True
-    
-    # Recalculate Stated
-    if cfg.get("stated_forces") and isinstance(cfg["stated_forces"], dict):
-        claim_u, claim_psi = calculate_son_coordinates(cfg["stated_forces"])
-        if cfg.get("claim_u") != claim_u or cfg.get("claim_psi") != claim_psi:
-            print(f"[{cfg.get('id')}] Updating stated coordinates: ({cfg.get('claim_u')}, {cfg.get('claim_psi')}) -> ({claim_u}, {claim_psi})")
-            cfg["claim_u"] = claim_u
-            cfg["claim_psi"] = claim_psi
-            
-            # Also update Stated Judgement string in posts[1] if present
-            if len(cfg.get("posts", [])) > 1:
-                post = cfg["posts"][1]
-                if "Stated Judgement:" in post:
-                    label = post.split("—")[-1].strip() if "—" in post else "Good Preference"
-                    sgn_u = "+" if claim_u >= 0 else ""
-                    sgn_psi = "+" if claim_psi >= 0 else ""
-                    cfg["posts"][1] = post.split("Stated Judgement:")[0] + f"Stated Judgement: ({sgn_u}{claim_u:.2f}, {sgn_psi}{claim_psi:.2f}) — {label}"
-            updated = True
-            
-    # Recalculate Actual
-    if cfg.get("actual_forces") and isinstance(cfg["actual_forces"], dict):
-        real_u, real_psi = calculate_son_coordinates(cfg["actual_forces"])
-        if cfg.get("real_u") != real_u or cfg.get("real_psi") != real_psi:
-            print(f"[{cfg.get('id')}] Updating actual coordinates: ({cfg.get('real_u')}, {cfg.get('real_psi')}) -> ({real_u}, {real_psi})")
-            cfg["real_u"] = real_u
-            cfg["real_psi"] = real_psi
-            
-            # Also update Resulting Judgement string in posts[2] if present
-            if len(cfg.get("posts", [])) > 2:
-                post = cfg["posts"][2]
-                if "Resulting Judgement:" in post:
-                    label = post.split("—")[-1].strip() if "—" in post else "Greater Evil"
-                    sgn_u = "+" if real_u >= 0 else ""
-                    sgn_psi = "+" if real_psi >= 0 else ""
-                    cfg["posts"][2] = post.split("Resulting Judgement:")[0] + f"Resulting Judgement: ({sgn_u}{real_u:.2f}, {sgn_psi}{real_psi:.2f}) — {label}"
-            updated = True
-
-    if updated:
-        try:
-            from generate_graph import enforce_deterministic_trajectory
-            cfg = enforce_deterministic_trajectory(cfg)
-        except Exception as te:
-            print(f"Warning: Could not enforce deterministic trajectory in registry update: {te}")
-            
-    return updated
+    # READ-ONLY INVARIANT: Rebuild registries must NEVER mutate coordinates or write to story files on disk.
+    return False
 
 def rebuild_registries():
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -275,13 +215,7 @@ def rebuild_registries():
                 print(f"Error reading darkroom file {p}: {e}")
                 continue
 
-            # Update coordinates deterministically if raw forces are defined
-            if process_and_update_coordinates(cfg, p):
-                try:
-                    with open(p, "w", encoding="utf-8") as f:
-                        json.dump(data, f, indent=2, ensure_ascii=False)
-                except Exception as we:
-                    print(f"Warning: Failed to save updated darkroom file {p}: {we}")
+            # Read-only darkroom staging: coordinate mutation strictly prohibited.
 
             # Generate graph
             graph_filename = f"{slug}_graph.png"
@@ -373,6 +307,8 @@ def rebuild_registries():
 
     for slug in sorted_slugs:
         authoritative_file, is_live = story_map[slug]
+        if "quarantine" in authoritative_file.replace("\\", "/").lower():
+            continue
 
         try:
             with open(authoritative_file, "r", encoding="utf-8") as f:
@@ -382,14 +318,10 @@ def rebuild_registries():
             print(f"Error reading {authoritative_file}: {e}")
             continue
 
-        # Recalculate coordinates deterministically if raw forces are defined
-        coords_changed = process_and_update_coordinates(cfg, authoritative_file)
-        if coords_changed:
-            try:
-                with open(authoritative_file, "w", encoding="utf-8") as f:
-                    json.dump(data, f, indent=2, ensure_ascii=False)
-            except Exception as we:
-                print(f"Warning: Failed to save updated config {authoritative_file}: {we}")
+        if str(cfg.get("status", "")).upper() == "QUARANTINED" or "QUARANTINE" in str(cfg.get("status", "")).upper():
+            continue
+
+        # Read-only scan: coordinate mutation strictly prohibited.
 
         # Auto-backfill missing/empty actors using the deterministic actor_extract utility
         if "actors" not in cfg:
@@ -458,9 +390,9 @@ def rebuild_registries():
         graph_filename = f"{slug}_graph.png"
         graph_path = os.path.join(graph_png_dir, graph_filename)
         
-        # If coordinates changed, we must regenerate the graph!
-        # So we force regeneration if coordinates were updated or if the graph is missing
-        if coords_changed or not os.path.exists(graph_path):
+        # Generate graph only if missing (or explicitly requested via REGEN_ALL_GRAPHS=1)
+        # to avoid blocking on 16,000 matplotlib renders during fast registry rebuilds
+        if not os.path.exists(graph_path) or os.environ.get("REGEN_ALL_GRAPHS") == "1":
             try:
                 print(f"Generating graph for {slug}...")
                 draw_graph(
@@ -516,29 +448,65 @@ def rebuild_registries():
                   "stated_forces", "actual_forces", "grounding_url", "claim_rnet", "real_rnet",
                   "claim_z", "real_z", "claim_z_profile", "real_z_profile", "claim_integrity", "real_integrity",
                   "five_word", "compact", "spiritual", "spiritual_audit",
-                  "modal_claim", "modal_real", "modal_vector", "geodesic", "central_is_barrier_crossed", "potential_audit"]:
+                  "modal_claim", "modal_real", "modal_vector", "geodesic", "central_is_barrier_crossed", "potential_audit", "exclude_from_analytics", "quarantine_reason"]:
             if k in cfg:
                 registry_story[k] = cfg[k]
 
 
-        if is_live:
+        if "QUARANTINE" in status.upper() or "quarantine" in authoritative_file.replace("\\", "/").lower():
+            continue
+        elif is_live:
             if not ("LIVE" in status.upper() or cfg.get("rkeys") or cfg.get("post_urls")):
                 registry_story["status"] = "LIVE POSTED"
             active_live_stories.append(registry_story)
         else:
-            if "LIVE" in status.upper() or cfg.get("rkeys") or cfg.get("post_urls"):
-                registry_story["status"] = "COMPLETED DRY RUN"
+            registry_story["status"] = "COMPLETED DRY RUN"
             active_stories.append(registry_story)
 
     # 5. Write stories_registry.js (single file, next to control_panel.html)
-    combined = active_live_stories + active_stories
+    active_live_stories.sort(key=lambda x: x.get("created_at", ""), reverse=True)
+    lightweight_live = []
+    for idx, story in enumerate(active_live_stories):
+        if idx < 200:
+            lightweight_live.append(story)
+        else:
+            story_copy = dict(story)
+            story_copy.pop("posts", None)
+            lightweight_live.append(story_copy)
+
+    combined = lightweight_live + active_stories
     combined.sort(key=lambda x: x.get("created_at", ""), reverse=True)
     registry_path = os.path.join(script_dir, "stories_registry.js")
+    tmp_path = os.path.join(script_dir, f"stories_registry_{os.getpid()}.js.tmp")
     try:
-        with open(registry_path, "w", encoding="utf-8") as f:
+        with open(tmp_path, "w", encoding="utf-8") as f:
             f.write("window.ALETHEIA_STORIES_REGISTRY = ")
             json.dump(combined, f, separators=(',', ':'), ensure_ascii=False)
             f.write(";\n")
+        replaced = False
+        for _ in range(5):
+            try:
+                os.replace(tmp_path, registry_path)
+                replaced = True
+                break
+            except Exception:
+                time.sleep(0.3)
+        if not replaced:
+            with open(registry_path, "w", encoding="utf-8") as f:
+                f.write("window.ALETHEIA_STORIES_REGISTRY = ")
+                json.dump(combined, f, separators=(',', ':'), ensure_ascii=False)
+                f.write(";\n")
+            if os.path.exists(tmp_path):
+                try:
+                    os.remove(tmp_path)
+                except Exception:
+                    pass
+        if False:
+            try:
+                os.remove(registry_path)
+            except Exception:
+                pass
+        pass
         print(f"Compiled stories_registry.js ({len(combined)} stories, {len(active_live_stories)} live)")
         
         # Log how many stories are in the harvested stories buffer (queue)

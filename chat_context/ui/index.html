@@ -147,6 +147,7 @@ async function load() { data = await (await api('/api/tree')).json(); renderList
 
 function chatRow(c) {
   const row = el('div', 'chat' + (current === c.id ? ' sel' : ''));
+  row.dataset.cid = c.id;
   const cb = el('input'); cb.type = 'checkbox'; cb.checked = picked.has(c.id);
   cb.onclick = e => { e.stopPropagation(); cb.checked ? picked.add(c.id) : picked.delete(c.id); updatePickedCount(); };
   const src = (c.source || 'file').toLowerCase();
@@ -262,7 +263,9 @@ function renderList() {
 }
 
 async function openChat(id) {
-  current = id; renderList();
+  current = id;
+  document.querySelectorAll('#list .chat.sel').forEach(el => el.classList.remove('sel'));
+  document.querySelectorAll('#list .chat').forEach(el => { if (el.dataset.cid === id) el.classList.add('sel'); });
   const c = await (await api('/api/chat/' + id)).json();
   if (current !== id) return;
   const m = $('#main'); m.replaceChildren();
@@ -780,9 +783,15 @@ $('#sync').onclick = async () => {
     setTimeout(() => { $('#sync').disabled = false; }, 1000);
   }
 };
+let pollTimer = null;
+let lastRev = null;
 async function poll() {
+  if (pollTimer) {
+    clearTimeout(pollTimer);
+    pollTimer = null;
+  }
   if (document.hidden) {
-    setTimeout(poll, 3000);
+    pollTimer = setTimeout(poll, 3000);
     return;
   }
   let nextInterval = 3000;
@@ -813,9 +822,14 @@ async function poll() {
       $('#status').textContent = s.error ? 'sync error: ' + s.error : 'up to date';
     }
   } catch (e) {}
-  setTimeout(poll, nextInterval);
+  pollTimer = setTimeout(poll, nextInterval);
 }
-document.addEventListener('visibilitychange', () => { if (!document.hidden) poll(); });
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    if (pollTimer) clearTimeout(pollTimer);
+    poll();
+  }
+});
 poll();
 $('#pack').onclick = () => { if (!picked.size && !$('#pq').value.trim()) { $('#status').textContent = 'pick chats or type a question'; return; } copyPack({ chat_ids:[...picked], query:$('#pq').value }); };
 $('#pq').onkeydown = e => { if (e.key === 'Enter') $('#pack').click(); };

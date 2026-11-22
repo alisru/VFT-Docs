@@ -1,0 +1,154 @@
+Command exited with code 0.
+
+Command output:
+
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:12:      let warnCount = 0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:13:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:14:      // Early Tab Switcher (available immediately 
+during resource loading)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:15:      window.switchTab = function(evt, tabId) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:16:        const tabcontents = 
+document.getElementsByClassName("tab-content");
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:200:      document.head.appendChild(style);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:201:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:202:      // Create DOM elements on DOMContentLoaded
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:203:      
+document.addEventListener('DOMContentLoaded', function() {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:204:        const toggle = 
+document.createElement('button');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:205:        toggle.id = 'onscreen-console-toggle';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:278:        }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:279:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:280:        // Run initial update in case logs were 
+added before DOMContentLoaded
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:281:        updateConsoleUI();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:282:      });
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1280:        </div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1281:        <div style="display:flex; gap:0.5rem; 
+width:100%;">
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1282:          <button 
+onclick="document.getElementById('fileUploadInput').click()" class="theme-toggle" style="flex:1; 
+justify-content:center; font-size:0.8rem; padding:0.35rem 0.5rem; font-family: var(--font-outfit);">?? Import 
+JSON</button>
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1283:          <input type="file" 
+id="fileUploadInput" style="display:none;" onchange="handleFileUpload(event)" accept=".json">
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1284:        </div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1285:        <div style="display:flex; gap:0.4rem; 
+flex-wrap:wrap; margin-bottom:0.25rem;">
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1334:        <button class="tab-button" 
+onclick="switchTab(event, 'composer-tab')">?? Controller & Composer</button>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1335:        <button class="tab-button" 
+onclick="switchTab(event, 'audit-tab'); renderAuditTab()">?? Audit & Trends</button>
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1336:        <button class="tab-button" 
+onclick="switchTab(event, 'source-tab'); fetchSourceText()">?? Source Text</button>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1337:      </div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1338:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1357:          <div id="sourceContent" 
+style="font-family: var(--font-outfit, sans-serif); color: var(--text-primary, #e2e8f0);">
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1358:            <div style="color: var(--text-muted, 
+#64748b); padding: 40px; text-align: center;">
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1359:              Select a story and click the 
+Source Text tab to load the scraped article.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1360:            </div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1361:          </div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1414:        <div id="audit-tab" class="tab-content" 
+style="padding:1.5rem; overflow-y:auto; display:flex; flex-direction:column; gap:1.5rem;">
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1415:          <div id="audit-content" 
+style="display:flex; flex-direction:column; gap:1.5rem;">
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1416:            <div style="color:var(--text-muted); 
+font-size:0.85rem;">Loading audit data.</div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1417:          </div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1418:        </div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1494:            <div class="composer-title">?? 
+Manual Thread Compiler</div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1495:            <div style="font-size:0.85rem; 
+color:var(--text-muted)">
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1496:              Draft your own Convergence Test 
+evaluation. Enter coordinates and details to download a pre-compiled JSON file directly.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1497:            </div>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1498:            
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1565:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1566:  <!-- Include external stories database script 
+-->
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1567:  <script src="stories_registry.js"></script>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1568:  <script src="../hegemony_db.js"></script>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1569:  <script 
+src="aletheia_canvas_renderer.js"></script>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1571:  <!-- JavaScript Stories Registry & Controller 
+-->
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1572:  <script>
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1573:    // Fallback to loaded global registry, or 
+empty list if offline/failed
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1574:    const STORIES_REGISTRY = 
+window.ALETHEIA_STORIES_REGISTRY || [];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1575:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1576:    let activeStory = STORIES_REGISTRY[0];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1577:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1578:    function updateServerStatus(isOnline) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1703:      }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1704:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1705:      // Reset scroll position on full list loads
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1706:      listContainer.scrollTop = 0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1707:      renderStoriesListVirtual();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1722:    // Select Story
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1723:    function selectStory(storyId, scrollIntoView 
+= true) {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1724:      activeStory = STORIES_REGISTRY.find(s => 
+s.id === storyId);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1725:      
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1726:      const listContainer = 
+document.getElementById('storyList');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1758:      const sourceTab = 
+document.getElementById('source-tab');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1759:      if (sourceTab && 
+sourceTab.classList.contains('active')) {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1760:        fetchSourceText();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1761:      }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1762:    }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2434:      const tradVal = tradCtrl ? tradCtrl.value 
+: 'all';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2435:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2436:      const filtered = STORIES_REGISTRY.filter(s 
+=> {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2437:        let matchesSearch = !query || 
+s.subject.toLowerCase().includes(query) || s.verdict.toLowerCase().includes(query);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2438:        if (!matchesSearch && query && s.link) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2563:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2564:      const dataStr = 
+"data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify([draftJSON], null, 2));
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2565:      const downloadAnchor = 
+document.createElement('a');
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2566:      downloadAnchor.setAttribute("href", 
+dataStr);
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2567:      downloadAnchor.setAttribute("download", 
+`factcheck_${subject.toLowerCase().replace(/\s+/g, '_')}.json`);
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2568:      document.body.appendChild(downloadAnchor);
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2569:      downloadAnchor.click();
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2570:      downloadAnchor.remove();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2571:    }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2572:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2617:    }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2618:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2619:    // File Upload & Drag-and-Drop Dynamic Loader
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2620:    function handleFileUpload(evt) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2621:      const file = evt.target.files[0];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2622:      if (!file) return;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2626:    function parseAndAddStoryFile(file) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2627:      const reader = new FileReader();
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2628:      reader.onload = function(e) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2629:        try {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2630:          const data = 
+JSON.parse(e.target.result);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2655:          };
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2656:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2657:          const existingIdx = 
+STORIES_REGISTRY.findIndex(s => s.subject === newStory.subject);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2658:          if (existingIdx !== -1) {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2659:            STORIES_REGISTRY[existingIdx] = 
+newStory;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2660:          } else {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2661:            STORIES_REGISTRY.unshift(newStory);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2662:          }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2663:
+
+

@@ -1,0 +1,243 @@
+Command exited with code 0.
+
+Command output:
+
+> E:\Vector Field Theory\peek_explorer\renderer.js:56:let kidsLayouts = {}, kidsRoomSize = {}; // per-folder layout of 
+expanded contents + sub-room sizes
+  E:\Vector Field Theory\peek_explorer\renderer.js:57:let kidsGroups = {};                  // per-subroom grouping 
+('none', 'type', 'mtime', 'name', 'size', 'ext')
+  E:\Vector Field Theory\peek_explorer\renderer.js:58:let kidsDense = {}, denseTop = false;     // dense packing (fill 
+gaps around sub-rooms): per folder + top-level list
+  E:\Vector Field Theory\peek_explorer\renderer.js:59:let virtualRooms = {};                  // { [folderPath]: 
+string[] } - folders injected virtually as rooms
+  E:\Vector Field Theory\peek_explorer\renderer.js:60:
+  E:\Vector Field Theory\peek_explorer\renderer.js:61:// ---- RTS Hotkey Favorite Rooms (Keys 1 to =) ----
+  E:\Vector Field Theory\peek_explorer\renderer.js:62:const HOTKEY_SLOTS = ['1', '2', '3', '4', '5', '6', '7', '8', 
+'9', '0', '-', '='];
+  E:\Vector Field Theory\peek_explorer\renderer.js:63:let hotkeyContainers = {}; // { [slot]: { name: string, items: 
+Array<{ path: string, name: string, isDir: boolean }> } }
+  E:\Vector Field Theory\peek_explorer\renderer.js:64:let hotkeyRoomsEnabled = true;
+  E:\Vector Field Theory\peek_explorer\renderer.js:65:let hotkeyFadeDelay = 1800;
+  E:\Vector Field Theory\peek_explorer\renderer.js:66:let hotkeyKeepHovered = true;
+  E:\Vector Field Theory\peek_explorer\renderer.js:67:let hotkeyZIndex = 2000;
+  E:\Vector Field Theory\peek_explorer\renderer.js:68:const hotkeyFadeTimers = {};
+  E:\Vector Field Theory\peek_explorer\renderer.js:69:const hotkeyRoomElements = {};
+  E:\Vector Field Theory\peek_explorer\renderer.js:70:const hotkeyPositions = {};
+  E:\Vector Field Theory\peek_explorer\renderer.js:71:
+> E:\Vector Field Theory\peek_explorer\renderer.js:210:      const sz = kidsRoomSize[k._path] || { w: 520, h: 260 };
+  E:\Vector Field Theory\peek_explorer\renderer.js:211:      k.style.width = ''; k.style.height = '';
+  E:\Vector Field Theory\peek_explorer\renderer.js:212:      k.style.setProperty('--sc', Math.min(cols, Math.max(1, 
+Math.ceil((sz.w + gap) / (cw + gap)))));
+  E:\Vector Field Theory\peek_explorer\renderer.js:213:      k.style.setProperty('--sr', Math.max(1, Math.ceil((sz.h + 
+gap) / (ch + gap))));
+  E:\Vector Field Theory\peek_explorer\renderer.js:214:      k.classList.remove('dense-full');
+  E:\Vector Field Theory\peek_explorer\renderer.js:215:    } else {
+  E:\Vector Field Theory\peek_explorer\renderer.js:216:      k.classList.add('dense-full');
+  E:\Vector Field Theory\peek_explorer\renderer.js:217:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:218:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:219:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:220:function refreshDense() { 
+document.querySelectorAll('.dense-grid').forEach(applyDense); }
+  E:\Vector Field Theory\peek_explorer\renderer.js:221:let landscapePalette = 'default'; // 'default' | 'inherit' | 
+'dna' | 'rainbow' | 'rainbow-sync' | 'rainbow-async' | 'skittles' | 'pastel' | 'neon' | 'breathing' | 'rain-puddle' | 
+'disco' | 'dusco' | 'deep-dusco'
+  E:\Vector Field Theory\peek_explorer\renderer.js:222:const DEFAULT_CUSTOM_SWATCHES = ['#ef4444', '#f97316', 
+'#eab308', '#22c55e', '#06b6d4', '#3b82f6', '#8b5cf6'];
+  E:\Vector Field Theory\peek_explorer\renderer.js:223:let modePaletteIndex = {}; // { [modeKey]: 0..5 } (0..4 = 5 
+Curated Palettes, 5 = Custom Palette)
+  E:\Vector Field Theory\peek_explorer\renderer.js:224:let customPaletteColors = {}; // { [modeKey]: ['#hex', ...] }
+  E:\Vector Field Theory\peek_explorer\renderer.js:225:let inheritShiftMode = 'lighter'; // 'lighter' | 'darker' | 
+'hue-shift' | 'exact'
+> E:\Vector Field Theory\peek_explorer\renderer.js:293:  modIndoorZoom: 'Alt',
+> E:\Vector Field Theory\peek_explorer\renderer.js:294:  modRoomScale: 'Alt+Shift',
+  E:\Vector Field Theory\peek_explorer\renderer.js:295:  modLoupe: 'Ctrl+Shift',
+  E:\Vector Field Theory\peek_explorer\renderer.js:296:  newTab: 'Ctrl+T',
+  E:\Vector Field Theory\peek_explorer\renderer.js:297:  closeTab: 'Ctrl+W',
+  E:\Vector Field Theory\peek_explorer\renderer.js:298:  reopenTab: 'Ctrl+Shift+T',
+  E:\Vector Field Theory\peek_explorer\renderer.js:299:  newFolder: 'Ctrl+Shift+N',
+  E:\Vector Field Theory\peek_explorer\renderer.js:300:  newWindow: 'Ctrl+N',
+  E:\Vector Field Theory\peek_explorer\renderer.js:301:  toggleTerminal: 'Ctrl+`',
+  E:\Vector Field Theory\peek_explorer\renderer.js:302:  togglePreview: 'Alt+P',
+  E:\Vector Field Theory\peek_explorer\renderer.js:303:  toggleSplit: 'Alt+S',
+  E:\Vector Field Theory\peek_explorer\renderer.js:304:  focusAddress: 'Ctrl+L',
+  E:\Vector Field Theory\peek_explorer\renderer.js:305:  focusSearch: 'Ctrl+F',
+  E:\Vector Field Theory\peek_explorer\renderer.js:306:  goHome: 'Alt+Home',
+  E:\Vector Field Theory\peek_explorer\renderer.js:307:  rename: 'F2',
+  E:\Vector Field Theory\peek_explorer\renderer.js:308:  refresh: 'F5'
+  E:\Vector Field Theory\peek_explorer\renderer.js:309:};
+> E:\Vector Field Theory\peek_explorer\renderer.js:1518:      kidsRoomSize[it.path] = { w: Math.round(g.offsetWidth), 
+h: Math.round(g.offsetHeight) };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1519:      persist();
+  E:\Vector Field Theory\peek_explorer\renderer.js:1520:    };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1521:    window.addEventListener('mousemove', onMove);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1522:    window.addEventListener('mouseup', onUp);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1523:  });
+  E:\Vector Field Theory\peek_explorer\renderer.js:1524:  g.appendChild(rzCorner);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1525:
+  E:\Vector Field Theory\peek_explorer\renderer.js:1526:  if (cell._applyKidsLayout) cell._applyKidsLayout();
+  E:\Vector Field Theory\peek_explorer\renderer.js:1527:  // Dragging the resize corner must not start rubber-band or 
+propagate
+  E:\Vector Field Theory\peek_explorer\renderer.js:1528:  g.addEventListener('mousedown', e => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1529:    if (!g.classList.contains('room')) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1530:    const r = g.getBoundingClientRect();
+  E:\Vector Field Theory\peek_explorer\renderer.js:1531:    if (e.clientX > r.right - 24 && e.clientY > r.bottom - 24) 
+e.stopPropagation();
+  E:\Vector Field Theory\peek_explorer\renderer.js:1532:  });
+  E:\Vector Field Theory\peek_explorer\renderer.js:1533:  g.addEventListener('mouseup', () => {
+> E:\Vector Field Theory\peek_explorer\renderer.js:1536:    const old = kidsRoomSize[it.path];
+  E:\Vector Field Theory\peek_explorer\renderer.js:1537:    if (!old || old.w !== w || old.h !== h) {
+> E:\Vector Field Theory\peek_explorer\renderer.js:1538:      kidsRoomSize[it.path] = { w, h };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1539:      persist();
+  E:\Vector Field Theory\peek_explorer\renderer.js:1540:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:1541:  });
+  E:\Vector Field Theory\peek_explorer\renderer.js:1542:  return [g];
+  E:\Vector Field Theory\peek_explorer\renderer.js:1543:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:1544:function makeItem(it, depth, parentCell = null) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1545:  const parentEffMode = parentCell ? (parentCell._effMode || 
+(folderViews[parentCell._item?.path] || mode)) : mode;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1546:  const effMode = parentCell ? (forceGlobalView ? mode : 
+(folderViews[parentCell._item?.path] || parentEffMode)) : mode;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1547:  const effPx = PX[effMode] || PX[mode] || 32;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1548:  const hasThumb = isThumbFile(it);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1549:  const cell = document.createElement('div'); cell.className = 
+'row item' + (hasThumb ? ' has-thumb' : '');
+  E:\Vector Field Theory\peek_explorer\renderer.js:1550:  cell._effMode = effMode;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1551:  cell.dataset.isDir = it.isDir ? '1' : '0';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1552:  cell.draggable = true;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1553:  cell._item = it;
+> E:\Vector Field Theory\peek_explorer\renderer.js:1682:          const sz = kidsRoomSize[it.path] || { w: 480, h: 260 
+};
+  E:\Vector Field Theory\peek_explorer\renderer.js:1683:          g.style.width = sz.w + 'px';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1684:          g.style.height = sz.h + 'px';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1685:        } else {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1686:          g.style.width = '';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1687:          g.style.height = '';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1688:        }
+  E:\Vector Field Theory\peek_explorer\renderer.js:1689:      }
+  E:\Vector Field Theory\peek_explorer\renderer.js:1690:    };
+  E:\Vector Field Theory\peek_explorer\renderer.js:1691:    cell._applyKidsLayout = applyKidsLayout;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1692:    kids.addEventListener('wheel', e => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1693:      if (!kids.classList.contains('kl-row') || e.ctrlKey || 
+!e.deltaY || kids.scrollWidth <= kids.clientWidth) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1694:      kids.scrollLeft += e.deltaY; e.preventDefault(); 
+e.stopPropagation();
+  E:\Vector Field Theory\peek_explorer\renderer.js:1695:    }, { passive: false });
+  E:\Vector Field Theory\peek_explorer\renderer.js:1696:
+  E:\Vector Field Theory\peek_explorer\renderer.js:1697:    klBtn.addEventListener('click', e => {
+> E:\Vector Field Theory\peek_explorer\renderer.js:2144:    const old = kidsRoomSize[g._folderPath];
+  E:\Vector Field Theory\peek_explorer\renderer.js:2145:    if (!old || old.w !== w || old.h !== h) {
+> E:\Vector Field Theory\peek_explorer\renderer.js:2146:      kidsRoomSize[g._folderPath] = { w, h };
+  E:\Vector Field Theory\peek_explorer\renderer.js:2147:      persist();
+  E:\Vector Field Theory\peek_explorer\renderer.js:2148:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:2149:  });
+  E:\Vector Field Theory\peek_explorer\renderer.js:2150:});
+  E:\Vector Field Theory\peek_explorer\renderer.js:2151:
+  E:\Vector Field Theory\peek_explorer\renderer.js:2152:// ---- Breadcrumb address bar ----
+  E:\Vector Field Theory\peek_explorer\renderer.js:2153:let justStartedAddrEdit = false;
+  E:\Vector Field Theory\peek_explorer\renderer.js:2154:function updateAddrIcon() {
+  E:\Vector Field Theory\peek_explorer\renderer.js:2155:  const ico = $('addrIcon');
+  E:\Vector Field Theory\peek_explorer\renderer.js:2156:  if (!ico) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:2157:  if (cur === HOME_URI) ico.textContent = '??';
+  E:\Vector Field Theory\peek_explorer\renderer.js:2158:  else if (/^[A-Za-z]:[\\/]*$/.test(cur)) ico.textContent = 
+'??';
+  E:\Vector Field Theory\peek_explorer\renderer.js:2159:  else if (cur.startsWith('\\\\')) ico.textContent = '??';
+  E:\Vector Field Theory\peek_explorer\renderer.js:2160:  else ico.textContent = '??';
+  E:\Vector Field Theory\peek_explorer\renderer.js:2161:  ico.title = `${cur} � Click to edit or copy path`;
+> E:\Vector Field Theory\peek_explorer\renderer.js:4773:    if (targetRoomEl && matchesModifiers(e, 'modRoomScale', 
+true)) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4774:      e.preventDefault(); e.stopPropagation();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4775:      const rPath = targetRoomEl.dataset.roomPath;
+  E:\Vector Field Theory\peek_explorer\renderer.js:4776:      const r = roomMap.get(rPath);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4777:      if (r) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4778:        const factor = e.deltaY < 0 ? 1.1 : 0.91;
+  E:\Vector Field Theory\peek_explorer\renderer.js:4779:        r.w = Math.max(260, Math.min(2600, Math.round(r.w * 
+factor)));
+  E:\Vector Field Theory\peek_explorer\renderer.js:4780:        r.h = Math.max(180, Math.min(1800, Math.round(r.h * 
+factor)));
+  E:\Vector Field Theory\peek_explorer\renderer.js:4781:        r.el.style.setProperty('--room-w', r.w + 'px');
+  E:\Vector Field Theory\peek_explorer\renderer.js:4782:        r.el.style.setProperty('--room-h', r.h + 'px');
+  E:\Vector Field Theory\peek_explorer\renderer.js:4783:        const dims = r.el.querySelector('.rm-dims');
+  E:\Vector Field Theory\peek_explorer\renderer.js:4784:        if (dims) dims.textContent = `${r.w}x${r.h}`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:4785:        layout.rooms[rPath] = { ...(layout.rooms[rPath] || 
+{}), w: r.w, h: r.h };
+  E:\Vector Field Theory\peek_explorer\renderer.js:4786:        drawBridges();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4787:      }
+  E:\Vector Field Theory\peek_explorer\renderer.js:4788:      return;
+> E:\Vector Field Theory\peek_explorer\renderer.js:4792:    if (targetRoomEl && (matchesModifiers(e, 'modIndoorZoom', 
+true) || (e.ctrlKey && !e.shiftKey && !e.altKey))) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4793:      e.preventDefault(); e.stopPropagation();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4794:      const rPath = targetRoomEl.dataset.roomPath;
+  E:\Vector Field Theory\peek_explorer\renderer.js:4795:      const r = roomMap.get(rPath) || htmlMap.get(rPath) || 
+fileViewerMap.get(rPath);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4796:      if (r) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4797:        if (!r.indoorScale) r.indoorScale = 1.0;
+  E:\Vector Field Theory\peek_explorer\renderer.js:4798:        const factor = e.deltaY < 0 ? 1.14 : 0.88;
+  E:\Vector Field Theory\peek_explorer\renderer.js:4799:        r.indoorScale = Math.max(0.4, Math.min(3.5, 
++(r.indoorScale * factor).toFixed(2)));
+  E:\Vector Field Theory\peek_explorer\renderer.js:4800:        const bodyEl = r.el.querySelector('.map-room-body') || 
+r.el.querySelector('.map-file-body') || r.el.querySelector('.map-html-body');
+  E:\Vector Field Theory\peek_explorer\renderer.js:4801:        if (bodyEl) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4802:          bodyEl.style.zoom = r.indoorScale;
+  E:\Vector Field Theory\peek_explorer\renderer.js:4803:          bodyEl.style.setProperty('--indoor-scale', 
+r.indoorScale);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4804:          r.el.classList.add('indoor-zoomed');
+  E:\Vector Field Theory\peek_explorer\renderer.js:4805:        }
+  E:\Vector Field Theory\peek_explorer\renderer.js:4806:        let badge = r.el.querySelector('.rm-zoom-badge');
+  E:\Vector Field Theory\peek_explorer\renderer.js:4807:        if (!badge) {
+> E:\Vector Field Theory\peek_explorer\renderer.js:6229:    const s = { view: mode, folderViews, forceGlobalView, 
+imageThumbFit, virtualRooms, hotkeyContainers, hotkeyFadeDelay, hotkeyRoomsEnabled, hotkeyKeepHovered, 
+landscapePalette, modePaletteIndex, customPaletteColors, inheritShiftMode, landscapeBg, landscapeBgColor, 
+landscapeBgImage, canvasReactMode, accentColor, hotkeys, defaultFrameColor, defaultBgColor, roomBgOpacity, 
+roomGlowIntensity, roomGlowRange, breathTargetColor, breathTargetBgColor, breathScaleSize, breathAffectTiles, 
+puddleIntervalMin, puddleIntervalMax, puddleRippleDuration, puddleMaxConcurrent, activeRoomBorderColor, 
+selectedFolderColor, useCustomSelectedFolder, unselectedFolderColor, useCustomUnselectedFolder, browserAutoSleep, 
+autoSummarize, breathingDuration, lockFrame, lockBg, holdRenameEnabled, holdRenameDelay, sortKey, sortAsc, groupKey, 
+colWidths, showPreview, darkMode, showHidden, showExt, showChecks, newTabTarget, scripts, bookmarks, recentFolders, 
+landscapeLayout, splitRatio, kidsLayouts, kidsGroups, kidsRoomSize, kidsDense, denseTop, cameraZones };
+  E:\Vector Field Theory\peek_explorer\renderer.js:6230:    if (isPrimary) s.session = { tabs, active };
+  E:\Vector Field Theory\peek_explorer\renderer.js:6231:    window.api.saveSettings(s);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6232:  }, 300);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6233:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:6234:
+  E:\Vector Field Theory\peek_explorer\renderer.js:6235:// ---- Back / Forward / Up / Home + Middle-Click for New Tab 
++ Mouse Back/Forward buttons + History menu ----
+  E:\Vector Field Theory\peek_explorer\renderer.js:6236:function goBack() { if (hi > 0) { hi--; go(hist[hi], false); } 
+}
+  E:\Vector Field Theory\peek_explorer\renderer.js:6237:function goForward() { if (hi < hist.length - 1) { hi++; 
+go(hist[hi], false); } }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6238:if ($('back')) $('back').onclick = goBack;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6239:if ($('fwd')) $('fwd').onclick = goForward;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6240:if ($('up')) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6241:  $('up').onclick = () => go(parent(cur));
+  E:\Vector Field Theory\peek_explorer\renderer.js:6242:  wireDropTarget($('up'), () => parent(cur));
+  E:\Vector Field Theory\peek_explorer\renderer.js:6243:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:6244:if ($('homeBtn')) $('homeBtn').onclick = () => go(HOME_URI);
+> E:\Vector Field Theory\peek_explorer\renderer.js:6616:    if (settings.kidsRoomSize && typeof settings.kidsRoomSize 
+=== 'object') kidsRoomSize = { ...settings.kidsRoomSize };
+  E:\Vector Field Theory\peek_explorer\renderer.js:6617:    if (settings.kidsDense && typeof settings.kidsDense === 
+'object') kidsDense = { ...settings.kidsDense };
+  E:\Vector Field Theory\peek_explorer\renderer.js:6618:    if (typeof settings.denseTop === 'boolean') denseTop = 
+settings.denseTop;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6619:    if (settings.cameraZones && typeof settings.cameraZones 
+=== 'object') cameraZones = { ...settings.cameraZones };
+  E:\Vector Field Theory\peek_explorer\renderer.js:6620:    if (settings.landscapeBg) landscapeBg = 
+settings.landscapeBg;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6621:    if (settings.landscapeBgColor) landscapeBgColor = 
+settings.landscapeBgColor;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6622:    if (settings.landscapeBgImage) landscapeBgImage = 
+settings.landscapeBgImage;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6623:    if (typeof settings.canvasReactMode === 'boolean') 
+canvasReactMode = settings.canvasReactMode;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6624:    if (settings.accentColor) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6625:      accentColor = settings.accentColor;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6626:      document.documentElement.style.setProperty('--accent', 
+accentColor);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6627:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6628:    if (settings.hotkeys && typeof settings.hotkeys === 
+'object') {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6629:      hotkeys = { ...DEFAULT_HOTKEYS, ...settings.hotkeys };
+  E:\Vector Field Theory\peek_explorer\renderer.js:6630:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6631:    if (settings.defaultFrameColor) defaultFrameColor = 
+settings.defaultFrameColor;
+
+

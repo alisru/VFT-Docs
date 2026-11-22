@@ -1,0 +1,160 @@
+Command exited with code 0.
+
+Command output:
+
+> E:\Vector Field Theory\peek_explorer\index.html:80:    <button id="settingsBtn" title="Settings, Appearance, 
+Palettes & Hotkeys">?? Settings</button>
+  E:\Vector Field Theory\peek_explorer\index.html:81:    <button id="devToolsBtn" title="Developer Tools Console (F12 
+or Ctrl+Shift+I)">??? Console</button>
+  E:\Vector Field Theory\peek_explorer\index.html:82:  </div>
+  E:\Vector Field Theory\peek_explorer\index.html:83:</div>
+  E:\Vector Field Theory\peek_explorer\index.html:84:<div id="main">
+  E:\Vector Field Theory\peek_explorer\index.html:85:  <div id="nav"></div>
+  E:\Vector Field Theory\peek_explorer\index.html:86:  <div id="workspace">
+  E:\Vector Field Theory\peek_explorer\index.html:87:    <div id="content">
+  E:\Vector Field Theory\peek_explorer\index.html:88:      <div id="searchBanner" class="search-banner hidden"></div>
+  E:\Vector Field Theory\peek_explorer\index.html:89:      <div id="header">
+  E:\Vector Field Theory\peek_explorer\index.html:90:        <span class="c-name">Name</span>
+> E:\Vector Field Theory\peek_explorer\index.html:139:<div id="hotkeyDock" class="hotkey-dock" title="RTS Favorite 
+Rooms (Hold 1 to = to reveal)"></div>
+  E:\Vector Field Theory\peek_explorer\index.html:140:<div id="status"></div>
+  E:\Vector Field Theory\peek_explorer\index.html:141:
+  E:\Vector Field Theory\peek_explorer\index.html:142:<!-- Settings & Customization Modal -->
+  E:\Vector Field Theory\peek_explorer\index.html:143:<div id="settingsBackdrop" class="settings-backdrop hidden">
+  E:\Vector Field Theory\peek_explorer\index.html:144:  <div id="settingsModal" class="settings-dialog">
+  E:\Vector Field Theory\peek_explorer\index.html:145:    <div class="settings-head">
+  E:\Vector Field Theory\peek_explorer\index.html:146:      <span class="settings-title">?? Peek Explorer Settings & 
+Customization</span>
+  E:\Vector Field Theory\peek_explorer\index.html:147:      <button id="settingsClose" class="settings-close-btn" 
+title="Close settings">x</button>
+  E:\Vector Field Theory\peek_explorer\index.html:148:    </div>
+  E:\Vector Field Theory\peek_explorer\index.html:149:    <div class="settings-nav">
+> E:\Vector Field Theory\peek_explorer\index.html:152:      <button class="settings-tab-btn" data-tab="hotkeys">?? 
+Hotkeys & Behavior</button>
+  E:\Vector Field Theory\peek_explorer\index.html:153:      <!-- <button class="settings-tab-btn" 
+data-tab="summarizer">?? Fractal Summarizer</button> -->
+  E:\Vector Field Theory\peek_explorer\index.html:154:    </div>
+  E:\Vector Field Theory\peek_explorer\index.html:155:    <div class="settings-content">
+  E:\Vector Field Theory\peek_explorer\index.html:156:      <!-- Tab 1: General & UI -->
+  E:\Vector Field Theory\peek_explorer\index.html:157:      <div class="settings-pane active" data-pane="general">
+  E:\Vector Field Theory\peek_explorer\index.html:158:        <div class="setting-group">
+  E:\Vector Field Theory\peek_explorer\index.html:159:          <h3>Interface Theme</h3>
+  E:\Vector Field Theory\peek_explorer\index.html:160:          <div class="setting-row">
+  E:\Vector Field Theory\peek_explorer\index.html:161:            <span>Color Theme:</span>
+  E:\Vector Field Theory\peek_explorer\index.html:162:            <div style="display:inline-flex;gap:8px">
+> E:\Vector Field Theory\peek_explorer\index.html:435:              <table class="hotkey-table" 
+style="margin-top:6px;font-size:10.5px">
+  E:\Vector Field Theory\peek_explorer\index.html:436:                <tr><td><strong>Base Shell + Home 
+Dashboard</strong></td><td>~85-115 MB Working Set � &lt;1% CPU � ~150 DOM nodes</td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:437:                <tr><td><strong>Standard File Views 
+(Details/Grid)</strong></td><td>~2-6 MB per 500 items � Lazy SVG/Thumb cache (capped 600)</td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:438:                <tr><td><strong>Landscape Room (Per Open 
+Room)</strong></td><td>~0.35-0.8 MB JS/DOM � Off-screen rooms culled (`content-visibility:hidden`)</td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:439:                <tr><td><strong>100+ Mass Rooms in 
+Landscape</strong></td><td>~35-65 MB delta � Frustum-culled + `.lod-far` hides sub-labels at zoom &lt;0.55</td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:440:                <tr><td><strong>Image Full-Bleed 
+Thumbnails</strong></td><td>~0.15 MB per decoded 256px thumb � `IntersectionObserver` lazy-loaded</td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:441:                <tr><td><strong>Dynamic Color Modes 
+(Breath/Disco/Rain)</strong></td><td>~0 MB RAM � GPU `opacity`/`transform` compositing on visible rooms only</td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:442:                <tr><td><strong>Magnifier Loupe 
+(`Ctrl+Shift`)</strong></td><td>~1-2 MB temporary while held (`750px` radius clone, 0 MB when released)</td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:443:                <tr><td><strong>Inline Text Editor 
+(`&lt;textarea&gt;`)</strong></td><td>&lt;0.05 MB (50 KB) per open editor � Zero Monaco/CodeMirror bloat</td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:444:                <tr><td><strong>HTML / PDF `&lt;iframe&gt;` 
+Island</strong></td><td>~15-45 MB per active iframe (isolated renderer sub-frame)</td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:445:              </table>
+> E:\Vector Field Theory\peek_explorer\index.html:451:      <!-- Tab 3: Hotkeys & Behavior -->
+> E:\Vector Field Theory\peek_explorer\index.html:452:      <div class="settings-pane" data-pane="hotkeys">
+  E:\Vector Field Theory\peek_explorer\index.html:453:        <div class="setting-group">
+> E:\Vector Field Theory\peek_explorer\index.html:454:          <h3>RTS Hotkey Favorite Rooms (Keys 1 to =)</h3>
+  E:\Vector Field Theory\peek_explorer\index.html:455:          <div class="setting-row">
+> E:\Vector Field Theory\peek_explorer\index.html:456:            <label><input type="checkbox" 
+id="setHotkeyRoomsEnabled" checked> Enable RTS Hotkey Favorite Rooms (Hold 1 to = in normal explorer)</label>
+  E:\Vector Field Theory\peek_explorer\index.html:457:          </div>
+  E:\Vector Field Theory\peek_explorer\index.html:458:          <div class="setting-row">
+  E:\Vector Field Theory\peek_explorer\index.html:459:            <span>Fade Delay after key release:</span>
+  E:\Vector Field Theory\peek_explorer\index.html:460:            <div 
+style="display:flex;align-items:center;gap:8px;flex:1">
+> E:\Vector Field Theory\peek_explorer\index.html:461:              <input type="range" id="setHotkeyFadeDelay" 
+min="300" max="5000" value="1800" step="100" style="flex:1">
+> E:\Vector Field Theory\peek_explorer\index.html:462:              <span id="setHotkeyFadeDelayVal" 
+style="font-size:11px;min-width:55px">1800ms</span>
+  E:\Vector Field Theory\peek_explorer\index.html:463:            </div>
+  E:\Vector Field Theory\peek_explorer\index.html:464:          </div>
+  E:\Vector Field Theory\peek_explorer\index.html:465:          <div class="setting-row">
+> E:\Vector Field Theory\peek_explorer\index.html:466:            <label><input type="checkbox" 
+id="setHotkeyKeepHovered" checked> Keep room open while mouse is hovering over it</label>
+  E:\Vector Field Theory\peek_explorer\index.html:467:          </div>
+  E:\Vector Field Theory\peek_explorer\index.html:468:          <div class="setting-row">
+  E:\Vector Field Theory\peek_explorer\index.html:469:            <span>Favorites Storage:</span>
+> E:\Vector Field Theory\peek_explorer\index.html:470:            <button id="setClearHotkeyRoomsBtn" class="dash-btn" 
+style="padding:2px 10px;font-size:11px">Clear All Saved Favorites</button>
+  E:\Vector Field Theory\peek_explorer\index.html:471:          </div>
+  E:\Vector Field Theory\peek_explorer\index.html:472:        </div>
+  E:\Vector Field Theory\peek_explorer\index.html:473:
+  E:\Vector Field Theory\peek_explorer\index.html:474:        <div class="setting-group">
+  E:\Vector Field Theory\peek_explorer\index.html:475:          <h3>Inline Rename Behavior</h3>
+  E:\Vector Field Theory\peek_explorer\index.html:476:          <div class="setting-row">
+  E:\Vector Field Theory\peek_explorer\index.html:477:            <label><input type="checkbox" 
+id="setHoldRenameEnabled" checked> Enable Hold-to-Rename on row click-and-hold</label>
+  E:\Vector Field Theory\peek_explorer\index.html:478:          </div>
+  E:\Vector Field Theory\peek_explorer\index.html:479:          <div class="setting-row" id="setHoldRenameDelayRow">
+  E:\Vector Field Theory\peek_explorer\index.html:480:            <span>Hold Duration:</span>
+> E:\Vector Field Theory\peek_explorer\index.html:489:            <h3 style="margin:0">Navigation & Landscape Hotkeys 
+(Click any hotkey to rebind)</h3>
+> E:\Vector Field Theory\peek_explorer\index.html:490:            <button id="resetAllHotkeysBtn" class="dash-btn" 
+style="padding:2px 10px;font-size:11px">Reset Defaults</button>
+  E:\Vector Field Theory\peek_explorer\index.html:491:          </div>
+> E:\Vector Field Theory\peek_explorer\index.html:492:          <table class="hotkey-table">
+> E:\Vector Field Theory\peek_explorer\index.html:493:            <tr><td>Landscape Camera Zoom (+ 
+Scroll)</td><td><button class="hotkey-bind-btn" data-hk="modCameraZoom" data-mod-only="true">Shift</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:494:            <tr><td>Global Landscape Camera Pan (+ Click & 
+Drag)</td><td><button class="hotkey-bind-btn" data-hk="modCameraPan" data-mod-only="true">Alt</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:495:            <tr><td>Indoor Room Tile & Icon Zoom (+ 
+Scroll)</td><td><button class="hotkey-bind-btn" data-hk="modIndoorZoom" data-mod-only="true">Alt</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:496:            <tr><td>Scale Room Box Width & Height (+ 
+Scroll)</td><td><button class="hotkey-bind-btn" data-hk="modRoomScale" 
+data-mod-only="true">Alt+Shift</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:497:            <tr><td>Hold for Magnifier Loupe (Scroll adjusts 
+zoom)</td><td><button class="hotkey-bind-btn" data-hk="modLoupe" data-mod-only="true">Ctrl+Shift</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:498:            <tr><td>New Tab</td><td><button 
+class="hotkey-bind-btn" data-hk="newTab">Ctrl+T</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:499:            <tr><td>Close Active Tab</td><td><button 
+class="hotkey-bind-btn" data-hk="closeTab">Ctrl+W</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:500:            <tr><td>Reopen Closed Tab</td><td><button 
+class="hotkey-bind-btn" data-hk="reopenTab">Ctrl+Shift+T</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:501:            <tr><td>Create New Folder</td><td><button 
+class="hotkey-bind-btn" data-hk="newFolder">Ctrl+Shift+N</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:502:            <tr><td>Open New Window</td><td><button 
+class="hotkey-bind-btn" data-hk="newWindow">Ctrl+N</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:503:            <tr><td>Toggle Bottom Terminal 
+Drawer</td><td><button class="hotkey-bind-btn" data-hk="toggleTerminal">Ctrl+`</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:504:            <tr><td>Toggle Preview Pane</td><td><button 
+class="hotkey-bind-btn" data-hk="togglePreview">Alt+P</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:505:            <tr><td>Toggle Split Pane</td><td><button 
+class="hotkey-bind-btn" data-hk="toggleSplit">Alt+S</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:506:            <tr><td>Focus Address Bar</td><td><button 
+class="hotkey-bind-btn" data-hk="focusAddress">Ctrl+L</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:507:            <tr><td>Focus Live Filter Search</td><td><button 
+class="hotkey-bind-btn" data-hk="focusSearch">Ctrl+F</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:508:            <tr><td>Go to Home Dashboard</td><td><button 
+class="hotkey-bind-btn" data-hk="goHome">Alt+Home</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:509:            <tr><td>Inline Rename Selected Item</td><td><button 
+class="hotkey-bind-btn" data-hk="rename">F2</button></td></tr>
+> E:\Vector Field Theory\peek_explorer\index.html:510:            <tr><td>Refresh Current View</td><td><button 
+class="hotkey-bind-btn" data-hk="refresh">F5</button></td></tr>
+  E:\Vector Field Theory\peek_explorer\index.html:511:          </table>
+  E:\Vector Field Theory\peek_explorer\index.html:512:        </div>
+  E:\Vector Field Theory\peek_explorer\index.html:513:      </div>
+  E:\Vector Field Theory\peek_explorer\index.html:514:
+  E:\Vector Field Theory\peek_explorer\index.html:515:      <!-- Tab 4: Summarizer Engine (Commented out per user 
+request - preserved for later)
+  E:\Vector Field Theory\peek_explorer\index.html:516:      <div class="settings-pane" data-pane="summarizer">
+  E:\Vector Field Theory\peek_explorer\index.html:517:        <div class="setting-group">
+  E:\Vector Field Theory\peek_explorer\index.html:518:          <h3>Fractal Polytrope Summarizer</h3>
+  E:\Vector Field Theory\peek_explorer\index.html:519:          <p 
+style="font-size:11.5px;color:var(--muted);line-height:1.5">
+  E:\Vector Field Theory\peek_explorer\index.html:520:            Extracts document invariant cores algorithmically 
+across the 7 Interrogative Reality Planes (Q1 Who, Q2 What, Q3 Where, Q4 Why, Q5 How, Q6 Cause, Q7 Effect).
+
+

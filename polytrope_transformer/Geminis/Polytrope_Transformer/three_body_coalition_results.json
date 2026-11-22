@@ -1,0 +1,95 @@
+{
+  "cycle": 11,
+  "experiment": "Three-Body Homeostatic Parliamentary Coalition Solver",
+  "tripartite_results": {
+    "parties": [
+      "Government Executive (Albanese Labor)",
+      "Opposition Coalition Scrutiny",
+      "Regional Independent Crossbench"
+    ],
+    "tripartite_equilibrium_s3": [
+      0.1068,
+      0.3357,
+      0.0659
+    ],
+    "modal_equilibrium": "PRODUCTIVE BIPARTISAN ACCORD [can be]",
+    "dominant_substrate": "Q1:Metaphysical",
+    "substrate_distribution_q": {
+      "Q1:Metaphysical": 0.3438,
+      "Q2:Possible": 0.091,
+      "Q3:Physical": 0.1992,
+      "Q4:Lyrical": 0.098,
+      "Q5:Logical": 0.1781,
+      "Q6:Historical": 0.0311,
+      "Q7:Emotive": 0.0588
+    },
+    "coalition_triangle_area": 0.955,
+    "stability_index": 0.6203,
+    "residual_strain": 0.000284,
+    "relaxation_trace": [
+      {
+        "step": 0,
+        "coords": [
+          0.1202,
+          0.3493,
+          0.0756
+        ],
+        "force_norm": 0.577083
+      },
+      {
+        "step": 20,
+        "coords": [
+          0.0996,
+          0.3327,
+          0.0624
+        ],
+        "force_norm": 0.139301
+      },
+      {
+        "step": 40,
+        "coords": [
+          0.1081,
+          0.3363,
+          0.065
+        ],
+        "force_norm": 0.03446
+      },
+      {
+        "step": 60,
+        "coords": [
+          0.1069,
+          0.3356,
+          0.0662
+        ],
+        "force_norm": 0.009953
+      },
+      {
+        "step": 80,
+        "coords": [
+          0.1066,
+          0.3357,
+          0.066
+        ],
+        "force_norm": 0.003103
+      },
+      {
+        "step": 100,
+        "coords": [
+          0.1068,
+          0.3357,
+          0.0659
+        ],
+        "force_norm": 0.000565
+      },
+      {
+        "step": 119,
+        "coords": [
+          0.1068,
+          0.3357,
+          0.0659
+        ],
+        "force_norm": 0.000284
+      }
+    ]
+  }
+}

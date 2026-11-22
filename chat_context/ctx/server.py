@@ -1,5 +1,6 @@
 import datetime
 import gc
+import hashlib
 import json
 import re
 import threading
@@ -15,7 +16,14 @@ from fastapi.responses import FileResponse, PlainTextResponse, RedirectResponse,
 from fastapi.staticfiles import StaticFiles
 
 from .db import DRAFTS_DIR, ROOT, connect, init_db
-from .embed import embed_pending, embed_texts, embed_query, load_chat_vectors
+from .embed import (
+    embed_pending,
+    embed_texts,
+    embed_query,
+    load_chat_vectors,
+    invalidate_vectors_cache,
+    unload_model,
+)
 from .export import (
     chat_to_html,
     chat_to_markdown,
@@ -359,7 +367,7 @@ def _why(a_chunks, b_chunks):
 
 @app.get("/api/related/{cid}")
 def related(cid: str, k: int = 8, con=Depends(get_con)):
-    ids, mat = load_chat_vectors(con)
+    ids, mat = load_chat_vectors(con, rev=STATUS.get("rev", 1))
     if cid not in ids:
         return []
     sims = mat @ mat[ids.index(cid)]
@@ -389,7 +397,7 @@ def related_live(body: dict = Body(...), con=Depends(get_con)):
         if r:
             cid = r["id"]
 
-    ids, mat = load_chat_vectors(con)
+    ids, mat = load_chat_vectors(con, rev=STATUS.get("rev", 1))
 
     # 1. If we have a recognized chat in our vectors, use standard chat vector similarity
     if cid and cid in ids and len(mat):
@@ -440,46 +448,89 @@ def related_live(body: dict = Body(...), con=Depends(get_con)):
     return [{"id": r["id"], "title": r["title"], "updated": r["updated"], "score": 0.0, "why": None} for r in recent if r["id"] != cid]
 
 
-_chunks_cache = {"rev": None, "mat": None, "meta": []}
+_chunks_cache = {"rev": None, "ids": None, "mat": None}
+_chunks_lock = threading.Lock()
 
 
 def _get_chunk_index(con):
     global _chunks_cache
     current_rev = STATUS.get("rev", 1)
-    if _chunks_cache["rev"] == current_rev and _chunks_cache["mat"] is not None:
-        return _chunks_cache["mat"], _chunks_cache["meta"]
+    with _chunks_lock:
+        if _chunks_cache["rev"] == current_rev and _chunks_cache["mat"] is not None:
+            return _chunks_cache["ids"], _chunks_cache["mat"]
 
-    # Single fast joined query with topics and source metadata
-    sql = """
-        SELECT k.id, k.chat_id, k.idx, k.text, k.emb, c.title, c.source, c.topic_id, t.name as topic_name,
-               COALESCE(c.updated, datetime(c.src_mtime, 'unixepoch'), c.started, '') as updated
-        FROM chunks k
-        JOIN chats c ON k.chat_id = c.id
-        LEFT JOIN topics t ON c.topic_id = t.id
-        WHERE k.emb IS NOT NULL AND length(k.emb) == 1536
-    """
-    rows = con.execute(sql).fetchall()
-    if not rows:
-        _chunks_cache = {"rev": current_rev, "mat": None, "meta": []}
-        return None, []
+        # Release previous arrays before allocating new ones
+        _chunks_cache = {"rev": None, "ids": None, "mat": None}
 
-    mat = np.vstack([np.frombuffer(r["emb"], dtype=np.float32) for r in rows])
-    meta = [
-        {
-            "id": r["id"],
-            "chat_id": r["chat_id"],
-            "idx": r["idx"],
-            "text": r["text"],
-            "title": r["title"] or r["chat_id"],
-            "source": r["source"] or "gemini",
-            "topic_id": r["topic_id"],
-            "topic_name": r["topic_name"] or "",
-            "updated": r["updated"],
-        }
-        for r in rows
-    ]
-    _chunks_cache = {"rev": current_rev, "mat": mat, "meta": meta}
-    return mat, meta
+        n = con.execute("SELECT count(*) FROM chunks WHERE emb IS NOT NULL AND length(emb) == 1536").fetchone()[0]
+        if not n:
+            _chunks_cache = {"rev": current_rev, "ids": np.zeros(0, dtype=np.int64), "mat": None}
+            return _chunks_cache["ids"], None
+
+        ids = np.empty(n, dtype=np.int64)
+        mat = np.empty((n, 384), dtype=np.float16)
+        cur = con.execute("SELECT id, emb FROM chunks WHERE emb IS NOT NULL AND length(emb) == 1536")
+        i = 0
+        while True:
+            batch = cur.fetchmany(2000)
+            if not batch:
+                break
+            for r in batch:
+                if i >= n:
+                    break
+                ids[i] = r[0]
+                mat[i] = np.frombuffer(r[1], dtype=np.float32)
+                i += 1
+        if i < n:
+            ids = ids[:i]
+            mat = mat[:i]
+
+        _chunks_cache = {"rev": current_rev, "ids": ids, "mat": mat}
+        return ids, mat
+
+
+def _fetch_chunk_meta(con, chunk_ids_list):
+    """Fetch metadata for only the selected candidate chunk IDs (avoids keeping 40k+ dicts in RAM)."""
+    if not chunk_ids_list:
+        return []
+    rows = []
+    # SQLite parameter limit is 999 on older builds; batch in 900s
+    for start in range(0, len(chunk_ids_list), 900):
+        batch_ids = [int(cid) for cid in chunk_ids_list[start:start + 900]]
+        placeholders = ",".join("?" for _ in batch_ids)
+        sql = f"""
+            SELECT k.id, k.chat_id, k.idx, SUBSTR(k.text, 1, 300) as preview, c.title, c.source, c.topic_id, t.name as topic_name,
+                   COALESCE(c.updated, datetime(c.src_mtime, 'unixepoch'), c.started, '') as updated
+            FROM chunks k
+            JOIN chats c ON k.chat_id = c.id
+            LEFT JOIN topics t ON c.topic_id = t.id
+            WHERE k.id IN ({placeholders})
+        """
+        rows.extend(con.execute(sql, tuple(batch_ids)).fetchall())
+    return rows
+
+
+def _filtered_chunk_ids(con, topic_id=None, source=None, chat_ids=None, must_words=None):
+    """Return allowed chunk IDs from SQLite when metadata filters are active, or None if unfiltered."""
+    if topic_id is None and not source and not chat_ids and not must_words:
+        return None
+    clauses = ["k.emb IS NOT NULL", "length(k.emb) == 1536"]
+    params = []
+    if topic_id is not None:
+        clauses.append("c.topic_id = ?")
+        params.append(topic_id)
+    if source:
+        clauses.append("LOWER(c.source) = LOWER(?)")
+        params.append(source)
+    if chat_ids:
+        placeholders = ",".join("?" for _ in chat_ids)
+        clauses.append(f"k.chat_id IN ({placeholders})")
+        params.extend(chat_ids)
+    for w in (must_words or []):
+        clauses.append("(INSTR(LOWER(k.text), ?) > 0 OR INSTR(LOWER(COALESCE(c.title, '')), ?) > 0)")
+        params.extend([w, w])
+    sql = f"SELECT k.id FROM chunks k JOIN chats c ON k.chat_id = c.id WHERE {' AND '.join(clauses)}"
+    return [r[0] for r in con.execute(sql, tuple(params))]
 
 
 def _search(
@@ -507,12 +558,6 @@ def _search(
         must_list.extend([w.strip() for w in re.split(r'[,; ]+', must_contain) if w.strip()])
     must_words = [w.lower() for w in must_list if len(w) > 1]
 
-    # Asymmetric BGE query embedding
-    qv = embed_query(clean_q)
-    mat, meta = _get_chunk_index(con)
-    if mat is None or len(meta) == 0:
-        return []
-
     # FTS5 matches
     clean_tokens = [w for w in re.findall(r"[a-zA-Z0-9]+", q.lower()) if len(w) > 2]
     fts_dict = {}
@@ -527,28 +572,79 @@ def _search(
         except Exception:
             pass
 
-    # Filtering mask
-    allowed_cids = set(chat_ids) if chat_ids else None
+    if mode == "exact":
+        if not fts_dict:
+            return []
+        cand_ids = list(fts_dict.keys())
+        allowed = _filtered_chunk_ids(con, topic_id=topic_id, source=source, chat_ids=chat_ids, must_words=must_words)
+        if allowed is not None:
+            allowed_set = set(allowed)
+            cand_ids = [cid for cid in cand_ids if cid in allowed_set]
+        if not cand_ids:
+            return []
+        meta_rows = _fetch_chunk_meta(con, cand_ids)
+        sim_by_id = {}
+    else:
+        # Asymmetric BGE query embedding
+        qv = embed_query(clean_q)
+        chunk_ids, mat = _get_chunk_index(con)
+        if mat is None or len(chunk_ids) == 0:
+            return []
 
-    # Dense vector dot products across all chunks in memory (<1ms)
-    sims = mat @ qv
+        allowed = _filtered_chunk_ids(con, topic_id=topic_id, source=source, chat_ids=chat_ids, must_words=must_words)
+        if allowed is not None:
+            if not allowed:
+                return []
+            mask = np.isin(chunk_ids, np.asarray(allowed, dtype=np.int64))
+            sub_ids = chunk_ids[mask]
+            sub_mat = mat[mask]
+        else:
+            sub_ids = chunk_ids
+            sub_mat = mat
+
+        n_sub = len(sub_ids)
+        if n_sub == 0:
+            return []
+
+        # Chunked float32 dot product to avoid materializing a full float32 copy of mat
+        sims = np.empty(n_sub, dtype=np.float32)
+        for s in range(0, n_sub, 8192):
+            e = min(s + 8192, n_sub)
+            sims[s:e] = sub_mat[s:e].astype(np.float32) @ qv
+
+        cand_limit = min(n_sub, max(k * 25, 500))
+        if n_sub > cand_limit:
+            top_idx = np.argpartition(-sims, cand_limit - 1)[:cand_limit]
+        else:
+            top_idx = np.arange(n_sub)
+
+        sim_by_id = {int(sub_ids[idx]): float(sims[idx]) for idx in top_idx}
+
+        # Include FTS5 matches that belong to the filtered set (if any)
+        if fts_dict:
+            if allowed is not None:
+                allowed_set = set(allowed)
+                extra_fts = [cid for cid in fts_dict if cid in allowed_set and cid not in sim_by_id]
+            else:
+                extra_fts = [cid for cid in fts_dict if cid not in sim_by_id]
+            if extra_fts:
+                extra_mask = np.isin(sub_ids, np.asarray(extra_fts, dtype=np.int64))
+                for idx in np.flatnonzero(extra_mask):
+                    sim_by_id[int(sub_ids[idx])] = float(sims[idx])
+
+        meta_rows = _fetch_chunk_meta(con, list(sim_by_id.keys()))
 
     candidates = []
-    for i, m in enumerate(meta):
-        # 1. Filters
-        if allowed_cids and m["chat_id"] not in allowed_cids:
-            continue
-        if topic_id is not None and m["topic_id"] != topic_id:
-            continue
-        if source and m["source"].lower() != source.lower():
-            continue
-
-        t_lower = (m["text"] + " " + m["title"]).lower()
+    for r in meta_rows:
+        cid = r["id"]
+        preview = r["preview"] or ""
+        title = r["title"] or r["chat_id"]
+        t_lower = (preview + " " + title).lower()
         if must_words and not all(w in t_lower for w in must_words):
             continue
 
-        sim = float(sims[i])
-        bm = fts_dict.get(m["id"])
+        sim = sim_by_id.get(cid, 0.0)
+        bm = fts_dict.get(cid)
 
         if mode == "exact":
             if bm is None:
@@ -571,15 +667,15 @@ def _search(
             continue
 
         candidates.append({
-            "id": m["id"],
-            "chat_id": m["chat_id"],
-            "title": m["title"],
-            "idx": m["idx"],
-            "text": m["text"],
-            "updated": m["updated"],
-            "source": m["source"],
-            "topic_id": m["topic_id"],
-            "topic_name": m["topic_name"],
+            "id": cid,
+            "chat_id": r["chat_id"],
+            "title": title,
+            "idx": r["idx"],
+            "preview": preview,
+            "updated": r["updated"],
+            "source": r["source"] or "gemini",
+            "topic_id": r["topic_id"],
+            "topic_name": r["topic_name"] or "",
             "score": final_score,
             "sim": round(sim, 3),
             "has_fts": bm is not None,
@@ -617,7 +713,8 @@ def _search(
             chat_results.append({
                 "chat_id": cid,
                 "title": data["title"],
-                "text": best["text"],
+                "chunk_id": best["id"],
+                "preview": best["preview"],
                 "idx": best["idx"],
                 "updated": data["updated"],
                 "source": data["source"],
@@ -631,13 +728,27 @@ def _search(
             chat_results.sort(key=lambda x: (x["updated"] or "", x["score"]), reverse=True)
         else:
             chat_results.sort(key=lambda x: x["score"], reverse=True)
-        return chat_results[:k]
+        top_items = chat_results[:k]
     else:
         if sort == "recent":
             candidates.sort(key=lambda x: (x["updated"] or "", x["score"]), reverse=True)
         else:
             candidates.sort(key=lambda x: x["score"], reverse=True)
-        return candidates[:k]
+        top_items = candidates[:k]
+
+    # Fetch authentic full text only for the final top-k items
+    if top_items:
+        chunk_ids = [it.get("chunk_id", it.get("id")) for it in top_items if it.get("chunk_id", it.get("id")) is not None]
+        if chunk_ids:
+            placeholders = ",".join("?" for _ in chunk_ids)
+            full_texts = dict(con.execute(f"SELECT id, text FROM chunks WHERE id IN ({placeholders})", tuple(chunk_ids)).fetchall())
+            for it in top_items:
+                cid = it.get("chunk_id", it.get("id"))
+                it["text"] = full_texts.get(cid, it.get("preview", ""))
+                it.pop("chunk_id", None)
+                it.pop("preview", None)
+
+    return top_items
 
 
 @app.get("/api/search")
@@ -747,6 +858,10 @@ AUTO_SECONDS = 120
 
 
 def _bump_rev():
+    global _chunks_cache
+    with _chunks_lock:
+        _chunks_cache = {"rev": None, "ids": None, "mat": None}
+    invalidate_vectors_cache()
     STATUS["rev"] = STATUS.get("rev", 1) + 1
 
 
@@ -766,9 +881,15 @@ def _run_once():
 
         STATUS["state"] = "embedding"
         embedded = embed_pending(con, STATUS)
-        if new or embedded or not con.execute("SELECT 1 FROM topics LIMIT 1").fetchone():
+
+        has_topics = bool(con.execute("SELECT 1 FROM topics LIMIT 1").fetchone())
+        unassigned_count = con.execute("SELECT count(*) FROM chats WHERE topic_id IS NULL AND emb IS NOT NULL").fetchone()[0]
+
+        # Only recluster if database has no topics yet, or 5+ unassigned chats accumulated, or forced manually
+        if not has_topics or unassigned_count >= 5 or _force_now.is_set():
             STATUS["state"] = "grouping"
             recluster(con, _threshold)
+
         STATUS["last"] = {"new": new, "unchanged": skip, "failed": fail, "embedded": embedded}
         if new or embedded:
             _bump_rev()
@@ -778,6 +899,7 @@ def _run_once():
     finally:
         con.close()
         STATUS["state"] = "idle"
+        unload_model()
         gc.collect()
 
 

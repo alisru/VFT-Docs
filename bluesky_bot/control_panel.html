@@ -1571,7 +1571,7 @@
   <!-- JavaScript Stories Registry & Controller -->
   <script>
     // Fallback to loaded global registry, or empty list if offline/failed
-    const STORIES_REGISTRY = window.ALETHEIA_STORIES_REGISTRY || [];
+    let STORIES_REGISTRY = window.ALETHEIA_STORIES_REGISTRY || [];
 
     let activeStory = STORIES_REGISTRY[0];
 
@@ -1722,6 +1722,20 @@
     // Select Story
     function selectStory(storyId, scrollIntoView = true) {
       activeStory = STORIES_REGISTRY.find(s => s.id === storyId);
+      if (activeStory && (!activeStory.posts || !activeStory.posts.length)) {
+        fetch(`stories/live/factcheck_${storyId}.json`, { cache: 'no-store' })
+          .then(r => r.ok ? r.json() : fetch(`stories/factcheck_${storyId}.json`, { cache: 'no-store' }).then(r2 => r2.ok ? r2.json() : null))
+          .then(data => {
+            if (data) {
+              const item = Array.isArray(data) ? data[0] : data;
+              if (item && item.posts && activeStory && activeStory.id === storyId) {
+                activeStory.posts = item.posts;
+                renderEmulator();
+              }
+            }
+          })
+          .catch(() => {});
+      }
       
       const listContainer = document.getElementById('storyList');
       if (listContainer) {
@@ -2455,7 +2469,7 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
         } else if (_statusFilter === 'live') {
           matchesFlag = s.status && s.status.toLowerCase().includes('live');
         } else if (_statusFilter === 'dry_run') {
-          matchesFlag = s.status && s.status.toLowerCase().includes('dry run');
+          matchesFlag = s.status && (s.status.toLowerCase().includes('dry run') || s.status.toLowerCase().includes('draft'));
         }
 
         let matchesTradition = true;
@@ -2764,6 +2778,41 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       });
     }
 
+    async function loadFallbackStories() {
+      try {
+        const res = await fetch('stories/index.json', { cache: 'no-store' });
+        if (res.ok) {
+          const files = await res.json();
+          if (Array.isArray(files) && files.length > 0) {
+            console.info(`Registry was empty, dynamically loading ${files.length} draft stories from stories/index.json...`);
+            const loaded = [];
+            for (const f of files.slice(0, 100)) {
+              try {
+                const sres = await fetch('stories/' + f, { cache: 'no-store' });
+                if (sres.ok) {
+                  const sdata = await sres.json();
+                  const item = Array.isArray(sdata) ? sdata[0] : sdata;
+                  if (item && item.subject) {
+                    if (!item.status) item.status = 'COMPLETED DRY RUN';
+                    loaded.push(item);
+                  }
+                }
+              } catch(e) {}
+            }
+            if (loaded.length > 0) {
+              STORIES_REGISTRY = loaded;
+              window.ALETHEIA_STORIES_REGISTRY = loaded;
+              refreshRegistryUI();
+              return true;
+            }
+          }
+        }
+      } catch(e) {
+        console.warn('Fallback index loader failed:', e);
+      }
+      return false;
+    }
+
     // Render and refresh stories list based on current registry state
     function refreshRegistryUI() {
       const flags = JSON.parse(localStorage.getItem('aletheia_flags') || '{}');
@@ -2812,6 +2861,9 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
       // Initial render from statically-loaded stories_registry.js
       initConvergenceModeUI();
       refreshRegistryUI();
+      if (!STORIES_REGISTRY || STORIES_REGISTRY.length === 0) {
+        await loadFallbackStories();
+      }
 
       // Attach click and scroll listeners for sliding-window virtual list rendering
       const storyListEl = document.getElementById('storyList');

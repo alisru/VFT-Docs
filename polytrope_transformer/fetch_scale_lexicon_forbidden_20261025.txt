@@ -1,0 +1,363 @@
+Command exited with code 0.
+
+Command output:
+
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:17:     - -X (Forbidden): Dual-source 
+Red-Force clash (empirical cant_be co-occurrence +
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:18:       opposing gauge attractor 
+projection along 15 canonical physical/philosophical axes).
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:19:     - -N (Precluded): Exclusion and 
+mutual-negation confidence from empirical is_not
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:20:       and asymmetric boundary 
+partitioning.
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:21:  4. Invariant Closing Token Engine: 
+Eliminates Agent 1's flaw by providing exact
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:22:     closing tokens (therefore, 
+proves, resolves, repels, etc.) for every open obligation.
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:23:  5. Bounded Graph Sparsification: 
+Avoids Agent 5's combinatorial traps with strict
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:24:     O(k * V) top-k sparse indices.
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:25:"""
+  E:\Vector Field Theory\VFT Docs\_VFT MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:26:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:27:import sys
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:28:import os
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:29:import re
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:30:import math
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:31:import json
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:32:import time
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:33:from pathlib import Path
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:34:from collections import defaultdict, 
+Counter
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:35:import numpy as np
+  E:\Vector Field Theory\VFT Docs\_VFT MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:36:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:37:if hasattr(sys.stdout, "reconfigure"):
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:127:        
+r"\b(?:impossible|forbidden|inadmissible)\s+(?:to\s+be\s+)?([a-z_]{3,})",
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:128:        
+r"\b(?:violates|contradicts|prohibits)\s+([a-z_]{3,})"
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:129:    ],
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:130:    "wont_be": [
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:131:        
+r"\b(?:will\s+not|wont)\s+(?:be\s+)?([a-z_]{3,})",
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:132:        
+r"\bnever\s+yields\s+([a-z_]{3,})"
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:133:    ],
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:134:    "was_like": [
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:135:        
+r"\b(?:was|were)\s+(?:initially|formerly|previously)\s+([a-z_]{3,})",
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:136:        
+r"\bhistorically\s+([a-z_]{3,})"
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:137:    ]
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:138:}
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:139:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:140:# 15 Canonical Physical/Philosophical 
+Gauge Polarity Axes
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:141:GAUGE_POLARITY_AXES = [
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:142:    ("entropy", "order"),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:143:    ("singularity", "regularity"),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:144:    ("infinity", "finite"),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:145:    ("discrete", "continuum"),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:146:    ("axiom", "paradox"),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:147:    ("deterministic", "random"),
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:379:            "forbidden": [],
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:380:            "precluded": []
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:381:        }
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:382:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:383:        # --- Tier 1: Guaranteed (+W) 
+---
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:384:        # Deductive coupling 
+magnitude g_AB, conditional P(B|A), and deductive weight
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:385:        succ_items = [(succ, cnt) for 
+succ, cnt in successor_dict.items() if succ in lemma_set]
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:386:        for succ_w, c_fwd in 
+succ_items:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:387:            p_cond = c_fwd / max(1, 
+freq)
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:388:            c_both = 
+pair_cooccur[w][succ_w]
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:389:            g_ab = c_both / 
+math.sqrt(max(1, freq * word_freq[succ_w]))
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:390:            # Deductive weight W_ij
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:391:            will_boost = 
+spread["will_be"] + (0.1 if modal_counts[succ_w]["will_be"] > 0 else 0.0)
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:392:            deductive_weight = 
+min(1.0, 0.45 * min(1.0, p_cond * 2.2) + 0.35 * min(1.0, g_ab * 2.5) + 0.20 * min(1.0, will_boost))
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:393:            
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:394:            if deductive_weight >= 
+0.18:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:395:                ct = 
+CLOSING_TOKENS["+W"][hash(succ_w) % len(CLOSING_TOKENS["+W"])]
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:396:                
+rel_magnitudes["guaranteed"].append({
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:397:                    "target": succ_w,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:398:                    "magnitude": 
+round(deductive_weight, 3),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:399:                    "coupling_g": 
+round(g_ab, 3),
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:455:        # --- Tier 4: Forbidden (-X) 
+---
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:456:        # Empirical cant_be 
+co-occurrence + Red-Force gauge clashes
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:457:        clash_items = 
+tier_counts["-X"][w].most_common(8)
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:458:        for clash_w, cnt in 
+clash_items:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:459:            clash_score = min(1.0, 
+round(0.45 + (cnt * 0.10), 3))
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:460:            ct = 
+CLOSING_TOKENS["-X"][hash(clash_w) % len(CLOSING_TOKENS["-X"])]
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:461:            
+rel_magnitudes["forbidden"].append({
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:462:                "target": clash_w,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:463:                "magnitude": 
+clash_score,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:464:                "clash_score": 
+clash_score,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:465:                "closing_token": ct
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:466:            })
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:467:        # If no explicit clash found, 
+deduce opposition from gauge polarity projection
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:468:        if not 
+rel_magnitudes["forbidden"]:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:469:            # Check gauge axis 
+opposition
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:470:            for axis_a, axis_b in 
+GAUGE_POLARITY_AXES:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:471:                if w in chosen_lemmas:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:472:                    sim_a = 
+float(CosineMatrix[i, lemma_to_idx.get(axis_a, 0)]) if axis_a in lemma_to_idx else 0.0
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:473:                    sim_b = 
+float(CosineMatrix[i, lemma_to_idx.get(axis_b, 0)]) if axis_b in lemma_to_idx else 0.0
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:474:                    if sim_a > 0.35 
+and axis_b in lemma_set:
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:475:                        
+rel_magnitudes["forbidden"].append({
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:476:                            "target": 
+axis_b,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:477:                            
+"magnitude": round(min(0.95, sim_a * 1.2), 3),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:478:                            
+"clash_score": round(sim_a, 3),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:479:                            
+"closing_token": "repels"
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:480:                        })
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:481:                    elif sim_b > 0.35 
+and axis_a in lemma_set:
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:482:                        
+rel_magnitudes["forbidden"].append({
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:483:                            "target": 
+axis_a,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:484:                            
+"magnitude": round(min(0.95, sim_b * 1.2), 3),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:485:                            
+"clash_score": round(sim_b, 3),
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:486:                            
+"closing_token": "repels"
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:487:                        })
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:488:            if not 
+rel_magnitudes["forbidden"]:
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:489:                
+rel_magnitudes["forbidden"].append({
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:490:                    "target": 
+f"unbounded_divergence_of_{w}",
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:491:                    "magnitude": 0.95,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:492:                    "clash_score": 
+0.95,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:493:                    "closing_token": 
+"violates"
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:494:                })
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:495:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:496:        # --- Tier 5: Precluded (-N) 
+---
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:497:        # Exclusion and 
+mutual-negation confidence
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:498:        excl_items = 
+tier_counts["-N"][w].most_common(8)
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:499:        for excl_w, cnt in excl_items:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:500:            excl_conf = min(1.0, 
+round(0.40 + (cnt * 0.12), 3))
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:501:            ct = 
+CLOSING_TOKENS["-N"][hash(excl_w) % len(CLOSING_TOKENS["-N"])]
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:502:            
+rel_magnitudes["precluded"].append({
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:503:                "target": excl_w,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:504:                "magnitude": 
+excl_conf,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:505:                
+"exclusion_confidence": excl_conf,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:506:                "closing_token": ct
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:507:            })
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:508:        if not 
+rel_magnitudes["precluded"]:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:509:            
+rel_magnitudes["precluded"].append({
+> E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:521:            "forbidden": [x["target"] 
+for x in rel_magnitudes["forbidden"]],
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:522:            "precluded": [x["target"] 
+for x in rel_magnitudes["precluded"]]
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:523:        }
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:524:
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:525:        entry = {
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:526:            "word": w,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:527:            "corpus_frequency": freq,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:528:            "cefr": cefr,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:529:            "tail_ingress": {
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:530:                "antecedent_weight": 
+tail_weight,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:531:                "requires_evidence": 
+tail_weight > 2.0,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:532:                "top_precursors": 
+top_precursors,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:533:                "closing_token": 
+top_precursors[0] if top_precursors else "given"
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:534:            },
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:535:            "head_egress": {
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:536:                "obligation_weight": 
+head_weight,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:537:                "binds_consequents": 
+head_weight > 2.0,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:538:                "top_successors": 
+top_successors,
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:539:                "closing_token": 
+top_successors[0] if top_successors else "therefore"
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:540:            },
+  E:\Vector Field Theory\VFT Docs\_VFT 
+MD\Physics\semantic_gluon_dna\agent_lexicon_kernel\scale_gluon_lexicon_v2.py:541:            "modal_spread": spread,
+
+

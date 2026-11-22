@@ -1,0 +1,299 @@
+Command exited with code 0.
+
+Command output:
+error: fsmonitor_ipc__send_query: unspecified error on '.git/fsmonitor--daemon.ipc'
+warning: in the working copy of 'bluesky_bot/banned_topics.json', LF will be replaced by CRLF the next time Git touches it
+diff --git a/bluesky_bot/banned_topics.json b/bluesky_bot/banned_topics.json
+index f768b2286..76c471877 100644
+--- a/bluesky_bot/banned_topics.json
++++ b/bluesky_bot/banned_topics.json
+@@ -76,7 +76,9 @@
+     "hulu",
+     "disney+",
+     "streaming",
+-    "review"
++    "movie review",
++    "album review",
++    "game review"
+   ],
+   "obituaries": [
+     "obituary",
+@@ -89,12 +91,11 @@
+   ],
+   "gardening": [
+     "gardening",
+-    "garden",
+     "recipe",
+     "recipes",
+     "cooking",
+     "fashion",
+-    "style",
++    "fashion style",
+     "runway"
+   ]
+ }
+diff --git a/bluesky_bot/harvest_candidates.py b/bluesky_bot/harvest_candidates.py
+index 3741888f9..6969942ca 100644
+--- a/bluesky_bot/harvest_candidates.py
++++ b/bluesky_bot/harvest_candidates.py
+@@ -1,3 +1,20 @@
++BOILERPLATE_PATTERNS = [
++    r'this material may not be published',
++    r'broadcast,\s*rewritten,\s*or redistributed',
++    r'quotes displayed in real-time or delayed',
++    r'market data provided by',
++    r"you've successfully subscribed",
++    r'subscribe to read',
++    r'please subscribe to continue',
++    r'enjoy unlimited website access',
++    r'exclusive content for subscribers',
++    r'log in to your account',
++    r'all rights reserved\.\s*©',
++    r'please enable javascript',
++    r'cookies are required',
++    r'access denied',
++]
++
+ import os
+ import sys
+ import json
+@@ -62,7 +79,9 @@ class ArticleContentExtractor(HTMLParser):
+             self.in_p = False
+             para_text = "".join(self.current_para).strip()
+             if para_text:
+-                self.paragraphs.append(para_text)
++                p_lower = para_text.lower()
++                if not any(re.search(bp, p_lower) for bp in BOILERPLATE_PATTERNS):
++                    self.paragraphs.append(para_text)
+             self.current_para = []
+         elif tag == 'title':
+             self.in_title = False
+@@ -96,7 +115,9 @@ def scrape_via_tavily(url):
+             results = data.get("results", [])
+             if results:
+                 raw_content = results[0].get("raw_content", "") or ""
+-                return "Article", "", raw_content
++                path_slug = urllib.parse.urlparse(url).path.strip('/').split('/')[-1]
++                slug_title = re.sub(r'[-_]+', ' ', path_slug).title()
++                return (slug_title or "News Report"), "", raw_content
+         return None, None, f"Tavily error: status {res.status_code}"
+     except Exception as ex:
+         return None, None, f"Tavily extract error: {ex}"
+@@ -193,6 +214,9 @@ def search_counter_sources_tavily(title, primary_url, primary_bias_family, max_r
+             if not r_url or not r_content or len(r_content) < 150:
+                 continue
+ 
++            if "tavily.com" in r_url:
++                continue
++
+             try:
+                 r_host = urllib.parse.urlparse(r_url).hostname or ""
+                 if r_host.startswith("www."):
+@@ -200,7 +224,10 @@ def search_counter_sources_tavily(title, primary_url, primary_bias_family, max_r
+             except Exception:
+                 continue
+ 
+-            if not r_host or r_host in seen_domains:
++            if not r_host or "tavily.com" in r_host or r_host in seen_domains:
++                continue
++
++            if not is_news_url(r_url):
+                 continue
+ 
+             fam = get_outlet_bias_family(r_host)
+@@ -277,7 +304,7 @@ def cluster_candidate_stories(candidates, similarity_threshold=0.35):
+             union = tokens.union(rep_tokens)
+             jaccard = len(intersection) / len(union) if union else 0.0
+             
+-            if jaccard >= similarity_threshold or len(intersection) >= 2:
++            if jaccard >= similarity_threshold:
+                 cluster.append(c)
+                 placed = True
+                 break
+@@ -367,6 +394,19 @@ def cluster_candidate_stories(candidates, similarity_threshold=0.35):
+                 final_results.append(c)
+                 continue
+                 
++            # Prioritize center/wire/neutral reporting as the primary candidate
++            def source_priority(s):
++                pub = s.get("publisher") or urllib.parse.urlparse(s.get("url", "")).hostname or ""
++                if pub.startswith("www."):
++                    pub = pub[4:]
++                fam = get_outlet_bias_family(pub)
++                if fam == "center":
++                    return 0
++                if fam == "other":
++                    return 1
++                return 2
++
++            distinct_sources.sort(key=source_priority)
+             primary_c = distinct_sources[0].copy()
+             primary_c["is_multi_source"] = True
+             
+@@ -435,6 +475,7 @@ PREFERRED_OUTLET_DOMAINS = []
+ 
+ # Domains that are never a news article (social media, shorteners-to-self, junk, crypto, adult).
+ NON_NEWS_DOMAINS = {
++    'tavily.com', 'api.tavily.com',
+     'bsky.app', 'bsky.social', 'graze.social',
+     'twitter.com', 'x.com', 't.co',
+     'youtube.com', 'youtu.be', 'tiktok.com',
+@@ -455,16 +496,19 @@ NON_NEWS_DOMAINS = {
+     # Deals, coupons, affiliate & shopping aggregators
+     'slickdeals.net', 'dealnews.com', 'coupons.com', 'retailmenot.com',
+     'producthunt.com', 'kickstarter.com', 'indiegogo.com',
++    # Online encyclopedias, wikis, and reference dictionaries
++    'wikipedia.org', 'wikimedia.org', 'wiktionary.org', 'wikiquote.org',
++    'wikinews.org', 'wikidata.org', 'fandom.com', 'wikia.com',
+ }
+ 
+ # Domains that consistently fail raw scraping due to paywalls, cloudflare blocks, etc.
+ UNSCRAPABLE_DOMAINS = {
+-    'pbs.org', 'reut.rs', 'reuters.com',
+-    'on.wsj.com', 'wsj.com',
+-    'bloom.bg', 'bloomberg.com',
+-    'nyti.ms', 'nytimes.com',
++    'pbs.org', 'reut.rs',
++    'on.wsj.com',
++    'bloom.bg',
++    'nyti.ms',
+     'washingtonpost.com', 'wapo.st',
+-    'ft.com', 'economist.com', 'afr.com'
++    'afr.com'
+ }
+ 
+ # Dynamic list of scraping-banned domains loaded from disk
+@@ -474,8 +518,16 @@ DYNAMIC_BANNED_DOMAINS = set(UNSCRAPABLE_DOMAINS)
+ SCRAPING_WHITELIST = {
+     'bbc.com', 'bbc.co.uk', 'bbci.co.uk',
+     'abc.net.au',
++    'theguardian.com', 'theguardian.co.uk', 'guardian.co.uk',
++    'apnews.com',
++    'reuters.com', 'reutersconnect.com',
++    'axios.com',
++    'aljazeera.com',
++    'france24.com',
++    'dw.com',
++    'propublica.org',
+     'thesaturdaypaper.com.au', 'saturdaypaper.com.au',
+-    'smh.com.au',
++    'smh.com.au', 'theage.com.au', 'sbs.com.au',
+     'techcrunch.com',
+     'npr.org',
+     'foxnews.com',
+@@ -681,6 +733,13 @@ AD_OR_LIFESTYLE_PATH_SEGMENTS = {
+     'advertisements', 'ad', 'ads', 'sponsored-content', 'commercial', 'brand-spotlight'
+ }
+ 
++CORPORATE_OR_NON_NEWS_PATHS = {
++    'about', 'about-us', 'pricing', 'plans', 'login', 'signin', 'signup',
++    'register', 'terms', 'privacy', 'careers', 'jobs', 'team', 'features',
++    'product', 'solutions', 'docs', 'documentation', 'knowledge', 'help',
++    'faq', 'support'
++}
++
+ def is_news_url(url):
+     if not url:
+         return False
+@@ -697,12 +756,21 @@ def is_news_url(url):
+         return False
+     if any(host == bad or host.endswith('.' + bad) for bad in NON_NEWS_DOMAINS):
+         return False
+-    if any(host == bad or host.endswith('.' + bad) for bad in DYNAMIC_BANNED_DOMAINS):
++    if not is_domain_whitelisted(host):
++        if any(host == bad or host.endswith('.' + bad) for bad in DYNAMIC_BANNED_DOMAINS):
++            return False
++    # Reject bare root homepages and empty paths
++    path_parts = [p.strip() for p in path.split('/') if p.strip()]
++    if not path_parts or path in ('', '/', '/index.html', '/index.php'):
++        return False
++    # Filter out corporate / non-news paths
++    if any(part in CORPORATE_OR_NON_NEWS_PATHS for part in path_parts):
+         return False
+     # Filter out lifestyle, celebrity showbiz, deals, shopping, and sponsored sections
+-    path_parts = [p.strip() for p in path.split('/') if p.strip()]
+     if any(part in AD_OR_LIFESTYLE_PATH_SEGMENTS for part in path_parts):
+         return False
++    if len(path_parts) == 1 and len(path_parts[0]) < 8 and not re.search(r'\d+', path_parts[0]):
++        return False
+     return True
+ 
+ AD_TEXT_PATTERNS = [
+@@ -713,7 +781,10 @@ AD_TEXT_PATTERNS = [
+     r'\border now\b', r'\bbuy now\b', r'\bexclusive discount\b',
+     r'\bsponsored content\b', r'\bpaid advertisement\b', r'\badvertisement feature\b',
+     r'\bsubscribe to read\b', r'\benjoy unlimited website access\b',
+-    r'\bexclusive content for subscribers\b', r'\bplease subscribe to continue reading\b'
++    r'\bexclusive content for subscribers\b', r'\bplease subscribe to continue reading\b',
++    r'this material may not be published', r'broadcast,\s*rewritten,\s*or redistributed',
++    r'quotes displayed in real-time or delayed', r'market data provided by',
++    r'all rights reserved\.\s*©'
+ ]
+ 
+ def is_ad_text(text):
+@@ -730,13 +801,13 @@ def is_banned(text, url, banned_keywords):
+     text_lower = text.lower()
+     url_lower = url.lower() if url else ""
+     for bk in banned_keywords:
+-        pattern = rf"\b{re.escape(bk)}\b"
++        pattern = rf"(?<!\w){re.escape(bk)}(?!\w)"
+         if re.search(pattern, text_lower) or (url_lower and re.search(pattern, url_lower)):
+             return True
+         if " " in bk:
+             variants = [bk.replace(" ", "-"), bk.replace(" ", "_"), bk.replace(" ", "")]
+             for var in variants:
+-                var_pattern = rf"\b{re.escape(var)}\b"
++                var_pattern = rf"(?<!\w){re.escape(var)}(?!\w)"
+                 if re.search(var_pattern, text_lower) or (url_lower and re.search(var_pattern, url_lower)):
+                     return True
+     return False
+@@ -754,7 +825,7 @@ def is_english(text):
+     if cjk_re.search(cleaned_text):
+         return False
+         
+-    non_eng_chars = re.compile(r'[áéíóúñ¿¡àèùçâêîôûëïüöäüß]', re.IGNORECASE)
++    non_eng_chars = re.compile(r'[áéíóúñ¿¡àèùçâêîôûëïüöäß]', re.IGNORECASE)
+     if len(non_eng_chars.findall(cleaned_text)) > 2:
+         return False
+         
+@@ -1482,7 +1553,26 @@ def run_harvest():
+         if i < len(bsky_candidates):
+             combined_candidates.append(bsky_candidates[i])
+ 
+-    all_final = combined_candidates[:TARGET_RSS + TARGET_BSKY]
++    # Enforce domain diversity capping (prevent any single domain from flooding the batch)
++    domain_counts = {}
++    diverse_candidates = []
++    overflow_candidates = []
++    for c in combined_candidates:
++        url = c.get("url", "")
++        try:
++            host = urllib.parse.urlparse(url).hostname or ""
++            if host.startswith("www."):
++                host = host[4:]
++        except Exception:
++            host = ""
++        domain = host or "unknown"
++        if domain_counts.get(domain, 0) < 2:
++            diverse_candidates.append(c)
++            domain_counts[domain] = domain_counts.get(domain, 0) + 1
++        else:
++            overflow_candidates.append(c)
++
++    all_final = (diverse_candidates + overflow_candidates)[:TARGET_RSS + TARGET_BSKY]
+     all_final.sort(key=get_sort_key)
+ 
+     print("\nScraping article bodies for final candidates...")
+diff --git a/bluesky_bot/scraped_cache.py b/bluesky_bot/scraped_cache.py
+index e043b5d18..b650036aa 100644
+--- a/bluesky_bot/scraped_cache.py
++++ b/bluesky_bot/scraped_cache.py
+@@ -29,7 +29,7 @@ def normalize_url(url):
+         url = url.split("?")[0]
+     if "#" in url:
+         url = url.split("#")[0]
+-    return url.lower().rstrip("/").strip()
++    return url.lower().strip()
+ 
+ def get_db_connection():
+     conn = sqlite3.connect(DB_PATH, timeout=15)

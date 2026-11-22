@@ -1,0 +1,52 @@
+{
+  "cycle": 5,
+  "experiment": "Zero-Shearing Beam Search Autoregressive Decoder",
+  "prompt": "The national government",
+  "valid_paths": [
+    {
+      "continuation": "will deliver economic growth and support working families",
+      "full_statement": "The national government will deliver economic growth and support working families",
+      "statistical_prob": 0.94,
+      "passthrough_score": 1.0,
+      "audited_coords": [
+        0.2,
+        0.3,
+        0.0
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "continuation": "has created severe structural debt over the past decade",
+      "full_statement": "The national government has created severe structural debt over the past decade",
+      "statistical_prob": 0.85,
+      "passthrough_score": 1.0,
+      "audited_coords": [
+        0.2,
+        0.3,
+        0.0
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "continuation": "did not increase taxes on working families",
+      "full_statement": "The national government did not increase taxes on working families",
+      "statistical_prob": 0.82,
+      "passthrough_score": 0.332,
+      "audited_coords": [
+        -0.85,
+        0.3,
+        0.0
+      ],
+      "dominant_plane": 1
+    }
+  ],
+  "pruned_paths": [
+    {
+      "continuation": "generates unlimited clean electricity without infrastructure",
+      "full_statement": "The national government generates unlimited clean electricity without infrastructure",
+      "statistical_prob": 0.89,
+      "passthrough_score": 0.0,
+      "prune_reason": "Critical Substrate Violation (Q3 Reality Shearing)"
+    }
+  ]
+}

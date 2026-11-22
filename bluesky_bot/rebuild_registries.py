@@ -332,6 +332,8 @@ def rebuild_registries():
 
     for slug in sorted_slugs:
         authoritative_file, is_live = story_map[slug]
+        if "quarantine" in authoritative_file.replace("\\", "/").lower():
+            continue
 
         try:
             with open(authoritative_file, "r", encoding="utf-8") as f:
@@ -339,6 +341,9 @@ def rebuild_registries():
             cfg = data[0] if isinstance(data, list) else data
         except Exception as e:
             print(f"Error reading {authoritative_file}: {e}")
+            continue
+
+        if str(cfg.get("status", "")).upper() == "QUARANTINED" or "QUARANTINE" in str(cfg.get("status", "")).upper():
             continue
 
         # Auto-backfill missing/empty actors & actor_roles using the deterministic actor_extract utility

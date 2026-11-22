@@ -1,0 +1,161 @@
+Command exited with code 0.
+
+Command output:
+
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1213:SPIRITUAL_TRADITIONS_MAP = {
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1224:def 
+resolve_spiritual_traditions(traditions_arg):
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1226:        return 
+list(SPIRITUAL_TRADITIONS_MAP.keys())
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1257:        if key in 
+SPIRITUAL_TRADITIONS_MAP and key not in selected:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1260:    return selected if selected else 
+list(SPIRITUAL_TRADITIONS_MAP.keys())
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1262:def 
+build_spiritual_directive(traditions_arg="all"):
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1263:    active_keys = 
+resolve_spiritual_traditions(traditions_arg)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1264:    active_desc = "\n".join(f"  - 
+{SPIRITUAL_TRADITIONS_MAP[k]}" for k in active_keys)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1267:        "=== SPIRITUAL AUDIT DIRECTIVE 
+===\n"
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1289:def 
+build_formatting_rules(use_son=False, use_potential=False, compact=False, five_word=False, use_multi_aspect=False, 
+use_spiritual=False, spiritual_traditions="all"):
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1302:    elif compact:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1304:            "=== COMPACT MODE DIRECTIVE 
+===\n"
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1312:    if (use_son or use_potential) and 
+use_multi_aspect:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1313:        multi_aspect_text = (
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1314:            "=== MULTI-ASPECT & 
+MULTI-SOURCE DIRECTIVE ===\n"
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1328:        formatting_rules = 
+multi_aspect_text + formatting_rules
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1330:    if use_spiritual:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1331:        spiritual_text = 
+build_spiritual_directive(spiritual_traditions)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1332:        formatting_rules = 
+spiritual_text + formatting_rules
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1343:def 
+build_system_instruction(use_son=False, use_potential=False, compact=False, five_word=False, use_multi_aspect=False, 
+use_spiritual=False, spiritual_traditions="all", extra_context=None):
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1366:        "- The Sub-Audits / Aspects 
+breakdown (item[27] and the multi-aspect post) MUST audit the constituent actors, institutions, and components of the 
+physical event itself (e.g., The Instigator's policy, The Regulatory oversight, The Impact on Victims/Public). NEVER 
+audit or score the news publications or journalists as the event aspects.\n\n"
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1385:    elif compact:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1387:            "You are the Master Aletheia 
+Auditor in Compact Mode. Respond ONLY with the exact delimited data rows requested. No commentary, no markdown, no 
+preamble, no explanation. "
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1413:def build_output_format(n, 
+use_son=False, use_potential=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all"):
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1416:        expected_len = 33 if 
+use_multi_aspect else 32
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1418:        expected_len = 28 if 
+use_multi_aspect else 27
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1437:    if is_son_or_potential and 
+use_multi_aspect:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1440:    if use_spiritual:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1441:        
+example_posts_list.append('"Spirithekanon:\\n\\"Universal wisdom quote...\\" (Source Chapter/Section) — PASS 
+(Spiritual Vector)\\nSpiritual evaluation in 1-2 sentences."')
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1471:        if use_multi_aspect:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1557:        if use_multi_aspect:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1960:def 
+run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key=None, use_son=False, use_potential=False, 
+use_search=False, extra_context=None, model_sequence=None, compact=False, five_word=False, thinking_level="MEDIUM", 
+use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", pre_grounded_dossier=None, 
+pre_harvested_urls=None):
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1975:    convergence_rules, formatting_rules 
+= build_formatting_rules(use_son=use_son, use_potential=use_potential, compact=compact, five_word=five_word, 
+use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1976:    system_instruction = 
+build_system_instruction(use_son=use_son, use_potential=use_potential, compact=compact, five_word=five_word, 
+use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions, 
+extra_context=extra_context)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1979:    output_format = 
+build_output_format(n, use_son=use_son, use_potential=use_potential, use_multi_aspect=use_multi_aspect, 
+use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2284:def sanitize_story_posts(posts, 
+use_spiritual=False):
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2297:    if use_spiritual and clean:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2314:    if use_spiritual and clean and 
+len(clean[-1]) > 280:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2331:def transpose_flat_to_json(flat_text, 
+use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", use_potential=False):
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2406:                clean_posts = 
+sanitize_story_posts(posts_raw, use_spiritual=use_spiritual)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2463:                elif use_multi_aspect:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2465:                if use_spiritual:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2466:                    story["spiritual"] = 
+True
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2467:                    
+story["spiritual_traditions"] = resolve_spiritual_traditions(spiritual_traditions)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2506:            clean_posts = 
+sanitize_story_posts(item[10], use_spiritual=use_spiritual)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2554:            elif use_multi_aspect:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2572:            if use_spiritual:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2573:                story["spiritual"] = True
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2574:                
+story["spiritual_traditions"] = resolve_spiritual_traditions(spiritual_traditions)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2597:def process_evaluations(evaluations, 
+category="general", topic=None, compact=False):
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2610:            if compact:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2611:                story["compact"] = 
+"single" if compact == "single" else True
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2656:            # Character limit warnings 
+(only check first 4 posts for compact mode)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2657:            is_compact = 
+story.get("compact") is True or story.get("compact") == "single"
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2658:            posts_to_check = posts[:4] 
+if is_compact else posts
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2747:    parser.add_argument("--compact", 
+action="store_true", help="Enable compact posting mode formatting (lifting character limits on posts 4+ in API 
+responses)")
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2748:    
+parser.add_argument("--compact-single", action="store_true", help="Enable compact single-post mode formatting (lifting 
+character limits on posts 4+ and tagging story as single-post compact)")
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2750:    
+parser.add_argument("--multi-aspect", action="store_true", help="Enable Multi-Aspect and Multi-Actor convergence test 
+audits")
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2751:    parser.add_argument("--spiritual", 
+action="store_true", help="Enable spiritual/scriptural optional audit mode")
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2752:    
+parser.add_argument("--spiritual-traditions", type=str, default="all", help="Comma-separated spiritual/scriptural 
+traditions to draw from (e.g. 'christianity,hinduism,buddhism,taoism,other', default: 'all')")
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2799:    compact_val = False
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2800:    if args.compact_single:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2801:        compact_val = "single"
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2802:    elif args.compact:
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2803:        compact_val = True
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3024:                is_spiritual_active = 
+args.spiritual or (args.spiritual_traditions and args.spiritual_traditions.lower().strip() != "all")
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3025:                is_multi_aspect_active = 
+args.multi_aspect or any(c.get("is_multi_source") for c in remaining)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3030:                    compact=compact_val, 
+five_word=args.five_word,
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3032:                    
+use_multi_aspect=is_multi_aspect_active,
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3033:                    
+use_spiritual=is_spiritual_active,
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3034:                    
+spiritual_traditions=args.spiritual_traditions,
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3038:                parsed = 
+transpose_flat_to_json(raw_text, use_multi_aspect=is_multi_aspect_active, use_spiritual=is_spiritual_active, 
+spiritual_traditions=args.spiritual_traditions, use_potential=args.potential)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3199:                                        
+compact=compact_val, five_word=args.five_word,
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3201:                                        
+use_multi_aspect=args.multi_aspect,
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3202:                                        
+use_spiritual=is_spiritual_active,
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3203:                                        
+spiritual_traditions=args.spiritual_traditions
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3205:                                    
+ref_parsed = transpose_flat_to_json(ref_raw, use_multi_aspect=args.multi_aspect, use_spiritual=is_spiritual_active, 
+spiritual_traditions=args.spiritual_traditions, use_potential=args.potential)
+E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3329:            chunk_success = 
+process_evaluations(chunk_evals, category=args.category, topic=args.topic, compact=compact_val)
+
+

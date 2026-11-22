@@ -49,7 +49,7 @@ if FastMCP is None:
 mcp = FastMCP("Aletheia Bot") if FastMCP else None
 
 
-def _load_all_stories():
+def _load_all_stories(include_quarantined: bool = False):
     """Load all factcheck JSON files across live, darkroom, and stories root dynamically."""
     stories = {}
     search_dirs = [LIVE_DIR, DARKROOM_DIR, STORIES_DIR]
@@ -65,6 +65,10 @@ def _load_all_stories():
                 with open(p, "r", encoding="utf-8") as f:
                     data = json.load(f)
                 cfg = data[0] if isinstance(data, list) and len(data) > 0 else (data if isinstance(data, dict) else {})
+                if not include_quarantined:
+                    status = str(cfg.get("status", "")).upper()
+                    if cfg.get("exclude_from_analytics") or "QUARANTINE" in status or "RETRACTED" in status:
+                        continue
                 cfg["_mtime"] = mtime
                 cfg["_filepath"] = p
                 if "id" not in cfg:
@@ -130,7 +134,7 @@ if mcp:
     @mcp.tool()
     def get_story(slug: str) -> str:
         """Get the full JSON config for a story by its slug or id."""
-        stories = _load_all_stories()
+        stories = _load_all_stories(include_quarantined=True)
         clean_slug = slug.strip()
         if clean_slug.startswith("factcheck_"):
             clean_slug = clean_slug[len("factcheck_"):]

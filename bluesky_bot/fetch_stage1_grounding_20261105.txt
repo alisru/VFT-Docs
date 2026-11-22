@@ -1,0 +1,157 @@
+Command exited with code 0.
+
+Command output:
+
+  bluesky_bot\google_ai_studio_one_shot.py:1612:
+  bluesky_bot\google_ai_studio_one_shot.py:1613:def harvest_search_grounding(genai_client, candidates):
+  bluesky_bot\google_ai_studio_one_shot.py:1614:    """
+> bluesky_bot\google_ai_studio_one_shot.py:1615:    Stage 1 Grounding Harvester:
+  bluesky_bot\google_ai_studio_one_shot.py:1616:    1. Primary: Direct Tavily Search API (ultra-fast ~1s, direct 
+publisher URLs, zero AI Studio tokens).
+  bluesky_bot\google_ai_studio_one_shot.py:1617:    2. 2nd Fallback: Direct Exa Search API (neural search, clean 
+canonical URLs, zero AI Studio tokens).
+  bluesky_bot\google_ai_studio_one_shot.py:1618:    3. 3rd Fallback: Gemini Search Grounding (gemini-2.5-flash-lite / 
+gemini-2.5-flash) with Google Search.
+  bluesky_bot\google_ai_studio_one_shot.py:1619:    """
+  bluesky_bot\google_ai_studio_one_shot.py:1620:    if not candidates:
+  bluesky_bot\google_ai_studio_one_shot.py:1621:        return "", []
+  bluesky_bot\google_ai_studio_one_shot.py:1622:
+  bluesky_bot\google_ai_studio_one_shot.py:1623:    # 1. Primary: Execute direct Tavily Search Grounding first
+  bluesky_bot\google_ai_studio_one_shot.py:1624:    try:
+  bluesky_bot\google_ai_studio_one_shot.py:1625:        t_dossier, t_urls = harvest_tavily_search_grounding(candidates)
+  bluesky_bot\google_ai_studio_one_shot.py:1626:        if t_dossier and len(t_urls) > 0:
+> bluesky_bot\google_ai_studio_one_shot.py:1627:            print(f"  [Stage 1 Grounding] Harvested successfully via 
+Tavily Search ({len(t_urls)} verified direct URLs, 0 AI Studio tokens).")
+  bluesky_bot\google_ai_studio_one_shot.py:1628:            return t_dossier, t_urls
+  bluesky_bot\google_ai_studio_one_shot.py:1629:    except Exception as te:
+> bluesky_bot\google_ai_studio_one_shot.py:1630:        print(f"  [Stage 1 Grounding] Tavily Search attempt failed 
+({te}). Falling back to Exa Search...")
+  bluesky_bot\google_ai_studio_one_shot.py:1631:
+  bluesky_bot\google_ai_studio_one_shot.py:1632:    # 2. Second Fallback: Execute direct Exa Search Grounding
+  bluesky_bot\google_ai_studio_one_shot.py:1633:    try:
+  bluesky_bot\google_ai_studio_one_shot.py:1634:        e_dossier, e_urls = harvest_exa_search_grounding(candidates)
+  bluesky_bot\google_ai_studio_one_shot.py:1635:        if e_dossier and len(e_urls) > 0:
+> bluesky_bot\google_ai_studio_one_shot.py:1636:            print(f"  [Stage 1 Grounding] Harvested successfully via 
+Exa Search ({len(e_urls)} verified direct URLs, 0 AI Studio tokens).")
+  bluesky_bot\google_ai_studio_one_shot.py:1637:            return e_dossier, e_urls
+  bluesky_bot\google_ai_studio_one_shot.py:1638:    except Exception as ee:
+> bluesky_bot\google_ai_studio_one_shot.py:1639:        print(f"  [Stage 1 Grounding] Exa Search attempt failed 
+({ee}). Falling back to Gemini Search Grounding...")
+  bluesky_bot\google_ai_studio_one_shot.py:1640:    
+  bluesky_bot\google_ai_studio_one_shot.py:1641:    # 3. Third Fallback: Google Search Grounding via Gemini models
+  bluesky_bot\google_ai_studio_one_shot.py:1642:    if not genai_client:
+> bluesky_bot\google_ai_studio_one_shot.py:1643:        print("  [Stage 1 Grounding] Gemini client unavailable and 
+search APIs failed. Proceeding ungrounded.")
+  bluesky_bot\google_ai_studio_one_shot.py:1644:        return "", []
+  bluesky_bot\google_ai_studio_one_shot.py:1645:    
+  bluesky_bot\google_ai_studio_one_shot.py:1646:    # Safety guard: Never exceed 5 candidates per search grounding 
+call to prevent Google Search fan-out 503 timeouts
+  bluesky_bot\google_ai_studio_one_shot.py:1647:    if len(candidates) > 5:
+  bluesky_bot\google_ai_studio_one_shot.py:1648:        all_dossiers = []
+  bluesky_bot\google_ai_studio_one_shot.py:1649:        all_urls = []
+  bluesky_bot\google_ai_studio_one_shot.py:1650:        for i in range(0, len(candidates), 5):
+  bluesky_bot\google_ai_studio_one_shot.py:1651:            sub_batch = candidates[i:i+5]
+  bluesky_bot\google_ai_studio_one_shot.py:1652:            sub_dossier, sub_urls = 
+harvest_search_grounding(genai_client, sub_batch)
+  bluesky_bot\google_ai_studio_one_shot.py:1653:            if sub_dossier:
+  bluesky_bot\google_ai_studio_one_shot.py:1654:                all_dossiers.append(sub_dossier)
+  bluesky_bot\google_ai_studio_one_shot.py:1655:            for u in sub_urls:
+  bluesky_bot\google_ai_studio_one_shot.py:1656:                if u not in all_urls:
+  bluesky_bot\google_ai_studio_one_shot.py:1657:                    all_urls.append(u)
+  bluesky_bot\google_ai_studio_one_shot.py:1658:        return "\n\n".join(all_dossiers), all_urls
+  bluesky_bot\google_ai_studio_one_shot.py:1659:    
+  bluesky_bot\google_ai_studio_one_shot.py:1660:    import datetime, requests
+  bluesky_bot\google_ai_studio_one_shot.py:1661:    today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+  bluesky_bot\google_ai_studio_one_shot.py:1662:    
+  bluesky_bot\google_ai_studio_one_shot.py:1663:    queries = []
+  bluesky_bot\google_ai_studio_one_shot.py:1664:    for c in candidates:
+  bluesky_bot\google_ai_studio_one_shot.py:1665:        title = c.get("title") or c.get("subject") or ""
+  bluesky_bot\google_ai_studio_one_shot.py:1666:        link = c.get("link") or c.get("url") or ""
+  bluesky_bot\google_ai_studio_one_shot.py:1667:        publisher = c.get("publisher") or c.get("author") or ""
+  bluesky_bot\google_ai_studio_one_shot.py:1668:        if not publisher and link:
+  bluesky_bot\google_ai_studio_one_shot.py:1699:    
+  bluesky_bot\google_ai_studio_one_shot.py:1700:    for g_model in grounding_models:
+  bluesky_bot\google_ai_studio_one_shot.py:1701:        try:
+> bluesky_bot\google_ai_studio_one_shot.py:1702:            print(f"  [Stage 1 Grounding] Pre-harvesting search facts 
+for {len(candidates)} candidate(s) via {g_model} (Ref Date: {today_str})...")
+  bluesky_bot\google_ai_studio_one_shot.py:1703:            resp = genai_client.models.generate_content(
+  bluesky_bot\google_ai_studio_one_shot.py:1704:                model=g_model,
+  bluesky_bot\google_ai_studio_one_shot.py:1705:                contents=prompt,
+  bluesky_bot\google_ai_studio_one_shot.py:1706:                config=types.GenerateContentConfig(
+  bluesky_bot\google_ai_studio_one_shot.py:1707:                    temperature=0.2,
+  bluesky_bot\google_ai_studio_one_shot.py:1708:                    max_output_tokens=16384,
+  bluesky_bot\google_ai_studio_one_shot.py:1709:                    
+tools=[types.Tool(google_search=types.GoogleSearch())]
+  bluesky_bot\google_ai_studio_one_shot.py:1710:                )
+  bluesky_bot\google_ai_studio_one_shot.py:1711:            )
+  bluesky_bot\google_ai_studio_one_shot.py:1712:            dossier = resp.text.strip() if resp and hasattr(resp, 
+"text") and resp.text else ""
+  bluesky_bot\google_ai_studio_one_shot.py:1713:            
+  bluesky_bot\google_ai_studio_one_shot.py:1714:            resolved_urls = []
+  bluesky_bot\google_ai_studio_one_shot.py:1715:            if resp.candidates and 
+resp.candidates[0].grounding_metadata:
+  bluesky_bot\google_ai_studio_one_shot.py:1716:                chunks = 
+resp.candidates[0].grounding_metadata.grounding_chunks
+  bluesky_bot\google_ai_studio_one_shot.py:1717:                if chunks:
+  bluesky_bot\google_ai_studio_one_shot.py:1718:                    for c in chunks:
+  bluesky_bot\google_ai_studio_one_shot.py:1719:                        if c.web and c.web.uri:
+  bluesky_bot\google_ai_studio_one_shot.py:1720:                            raw_url = c.web.uri
+  bluesky_bot\google_ai_studio_one_shot.py:1721:                            try:
+  bluesky_bot\google_ai_studio_one_shot.py:1722:                                r = requests.get(raw_url, 
+headers={"User-Agent": "Mozilla/5.0"}, timeout=5, allow_redirects=True)
+  bluesky_bot\google_ai_studio_one_shot.py:1723:                                if r.status_code == 200 and r.url not 
+in resolved_urls:
+  bluesky_bot\google_ai_studio_one_shot.py:1724:                                    resolved_urls.append(r.url)
+  bluesky_bot\google_ai_studio_one_shot.py:1725:                            except Exception:
+  bluesky_bot\google_ai_studio_one_shot.py:1726:                                pass
+> bluesky_bot\google_ai_studio_one_shot.py:1727:            print(f"  [Stage 1 Grounding] Harvested successfully via 
+{g_model} ({len(resolved_urls)} verified HTTP 200 URLs).")
+  bluesky_bot\google_ai_studio_one_shot.py:1728:            return dossier, resolved_urls
+  bluesky_bot\google_ai_studio_one_shot.py:1729:        except Exception as e:
+  bluesky_bot\google_ai_studio_one_shot.py:1730:            last_err = e
+> bluesky_bot\google_ai_studio_one_shot.py:1731:            print(f"  [Stage 1 Grounding] Warning: Grounding attempt 
+on {g_model} failed ({e}). Trying fallback...")
+  bluesky_bot\google_ai_studio_one_shot.py:1732:            
+> bluesky_bot\google_ai_studio_one_shot.py:1733:    print(f"  [Stage 1 Grounding] All grounding models failed 
+({last_err}). Proceeding with ungrounded context.")
+  bluesky_bot\google_ai_studio_one_shot.py:1734:    return "", []
+  bluesky_bot\google_ai_studio_one_shot.py:1735:
+  bluesky_bot\google_ai_studio_one_shot.py:1736:def run_one_shot_evaluations(genai_client, candidates, model_name, 
+agnes_api_key=None, use_son=False, use_potential=False, use_search=False, extra_context=None, model_sequence=None, 
+compact=False, five_word=False, thinking_level="MEDIUM", use_multi_aspect=False, use_spiritual=False, 
+spiritual_traditions="all", pre_grounded_dossier=None, pre_harvested_urls=None):
+  bluesky_bot\google_ai_studio_one_shot.py:1737:    if pre_harvested_urls is None:
+  bluesky_bot\google_ai_studio_one_shot.py:1738:        pre_harvested_urls = []
+  bluesky_bot\google_ai_studio_one_shot.py:1739:    
+  bluesky_bot\google_ai_studio_one_shot.py:1740:    # Stage 1: Attach pre-grounded dossier or run fallback grounding 
+on 2.5/2.5-lite
+  bluesky_bot\google_ai_studio_one_shot.py:1741:    if pre_grounded_dossier:
+  bluesky_bot\google_ai_studio_one_shot.py:1742:        extra_context = (extra_context + "\n\n" if extra_context else 
+"") + f"=== VERIFIED REAL-TIME SEARCH GROUNDING DOSSIER ===\n{pre_grounded_dossier}"
+  bluesky_bot\google_ai_studio_one_shot.py:1743:    elif use_search and genai_client:
+  bluesky_bot\google_ai_studio_one_shot.py:1744:        grounded_dossier, pre_harvested_urls = 
+harvest_search_grounding(genai_client, candidates)
+  bluesky_bot\google_ai_studio_one_shot.py:1745:        if grounded_dossier:
+  bluesky_bot\google_ai_studio_one_shot.py:1746:            extra_context = (extra_context + "\n\n" if extra_context 
+else "") + f"=== VERIFIED REAL-TIME SEARCH GROUNDING DOSSIER ===\n{grounded_dossier}"
+  bluesky_bot\google_ai_studio_one_shot.py:1747:
+  bluesky_bot\google_ai_studio_one_shot.py:1748:    convergence_rules, formatting_rules = 
+build_formatting_rules(use_son=use_son, use_potential=use_potential, compact=compact, five_word=five_word, 
+use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
+  bluesky_bot\google_ai_studio_one_shot.py:1749:    system_instruction = build_system_instruction(use_son=use_son, 
+use_potential=use_potential, compact=compact, five_word=five_word, use_multi_aspect=use_multi_aspect, 
+use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions, extra_context=extra_context)
+  bluesky_bot\google_ai_studio_one_shot.py:1750:    
+  bluesky_bot\google_ai_studio_one_shot.py:1751:    n = len(candidates)
+  bluesky_bot\google_ai_studio_one_shot.py:1752:    output_format = build_output_format(n, use_son=use_son, 
+use_potential=use_potential, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, 
+spiritual_traditions=spiritual_traditions)
+  bluesky_bot\google_ai_studio_one_shot.py:1753:    
+  bluesky_bot\google_ai_studio_one_shot.py:1754:    # Prune duplicate payload fields from candidates before passing to 
+LLM to save tokens
+  bluesky_bot\google_ai_studio_one_shot.py:1755:    clean_candidates = []
+  bluesky_bot\google_ai_studio_one_shot.py:1756:    for c in candidates:
+  bluesky_bot\google_ai_studio_one_shot.py:1757:        cand_entry = {
+  bluesky_bot\google_ai_studio_one_shot.py:1758:            "subject": c.get("subject") or c.get("title") or "",
+
+

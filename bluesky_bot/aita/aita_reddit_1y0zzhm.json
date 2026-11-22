@@ -1,0 +1,151 @@
+{
+  "id": "reddit_1y0zzhm",
+  "timestamp": "2026-11-20T10:48:42.319885+00:00",
+  "subreddit": "AmItheAsshole",
+  "author": "u/Bella470Sorbet",
+  "title": "WIBTA if I told my sister she can only stay one night when she visits",
+  "url": "https://www.reddit.com/r/AmItheAsshole/comments/1y0zzhm/wibta_if_i_told_my_sister_she_can_only_stay_one/",
+  "is_hypothetical": true,
+  "selftext": "My sister keeps saying she wants to crash at our place for a week next month while she's between apartments. My partner works from home and our spare room doubles as their office, so a whole week would mean losing the space and the quiet. I am thinking about telling her one night max, but she already assumes it will be longer and keeps saying it would save her a lot of money. She thinks it is no big deal because we are family and we have hosted her for a couple days before. From her side, a week feels normal and she figures we can just work around each other. My partner says we need the room for work calls, though, and that longer stays have left the place feeling crowded in the past. I want to be fair to her situation but also protect our daily routine. I am wondering if setting a hard one-night limit would make me the bad guy or if it is just being realistic about what actually works for us.",
+  "evaluation": {
+    "verdict": "NAH",
+    "certainty": "Certain",
+    "verdict_label": "No Assholes here",
+    "repair_state": "R0",
+    "hook_line": "Restricting a family member's transition stay to protect a home office and remote work productivity is a legitimate boundary.",
+    "context_summary": "A sister requested to crash for a full week between leases, but OP and partner rely on the spare room for essential remote work calls and daily domestic routine.",
+    "op_stated_summary": "OP aims to cap the sister's transitional housing stay at one night to safeguard partner's home office work requirements, while weighing family obligations against domestic crowding and routine disruption caused by longer stays.",
+    "actual_kinetics_summary": "The sister presumed an extended week-long stay based on kinship, while OP proactively sought to set a sustainable boundary to protect household work operations and shared living space integrity.",
+    "reasoning_summary": "Q3 Physical Sanctuary and work capability require structural boundaries. Preserving partner's operational space avoids externalising housing costs onto household productivity. Setting clear duration limits prevents friction and preserves overall family harmony.",
+    "resolution_summary_plain": "Communicate the limit firmly, warmly, and early. Explain that remote work demands make a week-long stay impossible, but offer one or two nights alongside assistance in finding affordable short-term lodging. Frame the decision as workspace necessity, not rejection.",
+    "alethekanon": "Kinship does not overwrite physical functional constraints. OP's partner requires the space for primary livelihood generation. Proactive boundary management prevents chronic operational degradation and preserves long-term relational health through clear clarity.",
+    "awwthekanon": "It is completely understandable to feel caught between helping your sister and respecting your partner's need to work peacefully. Setting a limit doesn't mean you don't love her; it just means honoring your home's real physical limits gently and honestly.",
+    "brothekanon": "Your partner needs that room to earn a living, plain and simple. A whole week of living on top of each other while trying to take work calls is a recipe for disaster. Be straight with your sister now so she can figure out her plans without burning bridges.",
+    "actor_aspects": [
+      {
+        "actor": "OP",
+        "role": "OP",
+        "son_u": 0.769,
+        "son_psi": 0.833,
+        "active_attractors": 3,
+        "anti_corner_collapse_ok": true,
+        "eca_anchor": "ECA_+0.5_+1",
+        "eca_u_interval": [
+          0.5,
+          0.5
+        ],
+        "duty_status": "Confirmed",
+        "u_eff_interval": [
+          0.769,
+          0.769
+        ],
+        "aspect_verdict": "PASS",
+        "P": 1.5,
+        "A": 1.5,
+        "Choice_delta": 0.5
+      },
+      {
+        "actor": "Sister",
+        "role": "Primary Counterparty",
+        "son_u": -0.0,
+        "son_psi": -0.25,
+        "active_attractors": 5,
+        "anti_corner_collapse_ok": true,
+        "eca_anchor": "ECA_-0.5_+1",
+        "eca_u_interval": [
+          -0.5,
+          -0.5
+        ],
+        "duty_status": "Confirmed",
+        "u_eff_interval": [
+          -0.0,
+          -0.0
+        ],
+        "aspect_verdict": "PASS",
+        "P": 0.5,
+        "A": 1.0,
+        "Choice_delta": -0.5
+      },
+      {
+        "actor": "OP's Partner",
+        "role": "Unwitting Pawn",
+        "son_u": 1.0,
+        "son_psi": 1.0,
+        "active_attractors": 3,
+        "anti_corner_collapse_ok": true,
+        "eca_anchor": "ECA_+0.5_+0",
+        "eca_u_interval": [
+          0.5,
+          2.0
+        ],
+        "duty_status": "Confirmed",
+        "u_eff_interval": [
+          1.0,
+          1.0
+        ],
+        "aspect_verdict": "PASS",
+        "P": 1.0,
+        "A": 1.0,
+        "Choice_delta": 0.0
+      }
+    ],
+    "coordinates": {
+      "op_stated": [
+        0.5,
+        0.5
+      ],
+      "op_actual": [
+        0.769,
+        0.833
+      ],
+      "op_u_interval": [
+        0.769,
+        0.769
+      ],
+      "op_eca_anchor": "ECA_+0.5_+1",
+      "other_actual": [
+        -0.0,
+        -0.25
+      ],
+      "other_u_interval": [
+        -0.0,
+        -0.0
+      ],
+      "other_eca_anchor": "ECA_-0.5_+1",
+      "delta_H": 0.428,
+      "C_act": 0.7,
+      "wisdom_score": 0.7,
+      "R_net": 1.0,
+      "r_net_coverage": 1.0,
+      "r_net_fault_flags": [],
+      "deception_codes": []
+    },
+    "why_verdict": "Protecting essential remote work infrastructure and household sanctuary is entirely reasonable; family kinship does not grant unlimited access to space.",
+    "vft_audit_trace": {
+      "silent_judgment": "[OBS] Sister wants 1 week stay. Partner works remote in spare room. OP planning 1-night boundary. [INF] Sister assumes family automatic access.",
+      "seven_planes": "Q3 Physical space bound to work function. Q5 Proportional housing hospitality.",
+      "traps_and_belief_state": "OP balancing Service Trap concerns against practical Sanctuary Defense.",
+      "unsaid_horizon": "Sister relies on assumed family entitlement to lower her transition costs without considering host operational burdens."
+    },
+    "vft_audit_trace_summary": "{\n  \"silent_judgment\": \"[OBS] Sister wants 1 week stay. Partner works remote in spare room. OP planning 1-night boundary. [INF] Sister assumes family automatic access.\",\n  \"seven_planes\": \"Q3 Physical space bound to work function. Q5 Proportional housing hospitality.\",\n  \"traps_and_belief_state\": \"OP balancing Service Trap concerns against practical Sanctuary Defense.\",\n  \"unsaid_horizon\": \"Sister relies on assumed family entitlement to lower her transition costs without considering host operational burdens.\"\n}",
+    "resolution": {
+      "trap_to_exit": "Service Trap / Family Entitlement Assumption",
+      "script": "We love hosting you, but because the spare room is partner's active work office during the day, we can only host you for one night so work calls aren't disrupted.",
+      "serenity_boundary": "You cannot manufacture extra square footage; you can establish clear limits on guest stays to protect home productivity.",
+      "counterfactual_flip": "If the spare room were unused and OP imposed a hard limit purely out of spite, the verdict would lean toward YWBTA."
+    },
+    "resolution_summary": "{\n  \"trap_to_exit\": \"Service Trap / Family Entitlement Assumption\",\n  \"script\": \"We love hosting you, but because the spare room is partner's active work office during the day, we can only host you for one night so work calls aren't disrupted.\",\n  \"serenity_boundary\": \"You cannot manufacture extra square footage; you can establish clear limits on guest stays to protect home productivity.\",\n  \"counterfactual_flip\": \"If the spare room were unused and OP imposed a hard limit purely out of spite, the verdict would lean toward YWBTA.\"\n}"
+  },
+  "posts": [
+    "⚖️ AITA Verdict: NAH — \"WIBTA if I told my sister she can only stay one night when she visits\"\nProtecting essential remote work infrastructure and household sanctuary is entirely reasonable; family kinship does not grant unlimited access to space.\n#AITA #Aletheia",
+    "Context:\nMy sister keeps saying she wants to crash at our place for a week next month while she's between apartments. My partner works from home and our spare room doubles…\nhttps://www.reddit.com/r/AmItheAsshole/comments/1y0zzhm/wibta_if_i_told_my_sister_she_can_only_stay_one/",
+    "Stated Framing:\nProtecting essential remote work infrastructure and household sanctuary is entirely reasonable; family kinship does not grant unlimited access to space.\nOP Stated: (+0.50, +0.50)",
+    "Actual Conduct:\n[OBS] Sister wants 1 week stay. Partner works remote in spare room. OP planning 1-night boundary. [INF] Sister assumes family automatic access.\nOP: (+0.77, +0.83) [PASS] | Other: (-0.00, -0.25) [PASS]",
+    "Verdict: NAH — No Assholes here\nProtecting essential remote work infrastructure and household sanctuary is entirely reasonable; family kinship does not grant unlimited access to space.\nSay-Do Gap: Low (0.43) | Integrity: 70% | Story Completeness: Solid (R_net 1.00)",
+    "Reasoning:\nProtecting essential remote work infrastructure and household sanctuary is entirely reasonable; family kinship does not grant unlimited access to space.",
+    "Resolution:\n",
+    "Alethekanon:\nProtecting essential remote work infrastructure and household sanctuary is entirely reasonable; family kinship does not grant unlimited access to space.",
+    "Awwthekanon:\n",
+    "Brothekanon:\nProtecting essential remote work infrastructure and household sanctuary is entirely reasonable; family kinship does not grant unlimited access to space."
+  ]
+}

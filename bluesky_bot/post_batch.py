@@ -128,6 +128,25 @@ def validate_story_file(path, compact=False):
             data = json.load(f)
         cfg = data[0] if isinstance(data, list) else data
 
+        is_aita = (
+            cfg.get("category") == "aita"
+            or cfg.get("story_type") == "aita"
+            or filename.startswith("factcheck_aita_")
+            or filename.startswith("aita_")
+        )
+        if is_aita:
+            if "status" not in cfg:
+                cfg["status"] = "DRAFT"
+            if not isinstance(cfg.get("posts"), list) or len(cfg["posts"]) == 0:
+                raise ValueError("AITA story missing 'posts' list.")
+            saved_cards = cfg.get("card_paths")
+            if not (isinstance(saved_cards, list) and len(saved_cards) == 4 and all(os.path.exists(p) for p in saved_cards)):
+                from aita.aita_poster import generate_all_aita_assets_safe
+                cfg["card_paths"] = generate_all_aita_assets_safe(cfg, path)
+                with open(path, "w", encoding="utf-8") as wf:
+                    json.dump([cfg] if isinstance(data, list) else cfg, wf, indent=2, ensure_ascii=False)
+            return True, ""
+
         # Validate JSON Schema
         required_keys = ["id", "subject", "link", "claim_u", "claim_psi", "real_u", "real_psi", "mode", "status", "posts"]
         missing_keys = [k for k in required_keys if k not in cfg]
@@ -302,7 +321,7 @@ def main():
                     candidates = [
                         os.path.join(args.folder, f)
                         for f in os.listdir(args.folder)
-                        if (f.startswith("factcheck_") or f.startswith("roundup_")) and f.endswith(".json")
+                        if (f.startswith("factcheck_") or f.startswith("roundup_") or f.startswith("aita_")) and f.endswith(".json")
                     ]
                     candidates = [
                         c for c in candidates
@@ -349,16 +368,8 @@ def main():
                         already_replied = False
                         for _attempt in range(2):
                             try:
-                                original_sleep = time.sleep
-                                try:
-                                    def custom_sleep(seconds):
-                                        original_sleep(2.0 if seconds == 1 else seconds)
-                                    time.sleep = custom_sleep
-                                    post_thread(client, cfg, live=args.live, compact=compact_val, five_word=args.five_word)
-
-                                    success = True
-                                finally:
-                                    time.sleep = original_sleep
+                                post_thread(client, cfg, live=args.live, compact=compact_val, five_word=args.five_word)
+                                success = True
                                 break
                             except Exception as e:
                                 if "ALREADY_REPLIED" in str(e):
@@ -458,7 +469,7 @@ def main():
                 candidates = [
                     os.path.join(args.folder, f)
                     for f in os.listdir(args.folder)
-                    if (f.startswith("factcheck_") or f.startswith("roundup_")) and f.endswith(".json")
+                    if (f.startswith("factcheck_") or f.startswith("roundup_") or f.startswith("aita_")) and f.endswith(".json")
                 ]
                 candidates = [
                     c for c in candidates
@@ -515,16 +526,8 @@ def main():
                 # Post thread (retry once after rate-limit)
                 for _attempt in range(2):
                     try:
-                        original_sleep = time.sleep
-                        try:
-                            def custom_sleep(seconds):
-                                original_sleep(2.0 if seconds == 1 else seconds)
-                            time.sleep = custom_sleep
-                            post_thread(client, cfg, live=args.live, compact=compact_val, five_word=args.five_word)
-
-                            success = True
-                        finally:
-                            time.sleep = original_sleep
+                        post_thread(client, cfg, live=args.live, compact=compact_val, five_word=args.five_word)
+                        success = True
                         break
                     except Exception as e:
                         if "ALREADY_REPLIED" in str(e):

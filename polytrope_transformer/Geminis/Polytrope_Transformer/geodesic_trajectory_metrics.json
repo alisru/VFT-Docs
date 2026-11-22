@@ -1,0 +1,264 @@
+{
+  "cycle": 6,
+  "experiment": "Continuous Manifold Geodesic Tracking & Hansard Multi-Turn Causal Extraction",
+  "test_statement": "The national government will deliver economic growth and support working families",
+  "geodesic_metrics": {
+    "total_arc_length": 0.7881,
+    "mean_momentum": 0.0788,
+    "curvature_strain": 0.2274
+  },
+  "trajectory_steps": [
+    {
+      "step": 1,
+      "token": "The",
+      "sub_text": "The",
+      "coords": [
+        0.1807,
+        -0.0945,
+        -0.0693
+      ],
+      "q_planes": [
+        0.1518,
+        0.136,
+        0.1351,
+        0.1566,
+        0.1409,
+        0.1439,
+        0.1357
+      ],
+      "dominant_plane": 4
+    },
+    {
+      "step": 2,
+      "token": "national",
+      "sub_text": "The national",
+      "coords": [
+        0.171,
+        -0.0861,
+        -0.0615
+      ],
+      "q_planes": [
+        0.4695,
+        0.0854,
+        0.0849,
+        0.0971,
+        0.0882,
+        0.0901,
+        0.0848
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "step": 3,
+      "token": "government",
+      "sub_text": "The national government",
+      "coords": [
+        0.1614,
+        -0.085,
+        -0.0542
+      ],
+      "q_planes": [
+        0.4694,
+        0.0858,
+        0.0851,
+        0.0967,
+        0.0879,
+        0.09,
+        0.0851
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "step": 4,
+      "token": "will",
+      "sub_text": "The national government will",
+      "coords": [
+        0.45,
+        0.55,
+        0.25
+      ],
+      "q_planes": [
+        0.4693,
+        0.0862,
+        0.0853,
+        0.0964,
+        0.0877,
+        0.0899,
+        0.0853
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "step": 5,
+      "token": "deliver",
+      "sub_text": "The national government will deliver",
+      "coords": [
+        0.45,
+        0.55,
+        0.25
+      ],
+      "q_planes": [
+        0.4692,
+        0.0863,
+        0.0855,
+        0.0959,
+        0.0874,
+        0.0897,
+        0.0859
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "step": 6,
+      "token": "economic",
+      "sub_text": "The national government will deliver economic",
+      "coords": [
+        0.45,
+        0.55,
+        0.25
+      ],
+      "q_planes": [
+        0.3414,
+        0.063,
+        0.0623,
+        0.0694,
+        0.3364,
+        0.0651,
+        0.0625
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "step": 7,
+      "token": "growth",
+      "sub_text": "The national government will deliver economic growth",
+      "coords": [
+        0.45,
+        0.55,
+        0.25
+      ],
+      "q_planes": [
+        0.3409,
+        0.0632,
+        0.0626,
+        0.0688,
+        0.3366,
+        0.0652,
+        0.0626
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "step": 8,
+      "token": "and",
+      "sub_text": "The national government will deliver economic growth and",
+      "coords": [
+        0.45,
+        0.55,
+        0.25
+      ],
+      "q_planes": [
+        0.3407,
+        0.0633,
+        0.0626,
+        0.0687,
+        0.3367,
+        0.0655,
+        0.0626
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "step": 9,
+      "token": "support",
+      "sub_text": "The national government will deliver economic growth and support",
+      "coords": [
+        0.45,
+        0.55,
+        0.25
+      ],
+      "q_planes": [
+        0.288,
+        0.0537,
+        0.0533,
+        0.2116,
+        0.2851,
+        0.0552,
+        0.053
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "step": 10,
+      "token": "working",
+      "sub_text": "The national government will deliver economic growth and support working",
+      "coords": [
+        0.45,
+        0.55,
+        0.25
+      ],
+      "q_planes": [
+        0.2878,
+        0.054,
+        0.0532,
+        0.2116,
+        0.2852,
+        0.0552,
+        0.053
+      ],
+      "dominant_plane": 1
+    },
+    {
+      "step": 11,
+      "token": "families",
+      "sub_text": "The national government will deliver economic growth and support working families",
+      "coords": [
+        0.45,
+        0.55,
+        0.25
+      ],
+      "q_planes": [
+        0.2876,
+        0.0541,
+        0.0532,
+        0.2116,
+        0.2851,
+        0.0552,
+        0.0532
+      ],
+      "dominant_plane": 1
+    }
+  ],
+  "hansard_dialogues": [
+    {
+      "debate": "Questions without Notice: Albanese Government",
+      "date": "2026-07-02",
+      "premise_turn": "As we wind up the budget session here, I thank the member for Gorton for her question.",
+      "response_turn": "This is a budget that delivers real change for Australians."
+    },
+    {
+      "debate": "Questions without Notice: Budget: Taxation",
+      "date": "2026-07-02",
+      "premise_turn": "The first thing I'd say is congratulations to the press gallery board, to Jane Norman and her team, in raising money for charity last night.",
+      "response_turn": "The second thing is that, if I were someone on that side led by this leader of the opposition, I wouldn't be mentioning last night."
+    },
+    {
+      "debate": "Questions without Notice: Budget: Taxation",
+      "date": "2026-07-02",
+      "premise_turn": "You just came in and asked a question about it.",
+      "response_turn": "There are geniuses in the tactics committee!"
+    },
+    {
+      "debate": "Questions without Notice: Gambling",
+      "date": "2026-07-02",
+      "premise_turn": "You do have that option.",
+      "response_turn": "But what we will do is take the strongest possible action that any government has taken in history."
+    },
+    {
+      "debate": "Questions without Notice: Gambling",
+      "date": "2026-07-02",
+      "premise_turn": "I thank the member for Mackellar for her question.",
+      "response_turn": "The legislation that was introduced into the parliament today follows on from the previous work that my government has done\u2014more work than has been done by any government since Federation to crack down on gambling."
+    }
+  ]
+}

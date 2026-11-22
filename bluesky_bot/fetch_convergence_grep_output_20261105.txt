@@ -1,0 +1,177 @@
+Command exited with code 0.
+
+Command output:
+
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1074:        if use_potential:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1075:            convergence_path = 
+os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_potential.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1076:            formatting_path = 
+os.path.join(script_dir, "instructions", "thread_formatting_potential.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1077:        elif use_son:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1078:            convergence_path = 
+os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_lite.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1079:            formatting_path = 
+os.path.join(script_dir, "instructions", "thread_formatting_son.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1080:        else:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1081:            convergence_path = 
+os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1082:            formatting_path = 
+os.path.join(script_dir, "instructions", "thread_formatting.md")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1083:        with open(convergence_path, 
+"r", encoding="utf-8") as f:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1084:            
+_RULES_CACHE[f"{cache_key}_convergence"] = minify_markdown(f.read())
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1085:        with open(formatting_path, 
+"r", encoding="utf-8") as f:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1086:            raw_fmt = f.read()
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1087:            clean_fmt = 
+extract_thread_content_rules(raw_fmt)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1088:            
+_RULES_CACHE[f"{cache_key}_formatting"] = minify_markdown(clean_fmt)
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1089:    return 
+_RULES_CACHE[f"{cache_key}_convergence"], _RULES_CACHE[f"{cache_key}_formatting"]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1090:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1091:SPIRITUAL_TRADITIONS_MAP = {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1092:    "christianity": "Christian / 
+Abrahamic (Gospels, Epistles, Hebrew Prophets like Isaiah/Amos, Psalms, Proverbs, Ecclesiastes)",
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1093:    "hinduism": "Hindu / Vedic 
+(Bhagavad Gita, Upanishads, Mahabharata, Vedas - Dharma, Karma, Rita)",
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1094:    "buddhism": "Buddhist / Dharmic 
+(Dhammapada, Pali Canon, Sutta Nipata, Heart Sutra, Zen Koans - Ahimsa, Interdependence)",
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1167:def 
+build_formatting_rules(use_son=False, use_potential=False, compact=False, five_word=False, use_multi_aspect=False, 
+use_spiritual=False, spiritual_traditions="all"):
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1168:    convergence_rules, 
+formatting_rules = _load_rules(use_son=use_son, use_potential=use_potential)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1169:        
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1170:    if five_word:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1171:        formatting_rules = (
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1172:            "CRITICAL DIRECTIVE FOR 
+FIVE-WORD MODE:\n"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1173:            "You are in FIVE-WORD 
+MODE. Every single element/string in the 'posts' array MUST be exactly 5 words long. "
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1211:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1212:    return convergence_rules, 
+formatting_rules
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1213:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1214:SOCIAL_PHYSICS_DIRECTIVE = (
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1215:    "=== SOCIAL PHYSICS ENGINE ('THE 
+42') ===\n"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1216:    "AUDIT DIRECTIVE FOR 'Social 
+Physics Analysis:' POST:\n"
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1217:    "Analyze the real-world actors and 
+events using the 4 axes (Power vs. Empowerment, Justification vs. Transparency, Projection vs. Empathy, Manufactured 
+Problems vs. Solutions) and actor loops (Smart Selfish vs. Smart Altruistic) defined in the convergence rules.\n"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1218:    "Cut through stated pretexts to 
+reveal whether actors are running a Smart Selfish Maneuver (hidden extraction behind manufactured crises and projected 
+blame) or acting towards genuine systemic empowerment."
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1219:)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1220:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1221:def 
+build_system_instruction(use_son=False, use_potential=False, compact=False, five_word=False, use_multi_aspect=False, 
+use_spiritual=False, spiritual_traditions="all", extra_context=None):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1222:    import datetime
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1319:        "  [\n"
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1320:        '    "thinking",               
+                 // item[0]: detailed thinking block. You MUST write down the full 6-Phase Convergence scan here, 
+including scoring the 18 variables of the 6 attractors with high-resolution decimals, and detailing your coordinate 
+equations (u, psi), hypocrisy delta, and trajectory calculations step-by-step before outputting the rest of the 
+array.\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1321:        '    "id",                     
+                 // item[1]: clean story id slug\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1322:        '    "subject",                
+                 // item[2]: story subject\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1323:        '    "link",                   
+                 // item[3]: story link (or "")\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1324:        '    "target_url",             
+                 // item[4]: target post url (or "")\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1325:        "    0.5,                      
+                 // item[5]: stated morality (claim_u, float)\n"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1766:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1767:    convergence_rules, 
+formatting_rules = build_formatting_rules(use_son=use_son, use_potential=use_potential, compact=compact, 
+five_word=five_word, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, 
+spiritual_traditions=spiritual_traditions)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1768:    system_instruction = 
+build_system_instruction(use_son=use_son, use_potential=use_potential, compact=compact, five_word=five_word, 
+use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions, 
+extra_context=extra_context)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1769:    
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1770:    n = len(candidates)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1771:    output_format = 
+build_output_format(n, use_son=use_son, use_potential=use_potential, use_multi_aspect=use_multi_aspect, 
+use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1772:    
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1789:    user_payload = [
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1790:        f"=== CONVERGENCE TEST RULES 
+===\n{convergence_rules}\n\n",
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1791:        f"=== THREAD FORMATTING & 
+SCHEMAS ===\n{formatting_rules}\n\n",
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1792:        f"You are evaluating a batch 
+of {n} candidate news items simultaneously.\n\n"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1793:    ]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1794:    if extra_context:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1795:        user_payload.append(f"=== 
+ADDITIONAL CONTEXT / BACKGROUND TO CONSIDER ===\n{extra_context}\n\n")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2485:    parser = 
+argparse.ArgumentParser(description="Google AI Studio One-Shot Batch Evaluator")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2486:    parser.add_argument("--son", 
+action="store_true", help="Use the 6-Attractor SON convergence model and formatting instructions")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2487:    parser.add_argument("--potential", 
+action="store_true", help="Use the 9-Node Modal & Temporal Potential convergence model (convergence_son_potential.md) 
+and formatting instructions")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2488:    parser.add_argument("--compact", 
+action="store_true", help="Enable compact posting mode formatting (lifting character limits on posts 4+ in API 
+responses)")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2489:    
+parser.add_argument("--compact-single", action="store_true", help="Enable compact single-post mode formatting (lifting 
+character limits on posts 4+ and tagging story as single-post compact)")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2490:    parser.add_argument("--search", 
+action="store_true", help="Enable Google Search Grounding to fact-check claims (default: False)")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2491:    
+parser.add_argument("--multi-aspect", action="store_true", help="Enable Multi-Aspect and Multi-Actor convergence test 
+audits")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2492:    parser.add_argument("--spiritual", 
+action="store_true", help="Enable spiritual/scriptural optional audit mode")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2493:    
+parser.add_argument("--spiritual-traditions", type=str, default="all", help="Comma-separated spiritual/scriptural 
+traditions to draw from (e.g. 'christianity,hinduism,buddhism,taoism,other', default: 'all')")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2494:    parser.add_argument("--five-word", 
+action="store_true", help="Enable 5-word limit mode")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2495:    parser.add_argument("--rss", 
+type=int_or_default(0), default=5, help="Number of RSS stories to harvest (default: 5)")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2496:    parser.add_argument("--bsky", 
+type=int_or_default(0), default=15, help="Number of Bluesky stories to harvest (default: 15)")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2648:    if args.potential:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2649:        convergence_path = 
+os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_potential.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2650:        formatting_path = 
+os.path.join(script_dir, "instructions", "thread_formatting_potential.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2651:    elif args.son:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2652:        convergence_path = 
+os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_son_lite.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2653:        formatting_path = 
+os.path.join(script_dir, "instructions", "thread_formatting_son.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2654:    else:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2655:        convergence_path = 
+os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2656:        formatting_path = 
+os.path.join(script_dir, "instructions", "thread_formatting.md")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2657:    with open(convergence_path, "r", 
+encoding="utf-8") as f:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2658:        raw_ct = len(f.read())
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2659:    with open(formatting_path, "r", 
+encoding="utf-8") as f:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2660:        raw_tf = len(f.read())
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2661:    
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2662:    min_ct = 
+len(minify_markdown(open(convergence_path, "r", encoding="utf-8").read()))
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2663:    min_tf = 
+len(minify_markdown(extract_thread_content_rules(open(formatting_path, "r", encoding="utf-8").read())))
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2664:    
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2665:    raw_total_chars = raw_ct + raw_tf
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2666:    min_total_chars = min_ct + min_tf
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2667:    percent_saved = (1.0 - 
+(min_total_chars / raw_total_chars)) * 100
+
+

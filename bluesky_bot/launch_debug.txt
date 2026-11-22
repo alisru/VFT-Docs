@@ -1,0 +1,112 @@
+--- Main execution crash: 'AletheiaLauncherApp' object has no attribute 'font_btn' ---
+Traceback (most recent call last):
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 2329, in <module>
+    app = AletheiaLauncherApp(root)
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 239, in __init__
+    self.build_ui()
+    ~~~~~~~~~~~~~^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 599, in build_ui
+    self.create_batch_card(left_panel)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 1130, in create_batch_card
+    btn_aita = tk.Button(aita_frame, text="⚖️ Judge Reddit AITA", bg=ACCENT_BLUE, fg="white", font=self.font_btn, relief="flat", padx=10, pady=2, command=self.run_aita_judge)
+                                                                                                   ^^^^^^^^^^^^^
+AttributeError: 'AletheiaLauncherApp' object has no attribute 'font_btn'. Did you mean: 'font_body'?
+--- Main execution crash: 'AletheiaLauncherApp' object has no attribute 'font_btn' ---
+Traceback (most recent call last):
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 2329, in <module>
+    app = AletheiaLauncherApp(root)
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 239, in __init__
+    self.build_ui()
+    ~~~~~~~~~~~~~^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 599, in build_ui
+    self.create_batch_card(left_panel)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 1130, in create_batch_card
+    btn_aita = tk.Button(aita_frame, text="⚖️ Judge Reddit AITA", bg=ACCENT_BLUE, fg="white", font=self.font_btn, relief="flat", padx=10, pady=2, command=self.run_aita_judge)
+                                                                                                   ^^^^^^^^^^^^^
+AttributeError: 'AletheiaLauncherApp' object has no attribute 'font_btn'. Did you mean: 'font_body'?
+--- Main execution crash: 'AletheiaLauncherApp' object has no attribute 'font_btn' ---
+Traceback (most recent call last):
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 2329, in <module>
+    app = AletheiaLauncherApp(root)
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 239, in __init__
+    self.build_ui()
+    ~~~~~~~~~~~~~^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 599, in build_ui
+    self.create_batch_card(left_panel)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 1130, in create_batch_card
+    btn_aita = tk.Button(aita_frame, text="⚖️ Judge Reddit AITA", bg=ACCENT_BLUE, fg="white", font=self.font_btn, relief="flat", padx=10, pady=2, command=self.run_aita_judge)
+                                                                                                   ^^^^^^^^^^^^^
+AttributeError: 'AletheiaLauncherApp' object has no attribute 'font_btn'. Did you mean: 'font_body'?
+--- Main execution crash: 'AletheiaLauncherApp' object has no attribute 'font_btn' ---
+Traceback (most recent call last):
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 2329, in <module>
+    app = AletheiaLauncherApp(root)
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 239, in __init__
+    self.build_ui()
+    ~~~~~~~~~~~~~^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 599, in build_ui
+    self.create_batch_card(left_panel)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 1130, in create_batch_card
+    btn_aita = tk.Button(aita_frame, text="⚖️ Judge Reddit AITA", bg=ACCENT_BLUE, fg="white", font=self.font_btn, relief="flat", padx=10, pady=2, command=self.run_aita_judge)
+                                                                                                   ^^^^^^^^^^^^^
+AttributeError: 'AletheiaLauncherApp' object has no attribute 'font_btn'. Did you mean: 'font_body'?
+--- Main execution crash: 'AletheiaLauncherApp' object has no attribute 'font_btn' ---
+Traceback (most recent call last):
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 2329, in <module>
+    app = AletheiaLauncherApp(root)
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 239, in __init__
+    self.build_ui()
+    ~~~~~~~~~~~~~^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 599, in build_ui
+    self.create_batch_card(left_panel)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 1130, in create_batch_card
+    btn_aita = tk.Button(aita_frame, text="⚖️ Judge Reddit AITA", bg=ACCENT_BLUE, fg="white", font=self.font_btn, relief="flat", padx=10, pady=2, command=self.run_aita_judge)
+                                                                                                   ^^^^^^^^^^^^^
+AttributeError: 'AletheiaLauncherApp' object has no attribute 'font_btn'. Did you mean: 'font_body'?
+--- Main execution crash: 'AletheiaLauncherApp' object has no attribute 'font_btn' ---
+Traceback (most recent call last):
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 2329, in <module>
+    app = AletheiaLauncherApp(root)
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 239, in __init__
+    self.build_ui()
+    ~~~~~~~~~~~~~^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 599, in build_ui
+    self.create_batch_card(left_panel)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 1130, in create_batch_card
+    btn_aita = tk.Button(aita_frame, text="⚖️ Judge Reddit AITA", bg=ACCENT_BLUE, fg="white", font=self.font_btn, relief="flat", padx=10, pady=2, command=self.run_aita_judge)
+                                                                                                   ^^^^^^^^^^^^^
+AttributeError: 'AletheiaLauncherApp' object has no attribute 'font_btn'. Did you mean: 'font_body'?
+--- Main execution crash: 'AletheiaLauncherApp' object has no attribute 'font_btn' ---
+Traceback (most recent call last):
+  File "e:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 2329, in <module>
+    app = AletheiaLauncherApp(root)
+  File "e:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 239, in __init__
+    self.build_ui()
+    ~~~~~~~~~~~~~^^
+  File "e:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 599, in build_ui
+    self.create_batch_card(left_panel)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "e:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 1130, in create_batch_card
+    btn_aita = tk.Button(aita_frame, text="⚖️ Judge Reddit AITA", bg=ACCENT_BLUE, fg="white", font=self.font_btn, relief="flat", padx=10, pady=2, command=self.run_aita_judge)
+                                                                                                   ^^^^^^^^^^^^^
+AttributeError: 'AletheiaLauncherApp' object has no attribute 'font_btn'. Did you mean: 'font_body'?
+--- Main execution crash: 'AletheiaLauncherApp' object has no attribute 'font_btn' ---
+Traceback (most recent call last):
+  File "e:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 2329, in <module>
+    app = AletheiaLauncherApp(root)
+  File "e:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 239, in __init__
+    self.build_ui()
+    ~~~~~~~~~~~~~^^
+  File "e:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 599, in build_ui
+    self.create_batch_card(left_panel)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "e:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw", line 1130, in create_batch_card
+    btn_aita = tk.Button(aita_frame, text="⚖️ Judge Reddit AITA", bg=ACCENT_BLUE, fg="white", font=self.font_btn, relief="flat", padx=10, pady=2, command=self.run_aita_judge)
+                                                                                                   ^^^^^^^^^^^^^
+AttributeError: 'AletheiaLauncherApp' object has no attribute 'font_btn'. Did you mean: 'font_body'?

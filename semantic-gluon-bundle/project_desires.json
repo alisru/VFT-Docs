@@ -1,0 +1,426 @@
+{
+  "project_id": "PRJ-BSKY-BOT",
+  "name": "Aletheia Bluesky News Factcheck & Audit Bot",
+  "description": "Harvest, offline convergence test, trinary synthesis, and 13-key schema factchecks on Bluesky",
+  "ground_truth_is": "Bot daemon running, Aletheia MCP tools active, audit archive indexed",
+  "last_updated": "2026-10-28T17:01:22.601785",
+  "desires": {
+    "DES-016": {
+      "id": "DES-016",
+      "title": "Generate 4-persona dynamic card thread responses",
+      "vertex": "will_be",
+      "status": "cancelled",
+      "rationale": "",
+      "superseded_by": null,
+      "supersedes": null,
+      "cancellation_reason": "Naturally cancelled out by Anti-Desire ANTI-013 (Target Goal breaches Invariant Constraint): 'Fixed array indexing posts[13] cannot survive dynamic persona thread lengths'",
+      "tags": [
+        "bluesky",
+        "cards",
+        "personas"
+      ],
+      "tasks": []
+    },
+    "DES-017": {
+      "id": "DES-017",
+      "title": "Cross-reference claims against 10,800+ Hegemonic Audit database",
+      "vertex": "can_be",
+      "status": "active",
+      "rationale": "",
+      "superseded_by": null,
+      "supersedes": null,
+      "cancellation_reason": null,
+      "tags": [
+        "audit",
+        "archive"
+      ],
+      "tasks": []
+    },
+    "DES-025": {
+      "id": "DES-025",
+      "title": "Stage True Bluesky Correction Threads",
+      "vertex": "can_be",
+      "status": "active",
+      "rationale": "",
+      "superseded_by": null,
+      "supersedes": null,
+      "cancellation_reason": null,
+      "tags": [],
+      "tasks": []
+    },
+    "DES-027": {
+      "id": "DES-027",
+      "title": "Multi-Source Event Clustering & Objective 3-Pillar Audit Pipeline",
+      "vertex": "will_be",
+      "status": "completed",
+      "rationale": "",
+      "superseded_by": null,
+      "supersedes": null,
+      "cancellation_reason": null,
+      "tags": [],
+      "tasks": [
+        {
+          "id": "DES-027-T1",
+          "title": "Pre-Quota Event Clustering",
+          "vertex": "can_be",
+          "status": "completed"
+        },
+        {
+          "id": "DES-027-T2",
+          "title": "Objective Event Aspect Audit Prompting",
+          "vertex": "can_be",
+          "status": "completed"
+        }
+      ]
+    },
+    "DES-028": {
+      "id": "DES-028",
+      "title": "Fix Codebase Hazards, Duplicate Injections & Schema Contradictions",
+      "vertex": "can_be",
+      "status": "active",
+      "rationale": "",
+      "superseded_by": null,
+      "supersedes": null,
+      "cancellation_reason": null,
+      "tags": [],
+      "tasks": [
+        {
+          "id": "DES-028-T1",
+          "title": "Restore accidentally archived core modules",
+          "vertex": "can_be",
+          "status": "completed"
+        },
+        {
+          "id": "DES-028-T2",
+          "title": "Eliminate duplicate prompt context injections",
+          "vertex": "can_be",
+          "status": "completed"
+        },
+        {
+          "id": "DES-028-T3",
+          "title": "Fix contradictory aspect schema in output format",
+          "vertex": "can_be",
+          "status": "completed"
+        },
+        {
+          "id": "DES-028-T4",
+          "title": "Purge dead legacy harvester copy",
+          "vertex": "can_be",
+          "status": "cancelled"
+        },
+        {
+          "id": "DES-028-T5",
+          "title": "Unify dual registry builder calls",
+          "vertex": "can_be",
+          "status": "cancelled"
+        },
+        {
+          "id": "DES-028-T6",
+          "title": "Consolidate mode rules into external files",
+          "vertex": "can_be",
+          "status": "pending"
+        },
+        {
+          "id": "DES-028-T7",
+          "title": "Enforce graph coordinates directly from Post 2 and Post 3",
+          "vertex": "can_be",
+          "status": "completed"
+        }
+      ]
+    },
+    "DES-033": {
+      "id": "DES-033",
+      "title": "AITA Reddit Scraper & VFT Verdict Engine Side Mode",
+      "vertex": "will_be",
+      "status": "completed",
+      "rationale": "Scrape Reddit AITA posts and judge them with full 7-verdict mapping (YTA, YWBTA, NTA, YWNBTA, ESH, NAH, INFO), VFT (u, psi) coordinates, 7-Plane Q-tensor, 0.5-Zone inversion check, and actionable resolution.",
+      "superseded_by": null,
+      "supersedes": null,
+      "cancellation_reason": null,
+      "tags": [
+        "aita",
+        "reddit",
+        "vft"
+      ],
+      "tasks": [
+        {
+          "id": "DES-033-T1",
+          "title": "Build Reddit AITA/AITAH JSON scraper with deduplication and WIBTA detection in aita_evaluator.py",
+          "vertex": "can_be",
+          "status": "completed"
+        },
+        {
+          "id": "DES-033-T2",
+          "title": "Implement VFT cognitive/truth prompt + deterministic 7-verdict mapper (YTA, YWBTA, NTA, YWNBTA, ESH, NAH, INFO) + resolution generator",
+          "vertex": "can_be",
+          "status": "completed"
+        },
+        {
+          "id": "DES-033-T3",
+          "title": "Add AITA Side Mode controls to AletheiaLauncher.pyw sharing active fallback queue and Timeout (s)",
+          "vertex": "can_be",
+          "status": "completed"
+        },
+        {
+          "id": "DES-033-T4",
+          "title": "Add unit tests for all 7 verdict mappings and verify isolated output in bluesky_bot/aita/",
+          "vertex": "can_be",
+          "status": "completed"
+        }
+      ]
+    }
+  },
+  "anti_desires": {
+    "ANTI-012": {
+      "id": "ANTI-012",
+      "title": "Never penalize an article coordinate solely because of paywalls or personal op-eds",
+      "vertex": "is_not",
+      "severity": "boundary_taboo",
+      "reason_to_avoid": "Commerce is not fraud",
+      "tags": []
+    },
+    "ANTI-013": {
+      "id": "ANTI-013",
+      "title": "Fixed array indexing posts[13] cannot survive dynamic persona thread lengths",
+      "vertex": "cant_be",
+      "severity": "hard_invariant",
+      "reason_to_avoid": "Persona counts vary between 1 and 4",
+      "tags": []
+    },
+    "ANTI-023": {
+      "id": "ANTI-023",
+      "title": "Live Posted Stories Are Immutable Local Records",
+      "vertex": "cant_be",
+      "severity": "hard_invariant",
+      "reason_to_avoid": "",
+      "tags": []
+    },
+    "ANTI-024": {
+      "id": "ANTI-024",
+      "title": "Zero Partial-Array Re-Audits",
+      "vertex": "is_not",
+      "severity": "hard_invariant",
+      "reason_to_avoid": "",
+      "tags": []
+    },
+    "ANTI-025": {
+      "id": "ANTI-025",
+      "title": "Mandatory Ground Verification Before Status Reports",
+      "vertex": "is_not",
+      "severity": "hard_invariant",
+      "reason_to_avoid": "",
+      "tags": []
+    },
+    "ANTI-031": {
+      "id": "ANTI-031",
+      "title": "Never mix AITA evaluations into news stories/ or stories_registry.js",
+      "vertex": "is_not",
+      "severity": "hard_invariant",
+      "reason_to_avoid": "AITA Reddit posts are personal interpersonal scenarios, not news audits, and must not corrupt the 16.5k news registry or trigger news orphan cleanup.",
+      "tags": [
+        "aita",
+        "isolation"
+      ]
+    }
+  },
+  "comparative_goals": {},
+  "conflicts": [
+    {
+      "desire_id": "DES-016",
+      "anti_desire_id": "ANTI-013",
+      "vector_type": "RED_PRIMARY",
+      "severity": "FATAL_CONTRADICTION",
+      "rule": "If you target 'will_be' but it 'can't be', the desire is fundamentally invalid and is automatically cancelled.",
+      "overlap_terms": [
+        "dynamic",
+        "thread",
+        "persona"
+      ]
+    }
+  ],
+  "process_logs": [],
+  "audit_trail": [
+    {
+      "id": 123,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-033-T4 to DES-033: Add unit tests for all 7 verdict mappings and verify isolated output in bluesky_bot/aita/",
+      "timestamp": "2026-11-18T09:56:25.199349"
+    },
+    {
+      "id": 122,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-033-T3 to DES-033: Add AITA Side Mode controls to AletheiaLauncher.pyw sharing active fallback queue and Timeout (s)",
+      "timestamp": "2026-11-18T09:56:23.328865"
+    },
+    {
+      "id": 121,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-033-T2 to DES-033: Implement VFT cognitive/truth prompt + deterministic 7-verdict mapper (YTA, YWBTA, NTA, YWNBTA, ESH, NAH, INFO) + resolution generator",
+      "timestamp": "2026-11-18T09:56:21.584126"
+    },
+    {
+      "id": 120,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-033-T1 to DES-033: Build Reddit AITA/AITAH JSON scraper with deduplication and WIBTA detection in aita_evaluator.py",
+      "timestamp": "2026-11-18T09:56:19.823105"
+    },
+    {
+      "id": 119,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_ANTI_DESIRE",
+      "details": "Added anti-desire ANTI-031: Never mix AITA evaluations into news stories/ or stories_registry.js at vertex is_not",
+      "timestamp": "2026-11-18T09:55:52.306457"
+    },
+    {
+      "id": 118,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_DESIRE",
+      "details": "Added desire DES-033: AITA Reddit Scraper & VFT Verdict Engine Side Mode at vertex will_be",
+      "timestamp": "2026-11-18T09:55:50.361732"
+    },
+    {
+      "id": 94,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-028-T7 to DES-028: Enforce graph coordinates directly from Post 2 and Post 3",
+      "timestamp": "2026-11-10T17:53:51.668383"
+    },
+    {
+      "id": 93,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-028-T6 to DES-028: Consolidate mode rules into external files",
+      "timestamp": "2026-11-10T16:32:45.798376"
+    },
+    {
+      "id": 92,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-028-T5 to DES-028: Unify dual registry builder calls",
+      "timestamp": "2026-11-10T16:32:39.412172"
+    },
+    {
+      "id": 91,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-028-T4 to DES-028: Purge dead legacy harvester copy",
+      "timestamp": "2026-11-10T16:32:28.238639"
+    },
+    {
+      "id": 90,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-028-T3 to DES-028: Fix contradictory aspect schema in output format",
+      "timestamp": "2026-11-10T16:32:23.013225"
+    },
+    {
+      "id": 89,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-028-T2 to DES-028: Eliminate duplicate prompt context injections",
+      "timestamp": "2026-11-10T16:32:16.872906"
+    },
+    {
+      "id": 88,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-028-T1 to DES-028: Restore accidentally archived core modules",
+      "timestamp": "2026-11-10T16:32:11.471216"
+    },
+    {
+      "id": 87,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_DESIRE",
+      "details": "Added desire DES-028: Fix Codebase Hazards, Duplicate Injections & Schema Contradictions at vertex can_be",
+      "timestamp": "2026-11-10T16:32:05.107138"
+    },
+    {
+      "id": 86,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-027-T2 to DES-027: Objective Event Aspect Audit Prompting",
+      "timestamp": "2026-11-09T18:49:25.507296"
+    },
+    {
+      "id": 85,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_TASK",
+      "details": "Added task DES-027-T1 to DES-027: Pre-Quota Event Clustering",
+      "timestamp": "2026-11-09T18:49:17.163220"
+    },
+    {
+      "id": 84,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_DESIRE",
+      "details": "Added desire DES-027: Multi-Source Event Clustering & Objective 3-Pillar Audit Pipeline at vertex will_be",
+      "timestamp": "2026-11-09T18:48:53.427174"
+    },
+    {
+      "id": 80,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_DESIRE",
+      "details": "Added desire DES-025: Stage True Bluesky Correction Threads at vertex can_be",
+      "timestamp": "2026-11-06T15:21:25.000620"
+    },
+    {
+      "id": 79,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_ANTI_DESIRE",
+      "details": "Added anti-desire ANTI-025: Mandatory Ground Verification Before Status Reports at vertex is_not",
+      "timestamp": "2026-11-06T15:21:18.325130"
+    },
+    {
+      "id": 78,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_ANTI_DESIRE",
+      "details": "Added anti-desire ANTI-024: Zero Partial-Array Re-Audits at vertex is_not",
+      "timestamp": "2026-11-06T15:21:12.708190"
+    },
+    {
+      "id": 77,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_ANTI_DESIRE",
+      "details": "Added anti-desire ANTI-023: Live Posted Stories Are Immutable Local Records at vertex cant_be",
+      "timestamp": "2026-11-06T15:21:06.306896"
+    },
+    {
+      "id": 55,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_ANTI_DESIRE",
+      "details": "Added anti-desire ANTI-013: Fixed array indexing posts[13] cannot survive dynamic persona thread lengths at vertex cant_be",
+      "timestamp": "2026-10-28T17:01:22.604493"
+    },
+    {
+      "id": 54,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_ANTI_DESIRE",
+      "details": "Added anti-desire ANTI-012: Never penalize an article coordinate solely because of paywalls or personal op-eds at vertex is_not",
+      "timestamp": "2026-10-28T17:01:22.603802"
+    },
+    {
+      "id": 53,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_DESIRE",
+      "details": "Added desire DES-017: Cross-reference claims against 10,800+ Hegemonic Audit database at vertex can_be",
+      "timestamp": "2026-10-28T17:01:22.602993"
+    },
+    {
+      "id": 52,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "ADD_DESIRE",
+      "details": "Added desire DES-016: Generate 4-persona dynamic card thread responses at vertex will_be",
+      "timestamp": "2026-10-28T17:01:22.602344"
+    },
+    {
+      "id": 51,
+      "project_id": "PRJ-BSKY-BOT",
+      "action": "INIT_PROJECT",
+      "details": "Project Aletheia Bluesky News Factcheck & Audit Bot (PRJ-BSKY-BOT) initialized.",
+      "timestamp": "2026-10-28T17:01:22.601795"
+    }
+  ]
+}

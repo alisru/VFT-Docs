@@ -1,0 +1,1712 @@
+Command exited with code 0.
+
+Command output:
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+diff --git a/styles.css b/styles.css
+index 8267cd3..2760321 100644
+--- a/styles.css
++++ b/styles.css
+@@ -5,6 +5,7 @@
+   --nav: #fafafa; --border: #e5e5e5; --input-bg: #ffffff; --input-bd: #d0d0d0;
+   --hover: #f0f6fc; --sel: #cce4f7; --tree-line: #cfe3f5;
+   --ctx-bg: #fcfcfc; --ctx-bd: #d6d6d6; --card: #f9f9f9;
++  --thumb-fit: cover;
+ }
+ body.dark {
+   --bg: #191919; --fg: #eaeaea; --muted: #9e9e9e;
+@@ -77,6 +78,73 @@ body { font: 12px "Segoe UI Variable", "Segoe UI", sans-serif; color: var(--fg);
+ .toolbar-row button.active, #toolbar button.active { background: var(--sel); border-color: #0078d4; }
+ .cmd-sep { width: 1px; height: 16px; background: var(--border); margin: 0 4px; flex-shrink: 0; }
+ .cmd-spacer { flex: 1; }
++
++/* Native Windows 11 Explorer Style Toolbar Buttons & Actions */
++.tb-btn {
++  border: 1px solid transparent;
++  background: transparent;
++  color: var(--fg);
++  padding: 4px 8px;
++  border-radius: 4px;
++  font-size: 12px;
++  cursor: pointer;
++  flex-shrink: 0;
++  display: inline-flex;
++  align-items: center;
++  gap: 6px;
++  user-select: none;
++}
++.tb-btn:hover:not(:disabled) {
++  background: var(--hover);
++  border-color: var(--border);
++}
++.tb-btn .tb-ico {
++  font-size: 13px;
++  line-height: 1;
++  display: flex;
++  align-items: center;
++}
++.tb-btn .tb-lbl {
++  font-size: 12px;
++  font-weight: 500;
++  line-height: 1.2;
++}
++.tb-btn .tb-arrow {
++  font-size: 10px;
++  color: var(--muted);
++  margin-left: 1px;
++}
++.tb-action-group {
++  display: inline-flex;
++  align-items: center;
++  gap: 2px;
++  flex-shrink: 0;
++}
++.tb-icon-btn {
++  width: 28px;
++  height: 26px;
++  padding: 0;
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  font-size: 13px;
++  border: 1px solid transparent;
++  background: transparent;
++  border-radius: 4px;
++  cursor: pointer;
++  color: var(--fg);
++  user-select: none;
++  transition: opacity 0.12s, background 0.12s;
++}
++.tb-icon-btn:hover:not(.disabled) {
++  background: var(--hover);
++  border-color: var(--border);
++}
++.tb-icon-btn.disabled, .tb-icon-btn:disabled {
++  opacity: 0.3 !important;
++  pointer-events: none !important;
++  cursor: default !important;
++}
+ #addrWrap {
+   flex: 1;
+   display: flex;
+@@ -164,7 +232,133 @@ body { font: 12px "Segoe UI Variable", "Segoe UI", sans-serif; color: var(--fg);
+ #addrWrap.editing .addr-btn {
+   display: none;
+ }
+-#search { width: 145px; height: 28px; border: 1px solid var(--input-bd); border-radius: 4px; padding: 4px 8px; font: inherit; background: var(--input-bg); color: var(--fg); }
++#searchWrap {
++  display: flex;
++  align-items: center;
++  position: relative;
++  background: var(--input-bg);
++  border: 1px solid var(--input-bd);
++  border-radius: 4px;
++  height: 28px;
++  box-sizing: border-box;
++}
++#searchWrap:focus-within {
++  border-color: var(--accent);
++  box-shadow: 0 0 0 1px var(--accent);
++}
++#search {
++  width: 170px;
++  height: 100%;
++  border: none;
++  background: transparent;
++  padding: 3px 6px;
++  font: inherit;
++  color: var(--fg);
++  outline: none;
++  box-sizing: border-box;
++  transition: width 0.18s ease;
++}
++#search:focus {
++  width: 230px;
++}
++#searchBtn, #searchClearBtn {
++  border: none;
++  background: transparent;
++  color: var(--muted);
++  cursor: pointer;
++  padding: 0 5px;
++  height: 100%;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  font-size: 11px;
++}
++#searchBtn:hover, #searchClearBtn:hover {
++  color: var(--fg);
++}
++#searchClearBtn.hidden {
++  display: none;
++}
++
++/* Search Results Banner */
++.search-banner {
++  flex: none;
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  padding: 5px 12px;
++  background: var(--bar);
++  border-bottom: 1px solid var(--border);
++  font-size: 12px;
++  color: var(--fg);
++  z-index: 5;
++}
++.search-banner.hidden {
++  display: none !important;
++}
++.search-banner .sb-text {
++  display: flex;
++  align-items: center;
++  gap: 6px;
++  overflow: hidden;
++  text-overflow: ellipsis;
++  white-space: nowrap;
++}
++.search-banner .sb-query {
++  font-weight: 700;
++  color: var(--accent);
++}
++.search-banner .sb-dir {
++  color: var(--muted);
++  font-size: 11px;
++}
++.search-banner .sb-count {
++  font-size: 11px;
++  color: var(--muted);
++  font-weight: 600;
++  background: var(--input-bg);
++  padding: 1px 6px;
++  border-radius: 10px;
++  border: 1px solid var(--border);
++}
++.search-banner .sb-cancel {
++  border: 1px solid var(--border);
++  background: var(--input-bg);
++  color: var(--fg);
++  border-radius: 4px;
++  padding: 2px 8px;
++  font-size: 11px;
++  cursor: pointer;
++  flex: none;
++  margin-left: 8px;
++}
++.search-banner .sb-cancel:hover {
++  background: var(--accent);
++  color: #fff;
++  border-color: var(--accent);
++}
++.sb-spinner {
++  display: inline-block;
++  animation: sbRotate 1.2s linear infinite;
++}
++@keyframes sbRotate {
++  from { transform: rotate(0deg); }
++  to { transform: rotate(360deg); }
++}
++
++/* Search results in Details View & Grid views */
++.row.item .search-loc {
++  font-size: 10.5px;
++  color: var(--muted);
++  margin-left: 8px;
++  overflow: hidden;
++  text-overflow: ellipsis;
++  white-space: nowrap;
++  font-weight: 400;
++}
++.row.item:hover .search-loc {
++  color: var(--fg);
++}
+ select, #sortDir { border: 1px solid var(--input-bd); background: var(--input-bg); color: var(--fg); border-radius: 4px; padding: 3px 5px; height: 28px; font: inherit; }
+ 
+ /* Main layout */
+@@ -185,7 +379,7 @@ select, #sortDir { border: 1px solid var(--input-bd); background: var(--input-bg
+ #header > span:hover { background: var(--hover); color: var(--fg); }
+ .col-resizer { position: absolute; left: -3px; top: 0; bottom: 0; width: 6px; cursor: col-resize; z-index: 5; }
+ .col-resizer:hover { background: #0078d4; }
+-.c-name { flex: 1; min-width: 120px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
++.c-name { flex: 1; min-width: 120px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; padding-right: 12px; }
+ .c-date { width: var(--w-date); flex: none; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+ .c-type { width: var(--w-type); flex: none; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+ .c-size { width: var(--w-size); flex: none; text-align: right; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+@@ -274,26 +468,77 @@ body.show-checks .chk { display: inline-block; }
+ .v-list .c-date, .v-list .c-type, .v-list .c-size, .v-small .c-date, .v-small .c-type, .v-small .c-size,
+ .v-medium .c-date, .v-medium .c-type, .v-medium .c-size, .v-large .c-date, .v-large .c-type, .v-large .c-size,
+ .v-xl .c-date, .v-xl .c-type, .v-xl .c-size, .v-tiles .c-date, .v-tiles .c-type, .v-tiles .c-size { display: none; }
+-.v-list .row.item, .v-small .row.item { width: 220px; height: 22px; padding: 2px 6px; overflow: hidden; box-sizing: border-box; }
+-.v-medium .row.item, .v-large .row.item, .v-xl .row.item {
++.v-list .row.item, .v-small .row.item { width: 220px; height: 24px; min-height: 24px; max-height: 24px; padding: 2px 6px; overflow: hidden; box-sizing: border-box; }
++.v-medium .row.item {
++  width: 104px; height: 104px; min-height: 104px; max-height: 104px;
++  position: relative !important;
++  flex-direction: column; align-items: center; justify-content: flex-start;
++  padding: 6px 4px; border-radius: 4px; overflow: hidden; box-sizing: border-box;
++}
++.v-large .row.item {
++  width: 144px; height: 144px; min-height: 144px; max-height: 144px;
++  position: relative !important;
++  flex-direction: column; align-items: center; justify-content: flex-start;
++  padding: 6px 4px; border-radius: 4px; overflow: hidden; box-sizing: border-box;
++}
++.v-xl .row.item {
++  width: 236px; height: 256px; min-height: 256px; max-height: 256px;
++  position: relative !important;
+   flex-direction: column; align-items: center; justify-content: flex-start;
+-  height: auto; padding: 6px 4px; border-radius: 4px; overflow: hidden; box-sizing: border-box;
++  padding: 6px 4px; border-radius: 4px; overflow: hidden; box-sizing: border-box;
+ }
+ .v-medium .c-name, .v-large .c-name, .v-xl .c-name {
+-  display: flex; flex-direction: column; align-items: center; flex: none;
++  display: flex; flex-direction: column; align-items: center; justify-content: flex-start; flex: 1;
+   width: 100% !important; max-width: 100% !important; min-width: 0 !important;
++  padding: 4px 2px 2px !important;
+   white-space: normal; text-align: center; overflow: hidden; box-sizing: border-box;
+ }
+-.v-medium .row.item { width: 104px; } .v-medium .ico { width: 48px; height: 48px; }
+-.v-large .row.item { width: 144px; } .v-large .ico { width: 96px; height: 96px; }
+-.v-xl .row.item { width: 236px; } .v-xl .ico { width: 190px; height: 190px; }
++.v-medium .ico { width: 48px; height: 48px; flex: 0 0 48px; margin-bottom: 4px; }
++.v-large .ico { width: 96px; height: 96px; flex: 0 0 96px; margin-bottom: 4px; }
++.v-xl .ico { width: 168px; height: 168px; flex: 0 0 168px; margin-bottom: 8px; }
+ .v-medium .ico.photo, .v-large .ico.photo, .v-xl .ico.photo { object-fit: cover; border-radius: 3px; }
+ .v-medium .nm, .v-large .nm, .v-xl .nm {
+   width: 100%; max-width: 100%; overflow: hidden; text-overflow: ellipsis;
++  font-size: 11px;
++  color: var(--fg);
+   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+   overflow-wrap: anywhere; word-break: break-all; line-height: 1.25; box-sizing: border-box;
+ }
+-.v-medium .arrow, .v-large .arrow, .v-xl .arrow { align-self: flex-start; }
++:is(.v-medium, .v-large, .v-xl) .arrow {
++  position: absolute !important;
++  top: 4px;
++  left: 4px;
++  z-index: 6;
++  width: 18px;
++  height: 18px;
++  line-height: 16px;
++  text-align: center;
++  border-radius: 3px;
++  background: var(--input-bg);
++  border: 1px solid var(--border);
++  opacity: 0.7;
++  font-size: 10px;
++  cursor: pointer;
++  display: flex !important;
++  align-items: center;
++  justify-content: center;
++  align-self: auto;
++}
++:is(.v-medium, .v-large, .v-xl) .arrow:hover {
++  opacity: 1;
++  background: var(--hover);
++  border-color: #0078d4;
++  color: var(--fg);
++}
++:is(.v-medium, .v-large, .v-xl) .arrow.empty {
++  display: none !important;
++}
++:is(.v-medium, .v-large, .v-xl) .chk {
++  position: absolute !important;
++  top: 4px;
++  right: 4px;
++  z-index: 6;
++}
+ .v-tiles .row.item { width: 270px; height: 56px; padding: 4px 6px; position: relative; border-radius: 4px; overflow: hidden; box-sizing: border-box; }
+ .v-tiles .ico { width: 40px; height: 40px; }
+ .v-tiles .ico.photo { object-fit: cover; border-radius: 3px; }
+@@ -668,9 +913,9 @@ body.dark .room-item .rm-focus-child-btn { background: rgba(255, 255, 255, 0.08)
+ .map-room-body.v-medium .room-item.has-thumb { height: 92px; }
+ .map-room-body.v-large .room-item.has-thumb { height: 126px; }
+ .map-room-body.v-xl .room-item.has-thumb { height: 160px; }
+-.v-medium .row.item.has-thumb { height: 108px; }
+-.v-large .row.item.has-thumb { height: 148px; }
+-.v-xl .row.item.has-thumb { height: 226px; }
++.v-medium .row.item.has-thumb { height: 104px; min-height: 104px; max-height: 104px; }
++.v-large .row.item.has-thumb { height: 144px; min-height: 144px; max-height: 144px; }
++.v-xl .row.item.has-thumb { height: 256px; min-height: 256px; max-height: 256px; }
+ 
+ .map-room-body.v-medium .room-item.has-thumb .ico,
+ .map-room-body.v-large .room-item.has-thumb .ico,
+@@ -685,7 +930,8 @@ body.dark .room-item .rm-focus-child-btn { background: rgba(255, 255, 255, 0.08)
+   width: 100% !important;
+   height: 100% !important;
+   margin: 0 !important;
+-  object-fit: cover !important;
++  object-fit: var(--thumb-fit, cover) !important;
++  background: rgba(0, 0, 0, 0.08);
+   border-radius: inherit;
+   z-index: 0;
+ }
+@@ -962,26 +1208,58 @@ body.dark .room-item .rm-focus-child-btn { background: rgba(255, 255, 255, 0.08)
+ /* Two-Rectangle Edge Lens Overlay (Inner Normal Viewport Frame + Outer Shrinking Margin for Far Rooms/Files) */
+ .lens-inner-frame {
+   position: absolute; inset: 64px;
+-  border: 2px solid var(--fg); border-radius: 4px;
++  border: 1.5px dashed rgba(0, 120, 212, 0.38); border-radius: 6px;
+   pointer-events: none; z-index: 25;
+-  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.06);
++  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.04);
++}
++body.dark .lens-inner-frame {
++  border-color: rgba(56, 189, 248, 0.4);
++  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.22);
+ }
+-body.dark .lens-inner-frame { box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.25); }
+ .lens-margin-layer { position: absolute; inset: 0; pointer-events: none; z-index: 30; overflow: hidden; }
+ .lens-proxy {
+   position: absolute; transform: translate(-50%, -50%);
+-  width: var(--px-w, 36px); height: var(--px-h, 28px);
+-  border: 2px solid var(--fg); background: var(--card);
+-  border-radius: 3px; pointer-events: auto; cursor: pointer;
+-  display: flex; flex-direction: column; align-items: center; justify-content: center;
+-  padding: 2px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+-  transition: transform 0.1s, border-color 0.1s;
++  width: var(--px-w, 55px); height: var(--px-h, 24px);
++  border: 1.5px solid var(--fg); background: var(--card);
++  border-radius: 5px; pointer-events: auto; cursor: pointer;
++  display: flex; flex-direction: row; align-items: center; justify-content: flex-start;
++  gap: 4px; padding: 2px 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.22);
++  transition: transform 0.12s ease, border-color 0.12s ease, width 0.18s ease, box-shadow 0.12s ease;
++  white-space: nowrap; z-index: 35; box-sizing: border-box;
+ }
+ .lens-proxy.is-room { border-color: #d99b26; background: rgba(255, 248, 230, 0.96); }
+-body.dark .lens-proxy.is-room { background: #2d2618; }
+-.lens-proxy:hover { transform: translate(-50%, -50%) scale(1.25); border-color: #0078d4; z-index: 45; }
+-.lens-proxy .lp-lbl { font-size: 8.5px; font-weight: 600; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; pointer-events: none; }
+-.lens-proxy.tiny .lp-lbl { display: none; }
++body.dark .lens-proxy.is-room { background: #231c12; border-color: #e6a832; color: #fef3c7; }
++.lens-proxy.is-file { border-color: #38bdf8; background: rgba(240, 249, 255, 0.96); }
++body.dark .lens-proxy.is-file { background: #0c4a6e; border-color: #38bdf8; color: #e0f2fe; }
++.lens-proxy.is-html { border-color: #0284c7; background: rgba(240, 249, 255, 0.96); }
++body.dark .lens-proxy.is-html { background: #082f49; border-color: #0ea5e9; color: #bae6fd; }
++.lens-proxy .lp-ico { font-size: 11px; flex: none; line-height: 1; }
++.lens-proxy .lp-lbl { font-size: 11px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; pointer-events: none; }
++
++/* Expanded on hover: expands smoothly to fit the full room name cleanly */
++.lens-proxy:hover, .lens-proxy.hover-expanded {
++  width: max-content !important;
++  min-width: 80px;
++  max-width: 380px !important;
++  height: 26px !important;
++  padding: 2px 8px !important;
++  border-color: #0078d4 !important;
++  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45) !important;
++  z-index: 9999 !important;
++  transform: translate(-50%, -50%) scale(1.06);
++  background: var(--bar) !important;
++}
++body.dark .lens-proxy:hover, body.dark .lens-proxy.hover-expanded {
++  background: #1e293b !important;
++  color: #fff !important;
++  border-color: #38bdf8 !important;
++}
++.lens-proxy:hover .lp-lbl, .lens-proxy.hover-expanded .lp-lbl {
++  font-size: 11.5px !important;
++  font-weight: 700 !important;
++  overflow: visible !important;
++  text-overflow: clip !important;
++}
+ 
+ /* Landscape Video-Game Map HUD */
+ .map-hud { position: absolute; bottom: 10px; left: 12px; z-index: 40; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; background: var(--ctx-bg); border: 1px solid var(--ctx-bd); padding: 5px 10px; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.18); font-size: 11px; width: fit-content; max-width: calc(100% - 220px); }
+@@ -990,6 +1268,97 @@ body.dark .lens-proxy.is-room { background: #2d2618; }
+ .map-hud label { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); }
+ .map-hud input[type="range"] { width: 58px; height: 14px; cursor: pointer; }
+ 
++/* RTS Camera Zones HUD Cluster */
++.hud-zones {
++  display: inline-flex;
++  align-items: center;
++  gap: 3px;
++  padding: 1px 4px;
++  background: var(--input-bg);
++  border: 1px solid var(--input-bd);
++  border-radius: 5px;
++  margin-left: 2px;
++}
++.hud-zones-title {
++  font-size: 10px;
++  font-weight: 700;
++  color: var(--muted);
++  text-transform: uppercase;
++  margin-right: 2px;
++  letter-spacing: 0.5px;
++}
++.zone-btn {
++  width: 20px;
++  height: 20px;
++  padding: 0 !important;
++  font-size: 10px !important;
++  font-weight: 700 !important;
++  display: inline-flex !important;
++  align-items: center !important;
++  justify-content: center !important;
++  border-radius: 3px !important;
++  color: var(--muted) !important;
++  background: transparent !important;
++  border: 1px dashed var(--border) !important;
++  cursor: pointer;
++  transition: all 0.15s ease;
++}
++.zone-btn:hover {
++  background: var(--hover) !important;
++  color: var(--fg) !important;
++  border-color: var(--accent) !important;
++}
++.zone-btn.has-zone {
++  border: 1.5px solid #d99b26 !important;
++  color: #d99b26 !important;
++  background: rgba(217, 155, 38, 0.15) !important;
++}
++body.dark .zone-btn.has-zone {
++  border-color: #f59e0b !important;
++  color: #fbbf24 !important;
++  background: rgba(245, 158, 11, 0.2) !important;
++}
++.zone-btn.has-zone:hover {
++  background: #d99b26 !important;
++  color: #fff !important;
++  box-shadow: 0 0 8px rgba(217, 155, 38, 0.5);
++}
++.zone-btn.active-ping {
++  animation: zonePing 0.35s ease-out;
++}
++@keyframes zonePing {
++  0% { transform: scale(0.85); box-shadow: 0 0 0 0 rgba(217, 155, 38, 0.8); }
++  50% { transform: scale(1.3); box-shadow: 0 0 0 6px rgba(217, 155, 38, 0); }
++  100% { transform: scale(1); }
++}
++.landscape-zone-toast {
++  position: absolute;
++  top: 16px;
++  left: 50%;
++  transform: translateX(-50%) translateY(-10px);
++  background: rgba(15, 23, 42, 0.92);
++  color: #fff;
++  border: 1px solid rgba(255, 255, 255, 0.2);
++  border-radius: 20px;
++  padding: 5px 16px;
++  font-size: 12px;
++  font-weight: 600;
++  pointer-events: none;
++  opacity: 0;
++  transition: opacity 0.2s ease, transform 0.2s ease;
++  z-index: 60;
++  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
++}
++.landscape-zone-toast.visible {
++  opacity: 1;
++  transform: translateX(-50%) translateY(0);
++}
++.bridge-anchor-peg {
++  stroke: var(--input-bd);
++  stroke-width: 1.5px;
++  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4));
++}
++
+ /* Tactical Radar Minimap HUD */
+ .landscape-radar {
+   position: absolute; bottom: 10px; right: 12px; z-index: 45;
+@@ -1368,52 +1737,106 @@ input.rn { font: inherit; border: 1px solid #0067c0; background: var(--input-bg)
+   animation-delay: var(--phase-delay, 0s) !important;
+ }
+ 
+-/* 100% GPU-Composited Breathing Mode & Rain Puddle Ripple (Animates ONLY opacity & transform on ::before — Zero CPU Repaint Lag!) */
+-@keyframes breathingGpuPulse {
++/* 100% GPU-Composited Breathing Mode: Rims physically expand outward with glowing aura */
++@keyframes breathingRimExpansion {
+   0%, 100% {
+-    opacity: 0;
+-    transform: scale(1);
++    inset: -2px;
++    box-shadow: 0 0 0 0px var(--breath-target, #ffffff),
++                0 0 4px var(--breath-glow, rgba(255, 255, 255, 0.3));
++    opacity: 0.35;
+   }
+   50% {
+-    opacity: 1;
+-    transform: scale(1.014);
++    inset: calc(-1 * var(--breath-scale, 20px));
++    box-shadow: 0 0 0 calc(var(--breath-scale, 20px) * 0.4) var(--breath-target, #ffffff),
++                0 0 calc(var(--room-glow-range, 18px) + var(--breath-scale, 20px) * 1.5) var(--breath-glow, rgba(255, 255, 255, 0.95));
++    opacity: 0.9;
+   }
+ }
+ @keyframes breathingTileGpuPulse {
+   0%, 100% {
++    background-color: transparent;
+     border-color: var(--folder-ambient-bd, rgba(255,255,255,0.12));
++    transform: scale(1);
+   }
+   50% {
+     background-color: var(--breath-tile-bg, rgba(255, 255, 255, 0.18));
+     border-color: var(--breath-target, #ffffff);
++    transform: scale(1.04);
+   }
+ }
+-.breathing-room::before,
+-.puddle-ripple-room::before {
++.breathing-room::before {
+   content: '';
+   position: absolute;
+   inset: -2px;
+   border-radius: inherit;
+   border: 3px solid var(--breath-target, #ffffff);
+-  background-color: var(--breath-target-bg, rgba(51, 65, 85, 0.9));
+-  box-shadow: 0 0 0 calc(var(--breath-scale, 20px) * 0.28) var(--breath-target, rgba(255, 255, 255, 0.42)),
+-              0 0 calc(var(--room-glow-intensity, 0.5) * (var(--room-glow-range, 18px) + var(--breath-scale, 20px) * 1.8)) var(--breath-glow, rgba(255, 255, 255, 0.85));
++  background-color: transparent !important;
+   pointer-events: none;
+   z-index: 1;
+-  opacity: 0;
+-  will-change: opacity, transform;
+-}
+-.breathing-room::before {
+-  animation: breathingGpuPulse var(--breath-duration, 6s) ease-in-out infinite;
++  opacity: 0.35;
++  will-change: inset, opacity, box-shadow;
++  animation: breathingRimExpansion var(--breath-duration, 6s) ease-in-out infinite;
+ }
+ .breathing-room.affect-tiles .room-item.is-dir {
+   animation: breathingTileGpuPulse var(--breath-duration, 6s) ease-in-out infinite;
+ }
++
++/* Rain Puddle Ripple: Calm water surface; NO background flashing, independent gentle ripple */
++@keyframes puddleRoomWave {
++  0% {
++    opacity: 0.9;
++    box-shadow: 0 0 0 0px var(--puddle-target, #38bdf8),
++                0 0 8px rgba(56, 189, 248, 0.6);
++    transform: scale(1);
++  }
++  100% {
++    opacity: 0;
++    box-shadow: 0 0 0 calc(var(--puddle-scale, 24px) * 1.5) var(--puddle-target, #38bdf8),
++                0 0 30px rgba(56, 189, 248, 0);
++    transform: scale(1.02);
++  }
++}
+ .puddle-ripple-room::before {
+-  animation: breathingGpuPulse var(--puddle-duration, 5s) ease-in-out 1;
++  content: '';
++  position: absolute;
++  inset: -2px;
++  border-radius: inherit;
++  border: 2px solid var(--puddle-target, #38bdf8);
++  pointer-events: none;
++  z-index: 1;
++  animation: puddleRoomWave var(--puddle-duration, 5s) cubic-bezier(0.16, 1, 0.3, 1) 1 forwards;
++}
++
++/* In Rain mode, file and folder tiles inside the touched room grow and shrink as the rain ripple passes over them */
++@keyframes puddleTileRippleWave {
++  0% {
++    transform: scale(1);
++  }
++  30% {
++    transform: scale(1.12);
++  }
++  65% {
++    transform: scale(0.94);
++  }
++  100% {
++    transform: scale(1);
++  }
++}
++.puddle-ripple-room .room-item {
++  animation: puddleTileRippleWave calc(var(--puddle-duration, 5s) * 0.65) cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
++  transform-origin: center center;
+ }
+-.puddle-ripple-room.affect-tiles .room-item.is-dir {
+-  animation: breathingTileGpuPulse var(--puddle-duration, 5s) ease-in-out 1;
++.puddle-ripple-room .room-item:nth-child(2n) {
++  animation-delay: 0.08s;
++}
++.puddle-ripple-room .room-item:nth-child(3n) {
++  animation-delay: 0.16s;
++}
++.puddle-ripple-room .room-item:nth-child(4n) {
++  animation-delay: 0.24s;
++}
++.puddle-ripple-room .room-item:nth-child(5n) {
++  animation-delay: 0.32s;
+ }
+ 
+ /* Rain Puddle Field Raindrop Expanding Wave Ring */
+@@ -2162,22 +2585,163 @@ input.rn { font: inherit; border: 1px solid #0067c0; background: var(--input-bg)
+   box-shadow: 0 0 6px var(--child-folder-glow, rgba(0, 120, 212, 0.4)) !important;
+ }
+ 
+-/* Integrated Terminal Drawer (Bottom Dock) */
+-.terminal-drawer {
+-  flex: none; height: 220px; min-height: 120px; max-height: 50vh;
+-  background: #0d1117; color: #c9d1d9; border-top: 2px solid #30363d;
+-  display: flex; flex-direction: column; z-index: 50; font-family: 'Consolas', 'Courier New', monospace;
++/* ============================================================
++   Contextual Text & Tile Contrast Engine
++   Guarantees all text & controls are contextually readable across any background
++   ============================================================ */
++
++/* 1. Dark Room Container & Header */
++.map-room.dark-room {
++  --room-fg: #f8fafc;
++  --room-muted: rgba(248, 250, 252, 0.74);
+ }
+-.term-drawer-head {
+-  flex: none; height: 28px; background: #161b22; border-bottom: 1px solid #30363d;
+-  display: flex; align-items: center; gap: 8px; padding: 0 10px; font-size: 11px; font-weight: 600;
++.map-room.light-room {
++  --room-fg: #0f172a;
++  --room-muted: #475569;
+ }
+-.term-title { color: #58a6ff; flex: 1; }
+-.term-shell-sel {
+-  font-size: 10px; height: 20px; background: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 3px; padding: 0 4px;
++
++.map-room.dark-room .map-room-head {
++  background: rgba(15, 23, 42, 0.85) !important;
++  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
++  color: #f8fafc !important;
+ }
+-.term-btn {
+-  background: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 3px; padding: 1px 6px; font-size: 10px; cursor: pointer;
++.map-room.dark-room .map-room-head .rm-title,
++.map-room.dark-room .map-room-head .rm-name {
++  color: #f8fafc !important;
++}
++.map-room.dark-room .map-room-head .rm-dims {
++  color: rgba(248, 250, 252, 0.65) !important;
++}
++.map-room.dark-room .map-room-head button,
++.map-room.dark-room .map-room-head select {
++  background: rgba(255, 255, 255, 0.12) !important;
++  border-color: rgba(255, 255, 255, 0.25) !important;
++  color: #f8fafc !important;
++}
++.map-room.dark-room .map-room-head button:hover {
++  background: var(--accent, #0078d4) !important;
++  border-color: var(--accent, #0078d4) !important;
++  color: #ffffff !important;
++}
++
++/* Details Header in Dark Room */
++.map-room.dark-room .rm-details-head {
++  border-bottom-color: rgba(255, 255, 255, 0.18) !important;
++}
++.map-room.dark-room .rm-details-head > span {
++  color: rgba(248, 250, 252, 0.75) !important;
++}
++
++/* 2. Dark Tiles & Dark Rooms: High-Contrast Light Text, Readable Subtitles, Subtle Shadow */
++.room-item.tile-dark,
++.map-room.dark-room .room-item {
++  color: #f8fafc !important;
++}
++.room-item.tile-dark .nm,
++.map-room.dark-room .room-item .nm,
++.map-room.dark-room .nm {
++  color: #f8fafc !important;
++  font-weight: 600 !important;
++  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
++}
++.room-item.tile-dark .c-tile-sub,
++.room-item.tile-dark .c-date,
++.room-item.tile-dark .c-type,
++.room-item.tile-dark .c-size,
++.map-room.dark-room .c-tile-sub,
++.map-room.dark-room .room-item .c-tile-sub,
++.map-room.dark-room .room-item .c-date,
++.map-room.dark-room .room-item .c-type,
++.map-room.dark-room .room-item .c-size {
++  color: rgba(248, 250, 252, 0.82) !important;
++  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
++}
++
++/* Target & Bridge buttons on dark tiles */
++.room-item.tile-dark .rm-bridge-indicator,
++.room-item.tile-dark .rm-focus-child-btn,
++.map-room.dark-room .room-item .rm-bridge-indicator,
++.map-room.dark-room .room-item .rm-focus-child-btn {
++  background: rgba(255, 255, 255, 0.16) !important;
++  border-color: rgba(255, 255, 255, 0.32) !important;
++  color: #f8fafc !important;
++}
++.room-item.tile-dark .rm-bridge-indicator:hover,
++.room-item.tile-dark .rm-focus-child-btn:hover,
++.map-room.dark-room .room-item .rm-bridge-indicator:hover,
++.map-room.dark-room .room-item .rm-focus-child-btn:hover {
++  background: rgba(255, 255, 255, 0.28) !important;
++  border-color: rgba(255, 255, 255, 0.55) !important;
++}
++
++/* File items (non-directories) inside dark rooms: harmonious translucent dark surface instead of stark white */
++.map-room.dark-room .room-item:not(.is-dir) {
++  background: rgba(255, 255, 255, 0.08) !important;
++  border-color: rgba(255, 255, 255, 0.18) !important;
++  color: #f8fafc !important;
++}
++.map-room.dark-room .room-item:not(.is-dir):hover {
++  background: rgba(255, 255, 255, 0.15) !important;
++  border-color: rgba(0, 120, 212, 0.6) !important;
++}
++
++/* Folder items inside dark rooms */
++.map-room.dark-room .room-item.is-dir {
++  background: var(--folder-ambient-bg, rgba(255, 255, 255, 0.08));
++  border-color: var(--folder-ambient-bd, rgba(255, 255, 255, 0.25));
++}
++.map-room.dark-room .room-item.is-dir:hover {
++  background: var(--folder-ambient-hover, rgba(255, 255, 255, 0.18));
++  border-color: var(--folder-ambient-bd-hover, rgba(255, 255, 255, 0.5));
++}
++
++/* 3. Light Tiles: Dark Crisp High-Contrast Text */
++.room-item.tile-light,
++.map-room.light-room .room-item:not(.tile-dark) {
++  color: #0f172a !important;
++}
++.room-item.tile-light .nm,
++.map-room.light-room .room-item:not(.tile-dark) .nm {
++  color: #0f172a !important;
++  font-weight: 600 !important;
++  text-shadow: none !important;
++}
++.room-item.tile-light .c-tile-sub,
++.room-item.tile-light .c-date,
++.room-item.tile-light .c-type,
++.room-item.tile-light .c-size,
++.map-room.light-room .room-item:not(.tile-dark) .c-tile-sub,
++.map-room.light-room .room-item:not(.tile-dark) .c-date,
++.map-room.light-room .room-item:not(.tile-dark) .c-type,
++.map-room.light-room .room-item:not(.tile-dark) .c-size {
++  color: #475569 !important;
++  text-shadow: none !important;
++}
++.room-item.tile-light .rm-bridge-indicator,
++.room-item.tile-light .rm-focus-child-btn,
++.map-room.light-room .room-item:not(.tile-dark) .rm-bridge-indicator,
++.map-room.light-room .room-item:not(.tile-dark) .rm-focus-child-btn {
++  background: rgba(0, 0, 0, 0.06) !important;
++  border-color: rgba(0, 0, 0, 0.18) !important;
++  color: #0f172a !important;
++}
++
++/* Integrated Terminal Drawer (Bottom Dock) */
++.terminal-drawer {
++  flex: none; height: 220px; min-height: 120px; max-height: 50vh;
++  background: #0d1117; color: #c9d1d9; border-top: 2px solid #30363d;
++  display: flex; flex-direction: column; z-index: 50; font-family: 'Consolas', 'Courier New', monospace;
++}
++.term-drawer-head {
++  flex: none; height: 28px; background: #161b22; border-bottom: 1px solid #30363d;
++  display: flex; align-items: center; gap: 8px; padding: 0 10px; font-size: 11px; font-weight: 600;
++}
++.term-title { color: #58a6ff; flex: 1; }
++.term-shell-sel {
++  font-size: 10px; height: 20px; background: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 3px; padding: 0 4px;
++}
++.term-btn {
++  background: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 3px; padding: 1px 6px; font-size: 10px; cursor: pointer;
+ }
+ .term-btn:hover { background: #30363d; color: #fff; }
+ .term-drawer-body {
+@@ -2215,60 +2779,839 @@ input.rn { font: inherit; border: 1px solid #0067c0; background: var(--input-bg)
+ 
+ 
+ 
+-/* ---- Per-folder layout of expanded contents (grid views): wrap | row | col | room ---- */
+-.kl-btn { display: none; margin-left: 4px; font-size: 11px; line-height: 14px; padding: 0 3px; border-radius: 3px; color: var(--muted); cursor: pointer; flex: none; }
+-.row.item.expanded .kl-btn { display: inline-block; }
++/* ---- Per-folder layout of expanded contents (grid views): col | row | wrap | room ---- */
++.kl-btn {
++  display: inline-block;
++  font-size: 11px;
++  line-height: 14px;
++  padding: 0 3px;
++  border-radius: 3px;
++  color: var(--muted);
++  cursor: pointer;
++  flex: none;
++}
+ .kl-btn:hover { background: var(--border); color: var(--fg); }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .kids.open.kl-row {
+-  flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; align-items: flex-start; padding-bottom: 8px; }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .kids.open.kl-row > * { flex: none; }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .kids.open.kl-col {
+-  flex-direction: column; flex-wrap: nowrap; flex: 0 0 100%; max-height: 340px; overflow-y: auto; overflow-x: hidden; align-items: flex-start; }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .kids.open.kl-col > * { flex: none; }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .kids.open.kl-room {
+-  flex: 0 0 auto; width: 520px; height: 260px; min-width: 160px; min-height: 90px; max-width: 100%;
+-  resize: both; overflow: auto; justify-content: space-between; align-content: flex-start;
+-  border: 1px solid var(--tree-line); border-left-width: 2px; border-radius: 6px; padding: 6px; background: var(--bar); }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .kids.open.kl-room::after { content: ''; flex: auto; }
+-
+-/* Sub-room must not stretch its neighbours to the room's height */
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) { align-items: flex-start; }
+-
+-/* ---- Dense packing: fixed-size cells, expanded folders / sub-rooms span cells, items fill the gaps ---- */
+-#list.dense-grid, .kids.open.dense-grid {
+-  display: grid !important; grid-auto-flow: row dense; grid-template-columns: repeat(auto-fill, var(--dcw, 120px));
+-  grid-auto-rows: var(--dch, auto); gap: 4px; justify-content: start; align-items: start; align-content: start; }
+-.dense-grid > .row.item { width: auto; }
+-.dense-grid > .kids.open.dense-full { grid-column: 1 / -1; }
+-.dense-grid > .kids.open.kl-room { grid-column: span var(--sc, 3); grid-row: span var(--sr, 3); width: auto; height: auto; max-width: none; box-sizing: border-box; }
+-#denseBtn.active { background: var(--accent); color: #fff; }
+-
+-/* ---- Expanded folder = one flowing block (folder + contents) that sits side by side with other items ---- */
+-.grp-fold { flex: none; display: flex; flex-direction: column; align-items: flex-start; max-width: 100%; }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .grp-fold > .kids.open {
+-  display: flex; flex: none; width: auto; max-width: 100%; box-sizing: border-box; align-items: flex-start; align-content: flex-start;
+-  flex-direction: column; flex-wrap: nowrap; max-height: 340px; overflow-y: auto; overflow-x: hidden; height: auto; resize: none; }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .grp-fold > .kids.open > * { flex: none; }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .grp-fold > .kids.open.kl-row {
+-  flex-direction: row; max-height: none; overflow-x: auto; overflow-y: hidden; max-width: 70vw; padding-bottom: 8px; }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .grp-fold > .kids.open.kl-wrap {
+-  flex-direction: row; flex-wrap: wrap; width: 520px; }
+-:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .grp-fold > .kids.open.kl-room {
+-  flex-direction: row; flex-wrap: wrap; width: 520px; height: 260px; max-height: none; min-width: 160px; min-height: 90px;
+-  resize: both; overflow: auto; justify-content: space-between;
+-  border: 1px solid var(--tree-line); border-left-width: 2px; border-radius: 6px; padding: 6px; background: var(--bar); }
+-
+-/* ---- Floats pack the top-level list tightly: later items slide into the gaps beside/below tall blocks ---- */
+-#list:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) { display: block !important; overflow-y: auto; }
+-#list:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles)::after { content: ''; display: block; clear: both; }
+-#list:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) > .row.item,
+-#list:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) > .grp-fold { float: left; margin: 0 4px 4px 0; }
+-
+-/* ---- Sub-room: inline box that CONTAINS the folder tile and its contents in one flow ---- */
+-.grp-fold.room:has(> .row.item.expanded) {
+-  flex-direction: row; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; justify-content: space-between;
+-  width: 520px; height: 260px; min-width: 160px; min-height: 90px; max-width: 100%; box-sizing: border-box;
+-  resize: both; overflow: auto; border: 1px solid var(--tree-line); border-radius: 6px; padding: 4px; background: var(--bar); }
+-.grp-fold.room:has(> .row.item.expanded) > .kids.open { display: contents !important; }
+-.grp-fold.room:has(> .row.item.expanded) > .kids.open > * { flex: none; }
+-.grp-fold.room:has(> .row.item.expanded)::after { content: ''; flex: auto; }
++
++/* Grid views: Float packing allows files and folders to seamlessly fill the space to the right of sub-rooms */
++:is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) {
++  display: block !important;
++  overflow-y: auto !important;
++  padding: 4px 8px;
++  width: 100% !important;
++  max-width: 100% !important;
++  box-sizing: border-box !important;
++}
++:is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles)::after,
++.grp-body::after {
++  content: '';
++  display: block !important;
++  clear: both !important;
++}
++:is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) > .row.item,
++:is(#list, #spList):is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) > .grp-fold,
++.grp-body > .row.item,
++.grp-body > .grp-fold {
++  float: left !important;
++  margin: 0 4px 4px 0 !important;
++}
++
++/* Base folder group wrapper in grid views */
++.grp-fold {
++  float: left !important;
++  margin: 0 4px 4px 0 !important;
++  display: block;
++  width: auto;
++  box-sizing: border-box;
++}
++.grp-fold > .row.item {
++  float: left !important;
++  margin: 0 !important;
++}
++
++/* In Details & Content views: full width row */
++:is(.v-details, .v-content) .grp-fold,
++:is(.v-details, .v-content) .grp-fold:has(> .kids.open.kl-col) {
++  display: flex !important;
++  flex-direction: column !important;
++  align-items: flex-start !important;
++  float: none !important;
++  clear: both !important;
++  width: 100% !important;
++  max-width: 100% !important;
++  box-sizing: border-box !important;
++}
++:is(.v-details, .v-content) .grp-fold > .row.item,
++:is(.v-details, .v-content) .grp-fold:has(> .kids.open.kl-col) > .row.item {
++  float: none !important;
++  width: 100% !important;
++  max-width: 100% !important;
++  box-sizing: border-box !important;
++}
++:is(.v-details, .v-content) .grp-fold:not(.room) > .kids.open,
++:is(.v-details, .v-content) .grp-fold:not(.room) > .kids.open.kl-col {
++  float: none !important;
++  width: calc(100% - 24px) !important;
++  max-width: 100% !important;
++  margin-left: 18px !important;
++  margin-top: 3px !important;
++}
++
++/* In Grid views: folder stays in its grid position, children drop down directly in column */
++:is(.v-list, .v-small, .v-medium, .v-large, .v-xl, .v-tiles) .grp-fold:has(> .kids.open.kl-col) {
++  display: flex !important;
++  flex-direction: column !important;
++  align-items: flex-start !important;
++  float: left !important;
++  clear: none !important;
++  width: auto !important;
++  box-sizing: border-box !important;
++}
++
++/* Mode: Column under folder (dropdown column) */
++.grp-fold:not(.room) > .kids.open.kl-col {
++  display: flex !important;
++  flex-direction: column !important;
++  flex-wrap: nowrap !important;
++  max-height: 380px;
++  overflow-y: auto;
++  overflow-x: hidden;
++  border-left: 2px solid var(--tree-line);
++  padding: 2px 0 4px 6px;
++  box-sizing: border-box;
++}
++.grp-fold:not(.room) > .kids.open.kl-col > * {
++  flex: none;
++}
++/* Only constrain to 24px rows when child folder is set to a list-like view */
++.grp-fold:not(.room) > .kids.open.kl-col:is(.v-list, .v-small, .v-details) > .row.item {
++  width: 100% !important;
++  min-width: 190px !important;
++  max-width: 280px !important;
++  height: 24px !important;
++  min-height: 24px !important;
++  flex-direction: row !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++  padding: 1px 6px !important;
++}
++.grp-fold:not(.room) > .kids.open.kl-col:is(.v-list, .v-small, .v-details) > .row.item .ico {
++  position: static !important;
++  width: 16px !important;
++  height: 16px !important;
++  margin-right: 6px !important;
++  flex: none !important;
++}
++.grp-fold:not(.room) > .kids.open.kl-col:is(.v-list, .v-small, .v-details) > .row.item .c-name {
++  flex-direction: row !important;
++  align-items: center !important;
++  width: auto !important;
++  max-width: 100% !important;
++  text-align: left !important;
++  white-space: nowrap !important;
++  overflow: hidden !important;
++  text-overflow: ellipsis !important;
++  padding: 0 !important;
++}
++.grp-fold:not(.room) > .kids.open.kl-col:is(.v-list, .v-small, .v-details) > .row.item .nm {
++  position: static !important;
++  display: inline !important;
++  width: auto !important;
++  height: auto !important;
++  padding: 0 !important;
++  background: transparent !important;
++  color: var(--fg) !important;
++  text-shadow: none !important;
++  overflow: hidden !important;
++  text-overflow: ellipsis !important;
++  white-space: nowrap !important;
++}
++
++/* Sub-room & folder icon buttons wrapper (View/Layout '⊞' and Grouping '📑') */
++.sub-opt-wrap {
++  display: none;
++}
++/* In Grid Cards (v-medium, v-large, v-xl, v-tiles): sits in top-right corner without entering .c-name or displacing .nm */
++:is(.v-medium, .v-large, .v-xl, .v-tiles) .row.item .sub-opt-wrap {
++  position: absolute !important;
++  top: 4px !important;
++  right: 4px !important;
++  z-index: 6;
++  display: none;
++  align-items: center;
++  gap: 2px;
++}
++:is(.v-medium, .v-large, .v-xl, .v-tiles) .row.item.expanded .sub-opt-wrap,
++:is(.v-medium, .v-large, .v-xl, .v-tiles) .row.item:hover .sub-opt-wrap {
++  display: flex !important;
++}
++
++/* In Details & List views: sits inline beside .c-name */
++:is(.v-details, .v-list, .v-small, .v-content) .row.item .sub-opt-wrap {
++  position: static !important;
++  display: none;
++  align-items: center;
++  gap: 3px;
++  margin-left: 6px;
++}
++:is(.v-details, .v-list, .v-small, .v-content) .row.item.expanded .sub-opt-wrap,
++:is(.v-details, .v-list, .v-small, .v-content) .row.item:hover .sub-opt-wrap {
++  display: inline-flex !important;
++}
++
++/* Sub-icon button styling */
++.sub-icon-btn {
++  display: inline-flex !important;
++  align-items: center;
++  justify-content: center;
++  font-size: 11px;
++  line-height: 1;
++  padding: 2px 4px;
++  border-radius: 3px;
++  color: var(--fg);
++  background: var(--input-bg);
++  border: 1px solid var(--border);
++  cursor: pointer;
++  user-select: none;
++  opacity: 0.85;
++  transition: opacity 0.12s, background 0.12s, border-color 0.12s;
++}
++.sub-icon-btn:hover {
++  opacity: 1;
++  background: var(--hover);
++  border-color: #0078d4;
++  color: var(--fg);
++}
++
++/* Mode: Single row (scrolls sideways) */
++.grp-fold:not(.room) > .kids.open.kl-row {
++  display: flex !important;
++  flex-direction: row !important;
++  flex-wrap: nowrap !important;
++  max-width: 65vw;
++  overflow-x: auto;
++  overflow-y: hidden;
++  border-left: 2px solid var(--tree-line);
++  padding: 2px 4px 6px 6px;
++  margin-left: 6px;
++  box-sizing: border-box;
++}
++.grp-fold:not(.room) > .kids.open.kl-row > * {
++  flex: none;
++}
++
++/* Mode: Wrap grid - stretches full width so wrapped children flow across the whole container */
++.grp-fold:has(> .kids.open.kl-wrap) {
++  clear: both !important;
++  width: 100% !important;
++  max-width: 100% !important;
++  float: left !important;
++}
++.grp-fold:not(.room) > .kids.open.kl-wrap {
++  display: flex !important;
++  flex-direction: row !important;
++  flex-wrap: wrap !important;
++  clear: both !important;
++  width: 100% !important;
++  max-width: 100% !important;
++  max-height: 520px;
++  overflow-y: auto;
++  border-left: 2px solid var(--tree-line);
++  padding: 4px 6px 8px 6px;
++  box-sizing: border-box;
++  gap: 4px;
++}
++.grp-fold:not(.room) > .kids.open.kl-wrap > * {
++  flex: none;
++}
++
++/* Mode: Inline Sub-room Card (associated, non-disruptive, resizable box) */
++.grp-fold.room {
++  float: left !important;
++  margin: 0 6px 6px 0 !important;
++  display: flex !important;
++  flex-direction: column !important;
++  align-items: stretch !important;
++  width: var(--room-w, 480px);
++  height: var(--room-h, 260px);
++  min-width: 180px;
++  min-height: 100px;
++  max-width: 100% !important;
++  box-sizing: border-box !important;
++  resize: both !important;
++  overflow: hidden !important;
++  position: relative !important;
++  border: 1.5px solid var(--tree-line);
++  border-radius: 8px;
++  background: var(--bg);
++  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
++}
++
++/* Dense Packing Grid: auto-fills cells around sub-rooms */
++#list.dense-grid {
++  display: grid !important;
++  grid-template-columns: repeat(auto-fill, minmax(var(--dcw, 104px), 1fr)) !important;
++  grid-auto-rows: var(--dch, 104px) !important;
++  grid-auto-flow: dense !important;
++  gap: 4px !important;
++}
++#list.dense-grid > .grp-fold.room {
++  grid-column: span var(--sc, 4);
++  grid-row: span var(--sr, 2);
++}
++body.dark .grp-fold.room {
++  background: #161b22;
++  border-color: #384252;
++  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
++}
++/* Room Header: folder tile transforms into a clean horizontal header bar */
++.grp-fold.room > .row.item {
++  width: 100% !important;
++  height: 28px !important;
++  min-height: 28px !important;
++  max-height: 28px !important;
++  flex: 0 0 28px !important;
++  display: flex !important;
++  flex-direction: row !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++  padding: 2px 8px !important;
++  margin: 0 !important;
++  border-radius: 6px 6px 0 0 !important;
++  background: var(--bar) !important;
++  border-bottom: 1px solid var(--border) !important;
++  box-sizing: border-box !important;
++  cursor: pointer;
++  user-select: none;
++}
++.grp-fold.room > .row.item .c-name {
++  display: flex !important;
++  flex-direction: row !important;
++  align-items: center !important;
++  flex: 1 1 auto !important;
++  width: auto !important;
++  max-width: calc(100% - 64px) !important;
++  text-align: left !important;
++  white-space: nowrap !important;
++  overflow: hidden !important;
++  text-overflow: ellipsis !important;
++  gap: 4px;
++}
++.grp-fold.room > .row.item .ico {
++  width: 16px !important;
++  height: 16px !important;
++  margin: 0 4px 0 0 !important;
++  flex: none !important;
++}
++.grp-fold.room > .row.item .nm {
++  display: inline !important;
++  white-space: nowrap !important;
++  font-weight: 700 !important;
++  font-size: 11.5px !important;
++  color: var(--fg);
++  overflow: hidden;
++  text-overflow: ellipsis;
++}
++.grp-fold.room > .row.item .arrow {
++  align-self: center !important;
++  margin-right: 2px !important;
++  font-size: 11px;
++}
++.grp-fold.room > .row.item .sub-opt-wrap {
++  position: static !important;
++  margin-left: auto !important;
++  display: flex !important;
++  align-items: center !important;
++  gap: 4px !important;
++}
++.grp-fold.room > .row.item .c-date,
++.grp-fold.room > .row.item .c-type,
++.grp-fold.room > .row.item .c-size,
++.grp-fold.room > .row.item .sub {
++  display: none !important;
++}
++/* Room Body: children wrap inside */
++.grp-fold.room > .kids.open {
++  flex: 1 1 0 !important;
++  width: 100% !important;
++  height: auto !important;
++  max-height: none !important;
++  display: flex !important;
++  flex-direction: row !important;
++  flex-wrap: wrap !important;
++  align-items: flex-start !important;
++  align-content: flex-start !important;
++  justify-content: flex-start !important;
++  gap: 4px !important;
++  padding: 6px !important;
++  margin: 0 !important;
++  border-left: none !important;
++  overflow-y: auto !important;
++  overflow-x: hidden !important;
++  box-sizing: border-box !important;
++}
++.grp-fold.room > .kids.open > * {
++  flex: none;
++}
++
++/* ---- Scoped View Mode Overrides for Child Expanded Folders & Sub-Rooms ---- */
++.kids.v-details > .row.item,
++.kids.v-details > .grp-fold > .row.item {
++  width: 100% !important;
++  min-width: 0 !important;
++  max-width: 100% !important;
++  height: 24px !important;
++  min-height: 24px !important;
++  max-height: 24px !important;
++  flex-direction: row !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++  padding: 2px 8px !important;
++}
++.kids.v-details > .row.item .ico {
++  width: 16px !important;
++  height: 16px !important;
++  flex: none !important;
++}
++.kids.v-details > .row.item .c-name {
++  flex-direction: row !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++  width: auto !important;
++  max-width: none !important;
++  text-align: left !important;
++}
++.kids.v-details > .row.item .c-date,
++.kids.v-details > .row.item .c-type,
++.kids.v-details > .row.item .c-size {
++  display: flex !important;
++}
++
++.kids.v-content > .row.item,
++.kids.v-content > .grp-fold > .row.item {
++  width: 100% !important;
++  height: 44px !important;
++  min-height: 44px !important;
++  max-height: 44px !important;
++  flex-direction: row !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++}
++.kids.v-content > .row.item .ico {
++  width: 32px !important;
++  height: 32px !important;
++}
++.kids.v-content > .row.item .sub {
++  display: block !important;
++}
++
++.kids.v-list :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold > .row.item),
++.kids.v-small :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold > .row.item) {
++  width: 220px !important;
++  height: 24px !important;
++  min-height: 24px !important;
++  max-height: 24px !important;
++  flex-direction: row !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++  padding: 2px 6px !important;
++}
++.kids.v-list :is(.row.item, .grp-fold > .row.item) .ico,
++.kids.v-small :is(.row.item, .grp-fold > .row.item) .ico {
++  width: 16px !important;
++  height: 16px !important;
++}
++.kids.v-list :is(.row.item, .grp-fold > .row.item) :is(.c-date, .c-type, .c-size),
++.kids.v-small :is(.row.item, .grp-fold > .row.item) :is(.c-date, .c-type, .c-size) {
++  display: none !important;
++}
++
++.kids.v-tiles :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold > .row.item) {
++  width: 240px !important;
++  height: 48px !important;
++  min-height: 48px !important;
++  max-height: 48px !important;
++  flex-direction: row !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++}
++.kids.v-tiles :is(.row.item, .grp-fold > .row.item) .ico {
++  width: 32px !important;
++  height: 32px !important;
++}
++
++.kids.v-medium :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold > .row.item) {
++  width: 104px !important;
++  height: 104px !important;
++  min-height: 104px !important;
++  max-height: 104px !important;
++  flex-direction: column !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++}
++.kids.v-medium :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .ico {
++  width: 48px !important;
++  height: 48px !important;
++}
++
++.kids.v-large :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold > .row.item) {
++  width: 144px !important;
++  height: 144px !important;
++  min-height: 144px !important;
++  max-height: 144px !important;
++  flex-direction: column !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++}
++.kids.v-large :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .ico {
++  width: 96px !important;
++  height: 96px !important;
++}
++
++.kids.v-xl :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold > .row.item) {
++  width: 236px !important;
++  height: 256px !important;
++  min-height: 256px !important;
++  max-height: 256px !important;
++  flex-direction: column !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++}
++.kids.v-xl :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .ico {
++  width: 168px !important;
++  height: 168px !important;
++  flex: 0 0 168px !important;
++  margin-bottom: 6px !important;
++}
++:is(.kids.v-xl, .v-xl) :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .c-name {
++  display: flex !important;
++  flex-direction: column !important;
++  align-items: center !important;
++  justify-content: flex-start !important;
++  width: 100% !important;
++  height: 100% !important;
++  min-height: 0 !important;
++  padding: 6px 4px 4px !important;
++  box-sizing: border-box !important;
++  overflow: visible !important;
++}
++:is(.kids.v-xl, .v-xl) :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .nm {
++  width: 100% !important;
++  max-width: 100% !important;
++  text-align: center !important;
++  font-size: 11.5px !important;
++  line-height: 1.35 !important;
++  display: -webkit-box !important;
++  -webkit-line-clamp: 3 !important;
++  -webkit-box-orient: vertical !important;
++  overflow: hidden !important;
++  text-overflow: ellipsis !important;
++  word-break: break-word !important;
++  overflow-wrap: anywhere !important;
++  margin-top: 2px !important;
++}
++
++/* Full bleed image/video thumbnails in child folders and top-level cards */
++:is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, .v-large, .v-xl) :is(.row.item, .grp-fold > .row.item).has-thumb {
++  position: relative !important;
++  padding: 0 !important;
++  overflow: hidden !important;
++  justify-content: flex-end !important;
++}
++:is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, .v-large, .v-xl) :is(.row.item, .grp-fold > .row.item).has-thumb .ico {
++  position: absolute !important;
++  inset: 0 !important;
++  width: 100% !important;
++  height: 100% !important;
++  margin: 0 !important;
++  object-fit: var(--thumb-fit, cover) !important;
++  background: rgba(0, 0, 0, 0.08);
++  border-radius: inherit;
++  z-index: 0;
++}
++:is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, .v-large, .v-xl) :is(.row.item, .grp-fold > .row.item).has-thumb .c-name {
++  position: static !important;
++  width: 100% !important;
++  height: 100% !important;
++  justify-content: flex-end !important;
++  padding: 0 !important;
++}
++:is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, .v-large, .v-xl) :is(.row.item, .grp-fold > .row.item).has-thumb .nm {
++  position: absolute !important;
++  left: 0 !important;
++  right: 0 !important;
++  bottom: 0 !important;
++  height: auto !important;
++  flex: 0 0 auto !important;
++  z-index: 2;
++  margin: 0 !important;
++  width: 100% !important;
++  padding: 3px 5px !important;
++  background: rgba(8, 12, 21, 0.78) !important;
++  color: #f8fafc !important;
++  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
++  box-sizing: border-box;
++}
++
++/* Dedicated Sub-room resize handle */
++.room-resize-corner {
++  position: absolute;
++  right: 0;
++  bottom: 0;
++  width: 16px;
++  height: 16px;
++  cursor: se-resize;
++  z-index: 25;
++  background: linear-gradient(135deg, transparent 40%, var(--muted) 40%, var(--muted) 55%, transparent 55%, transparent 70%, var(--muted) 70%);
++  opacity: 0.6;
++  transition: opacity 0.15s;
++}
++.room-resize-corner:hover {
++  opacity: 1;
++}
++
++/* ---- RTS Hotkey Favorite Rooms Dock & Floating Rooms ---- */
++.hotkey-dock {
++  display: flex;
++  align-items: center;
++  justify-content: flex-start;
++  gap: 3px;
++  padding: 2px 10px;
++  background: var(--nav);
++  border-top: 1px solid var(--border);
++  height: 26px;
++  box-sizing: border-box;
++  flex: none;
++  user-select: none;
++  overflow-x: auto;
++  overflow-y: hidden;
++}
++.hk-slot-btn {
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  min-width: 26px;
++  height: 20px;
++  padding: 0 6px;
++  background: var(--bar);
++  border: 1px solid var(--border);
++  border-radius: 3px;
++  font-size: 11px;
++  font-weight: 600;
++  color: var(--fg);
++  cursor: pointer;
++  transition: background 0.12s, border-color 0.12s, transform 0.08s;
++  position: relative;
++}
++.hk-slot-btn:hover {
++  background: var(--hover);
++  border-color: var(--accent);
++}
++.hk-slot-btn.active {
++  background: var(--accent) !important;
++  color: #fff !important;
++  border-color: var(--accent) !important;
++}
++.hk-slot-btn.has-items::after {
++  content: '';
++  position: absolute;
++  top: 2px;
++  right: 2px;
++  width: 5px;
++  height: 5px;
++  border-radius: 50%;
++  background: #22c55e;
++}
++
++.hotkey-room {
++  position: fixed;
++  width: 460px;
++  height: 280px;
++  min-width: 220px;
++  min-height: 140px;
++  background: var(--bg);
++  border: 1.5px solid var(--border);
++  border-radius: 8px;
++  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
++  display: flex;
++  flex-direction: column;
++  box-sizing: border-box;
++  opacity: 0;
++  pointer-events: none;
++  transition: opacity 0.22s ease-out, transform 0.15s ease-out;
++  transform: translateY(6px);
++  z-index: 2000;
++  overflow: hidden;
++  resize: both;
++}
++.hotkey-room.visible {
++  opacity: 1;
++  pointer-events: auto;
++  transform: translateY(0);
++}
++.hotkey-room.pinned {
++  border-color: var(--accent);
++  box-shadow: 0 12px 36px rgba(0, 120, 212, 0.35);
++}
++.hk-header {
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  padding: 4px 8px;
++  background: var(--bar);
++  border-bottom: 1px solid var(--border);
++  cursor: default;
++  user-select: none;
++  flex: none;
++  height: 30px;
++  box-sizing: border-box;
++}
++.hk-title-wrap {
++  display: flex;
++  align-items: center;
++  gap: 6px;
++  flex: 1;
++  overflow: hidden;
++}
++.hk-badge {
++  font-size: 11px;
++  font-weight: 700;
++  background: var(--accent);
++  color: #fff;
++  padding: 1px 6px;
++  border-radius: 3px;
++  line-height: 1.2;
++}
++.hk-title {
++  font-size: 12px;
++  font-weight: 600;
++  color: var(--fg);
++  overflow: hidden;
++  text-overflow: ellipsis;
++  white-space: nowrap;
++  outline: none;
++  padding: 1px 4px;
++  border-radius: 3px;
++}
++.hk-title[contenteditable="true"]:focus {
++  background: var(--input-bg);
++  box-shadow: 0 0 0 1px var(--accent);
++}
++.hk-controls {
++  display: flex;
++  align-items: center;
++  gap: 4px;
++  flex: none;
++}
++.hk-btn {
++  width: 22px;
++  height: 22px;
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  background: transparent;
++  border: 1px solid transparent;
++  border-radius: 3px;
++  cursor: pointer;
++  font-size: 11px;
++  color: var(--muted);
++}
++.hk-btn:hover {
++  background: var(--hover);
++  color: var(--fg);
++  border-color: var(--border);
++}
++.hk-btn.pinned {
++  color: var(--accent);
++  background: rgba(0, 120, 212, 0.15);
++  border-color: var(--accent);
++}
++.hk-move-btn {
++  cursor: grab;
++}
++.hk-move-btn:active {
++  cursor: grabbing;
++}
++.hk-body {
++  flex: 1 1 auto;
++  padding: 8px;
++  overflow: auto;
++  display: flex;
++  flex-direction: row;
++  flex-wrap: wrap;
++  align-items: flex-start;
++  align-content: flex-start;
++  gap: 6px;
++  background: var(--bg);
++  background-image: radial-gradient(var(--border) 1.2px, transparent 1.2px);
++  background-size: 20px 20px;
++  box-sizing: border-box;
++  position: relative;
++}
++.hk-empty-hint {
++  width: 100%;
++  padding: 28px 12px;
++  text-align: center;
++  color: var(--muted);
++  font-size: 11.5px;
++  pointer-events: none;
++  user-select: none;
++}
++.hk-item-card {
++  width: 90px;
++  height: 82px;
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  justify-content: flex-start;
++  padding: 6px 4px;
++  border-radius: 4px;
++  border: 1px solid transparent;
++  background: var(--card);
++  cursor: pointer;
++  position: relative;
++  box-sizing: border-box;
++  text-align: center;
++  overflow: hidden;
++}
++.hk-item-card:hover {
++  background: var(--hover);
++  border-color: var(--border);
++}
++.hk-item-card .hk-card-ico {
++  width: 32px;
++  height: 32px;
++  object-fit: contain;
++  margin-bottom: 4px;
++}
++.hk-item-card .hk-card-nm {
++  font-size: 10.5px;
++  color: var(--fg);
++  line-height: 1.2;
++  max-width: 100%;
++  overflow: hidden;
++  text-overflow: ellipsis;
++  display: -webkit-box;
++  -webkit-line-clamp: 2;
++  -webkit-box-orient: vertical;
++}
++.hk-item-card .hk-card-del {
++  position: absolute;
++  top: 2px;
++  right: 2px;
++  width: 16px;
++  height: 16px;
++  font-size: 10px;
++  border-radius: 50%;
++  background: rgba(0, 0, 0, 0.4);
++  color: #fff;
++  display: none;
++  align-items: center;
++  justify-content: center;
++  line-height: 1;
++}
++.hk-item-card:hover .hk-card-del {
++  display: flex;
++}
++.hk-item-card .hk-card-del:hover {
++  background: #ef4444;
++}

@@ -1,0 +1,250 @@
+{
+  "cycle": 9,
+  "experiment": "Multi-Complex Homeostatic Equilibrium Solver",
+  "parliamentary_debate_equilibrium": {
+    "complex_A": "Opposition Parliamentary Scrutiny Complex",
+    "complex_B": "Government Policy Delivery Complex",
+    "equilibrium_coords": [
+      -0.1273,
+      0.6056,
+      0.0385
+    ],
+    "modal_equilibrium": "REDUCTIVE COMPROMISE [is not] (Defined Borders)",
+    "equilibrium_hypervolume": 0.004343,
+    "dominant_equilibrium_substrate": "Q1:Metaphysical",
+    "q_star_distribution": {
+      "Q1:Metaphysical": 0.442,
+      "Q2:Possible": 0.0737,
+      "Q3:Physical": 0.1276,
+      "Q4:Lyrical": 0.0521,
+      "Q5:Logical": 0.2018,
+      "Q6:Historical": 0.0329,
+      "Q7:Emotive": 0.0699
+    },
+    "convergence_residual_force": 0.000234,
+    "relaxation_trajectory": [
+      {
+        "step": 0,
+        "coords": [
+          -0.0625,
+          0.6162,
+          0.0637
+        ],
+        "force_norm": 0.802675
+      },
+      {
+        "step": 10,
+        "coords": [
+          -0.1011,
+          0.604,
+          0.053
+        ],
+        "force_norm": 0.343079
+      },
+      {
+        "step": 20,
+        "coords": [
+          -0.1168,
+          0.6025,
+          0.0451
+        ],
+        "force_norm": 0.145367
+      },
+      {
+        "step": 30,
+        "coords": [
+          -0.1232,
+          0.604,
+          0.0408
+        ],
+        "force_norm": 0.062701
+      },
+      {
+        "step": 40,
+        "coords": [
+          -0.1257,
+          0.6052,
+          0.039
+        ],
+        "force_norm": 0.026805
+      },
+      {
+        "step": 50,
+        "coords": [
+          -0.1267,
+          0.6056,
+          0.0385
+        ],
+        "force_norm": 0.011288
+      },
+      {
+        "step": 60,
+        "coords": [
+          -0.1271,
+          0.6057,
+          0.0383
+        ],
+        "force_norm": 0.004881
+      },
+      {
+        "step": 70,
+        "coords": [
+          -0.1272,
+          0.6056,
+          0.0384
+        ],
+        "force_norm": 0.002143
+      },
+      {
+        "step": 80,
+        "coords": [
+          -0.1273,
+          0.6056,
+          0.0384
+        ],
+        "force_norm": 0.000886
+      },
+      {
+        "step": 90,
+        "coords": [
+          -0.1273,
+          0.6056,
+          0.0384
+        ],
+        "force_norm": 0.000338
+      },
+      {
+        "step": 99,
+        "coords": [
+          -0.1273,
+          0.6056,
+          0.0385
+        ],
+        "force_norm": 0.000234
+      }
+    ]
+  },
+  "cooperative_infrastructure_equilibrium": {
+    "complex_A": "High-Speed Rail Transit Complex",
+    "complex_B": "Renewable Grid Power Complex",
+    "equilibrium_coords": [
+      0.9,
+      0.725,
+      0.425
+    ],
+    "modal_equilibrium": "PRODUCTIVE ACCORD [can be] (Mutual Expansion)",
+    "equilibrium_hypervolume": 0.981425,
+    "dominant_equilibrium_substrate": "Q3:Physical",
+    "q_star_distribution": {
+      "Q1:Metaphysical": 0.1005,
+      "Q2:Possible": 0.1005,
+      "Q3:Physical": 0.6275,
+      "Q4:Lyrical": 0.0502,
+      "Q5:Logical": 0.0711,
+      "Q6:Historical": 0.0201,
+      "Q7:Emotive": 0.0301
+    },
+    "convergence_residual_force": 0.0,
+    "relaxation_trajectory": [
+      {
+        "step": 0,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 10,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 20,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 30,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 40,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 50,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 60,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 70,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 80,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 90,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      },
+      {
+        "step": 99,
+        "coords": [
+          0.9,
+          0.725,
+          0.425
+        ],
+        "force_norm": 0.0
+      }
+    ]
+  }
+}

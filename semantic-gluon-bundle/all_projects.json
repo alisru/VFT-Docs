@@ -1,0 +1,1265 @@
+{
+  "PRJ-AUS-KANON": {
+    "project_id": "PRJ-AUS-KANON",
+    "name": "Australian National Kanon & Hansard Corpus",
+    "description": "343-vector Qqci framework audit of Australian parliamentary speeches and policy positions",
+    "ground_truth_is": "Hansard corpus indexed in DuckDB, 39/51 tasks audited",
+    "last_updated": "2026-10-28T17:01:22.610441",
+    "desires": {
+      "DES-020": {
+        "id": "DES-020",
+        "title": "Complete 343 national kanon semantic matrix",
+        "vertex": "will_be",
+        "status": "cancelled",
+        "rationale": "",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": "Naturally cancelled out by Anti-Desire ANTI-016 (Target Goal breaches Invariant Constraint): 'Poetic Kanon vector names cannot be queried directly against Hansard text'",
+        "tags": [
+          "kanon",
+          "australia",
+          "343"
+        ],
+        "tasks": []
+      },
+      "DES-021": {
+        "id": "DES-021",
+        "title": "Local-first citation retrieval via hansard_mcp BM25 index",
+        "vertex": "can_be",
+        "status": "active",
+        "rationale": "",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "hansard",
+          "bm25"
+        ],
+        "tasks": []
+      }
+    },
+    "anti_desires": {
+      "ANTI-015": {
+        "id": "ANTI-015",
+        "title": "Never propose or hallucinate speech citations from memory without disk verification",
+        "vertex": "is_not",
+        "severity": "boundary_taboo",
+        "reason_to_avoid": "Source truth integrity",
+        "tags": []
+      },
+      "ANTI-016": {
+        "id": "ANTI-016",
+        "title": "Poetic Kanon vector names cannot be queried directly against Hansard text",
+        "vertex": "cant_be",
+        "severity": "hard_invariant",
+        "reason_to_avoid": "Politicians do not speak in vector names",
+        "tags": []
+      }
+    },
+    "comparative_goals": {},
+    "conflicts": [
+      {
+        "desire_id": "DES-020",
+        "anti_desire_id": "ANTI-016",
+        "vector_type": "RED_PRIMARY",
+        "severity": "FATAL_CONTRADICTION",
+        "rule": "If you target 'will_be' but it 'can't be', the desire is fundamentally invalid and is automatically cancelled.",
+        "overlap_terms": [
+          "kanon"
+        ]
+      }
+    ],
+    "process_logs": [],
+    "audit_trail": [
+      {
+        "id": 64,
+        "project_id": "PRJ-AUS-KANON",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-016: Poetic Kanon vector names cannot be queried directly against Hansard text at vertex cant_be",
+        "timestamp": "2026-10-28T17:01:22.612837"
+      },
+      {
+        "id": 63,
+        "project_id": "PRJ-AUS-KANON",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-015: Never propose or hallucinate speech citations from memory without disk verification at vertex is_not",
+        "timestamp": "2026-10-28T17:01:22.612221"
+      },
+      {
+        "id": 62,
+        "project_id": "PRJ-AUS-KANON",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-021: Local-first citation retrieval via hansard_mcp BM25 index at vertex can_be",
+        "timestamp": "2026-10-28T17:01:22.611628"
+      },
+      {
+        "id": 61,
+        "project_id": "PRJ-AUS-KANON",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-020: Complete 343 national kanon semantic matrix at vertex will_be",
+        "timestamp": "2026-10-28T17:01:22.611044"
+      },
+      {
+        "id": 60,
+        "project_id": "PRJ-AUS-KANON",
+        "action": "INIT_PROJECT",
+        "details": "Project Australian National Kanon & Hansard Corpus (PRJ-AUS-KANON) initialized.",
+        "timestamp": "2026-10-28T17:01:22.610463"
+      }
+    ]
+  },
+  "PRJ-PEEK-EXPLORER": {
+    "project_id": "PRJ-PEEK-EXPLORER",
+    "name": "Peek Explorer Spatial File & Knowledge Manager",
+    "description": "Local file explorer with 3D semantic clustering, deep preview, and VFT integration",
+    "ground_truth_is": "Electron / web UI rendering local directories and vector clusters",
+    "last_updated": "2026-10-28T17:01:22.605840",
+    "desires": {
+      "DES-004": {
+        "id": "DES-004",
+        "title": "Responsive Room Header Name (First Row When Narrow, Inline When Wide)",
+        "vertex": "will_be",
+        "status": "completed",
+        "rationale": "When a room is narrow, the room name (.rm-title) must occupy the full first row so it is 100% readable, and sit inline on a single row when the room is wide enough to fit both title and action buttons.",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "ui",
+          "room-header"
+        ],
+        "tasks": [
+          {
+            "id": "DES-004-T1",
+            "title": "Make .map-room-head flex-wrap so .rm-title takes full top row when narrow and sits inline when wide",
+            "vertex": "can_be",
+            "status": "completed"
+          }
+        ]
+      },
+      "DES-005": {
+        "id": "DES-005",
+        "title": "Ctrl+F Landscape Jump-To Navigator (Folders & Files List)",
+        "vertex": "will_be",
+        "status": "completed",
+        "rationale": "Pressing Ctrl+F (or typing in search in Landscape mode) opens a floating Jump-To Navigator listing matching rooms, folders, and files across the landscape; clicking or pressing Enter flies the camera directly to the room and highlights/scrolls to the target item.",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "search",
+          "landscape",
+          "navigation"
+        ],
+        "tasks": [
+          {
+            "id": "DES-005-T1",
+            "title": "Implement Ctrl+F Landscape Jump-To Navigator overlay with keyboard Up/Down/Enter and camera fly-to + tile pulse",
+            "vertex": "can_be",
+            "status": "completed"
+          }
+        ]
+      },
+      "DES-006": {
+        "id": "DES-006",
+        "title": "Zero-Bloat Text File Editing in Details Panel & Landscape File Viewer Islands",
+        "vertex": "will_be",
+        "status": "completed",
+        "rationale": "Allow editing and saving text/code/markdown files directly inside the right-hand Details Preview Pane and Landscape File Viewer Islands using a zero-overhead native <textarea> and Ctrl+S / Save button.",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "editor",
+          "preview",
+          "landscape"
+        ],
+        "tasks": [
+          {
+            "id": "DES-006-T1",
+            "title": "Add writeTextFile IPC and editable <textarea> + Save (Ctrl+S) in both Details Preview Pane and Landscape File Viewer Islands",
+            "vertex": "can_be",
+            "status": "completed"
+          }
+        ]
+      },
+      "DES-007": {
+        "id": "DES-007",
+        "title": "Feature Resource Audit Catalogue & Live Non-Destructive Resource Delta Tracker",
+        "vertex": "will_be",
+        "status": "cancelled",
+        "rationale": "Audit and catalogue every Peek Explorer feature with its predicted RAM/CPU/DOM cost, and embed a live Resource Usage & Delta Tracker in the status bar and Settings modal to log memory/DOM deltas across actions without removing features.",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": "Naturally cancelled out by Anti-Desire ANTI-007 (Target Goal breaches Invariant Constraint): 'No Removing Features to Measure Resource Usage'",
+        "tags": [
+          "telemetry",
+          "audit",
+          "performance"
+        ],
+        "tasks": []
+      },
+      "DES-008": {
+        "id": "DES-008",
+        "title": "Tight Parent-Adjacent Room Spawning (Closest Collision-Free Slot to Folder Tile)",
+        "vertex": "will_be",
+        "status": "completed",
+        "rationale": "When opening a child room from a folder tile inside a parent room, spawn the child room at the closest collision-free position directly adjacent to that folder tile's wall/position on the parent room, rather than throwing it far away on a fixed 500px+ ring.",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "layout",
+          "spawning",
+          "rooms"
+        ],
+        "tasks": [
+          {
+            "id": "DES-008-T1",
+            "title": "Replace far ring spawning with tight folder-tile-adjacent wall spawning and 28px step spiral search",
+            "vertex": "can_be",
+            "status": "completed"
+          }
+        ]
+      },
+      "DES-009": {
+        "id": "DES-009",
+        "title": "Feature Footprint Catalogue & Built-In Heap/DOM Delta Monitor",
+        "vertex": "can_be",
+        "status": "completed",
+        "rationale": "Audit every feature's memory/CPU footprint and provide a built-in heap & DOM delta monitor in the status bar and Settings modal.",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "audit",
+          "heap-monitor",
+          "perf-catalog"
+        ],
+        "tasks": [
+          {
+            "id": "DES-009-T1",
+            "title": "Create FEATURE_RESOURCE_AUDIT.md and add live Heap/Process/DOM Resource Delta Tracker in status bar & Settings modal",
+            "vertex": "can_be",
+            "status": "completed"
+          }
+        ]
+      },
+      "DES-018": {
+        "id": "DES-018",
+        "title": "Instant fuzzy spatial navigation across VFT Docs",
+        "vertex": "will_be",
+        "status": "active",
+        "rationale": "",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "spatial",
+          "search",
+          "files"
+        ],
+        "tasks": []
+      },
+      "DES-019": {
+        "id": "DES-019",
+        "title": "Local caching of metadata for sub-5ms render",
+        "vertex": "can_be",
+        "status": "active",
+        "rationale": "",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "cache",
+          "performance"
+        ],
+        "tasks": []
+      }
+    },
+    "anti_desires": {
+      "ANTI-005": {
+        "id": "ANTI-005",
+        "title": "No Heavy Editor Frameworks (Zero RAM Bloat for Text Editing)",
+        "vertex": "is_not",
+        "severity": "hard_invariant",
+        "reason_to_avoid": "Do not load Monaco, CodeMirror, or heavy editor frameworks that blow up RAM usage; use native <textarea> for text editing.",
+        "tags": [
+          "memory",
+          "editor"
+        ]
+      },
+      "ANTI-006": {
+        "id": "ANTI-006",
+        "title": "No Destructive Item Filtering in Landscape Mode on Ctrl+F",
+        "vertex": "wont_be",
+        "severity": "hard_invariant",
+        "reason_to_avoid": "Filtering/hiding items in Landscape rooms is disorienting; Ctrl+F / Search must list matching folders & files to jump/fly to without hiding room tiles.",
+        "tags": [
+          "search",
+          "landscape"
+        ]
+      },
+      "ANTI-007": {
+        "id": "ANTI-007",
+        "title": "No Removing Features to Measure Resource Usage",
+        "vertex": "cant_be",
+        "severity": "hard_invariant",
+        "reason_to_avoid": "Never remove features just to A/B test memory; track live resource usage deltas non-destructively inside the app.",
+        "tags": [
+          "telemetry",
+          "testing"
+        ]
+      },
+      "ANTI-014": {
+        "id": "ANTI-014",
+        "title": "Never delete files during directory scan or index exceptions",
+        "vertex": "is_not",
+        "severity": "boundary_taboo",
+        "reason_to_avoid": "No destructive fallback guardrail",
+        "tags": []
+      }
+    },
+    "comparative_goals": {
+      "CMP-003": {
+        "id": "CMP-003",
+        "desire_id": "DES-008",
+        "predicate": "closer",
+        "target_dimension": "spawn_distance_px",
+        "baseline_was_like": "preferredRingPos placed depth-1 rooms on a 500x360+ ring and findFreeRoomPos started spiral search at 420px+ from parent center, leaving huge empty gaps.",
+        "boundary_is_not": "Child rooms must never overlap existing rooms (minimum CORRIDOR_PAD gap maintained).",
+        "reference_is_like": "Compute exact world (tileX, tileY) of the clicked folder tile in parent room, project directly across the nearest parent wall at distance (parentHalf + childHalf + CORRIDOR_PAD), and spiral outward in tight 32px steps from that wall anchor.",
+        "verification_status": "verified_true",
+        "verification_notes": "Verified: Successfully advanced beyond baseline 'preferredRingPos placed depth-1 rooms on a 500x360+ ring and findFreeRoomPos started spiral search at 420px+ from parent center, leaving huge empty gaps.' to 'Child rooms spawn at 54px corridor gap directly adjacent to the parent folder tile Y coordinate, stepping outward in 28px increments.' while respecting boundary 'Child rooms must never overlap existing rooms (minimum CORRIDOR_PAD gap maintained).'."
+      },
+      "CMP-004": {
+        "id": "CMP-004",
+        "desire_id": "DES-006",
+        "predicate": "cheaper_and_editable",
+        "target_dimension": "editor_ram_overhead_kb",
+        "baseline_was_like": "Read-only <pre> text preview requiring external OS apps to edit text/code/markdown files.",
+        "boundary_is_not": "Must not load Monaco/CodeMirror or add >1MB RAM overhead per open text editor.",
+        "reference_is_like": "Native <textarea> with Tab indentation, Ctrl+S save via IPC writeTextFile, and dirty-state indicator (<50KB RAM overhead).",
+        "verification_status": "verified_true",
+        "verification_notes": "Verified: Successfully advanced beyond baseline 'Read-only <pre> text preview requiring external OS apps to edit text/code/markdown files.' to 'Native textarea editor in Details Pane and Landscape File Islands uses <50KB RAM and saves directly to disk via Ctrl+S / Save button.' while respecting boundary 'Must not load Monaco/CodeMirror or add >1MB RAM overhead per open text editor.'."
+      }
+    },
+    "conflicts": [
+      {
+        "desire_id": "DES-007",
+        "anti_desire_id": "ANTI-007",
+        "vector_type": "RED_PRIMARY",
+        "severity": "FATAL_CONTRADICTION",
+        "rule": "If you target 'will_be' but it 'can't be', the desire is fundamentally invalid and is automatically cancelled.",
+        "overlap_terms": [
+          "telemetry"
+        ]
+      }
+    ],
+    "process_logs": [],
+    "audit_trail": [
+      {
+        "id": 59,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-014: Never delete files during directory scan or index exceptions at vertex is_not",
+        "timestamp": "2026-10-28T17:01:22.609269"
+      },
+      {
+        "id": 58,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-019: Local caching of metadata for sub-5ms render at vertex can_be",
+        "timestamp": "2026-10-28T17:01:22.607854"
+      },
+      {
+        "id": 57,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-018: Instant fuzzy spatial navigation across VFT Docs at vertex will_be",
+        "timestamp": "2026-10-28T17:01:22.606651"
+      },
+      {
+        "id": 56,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "INIT_PROJECT",
+        "details": "Project Peek Explorer Spatial File & Knowledge Manager (PRJ-PEEK-EXPLORER) initialized.",
+        "timestamp": "2026-10-28T17:01:22.605870"
+      },
+      {
+        "id": 43,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "VERIFY_COMPARATIVE",
+        "details": "Evaluated CMP-004: verified_true",
+        "timestamp": "2026-10-28T16:38:53.252733"
+      },
+      {
+        "id": 42,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "VERIFY_COMPARATIVE",
+        "details": "Evaluated CMP-003: verified_true",
+        "timestamp": "2026-10-28T16:38:50.370871"
+      },
+      {
+        "id": 37,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_TASK",
+        "details": "Added task DES-009-T1 to DES-009: Create FEATURE_RESOURCE_AUDIT.md and add live Heap/Process/DOM Resource Delta Tracker in status bar & Settings modal",
+        "timestamp": "2026-10-28T16:23:58.522011"
+      },
+      {
+        "id": 36,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_TASK",
+        "details": "Added task DES-006-T1 to DES-006: Add writeTextFile IPC and editable <textarea> + Save (Ctrl+S) in both Details Preview Pane and Landscape File Viewer Islands",
+        "timestamp": "2026-10-28T16:23:55.996639"
+      },
+      {
+        "id": 35,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_TASK",
+        "details": "Added task DES-005-T1 to DES-005: Implement Ctrl+F Landscape Jump-To Navigator overlay with keyboard Up/Down/Enter and camera fly-to + tile pulse",
+        "timestamp": "2026-10-28T16:23:52.632489"
+      },
+      {
+        "id": 34,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_TASK",
+        "details": "Added task DES-008-T1 to DES-008: Replace far ring spawning with tight folder-tile-adjacent wall spawning and 28px step spiral search",
+        "timestamp": "2026-10-28T16:23:50.394502"
+      },
+      {
+        "id": 32,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_TASK",
+        "details": "Added task DES-004-T1 to DES-004: Make .map-room-head flex-wrap so .rm-title takes full top row when narrow and sits inline when wide",
+        "timestamp": "2026-10-28T16:23:48.253202"
+      },
+      {
+        "id": 30,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ANCHOR_COMPARATIVE",
+        "details": "Anchored vague predicate 'cheaper_and_editable' for DES-006 on dimension 'editor_ram_overhead_kb'",
+        "timestamp": "2026-10-28T16:23:41.537904"
+      },
+      {
+        "id": 28,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ANCHOR_COMPARATIVE",
+        "details": "Anchored vague predicate 'closer' for DES-008 on dimension 'spawn_distance_px'",
+        "timestamp": "2026-10-28T16:23:38.142525"
+      },
+      {
+        "id": 25,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-009: Feature Footprint Catalogue & Built-In Heap/DOM Delta Monitor at vertex can_be",
+        "timestamp": "2026-10-28T16:23:06.653009"
+      },
+      {
+        "id": 24,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-008: Tight Parent-Adjacent Room Spawning (Closest Collision-Free Slot to Folder Tile) at vertex will_be",
+        "timestamp": "2026-10-28T16:23:03.716968"
+      },
+      {
+        "id": 23,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-007: Feature Resource Audit Catalogue & Live Non-Destructive Resource Delta Tracker at vertex will_be",
+        "timestamp": "2026-10-28T16:22:47.067993"
+      },
+      {
+        "id": 22,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-006: Zero-Bloat Text File Editing in Details Panel & Landscape File Viewer Islands at vertex will_be",
+        "timestamp": "2026-10-28T16:22:44.071583"
+      },
+      {
+        "id": 21,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-005: Ctrl+F Landscape Jump-To Navigator (Folders & Files List) at vertex will_be",
+        "timestamp": "2026-10-28T16:22:41.055882"
+      },
+      {
+        "id": 20,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-004: Responsive Room Header Name (First Row When Narrow, Inline When Wide) at vertex will_be",
+        "timestamp": "2026-10-28T16:22:38.244830"
+      },
+      {
+        "id": 19,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-007: No Removing Features to Measure Resource Usage at vertex cant_be",
+        "timestamp": "2026-10-28T16:22:33.096191"
+      },
+      {
+        "id": 18,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-006: No Destructive Item Filtering in Landscape Mode on Ctrl+F at vertex wont_be",
+        "timestamp": "2026-10-28T16:22:30.192739"
+      },
+      {
+        "id": 17,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-005: No Heavy Editor Frameworks (Zero RAM Bloat for Text Editing) at vertex is_not",
+        "timestamp": "2026-10-28T16:22:27.272220"
+      },
+      {
+        "id": 16,
+        "project_id": "PRJ-PEEK-EXPLORER",
+        "action": "INIT_PROJECT",
+        "details": "Project Peek Explorer Spatial File Manager (PRJ-PEEK-EXPLORER) initialized.",
+        "timestamp": "2026-10-28T16:22:03.990981"
+      }
+    ]
+  },
+  "PRJ-BSKY-BOT": {
+    "project_id": "PRJ-BSKY-BOT",
+    "name": "Aletheia Bluesky News Factcheck & Audit Bot",
+    "description": "Harvest, offline convergence test, trinary synthesis, and 13-key schema factchecks on Bluesky",
+    "ground_truth_is": "Bot daemon running, Aletheia MCP tools active, audit archive indexed",
+    "last_updated": "2026-10-28T17:01:22.601785",
+    "desires": {
+      "DES-016": {
+        "id": "DES-016",
+        "title": "Generate 4-persona dynamic card thread responses",
+        "vertex": "will_be",
+        "status": "cancelled",
+        "rationale": "",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": "Naturally cancelled out by Anti-Desire ANTI-013 (Target Goal breaches Invariant Constraint): 'Fixed array indexing posts[13] cannot survive dynamic persona thread lengths'",
+        "tags": [
+          "bluesky",
+          "cards",
+          "personas"
+        ],
+        "tasks": []
+      },
+      "DES-017": {
+        "id": "DES-017",
+        "title": "Cross-reference claims against 10,800+ Hegemonic Audit database",
+        "vertex": "can_be",
+        "status": "active",
+        "rationale": "",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "audit",
+          "archive"
+        ],
+        "tasks": []
+      }
+    },
+    "anti_desires": {
+      "ANTI-012": {
+        "id": "ANTI-012",
+        "title": "Never penalize an article coordinate solely because of paywalls or personal op-eds",
+        "vertex": "is_not",
+        "severity": "boundary_taboo",
+        "reason_to_avoid": "Commerce is not fraud",
+        "tags": []
+      },
+      "ANTI-013": {
+        "id": "ANTI-013",
+        "title": "Fixed array indexing posts[13] cannot survive dynamic persona thread lengths",
+        "vertex": "cant_be",
+        "severity": "hard_invariant",
+        "reason_to_avoid": "Persona counts vary between 1 and 4",
+        "tags": []
+      }
+    },
+    "comparative_goals": {},
+    "conflicts": [
+      {
+        "desire_id": "DES-016",
+        "anti_desire_id": "ANTI-013",
+        "vector_type": "RED_PRIMARY",
+        "severity": "FATAL_CONTRADICTION",
+        "rule": "If you target 'will_be' but it 'can't be', the desire is fundamentally invalid and is automatically cancelled.",
+        "overlap_terms": [
+          "dynamic",
+          "persona",
+          "thread"
+        ]
+      }
+    ],
+    "process_logs": [],
+    "audit_trail": [
+      {
+        "id": 55,
+        "project_id": "PRJ-BSKY-BOT",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-013: Fixed array indexing posts[13] cannot survive dynamic persona thread lengths at vertex cant_be",
+        "timestamp": "2026-10-28T17:01:22.604493"
+      },
+      {
+        "id": 54,
+        "project_id": "PRJ-BSKY-BOT",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-012: Never penalize an article coordinate solely because of paywalls or personal op-eds at vertex is_not",
+        "timestamp": "2026-10-28T17:01:22.603802"
+      },
+      {
+        "id": 53,
+        "project_id": "PRJ-BSKY-BOT",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-017: Cross-reference claims against 10,800+ Hegemonic Audit database at vertex can_be",
+        "timestamp": "2026-10-28T17:01:22.602993"
+      },
+      {
+        "id": 52,
+        "project_id": "PRJ-BSKY-BOT",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-016: Generate 4-persona dynamic card thread responses at vertex will_be",
+        "timestamp": "2026-10-28T17:01:22.602344"
+      },
+      {
+        "id": 51,
+        "project_id": "PRJ-BSKY-BOT",
+        "action": "INIT_PROJECT",
+        "details": "Project Aletheia Bluesky News Factcheck & Audit Bot (PRJ-BSKY-BOT) initialized.",
+        "timestamp": "2026-10-28T17:01:22.601795"
+      }
+    ]
+  },
+  "PRJ-12AXES": {
+    "project_id": "PRJ-12AXES",
+    "name": "12Axes Hegemonic Grid Quiz & Telemetry",
+    "description": "9-cell hegemonic grid quiz anchored in geometry of definitions and polar sector answering model",
+    "ground_truth_is": "Hegemony pad active, dynamic pub test telemetry, upstream quarantined",
+    "last_updated": "2026-10-28T17:01:22.596605",
+    "desires": {
+      "DES-013": {
+        "id": "DES-013",
+        "title": "Build 9-cell hegemonic grid with zero side bleed",
+        "vertex": "will_be",
+        "status": "active",
+        "rationale": "",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "grid",
+          "polar",
+          "hegemony"
+        ],
+        "tasks": []
+      },
+      "DES-014": {
+        "id": "DES-014",
+        "title": "Single dynamic human sentence telemetry bar",
+        "vertex": "will_be",
+        "status": "active",
+        "rationale": "",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "telemetry",
+          "ui"
+        ],
+        "tasks": []
+      },
+      "DES-015": {
+        "id": "DES-015",
+        "title": "Grounded Pub Test Persona without cartoon slang or academic jargon",
+        "vertex": "can_be",
+        "status": "active",
+        "rationale": "",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "persona",
+          "pub_test"
+        ],
+        "tasks": []
+      }
+    },
+    "anti_desires": {
+      "ANTI-010": {
+        "id": "ANTI-010",
+        "title": "Never push to upstream repository (quarantined)",
+        "vertex": "is_not",
+        "severity": "boundary_taboo",
+        "reason_to_avoid": "Upstream repo is strictly isolated",
+        "tags": []
+      },
+      "ANTI-011": {
+        "id": "ANTI-011",
+        "title": "Cramped 3-column debug bars are impossible to read on mobile",
+        "vertex": "cant_be",
+        "severity": "hard_invariant",
+        "reason_to_avoid": "Mobile screen width constraint",
+        "tags": []
+      }
+    },
+    "comparative_goals": {},
+    "conflicts": [],
+    "process_logs": [],
+    "audit_trail": [
+      {
+        "id": 50,
+        "project_id": "PRJ-12AXES",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-011: Cramped 3-column debug bars are impossible to read on mobile at vertex cant_be",
+        "timestamp": "2026-10-28T17:01:22.601142"
+      },
+      {
+        "id": 49,
+        "project_id": "PRJ-12AXES",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-010: Never push to upstream repository (quarantined) at vertex is_not",
+        "timestamp": "2026-10-28T17:01:22.600416"
+      },
+      {
+        "id": 48,
+        "project_id": "PRJ-12AXES",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-015: Grounded Pub Test Persona without cartoon slang or academic jargon at vertex can_be",
+        "timestamp": "2026-10-28T17:01:22.599760"
+      },
+      {
+        "id": 47,
+        "project_id": "PRJ-12AXES",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-014: Single dynamic human sentence telemetry bar at vertex will_be",
+        "timestamp": "2026-10-28T17:01:22.599182"
+      },
+      {
+        "id": 46,
+        "project_id": "PRJ-12AXES",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-013: Build 9-cell hegemonic grid with zero side bleed at vertex will_be",
+        "timestamp": "2026-10-28T17:01:22.598507"
+      },
+      {
+        "id": 45,
+        "project_id": "PRJ-12AXES",
+        "action": "INIT_PROJECT",
+        "details": "Project 12Axes Hegemonic Grid Quiz & Telemetry (PRJ-12AXES) initialized.",
+        "timestamp": "2026-10-28T17:01:22.596670"
+      }
+    ]
+  },
+  "PRJ-RETRIEVAL-001": {
+    "project_id": "PRJ-RETRIEVAL-001",
+    "name": "Smart Document Retrieval Engine",
+    "description": "Testing project management lifecycle and 8-vertex topology with comparative goal anchoring.",
+    "ground_truth_is": "Baseline system has unindexed raw files and 850ms search latency.",
+    "last_updated": "2026-10-28T16:23:26.358893",
+    "desires": {
+      "DES-010": {
+        "id": "DES-010",
+        "title": "Build in-memory BM25 inverted index",
+        "vertex": "will_be",
+        "status": "cancelled",
+        "rationale": "Provides sub-50ms query lookups locally.",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": "Naturally cancelled out by Anti-Desire ANTI-008 (Target Goal breaches Invariant Constraint): 'Memory footprint cannot exceed 64MB RAM'",
+        "tags": [
+          "bm25",
+          "index",
+          "local"
+        ],
+        "tasks": []
+      },
+      "DES-011": {
+        "id": "DES-011",
+        "title": "Implement mmap chunked indexer with zero heap memory overhead",
+        "vertex": "will_be",
+        "status": "cancelled",
+        "rationale": "Keeps resident RAM footprint below 20MB by memory-mapping chunks from disk.",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": "Naturally cancelled out by Anti-Desire ANTI-008 (Target Goal breaches Invariant Constraint): 'Memory footprint cannot exceed 64MB RAM'",
+        "tags": [
+          "mmap",
+          "chunked",
+          "indexer"
+        ],
+        "tasks": []
+      },
+      "DES-012": {
+        "id": "DES-012",
+        "title": "Build disk-backed postings inverted index",
+        "vertex": "will_be",
+        "status": "completed",
+        "rationale": "Pre-tokenizes documents into disk-backed postings with 15MB resident RAM usage.",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "disk_index",
+          "postings",
+          "local_storage"
+        ],
+        "tasks": [
+          {
+            "id": "DES-012-T1",
+            "title": "Implement binary varint postings encoder",
+            "vertex": "can_be",
+            "status": "completed"
+          }
+        ]
+      }
+    },
+    "anti_desires": {
+      "ANTI-008": {
+        "id": "ANTI-008",
+        "title": "Memory footprint cannot exceed 64MB RAM",
+        "vertex": "is_not",
+        "severity": "hard_invariant",
+        "reason_to_avoid": "Physical device limitation on local edge runner.",
+        "tags": [
+          "ram",
+          "memory",
+          "limit"
+        ]
+      },
+      "ANTI-009": {
+        "id": "ANTI-009",
+        "title": "Never leak local queries to external cloud APIs",
+        "vertex": "is_not",
+        "severity": "boundary_taboo",
+        "reason_to_avoid": "Local privacy invariant.",
+        "tags": [
+          "cloud",
+          "external",
+          "api"
+        ]
+      }
+    },
+    "comparative_goals": {
+      "CMP-005": {
+        "id": "CMP-005",
+        "desire_id": "DES-012",
+        "predicate": "better",
+        "target_dimension": "search_latency_and_ram",
+        "baseline_was_like": "Unindexed scan took 850ms with 180MB RAM spike",
+        "boundary_is_not": "Must not exceed 64MB RAM limit and zero external cloud API queries",
+        "reference_is_like": "Lucene style immutable segments",
+        "verification_status": "verified_true",
+        "verification_notes": "Verified: Successfully advanced beyond baseline 'Unindexed scan took 850ms with 180MB RAM spike' to 'Query latency reduced from 850ms to 18ms at 14.5MB peak RAM locally' while respecting boundary 'Must not exceed 64MB RAM limit and zero external cloud API queries'."
+      }
+    },
+    "conflicts": [
+      {
+        "desire_id": "DES-010",
+        "anti_desire_id": "ANTI-008",
+        "vector_type": "RED_PRIMARY",
+        "severity": "FATAL_CONTRADICTION",
+        "rule": "If you target 'will_be' but it 'can't be', the desire is fundamentally invalid and is automatically cancelled.",
+        "overlap_terms": [
+          "memory",
+          "local"
+        ]
+      },
+      {
+        "desire_id": "DES-011",
+        "anti_desire_id": "ANTI-008",
+        "vector_type": "RED_PRIMARY",
+        "severity": "FATAL_CONTRADICTION",
+        "rule": "If you target 'will_be' but it 'can't be', the desire is fundamentally invalid and is automatically cancelled.",
+        "overlap_terms": [
+          "memory"
+        ]
+      }
+    ],
+    "process_logs": [
+      {
+        "id": 1,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "process_type": "reductive",
+        "item_id": "ANTI-008",
+        "transition": "cant_be -> is_not",
+        "formula": "Reductive: defined as 'can't be' collapsed into 'is not' using 'was like' and 'can be' opposing 'is like'.",
+        "notes": "Validating diagram process dynamics",
+        "timestamp": "2026-10-28T16:56:26.537920"
+      }
+    ],
+    "audit_trail": [
+      {
+        "id": 44,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "RUN_GLUON_PROCESS",
+        "details": "reductive: cant_be -> is_not",
+        "timestamp": "2026-10-28T16:56:26.538794"
+      },
+      {
+        "id": 41,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "VERIFY_COMPARATIVE",
+        "details": "Evaluated CMP-005: verified_true",
+        "timestamp": "2026-10-28T16:24:42.297629"
+      },
+      {
+        "id": 40,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "ANCHOR_COMPARATIVE",
+        "details": "Anchored vague predicate 'better' for DES-012 on dimension 'search_latency_and_ram'",
+        "timestamp": "2026-10-28T16:24:35.526750"
+      },
+      {
+        "id": 39,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "ADD_TASK",
+        "details": "Added task DES-012-T1 to DES-012: Implement binary varint postings encoder",
+        "timestamp": "2026-10-28T16:24:16.073398"
+      },
+      {
+        "id": 38,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-012: Build disk-backed postings inverted index at vertex will_be",
+        "timestamp": "2026-10-28T16:24:06.517439"
+      },
+      {
+        "id": 33,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-011: Implement mmap chunked indexer with zero heap memory overhead at vertex will_be",
+        "timestamp": "2026-10-28T16:23:49.428927"
+      },
+      {
+        "id": 31,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-010: Build in-memory BM25 inverted index at vertex will_be",
+        "timestamp": "2026-10-28T16:23:43.616425"
+      },
+      {
+        "id": 29,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-009: Never leak local queries to external cloud APIs at vertex is_not",
+        "timestamp": "2026-10-28T16:23:38.371611"
+      },
+      {
+        "id": 27,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-008: Memory footprint cannot exceed 64MB RAM at vertex cant_be",
+        "timestamp": "2026-10-28T16:23:33.241624"
+      },
+      {
+        "id": 26,
+        "project_id": "PRJ-RETRIEVAL-001",
+        "action": "INIT_PROJECT",
+        "details": "Project Smart Document Retrieval Engine (PRJ-RETRIEVAL-001) initialized.",
+        "timestamp": "2026-10-28T16:23:26.358945"
+      }
+    ]
+  },
+  "PRJ-FULL-TEST": {
+    "project_id": "PRJ-FULL-TEST",
+    "name": "Memory and Network Optimization Project",
+    "description": "Validating full gluon lifecycle and boundary defense",
+    "ground_truth_is": "Current script runs in 1500ms and consumes 200MB RAM",
+    "last_updated": "2026-10-28T16:07:13.860338",
+    "desires": {
+      "DES-002": {
+        "id": "DES-002",
+        "title": "Build optimized local chunked streaming reader",
+        "vertex": "will_be",
+        "status": "active",
+        "rationale": "Keeps memory below 50MB",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "streaming",
+          "chunked",
+          "local"
+        ],
+        "tasks": []
+      },
+      "DES-003": {
+        "id": "DES-003",
+        "title": "Allocate 512MB RAM buffer for hardware burst cache",
+        "vertex": "will_be",
+        "status": "cancelled",
+        "rationale": "Attempting huge buffer on 128MB device",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": "Naturally cancelled out by Anti-Desire ANTI-004 (Target Goal breaches Invariant Constraint): 'Hardware capacity cannot exceed 128MB total RAM limit'",
+        "tags": [
+          "hardware",
+          "ram",
+          "buffer"
+        ],
+        "tasks": []
+      }
+    },
+    "anti_desires": {
+      "ANTI-003": {
+        "id": "ANTI-003",
+        "title": "Never send unencrypted plain text credentials or secrets",
+        "vertex": "is_not",
+        "severity": "boundary_taboo",
+        "reason_to_avoid": "Strict security compliance taboo",
+        "tags": [
+          "credentials",
+          "secrets",
+          "plain"
+        ]
+      },
+      "ANTI-004": {
+        "id": "ANTI-004",
+        "title": "Hardware capacity cannot exceed 128MB total RAM limit",
+        "vertex": "cant_be",
+        "severity": "hard_invariant",
+        "reason_to_avoid": "Physical embedded board memory constraint",
+        "tags": [
+          "hardware",
+          "memory",
+          "ram",
+          "capacity"
+        ]
+      }
+    },
+    "comparative_goals": {
+      "CMP-002": {
+        "id": "CMP-002",
+        "desire_id": "DES-002",
+        "predicate": "better",
+        "target_dimension": "latency_and_memory",
+        "baseline_was_like": "1500ms latency and 200MB RAM",
+        "boundary_is_not": "Memory must never exceed 128MB and no secrets leaked",
+        "reference_is_like": "",
+        "verification_status": "verified_true",
+        "verification_notes": "Verified: Successfully advanced beyond baseline '1500ms latency and 200MB RAM' to 'Achieved 280ms execution at 45MB RAM footprint locally' while respecting boundary 'Memory must never exceed 128MB and no secrets leaked'."
+      }
+    },
+    "conflicts": [
+      {
+        "desire_id": "DES-003",
+        "anti_desire_id": "ANTI-004",
+        "vector_type": "RED_PRIMARY",
+        "severity": "FATAL_CONTRADICTION",
+        "rule": "If you target 'will_be' but it 'can't be', the desire is fundamentally invalid and is automatically cancelled.",
+        "overlap_terms": [
+          "ram",
+          "hardware"
+        ]
+      }
+    ],
+    "process_logs": [],
+    "audit_trail": [
+      {
+        "id": 15,
+        "project_id": "PRJ-FULL-TEST",
+        "action": "VERIFY_COMPARATIVE",
+        "details": "Evaluated CMP-002: verified_true",
+        "timestamp": "2026-10-28T16:07:13.874094"
+      },
+      {
+        "id": 14,
+        "project_id": "PRJ-FULL-TEST",
+        "action": "ANCHOR_COMPARATIVE",
+        "details": "Anchored vague predicate 'better' for DES-002 on dimension 'latency_and_memory'",
+        "timestamp": "2026-10-28T16:07:13.872307"
+      },
+      {
+        "id": 13,
+        "project_id": "PRJ-FULL-TEST",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-003: Allocate 512MB RAM buffer for hardware burst cache at vertex will_be",
+        "timestamp": "2026-10-28T16:07:13.869203"
+      },
+      {
+        "id": 12,
+        "project_id": "PRJ-FULL-TEST",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-002: Build optimized local chunked streaming reader at vertex will_be",
+        "timestamp": "2026-10-28T16:07:13.866965"
+      },
+      {
+        "id": 11,
+        "project_id": "PRJ-FULL-TEST",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-004: Hardware capacity cannot exceed 128MB total RAM limit at vertex cant_be",
+        "timestamp": "2026-10-28T16:07:13.864902"
+      },
+      {
+        "id": 10,
+        "project_id": "PRJ-FULL-TEST",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-003: Never send unencrypted plain text credentials or secrets at vertex is_not",
+        "timestamp": "2026-10-28T16:07:13.863342"
+      },
+      {
+        "id": 9,
+        "project_id": "PRJ-FULL-TEST",
+        "action": "INIT_PROJECT",
+        "details": "Project Memory and Network Optimization Project (PRJ-FULL-TEST) initialized.",
+        "timestamp": "2026-10-28T16:07:13.860460"
+      }
+    ]
+  },
+  "PRJ-TEST-SUITE": {
+    "project_id": "PRJ-TEST-SUITE",
+    "name": "Autonomous System Optimizer",
+    "description": "Test project for validating Gluon Project Manager workflows",
+    "ground_truth_is": "Legacy script runs in 1500ms and uses 200MB RAM",
+    "last_updated": "2026-10-28T16:06:10.088381",
+    "desires": {},
+    "anti_desires": {
+      "ANTI-001": {
+        "id": "ANTI-001",
+        "title": "Exceeding physical memory limit of 100MB is impossible on target device",
+        "vertex": "cant_be",
+        "severity": "hard_invariant",
+        "reason_to_avoid": "Device has only 128MB RAM total hardware capacity",
+        "tags": [
+          "memory",
+          "ram",
+          "limit",
+          "device"
+        ]
+      },
+      "ANTI-002": {
+        "id": "ANTI-002",
+        "title": "Never rely on external cloud API calls or internet access",
+        "vertex": "is_not",
+        "severity": "boundary_taboo",
+        "reason_to_avoid": "Air-gapped secure environment mandate",
+        "tags": [
+          "cloud",
+          "api",
+          "network",
+          "external"
+        ]
+      }
+    },
+    "comparative_goals": {},
+    "conflicts": [],
+    "process_logs": [],
+    "audit_trail": [
+      {
+        "id": 8,
+        "project_id": "PRJ-TEST-SUITE",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-002: Never rely on external cloud API calls or internet access at vertex is_not",
+        "timestamp": "2026-10-28T16:06:10.092339"
+      },
+      {
+        "id": 7,
+        "project_id": "PRJ-TEST-SUITE",
+        "action": "ADD_ANTI_DESIRE",
+        "details": "Added anti-desire ANTI-001: Exceeding physical memory limit of 100MB is impossible on target device at vertex cant_be",
+        "timestamp": "2026-10-28T16:06:10.091037"
+      },
+      {
+        "id": 6,
+        "project_id": "PRJ-TEST-SUITE",
+        "action": "INIT_PROJECT",
+        "details": "Project Autonomous System Optimizer (PRJ-TEST-SUITE) initialized.",
+        "timestamp": "2026-10-28T16:06:10.088464"
+      }
+    ]
+  },
+  "PRJ-GLUON-DEMO": {
+    "project_id": "PRJ-GLUON-DEMO",
+    "name": "Semantic Gluon Integration Demo",
+    "description": "End-to-end verification of MCP Project Manager",
+    "ground_truth_is": "Local SQLite and JSON stores operating synchronously.",
+    "last_updated": "2026-10-28T16:02:23.566725",
+    "desires": {
+      "DES-001": {
+        "id": "DES-001",
+        "title": "Build ultra-fast memory indexer",
+        "vertex": "will_be",
+        "status": "active",
+        "rationale": "Accelerate lookups across local corpora",
+        "superseded_by": null,
+        "supersedes": null,
+        "cancellation_reason": null,
+        "tags": [
+          "memory",
+          "indexer",
+          "speed"
+        ],
+        "tasks": []
+      }
+    },
+    "anti_desires": {},
+    "comparative_goals": {
+      "CMP-001": {
+        "id": "CMP-001",
+        "desire_id": "DES-001",
+        "predicate": "better",
+        "target_dimension": "latency_ms",
+        "baseline_was_like": "Disk-based index latency is 45ms",
+        "boundary_is_not": "RAM usage must not exceed 64MB and cannot crash on unicode",
+        "reference_is_like": "",
+        "verification_status": "verified_true",
+        "verification_notes": "Verified: Successfully advanced beyond baseline 'Disk-based index latency is 45ms' to 'Achieved 4.2ms in-memory lookup at 28MB RAM footprint' while respecting boundary 'RAM usage must not exceed 64MB and cannot crash on unicode'."
+      }
+    },
+    "conflicts": [],
+    "process_logs": [],
+    "audit_trail": [
+      {
+        "id": 5,
+        "project_id": "PRJ-GLUON-DEMO",
+        "action": "VERIFY_COMPARATIVE",
+        "details": "Evaluated CMP-001: verified_true",
+        "timestamp": "2026-10-28T16:02:23.571863"
+      },
+      {
+        "id": 4,
+        "project_id": "PRJ-GLUON-DEMO",
+        "action": "ANCHOR_COMPARATIVE",
+        "details": "Anchored vague predicate 'better' for DES-001 on dimension 'latency_ms'",
+        "timestamp": "2026-10-28T16:02:23.570512"
+      },
+      {
+        "id": 3,
+        "project_id": "PRJ-GLUON-DEMO",
+        "action": "ADD_DESIRE",
+        "details": "Added desire DES-001: Build ultra-fast memory indexer at vertex will_be",
+        "timestamp": "2026-10-28T16:02:23.568932"
+      },
+      {
+        "id": 2,
+        "project_id": "PRJ-GLUON-DEMO",
+        "action": "INIT_PROJECT",
+        "details": "Project Semantic Gluon Integration Demo (PRJ-GLUON-DEMO) initialized.",
+        "timestamp": "2026-10-28T16:02:23.566804"
+      }
+    ]
+  },
+  "TEST-001": {
+    "project_id": "TEST-001",
+    "name": "Test Project",
+    "description": "Testing proper MCP server",
+    "ground_truth_is": "Project initialized in active working state",
+    "last_updated": "2026-10-28T15:55:27.643379",
+    "desires": {},
+    "anti_desires": {},
+    "comparative_goals": {},
+    "conflicts": [],
+    "process_logs": [],
+    "audit_trail": [
+      {
+        "id": 1,
+        "project_id": "TEST-001",
+        "action": "INIT_PROJECT",
+        "details": "Project Test Project (TEST-001) initialized.",
+        "timestamp": "2026-10-28T15:55:27.643497"
+      }
+    ]
+  }
+}

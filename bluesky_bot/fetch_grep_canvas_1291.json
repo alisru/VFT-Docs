@@ -1,0 +1,171 @@
+Command exited with code 0.
+
+Command output:
+
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:48:  // 
+-------------------------------------------------------------
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:49:  // HELPER: Path Name Geodesic Logic 
+(Identical to generate_graph.py)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:50:  // 
+-------------------------------------------------------------
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:51:  function getPathName(claim_u, 
+claim_psi, real_u, real_psi) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:52:    let exitName = "Reckoning", 
+originZone = "Greater Evil";
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:53:    if (claim_u > 0 && claim_psi > 0) { 
+exitName = "Fall"; originZone = "Greater Good"; }
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:54:    else if (claim_u <= 0 && claim_psi > 
+0) { exitName = "Revelation"; originZone = "Greatest Lie"; }
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:55:    else if (claim_u > 0 && claim_psi <= 
+0) { exitName = "Awakening"; originZone = "Lesser Good"; }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:56:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:57:    let entryName = "Destruction", 
+destZone = "Greater Evil";
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:58:    if (real_u > 0 && real_psi > 0) { 
+entryName = "Grace"; destZone = "Greater Good"; }
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:59:    else if (real_u <= 0 && real_psi > 0) 
+{ entryName = "Deception"; destZone = "Greatest Lie"; }
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:60:    else if (real_u > 0 && real_psi <= 0) 
+{ entryName = "Redemption"; destZone = "Lesser Good"; }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:61:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:62:    if (originZone === destZone) return 
+"Stasis";
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:63:    return `${exitName} into 
+${entryName}`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:66:  // 
+-------------------------------------------------------------
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:67:  // 1. TRAJECTORY GRAPH ENGINE (Port of 
+generate_graph.py)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:68:  // 
+-------------------------------------------------------------
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:69:  function drawGraphCanvas(story, canvas) 
+{
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:70:    if (!canvas) canvas = 
+document.createElement('canvas');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:71:    canvas.width = 1000;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:72:    canvas.height = 1000;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:73:    const ctx = canvas.getContext('2d');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:74:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:75:    const claim_u = (story.claim_u !== 
+null && story.claim_u !== undefined) ? Number(story.claim_u) : 0.0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:76:    const claim_psi = (story.claim_psi 
+!== null && story.claim_psi !== undefined) ? Number(story.claim_psi) : 0.0;
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:77:    const real_u = (story.real_u !== null 
+&& story.real_u !== undefined) ? Number(story.real_u) : 0.0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:78:    const real_psi = (story.real_psi !== 
+null && story.real_psi !== undefined) ? Number(story.real_psi) : 0.0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:79:    const title = story.subject || 
+"Psochic Hegemony Assessment";
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:80:    const pathName = getPathName(claim_u, 
+claim_psi, real_u, real_psi);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:81:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:82:    // Canvas Background
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:83:    ctx.fillStyle = '#111111';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:122:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:123:    const field_sigma = 1.3;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:124:    const max_size = 32.0;
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:125:    const judgement_points = [{ u: 
+claim_u, psi: claim_psi }, { u: real_u, psi: real_psi }];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:126:    const green_lean = 
+judgement_points.reduce((acc, p) => acc + Math.max(p.u, 0.0) / 2.0, 0);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:127:    const red_lean = 
+judgement_points.reduce((acc, p) => acc + Math.max(-p.u, 0.0) / 2.0, 0);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:128:    const like_boost_strength = 0.6;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:280:    drawHegemonyCross(1.0, 0.0, 0.25, 
+'#CCCCCC');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:281:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:282:    // 2. Dynamic Needle Cross (50% 
+opacity, rotated along Resulting Judgement)
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:283:    const mag = Math.hypot(real_u, 
+real_psi);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:284:    if (mag > 0.05) {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:285:      const targetAngle = 
+(Math.atan2(real_psi, real_u) * 180.0) / Math.PI;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:286:      const rotAngle = targetAngle - 
+45.0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:287:      drawHegemonyCross(0.55, rotAngle, 
+0.50, 'white');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:288:    }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:351:    ctx.fillText("(Depression)", 
+toCanvasX(-1.9), toCanvasY(-1.9));
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:352:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:353:    // Stated Claim (Hollow Yellow Ring, 
+exactly matching matplotlib marker='o', fillstyle='none')
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:354:    const clX = toCanvasX(claim_u), clY 
+= toCanvasY(claim_psi);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:355:    ctx.strokeStyle = '#FFFF00';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:356:    ctx.lineWidth = 2.5;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:357:    ctx.beginPath();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:359:    ctx.stroke();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:360:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:361:    // Actual Reality (Red 5-pointed 
+star, exactly matching matplotlib marker='*', color='red')
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:362:    const reX = toCanvasX(real_u), reY = 
+toCanvasY(real_psi);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:363:    function drawStar(cx, cy, spikes, 
+outerRadius, innerRadius) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:364:      let rot = (Math.PI / 2) * 3;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:365:      let x = cx, y = cy;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:423:    ctx.font = '14px "DejaVu Sans", 
+Arial, sans-serif';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:424:    ctx.fillText(`Projected Eventuality: 
+${pathName}`, 500, 56);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:425:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:426:    const cU_str = `${claim_u > 0 ? '+' 
+: ''}${claim_u.toFixed(1)}`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:427:    const cPsi_str = `${claim_psi > 0 ? 
+'+' : ''}${claim_psi.toFixed(1)}`;
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:428:    const rU_str = `${real_u > 0 ? '+' : 
+''}${real_u.toFixed(1)}`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:429:    const rPsi_str = `${real_psi > 0 ? 
+'+' : ''}${real_psi.toFixed(1)}`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:430:    ctx.fillText(`Stated: (${cU_str}, 
+${cPsi_str})  |  Actual: (${rU_str}, ${rPsi_str})`, 500, 80);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:431:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:550:      });
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:551:    }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:552:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:553:    const real_u = (story.real_u !== 
+null && story.real_u !== undefined) ? Number(story.real_u) : 0.0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:554:    const real_psi = (story.real_psi !== 
+null && story.real_psi !== undefined) ? Number(story.real_psi) : 0.0;
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:555:    const coordsStr = `(${real_u > 0 ? 
+'+' : ''}${real_u.toFixed(2)}, ${real_psi > 0 ? '+' : ''}${real_psi.toFixed(2)})`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:556:    const verdictSubtitle = `Resulting 
+Judgement: ${coordsStr} - ${story.verdict || 'Hegemonic Audit'}`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:557:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:558:    const canvas_w = 1200;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:722:      { label: "BROTHEKANON", text: 
+(posts[secOffset + 8] || '').replace(/^Brothekanon:\s*/i, '').trim(), color: "#F59E0B" }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:723:    ];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:724:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:725:    const real_u = (story.real_u !== 
+null && story.real_u !== undefined) ? Number(story.real_u) : 0.0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:726:    const real_psi = (story.real_psi !== 
+null && story.real_psi !== undefined) ? Number(story.real_psi) : 0.0;
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:727:    const coordsStr = `(${real_u > 0 ? 
+'+' : ''}${real_u.toFixed(2)}, ${real_psi > 0 ? '+' : ''}${real_psi.toFixed(2)})`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:728:    const analysisSubtitle = `SYSTEM 
+ANALYSIS & PERSPECTIVES | ${coordsStr}`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:729:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:730:    const canvas_w = 1200;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:902:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:903:    const posts = story.posts || [];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:904:    const subject = story.subject || 
+"Five-Word Audit";
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:905:    const real_u = (story.real_u !== 
+null && story.real_u !== undefined) ? Number(story.real_u) : 0.0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:906:    const real_psi = (story.real_psi !== 
+null && story.real_psi !== undefined) ? Number(story.real_psi) : 0.0;
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:907:    const claim_u = (story.claim_u !== 
+null && story.claim_u !== undefined) ? Number(story.claim_u) : 0.0;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:908:    const claim_psi = (story.claim_psi 
+!== null && story.claim_psi !== undefined) ? Number(story.claim_psi) : 0.0;
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:909:    const subtitle = `Stated: (${claim_u 
+> 0 ? '+' : ''}${claim_u.toFixed(1)}, ${claim_psi > 0 ? '+' : ''}${claim_psi.toFixed(1)}) | Actual: (${real_u > 0 ? 
+'+' : ''}${real_u.toFixed(1)}, ${real_psi > 0 ? '+' : ''}${real_psi.toFixed(1)})`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:910:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:911:    ctx.fillStyle = '#0B0F19';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\aletheia_canvas_renderer.js:912:    ctx.fillRect(0, 0, 1100, 860);
+
+

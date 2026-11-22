@@ -1,0 +1,78 @@
+{
+  "version": "v2.8",
+  "description": "Validation suite covering all 7 AITA verdicts, opposing-perspective pairs, duty-gate boundaries, R_net fault flags, and repair states R0-R3.",
+  "cases": [
+    {
+      "id": "val_01_nta_retrospective",
+      "is_hypothetical": false,
+      "info_branches_flip": false,
+      "u_op_eval": 0.55,
+      "u_other_eff": -0.85,
+      "expected_verdict": "NTA"
+    },
+    {
+      "id": "val_02_ywnbta_prospective",
+      "is_hypothetical": true,
+      "info_branches_flip": false,
+      "u_op_eval": 0.35,
+      "u_other_eff": -0.80,
+      "expected_verdict": "YWNBTA"
+    },
+    {
+      "id": "val_03_yta_retrospective",
+      "is_hypothetical": false,
+      "info_branches_flip": false,
+      "u_op_eval": -0.75,
+      "u_other_eff": 0.40,
+      "expected_verdict": "YTA"
+    },
+    {
+      "id": "val_04_ywbta_prospective",
+      "is_hypothetical": true,
+      "info_branches_flip": false,
+      "u_op_eval": -0.60,
+      "u_other_eff": 0.25,
+      "expected_verdict": "YWBTA"
+    },
+    {
+      "id": "val_05_esh_coercion_collision",
+      "is_hypothetical": false,
+      "info_branches_flip": false,
+      "u_op_eval": -0.35,
+      "u_other_eff": -0.90,
+      "expected_verdict": "ESH"
+    },
+    {
+      "id": "val_06_nah_non_malicious_collision",
+      "is_hypothetical": false,
+      "info_branches_flip": false,
+      "u_op_eval": 0.15,
+      "u_other_eff": 0.10,
+      "expected_verdict": "NAH"
+    },
+    {
+      "id": "val_07_info_branch_flip",
+      "is_hypothetical": false,
+      "info_branches_flip": true,
+      "u_op_eval": 0.05,
+      "u_other_eff": -0.10,
+      "expected_verdict": "INFO"
+    },
+    {
+      "id": "val_08_boundary_tau_exact",
+      "is_hypothetical": false,
+      "info_branches_flip": false,
+      "u_op_eval": -0.20,
+      "u_other_eff": -0.21,
+      "expected_verdict": "NTA"
+    },
+    {
+      "id": "val_09_opposing_perspective_flip_op",
+      "is_hypothetical": false,
+      "info_branches_flip": false,
+      "u_op_eval": -0.85,
+      "u_other_eff": 0.55,
+      "expected_verdict": "YTA"
+    }
+  ]
+}

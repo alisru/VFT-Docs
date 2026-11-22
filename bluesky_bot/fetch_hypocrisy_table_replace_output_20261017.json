@@ -1,0 +1,161 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -4410,6 +4410,29 @@
+       const pageSize = _leaderboardPageSizes[tableType] || 100;
+       const paged = filtered.slice(0, pageSize);
+ 
++      const isOutletTable = tableType === 'outlet';
++      const isEditorialMode = isOutletTable && _outletMode === 'editorial';
++
++      const roleSelect = tableType === 'actor' ? `
++        <div style="display:flex; align-items:center; gap:0.3rem;">
++          <span style="color:var(--text-muted);">Role:</span>
++          <select onchange="setActorRoleFilter(this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
++            <option value="instigator" ${_actorRoleFilter==='instigator'?'selected':''}>⚡ Instigators</option>
++            <option value="all"        ${_actorRoleFilter==='all'?'selected':''}>All Roles</option>
++            <option value="acted_upon" ${_actorRoleFilter==='acted_upon'?'selected':''}>🎯 Targets/Victims</option>
++            <option value="author"     ${_actorRoleFilter==='author'?'selected':''}>📰 Authors/Media</option>
++            <option value="regulator"  ${_actorRoleFilter==='regulator'?'selected':''}>⚖️ Regulators/Courts</option>
++            <option value="context"    ${_actorRoleFilter==='context'?'selected':''}>🗺️ Context/Nations</option>
++          </select>
++        </div>` : (isOutletTable ? `
++        <div style="display:flex; align-items:center; gap:0.3rem;">
++          <span style="color:var(--text-muted);">Metric:</span>
++          <select onchange="setOutletMode(this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
++            <option value="editorial" ${_outletMode==='editorial'?'selected':''}>📰 Editorial Integrity (Communicator)</option>
++            <option value="target"    ${_outletMode==='target'?'selected':''}>🔍 Subject Distortion (Target Atrocities)</option>
++          </select>
++        </div>` : '');
++
+       let tableContent = '';
+       if (!paged.length) {
+         tableContent = '<div style="grid-column: span 6; color:var(--text-muted); text-align:center; padding: 1rem 0;">No entries matching filters.</div>';
+@@ -4416,7 +4416,4 @@
+         tableContent = paged.map((r, idx) => {
+-          const ratio = Math.min(1.0, Math.max(0.0, (r.avgDelta || 0) / 3.0));
+-          const hue = Math.round(140 - (ratio * 140));
+-          const color = `hsl(${hue}, 80%, 48%)`;
+           const cleanKey = r.key.replace(/[^a-zA-Z0-9]/g, '-');
+           const dropdownId = `dropdown-${tableType}-${cleanKey}`;
+           const isOpen = _openLeaderboardDropdowns.has(dropdownId);
+@@ -4423,44 +4423,58 @@
+           const arrowTransform = isOpen ? 'rotate(90deg)' : 'rotate(0deg)';
+           const safeKeyEscaped = r.key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+ 
+-          return `
+-            <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}', '${tableType}', '${safeKeyEscaped}')">
+-              <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px; transform:${arrowTransform};">▶</span>${r.key}
+-            </span>
+-            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
+-            <span style="text-align:right; font-family:var(--font-mono); color:${color}; font-weight:600;">${fmt(r.avgDelta)}</span>
+-            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealU)}</span>
+-            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealPsi)}</span>
+-            <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.consistency.toFixed(2)}</span>
+-            
+-            <div id="${dropdownId}" style="grid-column: span 6; display:${displayStyle}; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
+-              ${isOpen ? _renderDropdownStories(tableType, r.key) : ''}
+-            </div>
+-          `;
++          if (isEditorialMode) {
++            const passPct = r.passRate || 0;
++            const hue = Math.round((passPct / 100) * 120); // 0% = Red (0), 100% = Green (120)
++            const color = `hsl(${hue}, 80%, 48%)`;
++            const evalCount = r.editorialTotal > 0 ? r.editorialTotal : r.n;
++            const passText = `${passPct.toFixed(0)}%`;
++            const editU = r.avgEditorialU !== undefined ? fmt(r.avgEditorialU) : '0.00';
++            const passCount = r.editorialPasses || 0;
++            const failCount = r.editorialFails || 0;
++
++            return `
++              <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}', '${tableType}', '${safeKeyEscaped}')">
++                <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px; transform:${arrowTransform};">▶</span>${r.key}
++              </span>
++              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
++              <span style="text-align:right; font-family:var(--font-mono); color:${color}; font-weight:600;">${passText}</span>
++              <span style="text-align:right; font-family:var(--font-mono); color:${color}; font-weight:600;">${editU}</span>
++              <span style="text-align:right; font-family:var(--font-mono); color:var(--pass-green);">${passCount}</span>
++              <span style="text-align:right; font-family:var(--font-mono); color:var(--reality-red);">${failCount}</span>
++              
++              <div id="${dropdownId}" style="grid-column: span 6; display:${displayStyle}; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
++                ${isOpen ? _renderDropdownStories(tableType, r.key) : ''}
++              </div>
++            `;
++          } else {
++            const ratio = Math.min(1.0, Math.max(0.0, (r.avgDelta || 0) / 3.0));
++            const hue = Math.round(140 - (ratio * 140));
++            const color = `hsl(${hue}, 80%, 48%)`;
++
++            return `
++              <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; font-weight:600;" onclick="toggleActorDropdown('${dropdownId}', '${tableType}', '${safeKeyEscaped}')">
++                <span id="arrow-${dropdownId}" style="display:inline-block; transition:transform 0.15s; margin-right:4px; transform:${arrowTransform};">▶</span>${r.key}
++              </span>
++              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.n}</span>
++              <span style="text-align:right; font-family:var(--font-mono); color:${color}; font-weight:600;">${fmt(r.avgDelta)}</span>
++              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealU)}</span>
++              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${fmt(r.avgRealPsi)}</span>
++              <span style="text-align:right; font-family:var(--font-mono); color:var(--text-muted);">${r.consistency.toFixed(2)}</span>
++              
++              <div id="${dropdownId}" style="grid-column: span 6; display:${displayStyle}; padding:0.4rem 0.8rem; margin:0.1rem 0 0.3rem 0; background:rgba(0,0,0,0.15); border-left:2px solid var(--bsky-blue); border-radius:0 4px 4px 0; font-size:0.75rem;">
++                ${isOpen ? _renderDropdownStories(tableType, r.key) : ''}
++              </div>
++            `;
++          }
+         }).join('');
+       }
+ 
+-      let showMoreFooter = '';
+-      if (filtered.length > pageSize) {
+-        showMoreFooter = `
+-          <div onclick="showMoreTableRows('${tableType}')" style="grid-column: span 6; text-align: center; padding: 0.5rem; cursor: pointer; color: var(--bsky-blue); font-weight: 600; background: rgba(255,255,255,0.03); border: 1px dashed var(--panel-border); border-radius: 4px; margin: 4px 0; font-size: 0.75rem; user-select: none;">
+-            Showing ${paged.length} of ${filtered.length} entries — Click to show next 100 ▾
+-          </div>
+-        `;
+-      }
+-      
+-      const roleSelect = tableType === 'actor' ? `
+-        <div style="display:flex; align-items:center; gap:0.3rem;">
+-          <span style="color:var(--text-muted);">Role:</span>
+-          <select onchange="setActorRoleFilter(this.value)" style="background:rgba(0,0,0,0.25); border:1px solid var(--panel-border); color:var(--text-main); border-radius:4px; padding:0.15rem 0.4rem; outline:none; cursor:pointer; font-family:var(--font-outfit); font-size:0.72rem;">
+-            <option value="instigator" ${_actorRoleFilter==='instigator'?'selected':''}>⚡ Instigators</option>
+-            <option value="all"        ${_actorRoleFilter==='all'?'selected':''}>All Roles</option>
+-            <option value="acted_upon" ${_actorRoleFilter==='acted_upon'?'selected':''}>🎯 Targets/Victims</option>
+-            <option value="author"     ${_actorRoleFilter==='author'?'selected':''}>📰 Authors/Media</option>
+-            <option value="regulator"  ${_actorRoleFilter==='regulator'?'selected':''}>⚖️ Regulators/Courts</option>
+-            <option value="context"    ${_actorRoleFilter==='context'?'selected':''}>🗺️ Context/Nations</option>
+-          </select>
+-        </div>` : '';
++      const col3Header = isEditorialMode ? `Pass Rate${getIndicator('passRate')}` : `avg Δu${getIndicator('avgDelta')}`;
++      const col3Click = isEditorialMode ? `${clickFn}'passRate')` : `${clickFn}'avgDelta')`;
++      const col4Header = isEditorialMode ? `Editorial u${getIndicator('avgRealU')}` : `avg u${getIndicator('avgRealU')}`;
++      const col5Header = isEditorialMode ? `PASS` : `avg ψ${getIndicator('avgRealPsi')}`;
++      const col6Header = isEditorialMode ? `FAIL` : `σ${getIndicator('consistency')}`;
+ 
+       return `
+         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; font-size:0.75rem; flex-wrap:wrap; gap:0.5rem;">
+@@ -4488,10 +4488,10 @@
+             <!-- Clickable Headers (Standard Column Sorting) -->
+             <span style="color:var(--text-muted); font-weight:600; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'key')">${labelHead}${getIndicator('key')}</span>
+             <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'n')">n${getIndicator('n')}</span>
+-            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${clickFn}'avgDelta')">avg Δu${getIndicator('avgDelta')}</span>
+-            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'avgRealU')">avg u${getIndicator('avgRealU')}</span>
+-            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'avgRealPsi')">avg ψ${getIndicator('avgRealPsi')}</span>
+-            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'consistency')">σ${getIndicator('consistency')}</span>
++            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none;" onclick="${col3Click}">${col3Header}</span>
++            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'avgRealU')">${col4Header}</span>
++            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'avgRealPsi')">${col5Header}</span>
++            <span style="color:var(--text-muted); text-align:right; position: sticky; top: 0; background: var(--panel-bg); padding: 0.2rem 0; z-index: 2; cursor:pointer; user-select:none; white-space:nowrap;" onclick="${clickFn}'consistency')">${col6Header}</span>
+             
+             ${tableContent}
+             ${showMoreFooter}
+@@ -4498,5 +4498,8 @@
+         </div>
+       `;
++          </div>
++        </div>
++      `;
+     }
+ 
+     function auditActorLeaderboard(stories) {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

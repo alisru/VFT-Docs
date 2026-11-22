@@ -1,18 +1,41 @@
 # Active Task List: Bluesky Bot Codebase Hardening, Invariants & Optimization
 
-- [/] **Codebase Audit & Vulnerability Diagnosis**:
+- [x] **Codebase Audit & Vulnerability Diagnosis**:
   - [x] Complete subagent audit of `bluesky_bot` pipeline files.
   - [x] Save comprehensive report to `bluesky_bot/bluesky_bot_audit_report.md`.
-- [ ] **Deterministic Trajectory Invariant Enforcement**:
-  - [ ] Import `get_path_name` into `google_ai_studio_one_shot.py` and `rebuild_registries_son.py`.
-  - [ ] Automatically calculate and overwrite trajectory lines in Post 3 (Verdict) and Post 8 (The Trajectory) based on $(u, \psi)$ deltas.
-  - [ ] Add explicit Deterministic Trajectory Invariant text to `instructions/thread_formatting_son.md`.
-- [ ] **Prompt Efficiency & Token Optimization**:
-  - [ ] Remove duplicate `extra_context` from `system_instruction` in `google_ai_studio_one_shot.py` (keep once in `user_payload`).
-  - [ ] Cap candidate text body at 2,500 characters in `harvest_candidates.py` and cluster secondary snippets at 1,200 characters.
-  - [ ] Extract Bluesky `created_at` / `indexed_at` timestamps into `pub_date` in `harvest_candidates.py`.
-- [ ] **Card Alt-Text & Cascading Post Fixes**:
-  - [ ] Fix `aletheia_bot.py` alt-text generation to use persona prefix matching instead of fixed `posts[4..12]` array indices.
-  - [ ] Fix `pack_posts` carry-over logic to prevent text fragments bleeding into subsequent steps.
-- [ ] **Story Retraction & Correction Pipeline**:
-  - [ ] Implement `retract_story.py` CLI to post an errata reply, update story status to `AMENDED`/`RETRACTED`, and re-index registries.
+- [x] **Deterministic Trajectory Invariant Enforcement**:
+  - [x] Import and call `enforce_deterministic_trajectory()` in `google_ai_studio_one_shot.py` and `rebuild_registries_son.py`.
+  - [x] Overwrite trajectory strings in Post 3 (Verdict) and the Trajectory post so no prompt hallucination can violate mathematical quadrant transitions.
+  - [x] Add explicit Deterministic Trajectory Invariant text to `instructions/thread_formatting_son.md`.
+- [x] **Prompt Efficiency & Token Optimization**:
+  - [x] Remove duplicate `extra_context` from `system_instruction` in `google_ai_studio_one_shot.py` (kept once in `user_payload`).
+  - [x] Cap candidate text body at 2,500 characters in `harvest_candidates.py` and cluster secondary snippets at 1,200 characters.
+  - [x] Extract Bluesky `created_at` / `indexed_at` timestamps into `pub_date` in `harvest_candidates.py`.
+- [x] **Card Alt-Text & Cascading Post Fixes**:
+  - [x] Fix `aletheia_bot.py` alt-text generation to use persona prefix matching instead of fixed `posts[4..12]` array indices.
+  - [x] Fix `pack_posts` carry-over logic to prevent text fragments bleeding into subsequent steps.
+- [x] **Story Re-Audit, Retraction & Launcher UI Integration**:
+  - [x] Build `bluesky_bot/reaudit_story.py` engine that runs active counter-perspective search, re-audits with Gemini, and generates Errata cards.
+  - [x] Add **🔄 Story Re-Audit & Correction Dispatcher** card directly into `AletheiaLauncher.pyw` GUI with live console output streaming.
+- [x] **Source Bias, Harvester Pipeline & Queue Redo (v35)**:
+  - [x] Document full root-cause postmortem across all 7 Planes of Reality in `bluesky_bot/SOURCE_BIAS_AND_HARVESTER_POSTMORTEM.md`.
+  - [x] Clean `unscrapable_domains.json`: rescued 28 legitimate newsrooms (The Guardian, Reuters, AP, Axios, BBC, ABC, etc.).
+  - [x] Update `SCRAPING_WHITELIST` in `harvest_candidates.py` and `google_ai_studio_one_shot.py` to give permanent immunity to standard newsrooms.
+  - [x] Add domain diversity capping (max 2 per outlet) in `harvest_candidates.py` to stop single-outlet batch floods.
+  - [x] Add neutrality-weighted primary source prioritization in `cluster_by_semantic_similarity` (`center`/`wire` > `other` > `partisan`).
+  - [x] Re-audit all 23 queued stories via `redo_queued_audits.py` eliminating partisan asymmetry, trajectory violations, and tabloid smear adoption.
+  - [x] Recompile registries (`rebuild_registries_son.py`) with zero errors.
+- [x] **Comprehensive Re-Audit of Flawed Stories in Last 100 Live Batch (v36)**:
+  - [x] Scan and catalogue all flawed stories among the last 100 live posts (`scan_last_100_live.py`).
+  - [x] Build comprehensive batch re-audit engine `reaudit_live_batch.py` adhering to Aletheia SON Protocol.
+  - [x] Directly execute full substantive re-audits for all 62 identified flawed live stories.
+  - [x] Enforce 100% deterministic trajectory invariant compliance (dropped violations from 40 to 0).
+  - [x] Eliminate ungrounded cynical bias ($\le -0.7$ penalties dropped from 53 to 7, reserved strictly for actual criminal acts).
+  - [x] Move all 62 re-audited stories from `stories/live/` into the draft review queue (`stories/`) as `DRAFT (CORRECTION)`.
+  - [x] Update drafts index `stories/index.json` and live index `stories/live/index.json`.
+  - [x] Recompile all registries, shards, force tensors, and narrative spines (`rebuild_registries_son.py`).
+- [x] **Coordinate Scale Calibration & New Batch Invariant Guardrail (v37)**:
+  - [x] Programmatically inject `COORDINATE_SCALE_CALIBRATION` into `_load_rules()` in `google_ai_studio_one_shot.py` so calibration anchors are loaded first before any convergence tests without modifying source markdown files.
+  - [x] Bulletproof `enforce_deterministic_trajectory()` in `generate_graph.py` to deterministically set `story['path_name']`, overwrite line 1 of Post 3, and eliminate fragile regex dependencies.
+  - [x] Re-audit all 28 suspect stories in the incoming batch (France strikes, lab meat, AOC 2028, lame-duck session, ER copyright suit, noncitizen voter indictments).
+  - [x] Verify zero trajectory violations across all 137 drafts in `stories/index.json` and recompile master registry (`stories_registry.js`).

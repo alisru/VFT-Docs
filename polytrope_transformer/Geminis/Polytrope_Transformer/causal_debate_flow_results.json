@@ -1,0 +1,45 @@
+{
+  "cycle": 7,
+  "experiment": "Asymmetric Multi-Turn Causal Debate Loss",
+  "epochs": 35,
+  "final_loss": 9.606,
+  "mean_delta_z": -0.2023,
+  "evaluations": [
+    {
+      "debate": "Questions without Notice: Albanese Government",
+      "premise_text": "As we wind up the budget session here, I thank the member for Gorton for her question.",
+      "response_text": "This is a budget that delivers real change for Australians.",
+      "z_premise": 0.2461,
+      "z_response": 1.9638,
+      "delta_z": 1.7177,
+      "asymmetry_verified": true
+    },
+    {
+      "debate": "Questions without Notice: Budget: Taxation",
+      "premise_text": "The first thing I'd say is congratulations to the press gallery board, to Jane Norman and her team, in raising money for charity last night.",
+      "response_text": "The second thing is that, if I were someone on that side led by this leader of the opposition, I wouldn't be mentioning last night.",
+      "z_premise": -1.9941,
+      "z_response": -1.9921,
+      "delta_z": 0.0021,
+      "asymmetry_verified": true
+    },
+    {
+      "debate": "Questions without Notice: Budget: Taxation",
+      "premise_text": "You just came in and asked a question about it.",
+      "response_text": "There are geniuses in the tactics committee!",
+      "z_premise": 1.9773,
+      "z_response": 1.9918,
+      "delta_z": 0.0145,
+      "asymmetry_verified": true
+    },
+    {
+      "debate": "Questions without Notice: Gambling",
+      "premise_text": "I thank the member for Mackellar for her question.",
+      "response_text": "The legislation that was introduced into the parliament today follows on from the previous work that my government has done\u2014more work than has been done by any government since Federation to crack down on gambling.",
+      "z_premise": 1.9889,
+      "z_response": -1.9139,
+      "delta_z": -3.9028,
+      "asymmetry_verified": false
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+Command exited with code 0.
+
+Command output:
+
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:254:    """
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:255:    Groups candidates into topic clusters 
+based on entity and title token overlap.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:256:    De-duplicates identical syndicates, 
+selects up to 3 distinct publisher perspectives per cluster,
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:257:    and attaches multi-source comparison 
+dossiers.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:258:    """
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:259:    if not candidates or len(candidates) < 2:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:260:        return candidates
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:342:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:343:            # Pass 2: If we still have slots 
+(< 3), only add from the same bias family if there is genuinely no alternative
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:344:            # BUT if all distinct sources 
+share the EXACT same bias family (e.g. only Right-wing or only Left-wing),
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:345:            # DO NOT create a synthetic 
+"multi-source" cluster - keep them as single standalone stories
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:346:            # so the audit does not pretend to 
+be a multi-perspective consensus.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:347:            if len(distinct_sources) < 3:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:348:                for c in cluster:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:361:                        break
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:362:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:363:            # Anti-Echo Chamber Rule: If all 
+candidates in the cluster belong to the EXACT same partisan family
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:364:            # (e.g. Fox News + Breitbart = 
+only 'right'), refuse to treat it as a multi-source consensus.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:365:            # Fall back to a single primary 
+source.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:366:            partisan_families = {f for f in 
+seen_families if f in ('left', 'right')}
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:367:            if len(partisan_families) == 1 and 
+'center' not in seen_families and len(distinct_sources) > 1:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:411:            primary_c["is_multi_source"] = True
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:412:            
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:413:            sources_summary = []
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:414:            dossier_lines = [f"=== 
+MULTI-SOURCE TOPIC CLUSTER: {primary_c.get('subject')} ==="]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:415:            
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:416:            for idx, s in 
+enumerate(distinct_sources, 1):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:417:                pub_name = s.get("publisher") 
+or urllib.parse.urlparse(s.get("url", "")).hostname or f"Source {idx}"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:418:                url = s.get("url", "")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:419:                text = s.get("text", "")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:420:                bias = 
+get_outlet_bias(pub_name)
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:421:                # Cap secondary sources in 
+multi-source cluster dossier to 1,200 chars
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:422:                s_clean = text.strip()
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:423:                if idx > 1 and len(s_clean) > 
+1200:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:424:                    s_clean = 
+s_clean[:1200].rsplit(" ", 1)[0] + "..."
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:433:                
+dossier_lines.append(f"\n[Source {idx} - {pub_name} (Bias: {bias})] (URL: {url}):\n{s_clean}")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:434:                
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:435:            primary_c["cluster_sources"] = 
+sources_summary
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:436:            primary_c["cross_source_dossier"] 
+= "\n".join(dossier_lines)
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:437:            primary_c["text"] = f"Stated Claim 
+/ Post Context:\n{primary_c.get('subject')}\n\n{primary_c.get('cross_source_dossier')}"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:438:            if len(sources_summary) > 1:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:439:                primary_c["grounding_url"] = 
+sources_summary[1]["url"]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:440:            if len(sources_summary) > 2:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:445:            multi_count += 1
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:446:            
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:447:    if multi_count > 0:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:448:        print(f"\nClustered {len(candidates)} 
+raw candidates into {len(final_results)} distinct topics ({multi_count} multi-source cluster(s)).")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:449:    return final_results
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:450:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:451:script_dir = 
+os.path.dirname(os.path.abspath(__file__))  # e:\Vector Field Theory\VFT Docs\bluesky_bot
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1016:    # --- 1. DYNAMIC STORY-LEVEL 
+DE-DUPLICATION HEURISTIC ---
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1017:    # Only blocks the exact same article URL 
+from being evaluated or harvested twice.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1018:    # Multiple different outlets covering the 
+same topic are preserved so they can be
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1019:    # grouped together into multi-source 
+topic clusters by cluster_candidate_stories().
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1020:    seen_current_batch_urls = set()
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1021:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1022:    def is_duplicate_story(text, url, 
+check_batch=True):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1561:            
+combined_candidates.append(bsky_candidates[i])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1562:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1563:    # 5.1 Run topic clustering across ALL raw 
+candidates from all feeds before trimming to quota
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1564:    print(f"\nClustering 
+{len(combined_candidates)} raw candidate stories into multi-source topic events...")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1565:    clustered_candidates = 
+cluster_candidate_stories(combined_candidates)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1566:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1567:    # 5.2 Enforce domain diversity capping on 
+topic clusters
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1598:            continue
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1599:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1600:        c_text = c.get("text", "")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1601:        if "Actual Article Body:\n" in c_text 
+or "=== MULTI-SOURCE TOPIC CLUSTER:" in c_text:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1602:            print(f"[{idx}/{len(all_final)}] 
+[Candidate Body Exists] Reusing existing text for: {url}")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1603:            successful_final.append(c)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1604:            continue
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1605:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1606:        if c.get("is_multi_source") and 
+c.get("cluster_sources"):
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1607:            print(f"[{idx}/{len(all_final)}] 
+Scraping multi-source cluster ({len(c['cluster_sources'])} sources) for: {c.get('subject')}")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1608:            dossier_lines = [f"=== 
+MULTI-SOURCE TOPIC CLUSTER: {c.get('subject')} ==="]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1609:            for s_idx, src in 
+enumerate(c["cluster_sources"], 1):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1610:                src_url = src.get("url")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1611:                src_pub = 
+src.get("publisher") or f"Source {s_idx}"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1624:                src["snippet"] = 
+clean_body[:400].strip()
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1625:                
+dossier_lines.append(f"\n[Source {s_idx} - {src_pub} (Bias: {src_bias})] (URL: {src_url}):\n{clean_body}")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1626:            
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1627:            c["cross_source_dossier"] = 
+"\n".join(dossier_lines)
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1628:            c["text"] = f"Stated Claim / Post 
+Context:\n{c.get('subject')}\n\n{c['cross_source_dossier']}"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1629:            c["scraped_text"] = c["text"]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1630:            successful_final.append(c)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\harvest_candidates.py:1631:            continue
+
+

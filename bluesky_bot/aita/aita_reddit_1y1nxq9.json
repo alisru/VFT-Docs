@@ -1,0 +1,131 @@
+{
+  "id": "reddit_1y1nxq9",
+  "timestamp": "2026-11-21T05:02:50.992130+00:00",
+  "subreddit": "AmItheAsshole",
+  "author": "u/halloweeener",
+  "title": "AITAH for denying a free item to a customer?",
+  "url": "https://www.reddit.com/r/AmItheAsshole/comments/1y1nxq9/aitah_for_denying_a_free_item_to_a_customer/",
+  "is_hypothetical": false,
+  "selftext": "This is a super light hearted post, just genuinely interested in if I’m wrong for it or not.\n\nI work at a local fast food business, most of our items are à la carte and we have only 4 meal type things. We had a customer come through, he said he ordered a meal and we had missed one of his sides. So I naturally offered him a refund if he wanted one or I could write it down for next time and he could just receive it. I just needed him to provide an order number or the exact order down to a T. He started telling me what he had ordered and I found an order similar to it and I asked him to confirm the last four digits of the card. I told him he didn’t specify he wanted a meal and had clearly only paid for the item with no sides. He told me if he could hold an account with us and we could just give him the side for free. I told him since he hadn’t paid for it and had received the original food he did pay for we weren’t able to do that. He told me he was more than entitled to receive it because he asked for the item. I told him he definitely wasn’t and that if he had actually paid for it I wouldn’t argue with him about it at all, but that wasn’t the case. AITAH for refusing him a free item?",
+  "evaluation": {
+    "verdict": "NTA",
+    "certainty": "Certain",
+    "verdict_label": "Not the Asshole (and the other person is)",
+    "repair_state": "R0",
+    "hook_line": "A fast food worker refused to give a customer a free side item after checking the receipt and verifying he never paid for a full meal.",
+    "context_summary": "A customer claimed a missing meal side at a fast food counter. OP audited the register history, found the exact transaction, and confirmed only an a la carte item was purchased.",
+    "op_stated_summary": "OP asks if they are the asshole for refusing to hand over a free food item to a customer who claimed he was missing a side, after register receipts proved he had only ordered and paid for an a la carte item without any sides.",
+    "actual_kinetics_summary": "OP checked transaction logs, politely explained the billing error to the customer, and offered standard remedies. The customer demanded free food, asserting entitlement despite making zero payment.",
+    "reasoning_summary": "The customer attempted an unearned financial extraction by claiming entitlement to items never purchased. OP maintained zero-fault operational boundaries across Q3 physical inventory and Q5 logical billing rules, ensuring firm transactional compliance.",
+    "resolution_summary_plain": "Maintain current operational boundaries without second-guessing basic retail protocols. Script: 'I've verified the receipt and you were only charged for the single item. I can ring up the side for you now if you'd like it.' No further debate is required.",
+    "alethekanon": "Commercial interactions rely on strict logical equivalence between consideration and goods delivered. Refusing unearned extraction protects operational integrity and prevents low-level fraud. Enforcing rules calmly without escalation represents ideal execution.",
+    "awwthekanon": "You did your job perfectly and handled a uncomfortable customer situation with total professionalism! You offered to check the receipts and help him out, so you have absolutely nothing to feel bad about. Customers can't just demand free food for nothing!",
+    "brothekanon": "Guy tried to scam a free side dish, got caught red-handed by the receipt, and then tried to bully you into giving it to him anyway. You don't get free food just because you asked loudly. You did your job right, so laugh it off and don't give it another thought.",
+    "actor_aspects": [
+      {
+        "actor": "OP",
+        "role": "OP",
+        "son_u": 0.852,
+        "son_psi": 0.818,
+        "active_attractors": 3,
+        "anti_corner_collapse_ok": true,
+        "eca_anchor": "ECA_+0.5_+0.5",
+        "eca_u_interval": [
+          0.5,
+          0.5
+        ],
+        "duty_status": "Confirmed",
+        "u_eff_interval": [
+          0.852,
+          0.852
+        ],
+        "aspect_verdict": "PASS",
+        "P": 1.0,
+        "A": 1.0,
+        "Choice_delta": 0.0
+      },
+      {
+        "actor": "Customer",
+        "role": "Primary Counterparty",
+        "son_u": -0.655,
+        "son_psi": 0.304,
+        "active_attractors": 3,
+        "anti_corner_collapse_ok": true,
+        "eca_anchor": "ECA_-0.5_+0.5",
+        "eca_u_interval": [
+          -0.5,
+          -0.5
+        ],
+        "duty_status": "Confirmed",
+        "u_eff_interval": [
+          -0.655,
+          -0.655
+        ],
+        "aspect_verdict": "FAIL",
+        "P": 0.5,
+        "A": 1.0,
+        "Choice_delta": -0.5
+      }
+    ],
+    "coordinates": {
+      "op_stated": [
+        1.0,
+        1.0
+      ],
+      "op_actual": [
+        0.852,
+        0.818
+      ],
+      "op_u_interval": [
+        0.852,
+        0.852
+      ],
+      "op_eca_anchor": "ECA_+0.5_+0.5",
+      "other_actual": [
+        -0.655,
+        0.304
+      ],
+      "other_u_interval": [
+        -0.655,
+        -0.655
+      ],
+      "other_eca_anchor": "ECA_-0.5_+0.5",
+      "delta_H": 0.235,
+      "C_act": 0.81,
+      "wisdom_score": 0.81,
+      "R_net": 1.0,
+      "r_net_coverage": 1.0,
+      "r_net_fault_flags": [],
+      "deception_codes": [
+        "[5.2.5.3] Logical.Hearing.Debt.Touch — Customer: Asserting entitlement to unpaid merchandise based on verbal assertion over audit log"
+      ]
+    },
+    "why_verdict": "OP correctly enforced store policy and basic transactional fairness against a customer who demanded unearned, unpaid goods through aggressive entitlement.",
+    "vft_audit_trace": {
+      "silent_judgment": "Mute observer watches worker check POS system, find exact card transaction, verify single item purchase, and decline unpaid item request.",
+      "seven_planes": "Q3: Inventory boundary clear. Q5: Logical equation balanced (Goods = Payment). Q6: Audit trail confirms no side was billed or paid for.",
+      "traps_and_belief_state": "Customer operates in Ambition Trap (demanding unearned value through social pressure). OP is at baseline consensus truth.",
+      "unsaid_horizon": "Customer was attempting a standard retail push-through grift to gain free items via social awkwardness."
+    },
+    "vft_audit_trace_summary": "{\n  \"silent_judgment\": \"Mute observer watches worker check POS system, find exact card transaction, verify single item purchase, and decline unpaid item request.\",\n  \"seven_planes\": \"Q3: Inventory boundary clear. Q5: Logical equation balanced (Goods = Payment). Q6: Audit trail confirms no side was billed or paid for.\",\n  \"traps_and_belief_state\": \"Customer operates in Ambition Trap (demanding unearned value through social pressure). OP is at baseline consensus truth.\",\n  \"unsaid_horizon\": \"Customer was attempting a standard retail push-through grift to gain free items via social awkwardness.\"\n}",
+    "resolution": {
+      "trap_to_exit": "Ambition Trap (Customer)",
+      "script": "I've verified the receipt and card transaction. You were only billed for the single item. I am happy to ring up the side dish for you now if you'd like to purchase it.",
+      "serenity_boundary": "Enforce strict equivalence between payment and product release without engaging in emotional debate.",
+      "counterfactual_flip": "If POS history showed a meal charge, OP withholding the side would constitute a service breach."
+    },
+    "resolution_summary": "{\n  \"trap_to_exit\": \"Ambition Trap (Customer)\",\n  \"script\": \"I've verified the receipt and card transaction. You were only billed for the single item. I am happy to ring up the side dish for you now if you'd like to purchase it.\",\n  \"serenity_boundary\": \"Enforce strict equivalence between payment and product release without engaging in emotional debate.\",\n  \"counterfactual_flip\": \"If POS history showed a meal charge, OP withholding the side would constitute a service breach.\"\n}"
+  },
+  "posts": [
+    "⚖️ AITA Verdict: NTA — \"AITAH for denying a free item to a customer?\"\nOP correctly enforced store policy and basic transactional fairness against a customer who demanded unearned, unpaid goods through aggressive entitlement.\n#AITA #Aletheia",
+    "Context:\nThis is a super light hearted post, just genuinely interested in if I’m wrong for it or not.\n\nI work at a local fast food business, most of our items are à la carte…\nhttps://www.reddit.com/r/AmItheAsshole/comments/1y1nxq9/aitah_for_denying_a_free_item_to_a_customer/",
+    "Stated Framing:\nOP correctly enforced store policy and basic transactional fairness against a customer who demanded unearned, unpaid goods through aggressive entitlement.\nOP Stated: (+1.00, +1.00)",
+    "Actual Conduct:\nMute observer watches worker check POS system, find exact card transaction, verify single item purchase, and decline unpaid item request.\nOP: (+0.85, +0.82) [PASS] | Other: (-0.66, +0.30) [FAIL]",
+    "Verdict: NTA — Not the Asshole (and the other person is)\nOP correctly enforced store policy and basic transactional fairness against a customer who demanded unearned, unpaid goods through aggressive…\nSay-Do Gap: Low (0.23) | Integrity: 81% | Story Completeness: Solid (R_net 1.00)",
+    "Reasoning:\nOP correctly enforced store policy and basic transactional fairness against a customer who demanded unearned, unpaid goods through aggressive entitlement.",
+    "Resolution:\n",
+    "Alethekanon:\nOP correctly enforced store policy and basic transactional fairness against a customer who demanded unearned, unpaid goods through aggressive entitlement.",
+    "Awwthekanon:\n",
+    "Brothekanon:\nOP correctly enforced store policy and basic transactional fairness against a customer who demanded unearned, unpaid goods through aggressive entitlement."
+  ]
+}

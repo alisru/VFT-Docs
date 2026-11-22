@@ -1,0 +1,90 @@
+{
+  "cycle": 14,
+  "framework": "Argon 4 Teacher Distillation, Gyroscopic Polar Gate & Geodesic Trajectory Rebalancing",
+  "timestamp": "2026-10-14T09:57:26+11:00",
+  "geodesic_rebalancing": {
+    "shock_test_case": {
+      "delta_econ": 0.5,
+      "delta_mandate": 0.4,
+      "uncompensated_s_star": [-0.1905, 0.3371, -0.0873],
+      "uncompensated_modal": "REDUCTIVE COMPROMISE [is not]",
+      "beam_candidates": [
+        {
+          "id": "CANDIDATE_4_GROUNDED_TRIPARTITE_ACCORD",
+          "policy_text": "Establish regional airport and highway safety co-investment fund with statutory crossbench audit",
+          "q3_physical_allocation": 0.35,
+          "q5_logical_allocation": 0.2,
+          "substrate_passthrough": 1.0,
+          "rebalanced_s_star": [0.1405, 0.5336, 0.1617],
+          "resulting_modal_state": "PRODUCTIVE ACCORD [can be]",
+          "rebalancing_score": 0.8418,
+          "status": "SELECTED_OPTIMAL_GEODESIC_REBALANCING"
+        },
+        {
+          "id": "CANDIDATE_3_CONSTRUCTIVE_FREEZE",
+          "policy_text": "Defer regional aviation upgrades to statutory committee review until inflation subsides",
+          "q3_physical_allocation": 0.2,
+          "q5_logical_allocation": 0.25,
+          "substrate_passthrough": 1.0,
+          "rebalanced_s_star": [0.0257, 0.0193, -0.2181],
+          "resulting_modal_state": "PRODUCTIVE ACCORD [can be]",
+          "rebalancing_score": 0.4143,
+          "status": "SELECTED_OPTIMAL_GEODESIC_REBALANCING"
+        },
+        {
+          "id": "CANDIDATE_2_PARTISAN_GUILLOTINE",
+          "policy_text": "Force legislative guillotine and curtail crossbench regional scrutiny",
+          "q3_physical_allocation": 0.1,
+          "q5_logical_allocation": 0.15,
+          "substrate_passthrough": 1.0,
+          "rebalanced_s_star": [-0.4811, 0.5799, -0.1064],
+          "resulting_modal_state": "REDUCTIVE COMPROMISE [is not]",
+          "rebalancing_score": 0.25,
+          "status": "REJECTED_SUBOPTIMAL_QUADRANT (REDUCTIVE COMPROMISE [is not])"
+        },
+        {
+          "id": "CANDIDATE_1_DELUSIONAL_PROMISE",
+          "policy_text": "Promise unlimited tax rebates and instant surplus growth without physical infrastructure outlays",
+          "q3_physical_allocation": 0.0,
+          "q5_logical_allocation": 0.7,
+          "substrate_passthrough": 0.0,
+          "rebalanced_s_star": [-0.1905, 0.3371, -0.0873],
+          "resulting_modal_state": "REDUCTIVE COMPROMISE [is not]",
+          "rebalancing_score": 0.0,
+          "status": "PRUNED_BY_ZERO_SHEARING_SIEVE (Q3=0 Conservation Violation)"
+        }
+      ]
+    },
+    "phase_basin_recovery": {
+      "total_grid_points": 441,
+      "uncompensated_productive_points": 29,
+      "uncompensated_productive_pct": 6.58,
+      "rebalanced_productive_points": 341,
+      "rebalanced_productive_pct": 77.32,
+      "net_basin_expansion_points": 312,
+      "net_basin_expansion_pct": 70.74
+    }
+  },
+  "argon4_distillation_and_neural_kernel": {
+    "distillation_teacher": "Argon 4",
+    "primary_propositions": 33,
+    "antipodal_counterfactual_twins": 33,
+    "total_verified_tuples": 66,
+    "vocab_size": 280,
+    "latent_dim": 64,
+    "initial_loss": 1.457106,
+    "final_loss": 0.821938,
+    "loss_reduction_pct": 43.59,
+    "coordinate_mae_without_gyro_gate": 0.4664,
+    "coordinate_mae_with_gyro_gate": 0.002815,
+    "mae_improvement_factor": "165.7x",
+    "learned_antipodal_cancellation_error": 0.0,
+    "adversarial_audits": {
+      "negation_separation_overlap": 0.000335,
+      "causal_forward_vs_leakage": "0.9892 / 0.000000",
+      "substrate_shearing_q3_passthrough": 0.0,
+      "antipodal_fulcrum_closure_error": 0.0,
+      "verdict": "100% PASS across all 4 audits"
+    }
+  }
+}

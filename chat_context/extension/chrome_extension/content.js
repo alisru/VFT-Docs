@@ -1,6 +1,7 @@
 // Content script for Gemini web
 (() => {
   let lastSentHash = '';
+  let lastDomFingerprint = '';
   let debounceTimer = null;
   let statusBadge = null;
   let isChatCensored = false;
@@ -1869,6 +1870,35 @@
           }
         }
 
+        // HTML web-preview iframe (srcdoc or same-origin)
+        if (!content) {
+          const previewFrames = panel.querySelectorAll('web-preview iframe, iframe');
+          for (const ifr of previewFrames) {
+            let htmlStr = ifr.getAttribute('srcdoc') || '';
+            if (!htmlStr) {
+              try {
+                if (ifr.contentDocument && ifr.contentDocument.documentElement) {
+                  htmlStr = '<!DOCTYPE html>\n' + ifr.contentDocument.documentElement.outerHTML;
+                }
+              } catch (e) {}
+            }
+            if (htmlStr && htmlStr.length >= 250) {
+              content = htmlStr;
+              type = 'html';
+              break;
+            }
+          }
+        }
+
+        // Generic code block / pre / textarea fallback inside canvas panel
+        if (!content) {
+          const codeEl = panel.querySelector('pre code, pre, textarea');
+          if (codeEl) {
+            content = codeEl.tagName === 'TEXTAREA' ? (codeEl.value || '') : (codeEl.innerText || codeEl.textContent || '');
+            if (content) type = 'code';
+          }
+        }
+
         content = (content || '').trim();
 
         // Clean toolbar residue from raw DOM title
@@ -1894,7 +1924,7 @@
           }
         }
 
-        if (!contentTitle && type === 'code') {
+        if (!contentTitle && (type === 'code' || type === 'html')) {
           const htmlMatch = content.match(/<title>(.*?)<\/title>/i);
           if (htmlMatch && htmlMatch[1].trim()) {
             contentTitle = htmlMatch[1].trim();
@@ -1961,11 +1991,56 @@
     return canvases;
   }
 
-  function performSync(isManual = false) {
+  function getDomFingerprint() {
+    const nodes = document.querySelectorAll('message-content, .model-response-text, [data-message-author-role], .user-message, .agent-turn');
+    if (!nodes || nodes.length === 0) return '';
+    const last = nodes[nodes.length - 1];
+    return nodes.length + ':' + (last ? (last.textContent || '').slice(-60) : '');
+  }
+
+  function findLockedPreviewToggles() {
+    const pairs = [];
+    document.querySelectorAll('inline-preview, immersive-entry-chip, immersive-panel').forEach(panel => {
+      const wp = panel.querySelector('web-preview');
+      if (!wp) return;
+      let readable = false;
+      const ifr = wp.querySelector('iframe');
+      if (ifr) {
+        if (ifr.getAttribute('srcdoc')) readable = true;
+        else {
+          try { if (ifr.contentDocument && ifr.contentDocument.documentElement) readable = true; } catch (e) {}
+        }
+      }
+      if (readable) return;
+      const codeBtn = panel.querySelector('mat-button-toggle[value="code"] button');
+      const prevBtn = panel.querySelector('mat-button-toggle[value="preview"].mat-button-toggle-checked button');
+      if (codeBtn && prevBtn) pairs.push({ codeBtn, prevBtn });
+    });
+    return pairs;
+  }
+
+  function performSync(isManual = false, _skipPreviewFlip = false) {
     if (isChatCensored) {
       if (isManual) setStatus('error', '⛔ Censored');
       return;
     }
+
+    if (!isManual) {
+      const fp = getDomFingerprint();
+      if (fp && fp === lastDomFingerprint) return;
+    } else if (!_skipPreviewFlip) {
+      const toggles = findLockedPreviewToggles();
+      if (toggles.length > 0) {
+        setStatus('syncing', 'Reading HTML canvas...');
+        toggles.forEach(t => t.codeBtn.click());
+        setTimeout(() => {
+          performSync(true, true);
+          setTimeout(() => toggles.forEach(t => t.prevBtn.click()), 120);
+        }, 350);
+        return;
+      }
+    }
+
     let chat;
     try {
       chat = extractChat();
@@ -2004,6 +2079,7 @@
         console.warn('[Chat Context Sync]', errMsg);
       } else {
         lastSentHash = currentHash;
+        lastDomFingerprint = getDomFingerprint();
         const cvCount = chat.canvases && chat.canvases.length ? `, ${chat.canvases.length} 🎨` : '';
         setStatus('synced', `Synced (${chat.messages.length}${cvCount})`);
       }
@@ -2037,7 +2113,7 @@
     createUI();
     if (window.location.href !== lastUrl) {
       lastUrl = window.location.href;
-      lastSentHash = ''; // Reset hash so the new chat syncs immediately
+      lastSentHash = ''; lastDomFingerprint = ''; // Reset hash so the new chat syncs immediately
       isChatCensored = false;
       chrome.runtime.sendMessage({ action: 'CHECK_CENSORED', url: window.location.href }, (resp) => {
         isChatCensored = !!resp?.censored;

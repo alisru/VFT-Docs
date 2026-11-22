@@ -21,7 +21,7 @@ DEFAULT_LEDGER_PATH = os.path.join(script_dir, "policy_ledger.json")
 POLICY_MAP = {
     # Housing
     r"\bhousing\s*(crisis|affordability|affordabe|policy|plan|reform|supply|shortage|market)\b": "Housing Policy",
-    r"\brenters?(\s+rights?)?\b|\blandlord\b|\brevent\s+freeze\b|\bnegative\s+gearing\b": "Housing Policy",
+    r"\brenters?(\s+rights?)?\b|\blandlord\b|\brent\s+freeze\b|\bnegative\s+gearing\b": "Housing Policy",
 
     # Trade & Tariffs
     r"\btariff[s]?\b|\btrade\s+war\b|\bprotectionism\b|\btrade\s+barrier[s]?\b": "Trade Tariffs",
@@ -51,7 +51,7 @@ POLICY_MAP = {
 
     # Defence
     r"\bdefence\s*(policy|spending|budget|capability|force[s]?)\b|\bmilitary\s+(budget|spending|policy|force[s]?)\b": "Defence Policy",
-    r"\baukus\b|\banmzus\b|\bquad\b|\bfive\s+eyes\b": "AUKUS",
+    r"\baukus\b|\banzus\b|\bquad\b|\bfive\s+eyes\b": "AUKUS",
 
     # Foreign Aid
     r"\bforeign\s+aid\b|\baid\s+(budget|cut[s]?|package|program[s]?)\b|\boverseas\s+development\b": "Foreign Aid",
@@ -177,7 +177,7 @@ def update_policy_ledger(story_config: dict, ledger_path: str = DEFAULT_LEDGER_P
     # Verdict
     verdict = "PASS"
     if real_u is not None and real_psi is not None:
-        verdict = "PASS" if (real_u >= 0 and real_psi >= 0) else "FAIL"
+        verdict = "PASS" if real_u > 0.0 else ("CONDITIONAL" if abs(real_u) <= 0.1 else "FAIL")
 
     ledger = _load_ledger(ledger_path)
     ledger["last_updated"] = today

@@ -1,0 +1,21 @@
+{
+  "cycle": 12,
+  "experiment": "Coalition Sensitivity Perturbation Analysis & Phase Transitions",
+  "shocks_evaluated": {
+    "economic_stagflation": {
+      "shock_type": "economic_stagflation",
+      "bifurcation_threshold_delta_c": 0.3,
+      "summary": "Phase collapse from Productive Accord [can be] to Reductive Compromise [is not] at delta_c = 0.30"
+    },
+    "mandate_integrity_erosion": {
+      "shock_type": "mandate_integrity_erosion",
+      "bifurcation_threshold_delta_c": 0.4,
+      "summary": "Phase collapse from Productive Accord [can be] to Reductive Compromise [is not] at delta_c = 0.40"
+    },
+    "infrastructure_disaster": {
+      "shock_type": "infrastructure_disaster",
+      "bifurcation_threshold_delta_c": 1.0,
+      "summary": "Phase shift from Productive Accord [can be] to Constructive Treaty [is like] at delta_c = 1.00"
+    }
+  }
+}

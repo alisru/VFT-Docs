@@ -1,0 +1,220 @@
+Command exited with code 0.
+
+Command output:
+
+  bluesky_bot\control_panel.html:1714:      if (activeStory) {
+  bluesky_bot\control_panel.html:1715:        const exists = currentStoriesList.some(s => s.id === activeStory.id);
+  bluesky_bot\control_panel.html:1716:        if (exists) {
+> bluesky_bot\control_panel.html:1717:          selectStory(activeStory.id);
+  bluesky_bot\control_panel.html:1718:        }
+  bluesky_bot\control_panel.html:1719:      }
+  bluesky_bot\control_panel.html:1720:    }
+  bluesky_bot\control_panel.html:1721:
+  bluesky_bot\control_panel.html:1722:    // Select Story
+> bluesky_bot\control_panel.html:1723:    function selectStory(storyId, scrollIntoView = true) {
+  bluesky_bot\control_panel.html:1724:      activeStory = STORIES_REGISTRY.find(s => s.id === storyId);
+  bluesky_bot\control_panel.html:1725:      
+  bluesky_bot\control_panel.html:1726:      const listContainer = document.getElementById('storyList');
+  bluesky_bot\control_panel.html:1727:      if (listContainer) {
+  bluesky_bot\control_panel.html:1728:        // 1. Remove active class from any existing active card in the DOM
+  bluesky_bot\control_panel.html:1729:        const activeCards = listContainer.querySelectorAll('.story-card.active');
+  bluesky_bot\control_panel.html:1730:        activeCards.forEach(card => card.classList.remove('active'));
+  bluesky_bot\control_panel.html:1731:
+  bluesky_bot\control_panel.html:1732:        // 2. Add active class to the newly selected card in the DOM if it's 
+currently rendered
+  bluesky_bot\control_panel.html:1733:        const newActiveCard = 
+listContainer.querySelector(`[data-story-id="${storyId}"]`);
+  bluesky_bot\control_panel.html:2400:      const query = document.getElementById('searchInput').value.toLowerCase();
+  bluesky_bot\control_panel.html:2401:      renderStories(getFilteredStories(query));
+  bluesky_bot\control_panel.html:2402:      if (activeStory) {
+> bluesky_bot\control_panel.html:2403:        selectStory(activeStory.id);
+  bluesky_bot\control_panel.html:2404:      }
+  bluesky_bot\control_panel.html:2405:    }
+  bluesky_bot\control_panel.html:2406:
+  bluesky_bot\control_panel.html:2407:    function setStatusFilter(filter) {
+  bluesky_bot\control_panel.html:2408:      _statusFilter = filter;
+  bluesky_bot\control_panel.html:2409:      
+['filterAll','filterReady','filterFlagged','filterLive','filterDryRun'].forEach(id => {
+  bluesky_bot\control_panel.html:2410:        const el = document.getElementById(id);
+  bluesky_bot\control_panel.html:2411:        if (el) el.classList.remove('active');
+  bluesky_bot\control_panel.html:2412:      });
+  bluesky_bot\control_panel.html:2413:      const map = { all:'filterAll', ready:'filterReady', 
+flagged:'filterFlagged', live:'filterLive', dry_run:'filterDryRun' };
+  bluesky_bot\control_panel.html:2418:      if (activeStory) {
+  bluesky_bot\control_panel.html:2419:        const exists = currentStoriesList.some(s => s.id === activeStory.id);
+  bluesky_bot\control_panel.html:2420:        if (exists) {
+> bluesky_bot\control_panel.html:2421:          selectStory(activeStory.id);
+  bluesky_bot\control_panel.html:2422:        } else if (currentStoriesList.length > 0) {
+> bluesky_bot\control_panel.html:2423:          selectStory(currentStoriesList[0].id);
+  bluesky_bot\control_panel.html:2424:        }
+  bluesky_bot\control_panel.html:2425:      }
+  bluesky_bot\control_panel.html:2426:    }
+  bluesky_bot\control_panel.html:2427:
+  bluesky_bot\control_panel.html:2428:    function getFilteredStories(query) {
+  bluesky_bot\control_panel.html:2429:      const tradCtrl = document.getElementById('traditionFilter');
+  bluesky_bot\control_panel.html:2430:      const tradVal = tradCtrl ? tradCtrl.value : 'all';
+  bluesky_bot\control_panel.html:2431:
+  bluesky_bot\control_panel.html:2432:      const filtered = STORIES_REGISTRY.filter(s => {
+  bluesky_bot\control_panel.html:2433:        let matchesSearch = !query || s.subject.toLowerCase().includes(query) || 
+s.verdict.toLowerCase().includes(query);
+  bluesky_bot\control_panel.html:2658:          }
+  bluesky_bot\control_panel.html:2659:
+  bluesky_bot\control_panel.html:2660:          renderStories(STORIES_REGISTRY);
+> bluesky_bot\control_panel.html:2661:          selectStory(newStory.id);
+  bluesky_bot\control_panel.html:2662:        } catch(err) {
+  bluesky_bot\control_panel.html:2663:          alert("Error parsing JSON: " + err.message);
+  bluesky_bot\control_panel.html:2664:        }
+  bluesky_bot\control_panel.html:2665:      };
+  bluesky_bot\control_panel.html:2666:      reader.readAsText(file);
+  bluesky_bot\control_panel.html:2667:    }
+  bluesky_bot\control_panel.html:2668:
+  bluesky_bot\control_panel.html:2669:    // Helper to dynamically read files in directories when running http.server, 
+otherwise fallback to static index.json
+  bluesky_bot\control_panel.html:2670:    async function getFilenamesFromDirectory(dirPath, fallbackIndexPath) {
+  bluesky_bot\control_panel.html:2671:      try {
+  bluesky_bot\control_panel.html:2779:        const activeId = activeStory ? activeStory.id : null;
+  bluesky_bot\control_panel.html:2780:        const exists = STORIES_REGISTRY.some(s => s.id === activeId);
+  bluesky_bot\control_panel.html:2781:        if (exists) {
+> bluesky_bot\control_panel.html:2782:          selectStory(activeId);
+  bluesky_bot\control_panel.html:2783:        } else {
+> bluesky_bot\control_panel.html:2784:          selectStory(STORIES_REGISTRY[0].id);
+  bluesky_bot\control_panel.html:2785:        }
+  bluesky_bot\control_panel.html:2786:      } else {
+  bluesky_bot\control_panel.html:2787:        document.getElementById('storyList').innerHTML = '<div 
+class="empty-state"><span class="empty-icon">??</span><span>Upload story JSONs to visualize</span></div>';
+  bluesky_bot\control_panel.html:2788:      }
+  bluesky_bot\control_panel.html:2789:    }
+  bluesky_bot\control_panel.html:2790:
+  bluesky_bot\control_panel.html:2791:    // App Initialization
+  bluesky_bot\control_panel.html:2792:    window.onload = async () => {
+  bluesky_bot\control_panel.html:2793:
+  bluesky_bot\control_panel.html:2794:      // Bind Drag and Drop listeners
+  bluesky_bot\control_panel.html:2818:        storyListEl.addEventListener('click', (e) => {
+  bluesky_bot\control_panel.html:2819:          const card = e.target.closest('.story-card');
+  bluesky_bot\control_panel.html:2820:          if (card && card.dataset.storyId) {
+> bluesky_bot\control_panel.html:2821:            selectStory(card.dataset.storyId, false);
+  bluesky_bot\control_panel.html:2822:          }
+  bluesky_bot\control_panel.html:2823:        });
+  bluesky_bot\control_panel.html:2824:      }
+  bluesky_bot\control_panel.html:2825:
+  bluesky_bot\control_panel.html:2826:      async function checkRegistryUpdates() {
+  bluesky_bot\control_panel.html:2827:        try {
+  bluesky_bot\control_panel.html:2828:          if (window.ALETHEIA_STORIES_REGISTRY && 
+window.ALETHEIA_STORIES_REGISTRY.length > 0) {
+  bluesky_bot\control_panel.html:2829:            updateServerStatus(true);
+  bluesky_bot\control_panel.html:2830:            const text = document.getElementById('systemStatusText');
+  bluesky_bot\control_panel.html:2831:            if (text) text.innerText = `ONLINE 
+(${window.ALETHEIA_STORIES_REGISTRY.length} AUDITS)`;
+  bluesky_bot\control_panel.html:2978:            document.querySelector('.tab-button.active') && 
+document.querySelector('.tab-button').click();
+  bluesky_bot\control_panel.html:2979:            switchTab({currentTarget: document.querySelector('.tab-button')}, 
+'emulator-tab');
+  bluesky_bot\control_panel.html:2980:            document.querySelectorAll('.tab-button')[0].classList.add('active');
+> bluesky_bot\control_panel.html:2981:            selectStory(id);
+  bluesky_bot\control_panel.html:2982:          });
+  bluesky_bot\control_panel.html:2983:        });
+  bluesky_bot\control_panel.html:2984:      }
+  bluesky_bot\control_panel.html:2985:    }
+  bluesky_bot\control_panel.html:2986:
+  bluesky_bot\control_panel.html:2987:    function updateActorLeaderboard() { updateLeaderboard('actor'); }
+  bluesky_bot\control_panel.html:2988:    function updateOutletLeaderboard() { updateLeaderboard('outlet'); }
+  bluesky_bot\control_panel.html:2989:    function updateCategoryLeaderboard() { updateLeaderboard('category'); }
+  bluesky_bot\control_panel.html:2990:    function updateTopicLeaderboard() { updateLeaderboard('topic'); }
+  bluesky_bot\control_panel.html:2991:
+  bluesky_bot\control_panel.html:3470:          document.querySelector('.tab-button.active') && 
+document.querySelector('.tab-button').click();
+  bluesky_bot\control_panel.html:3471:          switchTab({currentTarget: document.querySelector('.tab-button')}, 
+'emulator-tab');
+  bluesky_bot\control_panel.html:3472:          document.querySelectorAll('.tab-button')[0].classList.add('active');
+> bluesky_bot\control_panel.html:3473:          selectStory(id);
+  bluesky_bot\control_panel.html:3474:        });
+  bluesky_bot\control_panel.html:3475:      });
+  bluesky_bot\control_panel.html:3476:    }
+  bluesky_bot\control_panel.html:3477:
+  bluesky_bot\control_panel.html:3478:    function avg(arr) {
+  bluesky_bot\control_panel.html:3479:      if (!arr.length) return 0;
+  bluesky_bot\control_panel.html:3480:      return arr.reduce((a,b) => a+b, 0) / arr.length;
+  bluesky_bot\control_panel.html:3481:    }
+  bluesky_bot\control_panel.html:3482:    function fmt(n) {
+  bluesky_bot\control_panel.html:3483:      if (n === null || n === undefined || isNaN(n)) return '?';
+  bluesky_bot\control_panel.html:3949:        if (closest && closest.stories.length > 0) {
+  bluesky_bot\control_panel.html:3950:          switchTab({currentTarget: document.querySelector('.tab-button')}, 
+'emulator-tab');
+  bluesky_bot\control_panel.html:3951:          document.querySelectorAll('.tab-button')[0].classList.add('active');
+> bluesky_bot\control_panel.html:3952:          selectStory(closest.stories[0].id);
+  bluesky_bot\control_panel.html:3953:        }
+  bluesky_bot\control_panel.html:3954:      };
+  bluesky_bot\control_panel.html:3955:    }
+  bluesky_bot\control_panel.html:3956:
+  bluesky_bot\control_panel.html:3957:    function auditHegemonyMap(stories) {
+  bluesky_bot\control_panel.html:3958:      const W = 600, H = 600, pad = 40;
+  bluesky_bot\control_panel.html:3959:      const sx = u => 300 - (u / 2.5) * 260;
+  bluesky_bot\control_panel.html:3960:      const sy = psi => 300 - (psi / 2.5) * 260;
+  bluesky_bot\control_panel.html:3961:
+  bluesky_bot\control_panel.html:3962:      const validStories = stories.filter(s => s.claim_u !== null && s.claim_u 
+!== undefined && s.real_u !== null && s.real_u !== undefined && s.claim_psi !== null && s.claim_psi !== undefined && 
+s.real_psi !== null && s.real_psi !== undefined);
+  bluesky_bot\control_panel.html:4077:        const remaining = g.stories.length > 5 ? `\n ... and ${g.stories.length 
+- 5} more stories` : '';
+  bluesky_bot\control_panel.html:4078:        const tooltip = `�u: ${g.du.toFixed(2)}, ?-drift: 
+${g.dpsi.toFixed(2)}\nStory Count: ${g.count}\n\nStories:\n ${titles}${remaining}`;
+  bluesky_bot\control_panel.html:4079:        
+> bluesky_bot\control_panel.html:4080:        return `<circle cx="${sx(g.du).toFixed(1)}" 
+cy="${sy(g.dpsi).toFixed(1)}" r="${r.toFixed(1)}" fill="${color}" opacity="${opacity.toFixed(2)}" 
+style="cursor:pointer;" onclick="selectStory('${g.stories[0].id}')">
+  bluesky_bot\control_panel.html:4081:          <title>${tooltip}</title>
+  bluesky_bot\control_panel.html:4082:        </circle>`;
+  bluesky_bot\control_panel.html:4083:      }).join('');
+  bluesky_bot\control_panel.html:4084:      return `<svg viewBox="0 0 ${W} ${H}" style="width:100%; max-width:${W}px; 
+display:block;">
+  bluesky_bot\control_panel.html:4085:        <line x1="${sx(0)}" y1="${pad}" x2="${sx(0)}" y2="${H-pad}" 
+stroke="var(--panel-border)"/>
+  bluesky_bot\control_panel.html:4086:        <line x1="${pad}" y1="${sy(0)}" x2="${W-pad}" y2="${sy(0)}" 
+stroke="var(--panel-border)"/>
+  bluesky_bot\control_panel.html:4087:        ${dots}
+  bluesky_bot\control_panel.html:4088:        <text x="${W-pad}" y="${sy(0)-4}" font-size="9" fill="var(--text-muted)" 
+text-anchor="end">�u </text>
+  bluesky_bot\control_panel.html:4089:        <text x="${sx(0)+4}" y="${pad+6}" font-size="9" 
+fill="var(--text-muted)">+? drift</text>
+  bluesky_bot\control_panel.html:4090:        <text x="${sx(0)+4}" y="${H-pad-2}" font-size="9" 
+fill="var(--text-muted)">-? drift</text>
+  bluesky_bot\control_panel.html:4156:        const remaining = g.stories.length > 5 ? `\n ... and ${g.stories.length 
+- 5} more stories` : '';
+  bluesky_bot\control_panel.html:4157:        const tooltip = `Vector: (${g.claim_u}, ${g.claim_psi}) ? (${g.real_u}, 
+${g.real_psi})\nTrajectory Count: ${g.count}\n\nStories:\n ${titles}${remaining}`;
+  bluesky_bot\control_panel.html:4158:        
+> bluesky_bot\control_panel.html:4159:        return `<g style="cursor:pointer;" 
+onclick="selectStory('${g.stories[0].id}')">
+  bluesky_bot\control_panel.html:4160:                  <line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" 
+x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${color}" stroke-width="${strokeWidth.toFixed(1)}" 
+opacity="${lineOpacity}"/>
+  bluesky_bot\control_panel.html:4161:                  <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" 
+r="${r.toFixed(1)}" fill="${color}" opacity="${dotOpacity}"/>
+  bluesky_bot\control_panel.html:4162:                  <title>${tooltip}</title>
+  bluesky_bot\control_panel.html:4163:                </g>`;
+  bluesky_bot\control_panel.html:4164:      }).join('');
+  bluesky_bot\control_panel.html:4165:      
+  bluesky_bot\control_panel.html:4166:      return `
+  bluesky_bot\control_panel.html:4167:        <div style="display:flex; justify-content:space-between; 
+align-items:center; margin-bottom:0.6rem; font-size:0.75rem;">
+  bluesky_bot\control_panel.html:4168:          <span style="color:var(--text-muted);">Showing ${sample.length} of 
+${validStories.length} stories</span>
+  bluesky_bot\control_panel.html:4169:          <div style="display:flex; align-items:center; gap:0.4rem;">
+  bluesky_bot\control_panel.html:4239:              const id = elLink.getAttribute('data-story-id');
+  bluesky_bot\control_panel.html:4240:              switchTab({currentTarget: document.querySelector('.tab-button')}, 
+'emulator-tab');
+  bluesky_bot\control_panel.html:4241:              
+document.querySelectorAll('.tab-button')[0].classList.add('active');
+> bluesky_bot\control_panel.html:4242:              selectStory(id);
+  bluesky_bot\control_panel.html:4243:            });
+  bluesky_bot\control_panel.html:4244:          });
+  bluesky_bot\control_panel.html:4245:        }
+  bluesky_bot\control_panel.html:4246:        el.style.display = 'block';
+  bluesky_bot\control_panel.html:4247:        if (arrow) arrow.style.transform = 'rotate(90deg)';
+  bluesky_bot\control_panel.html:4248:        _openLeaderboardDropdowns.add(actorId);
+  bluesky_bot\control_panel.html:4249:      } else {
+  bluesky_bot\control_panel.html:4250:        el.style.display = 'none';
+  bluesky_bot\control_panel.html:4251:        if (arrow) arrow.style.transform = 'rotate(0deg)';
+  bluesky_bot\control_panel.html:4252:        _openLeaderboardDropdowns.delete(actorId);
+
+

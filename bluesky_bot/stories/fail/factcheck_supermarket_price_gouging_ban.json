@@ -1,0 +1,147 @@
+[
+  {
+    "id": "chalmers-supermarket-price-gouging-ban",
+    "subject": "Albanese Labor Government Supermarket Price Gouging Ban (Food and Grocery Code / ACCC Enforcement)",
+    "link": "https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/media-releases/banning-supermarket-price-gouging-protect-australian",
+    "target_url": "",
+    "actors": [
+      "Jim Chalmers",
+      "Andrew Leigh",
+      "Albanese Labor Government",
+      "Coles",
+      "Woolworths",
+      "ACCC"
+    ],
+    "actor_roles": [
+      {
+        "name": "Jim Chalmers",
+        "role": "instigator"
+      },
+      {
+        "name": "Andrew Leigh",
+        "role": "instigator"
+      },
+      {
+        "name": "Coles",
+        "role": "beneficiary"
+      },
+      {
+        "name": "Woolworths",
+        "role": "beneficiary"
+      },
+      {
+        "name": "ACCC",
+        "role": "regulator"
+      }
+    ],
+    "claim_u": 1.0,
+    "claim_psi": 1.0,
+    "real_u": -0.66,
+    "real_psi": 0.52,
+    "delta_H": 1.73,
+    "verdict": "FAIL",
+    "trajectory": "Fall into Deception",
+    "exit_zone": "Greater Good (GG)",
+    "entry_zone": "Lesser Evil / Greatest Lie (LE)",
+    "claim_rnet": 1.0,
+    "real_rnet": 100.0,
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Baseless Lies",
+    "claim_z": 0,
+    "real_z": 0,
+    "claim_z_profile": [0, 0, 0, 0, 0, 0, 0],
+    "real_z_profile": [0, 0, 0, 0, 0, 0, 0],
+    "stated_forces": {
+      "GG": { "S": 1.0, "O": 0.0, "N": 0.0 },
+      "GE": { "S": 0.0, "O": 1.0, "N": 0.0 },
+      "LG": { "S": 0.8, "O": 0.0, "N": 0.2 },
+      "LE": { "S": 0.0, "O": 1.0, "N": 0.0 },
+      "GP": { "S": 1.0, "O": 0.0, "N": 0.0 },
+      "BP": { "S": 0.0, "O": 1.0, "N": 0.0 }
+    },
+    "actual_forces": {
+      "GG": { "S": 0.1, "O": 1.0, "N": 0.2 },
+      "GE": { "S": 0.9, "O": 0.2, "N": 0.1 },
+      "LG": { "S": 0.2, "O": 0.8, "N": 0.2 },
+      "LE": { "S": 1.6, "O": 0.1, "N": 0.1 },
+      "GP": { "S": 0.2, "O": 0.8, "N": 0.1 },
+      "BP": { "S": 1.3, "O": 0.2, "N": 0.1 }
+    },
+    "planes_scan": {
+      "Q1_Metaphysical": {
+        "interrogative": "WHO",
+        "pass_condition": "Stated beneficiary matches actual beneficiary",
+        "score": 0.0,
+        "verdict": "FAIL",
+        "rationale": "Stated beneficiary is Australian families at the checkout. Actual beneficiaries are the Federal Government (electoral insulation / PR headline) and the Coles/Woolworths duopoly (shielded from divestiture powers, statutory profit caps, or market-share limits)."
+      },
+      "Q2_Possible": {
+        "interrogative": "WHAT",
+        "pass_condition": "Failure modes acknowledged, not suppressed",
+        "score": 0.0,
+        "verdict": "FAIL",
+        "rationale": "Suppresses all critical regulatory failure modes: ACCC inquiry did not find price gouging, no fixed statutory threshold exists for 'excessive price', proving 'unreasonable margin' across 20,000 SKUs is legally and procedurally impractical, and duopoly concentration remains untouchable without divestiture."
+      },
+      "Q3_Physical": {
+        "interrogative": "WHERE",
+        "pass_condition": "Concrete, falsifiable physical prediction exists",
+        "score": 0.4,
+        "verdict": "PASS",
+        "rationale": "Concrete legislative enactment on the statute books taking effect 1 July 2026 for retailers with revenue >$30 billion, with specified statutory penalty ceilings ($10M / 10% turnover), though physical retail grocery price reduction predictions remain ungrounded."
+      },
+      "Q4_Lyrical": {
+        "interrogative": "WHY",
+        "pass_condition": "Narrative honest; no obfuscation required",
+        "score": 0.0,
+        "verdict": "FAIL",
+        "rationale": "Severe narrative obfuscation. Uses the aggressive populist phrase 'banning supermarket price gouging' to obscure the fact that the ACCC did not accuse supermarkets of gouging and cannot practically enforce margin caps without price control powers."
+      },
+      "Q5_Logical": {
+        "interrogative": "HOW",
+        "pass_condition": "Causal chain holds under load/adversity",
+        "score": 0.0,
+        "verdict": "FAIL",
+        "rationale": "Causal chain collapses: A ban on undefined 'excessive pricing' cannot lower shelf prices when margins are fungible across 20,000 products, illusory discounts bypass standard margins, and the underlying oligopolistic market structure remains legally insulated."
+      },
+      "Q6_Historical": {
+        "interrogative": "CAUSE",
+        "pass_condition": "Origin chain acknowledged; history not erased",
+        "score": 0.0,
+        "verdict": "FAIL",
+        "rationale": "Erases the decades-long bipartisan origin chain of grocery sector consolidation, planning law favoritism, and refusal of divestiture laws, framing structural duopoly concentration as a sudden moral infraction remediable by code tweaks."
+      },
+      "Q7_Emotive": {
+        "interrogative": "EFFECT",
+        "pass_condition": "Emotional payload matches stated intent",
+        "score": 0.0,
+        "verdict": "FAIL",
+        "rationale": "Weaponized moral theatre: Righteous populist aggression on behalf of 'struggling families' deployed as an electoral sedative to harvest voter relief while insulating duopoly profitability."
+      }
+    },
+    "forensic_stress_test": {
+      "fake_maximiser": {
+        "detected": true,
+        "reasoning": "Capacity >> Effort. Sovereign federal power could legislate divestiture powers, market share caps, or utility-style rate-of-return regulation. Instead, Treasury implemented an undefined code clause targeting two firms without quantitative margin benchmarks, leaving checkout prices unsolved."
+      },
+      "helxis": {
+        "detected": true,
+        "reasoning": "Bait Beneficiary (working families needing grocery relief) ≠ Switch Beneficiary (political actors securing headlines and the duopoly preserving structural market dominance)."
+      }
+    },
+    "social_physics": {
+      "law_1_power_vs_empowerment": "-υ Anti-Social Power: Regulatory deception hoards political credibility while protecting corporate market power.",
+      "law_2_justification_vs_transparency": "-υ Anti-Social Justification: Refuses structural antitrust first, manufactures 'world-first ban' pretexts second.",
+      "law_3_projection_vs_empathy": "-υ Anti-Social Projection: Projects systemic inflation entirely onto rogue corporate gouging despite regulator finding no gouging.",
+      "law_4_problems_vs_solutions": "-υ Anti-Social Problems: Preserves oligopoly intact, maintaining high grocery prices as a recurring political issue.",
+      "mode": "Perceptual Inversion (-υ): Inverts structural market failure into an alleged aggressive consumer crackdown.",
+      "process": "Immoral (-υ): High-strain deceptive configuration bypassing logical market reform for political pretexts.",
+      "actor_loop": "Smart Selfish Loop: Secret Goal (Deflect inflation backlash without breaking duopoly) -> Pretext (Price gouging ban) -> Scapegoat/Distraction (Supermarket CEOs & $10M penalties)."
+    },
+    "moral_axis_audit": {
+      "coordinate": "(-0.66, +0.52)",
+      "nearest_zone_anchor": "Lesser Evil / Greatest Lie (-1, +1)",
+      "plain_language_verdict": "Performative regulatory theater that shields market concentration while manufacturing political cover."
+    },
+    "status": "COMPLETED DRY RUN"
+  }
+]

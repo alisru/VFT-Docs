@@ -1,0 +1,207 @@
+Command exited with code 0.
+
+Command output:
+
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1449:        '    "link",                   
+                 // item[3]: story link (or "")\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1450:        '    "target_url",             
+                 // item[4]: target post url (or "")\n'
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1451:        "    0.5,                      
+                 // item[5]: stated morality (claim_u, float)\n"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1452:        "    0.0,                      
+                 // item[6]: stated will (claim_psi, float)\n"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1453:        "    -0.8,                     
+                 // item[7]: actual morality (real_u, float)\n"
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1478:                '    {"GG": {"S": 1.2, 
+"O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 
+0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, "N": 0.0}}, // item[25]: stated 
+forces\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1479:                '    {"GG": {"S": 0.0, 
+"O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 
+0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}, // item[26]: actual 
+forces\n'
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1480:                '    [{"aspect": 
+"Aspect Name", "claim_u": 0.5, "claim_psi": 0.0, "real_u": -0.9, "real_psi": -0.8, "verdict": "FAIL", "reason": 
+"1-line reason under 60 chars"}] // item[27]: aspects breakdown\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1481:            )
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1482:        else:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1568:                '        "name": 
+"Nigel Farage Political Intervention",\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1569:                '        "type": 
+"actor",\n'
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1570:                '        
+"stated_forces": {"GG": {"S": 1.2, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 
+0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, 
+"N": 0.0}},\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1571:                '        
+"actual_forces": {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 
+0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, 
+"N": 0.0}}\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1572:                '      },\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1574:                '        "name": 
+"Electoral Messaging Integrity",\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1575:                '        "type": 
+"aspect",\n'
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1576:                '        
+"stated_forces": {"GG": {"S": 1.0, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.0, "N": 0.0}, "LG": {"S": 0.0, "O": 
+0.0, "N": 0.5}, "LE": {"S": 0.0, "O": 0.0, "N": 0.5}, "GP": {"S": 1.0, "O": 0.0, "N": 0.0}, "BP": {"S": 1.0, "O": 1.0, 
+"N": 0.0}},\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1577:                '        
+"actual_forces": {"GG": {"S": 0.0, "O": 1.5, "N": 0.0}, "GE": {"S": 1.0, "O": 0.0, "N": 0.0}, "LG": {"S": 0.0, "O": 
+0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, 
+"N": 0.0}}\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1578:                '      }\n'
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1625:    def _query_candidate_tavily(c):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1626:        title = c.get("title") or 
+c.get("subject") or ""
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1627:        claim_url = c.get("url") or 
+c.get("link") or ""
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1628:        clean_title = 
+re.sub(r'[\'\"\[\]]+', '', title).strip() if title else ""
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1629:        clean_title = 
+re.sub(r'^(Watch|Video|Breaking|Report|Opinion):\s*', '', clean_title, flags=re.IGNORECASE).strip()
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1661:                        continue
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1662:                    # Strict isolation 
+& relevance filter: domain blocklist and entity overlap required
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1663:                    if 
+is_grounding_relevant(title, r_url, claim_url, r_title + " " + r_content):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1664:                        
+cand_urls.append(r_url.split("?")[0].strip())
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:1665:                        if r_content:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2408:                    "link": 
+sanitize_url(item.get("link", "")),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2409:                    "target_url": 
+sanitize_url(item.get("target_url", "")),
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2410:                    "claim_u": 
+float(item.get("claim_u", 0.0)),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2411:                    "claim_psi": 
+float(item.get("claim_psi", 0.0)),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2412:                    "real_u": 
+float(item.get("real_u", 0.0)),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2416:                    "actors": 
+item.get("actors", []),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2417:                    "macro_event": 
+str(item.get("macro_event", "")).strip(),
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2418:                    "macro_claim_u": 
+item.get("macro_claim_u"),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2419:                    "macro_claim_psi": 
+item.get("macro_claim_psi"),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2420:                    "macro_real_u": 
+item.get("macro_real_u"),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2438:                if "real_integrity" in 
+item and item["real_integrity"] is not None:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2439:                    
+story["real_integrity"] = str(item["real_integrity"]).strip()
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2440:                if "stated_forces" in 
+item and isinstance(item["stated_forces"], dict):
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2441:                    
+story["stated_forces"] = item["stated_forces"]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2442:                if "actual_forces" in 
+item and isinstance(item["actual_forces"], dict):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2443:                    
+story["actual_forces"] = item["actual_forces"]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2495:            # Parse optional 
+macro-context fields with fallback to None/empty
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2496:            macro_event = 
+str(item[12]).strip() if len(item) >= 13 and item[12] is not None else ""
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2497:            macro_claim_u = 
+float(item[13]) if len(item) >= 14 and item[13] is not None else None
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2498:            macro_claim_psi = 
+float(item[14]) if len(item) >= 15 and item[14] is not None else None
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2499:            macro_real_u = 
+float(item[15]) if len(item) >= 16 and item[15] is not None else None
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2508:                "link": 
+sanitize_url(item[3]),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2509:                "target_url": 
+sanitize_url(item[4]),
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2510:                "claim_u": 
+float(item[5]),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2511:                "claim_psi": 
+float(item[6]),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2512:                "real_u": 
+float(item[7]),
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2517:                "actor_roles": 
+ai_actor_roles,
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2518:                "macro_event": 
+macro_event,
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2519:                "macro_claim_u": 
+macro_claim_u,
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2520:                "macro_claim_psi": 
+macro_claim_psi,
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2521:                "macro_real_u": 
+macro_real_u,
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2542:                
+story["real_integrity"] = str(item[24]).strip()
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2543:            if len(item) >= 26 and 
+isinstance(item[25], dict):
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2544:                story["stated_forces"] 
+= item[25]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2545:            if len(item) >= 27 and 
+isinstance(item[26], dict):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2546:                story["actual_forces"] 
+= item[26]
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2682:            # Grounding Relevance 
+Guardrail
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2683:            current_g_url = 
+story.get("grounding_url")
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2684:            claim_url = 
+story.get("link") or ""
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2685:            story_subj = 
+story.get("subject") or ""
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2686:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2687:            if current_g_url:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2688:                if not 
+is_grounding_relevant(story_subj, current_g_url, claim_url):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2689:                    print(f"  
+[Grounding Guardrail] Warning: '{slug}' has irrelevant/contaminated grounding URL: '{current_g_url}'. Purging.")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2690:                    
+story["grounding_url"] = None
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2694:            if not 
+story.get("grounding_url") and story_subj:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2695:                try:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2696:                    _, single_g_map = 
+harvest_tavily_search_grounding([{"title": story_subj, "url": claim_url, "id": slug}])
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2697:                    cand_urls = 
+single_g_map.get(claim_url) or single_g_map.get(normalize_url(claim_url)) or single_g_map.get(slug) or []
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2698:                    for cu in 
+cand_urls:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2699:                        if 
+is_grounding_relevant(story_subj, cu, claim_url):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2700:                            
+story["grounding_url"] = cu.split("?")[0].strip()
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:2701:                            print(f"  
+[Grounding Guardrail] Recovered verified grounding URL for '{slug}': {story['grounding_url']}")
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3135:                            else:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3136:                                try:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3137:                                    
+claim_u = float(item.get("claim_u", 0.0))
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3138:                                    
+claim_psi = float(item.get("claim_psi", 0.0))
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3139:                                    
+real_u = float(item.get("real_u", 0.0))
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3140:                                    
+real_psi = float(item.get("real_psi", 0.0))
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3141:                                    
+hypocrisy = abs(real_u - claim_u) + abs(real_psi - claim_psi)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3142:                                except 
+(ValueError, TypeError):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3143:                                    
+pass
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3155:                        elif not 
+is_son_mode and isinstance(item, list) and len(item) >= 9:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3156:                            try:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3157:                                
+claim_u = float(item[5])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3158:                                
+claim_psi = float(item[6])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3159:                                real_u 
+= float(item[7])
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3160:                                
+real_psi = float(item[8])
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3161:                                
+hypocrisy = abs(real_u - claim_u) + abs(real_psi - claim_psi)
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3162:                            except 
+(ValueError, TypeError):
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\google_ai_studio_one_shot.py:3163:                                pass
+
+

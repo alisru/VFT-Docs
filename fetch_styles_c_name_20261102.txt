@@ -1,0 +1,381 @@
+Command exited with code 0.
+
+Command output:
+
+  styles.css:380:.col-resizer { position: absolute; left: -3px; top: 0; bottom: 0; width: 6px; cursor: col-resize; 
+z-index: 5; }
+  styles.css:381:.col-resizer:hover { background: #0078d4; }
+> styles.css:382:.c-name { flex: 1; min-width: 120px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; 
+padding-right: 12px; }
+> styles.css:383:.c-date { width: var(--w-date); flex: none; overflow: hidden; white-space: nowrap; text-overflow: 
+ellipsis; }
+  styles.css:384:.c-type { width: var(--w-type); flex: none; overflow: hidden; white-space: nowrap; text-overflow: 
+ellipsis; }
+  styles.css:385:.c-size { width: var(--w-size); flex: none; text-align: right; overflow: hidden; white-space: nowrap; 
+text-overflow: ellipsis; }
+  styles.css:386:
+  styles.css:387:/* Group headers */
+  styles.css:388:.grp-head { flex: 0 0 100%; width: 100%; padding: 8px 10px 4px; font-weight: 600; color: #0067c0; 
+border-bottom: 1px solid var(--border); cursor: pointer; display: flex; align-items: center; gap: 6px; }
+  styles.css:437:  border-radius: 999px;
+  styles.css:438:}
+> styles.css:439:.row .c-name { display: flex; align-items: center; gap: 4px; min-width: 0; }
+  styles.css:440:.nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  styles.css:441:.chk { display: none; margin: 0 2px 0 0; cursor: pointer; }
+  styles.css:442:body.show-checks .chk { display: inline-block; }
+  styles.css:443:.arrow { width: 16px; text-align: center; color: var(--muted); font-size: 10px; cursor: pointer; 
+flex: none; }
+  styles.css:444:.arrow:hover { color: var(--fg); }
+  styles.css:454:  height: 24px;
+  styles.css:455:}
+> styles.css:456::is(#list.v-details > .row.item, #list.v-details > .grp-fold > .row.item, .kids.v-details > 
+.row.item, .kids.v-details > .grp-fold > .row.item) :is(.c-date, .c-type, .c-size) {
+  styles.css:457:  display: block;
+  styles.css:458:}
+  styles.css:459::is(#list.v-details > .row.item, #list.v-details > .grp-fold > .row.item, .kids.v-details > 
+.row.item, .kids.v-details > .grp-fold > .row.item) .sub {
+  styles.css:460:  display: none !important;
+  styles.css:461:}
+  styles.css:476:  border-radius: 3px;
+  styles.css:477:}
+> styles.css:478::is(#list.v-content > .row.item, #list.v-content > .grp-fold > .row.item, .kids.v-content > 
+.row.item, .kids.v-content > .grp-fold > .row.item) :is(.c-date, .c-type, .c-size) {
+  styles.css:479:  display: none !important;
+  styles.css:480:}
+  styles.css:481::is(#list.v-content > .row.item, #list.v-content > .grp-fold > .row.item, .kids.v-content > 
+.row.item, .kids.v-content > .grp-fold > .row.item) .sub {
+  styles.css:482:  display: block !important;
+  styles.css:483:  font-size: 11px;
+  styles.css:493:  display: flex; flex-wrap: wrap; flex: 0 0 100%; gap: 4px; border-left: 2px solid var(--tree-line); 
+padding: 2px 0 4px 6px; box-sizing: border-box; }
+  styles.css:494:.v-list .kids:not(.open), .v-small .kids:not(.open), .v-medium .kids:not(.open), .v-large 
+.kids:not(.open), .v-xl .kids:not(.open), .v-tiles .kids:not(.open) { display: none; }
+> styles.css:495:.v-list .c-date, .v-list .c-type, .v-list .c-size, .v-small .c-date, .v-small .c-type, .v-small 
+.c-size,
+> styles.css:496:.v-medium .c-date, .v-medium .c-type, .v-medium .c-size, .v-large .c-date, .v-large .c-type, .v-large 
+.c-size,
+> styles.css:497:.v-xl .c-date, .v-xl .c-type, .v-xl .c-size, .v-tiles .c-date, .v-tiles .c-type, .v-tiles .c-size { 
+display: none; }
+> styles.css:498:.kids.v-details :is(.row.item, .grp-fold > .row.item) :is(.c-date, .c-type, .c-size) { display: block 
+!important; }
+  styles.css:499:.kids.v-details :is(.row.item, .grp-fold > .row.item) .sub { display: none !important; }
+  styles.css:500:.v-list .row.item, .v-small .row.item { width: 220px; height: 24px; min-height: 24px; max-height: 
+24px; padding: 2px 6px; overflow: hidden; box-sizing: border-box; }
+  styles.css:501:.v-medium .row.item {
+  styles.css:502:  width: 104px; height: 104px; min-height: 104px; max-height: 104px;
+  styles.css:503:  position: relative !important;
+  styles.css:517:  padding: 6px 4px; border-radius: 4px; overflow: hidden; box-sizing: border-box;
+  styles.css:518:}
+> styles.css:519:.v-medium .c-name, .v-large .c-name, .v-xl .c-name {
+  styles.css:520:  display: flex; flex-direction: column; align-items: center; justify-content: flex-start; flex: 1;
+  styles.css:521:  width: 100% !important; max-width: 100% !important; min-width: 0 !important;
+  styles.css:522:  padding: 4px 2px 2px !important;
+  styles.css:523:  white-space: normal; text-align: center; overflow: hidden; box-sizing: border-box;
+  styles.css:524:}
+  styles.css:572:.v-tiles .ico { width: 40px; height: 40px; }
+  styles.css:573:.v-tiles .ico.photo { object-fit: cover; border-radius: 3px; }
+> styles.css:574:.v-tiles .c-name { flex: 1; min-width: 0 !important; overflow: hidden; }
+  styles.css:575:.v-tiles .sub { display: none; }
+  styles.css:576:
+  styles.css:577:/* Home Dashboard */
+  styles.css:578:.dash { padding: 18px 24px; display: flex; flex-direction: column; gap: 22px; width: 100%; }
+  styles.css:579:.dash-head { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px 
+solid var(--border); padding-bottom: 8px; }
+  styles.css:702:}
+  styles.css:703:.map-world.lod-far .room-item .chk,
+> styles.css:704:.map-world.lod-far .room-item .c-date,
+  styles.css:705:.map-world.lod-far .room-item .c-type,
+  styles.css:706:.map-world.lod-far .room-item .c-size,
+  styles.css:707:.map-world.lod-far .room-item .c-tile-sub {
+  styles.css:708:  display: none !important;
+  styles.css:709:}
+  styles.css:805:.room-item .chk { width: 12px; height: 12px; margin: 0; flex: none; }
+  styles.css:806:.room-item .ico { flex: none; object-fit: contain; pointer-events: none; }
+> styles.css:807:.room-item .c-name { display: flex; align-items: center; gap: 5px; flex: 1; min-width: 0; overflow: 
+hidden; }
+  styles.css:808:.room-item .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  styles.css:809:.room-item.bridged {
+  styles.css:810:  border-color: #d99b26 !important;
+  styles.css:811:  background: rgba(217, 155, 38, 0.12) !important;
+  styles.css:812:}
+  styles.css:835:  background: #c2881a; border-color: #c2881a;
+  styles.css:836:}
+> styles.css:837:.room-item .c-date, .room-item .c-type, .room-item .c-size {
+  styles.css:838:  font-size: 10px; color: var(--muted); flex: none; overflow: hidden; text-overflow: ellipsis; 
+white-space: nowrap;
+  styles.css:839:}
+  styles.css:840:
+  styles.css:841:/* Sticky Details Column Header for Rooms */
+  styles.css:842:.rm-details-head {
+  styles.css:865:}
+  styles.css:866:.map-room-body.v-details .ico { width: 16px; height: 16px; flex: none; }
+> styles.css:867:.map-room-body.v-details .c-name { flex: 1 1 150px; min-width: 140px; overflow: hidden; }
+  styles.css:868:.map-room-body.v-details .rm-bridge-indicator,
+  styles.css:869:.map-room-body.v-details .rm-focus-child-btn { position: static; margin-left: 3px; flex: none; }
+> styles.css:870:.map-room-body.v-details .c-date { width: 125px; flex: 0 0 125px; font-size: 10.5px; }
+  styles.css:871:.map-room-body.v-details .c-type { width: 85px; flex: 0 0 85px; font-size: 10.5px; }
+  styles.css:872:.map-room-body.v-details .c-size { width: 65px; flex: 0 0 65px; text-align: right; padding-right: 
+4px; font-size: 10.5px; }
+  styles.css:873:
+  styles.css:874:/* 2. Tiles view in room */
+  styles.css:875:.map-room-body.v-tiles { display: flex; flex-direction: row; flex-wrap: wrap; gap: 6px; 
+align-content: flex-start; }
+  styles.css:879:}
+  styles.css:880:.map-room-body.v-tiles .ico { width: 32px; height: 32px; flex: none; }
+> styles.css:881:.map-room-body.v-tiles .c-name { flex-direction: column; align-items: flex-start; justify-content: 
+center; gap: 1px; flex: 1; min-width: 0; }
+  styles.css:882:.map-room-body.v-tiles .nm { font-weight: 500; font-size: 11px; white-space: nowrap; overflow: 
+hidden; text-overflow: ellipsis; max-width: 100%; }
+  styles.css:883:.map-room-body.v-tiles .c-tile-sub {
+  styles.css:884:  font-size: 9.5px; color: var(--muted); line-height: 1.1; white-space: nowrap; overflow: hidden; 
+text-overflow: ellipsis; max-width: 100%;
+  styles.css:885:}
+> styles.css:886:.map-room-body.v-tiles .c-date, .map-room-body.v-tiles .c-type, .map-room-body.v-tiles .c-size { 
+display: none; }
+  styles.css:887:
+  styles.css:888:/* 3. List view in room */
+  styles.css:889:.map-room-body.v-list { display: flex; flex-direction: column; flex-wrap: wrap; gap: 2px; 
+align-content: flex-start; }
+  styles.css:890:.map-room-body.v-list .room-item { width: 100%; height: 22px; padding: 1px 6px; }
+  styles.css:891:.map-room-body.v-list .ico { width: 15px; height: 15px; }
+  styles.css:892:.map-room-body.v-list .rm-bridge-indicator,
+  styles.css:893:.map-room-body.v-list .rm-focus-child-btn { position: static; margin-left: 3px; }
+> styles.css:894:.map-room-body.v-list .c-date, .map-room-body.v-list .c-type, .map-room-body.v-list .c-size { 
+display: none; }
+  styles.css:895:
+  styles.css:896:/* 4. Small Icons view in room */
+  styles.css:897:.map-room-body.v-small { display: flex; flex-direction: row; flex-wrap: wrap; gap: 3px; 
+align-content: flex-start; }
+  styles.css:898:.map-room-body.v-small .room-item { width: auto; max-width: 160px; height: 24px; padding: 2px 6px; 
+border: 1px solid var(--input-bd); background: var(--input-bg); border-radius: 4px; }
+  styles.css:899:.map-room-body.v-small .ico { width: 16px; height: 16px; }
+  styles.css:900:.map-room-body.v-small .rm-bridge-indicator,
+  styles.css:901:.map-room-body.v-small .rm-focus-child-btn { position: static; margin-left: 3px; }
+> styles.css:902:.map-room-body.v-small .c-date, .map-room-body.v-small .c-type, .map-room-body.v-small .c-size { 
+display: none; }
+  styles.css:903:
+  styles.css:904:/* 5. Medium Icons view in room */
+  styles.css:905:.map-room-body.v-medium { display: flex; flex-direction: row; flex-wrap: wrap; gap: 6px; 
+align-content: flex-start; }
+  styles.css:906:.map-room-body.v-medium .room-item {
+  styles.css:907:  width: 86px; min-height: 92px; height: auto; padding: 5px 4px 6px; flex-direction: column; 
+justify-content: flex-start; text-align: center;
+  styles.css:910:.map-room-body.v-medium .chk { position: absolute; top: 3px; left: 3px; z-index: 4; }
+  styles.css:911:.map-room-body.v-medium .ico { width: 48px; height: 48px; margin-bottom: 3px; }
+> styles.css:912:.map-room-body.v-medium .c-name {
+  styles.css:913:  flex-direction: column; align-items: center; width: 100% !important; max-width: 100% !important; 
+min-width: 0 !important;
+  styles.css:914:  overflow: hidden; box-sizing: border-box;
+  styles.css:915:}
+  styles.css:916:.map-room-body.v-medium .nm {
+  styles.css:917:  font-size: 10px; width: 100%; max-width: 100%; white-space: normal;
+  styles.css:920:  overflow: hidden; text-overflow: ellipsis; box-sizing: border-box;
+  styles.css:921:}
+> styles.css:922:.map-room-body.v-medium .c-date, .map-room-body.v-medium .c-type, .map-room-body.v-medium .c-size { 
+display: none; }
+  styles.css:923:
+  styles.css:924:/* 6. Large Icons view in room */
+  styles.css:925:.map-room-body.v-large { display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px; 
+align-content: flex-start; }
+  styles.css:926:.map-room-body.v-large .room-item {
+  styles.css:927:  width: 114px; min-height: 126px; height: auto; padding: 7px 5px 6px; flex-direction: column; 
+justify-content: flex-start; text-align: center;
+  styles.css:930:.map-room-body.v-large .chk { position: absolute; top: 4px; left: 4px; z-index: 4; }
+  styles.css:931:.map-room-body.v-large .ico { width: 68px; height: 68px; margin-bottom: 4px; }
+> styles.css:932:.map-room-body.v-large .c-name {
+  styles.css:933:  flex-direction: column; align-items: center; width: 100% !important; max-width: 100% !important; 
+min-width: 0 !important;
+  styles.css:934:  overflow: hidden; box-sizing: border-box;
+  styles.css:935:}
+  styles.css:936:.map-room-body.v-large .nm {
+  styles.css:937:  font-size: 11px; width: 100%; max-width: 100%; white-space: normal;
+  styles.css:940:  overflow: hidden; text-overflow: ellipsis; box-sizing: border-box;
+  styles.css:941:}
+> styles.css:942:.map-room-body.v-large .c-date, .map-room-body.v-large .c-type, .map-room-body.v-large .c-size { 
+display: none; }
+  styles.css:943:
+  styles.css:944:/* 7. Extra Large Icons view in room */
+  styles.css:945:.map-room-body.v-xl { display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; align-content: 
+flex-start; }
+  styles.css:946:.map-room-body.v-xl .room-item {
+  styles.css:947:  width: 148px; min-height: 160px; height: auto; padding: 9px 6px 6px; flex-direction: column; 
+justify-content: flex-start; text-align: center;
+  styles.css:950:.map-room-body.v-xl .chk { position: absolute; top: 5px; left: 5px; z-index: 4; }
+  styles.css:951:.map-room-body.v-xl .ico { width: 96px; height: 96px; margin-bottom: 6px; }
+> styles.css:952:.map-room-body.v-xl .c-name {
+  styles.css:953:  flex-direction: column; align-items: center; width: 100% !important; max-width: 100% !important; 
+min-width: 0 !important;
+  styles.css:954:  overflow: hidden; box-sizing: border-box;
+  styles.css:955:}
+  styles.css:956:.map-room-body.v-xl .nm {
+  styles.css:957:  font-size: 11.5px; width: 100%; max-width: 100%; white-space: normal;
+  styles.css:960:  overflow: hidden; text-overflow: ellipsis; box-sizing: border-box;
+  styles.css:961:}
+> styles.css:962:.map-room-body.v-xl .c-date, .map-room-body.v-xl .c-type, .map-room-body.v-xl .c-size { display: 
+none; }
+  styles.css:963:
+  styles.css:964:/* Full-Bleed Background Thumbnails for Image & Video Tiles (.has-thumb) */
+  styles.css:965:.map-room-body.v-medium .room-item.has-thumb,
+  styles.css:966:.map-room-body.v-large .room-item.has-thumb,
+  styles.css:967:.map-room-body.v-xl .room-item.has-thumb,
+  styles.css:999:  z-index: 0;
+  styles.css:1000:}
+> styles.css:1001:.map-room-body.v-medium .room-item.has-thumb .c-name,
+> styles.css:1002:.map-room-body.v-large .room-item.has-thumb .c-name,
+> styles.css:1003:.map-room-body.v-xl .room-item.has-thumb .c-name {
+  styles.css:1004:  position: absolute !important;
+  styles.css:1005:  left: 0 !important;
+  styles.css:1006:  right: 0 !important;
+  styles.css:1007:  bottom: 0 !important;
+  styles.css:1008:  height: auto !important;
+  styles.css:1017:  box-sizing: border-box;
+  styles.css:1018:}
+> styles.css:1019:.v-medium .row.item.has-thumb .c-name,
+> styles.css:1020:.v-large .row.item.has-thumb .c-name,
+> styles.css:1021:.v-xl .row.item.has-thumb .c-name {
+  styles.css:1022:  position: static !important;
+  styles.css:1023:  width: 100% !important;
+  styles.css:1024:  height: 100% !important;
+  styles.css:1025:  justify-content: flex-end !important;
+  styles.css:1026:  padding: 0 !important;
+  styles.css:1065:  overflow: hidden;
+  styles.css:1066:}
+> styles.css:1067:.map-room-body.v-tiles .room-item.has-thumb .c-name {
+  styles.css:1068:  position: relative;
+  styles.css:1069:  z-index: 2;
+  styles.css:1070:  width: 100% !important;
+  styles.css:1071:  height: 100% !important;
+  styles.css:1072:  padding: 4px 8px !important;
+  styles.css:1076:  box-sizing: border-box;
+  styles.css:1077:}
+> styles.css:1078:.v-tiles .row.item.has-thumb .c-name {
+  styles.css:1079:  position: static !important;
+  styles.css:1080:  width: 100% !important;
+  styles.css:1081:  height: 100% !important;
+  styles.css:1082:  padding: 0 !important;
+  styles.css:1083:}
+  styles.css:1109:.map-room-body.v-content .room-item { width: 100%; height: 42px; padding: 3px 8px; border: 1px solid 
+var(--input-bd); background: var(--input-bg); }
+  styles.css:1110:.map-room-body.v-content .ico { width: 32px; height: 32px; }
+> styles.css:1111:.map-room-body.v-content .c-name { flex-direction: column; align-items: flex-start; gap: 1px; flex: 
+1; }
+  styles.css:1112:.map-room-body.v-content .nm { font-weight: 600; font-size: 11px; }
+  styles.css:1113:.map-room-body.v-content .rm-bridge-indicator { position: static; margin-left: 4px; }
+> styles.css:1114:.map-room-body.v-content .c-date, .map-room-body.v-content .c-type, .map-room-body.v-content .c-size 
+{ font-size: 9.5px; }
+  styles.css:1115:
+  styles.css:1116:/* HTML Island Room (Render HTML directly inside Landscape) */
+  styles.css:1117:.map-room.html-room {
+  styles.css:1118:  border-color: #0284c7;
+  styles.css:1119:  box-shadow: 0 10px 28px rgba(2, 132, 199, 0.16);
+  styles.css:2709:}
+  styles.css:2710:.room-item.tile-dark .c-tile-sub,
+> styles.css:2711:.room-item.tile-dark .c-date,
+  styles.css:2712:.room-item.tile-dark .c-type,
+  styles.css:2713:.room-item.tile-dark .c-size,
+  styles.css:2714:.map-room.dark-room .c-tile-sub,
+  styles.css:2715:.map-room.dark-room .room-item .c-tile-sub,
+> styles.css:2716:.map-room.dark-room .room-item .c-date,
+  styles.css:2717:.map-room.dark-room .room-item .c-type,
+  styles.css:2718:.map-room.dark-room .room-item .c-size {
+  styles.css:2719:  color: rgba(248, 250, 252, 0.82) !important;
+  styles.css:2720:  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+  styles.css:2721:}
+  styles.css:2771:}
+  styles.css:2772:.room-item.tile-light .c-tile-sub,
+> styles.css:2773:.room-item.tile-light .c-date,
+  styles.css:2774:.room-item.tile-light .c-type,
+  styles.css:2775:.room-item.tile-light .c-size,
+  styles.css:2776:.map-room.light-room .room-item:not(.tile-dark) .c-tile-sub,
+> styles.css:2777:.map-room.light-room .room-item:not(.tile-dark) .c-date,
+  styles.css:2778:.map-room.light-room .room-item:not(.tile-dark) .c-type,
+  styles.css:2779:.map-room.light-room .room-item:not(.tile-dark) .c-size {
+  styles.css:2780:  color: #475569 !important;
+  styles.css:2781:  text-shadow: none !important;
+  styles.css:2782:}
+  styles.css:2965:  flex: none !important;
+  styles.css:2966:}
+> styles.css:2967:.grp-fold:not(.room) > .kids.open.kl-col:is(.v-list, .v-small, .v-details) > .row.item .c-name {
+  styles.css:2968:  flex-direction: row !important;
+  styles.css:2969:  align-items: center !important;
+  styles.css:2970:  width: auto !important;
+  styles.css:2971:  max-width: 100% !important;
+  styles.css:2972:  text-align: left !important;
+  styles.css:2994:  display: none;
+  styles.css:2995:}
+> styles.css:2996:/* In Grid Cards (v-medium, v-large, v-xl, v-tiles): sits in top-right corner without entering 
+.c-name or displacing .nm */
+  styles.css:2997::is(.v-medium, .v-large, .v-xl, .v-tiles) .row.item .sub-opt-wrap {
+  styles.css:2998:  position: absolute !important;
+  styles.css:2999:  top: 4px !important;
+  styles.css:3000:  right: 4px !important;
+  styles.css:3001:  z-index: 6;
+  styles.css:3009:}
+  styles.css:3010:
+> styles.css:3011:/* In Details & List views: sits inline beside .c-name */
+  styles.css:3012::is(.v-details, .v-list, .v-small, .v-content) .row.item .sub-opt-wrap {
+  styles.css:3013:  position: static !important;
+  styles.css:3014:  display: none;
+  styles.css:3015:  align-items: center;
+  styles.css:3016:  gap: 3px;
+  styles.css:3147:  user-select: none;
+  styles.css:3148:}
+> styles.css:3149:.grp-fold.room > .row.item .c-name {
+  styles.css:3150:  display: flex !important;
+  styles.css:3151:  flex-direction: row !important;
+  styles.css:3152:  align-items: center !important;
+  styles.css:3153:  flex: 1 1 auto !important;
+  styles.css:3154:  width: auto !important;
+  styles.css:3187:  gap: 4px !important;
+  styles.css:3188:}
+> styles.css:3189:.grp-fold.room > .row.item .c-date,
+  styles.css:3190:.grp-fold.room > .row.item .c-type,
+  styles.css:3191:.grp-fold.room > .row.item .c-size,
+  styles.css:3192:.grp-fold.room > .row.item .sub {
+  styles.css:3193:  display: none !important;
+  styles.css:3194:}
+  styles.css:3236:  flex: none !important;
+  styles.css:3237:}
+> styles.css:3238:.kids.v-details > .row.item .c-name {
+  styles.css:3239:  flex-direction: row !important;
+  styles.css:3240:  align-items: center !important;
+  styles.css:3241:  justify-content: flex-start !important;
+  styles.css:3242:  width: auto !important;
+  styles.css:3243:  max-width: none !important;
+  styles.css:3244:  text-align: left !important;
+  styles.css:3245:}
+> styles.css:3246:.kids.v-details > .row.item .c-date,
+  styles.css:3247:.kids.v-details > .row.item .c-type,
+  styles.css:3248:.kids.v-details > .row.item .c-size {
+  styles.css:3249:  display: flex !important;
+  styles.css:3250:}
+  styles.css:3251:
+  styles.css:3284:  height: 16px !important;
+  styles.css:3285:}
+> styles.css:3286:.kids.v-list :is(.row.item, .grp-fold > .row.item) :is(.c-date, .c-type, .c-size),
+> styles.css:3287:.kids.v-small :is(.row.item, .grp-fold > .row.item) :is(.c-date, .c-type, .c-size) {
+  styles.css:3288:  display: none !important;
+  styles.css:3289:}
+  styles.css:3290:
+  styles.css:3291:.kids.v-tiles :is(> .row.item, > .grp-fold > .row.item, .grp-body > .row.item, .grp-body > .grp-fold 
+> .row.item) {
+  styles.css:3292:  width: 240px !important;
+  styles.css:3346:  margin-bottom: 6px !important;
+  styles.css:3347:}
+> styles.css:3348::is(.kids.v-xl, .v-xl) :is(.row.item, .grp-fold > .row.item):not(.has-thumb) .c-name {
+  styles.css:3349:  display: flex !important;
+  styles.css:3350:  flex-direction: column !important;
+  styles.css:3351:  align-items: center !important;
+  styles.css:3352:  justify-content: flex-start !important;
+  styles.css:3353:  width: 100% !important;
+  styles.css:3392:  z-index: 0;
+  styles.css:3393:}
+> styles.css:3394::is(.kids.v-medium, .kids.v-large, .kids.v-xl, .v-medium, .v-large, .v-xl) :is(.row.item, .grp-fold 
+> .row.item).has-thumb .c-name {
+  styles.css:3395:  position: static !important;
+  styles.css:3396:  width: 100% !important;
+  styles.css:3397:  height: 100% !important;
+  styles.css:3398:  justify-content: flex-end !important;
+  styles.css:3399:  padding: 0 !important;
+
+

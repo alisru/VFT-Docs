@@ -139,6 +139,26 @@ def main():
                 continue
 
 
+            is_aita = (
+                cfg.get("category") == "aita"
+                or cfg.get("story_type") == "aita"
+                or filename.startswith("factcheck_aita_")
+                or filename.startswith("aita_")
+            )
+            if is_aita:
+                if "status" not in cfg:
+                    cfg["status"] = "DRAFT"
+                if not isinstance(cfg.get("posts"), list) or len(cfg["posts"]) == 0:
+                    raise ValueError("AITA story missing 'posts' list.")
+                saved_cards = cfg.get("card_paths")
+                if not (isinstance(saved_cards, list) and len(saved_cards) == 4 and all(os.path.exists(p) for p in saved_cards)):
+                    from aita.aita_poster import generate_all_aita_assets_safe
+                    cfg["card_paths"] = generate_all_aita_assets_safe(cfg, path)
+                    with open(path, "w", encoding="utf-8") as wf:
+                        json.dump([cfg] if isinstance(data, list) else cfg, wf, indent=2, ensure_ascii=False)
+                print(f"  [PASS] {filename} (AITA 10-post thread + 4 cards ready)")
+                continue
+
             # Validate complete JSON Schema
             required_keys = ["id", "subject", "link", "claim_u", "claim_psi", "real_u", "real_psi", "mode", "status", "posts"]
             missing_keys = [k for k in required_keys if k not in cfg]

@@ -153,7 +153,7 @@ body {
 /* Main Layout */
 .app-main {
   display: grid;
-  grid-template-columns: 240px 380px 1fr;
+  grid-template-columns: 240px minmax(380px, 440px) 1fr;
   flex: 1;
   overflow: hidden;
 }
@@ -389,18 +389,19 @@ body {
 }
 
 .stream-header {
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-bottom: 1px solid var(--border-color);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 8px;
   background: rgba(15, 21, 35, 0.4);
 }
 
 .stream-title-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .stream-title-row h2 {
@@ -412,14 +413,23 @@ body {
   font-size: 11px;
   color: var(--text-dim);
   background: var(--bg-card);
-  padding: 2px 6px;
+  padding: 2px 8px;
   border-radius: 10px;
+  white-space: nowrap;
+}
+
+.stream-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
 }
 
 .sort-controls {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   font-size: 12px;
   color: var(--text-dim);
 }

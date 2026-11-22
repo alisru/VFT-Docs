@@ -1,0 +1,68 @@
+{
+  "cycle": 22,
+  "framework": "Argon 4 Distillation — 3D Polar Dashboard & 340-Tuple Unified Corpus",
+  "timestamp": "2026-10-14T19:15:00+11:00",
+  "unified_neural_training": {
+    "total_tuples": 340,
+    "political_economic_tuples": 180,
+    "biblical_parable_tuples": 160,
+    "vocab_size": 1274,
+    "latent_dim": 64,
+    "initial_loss": 1.74218,
+    "final_loss": 0.657014,
+    "loss_reduction_pct": 62.3,
+    "coordinate_mae": 0.008574,
+    "antipodal_closure_error": 0.01912,
+    "adversarial_verdict": "100% PASS across all audits"
+  },
+  "evaluated_cases": [
+    {
+      "name": "Good Soil / PM $3B Transport Partnership",
+      "institutional_health_index": 0.9,
+      "regime_classification": "GENERATIVE_STATECRAFT (Order Coherent)",
+      "q1_identity_ratio": 0.9286,
+      "q3_physical_ratio": 0.9375,
+      "q5_logical_ratio": 0.6667
+    },
+    {
+      "name": "Abrahamic Moriah Altar of Alignment",
+      "institutional_health_index": 0.95,
+      "regime_classification": "GENERATIVE_STATECRAFT (Order Coherent)",
+      "q1_identity_ratio": 0.9722,
+      "q2_possible_ratio": 0.9615,
+      "q4_lyrical_ratio": 0.9524
+    },
+    {
+      "name": "Jacob's Well & Water Springs of Beersheba",
+      "institutional_health_index": 0.91,
+      "regime_classification": "GENERATIVE_STATECRAFT (Order Coherent)",
+      "q1_identity_ratio": 0.9,
+      "q3_physical_ratio": 0.9268,
+      "q5_logical_ratio": 0.8
+    },
+    {
+      "name": "Bipartisan High-Speed Rail & Regional Connectivity",
+      "institutional_health_index": 0.91,
+      "regime_classification": "GENERATIVE_STATECRAFT (Order Coherent)",
+      "q1_identity_ratio": 0.9167,
+      "q3_physical_ratio": 0.9444,
+      "q5_logical_ratio": 0.8333
+    },
+    {
+      "name": "Buried Talent / Queensland $1B Underspend",
+      "institutional_health_index": 0.11,
+      "regime_classification": "DEGENERATIVE_POLARIZATION (Chaos Entropic)",
+      "q1_identity_ratio": 0.0741,
+      "q3_physical_ratio": 0.12,
+      "q6_historical_ratio": 0.2
+    },
+    {
+      "name": "Sodom & Gomorrah Extractive Rupture",
+      "institutional_health_index": 0.04,
+      "regime_classification": "DEGENERATIVE_POLARIZATION (Chaos Entropic)",
+      "q1_identity_ratio": 0.0278,
+      "q3_physical_ratio": 0.0385,
+      "q4_lyrical_ratio": 0.0
+    }
+  ]
+}

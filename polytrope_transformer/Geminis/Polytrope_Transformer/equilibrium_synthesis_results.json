@@ -1,0 +1,68 @@
+{
+  "cycle": 10,
+  "experiment": "Generative Equilibrium Synthesis at Singular Point s*",
+  "s_star": [
+    -0.1273,
+    0.6056,
+    0.0385
+  ],
+  "q_star": [
+    0.442,
+    0.0737,
+    0.1276,
+    0.0521,
+    0.2018,
+    0.0329,
+    0.0699
+  ],
+  "candidate_syntheses": [
+    {
+      "statement": "Ministers deliver targeted accountability with balanced budget measures",
+      "coords": [
+        -0.1,
+        0.6,
+        0.05
+      ],
+      "distance_to_s_star": 0.0301,
+      "substrate_affinity": 0.995,
+      "equilibrium_match_score": 0.9932,
+      "is_viable_accord": true
+    },
+    {
+      "statement": "The parliament agrees to national safety reviews while delivering funded infrastructure",
+      "coords": [
+        0.15,
+        0.55,
+        0.1
+      ],
+      "distance_to_s_star": 0.2894,
+      "substrate_affinity": 0.9528,
+      "equilibrium_match_score": 0.8059,
+      "is_viable_accord": true
+    },
+    {
+      "statement": "The government refuses scrutiny and pushes ungrounded spending",
+      "coords": [
+        -0.8,
+        0.7,
+        -0.4
+      ],
+      "distance_to_s_star": 0.8085,
+      "substrate_affinity": 0.8184,
+      "equilibrium_match_score": 0.2214,
+      "is_viable_accord": false
+    },
+    {
+      "statement": "The opposition blocks all progress resulting in legislative paralysis",
+      "coords": [
+        -1.2,
+        -0.6,
+        -0.5
+      ],
+      "distance_to_s_star": 1.7012,
+      "substrate_affinity": 0.6961,
+      "equilibrium_match_score": 0.0021,
+      "is_viable_accord": false
+    }
+  ]
+}

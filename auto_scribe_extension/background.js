@@ -2,8 +2,8 @@
 // 100% Pure Extension: Solid, zero-overhead storage in chrome.storage.local
 
 const DEFAULT_SETTINGS = {
-  minChars: 50,
-  debounceMs: 1500,
+  minChars: 30,
+  debounceMs: 800,
   enabled: true,
   showIndicator: true,
   ignoredDomains: ['accounts.google.com', 'login.microsoftonline.com']

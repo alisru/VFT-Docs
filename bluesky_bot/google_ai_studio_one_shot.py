@@ -1,3 +1,20 @@
+BOILERPLATE_PATTERNS = [
+    r'this material may not be published',
+    r'broadcast,\s*rewritten,\s*or redistributed',
+    r'quotes displayed in real-time or delayed',
+    r'market data provided by',
+    r"you've successfully subscribed",
+    r'subscribe to read',
+    r'please subscribe to continue',
+    r'enjoy unlimited website access',
+    r'exclusive content for subscribers',
+    r'log in to your account',
+    r'all rights reserved\.\s*©',
+    r'please enable javascript',
+    r'cookies are required',
+    r'access denied',
+]
+
 import os
 import sys
 import json
@@ -46,7 +63,9 @@ class ParagraphExtractor(HTMLParser):
             self.in_p = False
             para_text = "".join(self.current_para).strip()
             if para_text:
-                self.paragraphs.append(para_text)
+                p_lower = para_text.lower()
+                if not any(re.search(bp, p_lower) for bp in BOILERPLATE_PATTERNS):
+                    self.paragraphs.append(para_text)
             self.current_para = []
 
     def handle_data(self, data):
@@ -64,7 +83,10 @@ def scrape_article_text(url):
         
         parser = ParagraphExtractor()
         parser.feed(response.text)
-        return "\n\n".join(parser.paragraphs)
+        clean_body = "\n\n".join(parser.paragraphs).strip()
+        if len(clean_body) < 250:
+            return "Error: Article body too short or blocked by paywall/boilerplate"
+        return clean_body
     except Exception as e:
         return f"Error: {e}"
 
@@ -109,9 +131,73 @@ except ImportError:
     genai = None
     types = None
 
-# Per-request deadline for Gemini calls. Without it a rate-limited/stalled call
-# hangs with no client-side timeout instead of raising into the fallback path.
-GEMINI_TIMEOUT_SECS = int(os.environ.get("GEMINI_TIMEOUT_SECS", "90"))
+# Intelligent, model-aware per-request deadline calculation.
+# Prevents prolonged deadlocks on overloaded experimental/preview models
+# while guaranteeing adequate budget for generation, thinking tokens, and tools.
+GEMINI_TIMEOUT_SECS = int(os.environ.get("GEMINI_TIMEOUT_SECS", "60"))
+
+def get_smart_model_timeout(model_name: str, num_candidates: int = 1, thinking_level: str = "HIGH", has_search: bool = False) -> int:
+    """
+    Computes an adaptive, model-aware client-side timeout tailored to:
+    1. Model tier & architecture:
+       - flash-lite: ultra-fast (20s base). Stalling beyond 20-25s indicates a dropped/dead connection.
+       - experimental / preview flash (3.8, 3.7, 3.5, preview): prone to capacity queue freezes (25s base).
+         Failing fast prevents minute-long dead-air freezes across fallback chains.
+       - stable production flash (2.5-flash): reliable production capacity (30s base).
+       - pro / reasoning models: deeper inference budget (45s base).
+    2. Batch candidate count: scales with payload size (+5-8s per additional candidate beyond 1).
+    3. Thinking budget: accounts for reasoning token generation (+5s for HIGH).
+    4. Tool attachments: accounts for search retrieval network latency (+5s for search).
+    """
+    env_override = os.environ.get("GEMINI_TIMEOUT_SECS")
+    if env_override and env_override.strip():
+        try:
+            return max(5, int(env_override))
+        except ValueError:
+            pass
+
+    m_lower = (model_name or "").lower()
+
+    if "flash-lite" in m_lower:
+        base_sec = 20
+        per_cand_sec = 5
+    elif "flash" in m_lower:
+        if any(v in m_lower for v in ["3.8", "3.7", "3.5", "preview"]):
+            base_sec = 25
+            per_cand_sec = 6
+        else:
+            base_sec = 30
+            per_cand_sec = 8
+    elif "pro" in m_lower:
+        base_sec = 45
+        per_cand_sec = 12
+    elif "hydrogen" in m_lower:
+        base_sec = 35
+        per_cand_sec = 10
+    elif "agnes" in m_lower:
+        base_sec = 25
+        per_cand_sec = 6
+    else:
+        base_sec = 25
+        per_cand_sec = 6
+
+    # Scale beyond 1 candidate
+    if num_candidates > 1:
+        base_sec += (num_candidates - 1) * per_cand_sec
+
+    # Thinking token budget
+    tl = (thinking_level or "HIGH").upper()
+    if tl == "HIGH":
+        base_sec += 25
+    elif tl == "MEDIUM":
+        base_sec += 10
+
+    # Search tool network retrieval overhead
+    if has_search:
+        base_sec += 5
+
+    # Enforce safe lower and upper bounds
+    return max(15, min(base_sec, 180))
 
 # --- 0. HELPER FUNCTIONS FOR TOKEN MINIFICATION & ALTERNATIVE API ---
 def minify_markdown(text):
@@ -214,7 +300,8 @@ def get_gemini_client():
         print("Warning: google-genai SDK is not installed. Gemini models will be unavailable.")
         return None
     try:
-        client = genai.Client(api_key=api_key)
+        http_options = types.HttpOptions(timeout=90 * 1000) if types and hasattr(types, "HttpOptions") else None
+        client = genai.Client(api_key=api_key, http_options=http_options) if http_options else genai.Client(api_key=api_key)
         return client
     except Exception as e:
         print(f"Warning: Failed to initialize genai.Client: {e}")
@@ -363,10 +450,30 @@ DYNAMIC_BANNED_DOMAINS = set(UNSCRAPABLE_DOMAINS)
 SCRAPING_WHITELIST = {
     'bbc.com', 'bbc.co.uk', 'bbci.co.uk',
     'abc.net.au',
+    'theguardian.com', 'theguardian.co.uk', 'guardian.co.uk',
+    'apnews.com',
+    'reuters.com', 'reutersconnect.com',
+    'axios.com',
+    'aljazeera.com',
+    'france24.com',
+    'dw.com',
+    'propublica.org',
     'thesaturdaypaper.com.au', 'saturdaypaper.com.au',
-    'smh.com.au',
+    'smh.com.au', 'theage.com.au', 'sbs.com.au',
     'techcrunch.com',
-    'npr.org'
+    'npr.org',
+    'foxnews.com',
+    'dailymail.co.uk', 'dailymail.com',
+    'nypost.com',
+    'washingtonexaminer.com',
+    'thefederalist.com',
+    'washingtontimes.com',
+    'dailycaller.com',
+    'breitbart.com',
+    'goodnewsnetwork.org',
+    'positive.news',
+    'optimistdaily.com',
+    'squirrel-news.net'
 }
 
 def is_domain_whitelisted(domain):
@@ -1031,19 +1138,58 @@ def harvest_news(target_rss, target_bsky, seen_urls, seen_ids, seen_targets, cat
 
 # --- 3. EXECUTE SINGLE-SHOT BATCH EVALUATION VIA GOOGLE AI STUDIO API ---
 DEFAULT_FALLBACKS = [
-    "gemini-3.8-flash",
     "gemini-3.7-flash",
     "gemini-2.5-flash",
-    "gemini-3.5-flash",
-    "gemini-3.6-flash",
     "gemini-2.5-flash-lite",
     "gemini-3.5-flash-lite",
     "gemini-3.1-flash-lite",
-    "vertex:gemini-3.8-flash",
     "vertex:gemini-3.7-flash",
     "vertex:gemini-3.1-flash-lite",
     "gemini-3-flash-preview",
+    "gemini-4-hydrogen",
 ]
+
+COORDINATE_SCALE_CALIBRATION = """=== COORDINATE SCALE CALIBRATION ANCHORS (CANONICAL VFT HORIZONS) ===
+When judging the morality (υ) and will (ψ) of any action, claim, or policy, you must map the coordinates strictly against the following concentric horizons. Do not moralize — map and calculate:
+
+AXIS υ (Morality) — Who does this benefit?
+  +2 Everyone / All beings (Systemic Justice)
+  +1 Other people (Greater Good)
+  +0 No one / Neutral
+  -1 My group only (Lesser Evil)
+  -2 Only me (Tyranny / Pure Extraction)
+  (Spectrum: Everyone -> Other Beings -> A Being -> No One -> My Group -> Me -> Only Me)
+
+AXIS ψ (Will) — What is the energy doing?
+  +2 Actively creating systemic value for all (Productive Justice)
+  +1 Proactive — creating, building, acting
+  +0 Neutral — no meaningful force applied
+  -1 Passive — allowing, suppressing, withholding
+  -2 Actively destroying or extracting value (Chaos / Collapse)
+
+CANONICAL BENCHMARK HORIZONS:
+- Ring 2.0 (Systemic / Civilizational — Structural Shift across Humanity / Species):
+  * (+2, +2) Salk polio vaccine, Universal Human Rights, municipal water sanitation.
+  * (-2, +2) Atlantic slave trade, WMD war pretext, Big Tobacco 50-yr cancer coverup.
+  * (-2, -2) Holocaust, Chernobyl coverup, Holodomor famine, nuclear war.
+  * (+2, -2) Montreal Protocol (banning CFCs), Cuban Missile Crisis de-escalation.
+- Ring 1.0 (Individual / Human / National — Affects Millions & Legal Architecture):
+  * (+1, +1) Civil Rights Act, Medicare, Apollo program, Robodebt Royal Commission.
+  * (-1, +1) Enron, 2008 subprime mortgage fraud, Watergate, partisan gerrymandering.
+  * (-1, -1) Flint water poisoning, Texas 2021 grid freeze, systemic police corruption.
+  * (+1, -1) Antitrust breakup, peaceful election concession, emergency public health pause.
+- Ring 0.5 (Perceptual Inversion Zone / Local Events / Everyday Civic & Commercial):
+  * (+0.5, +0.5) Local school bond, community clinic, open-sourcing useful software.
+  * (-0.5, +0.5) Misleading campaign ad, corporate astroturfing, hidden junk fees.
+  * (-0.5, -0.5) Fatal 143mph crash, postal ballot theft, localized shelter neglect.
+  * (+0.5, -0.5) Postponing event for weather/safety, temporary union strike / collective bargaining.
+- Neutral Horizon (0.0):
+  * Procedural court scheduling, neutral parliamentary rulings, routine commercial litigation.
+
+MANDATORY CALIBRATION BOUNDS:
+Before scoring any event <= -0.7 or >= +0.7, verify the blast radius against these benchmarks. Is the event structurally comparable to Flint, Michigan (-1.0), Enron (-1.0), or Chernobyl (-2.0)?
+Routine strikes, union protests, campaign debates, and commercial lawsuits belong strictly in the local/civic scale ([-0.3, +0.4]), NOT civilizational catastrophe (<= -0.8).
+"""
 
 _RULES_CACHE = {}
 
@@ -1061,7 +1207,7 @@ def _load_rules(use_son=False, use_potential=False):
             convergence_path = os.path.join(workspace_dir, ".agent", "tools", "convergence-test", "convergence_lite.md")
             formatting_path = os.path.join(script_dir, "instructions", "thread_formatting.md")
         with open(convergence_path, "r", encoding="utf-8") as f:
-            _RULES_CACHE[f"{cache_key}_convergence"] = minify_markdown(f.read())
+            _RULES_CACHE[f"{cache_key}_convergence"] = COORDINATE_SCALE_CALIBRATION + "\n\n" + minify_markdown(f.read())
         with open(formatting_path, "r", encoding="utf-8") as f:
             raw_fmt = f.read()
             clean_fmt = extract_thread_content_rules(raw_fmt)
@@ -1175,10 +1321,10 @@ def build_formatting_rules(use_son=False, use_potential=False, compact=False, fi
             "  Integrity: [real_integrity] (Hypocrisy: [real_rnet], z: [real_z])\n"
             "  DO NOT include any sub-audit or Subs: summary in this post.\n"
             "  *Note: Post 4 MUST be kept strictly under 260 characters total.\n"
-            "- Post 5 (index 4 in the posts array: Source Quality Scorecard / Sub-Audits Breakdown) is the dedicated aspect & source breakdown. Format DIRECTLY as concise bullet points (NO header prefix). Each bullet must be 1 short line under 60 chars:\n"
-            "  - [Outlet / Aspect A]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line framing/omission reason under 60 chars].\n"
-            "  - [Outlet / Aspect B]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line framing/omission reason under 60 chars].\n"
-            "  *Note: If the story contains multiple reporting sources in the dossier, evaluate each news outlet's editorial integrity, ideological slant, and framing bias as individual aspects. Never evaluate only one side of a partisan debate — always account for the outlets' stated bias tags and contrast competing editorial framing so the audit remains substrate-neutral and objective. Keep the ENTIRE combined Post 5 strictly under 260 characters total.\n"
+            "- Post 5 (index 4 in the posts array: Sub-Audits Breakdown) is the dedicated breakdown of the physical event's constituent aspects and primary actors (e.g. Instigator action, Regulator oversight, Impact on victims/public). Format DIRECTLY as concise bullet points (NO header prefix). Each bullet must be 1 short line under 60 chars:\n"
+            "  - [Actor / Aspect A]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line action/impact reason under 60 chars].\n"
+            "  - [Actor / Aspect B]: [PASS/FAIL/COND] ([real_u], [real_psi]) — [Brief 1-line action/impact reason under 60 chars].\n"
+            "  *Note: Sub-audits MUST evaluate the real-world actors, institutions, and components of the physical event itself (Instigator, Regulator, Acted-upon target). NEVER evaluate or score the news reporting outlets or journalists as the sub-audits. Keep the ENTIRE combined Post 5 strictly under 260 characters total.\n"
             "- Post 6 (index 5) is the Context post. Keep it to 1-2 concise sentences under 260 characters.\n"
             "- The Unavoidables post MUST have exactly 1 concise sentence for The Unavoidable Truth and 1 concise sentence for The Unavoidable Lie (under 260 chars total).\n"
             "- The Alethekanon post MUST be at most 2 concise sentences (under 260 chars total).\n\n"
@@ -1209,20 +1355,28 @@ def build_system_instruction(use_son=False, use_potential=False, compact=False, 
         "1. Institutional Actions: What did the institutions involved (universities, courts, police, government bodies, corporations) actually do, fail to do, or try to hide?\n"
         "2. Empirical Evidence: What do the documented records, official filings, timelines, and physical facts prove actually happened?\n"
         "3. Human Impacts: Who suffered real harm, trauma, financial loss, or danger, and who protected or failed them?\n\n"
+        "STATED CLAIM DEFINITION ACROSS ALL NEWS & ABSOLUTE BAN ON AUDITING REPORTING:\n"
+        "- The Stated Claim (Element 1 / Post 2) is the substantive real-world assertion of the event being reported in the headline and article (e.g. 'A fatal arson attack in Waterford killed five family members' or 'State enacts new public housing funding').\n"
+        "- ABSOLUTE BAN ON AUDITING NEWS REPORTING: You are strictly forbidden from writing 'News coverage presents objective reporting...', 'The article reports...', or evaluating the journalist/outlet as the Stated Claim. The reporting outlet is an observer ('author'), NOT the audited actor!\n"
+        "- CONVERGENCE = PASS: If the headline/article asserts that an event occurred, and empirical evidence (police reports, court filings, official records, hospital releases) confirms that event occurred, the claim CONVERGES with physical reality -> PASS. Both the claim and the reality reflect the physical event.\n"
+        "- Hypocrisy / FAIL only exists when there is an empirical DIVERGENCE between what was claimed and what actually happened (e.g. claiming an accidental fire when evidence proves deliberate arson; or a politician claiming a policy saves taxpayer money when it secretly extracts billions).\n\n"
         "MEDIA PUNDITRY & ANTI-GOTCHA RULE:\n"
         "- Never allow the audit to be tricked or hijacked by partisan media arguments, columnist commentary, or television panels.\n"
         "- If an article focuses on pundits trading blame, television arguments, or partisan 'gotchas' (e.g., arguing over which president was in office during a crime): that media punditry is SELF-INCRIMINATING EXTRACTION. Pundits who exploit real human tragedy, crimes, or institutional breakdown to score tribal political points are running a selfish maneuver to extract attention and moral credit.\n"
         "- Your audit must cut straight to the underlying crime, event, or institutional failure. Do NOT make a partisan calendar gotcha the central 'Reality' of the story. Expose the real institutional failure, and expose the punditry as a parasitic distraction from the victims and accountability.\n\n"
+        "MULTI-SOURCE DOSSIER & SUB-AUDIT ASPECTS RULE:\n"
+        "- When a candidate contains a '=== MULTI-SOURCE TOPIC CLUSTER ===' dossier from multiple outlets, treat each source as empirical testimony reporting on the underlying event. Triangulate the physical facts across all provided sources.\n"
+        "- NEVER use a reporting outlet to verify itself (e.g., citing Outlet A to confirm Outlet A's claim). Never adopt any outlet's narrative spin.\n"
+        "- The Sub-Audits / Aspects breakdown (item[27] and the multi-aspect post) MUST audit the constituent actors, institutions, and components of the physical event itself (e.g., The Instigator's policy, The Regulatory oversight, The Impact on Victims/Public). NEVER audit or score the news publications or journalists as the event aspects.\n\n"
         "ACTOR ENTITIES & 7-ROLE CLASSIFICATION DIRECTIVE:\n"
-        "In item[11] (the actors array), identify the key entities involved in the event. You may provide them as objects with explicit roles: [{\"name\": \"...\", \"role\": \"...\"}], or as strings (which will be classified by rule). The 7 canonical roles are:\n"
-        "- 'instigator': The active person or institution executing the action, policy, or claim (e.g. 'Donald Trump', 'ICE', 'Elon Musk').\n"
-        "- 'acted_upon': The impacted population, victim, or target (e.g. '500 U.S. Citizens', 'Patients', 'Schoolchildren'). NEVER tag victims as instigators.\n"
-        "- 'beneficiary': Third party gaining financial advantage or unearned extraction from the policy without executing it (e.g. 'Private Voucher Schools', 'Contractors').\n"
-        "- 'author': The news outlet, journalist, or whistleblower exposing the story (e.g. 'ProPublica', 'BBC'). NEVER tag reporting outlets as instigators.\n"
-        "- 'regulator': Courts, judges, monitors, or legal oversight bodies reviewing the action (e.g. 'Federal Judiciary', 'Supreme Court', 'QCAT').\n"
-        "- 'context': Geographic venue, country, or physical setting (e.g. 'United States', 'England', 'Beijing', 'Texas').\n"
-        "- 'misc': Peripheral secondary mentions.\n"
-    )
+        "In item[11] (the actors array), identify the key entities involved in the event. You MUST provide them as objects with explicit roles: [{\"name\": \"...\", \"role\": \"...\"}]. The 7 canonical roles are:\n"
+        "- 'acted_upon': The impacted population, victim, casualty, deceased person, or targeted community (e.g. 'Elliot English', 'English Family', 'Patients', 'Schoolchildren'). You are STRICTLY FORBIDDEN from ever tagging victims, casualties, or deceased individuals as instigators.\n"
+        "- 'regulator': Courts, judges, police forces, detectives, monitors, or legal oversight bodies reviewing/investigating the action (e.g. 'Garda Síochána', 'Federal Judiciary', 'Supreme Court', 'Police').\n"
+        "- 'instigator': The active perpetrator, politician, or institution executing the physical action, crime, policy, or claim (e.g. 'Arson Perpetrators', 'Donald Trump', 'ICE', 'Elon Musk').\n"
+        "- 'beneficiary': Third party gaining financial advantage or unearned extraction from the policy or action without executing it.\n"
+        "- 'author': The news outlet, journalist, or whistleblower exposing the story (e.g. 'The Guardian', 'ProPublica', 'BBC'). NEVER tag reporting outlets as instigators.\n"
+        "- 'context': Geographic venue, country, or physical setting (e.g. 'Waterford', 'Ireland', 'United States', 'Texas').\n"
+        "- 'misc': Peripheral secondary mentions.\n"    )
 
     if five_word:
         instruction = (
@@ -1277,7 +1431,7 @@ def build_output_format(n, use_son=False, use_potential=False, use_multi_aspect=
         '"Context paragraph."',
         '"The Bright Side:\\nNuance."',
         '"The Breakdown & Plane Error:\\nExplanation."',
-        '"**Social Physics Analysis:**\\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection."',
+        '"Social Physics Analysis:\\nDirect, conversational analysis in plain English detailing selfishness, pretexts, and projection."',
         '"The Trajectory: The Path of Deception.\\nWhen you map the gap between stated intentions and ground-level results, it plots a direct trajectory toward Greater Evil. Explanatory mathematical sentence."',
         '"The Unavoidable Truth: truth in 1 sentence.\\n\\nThe Unavoidable Lie: lie in 1 sentence."',
         '"Alethekanon:\\nStructural analysis in 1-2 concise sentences."',
@@ -1419,16 +1573,16 @@ def build_output_format(n, use_son=False, use_potential=False, use_multi_aspect=
                 '    {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}},\n'
                 '    [\n'
                 '      {\n'
-                '        "name": "Nigel Farage Political Intervention",\n'
-                '        "type": "actor",\n'
-                '        "stated_forces": {"GG": {"S": 1.2, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.2, "N": 0.0}, "LG": {"S": 1.0, "O": 0.0, "N": 0.0}, "LE": {"S": 0.0, "O": 0.8, "N": 0.0}, "GP": {"S": 1.2, "O": 0.0, "N": 0.0}, "BP": {"S": 0.0, "O": 1.2, "N": 0.0}},\n'
-                '        "actual_forces": {"GG": {"S": 0.0, "O": 1.2, "N": 0.0}, "GE": {"S": 0.8, "O": 0.2, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}\n'
+                '        "aspect": "Instigator Action",\n'
+                '        "claim_u": 1.0, "claim_psi": 1.0, "real_u": -0.89, "real_psi": -0.87,\n'
+                '        "verdict": "FAIL",\n'
+                '        "reason": "1-line concise reason under 60 chars"\n'
                 '      },\n'
                 '      {\n'
-                '        "name": "Electoral Messaging Integrity",\n'
-                '        "type": "aspect",\n'
-                '        "stated_forces": {"GG": {"S": 1.0, "O": 0.0, "N": 0.0}, "GE": {"S": 0.0, "O": 1.0, "N": 0.0}, "LG": {"S": 0.0, "O": 0.0, "N": 0.5}, "LE": {"S": 0.0, "O": 0.0, "N": 0.5}, "GP": {"S": 1.0, "O": 0.0, "N": 0.0}, "BP": {"S": 1.0, "O": 1.0, "N": 0.0}},\n'
-                '        "actual_forces": {"GG": {"S": 0.0, "O": 1.5, "N": 0.0}, "GE": {"S": 1.0, "O": 0.0, "N": 0.0}, "LG": {"S": 0.0, "O": 0.5, "N": 0.0}, "LE": {"S": 1.5, "O": 0.0, "N": 0.0}, "GP": {"S": 0.0, "O": 1.0, "N": 0.0}, "BP": {"S": 1.0, "O": 0.0, "N": 0.0}}\n'
+                '        "aspect": "Regulatory / Public Impact",\n'
+                '        "claim_u": 0.5, "claim_psi": 0.0, "real_u": -0.4, "real_psi": -0.6,\n'
+                '        "verdict": "FAIL",\n'
+                '        "reason": "1-line concise reason under 60 chars"\n'
                 '      }\n'
                 '    ]\n'
             )
@@ -1478,16 +1632,12 @@ def harvest_tavily_search_grounding(candidates):
 
     def _query_candidate_tavily(c):
         title = c.get("title") or c.get("subject") or ""
-        publisher = c.get("publisher") or c.get("author") or ""
-        clean_title = re.sub(r'[„“"\'\[\]]+', '', title).strip() if title else ""
+        claim_url = c.get("url") or c.get("link") or ""
+        clean_title = re.sub(r'[\'\"\[\]]+', '', title).strip() if title else ""
+        clean_title = re.sub(r'^(Watch|Video|Breaking|Report|Opinion):\s*', '', clean_title, flags=re.IGNORECASE).strip()
+        clean_title = re.sub(r'\s*[-|–]\s*[A-Za-z0-9\s]+$', '', clean_title).strip()
         
-        query_parts = []
-        if clean_title:
-            query_parts.append(clean_title[:120])
-        if publisher and publisher.lower() not in clean_title.lower():
-            query_parts.append(publisher)
-            
-        search_query = " ".join(query_parts) if query_parts else clean_title
+        search_query = clean_title[:90] if clean_title else ""
         if not search_query:
             return None, []
 
@@ -1497,7 +1647,7 @@ def harvest_tavily_search_grounding(candidates):
                 "query": search_query,
                 "search_depth": "basic",
                 "include_answer": True,
-                "max_results": 3,
+                "max_results": 4,
                 "topic": "news"
             }
             res = requests.post("https://api.tavily.com/search", json=payload, timeout=8)
@@ -1512,34 +1662,49 @@ def harvest_tavily_search_grounding(candidates):
                 
                 cand_urls = []
                 for r in results:
-                    r_url = r.get("url")
+                    r_url = r.get("url") or ""
                     r_content = r.get("content", "").strip()
                     r_title = r.get("title", "")
-                    if r_url:
-                        cand_urls.append(r_url)
-                    if r_content:
-                        story_lines.append(f"• Source ({r_title}): {r_content[:350]}")
-                        
-                return "\n".join(story_lines), cand_urls
+                    if not r_url:
+                        continue
+                    # Strict isolation & relevance filter: domain blocklist and entity overlap required
+                    if is_grounding_relevant(title, r_url, claim_url, r_title + " " + r_content):
+                        cand_urls.append(r_url.split("?")[0].strip())
+                        if r_content:
+                            story_lines.append(f"• Source ({r_title}): {r_content[:350]}")
+                
+                if cand_urls:
+                    c["grounding_url"] = cand_urls[0]
+                    c["grounding_context"] = "\n".join(story_lines)
+                    return "\n".join(story_lines), cand_urls
         except Exception as te:
             print(f"  [Tavily Grounding] Warning: Query for '{title[:40]}' failed: {te}")
         return None, []
-
     dossier_sections = []
-    grounding_urls = []
+    candidate_grounding_map = {}
 
     with ThreadPoolExecutor(max_workers=min(5, len(candidates))) as executor:
         batch_results = list(executor.map(_query_candidate_tavily, candidates))
 
-    for section, urls in batch_results:
+    for c, (section, urls) in zip(candidates, batch_results):
         if section:
             dossier_sections.append(section)
-        for u in urls:
-            if u not in grounding_urls:
-                grounding_urls.append(u)
+        clean_cand_urls = [u for u in (urls or []) if u]
+        
+        c_url = c.get("url") or c.get("link") or ""
+        c_id = c.get("id") or ""
+        c_subj = c.get("subject") or c.get("title") or ""
+        
+        if c_url:
+            candidate_grounding_map[c_url] = clean_cand_urls
+            candidate_grounding_map[normalize_url(c_url)] = clean_cand_urls
+        if c_id:
+            candidate_grounding_map[c_id] = clean_cand_urls
+        if c_subj:
+            candidate_grounding_map[c_subj.lower().strip()] = clean_cand_urls
 
     combined_dossier = "\n\n".join(dossier_sections)
-    return combined_dossier, grounding_urls
+    return combined_dossier, candidate_grounding_map
 
 def harvest_exa_search_grounding(candidates):
     """
@@ -1594,20 +1759,79 @@ def harvest_exa_search_grounding(candidates):
         return None, []
 
     dossier_sections = []
-    grounding_urls = []
+    candidate_grounding_map = {}
 
     with ThreadPoolExecutor(max_workers=min(5, len(candidates))) as executor:
         batch_results = list(executor.map(_query_candidate_exa, candidates))
 
-    for section, urls in batch_results:
+    for c, (section, urls) in zip(candidates, batch_results):
         if section:
             dossier_sections.append(section)
-        for u in urls:
-            if u not in grounding_urls:
-                grounding_urls.append(u)
+        clean_cand_urls = [u for u in (urls or []) if u]
+        
+        c_url = c.get("url") or c.get("link") or ""
+        c_id = c.get("id") or ""
+        c_subj = c.get("subject") or c.get("title") or ""
+        
+        if c_url:
+            candidate_grounding_map[c_url] = clean_cand_urls
+            candidate_grounding_map[normalize_url(c_url)] = clean_cand_urls
+        if c_id:
+            candidate_grounding_map[c_id] = clean_cand_urls
+        if c_subj:
+            candidate_grounding_map[c_subj.lower().strip()] = clean_cand_urls
 
     combined_dossier = "\n\n".join(dossier_sections)
-    return combined_dossier, grounding_urls
+    return combined_dossier, candidate_grounding_map
+
+def is_grounding_relevant(subject: str, grounding_url: str, claim_link: str = "", text_snippet: str = "") -> bool:
+    """
+    Validates whether a grounding URL is genuinely relevant to the audited event
+    and not a cross-contaminated placeholder, directory, or self-referential link.
+    """
+    if not grounding_url or not isinstance(grounding_url, str):
+        return False
+    
+    # 1. Anti-Self-Verification: Grounding cannot be the exact same article as the claim
+    g_url_clean = normalize_url(grounding_url)
+    if claim_link and g_url_clean == normalize_url(claim_link):
+        return False
+
+    # 2. Domain Blocklist: Exclude social media profiles, knowledge graphs, and directories
+    BANNED_GROUNDING_DOMAINS = (
+        "linkedin.com", "tavily.com", "wikipedia.org", "facebook.com", "instagram.com",
+        "twitter.com", "x.com", "youtube.com", "tiktok.com", "bloomberg.com/profile",
+        "crunchbase.com", "zoominfo.com", "pitchbook.com", "britannica.com",
+        "dictionary.com", "merriam-webster.com"
+    )
+    g_lower = grounding_url.lower()
+    if any(banned in g_lower for banned in BANNED_GROUNDING_DOMAINS):
+        return False
+
+    # 3. Content Entity Overlap Guardrail
+    STOP_WORDS = {
+        "this", "that", "with", "from", "after", "about", "into", "over", "under",
+        "their", "there", "where", "which", "could", "would", "should", "first",
+        "second", "break", "breaking", "update", "report", "reports", "saying",
+        "says", "said", "state", "states", "claims", "claim", "amid", "amidst",
+        "have", "been", "will", "more", "then", "some", "what", "when", "than",
+        "also", "next", "news", "time", "year", "years", "post", "article",
+        "watch", "video", "photos", "photo", "live", "daily", "press"
+    }
+    subj_tokens = {
+        w.lower() for w in re.findall(r'[a-zA-Z]{4,}', subject or "")
+        if w.lower() not in STOP_WORDS
+    }
+    if not subj_tokens:
+        return True
+
+    # Check match in URL path or text snippet
+    target_text = (g_lower + " " + (text_snippet or "").lower())
+    matches = [token for token in subj_tokens if token in target_text]
+    # Require at least 2 distinct entity tokens or 50% overlap if few tokens
+    min_required = min(2, len(subj_tokens))
+    return len(matches) >= min_required
+
 
 def harvest_search_grounding(genai_client, candidates):
     """
@@ -1645,15 +1869,17 @@ def harvest_search_grounding(genai_client, candidates):
     # Safety guard: Never exceed 5 candidates per search grounding call to prevent Google Search fan-out 503 timeouts
     if len(candidates) > 5:
         all_dossiers = []
-        all_urls = []
+        all_urls = {}
         for i in range(0, len(candidates), 5):
             sub_batch = candidates[i:i+5]
             sub_dossier, sub_urls = harvest_search_grounding(genai_client, sub_batch)
             if sub_dossier:
                 all_dossiers.append(sub_dossier)
-            for u in sub_urls:
-                if u not in all_urls:
-                    all_urls.append(u)
+            if isinstance(sub_urls, dict):
+                all_urls.update(sub_urls)
+            elif isinstance(sub_urls, list):
+                for idx_u, u in enumerate(sub_urls):
+                    all_urls[idx_u] = [u]
         return "\n\n".join(all_dossiers), all_urls
     
     import datetime, requests
@@ -1698,14 +1924,17 @@ def harvest_search_grounding(genai_client, candidates):
     
     for g_model in grounding_models:
         try:
-            print(f"  [Stage 1 Grounding] Pre-harvesting search facts for {len(candidates)} candidate(s) via {g_model} (Ref Date: {today_str})...")
+            g_timeout = get_smart_model_timeout(g_model, len(candidates), "OFF", True)
+            print(f"  [Stage 1 Grounding] Pre-harvesting search facts for {len(candidates)} candidate(s) via {g_model} (Ref Date: {today_str}, timeout: {g_timeout}s)...")
+            g_http_opts = types.HttpOptions(timeout=g_timeout * 1000) if types and hasattr(types, "HttpOptions") else None
             resp = genai_client.models.generate_content(
                 model=g_model,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     temperature=0.2,
                     max_output_tokens=16384,
-                    tools=[types.Tool(google_search=types.GoogleSearch())]
+                    tools=[types.Tool(google_search=types.GoogleSearch())],
+                    http_options=g_http_opts
                 )
             )
             dossier = resp.text.strip() if resp and hasattr(resp, "text") and resp.text else ""
@@ -1736,13 +1965,16 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     if pre_harvested_urls is None:
         pre_harvested_urls = []
     
-    # Stage 1: Attach pre-grounded dossier or run fallback grounding on 2.5/2.5-lite
-    if pre_grounded_dossier:
-        extra_context = (extra_context + "\n\n" if extra_context else "") + f"=== VERIFIED REAL-TIME SEARCH GROUNDING DOSSIER ===\n{pre_grounded_dossier}"
-    elif use_search and genai_client:
-        grounded_dossier, pre_harvested_urls = harvest_search_grounding(genai_client, candidates)
-        if grounded_dossier:
-            extra_context = (extra_context + "\n\n" if extra_context else "") + f"=== VERIFIED REAL-TIME SEARCH GROUNDING DOSSIER ===\n{grounded_dossier}"
+
+    # Ground candidates if search requested, without leaking into extra_context
+    if not pre_grounded_dossier and use_search and genai_client:
+        _, pre_harvested_urls = harvest_search_grounding(genai_client, candidates)
+
+
+
+
+
+
 
     convergence_rules, formatting_rules = build_formatting_rules(use_son=use_son, use_potential=use_potential, compact=compact, five_word=five_word, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
     system_instruction = build_system_instruction(use_son=use_son, use_potential=use_potential, compact=compact, five_word=five_word, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions, extra_context=extra_context)
@@ -1764,6 +1996,8 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
             cand_entry["id"] = c.get("id")
         if c.get("pub_date"):
             cand_entry["pub_date"] = str(c.get("pub_date"))
+        if c.get("grounding_context"):
+            pass # Grounding is already provided canonically in extra_context
         clean_candidates.append(cand_entry)
 
     user_payload = [
@@ -1771,7 +2005,7 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
         f"=== THREAD FORMATTING & SCHEMAS ===\n{formatting_rules}\n\n",
         f"You are evaluating a batch of {n} candidate news items simultaneously.\n\n"
     ]
-    if extra_context:
+    if extra_context and not any(extra_context.strip() in (c.get("text") or "") for c in clean_candidates):
         user_payload.append(f"=== ADDITIONAL CONTEXT / BACKGROUND TO CONSIDER ===\n{extra_context}\n\n")
     user_payload.extend([
         f"=== CANDIDATES TO EVALUATE ({n} total) ===\n{json.dumps(clean_candidates, separators=(',', ':'), ensure_ascii=False)}\n\n",
@@ -1800,7 +2034,8 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
     last_exception = None
     
     for model in fallback_models:
-        print(f"Attempting batch evaluation call using model: {model}...")
+        timeout_secs = get_smart_model_timeout(model, n, thinking_level, use_search)
+        print(f"Attempting batch evaluation call using model: {model} (timeout: {timeout_secs}s)...")
         try:
             if model.startswith("agnes"):
                 key = agnes_api_key or os.environ.get("AGNES_API_KEY")
@@ -1824,6 +2059,9 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                     client_args["project"] = project_id
                     client_args["location"] = location
                 
+                v_http_opts = vertex_types.HttpOptions(timeout=timeout_secs * 1000) if hasattr(vertex_types, "HttpOptions") else None
+                if v_http_opts:
+                    client_args["http_options"] = v_http_opts
                 print(f"Initializing Vertex AI client (key present: {bool(vertex_key)})...")
                 v_client = vertex_genai.Client(**client_args)
                 
@@ -1869,7 +2107,8 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                     system_instruction=system_instruction,
                     safety_settings=v_safety_settings,
                     tools=v_tools_list,
-                    thinking_config=v_thinking_config
+                    thinking_config=v_thinking_config,
+                    http_options=v_http_opts
                 )
                 
                 response = v_client.models.generate_content(
@@ -1933,13 +2172,15 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                             thinking_budget=budget_map.get(thinking_level.upper(), 8192)
                         )
 
+                main_http_opts = types.HttpOptions(timeout=timeout_secs * 1000) if types and hasattr(types, "HttpOptions") else None
                 config = types.GenerateContentConfig(
                     temperature=0.15,
                     max_output_tokens=65536,
                     system_instruction=system_instruction,
                     safety_settings=safety_settings,
                     tools=tools_list,
-                    thinking_config=thinking_config
+                    thinking_config=thinking_config,
+                    http_options=main_http_opts
                 )
                 
                 response = genai_client.models.generate_content(
@@ -2024,6 +2265,10 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                 except Exception as ge:
                     print(f"  Warning checking grounding chunks: {ge}")
 
+            # Preserve pre-harvested URLs if grounding_urls is empty
+            if not grounding_urls and pre_harvested_urls:
+                grounding_urls = list(pre_harvested_urls) if isinstance(pre_harvested_urls, list) else pre_harvested_urls
+
             return result_text, grounding_urls
         except Exception as e:
             err_str = str(e).lower()
@@ -2031,8 +2276,8 @@ def run_one_shot_evaluations(genai_client, candidates, model_name, agnes_api_key
                 print(f"Server capacity spike (503 Unavailable) on model {model}. Trying fallback...")
             elif "429" in err_str or "exhausted" in err_str or "quota" in err_str:
                 print(f"Rate limited or quota exhausted (429) on model {model}. Trying fallback...")
-            elif "deadline" in err_str or "timeout" in err_str or "504" in err_str:
-                print(f"Model {model} timed out after {GEMINI_TIMEOUT_SECS}s. Trying fallback...")
+            elif "deadline" in err_str or "timeout" in err_str or "504" in err_str or "timed out" in err_str or "timeoutexception" in err_str:
+                print(f"Model {model} timed out after {timeout_secs}s. Trying fallback...")
             else:
                 print(f"Warning: Model {model} failed ({e}). Trying fallback...")
             last_exception = e
@@ -2060,7 +2305,7 @@ def sanitize_story_posts(posts, use_spiritual=False):
         clean[-1] = repair_spirithekanon_post(last_p)
                 
     # Auto-fit raw text posts destined for Bluesky under 280 chars
-    for i in range(min(4, len(clean))):
+    for i in range(len(clean)):
         if len(clean[i]) > 280:
             lines = clean[i].split("\n")
             while len("\n".join(lines)) > 280 and len(lines) > 1:
@@ -2088,6 +2333,7 @@ def sanitize_story_posts(posts, use_spiritual=False):
     return clean
 
 def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", use_potential=False):
+    # Zero fallback synthesis: evaluated coordinates from model stand alone
     # Strip markdown fences if present
     content = flat_text.strip()
     if content.startswith("```json"):
@@ -2223,6 +2469,8 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
                 if use_spiritual:
                     story["spiritual"] = True
                     story["spiritual_traditions"] = resolve_spiritual_traditions(spiritual_traditions)
+
+                # Evaluated coordinates stand alone - zero fallback math
                 evaluations.append(story)
                 continue
             except Exception as e:
@@ -2329,6 +2577,7 @@ def transpose_flat_to_json(flat_text, use_multi_aspect=False, use_spiritual=Fals
                 story["spiritual"] = True
                 story["spiritual_traditions"] = resolve_spiritual_traditions(spiritual_traditions)
 
+                # Evaluated coordinates stand alone - zero fallback math
             evaluations.append(story)
         except Exception as e:
             print(f"Warning: Failed to parse item {idx}: {e}")
@@ -2369,11 +2618,11 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
             if not story.get("actor_roles"):
                 if story.get("actors"):
                     story["actor_roles"] = [
-                        {"name": a, "role": classify_actor_role(a, story.get("subject", ""))}
+                        {"name": a, "role": classify_actor_role(a, (story.get("subject", "") + " " + (story.get("scraped_text", "") or "")[:2500]).strip())}
                         for a in story["actors"]
                     ]
                 else:
-                    story["actor_roles"] = extract_actor_roles(story.get("subject", ""))
+                    story["actor_roles"] = extract_actor_roles((story.get("subject", "") + " " + (story.get("scraped_text", "") or "")[:2500]).strip())
                     story["actors"] = [r["name"] for r in story["actor_roles"]]
 
             if not story.get("actors") and story.get("actor_roles"):
@@ -2437,6 +2686,40 @@ def process_evaluations(evaluations, category="general", topic=None, compact=Fal
                     save_story_source(slug, story["scraped_text"], url=story.get("link"))
                 except Exception as se:
                     print(f"  Warning: Could not save story source to shard for '{slug}': {se}")
+
+            # Grounding Relevance Guardrail
+            current_g_url = story.get("grounding_url")
+            claim_url = story.get("link") or ""
+            story_subj = story.get("subject") or ""
+
+            if current_g_url:
+                if not is_grounding_relevant(story_subj, current_g_url, claim_url):
+                    print(f"  [Grounding Guardrail] Warning: '{slug}' has irrelevant/contaminated grounding URL: '{current_g_url}'. Purging.")
+                    story["grounding_url"] = None
+                    current_g_url = None
+
+            # If grounding_url is empty, attempt a targeted single-candidate Tavily search
+            if not story.get("grounding_url") and story_subj:
+                try:
+                    _, single_g_map = harvest_tavily_search_grounding([{"title": story_subj, "url": claim_url, "id": slug}])
+                    cand_urls = single_g_map.get(claim_url) or single_g_map.get(normalize_url(claim_url)) or single_g_map.get(slug) or []
+                    for cu in cand_urls:
+                        if is_grounding_relevant(story_subj, cu, claim_url):
+                            story["grounding_url"] = cu.split("?")[0].strip()
+                            print(f"  [Grounding Guardrail] Recovered verified grounding URL for '{slug}': {story['grounding_url']}")
+                            break
+                except Exception as t_err:
+                    print(f"  [Grounding Guardrail] Targeted recovery failed for '{slug}': {t_err}")
+
+            # Ensure post 1 globe marker accurately reflects verified grounding presence
+            if story.get("grounding_url"):
+                posts = story.get("posts", [])
+                if posts and len(posts) > 0 and "🌐" not in posts[0]:
+                    posts[0] = posts[0].rstrip() + " 🌐"
+            else:
+                posts = story.get("posts", [])
+                if posts and len(posts) > 0 and "🌐" in posts[0]:
+                    posts[0] = posts[0].replace(" 🌐", "").replace("🌐", "").rstrip()
 
             # Write to darkroom — rebuild_registries will generate the graph and promote it
             filename = f"factcheck_{slug}.json"
@@ -2690,7 +2973,7 @@ def main():
 
         # Retrieve pre-grounded dossier covering the candidates in this chunk
         cur_dossier_parts = []
-        cur_urls = []
+        cur_urls = {}
         if args.search:
             start_cand_idx = chunk_idx * chunk_size
             end_cand_idx = start_cand_idx + len(chunk)
@@ -2715,9 +2998,11 @@ def main():
                     
                 if g_dossier:
                     cur_dossier_parts.append(g_dossier)
-                for u in g_urls:
-                    if u not in cur_urls:
-                        cur_urls.append(u)
+                if isinstance(g_urls, dict):
+                    cur_urls.update(g_urls)
+                elif isinstance(g_urls, list):
+                    for idx_u, u in enumerate(g_urls):
+                        cur_urls[idx_u] = [u]
                         
             # Prefetch next grounding batch ahead of time if not already started
             next_g_batch = end_g_batch + 1
@@ -2830,6 +3115,10 @@ def main():
                                 it["is_multi_source"] = True
                             if cand_match.get("cross_source_dossier"):
                                 it["cross_source_dossier"] = cand_match["cross_source_dossier"]
+                            if cand_match.get("grounding_url") and not it.get("grounding_url"):
+                                it["grounding_url"] = cand_match["grounding_url"]
+                            if cand_match.get("secondary_url"):
+                                it["secondary_url"] = cand_match["secondary_url"]
 
                 # Conditional Second-Pass Fact-Checking Reflection for High Hypocrisy/Distortion
                 if args.search:
@@ -2939,28 +3228,60 @@ def main():
                     parsed = reflected_parsed
 
                 
-                # If search was actually used, append 🌐 to post 1 and record grounding URL as metadata
+                # If search was actually used, append 🌐 to post 1 and record candidate-isolated grounding URL
                 if grounding_urls:
                     print(f"  Google Search grounding detected with {len(grounding_urls)} source(s).")
-                    primary_url = grounding_urls[0]
-                    # Strip tracking parameters to save character space
-                    if "?" in primary_url:
-                        primary_url = primary_url.split("?")[0]
-                    primary_url = primary_url.strip()
-                    
-                    for item in parsed:
-                        if isinstance(item, dict):
-                            item["grounding_url"] = primary_url
-                            posts = item.get("posts", [])
-                            if posts and len(posts) > 0:
-                                first_post = posts[0]
-                                if "🌐" not in first_post:
-                                    posts[0] = first_post.rstrip() + " 🌐"
-                        elif isinstance(item, list) and len(item) > 10:
-                            if isinstance(item[10], list) and len(item[10]) > 0:
-                                first_post = item[10][0]
-                                if "🌐" not in first_post:
-                                    item[10][0] = first_post.rstrip() + " 🌐"
+                    for i, item in enumerate(parsed):
+                        # Strict Invariant: Preserve pre-existing verified grounding_url (e.g. from multi-source cluster)
+                        if isinstance(item, dict) and item.get("grounding_url"):
+                            continue
+
+                        item_id = item.get("id") if isinstance(item, dict) else (item[1] if isinstance(item, list) and len(item) > 1 else None)
+                        item_link = item.get("link") if isinstance(item, dict) else (item[3] if isinstance(item, list) and len(item) > 3 else None)
+                        item_subj = item.get("subject") if isinstance(item, dict) else (item[2] if isinstance(item, list) and len(item) > 2 else None)
+
+                        cand_url = None
+                        if isinstance(grounding_urls, dict):
+                            # Deterministic candidate lookup by link, normalized link, id, or subject
+                            urls_for_cand = (
+                                grounding_urls.get(item_link)
+                                or (grounding_urls.get(normalize_url(item_link)) if item_link else None)
+                                or grounding_urls.get(item_id)
+                                or (grounding_urls.get(item_subj.lower().strip()) if item_subj else None)
+                            )
+                            if urls_for_cand and isinstance(urls_for_cand, list):
+                                for u in urls_for_cand:
+                                    if normalize_url(u) != normalize_url(item_link or ""):
+                                        cand_url = u
+                                        break
+                                if not cand_url and len(urls_for_cand) > 0:
+                                    cand_url = urls_for_cand[0]
+                            elif urls_for_cand and isinstance(urls_for_cand, str):
+                                cand_url = urls_for_cand
+                        elif isinstance(grounding_urls, list) and item_subj:
+                            for u in grounding_urls:
+                                if is_grounding_relevant(item_subj, u, item_link or ""):
+                                    cand_url = u
+                                    break
+
+                        if cand_url:
+                            # Strip tracking parameters to save character space
+                            if "?" in cand_url:
+                                cand_url = cand_url.split("?")[0]
+                            cand_url = cand_url.strip()
+
+                            if isinstance(item, dict):
+                                item["grounding_url"] = cand_url
+                                posts = item.get("posts", [])
+                                if posts and len(posts) > 0:
+                                    first_post = posts[0]
+                                    if "🌐" not in first_post:
+                                        posts[0] = first_post.rstrip() + " 🌐"
+                            elif isinstance(item, list) and len(item) > 10:
+                                if isinstance(item[10], list) and len(item[10]) > 0:
+                                    first_post = item[10][0]
+                                    if "🌐" not in first_post:
+                                        item[10][0] = first_post.rstrip() + " 🌐"
 
                 chunk_evals.extend(parsed)
 

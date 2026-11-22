@@ -1,0 +1,146 @@
+[
+  {
+    "text": "The national government will deliver economic growth and support working families",
+    "proposition": {
+      "actor": "national government",
+      "action": "deliver economic growth",
+      "target": "working families",
+      "cause": "policy program",
+      "outcome": "support working families"
+    },
+    "coordinates": {
+      "upsilon": 0.45,
+      "psi": 0.55,
+      "z": 0.15
+    },
+    "modal_state": "PRODUCTIVE [can be]",
+    "q_planes": [0.3, 0.1, 0.05, 0.15, 0.25, 0.05, 0.1],
+    "dominant_plane": "Q1"
+  },
+  {
+    "text": "We need to make sure we can keep our planes in the air",
+    "proposition": {
+      "actor": "we / aviation sector",
+      "action": "keep planes in the air",
+      "target": "transport infrastructure",
+      "cause": "aviation capacity",
+      "outcome": "operational transport"
+    },
+    "coordinates": {
+      "upsilon": 0.25,
+      "psi": 0.45,
+      "z": 0.2
+    },
+    "modal_state": "PRODUCTIVE [can be]",
+    "q_planes": [0.15, 0.15, 0.45, 0.05, 0.1, 0.05, 0.05],
+    "dominant_plane": "Q3"
+  },
+  {
+    "text": "The problem is training enough Australian pilots to fulfil our domestic aviation needs",
+    "proposition": {
+      "actor": "aviation industry",
+      "action": "training pilots",
+      "target": "domestic aviation needs",
+      "cause": "pilot shortage",
+      "outcome": "workforce bottleneck"
+    },
+    "coordinates": {
+      "upsilon": 0.2,
+      "psi": -0.1,
+      "z": -0.85
+    },
+    "modal_state": "CONSTRUCTIVE [is like]",
+    "q_planes": [0.1, 0.35, 0.2, 0.05, 0.25, 0.03, 0.02],
+    "dominant_plane": "Q2"
+  },
+  {
+    "text": "It produces economic benefits as well as the spread of best practice",
+    "proposition": {
+      "actor": "training program",
+      "action": "produces benefits",
+      "target": "economy and industry",
+      "cause": "skills training",
+      "outcome": "spread of best practice"
+    },
+    "coordinates": {
+      "upsilon": 0.5,
+      "psi": 0.4,
+      "z": 1.25
+    },
+    "modal_state": "PRODUCTIVE [can be]",
+    "q_planes": [0.1, 0.05, 0.05, 0.1, 0.55, 0.05, 0.1],
+    "dominant_plane": "Q5"
+  },
+  {
+    "text": "More people are dying on our roads with tragic consequences for families",
+    "proposition": {
+      "actor": "road users / community",
+      "action": "dying on roads",
+      "target": "families",
+      "cause": "road trauma",
+      "outcome": "grief and tragic loss"
+    },
+    "coordinates": {
+      "upsilon": 0.15,
+      "psi": -0.35,
+      "z": 0.95
+    },
+    "modal_state": "CONSTRUCTIVE [is like]",
+    "q_planes": [0.05, 0.05, 0.2, 0.15, 0.05, 0.05, 0.45],
+    "dominant_plane": "Q7"
+  },
+  {
+    "text": "The opposition claims the budget is failing without proposing alternative funding",
+    "proposition": {
+      "actor": "opposition",
+      "action": "criticizes budget",
+      "target": "government economic plan",
+      "cause": "partisan scrutiny",
+      "outcome": "parliamentary challenge"
+    },
+    "coordinates": {
+      "upsilon": -0.65,
+      "psi": 0.4,
+      "z": -0.3
+    },
+    "modal_state": "REDUCTIVE [is not]",
+    "q_planes": [0.45, 0.05, 0.05, 0.1, 0.25, 0.05, 0.05],
+    "dominant_plane": "Q1"
+  },
+  {
+    "text": "Historical legislation passed in 1999 locked in statutory arbitration standards",
+    "proposition": {
+      "actor": "parliament",
+      "action": "passed arbitration legislation",
+      "target": "workplace relations",
+      "cause": "legislative precedent",
+      "outcome": "enduring statutory benchmark"
+    },
+    "coordinates": {
+      "upsilon": 0.35,
+      "psi": -0.25,
+      "z": -1.45
+    },
+    "modal_state": "CONSTRUCTIVE [is like]",
+    "q_planes": [0.15, 0.05, 0.05, 0.1, 0.2, 0.4, 0.05],
+    "dominant_plane": "Q6"
+  },
+  {
+    "text": "A predatory corporate monopoly extracts excessive rent from public infrastructure",
+    "proposition": {
+      "actor": "corporate monopoly",
+      "action": "extracts economic rent",
+      "target": "public infrastructure",
+      "cause": "market failure",
+      "outcome": "private extraction"
+    },
+    "coordinates": {
+      "upsilon": -1.35,
+      "psi": 0.5,
+      "z": 0.4
+    },
+    "modal_state": "REDUCTIVE [is not]",
+    "q_planes": [0.15, 0.05, 0.2, 0.05, 0.5, 0.02, 0.03],
+    "dominant_plane": "Q5"
+  }
+]

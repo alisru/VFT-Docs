@@ -1,0 +1,327 @@
+Command exited with code 0.
+
+Command output:
+
+> E:\Vector Field Theory\peek_explorer\renderer.js:586:    const rows = bodyEl.querySelectorAll('.room-item');
+  E:\Vector Field Theory\peek_explorer\renderer.js:587:    rows.forEach(row => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:588:      const it = row._item;
+  E:\Vector Field Theory\peek_explorer\renderer.js:589:      if (!it) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:590:      if (it.isDir) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:591:        const isBridged = row.classList.contains('bridged');
+  E:\Vector Field Theory\peek_explorer\renderer.js:592:        const dIdx = parseInt(row.dataset.dirIndex || '0', 10);
+  E:\Vector Field Theory\peek_explorer\renderer.js:593:        const childEntry = typeof roomMap !== 'undefined' ? 
+roomMap.get(it.path) : null;
+  E:\Vector Field Theory\peek_explorer\renderer.js:594:        const targetChildColor = (childEntry && 
+childEntry.roomColor)
+  E:\Vector Field Theory\peek_explorer\renderer.js:595:          ? childEntry.roomColor
+  E:\Vector Field Theory\peek_explorer\renderer.js:596:          : (typeof computeRoomAndChildColor === 'function' && 
+typeof layout !== 'undefined'
+  E:\Vector Field Theory\peek_explorer\renderer.js:597:            ? computeRoomAndChildColor(it.path, entry, dIdx, 
+entry.depth + 1, layout.rooms?.[it.path])
+  E:\Vector Field Theory\peek_explorer\renderer.js:598:            : '#0078d4');
+  E:\Vector Field Theory\peek_explorer\renderer.js:599:
+  E:\Vector Field Theory\peek_explorer\renderer.js:600:        const unopenedBase = useCustomUnselectedFolder
+  E:\Vector Field Theory\peek_explorer\renderer.js:601:          ? unselectedFolderColor
+  E:\Vector Field Theory\peek_explorer\renderer.js:602:          : (landscapePalette === 'default'
+  E:\Vector Field Theory\peek_explorer\renderer.js:603:            ? (entry.roomColor || defaultFrameColor)
+  E:\Vector Field Theory\peek_explorer\renderer.js:604:            : targetChildColor);
+  E:\Vector Field Theory\peek_explorer\renderer.js:605:        const openedBase = useCustomSelectedFolder ? 
+selectedFolderColor : targetChildColor;
+  E:\Vector Field Theory\peek_explorer\renderer.js:606:        const tileBaseCol = isBridged ? openedBase : 
+unopenedBase;
+> E:\Vector Field Theory\peek_explorer\renderer.js:935:const visibleRows = () => 
+[...$('list').querySelectorAll('.row.item, .room-item, .room-file, .room-door, .dash-card')].filter(r => r._item && 
+r.style.display !== 'none' && !r.closest('.collapsed'));
+  E:\Vector Field Theory\peek_explorer\renderer.js:936:function updateToolbarContextButtons() {
+  E:\Vector Field Theory\peek_explorer\renderer.js:937:  const selCount = selected.size;
+  E:\Vector Field Theory\peek_explorer\renderer.js:938:  $('cutBtn')?.classList.toggle('disabled', selCount === 0);
+  E:\Vector Field Theory\peek_explorer\renderer.js:939:  $('copyBtn')?.classList.toggle('disabled', selCount === 0);
+  E:\Vector Field Theory\peek_explorer\renderer.js:940:  $('pasteBtn')?.classList.toggle('disabled', !clip || 
+!clip.paths || !clip.paths.length);
+  E:\Vector Field Theory\peek_explorer\renderer.js:941:  $('renameBtn')?.classList.toggle('disabled', selCount !== 1);
+  E:\Vector Field Theory\peek_explorer\renderer.js:942:  $('deleteBtn')?.classList.toggle('disabled', selCount === 0);
+  E:\Vector Field Theory\peek_explorer\renderer.js:943:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:944:
+  E:\Vector Field Theory\peek_explorer\renderer.js:945:function updateStatus() {
+  E:\Vector Field Theory\peek_explorer\renderer.js:946:  updateToolbarContextButtons();
+  E:\Vector Field Theory\peek_explorer\renderer.js:947:  if (isSearching) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:948:    const n = selected.size;
+  E:\Vector Field Theory\peek_explorer\renderer.js:949:    if (n > 0) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:950:      $('status').textContent = `${totalCount} search results  
+|  ${n} item${n > 1 ? 's' : ''} selected  |  Search in ${cur}`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:951:    } else {
+  E:\Vector Field Theory\peek_explorer\renderer.js:952:      $('status').textContent = `${totalCount} search results 
+for "${currentSearchQuery}" in ${cur}`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:953:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:954:    updateStatusBarTelemetry();
+  E:\Vector Field Theory\peek_explorer\renderer.js:955:    if (showPreview) updatePreviewPane();
+> E:\Vector Field Theory\peek_explorer\renderer.js:1268:    for (const r of $('list').querySelectorAll('.room-item, 
+.room-file, .room-door')) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1269:      if (!r._item) continue;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1270:      const hiddenBlocked = !showHidden && 
+r._item.name.startsWith('.');
+  E:\Vector Field Theory\peek_explorer\renderer.js:1271:      r.style.display = hiddenBlocked ? 'none' : '';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1272:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:1273:    if (q && typeof window._openLandscapeJumpModal === 
+'function') {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1274:      window._openLandscapeJumpModal(filterText, false);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1275:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:1276:    return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1277:  }
+> E:\Vector Field Theory\peek_explorer\renderer.js:1278:  for (const r of $('list').querySelectorAll('.row.item, 
+.room-item, .room-file, .room-door')) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1279:    if (!r._item) continue;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1280:    const hiddenBlocked = !showHidden && 
+r._item.name.startsWith('.');
+  E:\Vector Field Theory\peek_explorer\renderer.js:1281:    const matchFilter = !q || 
+r._item.name.toLowerCase().includes(q) || (r._item.isDir && expanded.has(r._item.path));
+  E:\Vector Field Theory\peek_explorer\renderer.js:1282:    r.style.display = (!hiddenBlocked && matchFilter) ? '' : 
+'none';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1283:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:1284:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:1285:
+  E:\Vector Field Theory\peek_explorer\renderer.js:1286:// ---- Drag & drop helper ----
+  E:\Vector Field Theory\peek_explorer\renderer.js:1287:const MIME_PATHS = 'application/x-peek-paths';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1288:const MIME_TAB = 'application/x-peek-tab';
+  E:\Vector Field Theory\peek_explorer\renderer.js:1289:let activeDragPaths = []; // Fallback in-memory drag payload 
+if OS drag or DOM dataTransfer strips custom MIME
+  E:\Vector Field Theory\peek_explorer\renderer.js:1290:
+  E:\Vector Field Theory\peek_explorer\renderer.js:1291:function hasSupportedDrop(types) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1292:  if (activeDragPaths && activeDragPaths.length > 0) return 
+true;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1293:  if (!types) return false;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1294:  return types.includes(MIME_PATHS) || types.includes('Files');
+  E:\Vector Field Theory\peek_explorer\renderer.js:1295:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:1296:
+  E:\Vector Field Theory\peek_explorer\renderer.js:1297:let dragGhostEl = null;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1298:function setCustomDragGhost(e, paths, primaryName) {
+> E:\Vector Field Theory\peek_explorer\renderer.js:2104:    if (mode === 'landscape' || mode === 'lens' || cur === 
+HOME_URI || e.button !== 0 || e.target.closest('.row.item') || e.target.closest('.room-item') || 
+e.target.closest('.arrow') || e.target.closest('.grp-head') || e.target.closest('.dash') || 
+e.target.closest('.grp-fold') || e.target.closest('.kids')) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:2105:    hideMenu();
+  E:\Vector Field Theory\peek_explorer\renderer.js:2106:    const cr = contentEl.getBoundingClientRect();
+  E:\Vector Field Theory\peek_explorer\renderer.js:2107:    startX = e.clientX - cr.left; startY = e.clientY - cr.top;
+  E:\Vector Field Theory\peek_explorer\renderer.js:2108:    dragging = false;
+  E:\Vector Field Theory\peek_explorer\renderer.js:2109:    basePaths = e.ctrlKey ? new Set(selected.keys()) : new 
+Set();
+  E:\Vector Field Theory\peek_explorer\renderer.js:2110:    if (!e.ctrlKey && !e.shiftKey) clearSelection();
+  E:\Vector Field Theory\peek_explorer\renderer.js:2111:
+  E:\Vector Field Theory\peek_explorer\renderer.js:2112:    const onMove = ev => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:2113:      const curX = ev.clientX - cr.left, curY = ev.clientY - 
+cr.top;
+  E:\Vector Field Theory\peek_explorer\renderer.js:2114:      if (!dragging && Math.hypot(curX - startX, curY - 
+startY) < 4) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:2115:      dragging = true;
+  E:\Vector Field Theory\peek_explorer\renderer.js:2116:      const x1 = Math.min(startX, curX), y1 = Math.min(startY, 
+curY);
+  E:\Vector Field Theory\peek_explorer\renderer.js:2117:      const x2 = Math.max(startX, curX), y2 = Math.max(startY, 
+curY);
+  E:\Vector Field Theory\peek_explorer\renderer.js:2118:      rub.style.display = 'block';
+  E:\Vector Field Theory\peek_explorer\renderer.js:2119:      rub.style.left = x1 + 'px'; rub.style.top = y1 + 'px';
+  E:\Vector Field Theory\peek_explorer\renderer.js:2120:      rub.style.width = (x2 - x1) + 'px'; rub.style.height = 
+(y2 - y1) + 'px';
+  E:\Vector Field Theory\peek_explorer\renderer.js:2121:      const rr = rub.getBoundingClientRect();
+  E:\Vector Field Theory\peek_explorer\renderer.js:2122:      for (const row of visibleRows()) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:2123:        const br = row.getBoundingClientRect();
+  E:\Vector Field Theory\peek_explorer\renderer.js:2124:        const hit = !(br.right < rr.left || br.left > rr.right 
+|| br.bottom < rr.top || br.top > rr.bottom);
+> E:\Vector Field Theory\peek_explorer\renderer.js:3269:      if (e.target.closest('.room-item') || 
+e.target.closest('.room-file') || e.target.closest('.room-door')) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3270:      e.preventDefault(); e.stopPropagation();
+  E:\Vector Field Theory\peek_explorer\renderer.js:3271:      selectActiveRoom(roomPath);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3272:      await syncClip();
+  E:\Vector Field Theory\peek_explorer\renderer.js:3273:      fillMenu([
+  E:\Vector Field Theory\peek_explorer\renderer.js:3274:        { label: `?? Room: ${entry.name}`, disabled: true },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3275:        { label: '?? Zoom into this Room', run: () => 
+panToRoom(true) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3276:        { label: '? Auto-fit Room box to contents', run: () => 
+rm.querySelector('[data-rm="fit"]').click() },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3277:        '-',
+  E:\Vector Field Theory\peek_explorer\renderer.js:3278:        { label: '?? View: Details', run: () => 
+setRoomView(roomPath, 'details') },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3279:        { label: '?? View: Tiles', run: () => 
+setRoomView(roomPath, 'tiles') },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3280:        { label: '?? View: List', run: () => 
+setRoomView(roomPath, 'list') },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3281:        { label: '?? View: Small Icons', run: () => 
+setRoomView(roomPath, 'small') },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3282:        { label: '?? View: Medium Icons', run: () => 
+setRoomView(roomPath, 'medium') },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3283:        { label: '?? View: Large Icons', run: () => 
+setRoomView(roomPath, 'large') },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3284:        { label: '?? View: Inherit Global', run: () => 
+setRoomView(roomPath, 'inherit') },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3285:        '-',
+  E:\Vector Field Theory\peek_explorer\renderer.js:3286:        ...(depth > 0 ? [{ label: '?? Set as Root Room', run: 
+() => onNavigate(roomPath) }] : []),
+  E:\Vector Field Theory\peek_explorer\renderer.js:3287:        { label: 'Open in new tab (Middle-click)', run: () => 
+newTab(roomPath, [], true) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:3288:        '-',
+  E:\Vector Field Theory\peek_explorer\renderer.js:3289:        { label: '?? Set Custom Room Color', run: () => 
+promptRoomColor(entry) },
+> E:\Vector Field Theory\peek_explorer\renderer.js:3362:          row.className = 'room-item ' + (it.isDir ? 'is-dir' 
+: 'is-file' + (hasThumb ? ' has-thumb' : '')) + (isBridged ? ' bridged' : '');
+  E:\Vector Field Theory\peek_explorer\renderer.js:3363:          row._item = it;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3364:          row.draggable = true;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3365:          if (it.isDir) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:3366:            const dIdx = dirCounter++;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3367:            row.dataset.subpath = it.path;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3368:            row.dataset.dirIndex = String(dIdx);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3369:            entry.dirRows.push(row);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3370:            entry.subRowMap.set(it.path, row);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3371:            const childEntry = roomMap.get(it.path);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3372:            const targetChildColor = (childEntry && 
+childEntry.roomColor)
+  E:\Vector Field Theory\peek_explorer\renderer.js:3373:              ? childEntry.roomColor
+  E:\Vector Field Theory\peek_explorer\renderer.js:3374:              : computeRoomAndChildColor(it.path, entry, dIdx, 
+entry.depth + 1, layout.rooms?.[it.path]);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3375:
+  E:\Vector Field Theory\peek_explorer\renderer.js:3376:            const unopenedBase = useCustomUnselectedFolder
+  E:\Vector Field Theory\peek_explorer\renderer.js:3377:              ? unselectedFolderColor
+  E:\Vector Field Theory\peek_explorer\renderer.js:3378:              : (landscapePalette === 'default'
+  E:\Vector Field Theory\peek_explorer\renderer.js:3379:                ? (entry.roomColor || defaultFrameColor)
+  E:\Vector Field Theory\peek_explorer\renderer.js:3380:                : targetChildColor);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3381:            const lighterUnopened = 
+shiftColorShade(unopenedBase, 'lighter', 1);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3382:            row.style.setProperty('--folder-ambient-bg', 
+colorToRgba(lighterUnopened, useCustomUnselectedFolder ? 0.28 : 0.08));
+> E:\Vector Field Theory\peek_explorer\renderer.js:3626:      const dirs = r.dirRows || 
+r.el.querySelectorAll('.room-item.is-dir');
+  E:\Vector Field Theory\peek_explorer\renderer.js:3627:      for (const d of dirs) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:3628:        const subPath = d.dataset.subpath;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3629:        const dIdx = parseInt(d.dataset.dirIndex || '0', 10);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3630:        const isBridged = roomMap.has(subPath);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3631:        const childEntry = roomMap.get(subPath);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3632:        const targetChildColor = (childEntry && 
+childEntry.roomColor)
+  E:\Vector Field Theory\peek_explorer\renderer.js:3633:          ? childEntry.roomColor
+  E:\Vector Field Theory\peek_explorer\renderer.js:3634:          : computeRoomAndChildColor(subPath, r, dIdx, r.depth 
++ 1, layout.rooms?.[subPath]);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3635:        const unopenedBase = useCustomUnselectedFolder
+  E:\Vector Field Theory\peek_explorer\renderer.js:3636:          ? unselectedFolderColor
+  E:\Vector Field Theory\peek_explorer\renderer.js:3637:          : (landscapePalette === 'default'
+  E:\Vector Field Theory\peek_explorer\renderer.js:3638:            ? (r.roomColor || defaultFrameColor)
+  E:\Vector Field Theory\peek_explorer\renderer.js:3639:            : targetChildColor);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3640:        const openedBase = useCustomSelectedFolder ? 
+selectedFolderColor : targetChildColor;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3641:        const stateKey = `${isBridged}|${landscapePalette}|${us
+eCustomUnselectedFolder}|${unopenedBase}|${useCustomSelectedFolder}|${openedBase}`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3642:        if (d._badgeStateKey === stateKey) continue;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3643:        d._badgeStateKey = stateKey;
+  E:\Vector Field Theory\peek_explorer\renderer.js:3644:
+  E:\Vector Field Theory\peek_explorer\renderer.js:3645:        d.classList.toggle('bridged', isBridged);
+  E:\Vector Field Theory\peek_explorer\renderer.js:3646:        d.title = `${d._item ? d._item.name : 'Folder'} 
+(${isBridged ? 'Room island is open on map � Click to close � Shift+Click to focus' : 'Click to open room island on 
+map � Shift+Click to open & focus'})`;
+> E:\Vector Field Theory\peek_explorer\renderer.js:5315:      const rows = r.el.querySelectorAll('.room-item');
+  E:\Vector Field Theory\peek_explorer\renderer.js:5316:      for (const row of rows) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:5317:        if (row._item && row._item.path === m.path) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:5318:          clearSelection();
+  E:\Vector Field Theory\peek_explorer\renderer.js:5319:          setRowSelected(row._item, row, true);
+  E:\Vector Field Theory\peek_explorer\renderer.js:5320:          row.scrollIntoView({ block: 'center', behavior: 
+'smooth' });
+  E:\Vector Field Theory\peek_explorer\renderer.js:5321:          row.classList.remove('jump-flash-highlight');
+  E:\Vector Field Theory\peek_explorer\renderer.js:5322:          void row.offsetWidth;
+  E:\Vector Field Theory\peek_explorer\renderer.js:5323:          row.classList.add('jump-flash-highlight');
+  E:\Vector Field Theory\peek_explorer\renderer.js:5324:          updateStatus();
+  E:\Vector Field Theory\peek_explorer\renderer.js:5325:          break;
+  E:\Vector Field Theory\peek_explorer\renderer.js:5326:        }
+  E:\Vector Field Theory\peek_explorer\renderer.js:5327:      }
+  E:\Vector Field Theory\peek_explorer\renderer.js:5328:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:5329:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:5330:
+  E:\Vector Field Theory\peek_explorer\renderer.js:5331:  function renderJumpList(queryText) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:5332:    const q = (queryText || '').trim().toLowerCase();
+  E:\Vector Field Theory\peek_explorer\renderer.js:5333:    const results = [];
+  E:\Vector Field Theory\peek_explorer\renderer.js:5334:    const seenFolders = new Set();
+  E:\Vector Field Theory\peek_explorer\renderer.js:5335:
+> E:\Vector Field Theory\peek_explorer\renderer.js:6992:      document.querySelectorAll('.row.item, .room-item, 
+.room-file, .room-door, .grp-fold').forEach(el => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6993:        if ((el._item && el._item.path === p) || 
+(el._folderPath === p)) el.remove();
+  E:\Vector Field Theory\peek_explorer\renderer.js:6994:      });
+  E:\Vector Field Theory\peek_explorer\renderer.js:6995:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6996:    totalCount = Math.max(0, totalCount - paths.length);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6997:    updateStatus();
+  E:\Vector Field Theory\peek_explorer\renderer.js:6998:    if (nextItemPath) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6999:      const refreshedRows = visibleRows();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7000:      const newRow = refreshedRows.find(r => r._item && 
+r._item.path === nextItemPath) || refreshedRows[Math.min(idx, refreshedRows.length - 1)];
+  E:\Vector Field Theory\peek_explorer\renderer.js:7001:      if (newRow && newRow._item) focusRow(newRow, false);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7002:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7003:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7004:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:7005:
+  E:\Vector Field Theory\peek_explorer\renderer.js:7006:async function doPermanentDelete(paths) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7007:  if (!paths.length) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7008:  const rows = visibleRows();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7009:  const firstPath = paths[0];
+  E:\Vector Field Theory\peek_explorer\renderer.js:7010:  const idx = rows.findIndex(r => r._item && r._item.path === 
+firstPath);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7011:  const nextTarget = rows[idx + 1] || rows[idx - 1];
+  E:\Vector Field Theory\peek_explorer\renderer.js:7012:  const nextItemPath = nextTarget && nextTarget._item ? 
+nextTarget._item.path : null;
+> E:\Vector Field Theory\peek_explorer\renderer.js:7019:      document.querySelectorAll('.row.item, .room-item, 
+.room-file, .room-door, .grp-fold').forEach(el => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7020:        if ((el._item && el._item.path === p) || 
+(el._folderPath === p)) el.remove();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7021:      });
+  E:\Vector Field Theory\peek_explorer\renderer.js:7022:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7023:    totalCount = Math.max(0, totalCount - paths.length);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7024:    updateStatus();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7025:    if (nextItemPath) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7026:      const refreshedRows = visibleRows();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7027:      const newRow = refreshedRows.find(r => r._item && 
+r._item.path === nextItemPath) || refreshedRows[Math.min(idx, refreshedRows.length - 1)];
+  E:\Vector Field Theory\peek_explorer\renderer.js:7028:      if (newRow && newRow._item) focusRow(newRow, false);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7029:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7030:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7031:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:7032:function startRename(it, cell) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7033:  const nm = cell.querySelector('.nm'); if (!nm) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7034:  const inp = document.createElement('input'); inp.value = 
+it.name; inp.className = 'rn';
+  E:\Vector Field Theory\peek_explorer\renderer.js:7035:  nm.replaceWith(inp); inp.focus();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7036:  const dot = it.name.lastIndexOf('.'); 
+inp.setSelectionRange(0, !it.isDir && dot > 0 ? dot : it.name.length);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7037:  let done = false;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7038:  const finish = async ok => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7039:    if (done) return; done = true;
+> E:\Vector Field Theory\peek_explorer\renderer.js:7076:  const subDirsInCur = 
+[...$('list').querySelectorAll('.row.item[data-is-dir="1"], .room-item.is-dir')]
+  E:\Vector Field Theory\peek_explorer\renderer.js:7077:    .map(el => el._item)
+  E:\Vector Field Theory\peek_explorer\renderer.js:7078:    .filter(d => d && d.isDir && !paths.includes(d.path));
+  E:\Vector Field Theory\peek_explorer\renderer.js:7079:
+  E:\Vector Field Theory\peek_explorer\renderer.js:7080:  fillMenu([
+  E:\Vector Field Theory\peek_explorer\renderer.js:7081:    ...(!multi ? [
+  E:\Vector Field Theory\peek_explorer\renderer.js:7082:      { label: 'Open', run: () => it.isDir ? go(it.path) : 
+(/\.html?$/i.test(it.name) ? newTab(it.path, [], true) : window.api.open(it.path)) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7083:      ...(it.isDir ? [
+  E:\Vector Field Theory\peek_explorer\renderer.js:7084:        { label: 'Open in new tab (Middle-click)', run: () => 
+newTab(it.path, [], true) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7085:        { label: 'Open in background tab', run: () => 
+newTab(it.path, [], false) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7086:        { label: 'Open in new window', run: () => 
+window.api.newWindow(it.path) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7087:        { label: '? Split into Room (Inline Sub-room Box)', 
+run: () => injectVirtualRoom(it.path, cur) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7088:        { label: '??? Spawn Room in Landscape', run: () => 
+openFolderInLandscape(it.path, it.name) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7089:        { label: '? Bookmark folder in sidebar', run: () => { 
+if (!bookmarks.some(b => b.path === it.path)) { bookmarks.push({ name: it.name, path: it.path }); 
+renderBookmarksNav(); persist(); } } },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7090:        { label: 'Calculate folder size', run: () => 
+calcFolderSize(it, firstEntry && firstEntry.cell) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7091:        { label: 'Open PowerShell here', run: () => 
+window.api.openTerminal(it.path) }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7092:      ] : []),
+  E:\Vector Field Theory\peek_explorer\renderer.js:7093:      ...((!it.isDir && /\.html?$/i.test(it.name)) ? [
+  E:\Vector Field Theory\peek_explorer\renderer.js:7094:        { label: '?? Render in Landscape', run: () => 
+openHtmlInLandscape(it.path, it.name) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7095:        { label: 'Open in new tab (Render HTML)', run: () => 
+newTab(it.path, [], true) },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7096:        { label: 'Open in Native Browser (Windows)', run: () 
+=> window.api.open(it.path) }
+
+

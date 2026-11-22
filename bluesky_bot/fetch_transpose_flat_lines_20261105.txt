@@ -1,0 +1,135 @@
+Command exited with code 0.
+
+Command output:
+
+  bluesky_bot\google_ai_studio_one_shot.py:2088:            
+  bluesky_bot\google_ai_studio_one_shot.py:2089:    return clean
+  bluesky_bot\google_ai_studio_one_shot.py:2090:
+> bluesky_bot\google_ai_studio_one_shot.py:2091:def transpose_flat_to_json(flat_text, use_multi_aspect=False, 
+use_spiritual=False, spiritual_traditions="all", use_potential=False):
+  bluesky_bot\google_ai_studio_one_shot.py:2092:    # Strip markdown fences if present
+  bluesky_bot\google_ai_studio_one_shot.py:2093:    content = flat_text.strip()
+  bluesky_bot\google_ai_studio_one_shot.py:2094:    if content.startswith("```json"):
+  bluesky_bot\google_ai_studio_one_shot.py:2095:        content = content[7:]
+  bluesky_bot\google_ai_studio_one_shot.py:2096:    elif content.startswith("```"):
+  bluesky_bot\google_ai_studio_one_shot.py:2097:        content = content[3:]
+  bluesky_bot\google_ai_studio_one_shot.py:2098:    if content.endswith("```"):
+  bluesky_bot\google_ai_studio_one_shot.py:2099:        content = content[:-3]
+  bluesky_bot\google_ai_studio_one_shot.py:2100:    content = content.strip()
+  bluesky_bot\google_ai_studio_one_shot.py:2101:    
+  bluesky_bot\google_ai_studio_one_shot.py:2102:    # Locate array start [ and end ]
+  bluesky_bot\google_ai_studio_one_shot.py:2103:    start_idx = content.find("[")
+  bluesky_bot\google_ai_studio_one_shot.py:2104:    end_idx = content.rfind("]")
+  bluesky_bot\google_ai_studio_one_shot.py:2105:    if start_idx == -1 or end_idx == -1:
+  bluesky_bot\google_ai_studio_one_shot.py:2106:        print("ERROR: Could not find valid JSON array brackets in 
+model output.")
+  bluesky_bot\google_ai_studio_one_shot.py:2107:        print("--- RAW MODEL OUTPUT (first 500 chars) ---")
+  bluesky_bot\google_ai_studio_one_shot.py:2108:        print(flat_text[:500])
+  bluesky_bot\google_ai_studio_one_shot.py:2109:        print("------------------------------------------")
+  bluesky_bot\google_ai_studio_one_shot.py:2110:        return []
+  bluesky_bot\google_ai_studio_one_shot.py:2111:        
+  bluesky_bot\google_ai_studio_one_shot.py:2112:    json_str = content[start_idx:end_idx+1]
+  bluesky_bot\google_ai_studio_one_shot.py:2113:    
+  bluesky_bot\google_ai_studio_one_shot.py:2114:    try:
+  bluesky_bot\google_ai_studio_one_shot.py:2115:        data = json.loads(json_str)
+  bluesky_bot\google_ai_studio_one_shot.py:2116:    except Exception as je:
+  bluesky_bot\google_ai_studio_one_shot.py:2117:        print(f"Warning: Failed to parse response as complete JSON 
+({je}). Attempting block-by-block recovery of completed elements...")
+  bluesky_bot\google_ai_studio_one_shot.py:2118:        
+  bluesky_bot\google_ai_studio_one_shot.py:2119:        # Block-by-block parsing recovery
+  bluesky_bot\google_ai_studio_one_shot.py:2120:        lines = content.split('\n')
+  bluesky_bot\google_ai_studio_one_shot.py:2121:        data = []
+  bluesky_bot\google_ai_studio_one_shot.py:2748:                    pre_grounded_dossier=cur_dossier,
+  bluesky_bot\google_ai_studio_one_shot.py:2749:                    pre_harvested_urls=cur_urls
+  bluesky_bot\google_ai_studio_one_shot.py:2750:                )
+> bluesky_bot\google_ai_studio_one_shot.py:2751:                parsed = transpose_flat_to_json(raw_text, 
+use_multi_aspect=is_multi_aspect_active, use_spiritual=is_spiritual_active, 
+spiritual_traditions=args.spiritual_traditions, use_potential=args.potential)
+  bluesky_bot\google_ai_studio_one_shot.py:2752:
+  bluesky_bot\google_ai_studio_one_shot.py:2753:                # Robust Candidate Matching & Ground-Truth URL 
+Alignment
+  bluesky_bot\google_ai_studio_one_shot.py:2754:                def _find_cand_match(story_item, candidate_pool):
+  bluesky_bot\google_ai_studio_one_shot.py:2755:                    if not isinstance(story_item, dict) or not 
+candidate_pool:
+  bluesky_bot\google_ai_studio_one_shot.py:2756:                        return None
+  bluesky_bot\google_ai_studio_one_shot.py:2757:                    
+  bluesky_bot\google_ai_studio_one_shot.py:2758:                    # 1. Exact URL / Target URL match
+  bluesky_bot\google_ai_studio_one_shot.py:2759:                    s_links = {
+  bluesky_bot\google_ai_studio_one_shot.py:2760:                        normalize_url(story_item.get("link", "")),
+  bluesky_bot\google_ai_studio_one_shot.py:2761:                        normalize_url(story_item.get("target_url", 
+"")),
+  bluesky_bot\google_ai_studio_one_shot.py:2762:                        normalize_url(story_item.get("grounding_url", 
+""))
+  bluesky_bot\google_ai_studio_one_shot.py:2763:                    }
+  bluesky_bot\google_ai_studio_one_shot.py:2764:                    s_links.discard("")
+  bluesky_bot\google_ai_studio_one_shot.py:2765:                    for cand in candidate_pool:
+  bluesky_bot\google_ai_studio_one_shot.py:2766:                        c_links = {
+  bluesky_bot\google_ai_studio_one_shot.py:2767:                            normalize_url(cand.get("url", "")),
+  bluesky_bot\google_ai_studio_one_shot.py:2768:                            normalize_url(cand.get("target_url", ""))
+  bluesky_bot\google_ai_studio_one_shot.py:2769:                        }
+  bluesky_bot\google_ai_studio_one_shot.py:2770:                        c_links.discard("")
+  bluesky_bot\google_ai_studio_one_shot.py:2771:                        if s_links & c_links:
+  bluesky_bot\google_ai_studio_one_shot.py:2772:                            return cand
+  bluesky_bot\google_ai_studio_one_shot.py:2773:
+  bluesky_bot\google_ai_studio_one_shot.py:2774:                    # 2. Fuzzy URL slug match (handles line-wrapping 
+or LLM-introduced hyphens e.g. even-tually)
+  bluesky_bot\google_ai_studio_one_shot.py:2775:                    for s_u in s_links:
+  bluesky_bot\google_ai_studio_one_shot.py:2776:                        s_slug = _slugify(s_u)
+  bluesky_bot\google_ai_studio_one_shot.py:2777:                        if len(s_slug) > 15:
+  bluesky_bot\google_ai_studio_one_shot.py:2778:                            for cand in candidate_pool:
+  bluesky_bot\google_ai_studio_one_shot.py:2779:                                for c_u in (cand.get("url"), 
+cand.get("target_url")):
+  bluesky_bot\google_ai_studio_one_shot.py:2780:                                    if c_u and _slugify(c_u) == s_slug:
+  bluesky_bot\google_ai_studio_one_shot.py:2781:                                        return cand
+  bluesky_bot\google_ai_studio_one_shot.py:2911:                                        
+use_spiritual=is_spiritual_active,
+  bluesky_bot\google_ai_studio_one_shot.py:2912:                                        
+spiritual_traditions=args.spiritual_traditions
+  bluesky_bot\google_ai_studio_one_shot.py:2913:                                    )
+> bluesky_bot\google_ai_studio_one_shot.py:2914:                                    ref_parsed = 
+transpose_flat_to_json(ref_raw, use_multi_aspect=args.multi_aspect, use_spiritual=is_spiritual_active, 
+spiritual_traditions=args.spiritual_traditions, use_potential=args.potential)
+  bluesky_bot\google_ai_studio_one_shot.py:2915:                                    if ref_parsed and len(ref_parsed) 
+> 0:
+  bluesky_bot\google_ai_studio_one_shot.py:2916:                                        new_item = ref_parsed[0]
+  bluesky_bot\google_ai_studio_one_shot.py:2917:                                        # Retain ground-truth 
+candidate metadata so reflection never wipes out scraped_text or canonical URLs!
+  bluesky_bot\google_ai_studio_one_shot.py:2918:                                        if isinstance(item, dict) and 
+isinstance(new_item, dict):
+  bluesky_bot\google_ai_studio_one_shot.py:2919:                                            for meta_key in 
+("scraped_text", "link", "target_url", "cluster_sources", "is_multi_source", "cross_source_dossier", "id"):
+  bluesky_bot\google_ai_studio_one_shot.py:2920:                                                if meta_key in item 
+and item[meta_key]:
+  bluesky_bot\google_ai_studio_one_shot.py:2921:                                                    new_item[meta_key] 
+= item[meta_key]
+  bluesky_bot\google_ai_studio_one_shot.py:2922:                                        item = new_item
+  bluesky_bot\google_ai_studio_one_shot.py:2923:                                        print(f"  [REFLECT SUCCESS] 
+Successfully updated story '{subject_label}' with grounded facts.")
+  bluesky_bot\google_ai_studio_one_shot.py:2924:                                        if ref_grounding:
+  bluesky_bot\google_ai_studio_one_shot.py:2925:                                            if not grounding_urls:
+  bluesky_bot\google_ai_studio_one_shot.py:2926:                                                grounding_urls = []
+  bluesky_bot\google_ai_studio_one_shot.py:2927:                                            for u in ref_grounding:
+  bluesky_bot\google_ai_studio_one_shot.py:2928:                                                if u not in 
+grounding_urls:
+  bluesky_bot\google_ai_studio_one_shot.py:2929:                                                    
+grounding_urls.append(u)
+  bluesky_bot\google_ai_studio_one_shot.py:2930:                                except Exception as ref_err:
+  bluesky_bot\google_ai_studio_one_shot.py:2931:                                    print(f"  Warning: Reflection API 
+call failed: {ref_err}. Falling back to initial evaluation.")
+  bluesky_bot\google_ai_studio_one_shot.py:2932:                        reflected_parsed.append(item)
+  bluesky_bot\google_ai_studio_one_shot.py:2933:                    parsed = reflected_parsed
+  bluesky_bot\google_ai_studio_one_shot.py:2934:
+  bluesky_bot\google_ai_studio_one_shot.py:2935:                
+  bluesky_bot\google_ai_studio_one_shot.py:2936:                # If search was actually used, append ?? to post 1 and 
+record grounding URL as metadata
+  bluesky_bot\google_ai_studio_one_shot.py:2937:                if grounding_urls:
+  bluesky_bot\google_ai_studio_one_shot.py:2938:                    print(f"  Google Search grounding detected with 
+{len(grounding_urls)} source(s).")
+  bluesky_bot\google_ai_studio_one_shot.py:2939:                    primary_url = grounding_urls[0]
+  bluesky_bot\google_ai_studio_one_shot.py:2940:                    # Strip tracking parameters to save character space
+  bluesky_bot\google_ai_studio_one_shot.py:2941:                    if "?" in primary_url:
+  bluesky_bot\google_ai_studio_one_shot.py:2942:                        primary_url = primary_url.split("?")[0]
+  bluesky_bot\google_ai_studio_one_shot.py:2943:                    primary_url = primary_url.strip()
+  bluesky_bot\google_ai_studio_one_shot.py:2944:                    
+
+

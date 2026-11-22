@@ -1,0 +1,247 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -4150,7 +4150,6 @@
+         <div style="display:flex; flex-direction:column; gap:0.3rem;">
+           ${related.map(s => {
+             const sDelta = (s.claim_u !== null && s.claim_u !== undefined && s.real_u !== null && s.real_u !== undefined) ? s.claim_u - s.real_u : 0;
+-            const sColor = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
+             const sourceLink = s.link ? `<a href="${s.link}" target="_blank" onclick="event.stopPropagation()" title="Original Article" style="color:var(--bsky-blue); text-decoration:none; margin-right:6px;">🔗</a>` : '';
+             const bskyUrl = (s.post_urls && s.post_urls.length) ? s.post_urls[0] : (s.target_url ? s.target_url : null);
+             const bskyLink = bskyUrl ? `<a href="${bskyUrl}" target="_blank" onclick="event.stopPropagation()" title="Bluesky Thread" style="color:#0085ff; text-decoration:none; margin-right:6px;">🦋</a>` : '';
+@@ -4157,4 +4157,23 @@
+ 
++            let badge = '';
++            let sColor = s.real_u > 0 ? 'var(--pass-green)' : 'var(--reality-red)';
++            if (tableType === 'outlet' && _outletMode === 'editorial') {
++              const rep = auditStoryReporting(s);
++              if (rep.quadrant === 'expose') {
++                badge = `<span style="font-size:0.68rem; font-weight:700; background:rgba(34,197,94,0.15); color:var(--pass-green); border:1px solid rgba(34,197,94,0.3); border-radius:3px; padding:1px 5px; margin-right:6px;">🛡️ EXPOSÉ (Bad as Bad)</span>`;
++                sColor = 'var(--pass-green)';
++              } else if (rep.quadrant === 'constructive') {
++                badge = `<span style="font-size:0.68rem; font-weight:700; background:rgba(56,189,248,0.15); color:var(--bsky-blue); border:1px solid rgba(56,189,248,0.3); border-radius:3px; padding:1px 5px; margin-right:6px;">✨ PROGRESS (Good as Good)</span>`;
++                sColor = 'var(--bsky-blue)';
++              } else if (rep.quadrant === 'whitewash') {
++                badge = `<span style="font-size:0.68rem; font-weight:700; background:rgba(239,68,68,0.15); color:var(--reality-red); border:1px solid rgba(239,68,68,0.3); border-radius:3px; padding:1px 5px; margin-right:6px;">🎭 WHITEWASH (Bad as Good)</span>`;
++                sColor = 'var(--reality-red)';
++              } else {
++                badge = `<span style="font-size:0.68rem; font-weight:700; background:rgba(245,158,11,0.15); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); border-radius:3px; padding:1px 5px; margin-right:6px;">🎯 SMEAR (Good as Bad)</span>`;
++                sColor = 'var(--reality-red)';
++              }
++            }
++
+             return `
+               <div data-story-id="${s.id}" style="display:flex; justify-content:space-between; align-items:center; padding:0.2rem 0.4rem; border-radius:4px; cursor:pointer;"
+                    onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'">
+@@ -4161,8 +4161,9 @@
+                   ${linksSpan}
++                  ${badge}
+                   <span style="text-decoration:underline; color:var(--text-muted);">${s.subject || s.id}</span>
+                 </span>
+                 <span style="font-family:var(--font-mono); color:${sColor}; font-size:0.7rem; white-space:nowrap; margin-left:0.5rem;">
+-                  u: ${fmt(s.real_u)} | Δu: ${fmt(sDelta)}
++                  u: ${fmt(s.real_u)} | claim: ${fmt(s.claim_u)}
+                 </span>
+               </div>
+             `;
+@@ -4197,9 +4197,67 @@
+       }
+     }
+ 
++    const COMMENTARY_CUES = [
++      'the article', 'the piece', 'the essay', 'the commentary', 'partisan commentary', 
++      'the op-ed', 'this piece', 'the headline', 'partisan media', 'media framing',
++      'media weaponized', 'punditry', 'culture war', 'weaponizing', 'romanticizing', 
++      'cherry-pick', 'fearmonger', 'manufacture outrage', 'manufacture existential', 
++      'manufacture an election crisis', 'sensationalist', 'stoking panic', 'stoke outrage',
++      'pundits', 'talking heads', 'partisan narrative'
++    ];
++
++    function auditStoryReporting(s) {
++      const ru = (s.real_u !== undefined && s.real_u !== null) ? s.real_u : 0;
++      const cu = (s.claim_u !== undefined && s.claim_u !== null) ? s.claim_u : 0;
++      const posts = Array.isArray(s.posts) ? s.posts : [];
++      const p3 = (posts[3] || '').toLowerCase();
++      
++      const isMediaFaulted = COMMENTARY_CUES.some(c => p3.includes(c));
++
++      // 1. Explicit author sub-audits
++      for (let pi = 3; pi <= Math.min(5, posts.length - 1); pi++) {
++        const p = posts[pi] || '';
++        if (p.includes('PASS') || p.includes('FAIL')) {
++          const lines = p.split('\n');
++          for (const l of lines) {
++            const ll = l.toLowerCase();
++            if (ll.includes('reporting') || ll.includes('coverage') || ll.includes('journalism') || ll.includes('investigation') || ll.includes('editorial') || ll.includes('article') || ll.includes('framing')) {
++              if (l.toUpperCase().includes('PASS')) return { verdict: 'PASS', quadrant: ru < 0 ? 'expose' : 'constructive' };
++              if (l.toUpperCase().includes('FAIL')) return { verdict: 'FAIL', quadrant: ru < 0 ? 'whitewash' : 'smear' };
++            }
++          }
++        }
++      }
++
++      // 2. Four Quadrants:
++      // Bad Event (real_u < -0.15)
++      if (ru < -0.15) {
++        if (isMediaFaulted) {
++          return { verdict: 'FAIL', quadrant: 'whitewash' }; // Bad event presented as good story / weaponized spin
++        } else {
++          return { verdict: 'PASS', quadrant: 'expose' }; // Bad event presented as bad story / honest watchdog
++        }
++      }
++      // Good Event (real_u > 0.15)
++      else if (ru > 0.15) {
++        if (isMediaFaulted || cu < -0.2) {
++          return { verdict: 'FAIL', quadrant: 'smear' }; // Good event presented as bad story / cynical smear
++        } else {
++          return { verdict: 'PASS', quadrant: 'constructive' }; // Good event presented as good story / honest progress
++        }
++      }
++      // Neutral Event
++      else {
++        if (isMediaFaulted || Math.abs(cu - ru) > 0.8) {
++          return { verdict: 'FAIL', quadrant: 'whitewash' };
++        } else {
++          return { verdict: 'PASS', quadrant: 'constructive' };
++        }
++      }
++    }
++
+     function _statsForGroups(stories, keyFn, isOutletEditorial = false) {
+       const groups = {};
+-      const subPattern = /-\s*([^:]+):\s*(PASS|FAIL|COND)\s*\(([^)]+)\)/i;
+ 
+       stories.forEach(s => {
+         if (s.claim_u === null || s.claim_u === undefined || s.real_u === null || s.real_u === undefined) return;
+@@ -4209,8 +4209,7 @@
+           if (!groups[k]) {
+             groups[k] = { 
+               sumDelta: 0, sumRealU: 0, sumRealPsi: 0, deltas: [],
+-              editorialPasses: 0, editorialFails: 0, editorialConds: 0,
+-              editorialScores: []
++              expose: 0, constructive: 0, whitewash: 0, smear: 0
+             };
+           }
+           const delta = s.claim_u - s.real_u;
+@@ -4218,43 +4218,12 @@
+           groups[k].sumRealPsi += realPsi;
+           groups[k].deltas.push(delta);
+ 
+-          // If checking outlets, inspect communicator/editorial sub-audits
+           if (isOutletEditorial) {
+-            let foundEditorial = false;
+-            // 1. Check actor_roles with role === 'author'
+-            if (Array.isArray(s.actor_roles)) {
+-              s.actor_roles.forEach(ar => {
+-                if (ar.role === 'author' && ar.sub_verdict) {
+-                  foundEditorial = true;
+-                  const sv = ar.sub_verdict.toUpperCase();
+-                  if (sv.includes('PASS')) groups[k].editorialPasses++;
+-                  else if (sv.includes('FAIL')) groups[k].editorialFails++;
+-                  else groups[k].editorialConds++;
+-                  if (ar.sub_u !== undefined && ar.sub_u !== null) groups[k].editorialScores.push(ar.sub_u);
+-                }
+-              });
+-            }
+-            // 2. If no structured author sub-audit, check Post 5 text
+-            if (!foundEditorial && Array.isArray(s.posts) && s.posts.length >= 5) {
+-              const p5 = s.posts[4] || '';
+-              const lines = p5.split('\n');
+-              lines.forEach(line => {
+-                const m = line.match(subPattern);
+-                if (m) {
+-                  const ent = m[1].toLowerCase();
+-                  const hostClean = k.split('.')[0];
+-                  if (ent.includes('reporting') || ent.includes('framing') || ent.includes('journalism') || ent.includes('coverage') || ent.includes('investigation') || ent.includes(hostClean)) {
+-                    const verd = m[2].toUpperCase();
+-                    if (verd.includes('PASS')) groups[k].editorialPasses++;
+-                    else if (verd.includes('FAIL')) groups[k].editorialFails++;
+-                    else groups[k].editorialConds++;
+-                    const coords = m[3].split(',');
+-                    const uVal = parseFloat(coords[0]);
+-                    if (!isNaN(uVal)) groups[k].editorialScores.push(uVal);
+-                  }
+-                }
+-              });
+-            }
++            const rep = auditStoryReporting(s);
++            if (rep.quadrant === 'expose') groups[k].expose++;
++            else if (rep.quadrant === 'constructive') groups[k].constructive++;
++            else if (rep.quadrant === 'whitewash') groups[k].whitewash++;
++            else if (rep.quadrant === 'smear') groups[k].smear++;
+           }
+         });
+       });
+@@ -4273,9 +4273,10 @@
+           variance = sumSq / n;
+         }
+ 
+-        const totalEvals = g.editorialPasses + g.editorialFails + g.editorialConds;
+-        const passRate = totalEvals > 0 ? (g.editorialPasses / totalEvals) * 100 : 50.0;
+-        const avgEditorialU = g.editorialScores.length > 0 ? (g.editorialScores.reduce((a,b)=>a+b,0) / g.editorialScores.length) : (passRate >= 50 ? 0.5 : -0.5);
++        const totalEvals = g.expose + g.constructive + g.whitewash + g.smear;
++        const passes = g.expose + g.constructive;
++        const fails = g.whitewash + g.smear;
++        const passRate = totalEvals > 0 ? (passes / totalEvals) * 100 : 0;
+ 
+         return { 
+           key: k, 
+@@ -4283,11 +4283,14 @@
+           avgRealU: mRealU, 
+           avgRealPsi: mRealPsi,
+           consistency: Math.sqrt(variance),
+-          editorialPasses: g.editorialPasses,
+-          editorialFails: g.editorialFails,
+-          editorialTotal: totalEvals,
+-          passRate: passRate,
+-          avgEditorialU: avgEditorialU
++          expose: g.expose,
++          constructive: g.constructive,
++          whitewash: g.whitewash,
++          smear: g.smear,
++          passes: passes,
++          fails: fails,
++          totalEvals: totalEvals,
++          passRate: passRate
+         };
+       });
+     }
+@@ -4306,17 +4306,21 @@
+           if (roles.length > 0) {
+             return roles.filter(r => (r.role || 'instigator') === _actorRoleFilter).map(r => r.name);
+           }
+-          // Fallback if actor_roles not present
+           return s.actors;
+         };
+       } else if (tableType === 'outlet') {
+-        keyFn = s => {
+-          if (s._outlet) return [s._outlet];
++        const SHORTENER_HOSTS = new Set(['trib.al', 'bit.ly', 'tinyurl.com', 'nbcnews.to', 'ift.tt', 'buff.ly', 'ow.ly', 'dlvr.it', 'tiny.cc', 'is.gd']);
++        keyFn = s => {
++          if (s._outlet !== undefined) return s._outlet ? [s._outlet] : [];
+           try {
+             const host = new URL(s.link || 'https://unknown').hostname.replace(/^www\./, '').toLowerCase();
++            if (SHORTENER_HOSTS.has(host) || !host.includes('.')) {
++              s._outlet = null;
++              return [];
++            }
+             s._outlet = host;
+             return [host];
+-          } catch(e) { return []; }
++          } catch(e) { s._outlet = null; return []; }
+         };
+       } else if (tableType === 'category') {
+         keyFn = s => s.category ? s.category.split(',').map(c => c.trim().toLowerCase()).filter(Boolean) : [];
+@@ -4328,6 +4328,10 @@
+       _statsCache[scope][cacheKey] = rows;
+       return rows;
+     }
++      if (!_statsCache[scope]) _statsCache[scope] = {};
++      _statsCache[scope][cacheKey] = rows;
++      return rows;
++    }
+ 
+     function _hypocrisyTable(stories, rows, labelHead, minN) {
+       const labelLower = labelHead.toLowerCase();
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

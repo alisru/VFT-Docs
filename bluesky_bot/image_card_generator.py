@@ -221,8 +221,14 @@ def extract_personas_from_posts(posts):
                 break
     # Fallback to trailing posts if no prefixes matched
     if not extracted and len(posts) >= 13:
-        offset = 11 if len(posts) >= 14 else 10
-        labels = [("ALETHEKANON", "#38BDF8"), ("AWWTHEKANON", "#10B981"), ("BROTHEKANON", "#F59E0B")]
+        has_sub = len(posts) > 4 and any(kw in posts[4].lower() for kw in ["sub-audit", "sub audit", "sub-audits"])
+        offset = 11 if (has_sub or len(posts) >= 14) else 10
+        labels = [
+            ("ALETHEKANON", "#38BDF8"),
+            ("AWWTHEKANON", "#10B981"),
+            ("BROTHEKANON", "#F59E0B"),
+            ("SPIRITHEKANON", "#A855F7"),
+        ]
         for idx, (label, color) in enumerate(labels):
             p_idx = offset + idx
             if p_idx < len(posts):
@@ -234,9 +240,6 @@ def generate_compact_info_card(thread_config, output_path):
     subject = thread_config.get("subject", "Assessment Summary")
     posts = thread_config.get("posts", [])
     link = thread_config.get("link", "")
-    
-    if len(posts) < 13:
-        raise ValueError(f"Cannot generate compact info card: posts array has length {len(posts)} (expected 13, 14, or 15).")
 
     if thread_config.get("five_word") is True:
         # Load fonts, generate single 5-word terminal card
@@ -252,11 +255,13 @@ def generate_compact_info_card(thread_config, output_path):
         _generate_five_word_card(subject, verdict_subtitle, posts, fonts, link, five_word_output_path)
         return
 
+    if len(posts) < 13:
+        raise ValueError(f"Cannot generate compact info card: posts array has length {len(posts)} (expected 13, 14, or 15).")
 
     # Load standard layout configuration
     fonts = load_theme_fonts()
     
-    is_multi_aspect = bool(thread_config.get("aspects")) or (len(posts) >= 14 and ("sub-audit" in posts[4].lower() or posts[4].strip().startswith("- ")))
+    is_multi_aspect = bool(thread_config.get("aspects")) or (len(posts) >= 5 and ("sub-audit" in posts[4].lower() or "sub audit" in posts[4].lower() or posts[4].strip().startswith("- ")))
     
     if is_multi_aspect:
         sections = [
@@ -735,25 +740,54 @@ def _generate_five_word_card(subject, subtitle, posts, fonts, link, output_path)
     # Draw Container Box
     draw.rounded_rectangle([x_left, container_y1, x_right, container_y2], radius=16, fill=card_bg, outline=border_color, width=1)
     
-    # Draw Left-side Terminal rows
-    line_configs = [
-        {"label": "HOOK", "color": "#F472B6"},
-        {"label": "CLAIM", "color": "#94A3B8"},
-        {"label": "REALITY", "color": "#38BDF8"},
-        {"label": "VERDICT", "color": "#FBBF24"},
-        {"label": "CONTEXT", "color": "#60A5FA"},
-        {"label": "NUANCE", "color": "#34D399"},
-        {"label": "BREAKDOWN", "color": "#F87171"},
-        {"label": "PHYSICS", "color": "#A78BFA"},
-        {"label": "TRAJECTORY", "color": "#FB923C"},
-        {"label": "LIMITS", "color": "#E879F9"},
-        {"label": "ALETHEIA", "color": "#2DD4BF"},
-        {"label": "AWWTHE", "color": "#F43F5E"},
-        {"label": "BROTHE", "color": "#F59E0B"},
-    ]
+    # Check if posts[4] is Sub-Audits Breakdown for Multi-Aspect stories
+    is_sub_audit_4 = len(posts) > 4 and (
+        any(kw in posts[4].lower() for kw in ["sub-audit", "sub audit", "sub-audits"]) or
+        posts[4].strip().startswith("- ")
+    )
+
+    # Draw Left-side Terminal rows dynamically
+    if is_sub_audit_4:
+        line_configs = [
+            {"label": "HOOK", "color": "#F472B6"},
+            {"label": "CLAIM", "color": "#94A3B8"},
+            {"label": "REALITY", "color": "#38BDF8"},
+            {"label": "VERDICT", "color": "#FBBF24"},
+            {"label": "SUB-AUDIT", "color": "#A855F7"},
+            {"label": "CONTEXT", "color": "#60A5FA"},
+            {"label": "NUANCE", "color": "#34D399"},
+            {"label": "BREAKDOWN", "color": "#F87171"},
+            {"label": "PHYSICS", "color": "#A78BFA"},
+            {"label": "TRAJECTORY", "color": "#FB923C"},
+            {"label": "LIMITS", "color": "#E879F9"},
+            {"label": "ALETHEIA", "color": "#2DD4BF"},
+            {"label": "AWWTHE", "color": "#F43F5E"},
+            {"label": "BROTHE", "color": "#F59E0B"},
+        ]
+        if len(posts) > 14 or any(isinstance(p, str) and "spirithekanon" in p.lower() for p in posts):
+            line_configs.append({"label": "SPIRITHE", "color": "#A855F7"})
+    else:
+        line_configs = [
+            {"label": "HOOK", "color": "#F472B6"},
+            {"label": "CLAIM", "color": "#94A3B8"},
+            {"label": "REALITY", "color": "#38BDF8"},
+            {"label": "VERDICT", "color": "#FBBF24"},
+            {"label": "CONTEXT", "color": "#60A5FA"},
+            {"label": "NUANCE", "color": "#34D399"},
+            {"label": "BREAKDOWN", "color": "#F87171"},
+            {"label": "PHYSICS", "color": "#A78BFA"},
+            {"label": "TRAJECTORY", "color": "#FB923C"},
+            {"label": "LIMITS", "color": "#E879F9"},
+            {"label": "ALETHEIA", "color": "#2DD4BF"},
+            {"label": "AWWTHE", "color": "#F43F5E"},
+            {"label": "BROTHE", "color": "#F59E0B"},
+        ]
+        if len(posts) > 13 or any(isinstance(p, str) and "spirithekanon" in p.lower() for p in posts):
+            line_configs.append({"label": "SPIRITHE", "color": "#A855F7"})
     
-    row_start_y = container_y1 + 30
-    row_height = 45
+    row_start_y = container_y1 + 25
+    avail_row_height = (container_y2 - container_y1 - 35) // max(1, len(line_configs))
+    row_height = min(45, avail_row_height)
     
     for idx, cfg in enumerate(line_configs):
         if idx >= len(posts):
@@ -761,7 +795,7 @@ def _generate_five_word_card(subject, subtitle, posts, fonts, link, output_path)
         text = posts[idx].strip()
         
         # Clean clean prefixes from the generated text if the LLM outputted them
-        for prefix in ["Alethekanon:\n", "Awwthekanon:\n", "Brothekanon:\n", "The Bright Side:\n", "The Poison:\n", "Social Physics Analysis:\n", "The Trajectory: "]:
+        for prefix in ["Alethekanon:\n", "Awwthekanon:\n", "Brothekanon:\n", "Spirithekanon:\n", "The Bright Side:\n", "The Poison:\n", "Social Physics Analysis:\n", "The Trajectory: ", "Sub-Audits Breakdown:\n", "Sub-Audits:\n"]:
             if text.startswith(prefix):
                 text = text[len(prefix):].strip()
         if idx == 0 and "\n\n" in text:
@@ -799,7 +833,7 @@ def _generate_qr_code(url, size=150):
         qr = qrcode.QRCode(version=1, box_size=10, border=1)
         qr.add_data(url)
         qr.make(fit=True)
-        img = qr.make_image(fill_color="white", back_color="#141D2F")
+        img = qr.make_image(fill_color="#141D2F", back_color="white")
         img = img.convert("RGB")
         return img.resize((size, size))
     except Exception as e:

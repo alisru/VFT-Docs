@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Gluon 3D Potential Cube Visualizer</title>
+    <!-- Tailwind CSS for UI controls -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js and OrbitControls via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; background: #030712; color: #f3f4f6; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        #canvas-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hud-glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
+        ::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.5); border-radius: 3px; }
+    </style>
+</head>
+<body class="select-none">
+
+    <!-- 3D Canvas -->
+    <div id="canvas-container"></div>
+
+    <!-- Header Overlay -->
+    <header class="absolute top-4 left-4 z-10 hud-glass rounded-xl p-4 max-w-md shadow-2xl">
+        <div class="flex items-center justify-between gap-3 mb-2">
+            <div class="flex items-center gap-2">
+                <div class="w-3.5 h-3.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_12px_#22d3ee]"></div>
+                <h1 class="text-base font-bold tracking-tight text-white uppercase">The Semantic Gluon Cube</h1>
+            </div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-700/50">VFT Causal Valence</span>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Volumetric coordinate space around the central <strong>Semantic Gluon</strong> $(0, 0, 0)$. Vertical height is the <span class="text-amber-300 font-semibold">Potential Spectrum</span> from <span class="text-red-400 font-bold">Impossible</span> at the base to <span class="text-cyan-400 font-bold">Certain</span> at the ceiling.
+        </p>
+        <div class="space-y-1.5 text-[11px] font-mono border-t border-slate-700/60 pt-2.5">
+            <div class="flex items-center justify-between">
+                <span class="text-slate-400 font-semibold">Vertical Z (Potential):</span>
+                <span class="text-red-400">Base: Impossible (p=0)</span> &harr; <span class="text-cyan-400">Top: Certain (p=1)</span>
+            </div>
+            <div class="flex items-center justify-between">
+                <span class="text-slate-400 font-semibold">Horizontal X (Polarity):</span>
+                <span class="text-emerald-400">Left: Solution (+I)</span> &harr; <span class="text-rose-400">Right: Problem (-E)</span>
+            </div>
+            <div class="flex items-center justify-between">
+                <span class="text-slate-400 font-semibold">Depth Y (Causal Valence):</span>
+                <span class="text-purple-400">Back: Upstream (Behind)</span> &harr; <span class="text-blue-400">Front: Downstream (Ahead)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Right Control Panel: Concept Selection, Valence Toggles, Node Detail -->
+    <aside class="absolute top-4 right-4 z-10 hud-glass rounded-xl p-4 w-84 shadow-2xl max-h-[92vh] overflow-y-auto">
+        <!-- Concept Picker -->
+        <div class="mb-4">
+            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">Center Semantic Gluon</label>
+            <select id="gluon-select" class="w-full text-xs bg-slate-900 border border-slate-700 rounded-lg p-2 text-white font-mono focus:outline-none focus:border-cyan-500">
+                <option value="energy">"energy" — Physical Invariant</option>
+                <option value="system">"system" — Relational Dynamic</option>
+                <option value="truth">"truth" — Aletheia Unconcealment</option>
+                <option value="store">"store" — 3-Step Invariant (AE-C)</option>
+                <option value="kneel">"kneel" — Vector Duality (υ-Axis)</option>
+            </select>
+        </div>
+
+        <!-- Layer Toggles -->
+        <h2 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-2 flex items-center justify-between">
+            <span>Cube Gauge Layers</span>
+            <span class="text-[10px] font-mono text-slate-400">Filters</span>
+        </h2>
+        <div class="space-y-1.5 mb-4 text-xs font-mono">
+            <label class="flex items-center justify-between p-1.5 rounded bg-slate-900/60 border border-slate-800 cursor-pointer hover:bg-slate-800/40">
+                <span class="text-cyan-300 flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span> Certain Ceiling (p &ge; 0.9)
+                </span>
+                <input type="checkbox" id="toggle-certain" checked class="accent-cyan-500 w-4 h-4 cursor-pointer">
+            </label>
+            <label class="flex items-center justify-between p-1.5 rounded bg-slate-900/60 border border-slate-800 cursor-pointer hover:bg-slate-800/40">
+                <span class="text-emerald-300 flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span> Possible Mid-Cloud (0.25 &le; p &lt; 0.9)
+                </span>
+                <input type="checkbox" id="toggle-possible" checked class="accent-emerald-500 w-4 h-4 cursor-pointer">
+            </label>
+            <label class="flex items-center justify-between p-1.5 rounded bg-slate-900/60 border border-slate-800 cursor-pointer hover:bg-slate-800/40">
+                <span class="text-rose-300 flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span> Impossible Floor (p = 0.0)
+                </span>
+                <input type="checkbox" id="toggle-impossible" checked class="accent-rose-500 w-4 h-4 cursor-pointer">
+            </label>
+            <label class="flex items-center justify-between p-1.5 rounded bg-slate-900/60 border border-slate-800 cursor-pointer hover:bg-slate-800/40">
+                <span class="text-amber-300 flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span> Red Tension Force (-X Shear)
+                </span>
+                <input type="checkbox" id="toggle-tension" checked class="accent-amber-500 w-4 h-4 cursor-pointer">
+            </label>
+            <label class="flex items-center justify-between p-1.5 rounded bg-slate-900/60 border border-slate-800 cursor-pointer hover:bg-slate-800/40">
+                <span class="text-indigo-300 flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span> Upstream/Downstream Valence Rays
+                </span>
+                <input type="checkbox" id="toggle-valence" checked class="accent-indigo-500 w-4 h-4 cursor-pointer">
+            </label>
+        </div>
+
+        <!-- Selected Word Inspection Card -->
+        <div class="border-t border-slate-700/60 pt-3">
+            <h3 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-2 flex items-center justify-between">
+                <span>Node Inspector</span>
+                <span id="inspect-tag" class="text-[10px] text-cyan-400 font-mono">Click any sphere</span>
+            </h3>
+            <div id="inspect-card" class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 text-xs font-mono space-y-1.5">
+                <div class="text-slate-400 text-[11px]">Hover or click any node to read its 3D coordinates $(X, Y, Z)$, potential state, and causal valence.</div>
+            </div>
+        </div>
+
+        <!-- Optical Thickness Slider Simulation -->
+        <div class="border-t border-slate-700/60 pt-3 mt-3">
+            <div class="flex justify-between text-xs font-mono text-slate-300 mb-1">
+                <span>Semantic Optical Thickness &tau;:</span>
+                <span id="tau-val" class="text-cyan-400 font-bold">&tau; = 0.15 (Coherent)</span>
+            </div>
+            <input id="tau-slider" type="range" min="0" max="1" step="0.05" value="0.15" class="w-full accent-cyan-500 cursor-pointer mb-2">
+            <p class="text-[10px] text-slate-400 leading-normal">
+                Compressing &tau; via working-out collapses diffuse scatter into a coherent, razor-thin invariant beam ($L \propto 1 / (1 + \tau)$).
+            </p>
+        </div>
+    </aside>
+
+    <!-- Bottom HUD: Unsaid Horizon Mining & Causal Derivation Trajectory -->
+    <footer class="absolute bottom-4 left-4 right-4 z-10 hud-glass rounded-xl p-4 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4">
+        <!-- Horizon Mining Trigger -->
+        <div class="flex items-center gap-3 w-full md:w-auto">
+            <button id="mine-btn" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-xs transition shadow-[0_0_12px_#06b6d4] flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <span id="mine-text">Mine Unsaid Horizon</span>
+            </button>
+            <div class="flex flex-col flex-1 md:w-80">
+                <div class="flex justify-between text-[11px] font-mono text-slate-300 mb-1">
+                    <span>Causal Working-Out: <strong id="step-label" class="text-cyan-400">Step 0: Unconstrained Field</strong></span>
+                </div>
+                <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden border border-slate-700">
+                    <div id="horizon-progress" class="bg-gradient-to-r from-red-500 via-amber-400 to-cyan-400 h-2 w-0 transition-all duration-500"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Telemetry Horizon Status -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full md:w-auto text-xs font-mono border-t md:border-t-0 md:border-l border-slate-700/60 pt-2 md:pt-0 md:pl-4">
+            <div>
+                <div class="text-slate-400 text-[10px]">Excluded by Bounds:</div>
+                <div id="tele-excluded" class="text-rose-400 font-bold">0 candidates (p=0)</div>
+            </div>
+            <div>
+                <div class="text-slate-400 text-[10px]">Active Horizon Band:</div>
+                <div id="tele-horizon" class="text-emerald-400 font-bold">Wide Potential</div>
+            </div>
+            <div>
+                <div class="text-slate-400 text-[10px]">Invariant Conclusion:</div>
+                <div id="tele-conclusion" class="text-cyan-300 font-bold">Pending Derivation</div>
+            </div>
+            <div>
+                <div class="text-slate-400 text-[10px]">Causal Proof Status:</div>
+                <div id="tele-proof" class="text-indigo-300 font-bold">Unproved (&infin; Fog)</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js Visualizer Engine -->
+    <script>
+        // --- 1. Scene, Camera, Renderer ---
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x030712, 0.02);
+
+        const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(22, 16, 26);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        container.appendChild(renderer.domElement);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.maxDistance = 140;
+        controls.minDistance = 6;
+
+        // Lights
+        scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+        const dirLight = new THREE.DirectionalLight(0xffffff, 0.9);
+        dirLight.position.set(20, 40, 20);
+        scene.add(dirLight);
+
+        // --- 2. The Semantic Cube Geometry ---
+        // Box is [-10, 10] in X, Y, Z
+        const CUBE_SIZE = 20; // from -10 to +10
+        const cubeGroup = new THREE.Group();
+        scene.add(cubeGroup);
+
+        // Outer Wireframe Box
+        const boxGeom = new THREE.BoxGeometry(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE);
+        const boxEdges = new THREE.EdgesGeometry(boxGeom);
+        const boxMat = new THREE.LineBasicMaterial({ color: 0x475569, transparent: true, opacity: 0.45 });
+        const cubeBox = new THREE.LineSegments(boxEdges, boxMat);
+        cubeGroup.add(cubeBox);
+
+        // A. Top Ceiling Grid: CERTAIN (Z = +10, in Three.js coords Y is Up, so Y = +10)
+        // Note: For intuitive 3D camera navigation in Three.js, Three.js Y is VERTICAL (Height).
+        // Therefore:
+        // World Y = Vertical Axis Z (Potential: -10 = Impossible, +10 = Certain)
+        // World X = Axis X (Polarity: -10 = Solution/Inclusive, +10 = Problem/Exclusive)
+        // World Z = Axis Y (Causal Valence: -10 = Upstream Behind, +10 = Downstream Ahead)
+
+        // Top Ceiling: Certain (p = 1.0)
+        const ceilingGrid = new THREE.GridHelper(CUBE_SIZE, 10, 0x06b6d4, 0x0e7490);
+        ceilingGrid.position.y = 10;
+        cubeGroup.add(ceilingGrid);
+
+        // Bottom Floor: Impossible (p = 0.0)
+        const floorGrid = new THREE.GridHelper(CUBE_SIZE, 10, 0xef4444, 0x991b1b);
+        floorGrid.position.y = -10;
+        cubeGroup.add(floorGrid);
+
+        // Mid Plane: Possible (p ~ 0.5)
+        const midGrid = new THREE.GridHelper(CUBE_SIZE, 10, 0x10b981, 0x065f46);
+        midGrid.position.y = 0;
+        midGrid.material.opacity = 0.25;
+        midGrid.material.transparent = true;
+        cubeGroup.add(midGrid);
+
+        // Axis helper lines passing through (0,0,0)
+        function createAxisLine(p1, p2, colorHex, dashed = false) {
+            const points = [new THREE.Vector3(...p1), new THREE.Vector3(...p2)];
+            const geom = new THREE.BufferGeometry().setFromPoints(points);
+            const mat = dashed 
+                ? new THREE.LineDashedMaterial({ color: colorHex, dashSize: 0.6, gapSize: 0.4, opacity: 0.6, transparent: true })
+                : new THREE.LineBasicMaterial({ color: colorHex, opacity: 0.7, transparent: true });
+            const line = new THREE.Line(geom, mat);
+            if (dashed) line.computeLineDistances();
+            return line;
+        }
+
+        // Potential Vertical Shaft (from -10 to +10 on Y)
+        const potentialAxisLine = createAxisLine([0, -10, 0], [0, 10, 0], 0x22d3ee, false);
+        cubeGroup.add(potentialAxisLine);
+
+        // Polarity Axis (Left/Right on X)
+        cubeGroup.add(createAxisLine([-10, 0, 0], [10, 0, 0], 0x10b981, true));
+
+        // Valence Axis (Back/Front on Z)
+        cubeGroup.add(createAxisLine([0, 0, -10], [0, 0, 10], 0x818cf8, true));
+
+        // Helper to create text billboard sprite
+        function createTextSprite(text, colorHex, fontSize = 24) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 256;
+            canvas.height = 64;
+            const ctx = canvas.getContext('2d');
+            ctx.font = `Bold ${fontSize}px monospace`;
+            ctx.fillStyle = colorHex;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.shadowColor = 'rgba(0,0,0,0.95)';
+            ctx.shadowBlur = 8;
+            ctx.fillText(text, 128, 32);
+
+            const texture = new THREE.CanvasTexture(canvas);
+            const spriteMaterial = new THREE.SpriteMaterial({ map: texture, transparent: true, depthTest: false });
+            const sprite = new THREE.Sprite(spriteMaterial);
+            sprite.scale.set(5.5, 1.4, 1);
+            return sprite;
+        }
+
+        // Add Major Labels to Cube Boundaries
+        const certainLabel = createTextSprite("CERTAIN (p=1.0)", "#22d3ee", 22);
+        certainLabel.position.set(0, 11, 0);
+        cubeGroup.add(certainLabel);
+
+        const impossibleLabel = createTextSprite("IMPOSSIBLE (p=0.0)", "#f87171", 22);
+        impossibleLabel.position.set(0, -11, 0);
+        cubeGroup.add(impossibleLabel);
+
+        const possibleLabel = createTextSprite("POSSIBLE (p~0.5)", "#34d399", 20);
+        possibleLabel.position.set(0, 0.8, -10.5);
+        cubeGroup.add(possibleLabel);
+
+        const solutionLabel = createTextSprite("← INCLUSIVE (SOLUTION)", "#10b981", 18);
+        solutionLabel.position.set(-10.5, 0, 0);
+        cubeGroup.add(solutionLabel);
+
+        const problemLabel = createTextSprite("EXCLUSIVE (PROBLEM) →", "#fb7185", 18);
+        problemLabel.position.set(10.5, 0, 0);
+        cubeGroup.add(problemLabel);
+
+        const upstreamLabel = createTextSprite("▲ UPSTREAM (BEHIND)", "#c084fc", 18);
+        upstreamLabel.position.set(0, -9.5, -10.5);
+        cubeGroup.add(upstreamLabel);
+
+        const downstreamLabel = createTextSprite("▼ DOWNSTREAM (AHEAD)", "#60a5fa", 18);
+        downstreamLabel.position.set(0, -9.5, 10.5);
+        cubeGroup.add(downstreamLabel);
+
+        // --- 3. Concept Valence Datasets ---
+        // Coordinates map to:
+        // [X, Y, Z] where:
+        // X = Polarity (-10 = Solution, +10 = Problem)
+        // Y = Vertical Potential (-10 = Impossible, 0 = Possible, +10 = Certain)
+        // Z = Causal Valence (-10 = Upstream/Prerequisite, +10 = Downstream/Consequent)
+
+        const GLUON_DATA = {
+            energy: {
+                centerWord: "energy",
+                definition: "The capacity of a system to perform work across a gradient.",
+                plane: "Q3 Physical (Where) + Q5 Logical (How)",
+                nodes: [
+                    // Certain Ceiling (p ~ 1.0, Y = +7 to +10)
+                    { word: "conservation_law", pos: [0, 9.5, 0], p: 1.0, tier: "+W", desc: "Fundamental invariant: dE/dt = 0 in closed system." },
+                    { word: "work_output", pos: [-6, 8.5, 7], p: 0.98, tier: "+W", desc: "Downstream consequence: Force x Distance." },
+                    { word: "potential_gradient", pos: [-5, 8.8, -7], p: 0.96, tier: "+W", desc: "Upstream prerequisite: State difference enabling flux." },
+                    { word: "heat_capacity", pos: [4, 7.5, 2], p: 0.92, tier: "+W", desc: "Thermodynamic boundary limit for internal storage." },
+
+                    // Possible Mid-Cloud (0.25 <= p < 0.9, Y = -2 to +6)
+                    { word: "kinetic_release", pos: [-4, 4.5, 6], p: 0.85, tier: "+A", desc: "High-probability downstream operational mode." },
+                    { word: "stored_charge", pos: [-5, 2.0, -3], p: 0.70, tier: "+A", desc: "Available potential held in reserve (Q2 What)." },
+                    { word: "thermal_dissipation", pos: [5, 3.0, 5], p: 0.65, tier: "+A", desc: "Irreversible entropy generation into environment." },
+                    { word: "phase_transition", pos: [-2, 0.5, 4], p: 0.55, tier: "+A", desc: "Latent heat restructuring molecular bounds." },
+                    { word: "quantum_tunneling", pos: [-7, -2.0, 3], p: 0.35, tier: "+A", desc: "Sub-barrier penetration without classical energy." },
+
+                    // Impossible Floor (p = 0.0, Y = -8.5 to -9.8)
+                    { word: "perpetual_motion", pos: [8, -9.5, 6], p: 0.0, tier: "-X", desc: "FORBIDDEN: Work output without potential degradation." },
+                    { word: "creation_ex_nihilo", pos: [6, -9.2, -6], p: 0.0, tier: "-X", desc: "FORBIDDEN: Spontaneous mass-energy appearance." },
+                    { word: "lossless_friction", pos: [9, -9.6, 2], p: 0.0, tier: "-X", desc: "FORBIDDEN: Mechanical resistance without heat generation." },
+                    { word: "moral_sin", pos: [7, -9.0, 0], p: 0.0, tier: "-N", desc: "PRECLUDED: Category error. Energy is plane-agnostic physics." }
+                ]
+            },
+            system: {
+                centerWord: "system",
+                definition: "A set of interacting components enclosed by a boundary operating under dynamic laws.",
+                plane: "Q5 Logical (How) + Q2 Possible (What)",
+                nodes: [
+                    { word: "boundary_closure", pos: [0, 9.6, -7], p: 1.0, tier: "+W", desc: "Upstream invariant: Distinction between inside and outside." },
+                    { word: "state_transition", pos: [-5, 9.0, 6], p: 0.98, tier: "+W", desc: "Downstream behavior: Moving along phase trajectories." },
+                    { word: "feedback_loop", pos: [-6, 8.0, 4], p: 0.94, tier: "+W", desc: "Homeostatic regulation or compounding growth." },
+                    { word: "entropy_production", pos: [5, 7.8, 5], p: 0.91, tier: "+W", desc: "Thermodynamic cost of internal organization." },
+
+                    { word: "bifurcation", pos: [-4, 3.5, 5], p: 0.75, tier: "+A", desc: "Critical point branching into alternative attractors." },
+                    { word: "equilibrium", pos: [-2, 1.0, -2], p: 0.60, tier: "+A", desc: "Balanced steady-state with zero net flux." },
+                    { word: "dissipation", pos: [4, 2.5, 6], p: 0.55, tier: "+A", desc: "Energy shedding to maintain low internal entropy." },
+
+                    { word: "unbounded_closure", pos: [8, -9.5, -4], p: 0.0, tier: "-X", desc: "FORBIDDEN: Total containment without a boundary." },
+                    { word: "effect_before_cause", pos: [7, -9.2, 5], p: 0.0, tier: "-X", desc: "FORBIDDEN: Output response preceding input stimulus." },
+                    { word: "eternal_isolation", pos: [9, -9.6, -2], p: 0.0, tier: "-X", desc: "FORBIDDEN: Zero interaction with universal bath." }
+                ]
+            },
+            truth: {
+                centerWord: "truth",
+                definition: "Aletheia: Unconcealment. Invariant correspondence between an assertion and actual event physics.",
+                plane: "Q6 Historical (Cause) + Q1 Metaphysical (Who)",
+                nodes: [
+                    { word: "empirical_invariance", pos: [0, 9.8, 0], p: 1.0, tier: "+W", desc: "Invariant closure: Reality remains identical under all tests." },
+                    { word: "action_effect_alignment", pos: [-6, 9.2, -6], p: 0.98, tier: "+W", desc: "Upstream prerequisite: Words faithfully report actual work." },
+                    { word: "falsification_resistance", pos: [5, 8.5, 7], p: 0.95, tier: "+W", desc: "Downstream proof: Survives Reductive stress without collapse." },
+
+                    { word: "perspective_projection", pos: [-3, 3.0, 3], p: 0.70, tier: "+A", desc: "Single plane slice of a multi-plane object." },
+                    { word: "syntactic_consistency", pos: [-5, 1.5, -4], p: 0.60, tier: "+A", desc: "Internal logic holding together without external check." },
+
+                    { word: "fabrication_as_fact", pos: [8, -9.6, 5], p: 0.0, tier: "-X", desc: "FORBIDDEN: Claiming reality exists purely by decree." },
+                    { word: "coercive_consensus", pos: [9, -9.2, 2], p: 0.0, tier: "-X", desc: "FORBIDDEN: Enforcing belief at gunpoint without physical grounding." },
+                    { word: "inertial_mass", pos: [7, -9.0, -5], p: 0.0, tier: "-N", desc: "PRECLUDED: Category error. Truth has no physical kilograms." }
+                ]
+            },
+            store: {
+                centerWord: "store",
+                definition: "To shelter and organize an active resource so it can be retrieved and put to work later.",
+                plane: "Topological Enclosure (Level 3 □) across All 7 Planes",
+                nodes: [
+                    { word: "sheltered_enclosure", pos: [-5, 9.5, -7], p: 1.0, tier: "+W", desc: "Step 1: Put in against exposure strain -> Safe." },
+                    { word: "ordered_retrieval", pos: [-6, 9.2, 7], p: 0.98, tier: "+W", desc: "Step 3: Take out against inaccessible strain -> Ready." },
+                    { word: "maintained_indexing", pos: [0, 8.8, 0], p: 0.94, tier: "+W", desc: "Step 2: Keep organized against clutter strain -> Ordered." },
+
+                    { word: "capital_reserve", pos: [-4, 3.5, 4], p: 0.75, tier: "+A", desc: "Q2 Possible plane: Options held for tomorrow." },
+                    { word: "database_buffer", pos: [-5, 2.0, -3], p: 0.70, tier: "+A", desc: "Q5 Logical plane: Retrievable memory records." },
+                    { word: "cultural_archive", pos: [3, 2.5, 5], p: 0.65, tier: "+A", desc: "Q6 Historical plane: Preserving collective memory." },
+
+                    { word: "unbounded_leakage", pos: [8, -9.5, 4], p: 0.0, tier: "-X", desc: "FORBIDDEN: Calling an unsealed sieve a store." },
+                    { word: "irreversible_destruction", pos: [9, -9.2, 6], p: 0.0, tier: "-X", desc: "FORBIDDEN: Total dissipation without retrieval potential." }
+                ]
+            },
+            kneel: {
+                centerWord: "kneel",
+                definition: "To voluntarily or forcibly lower kinetic height, arrest forward locomotion, and drop leverage.",
+                plane: "Vector Duality: Order (+υ) Voluntary Humility vs Chaos (-υ) Coercive Subjugation",
+                nodes: [
+                    { word: "kinetic_arrest", pos: [0, 9.8, -7], p: 1.0, tier: "+W", desc: "Invariant Physical Action: Mechanical leverage to strike/flee is zero." },
+                    { word: "voluntary_humility", pos: [-7, 8.5, 6], p: 0.95, tier: "+W", desc: "+υ Order: Lowering to tend child, listen, or pray." },
+                    { word: "defensive_paranoia", pos: [7, 7.5, 5], p: 0.92, tier: "+W", desc: "-υ Chaos: Traumatized perception defining all kneeling as slavery." },
+
+                    { word: "receptive_stillness", pos: [-4, 3.0, 3], p: 0.75, tier: "+A", desc: "Silencing kinetic restlessness to receive wisdom." },
+                    { word: "social_ritual", pos: [3, 1.5, 2], p: 0.60, tier: "+A", desc: "Formalized deference in courtly or military protocol." },
+
+                    { word: "striking_while_kneeling", pos: [8, -9.6, 5], p: 0.0, tier: "-X", desc: "FORBIDDEN: Retaining full kinetic drive while knees are grounded." },
+                    { word: "flight_acceleration", pos: [9, -9.3, -4], p: 0.0, tier: "-X", desc: "FORBIDDEN: Running forward while knees touch earth." }
+                ]
+            }
+        };
+
+        // --- 4. Dynamic Node Creation & Management ---
+        const activeGroup = new THREE.Group();
+        scene.add(activeGroup);
+
+        const nodeMeshMap = new Map();
+        let centerGluonMesh = null;
+        let centralLight = null;
+
+        function renderGluonScene(key) {
+            // Clear prior meshes
+            while (activeGroup.children.length > 0) {
+                const obj = activeGroup.children[0];
+                activeGroup.remove(obj);
+            }
+            nodeMeshMap.clear();
+
+            const data = GLUON_DATA[key];
+
+            // 1. Central Gluon Sphere at (0, 0, 0)
+            const centerGeom = new THREE.SphereGeometry(1.5, 32, 32);
+            const centerMat = new THREE.MeshStandardMaterial({
+                color: 0x22d3ee,
+                emissive: 0x0891b2,
+                emissiveIntensity: 0.9,
+                roughness: 0.15,
+                metalness: 0.7
+            });
+            centerGluonMesh = new THREE.Mesh(centerGeom, centerMat);
+            centerGluonMesh.position.set(0, 0, 0);
+            activeGroup.add(centerGluonMesh);
+
+            // Glowing light at center
+            centralLight = new THREE.PointLight(0x22d3ee, 3.0, 25);
+            centerGluonMesh.add(centralLight);
+
+            // Center Label
+            const cSprite = createTextSprite(data.centerWord.toUpperCase(), "#ffffff", 26);
+            cSprite.position.set(0, 2.3, 0);
+            activeGroup.add(cSprite);
+
+            // 2. Build Surrounding Valence Nodes
+            for (const n of data.nodes) {
+                let colorHex = 0x34d399; // Possible green
+                let size = 0.85;
+
+                if (n.p >= 0.9) {
+                    colorHex = 0x22d3ee; // Certain cyan
+                    size = 1.05;
+                } else if (n.p === 0.0) {
+                    colorHex = 0xef4444; // Impossible red
+                    size = 0.95;
+                }
+
+                const nGeom = new THREE.SphereGeometry(size, 24, 24);
+                const nMat = new THREE.MeshStandardMaterial({
+                    color: colorHex,
+                    emissive: colorHex,
+                    emissiveIntensity: n.p >= 0.9 ? 0.65 : (n.p === 0.0 ? 0.5 : 0.3),
+                    roughness: 0.25,
+                    metalness: 0.5
+                });
+                const mesh = new THREE.Mesh(nGeom, nMat);
+                mesh.position.set(...n.pos);
+                mesh.userData = n;
+                activeGroup.add(mesh);
+                nodeMeshMap.set(n.word, mesh);
+
+                // Add Billboard Label
+                const labelColor = n.p >= 0.9 ? "#22d3ee" : (n.p === 0.0 ? "#f87171" : "#86efac");
+                const sprite = createTextSprite(n.word, labelColor, 20);
+                sprite.position.set(n.pos[0], n.pos[1] + size + 0.9, n.pos[2]);
+                mesh.add(sprite);
+
+                // 3. Connective Gauge Beams
+                const beamPoints = [new THREE.Vector3(0, 0, 0), new THREE.Vector3(...n.pos)];
+                const beamGeom = new THREE.BufferGeometry().setFromPoints(beamPoints);
+
+                let beamMat;
+                if (n.p === 0.0) {
+                    // Red Vector: High-tension contradiction shear
+                    beamMat = new THREE.LineDashedMaterial({
+                        color: 0xef4444,
+                        dashSize: 0.5,
+                        gapSize: 0.3,
+                        opacity: 0.75,
+                        transparent: true
+                    });
+                } else if (n.p >= 0.9) {
+                    // Cyan Beam: Superconducting flux line
+                    beamMat = new THREE.LineBasicMaterial({
+                        color: 0x06b6d4,
+                        opacity: 0.85,
+                        transparent: true
+                    });
+                } else {
+                    // Subtle Valence Ray
+                    beamMat = new THREE.LineBasicMaterial({
+                        color: 0x10b981,
+                        opacity: 0.35,
+                        transparent: true
+                    });
+                }
+
+                const beam = new THREE.Line(beamGeom, beamMat);
+                if (n.p === 0.0) beam.computeLineDistances();
+                beam.userData = { type: n.p === 0.0 ? "tension" : (n.p >= 0.9 ? "certain" : "valence") };
+                activeGroup.add(beam);
+            }
+
+            // Update Inspector with Center Info
+            showInspectorInfo({
+                word: data.centerWord,
+                pos: [0, 0, 0],
+                p: 1.0,
+                tier: "CENTRAL GLUON",
+                desc: data.definition + ` [${data.plane}]`
+            });
+        }
+
+        // --- 5. Inspector Display Logic ---
+        const inspectCard = document.getElementById('inspect-card');
+        const inspectTag = document.getElementById('inspect-tag');
+
+        function showInspectorInfo(n) {
+            inspectTag.textContent = n.word;
+            inspectTag.className = n.p >= 0.9 ? "text-cyan-400 font-bold" : (n.p === 0.0 ? "text-rose-400 font-bold" : "text-emerald-400 font-bold");
+
+            const xPolarity = n.pos[0] < -2 ? "Solution / Inclusive (-X)" : (n.pos[0] > 2 ? "Problem / Exclusive (+X)" : "Neutral Center");
+            const yPotential = n.p >= 0.9 ? "CERTAIN (Ceiling)" : (n.p === 0.0 ? "IMPOSSIBLE (Base Bound)" : "POSSIBLE (Branching)");
+            const zValence = n.pos[2] < -2 ? "Upstream Prerequisite (Behind)" : (n.pos[2] > 2 ? "Downstream Consequent (Ahead)" : "Internal Core");
+
+            inspectCard.innerHTML = `
+                <div class="text-sm font-bold text-white flex justify-between items-center border-b border-slate-800 pb-1">
+                    <span>${n.word.toUpperCase()}</span>
+                    <span class="text-[11px] px-2 py-0.5 rounded bg-slate-900 border border-slate-700 text-cyan-300">${n.tier}</span>
+                </div>
+                <div class="text-[11px] text-slate-300 pt-1 leading-snug">${n.desc}</div>
+                <div class="grid grid-cols-2 gap-2 text-[10px] text-slate-400 pt-2 border-t border-slate-800/80">
+                    <div>Probability: <strong class="${n.p >= 0.9 ? 'text-cyan-400' : (n.p === 0.0 ? 'text-rose-400' : 'text-emerald-400')}">p = ${n.p.toFixed(2)}</strong></div>
+                    <div>Height (Z-Axis): <strong class="text-white">${n.pos[1].toFixed(1)}</strong></div>
+                    <div class="col-span-2">Polarity: <strong class="text-slate-200">${xPolarity}</strong></div>
+                    <div class="col-span-2">Causal Valence: <strong class="text-slate-200">${zValence}</strong></div>
+                </div>
+            `;
+        }
+
+        // Raycasting for Mouse Interaction
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+
+        window.addEventListener('click', (event) => {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(Array.from(nodeMeshMap.values()));
+
+            if (intersects.length > 0) {
+                const nodeData = intersects[0].object.userData;
+                showInspectorInfo(nodeData);
+
+                // Flash node
+                const mat = intersects[0].object.material;
+                const prevEmissive = mat.emissiveIntensity;
+                mat.emissiveIntensity = 1.5;
+                setTimeout(() => { mat.emissiveIntensity = prevEmissive; }, 400);
+            }
+        });
+
+        // --- 6. Horizon Mining Simulator ---
+        const mineBtn = document.getElementById('mine-btn');
+        const mineText = document.getElementById('mine-text');
+        const horizonProgress = document.getElementById('horizon-progress');
+        const stepLabel = document.getElementById('step-label');
+        const teleExcluded = document.getElementById('tele-excluded');
+        const teleHorizon = document.getElementById('tele-horizon');
+        const teleConclusion = document.getElementById('tele-conclusion');
+        const teleProof = document.getElementById('tele-proof');
+
+        let isMining = false;
+        let mineStep = 0;
+
+        mineBtn.addEventListener('click', () => {
+            if (isMining) return;
+            runHorizonMining();
+        });
+
+        function runHorizonMining() {
+            isMining = true;
+            mineStep = 0;
+            mineText.textContent = "Mining Horizon...";
+
+            const steps = [
+                {
+                    progress: 25,
+                    label: "Step 1: Exclude Reductive Impossible Bounds",
+                    excluded: "3 bounds locked (p=0.0)",
+                    horizon: "Carving Void",
+                    conclusion: "Excluding Contradictions",
+                    proof: "Red Strain Active",
+                    action: () => {
+                        // Highlight floor nodes
+                        for (const mesh of nodeMeshMap.values()) {
+                            if (mesh.userData.p === 0.0) {
+                                mesh.scale.set(1.4, 1.4, 1.4);
+                                mesh.material.emissiveIntensity = 1.2;
+                            }
+                        }
+                    }
+                },
+                {
+                    progress: 55,
+                    label: "Step 2: Connect Upstream Prerequisite Valence",
+                    excluded: "Contradictions pruned",
+                    horizon: "Grounding Inputs",
+                    conclusion: "Traversing Causal Chain",
+                    proof: "Valence Coupled",
+                    action: () => {
+                        for (const mesh of nodeMeshMap.values()) {
+                            if (mesh.userData.pos[2] < 0 && mesh.userData.p > 0) {
+                                mesh.scale.set(1.3, 1.3, 1.3);
+                                mesh.material.emissiveIntensity = 1.0;
+                            }
+                        }
+                    }
+                },
+                {
+                    progress: 85,
+                    label: "Step 3: Compress Optical Thickness (τ → 0)",
+                    excluded: "Degrees of freedom shrinking",
+                    horizon: "Narrowing Corridor",
+                    conclusion: "Approaching Closure",
+                    proof: "High Luminescence",
+                    action: () => {
+                        document.getElementById('tau-slider').value = 0.05;
+                        updateOpticalThickness(0.05);
+                    }
+                },
+                {
+                    progress: 100,
+                    label: "Step 4: INVARIANT CLOSURE LOCKED (p = 1.0)",
+                    excluded: "All alternatives excluded",
+                    horizon: "Single Invariant Pin",
+                    conclusion: "Definitive Law Invariant ✓",
+                    proof: "Superconducting Proof ✓",
+                    action: () => {
+                        // Highlight ceiling nodes
+                        for (const mesh of nodeMeshMap.values()) {
+                            if (mesh.userData.p >= 0.95) {
+                                mesh.scale.set(1.5, 1.5, 1.5);
+                                mesh.material.emissiveIntensity = 1.8;
+                            }
+                        }
+                    }
+                }
+            ];
+
+            function executeStep(i) {
+                if (i >= steps.length) {
+                    setTimeout(() => {
+                        mineText.textContent = "Re-Mine Horizon";
+                        isMining = false;
+                    }, 800);
+                    return;
+                }
+                const s = steps[i];
+                horizonProgress.style.width = `${s.progress}%`;
+                stepLabel.textContent = s.label;
+                teleExcluded.textContent = s.excluded;
+                teleHorizon.textContent = s.horizon;
+                teleConclusion.textContent = s.conclusion;
+                teleProof.textContent = s.proof;
+                s.action();
+
+                setTimeout(() => executeStep(i + 1), 1200);
+            }
+
+            executeStep(0);
+        }
+
+        // --- 7. Optical Thickness Slider Control ---
+        const tauSlider = document.getElementById('tau-slider');
+        const tauVal = document.getElementById('tau-val');
+
+        function updateOpticalThickness(tau) {
+            tauVal.textContent = `τ = ${tau.toFixed(2)} (${tau < 0.25 ? 'Coherent' : (tau > 0.7 ? 'High Scatter Fog' : 'Translucent')})`;
+            scene.fog.density = 0.008 + tau * 0.035;
+
+            // Adjust beam opacities
+            activeGroup.traverse((child) => {
+                if (child.isLine && child.userData.type === "valence") {
+                    child.material.opacity = Math.max(0.1, (1.0 - tau) * 0.65);
+                }
+            });
+
+            // Adjust central light intensity
+            if (centralLight) {
+                centralLight.intensity = 1.0 + (1.0 - tau) * 3.5;
+            }
+        }
+
+        tauSlider.addEventListener('input', (e) => {
+            updateOpticalThickness(parseFloat(e.target.value));
+        });
+
+        // --- 8. UI Layer Filter Listeners ---
+        document.getElementById('toggle-certain').addEventListener('change', (e) => {
+            ceilingGrid.visible = e.target.checked;
+            for (const mesh of nodeMeshMap.values()) {
+                if (mesh.userData.p >= 0.9) mesh.visible = e.target.checked;
+            }
+        });
+
+        document.getElementById('toggle-possible').addEventListener('change', (e) => {
+            midGrid.visible = e.target.checked;
+            for (const mesh of nodeMeshMap.values()) {
+                if (mesh.userData.p > 0.0 && mesh.userData.p < 0.9) mesh.visible = e.target.checked;
+            }
+        });
+
+        document.getElementById('toggle-impossible').addEventListener('change', (e) => {
+            floorGrid.visible = e.target.checked;
+            for (const mesh of nodeMeshMap.values()) {
+                if (mesh.userData.p === 0.0) mesh.visible = e.target.checked;
+            }
+        });
+
+        document.getElementById('toggle-tension').addEventListener('change', (e) => {
+            activeGroup.traverse((child) => {
+                if (child.isLine && child.userData.type === "tension") {
+                    child.visible = e.target.checked;
+                }
+            });
+        });
+
+        document.getElementById('toggle-valence').addEventListener('change', (e) => {
+            activeGroup.traverse((child) => {
+                if (child.isLine && child.userData.type === "valence") {
+                    child.visible = e.target.checked;
+                }
+            });
+        });
+
+        document.getElementById('gluon-select').addEventListener('change', (e) => {
+            renderGluonScene(e.target.value);
+            // Reset Horizon progress
+            horizonProgress.style.width = "0%";
+            stepLabel.textContent = "Step 0: Unconstrained Field";
+            teleExcluded.textContent = "0 bounds (p=0)";
+            teleHorizon.textContent = "Wide Potential";
+            teleConclusion.textContent = "Pending Derivation";
+            teleProof.textContent = "Unproved (∞ Fog)";
+            tauSlider.value = 0.15;
+            updateOpticalThickness(0.15);
+        });
+
+        // --- 9. Animation Loop ---
+        const clock = new THREE.Clock();
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            const elapsed = clock.getElapsedTime();
+
+            // Gentle pulsation on central gluon
+            if (centerGluonMesh) {
+                const s = 1.0 + 0.06 * Math.sin(elapsed * 2.5);
+                centerGluonMesh.scale.set(s, s, s);
+            }
+
+            // Subtle rotation of cube
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        // Initialize First Concept
+        renderGluonScene('energy');
+        updateOpticalThickness(0.15);
+        animate();
+
+        // Window Resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>

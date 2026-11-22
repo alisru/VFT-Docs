@@ -97,6 +97,9 @@ def init_db():
         if "url" not in cols:
             con.execute("ALTER TABLE chats ADD COLUMN url TEXT")
             con.commit()
+        if "src_path" not in cols:
+            con.execute("ALTER TABLE chats ADD COLUMN src_path TEXT")
+            con.commit()
         # Ensure fragile triggers that cause "database disk image is malformed" are dropped
         con.execute("DROP TRIGGER IF EXISTS chunks_ai")
         con.execute("DROP TRIGGER IF EXISTS chunks_ad")

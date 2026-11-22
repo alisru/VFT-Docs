@@ -1,0 +1,181 @@
+Command exited with code 0.
+
+Command output:
+
+> E:\Vector Field Theory\peek_explorer\renderer.js:1406:    const r = await window.api.paste(op, validSrcs, dest);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1407:    if (r.moved && r.moved.length) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1408:      undoStack.push({ type: 'move', ops: r.moved.map(m => ({ 
+from: m.to, to: m.from.slice(0, m.from.lastIndexOf('\\')) })) });
+  E:\Vector Field Theory\peek_explorer\renderer.js:1409:      $('status').textContent = `� Moved ${r.moved.length} 
+item${r.moved.length > 1 ? 's' : ''}  "${baseName(dest)}" (Ctrl+Z to undo)`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1410:    } else if (op === 'copy') {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1411:      $('status').textContent = `� Copied ${validSrcs.length - 
+(r.skipped?.length || 0)} item(s)  "${baseName(dest)}"`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1412:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:1413:    if (r.skipped && r.skipped.length) alert('Skipped (already 
+exists or invalid):\n' + r.skipped.join('\n'));
+  E:\Vector Field Theory\peek_explorer\renderer.js:1414:    const affected = [dest, ...validSrcs.map(s => parent(s))];
+  E:\Vector Field Theory\peek_explorer\renderer.js:1415:    await refreshKeep(affected);
+  E:\Vector Field Theory\peek_explorer\renderer.js:1416:    if (splitState.active) renderSplitPane();
+  E:\Vector Field Theory\peek_explorer\renderer.js:1417:  });
+  E:\Vector Field Theory\peek_explorer\renderer.js:1418:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:1419:
+  E:\Vector Field Theory\peek_explorer\renderer.js:1420:async function renderDir(dir, depth, container, parentCell = 
+null) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1421:  console.log(`%c[PEEK-DIR] renderDir("${dir}", 
+depth=${depth}) called`, 'color: #06b6d4; font-weight: bold');
+  E:\Vector Field Theory\peek_explorer\renderer.js:1422:  let res = null;
+  E:\Vector Field Theory\peek_explorer\renderer.js:1423:  try {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1424:    if (window.api && typeof window.api.list === 'function') {
+  E:\Vector Field Theory\peek_explorer\renderer.js:1425:      res = await Promise.race([
+  E:\Vector Field Theory\peek_explorer\renderer.js:1426:        window.api.list(dir),
+> E:\Vector Field Theory\peek_explorer\renderer.js:4887:        await window.api.paste('cut', paths, res.path);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4888:        if (roomMap.has(parentDir)) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4889:          const parRm = roomMap.get(parentDir);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4890:          if (parRm && parRm.populate) await parRm.populate();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4891:          syncDoorwayBadges();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4892:        }
+  E:\Vector Field Theory\peek_explorer\renderer.js:4893:        const newRm = await spawnRoom(res.path, 
+baseName(res.path), parentDir, (roomMap.get(parentDir)?.depth || 0) + 1, { x: wx, y: wy });
+  E:\Vector Field Theory\peek_explorer\renderer.js:4894:        if (newRm && newRm.populate) await newRm.populate();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4895:        autoFitRoom(newRm);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4896:        resolveRoomCollisions();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4897:        syncDoorwayBadges();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4898:        drawBridges();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4899:        selectActiveRoom(res.path);
+  E:\Vector Field Theory\peek_explorer\renderer.js:4900:        updateCameraAndLens();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4901:        persist();
+  E:\Vector Field Theory\peek_explorer\renderer.js:4902:        return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:4903:      }
+  E:\Vector Field Theory\peek_explorer\renderer.js:4904:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:4905:
+  E:\Vector Field Theory\peek_explorer\renderer.js:4906:    for (let i = 0; i < paths.length; i++) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:4907:      const p = paths[i];
+> E:\Vector Field Theory\peek_explorer\renderer.js:5815:        const r = await window.api.paste(op, srcs, p);
+  E:\Vector Field Theory\peek_explorer\renderer.js:5816:        if (r.moved && r.moved.length) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:5817:          undoStack.push({ type: 'move', ops: r.moved.map(m => 
+({ from: m.to, to: m.from.slice(0, m.from.lastIndexOf('\\')) })) });
+  E:\Vector Field Theory\peek_explorer\renderer.js:5818:          $('status').textContent = `� Moved ${r.moved.length} 
+item${r.moved.length > 1 ? 's' : ''}  Tab "${baseName(p)}"`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:5819:        }
+  E:\Vector Field Theory\peek_explorer\renderer.js:5820:        if (r.skipped && r.skipped.length) alert('Skipped:\n' 
++ r.skipped.join('\n'));
+  E:\Vector Field Theory\peek_explorer\renderer.js:5821:        await refreshKeep([p, ...srcs.map(s => parent(s))]);
+  E:\Vector Field Theory\peek_explorer\renderer.js:5822:      }
+  E:\Vector Field Theory\peek_explorer\renderer.js:5823:    });
+  E:\Vector Field Theory\peek_explorer\renderer.js:5824:    bar.appendChild(el);
+  E:\Vector Field Theory\peek_explorer\renderer.js:5825:  });
+  E:\Vector Field Theory\peek_explorer\renderer.js:5826:  const plus = document.createElement('div'); plus.className = 
+'tab plus'; plus.textContent = '+'; plus.title = 'New tab (Ctrl+T or Middle-click � Right-click a tab to change 
+default)';
+  E:\Vector Field Theory\peek_explorer\renderer.js:5827:  plus.onclick = () => newTab();
+  E:\Vector Field Theory\peek_explorer\renderer.js:5828:  plus.addEventListener('auxclick', e => { if (e.button === 1) 
+{ e.preventDefault(); e.stopPropagation(); newTab(cur, [...expanded], true); } });
+  E:\Vector Field Theory\peek_explorer\renderer.js:5829:  bar.appendChild(plus);
+  E:\Vector Field Theory\peek_explorer\renderer.js:5830:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:5831:// Middle-clicking empty space on the tab bar or 
+double-clicking it opens a new tab
+  E:\Vector Field Theory\peek_explorer\renderer.js:5832:$('tabs').addEventListener('auxclick', e => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:5833:  if (e.button === 1 && e.target === $('tabs')) { 
+e.preventDefault(); newTab(); }
+  E:\Vector Field Theory\peek_explorer\renderer.js:5834:});
+  E:\Vector Field Theory\peek_explorer\renderer.js:5835:$('tabs').addEventListener('dblclick', e => {
+> E:\Vector Field Theory\peek_explorer\renderer.js:6869:  const r = await window.api.paste(clip.mode, clip.paths, 
+dest);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6870:  if (r.moved && r.moved.length) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6871:    undoStack.push({ type: 'move', ops: r.moved.map(m => ({ 
+from: m.to, to: m.from.slice(0, m.from.lastIndexOf('\\')) })) });
+  E:\Vector Field Theory\peek_explorer\renderer.js:6872:    $('status').textContent = `� Moved ${r.moved.length} 
+item${r.moved.length > 1 ? 's' : ''}  "${baseName(dest)}" (Ctrl+Z to undo)`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6873:  } else if (r.copied && r.copied.length) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6874:    $('status').textContent = `� Pasted ${r.copied.length} 
+item${r.copied.length > 1 ? 's' : ''} (${r.copied.map(c => baseName(c.to)).join(', ')})`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6875:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6876:  if (clip.mode === 'cut') await storeClip(null);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6877:  if (r.skipped && r.skipped.length) alert('Skipped (already 
+exists or failed):\n' + r.skipped.join('\n'));
+  E:\Vector Field Theory\peek_explorer\renderer.js:6878:  await refreshKeep([dest, ...srcParents]);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6879:  if (r.copied && r.copied.length) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6880:    clearSelection();
+  E:\Vector Field Theory\peek_explorer\renderer.js:6881:    const newPaths = new Set(r.copied.map(c => c.to));
+  E:\Vector Field Theory\peek_explorer\renderer.js:6882:    for (const row of visibleRows()) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6883:      if (row._item && newPaths.has(row._item.path)) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6884:        setRowSelected(row._item, row, true);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6885:      }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6886:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6887:    updateStatus();
+  E:\Vector Field Theory\peek_explorer\renderer.js:6888:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6889:}
+> E:\Vector Field Theory\peek_explorer\renderer.js:6972:      await window.api.paste('cut', [op.from], op.to);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6973:    }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6974:    await refreshKeep(affected);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6975:    return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6976:  }
+  E:\Vector Field Theory\peek_explorer\renderer.js:6977:  await refreshKeep();
+  E:\Vector Field Theory\peek_explorer\renderer.js:6978:}
+  E:\Vector Field Theory\peek_explorer\renderer.js:6979:async function doDelete(paths) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6980:  if (!paths.length) return;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6981:  const rows = visibleRows();
+  E:\Vector Field Theory\peek_explorer\renderer.js:6982:  const firstPath = paths[0];
+  E:\Vector Field Theory\peek_explorer\renderer.js:6983:  const idx = rows.findIndex(r => r._item && r._item.path === 
+firstPath);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6984:  const nextTarget = rows[idx + 1] || rows[idx - 1];
+  E:\Vector Field Theory\peek_explorer\renderer.js:6985:  const nextItemPath = nextTarget && nextTarget._item ? 
+nextTarget._item.path : null;
+  E:\Vector Field Theory\peek_explorer\renderer.js:6986:
+  E:\Vector Field Theory\peek_explorer\renderer.js:6987:  const r = await window.api.trash(paths);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6988:  if (r.error) alert(r.error);
+  E:\Vector Field Theory\peek_explorer\renderer.js:6989:  if (r.ok) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6990:    clearSelection();
+  E:\Vector Field Theory\peek_explorer\renderer.js:6991:    for (const p of paths) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:6992:      document.querySelectorAll('.row.item, .room-item, 
+.room-file, .room-door, .grp-fold').forEach(el => {
+> E:\Vector Field Theory\peek_explorer\renderer.js:7130:            const r = await window.api.paste('cut', paths, 
+mt.dest);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7131:            if (r.moved && r.moved.length) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7132:              undoStack.push({ type: 'move', ops: 
+r.moved.map(m => ({ from: m.to, to: m.from.slice(0, m.from.lastIndexOf('\\')) })) });
+  E:\Vector Field Theory\peek_explorer\renderer.js:7133:              $('status').textContent = `� Moved 
+${r.moved.length} item${r.moved.length > 1 ? 's' : ''}  "${baseName(mt.dest)}" (Ctrl+Z to undo)`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7134:            }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7135:            if (r.skipped && r.skipped.length) 
+alert('Skipped:\n' + r.skipped.join('\n'));
+  E:\Vector Field Theory\peek_explorer\renderer.js:7136:            show();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7137:            if (splitState.active) renderSplitPane();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7138:          }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7139:        }));
+  E:\Vector Field Theory\peek_explorer\renderer.js:7140:        if (moveTargets.length) menuItems.push('-');
+  E:\Vector Field Theory\peek_explorer\renderer.js:7141:        menuItems.push({
+  E:\Vector Field Theory\peek_explorer\renderer.js:7142:          label: '??  Choose another folder.',
+  E:\Vector Field Theory\peek_explorer\renderer.js:7143:          run: async () => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7144:            const picked = await window.api.pickFolder();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7145:            if (!picked) return;
+> E:\Vector Field Theory\peek_explorer\renderer.js:7146:            const r = await window.api.paste('cut', paths, 
+picked);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7147:            if (r.moved && r.moved.length) {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7148:              undoStack.push({ type: 'move', ops: 
+r.moved.map(m => ({ from: m.to, to: m.from.slice(0, m.from.lastIndexOf('\\')) })) });
+  E:\Vector Field Theory\peek_explorer\renderer.js:7149:              $('status').textContent = `� Moved 
+${r.moved.length} item${r.moved.length > 1 ? 's' : ''}  "${baseName(picked)}" (Ctrl+Z to undo)`;
+  E:\Vector Field Theory\peek_explorer\renderer.js:7150:            }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7151:            if (r.skipped && r.skipped.length) 
+alert('Skipped:\n' + r.skipped.join('\n'));
+  E:\Vector Field Theory\peek_explorer\renderer.js:7152:            show();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7153:            if (splitState.active) renderSplitPane();
+  E:\Vector Field Theory\peek_explorer\renderer.js:7154:          }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7155:        });
+  E:\Vector Field Theory\peek_explorer\renderer.js:7156:        fillMenu(menuItems);
+  E:\Vector Field Theory\peek_explorer\renderer.js:7157:        placeMenu(parseInt(menuEl.style.left), 
+parseInt(menuEl.style.top));
+  E:\Vector Field Theory\peek_explorer\renderer.js:7158:      }
+  E:\Vector Field Theory\peek_explorer\renderer.js:7159:    },
+  E:\Vector Field Theory\peek_explorer\renderer.js:7160:    '-',
+  E:\Vector Field Theory\peek_explorer\renderer.js:7161:    ...(scripts.length ? [
+  E:\Vector Field Theory\peek_explorer\renderer.js:7162:      {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7163:        label: `? Run Script Connection${countTag}  >`,
+  E:\Vector Field Theory\peek_explorer\renderer.js:7164:        keepOpen: true,
+  E:\Vector Field Theory\peek_explorer\renderer.js:7165:        run: () => {
+  E:\Vector Field Theory\peek_explorer\renderer.js:7166:          fillMenu(scripts.map(sc => ({ label: `?  
+${sc.name}`, run: () => triggerScript(sc) })));
+
+

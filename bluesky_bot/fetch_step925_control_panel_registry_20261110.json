@@ -1,0 +1,212 @@
+Command exited with code 0.
+
+Command output:
+
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1567:  <script src="stories_registry.js"></script>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1568:  <script src="../hegemony_db.js"></script>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1569:  <script 
+src="aletheia_canvas_renderer.js"></script>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1570:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1571:  <!-- JavaScript Stories Registry & Controller 
+-->
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1572:  <script>
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1573:    // Fallback to loaded global registry, or 
+empty list if offline/failed
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1574:    const STORIES_REGISTRY = 
+window.ALETHEIA_STORIES_REGISTRY || [];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1575:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1576:    let activeStory = STORIES_REGISTRY[0];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1577:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1578:    function updateServerStatus(isOnline) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1579:      const badge = 
+document.getElementById('systemStatusBadge');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1580:      const text = 
+document.getElementById('systemStatusText');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1581:      if (!badge || !text) return;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1582:      if (isOnline) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1583:        badge.classList.remove('offline');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1584:        text.innerText = 'SERVER ONLINE';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1585:      } else {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1586:        badge.classList.add('offline');
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1724:      activeStory = STORIES_REGISTRY.find(s => 
+s.id === storyId);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1725:      
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1726:      const listContainer = 
+document.getElementById('storyList');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1727:      if (listContainer) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1728:        // 1. Remove active class from any 
+existing active card in the DOM
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1729:        const activeCards = 
+listContainer.querySelectorAll('.story-card.active');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1730:        activeCards.forEach(card => 
+card.classList.remove('active'));
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1731:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1732:        // 2. Add active class to the newly 
+selected card in the DOM if it's currently rendered
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1733:        const newActiveCard = 
+listContainer.querySelector(`[data-story-id="${storyId}"]`);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:1734:        if (newActiveCard) {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2436:      const filtered = STORIES_REGISTRY.filter(s 
+=> {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2437:        let matchesSearch = !query || 
+s.subject.toLowerCase().includes(query) || s.verdict.toLowerCase().includes(query);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2438:        if (!matchesSearch && query && s.link) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2439:          try {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2440:            const host = new 
+URL(s.link).hostname.replace(/^www\./, '').toLowerCase();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2441:            if (host.includes(query) || 
+s.link.toLowerCase().includes(query)) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2442:              matchesSearch = true;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2443:            }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2444:          } catch (e) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2445:            if 
+(s.link.toLowerCase().includes(query)) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2446:              matchesSearch = true;
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2657:          const existingIdx = 
+STORIES_REGISTRY.findIndex(s => s.subject === newStory.subject);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2658:          if (existingIdx !== -1) {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2659:            STORIES_REGISTRY[existingIdx] = 
+newStory;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2660:          } else {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2661:            STORIES_REGISTRY.unshift(newStory);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2662:          }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2663:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2664:          renderStories(STORIES_REGISTRY);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2665:          selectStory(newStory.id);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2666:        } catch(err) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2667:          alert("Error parsing JSON: " + 
+err.message);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2668:        }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2669:      };
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2670:      reader.readAsText(file);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2671:    }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2672:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2673:    // Helper to dynamically read files in 
+directories when running http.server, otherwise fallback to static index.json
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2674:    async function 
+getFilenamesFromDirectory(dirPath, fallbackIndexPath) {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2723:      STORIES_REGISTRY.forEach(s => {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2724:        // Actor
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2725:        if (Array.isArray(s.actors)) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2726:          s.actors.forEach(a => {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2727:            const key = a.trim().toLowerCase();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2728:            if (key) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2729:              if (!storiesByActor[key]) 
+storiesByActor[key] = [];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2730:              storiesByActor[key].push(s);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2731:            }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2732:          });
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2733:        }
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2770:      STORIES_REGISTRY.forEach((s, idx) => {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2771:        s._origIndex = idx;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2772:        if (flags[s.id]) s._flag = flags[s.id];
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2773:      });
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2774:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2775:      // Build Fast Index Maps for O(1) 
+Leaderboard Lookups
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2776:      rebuildIndexMaps();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2777:
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2778:      if (STORIES_REGISTRY.length > 0) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2779:        const query = 
+document.getElementById('searchInput').value.toLowerCase();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2780:        renderStories(getFilteredStories(query));
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2781:        
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2782:        // Keep active story selected if it 
+still exists in the registry
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2783:        const activeId = activeStory ? 
+activeStory.id : null;
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2784:        const exists = STORIES_REGISTRY.some(s 
+=> s.id === activeId);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2785:        if (exists) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2786:          selectStory(activeId);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2787:        } else {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2788:          selectStory(STORIES_REGISTRY[0].id);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2789:        }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2790:      } else {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2791:        
+document.getElementById('storyList').innerHTML = '<div class="empty-state"><span 
+class="empty-icon">??</span><span>Upload story JSONs to visualize</span></div>';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2792:      }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2793:    }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2794:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2795:    // App Initialization
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2796:    window.onload = async () => {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2797:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2798:      // Bind Drag and Drop listeners
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2812:      // Initial render from statically-loaded 
+stories_registry.js
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2813:      initConvergenceModeUI();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2814:      refreshRegistryUI();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2815:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2816:      // Attach click and scroll listeners for 
+sliding-window virtual list rendering
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2817:      const storyListEl = 
+document.getElementById('storyList');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2818:      if (storyListEl) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2819:        storyListEl.addEventListener('scroll', 
+() => {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2820:          renderStoriesListVirtual();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2821:        });
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2822:        storyListEl.addEventListener('click', 
+(e) => {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2832:          if (window.ALETHEIA_STORIES_REGISTRY 
+&& window.ALETHEIA_STORIES_REGISTRY.length > 0) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2833:            updateServerStatus(true);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2834:            const text = 
+document.getElementById('systemStatusText');
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2835:            if (text) text.innerText = `ONLINE 
+(${window.ALETHEIA_STORIES_REGISTRY.length} AUDITS)`;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2836:          } else {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2837:            const res = await 
+fetch('http://localhost:8766/health').catch(() => null);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2838:            if (res && res.ok) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2839:              updateServerStatus(true);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2840:            } else {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2841:              updateServerStatus(false);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2842:            }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2843:          }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2844:        } catch (e) {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2845:          if (window.ALETHEIA_STORIES_REGISTRY 
+&& window.ALETHEIA_STORIES_REGISTRY.length > 0) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2846:            updateServerStatus(true);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2847:          }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2848:        }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2849:      }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2850:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2851:      // Initial check
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2852:      checkRegistryUpdates();
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2853:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2854:      // Periodically check server status
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2855:      setInterval(checkRegistryUpdates, 10000);
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2952:        const stories = STORIES_REGISTRY;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2953:        const liveOnly = stories.filter(s => 
+(s.status || '').toLowerCase().includes('live'));
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2954:        const live = _auditScope === 'live' ? 
+liveOnly : stories;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2955:        
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2956:        let title = '';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2957:        let bodyHtml = '';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2958:        
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2959:        if (tableType === 'actor') {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2960:          title = 'Actor Hypocrisy Leaderboard';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2961:          bodyHtml = auditActorLeaderboard(live);
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:2962:        } else if (tableType === 'outlet') {
+> E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3351:      const stories = STORIES_REGISTRY;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3352:      const container = 
+document.getElementById('audit-content');
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3353:      if (!stories || stories.length === 0) {
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3354:        container.innerHTML = '<div 
+style="color:var(--text-muted)">No stories loaded.</div>';
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3355:        return;
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3356:      }
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3357:
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3358:      // Scope: by default analyze the WHOLE 
+corpus (dry-run evaluations are valid
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3359:      // judgements too). Toggle to 'live' to 
+restrict to posted threads only.
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3360:      const liveOnly = stories.filter(s => 
+(s.status || '').toLowerCase().includes('live'));
+  E:\Vector Field Theory\VFT Docs\bluesky_bot\control_panel.html:3361:      const live = _auditScope === 'live' ? 
+liveOnly : stories;
+
+

@@ -1,0 +1,217 @@
+Command exited with code 0.
+
+Command output:
+
+bluesky_bot\google_ai_studio_one_shot.py:5:import json
+bluesky_bot\google_ai_studio_one_shot.py:159:def rebuild_registries_selector(use_son=False):
+bluesky_bot\google_ai_studio_one_shot.py:161:    if use_son:
+bluesky_bot\google_ai_studio_one_shot.py:163:        print("Invoking SON registry rebuilder...")
+bluesky_bot\google_ai_studio_one_shot.py:165:        from rebuild_registries_son import rebuild_registries as 
+rebuild_son
+bluesky_bot\google_ai_studio_one_shot.py:167:        rebuild_son()
+bluesky_bot\google_ai_studio_one_shot.py:179:def promote_and_register_selector(use_son=False):
+bluesky_bot\google_ai_studio_one_shot.py:181:    if use_son:
+bluesky_bot\google_ai_studio_one_shot.py:183:        from rebuild_registries_son import 
+promote_and_register_incremental as promote_son
+bluesky_bot\google_ai_studio_one_shot.py:185:        return promote_son()
+bluesky_bot\google_ai_studio_one_shot.py:287:    Strips on-disk storage dictionary schemas and obsolete canonical JSON 
+examples from thread formatting rules,
+bluesky_bot\google_ai_studio_one_shot.py:309:        if (stripped.startswith("## 1. The") and "JSON Schema" in 
+stripped) or stripped.startswith("## 2. Attractor Forces Schema"):
+bluesky_bot\google_ai_studio_one_shot.py:327:        # Skip canonical on-disk JSON example
+bluesky_bot\google_ai_studio_one_shot.py:329:        if (stripped.startswith("## 4. Canonical Example JSON") or 
+bluesky_bot\google_ai_studio_one_shot.py:331:            stripped.startswith("## 5. Canonical Example JSON") or 
+bluesky_bot\google_ai_studio_one_shot.py:333:            stripped.startswith("## Canonical Example JSON")):
+bluesky_bot\google_ai_studio_one_shot.py:359:        "Content-Type": "application/json"
+bluesky_bot\google_ai_studio_one_shot.py:385:        data=json.dumps(payload).encode("utf-8"),
+bluesky_bot\google_ai_studio_one_shot.py:401:            res_data = json.loads(response.read().decode("utf-8"))
+bluesky_bot\google_ai_studio_one_shot.py:557:            story_files = [f for f in os.listdir(scan_dir) if 
+f.startswith('factcheck_') and f.endswith('.json')]
+bluesky_bot\google_ai_studio_one_shot.py:565:                    data = json.load(f)
+bluesky_bot\google_ai_studio_one_shot.py:755:    path = os.path.join(script_dir, "unscrapable_domains.json")
+bluesky_bot\google_ai_studio_one_shot.py:763:                data = json.load(f)
+bluesky_bot\google_ai_studio_one_shot.py:779:    path = os.path.join(script_dir, "unscrapable_domains.json")
+bluesky_bot\google_ai_studio_one_shot.py:785:            json.dump(sorted(list(DYNAMIC_BANNED_DOMAINS)), f, indent=2, 
+ensure_ascii=False)
+bluesky_bot\google_ai_studio_one_shot.py:819:            "movie", "movies", "music", "song", "songs", "album", 
+"concert", "gaming",
+bluesky_bot\google_ai_studio_one_shot.py:847:    path = os.path.join(script_dir, "banned_topics.json")
+bluesky_bot\google_ai_studio_one_shot.py:855:                json.dump(default_categories, f, indent=2, 
+ensure_ascii=False)
+bluesky_bot\google_ai_studio_one_shot.py:861:            print(f"Warning: Failed to create default banned_topics.json: 
+{e}")
+bluesky_bot\google_ai_studio_one_shot.py:871:                data = json.load(f)
+bluesky_bot\google_ai_studio_one_shot.py:883:            print(f"Warning: Failed to load banned_topics.json: {e}")
+bluesky_bot\google_ai_studio_one_shot.py:2099:def _load_rules(use_son=False):
+bluesky_bot\google_ai_studio_one_shot.py:2103:    cache_key = "son" if use_son else "regular"
+bluesky_bot\google_ai_studio_one_shot.py:2107:        if use_son:
+bluesky_bot\google_ai_studio_one_shot.py:2109:            convergence_path = os.path.join(workspace_dir, ".agent", 
+"tools", "convergence-test", "convergence_son_lite.md")
+bluesky_bot\google_ai_studio_one_shot.py:2111:            formatting_path = os.path.join(script_dir, "instructions", 
+"thread_formatting_son.md")
+bluesky_bot\google_ai_studio_one_shot.py:2287:def build_formatting_rules(use_son=False, compact=False, 
+five_word=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all"):
+bluesky_bot\google_ai_studio_one_shot.py:2289:    convergence_rules, formatting_rules = _load_rules(use_son=use_son)
+bluesky_bot\google_ai_studio_one_shot.py:2321:            "- Posts 5+ (indices 4+ in the posts array: Context, Nuance, 
+Breakdown, Social Physics, Trajectory, Unavoidables, Personas) will be rendered into a graphical image card. They have 
+NO character limits. They MUST be highly verbose, comprehensive, and detailed (typically 400-800 characters each) to 
+explain the concepts fully. DO NOT compress or shorten them.\n\n"
+bluesky_bot\google_ai_studio_one_shot.py:2333:    if use_son and use_multi_aspect:
+bluesky_bot\google_ai_studio_one_shot.py:2351:            "  - [Outlet / Aspect A]: [PASS/FAIL/COND] ([real_u], 
+[real_psi]) - [Brief 1-line framing/omission reason under 60 chars].\n"
+bluesky_bot\google_ai_studio_one_shot.py:2353:            "  - [Outlet / Aspect B]: [PASS/FAIL/COND] ([real_u], 
+[real_psi]) - [Brief 1-line framing/omission reason under 60 chars].\n"
+bluesky_bot\google_ai_studio_one_shot.py:2397:def build_system_instruction(use_son=False, compact=False, 
+five_word=False, use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", extra_context=None):
+bluesky_bot\google_ai_studio_one_shot.py:2441:        "- Tier 3 (Subjective Opinion / Personal Anecdote): Unverified 
+personal essays, culture-war polemics, anonymous gossip, personal nostalgia.\n"
+bluesky_bot\google_ai_studio_one_shot.py:2443:        "- RULE: Tier 3 evidence CANNOT be scored as real_u ground 
+truth. If an article relies exclusively on Tier 3 personal anecdotes to make institutional claims, the author's aspect 
+must receive a FAIL for Unsubstantiated Assertion.\n\n"
+bluesky_bot\google_ai_studio_one_shot.py:2449:        "- 'instigator': The active person or institution executing the 
+action, policy, or claim (e.g. 'Donald Trump', 'ICE', 'Elon Musk').\n"
+bluesky_bot\google_ai_studio_one_shot.py:2489:            "Use Google Search ONLY to fact-check names, dates, and 
+medical/legal claims from the article. Do NOT use search results to alter your structural analysis or your Alethekanon 
+persona. "
+bluesky_bot\google_ai_studio_one_shot.py:2501:            "Posts 5+ (items 4+ in the posts array: Context, Nuance, 
+Breakdown, Social Physics, Trajectory, Unavoidables, Personas) have NO character limits and should be highly verbose, 
+comprehensive, and detailed (typically 400-800 characters each) because they will be rendered into a high-fidelity 
+visual image card.\n\n"
+bluesky_bot\google_ai_studio_one_shot.py:2513:            "Use Google Search ONLY to fact-check names, dates, and 
+medical/legal claims from the article. Do NOT use search results to alter your structural analysis or your Alethekanon 
+persona. "
+bluesky_bot\google_ai_studio_one_shot.py:2523:            "CRITICAL: In standard mode, each post must be kept strictly 
+under 280 characters to fit Bluesky limits (thread_formatting_son standard). Aim for 250-275 characters. BE 
+CONCISE.\n\n"
+bluesky_bot\google_ai_studio_one_shot.py:2541:def build_output_format(n, use_son=False, use_multi_aspect=False, 
+use_spiritual=False, spiritual_traditions="all"):
+bluesky_bot\google_ai_studio_one_shot.py:2543:    expected_len = 28 if (use_son and use_multi_aspect) else (27 if 
+use_son else 17)
+bluesky_bot\google_ai_studio_one_shot.py:2577:    if use_son and use_multi_aspect:
+bluesky_bot\google_ai_studio_one_shot.py:2595:        f"OUTPUT FORMAT - YOUR ENTIRE RESPONSE MUST BE A SINGLE VALID 
+JSON LIST OF LISTS. NO commentary, NO markdown formatting (other than JSON code fences if desired), NO explanation.\n"
+bluesky_bot\google_ai_studio_one_shot.py:2597:        f"The JSON array must contain exactly {n} elements (one per 
+candidate, in the same order). Each element must be a list of exactly {expected_len} items representing the evaluation 
+of that candidate in this specific structure:\n"
+bluesky_bot\google_ai_studio_one_shot.py:2627:        f"    ],                                         // item[10]: 
+posts array (logical thread sequence: Hook, Claim, Reality, Verdict, Context, Nuance, Breakdown, Social Physics, 
+Trajectory, Unavoidables, Personas...)\n"
+bluesky_bot\google_ai_studio_one_shot.py:2643:    if use_son:
+bluesky_bot\google_ai_studio_one_shot.py:2671:                '    [{"aspect": "Aspect Name", "claim_u": 0.5, 
+"claim_psi": 0.0, "real_u": -0.9, "real_psi": -0.8, "verdict": "FAIL", "reason": "1-line reason under 60 chars"}] // 
+item[27]: aspects breakdown\n'
+bluesky_bot\google_ai_studio_one_shot.py:2719:    if use_son:
+bluesky_bot\google_ai_studio_one_shot.py:2751:        "EXAMPLE RESPONSE (for a single candidate, format exactly as 
+JSON list of lists):\n"
+bluesky_bot\google_ai_studio_one_shot.py:2797:    if use_son:
+bluesky_bot\google_ai_studio_one_shot.py:2973:            res = requests.post("https://api.tavily.com/search", 
+json=payload, timeout=8)
+bluesky_bot\google_ai_studio_one_shot.py:2977:                data = res.json()
+bluesky_bot\google_ai_studio_one_shot.py:3101:                "Content-Type": "application/json"
+bluesky_bot\google_ai_studio_one_shot.py:3117:            res = requests.post("https://api.exa.ai/search", 
+headers=headers, json=payload, timeout=8)
+bluesky_bot\google_ai_studio_one_shot.py:3121:                data = res.json()
+bluesky_bot\google_ai_studio_one_shot.py:3437:def run_one_shot_evaluations(genai_client, candidates, model_name, 
+agnes_api_key=None, use_son=False, use_search=False, extra_context=None, model_sequence=None, compact=False, 
+five_word=False, thinking_level="MEDIUM", use_multi_aspect=False, use_spiritual=False, spiritual_traditions="all", 
+pre_grounded_dossier=None, pre_harvested_urls=None):
+bluesky_bot\google_ai_studio_one_shot.py:3461:    convergence_rules, formatting_rules = 
+build_formatting_rules(use_son=use_son, compact=compact, five_word=five_word, use_multi_aspect=use_multi_aspect, 
+use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
+bluesky_bot\google_ai_studio_one_shot.py:3463:    system_instruction = build_system_instruction(use_son=use_son, 
+compact=compact, five_word=five_word, use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, 
+spiritual_traditions=spiritual_traditions, extra_context=extra_context)
+bluesky_bot\google_ai_studio_one_shot.py:3469:    output_format = build_output_format(n, use_son=use_son, 
+use_multi_aspect=use_multi_aspect, use_spiritual=use_spiritual, spiritual_traditions=spiritual_traditions)
+bluesky_bot\google_ai_studio_one_shot.py:3521:        f"=== CANDIDATES TO EVALUATE ({n} total) 
+===\n{json.dumps(clean_candidates, separators=(',', ':'), ensure_ascii=False)}\n\n",
+bluesky_bot\google_ai_studio_one_shot.py:3905:                if getattr(pb, 'block_reason', None):
+bluesky_bot\google_ai_studio_one_shot.py:3907:                    raise ValueError(f"Prompt blocked by API policy: 
+{pb.block_reason}")
+bluesky_bot\google_ai_studio_one_shot.py:3911:            # Pre-flight JSON validation to trigger fallback on 
+truncation/corruption
+bluesky_bot\google_ai_studio_one_shot.py:3915:            if content.startswith("```json"):
+bluesky_bot\google_ai_studio_one_shot.py:3937:                raise ValueError("Model output does not contain a valid 
+JSON array structure (likely truncated or blocked by safety filters).")
+bluesky_bot\google_ai_studio_one_shot.py:3943:                json.loads(content[start_idx:end_idx+1])
+bluesky_bot\google_ai_studio_one_shot.py:3947:                raise ValueError(f"Model output is not complete valid 
+JSON (likely truncated): {je}")
+bluesky_bot\google_ai_studio_one_shot.py:4147:def transpose_flat_to_json(flat_text, use_multi_aspect=False, 
+use_spiritual=False, spiritual_traditions="all"):
+bluesky_bot\google_ai_studio_one_shot.py:4153:    if content.startswith("```json"):
+bluesky_bot\google_ai_studio_one_shot.py:4177:        print("ERROR: Could not find valid JSON array brackets in model 
+output.")
+bluesky_bot\google_ai_studio_one_shot.py:4189:    json_str = content[start_idx:end_idx+1]
+bluesky_bot\google_ai_studio_one_shot.py:4195:        data = json.loads(json_str)
+bluesky_bot\google_ai_studio_one_shot.py:4199:        print(f"Warning: Failed to parse response as complete JSON 
+({je}). Attempting block-by-block recovery of completed elements...")
+bluesky_bot\google_ai_studio_one_shot.py:4239:                        parsed = json.loads(block_str)
+bluesky_bot\google_ai_studio_one_shot.py:4257:            print("ERROR: Block-by-block parser could not recover any 
+valid JSON elements.")
+bluesky_bot\google_ai_studio_one_shot.py:4259:            print("--- EXTRACTED JSON STRING (first 500 chars) ---")
+bluesky_bot\google_ai_studio_one_shot.py:4261:            print(json_str[:500])
+bluesky_bot\google_ai_studio_one_shot.py:4269:            print(f"Successfully recovered {len(data)} completed 
+evaluation element(s) from truncated JSON.")
+bluesky_bot\google_ai_studio_one_shot.py:4275:        print("ERROR: Parsed JSON is not a list.")
+bluesky_bot\google_ai_studio_one_shot.py:4683:            # Normalise category: store as a comma-joined string so it's 
+JSON-friendly
+bluesky_bot\google_ai_studio_one_shot.py:4821:            filename = f"factcheck_{slug}.json"
+bluesky_bot\google_ai_studio_one_shot.py:4827:                json.dump([story], f, indent=2, ensure_ascii=False)
+bluesky_bot\google_ai_studio_one_shot.py:4869:    parser.add_argument("--son", action="store_true", help="Use the 
+6-Attractor SON convergence model and formatting instructions")
+bluesky_bot\google_ai_studio_one_shot.py:4923:    parser.add_argument("--candidates", type=str, default=None, 
+help="Path to existing candidate JSON file to evaluate directly (skips harvesting)")
+bluesky_bot\google_ai_studio_one_shot.py:4925:    parser.add_argument("--policy-report", action="store_true", 
+help="Print a formatted policy tracking report from policy_ledger.json and exit")
+bluesky_bot\google_ai_studio_one_shot.py:4941:                    ledger_data = json.load(f)
+bluesky_bot\google_ai_studio_one_shot.py:4965:                print("No policy ledger found at policy_ledger.json.")
+bluesky_bot\google_ai_studio_one_shot.py:5091:        scratch_candidates_path = os.path.join(script_dir, 
+"harvested_candidates.json")
+bluesky_bot\google_ai_studio_one_shot.py:5143:        scratch_candidates_path = os.path.join(script_dir, 
+"harvested_candidates.json")
+bluesky_bot\google_ai_studio_one_shot.py:5157:            candidates = json.load(f)
+bluesky_bot\google_ai_studio_one_shot.py:5187:    if args.son:
+bluesky_bot\google_ai_studio_one_shot.py:5189:        convergence_path = os.path.join(workspace_dir, ".agent", 
+"tools", "convergence-test", "convergence_son_lite.md")
+bluesky_bot\google_ai_studio_one_shot.py:5191:        formatting_path = os.path.join(script_dir, "instructions", 
+"thread_formatting_son.md")
+bluesky_bot\google_ai_studio_one_shot.py:5419:                    use_son=args.son, use_search=args.search,
+bluesky_bot\google_ai_studio_one_shot.py:5439:                parsed = transpose_flat_to_json(raw_text, 
+use_multi_aspect=is_multi_aspect_active, use_spiritual=is_spiritual_active, 
+spiritual_traditions=args.spiritual_traditions)
+bluesky_bot\google_ai_studio_one_shot.py:5615:                            if args.son:
+bluesky_bot\google_ai_studio_one_shot.py:5655:                        elif args.son and isinstance(item, list) and 
+len(item) >= 25:
+bluesky_bot\google_ai_studio_one_shot.py:5673:                        elif not args.son and isinstance(item, list) and 
+len(item) >= 9:
+bluesky_bot\google_ai_studio_one_shot.py:5699:                            desc = f"R_net={real_rnet:.2f}, 
+delta={hypocrisy:.2f}" if args.son else f"hypocrisy={hypocrisy:.2f}"
+bluesky_bot\google_ai_studio_one_shot.py:5749:                                        use_son=args.son, 
+use_search=True, # Force search grounding ON
+bluesky_bot\google_ai_studio_one_shot.py:5765:                                    ref_parsed = 
+transpose_flat_to_json(ref_raw, use_multi_aspect=args.multi_aspect, use_spiritual=is_spiritual_active, 
+spiritual_traditions=args.spiritual_traditions)
+bluesky_bot\google_ai_studio_one_shot.py:5893:            # Archive exhausted candidates to 
+stories/fail/skipped_candidates.jsonl
+bluesky_bot\google_ai_studio_one_shot.py:5895:            fail_log = os.path.join(script_dir, "stories", "fail", 
+"skipped_candidates.jsonl")
+bluesky_bot\google_ai_studio_one_shot.py:5905:                        ff.write(json.dumps(fc, ensure_ascii=False) + 
+"\n")
+bluesky_bot\google_ai_studio_one_shot.py:5915:            # Quarantine offending candidates to 
+stories/quarantine/quarantined_candidates.jsonl for analysis later
+bluesky_bot\google_ai_studio_one_shot.py:5917:            quarantine_log = os.path.join(script_dir, "stories", 
+"quarantine", "quarantined_candidates.jsonl")
+bluesky_bot\google_ai_studio_one_shot.py:5935:                        q_rec["quarantine_reason"] = "All evaluation 
+models failed or blocked"
+bluesky_bot\google_ai_studio_one_shot.py:5937:                        qf.write(json.dumps(q_rec, ensure_ascii=False) + 
+"\n")
+bluesky_bot\google_ai_studio_one_shot.py:5955:            promote_and_register_selector(args.son)
+bluesky_bot\google_ai_studio_one_shot.py:5963:        queue_file_path = os.path.join(script_dir, 
+"harvested_candidates.json")
+bluesky_bot\google_ai_studio_one_shot.py:5971:                    q_data = json.load(f)
+bluesky_bot\google_ai_studio_one_shot.py:6001:                        json.dump(trimmed_q, f, indent=2, 
+ensure_ascii=False)
+bluesky_bot\google_ai_studio_one_shot.py:6065:                rebuild_registries_selector(args.son)
+bluesky_bot\google_ai_studio_one_shot.py:6079:    rebuild_registries_selector(args.son)
+
+

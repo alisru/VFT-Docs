@@ -1,0 +1,113 @@
+{
+  "cycle": 19,
+  "framework": "Argon 4 Distillation — Real-Time Parliamentary Stream Sieve & 14-Polar Matrix",
+  "timestamp": "2026-10-14T15:58:12+11:00",
+  "stream_case_study": [
+    {
+      "turn_id": 1,
+      "speaker": "Shadow Minister for Transport",
+      "role": "Opposition Scrutiny Question",
+      "text": "Why are rural highway fatalities rising while regional councils face insolvency over unfunded airport mandates?",
+      "dominant_plane": "Q1",
+      "parable_archetype": "ROCKY_GROUND",
+      "archetype_score": 0.8291,
+      "substrate_passthrough": 1.0,
+      "spin_evasion_index": 0.0,
+      "diagnostic_flag": "UNROOTED_RHETORIC_RISK"
+    },
+    {
+      "turn_id": 2,
+      "speaker": "Minister for Infrastructure (First Answer)",
+      "role": "Ministerial Deflection",
+      "text": "The opposition has no credibility after spending a decade neglecting roads and slashing frontline transport staff!",
+      "dominant_plane": "Q1",
+      "parable_archetype": "ROCKY_GROUND",
+      "archetype_score": 0.7192,
+      "substrate_passthrough": 1.0,
+      "spin_evasion_index": 2.0,
+      "diagnostic_flag": "UNROOTED_RHETORIC_RISK"
+    },
+    {
+      "turn_id": 3,
+      "speaker": "Opposition Leader (Follow-up Attack)",
+      "role": "Follow-up Point of Order",
+      "text": "The minister fails to provide a single dollar or strategic explanation for the surging national road toll!",
+      "dominant_plane": "Q1",
+      "parable_archetype": "ROCKY_GROUND",
+      "archetype_score": 0.8291,
+      "substrate_passthrough": 1.0,
+      "spin_evasion_index": 5.99,
+      "diagnostic_flag": "RHETORICAL_EVASION_SPIN"
+    },
+    {
+      "turn_id": 4,
+      "speaker": "Regional Independent Crossbench",
+      "role": "Constructive Interlocutor",
+      "text": "I ask the Prime Minister directly: will the government co-fund runway screening and asphalt resurfacing for country towns?",
+      "dominant_plane": "Q3",
+      "parable_archetype": "ROCKY_GROUND",
+      "archetype_score": 0.3672,
+      "substrate_passthrough": 1.0,
+      "spin_evasion_index": 2.39,
+      "diagnostic_flag": "UNROOTED_RHETORIC_RISK"
+    },
+    {
+      "turn_id": 5,
+      "speaker": "Prime Minister",
+      "role": "Executive Bipartisan Accord Delivery",
+      "text": "I announce today a $3 billion regional transport safety partnership co-funding rural runways and physical road barrier upgrades.",
+      "dominant_plane": "Q3",
+      "parable_archetype": "GOOD_SOIL",
+      "archetype_score": 0.7575,
+      "substrate_passthrough": 1.0,
+      "spin_evasion_index": 0.97,
+      "diagnostic_flag": "PRODUCTIVE_STEWARDSHIP"
+    },
+    {
+      "turn_id": 6,
+      "speaker": "Unfunded Pre-Election Backbencher",
+      "role": "Rhetorical Over-Promise (Delusion)",
+      "text": "We promise that our tax reforms will instantly eliminate all regional living costs and deliver automatic trillion-dollar wealth!",
+      "dominant_plane": "Q5",
+      "parable_archetype": "ROCKY_GROUND",
+      "archetype_score": 0.8909,
+      "substrate_passthrough": 0.0,
+      "spin_evasion_index": 14333.32,
+      "diagnostic_flag": "CRITICAL_SUBSTRATE_DELUSION"
+    },
+    {
+      "turn_id": 7,
+      "speaker": "Shadow Treasurer",
+      "role": "Fiscal Scrutiny",
+      "text": "Treasury ledgers reveal $1 billion underspent in Queensland road funds locked in Canberra accounts while bridges deteriorate.",
+      "dominant_plane": "Q5",
+      "parable_archetype": "BURIED_TALENT",
+      "archetype_score": 0.8696,
+      "substrate_passthrough": 1.0,
+      "spin_evasion_index": 32666.68,
+      "diagnostic_flag": "RHETORICAL_EVASION_SPIN"
+    },
+    {
+      "turn_id": 8,
+      "speaker": "Minister for Infrastructure (Statutory Resolution)",
+      "role": "Final Legislative Accord",
+      "text": "The House agrees to the National Transport Safety Bill releasing the full $1 billion reserve under independent auditor general oversight.",
+      "dominant_plane": "Q3",
+      "parable_archetype": "GOOD_SOIL",
+      "archetype_score": 0.6795,
+      "substrate_passthrough": 1.0,
+      "spin_evasion_index": 1.11,
+      "diagnostic_flag": "PRODUCTIVE_STEWARDSHIP"
+    }
+  ],
+  "unified_neural_training": {
+    "total_tuples": 220,
+    "vocab_size": 840,
+    "latent_dim": 64,
+    "initial_loss": 1.826908,
+    "final_loss": 0.826951,
+    "coordinate_mae": 0.00831,
+    "antipodal_closure_error": 0.018651,
+    "adversarial_verdict": "100% PASS across all audits"
+  }
+}

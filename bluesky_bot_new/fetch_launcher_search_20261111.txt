@@ -1,0 +1,311 @@
+Command exited with code 0.
+
+Command output:
+
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:8:# Redirect stdout and stderr to dummy writers if running 
+under pythonw.exe (where they are None)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:9:# to prevent prints, warnings, and library logs from crashing 
+the application.
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:10:if sys.stdout is None or sys.stderr is None:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:23:        os.path.join(script_dir, ".venv", "Scripts", 
+"pythonw.exe"),
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:24:        os.path.join(script_dir, "bluesky_bot", ".venv", 
+"Scripts", "pythonw.exe")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:25:    ]
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:26:    venv_pyw = None
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:36:            subprocess.Popen(full_argv, cwd=script_dir)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:37:            sys.exit(0)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:38:        except Exception:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:129:        self.eval_process = None
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:130:        self.post_process = None
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:131:        self.reply_process = None
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:179:        # Load RSS feeds and Category mapping 
+statically/dynamically from harvester script
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:180:        self.category_feeds, self.feed_definitions = 
+self.load_rss_feeds_from_script()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:181:        self.feed_vars = {}
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:314:    def get_python_bin(self):
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:315:        script_dir = 
+os.path.dirname(os.path.abspath(__file__))
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:316:        venv_main = os.path.join(script_dir, ".venv", 
+"Scripts", "python.exe")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:317:        venv_bot = os.path.join(script_dir, "bluesky_bot", 
+".venv", "Scripts", "python.exe")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:318:        if os.path.exists(venv_main):
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:319:            return os.path.abspath(venv_main)
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:322:        return sys.executable or "python"
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:323:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:324:    def set_window_icon(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:461:    def log_eval(self, text):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:462:        self.log_queue.put(("eval", text))
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:463:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:464:    def log_post(self, text):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:478:                if target == "eval":
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:479:                    text_widget = self.eval_text
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:480:                elif target == "reply":
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:481:                    text_widget = getattr(self, 
+"reply_text", self.post_text)
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:597:        # Row 5: Batch Evaluator Card
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:598:        self.create_batch_card(left_panel)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:599:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:609:        self.create_eval_console_card(right_panel)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:610:        self.create_post_console_card(right_panel)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:611:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:702:                # Exclude helper config files like 
+index.json, filtered_candidates.json, harvested_candidates.json
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:703:                draft_count = len([
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:704:                    f for f in os.listdir(stories_dir) 
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:732:        # Count harvested stories buffer (queue)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:733:        queue_count = 0
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:734:        queue_path = os.path.join(bot_dir, 
+"harvested_candidates.json")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:735:        if os.path.exists(queue_path):
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:736:            try:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:806:        desc = tk.Label(inner, text="Harvest and judge 
+historical events, specific actors in time, or named policy records.", font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:807:        desc.pack(anchor="w", pady=(0, 8))
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:808:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:953:        chk_reply_ai = ttk.Checkbutton(inner, text="✨ AI 
+Persona Polish (Use Evaluator Fallback Sequence for Natural Synthesis across Queue)", variable=self.val_reply_ai, 
+style="Feeds.TCheckbutton")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:954:        chk_reply_ai.pack(anchor="w", pady=(2, 4))
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:955:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1020:        lbl = tk.Label(inner, text="One-Shot Batch 
+Evaluator", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1021:        lbl.pack(anchor="w", pady=(0, 8))
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1022:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1297:            inner, text="Run One-Shot Batch Evaluation", 
+font=self.font_body, bg=ACCENT_CYAN, fg=TEXT_COLOR,
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1298:            relief="flat", borderwidth=0, padx=12, pady=5, 
+cursor="hand2", command=self.run_one_shot_batch
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1299:        )
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1350:    def create_eval_console_card(self, parent):
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1351:        card = ttk.Frame(parent, style="Card.TFrame")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1352:        card.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1360:        lbl = tk.Label(header, text="Evaluator / Registry 
+Output", font=self.font_subtitle, fg=ACCENT_CYAN, bg=CARD_BG)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1361:        lbl.pack(side=tk.LEFT)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1362:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1363:        self.btn_kill_eval = tk.Button(
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1364:            header, text="Cancel Evaluator Action", 
+font=self.font_body, bg=DANGER_COLOR, fg=TEXT_COLOR,
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1365:            relief="flat", borderwidth=0, padx=8, pady=2, 
+cursor="hand2", command=self.kill_eval_process, state=tk.DISABLED
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1366:        )
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1367:        self.btn_kill_eval.pack(side=tk.RIGHT, padx=5)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1368:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1369:        btn_clear = tk.Button(
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1371:            relief="flat", borderwidth=0, padx=8, pady=2, 
+cursor="hand2", command=self.clear_eval_console
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1372:        )
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1373:        btn_clear.pack(side=tk.RIGHT)
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1381:        self.eval_text = tk.Text(
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1382:            txt_frame, bg=BG_COLOR, fg=TEXT_COLOR, 
+insertbackground=TEXT_COLOR, height=13,
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1383:            font=self.font_console, relief="flat", 
+borderwidth=0, yscrollcommand=scrollbar.set
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1385:        self.eval_text.pack(side=tk.LEFT, fill=tk.BOTH, 
+expand=True)
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1386:        scrollbar.config(command=self.eval_text.yview)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1387:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1388:    def create_post_console_card(self, parent):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1461:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1462:        root_dir = 
+os.path.dirname(os.path.abspath(__file__))
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1463:        source_script = os.path.join(root_dir, 
+"bluesky_bot", "source_server.py")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1473:        subprocess.Popen(
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1474:            [python_bin, source_script],
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1475:            cwd=os.path.join(root_dir, "bluesky_bot"),
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1476:            creationflags=subprocess.CREATE_NO_WINDOW if 
+os.name == 'nt' else 0
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1480:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1481:        root_dir = 
+os.path.dirname(os.path.abspath(__file__))
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1482:        chat_script = os.path.join(root_dir, 
+"bluesky_bot", "chat_server.py")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1492:        subprocess.Popen(
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1493:            [python_bin, chat_script],
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1494:            cwd=os.path.join(root_dir, "bluesky_bot"),
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1495:            creationflags=subprocess.CREATE_NO_WINDOW if 
+os.name == 'nt' else 0
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1509:        tk.Label(hdr, text="Browse the exact RSS feeds 
+harvested under each category. Apply categories or sync feed selections instantly.", font=self.font_body, 
+fg=TEXT_MUTED, bg=CARD_BG).pack(anchor="w")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1510:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1511:        # Category Buttons Bar
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1557:                feed_display.insert(tk.END, f"Feeds 
+harvested when --category {cat_key} is selected:\n\n")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1558:                for item in flist:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1559:                    feed_display.insert(tk.END, f"  • 
+{item['name']:<32} {item['url']}\n")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1604:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1605:        url = 
+"http://localhost:8000/bluesky_bot/control_panel.html"
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1606:        
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1607:        # Run pywebview inside a separate background 
+python process to avoid GUI thread deadlocks
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1608:        code = f"import webview; 
+webview.create_window('Aletheia Control Panel', '{url}', width=1400, height=850); webview.start()"
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1609:        
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1610:        subprocess.Popen(
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1611:            [python_bin, "-c", code],
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1612:            creationflags=subprocess.CREATE_NO_WINDOW if 
+os.name == 'nt' else 0
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1613:        )
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1615:    def clear_eval_console(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1616:        self.eval_text.delete("1.0", tk.END)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1617:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1618:    def clear_post_console(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1621:    def set_eval_running(self, running):
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1622:        if running:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1623:            self.btn_run_batch.configure(state=tk.DISABLED)
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1627:            self.btn_kill_eval.configure(state=tk.NORMAL)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1628:        else:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1629:            self.btn_run_batch.configure(state=tk.NORMAL)
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1633:            self.btn_kill_eval.configure(state=tk.DISABLED)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1634:            self.root.after(1, self.refresh_hud_stats)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1635:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1645:    def run_eval_subprocess_async(self, cmd_args):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1646:        self.set_eval_running(True)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1647:        def worker():
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1648:            try:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1649:                self.log_eval(f"\n> Running: {' 
+'.join(cmd_args)}\n")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1650:                self.eval_process = subprocess.Popen(
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1651:                    cmd_args,
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1652:                    stdout=subprocess.PIPE,
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1659:                self.read_stream(self.eval_process.stdout, 
+"eval")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1660:                self.eval_process.wait()
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1661:                self.log_eval(f"\n--- Process finished 
+with exit code {self.eval_process.returncode} ---\n")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1662:            except Exception as e:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1663:                self.log_eval(f"\nError running process: 
+{e}\n")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1664:            finally:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1665:                self.eval_process = None
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1666:                self.root.after(1, lambda: 
+self.set_eval_running(False))
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1667:        threading.Thread(target=worker, 
+daemon=True).start()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1668:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1669:    def kill_eval_process(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1670:        if self.eval_process:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1671:            self.log_eval("\n*** Terminating evaluator 
+process... ***\n")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1672:            self.eval_process.terminate()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1673:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1674:    def kill_post_process(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1688:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1689:        script = "bluesky_bot/rebuild_registries_son.py" 
+if (self.val_son.get() or self.val_potential.get()) else "bluesky_bot/rebuild_registries.py"
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1690:        self.run_eval_subprocess_async([python_bin, "-u", 
+script])
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1691:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1692:    def update_sequence_from_listbox(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1711:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1712:        args = [
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1713:            python_bin, "-u",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1714:            "bluesky_bot/google_ai_studio_one_shot.py",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1715:            "--rss", self.ent_rss.get().strip(),
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1777:        self.run_eval_subprocess_async(args)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1778:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1779:    def run_research_probe(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1783:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1784:        args = [
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1785:            python_bin, "-u",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1786:            "bluesky_bot/google_ai_studio_one_shot.py",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1787:            "--probe", query
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1816:        self.run_eval_subprocess_async(args)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1817:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1818:    def open_chat_ui(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1825:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1826:        args = [
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1827:            python_bin, "-u",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1828:            "bluesky_bot/google_ai_studio_one_shot.py",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1829:            "--policy-report"
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1831:        self.run_eval_subprocess_async(args)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1832:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1833:    def run_live_post(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1834:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1835:        self.set_post_running(True)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1836:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1841:                val_args = [python_bin, "-u", 
+"bluesky_bot/validate_batch.py"]
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1842:                if self.val_post_five_word.get():
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1843:                    val_args.append("--five-word")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1849:                val_proc = subprocess.Popen(
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1850:                    val_args,
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1851:                    stdout=subprocess.PIPE,
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1869:                args = [python_bin, "-u", 
+"bluesky_bot/post_batch.py", "--live"]
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1870:                
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1871:                if self.val_post_five_word.get():
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1891:                post_proc = subprocess.Popen(
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1892:                    args,
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1893:                    stdout=subprocess.PIPE,
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1918:                cmd_proc = subprocess.Popen(
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1919:                    cmd_args,
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1920:                    stdout=subprocess.PIPE,
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1962:                cmd_proc = subprocess.Popen(
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1963:                    cmd_args,
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:1964:                    stdout=subprocess.PIPE,
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2010:            python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2011:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2012:            # Read ordered perspective queue from 
+drag-and-drop listbox
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2038:                python_bin, "-u",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2039:                "bluesky_bot/direct_reply_dispatcher.py",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2040:                "--target-url", target_url,
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2086:                subprocess.Popen(["xdg-open", latest])
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2087:        except Exception as e:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2088:            self.log_reply(f"\nError previewing card 
+image: {e}\n")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2103:            text="Re-evaluate an existing story with 
+multi-source wire grounding, verify the draft & cards, and publish the correction reply directly to Bluesky.",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2104:            font=self.font_body, fg=TEXT_MUTED, bg=CARD_BG
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2105:        )
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2139:        lbl_engine = tk.Label(grid_frame, text="⚡ Uses 
+Active Evaluator Model Fallback Queue", bg=CARD_BG, fg=SUCCESS_COLOR, font=("Segoe UI", 8))
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2140:        lbl_engine.grid(row=2, column=1, columnspan=3, 
+sticky="w", pady=2)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2141:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2173:            self.log_eval("\n[ERROR] Target Story slug or 
+Bluesky post URL cannot be empty.\n")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2174:            return
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2175:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2177:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2178:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2179:        cmd = [
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2180:            python_bin, "-u", 
+"bluesky_bot/reaudit_story.py",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2181:            "--target", target,
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2182:            "--reason", reason
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2193:        self.log_eval(f"\n> Launching Story Re-Audit 
+Draft: {' '.join(cmd)}\n")
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2194:        self.run_eval_subprocess_async(cmd)
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2195:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2196:    def preview_correction_cards(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2221:                self.log_eval(f"\n[NOTICE] No correction 
+card found yet for '{slug}'. Run '1. Generate Correction Draft' first.\n")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2222:                return
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2223:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2224:            self.log_eval(f"\n[PREVIEW] Opening card 
+image: {found}\n")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2225:            if sys.platform == "win32":
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2226:                os.startfile(found)
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2228:                subprocess.Popen(["xdg-open", found])
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2229:        except Exception as e:
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2230:            self.log_eval(f"\nError previewing card image: 
+{e}\n")
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2231:
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2232:    def post_story_correction_live(self):
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2260:        python_bin = self.get_python_bin()
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2261:        cmd = [
+> E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2262:            python_bin, "-u", 
+"bluesky_bot/aletheia_bot.py",
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2263:            "--config", target_json,
+  E:\Vector Field Theory\VFT Docs\AletheiaLauncher.pyw:2264:            "--live",
+
+

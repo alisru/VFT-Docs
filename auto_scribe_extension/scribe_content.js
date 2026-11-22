@@ -18,15 +18,23 @@
 
   // Default configuration
   let config = {
-    minChars: 50,
-    debounceMs: 1500,
+    minChars: 30,
+    debounceMs: 300,
     enabled: true,
     showIndicator: true,
     ignoredDomains: []
   };
 
   // Check if current domain is blacklisted
-  const currentHost = window.location.hostname.replace(/^www\./, '').toLowerCase();
+  function getEffectiveHost() {
+    try {
+      const h = (window.top && window.top.location.hostname) || window.location.hostname;
+      return h.replace(/^www\./, '').toLowerCase();
+    } catch (e) {
+      return window.location.hostname.replace(/^www\./, '').toLowerCase();
+    }
+  }
+  const currentHost = getEffectiveHost();
 
   // Load settings from background
   try {
@@ -45,6 +53,7 @@
   let lastActiveElement = null;
   let lastActiveDraftId = null;
   let debounceTimer = null;
+  let currentWorkingTextMap = new WeakMap();
   let sessionKeyMap = new WeakMap();
   let savedDraftMap = new WeakMap();
   let submittedDrafts = new Set();
@@ -67,9 +76,10 @@
       return el;
     }
 
-    const ce = el.closest('[contenteditable="true"], [role="textbox"], .ProseMirror, .public-DraftEditor-content, [data-lexical-editor="true"], .ql-editor');
+    const ce = el.closest('[contenteditable="true"], [role="textbox"], .ProseMirror, .public-DraftEditor-content, [data-lexical-editor="true"], .ql-editor, body.cke_editable');
     if (ce) return ce;
-    if (el.isContentEditable) return el;
+    if (el.isContentEditable || el.contentEditable === 'true') return el;
+    if (el.ownerDocument && el.ownerDocument.designMode === 'on') return el.ownerDocument.body;
     return null;
   }
 
@@ -183,7 +193,11 @@
     }
 
     if (!contextTitle) {
-      contextTitle = document.title || window.location.pathname;
+      try {
+        contextTitle = (window.top && window.top.document.title) || document.title || window.location.pathname;
+      } catch (e) {
+        contextTitle = document.title || window.location.pathname;
+      }
     }
 
     // Clean up generic suffixes
@@ -252,7 +266,15 @@
     if (!el || !window.MutationObserver) return;
     if (activeObserver) activeObserver.disconnect();
 
-    activeObserver = new MutationObserver(() => {
+    activeObserver = new MutationObserver((mutations) => {
+      // Ignore mutations caused by our own indicator widget
+      const isOurIndicator = mutations.every(m => {
+        return Array.from(m.addedNodes).concat(Array.from(m.removedNodes)).every(n => {
+          return n.id === '__auto_scribe_field_indicator' || (n.classList && n.classList.contains('__auto_scribe'));
+        });
+      });
+      if (isOurIndicator) return;
+
       if (activeElement) {
         evaluateTextChange(activeElement);
       }
@@ -265,10 +287,26 @@
     });
   }
 
+  function getEffectiveUrl() {
+    try {
+      return (window.top && window.top.location.href) || window.location.href;
+    } catch (e) {
+      return window.location.href;
+    }
+  }
+
+  function getEffectiveTitle() {
+    try {
+      return (window.top && window.top.document.title) || document.title || '';
+    } catch (e) {
+      return document.title || '';
+    }
+  }
+
   /**
    * Save draft snapshot to storage
    */
-  function persistDraft(el, text) {
+  function persistDraft(el, text, statusOverride = null) {
     if (!config.enabled) return;
     if (config.ignoredDomains && config.ignoredDomains.some(d => d && currentHost.includes(d.toLowerCase()))) {
       return;
@@ -282,18 +320,20 @@
     const contextTitle = detectContext();
     const wordCount = text.split(/\s+/).filter(Boolean).length;
     const nowIso = new Date().toISOString();
+    const isPosted = statusOverride === 'posted';
 
     const payload = {
       id: draftId,
       site: currentHost,
-      url: window.location.href,
-      page_title: document.title || '',
+      url: getEffectiveUrl(),
+      page_title: getEffectiveTitle(),
       context_title: contextTitle,
       text: text,
       char_count: text.length,
       word_count: wordCount,
       updated_at: nowIso,
-      status: 'draft'
+      status: isPosted ? 'posted' : 'draft',
+      posted_at: isPosted ? nowIso : undefined
     };
 
     lastSavedText = text;
@@ -329,28 +369,47 @@
     const prevSaved = savedDraftMap.get(root) || '';
 
     if (text.length >= config.minChars) {
+      currentWorkingTextMap.set(root, text);
       updateIndicator('saving', root);
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => {
         persistDraft(root, text);
-      }, config.debounceMs || 1500);
+      }, config.debounceMs || 800);
     } else {
       // Text dropped below threshold or was cleared completely
       hideIndicator();
       clearTimeout(debounceTimer);
 
-      if (prevSaved && prevSaved.length >= config.minChars) {
+      const hadText = currentWorkingTextMap.get(root) || prevSaved || '';
+      if (hadText && hadText.length >= config.minChars) {
         const isRecentSubmit = (activeEmptyCheck && activeEmptyCheck.did === draftId && !activeEmptyCheck.done) ||
-                               submittedDrafts.has(draftId);
+                               submittedDrafts.has(draftId) ||
+                               (Date.now() - lastSubmitTime < 2500);
+
         if (isRecentSubmit) {
           console.log('[Auto-Scribe] ✓ Submission confirmed on text drop:', draftId);
           if (activeEmptyCheck) activeEmptyCheck.done = true;
-          markDraftPosted(draftId);
-          submittedDrafts.delete(draftId);
+          const payload = {
+            id: draftId,
+            site: currentHost,
+            url: window.location.href,
+            page_title: document.title || '',
+            context_title: detectContext(),
+            text: hadText,
+            char_count: hadText.length,
+            word_count: hadText.split(/\s+/).filter(Boolean).length,
+            updated_at: new Date().toISOString(),
+            status: 'posted',
+            posted_at: new Date().toISOString()
+          };
+          chrome.runtime.sendMessage({ action: 'SAVE_DRAFT', payload: payload });
+          chrome.runtime.sendMessage({ action: 'MARK_DRAFT_POSTED', id: draftId, payload: payload });
+          submittedDrafts.add(draftId);
         } else {
           console.log('[Auto-Scribe] ✗ Manual text deletion without submit. Deleting draft:', draftId);
           deleteSavedDraft(draftId);
         }
+        currentWorkingTextMap.delete(root);
         savedDraftMap.delete(root);
         sessionKeyMap.delete(root); // Refresh session ID for any subsequent post in this box
       }
@@ -363,12 +422,18 @@
    */
   function isCanvasOrDocEditor(el) {
     if (!el) return false;
+    const tag = (el.tagName || '').toLowerCase();
+    if (tag === 'textarea' || tag === 'input') return false;
+    if (el.getAttribute && el.getAttribute('role') === 'textbox') return false;
+    if (el.closest && el.closest('rich-textarea, #prompt-textarea, [data-testid*="prompt"], [data-testid*="chat-input"], .text-input-field')) {
+      return false;
+    }
+
     const target = el.closest ? el : el.parentElement;
     if (!target) return false;
     return !!target.closest(
-      '[data-testid*="canvas" i], [class*="canvas" i], [id*="canvas" i], ' +
-      '.cm-editor, .CodeMirror, [role="document"], .monaco-editor, ' +
-      '[data-testid*="code-editor"], [aria-label*="canvas" i], [aria-label*="document" i]'
+      '[data-testid*="canvas-editor" i], [id*="canvas-editor" i], [class*="canvas-editor" i], ' +
+      '.monaco-editor, .cm-editor, .CodeMirror, [data-testid*="code-editor"]'
     );
   }
 
@@ -380,8 +445,7 @@
    */
   function triggerPotentialSubmit(source, sourceTarget = null) {
     const now = Date.now();
-    // Throttle submit checks: maximum once per 1.5s
-    if (now - lastSubmitArmTime < 1500) return;
+    lastSubmitTime = now;
 
     const target = sourceTarget || activeElement || lastActiveElement;
     if (!target) return;
@@ -389,8 +453,8 @@
     // Never trigger submit clearance checks on a canvas/document editor!
     if (isCanvasOrDocEditor(target)) return;
 
-    // Strictly check CURRENT text in the box. NEVER resurrect from old saved text!
-    const currentText = extractText(target);
+    // Strictly check CURRENT text in the box or working text in memory
+    const currentText = extractText(target) || currentWorkingTextMap.get(target) || '';
     if (!currentText || currentText.length < config.minChars) {
       return;
     }
@@ -399,7 +463,12 @@
     if (!did) return;
 
     lastSubmitArmTime = now;
-    lastSubmitTime = now;
+
+    // ATOMIC PRE-DISPATCH: Instantly save as 'posted' into background storage right now!
+    // If the page redirects or clears immediately, the post is already 100% saved and marked posted.
+    clearTimeout(debounceTimer);
+    persistDraft(target, currentText, 'posted');
+    submittedDrafts.add(did);
 
     activeEmptyCheck = {
       target: target,
@@ -409,9 +478,9 @@
       done: false
     };
 
-    console.log(`[Auto-Scribe] 🎯 Submit check ARMED for draft: ${did} (${currentText.length} chars from ${source}). Watching for clearance...`);
+    console.log(`[Auto-Scribe] 🎯 Instant POST buffered & dispatched for draft: ${did} (${currentText.length} chars from ${source}).`);
 
-    const delays = [80, 200, 450, 800, 1400, 2200, 3500];
+    const delays = [60, 150, 350, 700, 1200, 2000, 3500];
     delays.forEach(delay => {
       setTimeout(() => {
         if (!activeEmptyCheck || activeEmptyCheck.done || activeEmptyCheck.did !== did) return;
@@ -425,35 +494,8 @@
         const isCleared = isUnmounted || !remText || (remText.length < config.minChars && remText !== activeEmptyCheck.text);
 
         if (isCleared) {
-          console.log(`[Auto-Scribe] ✅ BOX CLEARED at ${delay}ms! MARKING AS POSTED:`, activeEmptyCheck.did);
           activeEmptyCheck.done = true;
-          clearTimeout(debounceTimer);
-
-          const payload = {
-            id: activeEmptyCheck.did,
-            site: currentHost,
-            url: window.location.href,
-            page_title: document.title || '',
-            context_title: activeEmptyCheck.context,
-            text: activeEmptyCheck.text,
-            char_count: activeEmptyCheck.text.length,
-            word_count: activeEmptyCheck.text.split(/\s+/).filter(Boolean).length,
-            updated_at: new Date().toISOString(),
-            status: 'posted',
-            posted_at: new Date().toISOString()
-          };
-
-          chrome.runtime.sendMessage({
-            action: 'SAVE_DRAFT',
-            payload: payload
-          });
-          chrome.runtime.sendMessage({
-            action: 'MARK_DRAFT_POSTED',
-            id: activeEmptyCheck.did,
-            payload: payload
-          });
-
-          submittedDrafts.add(activeEmptyCheck.did);
+          currentWorkingTextMap.delete(activeEmptyCheck.target);
           savedDraftMap.delete(activeEmptyCheck.target);
           sessionKeyMap.delete(activeEmptyCheck.target);
 
@@ -489,16 +531,16 @@
       if (slot === 'submit-button' || testId.includes('submit') || testId.includes('comment') || testId.includes('post')) {
         return true;
       }
-      const submitRegex = /comment|post|reply|send|publish|tweet|submit|share|arrow_upward/i;
+      const submitRegex = /comment|post|reply|send|publish|tweet|submit|share|arrow_upward|save/i;
       if (submitRegex.test(aria) || submitRegex.test(title)) {
         return true;
       }
       const isButton = tag === 'button' || role === 'button' || type === 'submit';
       if (isButton) {
-        if (/^(comment|post|reply|send|publish|submit|tweet|share)$/i.test(text)) {
+        if (/^(comment|post|reply|send|publish|submit|tweet|share|save)$/i.test(text)) {
           return true;
         }
-        if (submitRegex.test(className)) {
+        if (submitRegex.test(className) || node.id.includes('submit') || (node.name && node.name.includes('submit'))) {
           return true;
         }
         if (node.querySelector('svg, [data-icon*="send"], [class*="send"], [class*="submit"], [class*="post"]')) {
@@ -514,15 +556,12 @@
    */
   function handleFlush() {
     clearTimeout(debounceTimer);
-    if (activeElement) {
-      const text = extractText(activeElement);
-      const prevSaved = savedDraftMap.get(activeElement);
-      if (text !== prevSaved) {
-        if (text.length >= config.minChars) {
-          persistDraft(activeElement, text);
-        } else if (prevSaved && prevSaved.length >= config.minChars) {
-          evaluateTextChange(activeElement);
-        }
+    const target = activeElement || lastActiveElement;
+    if (target) {
+      const text = extractText(target);
+      const prevSaved = savedDraftMap.get(target);
+      if (text && text.length >= config.minChars && text !== prevSaved) {
+        persistDraft(target, text);
       }
     }
   }
@@ -574,8 +613,8 @@
     }
   }, true);
 
-  document.addEventListener('submit', () => {
-    triggerPotentialSubmit('form-submit');
+  document.addEventListener('submit', (e) => {
+    triggerPotentialSubmit('form-submit', e.target);
   }, true);
 
   document.addEventListener('blur', handleFlush, true);
@@ -583,6 +622,72 @@
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') handleFlush();
   });
+
+  // -----------------------------------------------------------------
+  // WYSIWYG Iframe Bridge (CKEditor, TinyMCE, Drupal wysiwyg-processed)
+  // -----------------------------------------------------------------
+  const bridgedDocs = new WeakSet();
+
+  function attachToFrameDocument(frameDoc) {
+    if (!frameDoc || bridgedDocs.has(frameDoc)) return;
+    try {
+      bridgedDocs.add(frameDoc);
+
+      frameDoc.addEventListener('input', (e) => {
+        const root = getEditableRoot(e.target) || frameDoc.body;
+        if (root && !isSensitiveElement(root)) {
+          observeElement(root);
+          evaluateTextChange(root);
+        }
+      }, true);
+
+      frameDoc.addEventListener('keyup', (e) => {
+        const root = getEditableRoot(e.target) || frameDoc.body;
+        if (root && !isSensitiveElement(root)) {
+          evaluateTextChange(root);
+        }
+      }, true);
+
+      frameDoc.addEventListener('focusin', (e) => {
+        const root = getEditableRoot(e.target) || frameDoc.body;
+        if (root && !isSensitiveElement(root)) {
+          activeElement = root;
+          lastActiveElement = root;
+          observeElement(root);
+        }
+      }, true);
+
+      frameDoc.addEventListener('blur', () => {
+        handleFlush();
+      }, true);
+    } catch (err) {}
+  }
+
+  function scanAndBridgeWysiwygIframes() {
+    const iframes = document.querySelectorAll('iframe.cke_wysiwyg_frame, iframe[class*="wysiwyg"], iframe[title*="Rich Text"], .cke_contents iframe');
+    iframes.forEach(iframe => {
+      try {
+        const doc = iframe.contentDocument || (iframe.contentWindow && iframe.contentWindow.document);
+        if (doc && (doc.readyState === 'complete' || doc.readyState === 'interactive' || doc.body)) {
+          attachToFrameDocument(doc);
+        } else {
+          iframe.addEventListener('load', () => {
+            try {
+              const loadedDoc = iframe.contentDocument || (iframe.contentWindow && iframe.contentWindow.document);
+              if (loadedDoc) attachToFrameDocument(loadedDoc);
+            } catch (e) {}
+          }, { once: true });
+        }
+      } catch (err) {}
+    });
+  }
+
+  // Scan on start and watch for dynamically loaded editors
+  scanAndBridgeWysiwygIframes();
+  const wysiwygObserver = new MutationObserver(() => {
+    scanAndBridgeWysiwygIframes();
+  });
+  wysiwygObserver.observe(document.documentElement || document.body, { childList: true, subtree: true });
 
   // -----------------------------------------------------------------
   // In-Input Status Indicator (Bottom-Left of active text entry box)
@@ -644,11 +749,31 @@
   `;
 
   function positionIndicator(target) {
-    if (!target || !document.contains(target)) {
+    if (!target) {
       hideIndicator();
       return;
     }
-    const rect = target.getBoundingClientRect();
+    // If target is inside an iframe document or is an iframe document body, position relative to the iframe in top window
+    let elToMeasure = target;
+    if (target.ownerDocument && target.ownerDocument !== document) {
+      const parentIframe = Array.from(document.querySelectorAll('iframe')).find(f => {
+        try {
+          return f.contentDocument === target.ownerDocument;
+        } catch (e) { return false; }
+      });
+      if (parentIframe) {
+        elToMeasure = parentIframe;
+      } else {
+        hideIndicator();
+        return;
+      }
+    }
+
+    if (!document.contains(elToMeasure)) {
+      hideIndicator();
+      return;
+    }
+    const rect = elToMeasure.getBoundingClientRect();
     if (rect.width === 0 || rect.height === 0 || rect.bottom <= 0 || rect.top >= window.innerHeight) {
       hideIndicator();
       return;
@@ -673,6 +798,10 @@
   }
 
   function updateIndicator(state, target) {
+    // Never show indicator inside sub-frames/iframes to prevent DOM reflow loops with WYSIWYG engines
+    if (window !== window.top) {
+      return;
+    }
     if (!config.enabled || config.showIndicator === false) {
       hideIndicator();
       return;

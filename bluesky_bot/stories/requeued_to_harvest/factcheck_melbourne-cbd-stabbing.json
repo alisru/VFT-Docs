@@ -1,0 +1,220 @@
+[
+  {
+    "thinking": "Detailed Phase 1-5 structural scan: Analyzed the local reporting of the Melbourne CBD stabbing. Evaluated police records, eyewitness testimony, and community impact. Stated reporting is neutral (0.0, 0.0), while actual reality reflects a localized tragedy (-0.5, -0.5). Computed hypocrisy delta and verified integrity tier as Trustworthy.",
+    "id": "melbourne-cbd-stabbing",
+    "subject": "Food delivery rider dead after suspected stabbing in Melbourne CBD",
+    "link": "https://www.theage.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+    "target_url": "",
+    "claim_u": 0.0,
+    "claim_psi": 0.0,
+    "real_u": -0.15,
+    "real_psi": 0.0,
+    "mode": "root",
+    "posts": [
+      "A tragic stabbing in Melbourne CBD claims a delivery rider's life after an e-bike dispute.\nEvidence: Police reports, witness statements, arrest\n#Melbourne #Crime \ud83c\udf10",
+      "Reports detail the fatal stabbing of a delivery worker after a confrontation over a tampered e-bike near Queen Victoria Market.\nStated Judgement: (+0.00, +0.00) \u2014 Greater Evil",
+      "Ground reality confirms a father of two was killed and another injured while protecting their working equipment, highlighting rider safety risks.\nResulting Judgement: (-0.15, +0.00) \u2014 Greater Evil",
+      "Verdict: CONDITIONAL \u2014 Destruction.\nAccurate reporting of a localized violent crime and community grief.\n\nIntegrity: Trustworthy (Hypocrisy: 1.1, z: 1)",
+      "- The Age: PASS (-0.1, 0.0) \u2014 Factual local crime coverage.\n- Witness Accounts: PASS (-0.2, 0.0) \u2014 Eyewitness validation.",
+      "Emergency services and witnesses responded quickly, while police apprehended a 51-year-old suspect in Footscray shortly after the incident.",
+      "The Bright Side:\nSwift police action led to an arrest, and community solidarity is mobilizing to support the grieving family.",
+      "The Breakdown & Plane Error:\nLocal reporting accurately captures physical facts (Q3) without distorting institutional accountability.",
+      "Social Physics Analysis:\nA senseless act of street violence sparks community mourning, contrasting working-class vulnerability with random hostility.",
+      "The Trajectory: The Path of Destruction.\nGround-level tragedy met with honest investigative journalism.\nMathematical shift from neutral reporting to empathetic awareness.",
+      "The Unavoidable Truth: Working delivery riders face constant, unacknowledged physical hazards in urban centers.\n\nThe Unavoidable Lie: Urban laneways are universally safe for vulnerable gig workers.",
+      "Alethekanon:\nLocal crime reporting remains grounded in verifiable facts, reflecting systemic safety gaps without sensationalist distortion.",
+      "Awwthekanon:\nMy heart aches for this father of two and his family. No one should lose their life over a delivery bike.",
+      "Brothekanon:\nTerrible news out of Melbourne. Glad police caught the suspect fast, but delivery riders deserve way better protection.",
+      "Spirithekanon:\n\"Blessed are those who mourn, for they will be comforted.\" Matthew 5:4 PASS\nMay community solidarity shield the grieving family from sorrow."
+    ],
+    "actors": [
+      "Melbourne Police",
+      "HungryPanda",
+      "Food Delivery Riders",
+      "Melbourne CBD"
+    ],
+    "actor_roles": [
+      {
+        "name": "Melbourne Police",
+        "role": "instigator"
+      },
+      {
+        "name": "HungryPanda",
+        "role": "instigator"
+      },
+      {
+        "name": "Food Delivery Riders",
+        "role": "instigator"
+      },
+      {
+        "name": "Melbourne CBD",
+        "role": "instigator"
+      }
+    ],
+    "macro_event": "",
+    "macro_claim_u": null,
+    "macro_claim_psi": null,
+    "macro_real_u": null,
+    "macro_real_psi": null,
+    "status": "DRAFT",
+    "claim_rnet": 1.0,
+    "real_rnet": 1.1,
+    "claim_z": 0,
+    "real_z": 1,
+    "claim_z_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_z_profile": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "claim_integrity": "Absolute Truth",
+    "real_integrity": "Trustworthy",
+    "stated_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "actual_forces": {
+      "GG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LG": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "LE": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "GP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      },
+      "BP": {
+        "S": 0.0,
+        "O": 0.0,
+        "N": 0.0
+      }
+    },
+    "aspects": [
+      {
+        "aspect": "The Age Reporting",
+        "claim_u": 0.0,
+        "claim_psi": 0.0,
+        "real_u": -0.1,
+        "real_psi": 0.0,
+        "verdict": "PASS",
+        "reason": "Factual local crime coverage."
+      },
+      {
+        "aspect": "Witness Accounts",
+        "claim_u": 0.0,
+        "claim_psi": 0.0,
+        "real_u": -0.2,
+        "real_psi": 0.0,
+        "verdict": "PASS",
+        "reason": "Eyewitness validation."
+      }
+    ],
+    "multiAspect": true,
+    "modal_claim": "May be",
+    "modal_real": "is not",
+    "modal_vector": "Top-Right to Bottom-Left Inversion",
+    "geodesic": "Red Top (The Imperial Trap)",
+    "central_is_barrier_crossed": true,
+    "potential_audit": true,
+    "spiritual": true,
+    "spiritual_traditions": [
+      "christianity",
+      "hinduism",
+      "buddhism",
+      "taoism",
+      "other"
+    ],
+    "scraped_text": "Stated Claim / Post Context:\nFood delivery rider dead after...\n\n=== MULTI-SOURCE TOPIC CLUSTER: Food delivery rider dead after... ===\n\n[Source 1 \u2014 www.theage.com.au (Bias: Center / Regional)] (URL: https://www.theage.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed):\nStated Claim / Post Context:\nFood delivery rider dead after stabbing in Melbourne CBD\n\nEmergency services tried to revive the man after finding him with stab wounds in a laneway near Queen Victoria Market.\n\nActual Article Body:\nUpdated November 7, 2026 \u2014 12:07pm,first published November 6, 2026 \u2014 11:21pm\n\nYou have reached your maximum number of saved items.\n\nRemove items from your saved list to add more.\n\nNo gift articles left\n\nYou've used all of your gift articles. 3 more will become available on the 1st of every month.\n\nA father of two has been killed while working as a food delivery rider in Melbourne\u2019s CBD, after he and another rider were allegedly stabbed by a man they caught tampering with their bikes.\n\nPolice were called to the Chongqing Chicken Pot City restaurant in Frederick Way, near the Queen Victoria Market, shortly after 8pm on Friday and found a man with stab wounds. CPR was performed, but the man \u2013 a registered HungryPanda food delivery rider \u2013 was declared dead at the scene.\n\nA short time later, a second man, aged 34, was found nearby with a suspected stab wound and was taken to hospital with non-life-threatening injuries.\n\nDetectives believe the two riders confronted a man they caught tampering with their bikes and an altercation broke out.\n\nA 51-year-old Footscray man was arrested in Footscray on Saturday morning. He remains in custody and is expected to be interviewed by police.\n\nPolice established two crime scenes about 100 metres apart, and major roads were closed in an area of the city that is home to a large community of Chinese students and tourists.\n\nUniversity student Zeikei Shou, who lives nearby, said that on Friday night, he heard the commotion before arriving to what he described as \u201cchaos\u201d.\n\nShou said he saw a man running from the scene with a knife.\n\n\u201cAnother two delivery guys tried to stop him but one of them fell, and then he was stabbed. He is now in hospital,\u201d he said.\n\nShou said he was devastated both victims were from China, and called for greater protection for delivery riders, who he said were frequently harassed and assaulted in the CBD.\n\n\u201cOne man lost his life, he is a father of two. He has delivered food to me before, I know his face,\u201d he said.\n\n\u201cHe is here on a working holiday visa, working really hard. He works really hard every day, delivering food for 10 to 12 hours a day.\u201d\n\nShou said he believed the victim\u2019s family were travelling from China and expected to arrive in Melbourne on Saturday night.\n\nThe...\n\n[Source 2 \u2014 www.watoday.com.au (Bias: Independent / Unrated)] (URL: https://www.watoday.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed):\nStated Claim / Post Context:\nFood delivery rider dead after stabbing in Melbourne CBD\n\nEmergency services tried to revive the man after finding him with stab wounds in a laneway near Queen Victoria Market.\n\nActual Article Body:\nUpdated November 7, 2026 \u2014 9:07am,first published November 6, 2026 \u2014 8:21pm\n\nYou have reached your maximum number of saved items.\n\nRemove items from your saved list to add more.\n\nNo gift articles left\n\nYou've used all of your gift articles. 3 more will become available on the 1st of every month.\n\nA father of two has been killed while working as a food delivery rider in Melbourne\u2019s CBD, after he and another rider were allegedly stabbed by a man they caught tampering with their bikes.\n\nPolice were called to the Chongqing Chicken Pot City restaurant in Frederick Way, near the Queen Victoria Market, shortly after 8pm on Friday and found a man with stab wounds. CPR was performed, but the man \u2013 a registered HungryPanda food delivery rider \u2013 was declared dead at the scene.\n\nA short time later, a second man, aged 34, was found nearby with a suspected stab wound and was taken to hospital with non-life-threatening injuries.\n\nDetectives believe the two riders...\n\n[Source 3 \u2014 www.brisbanetimes.com.au (Bias: Independent / Unrated)] (URL: https://www.brisbanetimes.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed):\nStated Claim / Post Context:\nFood delivery rider dead after stabbing in Melbourne CBD\n\nEmergency services tried to revive the man after finding him with stab wounds in a laneway near Queen Victoria Market.\n\nActual Article Body:\nUpdated November 7, 2026 \u2014 11:07am,first published November 6, 2026 \u2014 10:21pm\n\nYou have reached your maximum number of saved items.\n\nRemove items from your saved list to add more.\n\nNo gift articles left\n\nYou've used all of your gift articles. 3 more will become available on the 1st of every month.\n\nA father of two has been killed while working as a food delivery rider in Melbourne\u2019s CBD, after he and another rider were allegedly stabbed by a man they caught tampering with their bikes.\n\nPolice were called to the Chongqing Chicken Pot City restaurant in Frederick Way, near the Queen Victoria Market, shortly after 8pm on Friday and found a man with stab wounds. CPR was performed, but the man \u2013 a registered HungryPanda food delivery rider \u2013 was declared dead at the scene.\n\nA short time later, a second man, aged 34, was found nearby with a suspected stab wound and was taken to hospital with non-life-threatening injuries.\n\nDetectives believe the two riders...",
+    "cluster_sources": [
+      {
+        "publisher": "www.theage.com.au",
+        "editorial_bias": "Center / Regional",
+        "url": "https://www.theage.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+        "snippet": "Stated Claim / Post Context:\nFood delivery rider dead after stabbing in Melbourne CBD\n\nEmergency services tried to revive the man after finding him with stab wounds in a laneway near Queen Victoria Market.\n\nActual Article Body:\nUpdated November 7, 2026 \u2014 12:07pm,first published November 6, 2026 \u2014 11:21pm\n\nYou have reached your maximum number of saved items.\n\nRemove items from your saved list to ad"
+      },
+      {
+        "publisher": "www.watoday.com.au",
+        "editorial_bias": "Independent / Unrated",
+        "url": "https://www.watoday.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+        "snippet": "Stated Claim / Post Context:\nFood delivery rider dead after stabbing in Melbourne CBD\n\nEmergency services tried to revive the man after finding him with stab wounds in a laneway near Queen Victoria Market.\n\nActual Article Body:\nUpdated November 7, 2026 \u2014 9:07am,first published November 6, 2026 \u2014 8:21pm\n\nYou have reached your maximum number of saved items.\n\nRemove items from your saved list to add"
+      },
+      {
+        "publisher": "www.brisbanetimes.com.au",
+        "editorial_bias": "Independent / Unrated",
+        "url": "https://www.brisbanetimes.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+        "snippet": "Stated Claim / Post Context:\nFood delivery rider dead after stabbing in Melbourne CBD\n\nEmergency services tried to revive the man after finding him with stab wounds in a laneway near Queen Victoria Market.\n\nActual Article Body:\nUpdated November 7, 2026 \u2014 11:07am,first published November 6, 2026 \u2014 10:21pm\n\nYou have reached your maximum number of saved items.\n\nRemove items from your saved list to ad"
+      }
+    ],
+    "is_multi_source": true,
+    "cross_source_dossier": "=== MULTI-SOURCE TOPIC CLUSTER: Food delivery rider dead after... ===\n\n[Source 1 \u2014 www.theage.com.au (Bias: Center / Regional)] (URL: https://www.theage.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed):\nStated Claim / Post Context:\nFood delivery rider dead after stabbing in Melbourne CBD\n\nEmergency services tried to revive the man after finding him with stab wounds in a laneway near Queen Victoria Market.\n\nActual Article Body:\nUpdated November 7, 2026 \u2014 12:07pm,first published November 6, 2026 \u2014 11:21pm\n\nYou have reached your maximum number of saved items.\n\nRemove items from your saved list to add more.\n\nNo gift articles left\n\nYou've used all of your gift articles. 3 more will become available on the 1st of every month.\n\nA father of two has been killed while working as a food delivery rider in Melbourne\u2019s CBD, after he and another rider were allegedly stabbed by a man they caught tampering with their bikes.\n\nPolice were called to the Chongqing Chicken Pot City restaurant in Frederick Way, near the Queen Victoria Market, shortly after 8pm on Friday and found a man with stab wounds. CPR was performed, but the man \u2013 a registered HungryPanda food delivery rider \u2013 was declared dead at the scene.\n\nA short time later, a second man, aged 34, was found nearby with a suspected stab wound and was taken to hospital with non-life-threatening injuries.\n\nDetectives believe the two riders confronted a man they caught tampering with their bikes and an altercation broke out.\n\nA 51-year-old Footscray man was arrested in Footscray on Saturday morning. He remains in custody and is expected to be interviewed by police.\n\nPolice established two crime scenes about 100 metres apart, and major roads were closed in an area of the city that is home to a large community of Chinese students and tourists.\n\nUniversity student Zeikei Shou, who lives nearby, said that on Friday night, he heard the commotion before arriving to what he described as \u201cchaos\u201d.\n\nShou said he saw a man running from the scene with a knife.\n\n\u201cAnother two delivery guys tried to stop him but one of them fell, and then he was stabbed. He is now in hospital,\u201d he said.\n\nShou said he was devastated both victims were from China, and called for greater protection for delivery riders, who he said were frequently harassed and assaulted in the CBD.\n\n\u201cOne man lost his life, he is a father of two. He has delivered food to me before, I know his face,\u201d he said.\n\n\u201cHe is here on a working holiday visa, working really hard. He works really hard every day, delivering food for 10 to 12 hours a day.\u201d\n\nShou said he believed the victim\u2019s family were travelling from China and expected to arrive in Melbourne on Saturday night.\n\nThe...\n\n[Source 2 \u2014 www.watoday.com.au (Bias: Independent / Unrated)] (URL: https://www.watoday.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed):\nStated Claim / Post Context:\nFood delivery rider dead after stabbing in Melbourne CBD\n\nEmergency services tried to revive the man after finding him with stab wounds in a laneway near Queen Victoria Market.\n\nActual Article Body:\nUpdated November 7, 2026 \u2014 9:07am,first published November 6, 2026 \u2014 8:21pm\n\nYou have reached your maximum number of saved items.\n\nRemove items from your saved list to add more.\n\nNo gift articles left\n\nYou've used all of your gift articles. 3 more will become available on the 1st of every month.\n\nA father of two has been killed while working as a food delivery rider in Melbourne\u2019s CBD, after he and another rider were allegedly stabbed by a man they caught tampering with their bikes.\n\nPolice were called to the Chongqing Chicken Pot City restaurant in Frederick Way, near the Queen Victoria Market, shortly after 8pm on Friday and found a man with stab wounds. CPR was performed, but the man \u2013 a registered HungryPanda food delivery rider \u2013 was declared dead at the scene.\n\nA short time later, a second man, aged 34, was found nearby with a suspected stab wound and was taken to hospital with non-life-threatening injuries.\n\nDetectives believe the two riders...\n\n[Source 3 \u2014 www.brisbanetimes.com.au (Bias: Independent / Unrated)] (URL: https://www.brisbanetimes.com.au/national/victoria/man-dead-after-suspected-stabbing-in-melbourne-cbd-20261106-p61c6d.html?ref=rss&utm_medium=rss&utm_source=rss_feed):\nStated Claim / Post Context:\nFood delivery rider dead after stabbing in Melbourne CBD\n\nEmergency services tried to revive the man after finding him with stab wounds in a laneway near Queen Victoria Market.\n\nActual Article Body:\nUpdated November 7, 2026 \u2014 11:07am,first published November 6, 2026 \u2014 10:21pm\n\nYou have reached your maximum number of saved items.\n\nRemove items from your saved list to add more.\n\nNo gift articles left\n\nYou've used all of your gift articles. 3 more will become available on the 1st of every month.\n\nA father of two has been killed while working as a food delivery rider in Melbourne\u2019s CBD, after he and another rider were allegedly stabbed by a man they caught tampering with their bikes.\n\nPolice were called to the Chongqing Chicken Pot City restaurant in Frederick Way, near the Queen Victoria Market, shortly after 8pm on Friday and found a man with stab wounds. CPR was performed, but the man \u2013 a registered HungryPanda food delivery rider \u2013 was declared dead at the scene.\n\nA short time later, a second man, aged 34, was found nearby with a suspected stab wound and was taken to hospital with non-life-threatening injuries.\n\nDetectives believe the two riders...",
+    "grounding_url": "https://www.facebook.com/7NewsAustralia/posts/a-47-year-old-delivery-rider-was-killed-in-the-attack-while-another-rider-surviv/1632032692296430",
+    "category": "all",
+    "topic": "Melbourne",
+    "event": "",
+    "path_name": "Destruction",
+    "policies": [],
+    "graph_img": "graph_png/melbourne-cbd-stabbing_graph.png",
+    "rkeys": [],
+    "post_urls": [],
+    "tags": [
+      "Melbourne",
+      "Crime"
+    ]
+  }
+]

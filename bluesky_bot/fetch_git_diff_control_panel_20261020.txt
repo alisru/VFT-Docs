@@ -1,0 +1,217 @@
+Command exited with code 0.
+
+Command output:
+diff --git a/bluesky_bot/control_panel.html b/bluesky_bot/control_panel.html
+index 003712ef0..bf7b6d371 100644
+--- a/bluesky_bot/control_panel.html
++++ b/bluesky_bot/control_panel.html
+@@ -1493,6 +1493,25 @@
+               <code id="terminalCmd">python bluesky_bot/orchestrator.py --news-query "..."</code>
+             </div>
+ 
++            <!-- Convergence Engine Mode Selector -->
++            <div style="margin-top: 1rem; border-top: 1px solid rgba(240, 246, 252, 0.1); padding-top: 0.75rem;">
++              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.4rem;">
++                <span class="meta-label" style="font-weight:600; color:var(--text-main); font-size:0.8rem;">?? Convergence Engine Mode</span>
++                <span id="convergenceModeBadge" style="font-size:0.7rem; color:var(--accent-cyan); font-family:var(--font-mono); font-weight:600;">POTENTIAL MODE</span>
++              </div>
++              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; background:rgba(255,255,255,0.03); padding:0.4rem 0.5rem; border-radius:6px; border:1px solid var(--panel-border);">
++                <label style="display:flex; align-items:center; gap:0.3rem; cursor:pointer; font-size:0.75rem; color:var(--text-main);">
++                  <input type="radio" name="conv_mode" id="mode_potential" value="potential" checked onchange="updateConvergenceMode()"> ?? Potential Mode (9-Node Modal Topology)
++                </label>
++                <label style="display:flex; align-items:center; gap:0.3rem; cursor:pointer; font-size:0.75rem; color:var(--text-main);">
++                  <input type="radio" name="conv_mode" id="mode_son" value="son" onchange="updateConvergenceMode()"> ? SON Mode (6 Attractors)
++                </label>
++                <label style="display:flex; align-items:center; gap:0.3rem; cursor:pointer; font-size:0.75rem; color:var(--text-main);">
++                  <input type="radio" name="conv_mode" id="mode_standard" value="standard" onchange="updateConvergenceMode()"> ?? Standard Mode
++                </label>
++              </div>
++            </div>
++
+             <!-- Spiritual Tradition Sub-Selectors -->
+             <div style="margin-top: 1rem; border-top: 1px solid rgba(240, 246, 252, 0.1); padding-top: 0.75rem;">
+               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.4rem;">
+@@ -2069,7 +2088,7 @@
+ 
+       // Render Meta Panel
+       const metaPane = document.getElementById('metaPane');
+-      const isPass = activeStory.verdict.trim().toUpperCase().startsWith('PASS');
++      const isPass = (activeStory.verdict || 'FAIL').trim().toUpperCase().startsWith('PASS');
+       const verdictColor = isPass ? 'var(--pass-green)' : 'var(--fail-red)';
+ 
+       // Resolve thread link for meta item
+@@ -2334,9 +2353,53 @@
+       } else {
+         explanation = "A customized dual-coordinate mapping representing the vector transition between stated claims and ground-level realities.";
+       }
++      if (activeStory.modal_claim && activeStory.modal_real) {
++        const geodesicInfo = activeStory.geodesic ? ` | Geodesic: ${activeStory.geodesic}` : '';
++        explanation = `[Modal: "${activeStory.modal_claim}" ? "${activeStory.modal_real}"${geodesicInfo}] ` + explanation;
++      }
+       document.getElementById('mapTrajectoryDynamics').innerText = explanation;
+     }
+ 
++    function getSelectedConvergenceMode() {
++      const saved = localStorage.getItem('aletheia_convergence_mode');
++      if (saved) return saved;
++      const rads = document.getElementsByName('conv_mode');
++      for (const r of rads) {
++        if (r.checked) return r.value;
++      }
++      return 'potential';
++    }
++
++    window.updateConvergenceMode = function() {
++      const rads = document.getElementsByName('conv_mode');
++      let chosen = 'potential';
++      for (const r of rads) {
++        if (r.checked) { chosen = r.value; break; }
++      }
++      localStorage.setItem('aletheia_convergence_mode', chosen);
++      const badge = document.getElementById('convergenceModeBadge');
++      if (badge) {
++        if (chosen === 'potential') badge.innerText = 'POTENTIAL MODE';
++        else if (chosen === 'son') badge.innerText = 'SON MODE';
++        else badge.innerText = 'STANDARD MODE';
++      }
++      if (activeStory) renderController();
++    };
++
++    function initConvergenceModeUI() {
++      const saved = getSelectedConvergenceMode();
++      const rads = document.getElementsByName('conv_mode');
++      for (const r of rads) {
++        r.checked = (r.value === saved);
++      }
++      const badge = document.getElementById('convergenceModeBadge');
++      if (badge) {
++        if (saved === 'potential') badge.innerText = 'POTENTIAL MODE';
++        else if (saved === 'son') badge.innerText = 'SON MODE';
++        else badge.innerText = 'STANDARD MODE';
++      }
++    }
++
+     function getSelectedTraditions() {
+       const keys = ['christianity', 'hinduism', 'buddhism', 'taoism', 'islam', 'indigenous', 'stoicism', 'other'];
+       const selected = [];
+@@ -2377,8 +2440,20 @@
+         tradPromptDesc = `\nSpiritual Traditions Sub-Selectors: ${selTrad.join(', ')}`;
+       }
+ 
++      const convMode = getSelectedConvergenceMode();
++      let modeFlag = '--potential';
++      let modePromptDesc = '\nConvergence Mode: Modal & Temporal Potential Model (9-Node Modal Topology & Cross-Chamber Geodesics)';
++      if (convMode === 'son') {
++        modeFlag = '--son';
++        modePromptDesc = '\nConvergence Mode: 6-Attractor SON Model (Force Vectors & Separated Will)';
++      } else if (convMode === 'standard') {
++        modeFlag = '';
++        modePromptDesc = '\nConvergence Mode: Standard Mode';
++      }
++
+       // Update terminal command
+-      document.getElementById('terminalCmd').innerText = `python bluesky_bot/google_ai_studio_one_shot.py --son --compact${tradFlag} --topic "${activeStory.subject}"`;
++      const flagPrefix = modeFlag ? ` ${modeFlag}` : '';
++      document.getElementById('terminalCmd').innerText = `python bluesky_bot/google_ai_studio_one_shot.py${flagPrefix} --compact${tradFlag} --topic "${activeStory.subject}"`;
+ 
+       // Update AI prompt generator
+       const prompt = `Please analyze a new Bluesky news story with the Aletheia Bot orchestrator:
+@@ -2386,7 +2461,7 @@
+ Link URL: ${activeStory.link}
+ Subject: ${activeStory.subject}
+ Stated Claim Coordinates: (${activeStory.claim_u}, ${activeStory.claim_psi})
+-Actual Reality Coordinates: (${activeStory.real_u}, ${activeStory.real_psi})${tradPromptDesc}
++Actual Reality Coordinates: (${activeStory.real_u}, ${activeStory.real_psi})${modePromptDesc}${tradPromptDesc}
+ 
+ Please construct a clean, premium 13-post Gnostic trinary assessment thread completely in Plain English without ellipses bridges, evaluate spiritual canon against the active sub-selectors, and save the compiled config locally.`;
+       
+@@ -2792,6 +2867,7 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
+       });
+ 
+       // Initial render from statically-loaded stories_registry.js
++      initConvergenceModeUI();
+       refreshRegistryUI();
+ 
+       // Attach click and scroll listeners for sliding-window virtual list rendering
+@@ -3236,23 +3312,49 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
+ 
+       let articleText = null;
+ 
+-      // 1. Check fast 16-shard partition
+-      const shardKey = getShardKey(cleanSlug);
+-      try {
+-        if (!window._SOURCE_SHARDS[shardKey]) {
+-          const sResp = await fetch(`sources/shard_${shardKey}.json`);
+-          if (sResp.ok) {
+-            window._SOURCE_SHARDS[shardKey] = await sResp.json();
+-          }
++      // 0. Check if activeStory has scraped_text directly in memory
++      if (activeStory && activeStory.scraped_text && typeof activeStory.scraped_text === 'string') {
++        let st = activeStory.scraped_text.trim();
++        if (st.includes('Actual Article Body:\n')) {
++          st = st.split('Actual Article Body:\n').pop().trim();
+         }
+-        if (window._SOURCE_SHARDS[shardKey]) {
+-          articleText = window._SOURCE_SHARDS[shardKey][cleanSlug] || window._SOURCE_SHARDS[shardKey][storyId] || null;
++        if (st.length > 50 && !st.startsWith('Error')) {
++          articleText = st;
+         }
+-      } catch (e) {
+-        console.warn('Shard fetch error:', e);
+       }
+ 
+-      // 2. Fallback to individual static JSON if present
++      // 1. If on localhost / local environment, query local source server first
++      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || !window.location.hostname;
++      if (!articleText && isLocal) {
++        try {
++          const params = new URLSearchParams();
++          if (url) params.set('url', url);
++          if (cleanSlug) params.set('id', cleanSlug);
++          const resp = await fetch(`http://localhost:8765/source?`);
++          if (resp.ok) {
++            const lData = await resp.json();
++            if (lData && lData.text) articleText = lData.text;
++          }
++        } catch(e) {}
++      }
++
++      // 2. Check 16-shard partition
++      if (!articleText) {
++        const shardKey = getShardKey(cleanSlug);
++        try {
++          if (!window._SOURCE_SHARDS[shardKey]) {
++            const sResp = await fetch(`sources/shard_${shardKey}.json`);
++            if (sResp.ok) {
++              window._SOURCE_SHARDS[shardKey] = await sResp.json();
++            }
++          }
++          if (window._SOURCE_SHARDS[shardKey]) {
++            articleText = window._SOURCE_SHARDS[shardKey][cleanSlug] || window._SOURCE_SHARDS[shardKey][storyId] || null;
++          }
++        } catch (e) {}
++      }
++
++      // 3. Fallback to individual static JSON if present
+       if (!articleText) {
+         const staticCandidates = [
+           `sources/${storyId}.json`,
+@@ -3272,18 +3374,6 @@ Please construct a clean, premium 13-post Gnostic trinary assessment thread comp
+           } catch(e) {}
+         }
+       }
+-
+-      // 3. Fallback to local source server if on localhost
+-      if (!articleText && url && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+-        try {
+-          const resp = await fetch(`http://localhost:8765/source?url=${encodeURIComponent(url)}`);
+-          if (resp.ok) {
+-            const lData = await resp.json();
+-            if (lData && lData.text) articleText = lData.text;
+-          }
+-        } catch(e) {}
+-      }
+-
+       // Render text or fallback card
+       if (articleText && articleText.trim()) {
+         const paragraphs = articleText.split('\n\n').filter(p => p.trim());

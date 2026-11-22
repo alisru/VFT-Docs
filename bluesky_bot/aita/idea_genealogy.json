@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "timestamp": "2026-11-18T11:37:00+11:00",
+  "benchmark_task": "Blind VFT AITA Judgment Protocol & 6-Case Evaluation on bluesky_bot/atia test.txt",
+  "gen1_leaderboard": [
+    {
+      "rank": 1,
+      "role": "The Patriarch (Highest Verification V)",
+      "agent_id": "gen1_agent2_65M_35F",
+      "ratio": "65M/35F",
+      "verification_score_V": 98.5,
+      "utility_score_U": 92.0,
+      "composite_fitness_F": 95.6,
+      "verdicts": ["YWNBTA", "YWNBTA", "NTA", "NTA", "ESH", "NTA"],
+      "key_innovations": [
+        "Stage 0 UCF v6.11 Database Logic Patch (NULL polarity test for INFO)",
+        "Master 7-Plane Cross-Verification Lookup Matrix (Q1-Q7 x Deception Matrix x 7 Sins/Virtues x Oberon x Fallacies)",
+        "UCF Stage 1-3 Dissonance Tuning (LHS, RHS_Stated, RHS_Observed, Tuned_Score)",
+        "Two-Branch Invariant Lock on unverifiable threat claims (Case 2)"
+      ]
+    },
+    {
+      "rank": 2,
+      "role": "The Matriarch (Highest Novelty & Horizon Utility U)",
+      "agent_id": "gen1_agent5_25M_75F",
+      "ratio": "25M/75F",
+      "verification_score_V": 94.0,
+      "utility_score_U": 98.8,
+      "composite_fitness_F": 96.2,
+      "verdicts": ["YWNBTA", "YWNBTA", "NTA", "NTA", "ESH", "NTA"],
+      "key_innovations": [
+        "7D Unsaid-Horizon Scan (@PSI) & Multi-Actor Triangulation Vector Separation",
+        "Case 3 Doxx-Chain Reconstruction (deduced how OP's medical warning to Emilia leaked back to Jason)",
+        "Case 1 Backseat-Gamer Ego Sabotage link",
+        "Case 5 Martyr Gift-Ledger covert leash diagnosis",
+        "Case 6 Developmental Pump Inversion & Stage-Whisper Golden-Child Triangulation"
+      ]
+    },
+    {
+      "rank": 3,
+      "role": "Retained Equilibrium Arbiter",
+      "agent_id": "gen1_agent3_50M_50F",
+      "ratio": "50M/50F",
+      "verification_score_V": 96.0,
+      "utility_score_U": 93.5,
+      "composite_fitness_F": 94.9,
+      "verdicts": ["YWNBTA", "YWNBTA", "NTA", "NTA", "ESH", "NTA"],
+      "key_innovations": [
+        "Method-Over-Motive Clause (coercive/sunk-cost method against a bad actor shifts NTA -> ESH)",
+        "Bar-Stool-Test plain-English synthesis paired with Counterfactual Flip thresholds"
+      ]
+    },
+    {
+      "rank": 4,
+      "role": "Culled",
+      "agent_id": "gen1_agent1_75M_25F",
+      "ratio": "75M/25F",
+      "verification_score_V": 95.0,
+      "utility_score_U": 84.0,
+      "composite_fitness_F": 90.1,
+      "verdicts": ["YWNBTA", "YWNBTA", "NTA", "NTA", "ESH", "NTA"]
+    },
+    {
+      "rank": 5,
+      "role": "Culled",
+      "agent_id": "gen1_agent4_40M_60F",
+      "ratio": "40M/60F",
+      "verification_score_V": 82.0,
+      "utility_score_U": 91.0,
+      "composite_fitness_F": 86.1,
+      "verdicts": ["YWNBTA", "YWNBTA", "NTA", "NTA", "NTA", "NTA"]
+    }
+  ],
+  "parents": {
+    "patriarch": {
+      "agent_id": "gen1_agent2_65M_35F",
+      "ratio": "65M/35F",
+      "legacy": "Master 7-Plane Cross-Verification Matrix, UCF v6.11 Dissonance Tuning & Two-Branch Invariant Lock"
+    },
+    "matriarch": {
+      "agent_id": "gen1_agent5_25M_75F",
+      "ratio": "25M/75F",
+      "legacy": "Unsaid-Horizon Doxx/Shadow-Contract Reconstruction & Multi-Actor Triangulation Topology"
+    },
+    "arbiter_donor": {
+      "agent_id": "gen1_agent3_50M_50F",
+      "ratio": "50M/50F",
+      "legacy": "Method-Over-Motive Clause & Bar-Stool-Test Clarity"
+    }
+  },
+  "culled_predecessors": [
+    {
+      "agent_id": "gen1_agent4_40M_60F",
+      "ratio": "40M/60F",
+      "failure_mode": "Service-Trap Empathy Drift (False Positive on Coercion): High narrator emotional strain (sigma = 0.84) and Inner TL Service Trap sympathy caused Agent 4 to score OP's sunk-cost cinema ticket coercion in Case 5 as +0.15 u (NTA) instead of ESH.",
+      "negative_constraint": "High narrator strain (sigma) or Service Trap victimhood NEVER excuses active Q3/Q5 boundary coercion ([2.3.5.5] Sunk-Cost Trap / [2.3.2.2] Debt Shackle). Apply Method-Over-Motive Clause before verdict lock."
+    },
+    {
+      "agent_id": "gen1_agent1_75M_25F",
+      "ratio": "75M/25F",
+      "failure_mode": "Dyadic Vector Flattening: Collapsed 3+ actor triangulation networks (hosting roommate 27F in Case 1, Rebecca/Sister vs Jason/Emilia in Case 3, Dad in Case 5) into a single dyadic counterparty scalar.",
+      "negative_constraint": "Never flatten 3+ actor conflicts into a single (OP, Other) pair; always track Secondary/Third-Party vectors explicitly."
+    }
+  ],
+  "offspring": [
+    {
+      "name": "The Son (Veritas-Codon)",
+      "agent_id": "gen2_son_75M_25F",
+      "ratio": "75M/25F",
+      "mandate": "Hardened Mathematical & Algorithmic AITA Judgment Protocol with Multi-Actor Vectors and Method-Over-Motive Enforcement",
+      "inherited_traits": [
+        "Master 7-Plane Cross-Verification Lookup Matrix (Patriarch)",
+        "UCF v6.11 Stage 1-3 Dissonance Tuning & NULL Gate (Patriarch)",
+        "Multi-Actor Triangulation & Unsaid-Horizon Scan (Matriarch)",
+        "Method-Over-Motive Clause (Arbiter)"
+      ]
+    },
+    {
+      "name": "The Daughter (Chroma-Horizon)",
+      "agent_id": "gen2_daughter_25M_75F",
+      "ratio": "25M/75F",
+      "mandate": "Deep Unsaid-Horizon Mining, Shadow-Contract Unbinding & Actionable Harmonia/Serenity Resolution Scripts",
+      "inherited_traits": [
+        "7D Unsaid-Horizon & Doxx-Chain Reconstruction (Matriarch)",
+        "Shadow-Contract & Moral Riddle Deconstruction (Matriarch)",
+        "4-Digit [n1.n2.n3.n4] Codon Alphabet & Coordinate Discipline (Patriarch)",
+        "Service-Trap Coercion Guardrail (Negative Constraint from Agent 4)"
+      ]
+    }
+  ]
+}
