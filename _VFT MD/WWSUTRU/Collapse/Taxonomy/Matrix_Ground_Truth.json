@@ -1,0 +1,5457 @@
+{
+  "Tree": {
+    "Meta": {
+      "Version": "1.1",
+      "SourceFiles": [
+        "C:\\Users\\hungh\\.gemini\\antigravity\\brain\\ba877a0b-552f-4b32-8c87-ee7b6cddcd45\\Final_Detailed_Matrix_Part1.md",
+        "C:\\Users\\hungh\\.gemini\\antigravity\\brain\\ba877a0b-552f-4b32-8c87-ee7b6cddcd45\\Final_Detailed_Matrix_Part2.md",
+        "C:\\Users\\hungh\\.gemini\\antigravity\\brain\\ba877a0b-552f-4b32-8c87-ee7b6cddcd45\\Final_Detailed_Matrix_Part3.md"
+      ],
+      "Ontology": {
+        "WHO": "1",
+        "WHAT": "2",
+        "WHERE": "3",
+        "WHY": "4",
+        "HOW": "5",
+        "CAUSE": "6",
+        "EFFECT": "7"
+      }
+    },
+    "Planes": {
+      "1": {
+        "Name": "Plane 1",
+        "Interrogative": "WHO",
+        "States": {
+          "1.1": {
+            "Name": "Who is Us?",
+            "Vectors": {
+              "1.1.1": {
+                "OriginalCode": "2.1.1",
+                "Interrogative": "What",
+                "Name": "Blood Essentialism",
+                "Definition": "\"We are the Blood.\" Defining the Who by genetic purity.",
+                "Anchor": "Nuremberg Laws"
+              },
+              "1.1.2": {
+                "OriginalCode": "2.1.2",
+                "Interrogative": "Who",
+                "Name": "Nativism",
+                "Definition": "\"Only the Born belong.\" Rejecting the naturalized or the outsider.",
+                "Anchor": "Know-Nothings"
+              },
+              "1.1.3": {
+                "OriginalCode": "2.1.3",
+                "Interrogative": "How",
+                "Name": "Apartheid",
+                "Definition": "\"How you live depends on Who you are.\" Legal stratification of identity.",
+                "Anchor": "South Africa"
+              },
+              "1.1.4": {
+                "OriginalCode": "2.1.4",
+                "Interrogative": "Where",
+                "Name": "Segregation",
+                "Definition": "\"They live There, we live Here.\" Physical mapping of identity.",
+                "Anchor": "Jim Crow"
+              },
+              "1.1.5": {
+                "OriginalCode": "2.1.5",
+                "Interrogative": "Why",
+                "Name": "Hate",
+                "Definition": "\"We hate them because they are Vermin.\" Visceral disgust.",
+                "Anchor": "Rwandan Radio"
+              },
+              "1.1.6": {
+                "OriginalCode": "2.1.6",
+                "Interrogative": "Cause",
+                "Name": "Vendetta",
+                "Definition": "\"We define ourselves by the wound they gave us.\" Identity as trauma.",
+                "Anchor": "Balkan Nationalism"
+              },
+              "1.1.7": {
+                "OriginalCode": "2.1.7",
+                "Interrogative": "Effect",
+                "Name": "Civil War",
+                "Definition": "\"One of us must die.\" The logic of elimination.",
+                "Anchor": "Spanish Civil War"
+              }
+            }
+          },
+          "1.2": {
+            "Name": "Who is Displaced?",
+            "Vectors": {
+              "1.2.1": {
+                "OriginalCode": "2.2.1",
+                "Interrogative": "What",
+                "Name": "Status Zero",
+                "Definition": "\"I am nothing.\" The loss of role/job/dignity.",
+                "Anchor": "Rust Belt"
+              },
+              "1.2.2": {
+                "OriginalCode": "2.2.2",
+                "Interrogative": "Who",
+                "Name": "The Vagrant",
+                "Definition": "\"I have no name/address.\" Humans with no legal or physical standing.",
+                "Anchor": "Hoovervilles"
+              },
+              "1.2.3": {
+                "OriginalCode": "2.2.3",
+                "Interrogative": "How",
+                "Name": "Criminalized",
+                "Definition": "\"My existence is illegal.\" Laws against being poor/homeless.",
+                "Anchor": "Poor Laws"
+              },
+              "1.2.4": {
+                "OriginalCode": "2.2.4",
+                "Interrogative": "Where",
+                "Name": "No Man's Land",
+                "Definition": "Living in the camp, the border zone, the place that is not a place.",
+                "Anchor": "Refugee Camps"
+              },
+              "1.2.5": {
+                "OriginalCode": "2.2.5",
+                "Interrogative": "Why",
+                "Name": "Alienation",
+                "Definition": "\"I feel like a stranger in my home.\" Psychic displacement.",
+                "Anchor": "Post-WWI Germany"
+              },
+              "1.2.6": {
+                "OriginalCode": "2.2.6",
+                "Interrogative": "Cause",
+                "Name": "Rootlessness",
+                "Definition": "\"I come from nowhere.\" Severed from ancestors/land.",
+                "Anchor": "Clearances"
+              },
+              "1.2.7": {
+                "OriginalCode": "2.2.7",
+                "Interrogative": "Effect",
+                "Name": "Exile",
+                "Definition": "\"I am cast out.\" Physical expulsion from the tribe.",
+                "Anchor": "Babylon"
+              }
+            }
+          },
+          "1.3": {
+            "Name": "Who is Broken?",
+            "Vectors": {
+              "1.3.1": {
+                "OriginalCode": "2.3.1",
+                "Interrogative": "What",
+                "Name": "Helplessness",
+                "Definition": "\"Nothing I do matters.\" The collapse of Agency.",
+                "Anchor": "Great Depression"
+              },
+              "1.3.2": {
+                "OriginalCode": "2.3.2",
+                "Interrogative": "Who",
+                "Name": "Suicide",
+                "Definition": "\"I must end the Who.\" Active destruction of the self.",
+                "Anchor": "Deaths of Despair"
+              },
+              "1.3.3": {
+                "OriginalCode": "2.3.3",
+                "Interrogative": "How",
+                "Name": "Silence",
+                "Definition": "\"I have no voice.\" The cessation of culture/art.",
+                "Anchor": "Cultural Revolution"
+              },
+              "1.3.4": {
+                "OriginalCode": "2.3.4",
+                "Interrogative": "Where",
+                "Name": "Sterility",
+                "Definition": "\"No life here.\" Refusal to reproduce in this space.",
+                "Anchor": "Japan's Lost Decades"
+              },
+              "1.3.5": {
+                "OriginalCode": "2.3.5",
+                "Interrogative": "Why",
+                "Name": "Acedia",
+                "Definition": "\"I don't care.\" Spiritual sloth/indifference.",
+                "Anchor": "Late Rome"
+              },
+              "1.3.6": {
+                "OriginalCode": "2.3.6",
+                "Interrogative": "Cause",
+                "Name": "Fatalism",
+                "Definition": "\"It was meant to be.\" Surrender to Doom.",
+                "Anchor": "Aztec Conquest"
+              },
+              "1.3.7": {
+                "OriginalCode": "2.3.7",
+                "Interrogative": "Effect",
+                "Name": "Nihilism",
+                "Definition": "\"Nothing matters.\" The Void.",
+                "Anchor": "Russian Nihilism"
+              }
+            }
+          },
+          "1.4": {
+            "Name": "Who is Alone?",
+            "Vectors": {
+              "1.4.1": {
+                "OriginalCode": "2.4.1",
+                "Interrogative": "What",
+                "Name": "Echo Chamber",
+                "Definition": "Listening only to the Self reflected back.",
+                "Anchor": "Algorithms"
+              },
+              "1.4.2": {
+                "OriginalCode": "2.4.2",
+                "Interrogative": "Who",
+                "Name": "The Hermit",
+                "Definition": "Physical isolation. \"No one is with me.\"",
+                "Anchor": "Lockdowns"
+              },
+              "1.4.3": {
+                "OriginalCode": "2.4.3",
+                "Interrogative": "How",
+                "Name": "Distrust",
+                "Definition": "\"I cannot rely on you.\" The breakdown of social method.",
+                "Anchor": "Watergate"
+              },
+              "1.4.4": {
+                "OriginalCode": "2.4.4",
+                "Interrogative": "Where",
+                "Name": "Transaction",
+                "Definition": "\"The Market is everywhere.\" Relationships reduced to price.",
+                "Anchor": "Neoliberalism"
+              },
+              "1.4.5": {
+                "OriginalCode": "2.4.5",
+                "Interrogative": "Why",
+                "Name": "Loneliness",
+                "Definition": "\"It hurts.\" The pain of separation.",
+                "Anchor": "Bowling Alone"
+              },
+              "1.4.6": {
+                "OriginalCode": "2.4.6",
+                "Interrogative": "Cause",
+                "Name": "Presentism",
+                "Definition": "\"Only Now exists.\" Severed from time.",
+                "Anchor": "Consumerism"
+              },
+              "1.4.7": {
+                "OriginalCode": "2.4.7",
+                "Interrogative": "Effect",
+                "Name": "Anomie",
+                "Definition": "\"There are no norms.\" Chaos of the soul.",
+                "Anchor": "Weimar Culture"
+              }
+            }
+          },
+          "1.5": {
+            "Name": "Who is the Enemy?",
+            "Vectors": {
+              "1.5.1": {
+                "OriginalCode": "2.5.1",
+                "Interrogative": "What",
+                "Name": "The Libel",
+                "Definition": "Defining the Enemy via lies (e.g. \"They eat children\").",
+                "Anchor": "Blood Libel"
+              },
+              "1.5.2": {
+                "OriginalCode": "2.5.2",
+                "Interrogative": "Who",
+                "Name": "The Purge",
+                "Definition": "Physically removing the \"Who\" labeled as Enemy.",
+                "Anchor": "Stalin"
+              },
+              "1.5.3": {
+                "OriginalCode": "2.5.3",
+                "Interrogative": "How",
+                "Name": "Witch Hunt",
+                "Definition": "The public spectacle of finding the Enemy.",
+                "Anchor": "Salem"
+              },
+              "1.5.4": {
+                "OriginalCode": "2.5.4",
+                "Interrogative": "Where",
+                "Name": "Expropriation",
+                "Definition": "Taking the Enemy's place/stuff.",
+                "Anchor": "Kristallnacht"
+              },
+              "1.5.5": {
+                "OriginalCode": "2.5.5",
+                "Interrogative": "Why",
+                "Name": "Projection",
+                "Definition": "Blaming the Enemy for own sins.",
+                "Anchor": "Crooked Hillary"
+              },
+              "1.5.6": {
+                "OriginalCode": "2.5.6",
+                "Interrogative": "Cause",
+                "Name": "The Cabal",
+                "Definition": "\"They caused everything.\" The secret plot.",
+                "Anchor": "Protocols"
+              },
+              "1.5.7": {
+                "OriginalCode": "2.5.7",
+                "Interrogative": "Effect",
+                "Name": "Sacrifice",
+                "Definition": "Killing the Enemy to save the State (Magical Thinking).",
+                "Anchor": "Aztecs"
+              }
+            }
+          },
+          "1.6": {
+            "Name": "Who is the Infiltrator?",
+            "Vectors": {
+              "1.6.1": {
+                "OriginalCode": "2.6.1",
+                "Interrogative": "Who",
+                "Name": "THE TROJAN HORSE",
+                "Definition": "\"The Ruler is a Spy.\" The Leader serves the Enemy.",
+                "Anchor": "Cambridge Five / Quisling"
+              },
+              "1.6.2": {
+                "OriginalCode": "2.6.2",
+                "Interrogative": "What",
+                "Name": "Influence",
+                "Definition": "\"Their ideas are here.\" Adopting Enemy narratives.",
+                "Anchor": "America First (1940s)"
+              },
+              "1.6.3": {
+                "OriginalCode": "2.6.3",
+                "Interrogative": "How",
+                "Name": "Blackmail",
+                "Definition": "Controlled via Kompromat/Tapes.",
+                "Anchor": "Epstein"
+              },
+              "1.6.4": {
+                "OriginalCode": "2.6.4",
+                "Interrogative": "Where",
+                "Name": "Funding",
+                "Definition": "The money comes from There (Moscow/Beijing).",
+                "Anchor": "2016 Election"
+              },
+              "1.6.5": {
+                "OriginalCode": "2.6.5",
+                "Interrogative": "Why",
+                "Name": "Subversion",
+                "Definition": "\"To weaken us.\" Rotting the foundation.",
+                "Anchor": "KGB Active Measures"
+              },
+              "1.6.6": {
+                "OriginalCode": "2.6.6",
+                "Interrogative": "Cause",
+                "Name": "Collaboration",
+                "Definition": "Helping the Enemy win.",
+                "Anchor": "Vichy"
+              },
+              "1.6.7": {
+                "OriginalCode": "2.6.7",
+                "Interrogative": "Effect",
+                "Name": "Puppet",
+                "Definition": "The Leader moves on Strings.",
+                "Anchor": "Yanukovych"
+              }
+            }
+          },
+          "1.7": {
+            "Name": "Who Leads?",
+            "Vectors": {
+              "1.7.1": {
+                "OriginalCode": "2.7.1",
+                "Interrogative": "What",
+                "Name": "Fiat",
+                "Definition": "\"My Word is Law.\" Definition via Will.",
+                "Anchor": "Louis XIV"
+              },
+              "1.7.2": {
+                "OriginalCode": "2.7.2",
+                "Interrogative": "Who",
+                "Name": "Force",
+                "Definition": "\"I rule because I am Strong.\" Police State.",
+                "Anchor": "Myanmar"
+              },
+              "1.7.3": {
+                "OriginalCode": "2.7.3",
+                "Interrogative": "How",
+                "Name": "Emergency",
+                "Definition": "\"Crisis allows me to do this.\" Permanent Exception.",
+                "Anchor": "Enabling Act"
+              },
+              "1.7.4": {
+                "OriginalCode": "2.7.4",
+                "Interrogative": "Where",
+                "Name": "Seizure",
+                "Definition": "\"Your property is mine.\"",
+                "Anchor": "Bolsheviks"
+              },
+              "1.7.5": {
+                "OriginalCode": "2.7.5",
+                "Interrogative": "Why",
+                "Name": "The Cult",
+                "Definition": "\"I am God.\" Worship of the Leader.",
+                "Anchor": "Kim Il Sung"
+              },
+              "1.7.6": {
+                "OriginalCode": "2.7.6",
+                "Interrogative": "Cause",
+                "Name": "The Purge",
+                "Definition": "Eliminating rivals to secure the Chair.",
+                "Anchor": "Night of Long Knives"
+              },
+              "1.7.7": {
+                "OriginalCode": "2.7.7",
+                "Interrogative": "Effect",
+                "Name": "Despot",
+                "Definition": "Absolute Power.",
+                "Anchor": "Stalin"
+              }
+            }
+          }
+        }
+      },
+      "2": {
+        "Name": "Plane 2",
+        "Interrogative": "WHAT",
+        "States": {
+          "2.1": {
+            "Name": "What is Reality?",
+            "Vectors": {
+              "2.1.1": {
+                "OriginalCode": "1.1.1",
+                "Interrogative": "What",
+                "Name": "Incommensurability",
+                "Definition": "The inability to define value or truth across the divide. Language breaks down; words mean opposite things to each side.",
+                "Anchor": "Reformation Wars"
+              },
+              "2.1.2": {
+                "OriginalCode": "1.1.2",
+                "Interrogative": "Who",
+                "Name": "Demonization",
+                "Definition": "Defining the Other not as \"Wrong\" but as \"Evil/Unreal.\" They are NPCs or demons, removing the moral obligation to treat them as human.",
+                "Anchor": "McCarthyism"
+              },
+              "2.1.3": {
+                "OriginalCode": "1.1.3",
+                "Interrogative": "How",
+                "Name": "Propaganda",
+                "Definition": "The manufacturing of a synthetic reality (The Narrative) to replace organic truth. Information is weaponized to define \"What is true.\"",
+                "Anchor": "Goebbels Ministry"
+              },
+              "2.1.4": {
+                "OriginalCode": "1.1.4",
+                "Interrogative": "Where",
+                "Name": "The Filter Bubble",
+                "Definition": "The physical/digital separation of data-space. One literally never encounters a definition that contradicts the Tribe's reality.",
+                "Anchor": "Facebook Algorithm"
+              },
+              "2.1.5": {
+                "OriginalCode": "1.1.5",
+                "Interrogative": "Why",
+                "Name": "Cynicism",
+                "Definition": "The belief that Truth is impossible, so one might as well choose the most convenient Lie.",
+                "Anchor": "Soviet Pravda Era"
+              },
+              "2.1.6": {
+                "OriginalCode": "1.1.6",
+                "Interrogative": "Cause",
+                "Name": "Conspiracy",
+                "Definition": "Defining all events as the result of a secret, malevolent plot. The rejection of randomness or error.",
+                "Anchor": "Protocols of Zion"
+              },
+              "2.1.7": {
+                "OriginalCode": "1.1.7",
+                "Interrogative": "Effect",
+                "Name": "Cold War",
+                "Definition": "The mental state of total hostility. Shared reality is annihilated; total bifurcation of the \"What.\"",
+                "Anchor": "Bleeding Kansas"
+              }
+            }
+          },
+          "2.2": {
+            "Name": "What is the Law?",
+            "Vectors": {
+              "2.2.1": {
+                "OriginalCode": "1.2.1",
+                "Interrogative": "What",
+                "Name": "Nullification",
+                "Definition": "The refusal to recognize the definition of the Central Law. \"That law does not exist here.\"",
+                "Anchor": "Nullification Crisis"
+              },
+              "2.2.2": {
+                "OriginalCode": "1.2.2",
+                "Interrogative": "Who",
+                "Name": "Disloyalty",
+                "Definition": "Transferring the definition of Authority from the State to the Local Chief/Warlord.",
+                "Anchor": "Warlord Era"
+              },
+              "2.2.3": {
+                "OriginalCode": "1.2.3",
+                "Interrogative": "How",
+                "Name": "Decree",
+                "Definition": "The Law is defined simply by the Will of the Ruler (\"Because I said so\"). It loses its objective structure.",
+                "Anchor": "Louis XIV"
+              },
+              "2.2.4": {
+                "OriginalCode": "1.2.4",
+                "Interrogative": "Where",
+                "Name": "Secession",
+                "Definition": "Redefining the border. \"The Law stops here.\" The physical contraction of the legal space.",
+                "Anchor": "Confederacy"
+              },
+              "2.2.5": {
+                "OriginalCode": "1.2.5",
+                "Interrogative": "Why",
+                "Name": "Illegitimacy",
+                "Definition": "Defining the Ruler as fake/fraudulent, thus voiding all their laws.",
+                "Anchor": "Birtherism"
+              },
+              "2.2.6": {
+                "OriginalCode": "1.2.6",
+                "Interrogative": "Cause",
+                "Name": "Usurpation",
+                "Definition": "Claiming the title was stolen in the past, making the current definition void.",
+                "Anchor": "War of Roses"
+              },
+              "2.2.7": {
+                "OriginalCode": "1.2.7",
+                "Interrogative": "Effect",
+                "Name": "Anarchy",
+                "Definition": "The absence of any definition. No one knows \"What\" the rules are.",
+                "Anchor": "Somalia"
+              }
+            }
+          },
+          "2.3": {
+            "Name": "What is Truth?",
+            "Vectors": {
+              "2.3.1": {
+                "OriginalCode": "1.3.1",
+                "Interrogative": "What",
+                "Name": "Doubt",
+                "Definition": "The deliberate manufacture of uncertainty. \"We don't know What it is.\" Stalling action via confusion.",
+                "Anchor": "Tobacco Lobby"
+              },
+              "2.3.2": {
+                "OriginalCode": "1.3.2",
+                "Interrogative": "Who",
+                "Name": "Denial",
+                "Definition": "Rejecting the definition because it comes from Them. \"If they say X, X is false.\"",
+                "Anchor": "Lysenkoism"
+              },
+              "2.3.3": {
+                "OriginalCode": "1.3.3",
+                "Interrogative": "How",
+                "Name": "The Power Lie",
+                "Definition": "Lying not to deceive, but to demonstrate power over the definition of reality. \"It is true because I say it is.\"",
+                "Anchor": "Sharpiegate"
+              },
+              "2.3.4": {
+                "OriginalCode": "1.3.4",
+                "Interrogative": "Where",
+                "Name": "Relativism",
+                "Definition": "\"Truth depends on where you stand.\" The rejection of objective fact for subjective narrative.",
+                "Anchor": "Postmodernism"
+              },
+              "2.3.5": {
+                "OriginalCode": "1.3.5",
+                "Interrogative": "Why",
+                "Name": "Nihilism",
+                "Definition": "The rejection of the concept of Truth itself. \"Nothing is true, everything is permitted.\"",
+                "Anchor": "Firehose of Falsehood"
+              },
+              "2.3.6": {
+                "OriginalCode": "1.3.6",
+                "Interrogative": "Cause",
+                "Name": "Gaslighting",
+                "Definition": "Rewriting the past definition to make the victim question their sanity. \"That never happened.\"",
+                "Anchor": "Show Trials"
+              },
+              "2.3.7": {
+                "OriginalCode": "1.3.7",
+                "Interrogative": "Effect",
+                "Name": "Delusion",
+                "Definition": "The population lives in a fantasy world unrelated to physical parameters.",
+                "Anchor": "QAnon"
+              }
+            }
+          },
+          "2.4": {
+            "Name": "What is Value?",
+            "Vectors": {
+              "2.4.1": {
+                "OriginalCode": "1.4.1",
+                "Interrogative": "What",
+                "Name": "Speculation",
+                "Definition": "Defining value as \"What the next person will pay.\" The economy becomes a casino/bet.",
+                "Anchor": "Tulip Mania"
+              },
+              "2.4.2": {
+                "OriginalCode": "1.4.2",
+                "Interrogative": "Who",
+                "Name": "Subsistence",
+                "Definition": "Value is reduced to \"Staying Alive.\" The total collapse of surplus and complex trade.",
+                "Anchor": "Irish Famine"
+              },
+              "2.4.3": {
+                "OriginalCode": "1.4.3",
+                "Interrogative": "How",
+                "Name": "Counterfeiting",
+                "Definition": "The proliferation of fake value. \"How is it made?\" It's not real.",
+                "Anchor": "Operation Bernhard"
+              },
+              "2.4.4": {
+                "OriginalCode": "1.4.4",
+                "Interrogative": "Where",
+                "Name": "Barter",
+                "Definition": "Value only exists \"Here and Now\" in physical goods (cigarettes, bullets).",
+                "Anchor": "Cigarette Currency"
+              },
+              "2.4.5": {
+                "OriginalCode": "1.4.5",
+                "Interrogative": "Why",
+                "Name": "Unknown",
+                "Definition": "The Price Mechanism fails. No one knows \"Why\" it costs X. Allocation chaos.",
+                "Anchor": "Hyperinflation"
+              },
+              "2.4.6": {
+                "OriginalCode": "1.4.6",
+                "Interrogative": "Cause",
+                "Name": "Short-Termism",
+                "Definition": "Value is defined only in the immediate moment. No investment in the future.",
+                "Anchor": "Dotcom Bubble"
+              },
+              "2.4.7": {
+                "OriginalCode": "1.4.7",
+                "Interrogative": "Effect",
+                "Name": "Debasement",
+                "Definition": "The Ruler dilutes the definition of the coin, stealing wealth from all holders.",
+                "Anchor": "Roman Denarius"
+              }
+            }
+          },
+          "2.5": {
+            "Name": "What is Justice?",
+            "Vectors": {
+              "2.5.1": {
+                "OriginalCode": "1.5.1",
+                "Interrogative": "What",
+                "Name": "Selective Justice",
+                "Definition": "\"Show me the man, I'll show you the crime.\" The definition of crime becomes fluid/weaponized.",
+                "Anchor": "Lavrentiy Beria"
+              },
+              "2.5.2": {
+                "OriginalCode": "1.5.2",
+                "Interrogative": "Who",
+                "Name": "Persecution",
+                "Definition": "Jailing the \"Who\" (Opponent) rather than the \"What\" (Criminal).",
+                "Anchor": "Alien Acts"
+              },
+              "2.5.3": {
+                "OriginalCode": "1.5.3",
+                "Interrogative": "How",
+                "Name": "Indictment",
+                "Definition": "Using the process of charging as the punishment itself.",
+                "Anchor": "Lula da Silva"
+              },
+              "2.5.4": {
+                "OriginalCode": "1.5.4",
+                "Interrogative": "Where",
+                "Name": "Seizure",
+                "Definition": "Taking the property/land of the rival. Justice defined as looting.",
+                "Anchor": "Dissolution of Monasteries"
+              },
+              "2.5.5": {
+                "OriginalCode": "1.5.5",
+                "Interrogative": "Why",
+                "Name": "Vengeance",
+                "Definition": "The court exists to inflict pain, not to restore balance.",
+                "Anchor": "Sulla's Proscriptions"
+              },
+              "2.5.6": {
+                "OriginalCode": "1.5.6",
+                "Interrogative": "Cause",
+                "Name": "Breach",
+                "Definition": "Breaking the historical definition/norm (Precedent) to win the current round.",
+                "Anchor": "Court Packing"
+              },
+              "2.5.7": {
+                "OriginalCode": "1.5.7",
+                "Interrogative": "Effect",
+                "Name": "Tyranny",
+                "Definition": "The Law is defined simply as the Will of the Strongest.",
+                "Anchor": "Absolutism"
+              }
+            }
+          },
+          "2.6": {
+            "Name": "What is the State?",
+            "Vectors": {
+              "2.6.1": {
+                "OriginalCode": "1.6.1",
+                "Interrogative": "What",
+                "Name": "Deadlock",
+                "Definition": "The system acts to stop itself. \"What is done?\" Nothing. Functional paralysis.",
+                "Anchor": "1876 Election"
+              },
+              "2.6.2": {
+                "OriginalCode": "1.6.2",
+                "Interrogative": "Who",
+                "Name": "The Mob",
+                "Definition": "The definition of power moves from the Institution to the Crowd (Force).",
+                "Anchor": "1968 Riots"
+              },
+              "2.6.3": {
+                "OriginalCode": "1.6.3",
+                "Interrogative": "How",
+                "Name": "Martial Law",
+                "Definition": "The State is defined by the Gun. Suspension of civil definition.",
+                "Anchor": "Poland 1981"
+              },
+              "2.6.4": {
+                "OriginalCode": "1.6.4",
+                "Interrogative": "Where",
+                "Name": "Dual Power",
+                "Definition": "Two Capitols, Two Kings. The definition of the Center is split.",
+                "Anchor": "Anti-Popes"
+              },
+              "2.6.5": {
+                "OriginalCode": "1.6.5",
+                "Interrogative": "Why",
+                "Name": "Panic",
+                "Definition": "The fear that the Definition (Order) is dissolving into Void.",
+                "Anchor": "The Terror"
+              },
+              "2.6.6": {
+                "OriginalCode": "1.6.6",
+                "Interrogative": "Cause",
+                "Name": "The Coup",
+                "Definition": "Seizing the definition of the State illegal means.",
+                "Anchor": "Pinochet"
+              },
+              "2.6.7": {
+                "OriginalCode": "1.6.7",
+                "Interrogative": "Effect",
+                "Name": "Dictatorship",
+                "Definition": "The State is defined as One Man.",
+                "Anchor": "Caesar"
+              }
+            }
+          },
+          "2.7": {
+            "Name": "What is Sovereignty?",
+            "Vectors": {
+              "2.7.1": {
+                "OriginalCode": "1.7.1",
+                "Interrogative": "What",
+                "Name": "Vetoed",
+                "Definition": "We cannot define our own policy. A foreign power holds the pen.",
+                "Anchor": "Finlandization"
+              },
+              "2.7.2": {
+                "OriginalCode": "1.7.2",
+                "Interrogative": "Who",
+                "Name": "The Occupier",
+                "Definition": "The Enemy defines the rules on our soil.",
+                "Anchor": "Post-WWII Germany"
+              },
+              "2.7.3": {
+                "OriginalCode": "1.7.3",
+                "Interrogative": "How",
+                "Name": "Vassalage",
+                "Definition": "We act as a Puppet. We execute the Will of Another.",
+                "Anchor": "Belarus"
+              },
+              "2.7.4": {
+                "OriginalCode": "1.7.4",
+                "Interrogative": "Where",
+                "Name": "Debt Slavery",
+                "Definition": "Our resources go \"There\" (to the Creditor). We do not own our output.",
+                "Anchor": "IMF Debt"
+              },
+              "2.7.5": {
+                "OriginalCode": "1.7.5",
+                "Interrogative": "Why",
+                "Name": "Inferiority",
+                "Definition": "We define ourselves as lesser than the Empire. Cultural cringe.",
+                "Anchor": "Colonial Mentality"
+              },
+              "2.7.6": {
+                "OriginalCode": "1.7.6",
+                "Interrogative": "Cause",
+                "Name": "Assimilation",
+                "Definition": "We are eaten. Our definition merges into Theirs.",
+                "Anchor": "The Borg"
+              },
+              "2.7.7": {
+                "OriginalCode": "1.7.7",
+                "Interrogative": "Effect",
+                "Name": "Extinction",
+                "Definition": "The Nation ceases to sustain a definition. It disappears from the map.",
+                "Anchor": "Poland 1795"
+              }
+            }
+          }
+        }
+      },
+      "3": {
+        "Name": "Plane 3",
+        "Interrogative": "WHERE",
+        "States": {
+          "3.1": {
+            "Name": "Where is the Supply?",
+            "Vectors": {
+              "3.1.1": {
+                "OriginalCode": "4.1.1",
+                "Interrogative": "What",
+                "Name": "Price Blindness",
+                "Definition": "We don't know \"What\" it costs anymore. Inflation destroys signal.",
+                "Anchor": "Venezuelan Hyperinflation"
+              },
+              "3.1.2": {
+                "OriginalCode": "4.1.2",
+                "Interrogative": "Who",
+                "Name": "Starvation",
+                "Definition": "The people (\"Who\") cease to eat. Biological failure.",
+                "Anchor": "Holodomor"
+              },
+              "3.1.3": {
+                "OriginalCode": "4.1.3",
+                "Interrogative": "How",
+                "Name": "Black Market",
+                "Definition": "Supply moves via illegal channels (\"How\").",
+                "Anchor": "Prohibition"
+              },
+              "3.1.4": {
+                "OriginalCode": "4.1.4",
+                "Interrogative": "Where",
+                "Name": "The Bottleneck",
+                "Definition": "It is stuck \"There.\" Chokepoint failure.",
+                "Anchor": "Suez Crisis"
+              },
+              "3.1.5": {
+                "OriginalCode": "4.1.5",
+                "Interrogative": "Why",
+                "Name": "Panic",
+                "Definition": "Buying because of fear. Run on goods.",
+                "Anchor": "Toilet Paper Panic"
+              },
+              "3.1.6": {
+                "OriginalCode": "4.1.6",
+                "Interrogative": "Cause",
+                "Name": "Hoarding",
+                "Definition": "Keeping it for yourself. Pre-positioning.",
+                "Anchor": "Cold War Bunkers"
+              },
+              "3.1.7": {
+                "OriginalCode": "4.1.7",
+                "Interrogative": "Effect",
+                "Name": "Autarky",
+                "Definition": "Closing the border. No trade come in.",
+                "Anchor": "North Korea"
+              }
+            }
+          },
+          "3.2": {
+            "Name": "Where is the Border?",
+            "Vectors": {
+              "3.2.1": {
+                "OriginalCode": "4.2.1",
+                "Interrogative": "What",
+                "Name": "Jurisdiction Clash",
+                "Definition": "\"What law applies here?\" Conflict of Sovereigns.",
+                "Anchor": "Fugitive Slave Act"
+              },
+              "3.2.2": {
+                "OriginalCode": "4.2.2",
+                "Interrogative": "Who",
+                "Name": "Infiltration",
+                "Definition": "The Enemy is inside the border.",
+                "Anchor": "Trojan Horse"
+              },
+              "3.2.3": {
+                "OriginalCode": "4.2.3",
+                "Interrogative": "How",
+                "Name": "Language Death",
+                "Definition": "We speak Their tongue here now.",
+                "Anchor": "Welsh Not"
+              },
+              "3.2.4": {
+                "OriginalCode": "4.2.4",
+                "Interrogative": "Where",
+                "Name": "Occupation",
+                "Definition": "They are Here. Military control.",
+                "Anchor": "Vichy France"
+              },
+              "3.2.5": {
+                "OriginalCode": "4.2.5",
+                "Interrogative": "Why",
+                "Name": "Violation",
+                "Definition": "Psychological rape of the homeland.",
+                "Anchor": "9/11 Attacks"
+              },
+              "3.2.6": {
+                "OriginalCode": "4.2.6",
+                "Interrogative": "Cause",
+                "Name": "Colonization",
+                "Definition": "They are rewriting our history/space.",
+                "Anchor": "British Raj"
+              },
+              "3.2.7": {
+                "OriginalCode": "4.2.7",
+                "Interrogative": "Effect",
+                "Name": "Annexation",
+                "Definition": "The Map changes. We are gone.",
+                "Anchor": "Crimea"
+              }
+            }
+          },
+          "3.3": {
+            "Name": "Where is the Asset?",
+            "Vectors": {
+              "3.3.1": {
+                "OriginalCode": "4.3.1",
+                "Interrogative": "What",
+                "Name": "Austerity",
+                "Definition": "Cutting \"What\" we need to pay the debt.",
+                "Anchor": "Greek Crisis"
+              },
+              "3.3.2": {
+                "OriginalCode": "4.3.2",
+                "Interrogative": "Who",
+                "Name": "Peonage",
+                "Definition": "We work for the Bank, not ourselves.",
+                "Anchor": "Sharecropping"
+              },
+              "3.3.3": {
+                "OriginalCode": "4.3.3",
+                "Interrogative": "How",
+                "Name": "Tribute",
+                "Definition": "Paying protection money to the Empire.",
+                "Anchor": "Danegeld"
+              },
+              "3.3.4": {
+                "OriginalCode": "4.3.4",
+                "Interrogative": "Where",
+                "Name": "Foreclosure",
+                "Definition": "They took the house/land. Dispossession.",
+                "Anchor": "2008 Housing Crisis"
+              },
+              "3.3.5": {
+                "OriginalCode": "4.3.5",
+                "Interrogative": "Why",
+                "Name": "Shame",
+                "Definition": "The humiliation of being a beggar nation.",
+                "Anchor": "Versailles Reparations"
+              },
+              "3.3.6": {
+                "OriginalCode": "4.3.6",
+                "Interrogative": "Cause",
+                "Name": "Usury",
+                "Definition": "Interest that can never be repaid. Trap.",
+                "Anchor": "Payday Lenders"
+              },
+              "3.3.7": {
+                "OriginalCode": "4.3.7",
+                "Interrogative": "Effect",
+                "Name": "Default",
+                "Definition": "Total credit collapse. Expulsion from system.",
+                "Anchor": "Argentina"
+              }
+            }
+          },
+          "3.4": {
+            "Name": "Where is the Maintenance?",
+            "Vectors": {
+              "3.4.1": {
+                "OriginalCode": "4.4.1",
+                "Interrogative": "What",
+                "Name": "Obsolescence",
+                "Definition": "\"What is this?\" It is old junk. Outdated tech.",
+                "Anchor": "Soviet Computers"
+              },
+              "3.4.2": {
+                "OriginalCode": "4.4.2",
+                "Interrogative": "Who",
+                "Name": "Rot",
+                "Definition": "Nature is eating the structure.",
+                "Anchor": "Rust Belt"
+              },
+              "3.4.3": {
+                "OriginalCode": "4.4.3",
+                "Interrogative": "How",
+                "Name": "Neglect",
+                "Definition": "Simply stopping the repairs.",
+                "Anchor": "Flint Water Crisis"
+              },
+              "3.4.4": {
+                "OriginalCode": "4.4.4",
+                "Interrogative": "Where",
+                "Name": "Blackout",
+                "Definition": "The Grid fails \"Here\". No power.",
+                "Anchor": "Texas Power Crisis"
+              },
+              "3.4.5": {
+                "OriginalCode": "4.4.5",
+                "Interrogative": "Why",
+                "Name": "Squalor",
+                "Definition": "Accepting filth as normal.",
+                "Anchor": "Victorian Slums"
+              },
+              "3.4.6": {
+                "OriginalCode": "4.4.6",
+                "Interrogative": "Cause",
+                "Name": "Ruins",
+                "Definition": "Living in the wreckage of the past.",
+                "Anchor": "Fall of Rome"
+              },
+              "3.4.7": {
+                "OriginalCode": "4.4.7",
+                "Interrogative": "Effect",
+                "Name": "Doom",
+                "Definition": "Thermodynamic collapse. Heat Death.",
+                "Anchor": "Physics"
+              }
+            }
+          },
+          "3.5": {
+            "Name": "Where is the Commons?",
+            "Vectors": {
+              "3.5.1": {
+                "OriginalCode": "4.5.1",
+                "Interrogative": "What",
+                "Name": "Rent-Seeking",
+                "Definition": "Charging for access to \"What\" was free.",
+                "Anchor": "Feudal Landlordism"
+              },
+              "3.5.2": {
+                "OriginalCode": "4.5.2",
+                "Interrogative": "Who",
+                "Name": "Enclosure",
+                "Definition": "Fencing off the land meant for All.",
+                "Anchor": "Enclosure Acts"
+              },
+              "3.5.3": {
+                "OriginalCode": "4.5.3",
+                "Interrogative": "How",
+                "Name": "Corruption",
+                "Definition": "Selling the public asset to a crony.",
+                "Anchor": "Post-Soviet Oligarchs"
+              },
+              "3.5.4": {
+                "OriginalCode": "4.5.4",
+                "Interrogative": "Where",
+                "Name": "Extraction",
+                "Definition": "Taking the wealth away from \"Here\".",
+                "Anchor": "Belgian Congo"
+              },
+              "3.5.5": {
+                "OriginalCode": "4.5.5",
+                "Interrogative": "Why",
+                "Name": "Greed",
+                "Definition": "\"Because I want it.\" Private gain > Public good.",
+                "Anchor": "Gordon Gekko"
+              },
+              "3.5.6": {
+                "OriginalCode": "4.5.6",
+                "Interrogative": "Cause",
+                "Name": "Looting",
+                "Definition": "Theft of national heritage/stuff.",
+                "Anchor": "Nazi Art Theft"
+              },
+              "3.5.7": {
+                "OriginalCode": "4.5.7",
+                "Interrogative": "Effect",
+                "Name": "Neo-Feudalism",
+                "Definition": "Society divides into Owners and Renters.",
+                "Anchor": "Gig Economy"
+              }
+            }
+          },
+          "3.6": {
+            "Name": "Where is the Trade?",
+            "Vectors": {
+              "3.6.1": {
+                "OriginalCode": "4.6.1",
+                "Interrogative": "What",
+                "Name": "Smuggling",
+                "Definition": "Trade moves to the dark. Contraband.",
+                "Anchor": "Rum-runners"
+              },
+              "3.6.2": {
+                "OriginalCode": "4.6.2",
+                "Interrogative": "Who",
+                "Name": "Scarcity",
+                "Definition": "\"Who\" has it? No one. Lack of goods.",
+                "Anchor": "Cuba Special Period"
+              },
+              "3.6.3": {
+                "OriginalCode": "4.6.3",
+                "Interrogative": "How",
+                "Name": "Censorship",
+                "Definition": "Blocking flow of information/connection.",
+                "Anchor": "Great Firewall"
+              },
+              "3.6.4": {
+                "OriginalCode": "4.6.4",
+                "Interrogative": "Where",
+                "Name": "Blockade",
+                "Definition": "Physical ring of steel. Nothing comes in.",
+                "Anchor": "Berlin Blockade"
+              },
+              "3.6.5": {
+                "OriginalCode": "4.6.5",
+                "Interrogative": "Why",
+                "Name": "Victimhood",
+                "Definition": "\"They did this to us.\" External blame.",
+                "Anchor": "Post-WWI Germany"
+              },
+              "3.6.6": {
+                "OriginalCode": "4.6.6",
+                "Interrogative": "Cause",
+                "Name": "Pariah Status",
+                "Definition": "Shunned by the world. Alone.",
+                "Anchor": "Apartheid SA"
+              },
+              "3.6.7": {
+                "OriginalCode": "4.6.7",
+                "Interrogative": "Effect",
+                "Name": "Autarky",
+                "Definition": "Forced self-reliance. Poverty.",
+                "Anchor": "Juche"
+              }
+            }
+          },
+          "3.7": {
+            "Name": "Where is the Value?",
+            "Vectors": {
+              "3.7.1": {
+                "OriginalCode": "4.7.1",
+                "Interrogative": "What",
+                "Name": "Speculation",
+                "Definition": "Value is in the bet/future.",
+                "Anchor": "Tulip Mania"
+              },
+              "3.7.2": {
+                "OriginalCode": "4.7.2",
+                "Interrogative": "Who",
+                "Name": "Subsistence",
+                "Definition": "Value is in staying alive.",
+                "Anchor": "Irish Famine"
+              },
+              "3.7.3": {
+                "OriginalCode": "4.7.3",
+                "Interrogative": "How",
+                "Name": "Counterfeiting",
+                "Definition": "Value is fake.",
+                "Anchor": "Operation Bernhard"
+              },
+              "3.7.4": {
+                "OriginalCode": "4.7.4",
+                "Interrogative": "Where",
+                "Name": "Barter",
+                "Definition": "Value is in the physical object here.",
+                "Anchor": "Cigarette Money"
+              },
+              "3.7.5": {
+                "OriginalCode": "4.7.5",
+                "Interrogative": "Why",
+                "Name": "Anxiety",
+                "Definition": "Value is fleeing. Fear of zero.",
+                "Anchor": "Stagflation"
+              },
+              "3.7.6": {
+                "OriginalCode": "4.7.6",
+                "Interrogative": "Cause",
+                "Name": "Short-Term",
+                "Definition": "Value is Now only.",
+                "Anchor": "Dotcom"
+              },
+              "3.7.7": {
+                "OriginalCode": "4.7.7",
+                "Interrogative": "Effect",
+                "Name": "Debasement",
+                "Definition": "Value is melted down.",
+                "Anchor": "Roman Denarius"
+              }
+            }
+          }
+        }
+      },
+      "4": {
+        "Name": "Plane 4",
+        "Interrogative": "WHY",
+        "States": {
+          "4.1": {
+            "Name": "Why this Pain?",
+            "Vectors": {
+              "4.1.1": {
+                "OriginalCode": "5.1.1",
+                "Interrogative": "What",
+                "Name": "Justification",
+                "Definition": "\"Pain is necessary.\" Using logic/science to explain why cruelty is good.",
+                "Anchor": "Social Darwinism"
+              },
+              "4.1.2": {
+                "OriginalCode": "5.1.2",
+                "Interrogative": "Who",
+                "Name": "Torture",
+                "Definition": "Inflicting physical agony on the \"Who\" (Body).",
+                "Anchor": "Abu Ghraib"
+              },
+              "4.1.3": {
+                "OriginalCode": "5.1.3",
+                "Interrogative": "How",
+                "Name": "Hate Speech",
+                "Definition": "Naming the victim as vermin to bypass empathy.",
+                "Anchor": "Rwandan Radio"
+              },
+              "4.1.4": {
+                "OriginalCode": "5.1.4",
+                "Interrogative": "Where",
+                "Name": "Starvation",
+                "Definition": "Withholding food from \"There\" (the enemy region).",
+                "Anchor": "Holodomor"
+              },
+              "4.1.5": {
+                "OriginalCode": "5.1.5",
+                "Interrogative": "Why",
+                "Name": "Sadism",
+                "Definition": "\"Because I enjoy it.\" Pleasure derived from suffering.",
+                "Anchor": "Caligula"
+              },
+              "4.1.6": {
+                "OriginalCode": "5.1.6",
+                "Interrogative": "Cause",
+                "Name": "The Cycle",
+                "Definition": "\"They did it to us.\" Repeating the trauma loop.",
+                "Anchor": "New Wars"
+              },
+              "4.1.7": {
+                "OriginalCode": "5.1.7",
+                "Interrogative": "Effect",
+                "Name": "Evil",
+                "Definition": "Alignment with pure destruction vs Life.",
+                "Anchor": "The Holocaust"
+              }
+            }
+          },
+          "4.2": {
+            "Name": "Why Exclude?",
+            "Vectors": {
+              "4.2.1": {
+                "OriginalCode": "5.2.1",
+                "Interrogative": "What",
+                "Name": "Othering",
+                "Definition": "Defining the stranger as Alien/Threat.",
+                "Anchor": "Chinese Exclusion Act"
+              },
+              "4.2.2": {
+                "OriginalCode": "5.2.2",
+                "Interrogative": "Who",
+                "Name": "The Ghetto",
+                "Definition": "\"They belong There.\" Physical containment of the unclean.",
+                "Anchor": "Warsaw Ghetto"
+              },
+              "4.2.3": {
+                "OriginalCode": "5.2.3",
+                "Interrogative": "How",
+                "Name": "The Slur",
+                "Definition": "Normalizing derogatory language to strip dignity.",
+                "Anchor": "Nazi Propaganda"
+              },
+              "4.2.4": {
+                "OriginalCode": "5.2.4",
+                "Interrogative": "Where",
+                "Name": "Disenfranchised",
+                "Definition": "Stripping the right to speak/vote in \"This Place.\"",
+                "Anchor": "Jim Crow"
+              },
+              "4.2.5": {
+                "OriginalCode": "5.2.5",
+                "Interrogative": "Why",
+                "Name": "Bigotry",
+                "Definition": "Visceral emotional disgust for difference.",
+                "Anchor": "KKK"
+              },
+              "4.2.6": {
+                "OriginalCode": "5.2.6",
+                "Interrogative": "Cause",
+                "Name": "Scapegoating",
+                "Definition": "Blaming the Other for the failures of the Self.",
+                "Anchor": "Pogroms"
+              },
+              "4.2.7": {
+                "OriginalCode": "5.2.7",
+                "Interrogative": "Effect",
+                "Name": "Ethnostate",
+                "Definition": "The goal of total racial purity.",
+                "Anchor": "White Nationalism"
+              }
+            }
+          },
+          "4.3": {
+            "Name": "Why Lie?",
+            "Vectors": {
+              "4.3.1": {
+                "OriginalCode": "5.3.1",
+                "Interrogative": "What",
+                "Name": "Double Standard",
+                "Definition": "One set of rules for Rulers, another for Ruled.",
+                "Anchor": "Soviet Nomenklatura"
+              },
+              "4.3.2": {
+                "OriginalCode": "5.3.2",
+                "Interrogative": "Who",
+                "Name": "Luxury",
+                "Definition": "The Leaders feast while the People starve.",
+                "Anchor": "French Court"
+              },
+              "4.3.3": {
+                "OriginalCode": "5.3.3",
+                "Interrogative": "How",
+                "Name": "Gaslighting",
+                "Definition": "Denying the privilege to the face of the poor.",
+                "Anchor": "Let them eat cake"
+              },
+              "4.3.4": {
+                "OriginalCode": "5.3.4",
+                "Interrogative": "Where",
+                "Name": "Immunity",
+                "Definition": "The Law does not apply \"Up Here.\"",
+                "Anchor": "Partygate"
+              },
+              "4.3.5": {
+                "OriginalCode": "5.3.5",
+                "Interrogative": "Why",
+                "Name": "Betrayal",
+                "Definition": "Preaching virtue while practicing vice.",
+                "Anchor": "Televangelist Scandals"
+              },
+              "4.3.6": {
+                "OriginalCode": "5.3.6",
+                "Interrogative": "Cause",
+                "Name": "Corruption",
+                "Definition": "\"I did it for me.\" Self-dealing.",
+                "Anchor": "Teapot Dome"
+              },
+              "4.3.7": {
+                "OriginalCode": "5.3.7",
+                "Interrogative": "Effect",
+                "Name": "Decadence",
+                "Definition": "The rot of the elite collapses the structure.",
+                "Anchor": "Fall of Rome"
+              }
+            }
+          },
+          "4.4": {
+            "Name": "Why Greed?",
+            "Vectors": {
+              "4.4.1": {
+                "OriginalCode": "5.4.1",
+                "Interrogative": "What",
+                "Name": "Market Fundamentalism",
+                "Definition": "\"Price is the only Value.\" Commodification of all life.",
+                "Anchor": "Neoliberalism"
+              },
+              "4.4.2": {
+                "OriginalCode": "5.4.2",
+                "Interrogative": "Who",
+                "Name": "The Hoard",
+                "Definition": "Keeping resources from the community.",
+                "Anchor": "Gilded Age Monopolies"
+              },
+              "4.4.3": {
+                "OriginalCode": "5.4.3",
+                "Interrogative": "How",
+                "Name": "Bribery",
+                "Definition": "Buying the outcome with cash.",
+                "Anchor": "Citizens United"
+              },
+              "4.4.4": {
+                "OriginalCode": "5.4.4",
+                "Interrogative": "Where",
+                "Name": "Predation",
+                "Definition": "Feeding on the weak/vulnerable sectors.",
+                "Anchor": "Subprime Mortgages"
+              },
+              "4.4.5": {
+                "OriginalCode": "5.4.5",
+                "Interrogative": "Why",
+                "Name": "Avarice",
+                "Definition": "Insatiable hunger for More.",
+                "Anchor": "Gordon Gekko"
+              },
+              "4.4.6": {
+                "OriginalCode": "5.4.6",
+                "Interrogative": "Cause",
+                "Name": "Exploitation",
+                "Definition": "Using humans as fuel/tools.",
+                "Anchor": "Child Labor"
+              },
+              "4.4.7": {
+                "OriginalCode": "5.4.7",
+                "Interrogative": "Effect",
+                "Name": "Mammon",
+                "Definition": "Worship of Money over God/Life.",
+                "Anchor": "Golden Calf"
+              }
+            }
+          },
+          "4.5": {
+            "Name": "Why Betray?",
+            "Vectors": {
+              "4.5.1": {
+                "OriginalCode": "5.5.1",
+                "Interrogative": "What",
+                "Name": "Treason",
+                "Definition": "Lending aid and comfort to the Enemy.",
+                "Anchor": "Benedict Arnold"
+              },
+              "4.5.2": {
+                "OriginalCode": "5.5.2",
+                "Interrogative": "Who",
+                "Name": "Abandonment",
+                "Definition": "Leaving the Soldier/Citizen behind.",
+                "Anchor": "Vietnam Withdrawal"
+              },
+              "4.5.3": {
+                "OriginalCode": "5.5.3",
+                "Interrogative": "How",
+                "Name": "Denunciation",
+                "Definition": "Reporting family/friends to the Secret Police.",
+                "Anchor": "Stasi"
+              },
+              "4.5.4": {
+                "OriginalCode": "5.5.4",
+                "Interrogative": "Where",
+                "Name": "Selling Out",
+                "Definition": "Trading national interest for foreign cash.",
+                "Anchor": "NAFTA Critique"
+              },
+              "4.5.5": {
+                "OriginalCode": "5.5.5",
+                "Interrogative": "Why",
+                "Name": "Perfidy",
+                "Definition": "Acting in bad faith to gain advantage.",
+                "Anchor": "Broken Treaties"
+              },
+              "4.5.6": {
+                "OriginalCode": "5.5.6",
+                "Interrogative": "Cause",
+                "Name": "The Stab",
+                "Definition": "Betrayal by a trusted ally.",
+                "Anchor": "Caesar's Assassination"
+              },
+              "4.5.7": {
+                "OriginalCode": "5.5.7",
+                "Interrogative": "Effect",
+                "Name": "Apostasy",
+                "Definition": "Abandoning the Creed/Faith of the nation.",
+                "Anchor": "The Confederacy"
+              }
+            }
+          },
+          "4.6": {
+            "Name": "Why Apathy?",
+            "Vectors": {
+              "4.6.1": {
+                "OriginalCode": "5.6.1",
+                "Interrogative": "What",
+                "Name": "Neutrality",
+                "Definition": "\"Good and Evil are equal.\" Refusal to judge.",
+                "Anchor": "Very Fine People"
+              },
+              "4.6.2": {
+                "OriginalCode": "5.6.2",
+                "Interrogative": "Who",
+                "Name": "Inaction",
+                "Definition": "Standing by while another is killed.",
+                "Anchor": "Kitty Genovese"
+              },
+              "4.6.3": {
+                "OriginalCode": "5.6.3",
+                "Interrogative": "How",
+                "Name": "Silence",
+                "Definition": "Refusing to speak up against power.",
+                "Anchor": "First They Came"
+              },
+              "4.6.4": {
+                "OriginalCode": "5.6.4",
+                "Interrogative": "Where",
+                "Name": "The Bystander",
+                "Definition": "Watching the crime from the sidelines.",
+                "Anchor": "Holocaust Complicity"
+              },
+              "4.6.5": {
+                "OriginalCode": "5.6.5",
+                "Interrogative": "Why",
+                "Name": "Numbness",
+                "Definition": "Inability to feel shock/horror anymore.",
+                "Anchor": "School Shooting Fatigue"
+              },
+              "4.6.6": {
+                "OriginalCode": "5.6.6",
+                "Interrogative": "Cause",
+                "Name": "The Drift",
+                "Definition": "Slow, passive acceptance of decline.",
+                "Anchor": "Late British Empire"
+              },
+              "4.6.7": {
+                "OriginalCode": "5.6.7",
+                "Interrogative": "Effect",
+                "Name": "Nihilism",
+                "Definition": "The belief that nothing matters.",
+                "Anchor": "The Void"
+              }
+            }
+          },
+          "4.7": {
+            "Name": "Why Fear?",
+            "Vectors": {
+              "4.7.1": {
+                "OriginalCode": "5.7.1",
+                "Interrogative": "What",
+                "Name": "The Threat",
+                "Definition": "\"They are coming.\" Constant alarm.",
+                "Anchor": "Terrorism"
+              },
+              "4.7.2": {
+                "OriginalCode": "5.7.2",
+                "Interrogative": "Who",
+                "Name": "The Spy",
+                "Definition": "\"My neighbor is watching me.\"",
+                "Anchor": "Red Scare"
+              },
+              "4.7.3": {
+                "OriginalCode": "5.7.3",
+                "Interrogative": "How",
+                "Name": "The Warning",
+                "Definition": "Government rules via fear-level.",
+                "Anchor": "Threat Levels"
+              },
+              "4.7.4": {
+                "OriginalCode": "5.7.4",
+                "Interrogative": "Where",
+                "Name": "The Bunker",
+                "Definition": "Hiding to survive the coming doom.",
+                "Anchor": "Prepper Construction"
+              },
+              "4.7.5": {
+                "OriginalCode": "5.7.5",
+                "Interrogative": "Why",
+                "Name": "Panic",
+                "Definition": "Uncontrollable fear response.",
+                "Anchor": "Bank Run"
+              },
+              "4.7.6": {
+                "OriginalCode": "5.7.6",
+                "Interrogative": "Cause",
+                "Name": "Paranoia",
+                "Definition": "\"It is all a plot against me.\"",
+                "Anchor": "McCarthy"
+              },
+              "4.7.7": {
+                "OriginalCode": "5.7.7",
+                "Interrogative": "Effect",
+                "Name": "Submission",
+                "Definition": "\"I obey to stay safe.\" Police State.",
+                "Anchor": "Totalitarianism"
+              }
+            }
+          }
+        }
+      },
+      "5": {
+        "Name": "Plane 5",
+        "Interrogative": "HOW",
+        "States": {
+          "5.1": {
+            "Name": "How do we Fail?",
+            "Vectors": {
+              "5.1.1": {
+                "OriginalCode": "3.1.1",
+                "Interrogative": "What",
+                "Name": "Anti-Expertise",
+                "Definition": "Purging the \"Knower.\" Replacing skill with loyalty. Defining expertise as a threat.",
+                "Anchor": "Stalin's Purge"
+              },
+              "5.1.2": {
+                "OriginalCode": "3.1.2",
+                "Interrogative": "Who",
+                "Name": "Incompetence",
+                "Definition": "The Idiot rules. The basic inability to perform the functions of office.",
+                "Anchor": "Idi Amin"
+              },
+              "5.1.3": {
+                "OriginalCode": "3.1.3",
+                "Interrogative": "How",
+                "Name": "Cronyism",
+                "Definition": "Promoting friends regardless of \"How\" well they perform.",
+                "Anchor": "FEMA (Katrina)"
+              },
+              "5.1.4": {
+                "OriginalCode": "3.1.4",
+                "Interrogative": "Where",
+                "Name": "Kleptocracy",
+                "Definition": "The budget goes \"There\" (to the Ruler's pocket). State as piggy bank.",
+                "Anchor": "Mobutu"
+              },
+              "5.1.5": {
+                "OriginalCode": "3.1.5",
+                "Interrogative": "Why",
+                "Name": "Malice",
+                "Definition": "Ruling to hurt. Active hatred of the population.",
+                "Anchor": "Pol Pot"
+              },
+              "5.1.6": {
+                "OriginalCode": "3.1.6",
+                "Interrogative": "Cause",
+                "Name": "Nepotism",
+                "Definition": "Power flows through the bloodline, not merit.",
+                "Anchor": "Trump/North Korea"
+              },
+              "5.1.7": {
+                "OriginalCode": "3.1.7",
+                "Interrogative": "Effect",
+                "Name": "Madness",
+                "Definition": "The Executive mind is broken/insane. Chaos ensues.",
+                "Anchor": "King George III"
+              }
+            }
+          },
+          "5.2": {
+            "Name": "How do we Stop?",
+            "Vectors": {
+              "5.2.1": {
+                "OriginalCode": "3.2.1",
+                "Interrogative": "What",
+                "Name": "The Veto",
+                "Definition": "One voice can say No, blocking the Will of the Many.",
+                "Anchor": "Liberum Veto"
+              },
+              "5.2.2": {
+                "OriginalCode": "3.2.2",
+                "Interrogative": "Who",
+                "Name": "Shutdown",
+                "Definition": "No one works. The machinery of state halts.",
+                "Anchor": "US Budget Crisis"
+              },
+              "5.2.3": {
+                "OriginalCode": "3.2.3",
+                "Interrogative": "How",
+                "Name": "Red Tape",
+                "Definition": "The process is the punishment. Forms/Rules prevent action.",
+                "Anchor": "Soviet Union"
+              },
+              "5.2.4": {
+                "OriginalCode": "3.2.4",
+                "Interrogative": "Where",
+                "Name": "The Filibuster",
+                "Definition": "The bill dies Here. Minority obstruction.",
+                "Anchor": "US Senate"
+              },
+              "5.2.5": {
+                "OriginalCode": "3.2.5",
+                "Interrogative": "Why",
+                "Name": "Obstruction",
+                "Definition": "Blocking for spite/political gain, not policy.",
+                "Anchor": "Mitch McConnell"
+              },
+              "5.2.6": {
+                "OriginalCode": "3.2.6",
+                "Interrogative": "Cause",
+                "Name": "Delay",
+                "Definition": "Waiting out the clock. Justice delayed is justice denied.",
+                "Anchor": "Trump Legal Strategy"
+              },
+              "5.2.7": {
+                "OriginalCode": "3.2.7",
+                "Interrogative": "Effect",
+                "Name": "Paralysis",
+                "Definition": "Total systemic freeze. Nothing moves.",
+                "Anchor": "Late Roman Senate"
+              }
+            }
+          },
+          "5.3": {
+            "Name": "How do we Hide?",
+            "Vectors": {
+              "5.3.1": {
+                "OriginalCode": "3.3.1",
+                "Interrogative": "What",
+                "Name": "Classified",
+                "Definition": "\"You cannot see What we do.\" Over-classification to hide incompetence.",
+                "Anchor": "Pentagon Papers"
+              },
+              "5.3.2": {
+                "OriginalCode": "3.3.2",
+                "Interrogative": "Who",
+                "Name": "Black Site",
+                "Definition": "\"Who is there?\" No one. Secret prisons where law does not exist.",
+                "Anchor": "CIA Sites"
+              },
+              "5.3.3": {
+                "OriginalCode": "3.3.3",
+                "Interrogative": "How",
+                "Name": "Newspeak",
+                "Definition": "Speaking to confuse. Using words to hide meaning rather than reveal it.",
+                "Anchor": "Orwell"
+              },
+              "5.3.4": {
+                "OriginalCode": "3.3.4",
+                "Interrogative": "Where",
+                "Name": "Dark Money",
+                "Definition": "\"Where did the cash come from?\" Unknown. Secret funding of power.",
+                "Anchor": "Super PACs"
+              },
+              "5.3.5": {
+                "OriginalCode": "3.3.5",
+                "Interrogative": "Why",
+                "Name": "Distrust",
+                "Definition": "Assuming the people are the enemy. The Secret List.",
+                "Anchor": "Nixon's Enemies List"
+              },
+              "5.3.6": {
+                "OriginalCode": "3.3.6",
+                "Interrogative": "Cause",
+                "Name": "The Cover-Up",
+                "Definition": "Creating a meta-crime to hide the original crime.",
+                "Anchor": "Watergate"
+              },
+              "5.3.7": {
+                "OriginalCode": "3.3.7",
+                "Interrogative": "Effect",
+                "Name": "Shadow State",
+                "Definition": "Real power operates invisibly (Deep State/Intel Agencies).",
+                "Anchor": "Deep State Theory"
+              }
+            }
+          },
+          "5.4": {
+            "Name": "How do we Cheat?",
+            "Vectors": {
+              "5.4.1": {
+                "OriginalCode": "3.4.1",
+                "Interrogative": "What",
+                "Name": "Quid Pro Quo",
+                "Definition": "\"This for That.\" Use of office for personal exchange.",
+                "Anchor": "Ukraine Call"
+              },
+              "5.4.2": {
+                "OriginalCode": "3.4.2",
+                "Interrogative": "Who",
+                "Name": "Pay-to-Play",
+                "Definition": "Access is sold to the highest bidder (Donor).",
+                "Anchor": "Blagojevich"
+              },
+              "5.4.3": {
+                "OriginalCode": "3.4.3",
+                "Interrogative": "How",
+                "Name": "Bribery",
+                "Definition": "Cash for outcome. The direct purchase of the State.",
+                "Anchor": "Teapot Dome"
+              },
+              "5.4.4": {
+                "OriginalCode": "3.4.4",
+                "Interrogative": "Where",
+                "Name": "Lobbying",
+                "Definition": "Law is written \"There\" (in the Corporation's office).",
+                "Anchor": "ALEC"
+              },
+              "5.4.5": {
+                "OriginalCode": "3.4.5",
+                "Interrogative": "Why",
+                "Name": "Mercenary",
+                "Definition": "Loyalty is rented, not owned. Fighting for money.",
+                "Anchor": "Wagner Group"
+              },
+              "5.4.6": {
+                "OriginalCode": "3.4.6",
+                "Interrogative": "Cause",
+                "Name": "The Spoils",
+                "Definition": "\"To the victor go the spoils.\" Looting the state after winning.",
+                "Anchor": "Andrew Jackson"
+              },
+              "5.4.7": {
+                "OriginalCode": "3.4.7",
+                "Interrogative": "Effect",
+                "Name": "Kleptocracy",
+                "Definition": "The State exists solely to facilitate theft.",
+                "Anchor": "Putin's Russia"
+              }
+            }
+          },
+          "5.5": {
+            "Name": "How do we Poison?",
+            "Vectors": {
+              "5.5.1": {
+                "OriginalCode": "3.5.1",
+                "Interrogative": "What",
+                "Name": "Deregulation",
+                "Definition": "Removing the rules that protect life. \"What rules?\"",
+                "Anchor": "2008 Financial Crash"
+              },
+              "5.5.2": {
+                "OriginalCode": "3.5.2",
+                "Interrogative": "Who",
+                "Name": "Poisoning",
+                "Definition": "Allowing the citizenry to be poisoned for profit.",
+                "Anchor": "OxyContin / FDA"
+              },
+              "5.5.3": {
+                "OriginalCode": "3.5.3",
+                "Interrogative": "How",
+                "Name": "Capture",
+                "Definition": "The Regulator is controlled by the Regulated.",
+                "Anchor": "Healthcare Industry"
+              },
+              "5.5.4": {
+                "OriginalCode": "3.5.4",
+                "Interrogative": "Where",
+                "Name": "Revolving Door",
+                "Definition": "Officials leave office to work \"There\" (for the companies they policed).",
+                "Anchor": "Defense Contractors"
+              },
+              "5.5.5": {
+                "OriginalCode": "3.5.5",
+                "Interrogative": "Why",
+                "Name": "Complicity",
+                "Definition": "The State helps the Corporation kill/steal.",
+                "Anchor": "Boeing 737 MAX"
+              },
+              "5.5.6": {
+                "OriginalCode": "3.5.6",
+                "Interrogative": "Cause",
+                "Name": "Immunity",
+                "Definition": "\"No consequences.\" Too Big To Fail/Jail.",
+                "Anchor": "2008 Bailouts"
+              },
+              "5.5.7": {
+                "OriginalCode": "3.5.7",
+                "Interrogative": "Effect",
+                "Name": "Corp-State",
+                "Definition": "The merger of State and Corporate power (Fascism).",
+                "Anchor": "East India Company"
+              }
+            }
+          },
+          "5.6": {
+            "Name": "How do we Rule?",
+            "Vectors": {
+              "5.6.1": {
+                "OriginalCode": "3.6.1",
+                "Interrogative": "What",
+                "Name": "The Fraud",
+                "Definition": "Business as deceit. The Contract is a trick.",
+                "Anchor": "Enron"
+              },
+              "5.6.2": {
+                "OriginalCode": "3.6.2",
+                "Interrogative": "Who",
+                "Name": "The Brute",
+                "Definition": "The Strongest rules. Violence is the only vote.",
+                "Anchor": "Wild West"
+              },
+              "5.6.3": {
+                "OriginalCode": "3.6.3",
+                "Interrogative": "How",
+                "Name": "Gang Code",
+                "Definition": "Law is replaced by Omerta (Silence/Loyalty).",
+                "Anchor": "Al Capone"
+              },
+              "5.6.4": {
+                "OriginalCode": "3.6.4",
+                "Interrogative": "Where",
+                "Name": "The Raid",
+                "Definition": "Wealth is taken from \"There\" to \"Here\". Predation.",
+                "Anchor": "Viking Raids"
+              },
+              "5.6.5": {
+                "OriginalCode": "3.6.5",
+                "Interrogative": "Why",
+                "Name": "Cruelty",
+                "Definition": "Enjoying the pain of others. Sadism as status.",
+                "Anchor": "Inquisition"
+              },
+              "5.6.6": {
+                "OriginalCode": "3.6.6",
+                "Interrogative": "Cause",
+                "Name": "Recruitment",
+                "Definition": "Indoctrinating youth into violence. Child Soldiers.",
+                "Anchor": "Sierra Leone"
+              },
+              "5.6.7": {
+                "OriginalCode": "3.6.7",
+                "Interrogative": "Effect",
+                "Name": "Warlordism",
+                "Definition": "The State breaks into rival gangs.",
+                "Anchor": "Somalia"
+              }
+            }
+          },
+          "5.7": {
+            "Name": "How do we Speak?",
+            "Vectors": {
+              "5.7.1": {
+                "OriginalCode": "3.7.1",
+                "Interrogative": "What",
+                "Name": "Doublethink",
+                "Definition": "Holding two contradictory thoughts at once.",
+                "Anchor": "Stalinism"
+              },
+              "5.7.2": {
+                "OriginalCode": "3.7.2",
+                "Interrogative": "Who",
+                "Name": "The Addict",
+                "Definition": "Escaping the \"How\" via chemistry.",
+                "Anchor": "Opium Wars"
+              },
+              "5.7.3": {
+                "OriginalCode": "3.7.3",
+                "Interrogative": "How",
+                "Name": "Babble",
+                "Definition": "Language breaks down into noise.",
+                "Anchor": "Tower of Babel"
+              },
+              "5.7.4": {
+                "OriginalCode": "3.7.4",
+                "Interrogative": "Where",
+                "Name": "The Bunker",
+                "Definition": "Hiding from reality in a hole.",
+                "Anchor": "Soviet Collapse"
+              },
+              "5.7.5": {
+                "OriginalCode": "3.7.5",
+                "Interrogative": "Why",
+                "Name": "Paranoia",
+                "Definition": "Fear of the plot.",
+                "Anchor": "Red Scare"
+              },
+              "5.7.6": {
+                "OriginalCode": "3.7.6",
+                "Interrogative": "Cause",
+                "Name": "Hallucination",
+                "Definition": "Seeing patterns that don't exist.",
+                "Anchor": "QAnon"
+              },
+              "5.7.7": {
+                "OriginalCode": "3.7.7",
+                "Interrogative": "Effect",
+                "Name": "Solipsism",
+                "Definition": "Only \"I\" exist.",
+                "Anchor": "The \"Me\" Decade"
+              }
+            }
+          }
+        }
+      },
+      "6": {
+        "Name": "Plane 6",
+        "Interrogative": "CAUSE",
+        "States": {
+          "6.1": {
+            "Name": "Cause of Myth?",
+            "Vectors": {
+              "6.1.1": {
+                "OriginalCode": "6.1.1",
+                "Interrogative": "What",
+                "Name": "Lost Cause",
+                "Definition": "\"We didn't lose, we were cheated.\" Reframing defeat.",
+                "Anchor": "The South (1865)"
+              },
+              "6.1.2": {
+                "OriginalCode": "6.1.2",
+                "Interrogative": "Who",
+                "Name": "Fabrication",
+                "Definition": "Inventing a divine origin for the Leader.",
+                "Anchor": "Kim Il Sung Myth"
+              },
+              "6.1.3": {
+                "OriginalCode": "6.1.3",
+                "Interrogative": "How",
+                "Name": "The Textbook",
+                "Definition": "Teaching lies to children to enforce loyalty.",
+                "Anchor": "Japanese History Books"
+              },
+              "6.1.4": {
+                "OriginalCode": "6.1.4",
+                "Interrogative": "Where",
+                "Name": "The Monument",
+                "Definition": "Building shrines to traitors/falsehoods.",
+                "Anchor": "Confederate Statues"
+              },
+              "6.1.5": {
+                "OriginalCode": "6.1.5",
+                "Interrogative": "Why",
+                "Name": "The Stab",
+                "Definition": "\"We were betrayed from within.\"",
+                "Anchor": "Dolchstosslegende"
+              },
+              "6.1.6": {
+                "OriginalCode": "6.1.6",
+                "Interrogative": "Cause",
+                "Name": "Golden Age",
+                "Definition": "\"It was perfect before.\" Weaponized nostalgia.",
+                "Anchor": "MAGA"
+              },
+              "6.1.7": {
+                "OriginalCode": "6.1.7",
+                "Interrogative": "Effect",
+                "Name": "Chosen People",
+                "Definition": "\"God selected us.\" Divine right excuses crimes.",
+                "Anchor": "Manifest Destiny"
+              }
+            }
+          },
+          "6.2": {
+            "Name": "Cause of Erasure?",
+            "Vectors": {
+              "6.2.1": {
+                "OriginalCode": "6.2.1",
+                "Interrogative": "What",
+                "Name": "Censorship",
+                "Definition": "Removing the Event from the record.",
+                "Anchor": "Tiananmen Square"
+              },
+              "6.2.2": {
+                "OriginalCode": "6.2.2",
+                "Interrogative": "Who",
+                "Name": "Book Burning",
+                "Definition": "Destroying the physical carriers of memory.",
+                "Anchor": "Nazi Book Burnings"
+              },
+              "6.2.3": {
+                "OriginalCode": "6.2.3",
+                "Interrogative": "How",
+                "Name": "Silence",
+                "Definition": "\"We do not speak of it.\" Enforced forgetting.",
+                "Anchor": "Spain's Pact"
+              },
+              "6.2.4": {
+                "OriginalCode": "6.2.4",
+                "Interrogative": "Where",
+                "Name": "Iconoclasm",
+                "Definition": "Smashing the statues/art of the past.",
+                "Anchor": "Taliban Buddhas"
+              },
+              "6.2.5": {
+                "OriginalCode": "6.2.5",
+                "Interrogative": "Why",
+                "Name": "Damnatio Memoriae",
+                "Definition": "Striking the Name so they never existed.",
+                "Anchor": "Roman Senate"
+              },
+              "6.2.6": {
+                "OriginalCode": "6.2.6",
+                "Interrogative": "Cause",
+                "Name": "Whitewashing",
+                "Definition": "Cleaning the blood history to look pure.",
+                "Anchor": "Slavery History"
+              },
+              "6.2.7": {
+                "OriginalCode": "6.2.7",
+                "Interrogative": "Effect",
+                "Name": "Oblivion",
+                "Definition": "Total cultural amnesia. Civilization forgets itself.",
+                "Anchor": "Mayan Collapse"
+              }
+            }
+          },
+          "6.3": {
+            "Name": "Cause of Reaction?",
+            "Vectors": {
+              "6.3.1": {
+                "OriginalCode": "6.3.1",
+                "Interrogative": "What",
+                "Name": "Traditionalism",
+                "Definition": "Rejecting the Modern for the Archaic.",
+                "Anchor": "Julius Evola"
+              },
+              "6.3.2": {
+                "OriginalCode": "6.3.2",
+                "Interrogative": "Who",
+                "Name": "Re-enactment",
+                "Definition": "Living in the past identity physically.",
+                "Anchor": "Civil War Cosplay"
+              },
+              "6.3.3": {
+                "OriginalCode": "6.3.3",
+                "Interrogative": "How",
+                "Name": "Revival",
+                "Definition": "Using dead language/symbols to signal purity.",
+                "Anchor": "Volkish Movement"
+              },
+              "6.3.4": {
+                "OriginalCode": "6.3.4",
+                "Interrogative": "Where",
+                "Name": "Restoration",
+                "Definition": "Trying to put the old map back together.",
+                "Anchor": "Putin's Empire"
+              },
+              "6.3.5": {
+                "OriginalCode": "6.3.5",
+                "Interrogative": "Why",
+                "Name": "Grievance",
+                "Definition": "\"They stole our glory.\" Politics of sadness.",
+                "Anchor": "White Grievance"
+              },
+              "6.3.6": {
+                "OriginalCode": "6.3.6",
+                "Interrogative": "Cause",
+                "Name": "Reaction",
+                "Definition": "Moving Backward in time as policy.",
+                "Anchor": "Nazism"
+              },
+              "6.3.7": {
+                "OriginalCode": "6.3.7",
+                "Interrogative": "Effect",
+                "Name": "Stasis",
+                "Definition": "Refusal to evolve or adapt. Petrified state.",
+                "Anchor": "Ottoman Empire"
+              }
+            }
+          },
+          "6.4": {
+            "Name": "Cause of Hatred?",
+            "Vectors": {
+              "6.4.1": {
+                "OriginalCode": "6.4.1",
+                "Interrogative": "What",
+                "Name": "The Libel",
+                "Definition": "\"They drink blood.\" The False Accusation.",
+                "Anchor": "Blood Libel"
+              },
+              "6.4.2": {
+                "OriginalCode": "6.4.2",
+                "Interrogative": "Who",
+                "Name": "The Purge",
+                "Definition": "Mass killing of the Scapegoat class.",
+                "Anchor": "Stalin's Purge"
+              },
+              "6.4.3": {
+                "OriginalCode": "6.4.3",
+                "Interrogative": "How",
+                "Name": "Witch Hunt",
+                "Definition": "The public trial of the innocent.",
+                "Anchor": "Salem Trials"
+              },
+              "6.4.4": {
+                "OriginalCode": "6.4.4",
+                "Interrogative": "Where",
+                "Name": "Expropriation",
+                "Definition": "Stealing the Scapegoat's wealth.",
+                "Anchor": "Kristallnacht"
+              },
+              "6.4.5": {
+                "OriginalCode": "6.4.5",
+                "Interrogative": "Why",
+                "Name": "Projection",
+                "Definition": "\"They are doing what we are actually doing.\"",
+                "Anchor": "Crooked Hillary"
+              },
+              "6.4.6": {
+                "OriginalCode": "6.4.6",
+                "Interrogative": "Cause",
+                "Name": "The Cabal",
+                "Definition": "\"a secret group caused this.\"",
+                "Anchor": "Protocols of Zion"
+              },
+              "6.4.7": {
+                "OriginalCode": "6.4.7",
+                "Interrogative": "Effect",
+                "Name": "Sacrifice",
+                "Definition": "Killing them to save us.",
+                "Anchor": "Aztec Sacrifice"
+              }
+            }
+          },
+          "6.5": {
+            "Name": "Cause of Amnesia?",
+            "Vectors": {
+              "6.5.1": {
+                "OriginalCode": "6.5.1",
+                "Interrogative": "What",
+                "Name": "Dark Age",
+                "Definition": "The loss of technical knowledge/literacy.",
+                "Anchor": "Fall of Rome"
+              },
+              "6.5.2": {
+                "OriginalCode": "6.5.2",
+                "Interrogative": "Who",
+                "Name": "Repetition",
+                "Definition": "Doing the same fatal thing again.",
+                "Anchor": "Invading Russia in Winter"
+              },
+              "6.5.3": {
+                "OriginalCode": "6.5.3",
+                "Interrogative": "How",
+                "Name": "Dumbing Down",
+                "Definition": "Simplifying discourse to slogans.",
+                "Anchor": "TV News"
+              },
+              "6.5.4": {
+                "OriginalCode": "6.5.4",
+                "Interrogative": "Where",
+                "Name": "Decay",
+                "Definition": "\"We forgot how to build There.\"",
+                "Anchor": "NASA Post-Apollo"
+              },
+              "6.5.5": {
+                "OriginalCode": "6.5.5",
+                "Interrogative": "Why",
+                "Name": "Indifference",
+                "Definition": "\"History is boring.\"",
+                "Anchor": "Ok Boomer"
+              },
+              "6.5.6": {
+                "OriginalCode": "6.5.6",
+                "Interrogative": "Cause",
+                "Name": "Short Attention",
+                "Definition": "Inability to focus on long timeframes.",
+                "Anchor": "TikTok Brain"
+              },
+              "6.5.7": {
+                "OriginalCode": "6.5.7",
+                "Interrogative": "Effect",
+                "Name": "Sleepwalking",
+                "Definition": "Drifting into dooms hidden in the past.",
+                "Anchor": "WWI"
+              }
+            }
+          },
+          "6.6": {
+            "Name": "Cause of Belief?",
+            "Vectors": {
+              "6.6.1": {
+                "OriginalCode": "6.6.1",
+                "Interrogative": "What",
+                "Name": "The News",
+                "Definition": "\"Only this source is true.\"",
+                "Anchor": "Pravda"
+              },
+              "6.6.2": {
+                "OriginalCode": "6.6.2",
+                "Interrogative": "Who",
+                "Name": "Orthodoxy",
+                "Definition": "\"Only We are saved.\"",
+                "Anchor": "Religious Fundamentalism"
+              },
+              "6.6.3": {
+                "OriginalCode": "6.6.3",
+                "Interrogative": "How",
+                "Name": "The Test",
+                "Definition": "\"Say the word correctly or die.\"",
+                "Anchor": "Shibboleth"
+              },
+              "6.6.4": {
+                "OriginalCode": "6.6.4",
+                "Interrogative": "Where",
+                "Name": "Heresy",
+                "Definition": "\"They go into the fire.\"",
+                "Anchor": "The Inquisition"
+              },
+              "6.6.5": {
+                "OriginalCode": "6.6.5",
+                "Interrogative": "Why",
+                "Name": "Fanaticism",
+                "Definition": "Willingness to kill for the Idea.",
+                "Anchor": "ISIS"
+              },
+              "6.6.6": {
+                "OriginalCode": "6.6.6",
+                "Interrogative": "Cause",
+                "Name": "Infallibility",
+                "Definition": "\"The Leader cannot be wrong.\"",
+                "Anchor": "Papal Infallibility"
+              },
+              "6.6.7": {
+                "OriginalCode": "6.6.7",
+                "Interrogative": "Effect",
+                "Name": "Theocracy",
+                "Definition": "God rules the State directly.",
+                "Anchor": "Iran"
+              }
+            }
+          },
+          "6.7": {
+            "Name": "Cause of Pattern?",
+            "Vectors": {
+              "6.7.1": {
+                "OriginalCode": "6.7.1",
+                "Interrogative": "What",
+                "Name": "Denialism",
+                "Definition": "\"The Moon is fake.\" Rejecting reality.",
+                "Anchor": "Moon Landing Denial"
+              },
+              "6.7.2": {
+                "OriginalCode": "6.7.2",
+                "Interrogative": "Who",
+                "Name": "The Spy",
+                "Definition": "\"They are watching me.\"",
+                "Anchor": "Red Scare"
+              },
+              "6.7.3": {
+                "OriginalCode": "6.7.3",
+                "Interrogative": "How",
+                "Name": "Disinformation",
+                "Definition": "\"Flooding the zone with sh*t.\"",
+                "Anchor": "Russian Active Measures"
+              },
+              "6.7.4": {
+                "OriginalCode": "6.7.4",
+                "Interrogative": "Where",
+                "Name": "The Bank",
+                "Definition": "\"They control the money flow.\"",
+                "Anchor": "Rothschild Myths"
+              },
+              "6.7.5": {
+                "OriginalCode": "6.7.5",
+                "Interrogative": "Why",
+                "Name": "The Hero",
+                "Definition": "\"Only I know the truth.\" Gnostic pride.",
+                "Anchor": "QAnon"
+              },
+              "6.7.6": {
+                "OriginalCode": "6.7.6",
+                "Interrogative": "Cause",
+                "Name": "Pattern Matching",
+                "Definition": "Seeing connections where none exist.",
+                "Anchor": "Numerology"
+              },
+              "6.7.7": {
+                "OriginalCode": "6.7.7",
+                "Interrogative": "Effect",
+                "Name": "Gnosis",
+                "Definition": "Secret knowledge saves you.",
+                "Anchor": "Gnosticism"
+              }
+            }
+          }
+        }
+      },
+      "7": {
+        "Name": "Plane 7",
+        "Interrogative": "EFFECT",
+        "States": {
+          "7.1": {
+            "Name": "Effect of Isolation?",
+            "Vectors": {
+              "7.1.1": {
+                "OriginalCode": "7.1.1",
+                "Interrogative": "What",
+                "Name": "Unilateralism",
+                "Definition": "\"We act alone.\" Ignoring the world.",
+                "Anchor": "Iraq War"
+              },
+              "7.1.2": {
+                "OriginalCode": "7.1.2",
+                "Interrogative": "Who",
+                "Name": "The Wall",
+                "Definition": "Physical barriers to stop the world.",
+                "Anchor": "Berlin Wall"
+              },
+              "7.1.3": {
+                "OriginalCode": "7.1.3",
+                "Interrogative": "How",
+                "Name": "Withdrawal",
+                "Definition": "Leaving the table/room (international bodies).",
+                "Anchor": "US leaving UNHRC"
+              },
+              "7.1.4": {
+                "OriginalCode": "7.1.4",
+                "Interrogative": "Where",
+                "Name": "Protectionism",
+                "Definition": "Closing the port with Tariffs.",
+                "Anchor": "Smoot-Hawley"
+              },
+              "7.1.5": {
+                "OriginalCode": "7.1.5",
+                "Interrogative": "Why",
+                "Name": "Xenophobia",
+                "Definition": "Fear of the Foreign contamination.",
+                "Anchor": "Yellow Peril"
+              },
+              "7.1.6": {
+                "OriginalCode": "7.1.6",
+                "Interrogative": "Cause",
+                "Name": "Retreat",
+                "Definition": "Pulling back the legions.",
+                "Anchor": "Syria Pullout"
+              },
+              "7.1.7": {
+                "OriginalCode": "7.1.7",
+                "Interrogative": "Effect",
+                "Name": "Hermit Kingdom",
+                "Definition": "Total closure. Death of exchange.",
+                "Anchor": "North Korea"
+              }
+            }
+          },
+          "7.2": {
+            "Name": "Effect of Breach?",
+            "Vectors": {
+              "7.2.1": {
+                "OriginalCode": "7.2.1",
+                "Interrogative": "What",
+                "Name": "Reneging",
+                "Definition": "Tearing up the signed deal.",
+                "Anchor": "Iran Nuclear Deal"
+              },
+              "7.2.2": {
+                "OriginalCode": "7.2.2",
+                "Interrogative": "Who",
+                "Name": "Invasion",
+                "Definition": "Breaking the sovereign line.",
+                "Anchor": "Ukraine Invasion"
+              },
+              "7.2.3": {
+                "OriginalCode": "7.2.3",
+                "Interrogative": "How",
+                "Name": "Insult",
+                "Definition": "Rudeness replacing Diplomacy.",
+                "Anchor": "Trump G7"
+              },
+              "7.2.4": {
+                "OriginalCode": "7.2.4",
+                "Interrogative": "Where",
+                "Name": "Default",
+                "Definition": "Not paying the debt.",
+                "Anchor": "Argentina"
+              },
+              "7.2.5": {
+                "OriginalCode": "7.2.5",
+                "Interrogative": "Why",
+                "Name": "Bad Faith",
+                "Definition": "Negotiating to trick.",
+                "Anchor": "Munich 1938"
+              },
+              "7.2.6": {
+                "OriginalCode": "7.2.6",
+                "Interrogative": "Cause",
+                "Name": "Madman Theory",
+                "Definition": "\"I am crazy, fear me.\" Chaos.",
+                "Anchor": "Nixon"
+              },
+              "7.2.7": {
+                "OriginalCode": "7.2.7",
+                "Interrogative": "Effect",
+                "Name": "Perfidy",
+                "Definition": "Using peace symbols to kill.",
+                "Anchor": "Trojan Horse"
+              }
+            }
+          },
+          "7.3": {
+            "Name": "Effect of Appeasement?",
+            "Vectors": {
+              "7.3.1": {
+                "OriginalCode": "7.3.1",
+                "Interrogative": "What",
+                "Name": "Concession",
+                "Definition": "Giving \"What\" they want to feed the beast.",
+                "Anchor": "Sudetenland"
+              },
+              "7.3.2": {
+                "OriginalCode": "7.3.2",
+                "Interrogative": "Who",
+                "Name": "Surrender",
+                "Definition": "Quitting before the end.",
+                "Anchor": "France 1940"
+              },
+              "7.3.3": {
+                "OriginalCode": "7.3.3",
+                "Interrogative": "How",
+                "Name": "Flattery",
+                "Definition": "Praising the Dictator.",
+                "Anchor": "Love Letters"
+              },
+              "7.3.4": {
+                "OriginalCode": "7.3.4",
+                "Interrogative": "Where",
+                "Name": "Tribute",
+                "Definition": "Paying them off.",
+                "Anchor": "Danegeld"
+              },
+              "7.3.5": {
+                "OriginalCode": "7.3.5",
+                "Interrogative": "Why",
+                "Name": "Fear",
+                "Definition": "Acting out of terror.",
+                "Anchor": "Finlandization"
+              },
+              "7.3.6": {
+                "OriginalCode": "7.3.6",
+                "Interrogative": "Cause",
+                "Name": "Denial",
+                "Definition": "\"He is not a threat.\"",
+                "Anchor": "Chamberlain"
+              },
+              "7.3.7": {
+                "OriginalCode": "7.3.7",
+                "Interrogative": "Effect",
+                "Name": "Collaboration",
+                "Definition": "Joining the Invader.",
+                "Anchor": "Vichy"
+              }
+            }
+          },
+          "7.4": {
+            "Name": "Effect of Abandonment?",
+            "Vectors": {
+              "7.4.1": {
+                "OriginalCode": "7.4.1",
+                "Interrogative": "What",
+                "Name": "Breaking Pacts",
+                "Definition": "Threatening to leave the Alliance.",
+                "Anchor": "NATO Threats"
+              },
+              "7.4.2": {
+                "OriginalCode": "7.4.2",
+                "Interrogative": "Who",
+                "Name": "Retreat",
+                "Definition": "Running away from the Ally.",
+                "Anchor": "Kabul Airlift"
+              },
+              "7.4.3": {
+                "OriginalCode": "7.4.3",
+                "Interrogative": "How",
+                "Name": "Empty Words",
+                "Definition": "\"Thoughts and Prayers\" only.",
+                "Anchor": "Budapest Memo"
+              },
+              "7.4.4": {
+                "OriginalCode": "7.4.4",
+                "Interrogative": "Where",
+                "Name": "Cutting Aid",
+                "Definition": "Stopping the supply flow.",
+                "Anchor": "Ukraine Aid"
+              },
+              "7.4.5": {
+                "OriginalCode": "7.4.5",
+                "Interrogative": "Why",
+                "Name": "Coldness",
+                "Definition": "Indifference to suffering.",
+                "Anchor": "Rwanda"
+              },
+              "7.4.6": {
+                "OriginalCode": "7.4.6",
+                "Interrogative": "Cause",
+                "Name": "Transactionalism",
+                "Definition": "\"Pay me to care.\"",
+                "Anchor": "Rent-a-Army"
+              },
+              "7.4.7": {
+                "OriginalCode": "7.4.7",
+                "Interrogative": "Effect",
+                "Name": "Isolationism",
+                "Definition": "\"America Alone.\"",
+                "Anchor": "1940s USA"
+              }
+            }
+          },
+          "7.5": {
+            "Name": "Effect of Mockery?",
+            "Vectors": {
+              "7.5.1": {
+                "OriginalCode": "7.5.1",
+                "Interrogative": "What",
+                "Name": "Hypocrisy",
+                "Definition": "Preaching rights, doing wrong.",
+                "Anchor": "Human Rights Record"
+              },
+              "7.5.2": {
+                "OriginalCode": "7.5.2",
+                "Interrogative": "Who",
+                "Name": "The Clown",
+                "Definition": "The Leader is a joke.",
+                "Anchor": "Boris Johnson"
+              },
+              "7.5.3": {
+                "OriginalCode": "7.5.3",
+                "Interrogative": "How",
+                "Name": "Laughter",
+                "Definition": "The world laughs at us.",
+                "Anchor": "UN laughs at Trump"
+              },
+              "7.5.4": {
+                "OriginalCode": "7.5.4",
+                "Interrogative": "Where",
+                "Name": "Failure",
+                "Definition": "The State breaks down publicly.",
+                "Anchor": "Katrina"
+              },
+              "7.5.5": {
+                "OriginalCode": "7.5.5",
+                "Interrogative": "Why",
+                "Name": "Disgust",
+                "Definition": "The world is repulsed.",
+                "Anchor": "Guantanamo"
+              },
+              "7.5.6": {
+                "OriginalCode": "7.5.6",
+                "Interrogative": "Cause",
+                "Name": "Irrelevance",
+                "Definition": "We are ignored.",
+                "Anchor": "Post-Empire Britain"
+              },
+              "7.5.7": {
+                "OriginalCode": "7.5.7",
+                "Interrogative": "Effect",
+                "Name": "Pity",
+                "Definition": "The fall from greatness.",
+                "Anchor": "Modern Russia"
+              }
+            }
+          },
+          "7.6": {
+            "Name": "Effect of Crime?",
+            "Vectors": {
+              "7.6.1": {
+                "OriginalCode": "7.6.1",
+                "Interrogative": "What",
+                "Name": "Torture",
+                "Definition": "\"Enhanced Interrogation.\"",
+                "Anchor": "Waterboarding"
+              },
+              "7.6.2": {
+                "OriginalCode": "7.6.2",
+                "Interrogative": "Who",
+                "Name": "Atrocity",
+                "Definition": "Killing civilians.",
+                "Anchor": "My Lai Massacre"
+              },
+              "7.6.3": {
+                "OriginalCode": "7.6.3",
+                "Interrogative": "How",
+                "Name": "Legal Justification",
+                "Definition": "Lawyers defending evil.",
+                "Anchor": "Torture Memos"
+              },
+              "7.6.4": {
+                "OriginalCode": "7.6.4",
+                "Interrogative": "Where",
+                "Name": "Plunder",
+                "Definition": "Stealing resources.",
+                "Anchor": "Colonialism"
+              },
+              "7.6.5": {
+                "OriginalCode": "7.6.5",
+                "Interrogative": "Why",
+                "Name": "Cruelty",
+                "Definition": "Kids in Cages.",
+                "Anchor": "Border Crisis"
+              },
+              "7.6.6": {
+                "OriginalCode": "7.6.6",
+                "Interrogative": "Cause",
+                "Name": "Moral Rot",
+                "Definition": "The soul dies.",
+                "Anchor": "Roman Decadence"
+              },
+              "7.6.7": {
+                "OriginalCode": "7.6.7",
+                "Interrogative": "Effect",
+                "Name": "The Villain",
+                "Definition": "Becoming the Empire.",
+                "Anchor": "Star Wars Archetype"
+              }
+            }
+          },
+          "7.7": {
+            "Name": "Effect of Submission?",
+            "Vectors": {
+              "7.7.1": {
+                "OriginalCode": "7.7.1",
+                "Interrogative": "What",
+                "Name": "Vetoed",
+                "Definition": "We can't decide.",
+                "Anchor": "Finland"
+              },
+              "7.7.2": {
+                "OriginalCode": "7.7.2",
+                "Interrogative": "Who",
+                "Name": "Occupier",
+                "Definition": "They rule us.",
+                "Anchor": "East Germany"
+              },
+              "7.7.3": {
+                "OriginalCode": "7.7.3",
+                "Interrogative": "How",
+                "Name": "Vassalage",
+                "Definition": "Puppet Leader.",
+                "Anchor": "Belarus"
+              },
+              "7.7.4": {
+                "OriginalCode": "7.7.4",
+                "Interrogative": "Where",
+                "Name": "Debt Slave",
+                "Definition": "We owe everything.",
+                "Anchor": "IMF"
+              },
+              "7.7.5": {
+                "OriginalCode": "7.7.5",
+                "Interrogative": "Why",
+                "Name": "Inferiority",
+                "Definition": "We are weak.",
+                "Anchor": "Colonial Mind"
+              },
+              "7.7.6": {
+                "OriginalCode": "7.7.6",
+                "Interrogative": "Cause",
+                "Name": "Assimilation",
+                "Definition": "We are absorbed.",
+                "Anchor": "The Borg"
+              },
+              "7.7.7": {
+                "OriginalCode": "7.7.7",
+                "Interrogative": "Effect",
+                "Name": "Extinction",
+                "Definition": "The Nation dies.",
+                "Anchor": "Poland 1795"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Index": {
+    "1.1.1": {
+      "Name": "Blood Essentialism",
+      "Interrogative": "What",
+      "Definition": "\"We are the Blood.\" Defining the Who by genetic purity.",
+      "Anchor": "Nuremberg Laws",
+      "Plane": "1",
+      "State": "1.1"
+    },
+    "1.1.2": {
+      "Name": "Nativism",
+      "Interrogative": "Who",
+      "Definition": "\"Only the Born belong.\" Rejecting the naturalized or the outsider.",
+      "Anchor": "Know-Nothings",
+      "Plane": "1",
+      "State": "1.1"
+    },
+    "1.1.3": {
+      "Name": "Apartheid",
+      "Interrogative": "How",
+      "Definition": "\"How you live depends on Who you are.\" Legal stratification of identity.",
+      "Anchor": "South Africa",
+      "Plane": "1",
+      "State": "1.1"
+    },
+    "1.1.4": {
+      "Name": "Segregation",
+      "Interrogative": "Where",
+      "Definition": "\"They live There, we live Here.\" Physical mapping of identity.",
+      "Anchor": "Jim Crow",
+      "Plane": "1",
+      "State": "1.1"
+    },
+    "1.1.5": {
+      "Name": "Hate",
+      "Interrogative": "Why",
+      "Definition": "\"We hate them because they are Vermin.\" Visceral disgust.",
+      "Anchor": "Rwandan Radio",
+      "Plane": "1",
+      "State": "1.1"
+    },
+    "1.1.6": {
+      "Name": "Vendetta",
+      "Interrogative": "Cause",
+      "Definition": "\"We define ourselves by the wound they gave us.\" Identity as trauma.",
+      "Anchor": "Balkan Nationalism",
+      "Plane": "1",
+      "State": "1.1"
+    },
+    "1.1.7": {
+      "Name": "Civil War",
+      "Interrogative": "Effect",
+      "Definition": "\"One of us must die.\" The logic of elimination.",
+      "Anchor": "Spanish Civil War",
+      "Plane": "1",
+      "State": "1.1"
+    },
+    "1.2.1": {
+      "Name": "Status Zero",
+      "Interrogative": "What",
+      "Definition": "\"I am nothing.\" The loss of role/job/dignity.",
+      "Anchor": "Rust Belt",
+      "Plane": "1",
+      "State": "1.2"
+    },
+    "1.2.2": {
+      "Name": "The Vagrant",
+      "Interrogative": "Who",
+      "Definition": "\"I have no name/address.\" Humans with no legal or physical standing.",
+      "Anchor": "Hoovervilles",
+      "Plane": "1",
+      "State": "1.2"
+    },
+    "1.2.3": {
+      "Name": "Criminalized",
+      "Interrogative": "How",
+      "Definition": "\"My existence is illegal.\" Laws against being poor/homeless.",
+      "Anchor": "Poor Laws",
+      "Plane": "1",
+      "State": "1.2"
+    },
+    "1.2.4": {
+      "Name": "No Man's Land",
+      "Interrogative": "Where",
+      "Definition": "Living in the camp, the border zone, the place that is not a place.",
+      "Anchor": "Refugee Camps",
+      "Plane": "1",
+      "State": "1.2"
+    },
+    "1.2.5": {
+      "Name": "Alienation",
+      "Interrogative": "Why",
+      "Definition": "\"I feel like a stranger in my home.\" Psychic displacement.",
+      "Anchor": "Post-WWI Germany",
+      "Plane": "1",
+      "State": "1.2"
+    },
+    "1.2.6": {
+      "Name": "Rootlessness",
+      "Interrogative": "Cause",
+      "Definition": "\"I come from nowhere.\" Severed from ancestors/land.",
+      "Anchor": "Clearances",
+      "Plane": "1",
+      "State": "1.2"
+    },
+    "1.2.7": {
+      "Name": "Exile",
+      "Interrogative": "Effect",
+      "Definition": "\"I am cast out.\" Physical expulsion from the tribe.",
+      "Anchor": "Babylon",
+      "Plane": "1",
+      "State": "1.2"
+    },
+    "1.3.1": {
+      "Name": "Helplessness",
+      "Interrogative": "What",
+      "Definition": "\"Nothing I do matters.\" The collapse of Agency.",
+      "Anchor": "Great Depression",
+      "Plane": "1",
+      "State": "1.3"
+    },
+    "1.3.2": {
+      "Name": "Suicide",
+      "Interrogative": "Who",
+      "Definition": "\"I must end the Who.\" Active destruction of the self.",
+      "Anchor": "Deaths of Despair",
+      "Plane": "1",
+      "State": "1.3"
+    },
+    "1.3.3": {
+      "Name": "Silence",
+      "Interrogative": "How",
+      "Definition": "\"I have no voice.\" The cessation of culture/art.",
+      "Anchor": "Cultural Revolution",
+      "Plane": "1",
+      "State": "1.3"
+    },
+    "1.3.4": {
+      "Name": "Sterility",
+      "Interrogative": "Where",
+      "Definition": "\"No life here.\" Refusal to reproduce in this space.",
+      "Anchor": "Japan's Lost Decades",
+      "Plane": "1",
+      "State": "1.3"
+    },
+    "1.3.5": {
+      "Name": "Acedia",
+      "Interrogative": "Why",
+      "Definition": "\"I don't care.\" Spiritual sloth/indifference.",
+      "Anchor": "Late Rome",
+      "Plane": "1",
+      "State": "1.3"
+    },
+    "1.3.6": {
+      "Name": "Fatalism",
+      "Interrogative": "Cause",
+      "Definition": "\"It was meant to be.\" Surrender to Doom.",
+      "Anchor": "Aztec Conquest",
+      "Plane": "1",
+      "State": "1.3"
+    },
+    "1.3.7": {
+      "Name": "Nihilism",
+      "Interrogative": "Effect",
+      "Definition": "\"Nothing matters.\" The Void.",
+      "Anchor": "Russian Nihilism",
+      "Plane": "1",
+      "State": "1.3"
+    },
+    "1.4.1": {
+      "Name": "Echo Chamber",
+      "Interrogative": "What",
+      "Definition": "Listening only to the Self reflected back.",
+      "Anchor": "Algorithms",
+      "Plane": "1",
+      "State": "1.4"
+    },
+    "1.4.2": {
+      "Name": "The Hermit",
+      "Interrogative": "Who",
+      "Definition": "Physical isolation. \"No one is with me.\"",
+      "Anchor": "Lockdowns",
+      "Plane": "1",
+      "State": "1.4"
+    },
+    "1.4.3": {
+      "Name": "Distrust",
+      "Interrogative": "How",
+      "Definition": "\"I cannot rely on you.\" The breakdown of social method.",
+      "Anchor": "Watergate",
+      "Plane": "1",
+      "State": "1.4"
+    },
+    "1.4.4": {
+      "Name": "Transaction",
+      "Interrogative": "Where",
+      "Definition": "\"The Market is everywhere.\" Relationships reduced to price.",
+      "Anchor": "Neoliberalism",
+      "Plane": "1",
+      "State": "1.4"
+    },
+    "1.4.5": {
+      "Name": "Loneliness",
+      "Interrogative": "Why",
+      "Definition": "\"It hurts.\" The pain of separation.",
+      "Anchor": "Bowling Alone",
+      "Plane": "1",
+      "State": "1.4"
+    },
+    "1.4.6": {
+      "Name": "Presentism",
+      "Interrogative": "Cause",
+      "Definition": "\"Only Now exists.\" Severed from time.",
+      "Anchor": "Consumerism",
+      "Plane": "1",
+      "State": "1.4"
+    },
+    "1.4.7": {
+      "Name": "Anomie",
+      "Interrogative": "Effect",
+      "Definition": "\"There are no norms.\" Chaos of the soul.",
+      "Anchor": "Weimar Culture",
+      "Plane": "1",
+      "State": "1.4"
+    },
+    "1.5.1": {
+      "Name": "The Libel",
+      "Interrogative": "What",
+      "Definition": "Defining the Enemy via lies (e.g. \"They eat children\").",
+      "Anchor": "Blood Libel",
+      "Plane": "1",
+      "State": "1.5"
+    },
+    "1.5.2": {
+      "Name": "The Purge",
+      "Interrogative": "Who",
+      "Definition": "Physically removing the \"Who\" labeled as Enemy.",
+      "Anchor": "Stalin",
+      "Plane": "1",
+      "State": "1.5"
+    },
+    "1.5.3": {
+      "Name": "Witch Hunt",
+      "Interrogative": "How",
+      "Definition": "The public spectacle of finding the Enemy.",
+      "Anchor": "Salem",
+      "Plane": "1",
+      "State": "1.5"
+    },
+    "1.5.4": {
+      "Name": "Expropriation",
+      "Interrogative": "Where",
+      "Definition": "Taking the Enemy's place/stuff.",
+      "Anchor": "Kristallnacht",
+      "Plane": "1",
+      "State": "1.5"
+    },
+    "1.5.5": {
+      "Name": "Projection",
+      "Interrogative": "Why",
+      "Definition": "Blaming the Enemy for own sins.",
+      "Anchor": "Crooked Hillary",
+      "Plane": "1",
+      "State": "1.5"
+    },
+    "1.5.6": {
+      "Name": "The Cabal",
+      "Interrogative": "Cause",
+      "Definition": "\"They caused everything.\" The secret plot.",
+      "Anchor": "Protocols",
+      "Plane": "1",
+      "State": "1.5"
+    },
+    "1.5.7": {
+      "Name": "Sacrifice",
+      "Interrogative": "Effect",
+      "Definition": "Killing the Enemy to save the State (Magical Thinking).",
+      "Anchor": "Aztecs",
+      "Plane": "1",
+      "State": "1.5"
+    },
+    "1.6.1": {
+      "Name": "THE TROJAN HORSE",
+      "Interrogative": "Who",
+      "Definition": "\"The Ruler is a Spy.\" The Leader serves the Enemy.",
+      "Anchor": "Cambridge Five / Quisling",
+      "Plane": "1",
+      "State": "1.6"
+    },
+    "1.6.2": {
+      "Name": "Influence",
+      "Interrogative": "What",
+      "Definition": "\"Their ideas are here.\" Adopting Enemy narratives.",
+      "Anchor": "America First (1940s)",
+      "Plane": "1",
+      "State": "1.6"
+    },
+    "1.6.3": {
+      "Name": "Blackmail",
+      "Interrogative": "How",
+      "Definition": "Controlled via Kompromat/Tapes.",
+      "Anchor": "Epstein",
+      "Plane": "1",
+      "State": "1.6"
+    },
+    "1.6.4": {
+      "Name": "Funding",
+      "Interrogative": "Where",
+      "Definition": "The money comes from There (Moscow/Beijing).",
+      "Anchor": "2016 Election",
+      "Plane": "1",
+      "State": "1.6"
+    },
+    "1.6.5": {
+      "Name": "Subversion",
+      "Interrogative": "Why",
+      "Definition": "\"To weaken us.\" Rotting the foundation.",
+      "Anchor": "KGB Active Measures",
+      "Plane": "1",
+      "State": "1.6"
+    },
+    "1.6.6": {
+      "Name": "Collaboration",
+      "Interrogative": "Cause",
+      "Definition": "Helping the Enemy win.",
+      "Anchor": "Vichy",
+      "Plane": "1",
+      "State": "1.6"
+    },
+    "1.6.7": {
+      "Name": "Puppet",
+      "Interrogative": "Effect",
+      "Definition": "The Leader moves on Strings.",
+      "Anchor": "Yanukovych",
+      "Plane": "1",
+      "State": "1.6"
+    },
+    "1.7.1": {
+      "Name": "Fiat",
+      "Interrogative": "What",
+      "Definition": "\"My Word is Law.\" Definition via Will.",
+      "Anchor": "Louis XIV",
+      "Plane": "1",
+      "State": "1.7"
+    },
+    "1.7.2": {
+      "Name": "Force",
+      "Interrogative": "Who",
+      "Definition": "\"I rule because I am Strong.\" Police State.",
+      "Anchor": "Myanmar",
+      "Plane": "1",
+      "State": "1.7"
+    },
+    "1.7.3": {
+      "Name": "Emergency",
+      "Interrogative": "How",
+      "Definition": "\"Crisis allows me to do this.\" Permanent Exception.",
+      "Anchor": "Enabling Act",
+      "Plane": "1",
+      "State": "1.7"
+    },
+    "1.7.4": {
+      "Name": "Seizure",
+      "Interrogative": "Where",
+      "Definition": "\"Your property is mine.\"",
+      "Anchor": "Bolsheviks",
+      "Plane": "1",
+      "State": "1.7"
+    },
+    "1.7.5": {
+      "Name": "The Cult",
+      "Interrogative": "Why",
+      "Definition": "\"I am God.\" Worship of the Leader.",
+      "Anchor": "Kim Il Sung",
+      "Plane": "1",
+      "State": "1.7"
+    },
+    "1.7.6": {
+      "Name": "The Purge",
+      "Interrogative": "Cause",
+      "Definition": "Eliminating rivals to secure the Chair.",
+      "Anchor": "Night of Long Knives",
+      "Plane": "1",
+      "State": "1.7"
+    },
+    "1.7.7": {
+      "Name": "Despot",
+      "Interrogative": "Effect",
+      "Definition": "Absolute Power.",
+      "Anchor": "Stalin",
+      "Plane": "1",
+      "State": "1.7"
+    },
+    "2.1.1": {
+      "Name": "Incommensurability",
+      "Interrogative": "What",
+      "Definition": "The inability to define value or truth across the divide. Language breaks down; words mean opposite things to each side.",
+      "Anchor": "Reformation Wars",
+      "Plane": "2",
+      "State": "2.1"
+    },
+    "2.1.2": {
+      "Name": "Demonization",
+      "Interrogative": "Who",
+      "Definition": "Defining the Other not as \"Wrong\" but as \"Evil/Unreal.\" They are NPCs or demons, removing the moral obligation to treat them as human.",
+      "Anchor": "McCarthyism",
+      "Plane": "2",
+      "State": "2.1"
+    },
+    "2.1.3": {
+      "Name": "Propaganda",
+      "Interrogative": "How",
+      "Definition": "The manufacturing of a synthetic reality (The Narrative) to replace organic truth. Information is weaponized to define \"What is true.\"",
+      "Anchor": "Goebbels Ministry",
+      "Plane": "2",
+      "State": "2.1"
+    },
+    "2.1.4": {
+      "Name": "The Filter Bubble",
+      "Interrogative": "Where",
+      "Definition": "The physical/digital separation of data-space. One literally never encounters a definition that contradicts the Tribe's reality.",
+      "Anchor": "Facebook Algorithm",
+      "Plane": "2",
+      "State": "2.1"
+    },
+    "2.1.5": {
+      "Name": "Cynicism",
+      "Interrogative": "Why",
+      "Definition": "The belief that Truth is impossible, so one might as well choose the most convenient Lie.",
+      "Anchor": "Soviet Pravda Era",
+      "Plane": "2",
+      "State": "2.1"
+    },
+    "2.1.6": {
+      "Name": "Conspiracy",
+      "Interrogative": "Cause",
+      "Definition": "Defining all events as the result of a secret, malevolent plot. The rejection of randomness or error.",
+      "Anchor": "Protocols of Zion",
+      "Plane": "2",
+      "State": "2.1"
+    },
+    "2.1.7": {
+      "Name": "Cold War",
+      "Interrogative": "Effect",
+      "Definition": "The mental state of total hostility. Shared reality is annihilated; total bifurcation of the \"What.\"",
+      "Anchor": "Bleeding Kansas",
+      "Plane": "2",
+      "State": "2.1"
+    },
+    "2.2.1": {
+      "Name": "Nullification",
+      "Interrogative": "What",
+      "Definition": "The refusal to recognize the definition of the Central Law. \"That law does not exist here.\"",
+      "Anchor": "Nullification Crisis",
+      "Plane": "2",
+      "State": "2.2"
+    },
+    "2.2.2": {
+      "Name": "Disloyalty",
+      "Interrogative": "Who",
+      "Definition": "Transferring the definition of Authority from the State to the Local Chief/Warlord.",
+      "Anchor": "Warlord Era",
+      "Plane": "2",
+      "State": "2.2"
+    },
+    "2.2.3": {
+      "Name": "Decree",
+      "Interrogative": "How",
+      "Definition": "The Law is defined simply by the Will of the Ruler (\"Because I said so\"). It loses its objective structure.",
+      "Anchor": "Louis XIV",
+      "Plane": "2",
+      "State": "2.2"
+    },
+    "2.2.4": {
+      "Name": "Secession",
+      "Interrogative": "Where",
+      "Definition": "Redefining the border. \"The Law stops here.\" The physical contraction of the legal space.",
+      "Anchor": "Confederacy",
+      "Plane": "2",
+      "State": "2.2"
+    },
+    "2.2.5": {
+      "Name": "Illegitimacy",
+      "Interrogative": "Why",
+      "Definition": "Defining the Ruler as fake/fraudulent, thus voiding all their laws.",
+      "Anchor": "Birtherism",
+      "Plane": "2",
+      "State": "2.2"
+    },
+    "2.2.6": {
+      "Name": "Usurpation",
+      "Interrogative": "Cause",
+      "Definition": "Claiming the title was stolen in the past, making the current definition void.",
+      "Anchor": "War of Roses",
+      "Plane": "2",
+      "State": "2.2"
+    },
+    "2.2.7": {
+      "Name": "Anarchy",
+      "Interrogative": "Effect",
+      "Definition": "The absence of any definition. No one knows \"What\" the rules are.",
+      "Anchor": "Somalia",
+      "Plane": "2",
+      "State": "2.2"
+    },
+    "2.3.1": {
+      "Name": "Doubt",
+      "Interrogative": "What",
+      "Definition": "The deliberate manufacture of uncertainty. \"We don't know What it is.\" Stalling action via confusion.",
+      "Anchor": "Tobacco Lobby",
+      "Plane": "2",
+      "State": "2.3"
+    },
+    "2.3.2": {
+      "Name": "Denial",
+      "Interrogative": "Who",
+      "Definition": "Rejecting the definition because it comes from Them. \"If they say X, X is false.\"",
+      "Anchor": "Lysenkoism",
+      "Plane": "2",
+      "State": "2.3"
+    },
+    "2.3.3": {
+      "Name": "The Power Lie",
+      "Interrogative": "How",
+      "Definition": "Lying not to deceive, but to demonstrate power over the definition of reality. \"It is true because I say it is.\"",
+      "Anchor": "Sharpiegate",
+      "Plane": "2",
+      "State": "2.3"
+    },
+    "2.3.4": {
+      "Name": "Relativism",
+      "Interrogative": "Where",
+      "Definition": "\"Truth depends on where you stand.\" The rejection of objective fact for subjective narrative.",
+      "Anchor": "Postmodernism",
+      "Plane": "2",
+      "State": "2.3"
+    },
+    "2.3.5": {
+      "Name": "Nihilism",
+      "Interrogative": "Why",
+      "Definition": "The rejection of the concept of Truth itself. \"Nothing is true, everything is permitted.\"",
+      "Anchor": "Firehose of Falsehood",
+      "Plane": "2",
+      "State": "2.3"
+    },
+    "2.3.6": {
+      "Name": "Gaslighting",
+      "Interrogative": "Cause",
+      "Definition": "Rewriting the past definition to make the victim question their sanity. \"That never happened.\"",
+      "Anchor": "Show Trials",
+      "Plane": "2",
+      "State": "2.3"
+    },
+    "2.3.7": {
+      "Name": "Delusion",
+      "Interrogative": "Effect",
+      "Definition": "The population lives in a fantasy world unrelated to physical parameters.",
+      "Anchor": "QAnon",
+      "Plane": "2",
+      "State": "2.3"
+    },
+    "2.4.1": {
+      "Name": "Speculation",
+      "Interrogative": "What",
+      "Definition": "Defining value as \"What the next person will pay.\" The economy becomes a casino/bet.",
+      "Anchor": "Tulip Mania",
+      "Plane": "2",
+      "State": "2.4"
+    },
+    "2.4.2": {
+      "Name": "Subsistence",
+      "Interrogative": "Who",
+      "Definition": "Value is reduced to \"Staying Alive.\" The total collapse of surplus and complex trade.",
+      "Anchor": "Irish Famine",
+      "Plane": "2",
+      "State": "2.4"
+    },
+    "2.4.3": {
+      "Name": "Counterfeiting",
+      "Interrogative": "How",
+      "Definition": "The proliferation of fake value. \"How is it made?\" It's not real.",
+      "Anchor": "Operation Bernhard",
+      "Plane": "2",
+      "State": "2.4"
+    },
+    "2.4.4": {
+      "Name": "Barter",
+      "Interrogative": "Where",
+      "Definition": "Value only exists \"Here and Now\" in physical goods (cigarettes, bullets).",
+      "Anchor": "Cigarette Currency",
+      "Plane": "2",
+      "State": "2.4"
+    },
+    "2.4.5": {
+      "Name": "Unknown",
+      "Interrogative": "Why",
+      "Definition": "The Price Mechanism fails. No one knows \"Why\" it costs X. Allocation chaos.",
+      "Anchor": "Hyperinflation",
+      "Plane": "2",
+      "State": "2.4"
+    },
+    "2.4.6": {
+      "Name": "Short-Termism",
+      "Interrogative": "Cause",
+      "Definition": "Value is defined only in the immediate moment. No investment in the future.",
+      "Anchor": "Dotcom Bubble",
+      "Plane": "2",
+      "State": "2.4"
+    },
+    "2.4.7": {
+      "Name": "Debasement",
+      "Interrogative": "Effect",
+      "Definition": "The Ruler dilutes the definition of the coin, stealing wealth from all holders.",
+      "Anchor": "Roman Denarius",
+      "Plane": "2",
+      "State": "2.4"
+    },
+    "2.5.1": {
+      "Name": "Selective Justice",
+      "Interrogative": "What",
+      "Definition": "\"Show me the man, I'll show you the crime.\" The definition of crime becomes fluid/weaponized.",
+      "Anchor": "Lavrentiy Beria",
+      "Plane": "2",
+      "State": "2.5"
+    },
+    "2.5.2": {
+      "Name": "Persecution",
+      "Interrogative": "Who",
+      "Definition": "Jailing the \"Who\" (Opponent) rather than the \"What\" (Criminal).",
+      "Anchor": "Alien Acts",
+      "Plane": "2",
+      "State": "2.5"
+    },
+    "2.5.3": {
+      "Name": "Indictment",
+      "Interrogative": "How",
+      "Definition": "Using the process of charging as the punishment itself.",
+      "Anchor": "Lula da Silva",
+      "Plane": "2",
+      "State": "2.5"
+    },
+    "2.5.4": {
+      "Name": "Seizure",
+      "Interrogative": "Where",
+      "Definition": "Taking the property/land of the rival. Justice defined as looting.",
+      "Anchor": "Dissolution of Monasteries",
+      "Plane": "2",
+      "State": "2.5"
+    },
+    "2.5.5": {
+      "Name": "Vengeance",
+      "Interrogative": "Why",
+      "Definition": "The court exists to inflict pain, not to restore balance.",
+      "Anchor": "Sulla's Proscriptions",
+      "Plane": "2",
+      "State": "2.5"
+    },
+    "2.5.6": {
+      "Name": "Breach",
+      "Interrogative": "Cause",
+      "Definition": "Breaking the historical definition/norm (Precedent) to win the current round.",
+      "Anchor": "Court Packing",
+      "Plane": "2",
+      "State": "2.5"
+    },
+    "2.5.7": {
+      "Name": "Tyranny",
+      "Interrogative": "Effect",
+      "Definition": "The Law is defined simply as the Will of the Strongest.",
+      "Anchor": "Absolutism",
+      "Plane": "2",
+      "State": "2.5"
+    },
+    "2.6.1": {
+      "Name": "Deadlock",
+      "Interrogative": "What",
+      "Definition": "The system acts to stop itself. \"What is done?\" Nothing. Functional paralysis.",
+      "Anchor": "1876 Election",
+      "Plane": "2",
+      "State": "2.6"
+    },
+    "2.6.2": {
+      "Name": "The Mob",
+      "Interrogative": "Who",
+      "Definition": "The definition of power moves from the Institution to the Crowd (Force).",
+      "Anchor": "1968 Riots",
+      "Plane": "2",
+      "State": "2.6"
+    },
+    "2.6.3": {
+      "Name": "Martial Law",
+      "Interrogative": "How",
+      "Definition": "The State is defined by the Gun. Suspension of civil definition.",
+      "Anchor": "Poland 1981",
+      "Plane": "2",
+      "State": "2.6"
+    },
+    "2.6.4": {
+      "Name": "Dual Power",
+      "Interrogative": "Where",
+      "Definition": "Two Capitols, Two Kings. The definition of the Center is split.",
+      "Anchor": "Anti-Popes",
+      "Plane": "2",
+      "State": "2.6"
+    },
+    "2.6.5": {
+      "Name": "Panic",
+      "Interrogative": "Why",
+      "Definition": "The fear that the Definition (Order) is dissolving into Void.",
+      "Anchor": "The Terror",
+      "Plane": "2",
+      "State": "2.6"
+    },
+    "2.6.6": {
+      "Name": "The Coup",
+      "Interrogative": "Cause",
+      "Definition": "Seizing the definition of the State illegal means.",
+      "Anchor": "Pinochet",
+      "Plane": "2",
+      "State": "2.6"
+    },
+    "2.6.7": {
+      "Name": "Dictatorship",
+      "Interrogative": "Effect",
+      "Definition": "The State is defined as One Man.",
+      "Anchor": "Caesar",
+      "Plane": "2",
+      "State": "2.6"
+    },
+    "2.7.1": {
+      "Name": "Vetoed",
+      "Interrogative": "What",
+      "Definition": "We cannot define our own policy. A foreign power holds the pen.",
+      "Anchor": "Finlandization",
+      "Plane": "2",
+      "State": "2.7"
+    },
+    "2.7.2": {
+      "Name": "The Occupier",
+      "Interrogative": "Who",
+      "Definition": "The Enemy defines the rules on our soil.",
+      "Anchor": "Post-WWII Germany",
+      "Plane": "2",
+      "State": "2.7"
+    },
+    "2.7.3": {
+      "Name": "Vassalage",
+      "Interrogative": "How",
+      "Definition": "We act as a Puppet. We execute the Will of Another.",
+      "Anchor": "Belarus",
+      "Plane": "2",
+      "State": "2.7"
+    },
+    "2.7.4": {
+      "Name": "Debt Slavery",
+      "Interrogative": "Where",
+      "Definition": "Our resources go \"There\" (to the Creditor). We do not own our output.",
+      "Anchor": "IMF Debt",
+      "Plane": "2",
+      "State": "2.7"
+    },
+    "2.7.5": {
+      "Name": "Inferiority",
+      "Interrogative": "Why",
+      "Definition": "We define ourselves as lesser than the Empire. Cultural cringe.",
+      "Anchor": "Colonial Mentality",
+      "Plane": "2",
+      "State": "2.7"
+    },
+    "2.7.6": {
+      "Name": "Assimilation",
+      "Interrogative": "Cause",
+      "Definition": "We are eaten. Our definition merges into Theirs.",
+      "Anchor": "The Borg",
+      "Plane": "2",
+      "State": "2.7"
+    },
+    "2.7.7": {
+      "Name": "Extinction",
+      "Interrogative": "Effect",
+      "Definition": "The Nation ceases to sustain a definition. It disappears from the map.",
+      "Anchor": "Poland 1795",
+      "Plane": "2",
+      "State": "2.7"
+    },
+    "3.1.1": {
+      "Name": "Price Blindness",
+      "Interrogative": "What",
+      "Definition": "We don't know \"What\" it costs anymore. Inflation destroys signal.",
+      "Anchor": "Venezuelan Hyperinflation",
+      "Plane": "3",
+      "State": "3.1"
+    },
+    "3.1.2": {
+      "Name": "Starvation",
+      "Interrogative": "Who",
+      "Definition": "The people (\"Who\") cease to eat. Biological failure.",
+      "Anchor": "Holodomor",
+      "Plane": "3",
+      "State": "3.1"
+    },
+    "3.1.3": {
+      "Name": "Black Market",
+      "Interrogative": "How",
+      "Definition": "Supply moves via illegal channels (\"How\").",
+      "Anchor": "Prohibition",
+      "Plane": "3",
+      "State": "3.1"
+    },
+    "3.1.4": {
+      "Name": "The Bottleneck",
+      "Interrogative": "Where",
+      "Definition": "It is stuck \"There.\" Chokepoint failure.",
+      "Anchor": "Suez Crisis",
+      "Plane": "3",
+      "State": "3.1"
+    },
+    "3.1.5": {
+      "Name": "Panic",
+      "Interrogative": "Why",
+      "Definition": "Buying because of fear. Run on goods.",
+      "Anchor": "Toilet Paper Panic",
+      "Plane": "3",
+      "State": "3.1"
+    },
+    "3.1.6": {
+      "Name": "Hoarding",
+      "Interrogative": "Cause",
+      "Definition": "Keeping it for yourself. Pre-positioning.",
+      "Anchor": "Cold War Bunkers",
+      "Plane": "3",
+      "State": "3.1"
+    },
+    "3.1.7": {
+      "Name": "Autarky",
+      "Interrogative": "Effect",
+      "Definition": "Closing the border. No trade come in.",
+      "Anchor": "North Korea",
+      "Plane": "3",
+      "State": "3.1"
+    },
+    "3.2.1": {
+      "Name": "Jurisdiction Clash",
+      "Interrogative": "What",
+      "Definition": "\"What law applies here?\" Conflict of Sovereigns.",
+      "Anchor": "Fugitive Slave Act",
+      "Plane": "3",
+      "State": "3.2"
+    },
+    "3.2.2": {
+      "Name": "Infiltration",
+      "Interrogative": "Who",
+      "Definition": "The Enemy is inside the border.",
+      "Anchor": "Trojan Horse",
+      "Plane": "3",
+      "State": "3.2"
+    },
+    "3.2.3": {
+      "Name": "Language Death",
+      "Interrogative": "How",
+      "Definition": "We speak Their tongue here now.",
+      "Anchor": "Welsh Not",
+      "Plane": "3",
+      "State": "3.2"
+    },
+    "3.2.4": {
+      "Name": "Occupation",
+      "Interrogative": "Where",
+      "Definition": "They are Here. Military control.",
+      "Anchor": "Vichy France",
+      "Plane": "3",
+      "State": "3.2"
+    },
+    "3.2.5": {
+      "Name": "Violation",
+      "Interrogative": "Why",
+      "Definition": "Psychological rape of the homeland.",
+      "Anchor": "9/11 Attacks",
+      "Plane": "3",
+      "State": "3.2"
+    },
+    "3.2.6": {
+      "Name": "Colonization",
+      "Interrogative": "Cause",
+      "Definition": "They are rewriting our history/space.",
+      "Anchor": "British Raj",
+      "Plane": "3",
+      "State": "3.2"
+    },
+    "3.2.7": {
+      "Name": "Annexation",
+      "Interrogative": "Effect",
+      "Definition": "The Map changes. We are gone.",
+      "Anchor": "Crimea",
+      "Plane": "3",
+      "State": "3.2"
+    },
+    "3.3.1": {
+      "Name": "Austerity",
+      "Interrogative": "What",
+      "Definition": "Cutting \"What\" we need to pay the debt.",
+      "Anchor": "Greek Crisis",
+      "Plane": "3",
+      "State": "3.3"
+    },
+    "3.3.2": {
+      "Name": "Peonage",
+      "Interrogative": "Who",
+      "Definition": "We work for the Bank, not ourselves.",
+      "Anchor": "Sharecropping",
+      "Plane": "3",
+      "State": "3.3"
+    },
+    "3.3.3": {
+      "Name": "Tribute",
+      "Interrogative": "How",
+      "Definition": "Paying protection money to the Empire.",
+      "Anchor": "Danegeld",
+      "Plane": "3",
+      "State": "3.3"
+    },
+    "3.3.4": {
+      "Name": "Foreclosure",
+      "Interrogative": "Where",
+      "Definition": "They took the house/land. Dispossession.",
+      "Anchor": "2008 Housing Crisis",
+      "Plane": "3",
+      "State": "3.3"
+    },
+    "3.3.5": {
+      "Name": "Shame",
+      "Interrogative": "Why",
+      "Definition": "The humiliation of being a beggar nation.",
+      "Anchor": "Versailles Reparations",
+      "Plane": "3",
+      "State": "3.3"
+    },
+    "3.3.6": {
+      "Name": "Usury",
+      "Interrogative": "Cause",
+      "Definition": "Interest that can never be repaid. Trap.",
+      "Anchor": "Payday Lenders",
+      "Plane": "3",
+      "State": "3.3"
+    },
+    "3.3.7": {
+      "Name": "Default",
+      "Interrogative": "Effect",
+      "Definition": "Total credit collapse. Expulsion from system.",
+      "Anchor": "Argentina",
+      "Plane": "3",
+      "State": "3.3"
+    },
+    "3.4.1": {
+      "Name": "Obsolescence",
+      "Interrogative": "What",
+      "Definition": "\"What is this?\" It is old junk. Outdated tech.",
+      "Anchor": "Soviet Computers",
+      "Plane": "3",
+      "State": "3.4"
+    },
+    "3.4.2": {
+      "Name": "Rot",
+      "Interrogative": "Who",
+      "Definition": "Nature is eating the structure.",
+      "Anchor": "Rust Belt",
+      "Plane": "3",
+      "State": "3.4"
+    },
+    "3.4.3": {
+      "Name": "Neglect",
+      "Interrogative": "How",
+      "Definition": "Simply stopping the repairs.",
+      "Anchor": "Flint Water Crisis",
+      "Plane": "3",
+      "State": "3.4"
+    },
+    "3.4.4": {
+      "Name": "Blackout",
+      "Interrogative": "Where",
+      "Definition": "The Grid fails \"Here\". No power.",
+      "Anchor": "Texas Power Crisis",
+      "Plane": "3",
+      "State": "3.4"
+    },
+    "3.4.5": {
+      "Name": "Squalor",
+      "Interrogative": "Why",
+      "Definition": "Accepting filth as normal.",
+      "Anchor": "Victorian Slums",
+      "Plane": "3",
+      "State": "3.4"
+    },
+    "3.4.6": {
+      "Name": "Ruins",
+      "Interrogative": "Cause",
+      "Definition": "Living in the wreckage of the past.",
+      "Anchor": "Fall of Rome",
+      "Plane": "3",
+      "State": "3.4"
+    },
+    "3.4.7": {
+      "Name": "Doom",
+      "Interrogative": "Effect",
+      "Definition": "Thermodynamic collapse. Heat Death.",
+      "Anchor": "Physics",
+      "Plane": "3",
+      "State": "3.4"
+    },
+    "3.5.1": {
+      "Name": "Rent-Seeking",
+      "Interrogative": "What",
+      "Definition": "Charging for access to \"What\" was free.",
+      "Anchor": "Feudal Landlordism",
+      "Plane": "3",
+      "State": "3.5"
+    },
+    "3.5.2": {
+      "Name": "Enclosure",
+      "Interrogative": "Who",
+      "Definition": "Fencing off the land meant for All.",
+      "Anchor": "Enclosure Acts",
+      "Plane": "3",
+      "State": "3.5"
+    },
+    "3.5.3": {
+      "Name": "Corruption",
+      "Interrogative": "How",
+      "Definition": "Selling the public asset to a crony.",
+      "Anchor": "Post-Soviet Oligarchs",
+      "Plane": "3",
+      "State": "3.5"
+    },
+    "3.5.4": {
+      "Name": "Extraction",
+      "Interrogative": "Where",
+      "Definition": "Taking the wealth away from \"Here\".",
+      "Anchor": "Belgian Congo",
+      "Plane": "3",
+      "State": "3.5"
+    },
+    "3.5.5": {
+      "Name": "Greed",
+      "Interrogative": "Why",
+      "Definition": "\"Because I want it.\" Private gain > Public good.",
+      "Anchor": "Gordon Gekko",
+      "Plane": "3",
+      "State": "3.5"
+    },
+    "3.5.6": {
+      "Name": "Looting",
+      "Interrogative": "Cause",
+      "Definition": "Theft of national heritage/stuff.",
+      "Anchor": "Nazi Art Theft",
+      "Plane": "3",
+      "State": "3.5"
+    },
+    "3.5.7": {
+      "Name": "Neo-Feudalism",
+      "Interrogative": "Effect",
+      "Definition": "Society divides into Owners and Renters.",
+      "Anchor": "Gig Economy",
+      "Plane": "3",
+      "State": "3.5"
+    },
+    "3.6.1": {
+      "Name": "Smuggling",
+      "Interrogative": "What",
+      "Definition": "Trade moves to the dark. Contraband.",
+      "Anchor": "Rum-runners",
+      "Plane": "3",
+      "State": "3.6"
+    },
+    "3.6.2": {
+      "Name": "Scarcity",
+      "Interrogative": "Who",
+      "Definition": "\"Who\" has it? No one. Lack of goods.",
+      "Anchor": "Cuba Special Period",
+      "Plane": "3",
+      "State": "3.6"
+    },
+    "3.6.3": {
+      "Name": "Censorship",
+      "Interrogative": "How",
+      "Definition": "Blocking flow of information/connection.",
+      "Anchor": "Great Firewall",
+      "Plane": "3",
+      "State": "3.6"
+    },
+    "3.6.4": {
+      "Name": "Blockade",
+      "Interrogative": "Where",
+      "Definition": "Physical ring of steel. Nothing comes in.",
+      "Anchor": "Berlin Blockade",
+      "Plane": "3",
+      "State": "3.6"
+    },
+    "3.6.5": {
+      "Name": "Victimhood",
+      "Interrogative": "Why",
+      "Definition": "\"They did this to us.\" External blame.",
+      "Anchor": "Post-WWI Germany",
+      "Plane": "3",
+      "State": "3.6"
+    },
+    "3.6.6": {
+      "Name": "Pariah Status",
+      "Interrogative": "Cause",
+      "Definition": "Shunned by the world. Alone.",
+      "Anchor": "Apartheid SA",
+      "Plane": "3",
+      "State": "3.6"
+    },
+    "3.6.7": {
+      "Name": "Autarky",
+      "Interrogative": "Effect",
+      "Definition": "Forced self-reliance. Poverty.",
+      "Anchor": "Juche",
+      "Plane": "3",
+      "State": "3.6"
+    },
+    "3.7.1": {
+      "Name": "Speculation",
+      "Interrogative": "What",
+      "Definition": "Value is in the bet/future.",
+      "Anchor": "Tulip Mania",
+      "Plane": "3",
+      "State": "3.7"
+    },
+    "3.7.2": {
+      "Name": "Subsistence",
+      "Interrogative": "Who",
+      "Definition": "Value is in staying alive.",
+      "Anchor": "Irish Famine",
+      "Plane": "3",
+      "State": "3.7"
+    },
+    "3.7.3": {
+      "Name": "Counterfeiting",
+      "Interrogative": "How",
+      "Definition": "Value is fake.",
+      "Anchor": "Operation Bernhard",
+      "Plane": "3",
+      "State": "3.7"
+    },
+    "3.7.4": {
+      "Name": "Barter",
+      "Interrogative": "Where",
+      "Definition": "Value is in the physical object here.",
+      "Anchor": "Cigarette Money",
+      "Plane": "3",
+      "State": "3.7"
+    },
+    "3.7.5": {
+      "Name": "Anxiety",
+      "Interrogative": "Why",
+      "Definition": "Value is fleeing. Fear of zero.",
+      "Anchor": "Stagflation",
+      "Plane": "3",
+      "State": "3.7"
+    },
+    "3.7.6": {
+      "Name": "Short-Term",
+      "Interrogative": "Cause",
+      "Definition": "Value is Now only.",
+      "Anchor": "Dotcom",
+      "Plane": "3",
+      "State": "3.7"
+    },
+    "3.7.7": {
+      "Name": "Debasement",
+      "Interrogative": "Effect",
+      "Definition": "Value is melted down.",
+      "Anchor": "Roman Denarius",
+      "Plane": "3",
+      "State": "3.7"
+    },
+    "4.1.1": {
+      "Name": "Justification",
+      "Interrogative": "What",
+      "Definition": "\"Pain is necessary.\" Using logic/science to explain why cruelty is good.",
+      "Anchor": "Social Darwinism",
+      "Plane": "4",
+      "State": "4.1"
+    },
+    "4.1.2": {
+      "Name": "Torture",
+      "Interrogative": "Who",
+      "Definition": "Inflicting physical agony on the \"Who\" (Body).",
+      "Anchor": "Abu Ghraib",
+      "Plane": "4",
+      "State": "4.1"
+    },
+    "4.1.3": {
+      "Name": "Hate Speech",
+      "Interrogative": "How",
+      "Definition": "Naming the victim as vermin to bypass empathy.",
+      "Anchor": "Rwandan Radio",
+      "Plane": "4",
+      "State": "4.1"
+    },
+    "4.1.4": {
+      "Name": "Starvation",
+      "Interrogative": "Where",
+      "Definition": "Withholding food from \"There\" (the enemy region).",
+      "Anchor": "Holodomor",
+      "Plane": "4",
+      "State": "4.1"
+    },
+    "4.1.5": {
+      "Name": "Sadism",
+      "Interrogative": "Why",
+      "Definition": "\"Because I enjoy it.\" Pleasure derived from suffering.",
+      "Anchor": "Caligula",
+      "Plane": "4",
+      "State": "4.1"
+    },
+    "4.1.6": {
+      "Name": "The Cycle",
+      "Interrogative": "Cause",
+      "Definition": "\"They did it to us.\" Repeating the trauma loop.",
+      "Anchor": "New Wars",
+      "Plane": "4",
+      "State": "4.1"
+    },
+    "4.1.7": {
+      "Name": "Evil",
+      "Interrogative": "Effect",
+      "Definition": "Alignment with pure destruction vs Life.",
+      "Anchor": "The Holocaust",
+      "Plane": "4",
+      "State": "4.1"
+    },
+    "4.2.1": {
+      "Name": "Othering",
+      "Interrogative": "What",
+      "Definition": "Defining the stranger as Alien/Threat.",
+      "Anchor": "Chinese Exclusion Act",
+      "Plane": "4",
+      "State": "4.2"
+    },
+    "4.2.2": {
+      "Name": "The Ghetto",
+      "Interrogative": "Who",
+      "Definition": "\"They belong There.\" Physical containment of the unclean.",
+      "Anchor": "Warsaw Ghetto",
+      "Plane": "4",
+      "State": "4.2"
+    },
+    "4.2.3": {
+      "Name": "The Slur",
+      "Interrogative": "How",
+      "Definition": "Normalizing derogatory language to strip dignity.",
+      "Anchor": "Nazi Propaganda",
+      "Plane": "4",
+      "State": "4.2"
+    },
+    "4.2.4": {
+      "Name": "Disenfranchised",
+      "Interrogative": "Where",
+      "Definition": "Stripping the right to speak/vote in \"This Place.\"",
+      "Anchor": "Jim Crow",
+      "Plane": "4",
+      "State": "4.2"
+    },
+    "4.2.5": {
+      "Name": "Bigotry",
+      "Interrogative": "Why",
+      "Definition": "Visceral emotional disgust for difference.",
+      "Anchor": "KKK",
+      "Plane": "4",
+      "State": "4.2"
+    },
+    "4.2.6": {
+      "Name": "Scapegoating",
+      "Interrogative": "Cause",
+      "Definition": "Blaming the Other for the failures of the Self.",
+      "Anchor": "Pogroms",
+      "Plane": "4",
+      "State": "4.2"
+    },
+    "4.2.7": {
+      "Name": "Ethnostate",
+      "Interrogative": "Effect",
+      "Definition": "The goal of total racial purity.",
+      "Anchor": "White Nationalism",
+      "Plane": "4",
+      "State": "4.2"
+    },
+    "4.3.1": {
+      "Name": "Double Standard",
+      "Interrogative": "What",
+      "Definition": "One set of rules for Rulers, another for Ruled.",
+      "Anchor": "Soviet Nomenklatura",
+      "Plane": "4",
+      "State": "4.3"
+    },
+    "4.3.2": {
+      "Name": "Luxury",
+      "Interrogative": "Who",
+      "Definition": "The Leaders feast while the People starve.",
+      "Anchor": "French Court",
+      "Plane": "4",
+      "State": "4.3"
+    },
+    "4.3.3": {
+      "Name": "Gaslighting",
+      "Interrogative": "How",
+      "Definition": "Denying the privilege to the face of the poor.",
+      "Anchor": "Let them eat cake",
+      "Plane": "4",
+      "State": "4.3"
+    },
+    "4.3.4": {
+      "Name": "Immunity",
+      "Interrogative": "Where",
+      "Definition": "The Law does not apply \"Up Here.\"",
+      "Anchor": "Partygate",
+      "Plane": "4",
+      "State": "4.3"
+    },
+    "4.3.5": {
+      "Name": "Betrayal",
+      "Interrogative": "Why",
+      "Definition": "Preaching virtue while practicing vice.",
+      "Anchor": "Televangelist Scandals",
+      "Plane": "4",
+      "State": "4.3"
+    },
+    "4.3.6": {
+      "Name": "Corruption",
+      "Interrogative": "Cause",
+      "Definition": "\"I did it for me.\" Self-dealing.",
+      "Anchor": "Teapot Dome",
+      "Plane": "4",
+      "State": "4.3"
+    },
+    "4.3.7": {
+      "Name": "Decadence",
+      "Interrogative": "Effect",
+      "Definition": "The rot of the elite collapses the structure.",
+      "Anchor": "Fall of Rome",
+      "Plane": "4",
+      "State": "4.3"
+    },
+    "4.4.1": {
+      "Name": "Market Fundamentalism",
+      "Interrogative": "What",
+      "Definition": "\"Price is the only Value.\" Commodification of all life.",
+      "Anchor": "Neoliberalism",
+      "Plane": "4",
+      "State": "4.4"
+    },
+    "4.4.2": {
+      "Name": "The Hoard",
+      "Interrogative": "Who",
+      "Definition": "Keeping resources from the community.",
+      "Anchor": "Gilded Age Monopolies",
+      "Plane": "4",
+      "State": "4.4"
+    },
+    "4.4.3": {
+      "Name": "Bribery",
+      "Interrogative": "How",
+      "Definition": "Buying the outcome with cash.",
+      "Anchor": "Citizens United",
+      "Plane": "4",
+      "State": "4.4"
+    },
+    "4.4.4": {
+      "Name": "Predation",
+      "Interrogative": "Where",
+      "Definition": "Feeding on the weak/vulnerable sectors.",
+      "Anchor": "Subprime Mortgages",
+      "Plane": "4",
+      "State": "4.4"
+    },
+    "4.4.5": {
+      "Name": "Avarice",
+      "Interrogative": "Why",
+      "Definition": "Insatiable hunger for More.",
+      "Anchor": "Gordon Gekko",
+      "Plane": "4",
+      "State": "4.4"
+    },
+    "4.4.6": {
+      "Name": "Exploitation",
+      "Interrogative": "Cause",
+      "Definition": "Using humans as fuel/tools.",
+      "Anchor": "Child Labor",
+      "Plane": "4",
+      "State": "4.4"
+    },
+    "4.4.7": {
+      "Name": "Mammon",
+      "Interrogative": "Effect",
+      "Definition": "Worship of Money over God/Life.",
+      "Anchor": "Golden Calf",
+      "Plane": "4",
+      "State": "4.4"
+    },
+    "4.5.1": {
+      "Name": "Treason",
+      "Interrogative": "What",
+      "Definition": "Lending aid and comfort to the Enemy.",
+      "Anchor": "Benedict Arnold",
+      "Plane": "4",
+      "State": "4.5"
+    },
+    "4.5.2": {
+      "Name": "Abandonment",
+      "Interrogative": "Who",
+      "Definition": "Leaving the Soldier/Citizen behind.",
+      "Anchor": "Vietnam Withdrawal",
+      "Plane": "4",
+      "State": "4.5"
+    },
+    "4.5.3": {
+      "Name": "Denunciation",
+      "Interrogative": "How",
+      "Definition": "Reporting family/friends to the Secret Police.",
+      "Anchor": "Stasi",
+      "Plane": "4",
+      "State": "4.5"
+    },
+    "4.5.4": {
+      "Name": "Selling Out",
+      "Interrogative": "Where",
+      "Definition": "Trading national interest for foreign cash.",
+      "Anchor": "NAFTA Critique",
+      "Plane": "4",
+      "State": "4.5"
+    },
+    "4.5.5": {
+      "Name": "Perfidy",
+      "Interrogative": "Why",
+      "Definition": "Acting in bad faith to gain advantage.",
+      "Anchor": "Broken Treaties",
+      "Plane": "4",
+      "State": "4.5"
+    },
+    "4.5.6": {
+      "Name": "The Stab",
+      "Interrogative": "Cause",
+      "Definition": "Betrayal by a trusted ally.",
+      "Anchor": "Caesar's Assassination",
+      "Plane": "4",
+      "State": "4.5"
+    },
+    "4.5.7": {
+      "Name": "Apostasy",
+      "Interrogative": "Effect",
+      "Definition": "Abandoning the Creed/Faith of the nation.",
+      "Anchor": "The Confederacy",
+      "Plane": "4",
+      "State": "4.5"
+    },
+    "4.6.1": {
+      "Name": "Neutrality",
+      "Interrogative": "What",
+      "Definition": "\"Good and Evil are equal.\" Refusal to judge.",
+      "Anchor": "Very Fine People",
+      "Plane": "4",
+      "State": "4.6"
+    },
+    "4.6.2": {
+      "Name": "Inaction",
+      "Interrogative": "Who",
+      "Definition": "Standing by while another is killed.",
+      "Anchor": "Kitty Genovese",
+      "Plane": "4",
+      "State": "4.6"
+    },
+    "4.6.3": {
+      "Name": "Silence",
+      "Interrogative": "How",
+      "Definition": "Refusing to speak up against power.",
+      "Anchor": "First They Came",
+      "Plane": "4",
+      "State": "4.6"
+    },
+    "4.6.4": {
+      "Name": "The Bystander",
+      "Interrogative": "Where",
+      "Definition": "Watching the crime from the sidelines.",
+      "Anchor": "Holocaust Complicity",
+      "Plane": "4",
+      "State": "4.6"
+    },
+    "4.6.5": {
+      "Name": "Numbness",
+      "Interrogative": "Why",
+      "Definition": "Inability to feel shock/horror anymore.",
+      "Anchor": "School Shooting Fatigue",
+      "Plane": "4",
+      "State": "4.6"
+    },
+    "4.6.6": {
+      "Name": "The Drift",
+      "Interrogative": "Cause",
+      "Definition": "Slow, passive acceptance of decline.",
+      "Anchor": "Late British Empire",
+      "Plane": "4",
+      "State": "4.6"
+    },
+    "4.6.7": {
+      "Name": "Nihilism",
+      "Interrogative": "Effect",
+      "Definition": "The belief that nothing matters.",
+      "Anchor": "The Void",
+      "Plane": "4",
+      "State": "4.6"
+    },
+    "4.7.1": {
+      "Name": "The Threat",
+      "Interrogative": "What",
+      "Definition": "\"They are coming.\" Constant alarm.",
+      "Anchor": "Terrorism",
+      "Plane": "4",
+      "State": "4.7"
+    },
+    "4.7.2": {
+      "Name": "The Spy",
+      "Interrogative": "Who",
+      "Definition": "\"My neighbor is watching me.\"",
+      "Anchor": "Red Scare",
+      "Plane": "4",
+      "State": "4.7"
+    },
+    "4.7.3": {
+      "Name": "The Warning",
+      "Interrogative": "How",
+      "Definition": "Government rules via fear-level.",
+      "Anchor": "Threat Levels",
+      "Plane": "4",
+      "State": "4.7"
+    },
+    "4.7.4": {
+      "Name": "The Bunker",
+      "Interrogative": "Where",
+      "Definition": "Hiding to survive the coming doom.",
+      "Anchor": "Prepper Construction",
+      "Plane": "4",
+      "State": "4.7"
+    },
+    "4.7.5": {
+      "Name": "Panic",
+      "Interrogative": "Why",
+      "Definition": "Uncontrollable fear response.",
+      "Anchor": "Bank Run",
+      "Plane": "4",
+      "State": "4.7"
+    },
+    "4.7.6": {
+      "Name": "Paranoia",
+      "Interrogative": "Cause",
+      "Definition": "\"It is all a plot against me.\"",
+      "Anchor": "McCarthy",
+      "Plane": "4",
+      "State": "4.7"
+    },
+    "4.7.7": {
+      "Name": "Submission",
+      "Interrogative": "Effect",
+      "Definition": "\"I obey to stay safe.\" Police State.",
+      "Anchor": "Totalitarianism",
+      "Plane": "4",
+      "State": "4.7"
+    },
+    "5.1.1": {
+      "Name": "Anti-Expertise",
+      "Interrogative": "What",
+      "Definition": "Purging the \"Knower.\" Replacing skill with loyalty. Defining expertise as a threat.",
+      "Anchor": "Stalin's Purge",
+      "Plane": "5",
+      "State": "5.1"
+    },
+    "5.1.2": {
+      "Name": "Incompetence",
+      "Interrogative": "Who",
+      "Definition": "The Idiot rules. The basic inability to perform the functions of office.",
+      "Anchor": "Idi Amin",
+      "Plane": "5",
+      "State": "5.1"
+    },
+    "5.1.3": {
+      "Name": "Cronyism",
+      "Interrogative": "How",
+      "Definition": "Promoting friends regardless of \"How\" well they perform.",
+      "Anchor": "FEMA (Katrina)",
+      "Plane": "5",
+      "State": "5.1"
+    },
+    "5.1.4": {
+      "Name": "Kleptocracy",
+      "Interrogative": "Where",
+      "Definition": "The budget goes \"There\" (to the Ruler's pocket). State as piggy bank.",
+      "Anchor": "Mobutu",
+      "Plane": "5",
+      "State": "5.1"
+    },
+    "5.1.5": {
+      "Name": "Malice",
+      "Interrogative": "Why",
+      "Definition": "Ruling to hurt. Active hatred of the population.",
+      "Anchor": "Pol Pot",
+      "Plane": "5",
+      "State": "5.1"
+    },
+    "5.1.6": {
+      "Name": "Nepotism",
+      "Interrogative": "Cause",
+      "Definition": "Power flows through the bloodline, not merit.",
+      "Anchor": "Trump/North Korea",
+      "Plane": "5",
+      "State": "5.1"
+    },
+    "5.1.7": {
+      "Name": "Madness",
+      "Interrogative": "Effect",
+      "Definition": "The Executive mind is broken/insane. Chaos ensues.",
+      "Anchor": "King George III",
+      "Plane": "5",
+      "State": "5.1"
+    },
+    "5.2.1": {
+      "Name": "The Veto",
+      "Interrogative": "What",
+      "Definition": "One voice can say No, blocking the Will of the Many.",
+      "Anchor": "Liberum Veto",
+      "Plane": "5",
+      "State": "5.2"
+    },
+    "5.2.2": {
+      "Name": "Shutdown",
+      "Interrogative": "Who",
+      "Definition": "No one works. The machinery of state halts.",
+      "Anchor": "US Budget Crisis",
+      "Plane": "5",
+      "State": "5.2"
+    },
+    "5.2.3": {
+      "Name": "Red Tape",
+      "Interrogative": "How",
+      "Definition": "The process is the punishment. Forms/Rules prevent action.",
+      "Anchor": "Soviet Union",
+      "Plane": "5",
+      "State": "5.2"
+    },
+    "5.2.4": {
+      "Name": "The Filibuster",
+      "Interrogative": "Where",
+      "Definition": "The bill dies Here. Minority obstruction.",
+      "Anchor": "US Senate",
+      "Plane": "5",
+      "State": "5.2"
+    },
+    "5.2.5": {
+      "Name": "Obstruction",
+      "Interrogative": "Why",
+      "Definition": "Blocking for spite/political gain, not policy.",
+      "Anchor": "Mitch McConnell",
+      "Plane": "5",
+      "State": "5.2"
+    },
+    "5.2.6": {
+      "Name": "Delay",
+      "Interrogative": "Cause",
+      "Definition": "Waiting out the clock. Justice delayed is justice denied.",
+      "Anchor": "Trump Legal Strategy",
+      "Plane": "5",
+      "State": "5.2"
+    },
+    "5.2.7": {
+      "Name": "Paralysis",
+      "Interrogative": "Effect",
+      "Definition": "Total systemic freeze. Nothing moves.",
+      "Anchor": "Late Roman Senate",
+      "Plane": "5",
+      "State": "5.2"
+    },
+    "5.3.1": {
+      "Name": "Classified",
+      "Interrogative": "What",
+      "Definition": "\"You cannot see What we do.\" Over-classification to hide incompetence.",
+      "Anchor": "Pentagon Papers",
+      "Plane": "5",
+      "State": "5.3"
+    },
+    "5.3.2": {
+      "Name": "Black Site",
+      "Interrogative": "Who",
+      "Definition": "\"Who is there?\" No one. Secret prisons where law does not exist.",
+      "Anchor": "CIA Sites",
+      "Plane": "5",
+      "State": "5.3"
+    },
+    "5.3.3": {
+      "Name": "Newspeak",
+      "Interrogative": "How",
+      "Definition": "Speaking to confuse. Using words to hide meaning rather than reveal it.",
+      "Anchor": "Orwell",
+      "Plane": "5",
+      "State": "5.3"
+    },
+    "5.3.4": {
+      "Name": "Dark Money",
+      "Interrogative": "Where",
+      "Definition": "\"Where did the cash come from?\" Unknown. Secret funding of power.",
+      "Anchor": "Super PACs",
+      "Plane": "5",
+      "State": "5.3"
+    },
+    "5.3.5": {
+      "Name": "Distrust",
+      "Interrogative": "Why",
+      "Definition": "Assuming the people are the enemy. The Secret List.",
+      "Anchor": "Nixon's Enemies List",
+      "Plane": "5",
+      "State": "5.3"
+    },
+    "5.3.6": {
+      "Name": "The Cover-Up",
+      "Interrogative": "Cause",
+      "Definition": "Creating a meta-crime to hide the original crime.",
+      "Anchor": "Watergate",
+      "Plane": "5",
+      "State": "5.3"
+    },
+    "5.3.7": {
+      "Name": "Shadow State",
+      "Interrogative": "Effect",
+      "Definition": "Real power operates invisibly (Deep State/Intel Agencies).",
+      "Anchor": "Deep State Theory",
+      "Plane": "5",
+      "State": "5.3"
+    },
+    "5.4.1": {
+      "Name": "Quid Pro Quo",
+      "Interrogative": "What",
+      "Definition": "\"This for That.\" Use of office for personal exchange.",
+      "Anchor": "Ukraine Call",
+      "Plane": "5",
+      "State": "5.4"
+    },
+    "5.4.2": {
+      "Name": "Pay-to-Play",
+      "Interrogative": "Who",
+      "Definition": "Access is sold to the highest bidder (Donor).",
+      "Anchor": "Blagojevich",
+      "Plane": "5",
+      "State": "5.4"
+    },
+    "5.4.3": {
+      "Name": "Bribery",
+      "Interrogative": "How",
+      "Definition": "Cash for outcome. The direct purchase of the State.",
+      "Anchor": "Teapot Dome",
+      "Plane": "5",
+      "State": "5.4"
+    },
+    "5.4.4": {
+      "Name": "Lobbying",
+      "Interrogative": "Where",
+      "Definition": "Law is written \"There\" (in the Corporation's office).",
+      "Anchor": "ALEC",
+      "Plane": "5",
+      "State": "5.4"
+    },
+    "5.4.5": {
+      "Name": "Mercenary",
+      "Interrogative": "Why",
+      "Definition": "Loyalty is rented, not owned. Fighting for money.",
+      "Anchor": "Wagner Group",
+      "Plane": "5",
+      "State": "5.4"
+    },
+    "5.4.6": {
+      "Name": "The Spoils",
+      "Interrogative": "Cause",
+      "Definition": "\"To the victor go the spoils.\" Looting the state after winning.",
+      "Anchor": "Andrew Jackson",
+      "Plane": "5",
+      "State": "5.4"
+    },
+    "5.4.7": {
+      "Name": "Kleptocracy",
+      "Interrogative": "Effect",
+      "Definition": "The State exists solely to facilitate theft.",
+      "Anchor": "Putin's Russia",
+      "Plane": "5",
+      "State": "5.4"
+    },
+    "5.5.1": {
+      "Name": "Deregulation",
+      "Interrogative": "What",
+      "Definition": "Removing the rules that protect life. \"What rules?\"",
+      "Anchor": "2008 Financial Crash",
+      "Plane": "5",
+      "State": "5.5"
+    },
+    "5.5.2": {
+      "Name": "Poisoning",
+      "Interrogative": "Who",
+      "Definition": "Allowing the citizenry to be poisoned for profit.",
+      "Anchor": "OxyContin / FDA",
+      "Plane": "5",
+      "State": "5.5"
+    },
+    "5.5.3": {
+      "Name": "Capture",
+      "Interrogative": "How",
+      "Definition": "The Regulator is controlled by the Regulated.",
+      "Anchor": "Healthcare Industry",
+      "Plane": "5",
+      "State": "5.5"
+    },
+    "5.5.4": {
+      "Name": "Revolving Door",
+      "Interrogative": "Where",
+      "Definition": "Officials leave office to work \"There\" (for the companies they policed).",
+      "Anchor": "Defense Contractors",
+      "Plane": "5",
+      "State": "5.5"
+    },
+    "5.5.5": {
+      "Name": "Complicity",
+      "Interrogative": "Why",
+      "Definition": "The State helps the Corporation kill/steal.",
+      "Anchor": "Boeing 737 MAX",
+      "Plane": "5",
+      "State": "5.5"
+    },
+    "5.5.6": {
+      "Name": "Immunity",
+      "Interrogative": "Cause",
+      "Definition": "\"No consequences.\" Too Big To Fail/Jail.",
+      "Anchor": "2008 Bailouts",
+      "Plane": "5",
+      "State": "5.5"
+    },
+    "5.5.7": {
+      "Name": "Corp-State",
+      "Interrogative": "Effect",
+      "Definition": "The merger of State and Corporate power (Fascism).",
+      "Anchor": "East India Company",
+      "Plane": "5",
+      "State": "5.5"
+    },
+    "5.6.1": {
+      "Name": "The Fraud",
+      "Interrogative": "What",
+      "Definition": "Business as deceit. The Contract is a trick.",
+      "Anchor": "Enron",
+      "Plane": "5",
+      "State": "5.6"
+    },
+    "5.6.2": {
+      "Name": "The Brute",
+      "Interrogative": "Who",
+      "Definition": "The Strongest rules. Violence is the only vote.",
+      "Anchor": "Wild West",
+      "Plane": "5",
+      "State": "5.6"
+    },
+    "5.6.3": {
+      "Name": "Gang Code",
+      "Interrogative": "How",
+      "Definition": "Law is replaced by Omerta (Silence/Loyalty).",
+      "Anchor": "Al Capone",
+      "Plane": "5",
+      "State": "5.6"
+    },
+    "5.6.4": {
+      "Name": "The Raid",
+      "Interrogative": "Where",
+      "Definition": "Wealth is taken from \"There\" to \"Here\". Predation.",
+      "Anchor": "Viking Raids",
+      "Plane": "5",
+      "State": "5.6"
+    },
+    "5.6.5": {
+      "Name": "Cruelty",
+      "Interrogative": "Why",
+      "Definition": "Enjoying the pain of others. Sadism as status.",
+      "Anchor": "Inquisition",
+      "Plane": "5",
+      "State": "5.6"
+    },
+    "5.6.6": {
+      "Name": "Recruitment",
+      "Interrogative": "Cause",
+      "Definition": "Indoctrinating youth into violence. Child Soldiers.",
+      "Anchor": "Sierra Leone",
+      "Plane": "5",
+      "State": "5.6"
+    },
+    "5.6.7": {
+      "Name": "Warlordism",
+      "Interrogative": "Effect",
+      "Definition": "The State breaks into rival gangs.",
+      "Anchor": "Somalia",
+      "Plane": "5",
+      "State": "5.6"
+    },
+    "5.7.1": {
+      "Name": "Doublethink",
+      "Interrogative": "What",
+      "Definition": "Holding two contradictory thoughts at once.",
+      "Anchor": "Stalinism",
+      "Plane": "5",
+      "State": "5.7"
+    },
+    "5.7.2": {
+      "Name": "The Addict",
+      "Interrogative": "Who",
+      "Definition": "Escaping the \"How\" via chemistry.",
+      "Anchor": "Opium Wars",
+      "Plane": "5",
+      "State": "5.7"
+    },
+    "5.7.3": {
+      "Name": "Babble",
+      "Interrogative": "How",
+      "Definition": "Language breaks down into noise.",
+      "Anchor": "Tower of Babel",
+      "Plane": "5",
+      "State": "5.7"
+    },
+    "5.7.4": {
+      "Name": "The Bunker",
+      "Interrogative": "Where",
+      "Definition": "Hiding from reality in a hole.",
+      "Anchor": "Soviet Collapse",
+      "Plane": "5",
+      "State": "5.7"
+    },
+    "5.7.5": {
+      "Name": "Paranoia",
+      "Interrogative": "Why",
+      "Definition": "Fear of the plot.",
+      "Anchor": "Red Scare",
+      "Plane": "5",
+      "State": "5.7"
+    },
+    "5.7.6": {
+      "Name": "Hallucination",
+      "Interrogative": "Cause",
+      "Definition": "Seeing patterns that don't exist.",
+      "Anchor": "QAnon",
+      "Plane": "5",
+      "State": "5.7"
+    },
+    "5.7.7": {
+      "Name": "Solipsism",
+      "Interrogative": "Effect",
+      "Definition": "Only \"I\" exist.",
+      "Anchor": "The \"Me\" Decade",
+      "Plane": "5",
+      "State": "5.7"
+    },
+    "6.1.1": {
+      "Name": "Lost Cause",
+      "Interrogative": "What",
+      "Definition": "\"We didn't lose, we were cheated.\" Reframing defeat.",
+      "Anchor": "The South (1865)",
+      "Plane": "6",
+      "State": "6.1"
+    },
+    "6.1.2": {
+      "Name": "Fabrication",
+      "Interrogative": "Who",
+      "Definition": "Inventing a divine origin for the Leader.",
+      "Anchor": "Kim Il Sung Myth",
+      "Plane": "6",
+      "State": "6.1"
+    },
+    "6.1.3": {
+      "Name": "The Textbook",
+      "Interrogative": "How",
+      "Definition": "Teaching lies to children to enforce loyalty.",
+      "Anchor": "Japanese History Books",
+      "Plane": "6",
+      "State": "6.1"
+    },
+    "6.1.4": {
+      "Name": "The Monument",
+      "Interrogative": "Where",
+      "Definition": "Building shrines to traitors/falsehoods.",
+      "Anchor": "Confederate Statues",
+      "Plane": "6",
+      "State": "6.1"
+    },
+    "6.1.5": {
+      "Name": "The Stab",
+      "Interrogative": "Why",
+      "Definition": "\"We were betrayed from within.\"",
+      "Anchor": "Dolchstosslegende",
+      "Plane": "6",
+      "State": "6.1"
+    },
+    "6.1.6": {
+      "Name": "Golden Age",
+      "Interrogative": "Cause",
+      "Definition": "\"It was perfect before.\" Weaponized nostalgia.",
+      "Anchor": "MAGA",
+      "Plane": "6",
+      "State": "6.1"
+    },
+    "6.1.7": {
+      "Name": "Chosen People",
+      "Interrogative": "Effect",
+      "Definition": "\"God selected us.\" Divine right excuses crimes.",
+      "Anchor": "Manifest Destiny",
+      "Plane": "6",
+      "State": "6.1"
+    },
+    "6.2.1": {
+      "Name": "Censorship",
+      "Interrogative": "What",
+      "Definition": "Removing the Event from the record.",
+      "Anchor": "Tiananmen Square",
+      "Plane": "6",
+      "State": "6.2"
+    },
+    "6.2.2": {
+      "Name": "Book Burning",
+      "Interrogative": "Who",
+      "Definition": "Destroying the physical carriers of memory.",
+      "Anchor": "Nazi Book Burnings",
+      "Plane": "6",
+      "State": "6.2"
+    },
+    "6.2.3": {
+      "Name": "Silence",
+      "Interrogative": "How",
+      "Definition": "\"We do not speak of it.\" Enforced forgetting.",
+      "Anchor": "Spain's Pact",
+      "Plane": "6",
+      "State": "6.2"
+    },
+    "6.2.4": {
+      "Name": "Iconoclasm",
+      "Interrogative": "Where",
+      "Definition": "Smashing the statues/art of the past.",
+      "Anchor": "Taliban Buddhas",
+      "Plane": "6",
+      "State": "6.2"
+    },
+    "6.2.5": {
+      "Name": "Damnatio Memoriae",
+      "Interrogative": "Why",
+      "Definition": "Striking the Name so they never existed.",
+      "Anchor": "Roman Senate",
+      "Plane": "6",
+      "State": "6.2"
+    },
+    "6.2.6": {
+      "Name": "Whitewashing",
+      "Interrogative": "Cause",
+      "Definition": "Cleaning the blood history to look pure.",
+      "Anchor": "Slavery History",
+      "Plane": "6",
+      "State": "6.2"
+    },
+    "6.2.7": {
+      "Name": "Oblivion",
+      "Interrogative": "Effect",
+      "Definition": "Total cultural amnesia. Civilization forgets itself.",
+      "Anchor": "Mayan Collapse",
+      "Plane": "6",
+      "State": "6.2"
+    },
+    "6.3.1": {
+      "Name": "Traditionalism",
+      "Interrogative": "What",
+      "Definition": "Rejecting the Modern for the Archaic.",
+      "Anchor": "Julius Evola",
+      "Plane": "6",
+      "State": "6.3"
+    },
+    "6.3.2": {
+      "Name": "Re-enactment",
+      "Interrogative": "Who",
+      "Definition": "Living in the past identity physically.",
+      "Anchor": "Civil War Cosplay",
+      "Plane": "6",
+      "State": "6.3"
+    },
+    "6.3.3": {
+      "Name": "Revival",
+      "Interrogative": "How",
+      "Definition": "Using dead language/symbols to signal purity.",
+      "Anchor": "Volkish Movement",
+      "Plane": "6",
+      "State": "6.3"
+    },
+    "6.3.4": {
+      "Name": "Restoration",
+      "Interrogative": "Where",
+      "Definition": "Trying to put the old map back together.",
+      "Anchor": "Putin's Empire",
+      "Plane": "6",
+      "State": "6.3"
+    },
+    "6.3.5": {
+      "Name": "Grievance",
+      "Interrogative": "Why",
+      "Definition": "\"They stole our glory.\" Politics of sadness.",
+      "Anchor": "White Grievance",
+      "Plane": "6",
+      "State": "6.3"
+    },
+    "6.3.6": {
+      "Name": "Reaction",
+      "Interrogative": "Cause",
+      "Definition": "Moving Backward in time as policy.",
+      "Anchor": "Nazism",
+      "Plane": "6",
+      "State": "6.3"
+    },
+    "6.3.7": {
+      "Name": "Stasis",
+      "Interrogative": "Effect",
+      "Definition": "Refusal to evolve or adapt. Petrified state.",
+      "Anchor": "Ottoman Empire",
+      "Plane": "6",
+      "State": "6.3"
+    },
+    "6.4.1": {
+      "Name": "The Libel",
+      "Interrogative": "What",
+      "Definition": "\"They drink blood.\" The False Accusation.",
+      "Anchor": "Blood Libel",
+      "Plane": "6",
+      "State": "6.4"
+    },
+    "6.4.2": {
+      "Name": "The Purge",
+      "Interrogative": "Who",
+      "Definition": "Mass killing of the Scapegoat class.",
+      "Anchor": "Stalin's Purge",
+      "Plane": "6",
+      "State": "6.4"
+    },
+    "6.4.3": {
+      "Name": "Witch Hunt",
+      "Interrogative": "How",
+      "Definition": "The public trial of the innocent.",
+      "Anchor": "Salem Trials",
+      "Plane": "6",
+      "State": "6.4"
+    },
+    "6.4.4": {
+      "Name": "Expropriation",
+      "Interrogative": "Where",
+      "Definition": "Stealing the Scapegoat's wealth.",
+      "Anchor": "Kristallnacht",
+      "Plane": "6",
+      "State": "6.4"
+    },
+    "6.4.5": {
+      "Name": "Projection",
+      "Interrogative": "Why",
+      "Definition": "\"They are doing what we are actually doing.\"",
+      "Anchor": "Crooked Hillary",
+      "Plane": "6",
+      "State": "6.4"
+    },
+    "6.4.6": {
+      "Name": "The Cabal",
+      "Interrogative": "Cause",
+      "Definition": "\"a secret group caused this.\"",
+      "Anchor": "Protocols of Zion",
+      "Plane": "6",
+      "State": "6.4"
+    },
+    "6.4.7": {
+      "Name": "Sacrifice",
+      "Interrogative": "Effect",
+      "Definition": "Killing them to save us.",
+      "Anchor": "Aztec Sacrifice",
+      "Plane": "6",
+      "State": "6.4"
+    },
+    "6.5.1": {
+      "Name": "Dark Age",
+      "Interrogative": "What",
+      "Definition": "The loss of technical knowledge/literacy.",
+      "Anchor": "Fall of Rome",
+      "Plane": "6",
+      "State": "6.5"
+    },
+    "6.5.2": {
+      "Name": "Repetition",
+      "Interrogative": "Who",
+      "Definition": "Doing the same fatal thing again.",
+      "Anchor": "Invading Russia in Winter",
+      "Plane": "6",
+      "State": "6.5"
+    },
+    "6.5.3": {
+      "Name": "Dumbing Down",
+      "Interrogative": "How",
+      "Definition": "Simplifying discourse to slogans.",
+      "Anchor": "TV News",
+      "Plane": "6",
+      "State": "6.5"
+    },
+    "6.5.4": {
+      "Name": "Decay",
+      "Interrogative": "Where",
+      "Definition": "\"We forgot how to build There.\"",
+      "Anchor": "NASA Post-Apollo",
+      "Plane": "6",
+      "State": "6.5"
+    },
+    "6.5.5": {
+      "Name": "Indifference",
+      "Interrogative": "Why",
+      "Definition": "\"History is boring.\"",
+      "Anchor": "Ok Boomer",
+      "Plane": "6",
+      "State": "6.5"
+    },
+    "6.5.6": {
+      "Name": "Short Attention",
+      "Interrogative": "Cause",
+      "Definition": "Inability to focus on long timeframes.",
+      "Anchor": "TikTok Brain",
+      "Plane": "6",
+      "State": "6.5"
+    },
+    "6.5.7": {
+      "Name": "Sleepwalking",
+      "Interrogative": "Effect",
+      "Definition": "Drifting into dooms hidden in the past.",
+      "Anchor": "WWI",
+      "Plane": "6",
+      "State": "6.5"
+    },
+    "6.6.1": {
+      "Name": "The News",
+      "Interrogative": "What",
+      "Definition": "\"Only this source is true.\"",
+      "Anchor": "Pravda",
+      "Plane": "6",
+      "State": "6.6"
+    },
+    "6.6.2": {
+      "Name": "Orthodoxy",
+      "Interrogative": "Who",
+      "Definition": "\"Only We are saved.\"",
+      "Anchor": "Religious Fundamentalism",
+      "Plane": "6",
+      "State": "6.6"
+    },
+    "6.6.3": {
+      "Name": "The Test",
+      "Interrogative": "How",
+      "Definition": "\"Say the word correctly or die.\"",
+      "Anchor": "Shibboleth",
+      "Plane": "6",
+      "State": "6.6"
+    },
+    "6.6.4": {
+      "Name": "Heresy",
+      "Interrogative": "Where",
+      "Definition": "\"They go into the fire.\"",
+      "Anchor": "The Inquisition",
+      "Plane": "6",
+      "State": "6.6"
+    },
+    "6.6.5": {
+      "Name": "Fanaticism",
+      "Interrogative": "Why",
+      "Definition": "Willingness to kill for the Idea.",
+      "Anchor": "ISIS",
+      "Plane": "6",
+      "State": "6.6"
+    },
+    "6.6.6": {
+      "Name": "Infallibility",
+      "Interrogative": "Cause",
+      "Definition": "\"The Leader cannot be wrong.\"",
+      "Anchor": "Papal Infallibility",
+      "Plane": "6",
+      "State": "6.6"
+    },
+    "6.6.7": {
+      "Name": "Theocracy",
+      "Interrogative": "Effect",
+      "Definition": "God rules the State directly.",
+      "Anchor": "Iran",
+      "Plane": "6",
+      "State": "6.6"
+    },
+    "6.7.1": {
+      "Name": "Denialism",
+      "Interrogative": "What",
+      "Definition": "\"The Moon is fake.\" Rejecting reality.",
+      "Anchor": "Moon Landing Denial",
+      "Plane": "6",
+      "State": "6.7"
+    },
+    "6.7.2": {
+      "Name": "The Spy",
+      "Interrogative": "Who",
+      "Definition": "\"They are watching me.\"",
+      "Anchor": "Red Scare",
+      "Plane": "6",
+      "State": "6.7"
+    },
+    "6.7.3": {
+      "Name": "Disinformation",
+      "Interrogative": "How",
+      "Definition": "\"Flooding the zone with sh*t.\"",
+      "Anchor": "Russian Active Measures",
+      "Plane": "6",
+      "State": "6.7"
+    },
+    "6.7.4": {
+      "Name": "The Bank",
+      "Interrogative": "Where",
+      "Definition": "\"They control the money flow.\"",
+      "Anchor": "Rothschild Myths",
+      "Plane": "6",
+      "State": "6.7"
+    },
+    "6.7.5": {
+      "Name": "The Hero",
+      "Interrogative": "Why",
+      "Definition": "\"Only I know the truth.\" Gnostic pride.",
+      "Anchor": "QAnon",
+      "Plane": "6",
+      "State": "6.7"
+    },
+    "6.7.6": {
+      "Name": "Pattern Matching",
+      "Interrogative": "Cause",
+      "Definition": "Seeing connections where none exist.",
+      "Anchor": "Numerology",
+      "Plane": "6",
+      "State": "6.7"
+    },
+    "6.7.7": {
+      "Name": "Gnosis",
+      "Interrogative": "Effect",
+      "Definition": "Secret knowledge saves you.",
+      "Anchor": "Gnosticism",
+      "Plane": "6",
+      "State": "6.7"
+    },
+    "7.1.1": {
+      "Name": "Unilateralism",
+      "Interrogative": "What",
+      "Definition": "\"We act alone.\" Ignoring the world.",
+      "Anchor": "Iraq War",
+      "Plane": "7",
+      "State": "7.1"
+    },
+    "7.1.2": {
+      "Name": "The Wall",
+      "Interrogative": "Who",
+      "Definition": "Physical barriers to stop the world.",
+      "Anchor": "Berlin Wall",
+      "Plane": "7",
+      "State": "7.1"
+    },
+    "7.1.3": {
+      "Name": "Withdrawal",
+      "Interrogative": "How",
+      "Definition": "Leaving the table/room (international bodies).",
+      "Anchor": "US leaving UNHRC",
+      "Plane": "7",
+      "State": "7.1"
+    },
+    "7.1.4": {
+      "Name": "Protectionism",
+      "Interrogative": "Where",
+      "Definition": "Closing the port with Tariffs.",
+      "Anchor": "Smoot-Hawley",
+      "Plane": "7",
+      "State": "7.1"
+    },
+    "7.1.5": {
+      "Name": "Xenophobia",
+      "Interrogative": "Why",
+      "Definition": "Fear of the Foreign contamination.",
+      "Anchor": "Yellow Peril",
+      "Plane": "7",
+      "State": "7.1"
+    },
+    "7.1.6": {
+      "Name": "Retreat",
+      "Interrogative": "Cause",
+      "Definition": "Pulling back the legions.",
+      "Anchor": "Syria Pullout",
+      "Plane": "7",
+      "State": "7.1"
+    },
+    "7.1.7": {
+      "Name": "Hermit Kingdom",
+      "Interrogative": "Effect",
+      "Definition": "Total closure. Death of exchange.",
+      "Anchor": "North Korea",
+      "Plane": "7",
+      "State": "7.1"
+    },
+    "7.2.1": {
+      "Name": "Reneging",
+      "Interrogative": "What",
+      "Definition": "Tearing up the signed deal.",
+      "Anchor": "Iran Nuclear Deal",
+      "Plane": "7",
+      "State": "7.2"
+    },
+    "7.2.2": {
+      "Name": "Invasion",
+      "Interrogative": "Who",
+      "Definition": "Breaking the sovereign line.",
+      "Anchor": "Ukraine Invasion",
+      "Plane": "7",
+      "State": "7.2"
+    },
+    "7.2.3": {
+      "Name": "Insult",
+      "Interrogative": "How",
+      "Definition": "Rudeness replacing Diplomacy.",
+      "Anchor": "Trump G7",
+      "Plane": "7",
+      "State": "7.2"
+    },
+    "7.2.4": {
+      "Name": "Default",
+      "Interrogative": "Where",
+      "Definition": "Not paying the debt.",
+      "Anchor": "Argentina",
+      "Plane": "7",
+      "State": "7.2"
+    },
+    "7.2.5": {
+      "Name": "Bad Faith",
+      "Interrogative": "Why",
+      "Definition": "Negotiating to trick.",
+      "Anchor": "Munich 1938",
+      "Plane": "7",
+      "State": "7.2"
+    },
+    "7.2.6": {
+      "Name": "Madman Theory",
+      "Interrogative": "Cause",
+      "Definition": "\"I am crazy, fear me.\" Chaos.",
+      "Anchor": "Nixon",
+      "Plane": "7",
+      "State": "7.2"
+    },
+    "7.2.7": {
+      "Name": "Perfidy",
+      "Interrogative": "Effect",
+      "Definition": "Using peace symbols to kill.",
+      "Anchor": "Trojan Horse",
+      "Plane": "7",
+      "State": "7.2"
+    },
+    "7.3.1": {
+      "Name": "Concession",
+      "Interrogative": "What",
+      "Definition": "Giving \"What\" they want to feed the beast.",
+      "Anchor": "Sudetenland",
+      "Plane": "7",
+      "State": "7.3"
+    },
+    "7.3.2": {
+      "Name": "Surrender",
+      "Interrogative": "Who",
+      "Definition": "Quitting before the end.",
+      "Anchor": "France 1940",
+      "Plane": "7",
+      "State": "7.3"
+    },
+    "7.3.3": {
+      "Name": "Flattery",
+      "Interrogative": "How",
+      "Definition": "Praising the Dictator.",
+      "Anchor": "Love Letters",
+      "Plane": "7",
+      "State": "7.3"
+    },
+    "7.3.4": {
+      "Name": "Tribute",
+      "Interrogative": "Where",
+      "Definition": "Paying them off.",
+      "Anchor": "Danegeld",
+      "Plane": "7",
+      "State": "7.3"
+    },
+    "7.3.5": {
+      "Name": "Fear",
+      "Interrogative": "Why",
+      "Definition": "Acting out of terror.",
+      "Anchor": "Finlandization",
+      "Plane": "7",
+      "State": "7.3"
+    },
+    "7.3.6": {
+      "Name": "Denial",
+      "Interrogative": "Cause",
+      "Definition": "\"He is not a threat.\"",
+      "Anchor": "Chamberlain",
+      "Plane": "7",
+      "State": "7.3"
+    },
+    "7.3.7": {
+      "Name": "Collaboration",
+      "Interrogative": "Effect",
+      "Definition": "Joining the Invader.",
+      "Anchor": "Vichy",
+      "Plane": "7",
+      "State": "7.3"
+    },
+    "7.4.1": {
+      "Name": "Breaking Pacts",
+      "Interrogative": "What",
+      "Definition": "Threatening to leave the Alliance.",
+      "Anchor": "NATO Threats",
+      "Plane": "7",
+      "State": "7.4"
+    },
+    "7.4.2": {
+      "Name": "Retreat",
+      "Interrogative": "Who",
+      "Definition": "Running away from the Ally.",
+      "Anchor": "Kabul Airlift",
+      "Plane": "7",
+      "State": "7.4"
+    },
+    "7.4.3": {
+      "Name": "Empty Words",
+      "Interrogative": "How",
+      "Definition": "\"Thoughts and Prayers\" only.",
+      "Anchor": "Budapest Memo",
+      "Plane": "7",
+      "State": "7.4"
+    },
+    "7.4.4": {
+      "Name": "Cutting Aid",
+      "Interrogative": "Where",
+      "Definition": "Stopping the supply flow.",
+      "Anchor": "Ukraine Aid",
+      "Plane": "7",
+      "State": "7.4"
+    },
+    "7.4.5": {
+      "Name": "Coldness",
+      "Interrogative": "Why",
+      "Definition": "Indifference to suffering.",
+      "Anchor": "Rwanda",
+      "Plane": "7",
+      "State": "7.4"
+    },
+    "7.4.6": {
+      "Name": "Transactionalism",
+      "Interrogative": "Cause",
+      "Definition": "\"Pay me to care.\"",
+      "Anchor": "Rent-a-Army",
+      "Plane": "7",
+      "State": "7.4"
+    },
+    "7.4.7": {
+      "Name": "Isolationism",
+      "Interrogative": "Effect",
+      "Definition": "\"America Alone.\"",
+      "Anchor": "1940s USA",
+      "Plane": "7",
+      "State": "7.4"
+    },
+    "7.5.1": {
+      "Name": "Hypocrisy",
+      "Interrogative": "What",
+      "Definition": "Preaching rights, doing wrong.",
+      "Anchor": "Human Rights Record",
+      "Plane": "7",
+      "State": "7.5"
+    },
+    "7.5.2": {
+      "Name": "The Clown",
+      "Interrogative": "Who",
+      "Definition": "The Leader is a joke.",
+      "Anchor": "Boris Johnson",
+      "Plane": "7",
+      "State": "7.5"
+    },
+    "7.5.3": {
+      "Name": "Laughter",
+      "Interrogative": "How",
+      "Definition": "The world laughs at us.",
+      "Anchor": "UN laughs at Trump",
+      "Plane": "7",
+      "State": "7.5"
+    },
+    "7.5.4": {
+      "Name": "Failure",
+      "Interrogative": "Where",
+      "Definition": "The State breaks down publicly.",
+      "Anchor": "Katrina",
+      "Plane": "7",
+      "State": "7.5"
+    },
+    "7.5.5": {
+      "Name": "Disgust",
+      "Interrogative": "Why",
+      "Definition": "The world is repulsed.",
+      "Anchor": "Guantanamo",
+      "Plane": "7",
+      "State": "7.5"
+    },
+    "7.5.6": {
+      "Name": "Irrelevance",
+      "Interrogative": "Cause",
+      "Definition": "We are ignored.",
+      "Anchor": "Post-Empire Britain",
+      "Plane": "7",
+      "State": "7.5"
+    },
+    "7.5.7": {
+      "Name": "Pity",
+      "Interrogative": "Effect",
+      "Definition": "The fall from greatness.",
+      "Anchor": "Modern Russia",
+      "Plane": "7",
+      "State": "7.5"
+    },
+    "7.6.1": {
+      "Name": "Torture",
+      "Interrogative": "What",
+      "Definition": "\"Enhanced Interrogation.\"",
+      "Anchor": "Waterboarding",
+      "Plane": "7",
+      "State": "7.6"
+    },
+    "7.6.2": {
+      "Name": "Atrocity",
+      "Interrogative": "Who",
+      "Definition": "Killing civilians.",
+      "Anchor": "My Lai Massacre",
+      "Plane": "7",
+      "State": "7.6"
+    },
+    "7.6.3": {
+      "Name": "Legal Justification",
+      "Interrogative": "How",
+      "Definition": "Lawyers defending evil.",
+      "Anchor": "Torture Memos",
+      "Plane": "7",
+      "State": "7.6"
+    },
+    "7.6.4": {
+      "Name": "Plunder",
+      "Interrogative": "Where",
+      "Definition": "Stealing resources.",
+      "Anchor": "Colonialism",
+      "Plane": "7",
+      "State": "7.6"
+    },
+    "7.6.5": {
+      "Name": "Cruelty",
+      "Interrogative": "Why",
+      "Definition": "Kids in Cages.",
+      "Anchor": "Border Crisis",
+      "Plane": "7",
+      "State": "7.6"
+    },
+    "7.6.6": {
+      "Name": "Moral Rot",
+      "Interrogative": "Cause",
+      "Definition": "The soul dies.",
+      "Anchor": "Roman Decadence",
+      "Plane": "7",
+      "State": "7.6"
+    },
+    "7.6.7": {
+      "Name": "The Villain",
+      "Interrogative": "Effect",
+      "Definition": "Becoming the Empire.",
+      "Anchor": "Star Wars Archetype",
+      "Plane": "7",
+      "State": "7.6"
+    },
+    "7.7.1": {
+      "Name": "Vetoed",
+      "Interrogative": "What",
+      "Definition": "We can't decide.",
+      "Anchor": "Finland",
+      "Plane": "7",
+      "State": "7.7"
+    },
+    "7.7.2": {
+      "Name": "Occupier",
+      "Interrogative": "Who",
+      "Definition": "They rule us.",
+      "Anchor": "East Germany",
+      "Plane": "7",
+      "State": "7.7"
+    },
+    "7.7.3": {
+      "Name": "Vassalage",
+      "Interrogative": "How",
+      "Definition": "Puppet Leader.",
+      "Anchor": "Belarus",
+      "Plane": "7",
+      "State": "7.7"
+    },
+    "7.7.4": {
+      "Name": "Debt Slave",
+      "Interrogative": "Where",
+      "Definition": "We owe everything.",
+      "Anchor": "IMF",
+      "Plane": "7",
+      "State": "7.7"
+    },
+    "7.7.5": {
+      "Name": "Inferiority",
+      "Interrogative": "Why",
+      "Definition": "We are weak.",
+      "Anchor": "Colonial Mind",
+      "Plane": "7",
+      "State": "7.7"
+    },
+    "7.7.6": {
+      "Name": "Assimilation",
+      "Interrogative": "Cause",
+      "Definition": "We are absorbed.",
+      "Anchor": "The Borg",
+      "Plane": "7",
+      "State": "7.7"
+    },
+    "7.7.7": {
+      "Name": "Extinction",
+      "Interrogative": "Effect",
+      "Definition": "The Nation dies.",
+      "Anchor": "Poland 1795",
+      "Plane": "7",
+      "State": "7.7"
+    }
+  }
+}

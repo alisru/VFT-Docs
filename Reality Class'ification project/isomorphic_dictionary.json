@@ -1,0 +1,35 @@
+{
+  "semantic_units": {
+    "relocate": {
+      "garden": "Physics",
+      "plant": "Relocate",
+      "target_plane": "Where",
+      "pointers": {
+        "went": { "position": "Are", "magnitude": 1.0, "polarity": "Positive" },
+        "drove": { "position": "Are", "magnitude": 1.0, "polarity": "Positive" },
+        "flew": { "position": "Are", "magnitude": 1.0, "polarity": "Positive" },
+        "store": { "position": "Are", "magnitude": 1.0, "polarity": "Positive" },
+        "garage": { "position": "Are", "magnitude": 1.0, "polarity": "Positive" },
+        "lost": { "position": "NotReally", "magnitude": -1.0, "polarity": "Negative" },
+        "death": { "position": "NotReally", "magnitude": -2.0, "polarity": "Negative" },
+        "destroyed": { "position": "NotReally", "magnitude": -2.0, "polarity": "Negative" },
+        "vaporized": { "position": "NotReally", "magnitude": -2.0, "polarity": "Negative" }
+      }
+    },
+    "transfer": {
+      "garden": "Commerce",
+      "plant": "Transfer",
+      "target_plane": "What",
+      "pointers": {
+        "paid": { "position": "Are", "magnitude": 1.0, "polarity": "Positive" },
+        "gave": { "position": "Are", "magnitude": 1.0, "polarity": "Positive" },
+        "bought": { "position": "Are", "magnitude": 1.0, "polarity": "Positive" },
+        "taxed": { "position": "NotReally", "magnitude": -1.0, "polarity": "Negative" },
+        "fined": { "position": "NotReally", "magnitude": -1.0, "polarity": "Negative" },
+        "stole": { "position": "NotReally", "magnitude": -1.0, "polarity": "Negative" },
+        "bankrupt": { "position": "NotReally", "magnitude": -2.0, "polarity": "Negative" },
+        "forfeited": { "position": "NotReally", "magnitude": -2.0, "polarity": "Negative" }
+      }
+    }
+  }
+}

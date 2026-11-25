@@ -1,0 +1,677 @@
+{
+  "generated_at": "2026-11-25T11:14:28Z",
+  "total_docs": 2361,
+  "total_families": 254,
+  "consolidate_families": 90,
+  "sources": {
+    "both": 560,
+    "drive": 678,
+    "local": 1123
+  },
+  "exts": [
+    [
+      "md",
+      1576
+    ],
+    [
+      "gdoc",
+      678
+    ],
+    [
+      "html",
+      62
+    ],
+    [
+      "lean",
+      33
+    ],
+    [
+      "pdf",
+      12
+    ]
+  ],
+  "triage": {
+    "KEEP": 2199,
+    "CONSOLIDATE": 162
+  },
+  "categories": [
+    [
+      "Psochic Hegemony & Philosophy",
+      735
+    ],
+    [
+      "Politics, Geopolitics & Media",
+      490
+    ],
+    [
+      "Theology & Biblical Translation",
+      228
+    ],
+    [
+      "Vector Field Theory & Physics",
+      208
+    ],
+    [
+      "General & Uncategorized",
+      185
+    ],
+    [
+      "Economics & Value Physics (VPE/PREF)",
+      156
+    ],
+    [
+      "AI, Software & Data",
+      134
+    ],
+    [
+      "Infinity & Reality Math (IRM)",
+      119
+    ],
+    [
+      "Linguistics & Name Analysis",
+      70
+    ],
+    [
+      "Energy & Infrastructure (NEN)",
+      36
+    ]
+  ],
+  "category_breakdown": [
+    {
+      "name": "Psochic Hegemony & Philosophy",
+      "total": 735,
+      "md": 570,
+      "gdoc": 146,
+      "html": 7,
+      "consolidate": 25,
+      "top_tags": [
+        "logic",
+        "philosophy",
+        "ethics",
+        "psychology",
+        "computation",
+        "physics"
+      ]
+    },
+    {
+      "name": "Politics, Geopolitics & Media",
+      "total": 490,
+      "md": 390,
+      "gdoc": 51,
+      "html": 49,
+      "consolidate": 5,
+      "top_tags": [
+        "accountability",
+        "conviction",
+        "equity",
+        "internal judgment",
+        "jurisprudance",
+        "justice"
+      ]
+    },
+    {
+      "name": "Theology & Biblical Translation",
+      "total": 228,
+      "md": 125,
+      "gdoc": 103,
+      "html": 0,
+      "consolidate": 27,
+      "top_tags": [
+        "religion",
+        "ethics",
+        "theology",
+        "parable",
+        "metaphysics",
+        "genesis"
+      ]
+    },
+    {
+      "name": "Vector Field Theory & Physics",
+      "total": 208,
+      "md": 136,
+      "gdoc": 70,
+      "html": 2,
+      "consolidate": 21,
+      "top_tags": [
+        "physics",
+        "dogma",
+        "denial",
+        "vft",
+        "imagination",
+        "objectivity"
+      ]
+    },
+    {
+      "name": "General & Uncategorized",
+      "total": 185,
+      "md": 148,
+      "gdoc": 37,
+      "html": 0,
+      "consolidate": 3,
+      "top_tags": [
+        "history",
+        "delusion",
+        "erasure",
+        "psychology",
+        "society",
+        "physics"
+      ]
+    },
+    {
+      "name": "Economics & Value Physics (VPE/PREF)",
+      "total": 156,
+      "md": 48,
+      "gdoc": 107,
+      "html": 1,
+      "consolidate": 51,
+      "top_tags": [
+        "changelog",
+        "housing",
+        "rrp",
+        "fairness",
+        "package",
+        "manuscript"
+      ]
+    },
+    {
+      "name": "AI, Software & Data",
+      "total": 134,
+      "md": 46,
+      "gdoc": 88,
+      "html": 0,
+      "consolidate": 10,
+      "top_tags": [
+        "physics",
+        "psychology",
+        "relationalism",
+        "understanding",
+        "symmetry",
+        "gate"
+      ]
+    },
+    {
+      "name": "Infinity & Reality Math (IRM)",
+      "total": 119,
+      "md": 43,
+      "gdoc": 43,
+      "html": 0,
+      "consolidate": 15,
+      "top_tags": [
+        "cellular",
+        "carrier",
+        "infinitesimal",
+        "physics",
+        "number",
+        "denial"
+      ]
+    },
+    {
+      "name": "Linguistics & Name Analysis",
+      "total": 70,
+      "md": 58,
+      "gdoc": 9,
+      "html": 3,
+      "consolidate": 3,
+      "top_tags": [
+        "phonetic",
+        "alisru",
+        "match",
+        "sovereignty",
+        "history",
+        "english"
+      ]
+    },
+    {
+      "name": "Energy & Infrastructure (NEN)",
+      "total": 36,
+      "md": 12,
+      "gdoc": 24,
+      "html": 0,
+      "consolidate": 2,
+      "top_tags": [
+        "manufacturing",
+        "information",
+        "instruction",
+        "knowledge",
+        "learning",
+        "pedagogy"
+      ]
+    }
+  ],
+  "planes": [
+    [
+      "Q1 WHO",
+      268
+    ],
+    [
+      "Q2 WHAT",
+      108
+    ],
+    [
+      "Q3 WHERE",
+      206
+    ],
+    [
+      "Q4 WHY",
+      82
+    ],
+    [
+      "Q5 HOW",
+      254
+    ],
+    [
+      "Q6 CAUSE",
+      219
+    ],
+    [
+      "Q7 EFFECT",
+      131
+    ]
+  ],
+  "doc_types": [
+    [
+      "Research Paper / Essay",
+      1657
+    ],
+    [
+      "Framework / Spec",
+      199
+    ],
+    [
+      "Audit / Analysis",
+      173
+    ],
+    [
+      "AI Research / Q&A",
+      70
+    ],
+    [
+      "Translation / Lexicon",
+      70
+    ],
+    [
+      "Policy / Proposal",
+      66
+    ],
+    [
+      "Interactive Visualizer",
+      61
+    ],
+    [
+      "Formal Proof (Lean 4)",
+      33
+    ],
+    [
+      "Code / Technical",
+      21
+    ],
+    [
+      "Guide / Summary",
+      11
+    ]
+  ],
+  "folders": [
+    [
+      "WWSUTRU",
+      417
+    ],
+    [
+      "Actualism",
+      293
+    ],
+    [
+      "My Drive (Root)",
+      250
+    ],
+    [
+      "io",
+      159
+    ],
+    [
+      "geometry of definitions",
+      126
+    ],
+    [
+      "Archive",
+      124
+    ],
+    [
+      "Unassigned Drive Folder",
+      93
+    ],
+    [
+      "Physics",
+      91
+    ],
+    [
+      "IRM",
+      76
+    ],
+    [
+      "Theology & Spirituality",
+      66
+    ],
+    [
+      "Hegemony",
+      60
+    ],
+    [
+      "Consciousness",
+      52
+    ],
+    [
+      "Value Physics",
+      46
+    ],
+    [
+      "Reality Class'ification project",
+      40
+    ],
+    [
+      "Australian Politics",
+      38
+    ],
+    [
+      "AI",
+      36
+    ],
+    [
+      "Processed",
+      27
+    ],
+    [
+      "Truth",
+      24
+    ],
+    [
+      "Planes",
+      22
+    ],
+    [
+      "Policy",
+      18
+    ],
+    [
+      "Matrix",
+      16
+    ],
+    [
+      "hegemony_attractor",
+      16
+    ],
+    [
+      "42",
+      15
+    ],
+    [
+      "Protocols",
+      15
+    ],
+    [
+      "hinduism",
+      12
+    ],
+    [
+      "Bible Translation Transformer Development - Google Gemini",
+      11
+    ],
+    [
+      "Philosophy",
+      11
+    ],
+    [
+      "buddhism",
+      11
+    ],
+    [
+      "Moral Architecture Framework Audit - Google Gemini",
+      10
+    ],
+    [
+      "God & Religion",
+      10
+    ]
+  ],
+  "top_tags": [
+    [
+      "history",
+      133
+    ],
+    [
+      "physics",
+      105
+    ],
+    [
+      "logic",
+      104
+    ],
+    [
+      "ethics",
+      80
+    ],
+    [
+      "psychology",
+      78
+    ],
+    [
+      "philosophy",
+      73
+    ],
+    [
+      "accountability",
+      71
+    ],
+    [
+      "justice",
+      70
+    ],
+    [
+      "law",
+      70
+    ],
+    [
+      "knowledge",
+      70
+    ],
+    [
+      "prudence",
+      69
+    ],
+    [
+      "conviction",
+      67
+    ],
+    [
+      "equity",
+      67
+    ],
+    [
+      "society",
+      67
+    ],
+    [
+      "internal judgment",
+      66
+    ],
+    [
+      "jurisprudance",
+      66
+    ],
+    [
+      "mathematics",
+      66
+    ],
+    [
+      "computation",
+      62
+    ],
+    [
+      "network",
+      59
+    ],
+    [
+      "group",
+      57
+    ],
+    [
+      "information",
+      57
+    ],
+    [
+      "learning",
+      57
+    ],
+    [
+      "instruction",
+      55
+    ],
+    [
+      "pedagogy",
+      55
+    ],
+    [
+      "delusion",
+      54
+    ],
+    [
+      "community",
+      54
+    ],
+    [
+      "morality",
+      53
+    ],
+    [
+      "erasure",
+      52
+    ],
+    [
+      "dogma",
+      52
+    ],
+    [
+      "public",
+      47
+    ],
+    [
+      "religion",
+      46
+    ],
+    [
+      "denial",
+      46
+    ],
+    [
+      "metaphysics",
+      42
+    ],
+    [
+      "language",
+      42
+    ],
+    [
+      "epistemology",
+      41
+    ],
+    [
+      "the world",
+      39
+    ],
+    [
+      "theology",
+      38
+    ],
+    [
+      "social",
+      37
+    ],
+    [
+      "context",
+      36
+    ],
+    [
+      "spirituality",
+      35
+    ],
+    [
+      "cognition",
+      35
+    ],
+    [
+      "virtue",
+      34
+    ],
+    [
+      "corruption",
+      34
+    ],
+    [
+      "imagination",
+      33
+    ],
+    [
+      "historicism",
+      33
+    ],
+    [
+      "realism",
+      33
+    ],
+    [
+      "vft",
+      33
+    ],
+    [
+      "record",
+      33
+    ],
+    [
+      "geometry",
+      32
+    ],
+    [
+      "cowardice",
+      32
+    ],
+    [
+      "understanding",
+      32
+    ],
+    [
+      "civic",
+      31
+    ],
+    [
+      "scripture",
+      30
+    ],
+    [
+      "timeline",
+      30
+    ],
+    [
+      "linguistics",
+      30
+    ],
+    [
+      "objectivity",
+      29
+    ],
+    [
+      "communication",
+      29
+    ],
+    [
+      "algorithms",
+      28
+    ],
+    [
+      "media",
+      28
+    ],
+    [
+      "collective",
+      28
+    ]
+  ]
+}

@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VFT Research Library &amp; Knowledge Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --bg-panel: #111827;
+      --bg-card: #172033;
+      --bg-hover: #1e293b;
+      --border: #263248;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --bright: #ffffff;
+      --accent: #38bdf8;
+      --indigo: #818cf8;
+      --green: #34d399;
+      --amber: #fbbf24;
+      --red: #f87171;
+      --pink: #f472b6;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    header {
+      background: #0f172a;
+      border-bottom: 1px solid var(--border);
+      padding: 9px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+    .brand-logo {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: #fff; font-size: 13px;
+    }
+    .brand h1 { font-size: 14.5px; font-weight: 700; color: var(--bright); }
+    .brand small { font-size: 11px; color: var(--muted); display: block; }
+    .tabs {
+      display: flex; gap: 4px; background: #0b1120; padding: 3px;
+      border-radius: 9px; border: 1px solid var(--border); flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: transparent; border: none; color: var(--muted);
+      padding: 6px 11px; border-radius: 7px; font-size: 12px;
+      font-weight: 600; cursor: pointer; transition: 0.15s;
+    }
+    .tab-btn:hover { color: var(--bright); background: rgba(255,255,255,0.05); }
+    .tab-btn.active { background: #4f46e5; color: #fff; }
+    .header-right { display: flex; align-items: center; gap: 8px; }
+    .cmd-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--bg); border: 1px solid var(--border); color: var(--muted);
+      padding: 5px 11px; border-radius: 8px; font-size: 12px; cursor: pointer;
+    }
+    .cmd-btn:hover { border-color: var(--accent); color: var(--bright); }
+    .kbd {
+      font-family: var(--mono); font-size: 10px; padding: 1px 5px;
+      border-radius: 4px; background: var(--bg-card); border: 1px solid var(--border);
+    }
+    .stats-pill {
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+      background: var(--bg-panel); border: 1px solid var(--border);
+      padding: 5px 10px; border-radius: 8px;
+    }
+
+    .view { display: none; flex: 1; overflow: hidden; flex-direction: column; }
+    .view.active { display: flex; }
+
+    /* Dashboard */
+    .dash-scroll { flex: 1; overflow-y: auto; padding: 24px 32px; }
+    .dash-inner { max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 12px; }
+    .kpi-card {
+      background: var(--bg-panel); border: 1px solid var(--border); border-radius: 12px;
+      padding: 14px 16px; cursor: pointer; transition: 0.15s;
+    }
+    .kpi-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .kpi-val { font-size: 23px; font-weight: 800; color: var(--bright); font-family: var(--mono); }
+    .kpi-lbl { font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+    .section-title {
+      font-size: 12.5px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--accent); margin-bottom: 10px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 12px; }
+    .cat-card {
+      background: var(--bg-panel); border: 1px solid var(--border); border-radius: 12px;
+      padding: 15px 17px; display: flex; flex-direction: column; gap: 8px; transition: 0.15s;
+    }
+    .cat-card:hover { border-color: var(--indigo); }
+    .cat-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+    .cat-card-name { font-size: 14px; font-weight: 700; color: var(--bright); }
+    .cat-card-count { font-family: var(--mono); font-size: 12px; color: var(--accent); font-weight: 700; }
+    .plane-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+    .plane-card {
+      background: var(--bg-panel); border: 1px solid var(--border); border-radius: 10px;
+      padding: 12px; cursor: pointer; transition: 0.15s;
+    }
+    .plane-card:hover { border-color: var(--pink); transform: translateY(-1px); }
+
+    /* Top File Kinds Strip */
+    .kinds-bar {
+      display: flex; align-items: center; gap: 6px; padding: 8px 14px;
+      background: #0d1321; border-bottom: 1px solid var(--border);
+      overflow-x: auto; flex-shrink: 0;
+    }
+    .kind-pill {
+      display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+      padding: 5px 10px; border-radius: 8px; font-size: 11.5px; font-weight: 600;
+      background: var(--bg-panel); border: 1px solid var(--border); color: var(--muted);
+      cursor: pointer; transition: 0.12s;
+    }
+    .kind-pill:hover { border-color: var(--accent); color: var(--bright); }
+    .kind-pill.active { background: rgba(56, 189, 248, 0.16); border-color: var(--accent); color: var(--bright); }
+    .kind-cnt { font-family: var(--mono); font-size: 10.5px; opacity: 0.85; }
+
+    /* 3-Pane Library Layout */
+    .lib-workspace { flex: 1; display: flex; overflow: hidden; }
+    .nav-rail {
+      width: 265px; min-width: 220px; background: #0e1422;
+      border-right: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden;
+    }
+    .nav-rail.collapsed { display: none; }
+    .nav-modes {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px;
+      padding: 6px; border-bottom: 1px solid var(--border); background: #0b101b;
+    }
+    .nav-mode-btn {
+      background: transparent; border: none; color: var(--muted);
+      padding: 5px 2px; border-radius: 6px; font-size: 10.5px; font-weight: 600;
+      cursor: pointer; text-align: center;
+    }
+    .nav-mode-btn:hover { color: var(--bright); background: rgba(255,255,255,0.04); }
+    .nav-mode-btn.active { background: var(--bg-card); color: var(--accent); border: 1px solid var(--border); }
+    .nav-tree { flex: 1; overflow-y: auto; padding: 6px; }
+    .tree-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 6px;
+      padding: 6px 8px; border-radius: 6px; font-size: 12px; color: var(--text);
+      cursor: pointer; user-select: none;
+    }
+    .tree-row:hover { background: rgba(56, 189, 248, 0.08); }
+    .tree-row.active { background: rgba(79, 70, 229, 0.25); color: var(--bright); font-weight: 600; }
+    .tree-left { display: flex; align-items: center; gap: 6px; min-width: 0; flex: 1; }
+    .tree-lbl { truncate: ellipsis; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .tree-chev { width: 14px; font-size: 10px; color: var(--muted); flex-shrink: 0; text-align: center; }
+    .tree-cnt { font-family: var(--mono); font-size: 10.5px; color: var(--muted); flex-shrink: 0; }
+    .tree-children { padding-left: 12px; border-left: 1px solid rgba(38,50,72,0.7); margin-left: 11px; }
+    .tree-children.closed { display: none; }
+
+    /* Middle Doc List */
+    .sidebar {
+      width: 345px; min-width: 280px; background: var(--bg-panel);
+      border-right: 1px solid var(--border); display: flex;
+      flex-direction: column; overflow: hidden;
+    }
+    .sidebar.collapsed { display: none; }
+    .filters { padding: 10px; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 7px; }
+    .search-row { display: flex; gap: 6px; }
+    .search-input {
+      flex: 1; width: 100%; background: var(--bg); border: 1px solid var(--border);
+      border-radius: 7px; padding: 7px 10px; color: var(--bright); font-size: 12.5px; outline: none;
+    }
+    .search-input:focus { border-color: var(--accent); }
+    select.f-sel {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+      padding: 6px 8px; color: var(--text); font-size: 11.5px; outline: none;
+    }
+    .active-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .chip-active {
+      display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600;
+      padding: 2px 7px; border-radius: 99px; background: rgba(79,70,229,0.25);
+      border: 1px solid rgba(129,140,248,0.45); color: #c7d2fe; cursor: pointer;
+    }
+    .chip-active:hover { border-color: var(--red); color: #fecaca; }
+    .tag-strip { display: flex; gap: 5px; overflow-x: auto; padding-bottom: 2px; flex-wrap: nowrap; }
+    .tag-strip.wrap { flex-wrap: wrap; overflow-x: visible; }
+    .tag-strip::-webkit-scrollbar { height: 4px; }
+    .tag-pill {
+      white-space: nowrap; font-size: 10.5px; padding: 2px 8px; border-radius: 99px;
+      background: var(--bg-card); border: 1px solid var(--border); color: var(--muted); cursor: pointer;
+    }
+    .tag-pill:hover, .tag-pill.active {
+      border-color: var(--accent); color: var(--accent); background: rgba(56, 189, 248, 0.12);
+    }
+    .list-meta {
+      padding: 6px 12px; font-size: 11px; color: var(--muted);
+      border-bottom: 1px solid var(--border); display: flex;
+      justify-content: space-between; align-items: center; background: #0d1321;
+    }
+    .doc-list { flex: 1; overflow-y: auto; list-style: none; }
+    .doc-item {
+      padding: 10px 12px; border-bottom: 1px solid rgba(38, 50, 72, 0.65);
+      cursor: pointer; transition: background 0.12s;
+    }
+    .doc-item:hover { background: rgba(56, 189, 248, 0.07); }
+    .doc-item.active { background: rgba(79, 70, 229, 0.18); border-left: 3px solid var(--accent); }
+    .doc-item-title { font-size: 12.5px; font-weight: 600; color: var(--bright); margin-bottom: 3px; line-height: 1.35; word-break: break-word; }
+    .doc-item-path { font-size: 10.5px; font-family: var(--mono); color: #64748b; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .doc-item-sub {
+      font-size: 11.5px; color: var(--muted); display: -webkit-box;
+      -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      margin-bottom: 5px; line-height: 1.38;
+    }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+    .badge {
+      font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 4px;
+      background: #1e293b; color: #cbd5e1; border: 1px solid #334155;
+    }
+    .b-both { background: rgba(52, 211, 153, 0.14); color: #34d399; border-color: rgba(52, 211, 153, 0.35); }
+    .b-drive { background: rgba(56, 189, 248, 0.14); color: #38bdf8; border-color: rgba(56, 189, 248, 0.35); }
+    .b-local { background: rgba(129, 140, 248, 0.14); color: #a5b4fc; border-color: rgba(129, 140, 248, 0.35); }
+    .b-consolidate { background: rgba(251, 191, 36, 0.14); color: #fbbf24; border-color: rgba(251, 191, 36, 0.4); }
+    .b-delete { background: rgba(248, 113, 113, 0.14); color: #f87171; border-color: rgba(248, 113, 113, 0.4); }
+    .b-archive { background: rgba(148, 163, 184, 0.14); color: #cbd5e1; border-color: rgba(148, 163, 184, 0.35); }
+    .b-plane { background: rgba(244, 114, 182, 0.14); color: #f472b6; border-color: rgba(244, 114, 182, 0.35); }
+
+    .load-more-btn {
+      width: 100%; padding: 10px; background: var(--bg-card); border: none;
+      border-top: 1px solid var(--border); color: var(--accent);
+      font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .load-more-btn:hover { background: var(--bg-hover); }
+
+    /* Reader Pane */
+    .reader { flex: 1; overflow-y: auto; padding: 22px 30px; background: var(--bg); }
+    .reader-inner { max-width: 940px; margin: 0 auto; }
+    .breadcrumbs {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 5px;
+      font-size: 11.5px; color: var(--muted); margin-bottom: 10px;
+    }
+    .crumb-link { color: var(--accent); cursor: pointer; }
+    .crumb-link:hover { text-decoration: underline; }
+    .reader-header { border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 18px; }
+    .reader-title { font-size: 21px; font-weight: 700; color: var(--bright); line-height: 1.3; margin-bottom: 10px; }
+    .reader-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px;
+      border-radius: 7px; font-size: 11.5px; font-weight: 600;
+      border: 1px solid var(--border); background: var(--bg-card);
+      color: var(--text); text-decoration: none; cursor: pointer;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-primary { background: #0284c7; border-color: #0ea5e9; color: #fff; }
+    .btn-primary:hover { background: #0369a1; color: #fff; }
+
+    .panel {
+      background: var(--bg-panel); border: 1px solid var(--border);
+      border-radius: 10px; padding: 15px 18px; margin-bottom: 16px;
+    }
+    .panel-head {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 10px; margin-bottom: 10px; flex-wrap: wrap;
+    }
+    .panel h3 {
+      font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--accent); margin: 0;
+    }
+    .panel p { font-size: 13.5px; line-height: 1.65; color: var(--text); }
+
+    .toc-box {
+      background: #0d1321; border: 1px solid var(--border); border-radius: 8px;
+      padding: 10px 14px; margin-bottom: 14px;
+    }
+    .toc-list { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 6px; }
+    .toc-link { font-size: 12px; color: var(--indigo); cursor: pointer; text-decoration: none; }
+    .toc-link:hover { color: var(--accent); text-decoration: underline; }
+
+    .sim-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; margin-top: 8px; }
+    .sim-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+      padding: 9px 11px; cursor: pointer; transition: 0.12s;
+    }
+    .sim-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .sim-card-title { font-size: 12px; font-weight: 600; color: var(--bright); margin-bottom: 3px; }
+    .sim-card-meta { font-size: 10.5px; color: var(--muted); font-family: var(--mono); }
+
+    /* Rendered Markdown */
+    .md-body { font-size: 15px; line-height: 1.75; color: #dbe4f0; overflow-wrap: anywhere; }
+    .md-body h1, .md-body h2, .md-body h3, .md-body h4 {
+      color: var(--bright); margin-top: 1.35em; margin-bottom: 0.5em; line-height: 1.3;
+    }
+    .md-body h1 { font-size: 1.55em; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    .md-body h2 { font-size: 1.28em; color: #7dd3fc; }
+    .md-body h3 { font-size: 1.08em; color: #a5b4fc; }
+    .md-body p { margin-bottom: 0.95em; }
+    .md-body hr { border: none; border-top: 1px solid var(--border); margin: 1.4em 0; }
+    .md-body ul, .md-body ol { padding-left: 1.5em; margin-bottom: 0.95em; }
+    .md-body li { margin-bottom: 0.35em; }
+    .md-body img { max-width: 100%; border-radius: 8px; margin: 10px 0; border: 1px solid var(--border); }
+    .md-body blockquote {
+      border-left: 3px solid var(--indigo); padding: 7px 14px; margin: 12px 0;
+      background: rgba(129, 140, 248, 0.08); color: #cbd5e1; border-radius: 0 6px 6px 0;
+    }
+    .md-body code {
+      font-family: var(--mono); font-size: 0.86em; background: #1e293b;
+      padding: 2px 5px; border-radius: 4px; color: #7dd3fc;
+    }
+    .md-body pre {
+      background: #090d16; border: 1px solid var(--border); padding: 13px;
+      border-radius: 8px; overflow-x: auto; margin: 12px 0;
+      font-family: var(--mono); font-size: 12px; line-height: 1.55;
+    }
+    .md-body pre code { background: none; padding: 0; color: #e2e8f0; }
+    .md-body table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12.5px; display: block; overflow-x: auto; }
+    .md-body th, .md-body td { border: 1px solid var(--border); padding: 7px 10px; text-align: left; }
+    .md-body th { background: var(--bg-card); color: var(--bright); }
+    .md-body a { color: var(--accent); }
+    .md-body .katex-display { overflow-x: auto; overflow-y: hidden; padding: 6px 0; }
+    .embed-frame { width: 100%; height: 70vh; border: 1px solid var(--border); border-radius: 10px; background: #020617; }
+
+    /* Versions Tab */
+    .split-row { flex: 1; display: flex; overflow: hidden; }
+    .diff-box {
+      margin-top: 8px; background: #090d16; border: 1px solid rgba(251, 191, 36, 0.35);
+      border-radius: 7px; padding: 10px 12px; font-size: 12px;
+      line-height: 1.55; color: #fde68a; white-space: pre-wrap;
+    }
+    .ver-card {
+      background: var(--bg-panel); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 16px; margin-bottom: 12px;
+    }
+    .ver-card.canonical { border-color: rgba(52, 211, 153, 0.55); }
+    .ver-inline-reader {
+      margin-top: 10px; padding: 14px; background: #0b0f17;
+      border: 1px solid var(--border); border-radius: 8px;
+    }
+
+    /* Graph Tab */
+    .graph-wrap { flex: 1; position: relative; background: #070b12; overflow: hidden; }
+    #graphCanvas { width: 100%; height: 100%; display: block; cursor: grab; }
+    .graph-hud {
+      position: absolute; top: 14px; left: 14px;
+      background: rgba(15, 23, 42, 0.92); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 14px; max-width: 340px; backdrop-filter: blur(8px);
+    }
+    .graph-inspector {
+      position: absolute; bottom: 14px; right: 14px; width: 360px;
+      background: rgba(15, 23, 42, 0.94); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px; backdrop-filter: blur(8px);
+    }
+
+    /* Command Palette Modal */
+    .cmd-overlay {
+      position: fixed; inset: 0; background: rgba(2, 6, 23, 0.72);
+      backdrop-filter: blur(4px); z-index: 200; display: none;
+      align-items: flex-start; justify-content: center; padding-top: 9vh;
+    }
+    .cmd-overlay.open { display: flex; }
+    .cmd-modal {
+      width: min(680px, 94vw); background: #0f172a; border: 1px solid var(--border);
+      border-radius: 12px; box-shadow: 0 24px 60px rgba(0,0,0,0.65); overflow: hidden;
+    }
+    .cmd-input {
+      width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--border);
+      padding: 14px 16px; color: var(--bright); font-size: 15px; outline: none;
+    }
+    .cmd-results { max-height: 55vh; overflow-y: auto; list-style: none; }
+    .cmd-item {
+      padding: 10px 16px; border-bottom: 1px solid rgba(38,50,72,0.5);
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    }
+    .cmd-item:hover, .cmd-item.active { background: rgba(79,70,229,0.28); }
+
+    @media (max-width: 960px) {
+      .lib-workspace, .split-row { flex-direction: column; }
+      .nav-rail { width: 100%; height: 28vh; border-right: none; border-bottom: 1px solid var(--border); }
+      .sidebar { width: 100%; height: 34vh; border-right: none; border-bottom: 1px solid var(--border); }
+      .reader, .dash-scroll { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand" id="brandHomeBtn">
+      <div class="brand-logo">VFT</div>
+      <div>
+        <h1>VFT Research Library</h1>
+        <small id="subtitle">Unified Local Docs &amp; Google Drive Catalog</small>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="dashboard">📊 Dashboard</button>
+      <button class="tab-btn" data-tab="library">📚 Browse &amp; Read</button>
+      <button class="tab-btn" data-tab="versions">🧬 Versions &amp; Consolidate</button>
+      <button class="tab-btn" data-tab="graph">🕸️ Graph</button>
+    </div>
+
+    <div class="header-right">
+      <button class="cmd-btn" id="openCmdBtn">🔍 Quick Jump <span class="kbd">Ctrl+K</span></button>
+      <div class="stats-pill" id="globalStats">Loading catalog...</div>
+    </div>
+  </header>
+
+  <!-- VIEW 0: DASHBOARD -->
+  <section id="view-dashboard" class="view active">
+    <div class="dash-scroll">
+      <div class="dash-inner" id="dashContent">
+        <div style="color:var(--muted);">Loading dashboard metrics...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 1: 3-PANE BROWSER & READER -->
+  <section id="view-library" class="view">
+    <div class="kinds-bar" id="kindsBar"></div>
+    <div class="lib-workspace">
+      <!-- Pane 1: Category / Folder / Kind / Plane Tree -->
+      <aside id="navRail" class="nav-rail">
+        <div class="nav-modes">
+          <button class="nav-mode-btn active" data-nav="categories">Categories</button>
+          <button class="nav-mode-btn" data-nav="folders">Folders</button>
+          <button class="nav-mode-btn" data-nav="types">Types</button>
+          <button class="nav-mode-btn" data-nav="planes">Planes</button>
+          <button class="nav-mode-btn" data-nav="tags">Tags</button>
+        </div>
+        <div id="navTree" class="nav-tree"></div>
+      </aside>
+
+      <!-- Pane 2: Filtered Document List -->
+      <aside id="libSidebar" class="sidebar">
+        <div class="filters">
+          <div class="search-row">
+            <input id="libSearch" class="search-input" type="search" placeholder="Filter titles, tags, snippets..." />
+            <select id="fSort" class="f-sel" title="Sort order">
+              <option value="title">A–Z</option>
+              <option value="recent">Newest</option>
+              <option value="links">Most Linked</option>
+              <option value="consolidate">Consolidate First</option>
+            </select>
+          </div>
+          <div id="activeChips" class="active-chips"></div>
+        </div>
+        <div class="list-meta">
+          <span id="libCount">0 docs</span>
+          <button id="clearFiltersBtn" style="background:none;border:none;color:var(--accent);cursor:pointer;font-size:11px;">Clear all</button>
+        </div>
+        <ul id="docList" class="doc-list"></ul>
+        <button id="loadMoreBtn" class="load-more-btn" style="display:none;">Show more</button>
+      </aside>
+
+      <!-- Pane 3: Document Reader -->
+      <main id="libReader" class="reader">
+        <div class="reader-inner" style="color:var(--muted);padding-top:40px;text-align:center;">
+          Pick a category, folder, or file kind on the left to browse and read.
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- VIEW 2: VERSIONS & CONSOLIDATE -->
+  <section id="view-versions" class="view">
+    <div class="split-row">
+      <aside class="sidebar">
+        <div class="filters">
+          <input id="famSearch" class="search-input" type="search" placeholder="Search families, titles, missing passages..." />
+          <select id="fFamStatus" class="f-sel">
+            <option value="CONSOLIDATE">Consolidate Needed</option>
+            <option value="">All Families</option>
+            <option value="Delete Exact Duplicates">Exact Duplicates Only</option>
+          </select>
+        </div>
+        <div class="list-meta">
+          <span id="famCount">0 families</span>
+        </div>
+        <ul id="famList" class="doc-list"></ul>
+      </aside>
+
+      <main id="famReader" class="reader">
+        <div class="reader-inner" style="color:var(--muted);padding-top:40px;text-align:center;">
+          Loading version families...
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- VIEW 3: SIMILARITY GRAPH -->
+  <section id="view-graph" class="view">
+    <div class="graph-wrap">
+      <canvas id="graphCanvas"></canvas>
+      <div class="graph-hud">
+        <div style="font-size:12px;font-weight:700;color:var(--bright);margin-bottom:4px;">Document Similarity Neighborhood</div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:8px;">Click a node to inspect · Double-click to re-center</div>
+        <select id="graphHubSelect" class="f-sel" style="width:100%;"></select>
+      </div>
+      <div id="graphInspector" class="graph-inspector">
+        <div style="font-size:12px;color:var(--muted);">Select a node on the graph.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMAND PALETTE (Ctrl+K / /) -->
+  <div id="cmdOverlay" class="cmd-overlay">
+    <div class="cmd-modal">
+      <input id="cmdInput" class="cmd-input" type="search" placeholder="Jump to any document, folder, tag, or snippet keyword..." />
+      <ul id="cmdResults" class="cmd-results"></ul>
+    </div>
+  </div>
+
+  <script>
+    const state = {
+      catalog: [],
+      meta: null,
+      searchIndex: null,
+      families: null,
+      snippetCache: new Map(),
+      filtered: [],
+      pageSize: 60,
+      selectedIdx: null,
+      selectedFamilyId: null,
+      filters: { q: "", ext: "", category: "", folderPrefix: "", docType: "", plane: "", tag: "", triage: "" },
+      sortBy: "title",
+      navMode: "categories",
+      expandedKeys: new Set(["_VFT MD", "Google Drive"]),
+      activeTab: "dashboard",
+      treeVisible: true,
+      focusMode: false,
+      rawMode: false,
+      currentRawText: "",
+      graphCenterIdx: 0,
+      graphNodes: [],
+      graphEdges: [],
+      cmdHits: [],
+      cmdActive: 0,
+    };
+
+    const CAT_COLORS = {
+      "Psochic Hegemony & Philosophy": "#818cf8",
+      "Theology & Biblical Translation": "#f472b6",
+      "Vector Field Theory & Physics": "#38bdf8",
+      "Economics & Value Physics (VPE/PREF)": "#34d399",
+      "AI, Software & Data": "#a78bfa",
+      "Infinity & Reality Math (IRM)": "#fbbf24",
+      "Politics, Geopolitics & Media": "#fb7185",
+      "Energy & Infrastructure (NEN)": "#2dd4bf",
+      "Linguistics & Name Analysis": "#c084fc",
+      "General & Uncategorized": "#94a3b8",
+    };
+
+    function esc(s) {
+      return String(s || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function encodeRelPath(relPath) {
+      if (!relPath) return "";
+      return "./" + relPath.split("/").map(seg => encodeURIComponent(seg)).join("/");
+    }
+
+    function resolveRelPath(baseRelPath, linkPath) {
+      if (!linkPath || /^[a-z]+:/i.test(linkPath) || linkPath.startsWith("#")) return linkPath;
+      const baseParts = (baseRelPath || "").split("/");
+      baseParts.pop();
+      for (const part of linkPath.split("/")) {
+        if (!part || part === ".") continue;
+        if (part === "..") baseParts.pop();
+        else baseParts.push(part);
+      }
+      return baseParts.join("/");
+    }
+
+    function renderMarkdown(md, baseRelPath = "") {
+      if (!md) return { html: "", headings: [] };
+      const codeBlocks = [];
+      let text = md.replace(/```([a-zA-Z0-9_-]*)\r?\n([\s\S]*?)```/g, (_, lang, code) => {
+        const idx = codeBlocks.length;
+        codeBlocks.push(`<pre><code>${esc(code.trimEnd())}</code></pre>`);
+        return `\n@@CODEBLOCK_${idx}@@\n`;
+      });
+
+      const mathBlocks = [];
+      const stashMath = (raw) => {
+        const idx = mathBlocks.length;
+        mathBlocks.push(esc(raw));
+        return `@@MATH_${idx}@@`;
+      };
+      text = text.replace(/\$\$([\s\S]*?)\$\$/g, (m) => stashMath(m));
+      text = text.replace(/\\\[([\s\S]*?)\\\]/g, (m) => stashMath(m));
+      text = text.replace(/\\\(([\s\S]*?)\\\)/g, (m) => stashMath(m));
+      text = text.replace(/(^|[^\\])\$(?!\s)([^\n$]+?)(?<!\s)\$/g, (full, pre, inner) => {
+        if (/^\d[\d,.\s]*$/.test(inner.trim())) return full;
+        return pre + stashMath(`$${inner}$`);
+      });
+
+      const lines = text.split(/\r?\n/);
+      const out = [];
+      const headings = [];
+      let inUl = false, inOl = false, inTable = false;
+
+      const closeLists = () => {
+        if (inUl) { out.push("</ul>"); inUl = false; }
+        if (inOl) { out.push("</ol>"); inOl = false; }
+        if (inTable) { out.push("</tbody></table>"); inTable = false; }
+      };
+
+      const inline = (s) => {
+        const inlineCodes = [];
+        let r = esc(s).replace(/`([^`]+)`/g, (_, c) => {
+          const i = inlineCodes.length;
+          inlineCodes.push(`<code>${c}</code>`);
+          return `@@ICODE_${i}@@`;
+        });
+        r = r.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => {
+          const resolved = resolveRelPath(baseRelPath, src.trim());
+          const href = /^[a-z]+:/i.test(resolved) ? esc(resolved) : encodeRelPath(resolved);
+          return `<img src="${href}" alt="${alt}" loading="lazy" />`;
+        });
+        r = r.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, lbl, href) => {
+          const clean = href.trim();
+          if (/^[a-z]+:/i.test(clean) || clean.startsWith("#")) {
+            return `<a href="${clean}" target="_blank" rel="noopener">${lbl}</a>`;
+          }
+          const resolved = resolveRelPath(baseRelPath, clean);
+          if (/\.md(#.*)?$/i.test(resolved)) {
+            return `<a href="#path=${encodeURIComponent(resolved.split("#")[0])}" class="md-internal-link" data-relpath="${esc(resolved.split("#")[0])}">${lbl}</a>`;
+          }
+          return `<a href="${encodeRelPath(resolved)}" target="_blank" rel="noopener">${lbl}</a>`;
+        });
+        r = r.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+        r = r.replace(/(^|\W)\*([^*\n]+)\*(?=\W|$)/g, "$1<em>$2</em>");
+        r = r.replace(/~~([^~]+)~~/g, "<del>$1</del>");
+        r = r.replace(/@@ICODE_(\d+)@@/g, (_, i) => inlineCodes[Number(i)]);
+        return r;
+      };
+
+      for (let i = 0; i < lines.length; i++) {
+        const tr = lines[i].trim();
+        if (!tr) { closeLists(); continue; }
+        if (tr.startsWith("@@CODEBLOCK_")) {
+          closeLists();
+          const m = tr.match(/^@@CODEBLOCK_(\d+)@@$/);
+          if (m) out.push(codeBlocks[Number(m[1])]);
+          continue;
+        }
+        if (/^(-{3,}|\*{3,}|_{3,})$/.test(tr)) { closeLists(); out.push("<hr />"); continue; }
+        if (/^#{1,4}\s+/.test(tr)) {
+          closeLists();
+          const lvl = tr.match(/^(#{1,4})\s+/)[1].length;
+          const rawTitle = tr.slice(lvl + 1);
+          const hid = "sec-" + headings.length;
+          if (lvl <= 3) headings.push({ id: hid, level: lvl, text: rawTitle.replace(/@@MATH_\d+@@/g, "[math]") });
+          out.push(`<h${lvl} id="${hid}">${inline(rawTitle)}</h${lvl}>`);
+          continue;
+        }
+        if (tr.startsWith(">")) { closeLists(); out.push(`<blockquote>${inline(tr.replace(/^>\s?/, ""))}</blockquote>`); continue; }
+        if (tr.startsWith("|") && tr.endsWith("|")) {
+          const cells = tr.slice(1, -1).split("|").map(c => c.trim());
+          if (!inTable) {
+            closeLists();
+            const next = (lines[i + 1] || "").trim();
+            if (/^\|[\s:|-]+\|$/.test(next)) {
+              out.push("<table><thead><tr>" + cells.map(c => `<th>${inline(c)}</th>`).join("") + "</tr></thead><tbody>");
+              inTable = true;
+              i++;
+              continue;
+            }
+          } else {
+            out.push("<tr>" + cells.map(c => `<td>${inline(c)}</td>`).join("") + "</tr>");
+            continue;
+          }
+        }
+        if (/^[-*]\s+/.test(tr)) {
+          if (inOl) { out.push("</ol>"); inOl = false; }
+          if (!inUl) { out.push("<ul>"); inUl = true; }
+          out.push(`<li>${inline(tr.replace(/^[-*]\s+/, ""))}</li>`);
+          continue;
+        }
+        if (/^\d+\.\s+/.test(tr)) {
+          if (inUl) { out.push("</ul>"); inUl = false; }
+          if (!inOl) { out.push("<ol>"); inOl = true; }
+          out.push(`<li>${inline(tr.replace(/^\d+\.\s+/, ""))}</li>`);
+          continue;
+        }
+        closeLists();
+        out.push(`<p>${inline(tr)}</p>`);
+      }
+      closeLists();
+      const html = out.join("\n").replace(/@@MATH_(\d+)@@/g, (_, i) => mathBlocks[Number(i)]);
+      return { html, headings };
+    }
+
+    function tryRenderMath(el, attempt = 0) {
+      if (!el) return;
+      if (window.renderMathInElement) {
+        try {
+          window.renderMathInElement(el, {
+            delimiters: [
+              { left: "$$", right: "$$", display: true },
+              { left: "\\[", right: "\\]", display: true },
+              { left: "$", right: "$", display: false },
+              { left: "\\(", right: "\\)", display: false },
+            ],
+            throwOnError: false,
+          });
+        } catch (_) {}
+      } else if (attempt < 15) {
+        setTimeout(() => tryRenderMath(el, attempt + 1), 200);
+      }
+    }
+
+    async function loadSnippetById(docId, shard) {
+      const sKey = String(shard).padStart(2, "0");
+      if (!state.snippetCache.has(sKey)) {
+        const res = await fetch(`./data/snippets/shard_${sKey}.json`);
+        state.snippetCache.set(sKey, await res.json());
+      }
+      return state.snippetCache.get(sKey)[docId] || null;
+    }
+
+    function jumpLibrary(opts) {
+      state.filters = {
+        q: opts.q || "",
+        ext: opts.ext || "",
+        category: opts.category || "",
+        folderPrefix: opts.folderPrefix || "",
+        docType: opts.docType || "",
+        plane: opts.plane || "",
+        tag: opts.tag || "",
+        triage: opts.triage || "",
+      };
+      document.getElementById("libSearch").value = state.filters.q;
+      applyLibraryFilters();
+      switchTab("library");
+      if (state.filtered.length && !opts.keepCurrentDoc) selectDoc(state.filtered[0].i);
+    }
+
+    function renderDashboard() {
+      const m = state.meta;
+      const mdCount = (m.exts.find(([e]) => e === "md") || ["md", 0])[1];
+      const gdocCount = (m.exts.find(([e]) => e === "gdoc") || ["gdoc", 0])[1];
+      const htmlCount = (m.exts.find(([e]) => e === "html") || ["html", 0])[1];
+      const leanCount = (m.exts.find(([e]) => e === "lean") || ["lean", 0])[1];
+      const consCount = m.triage.CONSOLIDATE || 0;
+      const planeMapped = state.catalog.filter(x => x.planes && x.planes.length).length;
+
+      const host = document.getElementById("dashContent");
+      host.innerHTML = `
+        <div class="kpi-grid">
+          <div class="kpi-card" data-jump="{}"><div class="kpi-val">${m.total_docs.toLocaleString()}</div><div class="kpi-lbl">All Research Files</div></div>
+          <div class="kpi-card" data-jump='${esc(JSON.stringify({ext:"md"}))}'><div class="kpi-val" style="color:var(--indigo);">${mdCount.toLocaleString()}</div><div class="kpi-lbl">Full Markdown (.md)</div></div>
+          <div class="kpi-card" data-jump='${esc(JSON.stringify({ext:"html"}))}'><div class="kpi-val" style="color:var(--green);">${htmlCount}</div><div class="kpi-lbl">Interactive HTML Apps</div></div>
+          <div class="kpi-card" data-jump='${esc(JSON.stringify({ext:"lean"}))}'><div class="kpi-val" style="color:var(--amber);">${leanCount}</div><div class="kpi-lbl">Lean 4 Proofs</div></div>
+          <div class="kpi-card" data-jump='${esc(JSON.stringify({ext:"gdoc"}))}'><div class="kpi-val" style="color:var(--accent);">${gdocCount.toLocaleString()}</div><div class="kpi-lbl">Google Drive Snippets</div></div>
+          <div class="kpi-card" data-jump='${esc(JSON.stringify({triage:"CONSOLIDATE"}))}'><div class="kpi-val" style="color:var(--amber);">${consCount}</div><div class="kpi-lbl">Consolidate Docs</div></div>
+          <div class="kpi-card" data-tab-jump="versions"><div class="kpi-val" style="color:var(--green);">${m.consolidate_families} / ${m.total_families}</div><div class="kpi-lbl">Version Families</div></div>
+          <div class="kpi-card" data-jump='${esc(JSON.stringify({plane:"Q1 WHO"}))}'><div class="kpi-val" style="color:var(--pink);">${planeMapped}</div><div class="kpi-lbl">Q-Plane Mapped Docs</div></div>
+        </div>
+
+        <div>
+          <div class="section-title">
+            <span>Browse by Category (${m.category_breakdown.length})</span>
+            <button class="btn" data-jump='${esc(JSON.stringify({triage:"CONSOLIDATE"}))}'>View All ${consCount} Consolidate Files →</button>
+          </div>
+          <div class="cat-grid">
+            ${m.category_breakdown.map(c => `
+              <div class="cat-card">
+                <div class="cat-card-head">
+                  <div class="cat-card-name">${esc(c.name)}</div>
+                  <div class="cat-card-count">${c.total}</div>
+                </div>
+                <div class="badge-row">
+                  <span class="badge b-local">${c.md} Full .md</span>
+                  <span class="badge b-drive">${c.gdoc} Drive</span>
+                  ${c.html ? `<span class="badge b-both">${c.html} HTML</span>` : ""}
+                  ${c.consolidate ? `<span class="badge b-consolidate">${c.consolidate} Consolidate</span>` : ""}
+                </div>
+                <div class="tag-strip wrap" style="margin-top:2px;">
+                  ${c.top_tags.map(t => `<span class="tag-pill" data-jump='${esc(JSON.stringify({tag:t}))}'>#${esc(t)}</span>`).join("")}
+                </div>
+                <div style="display:flex;gap:6px;margin-top:auto;padding-top:4px;flex-wrap:wrap;">
+                  <button class="btn btn-primary" data-jump='${esc(JSON.stringify({category:c.name}))}'>Browse Category</button>
+                  ${c.md ? `<button class="btn" data-jump='${esc(JSON.stringify({category:c.name,ext:"md"}))}'>Read .md (${c.md})</button>` : ""}
+                  ${c.consolidate ? `<button class="btn" data-jump='${esc(JSON.stringify({category:c.name,triage:"CONSOLIDATE"}))}'>Consolidate</button>` : ""}
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title"><span>VFT 7 Planes (Normalized Q1–Q7)</span></div>
+          <div class="plane-grid">
+            ${m.planes.map(([p, n]) => `
+              <div class="plane-card" data-jump='${esc(JSON.stringify({plane:p}))}'>
+                <div style="font-size:13px;font-weight:700;color:var(--pink);">${esc(p)}</div>
+                <div style="font-size:18px;font-weight:800;color:var(--bright);font-family:var(--mono);margin-top:4px;">${n} docs</div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Top Folders (Click to Open in Browser)</h3></div>
+          <div class="tag-strip wrap">
+            ${(m.folders || []).slice(0, 26).map(([fn, n]) =>
+              `<span class="tag-pill" data-jump='${esc(JSON.stringify({q:fn}))}'>📁 ${esc(fn)} (${n})</span>`
+            ).join("")}
+          </div>
+        </div>
+      `;
+
+      host.querySelectorAll("[data-jump]").forEach(el => {
+        el.onclick = () => jumpLibrary(JSON.parse(el.dataset.jump));
+      });
+      host.querySelectorAll("[data-tab-jump]").forEach(el => {
+        el.onclick = () => switchTab(el.dataset.tabJump);
+      });
+    }
+
+    function renderKindsBar() {
+      const m = state.meta;
+      const extMap = Object.fromEntries(m.exts);
+      const pills = [
+        { key: "all", label: "All Files", cnt: m.total_docs, match: () => !state.filters.ext && !state.filters.triage },
+        { key: "md", label: "📝 Full Markdown (.md)", cnt: extMap.md || 0, match: () => state.filters.ext === "md" },
+        { key: "html", label: "🌐 Interactive HTML", cnt: extMap.html || 0, match: () => state.filters.ext === "html" },
+        { key: "lean", label: "λ Lean 4 Proofs", cnt: extMap.lean || 0, match: () => state.filters.ext === "lean" },
+        { key: "pdf", label: "📑 PDFs", cnt: extMap.pdf || 0, match: () => state.filters.ext === "pdf" },
+        { key: "gdoc", label: "☁️ Drive Snippets", cnt: extMap.gdoc || 0, match: () => state.filters.ext === "gdoc" },
+        { key: "CONSOLIDATE", label: "🧬 Needs Consolidate", cnt: m.triage.CONSOLIDATE || 0, match: () => state.filters.triage === "CONSOLIDATE" },
+      ];
+      const bar = document.getElementById("kindsBar");
+      bar.innerHTML = pills.map(p => `
+        <button class="kind-pill ${p.match() ? "active" : ""}" data-kind="${p.key}">
+          <span>${p.label}</span>
+          <span class="kind-cnt">${p.cnt.toLocaleString()}</span>
+        </button>
+      `).join("");
+
+      bar.querySelectorAll(".kind-pill").forEach(btn => {
+        btn.onclick = () => {
+          const k = btn.dataset.kind;
+          if (k === "all") { state.filters.ext = ""; state.filters.triage = ""; }
+          else if (k === "CONSOLIDATE") { state.filters.triage = state.filters.triage === "CONSOLIDATE" ? "" : "CONSOLIDATE"; }
+          else { state.filters.ext = state.filters.ext === k ? "" : k; }
+          applyLibraryFilters();
+        };
+      });
+    }
+
+    function renderNavTree() {
+      const host = document.getElementById("navTree");
+      const mode = state.navMode;
+      const f = state.filters;
+
+      if (mode === "categories") {
+        // Categories -> Top Subfolders inside each category
+        const byCat = new Map();
+        state.catalog.forEach(item => {
+          if (!byCat.has(item.category)) byCat.set(item.category, { count: 0, folders: new Map() });
+          const entry = byCat.get(item.category);
+          entry.count++;
+          const topSub = item.rel_folder.split("/").slice(0, 2).join("/");
+          entry.folders.set(topSub, (entry.folders.get(topSub) || 0) + 1);
+        });
+        const sorted = [...byCat.entries()].sort((a, b) => b[1].count - a[1].count);
+        host.innerHTML = sorted.map(([cat, info]) => {
+          const isExp = state.expandedKeys.has("cat:" + cat) || f.category === cat;
+          const isAct = f.category === cat && !f.folderPrefix;
+          const subs = [...info.folders.entries()].sort((a, b) => b[1] - a[1]);
+          return `
+            <div>
+              <div class="tree-row ${isAct ? "active" : ""}" data-cat="${esc(cat)}">
+                <span class="tree-left">
+                  <span class="tree-chev" data-toggle="${esc("cat:" + cat)}">${isExp ? "▾" : "▸"}</span>
+                  <span class="tree-lbl">${esc(cat)}</span>
+                </span>
+                <span class="tree-cnt">${info.count}</span>
+              </div>
+              <div class="tree-children ${isExp ? "" : "closed"}">
+                ${subs.map(([sub, cnt]) => `
+                  <div class="tree-row ${f.category === cat && f.folderPrefix === sub ? "active" : ""}" data-cat="${esc(cat)}" data-folder="${esc(sub)}">
+                    <span class="tree-left"><span class="tree-lbl">📁 ${esc(sub)}</span></span>
+                    <span class="tree-cnt">${cnt}</span>
+                  </div>
+                `).join("")}
+              </div>
+            </div>`;
+        }).join("");
+
+        host.querySelectorAll("[data-toggle]").forEach(el => {
+          el.onclick = (e) => {
+            e.stopPropagation();
+            const k = el.dataset.toggle;
+            if (state.expandedKeys.has(k)) state.expandedKeys.delete(k);
+            else state.expandedKeys.add(k);
+            renderNavTree();
+          };
+        });
+        host.querySelectorAll("[data-cat]").forEach(el => {
+          el.onclick = () => {
+            const c = el.dataset.cat;
+            const fp = el.dataset.folder || "";
+            if (f.category === c && f.folderPrefix === fp) {
+              f.category = ""; f.folderPrefix = "";
+            } else {
+              f.category = c; f.folderPrefix = fp;
+              state.expandedKeys.add("cat:" + c);
+            }
+            applyLibraryFilters();
+          };
+        });
+      } else if (mode === "folders") {
+        // Recursive folder tree from rel_folder
+        const root = { children: new Map(), count: 0 };
+        state.catalog.forEach(item => {
+          const parts = (item.rel_folder || "Uncategorized").split("/").filter(Boolean);
+          let node = root;
+          let acc = "";
+          for (const p of parts) {
+            acc = acc ? acc + "/" + p : p;
+            if (!node.children.has(p)) node.children.set(p, { name: p, path: acc, children: new Map(), count: 0 });
+            node = node.children.get(p);
+            node.count++;
+          }
+        });
+        const renderNode = (node) => {
+          const kids = [...node.children.values()].sort((a, b) => b.count - a.count);
+          const hasKids = kids.length > 0;
+          const isExp = state.expandedKeys.has(node.path) || (f.folderPrefix && f.folderPrefix.startsWith(node.path + "/"));
+          const isAct = f.folderPrefix === node.path;
+          return `
+            <div>
+              <div class="tree-row ${isAct ? "active" : ""}" data-folder="${esc(node.path)}">
+                <span class="tree-left">
+                  <span class="tree-chev" ${hasKids ? `data-toggle="${esc(node.path)}"` : ""}>${hasKids ? (isExp ? "▾" : "▸") : "·"}</span>
+                  <span class="tree-lbl">📁 ${esc(node.name)}</span>
+                </span>
+                <span class="tree-cnt">${node.count}</span>
+              </div>
+              ${hasKids ? `<div class="tree-children ${isExp ? "" : "closed"}">${kids.map(renderNode).join("")}</div>` : ""}
+            </div>`;
+        };
+        host.innerHTML = [...root.children.values()].sort((a, b) => b.count - a.count).map(renderNode).join("");
+        host.querySelectorAll("[data-toggle]").forEach(el => {
+          el.onclick = (e) => {
+            e.stopPropagation();
+            const k = el.dataset.toggle;
+            if (state.expandedKeys.has(k)) state.expandedKeys.delete(k);
+            else state.expandedKeys.add(k);
+            renderNavTree();
+          };
+        });
+        host.querySelectorAll("[data-folder]").forEach(el => {
+          el.onclick = () => {
+            const fp = el.dataset.folder;
+            f.folderPrefix = f.folderPrefix === fp ? "" : fp;
+            state.expandedKeys.add(fp);
+            applyLibraryFilters();
+          };
+        });
+      } else if (mode === "types") {
+        host.innerHTML = state.meta.doc_types.map(([dt, cnt]) => `
+          <div class="tree-row ${f.docType === dt ? "active" : ""}" data-doctype="${esc(dt)}">
+            <span class="tree-left"><span class="tree-lbl">${esc(dt)}</span></span>
+            <span class="tree-cnt">${cnt}</span>
+          </div>
+        `).join("");
+        host.querySelectorAll("[data-doctype]").forEach(el => {
+          el.onclick = () => {
+            f.docType = f.docType === el.dataset.doctype ? "" : el.dataset.doctype;
+            applyLibraryFilters();
+          };
+        });
+      } else if (mode === "planes") {
+        host.innerHTML = state.meta.planes.map(([pl, cnt]) => `
+          <div class="tree-row ${f.plane === pl ? "active" : ""}" data-plane="${esc(pl)}">
+            <span class="tree-left"><span class="tree-lbl">🧭 ${esc(pl)}</span></span>
+            <span class="tree-cnt">${cnt}</span>
+          </div>
+        `).join("");
+        host.querySelectorAll("[data-plane]").forEach(el => {
+          el.onclick = () => {
+            f.plane = f.plane === el.dataset.plane ? "" : el.dataset.plane;
+            applyLibraryFilters();
+          };
+        });
+      } else if (mode === "tags") {
+        host.innerHTML = state.meta.top_tags.map(([tg, cnt]) => `
+          <div class="tree-row ${f.tag === tg ? "active" : ""}" data-tag="${esc(tg)}">
+            <span class="tree-left"><span class="tree-lbl">#${esc(tg)}</span></span>
+            <span class="tree-cnt">${cnt}</span>
+          </div>
+        `).join("");
+        host.querySelectorAll("[data-tag]").forEach(el => {
+          el.onclick = () => {
+            f.tag = f.tag === el.dataset.tag ? "" : el.dataset.tag;
+            applyLibraryFilters();
+          };
+        });
+      }
+    }
+
+    function renderActiveChips() {
+      const f = state.filters;
+      const chips = [];
+      if (f.ext) chips.push(["ext", `Format: .${f.ext}`]);
+      if (f.triage) chips.push(["triage", `Triage: ${f.triage}`]);
+      if (f.category) chips.push(["category", `Category: ${f.category}`]);
+      if (f.folderPrefix) chips.push(["folderPrefix", `Folder: ${f.folderPrefix}`]);
+      if (f.docType) chips.push(["docType", `Type: ${f.docType}`]);
+      if (f.plane) chips.push(["plane", `Plane: ${f.plane}`]);
+      if (f.tag) chips.push(["tag", `Tag: #${f.tag}`]);
+      if (f.q) chips.push(["q", `Search: "${f.q}"`]);
+
+      const host = document.getElementById("activeChips");
+      host.innerHTML = chips.map(([k, lbl]) => `<span class="chip-active" data-clear="${k}">${esc(lbl)} ×</span>`).join("");
+      host.querySelectorAll("[data-clear]").forEach(el => {
+        el.onclick = () => {
+          state.filters[el.dataset.clear] = "";
+          if (el.dataset.clear === "q") document.getElementById("libSearch").value = "";
+          applyLibraryFilters();
+        };
+      });
+    }
+
+    function applyLibraryFilters() {
+      const f = state.filters;
+      f.q = document.getElementById("libSearch").value.trim().toLowerCase();
+
+      let tokenHits = null;
+      if (f.q && state.searchIndex) {
+        const words = f.q.match(/[a-z0-9]{3,28}/g) || [];
+        for (const w of words) {
+          const post = state.searchIndex[w];
+          if (post) {
+            const set = new Set(post);
+            tokenHits = tokenHits ? new Set([...tokenHits].filter(i => set.has(i))) : set;
+          }
+        }
+      }
+
+      let res = state.catalog.filter(item => {
+        if (f.ext && item.ext !== f.ext) return false;
+        if (f.triage && item.triage !== f.triage) return false;
+        if (f.category && item.category !== f.category) return false;
+        if (f.folderPrefix && item.rel_folder !== f.folderPrefix && !item.rel_folder.startsWith(f.folderPrefix + "/")) return false;
+        if (f.docType && item.doc_type !== f.docType) return false;
+        if (f.plane && !(item.planes || []).includes(f.plane)) return false;
+        if (f.tag && !item.tags.includes(f.tag)) return false;
+
+        if (f.q) {
+          const textHit =
+            item.title.toLowerCase().includes(f.q) ||
+            item.summary.toLowerCase().includes(f.q) ||
+            item.rel_folder.toLowerCase().includes(f.q) ||
+            item.category.toLowerCase().includes(f.q) ||
+            item.tags.some(t => t.includes(f.q));
+          const idxHit = tokenHits ? tokenHits.has(item.i) : false;
+          if (!textHit && !idxHit) return false;
+        }
+        return true;
+      });
+
+      if (state.sortBy === "recent") {
+        res.sort((a, b) => (b.modified || "").localeCompare(a.modified || "") || a.title.localeCompare(b.title));
+      } else if (state.sortBy === "links") {
+        res.sort((a, b) => (b.sim?.length || 0) - (a.sim?.length || 0) || a.title.localeCompare(b.title));
+      } else if (state.sortBy === "consolidate") {
+        res.sort((a, b) => (b.triage === "CONSOLIDATE" ? 1 : 0) - (a.triage === "CONSOLIDATE" ? 1 : 0) || a.title.localeCompare(b.title));
+      } else {
+        res.sort((a, b) => a.title.localeCompare(b.title));
+      }
+
+      state.filtered = res;
+      state.pageSize = 60;
+      renderKindsBar();
+      renderNavTree();
+      renderActiveChips();
+      renderLibraryList();
+    }
+
+    function sourceBadge(src) {
+      if (src === "both") return '<span class="badge b-both">Synced</span>';
+      if (src === "drive") return '<span class="badge b-drive">Drive</span>';
+      return '<span class="badge b-local">Repo</span>';
+    }
+
+    function renderLibraryList() {
+      const list = document.getElementById("docList");
+      const slice = state.filtered.slice(0, state.pageSize);
+      document.getElementById("libCount").textContent = `${state.filtered.length.toLocaleString()} docs`;
+
+      list.innerHTML = slice.map(item => `
+        <li class="doc-item ${item.i === state.selectedIdx ? "active" : ""}" data-idx="${item.i}">
+          <div class="doc-item-title">${esc(item.title)}</div>
+          <div class="doc-item-path">${esc(item.rel_folder)}</div>
+          <div class="doc-item-sub">${esc(item.summary)}</div>
+          <div class="badge-row">
+            ${sourceBadge(item.source)}
+            ${item.triage === "CONSOLIDATE" ? '<span class="badge b-consolidate">CONSOLIDATE</span>' : ""}
+            <span class="badge">${esc(item.ext.toUpperCase())}</span>
+            ${item.plane ? `<span class="badge b-plane">${esc(item.plane)}</span>` : ""}
+          </div>
+        </li>
+      `).join("");
+
+      list.querySelectorAll(".doc-item").forEach(el => {
+        el.onclick = () => selectDoc(Number(el.dataset.idx));
+      });
+
+      const moreBtn = document.getElementById("loadMoreBtn");
+      if (state.filtered.length > state.pageSize) {
+        moreBtn.style.display = "block";
+        moreBtn.textContent = `Show more (${state.filtered.length - state.pageSize} remaining)`;
+      } else {
+        moreBtn.style.display = "none";
+      }
+    }
+
+    function updatePaneVisibility() {
+      document.getElementById("navRail").classList.toggle("collapsed", state.focusMode || !state.treeVisible);
+      document.getElementById("libSidebar").classList.toggle("collapsed", state.focusMode);
+      const fb = document.getElementById("focusToggleBtn");
+      if (fb) fb.textContent = state.focusMode ? "◀ Show Panels" : "📖 Focus Reader";
+      const tb = document.getElementById("treeToggleBtn");
+      if (tb) tb.textContent = state.treeVisible ? "◧ Hide Tree" : "◧ Show Tree";
+    }
+
+    function bindMdInternalLinks(container) {
+      if (!container) return;
+      container.querySelectorAll("a.md-internal-link").forEach(a => {
+        a.onclick = (e) => { e.preventDefault(); openByRelPath(a.dataset.relpath); };
+      });
+    }
+
+    function renderMdIntoBody(bodyHost, raw, relPath) {
+      state.currentRawText = raw;
+      const { html, headings } = renderMarkdown(raw, relPath);
+      const tocHtml = headings.length >= 3 ? `
+        <div class="toc-box">
+          <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;">Table of Contents (${headings.length})</div>
+          <div class="toc-list">
+            ${headings.map(h => `<a class="toc-link" data-hid="${h.id}" style="padding-left:${(h.level - 1) * 8}px;">${esc(h.text)}</a>`).join("")}
+          </div>
+        </div>` : "";
+
+      const contentHtml = state.rawMode
+        ? `<pre style="white-space:pre-wrap;word-break:break-word;"><code>${esc(raw)}</code></pre>`
+        : `${tocHtml}<div class="md-body" id="mdRendered">${html}</div>`;
+
+      bodyHost.innerHTML = `
+        <div class="panel-head">
+          <h3>Full Markdown (${esc(relPath)})</h3>
+          <div style="display:flex;gap:6px;">
+            <button class="btn" id="toggleRawBtn">${state.rawMode ? "Rendered View" : "Raw Source"}</button>
+            <button class="btn" id="copyRawBtn">Copy Markdown</button>
+          </div>
+        </div>
+        ${contentHtml}
+      `;
+      document.getElementById("toggleRawBtn").onclick = () => {
+        state.rawMode = !state.rawMode;
+        renderMdIntoBody(bodyHost, state.currentRawText, relPath);
+      };
+      document.getElementById("copyRawBtn").onclick = () => {
+        if (state.currentRawText && navigator.clipboard) navigator.clipboard.writeText(state.currentRawText);
+      };
+      bodyHost.querySelectorAll("[data-hid]").forEach(a => {
+        a.onclick = () => document.getElementById(a.dataset.hid)?.scrollIntoView({ behavior: "smooth" });
+      });
+      if (!state.rawMode) {
+        const el = document.getElementById("mdRendered");
+        bindMdInternalLinks(el);
+        tryRenderMath(el);
+      }
+    }
+
+    async function selectDoc(idx) {
+      const item = state.catalog[idx];
+      if (!item) return;
+      state.selectedIdx = idx;
+      state.rawMode = false;
+      state.currentRawText = "";
+      window.location.hash = `tab=library&doc=${encodeURIComponent(item.id)}`;
+      renderLibraryList();
+
+      const reader = document.getElementById("libReader");
+      const folderParts = (item.rel_folder || "").split("/").filter(Boolean);
+      const crumbsHtml = [
+        `<span class="crumb-link" data-crumb-cat="${esc(item.category)}">${esc(item.category)}</span>`,
+        ...folderParts.map((seg, i) => {
+          const prefix = folderParts.slice(0, i + 1).join("/");
+          return `<span>›</span><span class="crumb-link" data-crumb-folder="${esc(prefix)}">${esc(seg)}</span>`;
+        }),
+      ].join(" ");
+
+      const localHref = item.local_path ? encodeRelPath(item.local_path) : "";
+
+      reader.innerHTML = `
+        <div class="reader-inner">
+          <div class="breadcrumbs">${crumbsHtml}</div>
+          <div class="reader-header">
+            <div class="reader-title">${esc(item.title)}</div>
+            <div class="badge-row" style="margin-bottom:8px;">
+              ${sourceBadge(item.source)}
+              ${item.triage === "CONSOLIDATE" ? '<span class="badge b-consolidate">CONSOLIDATE</span>' : ""}
+              <span class="badge">${esc(item.doc_type)}</span>
+              ${(item.planes || []).map(p => `<span class="badge b-plane">${esc(p)}</span>`).join("")}
+              ${item.node ? `<span class="badge">${esc(item.node)}</span>` : ""}
+              ${item.modified ? `<span class="badge">📅 ${esc(item.modified)}</span>` : ""}
+            </div>
+            <div class="badge-row" id="readerTags" style="margin-top:6px;">
+              ${item.tags.map(t => `<span class="tag-pill" data-tag="${esc(t)}">#${esc(t)}</span>`).join("")}
+            </div>
+            <div class="reader-actions">
+              <button class="btn" id="treeToggleBtn">${state.treeVisible ? "◧ Hide Tree" : "◧ Show Tree"}</button>
+              <button class="btn" id="focusToggleBtn">${state.focusMode ? "◀ Show Panels" : "📖 Focus Reader"}</button>
+              ${item.view_url ? `<a class="btn btn-primary" href="${esc(item.view_url)}" target="_blank" rel="noopener">↗ Open in Google Docs</a>` : ""}
+              ${localHref ? `<a class="btn" href="${localHref}" target="_blank" rel="noopener">📄 Open Raw File</a>` : ""}
+              ${item.sim && item.sim.length ? `<button class="btn" id="openGraphBtn">🕸️ Similarity Graph</button>` : ""}
+              ${item.family_id ? `<button class="btn" id="openFamBtn">🧬 View Versions</button>` : ""}
+            </div>
+          </div>
+
+          ${item.summary ? `<div class="panel"><div class="panel-head"><h3>Summary</h3></div><p>${esc(item.summary)}</p></div>` : ""}
+          <div id="topicsHost"></div>
+          <div id="docBodyHost" class="panel"><div class="panel-head"><h3>Document Content</h3></div><p style="color:var(--muted);">Loading content...</p></div>
+          ${(item.sim && item.sim.length) ? `
+            <div class="panel">
+              <div class="panel-head"><h3>Related Documents (${item.sim.length})</h3></div>
+              <div class="sim-grid" id="simGridHost">
+                ${item.sim.map(([sIdx, score]) => {
+                  const target = state.catalog[sIdx];
+                  if (!target) return "";
+                  return `<div class="sim-card" data-open-doc="${sIdx}">
+                    <div class="sim-card-title">${esc(target.title)}</div>
+                    <div class="sim-card-meta">${Math.round(score * 100)}% match · ${esc(target.category)}</div>
+                  </div>`;
+                }).join("")}
+              </div>
+            </div>` : ""}
+        </div>
+      `;
+
+      reader.querySelectorAll("[data-crumb-cat]").forEach(el => {
+        el.onclick = () => jumpLibrary({ category: el.dataset.crumbCat, keepCurrentDoc: true });
+      });
+      reader.querySelectorAll("[data-crumb-folder]").forEach(el => {
+        el.onclick = () => jumpLibrary({ folderPrefix: el.dataset.crumbFolder, keepCurrentDoc: true });
+      });
+      reader.querySelectorAll("#readerTags [data-tag]").forEach(el => {
+        el.onclick = () => { state.filters.tag = el.dataset.tag; applyLibraryFilters(); };
+      });
+      reader.querySelectorAll("[data-open-doc]").forEach(el => {
+        el.onclick = () => selectDoc(Number(el.dataset.openDoc));
+      });
+      document.getElementById("treeToggleBtn").onclick = () => { state.treeVisible = !state.treeVisible; updatePaneVisibility(); };
+      document.getElementById("focusToggleBtn").onclick = () => { state.focusMode = !state.focusMode; updatePaneVisibility(); };
+      const gb = document.getElementById("openGraphBtn");
+      if (gb) gb.onclick = () => { switchTab("graph"); setTimeout(() => buildNeighborhoodGraph(item.i), 20); };
+      const fb = document.getElementById("openFamBtn");
+      if (fb) fb.onclick = async () => { switchTab("versions"); await ensureFamiliesLoaded(); selectFamily(item.family_id); };
+
+      const snipData = item.has_snippet ? await loadSnippetById(item.id, item.shard) : null;
+      if (snipData && snipData.topics && snipData.topics.length) {
+        document.getElementById("topicsHost").innerHTML = `
+          <div class="panel">
+            <div class="panel-head"><h3>Structured Findings</h3></div>
+            ${snipData.topics.map(t => `<p style="margin-bottom:8px;"><strong style="color:var(--accent);">${esc(t.topic)}:</strong> ${esc(t.description)}</p>`).join("")}
+          </div>`;
+      }
+
+      const bodyHost = document.getElementById("docBodyHost");
+      if (item.local_path && (item.ext === "html" || item.ext === "htm")) {
+        bodyHost.innerHTML = `<div class="panel-head"><h3>Interactive Visualizer (${esc(item.local_path)})</h3></div><iframe class="embed-frame" src="${localHref}"></iframe>`;
+      } else if (item.local_path && item.ext === "pdf") {
+        bodyHost.innerHTML = `<div class="panel-head"><h3>PDF Document (${esc(item.local_path)})</h3></div><iframe class="embed-frame" src="${localHref}"></iframe>`;
+      } else if (item.local_path && (item.ext === "md" || item.ext === "lean")) {
+        try {
+          const res = await fetch(localHref);
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          const raw = await res.text();
+          if (item.ext === "lean") {
+            bodyHost.innerHTML = `<div class="panel-head"><h3>Lean 4 Source (${esc(item.local_path)})</h3></div><div class="md-body"><pre><code>${esc(raw)}</code></pre></div>`;
+          } else {
+            renderMdIntoBody(bodyHost, raw, item.local_path);
+          }
+        } catch (err) {
+          renderSnippetFallback(bodyHost, snipData, item);
+        }
+      } else {
+        renderSnippetFallback(bodyHost, snipData, item);
+      }
+    }
+
+    async function openByRelPath(relPath) {
+      const match = state.catalog.find(x => x.local_path && x.local_path.toLowerCase() === relPath.toLowerCase());
+      if (match) { switchTab("library"); selectDoc(match.i); return; }
+      switchTab("library");
+      const reader = document.getElementById("libReader");
+      reader.innerHTML = `<div class="reader-inner"><div class="panel"><div class="panel-head"><h3>${esc(relPath)}</h3></div><div id="directMdHost">Loading...</div></div></div>`;
+      try {
+        const res = await fetch(encodeRelPath(relPath));
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const raw = await res.text();
+        renderMdIntoBody(document.getElementById("directMdHost"), raw, relPath);
+      } catch (e) {
+        document.getElementById("directMdHost").innerHTML = `<p style="color:var(--muted);">Could not load ${esc(relPath)} (${esc(e.message)}).</p>`;
+      }
+    }
+
+    function renderSnippetFallback(host, snipData, item) {
+      if (snipData && snipData.snippet) {
+        const { html } = renderMarkdown(snipData.snippet, item.local_path || "");
+        host.innerHTML = `<div class="panel-head"><h3>Document Excerpt (Google Drive Snippet)</h3></div><div class="md-body" id="snipMd">${html}</div>`;
+        tryRenderMath(document.getElementById("snipMd"));
+      } else {
+        host.innerHTML = `<div class="panel-head"><h3>Document Content</h3></div><p style="color:var(--muted);">No local file or snippet available.${item.view_url ? " Open the source in Google Docs above." : ""}</p>`;
+      }
+    }
+
+    /* Versions & Consolidate Tab */
+    async function ensureFamiliesLoaded() {
+      if (state.families) return;
+      const res = await fetch("./data/families.json");
+      state.families = await res.json();
+      renderFamilyList();
+      if (state.families.length && state.selectedFamilyId == null) {
+        const first = state.families.find(f => f.consolidate_count > 0) || state.families[0];
+        selectFamily(first.family_id);
+      }
+    }
+
+    function filteredFamilies() {
+      if (!state.families) return [];
+      const q = document.getElementById("famSearch").value.trim().toLowerCase();
+      const st = document.getElementById("fFamStatus").value;
+      return state.families.filter(f => {
+        if (st === "CONSOLIDATE" && f.consolidate_count <= 0) return false;
+        if (st && st !== "CONSOLIDATE" && f.action_status !== st) return false;
+        if (q) {
+          const hit = f.canonical_title.toLowerCase().includes(q) ||
+            f.missing_info_summary.toLowerCase().includes(q) ||
+            f.versions.some(v => v.title.toLowerCase().includes(q) || v.missing_from_canonical.toLowerCase().includes(q));
+          if (!hit) return false;
+        }
+        return true;
+      });
+    }
+
+    function renderFamilyList() {
+      const fams = filteredFamilies();
+      document.getElementById("famCount").textContent = `${fams.length} families`;
+      const list = document.getElementById("famList");
+      list.innerHTML = fams.map(f => `
+        <li class="doc-item ${f.family_id === state.selectedFamilyId ? "active" : ""}" data-fid="${f.family_id}">
+          <div class="doc-item-title">${esc(f.canonical_title)}</div>
+          <div class="doc-item-sub">${esc(f.missing_info_summary)}</div>
+          <div class="badge-row">
+            <span class="badge">${f.version_count} versions</span>
+            ${f.consolidate_count ? `<span class="badge b-consolidate">${f.consolidate_count} consolidate</span>` : ""}
+            ${f.archive_count ? `<span class="badge b-archive">${f.archive_count} archive</span>` : ""}
+            ${f.delete_count ? `<span class="badge b-delete">${f.delete_count} delete</span>` : ""}
+          </div>
+        </li>
+      `).join("");
+      list.querySelectorAll(".doc-item").forEach(el => {
+        el.onclick = () => selectFamily(Number(el.dataset.fid));
+      });
+    }
+
+    async function toggleInlineVersionReader(btnEl, v) {
+      const host = document.getElementById(`ver-inline-${v.id}`);
+      if (!host) return;
+      if (host.style.display === "block") {
+        host.style.display = "none";
+        btnEl.textContent = "📖 Read Version";
+        return;
+      }
+      host.style.display = "block";
+      host.innerHTML = `<div style="color:var(--muted);font-size:12px;">Loading content...</div>`;
+      btnEl.textContent = "▲ Hide Content";
+
+      if (v.local_path && v.ext === "md") {
+        try {
+          const res = await fetch(encodeRelPath(v.local_path));
+          if (res.ok) {
+            const raw = await res.text();
+            const { html } = renderMarkdown(raw, v.local_path);
+            host.innerHTML = `<div class="md-body">${html}</div>`;
+            tryRenderMath(host);
+            return;
+          }
+        } catch (_) {}
+      }
+      const snip = await loadSnippetById(v.id, v.shard);
+      if (snip && snip.snippet) {
+        const { html } = renderMarkdown(snip.snippet, v.local_path || "");
+        host.innerHTML = `<div class="md-body">${html}</div>`;
+        tryRenderMath(host);
+      } else {
+        host.innerHTML = `<div style="color:var(--muted);font-size:12px;">No excerpt available locally — open in Google Docs.</div>`;
+      }
+    }
+
+    function selectFamily(fid) {
+      if (!state.families) return;
+      const fam = state.families.find(f => f.family_id === fid);
+      if (!fam) return;
+      state.selectedFamilyId = fid;
+      renderFamilyList();
+
+      const reader = document.getElementById("famReader");
+      reader.innerHTML = `
+        <div class="reader-inner">
+          <div class="reader-header">
+            <div class="reader-title">${esc(fam.canonical_title)}</div>
+            <div class="badge-row">
+              <span class="badge b-both">${esc(fam.action_status)}</span>
+              <span class="badge">${fam.version_count} total versions</span>
+              <span class="badge b-consolidate">${fam.consolidate_count} consolidate</span>
+              <span class="badge b-archive">${fam.archive_count} archive</span>
+              <span class="badge b-delete">${fam.delete_count} delete</span>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h3>Consolidation Summary</h3></div>
+            <p>${esc(fam.missing_info_summary || "No missing content summary recorded.")}</p>
+          </div>
+          ${fam.versions.map((v, vIdx) => {
+            const actCls = v.triage_action === "CONSOLIDATE" ? "b-consolidate" :
+                           v.triage_action === "DELETE" ? "b-delete" :
+                           v.triage_action === "ARCHIVE" ? "b-archive" : "b-both";
+            return `
+              <div class="ver-card ${v.is_canonical ? "canonical" : ""}">
+                <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap;margin-bottom:6px;">
+                  <div>
+                    <strong style="color:var(--bright);font-size:14px;">${esc(v.title)}</strong>
+                    <div class="badge-row" style="margin-top:5px;">
+                      <span class="badge ${actCls}">${esc(v.triage_action)}</span>
+                      <span class="badge">${esc(v.version_label)}</span>
+                      <span class="badge">${Math.round(v.sim_to_canonical * 100)}% sim to canonical</span>
+                      <span class="badge">📁 ${esc(v.folder)}</span>
+                      ${v.modified ? `<span class="badge">📅 ${esc(v.modified)}</span>` : ""}
+                    </div>
+                  </div>
+                  <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                    ${(v.has_snippet || v.local_path) ? `<button class="btn" data-read-ver="${vIdx}">📖 Read Version</button>` : ""}
+                    ${v.catalog_idx != null ? `<button class="btn" data-open-doc="${v.catalog_idx}">Open in Reader</button>` : ""}
+                    ${v.view_url ? `<a class="btn btn-primary" href="${esc(v.view_url)}" target="_blank" rel="noopener">↗ Google Doc</a>` : ""}
+                  </div>
+                </div>
+                ${v.summary ? `<p style="font-size:12.5px;color:var(--muted);line-height:1.5;">${esc(v.summary)}</p>` : ""}
+                ${v.missing_from_canonical ? `<div class="diff-box"><strong>Missing from Canonical:</strong>\n${esc(v.missing_from_canonical)}</div>` : ""}
+                <div id="ver-inline-${esc(v.id)}" class="ver-inline-reader" style="display:none;"></div>
+              </div>`;
+          }).join("")}
+        </div>`;
+
+      reader.querySelectorAll("[data-read-ver]").forEach(btn => {
+        btn.onclick = () => toggleInlineVersionReader(btn, fam.versions[Number(btn.dataset.readVer)]);
+      });
+      reader.querySelectorAll("[data-open-doc]").forEach(btn => {
+        btn.onclick = () => { switchTab("library"); selectDoc(Number(btn.dataset.openDoc)); };
+      });
+    }
+
+    /* Similarity Graph Tab */
+    function buildNeighborhoodGraph(centerIdx) {
+      state.graphCenterIdx = centerIdx;
+      const center = state.catalog[centerIdx];
+      if (!center) return;
+      const canvas = document.getElementById("graphCanvas");
+      const W = canvas.width = canvas.clientWidth || 1000;
+      const H = canvas.height = canvas.clientHeight || 700;
+      const cx = W / 2, cy = H / 2;
+
+      const nodes = [{ idx: centerIdx, item: center, x: cx, y: cy, r: 16 }];
+      const nodeMap = new Map([[centerIdx, 0]]);
+      const edges = [];
+
+      const hop1 = (center.sim || []).slice(0, 8);
+      hop1.forEach(([nIdx, score], k) => {
+        const item = state.catalog[nIdx];
+        if (!item) return;
+        const ang = (k / Math.max(1, hop1.length)) * Math.PI * 2 - Math.PI / 2;
+        const dist = Math.min(W, H) * 0.25;
+        if (!nodeMap.has(nIdx)) {
+          nodeMap.set(nIdx, nodes.length);
+          nodes.push({ idx: nIdx, item, x: cx + Math.cos(ang) * dist, y: cy + Math.sin(ang) * dist, r: 11 });
+        }
+        edges.push([0, nodeMap.get(nIdx), score]);
+
+        (item.sim || []).slice(0, 3).forEach(([h2Idx, s2], j) => {
+          const h2 = state.catalog[h2Idx];
+          if (!h2) return;
+          if (!nodeMap.has(h2Idx)) {
+            const subAng = ang + (j - 1) * 0.32;
+            const d2 = Math.min(W, H) * 0.41;
+            nodeMap.set(h2Idx, nodes.length);
+            nodes.push({ idx: h2Idx, item: h2, x: cx + Math.cos(subAng) * d2, y: cy + Math.sin(subAng) * d2, r: 7 });
+          }
+          edges.push([nodeMap.get(nIdx), nodeMap.get(h2Idx), s2]);
+        });
+      });
+
+      state.graphNodes = nodes;
+      state.graphEdges = edges;
+      drawGraph();
+      inspectGraphNode(nodes[0]);
+    }
+
+    function drawGraph() {
+      const canvas = document.getElementById("graphCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      state.graphEdges.forEach(([a, b, score]) => {
+        const na = state.graphNodes[a], nb = state.graphNodes[b];
+        ctx.beginPath();
+        ctx.moveTo(na.x, na.y);
+        ctx.lineTo(nb.x, nb.y);
+        ctx.strokeStyle = `rgba(56, 189, 248, ${Math.min(0.75, 0.15 + score)})`;
+        ctx.lineWidth = Math.max(1, score * 4);
+        ctx.stroke();
+      });
+
+      state.graphNodes.forEach((n, idx) => {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = CAT_COLORS[n.item.category] || "#94a3b8";
+        ctx.fill();
+        ctx.lineWidth = idx === 0 ? 3 : 1.2;
+        ctx.strokeStyle = idx === 0 ? "#ffffff" : "#0f172a";
+        ctx.stroke();
+        ctx.fillStyle = idx === 0 ? "#ffffff" : "#cbd5e1";
+        ctx.font = (idx === 0 ? "bold 12px " : "11px ") + "sans-serif";
+        ctx.textAlign = "center";
+        const lbl = n.item.title.length > 26 ? n.item.title.slice(0, 24) + "…" : n.item.title;
+        ctx.fillText(lbl, n.x, n.y + n.r + 14);
+      });
+    }
+
+    function inspectGraphNode(node) {
+      const box = document.getElementById("graphInspector");
+      const it = node.item;
+      box.innerHTML = `
+        <div style="font-size:13px;font-weight:700;color:var(--bright);margin-bottom:4px;">${esc(it.title)}</div>
+        <div class="badge-row" style="margin-bottom:6px;">
+          <span class="badge">${esc(it.category)}</span>
+          ${sourceBadge(it.source)}
+        </div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:10px;">${esc(it.summary)}</p>
+        <div style="display:flex;gap:6px;">
+          <button class="btn btn-primary" id="gOpenBtn">Open Document</button>
+          <button class="btn" id="gCenterBtn">Center Graph</button>
+        </div>
+      `;
+      document.getElementById("gOpenBtn").onclick = () => { switchTab("library"); selectDoc(it.i); };
+      document.getElementById("gCenterBtn").onclick = () => buildNeighborhoodGraph(it.i);
+    }
+
+    /* Command Palette */
+    function openCmd() {
+      const ov = document.getElementById("cmdOverlay");
+      ov.classList.add("open");
+      const inp = document.getElementById("cmdInput");
+      inp.focus();
+      inp.select();
+      renderCmdResults();
+    }
+    function closeCmd() {
+      document.getElementById("cmdOverlay").classList.remove("open");
+    }
+    function renderCmdResults() {
+      const q = document.getElementById("cmdInput").value.trim().toLowerCase();
+      let hits;
+      if (!q) {
+        hits = state.catalog.slice(0, 20);
+      } else {
+        const words = q.match(/[a-z0-9]{3,28}/g) || [];
+        let tokenHits = null;
+        if (state.searchIndex) {
+          for (const w of words) {
+            const post = state.searchIndex[w];
+            if (post) {
+              const s = new Set(post);
+              tokenHits = tokenHits ? new Set([...tokenHits].filter(i => s.has(i))) : s;
+            }
+          }
+        }
+        hits = state.catalog.filter(x =>
+          x.title.toLowerCase().includes(q) ||
+          x.rel_folder.toLowerCase().includes(q) ||
+          x.tags.some(t => t.includes(q)) ||
+          (tokenHits && tokenHits.has(x.i))
+        ).slice(0, 30);
+      }
+      state.cmdHits = hits;
+      state.cmdActive = 0;
+      paintCmdList();
+    }
+    function paintCmdList() {
+      const ul = document.getElementById("cmdResults");
+      ul.innerHTML = state.cmdHits.map((it, idx) => `
+        <li class="cmd-item ${idx === state.cmdActive ? "active" : ""}" data-cmd-idx="${idx}">
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--bright);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(it.title)}</div>
+            <div style="font-size:11px;color:var(--muted);">${esc(it.category)} › ${esc(it.rel_folder)}</div>
+          </div>
+          <span class="badge">${esc(it.ext.toUpperCase())}</span>
+        </li>
+      `).join("") || `<li style="padding:14px;color:var(--muted);font-size:12px;">No matching documents.</li>`;
+      ul.querySelectorAll("[data-cmd-idx]").forEach(el => {
+        el.onclick = () => {
+          const it = state.cmdHits[Number(el.dataset.cmdIdx)];
+          closeCmd();
+          if (it) { switchTab("library"); selectDoc(it.i); }
+        };
+      });
+    }
+
+    function switchTab(tab) {
+      state.activeTab = tab;
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === tab));
+      document.querySelectorAll(".view").forEach(v => v.classList.toggle("active", v.id === `view-${tab}`));
+      if (tab === "versions") ensureFamiliesLoaded();
+      if (tab === "graph") {
+        const target = state.selectedIdx != null ? state.selectedIdx : Number(document.getElementById("graphHubSelect").value || 0);
+        setTimeout(() => buildNeighborhoodGraph(target), 20);
+      }
+    }
+
+    function handleHashRoute() {
+      const hash = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+      const tab = hash.get("tab");
+      const docParam = hash.get("doc");
+      const pathParam = hash.get("path");
+      if (pathParam) { openByRelPath(pathParam); return; }
+      if (tab === "versions") switchTab("versions");
+      else if (tab === "graph") switchTab("graph");
+      else if (tab === "library") switchTab("library");
+      else if (tab === "dashboard") switchTab("dashboard");
+      if (docParam) {
+        const found = state.catalog.find(x => x.id === docParam);
+        if (found) { switchTab("library"); selectDoc(found.i); }
+      }
+    }
+
+    async function init() {
+      const [metaRes, catRes, idxRes] = await Promise.all([
+        fetch("./data/meta.json"),
+        fetch("./data/catalog.json"),
+        fetch("./data/search_index.json"),
+      ]);
+      state.meta = await metaRes.json();
+      state.catalog = await catRes.json();
+      state.searchIndex = await idxRes.json();
+
+      document.getElementById("globalStats").textContent =
+        `${state.meta.total_docs.toLocaleString()} Docs · ${state.meta.consolidate_families} Consolidate Families`;
+
+      const hubSel = document.getElementById("graphHubSelect");
+      state.catalog.filter(x => x.sim && x.sim.length >= 3).slice(0, 120).forEach(x => {
+        const o = document.createElement("option");
+        o.value = x.i;
+        o.textContent = `${x.title.slice(0, 48)} (${x.sim.length} links)`;
+        hubSel.appendChild(o);
+      });
+
+      renderDashboard();
+      applyLibraryFilters();
+
+      document.getElementById("brandHomeBtn").onclick = () => switchTab("dashboard");
+      document.querySelectorAll(".tab-btn").forEach(b => b.onclick = () => switchTab(b.dataset.tab));
+      document.querySelectorAll(".nav-mode-btn").forEach(b => b.onclick = () => {
+        state.navMode = b.dataset.nav;
+        document.querySelectorAll(".nav-mode-btn").forEach(x => x.classList.toggle("active", x === b));
+        renderNavTree();
+      });
+
+      document.getElementById("libSearch").addEventListener("input", applyLibraryFilters);
+      document.getElementById("fSort").addEventListener("change", (e) => { state.sortBy = e.target.value; applyLibraryFilters(); });
+      document.getElementById("clearFiltersBtn").onclick = () => jumpLibrary({ keepCurrentDoc: true });
+      document.getElementById("loadMoreBtn").onclick = () => { state.pageSize += 60; renderLibraryList(); };
+      document.getElementById("famSearch").addEventListener("input", renderFamilyList);
+      document.getElementById("fFamStatus").addEventListener("change", renderFamilyList);
+      document.getElementById("graphHubSelect").addEventListener("change", (e) => buildNeighborhoodGraph(Number(e.target.value)));
+
+      const canvas = document.getElementById("graphCanvas");
+      canvas.addEventListener("click", (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const hit = state.graphNodes.find(n => Math.hypot(n.x - (e.clientX - rect.left), n.y - (e.clientY - rect.top)) <= n.r + 6);
+        if (hit) inspectGraphNode(hit);
+      });
+      canvas.addEventListener("dblclick", (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const hit = state.graphNodes.find(n => Math.hypot(n.x - (e.clientX - rect.left), n.y - (e.clientY - rect.top)) <= n.r + 6);
+        if (hit) buildNeighborhoodGraph(hit.idx);
+      });
+
+      // Command palette shortcuts
+      document.getElementById("openCmdBtn").onclick = openCmd;
+      document.getElementById("cmdOverlay").onclick = (e) => { if (e.target.id === "cmdOverlay") closeCmd(); };
+      document.getElementById("cmdInput").addEventListener("input", renderCmdResults);
+      document.getElementById("cmdInput").addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown") { e.preventDefault(); state.cmdActive = Math.min(state.cmdHits.length - 1, state.cmdActive + 1); paintCmdList(); }
+        else if (e.key === "ArrowUp") { e.preventDefault(); state.cmdActive = Math.max(0, state.cmdActive - 1); paintCmdList(); }
+        else if (e.key === "Enter" && state.cmdHits[state.cmdActive]) {
+          const it = state.cmdHits[state.cmdActive]; closeCmd(); switchTab("library"); selectDoc(it.i);
+        }
+      });
+      window.addEventListener("keydown", (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); openCmd(); }
+        else if (e.key === "/" && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) { e.preventDefault(); openCmd(); }
+        else if (e.key === "Escape") closeCmd();
+      });
+
+      window.addEventListener("hashchange", handleHashRoute);
+      handleHashRoute();
+    }
+
+    init().catch(err => {
+      document.getElementById("globalStats").textContent = "Load Error (serve via HTTP)";
+      document.getElementById("dashContent").innerHTML = `<div class="panel"><h3>Could not load ./data/catalog.json</h3><p>${esc(err.message)}. Serve via HTTP or GitHub Pages.</p></div>`;
+    });
+  </script>
+</body>
+</html>
